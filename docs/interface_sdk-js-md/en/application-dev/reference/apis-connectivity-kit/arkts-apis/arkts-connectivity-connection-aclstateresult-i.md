@@ -9,7 +9,6 @@ Acl state change result.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deviceId

@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getColorTintRange
@@ -30,15 +29,32 @@ getColorTintRange(): Array<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;number & gt; | 用于获取色调调节值的可调范围。若接口调用失败，返回undefined。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getColorTintRange(session: camera.PhotoSession | camera.VideoSession): Array<number> {
+  let range: Array<number> = [];
+  try {
+    range = session.getColorTintRange();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getColorTintRange call failed. error code: ${err.code}`);
+  }
+  return range;
+}
+```
 
 ## getWhiteBalanceRange
 
@@ -56,16 +72,33 @@ getWhiteBalanceRange(): Array<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;number & gt; | 用于获取手动白平衡值的可调范围，如[2800，10000]，单位为K（Kelvin，温度单位），实际情况根据底层能力返回为准。若接口调用失败，返回undefined。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getWhiteBalanceRange(session: camera.PhotoSession | camera.VideoSession): Array<number> {
+  let range: Array<number> = [];
+  try {
+    range = session.getWhiteBalanceRange();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getWhiteBalanceRange call failed. error code: ${err.code}`);
+  }
+  return range;
+}
+```
 
 ## isWhiteBalanceModeSupported
 
@@ -83,20 +116,38 @@ isWhiteBalanceModeSupported(mode: WhiteBalanceMode): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | 是 | 白平衡模式。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 表示是否支持白平衡模式。true表示支持，false表示不支持。若接口调用失败，返回undefined。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isWhiteBalanceModeSupported(session: camera.PhotoSession | camera.VideoSession): boolean {
+  let status: boolean = false;
+  try {
+  let mode: camera.WhiteBalanceMode = camera.WhiteBalanceMode.DAYLIGHT;
+    status = session.isWhiteBalanceModeSupported(mode);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The isWhiteBalanceModeSupported call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```

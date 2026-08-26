@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## on('streamChange')
@@ -28,10 +31,10 @@ Subscribe Wi-Fi stream change events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'streamChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'streamChange' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | the callback of on, 1: stream down, 2: stream up, 3: stream bidirectional |
 
 
 ## on('hotspotStaJoin')
@@ -56,10 +59,10 @@ Subscribe Wi-Fi hotspot sta join events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'hotspotStaJoin' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'hotspotStaJoin' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes | the callback of on |
 
 
 ## on('hotspotStaLeave')
@@ -84,7 +87,7 @@ Subscribe Wi-Fi hotspot sta leave events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'hotspotStaLeave' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'hotspotStaLeave' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes | the callback of on |

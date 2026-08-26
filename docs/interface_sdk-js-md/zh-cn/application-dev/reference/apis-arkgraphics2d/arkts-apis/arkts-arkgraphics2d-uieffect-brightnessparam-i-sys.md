@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import uiEffect from '@kit.ArkGraphics2D';
 ```
 
 ## cubicCoeff

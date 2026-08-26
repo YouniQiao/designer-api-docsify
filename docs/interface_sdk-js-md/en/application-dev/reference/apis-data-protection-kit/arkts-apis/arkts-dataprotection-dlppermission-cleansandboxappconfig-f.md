@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import dlpPermission from '@kit.DataProtectionKit';
 ```
 
 ## cleanSandboxAppConfig
@@ -20,16 +20,28 @@ Clears the sandbox application configuration. After the API is successfully call
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-| [19100018](../errorcode-dlp.md#19100018-application-unauthorized) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) | No permission to call this API, which is available only for non-DLP sandbox applications. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.cleanSandboxAppConfig().then(() => { // Clear sandbox application configuration.
+  console.info('cleanSandboxAppConfig success');
+}).catch((error: BusinessError)=> {
+  console.error(JSON.stringify(error));
+});
+```

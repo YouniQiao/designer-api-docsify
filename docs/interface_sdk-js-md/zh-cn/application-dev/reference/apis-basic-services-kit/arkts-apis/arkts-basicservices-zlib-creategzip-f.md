@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import zlib from '@kit.BasicServicesKit';
 ```
 
 ## createGZip
@@ -22,6 +22,16 @@ function createGZip(): Promise<GZip>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[GZip](arkts-basicservices-zlib-gzip-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[GZip](arkts-basicservices-zlib-gzip-i.md)&gt; | Promise对象。返回GZip对象实例。 |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+
+zlib.createGZip().then((data) => {
+  console.info('createGZip success');
+})
+```

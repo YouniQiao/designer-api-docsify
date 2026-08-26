@@ -14,7 +14,15 @@ The callback of key request.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| assetId | string | Yes |
-| requestData | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| assetId | string | Yes | request key for current assetId |
+| requestData | Uint8Array | Yes | media key request data sent to media key server |
+
+**Examples**
+
+```TypeScript
+let keyRequestCallback: avSession.KeyRequestCallback = async(assetId: string, requestData: Uint8Array) => {
+  console.info(`Succeeded in keyRequestCallback. assetId: ${assetId}, requestData: ${requestData}`);
+}
+```

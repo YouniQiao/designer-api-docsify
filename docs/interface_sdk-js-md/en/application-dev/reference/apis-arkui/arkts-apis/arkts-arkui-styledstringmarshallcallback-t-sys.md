@@ -16,12 +16,12 @@ Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-st
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| marshallableVal | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| marshallableVal | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | Yes | Object to be marshaled. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| ArrayBuffer |
+| Type | Description |
+| --- | --- |
+| ArrayBuffer | Marshaled data of [StyledStringMarshallingValue]{ |

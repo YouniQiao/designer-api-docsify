@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from 'kits/@kit.AbilityKit';
+import distributedMissionManager from '@kit.AbilityKit';
 ```
 
 ## stopSyncRemoteMissions
@@ -26,17 +26,40 @@ Stops synchronizing the remote mission list. This API uses an asynchronous callb
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes | Parameters required for synchronization. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the synchronization is stopped, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  distributedMissionManager.stopSyncRemoteMissions(
+    {
+      deviceId: ""
+    },
+    (error: BusinessError) => {
+      if (error) {
+        console.error('stopSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
+        return;
+      }
+      console.info('stopSyncRemoteMissions finished');}
+  )
+} catch (error) {
+  console.error('stopSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
+}
+```
 
 
 ## stopSyncRemoteMissions
@@ -59,19 +82,39 @@ Stops synchronizing the remote mission list. This API uses a promise to return t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes | Parameters required for synchronization. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  distributedMissionManager.stopSyncRemoteMissions(
+    {
+      deviceId: ""
+    }).then(() => {
+      console.info('stopSyncRemoteMissions finished successfully');
+    }).catch((error: BusinessError) => {
+    console.error('stopSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
+  })
+} catch (error) {
+  console.error('stopSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
+}
+```

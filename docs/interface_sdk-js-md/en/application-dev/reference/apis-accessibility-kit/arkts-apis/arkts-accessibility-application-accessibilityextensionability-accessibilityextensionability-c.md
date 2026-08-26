@@ -10,8 +10,7 @@ AccessibilityExtensionAbility provides accessibility extension capabilities base
 ## Modules to Import
 
 ```TypeScript
-import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from 'kits/@kit.AccessibilityKit';
-import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, FocusDirection, Rect, WindowType, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from 'kits/@kit.AccessibilityKit';
+import AccessibilityExtensionAbility, { AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
 ```
 
 ## onAccessibilityEvent
@@ -30,9 +29,24 @@ Called when an accessibility event occurs. In this API, you can implement event-
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | Yes | Accessibility event information. |
+
+**Examples**
+
+```TypeScript
+import { AccessibilityExtensionAbility, AccessibilityEvent } from '@kit.AccessibilityKit';
+
+class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
+  onAccessibilityEvent(event: AccessibilityEvent): void {
+    console.info('AxExtensionAbility onAccessibilityEvent');
+    if (event.eventType === 'click') {
+      console.info('AxExtensionAbility onAccessibilityEvent: click');
+    }
+  }
+}
+```
 
 ## onConnect
 
@@ -48,6 +62,18 @@ Called when the **AccessibilityExtensionAbility** is enabled and connected to th
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
+**Examples**
+
+```TypeScript
+import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
+
+class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
+  onConnect(): void {
+    console.info('AxExtensionAbility onConnect');
+  }
+}
+```
+
 ## onDisconnect
 
 ```TypeScript
@@ -61,6 +87,18 @@ Called when the **AccessibilityExtensionAbility** is disabled and disconnected f
 **Deprecated since:** 12
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**Examples**
+
+```TypeScript
+import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
+
+class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
+  onDisconnect(): void {
+    console.info('AxExtensionAbility onDisconnect');
+  }
+}
+```
 
 ## onKeyEvent
 
@@ -78,15 +116,33 @@ Called when a physical key is pressed. In this API, you can determine whether to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [keyEvent](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyeventdata-i-sys.md) | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keyEvent | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | Key event. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the event is consumed and will not be transferred; |
+
+**Examples**
+
+```TypeScript
+import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
+import { KeyEvent } from '@kit.InputKit';
+
+class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
+  onKeyEvent(keyEvent: KeyEvent): boolean {
+    console.info('AxExtensionAbility onKeyEvent');
+    if (keyEvent.key.code === 16) {
+      console.info('AxExtensionAbility onKeyEvent: intercept 16');
+      return true;
+    }
+    return false;
+  }
+}
+```
 
 ## context
 

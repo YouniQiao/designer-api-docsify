@@ -11,7 +11,7 @@ Parameters required to perform garbage collection (GC).@interface FileSystemRequ
 ## Modules to Import
 
 ```TypeScript
-import { backup } from 'kits/@kit.CoreFileKit';
+import backup from '@kit.CoreFileKit';
 ```
 
 ## triggerType

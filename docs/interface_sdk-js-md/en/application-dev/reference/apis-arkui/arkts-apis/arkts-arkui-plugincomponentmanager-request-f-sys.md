@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## request
@@ -24,7 +24,71 @@ Plugin component request method used to send a request for the information of th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | [RequestParameterForStage](arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [RequestParameterForStage](arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) | Yes | Plugin component request parameters for stage. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Plugin component request event callback. |
+
+**Examples**
+
+```TypeScript
+import { pluginComponentManager } from '@kit.ArkUI';
+
+pluginComponentManager.request(
+  {
+    want: {
+      bundleName: "com.example.provider",
+      abilityName: "com.example.provider.MainAbility",
+    },
+    name: "plugintemplate",
+    data: {
+      "key_1": "plugin component test",
+      "key_2": 1111111,
+    },
+    jsonPath: "",
+  },
+  (err, data) => {
+    if (err) {
+      console.error(`request_callback: err.code = ${err.code}, err.message = ${err.message}`);
+      return;
+    }
+    console.info("request_callback: componentTemplate.ability=" + data.componentTemplate.ability);
+    console.info("request_callback: componentTemplate.source=" + data.componentTemplate.source);
+    console.info("request_callback: data=" + JSON.stringify(data.data));
+    console.info("request_callback: extraData=" + JSON.stringify(data.extraData));
+  }
+)
+```
+
+```TypeScript
+import { pluginComponentManager } from '@kit.ArkUI';
+
+pluginComponentManager.request(
+  {
+    owner: {
+      bundleName: "com.example.user",
+      abilityName: "com.example.user.MainAbility",
+    },
+    target: {
+      bundleName: "com.example.provider",
+      abilityName: "com.example.provider.MainAbility",
+    },
+    name: "plugintemplate",
+    data: {
+      "key1": "myapplication plugin component test",
+    },
+    jsonPath: "",
+  },
+  (err, data) => {
+    if (err) {
+      console.error(`Failed to request. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    if (!data) {
+      return;
+    }
+    console.info("request_callback: componentTemplate.ability=" + data.componentTemplate.ability);
+    console.info("request_callback: componentTemplate.source=" + data.componentTemplate.source);
+  }
+);
+```

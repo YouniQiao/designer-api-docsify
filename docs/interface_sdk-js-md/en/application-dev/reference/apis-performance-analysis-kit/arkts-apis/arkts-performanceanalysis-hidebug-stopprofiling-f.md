@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## stopProfiling
@@ -21,3 +20,15 @@ Stops the VM profiling method. **stopProfiling()** and **startProfiling(filename
 **Substitutes:** [stopJsCpuProfiling](arkts-performanceanalysis-hidebug-stopjscpuprofiling-f.md)
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+hidebug.startProfiling("cpuprofiler-20220216");
+// code block
+// ...
+// code block
+hidebug.stopProfiling();
+```

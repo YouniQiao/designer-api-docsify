@@ -3,7 +3,22 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import appControl from '@kit.AbilityKit.appControl';
+import bundleManager from '@kit.AbilityKit.bundleManager';
+import bundleMonitor from '@kit.AbilityKit.bundleMonitor';
+import bundleResourceManager from '@kit.AbilityKit.bundleResourceManager';
+import bundle from '@kit.AbilityKit';
+import defaultAppManager from '@kit.AbilityKit.defaultAppManager';
+import distributedBundleManager from '@kit.AbilityKit.distributedBundleManager';
+import freeInstall from '@kit.AbilityKit.freeInstall';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit.innerBundleManager';
+import installer from '@kit.AbilityKit.installer';
+import launcherBundleManager from '@kit.AbilityKit.launcherBundleManager';
+import overlay from '@kit.AbilityKit.overlay';
+import shortcutManager from '@kit.AbilityKit.shortcutManager';
+import skillManager from '@kit.AbilityKit.skillManager';
+import appDomainVerify from '@kit.AbilityKit.appDomainVerify';
+import pluginBundleManager from '@kit.AbilityKit.pluginBundleManager';
 ```
 
 ## getAllBundleInfo
@@ -24,11 +39,57 @@ Obtains the information of all bundles of the specified user. This API uses an a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes |
-| userId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| userId | number | Yes | User ID. The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the information of all bundles. |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleFlag: number = 0;
+let userId: number = 100;
+
+bundle.getAllBundleInfo(bundleFlag, userId)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleFlag: number = 0;
+
+bundle.getAllBundleInfo(bundleFlag, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleFlag: number = 0;
+let userId: number = 100;
+
+bundle.getAllBundleInfo(bundleFlag, userId, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
 
 
 ## getAllBundleInfo
@@ -49,10 +110,14 @@ Obtains the information of all bundles of the current user. This API uses an asy
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the information of all bundles. |
+
+**Examples**
+
+See [getAllBundleInfo](#getallbundleinfo)
 
 
 ## getAllBundleInfo
@@ -73,13 +138,17 @@ Obtains the information of all bundles of the specified user. This API uses a pr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes |
-| userId | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| userId | number | No | User ID. The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Promise used to return the information of all bundles. |
+
+**Examples**
+
+See [getAllBundleInfo](#getallbundleinfo)

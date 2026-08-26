@@ -103,3 +103,35 @@ TYPE_CAR = 'car'
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
+
+**示例**
+
+```TypeScript
+let deviceTypesInfoDefault: string = deviceInfo.DeviceTypes.TYPE_DEFAULT;
+// 输出结果：the value of the DeviceTypes is :default
+console.info('the value of the DeviceTypes is :' + deviceTypesInfoDefault);
+
+let deviceTypesInfoPhone: string = deviceInfo.DeviceTypes.TYPE_PHONE;
+// 输出结果：the value of the DeviceTypes is :phone
+console.info('the value of the DeviceTypes is :' + deviceTypesInfoPhone);
+
+let deviceTypesInfoTablet: string = deviceInfo.DeviceTypes.TYPE_TABLET;
+// 输出结果：the value of the DeviceTypes is :tablet
+console.info('the value of the DeviceTypes is :' + deviceTypesInfoTablet);
+
+let deviceTypesInfo2IN1: string = deviceInfo.DeviceTypes.TYPE_2IN1;
+// 输出结果：the value of the DeviceTypes is :2in1
+console.info('the value of the DeviceTypes is :' + deviceTypesInfo2IN1);
+
+let deviceTypesInfoTV: string = deviceInfo.DeviceTypes.TYPE_TV;
+// 输出结果：the value of the DeviceTypes is :tv
+console.info('the value of the DeviceTypes is :' + deviceTypesInfoTV);
+
+let deviceTypesInfoWearable: string = deviceInfo.DeviceTypes.TYPE_WEARABLE;
+// 输出结果：the value of the DeviceTypes is :wearable
+console.info('the value of the DeviceTypes is :' + deviceTypesInfoWearable);
+
+let deviceTypesInfoCar: string = deviceInfo.DeviceTypes.TYPE_CAR;
+// 输出结果：the value of the DeviceTypes is :car
+console.info('the value of the DeviceTypes is :' + deviceTypesInfoCar);
+```

@@ -19,12 +19,12 @@ Defines the Gesture Type.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
-| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |
-| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
-| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |  |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
+| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |  |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |

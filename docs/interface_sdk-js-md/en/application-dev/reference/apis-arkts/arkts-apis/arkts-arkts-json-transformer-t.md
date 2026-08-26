@@ -14,14 +14,14 @@ Defines the type of the conversion result function.When used as a parameter of [
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | Object | Yes |
-| key | string | Yes |
-| value | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | Object | Yes | Object to which the key-value pair to parse belongs. |
+| key | string | Yes | Key to parse. |
+| value | Object | Yes | Value of the key. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Object \| undefined \| null |
+| Type | Description |
+| --- | --- |
+| Object \| undefined \| null | Return an Object, undefined or null value |

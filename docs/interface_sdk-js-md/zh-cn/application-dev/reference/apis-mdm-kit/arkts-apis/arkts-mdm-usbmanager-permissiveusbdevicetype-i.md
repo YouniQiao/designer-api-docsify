@@ -13,7 +13,7 @@ USB设备类型信息，支持部分字段匹配。
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.MDMKit';
+import usbManager from '@kit.MDMKit';
 ```
 
 ## baseClass

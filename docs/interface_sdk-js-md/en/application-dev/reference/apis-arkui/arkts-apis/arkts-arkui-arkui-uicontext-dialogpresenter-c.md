@@ -9,10 +9,10 @@ Provides unified dialog APIs.
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## dismiss
@@ -33,22 +33,22 @@ Dismisses a dialog box. Accepts either the dialog ID (returned by present) or th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | number \| ComponentContent & lt;Object & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | number \| ComponentContent & lt;Object & gt; | Yes | The dialog ID or ComponentContent to dismiss. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
 
 ## present
 
@@ -68,22 +68,22 @@ Presents a fixed-style dialog box.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | dialog.DialogStyleOptions | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | dialog.DialogStyleOptions | No | Dialog options. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; | Promise used to return the dialog result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 103306 |
-| 103308 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 103306 | The dialog cannot be opened due to node mount failure. |
+| 103308 | The dialog cannot be opened due to subwindow create failure. |
 
 ## present
 
@@ -106,25 +106,25 @@ isModal = true and showInSubWindow = true cannot be used at the same time.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent & lt;Object & gt; | Yes |
-| options | dialog.DialogCustomOptions | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent & lt;Object & gt; | Yes | Custom dialog content. |
+| options | dialog.DialogCustomOptions | No | Custom dialog options. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; | Promise used to return the dialog result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) |
-| 103306 |
-| 103308 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
+| [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exist. The ComponentContent has already been opened. |
+| 103306 | The dialog cannot be opened due to node mount failure. |
+| 103308 | The dialog cannot be opened due to subwindow create failure. |
 
 ## update
 
@@ -144,20 +144,20 @@ Updates a presented custom dialog box.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| content | ComponentContent & lt;Object & gt; | Yes |
-| options | dialog.DialogBaseOptions | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| content | ComponentContent & lt;Object & gt; | Yes | The content used to identify the dialog. |
+| options | dialog.DialogBaseOptions | No | Options to update. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |

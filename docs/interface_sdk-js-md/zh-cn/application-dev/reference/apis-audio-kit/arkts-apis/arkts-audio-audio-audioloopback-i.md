@@ -13,7 +13,8 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## enable
@@ -32,22 +33,22 @@ enable(enable: boolean): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [enable](#enable) | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 表示是否启用音频返听器。true表示启用，false表示禁用。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示功能执行成功；返回false表示功能执行失败。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## getEqualizerPreset
 
@@ -63,9 +64,9 @@ getEqualizerPreset(): AudioLoopbackEqualizerPreset
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | 返回当前音频返听器的均衡器类型。 |
 
 ## getPreferredDevicePair
 
@@ -83,9 +84,9 @@ getPreferredDevicePair(): AudioDevicePair | null
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) \| null |
+| 类型 | 说明 |
+| --- | --- |
+| [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) \| null | 返回系统推荐的音频输入输出设备组合。 |
 
 ## getReverbPreset
 
@@ -101,9 +102,9 @@ getReverbPreset(): AudioLoopbackReverbPreset
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | 返回当前音频返听器的混响模式。 |
 
 ## getStatus
 
@@ -119,9 +120,9 @@ getStatus(): Promise<AudioLoopbackStatus>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Promise对象，返回音频返听状态。 |
 
 ## getSupportedDevicePairs
 
@@ -139,9 +140,9 @@ getSupportedDevicePairs(): Array<AudioDevicePair>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md)&gt; | 返回支持返听的音频输入输出设备数组。 |
 
 ## getVolume
 
@@ -159,9 +160,23 @@ getVolume(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回当前音频返听输出音量，范围为[0.0, 1.0]。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: number = audioRenderer.getVolume();
+  console.info(`Indicate that the volume is obtained ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the volume, error ${error}.`);
+}
+```
 
 ## off('statusChange')
 
@@ -177,16 +192,16 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'statusChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 | 回调函数，返回当前音频返听的状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## on('statusChange')
 
@@ -202,16 +217,16 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'statusChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'，当AudioLoopback的状态发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 | 回调函数，返回当前音频返听的状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## setEqualizerPreset
 
@@ -227,21 +242,21 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [preset](../../apis-media-kit/arkts-apis/arkts-media-media-avscreencapturerecordconfig-i.md) | [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| preset | [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | 是 | 均衡器类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回均衡器类型是否设置成功。true表示成功，false表示不成功。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## setReverbPreset
 
@@ -257,21 +272,21 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [preset](../../apis-media-kit/arkts-apis/arkts-media-media-avscreencapturerecordconfig-i.md) | [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| preset | [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | 是 | 混响模式。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回混响模式是否设置成功。true表示成功，false表示不成功。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## setVolume
 
@@ -287,18 +302,30 @@ setVolume(volume: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| volume | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| volume | number | 是 | 音量值范围为[0.0, 1.0]。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, form 0.0 to 1.0. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.setVolume(0.5).then(() => {
+  console.info('setVolume Success!');
+}).catch((err: BusinessError) => {
+  console.error(`setVolume Fail: ${err}`);
+});
+```

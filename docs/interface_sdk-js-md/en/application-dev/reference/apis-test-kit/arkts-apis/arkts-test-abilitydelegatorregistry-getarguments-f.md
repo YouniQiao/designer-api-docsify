@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
 ```
 
 ## getArguments
@@ -22,6 +21,20 @@ Obtains an [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-abilit
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) |
+| Type | Description |
+| --- | --- |
+| [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) | [AbilityDelegatorArgs]{ |
+
+**Examples**
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+// Obtain the AbilityDelegatorArgs object of the application.
+let args = abilityDelegatorRegistry.getArguments();
+// Print the test parameter information.
+console.info(`getArguments bundleName: ${args.bundleName}`);
+console.info(`getArguments parameters: ${JSON.stringify(args.parameters)}`);
+console.info(`getArguments testCaseNames: ${args.testCaseNames}`);
+console.info(`getArguments testRunnerClassName: ${args.testRunnerClassName}`);
+```

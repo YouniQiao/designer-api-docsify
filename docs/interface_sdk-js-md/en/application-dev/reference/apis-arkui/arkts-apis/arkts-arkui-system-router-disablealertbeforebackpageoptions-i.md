@@ -13,7 +13,7 @@ Defines the **DisableAlertBeforeBackPage** parameter.
 ## Modules to Import
 
 ```TypeScript
-import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from 'kits/@kit.ArkUI';
+import SystemRouter, { BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -34,9 +34,9 @@ Called when the dialog box fails to be closed. **errMsg** indicates the returned
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| errMsg | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| errMsg | string | Yes |  |
 
 ## complete
 
@@ -72,6 +72,6 @@ Called when the dialog box is closed. **errMsg** indicates the returned informat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| errMsg | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| errMsg | string | Yes |  |

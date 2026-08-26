@@ -22,10 +22,10 @@ Begins a query
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Target |
+| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | Yes | [Query](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-query-c.md) |
 
 ## beginTransformFeedback
 
@@ -43,9 +43,9 @@ Begins transform feedback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| primitiveMode | webgl.GLenum | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| primitiveMode | webgl.GLenum | Yes | Primitive mode |
 
 ## bindBufferBase
 
@@ -63,11 +63,11 @@ Binds buffer base
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| index | webgl.GLuint | Yes |
-| buffer | webgl.WebGLBuffer \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Target |
+| index | webgl.GLuint | Yes | Index |
+| buffer | webgl.WebGLBuffer \| null | Yes | Buffer |
 
 ## bindBufferRange
 
@@ -91,13 +91,13 @@ Binds buffer range
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| index | webgl.GLuint | Yes |
-| buffer | webgl.WebGLBuffer \| null | Yes |
-| offset | webgl.GLintptr | Yes |
-| size | webgl.GLsizeiptr | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Target |
+| index | webgl.GLuint | Yes | Index |
+| buffer | webgl.WebGLBuffer \| null | Yes | Buffer |
+| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| size | webgl.GLsizeiptr | Yes | Size |
 
 ## bindSampler
 
@@ -115,10 +115,10 @@ Binds a sampler
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| unit | webgl.GLuint | Yes |
-| [sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| unit | webgl.GLuint | Yes | Texture unit |
+| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
 
 ## bindTransformFeedback
 
@@ -136,10 +136,10 @@ Binds a transform feedback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Target |
+| tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | Yes | Transform feedback |
 
 ## bindVertexArray
 
@@ -157,9 +157,9 @@ Binds a vertex array
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| array | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| array | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | Yes | Vertex array |
 
 ## blitFramebuffer
 
@@ -188,18 +188,18 @@ Blits framebuffer
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| srcX0 | webgl.GLint | Yes |
-| srcY0 | webgl.GLint | Yes |
-| srcX1 | webgl.GLint | Yes |
-| srcY1 | webgl.GLint | Yes |
-| dstX0 | webgl.GLint | Yes |
-| dstY0 | webgl.GLint | Yes |
-| dstX1 | webgl.GLint | Yes |
-| dstY1 | webgl.GLint | Yes |
-| mask | webgl.GLbitfield | Yes |
-| filter | webgl.GLenum | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| srcX0 | webgl.GLint | Yes | Source X0 |
+| srcY0 | webgl.GLint | Yes | Source Y0 |
+| srcX1 | webgl.GLint | Yes | Source X1 |
+| srcY1 | webgl.GLint | Yes | Source Y1 |
+| dstX0 | webgl.GLint | Yes | Destination X0 |
+| dstY0 | webgl.GLint | Yes | Destination Y0 |
+| dstX1 | webgl.GLint | Yes | Destination X1 |
+| dstY1 | webgl.GLint | Yes | Destination Y1 |
+| mask | webgl.GLbitfield | Yes | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) |
+| filter | webgl.GLenum | Yes | [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 ## clearBufferfi
 
@@ -217,12 +217,12 @@ Clears bufferfi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffer | webgl.GLenum | Yes |
-| drawbuffer | webgl.GLint | Yes |
-| [depth](#depth) | webgl.GLfloat | Yes |
-| [stencil](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | webgl.GLint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | webgl.GLenum | Yes | Buffer |
+| drawbuffer | webgl.GLint | Yes | Draw buffer |
+| depth | webgl.GLfloat | Yes | [Depth](#depth) |
+| stencil | webgl.GLint | Yes | [Stencil](#stencil) |
 
 ## clearBufferfv
 
@@ -245,12 +245,12 @@ Clears bufferfv
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffer | webgl.GLenum | Yes |
-| drawbuffer | webgl.GLint | Yes |
-| values | webgl.Float32List | Yes |
-| srcOffset | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | webgl.GLenum | Yes | Buffer |
+| drawbuffer | webgl.GLint | Yes | Draw buffer |
+| values | webgl.Float32List | Yes | Values |
+| srcOffset | webgl.GLuint | No | Source offset |
 
 ## clearBufferiv
 
@@ -273,12 +273,12 @@ Clears bufferiv
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffer | webgl.GLenum | Yes |
-| drawbuffer | webgl.GLint | Yes |
-| values | webgl.Int32List | Yes |
-| srcOffset | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | webgl.GLenum | Yes | Buffer |
+| drawbuffer | webgl.GLint | Yes | Draw buffer |
+| values | webgl.Int32List | Yes | Values |
+| srcOffset | webgl.GLuint | No | Source offset |
 
 ## clearBufferuiv
 
@@ -296,12 +296,12 @@ Clears bufferuiv
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffer | webgl.GLenum | Yes |
-| drawbuffer | webgl.GLint | Yes |
-| values | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes |
-| srcOffset | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | webgl.GLenum | Yes | Buffer |
+| drawbuffer | webgl.GLint | Yes | Draw buffer |
+| values | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Values |
+| srcOffset | webgl.GLuint | No | Source offset |
 
 ## clientWaitSync
 
@@ -319,17 +319,17 @@ Client waits for sync object
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | Yes |
-| flags | webgl.GLbitfield | Yes |
-| timeout | [GLuint64](arkts-arkgraphics2d-gluint64-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | Yes | Sync object |
+| flags | webgl.GLbitfield | Yes | [Flags](../../apis-ability-kit/arkts-apis/arkts-ability-wantconstant-flags-e.md) |
+| timeout | [GLuint64](arkts-arkgraphics2d-gluint64-t.md) | Yes | Timeout |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| webgl.GLenum |
+| Type | Description |
+| --- | --- |
+| webgl.GLenum | [Result](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-result-i.md) |
 
 ## compressedTexImage3D
 
@@ -357,17 +357,17 @@ Compressed texture image 3D from PBO offset
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| level | webgl.GLint | Yes |
-| internalformat | webgl.GLenum | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
-| [depth](#depth) | webgl.GLsizei | Yes |
-| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | webgl.GLint | Yes |
-| imageSize | webgl.GLsizei | Yes |
-| offset | webgl.GLintptr | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| level | webgl.GLint | Yes | Mipmap level |
+| internalformat | webgl.GLenum | Yes | Internal format |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
+| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| border | webgl.GLint | Yes | Border |
+| imageSize | webgl.GLsizei | Yes | Image size |
+| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
 
 ## compressedTexImage3D
 
@@ -396,18 +396,18 @@ Compressed texture image 3D from ArrayBufferView
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| level | webgl.GLint | Yes |
-| internalformat | webgl.GLenum | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
-| [depth](#depth) | webgl.GLsizei | Yes |
-| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | webgl.GLint | Yes |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
-| srcOffset | webgl.GLuint | No |
-| srcLengthOverride | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| level | webgl.GLint | Yes | Mipmap level |
+| internalformat | webgl.GLenum | Yes | Internal format |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
+| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| border | webgl.GLint | Yes | Border |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
+| srcOffset | webgl.GLuint | No | Source offset |
+| srcLengthOverride | webgl.GLuint | No | Source length override |
 
 ## compressedTexSubImage3D
 
@@ -437,19 +437,19 @@ Compressed texture sub image 3D from PBO offset
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| level | webgl.GLint | Yes |
-| xoffset | webgl.GLint | Yes |
-| yoffset | webgl.GLint | Yes |
-| zoffset | webgl.GLint | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
-| [depth](#depth) | webgl.GLsizei | Yes |
-| format | webgl.GLenum | Yes |
-| imageSize | webgl.GLsizei | Yes |
-| offset | webgl.GLintptr | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| level | webgl.GLint | Yes | Mipmap level |
+| xoffset | webgl.GLint | Yes | X offset |
+| yoffset | webgl.GLint | Yes | Y offset |
+| zoffset | webgl.GLint | Yes | Z offset |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
+| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| imageSize | webgl.GLsizei | Yes | Image size |
+| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
 
 ## compressedTexSubImage3D
 
@@ -480,20 +480,20 @@ Compressed texture sub image 3D from ArrayBufferView
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| level | webgl.GLint | Yes |
-| xoffset | webgl.GLint | Yes |
-| yoffset | webgl.GLint | Yes |
-| zoffset | webgl.GLint | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
-| [depth](#depth) | webgl.GLsizei | Yes |
-| format | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
-| srcOffset | webgl.GLuint | No |
-| srcLengthOverride | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| level | webgl.GLint | Yes | Mipmap level |
+| xoffset | webgl.GLint | Yes | X offset |
+| yoffset | webgl.GLint | Yes | Y offset |
+| zoffset | webgl.GLint | Yes | Z offset |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
+| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
+| srcOffset | webgl.GLuint | No | Source offset |
+| srcLengthOverride | webgl.GLuint | No | Source length override |
 
 ## copyBufferSubData
 
@@ -517,13 +517,13 @@ Copies data from one buffer to another
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| readTarget | webgl.GLenum | Yes |
-| writeTarget | webgl.GLenum | Yes |
-| readOffset | webgl.GLintptr | Yes |
-| writeOffset | webgl.GLintptr | Yes |
-| size | webgl.GLsizeiptr | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| readTarget | webgl.GLenum | Yes | Read buffer target |
+| writeTarget | webgl.GLenum | Yes | Write buffer target |
+| readOffset | webgl.GLintptr | Yes | Read offset |
+| writeOffset | webgl.GLintptr | Yes | Write offset |
+| size | webgl.GLsizeiptr | Yes | Size to copy |
 
 ## copyTexSubImage3D
 
@@ -551,17 +551,17 @@ Copies a portion of a 3D texture image
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| level | webgl.GLint | Yes |
-| xoffset | webgl.GLint | Yes |
-| yoffset | webgl.GLint | Yes |
-| zoffset | webgl.GLint | Yes |
-| x | webgl.GLint | Yes |
-| y | webgl.GLint | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| level | webgl.GLint | Yes | Mipmap level |
+| xoffset | webgl.GLint | Yes | X offset |
+| yoffset | webgl.GLint | Yes | Y offset |
+| zoffset | webgl.GLint | Yes | Z offset |
+| x | webgl.GLint | Yes | X coordinate |
+| y | webgl.GLint | Yes | Y coordinate |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
 
 ## createQuery
 
@@ -579,9 +579,9 @@ Creates a query
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | The created query |
 
 ## createSampler
 
@@ -599,9 +599,9 @@ Creates a sampler
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | The created sampler |
 
 ## createTransformFeedback
 
@@ -619,9 +619,9 @@ Creates a transform feedback object
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | The created transform feedback |
 
 ## createVertexArray
 
@@ -639,9 +639,9 @@ Creates a vertex array object
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | The created vertex array object |
 
 ## deleteQuery
 
@@ -659,9 +659,9 @@ Deletes a query
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | Yes | Query to delete |
 
 ## deleteSampler
 
@@ -679,9 +679,9 @@ Deletes a sampler
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes | Sampler to delete |
 
 ## deleteSync
 
@@ -699,9 +699,9 @@ Deletes a sync object
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) \| null | Yes | Sync object to delete |
 
 ## deleteTransformFeedback
 
@@ -719,9 +719,9 @@ Deletes a transform feedback object
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | Yes | Transform feedback to delete |
 
 ## deleteVertexArray
 
@@ -739,9 +739,9 @@ Deletes a vertex array object
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| vertexArray | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| vertexArray | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | Yes | Vertex array to delete |
 
 ## drawArraysInstanced
 
@@ -764,12 +764,12 @@ Draws arrays instanced
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | webgl.GLenum | Yes |
-| first | webgl.GLint | Yes |
-| count | webgl.GLsizei | Yes |
-| instanceCount | webgl.GLsizei | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | webgl.GLenum | Yes | [Mode](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-mode-e.md) |
+| first | webgl.GLint | Yes | First |
+| count | webgl.GLsizei | Yes | Count |
+| instanceCount | webgl.GLsizei | Yes | Instance count |
 
 ## drawBuffers
 
@@ -787,9 +787,9 @@ Sets draw buffers
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffers | webgl.GLenum[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffers | webgl.GLenum[] | Yes | Buffers |
 
 ## drawElementsInstanced
 
@@ -813,13 +813,13 @@ Draws elements instanced
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | webgl.GLenum | Yes |
-| count | webgl.GLsizei | Yes |
-| type | webgl.GLenum | Yes |
-| offset | webgl.GLintptr | Yes |
-| instanceCount | webgl.GLsizei | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | webgl.GLenum | Yes | [Mode](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-mode-e.md) |
+| count | webgl.GLsizei | Yes | Count |
+| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| instanceCount | webgl.GLsizei | Yes | Instance count |
 
 ## drawRangeElements
 
@@ -844,14 +844,14 @@ Draws range elements
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | webgl.GLenum | Yes |
-| start | webgl.GLuint | Yes |
-| end | webgl.GLuint | Yes |
-| count | webgl.GLsizei | Yes |
-| type | webgl.GLenum | Yes |
-| offset | webgl.GLintptr | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | webgl.GLenum | Yes | [Mode](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-mode-e.md) |
+| start | webgl.GLuint | Yes | Start |
+| end | webgl.GLuint | Yes | End |
+| count | webgl.GLsizei | Yes | Count |
+| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
 
 ## endQuery
 
@@ -869,9 +869,9 @@ Ends a query
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Target |
 
 ## endTransformFeedback
 
@@ -903,16 +903,16 @@ Creates a sync object
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| condition | webgl.GLenum | Yes |
-| flags | webgl.GLbitfield | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| condition | webgl.GLenum | Yes | Condition |
+| flags | webgl.GLbitfield | Yes | [Flags](../../apis-ability-kit/arkts-apis/arkts-ability-wantconstant-flags-e.md) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) \| null | The created sync object |
 
 ## framebufferTextureLayer
 
@@ -936,13 +936,13 @@ Attaches a texture layer to a framebuffer
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | webgl.GLenum | Yes |
-| texture | webgl.WebGLTexture \| null | Yes |
-| level | webgl.GLint | Yes |
-| layer | webgl.GLint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Framebuffer target |
+| attachment | webgl.GLenum | Yes | Attachment point |
+| texture | webgl.WebGLTexture \| null | Yes | Texture |
+| level | webgl.GLint | Yes | Mipmap level |
+| layer | webgl.GLint | Yes | Layer |
 
 ## getActiveUniformBlockName
 
@@ -960,16 +960,16 @@ Gets active uniform block name
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | webgl.WebGLProgram | Yes |
-| uniformBlockIndex | webgl.GLuint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | webgl.WebGLProgram | Yes | Program |
+| uniformBlockIndex | webgl.GLuint | Yes | Uniform block index |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string \| null |
+| Type | Description |
+| --- | --- |
+| string \| null | Uniform block name |
 
 ## getActiveUniformBlockParameter
 
@@ -991,17 +991,17 @@ Gets active uniform block parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | webgl.WebGLProgram | Yes |
-| uniformBlockIndex | webgl.GLuint | Yes |
-| pname | webgl.GLenum | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | webgl.WebGLProgram | Yes | Program |
+| uniformBlockIndex | webgl.GLuint | Yes | Uniform block index |
+| pname | webgl.GLenum | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | Parameter value |
 
 ## getActiveUniforms
 
@@ -1019,17 +1019,17 @@ Gets active uniforms
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | webgl.WebGLProgram | Yes |
-| uniformIndices | webgl.GLuint[] | Yes |
-| pname | webgl.GLenum | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | webgl.WebGLProgram | Yes | Program |
+| uniformIndices | webgl.GLuint[] | Yes | Uniform indices |
+| pname | webgl.GLenum | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | Parameter value |
 
 ## getBufferSubData
 
@@ -1053,13 +1053,13 @@ Gets buffer sub data
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| srcByteOffset | webgl.GLintptr | Yes |
-| dstBuffer | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
-| dstOffset | webgl.GLuint | No |
-| length | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Buffer target |
+| srcByteOffset | webgl.GLintptr | Yes | Source byte offset |
+| dstBuffer | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Destination buffer |
+| dstOffset | webgl.GLuint | No | Destination offset |
+| length | webgl.GLuint | No | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) |
 
 ## getFragDataLocation
 
@@ -1077,16 +1077,16 @@ Gets fragment data location
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | webgl.WebGLProgram | Yes |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | webgl.WebGLProgram | Yes | Program |
+| name | string | Yes | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| webgl.GLint |
+| Type | Description |
+| --- | --- |
+| webgl.GLint | [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md) |
 
 ## getIndexedParameter
 
@@ -1104,16 +1104,16 @@ Gets indexed parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| index | webgl.GLuint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Target |
+| index | webgl.GLuint | Yes | Index |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | Parameter value |
 
 ## getInternalformatParameter
 
@@ -1131,17 +1131,17 @@ Gets internal format parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| internalformat | webgl.GLenum | Yes |
-| pname | webgl.GLenum | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Target |
+| internalformat | webgl.GLenum | Yes | Internal format |
+| pname | webgl.GLenum | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | Parameter value |
 
 ## getQuery
 
@@ -1159,16 +1159,16 @@ Gets a query
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| pname | webgl.GLenum | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Target |
+| pname | webgl.GLenum | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | The query |
 
 ## getQueryParameter
 
@@ -1186,16 +1186,16 @@ Gets query parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | Yes |
-| pname | webgl.GLenum | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | Yes | [Query](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-query-c.md) |
+| pname | webgl.GLenum | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | Parameter value |
 
 ## getSamplerParameter
 
@@ -1213,16 +1213,16 @@ Gets sampler parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes |
-| pname | webgl.GLenum | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
+| pname | webgl.GLenum | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | Parameter value |
 
 ## getSyncParameter
 
@@ -1240,16 +1240,16 @@ Gets sync parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | Yes |
-| pname | webgl.GLenum | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | Yes | Sync object |
+| pname | webgl.GLenum | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | Parameter value |
 
 ## getTransformFeedbackVarying
 
@@ -1267,16 +1267,16 @@ Gets transform feedback varying
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | webgl.WebGLProgram | Yes |
-| index | webgl.GLuint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | webgl.WebGLProgram | Yes | Program |
+| index | webgl.GLuint | Yes | Index |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| webgl.WebGLActiveInfo \| null |
+| Type | Description |
+| --- | --- |
+| webgl.WebGLActiveInfo \| null | Active info |
 
 ## getUniformBlockIndex
 
@@ -1294,16 +1294,16 @@ Gets uniform block index
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | webgl.WebGLProgram | Yes |
-| uniformBlockName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | webgl.WebGLProgram | Yes | Program |
+| uniformBlockName | string | Yes | Uniform block name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| webgl.GLuint |
+| Type | Description |
+| --- | --- |
+| webgl.GLuint | Uniform block index |
 
 ## getUniformIndices
 
@@ -1321,16 +1321,16 @@ Gets uniform indices
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | webgl.WebGLProgram | Yes |
-| uniformNames | string[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | webgl.WebGLProgram | Yes | Program |
+| uniformNames | string[] | Yes | Uniform names |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| webgl.GLuint[] \| null |
+| Type | Description |
+| --- | --- |
+| webgl.GLuint[] \| null | Uniform indices |
 
 ## invalidateFramebuffer
 
@@ -1348,10 +1348,10 @@ Invalidates framebuffer attachments
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| attachments | webgl.GLenum[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Framebuffer target |
+| attachments | webgl.GLenum[] | Yes | Attachments to invalidate |
 
 ## invalidateSubFramebuffer
 
@@ -1376,14 +1376,14 @@ Invalidates sub framebuffer attachments
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| attachments | webgl.GLenum[] | Yes |
-| x | webgl.GLint | Yes |
-| y | webgl.GLint | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Framebuffer target |
+| attachments | webgl.GLenum[] | Yes | Attachments to invalidate |
+| x | webgl.GLint | Yes | X coordinate |
+| y | webgl.GLint | Yes | Y coordinate |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
 
 ## isQuery
 
@@ -1401,15 +1401,15 @@ Returns whether a query is valid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | Yes | [Query](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-query-c.md) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| webgl.GLboolean |
+| Type | Description |
+| --- | --- |
+| webgl.GLboolean | Whether the query is valid |
 
 ## isSampler
 
@@ -1427,15 +1427,15 @@ Returns whether a sampler is valid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| webgl.GLboolean |
+| Type | Description |
+| --- | --- |
+| webgl.GLboolean | Whether the sampler is valid |
 
 ## isSync
 
@@ -1453,15 +1453,15 @@ Returns whether a sync object is valid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) \| null | Yes | Sync object |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| webgl.GLboolean |
+| Type | Description |
+| --- | --- |
+| webgl.GLboolean | Whether the sync is valid |
 
 ## isTransformFeedback
 
@@ -1479,15 +1479,15 @@ Returns whether a transform feedback is valid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | Yes | Transform feedback |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| webgl.GLboolean |
+| Type | Description |
+| --- | --- |
+| webgl.GLboolean | Whether the transform feedback is valid |
 
 ## isVertexArray
 
@@ -1505,15 +1505,15 @@ Returns whether a vertex array is valid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| vertexArray | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| vertexArray | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | Yes | Vertex array |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| webgl.GLboolean |
+| Type | Description |
+| --- | --- |
+| webgl.GLboolean | Whether the vertex array is valid |
 
 ## pauseTransformFeedback
 
@@ -1545,9 +1545,9 @@ Sets the read buffer
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | webgl.GLenum | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | webgl.GLenum | Yes | Read buffer |
 
 ## renderbufferStorageMultisample
 
@@ -1571,13 +1571,13 @@ Sets renderbuffer storage with multisampling
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| samples | webgl.GLsizei | Yes |
-| internalformat | webgl.GLenum | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Renderbuffer target |
+| samples | webgl.GLsizei | Yes | Number of samples |
+| internalformat | webgl.GLenum | Yes | Internal format |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
 
 ## resumeTransformFeedback
 
@@ -1609,11 +1609,11 @@ Sets sampler parameterf
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes |
-| pname | webgl.GLenum | Yes |
-| param | webgl.GLfloat | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
+| pname | webgl.GLenum | Yes | Parameter name |
+| param | webgl.GLfloat | Yes | Parameter value |
 
 ## samplerParameteri
 
@@ -1631,11 +1631,11 @@ Sets sampler parameteri
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes |
-| pname | webgl.GLenum | Yes |
-| param | webgl.GLint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
+| pname | webgl.GLenum | Yes | Parameter name |
+| param | webgl.GLint | Yes | Parameter value |
 
 ## texImage3D
 
@@ -1664,18 +1664,18 @@ Sets texture image 3D from PBO offset
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| level | webgl.GLint | Yes |
-| internalformat | webgl.GLint | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
-| [depth](#depth) | webgl.GLsizei | Yes |
-| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | webgl.GLint | Yes |
-| format | webgl.GLenum | Yes |
-| type | webgl.GLenum | Yes |
-| pboOffset | webgl.GLintptr | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| level | webgl.GLint | Yes | Mipmap level |
+| internalformat | webgl.GLint | Yes | Internal format |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
+| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| border | webgl.GLint | Yes | Border |
+| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| pboOffset | webgl.GLintptr | Yes | PBO offset |
 
 ## texImage3D
 
@@ -1704,18 +1704,18 @@ Sets texture image 3D from TexImageSource
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| level | webgl.GLint | Yes |
-| internalformat | webgl.GLint | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
-| [depth](#depth) | webgl.GLsizei | Yes |
-| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | webgl.GLint | Yes |
-| format | webgl.GLenum | Yes |
-| type | webgl.GLenum | Yes |
-| source | webgl.TexImageSource | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| level | webgl.GLint | Yes | Mipmap level |
+| internalformat | webgl.GLint | Yes | Internal format |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
+| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| border | webgl.GLint | Yes | Border |
+| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| source | webgl.TexImageSource | Yes | Image source |
 
 ## texImage3D
 
@@ -1744,18 +1744,18 @@ Sets texture image 3D from ArrayBufferView
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| level | webgl.GLint | Yes |
-| internalformat | webgl.GLint | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
-| [depth](#depth) | webgl.GLsizei | Yes |
-| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | webgl.GLint | Yes |
-| format | webgl.GLenum | Yes |
-| type | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| level | webgl.GLint | Yes | Mipmap level |
+| internalformat | webgl.GLint | Yes | Internal format |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
+| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| border | webgl.GLint | Yes | Border |
+| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Source data |
 
 ## texImage3D
 
@@ -1785,19 +1785,19 @@ Sets texture image 3D from ArrayBufferView with offset
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| level | webgl.GLint | Yes |
-| internalformat | webgl.GLint | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
-| [depth](#depth) | webgl.GLsizei | Yes |
-| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | webgl.GLint | Yes |
-| format | webgl.GLenum | Yes |
-| type | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
-| srcOffset | webgl.GLuint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| level | webgl.GLint | Yes | Mipmap level |
+| internalformat | webgl.GLint | Yes | Internal format |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
+| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| border | webgl.GLint | Yes | Border |
+| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
+| srcOffset | webgl.GLuint | Yes | Source offset |
 
 ## texStorage2D
 
@@ -1821,13 +1821,13 @@ Sets texture storage 2D
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| levels | webgl.GLsizei | Yes |
-| internalformat | webgl.GLenum | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| levels | webgl.GLsizei | Yes | Number of levels |
+| internalformat | webgl.GLenum | Yes | Internal format |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
 
 ## texStorage3D
 
@@ -1852,14 +1852,14 @@ Sets texture storage 3D
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| levels | webgl.GLsizei | Yes |
-| internalformat | webgl.GLenum | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
-| [depth](#depth) | webgl.GLsizei | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| levels | webgl.GLsizei | Yes | Number of levels |
+| internalformat | webgl.GLenum | Yes | Internal format |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
+| depth | webgl.GLsizei | Yes | [Depth](#depth) |
 
 ## texSubImage3D
 
@@ -1889,19 +1889,19 @@ Sets texture sub image 3D from PBO offset
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| level | webgl.GLint | Yes |
-| xoffset | webgl.GLint | Yes |
-| yoffset | webgl.GLint | Yes |
-| zoffset | webgl.GLint | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
-| [depth](#depth) | webgl.GLsizei | Yes |
-| format | webgl.GLenum | Yes |
-| type | webgl.GLenum | Yes |
-| pboOffset | webgl.GLintptr | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| level | webgl.GLint | Yes | Mipmap level |
+| xoffset | webgl.GLint | Yes | X offset |
+| yoffset | webgl.GLint | Yes | Y offset |
+| zoffset | webgl.GLint | Yes | Z offset |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
+| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| pboOffset | webgl.GLintptr | Yes | PBO offset |
 
 ## texSubImage3D
 
@@ -1931,19 +1931,19 @@ Sets texture sub image 3D from TexImageSource
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| level | webgl.GLint | Yes |
-| xoffset | webgl.GLint | Yes |
-| yoffset | webgl.GLint | Yes |
-| zoffset | webgl.GLint | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
-| [depth](#depth) | webgl.GLsizei | Yes |
-| format | webgl.GLenum | Yes |
-| type | webgl.GLenum | Yes |
-| source | webgl.TexImageSource | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| level | webgl.GLint | Yes | Mipmap level |
+| xoffset | webgl.GLint | Yes | X offset |
+| yoffset | webgl.GLint | Yes | Y offset |
+| zoffset | webgl.GLint | Yes | Z offset |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
+| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| source | webgl.TexImageSource | Yes | Image source |
 
 ## texSubImage3D
 
@@ -1974,20 +1974,20 @@ Sets texture sub image 3D from ArrayBufferView
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | webgl.GLenum | Yes |
-| level | webgl.GLint | Yes |
-| xoffset | webgl.GLint | Yes |
-| yoffset | webgl.GLint | Yes |
-| zoffset | webgl.GLint | Yes |
-| width | webgl.GLsizei | Yes |
-| height | webgl.GLsizei | Yes |
-| [depth](#depth) | webgl.GLsizei | Yes |
-| format | webgl.GLenum | Yes |
-| type | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
-| srcOffset | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | webgl.GLenum | Yes | Texture target |
+| level | webgl.GLint | Yes | Mipmap level |
+| xoffset | webgl.GLint | Yes | X offset |
+| yoffset | webgl.GLint | Yes | Y offset |
+| zoffset | webgl.GLint | Yes | Z offset |
+| width | webgl.GLsizei | Yes | Width |
+| height | webgl.GLsizei | Yes | Height |
+| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Source data |
+| srcOffset | webgl.GLuint | No | Source offset |
 
 ## transformFeedbackVaryings
 
@@ -2005,11 +2005,11 @@ Sets transform feedback varyings
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | webgl.WebGLProgram | Yes |
-| varyings | string[] | Yes |
-| bufferMode | webgl.GLenum | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | webgl.WebGLProgram | Yes | Program |
+| varyings | string[] | Yes | Varyings |
+| bufferMode | webgl.GLenum | Yes | Buffer mode |
 
 ## uniform1ui
 
@@ -2027,10 +2027,10 @@ Sets uniform1ui value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| v0 | webgl.GLuint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| v0 | webgl.GLuint | Yes | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) |
 
 ## uniform1uiv
 
@@ -2053,12 +2053,12 @@ Sets uniform1uiv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes |
-| srcOffset | webgl.GLuint | No |
-| srcLength | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
+| srcOffset | webgl.GLuint | No | Source offset |
+| srcLength | webgl.GLuint | No | Source length |
 
 ## uniform2ui
 
@@ -2076,11 +2076,11 @@ Sets uniform2ui value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| v0 | webgl.GLuint | Yes |
-| v1 | webgl.GLuint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| v0 | webgl.GLuint | Yes | X value |
+| v1 | webgl.GLuint | Yes | Y value |
 
 ## uniform2uiv
 
@@ -2103,12 +2103,12 @@ Sets uniform2uiv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes |
-| srcOffset | webgl.GLuint | No |
-| srcLength | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
+| srcOffset | webgl.GLuint | No | Source offset |
+| srcLength | webgl.GLuint | No | Source length |
 
 ## uniform3ui
 
@@ -2126,12 +2126,12 @@ Sets uniform3ui value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| v0 | webgl.GLuint | Yes |
-| v1 | webgl.GLuint | Yes |
-| v2 | webgl.GLuint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| v0 | webgl.GLuint | Yes | X value |
+| v1 | webgl.GLuint | Yes | Y value |
+| v2 | webgl.GLuint | Yes | Z value |
 
 ## uniform3uiv
 
@@ -2154,12 +2154,12 @@ Sets uniform3uiv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes |
-| srcOffset | webgl.GLuint | No |
-| srcLength | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
+| srcOffset | webgl.GLuint | No | Source offset |
+| srcLength | webgl.GLuint | No | Source length |
 
 ## uniform4ui
 
@@ -2183,13 +2183,13 @@ Sets uniform4ui value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| v0 | webgl.GLuint | Yes |
-| v1 | webgl.GLuint | Yes |
-| v2 | webgl.GLuint | Yes |
-| v3 | webgl.GLuint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| v0 | webgl.GLuint | Yes | X value |
+| v1 | webgl.GLuint | Yes | Y value |
+| v2 | webgl.GLuint | Yes | Z value |
+| v3 | webgl.GLuint | Yes | W value |
 
 ## uniform4uiv
 
@@ -2212,12 +2212,12 @@ Sets uniform4uiv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes |
-| srcOffset | webgl.GLuint | No |
-| srcLength | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
+| srcOffset | webgl.GLuint | No | Source offset |
+| srcLength | webgl.GLuint | No | Source length |
 
 ## uniformBlockBinding
 
@@ -2239,11 +2239,11 @@ Sets uniform block binding
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | webgl.WebGLProgram | Yes |
-| uniformBlockIndex | webgl.GLuint | Yes |
-| [uniformBlockBinding](arkts-arkgraphics2d-webgl2-webgl2renderingcontextbase-i.md) | webgl.GLuint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | webgl.WebGLProgram | Yes | Program |
+| uniformBlockIndex | webgl.GLuint | Yes | Uniform block index |
+| uniformBlockBinding | webgl.GLuint | Yes | Uniform block binding |
 
 ## uniformMatrix2x3fv
 
@@ -2267,13 +2267,13 @@ Sets uniformMatrix2x3fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| transpose | webgl.GLboolean | Yes |
-| data | webgl.Float32List | Yes |
-| srcOffset | webgl.GLuint | No |
-| srcLength | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| transpose | webgl.GLboolean | Yes | Transpose |
+| data | webgl.Float32List | Yes | Data |
+| srcOffset | webgl.GLuint | No | Source offset |
+| srcLength | webgl.GLuint | No | Source length |
 
 ## uniformMatrix2x4fv
 
@@ -2297,13 +2297,13 @@ Sets uniformMatrix2x4fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| transpose | webgl.GLboolean | Yes |
-| data | webgl.Float32List | Yes |
-| srcOffset | webgl.GLuint | No |
-| srcLength | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| transpose | webgl.GLboolean | Yes | Transpose |
+| data | webgl.Float32List | Yes | Data |
+| srcOffset | webgl.GLuint | No | Source offset |
+| srcLength | webgl.GLuint | No | Source length |
 
 ## uniformMatrix3x2fv
 
@@ -2327,13 +2327,13 @@ Sets uniformMatrix3x2fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| transpose | webgl.GLboolean | Yes |
-| data | webgl.Float32List | Yes |
-| srcOffset | webgl.GLuint | No |
-| srcLength | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| transpose | webgl.GLboolean | Yes | Transpose |
+| data | webgl.Float32List | Yes | Data |
+| srcOffset | webgl.GLuint | No | Source offset |
+| srcLength | webgl.GLuint | No | Source length |
 
 ## uniformMatrix3x4fv
 
@@ -2357,13 +2357,13 @@ Sets uniformMatrix3x4fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| transpose | webgl.GLboolean | Yes |
-| data | webgl.Float32List | Yes |
-| srcOffset | webgl.GLuint | No |
-| srcLength | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| transpose | webgl.GLboolean | Yes | Transpose |
+| data | webgl.Float32List | Yes | Data |
+| srcOffset | webgl.GLuint | No | Source offset |
+| srcLength | webgl.GLuint | No | Source length |
 
 ## uniformMatrix4x2fv
 
@@ -2387,13 +2387,13 @@ Sets uniformMatrix4x2fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| transpose | webgl.GLboolean | Yes |
-| data | webgl.Float32List | Yes |
-| srcOffset | webgl.GLuint | No |
-| srcLength | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| transpose | webgl.GLboolean | Yes | Transpose |
+| data | webgl.Float32List | Yes | Data |
+| srcOffset | webgl.GLuint | No | Source offset |
+| srcLength | webgl.GLuint | No | Source length |
 
 ## uniformMatrix4x3fv
 
@@ -2417,13 +2417,13 @@ Sets uniformMatrix4x3fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | webgl.WebGLUniformLocation \| null | Yes |
-| transpose | webgl.GLboolean | Yes |
-| data | webgl.Float32List | Yes |
-| srcOffset | webgl.GLuint | No |
-| srcLength | webgl.GLuint | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
+| transpose | webgl.GLboolean | Yes | Transpose |
+| data | webgl.Float32List | Yes | Data |
+| srcOffset | webgl.GLuint | No | Source offset |
+| srcLength | webgl.GLuint | No | Source length |
 
 ## vertexAttribDivisor
 
@@ -2441,10 +2441,10 @@ Sets vertex attrib divisor
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | webgl.GLuint | Yes |
-| divisor | webgl.GLuint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | webgl.GLuint | Yes | Vertex attribute index |
+| divisor | webgl.GLuint | Yes | Divisor |
 
 ## vertexAttribI4i
 
@@ -2462,13 +2462,13 @@ Sets vertex attrib I4i value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | webgl.GLuint | Yes |
-| x | webgl.GLint | Yes |
-| y | webgl.GLint | Yes |
-| z | webgl.GLint | Yes |
-| w | webgl.GLint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | webgl.GLuint | Yes | Vertex attribute index |
+| x | webgl.GLint | Yes | X value |
+| y | webgl.GLint | Yes | Y value |
+| z | webgl.GLint | Yes | Z value |
+| w | webgl.GLint | Yes | W value |
 
 ## vertexAttribI4iv
 
@@ -2486,10 +2486,10 @@ Sets vertex attrib I4iv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | webgl.GLuint | Yes |
-| values | webgl.Int32List | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | webgl.GLuint | Yes | Vertex attribute index |
+| values | webgl.Int32List | Yes | Values |
 
 ## vertexAttribI4ui
 
@@ -2507,13 +2507,13 @@ Sets vertex attrib I4ui value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | webgl.GLuint | Yes |
-| x | webgl.GLuint | Yes |
-| y | webgl.GLuint | Yes |
-| z | webgl.GLuint | Yes |
-| w | webgl.GLuint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | webgl.GLuint | Yes | Vertex attribute index |
+| x | webgl.GLuint | Yes | X value |
+| y | webgl.GLuint | Yes | Y value |
+| z | webgl.GLuint | Yes | Z value |
+| w | webgl.GLuint | Yes | W value |
 
 ## vertexAttribI4uiv
 
@@ -2531,10 +2531,10 @@ Sets vertex attrib I4uiv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | webgl.GLuint | Yes |
-| values | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | webgl.GLuint | Yes | Vertex attribute index |
+| values | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Values |
 
 ## vertexAttribIPointer
 
@@ -2558,13 +2558,13 @@ Sets vertex attrib integer pointer
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | webgl.GLuint | Yes |
-| size | webgl.GLint | Yes |
-| type | webgl.GLenum | Yes |
-| stride | webgl.GLsizei | Yes |
-| offset | webgl.GLintptr | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | webgl.GLuint | Yes | Vertex attribute index |
+| size | webgl.GLint | Yes | Size |
+| type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| stride | webgl.GLsizei | Yes | Stride |
+| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
 
 ## waitSync
 
@@ -2582,11 +2582,11 @@ Waits for sync object
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | Yes |
-| flags | webgl.GLbitfield | Yes |
-| timeout | [GLint64](arkts-arkgraphics2d-glint64-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | Yes | Sync object |
+| flags | webgl.GLbitfield | Yes | [Flags](../../apis-ability-kit/arkts-apis/arkts-ability-wantconstant-flags-e.md) |
+| timeout | [GLint64](arkts-arkgraphics2d-glint64-t.md) | Yes | Timeout |
 
 ## ACTIVE_UNIFORM_BLOCKS
 

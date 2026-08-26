@@ -9,7 +9,7 @@ Defines the VCard information.
 ## Modules to Import
 
 ```TypeScript
-import { vcard } from 'kits/@kit.TelephonyKit';
+import vcard from '@kit.TelephonyKit';
 ```
 
 ## cardType

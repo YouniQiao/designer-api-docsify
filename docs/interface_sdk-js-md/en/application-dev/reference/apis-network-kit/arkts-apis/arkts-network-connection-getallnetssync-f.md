@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getAllNetsSync
@@ -23,14 +22,22 @@ Obtains the list of all connected networks. This API returns the result synchron
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;NetHandle & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;NetHandle & gt; | List of all connected networks. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+let netHandle = connection.getAllNetsSync();
+```

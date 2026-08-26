@@ -15,11 +15,11 @@ All data operation types.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataAddOperation](arkts-arkui-dataaddoperation-i.md) |
-| [DataDeleteOperation](arkts-arkui-datadeleteoperation-i.md) |
-| [DataChangeOperation](arkts-arkui-datachangeoperation-i.md) |
-| [DataMoveOperation](arkts-arkui-datamoveoperation-i.md) |
-| [DataExchangeOperation](arkts-arkui-dataexchangeoperation-i.md) |
-| [DataReloadOperation](arkts-arkui-datareloadoperation-i.md) |
+| Type | Description |
+| --- | --- |
+| [DataAddOperation](arkts-arkui-dataaddoperation-i.md) | Represents an operation for adding data. |
+| [DataDeleteOperation](arkts-arkui-datadeleteoperation-i.md) | Represents an operation for deleting data. |
+| [DataChangeOperation](arkts-arkui-datachangeoperation-i.md) | Represents an operation for changing data. |
+| [DataMoveOperation](arkts-arkui-datamoveoperation-i.md) | Represents an operation for moving data. |
+| [DataExchangeOperation](arkts-arkui-dataexchangeoperation-i.md) | Represents an operation for exchanging data. |
+| [DataReloadOperation](arkts-arkui-datareloadoperation-i.md) | Represents an operation for reloading data. |

@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## writeSync
@@ -28,31 +26,42 @@ Writes data to a file. This API returns the result synchronously.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
-| buffer | ArrayBuffer \| string | Yes |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | FD of the file. |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows:   - **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.   - **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.   - **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported currently.<br>**Since:** 11 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Length of the data written, in bytes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900001 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900013 |
-| 13900020 |
-| 13900024 |
-| 13900025 |
-| 13900034 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900013 | Bad address |
+| 13900020 | Invalid argument |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900034 | Operation would block |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let str: string = "hello, world";
+let writeLen = fileIo.writeSync(file.fd, str);
+console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
+fileIo.closeSync(file);
+```

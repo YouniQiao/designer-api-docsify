@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import request from '@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
 ```
 
 ## deleteGroup
@@ -20,20 +21,20 @@ function deleteGroup(gid: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| gid | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| gid | string | 是 | 目标分组id。与创建的任务分组ID保持一致，即使用 [request.agent.createGroup](arkts-basicservices-agent-creategroup-f.md) 接口成功创建任务分组时的返回值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [13400003](../errorcode-request.md#13400003-服务异常) |
-| [21900008](../errorcode-request.md#21900008-任务分组不存在或已移除) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [21900008](../errorcode-request.md#21900008-任务分组不存在或已移除) | Group deleted or not found. |

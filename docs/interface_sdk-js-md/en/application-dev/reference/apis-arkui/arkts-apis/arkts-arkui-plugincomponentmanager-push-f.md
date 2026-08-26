@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## push
@@ -22,7 +22,38 @@ Pushes the component and data to the component user.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | [PushParameters](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [PushParameters](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
+
+**Examples**
+
+```TypeScript
+import { pluginComponentManager } from '@kit.ArkUI';
+
+pluginComponentManager.push(
+  {
+    want: {
+      bundleName: "com.example.provider",
+      abilityName: "com.example.provider.MainAbility",
+    },
+    name: "plugintemplate",
+    data: {
+      "key_1": "plugin component test",
+      "key_2": 34234,
+    },
+    extraData: {
+      "extra_str": "this is push event",
+    },
+    jsonPath: "",
+  },
+  (err) => {
+    if (err) {
+      console.error(`push_callback: err.code = ${err.code}, err.message = ${err.message}`);
+      return;
+    }
+    console.info("push_callback: push ok!");
+  }
+)
+```

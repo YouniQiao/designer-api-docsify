@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## promiseWrapper
@@ -24,12 +25,12 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| original | (err: Object, value: Object) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| original | (err: Object, value: Object) = & gt; void | Yes | Asynchronous function. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Object |
+| Type | Description |
+| --- | --- |
+| Object | Promise in the error-first style (that is, (err, value) = & gt; ... is called as the last parameter). |

@@ -2,7 +2,8 @@
 
 结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API Version 9开始，该接口不再维护，推荐使用新接口[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)。
 
 **起始版本：** 7
@@ -29,6 +30,18 @@ close(): void
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+**示例**
+
+```TypeScript
+let predicatesClose = new dataRdb.RdbPredicates("EMPLOYEE");
+let promiseClose = rdbStore.query(predicatesClose, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promiseClose.then((resultSet) => {
+  resultSet.close();
+}).catch((err) => {
+  console.error('resultset close failed');
+});
+```
+
 ## getBlob
 
 ```TypeScript
@@ -47,15 +60,21 @@ getBlob(columnIndex: number): Uint8Array
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Uint8Array |
+| 类型 | 说明 |
+| --- | --- |
+| Uint8Array | 以字节数组的形式返回指定列的值。 |
+
+**示例**
+
+```TypeScript
+const codes = resultSet.getBlob(resultSet.getColumnIndex("CODES"));
+```
 
 ## getColumnIndex
 
@@ -75,15 +94,27 @@ getColumnIndex(columnName: string): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| columnName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnName | string | 是 | 表示结果集中指定列的名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回指定列的索引。 |
+
+**示例**
+
+```TypeScript
+const success = resultSet.goToFirstRow();
+if (success) {
+  const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+  const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+  const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+  const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+}
+```
 
 ## getColumnName
 
@@ -103,15 +134,23 @@ getColumnName(columnIndex: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 表示结果集中指定列的索引。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回指定列的名称。 |
+
+**示例**
+
+```TypeScript
+const id = resultSet.getColumnName(0);
+const name = resultSet.getColumnName(1);
+const age = resultSet.getColumnName(2);
+```
 
 ## getDouble
 
@@ -131,15 +170,21 @@ getDouble(columnIndex: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 以double形式返回指定列的值。 |
+
+**示例**
+
+```TypeScript
+const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+```
 
 ## getLong
 
@@ -159,15 +204,21 @@ getLong(columnIndex: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 以Long形式返回指定列的值。 |
+
+**示例**
+
+```TypeScript
+const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+```
 
 ## getString
 
@@ -187,15 +238,21 @@ getString(columnIndex: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 以字符串形式返回指定列的值。 |
+
+**示例**
+
+```TypeScript
+const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+```
 
 ## goTo
 
@@ -215,15 +272,28 @@ goTo(offset: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 表示相对于当前位置的偏移量。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+
+**示例**
+
+```TypeScript
+let predicatesgoto = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoto = rdbStore.query(predicatesgoto, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoto.then((resultSet) => {
+  resultSet.goTo(1);
+  resultSet.close();
+}).catch((err) => {
+  console.error('query failed');
+});
+```
 
 ## goToFirstRow
 
@@ -243,9 +313,22 @@ goToFirstRow(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集到第一行，则为true；否则为false。 |
+
+**示例**
+
+```TypeScript
+let predicatesgoFirst = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoFirst = rdbStore.query(predicatesgoFirst, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoFirst.then((resultSet) => {
+  resultSet.goToFirstRow();
+  resultSet.close();
+}).catch((err) => {
+  console.error('query failed');
+});
+```
 
 ## goToLastRow
 
@@ -265,9 +348,22 @@ goToLastRow(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集到最后一行，则为true；否则为false。 |
+
+**示例**
+
+```TypeScript
+let predicatesgoLast = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoLast = rdbStore.query(predicatesgoLast, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoLast.then((resultSet) => {
+  resultSet.goToLastRow();
+  resultSet.close();
+}).catch((err) => {
+  console.error('query failed');
+});
+```
 
 ## goToNextRow
 
@@ -287,9 +383,22 @@ goToNextRow(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集到下一行，则为true；否则为false。 |
+
+**示例**
+
+```TypeScript
+let predicatesgoNext = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoNext = rdbStore.query(predicatesgoNext, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoNext.then((resultSet) => {
+  resultSet.goToNextRow();
+  resultSet.close();
+}).catch((err) => {
+  console.error('query failed');
+});
+```
 
 ## goToPreviousRow
 
@@ -309,9 +418,22 @@ goToPreviousRow(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集到上一行，则为true；否则为false。 |
+
+**示例**
+
+```TypeScript
+let predicatesgoPrev = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoPrev = rdbStore.query(predicatesgoPrev, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoPrev.then((resultSet) => {
+  resultSet.goToPreviousRow();
+  resultSet.close();
+}).catch((err) => {
+  console.error('query failed');
+});
+```
 
 ## goToRow
 
@@ -331,15 +453,28 @@ goToRow(position: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| position | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| position | number | 是 | 表示要移动到的指定位置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+
+**示例**
+
+```TypeScript
+let predicatesgotorow = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygotorow = rdbStore.query(predicatesgotorow, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygotorow.then((resultSet) => {
+  resultSet.goToRow(5);
+  resultSet.close();
+}).catch((err) => {
+  console.error('query failed');
+});
+```
 
 ## isColumnNull
 
@@ -359,15 +494,21 @@ isColumnNull(columnIndex: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果当前行中指定列的值为null，则返回true，否则返回false。 |
+
+**示例**
+
+```TypeScript
+const isColumnNull = resultSet.isColumnNull(resultSet.getColumnIndex("CODES"));
+```
 
 ## columnCount
 

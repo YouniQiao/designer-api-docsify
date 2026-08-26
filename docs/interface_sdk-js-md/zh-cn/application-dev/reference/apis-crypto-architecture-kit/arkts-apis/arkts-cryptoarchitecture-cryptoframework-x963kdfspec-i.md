@@ -2,7 +2,8 @@
 
 密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为X963KDF密钥派生函数进行密钥派生时的输入。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > key指的是用户输入的最初的密钥材料。
 
 **继承/实现关系：** X963KdfSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
@@ -14,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## info

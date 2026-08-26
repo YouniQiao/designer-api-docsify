@@ -9,7 +9,7 @@ Information about the system font.
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import font from '@kit.ArkUI';
 ```
 
 ## family
@@ -194,3 +194,39 @@ Width of the system font.Value range: [1, 9], with intervals of 1, corresponding
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+Directly using font can lead to the issue of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the [Font](arkts-apis-uicontext-font.md) object associated with the current UI context by using the [getFont](./arkts-apis-uicontext-uicontext.md#getfont) API in [UIContext](./arkts-apis-uicontext-uicontext.md).
+
+```TypeScript
+// xxx.ets
+import { font } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct FontExample {
+  uiFont = this.getUIContext().getFont();
+  fontInfo: font.FontInfo = this.uiFont.getFontByName(''); // You are advised to use the this.getUIContext().getFont().getFontByName() API.
+
+  build() {
+    Column() {
+      Button("getFontByName")
+        .onClick(() => {
+          this.fontInfo =
+            this.uiFont.getFontByName('HarmonyOS Sans Italic');
+          console.info("getFontByName(): path = " + this.fontInfo.path);
+          console.info("getFontByName(): postScriptName = " + this.fontInfo.postScriptName);
+          console.info("getFontByName(): fullName = " + this.fontInfo.fullName);
+          console.info("getFontByName(): family = " + this.fontInfo.family);
+          console.info("getFontByName(): subfamily = " + this.fontInfo.subfamily);
+          console.info("getFontByName(): weight = " + this.fontInfo.weight);
+          console.info("getFontByName(): width = " + this.fontInfo.width);
+          console.info("getFontByName(): italic = " + this.fontInfo.italic);
+          console.info("getFontByName(): monoSpace = " + this.fontInfo.monoSpace);
+          console.info("getFontByName(): symbolic = " + this.fontInfo.symbolic);
+        })
+    }.width('100%')
+  }
+}
+```

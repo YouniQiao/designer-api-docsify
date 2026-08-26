@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+import userStatus from '@kit.MultimodalAwarenessKit';
 ```
 
 ## off('userAgeGroupDetected')
@@ -14,7 +14,8 @@ function off(type: 'userAgeGroupDetected', callback?: Callback<UserClassificatio
 
 Disables the age group detection function.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported only on some phones. Error code **33900003** is returned if it is called on unsupported
 > phones.
 
@@ -26,15 +27,29 @@ Disables the age group detection function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'userAgeGroupDetected' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'userAgeGroupDetected' | Yes | Event type. The value **userAgeGroupDetected** indicates the event of enabling age group detection. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md)&gt; | No | Callback used to return the detection result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [33900001](../errorcode-userStatus.md#33900001-service-exception) |
-| 33900003 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited device capabilities. |
+| [33900001](../errorcode-userStatus.md#33900001-service-exception) | Service exception. Possible causes:  1. System error, such as a null pointer and container-related exception.  2. Node-API invocation exception, such as invalid Node-API status. |
+| 33900003 | Unsubscription failed. Possible causes:  1. Callback failure.  2. Node-API invocation exception, such as invalid Node-API status.  3. IPC request exception. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    userStatus.off('userAgeGroupDetected');
+    console.info("off succeeded");
+} catch (err) {
+    let error = err as BusinessError;
+    console.error("Failed off and err code is " + error.code);
+}
+```

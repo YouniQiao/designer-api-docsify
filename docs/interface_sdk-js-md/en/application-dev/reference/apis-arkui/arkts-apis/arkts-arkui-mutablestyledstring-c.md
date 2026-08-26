@@ -2,9 +2,11 @@
 
 Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class.
 
-> **An exception is thrown in the following cases:**&gt;
+> **An exception is thrown in the following cases:**
+> 
 > If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed
-> as **undefined**, an exception is thrown.&gt;
+> as **undefined**, an exception is thrown.
+> 
 > **styledKey** or **styledValue** is set to an invalid value or they do not match.
 
 **Inheritance/Implementation:** MutableStyledString extends [StyledString](arkts-arkui-styledstring-c.md)
@@ -36,9 +38,9 @@ Appends a styled string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | New styled string. |
 
 ## clearStyles
 
@@ -74,16 +76,16 @@ Inserts a string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| other | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Subscript of the position where the string will be inserted. |
+| other | string | Yes | String to insert.   **NOTE：**The string specified here uses the style of the character at the **start** - 1 position or, if that character does not have style set, the style of the character at the **start** position. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## insertStyledString
 
@@ -103,16 +105,16 @@ Inserts a new styled string at the specified position.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Subscript of the position to insert the styled string. |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | New styled string. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## removeString
 
@@ -132,16 +134,16 @@ Removes the string in the specified range of this styled string.This API equally
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| length | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Subscript of the target range. |
+| length | number | Yes | Length of the target range. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## removeStyle
 
@@ -161,17 +163,17 @@ Removes the style for the specified range of this styled string.After a style is
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| length | number | Yes |
-| styledKey | [StyledStringKey](arkts-arkui-styledstringkey-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Subscript that corresponds to the start position of the target range. |
+| length | number | Yes | Length of the target range. |
+| styledKey | [StyledStringKey](arkts-arkui-styledstringkey-e.md) | Yes | Styled key. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## removeStyles
 
@@ -191,16 +193,16 @@ Removes all styles for the specified range of this styled string.After a style i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| length | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Subscript that corresponds to the start position of the target range. |
+| length | number | Yes | Length of the target range. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## replaceString
 
@@ -220,17 +222,17 @@ Replaces the string in the specified range of this styled string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| length | number | Yes |
-| other | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Subscript of the target range. |
+| length | number | Yes | Length of the target range. |
+| other | string | Yes | String to replace the content in the target range.   **NOTE：**The string specified here uses the style of the character at the **start** position. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## replaceStyle
 
@@ -250,15 +252,15 @@ Replaces the style in the specified range of this styled string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | Yes | Style object.   **NOTE：**By default, the original style is removed and replaced with the new style.If **styledKey** of **SpanStyle** is **IMAGE** or **CUSTOM_SPAN**, this API takes effect only when an image or custom span with the length of 1 is at the **start** position. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## replaceStyledString
 
@@ -278,17 +280,17 @@ Replaces the styled string in the specified range.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| length | number | Yes |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Subscript that corresponds to the start position of the target range. |
+| length | number | Yes | Length of the target range. |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | New styled string. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## setStyle
 
@@ -308,12 +310,12 @@ Sets a new style for the specified range of this styled string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | Yes | Style object.By default, the new style is applied without removing the original style. If the **StyledStringValue** types are the same, the new style overwrites the old one.If **styledKey** of **SpanStyle** is **IMAGE** or **CUSTOM_SPAN**, this API takes effect only when an image or custom span with the length of 1 is at the **start** position. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |

@@ -12,7 +12,7 @@ type WebMessage = ArrayBuffer | string
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-| 类型 |
-| --- |
-| ArrayBuffer |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| ArrayBuffer | 二进制类型数据。 [since 11] |
+| string | 字符串类型数据。 [since 11] |

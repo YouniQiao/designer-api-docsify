@@ -2,8 +2,10 @@
 
 画笔对象，用于描述所绘制图形形状的轮廓信息，支持设置颜色、线宽、抗锯齿、透明度、混合模式、转角样式、线帽样式，以及颜色滤波器、蒙版滤波器、路径效果、着色器、阴影层等绘制效果。
 
-> **说明：**&gt;
-> - 本模块使用屏幕物理像素单位px。&gt;
+> **说明：**
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 11
@@ -13,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import drawing from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -27,6 +29,48 @@ constructor()
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let matrix = new drawing.Matrix();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+```
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    let samplingOptions = new drawing.SamplingOptions();
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+let typefaceArgument = new drawing.TypefaceArguments();
+```
 
 ## constructor
 
@@ -42,15 +86,27 @@ constructor(pen: Pen)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| pen | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pen | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | 是 | 待复制的画笔对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+const penColor: common2D.Color = { alpha: 255, red: 0, green: 255, blue: 0 };
+pen.setColor(penColor);
+pen.setStrokeWidth(10);
+const newPen = new drawing.Pen(pen);
+```
 
 ## getAlpha
 
@@ -66,9 +122,25 @@ getAlpha(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回画笔的透明度，该返回值为0到255之间的整数。 |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let alpha = brush.getAlpha();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let alpha = pen.getAlpha();
+```
 
 ## getCapStyle
 
@@ -84,9 +156,27 @@ getCapStyle(): CapStyle
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md) | 返回画笔的线帽样式。 |
+
+**示例**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setStrokeWidth(5);
+    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
+    pen.setCapStyle(drawing.CapStyle.SQUARE_CAP);
+    pen.getCapStyle();
+  }
+}
+```
 
 ## getColor
 
@@ -102,9 +192,29 @@ getColor(): common2D.Color
 
 **返回值：**
 
-| 类型 |
-| --- |
-| common2D.Color |
+| 类型 | 说明 |
+| --- | --- |
+| common2D.Color | 返回画笔当前设置的颜色。 |
+
+**示例**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+const brush = new drawing.Brush();
+brush.setColor(color);
+let currentColor = brush.getColor();
+```
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+const pen = new drawing.Pen();
+pen.setColor(color);
+let colorGet = pen.getColor();
+```
 
 ## getColor4f
 
@@ -120,9 +230,31 @@ getColor4f(): common2D.Color4f
 
 **返回值：**
 
-| 类型 |
-| --- |
-| common2D.Color4f |
+| 类型 | 说明 |
+| --- | --- |
+| common2D.Color4f | 返回画笔当前设置的颜色，为ARGB格式的浮点数表示，每个颜色通道的取值范围为[0.0, 1.0]。 |
+
+**示例**
+
+```TypeScript
+import { common2D, drawing, colorSpaceManager } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
+let color4f: common2D.Color4f = { alpha: 1, red: 0.5, green: 0.4, blue: 0.7 };
+brush.setColor4f(color4f, colorSpace);
+let color = brush.getColor4f();
+```
+
+```TypeScript
+import { common2D, drawing, colorSpaceManager } from "@kit.ArkGraphics2D";
+
+const pen = new drawing.Pen();
+let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
+let color4f: common2D.Color4f = {alpha: 1, red: 0.5, green: 0.4, blue: 0.7};
+pen.setColor4f(color4f, colorSpace);
+let color = pen.getColor4f();
+```
 
 ## getColorFilter
 
@@ -138,9 +270,29 @@ getColorFilter(): ColorFilter
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回画笔当前设置的颜色滤波器，可用于查询当前画笔的颜色过滤效果。 |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let brush = new drawing.Brush();
+let colorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
+brush.setColorFilter(colorFilter);
+let currentFilter = brush.getColorFilter();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let pen = new drawing.Pen();
+let colorFilter = drawing.ColorFilter.createLumaColorFilter();
+pen.setColorFilter(colorFilter);
+let filter = pen.getColorFilter();
+```
 
 ## getFillPath
 
@@ -156,22 +308,35 @@ getFillPath(src: Path, dst: Path): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| src | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 |
-| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| src | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 待提取轮廓的源路径对象。 |
+| dst | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 目标路径对象，用于存储根据画笔属性从src路径计算得到的轮廓结果。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回获取源路径轮廓是否成功，true表示成功，false表示失败。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let pen = new drawing.Pen();
+let pathSrc: drawing.Path = new drawing.Path();
+let pathDst: drawing.Path = new drawing.Path();
+pathSrc.moveTo(0, 0);
+pathSrc.lineTo(700, 700);
+let value = pen.getFillPath(pathSrc, pathDst);
+```
 
 ## getHexColor
 
@@ -187,9 +352,31 @@ getHexColor(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回画笔的颜色，以16进制ARGB格式的32位无符号整数表示。 |
+
+**示例**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+let brush = new drawing.Brush();
+brush.setColor(color);
+let hexColor: number = brush.getHexColor();
+console.info('getHexColor: ', hexColor.toString(16));
+```
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+let pen = new drawing.Pen();
+pen.setColor(color);
+let hexColor: number = pen.getHexColor();
+console.info('getHexColor: ', hexColor.toString(16));
+```
 
 ## getJoinStyle
 
@@ -205,9 +392,27 @@ getJoinStyle(): JoinStyle
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) | 返回折线转角的样式。 |
+
+**示例**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setStrokeWidth(5);
+    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
+    pen.setJoinStyle(drawing.JoinStyle.ROUND_JOIN);
+    pen.getJoinStyle();
+  }
+}
+```
 
 ## getMiterLimit
 
@@ -223,9 +428,18 @@ getMiterLimit(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回折线尖角长度与线宽的最大比值。 |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let miter = pen.getMiterLimit();
+```
 
 ## getWidth
 
@@ -241,9 +455,31 @@ getWidth(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回画笔的线宽，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let width = canvas.getWidth();
+    console.info('get canvas width:' + width);
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let width = pen.getWidth();
+```
 
 ## isAntiAlias
 
@@ -259,9 +495,25 @@ isAntiAlias(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回画笔是否开启抗锯齿属性，true表示开启，false表示关闭。 |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let isAntiAlias = brush.isAntiAlias();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let isAntiAlias = pen.isAntiAlias();
+```
 
 ## reset
 
@@ -274,6 +526,40 @@ reset(): void
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.reset();
+```
+
+```TypeScript
+import { drawing } from "@kit.ArkGraphics2D";
+
+let matrix = new drawing.Matrix();
+matrix.postScale(2, 3, 4, 5);
+matrix.reset();
+console.info("matrix= "+matrix.getAll().toString());
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+path.moveTo(10, 10);
+path.cubicTo(10, 10, 10, 10, 15, 15);
+path.reset();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.reset();
+```
 
 ## setAlpha
 
@@ -289,15 +575,31 @@ setAlpha(alpha: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| alpha | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| alpha | number | 是 | 表示透明度，取值范围为[0, 255]，传入浮点类型时向下取整。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.setAlpha(128);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setAlpha(128);
+```
 
 ## setAntiAlias
 
@@ -313,15 +615,31 @@ setAntiAlias(aa: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| aa | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| aa | boolean | 是 | 表示是否开启抗锯齿。true表示开启，false表示关闭。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.setAntiAlias(true);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setAntiAlias(true);
+```
 
 ## setBlendMode
 
@@ -337,15 +655,31 @@ setBlendMode(mode: BlendMode): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | 是 | 颜色的混合模式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.setBlendMode(drawing.BlendMode.SRC);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setBlendMode(drawing.BlendMode.SRC);
+```
 
 ## setCapStyle
 
@@ -361,15 +695,32 @@ setCapStyle(style: CapStyle): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| style | [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| style | [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md) | 是 | 描述画笔的线帽样式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setStrokeWidth(5);
+    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
+    pen.setCapStyle(drawing.CapStyle.SQUARE_CAP);
+  }
+}
+```
 
 ## setColor
 
@@ -385,15 +736,33 @@ setColor(color: common2D.Color): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color | common2D.Color | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | common2D.Color | 是 | ARGB格式的颜色，每个颜色通道的值是0到255之间的整数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+const brush = new drawing.Brush();
+brush.setColor(color);
+```
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+const pen = new drawing.Pen();
+pen.setColor(color);
+```
 
 ## setColor
 
@@ -409,18 +778,34 @@ setColor(alpha: number, red: number, green: number, blue: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| alpha | number | 是 |
-| red | number | 是 |
-| green | number | 是 |
-| blue | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| alpha | number | 是 | ARGB格式颜色的透明度通道值，该参数取值范围是[0, 255]，传入范围内的浮点数会向下取整，超出范围的值会被截断到0或255。 |
+| red | number | 是 | ARGB格式颜色的红色通道值，该参数取值范围是[0, 255]，传入范围内的浮点数会向下取整，超出范围的值会被截断到0或255。 |
+| green | number | 是 | ARGB格式颜色的绿色通道值，该参数取值范围是[0, 255]，传入范围内的浮点数会向下取整，超出范围的值会被截断到0或255。 |
+| blue | number | 是 | ARGB格式颜色的蓝色通道值，该参数取值范围是[0, 255]，传入范围内的浮点数会向下取整，超出范围的值会被截断到0或255。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.setColor(255, 255, 0, 0);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setColor(255, 255, 0, 0);
+```
 
 ## setColor
 
@@ -436,9 +821,25 @@ setColor(color: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | number | 是 | 16进制ARGB格式的颜色，格式为0xAARRGGBB，其中AA表示透明度通道，RR表示红色通道，GG表示绿色通道，BB表示蓝色通道，各通道取值范围为00-FF，取值范围为 [0x00000000, 0xFFFFFFFF]。超出有效范围的值会被截断处理。 |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.setColor(0xffff0000);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setColor(0xffff0000);
+```
 
 ## setColor4f
 
@@ -454,10 +855,30 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color4f | common2D.Color4f | 是 |
-| colorSpace | colorSpaceManager.ColorSpaceManager \| null | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color4f | common2D.Color4f | 是 | ARGB格式的颜色，浮点数，每个颜色通道值的范围为[0.0, 1.0]，超出范围的值会被截断到0.0或1.0。 |
+| colorSpace | colorSpaceManager.ColorSpaceManager \| null | 是 | 标准色域对象，null表示使用SRGB色域。 |
+
+**示例**
+
+```TypeScript
+import { common2D, drawing, colorSpaceManager } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
+let color4f: common2D.Color4f = { alpha: 1, red: 0.5, green: 0.4, blue: 0.7 };
+brush.setColor4f(color4f, colorSpace);
+```
+
+```TypeScript
+import { common2D, drawing, colorSpaceManager } from "@kit.ArkGraphics2D";
+
+const pen = new drawing.Pen();
+let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
+let color4f: common2D.Color4f = {alpha: 1, red: 0.5, green: 0.4, blue: 0.7};
+pen.setColor4f(color4f, colorSpace);
+```
 
 ## setColorFilter
 
@@ -473,15 +894,33 @@ setColorFilter(filter: ColorFilter | null): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filter | ColorFilter \| null | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | ColorFilter \| null | 是 | 颜色滤波器。null表示清空颜色滤波器。<br>**起始版本：** 20 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
+brush.setColorFilter(colorFilter);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
+pen.setColorFilter(colorFilter);
+```
 
 ## setDither
 
@@ -497,15 +936,24 @@ setDither(dither: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| dither | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| dither | boolean | 是 | 是否开启画笔的抖动绘制效果。true表示开启，false表示关闭。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setDither(true);
+```
 
 ## setImageFilter
 
@@ -521,15 +969,36 @@ setImageFilter(filter: ImageFilter | null): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 是 | 图像滤波器，null表示清空画笔的图像滤波器效果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let brush = new drawing.Brush();
+let imageFilter = drawing.ImageFilter.createBlurImageFilter(5, 10, drawing.TileMode.DECAL);
+brush.setImageFilter(imageFilter);
+brush.setImageFilter(null);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let colorfilter = drawing.ColorFilter.createSRGBGammaToLinear();
+let imgFilter = drawing.ImageFilter.createFromColorFilter(colorfilter);
+let pen = new drawing.Pen();
+pen.setImageFilter(imgFilter);
+pen.setImageFilter(null);
+```
 
 ## setJoinStyle
 
@@ -545,15 +1014,32 @@ setJoinStyle(style: JoinStyle): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| style | [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| style | [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) | 是 | 折线转角样式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setStrokeWidth(5);
+    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
+    pen.setJoinStyle(drawing.JoinStyle.ROUND_JOIN);
+  }
+}
+```
 
 ## setMaskFilter
 
@@ -569,15 +1055,45 @@ setMaskFilter(filter: MaskFilter | null): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filter | [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) \| null | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) \| null | 是 | 蒙版滤镜。null表示清空蒙版滤镜。<br>**起始版本：** 20 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const brush = new drawing.Brush();
+    let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10);
+    brush.setMaskFilter(maskFilter);
+  }
+}
+```
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const pen = new drawing.Pen();
+    pen.setStrokeWidth(5);
+    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
+    let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10);
+    pen.setMaskFilter(maskFilter);
+  }
+}
+```
 
 ## setMiterLimit
 
@@ -593,15 +1109,24 @@ setMiterLimit(miter: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| miter | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| miter | number | 是 | 折线尖角长度与线宽的最大比值，负数在绘制时会被视作4.0处理，非负数按实际传入值生效，该参数为浮点数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setMiterLimit(5);
+```
 
 ## setPathEffect
 
@@ -617,15 +1142,33 @@ setPathEffect(effect: PathEffect | null): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| effect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| null | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| effect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| null | 是 | 路径效果对象，用于设置虚线、转角等路径绘制样式。null表示清空路径效果。<br>**起始版本：** 20 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setStrokeWidth(5);
+    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
+    let pathEffect = drawing.PathEffect.createDashPathEffect([30, 10], 0);
+    pen.setPathEffect(pathEffect);
+  }
+}
+```
 
 ## setShaderEffect
 
@@ -641,15 +1184,33 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| null | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| null | 是 | 着色器效果对象。null表示清空着色器效果。<br>**起始版本：** 20 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let shaderEffect = drawing.ShaderEffect.createLinearGradient({x: 100, y: 100}, {x: 300, y: 300}, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
+brush.setShaderEffect(shaderEffect);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let shaderEffect = drawing.ShaderEffect.createLinearGradient({x: 100, y: 100}, {x: 300, y: 300}, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
+pen.setShaderEffect(shaderEffect);
+```
 
 ## setShadowLayer
 
@@ -665,15 +1226,86 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| shadowLayer | [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| null | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| shadowLayer | [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| null | 是 | 阴影层对象。null表示清空阴影层效果。<br>**起始版本：** 20 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    font.setSize(60);
+
+    let textBlob = drawing.TextBlob.makeFromString('hello', font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    let pen = new drawing.Pen();
+    pen.setStrokeWidth(2.0);
+
+    let penColor : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
+    pen.setColor(penColor);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100, 100);
+    canvas.detachPen();
+
+    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
+    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, color);
+    pen.setShadowLayer(shadowLayer);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100, 200);
+    canvas.detachPen();
+
+    let brush = new drawing.Brush();
+    let brushColor : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
+    brush.setColor(brushColor);
+    canvas.attachBrush(brush);
+    canvas.drawTextBlob(textBlob, 300, 100);
+    canvas.detachBrush();
+
+    brush.setShadowLayer(shadowLayer);
+    canvas.attachBrush(brush);
+    canvas.drawTextBlob(textBlob, 300, 200);
+    canvas.detachBrush();
+  }
+}
+```
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    font.setSize(60);
+    let textBlob = drawing.TextBlob.makeFromString("hello", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    let pen = new drawing.Pen();
+    pen.setStrokeWidth(2.0);
+    let pen_color : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
+    pen.setColor(pen_color);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100, 100);
+    canvas.detachPen();
+    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
+    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, color);
+    pen.setShadowLayer(shadowLayer);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100, 200);
+    canvas.detachPen();
+  }
+}
+```
 
 ## setStrokeWidth
 
@@ -689,12 +1321,21 @@ setStrokeWidth(width: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| width | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | number | 是 | 表示线宽，该参数为浮点数，单位为物理像素px。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setStrokeWidth(5);
+```

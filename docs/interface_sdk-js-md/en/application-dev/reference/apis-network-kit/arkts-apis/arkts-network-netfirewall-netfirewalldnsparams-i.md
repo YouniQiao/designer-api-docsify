@@ -2,7 +2,8 @@
 
 Defines the DNS information of a firewall rule.
 
-> **Description**&gt;
+> **Description**
+> 
 > This parameter cannot be empty when **rule.type** of [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md)
 > is set to RULE_DNS.
 
@@ -13,7 +14,7 @@ Defines the DNS information of a firewall rule.
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from 'kits/@kit.NetworkKit';
+import netFirewall from '@kit.NetworkKit';
 ```
 
 ## primaryDns

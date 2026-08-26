@@ -9,7 +9,7 @@ Provides the AIHDR feature status.
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessing } from 'kits/@kit.MediaKit';
+import videoProcessing from '@kit.MediaKit';
 ```
 
 ## enabled

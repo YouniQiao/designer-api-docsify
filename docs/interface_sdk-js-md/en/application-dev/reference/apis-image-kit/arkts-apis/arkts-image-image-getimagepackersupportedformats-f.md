@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## getImagePackerSupportedFormats
@@ -20,6 +20,15 @@ Obtains the supported encoding formats, represented by MIME types.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string[] |
+| Type | Description |
+| --- | --- |
+| string[] | List of supported encoding formats (MIME types). |
+
+**Examples**
+
+```TypeScript
+async function GetImagePackerSupportedFormats() {
+    let formats = image.getImagePackerSupportedFormats();
+    console.info('formats:', formats);
+}
+```

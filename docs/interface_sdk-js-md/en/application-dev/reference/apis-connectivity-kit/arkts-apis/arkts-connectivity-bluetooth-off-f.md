@@ -3,7 +3,16 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import bas from '@kit.ConnectivityKit.bas';
+import common from '@kit.ConnectivityKit.common';
+import bluetooth from '@kit.ConnectivityKit';
+import map from '@kit.ConnectivityKit.map';
+import pan from '@kit.ConnectivityKit.pan';
+import pbap from '@kit.ConnectivityKit.pbap';
+import opp from '@kit.ConnectivityKit.opp';
+import socket from '@kit.ConnectivityKit.socket';
+import wearDetection from '@kit.ConnectivityKit.wearDetection';
+import bluetoothManager from '@kit.ConnectivityKitManager';
 ```
 
 ## off('bluetoothDeviceFind')
@@ -26,10 +35,20 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'bluetoothDeviceFind' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'bluetoothDeviceFind' | Yes | Type of the discovering event to listen for. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | No | Callback used to listen for the discovering event. |
+
+**Examples**
+
+```TypeScript
+function onReceiveEvent(data : Array<string>) {
+    console.info('bluetooth device find = '+ JSON.stringify(data));
+}
+bluetooth.on('bluetoothDeviceFind', onReceiveEvent);
+bluetooth.off('bluetoothDeviceFind', onReceiveEvent);
+```
 
 
 ## off('bondStateChange')
@@ -52,10 +71,20 @@ Unsubscribe the event reported when a remote Bluetooth device is bonded.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'bondStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'bondStateChange' | Yes | Type of the bond state event to listen for. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | No | Callback used to listen for the bond state event. |
+
+**Examples**
+
+```TypeScript
+function onReceiveEvent(data : bluetooth.BondStateParam) {
+    console.info('bond state = '+ JSON.stringify(data));
+}
+bluetooth.on('bondStateChange', onReceiveEvent);
+bluetooth.off('bondStateChange', onReceiveEvent);
+```
 
 
 ## off('pinRequired')
@@ -78,10 +107,20 @@ Unsubscribe the event of a pairing request from a remote Bluetooth device.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'pinRequired' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PinRequiredParam&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'pinRequired' | Yes | Type of the pairing request event to listen for. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PinRequiredParam&gt; | No | Callback used to listen for the pairing request event. |
+
+**Examples**
+
+```TypeScript
+function onReceiveEvent(data : bluetooth.PinRequiredParam) {
+    console.info('pin required = '+ JSON.stringify(data));
+}
+bluetooth.on('pinRequired', onReceiveEvent);
+bluetooth.off('pinRequired', onReceiveEvent);
+```
 
 
 ## off('stateChange')
@@ -104,10 +143,20 @@ Unsubscribe the event reported when the Bluetooth state changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'stateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'stateChange' | Yes | Type of the Bluetooth state changes event to listen for. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | No | Callback used to listen for the Bluetooth state event. |
+
+**Examples**
+
+```TypeScript
+function onReceiveEvent(data : bluetooth.BluetoothState) {
+    console.info('bluetooth state = '+ JSON.stringify(data));
+}
+bluetooth.on('stateChange', onReceiveEvent);
+bluetooth.off('stateChange', onReceiveEvent);
+```
 
 
 ## off('sppRead')
@@ -128,8 +177,24 @@ Unsubscribe the event reported when data is read from the socket.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'sppRead' | Yes |
-| clientSocket | number | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'sppRead' | Yes | Type of the spp read event to listen for. |
+| clientSocket | number | Yes | Client socket ID, which is obtained by sppAccept or sppConnect. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used to listen for the spp read event. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let clientNumber = -1;
+function clientSocket(code : BusinessError, number : number) {
+  if (code == null || code.code != 0) {
+    return;
+  }
+  console.info(`bluetooth serverSocket Number: ${number}`);
+  // The obtained clientNumber is used as the socket ID for subsequent read/write operations on the client.
+  clientNumber = number;
+}
+bluetooth.off('sppRead', clientNumber);
+```

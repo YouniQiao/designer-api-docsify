@@ -13,11 +13,11 @@ new <K extends object, V>(iterable: Iterable<readonly [K, V]>): WeakMap<K, V>
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| iterable | Iterable & lt;readonly [K, V] & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| iterable | Iterable & lt;readonly [K, V] & gt; | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

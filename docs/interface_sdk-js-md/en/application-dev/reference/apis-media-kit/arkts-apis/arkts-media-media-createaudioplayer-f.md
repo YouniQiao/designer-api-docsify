@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## createAudioPlayer
@@ -24,6 +24,12 @@ Creates an AudioPlayer instance in synchronous mode.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AudioPlayer](arkts-media-media-audioplayer-i.md) |
+| Type | Description |
+| --- | --- |
+| [AudioPlayer](arkts-media-media-audioplayer-i.md) | If the operation is successful, an AudioPlayer instance is returned; otherwise, **null** is returned. After the instance is created, you can start, pause, or stop audio playback. |
+
+**Examples**
+
+```TypeScript
+let audioPlayer: media.AudioPlayer = media.createAudioPlayer();
+```

@@ -3,7 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import usb from '@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKitManager';
+import serialManager from '@kit.BasicServicesKitManager.serial';
 ```
 
 ## getSupportedModes
@@ -26,12 +28,18 @@ function getSupportedModes(portId: number): PortModeType
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| portId | number | 是 | 端口号。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md) | 支持的模式列表的组合掩码。 |
+
+**示例**
+
+```TypeScript
+let ret = usb.getSupportedModes(0);
+```

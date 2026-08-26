@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+import systemDateTime from '@kit.BasicServicesKit';
 ```
 
 ## getTimezone
@@ -20,9 +20,28 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回系统时区。具体可见 [支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-date-time.md#支持的系统时区)。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.getTimezone((error: BusinessError, timezone: string) => {
+    if (error) {
+      console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info(`Succeeded in getting timezone: ${timezone}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 
 ## getTimezone
@@ -39,6 +58,23 @@ function getTimezone(): Promise<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回系统时区。具体可见 [支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-date-time.md#支持的系统时区)。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.getTimezone().then((timezone: string) => {
+    console.info(`Succeeded in getting timezone: ${timezone}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
+}
+```

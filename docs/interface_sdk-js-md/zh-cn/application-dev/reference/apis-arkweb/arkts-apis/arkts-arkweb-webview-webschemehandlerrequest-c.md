@@ -9,7 +9,6 @@ WebSchemeHandlerRequest类模块定义了通过WebSchemeHandler拦截到的资�
 ## 导入模块
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getFrameUrl
@@ -26,9 +25,13 @@ getFrameUrl(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回触发此请求的Frame的URL。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getHeader
 
@@ -46,9 +49,13 @@ getHeader(): Array<WebHeader>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;WebHeader & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;WebHeader & gt; | 返回资源请求头信息。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getHttpBodyStream
 
@@ -66,9 +73,13 @@ getHttpBodyStream(): WebHttpBodyStream | null
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) \| null |
+| 类型 | 说明 |
+| --- | --- |
+| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) \| null | 返回资源请求中的WebHttpBodyStream，如果没有则返回null。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getReferrer
 
@@ -86,9 +97,13 @@ getReferrer(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 获取到的referrer。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getRequestMethod
 
@@ -106,9 +121,13 @@ getRequestMethod(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回请求方法。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getRequestResourceType
 
@@ -124,9 +143,13 @@ getRequestResourceType(): WebResourceType
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | 返回资源请求的资源类型。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getRequestUrl
 
@@ -144,9 +167,13 @@ getRequestUrl(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回资源请求的URL信息。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## hasGesture
 
@@ -164,9 +191,13 @@ hasGesture(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回资源请求是否与手势（如点击）相关联，如果资源请求与手势相关联则返回true，否则返回false。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## isMainFrame
 
@@ -184,6 +215,10 @@ isMainFrame(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 判断资源请求是否为主Frame，如果资源请求是主Frame则返回true，否则返回false。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。

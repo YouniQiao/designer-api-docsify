@@ -16,12 +16,12 @@ declare type StyledStringMarshallCallback = (marshallableVal: StyledStringMarsha
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| marshallableVal | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| marshallableVal | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | 是 | 属性字符串中需要自定义序列化的UserDataSpan对象。开发者在回调函数中根据此参数的类型，选择对应的序列化接口将 其转换为ArrayBuffer。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| ArrayBuffer |
+| 类型 | 说明 |
+| --- | --- |
+| ArrayBuffer | [StyledStringMarshallingValue]{ |

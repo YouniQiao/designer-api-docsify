@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dataTransfer } from 'kits/@kit.ConnectivityKit';
+import dataTransfer from '@kit.ConnectivityKit';
 ```
 
 ## address

@@ -2,7 +2,8 @@
 
 Represents an array for storing button information.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The SegmentButtonItemOptionsArray can save only two to five button information elements.
 
 **Inheritance/Implementation:** SegmentButtonItemOptionsArray extends Array<SegmentButtonItemOptions>
@@ -14,7 +15,8 @@ Represents an array for storing button information.
 ## Modules to Import
 
 ```TypeScript
-import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from 'kits/@kit.ArkUI';
+import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from '@kit.ArkUI';
+import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from '@kit.ArkUIV2';
 ```
 
 ## constructor
@@ -35,9 +37,9 @@ Constructor.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| elements | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | Yes | Button information. |
 
 ## create
 
@@ -57,15 +59,15 @@ Creates a **SegmentButtonItemOptionsArray** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| elements | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | Yes | Button information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SegmentButtonItemOptionsArray](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) |
+| Type | Description |
+| --- | --- |
+| [SegmentButtonItemOptionsArray](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) | Created SegmentButtonItemOptionsArray object. |
 
 ## pop
 
@@ -85,9 +87,9 @@ Removes the last element from this array and returns that element.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Element removed from the array. |
 
 ## push
 
@@ -107,15 +109,15 @@ Adds the specified elements to the end of this array and returns the new length 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes | Elements to add to the end of the array. Default value: array with 0 new button information items |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Length of the array after the elements are added. |
 
 ## shift
 
@@ -135,9 +137,9 @@ Removes the first element from this array and returns that element.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Element removed from the array. |
 
 ## splice
 
@@ -157,17 +159,17 @@ Changes the contents of this array by removing the specified number of elements 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| deleteCount | number | Yes |
-| items | [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Index of the position starting from which elements are to be removed. |
+| deleteCount | number | Yes | Number of elements to remove. |
+| items | [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Yes | Element to be added to the array from start. Default value: If no element is specified, the element is deleted from the array. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] |
+| Type | Description |
+| --- | --- |
+| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | An array containing the removed elements. |
 
 ## unshift
 
@@ -187,12 +189,12 @@ Adds an element to the beginning of this array and returns the new length of the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes | Elements to add to the beginning of the array. Default value: array with 0 new button information items |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Length of the array after the elements are added. |

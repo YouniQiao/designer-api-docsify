@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+import abilityConnectionManager from '@kit.DistributedServiceKit';
 ```
 
 ## destroyAbilityConnectionSession
@@ -22,6 +22,17 @@ Destroys a collaboration session between applications.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sessionId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sessionId | number | Yes | Collaboration session ID. |
+
+**Examples**
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+hilog.info(0x0000, 'testTag', 'destroyAbilityConnectionSession called');
+let sessionId = 100;
+abilityConnectionManager.destroyAbilityConnectionSession(sessionId);
+```

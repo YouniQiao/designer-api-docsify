@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## setPortRoles
@@ -26,20 +27,32 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | Yes |
-| powerRole | [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md) | Yes |
-| dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| portId | number | Yes | Port number. |
+| powerRole | [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md) | Yes | Role for charging. |
+| dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | Yes | Role for data transfer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import {BusinessError} from '@kit.BasicServicesKit';
+let portId: number = 1;
+usbManager.setPortRoles(portId, usbManager.PowerRoleType.SOURCE, usbManager.DataRoleType.HOST).then(() => {
+    console.info('usb setPortRoles successfully.');
+}).catch((err: BusinessError) => {
+    console.error('usb setPortRoles failed: ' + err.code + ' message: ' + err.message);
+});
+```

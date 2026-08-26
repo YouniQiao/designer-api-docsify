@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
+import systemTime from '@kit.BasicServicesKit';
+import systemTimer from '@kit.BasicServicesKitr';
 ```
 
 ## getDate
@@ -24,15 +25,34 @@ function getDate(callback: AsyncCallback<Date>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Date&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Date&gt; | 是 | 回调函数，返回当前系统日期。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| -1 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| -1 | Parameter check failed, permission denied, or system error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemTime.getDate((error: BusinessError, date: Date) => {
+    if (error) {
+      console.info(`Failed to get date. message: ${error.message}, code: ${error.code}`);
+      return;
+    }
+    console.info(`Succeeded in getting date : ${date}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.info(`Failed to get date. message: ${error.message}, code: ${error.code}`);
+}
+```
 
 
 ## getDate
@@ -53,12 +73,29 @@ function getDate(): Promise<Date>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Date & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Date & gt; | Promise对象，返回当前系统日期。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| -1 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| -1 | Parameter check failed, permission denied, or system error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemTime.getDate().then((date: Date) => {
+    console.info(`Succeeded in getting date : ${date}`);
+  }).catch((error: BusinessError) => {
+    console.info(`Failed to get date. message: ${error.message}, code: ${error.code}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.info(`Failed to get date. message: ${error.message}, code: ${error.code}`);
+}
+```

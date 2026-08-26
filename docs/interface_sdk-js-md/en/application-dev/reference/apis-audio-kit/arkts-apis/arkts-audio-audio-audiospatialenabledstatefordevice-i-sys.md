@@ -11,7 +11,8 @@ This interface is used to notify the listener of any device Spatialization or He
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## deviceDescriptor

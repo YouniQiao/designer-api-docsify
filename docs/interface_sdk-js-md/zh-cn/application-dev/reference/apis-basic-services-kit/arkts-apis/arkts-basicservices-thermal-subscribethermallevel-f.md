@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { thermal } from 'kits/@kit.BasicServicesKit';
+import thermal from '@kit.BasicServicesKit';
 ```
 
 ## subscribeThermalLevel
@@ -24,6 +24,18 @@ function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)&gt; | 是 | 回调函数，返回变化后的热档位。 |
+
+**示例**
+
+```TypeScript
+thermal.subscribeThermalLevel((err: Error, level: thermal.ThermalLevel) => {
+    if (err) {
+        console.error('subscribe thermal level failed, err: ' + err);
+        return;
+    }
+    console.info('thermal level is: ' + level);
+});
+```

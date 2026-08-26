@@ -9,8 +9,11 @@ Defines the accessibility event information, which describes UI changes or inter
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
+import config from '@kit.AccessibilityKit.config';
+import accessibility from '@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
+import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -31,9 +34,21 @@ Constructor, which is used to construct an EventInfo instance using a JSON objec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| jsonObject | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| jsonObject | Object | Yes | JSON object containing three fields: type, bundleName, and triggerAction. For details, see the example. |
+
+**Examples**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+let eventInfo = new accessibility.EventInfo({
+  type: 'click',
+  bundleName: 'com.example.MyApplication',
+  triggerAction: 'click',
+});
+```
 
 ## constructor
 
@@ -53,11 +68,20 @@ Constructor, which is used to construct an EventInfo instance using independent 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [type](#type) | [EventType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes |
-| [bundleName](#bundlename) | string | Yes |
-| [triggerAction](#triggeraction) | [Action](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [EventType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | Accessibility event types. |
+| bundleName | string | Yes | Bundle name of the target app. |
+| triggerAction | [Action](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | Yes | Action that triggers the event. |
+
+**Examples**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+// The parameters are, in order: type, bundleName, triggerAction.
+let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication', 'click');
+```
 
 ## beginIndex
 

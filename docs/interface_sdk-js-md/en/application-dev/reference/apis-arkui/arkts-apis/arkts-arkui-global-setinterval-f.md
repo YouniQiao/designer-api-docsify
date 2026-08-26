@@ -20,14 +20,14 @@ Sets the interval for repeatedly calling a function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | Function | Yes |
-| delay | number | Yes |
-| arguments | any[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | Function | Yes | Indicates the function to be called repeatedly at the interval. |
+| delay | number | Yes | Indicates the interval between each two calls, in milliseconds. The function will be called after this delay. |
+| arguments | any[] | Yes | Indicates additional arguments to pass to "handler" when the timer goes off. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns the timer ID. |

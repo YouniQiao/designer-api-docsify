@@ -9,7 +9,7 @@ Provides the result returned after the request listener is registered and the re
 ## Modules to Import
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## data

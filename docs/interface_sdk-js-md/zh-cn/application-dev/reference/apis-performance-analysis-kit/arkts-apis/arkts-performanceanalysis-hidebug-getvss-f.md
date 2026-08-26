@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getVss
@@ -20,6 +19,15 @@ function getVss(): bigint
 
 **返回值：**
 
-| 类型 |
-| --- |
-| bigint |
+| 类型 | 说明 |
+| --- | --- |
+| bigint | 返回应用进程占用的虚拟内存大小，单位为KB。 |
+
+**示例**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let vss: bigint = hidebug.getVss();
+console.info(`vss = ${vss}`);
+```

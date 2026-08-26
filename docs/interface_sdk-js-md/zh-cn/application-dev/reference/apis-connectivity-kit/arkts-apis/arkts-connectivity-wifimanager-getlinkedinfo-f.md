@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## getLinkedInfo
@@ -24,18 +25,30 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;WifiLinkedInfo & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;WifiLinkedInfo & gt; | 返回WLAN连接信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
-| [2501001](../errorcode-wifi.md#2501001-sta功能未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [2501000](../errorcode-wifi.md#2501000-sta内部异常) | Operation failed. |
+| [2501001](../errorcode-wifi.md#2501001-sta功能未打开) | Wi-Fi STA disabled. |
+
+**示例**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+wifiManager.getLinkedInfo().then((data: wifiManager.WifiLinkedInfo) => {
+    console.info("get wifi linked info: " + JSON.stringify(data));
+}).catch((error: Error) => {
+    console.error("get linked info error: ", error);
+});
+```
 
 
 ## getLinkedInfo
@@ -54,16 +67,20 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 | 表示回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
-| [2501001](../errorcode-wifi.md#2501001-sta功能未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [2501000](../errorcode-wifi.md#2501000-sta内部异常) | Operation failed. |
+| [2501001](../errorcode-wifi.md#2501001-sta功能未打开) | Wi-Fi STA disabled. |
+
+**示例**
+
+参见 [getLinkedInfo](#getlinkedinfo)

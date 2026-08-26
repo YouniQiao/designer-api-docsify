@@ -9,7 +9,7 @@ Defines the IP parameters of the firewall rule. The IP address type can be IPv4 
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from 'kits/@kit.NetworkKit';
+import netFirewall from '@kit.NetworkKit';
 ```
 
 ## address

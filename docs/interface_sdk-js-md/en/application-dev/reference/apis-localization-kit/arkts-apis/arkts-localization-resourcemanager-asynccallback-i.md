@@ -13,7 +13,7 @@ Asynchronous callback interface.
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import resourceManager from '@kit.LocalizationKit';
 ```
 
 ## [[Call]]
@@ -34,7 +34,7 @@ Defines an asynchronous callback that carries an error parameter and asynchronou
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| err | Error | Yes |
-| data | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| err | Error | Yes | Error message returned when the API fails to be called. |
+| data | T | Yes | Callback invoked when the API is called. |

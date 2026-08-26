@@ -9,8 +9,6 @@ HashSet是一种非线性容器，用于存储不重复的元素集合，支持�
 ## 导入模块
 
 ```TypeScript
-import { HashSet } from 'kits/@kit.ArkTS';
-import { HashSetCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -19,8 +17,9 @@ import { HashSetCbFn } from 'kits/@kit.ArkTS';
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器的每一项为HashSet中的元素。  
-> **说明：**&gt;
+返回一个迭代器，迭代器的每一项为HashSet中的元素。   
+> **说明：**
+> 
 > 不建议在Symbol.iterator中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 8
@@ -31,15 +30,52 @@ import { HashSetCbFn } from 'kits/@kit.ArkTS';
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;T & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;T & gt; | 返回包含此HashSet中所有元素的迭代器对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+
+**示例**
+
+```TypeScript
+// 创建HashSet实例并添加元素
+let hashSet = new HashSet<string>();
+hashSet.add("squirrel");
+hashSet.add("sparrow");
+
+// 使用方法一：
+for (let item of hashSet) {
+  console.info("value: " + item);
+}
+// value: squirrel
+// value: sparrow
+
+// 使用方法二：
+let symbolIterator = hashSet[Symbol.iterator]();
+let iterResult: IteratorResult<string> = symbolIterator.next();
+while(!iterResult.done) {
+  console.info("value: " + iterResult.value);
+  iterResult = symbolIterator.next();
+}
+// value: squirrel
+// value: sparrow
+```
+
+```TypeScript
+// 不建议在Symbol.iterator中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
+let hashSet = new HashSet<string>();
+for(let i = 0; i < 10; i++) {
+  hashSet.add("sparrow" + i);
+}
+for(let i = 0; i < 10; i++) {
+  hashSet.remove("sparrow" + i);
+}
+```
 
 ## add
 
@@ -57,21 +93,31 @@ add(value: T): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | T | 是 | 要添加的元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 成功添加元素返回true，若元素已存在则返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
+
+**示例**
+
+```TypeScript
+// 创建HashSet实例
+let hashSet = new HashSet<string>();
+// 向HashSet中添加元素
+let result = hashSet.add("squirrel");
+console.info("result:", result);  // result: true
+```
 
 ## clear
 
@@ -89,9 +135,21 @@ clear(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
+
+**示例**
+
+```TypeScript
+// 创建HashSet实例并添加元素
+let hashSet = new HashSet<string>();
+hashSet.add("squirrel");
+hashSet.add("sparrow");
+hashSet.clear();
+let result = hashSet.isEmpty();
+console.info("result:", result);  // result: true
+```
 
 ## constructor
 
@@ -109,9 +167,15 @@ HashSet的构造函数，用于创建一个空的HashSet实例。
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The HashSet's constructor cannot be directly invoked. |
+
+**示例**
+
+```TypeScript
+let hashSet = new HashSet<number>();
+```
 
 ## entries
 
@@ -119,8 +183,9 @@ HashSet的构造函数，用于创建一个空的HashSet实例。
 entries(): IterableIterator<[T, T]>
 ```
 
-返回包含此HashSet中所有元素的新迭代器对象，每个元素以[value, value]形式返回。  
-> **说明：**&gt;
+返回包含此HashSet中所有元素的新迭代器对象，每个元素以[value, value]形式返回。   
+> **说明：**
+> 
 > 不建议在entries迭代过程中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 8
@@ -131,15 +196,46 @@ entries(): IterableIterator<[T, T]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;[T, T] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;[T, T] & gt; | 返回包含此HashSet中所有元素的迭代器对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
+
+**示例**
+
+```TypeScript
+// 创建HashSet实例并添加元素
+let hashSet = new HashSet<string>();
+hashSet.add("squirrel");
+hashSet.add("sparrow");
+let entriesIterator = hashSet.entries();
+let iterResult: IteratorResult<[string, string]> = entriesIterator.next();
+while(!iterResult.done) {
+  console.info("key:" + iterResult.value[0]);
+  console.info("value:" + iterResult.value[1]);
+  iterResult = entriesIterator.next();
+}
+// key:squirrel
+// value:squirrel
+// key:sparrow
+// value:sparrow
+```
+
+```TypeScript
+// 不建议在entries中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
+let hashSet = new HashSet<string>();
+for(let i = 0; i < 10; i++) {
+  hashSet.add("sparrow" + i);
+}
+for(let i = 0; i < 10; i++) {
+  hashSet.remove("sparrow" + i);
+}
+```
 
 ## forEach
 
@@ -157,16 +253,41 @@ forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Ob
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: HashSet & lt;T & gt;) = & gt; void | 是 |
-| thisArg | Object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callbackFn | (value?: T, key?: T, set?: HashSet & lt;T & gt;) = & gt; void | 是 | 回调函数，在遍历过程中对每个元素调用一次。回调参数包括value、key和set，详见callbackFn的参数说明。 |
+| thisArg | Object | 否 | callbackFn被调用时用作this值。当需要改变回调函数内this指向时传入此参数，不传入时默认值为当前实例对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+
+**示例**
+
+```TypeScript
+// 创建HashSet实例并添加元素
+let hashSet = new HashSet<string>();
+hashSet.add("sparrow");
+hashSet.add("squirrel");
+hashSet.forEach((value: string, key: string): void => {
+  console.info("value:", value, "key:", key);
+});
+// value:squirrel key:squirrel
+// value:sparrow key:sparrow
+```
+
+```TypeScript
+// 不建议在forEach中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
+let hashSet = new HashSet<string>();
+for(let i = 0; i < 10; i++) {
+  hashSet.add("sparrow" + i);
+}
+for(let i = 0; i < 10; i++) {
+  hashSet.remove("sparrow" + i);
+}
+```
 
 ## has
 
@@ -184,21 +305,31 @@ has(value: T): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | T | 是 | 指定要查找的元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 包含指定元素返回true，不包含指定元素返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
+
+**示例**
+
+```TypeScript
+// 创建HashSet实例并添加元素
+let hashSet = new HashSet<string>();
+hashSet.add("squirrel");
+let result = hashSet.has("squirrel");
+console.info("result:", result);  // result: true
+```
 
 ## isEmpty
 
@@ -216,15 +347,24 @@ isEmpty(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 为空时返回true，不为空时返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
+
+**示例**
+
+```TypeScript
+// 创建HashSet实例，判断是否为空
+const hashSet = new HashSet<number>();
+let result = hashSet.isEmpty();
+console.info("result:", result);  // result: true
+```
 
 ## remove
 
@@ -242,21 +382,32 @@ remove(value: T): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | T | 是 | 指定要删除的元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 成功删除指定元素返回true，若指定元素不存在则返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
+
+**示例**
+
+```TypeScript
+// 创建HashSet实例并添加元素
+let hashSet = new HashSet<string>();
+hashSet.add("squirrel");
+hashSet.add("sparrow");
+let result = hashSet.remove("sparrow");
+console.info("result:", result);  // result: true
+```
 
 ## values
 
@@ -264,8 +415,9 @@ remove(value: T): boolean
 values(): IterableIterator<T>
 ```
 
-返回包含此HashSet中所有值的新迭代器对象。  
-> **说明：**&gt;
+返回包含此HashSet中所有值的新迭代器对象。   
+> **说明：**
+> 
 > 不建议在values迭代过程中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 8
@@ -276,15 +428,30 @@ values(): IterableIterator<T>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;T & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;T & gt; | 返回包含此HashSet中所有值的迭代器对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
+
+**示例**
+
+```TypeScript
+// 创建HashSet实例并添加元素
+let hashSet = new HashSet<string>();
+hashSet.add("squirrel");
+hashSet.add("sparrow");
+let values = hashSet.values();
+for (let value of values) {
+  console.info("value:", value);
+}
+// value: squirrel
+// value: sparrow
+```
 
 ## length
 

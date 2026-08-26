@@ -2,7 +2,8 @@
 
 用于触发长按手势事件，触发长按手势的最少手指数为1，默认最短长按时间为500毫秒。可配置duration参数控制最短长按时长。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 18开始，部分设备会优先响应系统的双指长按手势，导致应用的双指长按手势不生效。
 
 **继承/实现关系：** LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>
@@ -32,15 +33,15 @@
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | { fingers?: number; repeat?: boolean; duration?: number } | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | { fingers?: number; repeat?: boolean; duration?: number } | 否 | 设置长按手势参数。    - fingers：触发长按的最少手指数，最小值为1， & nbsp;最大值为10。   默认值：1     - repeat：是否连续触发事件回调。true表示连续触发事件回调，false表示不连续触发事件回调。   默认值：false     - duration：触发长按的最短时间，单位为毫秒（ms）。   默认值：500 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
 
 ## [[Call]]
 
@@ -60,15 +61,15 @@
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | 否 | 长按手势处理器配置参数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
 
 ## onAction
 
@@ -86,15 +87,15 @@ onAction(event: (event: GestureEvent) => void): LongPressGestureInterface
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | 是 | 长按手势识别成功回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -112,15 +113,15 @@ onActionCancel(event: () => void): LongPressGestureInterface
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 长按手势取消回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -140,15 +141,15 @@ onActionCancel(event: Callback<GestureEvent>): LongPressGestureInterface
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 长按手势取消回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
 
 ## onActionEnd
 
@@ -166,12 +167,12 @@ onActionEnd(event: (event: GestureEvent) => void): LongPressGestureInterface
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | 是 | 长按手势结束回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |

@@ -14,6 +14,6 @@ type EventListener = (evt: Object) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| evt | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| evt | Object | 是 | 用户事件。 |

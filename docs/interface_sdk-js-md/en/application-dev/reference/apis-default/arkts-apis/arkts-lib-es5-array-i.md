@@ -15,14 +15,14 @@ Combines two or more arrays. This method returns a new array without modifying a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| items | ConcatArray & lt;T & gt;[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| items | ConcatArray & lt;T & gt;[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## concat
 
 ```TypeScript
@@ -33,14 +33,14 @@ Combines two or more arrays. This method returns a new array without modifying a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| items | (T \| ConcatArray & lt;T & gt;)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| items | (T \| ConcatArray & lt;T & gt;)[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## every
 
 ```TypeScript
@@ -51,15 +51,15 @@ Determines whether all the members of an array satisfy the specified test.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: T[]) = & gt; value is S | Yes |
-| thisArg | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| predicate | (value: T, index: number, array: T[]) = & gt; value is S | Yes |  |
+| thisArg | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## every
 
 ```TypeScript
@@ -70,15 +70,15 @@ Determines whether all the members of an array satisfy the specified test.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: T[]) = & gt; unknown | Yes |
-| thisArg | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| predicate | (value: T, index: number, array: T[]) = & gt; unknown | Yes |  |
+| thisArg | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## filter
 
 ```TypeScript
@@ -89,15 +89,15 @@ Returns the elements of an array that meet the condition specified in a callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: T[]) = & gt; value is S | Yes |
-| thisArg | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| predicate | (value: T, index: number, array: T[]) = & gt; value is S | Yes |  |
+| thisArg | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## filter
 
 ```TypeScript
@@ -108,15 +108,15 @@ Returns the elements of an array that meet the condition specified in a callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: T[]) = & gt; unknown | Yes |
-| thisArg | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| predicate | (value: T, index: number, array: T[]) = & gt; unknown | Yes |  |
+| thisArg | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## forEach
 
 ```TypeScript
@@ -127,10 +127,10 @@ Performs the specified action for each element in an array.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackfn | (value: T, index: number, array: T[]) = & gt; void | Yes |
-| thisArg | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackfn | (value: T, index: number, array: T[]) = & gt; void | Yes |  |
+| thisArg | any | No |  |
 
 ## indexOf
 
@@ -142,15 +142,15 @@ Returns the index of the first occurrence of a value in an array, or -1 if it is
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| searchElement | T | Yes |
-| fromIndex | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchElement | T | Yes |  |
+| fromIndex | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## join
 
 ```TypeScript
@@ -161,14 +161,14 @@ Adds all the elements of an array into a string, separated by the specified sepa
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| separator | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| separator | string | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## lastIndexOf
 
 ```TypeScript
@@ -179,15 +179,15 @@ Returns the index of the last occurrence of a specified value in an array, or -1
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| searchElement | T | Yes |
-| fromIndex | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchElement | T | Yes |  |
+| fromIndex | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## map
 
 ```TypeScript
@@ -198,15 +198,15 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackfn | (value: T, index: number, array: T[]) = & gt; U | Yes |
-| thisArg | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackfn | (value: T, index: number, array: T[]) = & gt; U | Yes |  |
+| thisArg | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## pop
 
 ```TypeScript
@@ -217,8 +217,8 @@ Removes the last element from an array and returns it. If the array is empty, un
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## push
 
 ```TypeScript
@@ -229,14 +229,14 @@ Appends new elements to the end of an array, and returns the new length of the a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| items | T[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| items | T[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -247,14 +247,14 @@ Calls the specified callback function for all the elements in an array. The retu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) = & gt; T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) = & gt; T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -263,15 +263,15 @@ reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, arr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) = & gt; T | Yes |
-| initialValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) = & gt; T | Yes |  |
+| initialValue | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -282,15 +282,15 @@ Calls the specified callback function for all the elements in an array. The retu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: T[]) = & gt; U | Yes |
-| initialValue | U | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: T[]) = & gt; U | Yes |  |
+| initialValue | U | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -301,14 +301,14 @@ Calls the specified callback function for all the elements in an array, in desce
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) = & gt; T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) = & gt; T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -317,15 +317,15 @@ reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) = & gt; T | Yes |
-| initialValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) = & gt; T | Yes |  |
+| initialValue | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -336,15 +336,15 @@ Calls the specified callback function for all the elements in an array, in desce
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: T[]) = & gt; U | Yes |
-| initialValue | U | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: T[]) = & gt; U | Yes |  |
+| initialValue | U | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## reverse
 
 ```TypeScript
@@ -355,8 +355,8 @@ Reverses the elements in an array in place. This method mutates the array and re
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## shift
 
 ```TypeScript
@@ -367,8 +367,8 @@ Removes the first element from an array and returns it. If the array is empty, u
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## slice
 
 ```TypeScript
@@ -379,15 +379,15 @@ Returns a copy of a section of an array. For both start and end, a negative inde
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | No |
-| end | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | No |  |
+| end | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## some
 
 ```TypeScript
@@ -398,15 +398,15 @@ Determines whether the specified callback function returns true for any element 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: T[]) = & gt; unknown | Yes |
-| thisArg | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| predicate | (value: T, index: number, array: T[]) = & gt; unknown | Yes |  |
+| thisArg | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## sort
 
 ```TypeScript
@@ -417,14 +417,14 @@ Sorts an array in place. This method mutates the array and returns a reference t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| compareFn | (a: T, b: T) = & gt; number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| compareFn | (a: T, b: T) = & gt; number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## splice
 
 ```TypeScript
@@ -435,15 +435,15 @@ Removes elements from an array and, if necessary, inserts new elements in their 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| deleteCount | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes |  |
+| deleteCount | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## splice
 
 ```TypeScript
@@ -454,16 +454,16 @@ Removes elements from an array and, if necessary, inserts new elements in their 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| deleteCount | number | Yes |
-| items | T[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes |  |
+| deleteCount | number | Yes |  |
+| items | T[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toLocaleString
 
 ```TypeScript
@@ -474,8 +474,8 @@ Returns a string representation of an array. The elements are converted to strin
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toString
 
 ```TypeScript
@@ -486,8 +486,8 @@ Returns a string representation of an array.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## unshift
 
 ```TypeScript
@@ -498,14 +498,14 @@ Inserts new elements at the start of an array, and returns the new length of the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| items | T[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| items | T[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [n: number]
 
 ```TypeScript

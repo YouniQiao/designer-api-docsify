@@ -2,9 +2,12 @@
 
 Rounded rectangle.
 
-> **NOTE：**&gt;
-> - The initial APIs of this class are supported since API version 12.&gt;
-> - This module uses the physical pixel unit, px.&gt;
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 12.
+> 
+> - This module uses the physical pixel unit, px.
+> 
 > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
@@ -15,7 +18,7 @@ Rounded rectangle.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import drawing from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -32,9 +35,19 @@ Copies a rounded rectangle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [roundRect](../../apis-arkui/arkts-components/arkts-arkui-canvaspath-c.md) | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | Rounded rectangle to be copied. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let rect: common2D.Rect = {left : 100, top : 100, right : 500, bottom : 300};
+let roundRect = new drawing.RoundRect(rect, 50, 50);
+let roundRect2 = new drawing.RoundRect(roundRect);
+```
 
 ## constructor
 
@@ -50,17 +63,26 @@ A constructor used to create a **RoundRect** object. A rounded rectangle is crea
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rect | common2D.Rect | Yes |
-| xRadii | number | Yes |
-| yRadii | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rect | common2D.Rect | Yes | Rectangle that encloses the rounded rectangle to create. |
+| xRadii | number | Yes | Radius of the rounded corner on the X axis. The value is a floating point number. A negative number is invalid. |
+| yRadii | number | Yes | Radius of the rounded corner on the Y axis. The value is a floating point number. A negative number is invalid. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let rect: common2D.Rect = {left : 100, top : 100, right : 500, bottom : 300};
+let roundRect = new drawing.RoundRect(rect, 50, 50);
+```
 
 ## getCorner
 
@@ -76,21 +98,32 @@ Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Yes | Position of the rounded corner. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| common2D.Point |
+| Type | Description |
+| --- | --- |
+| common2D.Point | Point. The horizontal coordinate indicates the radius of the rounded corner on the X axis, and the vertical coordinate indicates the radius on the Y axis. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let roundRect : drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
+let cornerRadius = roundRect.getCorner(drawing.CornerPos.BOTTOM_LEFT_POS);
+console.info("getCorner---"+cornerRadius.x)
+console.info("getCorner---"+cornerRadius.y)
+```
 
 ## offset
 
@@ -106,16 +139,51 @@ Translates this rounded rectangle by an offset along the X axis and Y axis.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dx | number | Yes |
-| dy | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dx | number | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
+| dy | number | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({
+      alpha: 255,
+      red: 255,
+      green: 0,
+      blue: 0
+    });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    region.setRect(100, 100, 400, 400);
+    region.offset(10, 20);
+    canvas.drawPoint(200, 200);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let roundRect : drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
+roundRect.offset(100, 100);
+```
 
 ## setCorner
 
@@ -131,14 +199,23 @@ Sets the radii of the specified rounded corner in this rounded rectangle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Yes |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Yes | Position of the rounded corner. |
+| x | number | Yes | Radius of the rounded corner on the X axis. The value is a floating point number. A negative number is invalid. |
+| y | number | Yes | Radius of the rounded corner on the Y axis. The value is a floating point number. A negative number is invalid. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let roundRect : drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
+roundRect.setCorner(drawing.CornerPos.TOP_LEFT_POS, 150, 150);
+```

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## setUserId
@@ -22,13 +21,25 @@ function setUserId(name: string, value: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 用户ID的key。只能包含大小写字母、数字、下划线和 \\$，不能以数字开头，长度非空且不超过256个字符。 |
+| value | string | 是 | 用户ID的值。长度不超过256个字符，当值为null或空字符串时，则清除用户ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  hiAppEvent.setUserId('key', 'value');
+} catch (error) {
+  hilog.error(0x0000, 'hiAppEvent', `failed to setUserId event, code=${error.code}`);
+}
+```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { JSON } from 'kits/@kit.ArkTS';
+import JSON from '@kit.ArkTS';
 ```
 
 ## has
@@ -22,13 +22,25 @@ function has(obj: object, property: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| obj | object | 是 |
-| property | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| obj | object | 是 | ArkTS对象，仅支持最外层为字典形式（即大括号而非中括号包围）的合法JSON串解析后的对象。 |
+| property | string | 是 | 要检查的属性名称，用于指定需在ArkTS对象中查找是否存在的属性。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回ArkTS对象是否包含指定属性的结果。true表示对象包含指定属性；false表示对象不包含指定属性。 |
+
+**示例**
+
+```TypeScript
+import { JSON } from '@kit.ArkTS';
+
+const jsonText = '{"name": "John", "age": 30, "city": "ChongQing"}';
+let inputObj = JSON.parse(jsonText);
+let hasNameResult = JSON.has(inputObj, "name");
+console.info("hasNameResult = " + hasNameResult);
+// 打印结果：hasNameResult = true
+```

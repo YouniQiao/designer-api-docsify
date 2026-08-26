@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import avSession from '@kit.AVSessionKit';
 ```
 
 ## onSystemCommonEvent
@@ -24,13 +24,13 @@ function onSystemCommonEvent(callback: EventProcess): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | EventProcess | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | EventProcess | 是 | 监听通用事件命令回调 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |

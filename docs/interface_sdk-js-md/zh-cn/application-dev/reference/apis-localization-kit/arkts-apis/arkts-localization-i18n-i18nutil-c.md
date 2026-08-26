@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## convertCanonicalLocaleIdentifier
@@ -30,15 +30,21 @@ static convertCanonicalLocaleIdentifier(locale: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 是 | 区域ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 有效的区域ID会返回符合[BCP47](https://www.rfc-editor.org/info/bcp47/)标准格式的区域ID。无效的区域ID会返回空字符串。 |
+
+**示例**
+
+```TypeScript
+let result: string = i18n.I18NUtil.convertCanonicalLocaleIdentifier('zh-cn'); // result = 'zh-CN'
+```
 
 ## getBestMatchLocale
 
@@ -56,23 +62,38 @@ static getBestMatchLocale(locale: string, localeList: string[]): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string | 是 |
-| localeList | string[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 是 | 待匹配的[区域ID字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，如：zh-Hans- CN。 |
+| localeList | string[] | 是 | 指定的区域ID字符串列表。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 与某个区域最佳匹配的区域ID。当指定区域列表中没有匹配的区域时，返回空字串。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let matchedLocaleId: string = i18n.I18NUtil.getBestMatchLocale('zh-Hans-CN',
+    ['en-Latn-US', 'en-GB', 'zh-Hant-CN', 'zh-Hans-MO']); // matchedLocaleId = 'zh-Hans-MO'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call I18NUtil.getBestMatchLocale failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getDateOrder
 
@@ -90,15 +111,23 @@ static getDateOrder(locale: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成，如：zh-Hans-CN。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 该区域年、月、日的排列顺序。“y”表示年，“L”表示月，“d”表示日。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let order: string = i18n.I18NUtil.getDateOrder('zh-CN'); // order = 'y-L-d'
+```
 
 ## getThreeLetterLanguage
 
@@ -116,22 +145,36 @@ static getThreeLetterLanguage(locale: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 是 | 待转换的语言二字母代码，如：zh。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回待转换语言二字母代码对应的三字母代码。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let language: string = i18n.I18NUtil.getThreeLetterLanguage('zh') // language = 'zho'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call I18NUtil.getThreeLetterLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getThreeLetterRegion
 
@@ -149,22 +192,36 @@ static getThreeLetterRegion(locale: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 是 | 待转换的地区二字母代码，如：CN。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回待转换地区二字母代码对应的三字母代码。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let region: string = i18n.I18NUtil.getThreeLetterRegion('CN') // region = 'CHN'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call I18NUtil.getThreeLetterRegion failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getTimePeriodName
 
@@ -182,23 +239,37 @@ static getTimePeriodName(hour:number, locale?: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| hour | number | 是 |
-| locale | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| hour | number | 是 | 指定的时间，例如16。 |
+| locale | string | 否 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区 组成。如：zh-Hans-CN。 默认值：系统当前区域ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 指定时间在某区域的本地化表达。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let name: string = i18n.I18NUtil.getTimePeriodName(2, 'zh-CN'); // name = '凌晨'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call I18NUtil.getTimePeriodName failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getUnicodeWrappedFilePath
 
@@ -216,23 +287,41 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
-| delimiter | string | 否 |
-| locale | Intl.Locale | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 待处理的路径，如：/data/out/tmp。 |
+| delimiter | string | 否 | 路径分隔符，默认值：/。 |
+| locale | Intl.Locale | 否 | 区域对象，默认值：系统区域对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 本地化处理后的文件路径。如果区域对象表示的语言是镜像语言，则处理后的文件路径包含方向控制符，保证文件路径镜像显示。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let path: string = '/data/out/tmp';
+  let delimiter: string = '/';
+  let locale: Intl.Locale = new Intl.Locale('ar');
+  let mirrorPath: string =
+    i18n.I18NUtil.getUnicodeWrappedFilePath(path, delimiter, locale); // mirrorPath显示为: 'tmp/out/data/'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call I18NUtil.getUnicodeWrappedFilePath failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getUnicodeWrappedFilePath
 
@@ -254,23 +343,41 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
-| delimiter | string | 否 |
-| locale | intl.Locale | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 待处理的路径，如：/data/out/tmp。 |
+| delimiter | string | 否 | 路径分隔符，默认值：/。 |
+| locale | intl.Locale | 否 | 区域对象，默认值：系统区域对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 本地化处理后的文件路径。如果区域对象表示的语言是镜像语言，则处理后的文件路径包含方向控制符，保证文件路径镜像显示。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n, intl } from '@kit.LocalizationKit';
+
+try {
+  let path: string = '/data/out/tmp';
+  let delimiter: string = '/';
+  let locale: intl.Locale = new intl.Locale('ar');
+  let mirrorPath: string =
+    i18n.I18NUtil.getUnicodeWrappedFilePath(path, delimiter, locale); // mirrorPath显示为: 'tmp/out/data/'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call I18NUtil.getUnicodeWrappedFilePath failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setUnicodeWrappedBidiDirection
 
@@ -280,7 +387,8 @@ static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): s
 
 设置整段文本中部分文本方向，包括RTL、LTR。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 在强字符（指具有明确书写方向的字符）中不生效。
 
 **起始版本：** 26.0.0
@@ -293,16 +401,32 @@ static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): s
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
-| direction | 'RTL' \| 'LTR' | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 需要设置方向的文本。 |
+| direction | 'RTL' \| 'LTR' | 是 | 'RTL'表示从右到左，'LTR'表示从左到右。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 设置方向后的文本。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let text: string = '(012) 345-6789';
+  let result: string = i18n.I18NUtil.setUnicodeWrappedBidiDirection(text, 'LTR');
+  console.info(`setUnicodeWrappedBidiDirection, result: ${result}`);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call I18NUtil.setUnicodeWrappedBidiDirection failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## unitConvert
 
@@ -320,16 +444,27 @@ static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: number, locale: 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 |
-| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 |
-| value | number | 是 |
-| locale | string | 是 |
-| style | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 需要转换的单位。 |
+| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 转换成的目标单位。 |
+| value | number | 是 | 需要转换的单位的数量值。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成，如：zh-Hans-CN。 |
+| style | string | 否 | 格式化使用的风格，取值包括：'number', 'short', 'narrow'。默认值：short。 不同取值显示效果请参考[数字与度量衡国际化](../../../internationalization/i18n-numbers-weights-measures.md)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 转换单位后的度量衡格式化结果。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let fromUnit: i18n.UnitInfo = { unit: 'cup', measureSystem: 'US' };
+let toUnit: i18n.UnitInfo = { unit: 'liter', measureSystem: 'SI' };
+let convertResult: string =
+  i18n.I18NUtil.unitConvert(fromUnit, toUnit, 1000, 'en-US', 'long'); // convertResult = '236.588 liters'
+```

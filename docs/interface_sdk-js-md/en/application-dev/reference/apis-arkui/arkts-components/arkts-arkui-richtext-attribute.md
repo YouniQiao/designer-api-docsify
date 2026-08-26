@@ -29,9 +29,9 @@ Triggered when the RichText loading ends.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | () = & gt; void | Yes |  |
 
 ## onStart
 
@@ -49,6 +49,6 @@ Triggered when the RichText loading starts.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | () = & gt; void | Yes |  |

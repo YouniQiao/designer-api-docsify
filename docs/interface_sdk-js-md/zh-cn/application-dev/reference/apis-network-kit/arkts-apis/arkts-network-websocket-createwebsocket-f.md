@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## createWebSocket
@@ -22,6 +21,12 @@ function createWebSocket(): WebSocket
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [WebSocket](arkts-network-websocket-websocket-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [WebSocket](arkts-network-websocket-websocket-i.md) | 返回一个WebSocket对象，里面包括connect、send、close、on和off方法。 |
+
+**示例**
+
+```TypeScript
+let ws: webSocket.WebSocket = webSocket.createWebSocket();
+```

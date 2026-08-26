@@ -29,9 +29,9 @@ getId(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 当前组件的[组件标识]{ |
 
 ## getUniqueId
 
@@ -51,9 +51,9 @@ Returns the component's unique id.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | the unique id of the component |
 
 ## getUniqueId
 
@@ -73,6 +73,6 @@ getUniqueId(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前组件的唯一id。 |

@@ -19,7 +19,7 @@ MultiNavigation是一个支持分栏导航的组件，提供多层页面栈管�
 ## 导入模块
 
 ```TypeScript
-import { SplitPolicy, MultiNavigation, MultiNavPathStack } from 'kits/@kit.ArkUI';
+import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
 ```
 
 ## navDestination

@@ -3,8 +3,11 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
+import config from '@kit.AccessibilityKit.config';
+import accessibility from '@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
+import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
 ## isOpenTouchGuideSync
@@ -25,6 +28,14 @@ Checks whether touch guide mode is enabled.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether touch guide mode is enabled. Returns **true** if touch guide mode is enabled; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+let status: boolean = accessibility.isOpenTouchGuideSync();
+```

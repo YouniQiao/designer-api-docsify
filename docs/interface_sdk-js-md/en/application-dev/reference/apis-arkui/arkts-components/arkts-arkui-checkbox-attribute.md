@@ -31,9 +31,9 @@ Creates a content modifier for the **Checkbox** component. Setting this attribut
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md)&gt; | Yes | Content modifier to apply to the **Checkbox** component.   **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## contentModifier
 
@@ -53,9 +53,9 @@ Creates a content modifier for the **Checkbox** component. Compared with [conten
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md)&gt;&gt; | Yes | Content modifier to apply to the **Checkbox** component.   **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API.If **modifier** is set to **undefined**, no content modifier is used. |
 
 ## mark
 
@@ -75,9 +75,9 @@ Sets the check mark style of the check box.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | Yes | Check mark style of the check box. Since API version 12, if **indicatorBuilder** is set, the style is determined by **indicatorBuilder**.Default value: {strokeColor : `\\$r('sys.color.ohos_id_color_foreground_contrary')`,strokeWidth: `\\$r('sys.float.ohos_id_checkbox_stroke_width')`,size: '20vp'} |
 
 ## mark
 
@@ -97,9 +97,9 @@ Sets the check mark style of the check box. Compared with [mark](#mark)&lt;sup&g
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md)&gt; | Yes | Check mark style of the check box. If **indicatorBuilder** is set, the style is determined by **indicatorBuilder**.If **style** is set to **undefined**, the default value is used: {strokeColor : `\\$r('sys.color.ohos_id_color_foreground_contrary')`,strokeWidth: `\\$r('sys.float.ohos_id_checkbox_stroke_width')`,size: '20vp'} |
 
 ## onChange
 
@@ -119,9 +119,9 @@ Invoked when the selected state of the check box changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | Yes | Callback used to return the selected state.<br>**Since:** 18 |
 
 ## onChange
 
@@ -143,9 +143,9 @@ Invoked when the selected state of the check box changes. Compared with [onChang
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md)&gt; | Yes | Callback used to return the selected state.If **callback** is set to **undefined**, the callback function is not used. |
 
 ## select
 
@@ -165,9 +165,9 @@ Sets whether the check box is selected.Since API version 10, this attribute supp
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the check box is selected.Default value: **false**   **true**: The check box is selected.    **false**: The check box is not selected. |
 
 ## select
 
@@ -189,9 +189,9 @@ Sets whether the check box is selected. Compared with [select](#select), this AP
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isSelected | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isSelected | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether the check box is selected.If **isSelected** is set to **undefined**, the default value **false** is used.   **true**: The check box is selected.    **false**: The check box is not selected. |
 
 ## selectedColor
 
@@ -211,9 +211,9 @@ Sets the color of the check box when it is selected.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the check box when it is selected.Default value: **\\$r('sys.color.ohos_id_color_text_primary_activated')**.An invalid value is handled as the default value. |
 
 ## selectedColor
 
@@ -235,9 +235,9 @@ Sets the color of the check box when it is selected. Compared with [selectedColo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Color of the check box when it is selected.If **resColor** is set to **undefined**, the default value **\\$r('sys.color.ohos_id_color_text_primary_activated')** is used.An invalid value is handled as the default value. |
 
 ## shape
 
@@ -259,9 +259,9 @@ Sets the check box shape. To adjust the style of the current check box, use [con
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | Yes | Shape of the check box.Default value: **CheckBoxShape.CIRCLE |
 
 ## shape
 
@@ -283,9 +283,9 @@ Sets the check box shape. Compared with [shape](#shape)&lt;sup&gt;11+&lt;/sup&gt
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [shape](#shape) | [Optional](arkts-arkui-optional-t.md)&lt;[CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shape | [Optional](arkts-arkui-optional-t.md)&lt;[CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md)&gt; | Yes | Shape of the check box.If **shape** is set to **undefined**, the default value **CheckBoxShape.CIRCLE** is used. |
 
 ## unselectedColor
 
@@ -305,9 +305,9 @@ Sets the border color of the check box when it is not selected.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Border color of the check box when it is not selected.Default value: **\\$r('sys.color.ohos_id_color_switch_outline_off')**. |
 
 ## unselectedColor
 
@@ -327,6 +327,6 @@ Sets the border color of the check box when it is not selected. Compared with [u
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Border color of the check box when it is not selected.If **resColor** is set to **undefined**, the default value **\\$r('sys.color.ohos_id_color_switch_outline_off')** is used. |

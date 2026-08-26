@@ -2,7 +2,8 @@
 
 Describes the water flow item sections.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After the section information is modified using **splice**, **push**, and **update**, ensure that the total number
 > of child nodes in all sections matches the actual total number of child nodes in the **WaterFlow** component. Any
 > failure to do so may result in layout issues that prevent the **WaterFlow** component from scrolling properly.
@@ -50,9 +51,9 @@ Obtains the number of sections in the **WaterFlow** component.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of sections in the **WaterFlow** component. |
 
 ## push
 
@@ -72,15 +73,15 @@ Adds the specified sections to the end of the **WaterFlow** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| section | [SectionOptions](arkts-arkui-sectionoptions-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| section | [SectionOptions](arkts-arkui-sectionoptions-c.md) | Yes | Sections to add to the end of the **WaterFlow** component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the section is successfully added; returns **false** if the addition fails (**itemsCount** of the new section is not a non-negative number). |
 
 ## splice
 
@@ -100,17 +101,17 @@ Changes sections by removing or replacing an existing section and/or adding a se
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| deleteCount | number | No |
-| [sections](arkts-arkui-waterflowoptions-i.md) | Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Zero-based index at which the changing starts. The value is converted to an integer.   **NOTE：** 1. A negative index counts back from the end of the section list. **start + WaterFlowSections.length()** is used. 2. If **start** & lt; -**WaterFlowSections.length()**, **0** is used. 3. If **start** & gt;= **WaterFlowSections.length()**, a new section is added at the end. |
+| deleteCount | number | No | Number of sections to be deleted from the position specified by **start**.   **NOTE：** 1. If **deleteCount** is omitted, or if its value is greater than or equal to the number of sections from the position specified by **start** to the end of the **WaterFlowSections**, then all sections from the position specified by **start** to the end of the **WaterFlowSections** will be deleted. 2. If **deleteCount** is **0** or a negative number, no sections are deleted. |
+| sections | Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; | No | Sections to add to the section list, beginning from the position specified by **start**. If no section is specified, **splice()** will only delete sections from the **WaterFlow** component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the sections are successfully modified and returns **false** if the modification fails (**itemsCount** of any section to be added is not a non-negative number). |
 
 ## update
 
@@ -130,16 +131,16 @@ Updates the configuration of a specified water flow item section.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sectionIndex | number | Yes |
-| section | [SectionOptions](arkts-arkui-sectionoptions-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sectionIndex | number | Yes | Zero-based index of the water flow item section to update. The value is converted to an integer.   **NOTE：** 1. A negative index counts back from the end of the section list. **sectionIndex + WaterFlowSections.length()** is used. 2. If **sectionIndex** & lt; - **WaterFlowSections.length()**, **0** is used. 3. If **sectionIndex** & gt;= **WaterFlowSections.length()**, a new section is added at the end. |
+| section | [SectionOptions](arkts-arkui-sectionoptions-c.md) | Yes | New section configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns whether the update is successful. If the value of **itemsCount** in any section to add is not a non-negative integer, **false** is returned. |
 
 ## values
 
@@ -159,6 +160,6 @@ Obtains the configuration of all sections in the **WaterFlow** component.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; | Configuration of all sections in the **WaterFlow** component. |

@@ -14,9 +14,9 @@ Defines the value types allowed in a **ValuesBucket** instance.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| long |
-| double |
-| string |
-| boolean |
+| Type | Description |
+| --- | --- |
+| long | [since 20] |
+| double | [since 20] |
+| string | The value is a string. [since 12] |
+| boolean | The value is **true** or **false**. [since 12] |

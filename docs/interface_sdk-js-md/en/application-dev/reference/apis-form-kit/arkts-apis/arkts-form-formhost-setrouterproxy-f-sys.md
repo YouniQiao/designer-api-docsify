@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from 'kits/@kit.FormKit';
+import formHost from '@kit.FormKit';
 ```
 
 ## setRouterProxy
@@ -14,7 +14,8 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 
 Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
 > checks whether the destination is proper and whether the widget has the redirection permission, and then
 > triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,
@@ -31,23 +32,77 @@ Sets a router proxy for widgets and obtains the Want information required for re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes |
-| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formIds | Array & lt;string & gt; | Yes | Array of widget IDs. |
+| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want information required for redirection. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the router proxy is set, **error** is **undefined**; otherwise, an exception is thrown. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+
+**Examples**
+
+```TypeScript
+import { common, Want } from '@kit.AbilityKit';
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct CardExample {
+  @State formId: number = 0;
+  @State fwidth: number = 420;
+  @State fheight: number = 280;
+  private context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+  build() {
+    Column() {
+      FormComponent({
+        id: this.formId,
+        name: "widget",
+        bundle: "com.example.cardprovider",
+        ability: "EntryFormAbility",
+        module: "entry",
+        dimension: FormDimension.Dimension_2_2,
+        temporary: false,
+      })
+        .allowUpdate(true)
+        .size({ width: this.fwidth, height: this.fheight })
+        .visibility(Visibility.Visible)
+        .onAcquired((form) => {
+          console.info('testTag onAcquired.');
+          this.formId = form.id;
+          try {
+            let formIds: string[] = [this.formId.toString()];
+            formHost.setRouterProxy(formIds, (want: Want) => {
+              console.info('formHost recv router event.');
+              // The widget host processes the redirection.
+              this.context.startAbility(want, (err: BusinessError) => {
+                console.error(`formHost startAbility error, code: ${err.code}, message: ${err.message}`);
+              });
+            }, (err: BusinessError) => {
+              console.error(`set router proxy error, code: ${err.code}, message: ${err.message}`);
+            })
+          } catch (e) {
+            console.error(`formHost setRouterProxy, code: ${(e as BusinessError).code}, message: ${(e as BusinessError).message}`);
+          }
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 
 ## setRouterProxy
@@ -58,11 +113,13 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<
 
 Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise to return the result. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
 > checks whether the destination is proper and whether the widget has the redirection permission, and then
 > triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,
-> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.&gt;
+> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
+> 
 > - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
 
 **Since:** 11
@@ -75,25 +132,81 @@ Sets a router proxy for widgets and obtains the Want information required for re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes |
-| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formIds | Array & lt;string & gt; | Yes | Array of widget IDs. |
+| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want information required for redirection. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+
+**Examples**
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { common, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct CardExample {
+  @State formId: number = 0;
+  @State fwidth: number = 420;
+  @State fheight: number = 280;
+  private context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+  build() {
+    Column() {
+      FormComponent({
+        id: this.formId,
+        name: "widget",
+        bundle: "com.example.cardprovider",
+        ability: "EntryFormAbility",
+        module: "entry",
+        dimension: FormDimension.Dimension_2_2,
+        temporary: false,
+      })
+        .allowUpdate(true)
+        .size({ width: this.fwidth, height: this.fheight })
+        .visibility(Visibility.Visible)
+        .onAcquired((form) => {
+          console.info('testTag onAcquired.');
+          this.formId = form.id;
+          try {
+            let formIds: string[] = [this.formId.toString()];
+            formHost.setRouterProxy(formIds, (want: Want) => {
+              console.info('formHost recv router event.');
+              // The widget host processes the redirection.
+              this.context.startAbility(want, (err: BusinessError) => {
+                console.error(`formHost startAbility error, code: ${err.code}, message: ${err.message}`);
+              });
+            }).then(() => {
+              console.info('formHost set router proxy success');
+            }).catch((err: BusinessError) => {
+              console.error(`set router proxy error, code: ${err.code}, message: ${err.message}`);
+            })
+          } catch (e) {
+            console.error(`formHost setRouterProxy, code: ${e.code}, message: ${e.message}`);
+          }
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```

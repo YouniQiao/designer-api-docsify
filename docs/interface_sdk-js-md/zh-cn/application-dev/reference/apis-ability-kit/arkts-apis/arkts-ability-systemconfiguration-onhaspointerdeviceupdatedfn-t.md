@@ -16,6 +16,6 @@ type OnHasPointerDeviceUpdatedFn = (hasPointerDevice: boolean) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [hasPointerDevice](arkts-ability-app-ability-configuration-configuration-i.md) | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| hasPointerDevice | boolean | 是 | 指针设备是否已连接，如键盘、鼠标、触控板等。true表示设备已连接，false表示设备未连接。 |

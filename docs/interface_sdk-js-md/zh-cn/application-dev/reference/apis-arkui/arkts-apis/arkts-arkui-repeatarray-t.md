@@ -16,8 +16,8 @@ Repeat数据源参数联合类型。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| Array & lt;T & gt; |
-| ReadonlyArray & lt;T & gt; |
-| Readonly & lt;Array & lt;T & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;T & gt; | 常规数组类型。 |
+| ReadonlyArray & lt;T & gt; | 只读数组类型，不允许数组对象变更。 |
+| Readonly & lt;Array & lt;T & gt; & gt; | 只读数组类型，不允许数组对象变更。 |

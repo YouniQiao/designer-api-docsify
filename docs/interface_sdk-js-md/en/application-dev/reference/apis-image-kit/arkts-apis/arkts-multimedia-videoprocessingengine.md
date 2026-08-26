@@ -9,27 +9,27 @@ This module provides the capability of content processing for images, including 
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from 'kits/@kit.ImageKit';
+import videoProcessingEngine from '@kit.ImageKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [create(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-create-f.md) |
-| [deinitializeEnvironment(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-deinitializeenvironment-f.md) |
-| [initializeEnvironment(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-initializeenvironment-f.md) |
+| Name | Description |
+| --- | --- |
+| [create(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-create-f.md) | Create an image processing instance. |
+| [deinitializeEnvironment(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-deinitializeenvironment-f.md) | Deinitialize global environment for image processing. |
+| [initializeEnvironment(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-initializeenvironment-f.md) | Initialize global environment for image processing. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ImageProcessor(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-imageprocessor-i.md) |
+| Name | Description |
+| --- | --- |
+| [ImageProcessor(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-imageprocessor-i.md) | Provides the ImageProcessor type, including the processing function. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [QualityLevel(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-qualitylevel-e.md) |
+| Name | Description |
+| --- | --- |
+| [QualityLevel(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-qualitylevel-e.md) | Levels of processing quality for detail enhancement. @enum {number} |

@@ -31,9 +31,9 @@ A constructor used to create a **LinearGradientStyle** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [options](#options) | [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md) | Yes | Options for displaying a linear gradient. |
 
 ## options
 

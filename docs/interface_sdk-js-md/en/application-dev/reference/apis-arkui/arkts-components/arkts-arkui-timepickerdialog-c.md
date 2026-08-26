@@ -34,6 +34,6 @@ Shows a time picker dialog box.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [TimePickerDialogOptions](arkts-arkui-timepickerdialogoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [TimePickerDialogOptions](arkts-arkui-timepickerdialogoptions-i.md) | No | Parameters of the time picker dialog box. |

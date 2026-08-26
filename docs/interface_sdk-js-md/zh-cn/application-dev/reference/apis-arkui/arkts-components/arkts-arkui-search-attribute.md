@@ -31,9 +31,9 @@ autoCapitalizationMode(mode: AutoCapitalizationMode)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [AutoCapitalizationMode](../arkts-apis/arkts-arkui-autocapitalizationmode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [AutoCapitalizationMode](../arkts-apis/arkts-arkui-autocapitalizationmode-e.md) | 是 | 自动大小写模式，用于设置输入法的大小写转换规则，具体实现以输入法应用为主。 |
 
 ## cancelButton
 
@@ -53,9 +53,9 @@ cancelButton(value: CancelButtonOptions | CancelButtonSymbolOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md) \| [CancelButtonSymbolOptions](arkts-arkui-cancelbuttonsymboloptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md) \| [CancelButtonSymbolOptions](arkts-arkui-cancelbuttonsymboloptions-i.md) | 是 | 右侧清除按钮样式。当style为CancelButtonStyle.CONSTANT时，默认显示 清除样式。<br>**起始版本：** 12 |
 
 ## caretStyle
 
@@ -65,7 +65,8 @@ caretStyle(value: CaretStyle)
 
 设置光标样式。未通过该接口设置时，默认光标宽度为2.0vp，颜色为'#007DFF'（蓝色）。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 12开始，此接口支持设置文本手柄颜色，光标和文本手柄颜色保持一致。
 
 **起始版本：** 10
@@ -78,9 +79,9 @@ caretStyle(value: CaretStyle)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [CaretStyle](../arkts-apis/arkts-arkui-caretstyle-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [CaretStyle](../arkts-apis/arkts-arkui-caretstyle-i.md) | 是 | 光标样式。 |
 
 ## compressLeadingPunctuation
 
@@ -90,8 +91,10 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 设置是否开启行首标点符号压缩。开启后，行首标点符号左侧的间距将被压缩，适用于追求排版美观的中文、日文等CJK文本场景。
 
-> **说明：**&gt;
-> - 行首标点符号默认不压缩。&gt;
+> **说明：**
+> 
+> - 行首标点符号默认不压缩。
+> 
 > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md)的行首压缩的标点范围。
 
 **起始版本：** 23
@@ -106,9 +109,9 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启行首标点符号压缩。 true表示开启行首标点符号压缩；false表示不开启行首标点符号压缩。 |
 
 ## copyOption
 
@@ -126,9 +129,9 @@ copyOption(value: CopyOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | 是 | 输入的文本是否可复制。    **说明：** 当copyOption不为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时， [enableSelectedDataDetector](#enableselecteddatadetector)功能不生效。 |
 
 ## customKeyboard
 
@@ -138,7 +141,8 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 设置自定义键盘。当设置自定义键盘时，输入框激活后不会打开系统输入法，而是加载指定的自定义组件。自定义键盘的高度可以通过自定义组件根节点的height属性设置，宽度不可设置，使用系统默认值。自定义键盘采用覆盖原始界面的方式呈现。当未开启避让模式或输入框不需要避让时，不会对应用原始界面产生压缩或上提。自定义键盘无法获取焦点，但是会拦截手势事件。默认在输入控件失去焦点时，关闭自定义键盘，开发者也可以通过[stopEditing](arkts-arkui-searchcontroller-c.md#stopediting)方法控制键盘关闭。当设置自定义键盘时，可以通过绑定[onKeyPreIme](arkts-arkui-commonmethod-c.md#onkeypreime)事件规避物理键盘的输入。从API version 23开始，自定义键盘可以通过 [setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)开启接续，在切换至 其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 10
@@ -153,10 +157,10 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| ComponentContent \| undefined | 是 |
-| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| ComponentContent \| undefined | 是 | 自定义键盘。设定值为undefined时，关闭自定义键盘。<br>**起始版本：** 22 |
+| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) | 否 | 设置自定义键盘是否支持避让功能。不传入时使用默认配置。<br>**起始版本：** 12 |
 
 ## decoration
 
@@ -166,8 +170,10 @@ decoration(value: TextDecorationOptions)
 
 设置文本装饰线类型样式及其颜色。未通过该接口设置时，默认装饰线类型为TextDecorationType.None（无装饰线），颜色为Color.Black（黑色），样式为TextDecorationStyle.SOLID（实线） ，粗细缩放为1.0。
 
-> **说明：**&gt;
-> - 当文字的下边缘轮廓与装饰线位置相交时，会触发下划线避让规则，下划线将在这些字符处避让文字。常见”gjyqp”等英文字符。&gt;
+> **说明：**
+> 
+> - 当文字的下边缘轮廓与装饰线位置相交时，会触发下划线避让规则，下划线将在这些字符处避让文字。常见”gjyqp”等英文字符。
+> 
 > - 当文本装饰线的颜色设置为Color.Transparent时，装饰线颜色设置为跟随每行第一个字的字体颜色。当文本装饰线的颜色设置为透明色16进制对应值”#00FFFFFF”时，装饰线颜色设置为透明色。
 
 **起始版本：** 12
@@ -180,9 +186,9 @@ decoration(value: TextDecorationOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [TextDecorationOptions](arkts-arkui-textdecorationoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [TextDecorationOptions](arkts-arkui-textdecorationoptions-i.md) | 是 | 文本装饰线对象。 |
 
 ## dividerColor
 
@@ -202,9 +208,9 @@ dividerColor(color: Optional<ColorMetrics>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 | 设置分割线颜色。 默认使用系统的主题色：浅色模式下为0x33000000，表示黑色（20%不透明度），深色模式下为0x33FFFFFF，表示白色（20%不透明度）。 |
 
 ## editMenuOptions
 
@@ -224,9 +230,9 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | 是 | 扩展菜单选项，用于设置自定义菜单扩展项的文本内容、图标和回调方法。当需要在文本选择菜单中添加自定义选项时使用此参数。 |
 
 ## enableAutoSpacing
 
@@ -246,9 +252,9 @@ enableAutoSpacing(enabled: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启中文与西文的自动间距。 true为开启自动间距，false为不开启。 |
 
 ## enableHapticFeedback
 
@@ -270,9 +276,9 @@ enableHapticFeedback(isEnabled: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isEnabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isEnabled | boolean | 是 | 是否开启触控反馈。 true表示开启触控反馈，false表示不开启触控反馈。 |
 
 ## enableKeyboardOnFocus
 
@@ -294,9 +300,9 @@ enableKeyboardOnFocus(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | Search获焦时，是否主动拉起软键盘。 true表示主动拉起，false表示不主动拉起。 |
 
 ## enablePreviewText
 
@@ -306,7 +312,8 @@ enablePreviewText(enable: boolean)
 
 设置是否开启输入预上屏。未通过该接口设置时，默认开启输入预上屏。预上屏内容定义为文字暂存态，目前不支持文字拦截功能。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > “预上屏”描述的是一种文字暂存状态。需要在输入法中开启预上屏功能，在输入文本过程中，未确认输入候选词时，文本框中显示标记文本。例如，通过拼音输入中文时，未确定候选词之前，在输入框中显示拼音字母，该状态称为文字预上屏。
 
 **起始版本：** 12
@@ -319,9 +326,9 @@ enablePreviewText(enable: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 是否开启输入预上屏。 true表示开启输入预上屏，false表示不开启输入预上屏。 |
 
 ## enableSelectedDataDetector
 
@@ -341,9 +348,9 @@ enableSelectedDataDetector(enable: boolean | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | boolean \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean \| undefined | 是 | 开启选中文本实体识别。 true：开启识别，false：关闭识别。 |
 
 ## enterKeyType
 
@@ -363,9 +370,9 @@ enterKeyType(value: EnterKeyType)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [EnterKeyType](#enterkeytype) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [EnterKeyType](#enterkeytype) | 是 | 输入法回车键类型。 |
 
 ## fallbackLineSpacing
 
@@ -387,9 +394,9 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 行高是否基于文字实际高度自适应。 此接口仅当行高小于文字实际高度时生效。 true表示行高基于文字实际高度自适应；false表示行高不基于文字实际高度自适应。 |
 
 ## fontColor
 
@@ -399,7 +406,8 @@ fontColor(value: ResourceColor)
 
 设置输入文本的字体颜色。未通过该接口设置时，默认输入文本的字体颜色为'#FF182431'（深灰色），Wearable设备上默认为'#dbffffff'（白色，不透明度约为86%）。fontSize、fontStyle、 fontWeight和fontFamily在[textFont](#textfont)属性中设置。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 当同时设置fontColor和[shaderStyle](#shaderstyle)时，fontColor不生效。
 
 **起始版本：** 10
@@ -412,9 +420,9 @@ fontColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 输入文本的字体颜色。    **说明：** 当同时设置fontColor和[shaderStyle](#shaderstyle)时，fontColor设置不生效。 |
 
 ## fontFeature
 
@@ -434,9 +442,9 @@ fontFeature(value: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | string | 是 | 文字特性效果，用于设置OpenType字体的高级排版能力，如连字、数字等宽等。 格式为："ss01" on。更多支持的属性详见fontFeature属性列表。 |
 
 ## halfLeading
 
@@ -456,9 +464,9 @@ halfLeading(halfLeading: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [halfLeading](#halfleading) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| halfLeading | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 设置文本是否垂直居中。 true表示将行间距平分至行的顶部与底部，false则不平分。 |
 
 ## includeFontPadding
 
@@ -480,9 +488,9 @@ includeFontPadding(include: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否在首行和尾行增加间距以避免文字截断。 true表示在首行和尾行增加间距；false表示在首行和尾行不增加间距。 |
 
 ## inputFilter
 
@@ -502,10 +510,10 @@ inputFilter(value: ResourceStr, error?: Callback<string>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
-| error | Callback & lt;string & gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 输入过滤器的正则表达式。匹配该表达式的输入允许显示，不匹配的输入将被过滤。 |
+| error | Callback & lt;string & gt; | 否 | 正则匹配失败时，返回被过滤的内容。不传入时不触发该回调。 |
 
 ## keyboardAppearance
 
@@ -525,9 +533,9 @@ keyboardAppearance(appearance: Optional<KeyboardAppearance>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | 是 | 键盘样式。 |
 
 ## letterSpacing
 
@@ -547,9 +555,9 @@ letterSpacing(value: number | string | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 文本字符间距。 单位：[fp](../arkts-apis/arkts-arkui-length-t.md) |
 
 ## lineHeight
 
@@ -559,7 +567,8 @@ lineHeight(value: number | string | Resource)
 
 设置文本的文本行高，设置值不大于0时，不限制文本行高，自适应字体大小，number类型时单位为fp。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 特殊字符字体高度远超出同行的其他字符高度时，文本框出现截断、遮挡、内容相对位置发生变化等不符合预期的显示异常，需要开发者调整组件高度、行高等属性，修改对应的页面布局。
 
 **起始版本：** 12
@@ -572,9 +581,9 @@ lineHeight(value: number | string | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 文本的文本行高。 number类型时单位为fp，string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。 |
 
 ## maxFontScale
 
@@ -594,9 +603,9 @@ maxFontScale(scale: Optional<number|Resource>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | 是 | 文本最大的字体缩放倍数，支持undefined类型。 取值范围：[1, +∞)    **说明：** 设置的值小于1时，按值为1处理。设置undefined时维持原值，异常值默认不生效。 设置maxFontScale属性后，search组件内容最多放大到2倍。 使用前需在工程中配置[configuration.json](../../../quick-start/app-configuration-file.md#configuration标签)文件和 [app.json5](../../../quick-start/app-configuration-file.md)文件，具体详见 [示例19（设置最小字体范围与最大字体范围）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-search.md#示例19设置最小字体范围与最大字体范围)。 |
 
 ## maxFontSize
 
@@ -616,9 +625,9 @@ maxFontSize(value: number | string | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 文本最大显示字号。 单位：[fp](../arkts-apis/arkts-arkui-length-t.md) |
 
 ## maxLength
 
@@ -638,9 +647,9 @@ maxLength(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 文本的最大输入字符数。取值范围：[0, +∞)。当value & lt;0时，按照默认值处理，不设限制。 |
 
 ## minFontScale
 
@@ -660,9 +669,9 @@ minFontScale(scale: Optional<number|Resource>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | 是 | 文本最小的字体缩放倍数，支持undefined类型。 取值范围：[0, 1]    **说明：** 设置的值小于0时，按值为0处理。设置的值大于1，按值为1处理。设置undefined时维持原值，异常值默认不生效。 使用前需在工程中配置[configuration.json](../../../quick-start/app-configuration-file.md#configuration标签)文件和 [app.json5](../../../quick-start/app-configuration-file.md)文件，具体详见 [示例19（设置最小字体范围与最大字体范围）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-search.md#示例19设置最小字体范围与最大字体范围)。 |
 
 ## minFontSize
 
@@ -682,9 +691,9 @@ minFontSize(value: number | string | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 文本最小显示字号。 单位：[fp](../arkts-apis/arkts-arkui-length-t.md) |
 
 ## onChange
 
@@ -702,9 +711,9 @@ onChange(callback: EditableTextOnChangeCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [EditableTextOnChangeCallback](../arkts-apis/arkts-arkui-editabletextonchangecallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [EditableTextOnChangeCallback](../arkts-apis/arkts-arkui-editabletextonchangecallback-t.md) | 是 | 当前输入文本内容变化时的回调。<br>**起始版本：** 12 |
 
 ## onContentScroll
 
@@ -726,9 +735,9 @@ onContentScroll(callback: OnContentScrollCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnContentScrollCallback](../arkts-apis/arkts-arkui-oncontentscrollcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnContentScrollCallback](../arkts-apis/arkts-arkui-oncontentscrollcallback-t.md) | 是 | 文本内容滚动回调，回调参数包括totalOffsetX（水平滚动偏移量）和totalOffsetY（垂直滚动偏移量）。<br>**起始版本：** 18 |
 
 ## onCopy
 
@@ -738,7 +747,8 @@ onCopy(callback: Callback<string>)
 
 进行复制操作时，触发该回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > onWillCopy先于onCopy触发。onWillCopy回调返回true时允许复制操作继续执行，返回false时拦截复制操作且不触发onCopy。两者可同时使用。
 
 **起始版本：** 8
@@ -749,9 +759,9 @@ onCopy(callback: Callback<string>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback & lt;string & gt; | 是 | 复制回调，其返回值为复制的文本内容。<br>**起始版本：** 18 |
 
 ## onCut
 
@@ -761,7 +771,8 @@ onCut(callback: Callback<string>)
 
 进行剪切操作时，触发该回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > onWillCut先于onCut触发。onWillCut回调返回true时允许剪切操作继续执行，返回false时拦截剪切操作且不触发onCut。两者可同时使用。
 
 **起始版本：** 8
@@ -772,9 +783,9 @@ onCut(callback: Callback<string>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback & lt;string & gt; | 是 | 剪切回调，其返回值为剪切的文本内容。<br>**起始版本：** 18 |
 
 ## onDidDelete
 
@@ -784,7 +795,8 @@ onDidDelete(callback: Callback<DeleteValue>)
 
 在删除完成时，触发该回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 点击清除按钮不触发onDidDelete回调。
 
 **起始版本：** 12
@@ -797,9 +809,9 @@ onDidDelete(callback: Callback<DeleteValue>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[DeleteValue](../arkts-apis/arkts-arkui-deletevalue-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[DeleteValue](../arkts-apis/arkts-arkui-deletevalue-i.md)&gt; | 是 | 在删除完成时调用的回调。 仅支持系统输入法输入的场景。 |
 
 ## onDidInsert
 
@@ -819,9 +831,9 @@ onDidInsert(callback: Callback<InsertValue>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[InsertValue](../arkts-apis/arkts-arkui-insertvalue-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[InsertValue](../arkts-apis/arkts-arkui-insertvalue-i.md)&gt; | 是 | 在输入完成时调用的回调。 仅支持系统输入法输入的场景。 |
 
 ## onEditChange
 
@@ -841,9 +853,9 @@ onEditChange(callback: Callback<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback & lt;boolean & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback & lt;boolean & gt; | 是 | 编辑状态改变回调，其返回值为true表示正在输入，false表示无焦点，无法输入文字。 |
 
 ## onPaste
 
@@ -863,9 +875,9 @@ onPaste(callback: OnPasteCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnPasteCallback](../arkts-apis/arkts-arkui-onpastecallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnPasteCallback](../arkts-apis/arkts-arkui-onpastecallback-t.md) | 是 | Executed when a paste operation is performed.Callback used to return the pasted text content.<br>**起始版本：** 18 |
 
 ## onSubmit
 
@@ -883,9 +895,9 @@ onSubmit(callback: Callback<string>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback & lt;string & gt; | 是 | 搜索提交回调，其返回值为当前搜索框中输入的文本内容。<br>**起始版本：** 18 |
 
 ## onSubmit
 
@@ -905,9 +917,9 @@ onSubmit(callback: SearchSubmitCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [SearchSubmitCallback](arkts-arkui-searchsubmitcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [SearchSubmitCallback](arkts-arkui-searchsubmitcallback-t.md) | 是 | 点击搜索图标、搜索按钮或者按下软键盘搜索按钮时的回调事件。 |
 
 ## onTextSelectionChange
 
@@ -929,9 +941,9 @@ onTextSelectionChange(callback: OnTextSelectionChangeCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) | 是 | 文本选择变化回调或光标位置变化回调。<br>**起始版本：** 18 |
 
 ## onWillAttachIME
 
@@ -941,7 +953,8 @@ onWillAttachIME(callback: Callback<IMEClient>)
 
 在搜索框将要绑定输入法前触发该回调。<!--Del-->在搜索框将要绑定输入法前，可以通过`UIContext`的系统接口 [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig)设置键盘的样式。&lt;!--DelEnd- -&gt;从API version 22开始，调用[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)的[setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.md#setextraconfig)方法可以设置输入法扩展信息。在绑定输 入法成功后，输入法会收到扩展信息，输入法可以依据此信息实现自定义功能。IMEClient仅在onWillAttachIME执行期间有效，不可进行异步调用。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 20
@@ -954,9 +967,9 @@ onWillAttachIME(callback: Callback<IMEClient>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)&gt; | 是 | 在搜索框将要绑定输入法前触发该回调。 |
 
 ## onWillChange
 
@@ -976,9 +989,9 @@ onWillChange(callback: Callback<EditableTextChangeValue, boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[EditableTextChangeValue](../arkts-apis/arkts-arkui-editabletextchangevalue-i.md), boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[EditableTextChangeValue](../arkts-apis/arkts-arkui-editabletextchangevalue-i.md), boolean&gt; | 是 | 在文本内容将要发生变化时的回调。 返回true时，表示正常修改。返回false时，表示拦截此次触发。 |
 
 ## onWillCopy
 
@@ -988,7 +1001,8 @@ onWillCopy(callback: Callback<string, boolean>)
 
 在进行复制操作前，触发该回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > onWillCopy先于onCopy触发。onWillCopy回调返回true时允许复制操作继续执行，返回false时拦截复制操作且不触发onCopy。两者可同时使用。
 
 **起始版本：** 26.0.0
@@ -1001,9 +1015,9 @@ onWillCopy(callback: Callback<string, boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback & lt;string, boolean & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback & lt;string, boolean & gt; | 是 | 复制操作前的回调。回调参数类型为string时，表示将要被复制的文本内容。回调参数类型为boolean时，表示当前选中文本是否允许被复 制，true：允许文本被复制；false：不允许文本被复制。 |
 
 ## onWillCut
 
@@ -1013,7 +1027,8 @@ onWillCut(callback: Callback<string, boolean>)
 
 在进行剪切操作前，触发该回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > onWillCut先于onCut触发。onWillCut回调返回true时允许剪切操作继续执行，返回false时拦截剪切操作且不触发onCut。两者可同时使用。
 
 **起始版本：** 26.0.0
@@ -1026,9 +1041,9 @@ onWillCut(callback: Callback<string, boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback & lt;string, boolean & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback & lt;string, boolean & gt; | 是 | 剪切操作前的回调。回调参数类型为string时，表示将要被剪切的文本内容。回调参数类型为boolean时，表示当前选中文本是否允许被剪 切，true：允许文本被剪切；false：不允许文本被剪切。 |
 
 ## onWillDelete
 
@@ -1048,9 +1063,9 @@ onWillDelete(callback: Callback<DeleteValue, boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[DeleteValue](../arkts-apis/arkts-arkui-deletevalue-i.md), boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[DeleteValue](../arkts-apis/arkts-arkui-deletevalue-i.md), boolean&gt; | 是 | 在将要删除时调用的回调。 在返回true时，表示正常删除，返回false时，表示不删除。 在预上屏删除操作时，该回调不触发。 仅支持系统输入法输入的场景。 |
 
 ## onWillInsert
 
@@ -1070,9 +1085,9 @@ onWillInsert(callback: Callback<InsertValue, boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[InsertValue](../arkts-apis/arkts-arkui-insertvalue-i.md), boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[InsertValue](../arkts-apis/arkts-arkui-insertvalue-i.md), boolean&gt; | 是 | 在将要输入时调用的回调。 在返回true时，表示正常插入，返回false时，表示不插入。 在预上屏和候选词操作时，该回调不触发。 仅支持系统输入法输入的场景。 |
 
 ## placeholderColor
 
@@ -1090,9 +1105,9 @@ placeholderColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | placeholder文本颜色。 |
 
 ## placeholderFont
 
@@ -1102,7 +1117,8 @@ placeholderFont(value?: Font)
 
 设置placeholder文本样式，包括字体大小、字体粗细、字体族、字体风格。Wearable设备上默认字体大小为18fp。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)注册自定义字体。
 
 **起始版本：** 8
@@ -1113,9 +1129,9 @@ placeholderFont(value?: Font)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 否 | placeholder文本样式。不传入时使用系统默认字体样式。 |
 
 ## searchButton
 
@@ -1133,10 +1149,10 @@ searchButton(value: ResourceStr, option?: SearchButtonOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
-| option | [SearchButtonOptions](arkts-arkui-searchbuttonoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 搜索框末尾搜索按钮文本内容。 从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
+| option | [SearchButtonOptions](arkts-arkui-searchbuttonoptions-i.md) | 否 | 配置搜索框末尾搜索按钮样式。 默认值： {fontSize: '16fp', fontColor: '#ff3f97e9'}<br>**起始版本：** 10 |
 
 ## searchIcon
 
@@ -1156,9 +1172,9 @@ searchIcon(value: IconOptions | SymbolGlyphModifier)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [IconOptions](arkts-arkui-iconoptions-i.md) \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [IconOptions](arkts-arkui-iconoptions-i.md) \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | 是 | 左侧搜索图标样式。如果与参数icon同时设置，本属性优先生效。<!--RP1--> 浅色模式默认值： {size: '16vp', color: '#99182431', src: ' '} 深色模式默认值： {size: '16vp', color: '#99ffffff', src: ' '} <!--RP1End--><br>**起始版本：** 12 |
 
 ## selectedBackgroundColor
 
@@ -1178,9 +1194,9 @@ selectedBackgroundColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 文本选中底板颜色。如果未设置不透明度，默认为20%不透明度。 |
 
 ## selectedDragPreviewStyle
 
@@ -1200,9 +1216,9 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | 是 | 文本拖拽时的背板样式。 设置为undefined时：背板颜色跟随主题，浅色模式显示白色，深色模式显示黑色。 |
 
 ## selectionMenuHidden
 
@@ -1224,9 +1240,9 @@ selectionMenuHidden(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 是否不弹出系统文本选择菜单。 设置为true时，单击输入框光标、长按输入框、双击输入框、三击输入框或者右键输入框，不弹出系统文本选择菜单。 设置为false时，弹出系统文本选择菜单。 |
 
 ## shaderStyle
 
@@ -1236,8 +1252,10 @@ shaderStyle(shader: ShaderStyle | undefined)
 
 设置文本着色器效果，如线性渐变、径向渐变效果等。未通过该接口设置时，默认无渐变效果。
 
-> **说明：**&gt;
-> - 当同时设置shaderStyle和[strokeWidth](#strokewidth)时，shaderStyle不生效。&gt;
+> **说明：**
+> 
+> - 当同时设置shaderStyle和[strokeWidth](#strokewidth)时，shaderStyle不生效。
+> 
 > - 当同时设置shaderStyle和[fontColor](#fontcolor)时，fontColor不生效。
 
 **起始版本：** 26.0.0
@@ -1252,9 +1270,9 @@ shaderStyle(shader: ShaderStyle | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| shader | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| shader | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) \| undefined | 是 | 文本着色器效果。    **说明：** 当同时设置shaderStyle和[strokeWidth](#strokewidth)时，shaderStyle不生效。 当同时设置shaderStyle和[fontColor](#fontcolor)时，fontColor不生效。 值为undefined时，无渐变效果。 |
 
 ## stopBackPress
 
@@ -1274,9 +1292,9 @@ stopBackPress(isStopped: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isStopped | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isStopped | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否阻止返回键。 true表示阻止，false表示不阻止。 异常值取默认值。 |
 
 ## strokeColor
 
@@ -1298,9 +1316,9 @@ strokeColor(color: Optional<ResourceColor>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 描边颜色。未通过该接口设置时，默认描边颜色为字体颜色，设置异常值时取默认值。需配合 [strokeWidth](#strokewidth)设置描边宽度后生效。 |
 
 ## strokeJoinStyle
 
@@ -1322,9 +1340,9 @@ strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [strokeJoinStyle](#strokejoinstyle) | [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md) \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| strokeJoinStyle | [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md) \| undefined | 是 | 文本描边拐角样式。 值为undefined时，按照StrokeJoinStyle.MITER_JOIN处理，请参考[StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md)，文本拐角处表现为锐角。 |
 
 ## strokeWidth
 
@@ -1334,7 +1352,8 @@ strokeWidth(width: Optional<LengthMetrics>)
 
 设置文本描边的宽度。未通过该接口设置时，默认值为0，不做描边处理。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 当同时设置strokeWidth和[shaderStyle](#shaderstyle)时，shaderStyle不生效。
 
 **起始版本：** 20
@@ -1349,9 +1368,9 @@ strokeWidth(width: Optional<LengthMetrics>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| width | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 | 文本描边的宽度。如果LengthMetrics的unit值是PERCENT，当前设置不生效，按默认值处理。 若设置值小于0，显示实心字；若大于0，显示空心字。    **说明：** 当同时设置strokeWidth和[shaderStyle](#shaderstyle)时，shaderStyle不生效。 [strokeJoinStyle](#strokejoinstyle)仅在使用strokeWidth设置文本描边时生效。 |
 
 ## textAlign
 
@@ -1361,7 +1380,8 @@ textAlign(value: TextAlign)
 
 设置文本在搜索框中的对齐方式。目前支持的对齐方式有：TextAlign.Start、TextAlign.Center、TextAlign.End、TextAlign.LEFT、TextAlign.RIGHT。 TextAlign.JUSTIFY的对齐方式按照TextAlign.Start处理。未通过该接口设置时，默认对齐方式为TextAlign.Start。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > textAlign只能调整文本整体的布局，不影响字符的显示顺序。若需要调整字符的显示顺序，请参考[镜像状态字符对齐](../../../ui/arkts-internationalization.md#镜像状态字符对齐)。
 
 **起始版本：** 9
@@ -1372,9 +1392,9 @@ textAlign(value: TextAlign)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [TextAlign](#textalign) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [TextAlign](#textalign) | 是 | 文本在搜索框中的对齐方式。 |
 
 ## textDirection
 
@@ -1394,9 +1414,9 @@ textDirection(direction: TextDirection | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| direction | TextDirection \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| direction | TextDirection \| undefined | 是 | 文本排版方向。 设置为undefined时，按照TextDirection.DEFAULT处理，表现为文本排版方向遵循组件布局方向。 |
 
 ## textFont
 
@@ -1406,7 +1426,8 @@ textFont(value?: Font)
 
 设置搜索框内输入文本样式，包括字体大小、字体粗细、字体族、字体风格。Wearable设备上默认字体大小为18fp。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)注册自定义字体。
 
 **起始版本：** 8
@@ -1417,9 +1438,9 @@ textFont(value?: Font)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 否 | 搜索框内输入文本样式。不传入时使用系统默认字体样式。 |
 
 ## textIndent
 
@@ -1439,9 +1460,9 @@ textIndent(value: Dimension)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 | 首行文本缩进。 单位：[vp](../arkts-apis/arkts-arkui-length-t.md) 取值范围：大于等于0。设置负数时，按默认值处理。 |
 
 ## type
 
@@ -1451,7 +1472,8 @@ type(value: SearchType)
 
 设置输入框类型。未通过该接口设置时，默认输入框类型为SearchType.NORMAL（基本输入模式，无特殊限制）。不同的SearchType会拉起对应类型的键盘，同时限制输入。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 如果同时设置了[inputFilter](#inputfilter)属性且输入的字符不为空字符，type接口附带的文本过滤效果将失效，以inputFilter的过滤规则为准。
 
 **起始版本：** 11
@@ -1464,6 +1486,6 @@ type(value: SearchType)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [SearchType](arkts-arkui-searchtype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [SearchType](arkts-arkui-searchtype-e.md) | 是 | 输入框类型。 当同时设置了[inputFilter](#inputfilter)且输入的字符不为空字符时，type接口附带的文本过滤效果失效。 |

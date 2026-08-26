@@ -11,19 +11,19 @@ The **LiveFormExtensionAbility** module, inherited from
 ## Modules to Import
 
 ```TypeScript
-import { LiveFormExtensionAbility, LiveFormInfo } from 'kits/@kit.FormKit';
+import LiveFormExtensionAbility, { LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md) |
+| Name | Description |
+| --- | --- |
+| [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md) | Interactive widget extension class. It provides APIs for the widget provider to receive notifications about widget creation and destruction. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | Provides information about a live form. |

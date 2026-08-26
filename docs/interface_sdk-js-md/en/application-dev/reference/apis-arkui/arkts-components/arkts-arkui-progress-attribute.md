@@ -31,9 +31,9 @@ Sets the foreground color of the progress indicator.Since API version 10, Linear
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes | Foreground color of the progress indicator.Default value:  - Capsule:      API version 9 or earlier: **'#ff007dff'**   API version 10: **'#33006cde'**   API version 11 or later: **'#33007dff'**   - Ring:      API version 9 or earlier: **'#ff007dff'**   API version 10 or later: start: **'#ff86c1ff'**, end: **'#ff254ff7'**   - Other styles: **'#ff007dff' |
 
 ## contentModifier
 
@@ -53,9 +53,9 @@ Creates a content modifier.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ProgressConfiguration](arkts-arkui-progressconfiguration-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ProgressConfiguration](arkts-arkui-progressconfiguration-i.md)&gt; | Yes | The contentModifier of progress. |
 
 ## privacySensitive
 
@@ -65,7 +65,8 @@ privacySensitive(isPrivacySensitiveMode: Optional<boolean>)
 
 Sets whether to enable privacy-sensitive mode.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called in attributeModifier since API version 20.
 
 **Since:** 12
@@ -80,9 +81,9 @@ Sets whether to enable privacy-sensitive mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isPrivacySensitiveMode | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isPrivacySensitiveMode | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable privacy-sensitive mode, in which the progress indicator is cleared and text content is masked. **true**: The privacy-sensitive mode is enabled. **false**: The privacy-sensitive mode is disabled.Default value: **false**   **NOTE：**Setting this parameter to **null** indicates that no specific privacy sensitivity is applied.<!--Del-->For widgets, this property must be used with FormComponent and the [obscured](arkts-arkui-commonmethod-c.md#obscured) attribute to display privacy masking effects.<!--DelEnd--> |
 
 ## style
 
@@ -102,9 +103,9 @@ Sets the component style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [Style](#style) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Style](#style) | Yes | Component style.   - **CapsuleStyleOptions**: capsule style.   - **RingStyleOptions**: ring style.   - **LinearStyleOptions**: linear style.   - **ScaleRingStyleOptions**: determinate ring style.   - **EclipseStyleOptions**: eclipse style.   - **ProgressStyleOptions**: **strokeWidth**, **scaleCount**, and **scaleWidth** of a progress indicator. This parameter is valid only for the progress indicator that supports these style settings. |
 
 ## value
 
@@ -124,6 +125,6 @@ Current progress. Values less than 0 are adjusted to **0**, and values greater t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Current progress.Default value: **0 |

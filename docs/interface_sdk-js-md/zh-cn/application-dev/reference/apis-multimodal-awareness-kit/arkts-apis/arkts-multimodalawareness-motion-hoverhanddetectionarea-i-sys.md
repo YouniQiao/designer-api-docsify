@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { motion } from 'kits/@kit.MultimodalAwarenessKit';
+import motion from '@kit.MultimodalAwarenessKit';
 ```
 
 ## height

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from 'kits/@kit.MDMKit';
+import adminManager from '@kit.MDMKit';
 ```
 
 ## isByodAdmin
@@ -24,19 +24,39 @@ function isByodAdmin(admin: Want): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。仅支持传入当前应用的企业设备管理扩展组件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示被激活为BYOD设备管理应用，返回false表示没有被激活为BYOD设备管理应用。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+**示例**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { adminManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // 请根据实际情况替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  let result: boolean = adminManager.isByodAdmin(wantTemp);
+  console.info(`Succeeded in querying admin is byod admin or not : ${result}`);
+} catch (error) {
+  console.error(`Failed to query admin is byod admin or not. Code is ${error.code}, message is ${error.message}`);
+}
+```

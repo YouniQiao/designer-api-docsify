@@ -9,7 +9,7 @@ Represents a **Schema** instance, which provides the methods for defining the va
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import distributedKVStore from '@kit.ArkData';
 ```
 
 ## appendChild
@@ -28,21 +28,43 @@ Appends a child node to this **FieldNode**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [child](../../apis-arkui/arkts-components/arkts-arkui-nestedscrollinfo-i.md) | [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| child | [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md) | Yes | Child node to append. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+
+**Examples**
+
+```TypeScript
+try {
+  let node: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode('root');
+  let child1: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode('child1');
+  let child2: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode('child2');
+  let child3: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode('child3');
+  node.appendChild(child1);
+  node.appendChild(child2);
+  node.appendChild(child3);
+  console.info('appendNode ' + JSON.stringify(node));
+  child1 = null;
+  child2 = null;
+  child3 = null;
+  node = null;
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to append child. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## constructor
 
@@ -60,15 +82,35 @@ Defines a constructor used to create a **FieldNode** instance with a string fiel
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Value of **FieldNode**, with a maximum of 64 characters. This parameter cannot be left blank. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let child1 = new distributedKVStore.FieldNode('id');
+child1.type = distributedKVStore.ValueType.INTEGER;
+child1.nullable = false;
+child1.default = '1';
+let child2 = new distributedKVStore.FieldNode('name');
+child2.type = distributedKVStore.ValueType.STRING;
+child2.nullable = false;
+child2.default = 'zhangsan';
+
+let schema = new distributedKVStore.Schema();
+schema.root.appendChild(child1);
+schema.root.appendChild(child2);
+schema.indexes = ['$.id', '$.name'];
+schema.mode = 1;
+schema.skip = 0;
+```
 
 ## default
 

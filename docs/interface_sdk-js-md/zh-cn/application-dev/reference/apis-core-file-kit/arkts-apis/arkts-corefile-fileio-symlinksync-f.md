@@ -23,7 +23,15 @@ declare function symlinkSync(target: string, srcPath: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| target | string | 是 |
-| srcPath | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| target | string | 是 | 目标文件的应用沙箱路径。 |
+| srcPath | string | 是 | 符号链接文件的应用沙箱路径。 |
+
+**示例**
+
+```TypeScript
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + '/test';
+fileio.symlinkSync(srcFile, dstFile);
+```

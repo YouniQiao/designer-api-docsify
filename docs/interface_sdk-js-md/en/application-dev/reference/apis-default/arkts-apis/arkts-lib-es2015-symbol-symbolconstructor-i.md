@@ -15,14 +15,14 @@ Returns a new unique Symbol value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| description | string \| number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| description | string \| number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## for
 
 ```TypeScript
@@ -33,14 +33,14 @@ Returns a Symbol object from the global symbol registry matching the given key i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## keyFor
 
 ```TypeScript
@@ -51,14 +51,14 @@ Returns a key from the global symbol registry matching the given Symbol if found
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sym | symbol | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sym | symbol | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## prototype
 
 ```TypeScript

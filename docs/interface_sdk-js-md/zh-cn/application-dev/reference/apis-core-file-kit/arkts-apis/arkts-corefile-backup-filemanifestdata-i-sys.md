@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backup } from 'kits/@kit.CoreFileKit';
+import backup from '@kit.CoreFileKit';
 ```
 
 ## manifestFd

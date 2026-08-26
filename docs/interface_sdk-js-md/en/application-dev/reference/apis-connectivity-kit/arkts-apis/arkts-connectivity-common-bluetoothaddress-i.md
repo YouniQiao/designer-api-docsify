@@ -9,7 +9,7 @@ Describe the type of Bluetooth address.
 ## Modules to Import
 
 ```TypeScript
-import { common } from 'kits/@kit.ConnectivityKit';
+import common from '@kit.ConnectivityKit';
 ```
 
 ## address

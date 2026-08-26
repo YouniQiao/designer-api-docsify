@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { windowAnimationManager } from 'kits/@kit.ArkUI';
+import windowAnimationManager from '@kit.ArkUI';
 ```
 
 ## onAnimationFinish
@@ -27,3 +27,7 @@ onAnimationFinish(): void
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+请参考windowAnimationManager.setController的示例代码。

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import photoAccessHelper from '@kit.MediaLibraryKit';
 ```
 
 ## completeButtonText
@@ -222,3 +222,14 @@ subWindowName?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**示例**
+
+```TypeScript
+async function photoPicker() {
+    let picker = new photoAccessHelper.PhotoViewPicker();
+    let option = new photoAccessHelper.PhotoSelectOptions();
+    option.userId = 101;
+    picker.select(option);
+  }
+```

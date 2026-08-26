@@ -16,6 +16,6 @@ Custom page state restore callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| savedState | Record & lt;string, Object & gt; \ | null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| savedState | Record & lt;string, Object & gt; \ | null | Yes | Custom page state saved by onSaveState. |

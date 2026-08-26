@@ -11,7 +11,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getActiveColorSpace
@@ -30,15 +29,33 @@ Obtains the color space in use.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| colorSpaceManager.ColorSpace |
+| Type | Description |
+| --- | --- |
+| colorSpaceManager.ColorSpace | Color space. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+
+function getActiveColorSpace(session: camera.PhotoSession): colorSpaceManager.ColorSpace | undefined {
+  let colorSpace: colorSpaceManager.ColorSpace | undefined = undefined;
+  try {
+    colorSpace = session.getActiveColorSpace();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getActiveColorSpace call failed. error code: ${err.code}`);
+  }
+  return colorSpace;
+}
+```
 
 ## setColorSpace
 
@@ -52,7 +69,7 @@ Sets a color space.Before the setting, call [getSupportedColorSpaces](arkts-came
 - If the application sets the color space, in photo mode, the **CameraFormat** and **ColorSpace** must be  
 configured according to the following mapping table. Otherwise, an error code will be returned in [setColorSpace](#setcolorspace) or [commitConfig](arkts-camera-camera-session-i.md#commitconfig).Photo mode:  
 | SDR/HDR Photo Capture | CameraFormat| ColorSpace| |--------------------|------------| ------------| | SDR(Default) | CAMERA_FORMAT_YUV_420_SP | SRGB | | HDR P3 | CAMERA_FORMAT_YUV_420_SP | DISPLAY_P3 | | HDR BT.2020 | CAMERA_FORMAT_YCRCB_P010,CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG |In video recording mode, if SDR or HDR VIVID is enabled, the camera format and color space must be configured according to the relationships specified in the table below. Configurations that do not match the table will cause issues such as preview exceptions.Recording mode:  
-| SDR/HDR Photo Capture | [CameraFormat](arkts-camera-camera-cameraformat-e.md) | [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) | |--------------------|--------------------------|------------------| | SDR(Default) | [CAMERA_FORMAT_YUV_420_SP](arkts-camera-camera-cameraformat-e.md) | [BT709_LIMIT](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | | HDR_VIVID | [CAMERA_FORMAT_YCRCB_P010](arkts-camera-camera-cameraformat-e.md) |
+| SDR/HDR Photo Capture | CameraFormat | ColorSpace | |--------------------|--------------------------|------------------| | SDR(Default) | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT | | HDR_VIVID | CAMERA_FORMAT_YCRCB_P010 | BT2020_HLG_LIMIT,BT2020_HLG |
 
 **Since:** 12
 
@@ -62,15 +79,34 @@ configured according to the following mapping table. Otherwise, an error code wi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| colorSpace | colorSpaceManager.ColorSpace | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| colorSpace | colorSpaceManager.ColorSpace | Yes | The type of color space. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | The colorSpace does not match the format. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+
+function setColorSpace(session: camera.PhotoSession, colorSpaces: Array<colorSpaceManager.ColorSpace>): void {
+  if (colorSpaces === undefined || colorSpaces.length <= 0) {
+    return;
+  }
+  try {
+    session.setColorSpace(colorSpaces[0]);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setColorSpace call failed, error code: ${err.code}`);
+  }
+}
+```

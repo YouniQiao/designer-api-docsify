@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import floatingBall from '@kit.ArkUI.floatingBall';
+import floatView from '@kit.ArkUI.floatView';
+import window from '@kit.ArkUI';
 ```
 
 ## offApplicationFocusStateChange
@@ -22,6 +24,24 @@ Unregister the callback for application process focus state changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | No | Callback used to return the result whether application process focused or not. If not provided, all callbacks for the given event type will be removed. |
+
+**Examples**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+const callback = (bool: boolean) => {
+  // ...
+}
+try {
+  window.onApplicationFocusStateChange(callback);
+  window.offApplicationFocusStateChange(callback);
+  // Unregister all the callbacks that have been registered through on().
+  window.offApplicationFocusStateChange(); 
+} catch (exception) {
+  console.error(`Failed to enable or disable the listener for application focus state changes. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```

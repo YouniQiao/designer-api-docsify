@@ -11,7 +11,7 @@ AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后
 ## 导入模块
 
 ```TypeScript
-import { AppServiceExtensionAbility } from 'kits/@kit.AbilityKit';
+import AppServiceExtensionAbility from '@kit.AbilityKit';
 ```
 
 ## onConnect
@@ -31,15 +31,42 @@ onConnect(want: Want): rpc.RemoteObject
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 调用方拉起当前AppServiceExtensionAbility实例时传递的Want类型信息，包括Ability名称、Bundle名称等。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| rpc.RemoteObject |
+| 类型 | 说明 |
+| --- | --- |
+| rpc.RemoteObject | 一个RemoteObject对象，用于客户端和服务端进行通信。 |
+
+**示例**
+
+```TypeScript
+import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG: string = '[AppServiceExtAbility]';
+
+class StubTest extends rpc.RemoteObject {
+  constructor(des: string) {
+    super(des);
+  }
+
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, options: rpc.MessageOption): boolean {
+    return true;
+  }
+}
+
+export default class AppServiceExtAbility extends AppServiceExtensionAbility {
+  onConnect(want: Want) {
+    hilog.info(0x0000, TAG, `onConnect, want: ${want.abilityName}`);
+    return new StubTest('test');
+  }
+}
+```
 
 ## onCreate
 
@@ -49,7 +76,8 @@ onCreate(want: Want): void
 
 在AppServiceExtensionAbility实例创建时，系统会触发该回调。应用可以在该接口中执行自己的业务逻辑初始化操作，例如注册公共事件监听等。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 如果AppServiceExtensionAbility实例已创建，再次启动或连接该实例时不会触发onCreate()回调。
 **设备行为差异**：该接口仅在PC/2in1设备中可正常执行回调，在其他设备上不执行回调。
 
@@ -61,9 +89,24 @@ onCreate(want: Want): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 调用方拉起当前AppServiceExtensionAbility实例时传递的Want类型信息，包括Ability名称、Bundle名称等。 |
+
+**示例**
+
+```TypeScript
+import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG: string = '[AppServiceExtAbility]';
+
+export default class AppServiceExtAbility extends AppServiceExtensionAbility {
+  onCreate(want: Want) {
+    hilog.info(0x0000, TAG, `onCreate, want: ${want.abilityName}`);
+  }
+}
+```
 
 ## onDestroy
 
@@ -79,6 +122,21 @@ onDestroy(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { AppServiceExtensionAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG: string = '[AppServiceExtAbility]';
+
+export default class AppServiceExtAbility extends AppServiceExtensionAbility {
+  onDestroy() {
+    hilog.info(0x0000, TAG, `onDestroy`);
+  }
+}
+```
 
 ## onDisconnect
 
@@ -97,9 +155,24 @@ onDisconnect(want: Want): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | AppServiceExtensionAbility实例最近一次被拉起或者连接时，调用方传递的Want类型信息，包括Ability名称、Bundle名称等。 |
+
+**示例**
+
+```TypeScript
+import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG: string = '[AppServiceExtAbility]';
+
+export default class AppServiceExtAbility extends AppServiceExtensionAbility {
+  onDisconnect(want: Want) {
+    hilog.info(0x0000, TAG, `onDisconnect, want: ${want.abilityName}`);
+  }
+}
+```
 
 ## onRequest
 
@@ -118,10 +191,25 @@ onRequest(want: Want, startId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-| startId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 调用方拉起当前AppServiceExtensionAbility实例时传递的Want类型信息，包括Ability名称、Bundle名称等。 |
+| startId | number | 是 | 拉起次数标识。首次拉起初始值为1，多次拉起时自动递增。建议开发者根据startId值判断是否为首次启动，避免重复执行初始化操作。 |
+
+**示例**
+
+```TypeScript
+import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG: string = '[AppServiceExtAbility]';
+
+export default class AppServiceExtAbility extends AppServiceExtensionAbility {
+  onRequest(want: Want, startId: number) {
+    hilog.info(0x0000, TAG, `onRequest, want: ${want.abilityName}, startId: ${startId}`);
+  }
+}
+```
 
 ## context
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getFirstPreferredLanguage
@@ -24,6 +24,20 @@ Obtains the first language in the preferred language list.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | First language in the preferred language list. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let firstPreferredLanguage: string = i18n.System.getFirstPreferredLanguage();
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let firstPreferredLanguage: string = i18n.getFirstPreferredLanguage();
+```

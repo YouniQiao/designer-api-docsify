@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import privacyManager from '@kit.AbilityKit';
 ```
 
 ## setPermissionUsedRecordToggleStatus
@@ -24,26 +24,40 @@ function setPermissionUsedRecordToggleStatus(status: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| status | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| status | boolean | 是 | 权限使用记录开关状态。true为开，false为关。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission"ohos.permission.PERMISSION_RECORD_TOGGLE". |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionUsedRecordToggleStatus](#setpermissionusedrecordtogglestatus系统接口).<br>**适用版本：** 26.1.0+ |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. Possible causes: 1. Database error. 2. Failed to query all applications under the user. |
+
+**示例**
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 设置权限使用记录开关状态
+privacyManager.setPermissionUsedRecordToggleStatus(true).then(() => {
+  console.info('setPermissionUsedRecordToggleStatus success');
+}).catch((err: BusinessError): void => {
+  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 
 ## setPermissionUsedRecordToggleStatus
@@ -66,25 +80,39 @@ function setPermissionUsedRecordToggleStatus(status: boolean, subProfileId: numb
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| status | boolean | 是 |
-| [subProfileId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| status | boolean | 是 | 权限使用记录开关状态。true为开，false为关。 |
+| subProfileId | number | 是 | 子身份资料的标识符。可以通过[OsAccountSubProfile.id](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id)获取。 取值限定为整数。取值约束：该参数必须为大于0的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission"ohos.permission.PERMISSION_RECORD_TOGGLE". |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The specified subProfileId does not exist for the current user. |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionUsedRecordToggleStatus](#setpermissionusedrecordtogglestatus). |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. Possible causes: 1. Database error. 2. Failed to query all applications under the user. |
+
+**示例**
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+privacyManager.setPermissionUsedRecordToggleStatus(true, subProfileId).then(() => {
+  console.info('setPermissionUsedRecordToggleStatus success');
+}).catch((err: BusinessError): void => {
+  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```

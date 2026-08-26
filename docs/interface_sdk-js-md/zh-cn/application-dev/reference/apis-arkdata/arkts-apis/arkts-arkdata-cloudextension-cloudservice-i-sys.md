@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import cloudExtension from '@kit.ArkData';
 ```
 
 ## connectAssetLoader
@@ -30,16 +30,35 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 应用包名。 |
+| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | 是 | 需要连接的数据库。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;rpc.RemoteObject & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;rpc.RemoteObject & gt; | Promise对象，返回AssetLoader的RemoteObject对象。 |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class MyAssetLoader implements cloudExtension.AssetLoader {
+  // ...
+}
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  async connectAssetLoader(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
+    // ...
+    console.info(`connect asset loader, bundle: ${bundleName}`);
+    return cloudExtension.createAssetLoaderStub(new MyAssetLoader());
+  }
+}
+```
 
 ## connectDB
 
@@ -57,16 +76,35 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 应用包名。 |
+| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | 是 | 需要连接的数据库。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;rpc.RemoteObject & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;rpc.RemoteObject & gt; | Promise对象，返回CloudDB的RemoteObject对象。 |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+}
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+    // ...
+  async connectDB(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
+    console.info(`connect DB, bundleName: ${bundleName}`);
+    return cloudExtension.createCloudDBStub(new MyCloudDB());
+  }
+}
+```
 
 ## connectShareCenter
 
@@ -84,16 +122,35 @@ connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| userId | number | 是 |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| userId | number | 是 | 表示用户账号ID。 |
+| bundleName | string | 是 | 应用包名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;rpc.RemoteObject & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;rpc.RemoteObject & gt; | Promise对象，返回ShareCenter的RemoteObject对象。 |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class MyShareCenter implements cloudExtension.ShareCenter {
+  constructor() {}
+  // ...
+}
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  async connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject> {
+    console.info(`connect share center, bundle: ${bundleName}`);
+    return cloudExtension.createShareServiceStub(new MyShareCenter());
+  }
+}
+```
 
 ## getAppBriefInfo
 
@@ -111,9 +168,31 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; | Promise对象，返回以bundleName为键、AppBriefInfo为值的键值对。 in KV pairs. |
+
+**示例**
+
+```TypeScript
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  // ...
+  async getAppBriefInfo(): Promise<Record<string, cloudExtension.AppBriefInfo>> {
+    console.info(`get app brief info`);
+    // ...
+    return {
+      "test_bundle":
+      {
+        appId: "test_appID",
+        bundleName: "test_bundlename",
+        cloudSwitch: true,
+        instanceId: 0,
+      }
+    };
+  }
+}
+```
 
 ## getAppSchema
 
@@ -131,15 +210,38 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 应用包名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; | Promise对象，返回数据库的schema信息。 |
+
+**示例**
+
+```TypeScript
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {
+  }
+  // ...
+  async getAppSchema(bundleName: string): Promise<cloudExtension.Result<cloudExtension.AppSchema>> {
+    console.info(`get app schema, bundleName:${bundleName}`);
+    // ...
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: "get app schema success",
+      value: {
+        bundleName: "test_bundleName",
+        version: 1,
+        databases: []
+      }
+    };
+  }
+}
+```
 
 ## getServiceInfo
 
@@ -157,9 +259,34 @@ getServiceInfo(): Promise<ServiceInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; | Promise对象，返回获取的服务器信息。 |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+let testSpace: number = 100;
+let testUserId: number = 1;
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  // ...
+  async getServiceInfo(): Promise<cloudExtension.ServiceInfo> {
+    console.info(`get service info`);
+    // ...
+    return {
+      enableCloud: true,
+      id: "test_id",
+      totalSpace: testSpace,
+      remainingSpace: testSpace,
+      user: testUserId,
+    };
+  }
+}
+```
 
 ## subscribe
 
@@ -180,16 +307,39 @@ subscribe(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| subInfo | Record&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | 是 |
-| expirationTime | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| subInfo | Record&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | 是 | 需要订阅的数据，由应用包名称和数据库信息组成的键值对。 |
+| expirationTime | number | 是 | 表示订阅到期时间（ms）。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Result & lt;SubscribeInfo & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Result & lt;SubscribeInfo & gt; & gt; | Promise对象，返回订阅的结果，包含订阅的过期时间和订阅信息。 |
+
+**示例**
+
+```TypeScript
+let testTime: number = 10;
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {
+  }
+  // ...
+  async subscribe(subInfo: Record<string, Array<cloudExtension.Database>>, expirationTime: number): Promise<cloudExtension.Result<cloudExtension.SubscribeInfo>> {
+    console.info(`subscribe expirationTime: ${expirationTime}`);
+    // ...
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: "subscribe success",
+      value: {
+        expirationTime: testTime,
+        subscribe: {}
+      }
+    };
+  }
+}
+```
 
 ## unsubscribe
 
@@ -207,12 +357,27 @@ unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| unsubscribeInfo | Record & lt;string, Array & lt;string & gt; & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| unsubscribeInfo | Record & lt;string, Array & lt;string & gt; & gt; | 是 | 需要取消订阅的数据信息，由应用包名和数据库名组成的键值对。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回取消订阅结果的错误码。 |
+
+**示例**
+
+```TypeScript
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {
+  }
+  // ...
+  async unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<number> {
+    console.info(`unsubscribe`);
+    // ...
+    return cloudExtension.ErrorCode.SUCCESS;
+  }
+}
+```

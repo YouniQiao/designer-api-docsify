@@ -14,7 +14,7 @@ Called when an item in the drop-down list box is selected.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| [selectValue](arkts-arkui-atomicservice-atomicservicesearch-selectparams-i.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the selected option. The index is zero-based. |
+| selectValue | string | Yes | Value of the selected option. |

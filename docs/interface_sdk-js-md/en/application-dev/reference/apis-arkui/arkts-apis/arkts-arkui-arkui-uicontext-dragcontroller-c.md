@@ -2,7 +2,8 @@
 
 Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or number-press event, an application can initiate a drag action and carry drag information therein.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > In the following API examples, you must first use [getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) in
 > **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
 
@@ -13,10 +14,10 @@ Provides APIs for initiating drag actions. When receiving a gesture event, such 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## cancelDataLoading
@@ -37,16 +38,16 @@ Cancels the data loading initiated by the [startDataLoading](../arkts-components
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Identifier for the drag data. It is used to distinguish between different drag operations. The key can be obtained through the **startDataLoading** API. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [190004](../errorcode-drag-event.md#190004-operation-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [190004](../errorcode-drag-event.md#190004-operation-failed) | Operation failed. |
 
 ## createDragAction
 
@@ -56,7 +57,8 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 
 Creates a drag action object for initiating drag and drop operations. You need to explicitly specify one or more drag previews, the drag data, and the drag handle point. If a drag operation initiated by an existing drag action object is not completed, no new object can be created, and calling the API will throw an exception. After the lifecycle of the drag action object ends, the callback functions registered on this object become invalid. Therefore, it is necessary to hold this object within a longer scope and replace the old value with a new object returned by **createDragAction** before each drag initiation.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For optimal drag and drop performance, limit the number of drag previews.
 
 **Since:** 11
@@ -69,23 +71,169 @@ Creates a drag action object for initiating drag and drop operations. You need t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | Yes |
-| dragInfo | dragController.DragInfo | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | Yes | Object to be dragged. |
+| dragInfo | dragController.DragInfo | Yes | Drag information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| dragController.DragAction |
+| Type | Description |
+| --- | --- |
+| dragController.DragAction | DragAction** object, which is used to subscribe to drag state changes and start the drag service. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+
+**Examples**
+
+Obtain the UI context from EntryAbility.ets and save it to LocalStorage.
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { window, UIContext } from '@kit.ArkUI';
+
+let uiContext: UIContext;
+let localStorage: LocalStorage = new LocalStorage('uiContext');
+
+export default class EntryAbility extends UIAbility {
+  storage: LocalStorage = localStorage;
+
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+  }
+
+  onDestroy(): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onDestroy');
+  }
+
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    // Main window is created, set main page for this ability
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
+
+    windowStage.loadContent('pages/Index', this.storage, (err, data) => {
+      if (err.code) {
+        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
+        return;
+      }
+      hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
+      windowStage.getMainWindow((err, data) => {
+        if (err.code) {
+          console.error(`Failed to obtain the main window. Cause:${err.message}`);
+          return;
+        }
+        let windowClass: window.Window = data;
+        uiContext = windowClass.getUIContext();
+        this.storage.setOrCreate<UIContext>('uiContext', uiContext);
+        // Obtain a UIContext instance.
+      });
+    });
+  }
+
+  onWindowStageDestroy(): void {
+    // Main window is destroyed, release UI related resources
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageDestroy');
+  }
+
+  onForeground(): void {
+    // Ability has brought to foreground
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onForeground');
+  }
+
+  onBackground(): void {
+    // Ability has back to background
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onBackground');
+  }
+}
+```
+
+Call this.getUIContext().getSharedLocalStorage() to obtain the context, and then obtain the DragController object to perform subsequent drag operations.
+
+```TypeScript
+import { dragController, UIContext } from '@kit.ArkUI';
+import { image } from '@kit.ImageKit';
+import { unifiedDataChannel } from '@kit.ArkData';
+
+@Entry()
+@Component
+struct DragControllerPage {
+  private dragAction: dragController.DragAction | null = null;
+  customBuilders: Array<CustomBuilder | DragItemInfo> = new Array<CustomBuilder | DragItemInfo>();
+  storages = this.getUIContext().getSharedLocalStorage();
+
+  @Builder
+  DraggingBuilder() {
+    Column() {
+      Text('DraggingBuilder')
+    }
+    .width(100)
+    .height(100)
+    .backgroundColor(Color.Blue)
+  }
+
+  build() {
+    Column() {
+      Button('Drag Multiple Objects').onTouch((event?: TouchEvent) => {
+        if (event) {
+          if (event.type == TouchType.Down) {
+            console.info('multi drag Down by listener');
+            this.customBuilders.push(() => {
+              this.DraggingBuilder()
+            });
+            this.customBuilders.push(() => {
+              this.DraggingBuilder()
+            });
+            this.customBuilders.push(() => {
+              this.DraggingBuilder()
+            });
+            let text = new unifiedDataChannel.Text();
+            let unifiedData = new unifiedDataChannel.UnifiedData(text);
+            let dragInfo: dragController.DragInfo = {
+              pointerId: 0,
+              data: unifiedData,
+              extraParams: ''
+            };
+            try {
+              this.dragAction = this.getUIContext().getDragController().createDragAction(this.customBuilders, dragInfo);
+              if (!this.dragAction) {
+                console.info('listener dragAction is null');
+                return;
+              }
+              this.dragAction.on('statusChange', (dragAndDropInfo) => {
+                if (dragAndDropInfo.status == dragController.DragStatus.STARTED) {
+                  console.info('drag has start');
+                } else if (dragAndDropInfo.status == dragController.DragStatus.ENDED) {
+                  console.info('drag has end');
+                  if (!this.dragAction) {
+                    return;
+                  }
+                  // After the drag operation is complete, clear the drag preview array and cancel the status listener.
+                  this.customBuilders.splice(0, this.customBuilders.length);
+                  this.dragAction.off('statusChange');
+                }
+              });
+              this.dragAction.startDrag().then(() => {
+              }).catch((err: BusinessError) => {
+                console.error(`Failed to start drag. Code: ${err.code}, message: ${err.message}`);
+              });
+            } catch (err) {
+              const error = err as BusinessError;
+              console.error(`Failed to create dragAction. Code: ${error.code}, message: ${error.message}`);
+            }
+          }
+        }
+      }).margin({ top: 20 })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## enableDropDisallowedBadge
 
@@ -105,9 +253,60 @@ Specifies whether to enable the display of a disallowed badge when dragged conte
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Whether to enable the display of a disallowed badge when dragged content is incompatible with a component's configured [allowDrop](../arkts-components/arkts-arkui-commonmethod-c.md#allowdrop) types. The value **true** means to enable the display of a disallowed badge, and **false** means the opposite. The default value is **false**. |
+
+**Examples**
+
+Call the enableDropDisallowedBadge API in EntryAbility.ets and set the enabled parameter to true.
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window, UIContext } from '@kit.ArkUI';
+
+ export default class EntryAbility extends UIAbility {
+   onWindowStageCreate(windowStage: window.WindowStage): void {
+       windowStage.loadContent('pages/Index', (err, data) => {
+         if (err.code) {
+         return;
+       }
+       windowStage.getMainWindow((err, data) => {
+         if (err.code) {
+           return;
+         }
+         let windowClass: window.Window = data;
+         let uiContext: UIContext = windowClass.getUIContext();
+         uiContext.getDragController().enableDropDisallowedBadge(true);
+     });
+   });
+ }
+}
+```
+
+Drag the icon to the blank area below in Index.ets. The drag-disallowed badge is displayed.
+
+```TypeScript
+@Entry
+@Component
+struct Index {
+  build() {
+    Column({ space: 20 }) {
+      // Replace $r('app.media.startIcon') with the image resource file you use.
+      Image($r('app.media.startIcon'))
+        .width(120)
+        .height(120)
+      Text ('Invalid drop zone.')
+      Column()
+        .width('100%')
+        .layoutWeight(1)
+        .allowDrop(null)
+        .onDrop(() => {
+        })
+    }.width('100%')
+  }
+}
+```
 
 ## executeDrag
 
@@ -128,18 +327,77 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes |
-| dragInfo | dragController.DragInfo | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dragController.DragEventParam&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes | Object to be dragged.   **NOTE：**The global builder is not supported. If the Image component is used in the builder, enable synchronous loading, that is, set the syncLoad attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging. If the root component of the builder has zero width or height, it will cause failure in drag image generation, which in turn breaks the entire drag operation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
+| dragInfo | dragController.DragInfo | Yes | Drag information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dragController.DragEventParam&gt; | Yes | Callback used to return the result.   - **event**: drag event information that includes only the drag result.   - **extraParams**: extra information about the drag event.<br>**Since:** 12 |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+
+**Examples**
+
+```TypeScript
+import { dragController } from '@kit.ArkUI';
+import { unifiedDataChannel } from '@kit.ArkData';
+
+class DragInfo {
+  event: DragEvent | undefined = undefined;
+  extraParams: string = '';
+}
+
+@Entry
+@Component
+struct DragControllerPage {
+  @Builder
+  DraggingBuilder() {
+    Column() {
+      Text('DraggingBuilder')
+    }
+    .width(100)
+    .height(100)
+    .backgroundColor(Color.Blue)
+  }
+
+  build() {
+    Column() {
+      Button('touch to execute drag')
+        .onTouch((event?: TouchEvent) => {
+          if (event) {
+            if (event.type == TouchType.Down) {
+              let text = new unifiedDataChannel.Text();
+              let unifiedData = new unifiedDataChannel.UnifiedData(text);
+
+              let dragInfo: dragController.DragInfo = {
+                pointerId: 0,
+                data: unifiedData,
+                extraParams: ''
+              };
+              this.getUIContext().getDragController().executeDrag(() => {
+                this.DraggingBuilder()
+              }, dragInfo, (err, dragEventParam) => {
+                if (dragEventParam.event) {
+                  if (dragEventParam.event.getResult() == DragResult.DRAG_SUCCESSFUL) {
+                    // ...
+                  } else if (dragEventParam.event.getResult() == DragResult.DRAG_FAILED) {
+                    // ...
+                  }
+                }
+              });
+            }
+          }
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## executeDrag
 
@@ -160,24 +418,110 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes |
-| dragInfo | dragController.DragInfo | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes | Object to be dragged. |
+| dragInfo | dragController.DragInfo | Yes | Drag information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;{ event: DragEvent, extraParams: string |
-| Promise & lt;dragController.DragEventParam & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;{ event: DragEvent, extraParams: string | > } Callback used to return the result. |
+| Promise & lt;dragController.DragEventParam & gt; | A Promise with the drag event information.<br>**Applicable version:** 12 and later |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+
+**Examples**
+
+```TypeScript
+import { dragController } from '@kit.ArkUI';
+import { image } from '@kit.ImageKit';
+import { unifiedDataChannel } from '@kit.ArkData';
+
+class DragInfo {
+  event: DragEvent | undefined = undefined;
+  extraParams: string = '';
+}
+
+@Entry
+@Component
+struct DragControllerPage {
+  @State pixmap: image.PixelMap | null = null;
+
+  @Builder
+  DraggingBuilder() {
+    Column() {
+      Text('DraggingBuilder')
+    }
+    .width(100)
+    .height(100)
+    .backgroundColor(Color.Blue)
+  }
+
+  @Builder
+  PixmapBuilder() {
+    Column() {
+      Text('PixmapBuilder')
+    }
+    .width(100)
+    .height(100)
+    .backgroundColor(Color.Blue)
+  }
+
+  build() {
+    Column() {
+      Button('touch to execute drag')
+        .onTouch((event?: TouchEvent) => {
+          if (event) {
+            if (event.type == TouchType.Down) {
+              let text = new unifiedDataChannel.Text();
+              let unifiedData = new unifiedDataChannel.UnifiedData(text);
+
+              let dragInfo: dragController.DragInfo = {
+                pointerId: 0,
+                data: unifiedData,
+                extraParams: ''
+              };
+              let pixmapBuilder: CustomBuilder = (): void => {
+                this.PixmapBuilder()
+              };
+              this.getUIContext().getComponentSnapshot().createFromBuilder(pixmapBuilder).then((pixelMap: image.PixelMap) => {
+                this.pixmap = pixelMap;
+                let dragItemInfo: DragItemInfo = {
+                  pixelMap: this.pixmap,
+                  builder: () => {
+                    this.DraggingBuilder()
+                  },
+                  extraInfo: 'DragItemInfoTest'
+                };
+                this.getUIContext()
+                  .getDragController()
+                  .executeDrag(dragItemInfo, dragInfo)
+                  .then((dragEventParam) => {
+                    if (dragEventParam.event.getResult() == DragResult.DRAG_SUCCESSFUL) {
+                      // ...
+                    } else if (dragEventParam.event.getResult() == DragResult.DRAG_FAILED) {
+                      // ...
+                    }
+                  })
+                  .catch((err: Error) => {
+                  })
+              });
+            }
+          }
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## getDragPreview
 
@@ -197,9 +541,13 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| dragController.DragPreview |
+| Type | Description |
+| --- | --- |
+| dragController.DragPreview | DragPreview** object. It provides the API for setting the preview style. It does not work in the **OnDrop** and **OnDragEnd** callbacks. |
+
+**Examples**
+
+See the example for animate.
 
 ## notifyDragStartRequest
 
@@ -219,9 +567,85 @@ Controls whether the application can initiate a drag operation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| requestStatus | dragController.DragStartRequestStatus | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| requestStatus | dragController.DragStartRequestStatus | Yes | Whether the application can initiate a drag operation. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { unifiedDataChannel } from '@kit.ArkData';
+import { image } from '@kit.ImageKit';
+import { dragController } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct NormalEts {
+  @State finished: boolean = false;
+  @State timeout1: number = 1;
+  @State pixmap: image.PixelMap | undefined = undefined;
+  @State unifiedData1: unifiedDataChannel.UnifiedData | undefined = undefined;
+  @State previewData: DragItemInfo | undefined = undefined;
+
+  loadData() {
+    // Set a 4-second delay before initiating a drag action.
+    let timeout = setTimeout(() => {
+      this.getUIContext().getComponentSnapshot().get('image1', (error: Error, pixmap: image.PixelMap) => {
+        if (error) {
+          return;
+        }
+        this.pixmap = pixmap;
+        this.previewData = {
+          pixelMap: this.pixmap
+        };
+      });
+
+      let data: unifiedDataChannel.Image = new unifiedDataChannel.Image();
+      data.imageUri = 'app.media.startIcon';
+      let unifiedData = new unifiedDataChannel.UnifiedData(data);
+      this.unifiedData1 = unifiedData;
+      this.finished = true;
+
+      this.getUIContext().getDragController().notifyDragStartRequest(dragController.DragStartRequestStatus.READY);
+    }, 4000);
+    this.timeout1 = timeout;
+  }
+
+  build() {
+    Column({ space: 20 }) {
+      Image($r('app.media.startIcon'))
+        .width(150)
+        .height(150)
+        .id('image1')
+        .draggable(true)
+        .dragPreview(this.previewData)
+        .onPreDrag((status: PreDragStatus) => {
+          if (status == PreDragStatus.PREPARING_FOR_DRAG_DETECTION) {
+            this.loadData();
+          } else {
+            clearTimeout(this.timeout1);
+          }
+        })
+        .onDragStart((event: DragEvent) => {
+          if (this.finished == false) {
+            this.getUIContext()
+              .getDragController()
+              // In the application data preparation phase, a drag action cannot be initiated.
+              .notifyDragStartRequest(dragController.DragStartRequestStatus.WAITING);
+          } else {
+            event.setData(this.unifiedData1);
+          }
+        })
+        .onDragEnd(() => {
+          this.finished = false;
+        })
+    }
+    .width('100%')
+    .height(400)
+  }
+}
+```
 
 ## setDragEventStrictReportingEnabled
 
@@ -241,6 +665,31 @@ Sets whether the **onDragLeave** callback of the parent component is triggered w
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether the **onDragLeave** callback of the parent component is triggered when an item is dragged from the parent to the child component. The value **true** means the **onDragLeave** callback of the parent component is triggered, and **false** means the opposite. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window, UIContext } from '@kit.ArkUI';
+
+ export default class EntryAbility extends UIAbility {
+   onWindowStageCreate(windowStage: window.WindowStage): void {
+       windowStage.loadContent('pages/Index', (err, data) => {
+         if (err.code) {
+         return;
+       }
+       windowStage.getMainWindow((err, data) => {
+         if (err.code) {
+           return;
+         }
+         let windowClass: window.Window = data;
+         let uiContext: UIContext = windowClass.getUIContext();
+         uiContext.getDragController().setDragEventStrictReportingEnabled(true);
+     });
+   });
+ }
+}
+```

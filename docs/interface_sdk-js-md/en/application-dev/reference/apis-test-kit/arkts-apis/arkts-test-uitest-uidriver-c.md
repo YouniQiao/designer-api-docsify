@@ -13,8 +13,7 @@ The **UiDriver** class is the main entry to the UiTest framework. It provides AP
 ## Modules to Import
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## assertComponentExist
@@ -35,23 +34,35 @@ Asserts that a component that matches the given attributes exists on the current
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | Attributes of the target component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000003](../errorcode-uitest.md#17000003-assertion-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | if the input parameters are invalid. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000003](../errorcode-uitest.md#17000003-assertion-failure) | if the assertion failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.assertComponentExist(BY.text('next page'));
+}
+```
 
 ## click
 
@@ -71,16 +82,40 @@ Clicks a specific point of this **UiDriver** object based on the given coordinat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. |
+| y | number | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  // Create a Driver object.
+  let driver: Driver = Driver.create();
+  // Perform a tap operation at coordinates (100,100).
+  await driver.click(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.click(100, 100);
+}
+```
 
 ## create
 
@@ -90,7 +125,8 @@ static create(): UiDriver
 
 Creates a **UiDriver** object and returns the object created. This API is a static API.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This method is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create) instead.
 
@@ -104,9 +140,20 @@ Creates a **UiDriver** object and returns the object created. This API is a stat
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [UiDriver](arkts-test-uitest-uidriver-c.md) |
+| Type | Description |
+| --- | --- |
+| [UiDriver](arkts-test-uitest-uidriver-c.md) | UiDriver** object created. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+}
+```
 
 ## delayMs
 
@@ -126,15 +173,37 @@ Delays a duration of time. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| duration | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| duration | number | Yes | Specified time, in ms. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.delayMs(1000);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.delayMs(1000);
+}
+```
 
 ## doubleClick
 
@@ -154,16 +223,38 @@ Double-clicks a specific point of this **UiDriver** object based on the given co
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. |
+| y | number | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.doubleClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.doubleClick(100, 100);
+}
+```
 
 ## findComponent
 
@@ -183,15 +274,27 @@ Searches this **UiDriver** object for the target component that matches the give
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | Attributes of the target component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; | Promise used to return the component. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.text('next page'));
+}
+```
 
 ## findComponents
 
@@ -211,15 +314,27 @@ Searches this **UiDriver** object for all components that match the given attrib
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | Attributes of the target component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt;&gt; | Promise used to return the list of components. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let buttonList: Array<UiComponent> = await driver.findComponents(BY.text('next page'));
+}
+```
 
 ## longClick
 
@@ -239,16 +354,38 @@ Long-clicks a specific point of this **UiDriver** object based on the given coor
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. |
+| y | number | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.longClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.longClick(100, 100);
+}
+```
 
 ## pressBack
 
@@ -268,9 +405,31 @@ Presses the Back button on this **UiDriver** object. This API uses a promise to 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.pressBack();
+}
+```
 
 ## screenCap
 
@@ -290,15 +449,37 @@ Captures the current screen of this **UiDriver** object and saves it as a PNG im
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| savePath | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| savePath | string | Yes | File save path. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return whether the screenshot operation is successful. The value **true** indicates the screenshot operation is successful, and **false** indicates the opposite. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png');
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png');
+}
+```
 
 ## swipe
 
@@ -318,18 +499,30 @@ Swipes on this **UiDriver** object from the start point to the end point based o
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| startx | number | Yes |
-| starty | number | Yes |
-| endx | number | Yes |
-| endy | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| startx | number | Yes | Horizontal coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. |
+| starty | number | Yes | Vertical coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. |
+| endx | number | Yes | Horizontal coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. |
+| endy | number | Yes | Vertical coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.swipe(100, 100, 200, 200);
+}
+```
 
 ## triggerKey
 
@@ -349,12 +542,36 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| keyCode | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keyCode | number | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK); // Back button
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK); // Back button
+}
+```

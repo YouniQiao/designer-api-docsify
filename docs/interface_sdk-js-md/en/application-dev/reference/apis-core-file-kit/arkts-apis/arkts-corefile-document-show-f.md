@@ -21,16 +21,24 @@ Opens a file. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
-| type | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | URI of the file to open. |
+| type | string | Yes | Type of the file to open. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. An error code is returned. |
+
+**Examples**
+
+```TypeScript
+let type: string = "";
+let uri: string = "";
+document.show(uri, type);
+```
 
 
 ## show
@@ -49,8 +57,18 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
-| type | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | URI of the file to open. |
+| type | string | Yes | Type of the file to open. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. An error code is returned. |
+
+**Examples**
+
+```TypeScript
+let type: string = "";
+let uri: string = "";
+document.show(uri, type, (err: TypeError) => {
+  //do something
+});
+```

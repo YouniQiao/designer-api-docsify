@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+import bundleState from '@kit.BackgroundTasksKit';
 ```
 
 ## queryAppUsagePriorityGroup
@@ -22,9 +22,24 @@ Queries the usage priority group of the calling application.The priority defined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | the callback of queryAppUsagePriorityGroup. Returns the app group of the calling application. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
+
+bundleState.queryAppUsagePriorityGroup((err: BusinessError, res: number) => {
+  if(err) {
+    console.error('BUNDLE_ACTIVE QueryPackageGroup callback failed. because: ' + err.code);
+  } else {
+    console.info('BUNDLE_ACTIVE QueryPackageGroup callback succeeded. result: ' + JSON.stringify(res));
+  }
+});
+```
 
 
 ## queryAppUsagePriorityGroup
@@ -43,6 +58,19 @@ Queries the usage priority group of the calling application.The priority defined
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | the promise returned by queryAppUsagePriorityGroup. Returns the app group of the calling application. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
+
+bundleState.queryAppUsagePriorityGroup().then((res: number) => {
+  console.info('BUNDLE_ACTIVE QueryPackageGroup promise succeeded. result: ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE QueryPackageGroup promise failed. because: ' + err.code);
+});
+```

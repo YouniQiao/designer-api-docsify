@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { brightness } from 'kits/@kit.BasicServicesKit';
+import brightness from '@kit.BasicServicesKit';
 ```
 
 ## setValue
@@ -22,17 +22,27 @@ function setValue(value: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 亮度的值。范围：0~255；该参数必须为数字类型。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [4700101](../errorcode-brightness.md#4700101-连接服务失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| [4700101](../errorcode-brightness.md#4700101-连接服务失败) | Failed to connect to the service. |
+
+**示例**
+
+```TypeScript
+try {
+    brightness.setValue(128);
+} catch (err) {
+    console.error(`Failed to set brightness. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 
 ## setValue
@@ -51,15 +61,25 @@ function setValue(value: number, continuous: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
-| continuous | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 亮度的值。范围：0~255。 |
+| continuous | boolean | 是 | 亮度调节是否连续。true表示亮度调节连续，false表示亮度调节不连续。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [4700101](../errorcode-brightness.md#4700101-连接服务失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| [4700101](../errorcode-brightness.md#4700101-连接服务失败) | Failed to connect to the service. |
+
+**示例**
+
+```TypeScript
+try {
+    brightness.setValue(128, true);
+} catch (err) {
+    console.error(`Failed to set brightness. Code: ${err.code}, message: ${err.message}`);
+}
+```

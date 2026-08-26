@@ -14,8 +14,8 @@ Represents the array union type used to store button information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;SegmentButtonTextItem & gt; |
-| Array & lt;SegmentButtonIconItem & gt; |
-| Array & lt;SegmentButtonIconTextItem & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;SegmentButtonTextItem & gt; | An array of text-only button information. |
+| Array & lt;SegmentButtonIconItem & gt; | An array of icon-only button information. |
+| Array & lt;SegmentButtonIconTextItem & gt; | An array of icon and text button information. |

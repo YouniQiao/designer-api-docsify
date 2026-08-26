@@ -31,6 +31,6 @@ Shows a text picker in the given settings.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md) | No | Parameters of the text picker dialog box. |

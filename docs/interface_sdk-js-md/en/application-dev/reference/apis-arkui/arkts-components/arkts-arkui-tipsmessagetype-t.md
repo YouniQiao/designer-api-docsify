@@ -14,7 +14,7 @@ Provides information about the tooltip.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) |
-| [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) |
+| Type | Description |
+| --- | --- |
+| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Type used to represent the types that can be used by input parameters of the string type. |
+| [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Styled string. |

@@ -11,30 +11,30 @@ This module provides skill query capabilities for applications.@namespace skillM
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from 'kits/@kit.AbilityKit';
+import skillManager from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getAllSkillInfos](arkts-ability-skillmanager-getallskillinfos-f.md) |
-| [getSkillInfo](arkts-ability-skillmanager-getskillinfo-f.md) |
-| [getSkillInfoForSelf](arkts-ability-skillmanager-getskillinfoforself-f.md) |
-| [getSkillInfos](arkts-ability-skillmanager-getskillinfos-f.md) |
-| [getSkillInfosForSelf](arkts-ability-skillmanager-getskillinfosforself-f.md) |
+| Name | Description |
+| --- | --- |
+| [getAllSkillInfos](arkts-ability-skillmanager-getallskillinfos-f.md) | Obtains all SkillInfo objects installed on the device. To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted. |
+| [getSkillInfo](arkts-ability-skillmanager-getskillinfo-f.md) | Obtains SkillInfo of a specified application based on bundleName, moduleName and skillName. To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted. |
+| [getSkillInfoForSelf](arkts-ability-skillmanager-getskillinfoforself-f.md) | Obtains SkillInfo of the calling application based on moduleName and skillName. |
+| [getSkillInfos](arkts-ability-skillmanager-getskillinfos-f.md) | Obtains all SkillInfo of a specified application based on bundleName. To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted. |
+| [getSkillInfosForSelf](arkts-ability-skillmanager-getskillinfosforself-f.md) | Obtains all SkillInfo objects of the calling application. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) | Enumeration of flags used to control what content is populated in a SkillInfo. Multiple flags can be combined using bitwise OR, for example GET_SKILL_INFO_WITH_SRC_ENTRIES \|
+| Name | Description |
+| --- | --- |
+| [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) | Enumeration of flags used to control what content is populated in a SkillInfo. Multiple flags can be combined using bitwise OR, for example GET_SKILL_INFO_WITH_SRC_ENTRIES \| GET_SKILL_INFO_WITH_DESCRIPTION.@enum { number } |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SkillInfo](arkts-ability-skillmanager-skillinfo-t.md) |
-| [SkillType](arkts-ability-skillmanager-skilltype-t.md) |
+| Name | Description |
+| --- | --- |
+| [SkillInfo](arkts-ability-skillmanager-skillinfo-t.md) | Provides information about a skill, including skill name, type, and associated metadata. |
+| [SkillType](arkts-ability-skillmanager-skilltype-t.md) | Enumerates the skill types. |

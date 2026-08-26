@@ -2,7 +2,8 @@
 
 The **bytrace** module implements performance tracing for processes.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The APIs provided by this module are deprecated since API version 8. You are advised to use the new APIs
 > [@ohos.hiTraceMeter](../../apis-performance-analysis-kit/arkts-apis/arkts-hitracemeter.md) instead.
 
@@ -23,8 +24,8 @@ The **bytrace** module implements performance tracing for processes.
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [finishTrace(Performance Tracing)](arkts-api10lessdeprecatedmodules-bytrace-finishtrace-f.md) |
-| [startTrace(Performance Tracing)](arkts-api10lessdeprecatedmodules-bytrace-starttrace-f.md) |
-| [traceByValue(Performance Tracing)](arkts-api10lessdeprecatedmodules-bytrace-tracebyvalue-f.md) |
+| Name | Description |
+| --- | --- |
+| [finishTrace(Performance Tracing)](arkts-api10lessdeprecatedmodules-bytrace-finishtrace-f.md) | Marks the end of a timeslice trace task. |
+| [startTrace(Performance Tracing)](arkts-api10lessdeprecatedmodules-bytrace-starttrace-f.md) | Marks the start of a timeslice trace task. |
+| [traceByValue(Performance Tracing)](arkts-api10lessdeprecatedmodules-bytrace-tracebyvalue-f.md) | Defines a numeric variable that indicates the number of timeslice trace tasks. |

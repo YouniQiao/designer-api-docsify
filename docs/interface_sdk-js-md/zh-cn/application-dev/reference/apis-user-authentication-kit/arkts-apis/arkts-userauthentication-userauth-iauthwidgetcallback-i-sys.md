@@ -11,7 +11,8 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## sendCommand
@@ -30,6 +31,28 @@ sendCommand(cmdData: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| cmdData | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| cmdData | string | 是 | 命令数据。JSON格式的字符串，包含用户认证框架向身份认证控件发送的具体命令内容。JSON结构根据不同的命令类型包含相应字段，常见字段包括：commandType（ string，命令类型）、authType（array，认证类型列表）、result（number，认证结果码）等。控件需解析此数据并根据命令类型执行相应操作。 |
+
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const userAuthWidgetMgrVersion = 1;
+try {
+  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
+  console.info('get userAuthWidgetMgr instance successfully.');
+  userAuthWidgetMgr.on('command', {
+    sendCommand: (cmdData) => {
+      console.info(`The cmdData is ${cmdData}`);
+    }
+  });
+  console.info('subscribe authentication event successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to operate userAuthWidgetMgr. Code: ${err?.code}, message: ${err?.message}`);
+}
+```

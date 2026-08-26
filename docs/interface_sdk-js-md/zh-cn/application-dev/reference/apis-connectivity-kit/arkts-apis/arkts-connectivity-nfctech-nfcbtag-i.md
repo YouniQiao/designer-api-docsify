@@ -24,9 +24,19 @@ getRespAppData(): number[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number[] |
+| 类型 | 说明 |
+| --- | --- |
+| number[] | NfcB 标签的应用程序数据，每个number十六进制表示，范围是0x00~0xFF。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 nfcB
+let respAppData : number[] = nfcB.getRespAppData();
+console.info("nfcB respAppData: " + respAppData);
+```
 
 ## getRespProtocol
 
@@ -44,6 +54,16 @@ getRespProtocol(): number[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number[] |
+| 类型 | 说明 |
+| --- | --- |
+| number[] | NfcB 标签的协议信息，每个number十六进制表示，范围是0x00~0xFF。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 nfcB
+let respProtocol : number[] = nfcB.getRespProtocol();
+console.info("nfcB respProtocol: " + respProtocol);
+```

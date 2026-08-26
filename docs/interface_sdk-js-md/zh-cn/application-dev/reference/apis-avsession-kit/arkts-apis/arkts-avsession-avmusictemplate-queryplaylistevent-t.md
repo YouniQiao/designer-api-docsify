@@ -14,13 +14,13 @@ type QueryPlaylistEvent = (pageIndex: number, sort: Sort) => Promise<PageMediaEn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| pageIndex | number | 是 |
-| sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pageIndex | number | 是 | 页面的索引。 |
+| sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | Promise对象，返回查询的播放列表的分页对象。 |

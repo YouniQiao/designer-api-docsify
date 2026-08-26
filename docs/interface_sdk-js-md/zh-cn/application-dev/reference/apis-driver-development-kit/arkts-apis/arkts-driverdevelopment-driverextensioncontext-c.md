@@ -25,3 +25,12 @@ updateDriverState(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
+
+**示例**
+
+```TypeScript
+// 当前代码实现依赖上一节代码实现
+if (context !== undefined) {
+  context.updateDriverState();
+}
+```

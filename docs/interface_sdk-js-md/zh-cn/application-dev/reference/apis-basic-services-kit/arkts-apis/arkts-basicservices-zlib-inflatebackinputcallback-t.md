@@ -14,12 +14,12 @@ type InflateBackInputCallback = (inDesc: object) => ArrayBuffer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| inDesc | object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| inDesc | object | 是 | 用户定义数据对象。具体的类型和内容会根据实际的应用场景而有所不同，可能包括配置数据、文件句柄等。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| ArrayBuffer |
+| 类型 | 说明 |
+| --- | --- |
+| ArrayBuffer | 从输入数据源成功读取的内容缓冲区。 |

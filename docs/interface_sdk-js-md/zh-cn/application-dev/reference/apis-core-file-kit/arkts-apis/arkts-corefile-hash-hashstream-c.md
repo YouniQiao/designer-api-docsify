@@ -11,7 +11,7 @@ HashStream类是用于创建数据的哈希摘要的实用工具。由 [createHa
 ## 导入模块
 
 ```TypeScript
-import { hash } from 'kits/@kit.CoreFileKit';
+import hash from '@kit.CoreFileKit';
 ```
 
 ## digest
@@ -28,16 +28,28 @@ digest(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回数据的哈希值。该哈希值表示为十六进制数字串，所有字母均大写。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+// 创建哈希流
+const hs = hash.createHash('sha256');
+hs.update(new Uint8Array('1234567890'?.split('').map((x: string) => x.charCodeAt(0))).buffer);
+hs.update(new Uint8Array('abcdefg'?.split('').map((x: string) => x.charCodeAt(0))).buffer);
+const hashResult = hs.digest();
+// 88A00F46836CD629D0B79DE98532AFDE3AEAD79A5C53E4848102F433046D0106
+console.info(`Succeeded in calculating file hash. hashResult: ${hashResult}`);
+```
 
 ## update
 
@@ -53,13 +65,25 @@ update(data: ArrayBuffer): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | ArrayBuffer | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | ArrayBuffer | 是 | 待计算哈希值的数据，以ArrayBuffer形式传入。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+// 创建哈希流
+const hs = hash.createHash('sha256');
+hs.update(new Uint8Array('1234567890'?.split('').map((x: string) => x.charCodeAt(0))).buffer);
+hs.update(new Uint8Array('abcdefg'?.split('').map((x: string) => x.charCodeAt(0))).buffer);
+const hashResult = hs.digest();
+// 88A00F46836CD629D0B79DE98532AFDE3AEAD79A5C53E4848102F433046D0106
+console.info(`Succeeded in calculating file hash. hashResult: ${hashResult}`);
+```

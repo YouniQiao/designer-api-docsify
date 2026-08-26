@@ -31,9 +31,9 @@ Sets the disturbance fields.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [fields](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-table-i-sys.md) | Array&lt;[DisturbanceFieldOptions](arkts-arkui-disturbancefieldoptions-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fields | Array&lt;[DisturbanceFieldOptions](arkts-arkui-disturbancefieldoptions-i.md)&gt; | Yes | Array of disturbance fields. |
 
 ## emitter
 
@@ -53,9 +53,9 @@ Sets the emitter parameters.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Array&lt;[EmitterProperty](arkts-arkui-emitterproperty-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Array&lt;[EmitterProperty](arkts-arkui-emitterproperty-i.md)&gt; | Yes | Array of emitter parameters to set. |
 
 ## rippleFields
 
@@ -75,9 +75,9 @@ Sets the particle wave field. The wave field applies a force that changes accord
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [fields](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-table-i-sys.md) | Array&lt;[RippleFieldOptions](arkts-arkui-ripplefieldoptions-i.md)&gt; \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fields | Array&lt;[RippleFieldOptions](arkts-arkui-ripplefieldoptions-i.md)&gt; \| undefined | Yes | Particle wave field array. You can set multiple particle wave fields in array form. If this parameter is set to undefined, no wave field is available. |
 
 ## velocityFields
 
@@ -97,6 +97,6 @@ Sets the particle velocity field. The velocity field applies a force to particle
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [fields](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-table-i-sys.md) | Array&lt;[VelocityFieldOptions](arkts-arkui-velocityfieldoptions-i.md)&gt; \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fields | Array&lt;[VelocityFieldOptions](arkts-arkui-velocityfieldoptions-i.md)&gt; \| undefined | Yes | Particle velocity field array. You can set multiple particle velocity fields in array form. If this parameter is set to undefined, there is no velocity field. |

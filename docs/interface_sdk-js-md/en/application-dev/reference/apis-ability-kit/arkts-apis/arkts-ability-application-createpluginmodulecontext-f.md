@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import application from '@kit.AbilityKit';
 ```
 
 ## createPluginModuleContext
@@ -22,14 +22,43 @@ Creates the context of a plugin under the current application based on the conte
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes |
-| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | Yes |
-| pluginModuleName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [Context](arkts-ability-context-c.md) | Yes | Application context. |
+| pluginBundleName | string | Yes | Bundle name of the plugin. |
+| pluginModuleName | string | Yes | Module name of the plugin. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Context](arkts-ability-context-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise used to return the context created. |
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, UIAbility, application, common, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    let moduleContext: common.Context;
+    try {
+      application.createPluginModuleContext(this.context, 'com.example.pluginBundleName', 'pluginModuleName')
+        .then((data: Context) => {
+          moduleContext = data;
+          console.info('createPluginModuleContext success!');
+        })
+        .catch((error: BusinessError) => {
+          let code: number = (error as BusinessError).code;
+          let message: string = (error as BusinessError).message;
+          console.error(`createPluginModuleContext failed, error.code: ${code}, error.message: ${message}`);
+        });
+    } catch (error) {
+      let code: number = (error as BusinessError).code;
+      let message: string = (error as BusinessError).message;
+      console.error(`createPluginModuleContext failed, error.code: ${code}, error.message: ${message}`);
+    }
+  }
+}
+```

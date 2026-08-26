@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
+import metadataBinding from '@kit.MultimodalAwarenessKit';
 ```
 
 ## submitMetadata
@@ -22,12 +22,27 @@ function submitMetadata(metadata: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| metadata | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| metadata | string | 是 | 需要编码的内容。字符串长度不超过128Bytes。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+
+let metadata: string = 'sample metadata';
+try {
+  metadataBinding.submitMetadata(metadata);
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to submit metadata. Code: ${err.code}, message: ${err.message}`);
+}
+```

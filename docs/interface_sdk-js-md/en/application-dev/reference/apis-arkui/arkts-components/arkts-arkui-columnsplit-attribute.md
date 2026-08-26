@@ -31,9 +31,9 @@ Margin of the divider.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ColumnSplitDividerStyle](arkts-arkui-columnsplitdividerstyle-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ColumnSplitDividerStyle](arkts-arkui-columnsplitdividerstyle-i.md) \| null | Yes | Margin of the divider, that is, the distance between the divider and the child component. Default value: **null**. When this parameter is set to null, the distance between the divider and the child component is 0 vp. Invalid values are treated as the default value. |
 
 ## resizeable
 
@@ -51,6 +51,6 @@ Sets whether the divider can be dragged.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the divider can be dragged. **true**: The divider can be dragged. **false**: The divider cannot be dragged. Default value: **false** Invalid values are treated as the default value. |

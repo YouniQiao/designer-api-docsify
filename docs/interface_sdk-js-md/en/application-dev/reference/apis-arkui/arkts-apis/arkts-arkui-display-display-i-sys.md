@@ -9,7 +9,7 @@ Implements a Display instance, with attributes and APIs defined.Before calling a
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import display from '@kit.ArkUI';
 ```
 
 ## hasImmersiveWindow
@@ -28,18 +28,38 @@ Checks whether this display contains an immersive window. This API uses an async
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the display contains an immersive window, **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
+
+let displayClass: display.Display | null = null;
+// Obtain the default Display object.
+displayClass = display.getDefaultDisplaySync();
+// Check whether an immersive window is included.
+displayClass.hasImmersiveWindow((err: BusinessError, data: boolean) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to check whether there is immersive window. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
+});
+```
 
 ## hasImmersiveWindow
 
@@ -57,15 +77,33 @@ Checks whether this display contains an immersive window. This API uses a promis
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. **true** if the display contains an immersive window, **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
+
+let displayClass: display.Display | null = null;
+// Obtain the default Display object.
+displayClass = display.getDefaultDisplaySync();
+// Check whether an immersive window is included.
+let promise = displayClass.hasImmersiveWindow();
+promise.then((data) => {
+  console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether there is immersive window. Code: ${err.code}, message: ${err.message}`);
+});
+```

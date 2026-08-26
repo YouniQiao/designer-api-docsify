@@ -11,7 +11,6 @@ WiFi扫描信息，包含扫描到的WiFi热点的ssid、bssid和rssi等信息�
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## bssid

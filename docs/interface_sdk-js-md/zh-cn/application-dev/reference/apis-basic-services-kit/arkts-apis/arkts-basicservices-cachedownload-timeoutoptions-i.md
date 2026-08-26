@@ -9,7 +9,7 @@ Task timeout configuration.
 ## 导入模块
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## httpTotalTimeout

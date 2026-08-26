@@ -33,9 +33,18 @@ and(): RdbPredicates
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回带有和条件的Rdb谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Lisa")
+    .and()
+    .equalTo("SALARY", 200.5)
+```
 
 ## beginsWith
 
@@ -55,16 +64,23 @@ beginsWith(field: string, value: string): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了以指定字符串开头条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.beginsWith("NAME", "os")
+```
 
 ## beginWrap
 
@@ -84,9 +100,21 @@ beginWrap(): RdbPredicates
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回带有左括号的Rdb谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap()
+```
 
 ## between
 
@@ -106,17 +134,24 @@ between(field: string, low: ValueType, high: ValueType): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
-| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
+| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的最大值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了在给定范围内条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.between("AGE", 10, 50)
+```
 
 ## constructor
 
@@ -136,9 +171,15 @@ constructor(name: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 数据库表名，不能为空字符串。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+```
 
 ## contains
 
@@ -158,16 +199,23 @@ contains(field: string, value: string): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了包含指定值条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.contains("NAME", "os")
+```
 
 ## distinct
 
@@ -187,9 +235,16 @@ distinct(): RdbPredicates
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回可用于过滤重复记录的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Rose").distinct()
+```
 
 ## endsWith
 
@@ -209,16 +264,23 @@ endsWith(field: string, value: string): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了以指定字符串结尾条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.endsWith("NAME", "se")
+```
 
 ## endWrap
 
@@ -238,9 +300,21 @@ endWrap(): RdbPredicates
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回带有右括号的Rdb谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap()
+```
 
 ## equalTo
 
@@ -260,16 +334,23 @@ equalTo(field: string, value: ValueType): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了等于指定值条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "lisi")
+```
 
 ## glob
 
@@ -289,16 +370,23 @@ glob(field: string, value: string): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节 支持通配符，*表示0个、1个或多个数字或字符，?表示1个数字或字符。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了匹配指定通配符模式条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.glob("NAME", "?h*g")
+```
 
 ## greaterThan
 
@@ -318,16 +406,23 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了大于指定值条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.greaterThan("AGE", 18)
+```
 
 ## greaterThanOrEqualTo
 
@@ -347,16 +442,23 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了大于或等于指定值条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.greaterThanOrEqualTo("AGE", 18)
+```
 
 ## groupBy
 
@@ -376,15 +478,22 @@ groupBy(fields: Array<string>): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fields | Array & lt;string & gt; | 是 | 指定分组依赖的列名，不能为空字符串。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回分组查询列的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.groupBy(["AGE", "NAME"])
+```
 
 ## in
 
@@ -404,16 +513,23 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | Array & lt;ValueType & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | Array & lt;ValueType & gt; | 是 | 以ValueType型数组形式指定的要匹配的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了值在给定范围内条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.in("AGE", [18, 20])
+```
 
 ## inAllDevices
 
@@ -433,9 +549,16 @@ inAllDevices(): RdbPredicates
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了所有远程设备同步条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.inAllDevices()
+```
 
 ## inDevices
 
@@ -445,8 +568,10 @@ inDevices(devices: Array<string>): RdbPredicates
 
 同步分布式数据库时连接到组网内指定的远程设备。
 
-> **说明：**&gt;
-> 其中devices通过调用<!--RP2-->
+> **说明：**
+> 
+> 其中devices通过调用<!--RP2--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP2End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 
@@ -460,15 +585,40 @@ inDevices(devices: Array<string>): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| devices | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| devices | Array & lt;string & gt; | 是 | 指定的组网内的远程设备ID，不能为空字符串。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了指定远程设备同步条件的谓词。 |
+
+**示例**
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+
+let dmInstance: deviceManager.DeviceManager;
+let deviceIds: Array<string> = [];
+let devices: Array<string> = [];
+
+deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
+  if (err) {
+    console.error("create device manager failed, err=" + err);
+    return;
+  }
+  dmInstance = manager;
+  devices = dmInstance.getTrustedDeviceListSync();
+  for (let i = 0; i < devices.length; i++) {
+    deviceIds[i] = devices[i].deviceId;
+  }
+})
+
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE");
+predicates.inDevices(deviceIds);
+```
 
 ## indexedBy
 
@@ -488,15 +638,22 @@ indexedBy(field: string): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 索引列的名称，不能为空字符串。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回具有指定索引列的RdbPredicates。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.indexedBy("SALARY_INDEX")
+```
 
 ## isNotNull
 
@@ -516,21 +673,28 @@ isNotNull(field: string): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了值不为null条件的谓词。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.isNotNull("NAME")
+```
 
 ## isNull
 
@@ -550,15 +714,22 @@ isNull(field: string): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了值为null条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.isNull("NAME")
+```
 
 ## lessThan
 
@@ -578,16 +749,23 @@ lessThan(field: string, value: ValueType): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了小于指定值条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.lessThan("AGE", 20)
+```
 
 ## lessThanOrEqualTo
 
@@ -607,16 +785,23 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了小于或等于指定值条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.lessThanOrEqualTo("AGE", 20)
+```
 
 ## like
 
@@ -636,16 +821,23 @@ like(field: string, value: string): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了类似指定字符串条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.like("NAME", "%os%")
+```
 
 ## limitAs
 
@@ -665,15 +857,22 @@ limitAs(value: number): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 最大数据记录数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回可用于设置最大数据记录数的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Rose").limitAs(3)
+```
 
 ## notBetween
 
@@ -693,17 +892,24 @@ notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
-| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
+| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的最大值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了超出给定范围条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.notBetween("AGE", 10, 50)
+```
 
 ## notEqualTo
 
@@ -723,16 +929,23 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了不等于指定值条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.notEqualTo("NAME", "lisi")
+```
 
 ## notIn
 
@@ -752,16 +965,23 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | Array & lt;ValueType & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| value | Array & lt;ValueType & gt; | 是 | 以ValueType数组形式指定的要匹配的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了值超出给定范围内条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.notIn("NAME", ["Lisa", "Rose"])
+```
 
 ## offsetAs
 
@@ -781,15 +1001,22 @@ offsetAs(rowOffset: number): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| rowOffset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rowOffset | number | 是 | 返回结果的起始位置，取值为正整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回具有指定返回结果起始位置的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Rose").limitAs(-1).offsetAs(3)
+```
 
 ## or
 
@@ -809,9 +1036,18 @@ or(): RdbPredicates
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回带有或条件的Rdb谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Lisa")
+    .or()
+    .equalTo("NAME", "Rose")
+```
 
 ## orderByAsc
 
@@ -831,15 +1067,22 @@ orderByAsc(field: string): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了按升序排序条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.orderByAsc("NAME")
+```
 
 ## orderByDesc
 
@@ -859,12 +1102,19 @@ orderByDesc(field: string): RdbPredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了按降序排序条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.orderByDesc("AGE")
+```

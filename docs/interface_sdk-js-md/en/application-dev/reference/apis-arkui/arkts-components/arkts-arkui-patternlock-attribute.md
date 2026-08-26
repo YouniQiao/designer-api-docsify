@@ -31,9 +31,9 @@ Sets the background circle style for the dots in a grid when they are in the act
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;[CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)&gt; | Yes | Background circle style of the dots in the activated state. |
 
 ## activeColor
 
@@ -51,9 +51,9 @@ Sets the fill color of the grid dot in the activated state, which is when the do
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the activated state.Default value: **'#ff182431' |
 
 ## autoReset
 
@@ -71,9 +71,9 @@ Sets whether to allow the user to reset the component status (that is, clear the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to allow the user to reset the component status (that is, clear the input) by touching the component again after the input is complete.   **true**: yes; **false**: no Default value: **true |
 
 ## backgroundColor
 
@@ -83,7 +83,8 @@ backgroundColor(value: ResourceColor)
 
 Sets the background color.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 9
@@ -94,9 +95,9 @@ Sets the background color.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color. |
 
 ## circleRadius
 
@@ -114,9 +115,9 @@ Sets the radius of the dots in a grid. If this attribute is set to **0** or a ne
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Radius of the dots in a grid.Default value: **6vp**Value range: (0, sideLength/11]. If the value is less than or equal to **0**, the default value is used. If the value exceeds the maximum value, the maximum value is used. |
 
 ## onDotConnect
 
@@ -126,7 +127,8 @@ onDotConnect(callback: import('../api/@ohos.base').Callback<number>)
 
 Invoked when a grid dot is connected during pattern password input.The callback parameter is an array of digits, where each digit represents the index of a selected grid dot, listed in the order they were connected. Grid dots are indexed row-wise from top to bottom, left to right: The first row contains indices 0, 1, 2; the second row 3, 4, 5; and the third row 6, 7, 8.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 11
@@ -139,9 +141,9 @@ Invoked when a grid dot is connected during pattern password input.The callback 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | import('../api/@ohos.base').Callback & lt;number & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | import('../api/@ohos.base').Callback & lt;number & gt; | Yes | Invoked when a grid dot is connected during pattern password input. |
 
 ## onPatternComplete
 
@@ -159,9 +161,9 @@ Invoked when the pattern password input is complete.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (input: Array & lt;number & gt;) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (input: Array & lt;number & gt;) = & gt; void | Yes | Array of digits representing the indices of the selected grid dots, in the order they were connected. Grid dots are indexed row-wise from top to bottom, left to right: The first row contains indices 0, 1, 2; the second row 3, 4, 5; and the third row 6, 7, 8. |
 
 ## pathColor
 
@@ -179,9 +181,9 @@ Sets the path color.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Path color.Default value: **'#33182431' |
 
 ## pathStrokeWidth
 
@@ -199,9 +201,9 @@ Sets the width of the path stroke. If this attribute is set to **0** or a negati
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string | Yes | Width of the path stroke. Value constraint: (0, sideLength/3]. Default value: 12. Unit: vp. |
 
 ## regularColor
 
@@ -219,9 +221,9 @@ Sets the fill color of the grid dot in the unselected state.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the unselected state.Default value: **'#ff182431' |
 
 ## selectedColor
 
@@ -239,9 +241,9 @@ Fill color of the grid dot in the selected state.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the selected state.Default value: **'#ff182431' |
 
 ## sideLength
 
@@ -251,7 +253,8 @@ sideLength(value: Length)
 
 Sets the width and height (same value) of the component. If this attribute is set to **0** or a negative number, the component is not displayed.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When the **PatternLock** component has the universal attribute [aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio) set
 > and the ratio is not equal to 1 (the component is constrained to a rectangle), the nine‑grid pattern is still
 > drawn as a square, which exceeds the component's bounds.
@@ -264,9 +267,9 @@ Sets the width and height (same value) of the component. If this attribute is se
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width and height of the component. Default value: **288vp |
 
 ## skipUnselectedPoint
 
@@ -286,6 +289,6 @@ Sets whether unselected dots in the grid are automatically skipped when the pass
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| skipped | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| skipped | boolean | Yes | Whether unselected dots in the grid are automatically skipped when the password path passes over them.   **true** to skip the unselected dots when the password path passes over them; **false** otherwise. Default value: **false |

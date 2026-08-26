@@ -15,16 +15,16 @@ A trap method for a function call.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| thisArg | any | Yes |
-| argArray | any[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| thisArg | any | Yes |  |
+| argArray | any[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## construct
 
 ```TypeScript
@@ -35,16 +35,16 @@ A trap for the `new` operator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| argArray | any[] | Yes |
-| newTarget | Function | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| argArray | any[] | Yes |  |
+| newTarget | Function | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## defineProperty
 
 ```TypeScript
@@ -55,16 +55,16 @@ A trap for `Object.defineProperty()`.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| property | string \| symbol | Yes |
-| attributes | PropertyDescriptor | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| property | string \| symbol | Yes |  |
+| attributes | PropertyDescriptor | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## deleteProperty
 
 ```TypeScript
@@ -75,15 +75,15 @@ A trap for the `delete` operator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| p | string \| symbol | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| p | string \| symbol | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## get
 
 ```TypeScript
@@ -94,16 +94,16 @@ A trap for getting a property value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| p | string \| symbol | Yes |
-| receiver | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| p | string \| symbol | Yes |  |
+| receiver | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getOwnPropertyDescriptor
 
 ```TypeScript
@@ -114,15 +114,15 @@ A trap for `Object.getOwnPropertyDescriptor()`.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| p | string \| symbol | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| p | string \| symbol | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getPrototypeOf
 
 ```TypeScript
@@ -133,14 +133,14 @@ A trap for the `[[GetPrototypeOf]]` internal method.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## has
 
 ```TypeScript
@@ -151,15 +151,15 @@ A trap for the `in` operator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| p | string \| symbol | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| p | string \| symbol | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## isExtensible
 
 ```TypeScript
@@ -170,14 +170,14 @@ A trap for `Object.isExtensible()`.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## ownKeys
 
 ```TypeScript
@@ -188,14 +188,14 @@ A trap for `Reflect.ownKeys()`.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## preventExtensions
 
 ```TypeScript
@@ -206,14 +206,14 @@ A trap for `Object.preventExtensions()`.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## set
 
 ```TypeScript
@@ -224,17 +224,17 @@ A trap for setting a property value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| p | string \| symbol | Yes |
-| newValue | any | Yes |
-| receiver | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| p | string \| symbol | Yes |  |
+| newValue | any | Yes |  |
+| receiver | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setPrototypeOf
 
 ```TypeScript
@@ -245,12 +245,12 @@ A trap for `Object.setPrototypeOf()`.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| v | object \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| v | object \| null | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

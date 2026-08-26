@@ -9,7 +9,6 @@ beacon围栏的参数配置。
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## beaconFenceInfoType

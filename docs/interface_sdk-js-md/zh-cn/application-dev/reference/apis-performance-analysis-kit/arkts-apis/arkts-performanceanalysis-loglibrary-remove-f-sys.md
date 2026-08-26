@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## remove
@@ -24,16 +23,31 @@ function remove(logType: string, logName: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| logType | string | 是 |
-| logName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| logType | string | 是 | 日志类型字符串，例如"FAULTLOG", "BETACLUB", "REMOTELOG"等。 |
+| logName | string | 是 | 日志文件名称。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [21300001](../errorcode-loglibrary-sys.md#21300001-指定文件不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid argument. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
+| [21300001](../errorcode-loglibrary-sys.md#21300001-指定文件不存在) | Source file does not exists |
+
+**示例**
+
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let logFiles = logLibrary.list('FAULTLOG');
+  if (logFiles.length > 0) {
+    logLibrary.remove('FAULTLOG', logFiles[0].name);
+  }
+} catch (error) {
+  console.error(`Failed to call logLibrary API. Code: ${error?.code}, message: ${error?.message}`);
+}
+```

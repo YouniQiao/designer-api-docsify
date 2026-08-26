@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithDirectory
@@ -22,18 +22,18 @@ Create a MediaSource object from the given directory.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Buffer path information for creating a media source. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[MediaSource](arkts-media-media-mediasource-i.md) \| undefined & gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[MediaSource](arkts-media-media-mediasource-i.md) \| undefined & gt; | If success, a MediaSource is returned. Otherwise returns null. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [5411007](../errorcode-media.md#5411007-no-resource-available) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [5411007](../errorcode-media.md#5411007-no-resource-available) | The directory specified by the path parameter does not exist or inaccessible. |

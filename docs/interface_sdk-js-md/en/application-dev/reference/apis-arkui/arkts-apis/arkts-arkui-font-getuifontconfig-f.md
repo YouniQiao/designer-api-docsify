@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import font from '@kit.ArkUI';
 ```
 
 ## getUIFontConfig
@@ -24,6 +24,6 @@ Obtains the UI font configuration information in the system font configuration f
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [UIFontConfig](arkts-arkui-font-uifontconfig-i.md) |
+| Type | Description |
+| --- | --- |
+| [UIFontConfig](arkts-arkui-font-uifontconfig-i.md) | Returns the ui font config |

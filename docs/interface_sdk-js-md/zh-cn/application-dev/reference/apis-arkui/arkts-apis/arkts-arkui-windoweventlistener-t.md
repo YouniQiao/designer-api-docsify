@@ -14,7 +14,7 @@ declare type WindowEventListener = (windowId: number, event: window.WindowEventT
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| windowId | number | 是 |
-| event | [window.WindowEventType](arkts-arkui-window-windoweventtype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| windowId | number | 是 | 触发事件的窗口id |
+| event | [window.WindowEventType](arkts-arkui-window-windoweventtype-e.md) | 是 | 窗口回调的事件类型 |

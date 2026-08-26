@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+import abilityConnectionManager from '@kit.DistributedServiceKit';
 ```
 
 ## createStream
@@ -24,23 +24,44 @@ Creating a Stream.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sessionId | number | Yes |
-| param | [StreamParam](arkts-distributedservice-abilityconnectionmanager-streamparam-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sessionId | number | Yes | Ability connection Session id. |
+| param | [StreamParam](arkts-distributedservice-abilityconnectionmanager-streamparam-i-sys.md) | Yes | Transport Stream Parameters |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | The promise returned by the function, contain the ID of a transport stream. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [32300001](../errorcode-device-manager.md#32300001-transport-stream-repeatedly-created) |
-| [32300003](../errorcode-device-manager.md#32300003-bit-rate-not-supported) |
-| [32300004](../errorcode-device-manager.md#32300004-color-space-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [32300001](../errorcode-device-manager.md#32300001-transport-stream-repeatedly-created) | Only one stream can be created for the current session. |
+| [32300003](../errorcode-device-manager.md#32300003-bit-rate-not-supported) | Bitrate not supported. |
+| [32300004](../errorcode-device-manager.md#32300004-color-space-not-supported) | Color space not supported. |
+
+**Examples**
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+hilog.info(0x0000, 'testTag', 'startStream');
+let sessionId = 100;
+abilityConnectionManager.createStream(sessionId ,{name: 'receive', role: 0}).then(async (streamId) => {
+  let surfaceParam: abilityConnectionManager.SurfaceParam = {
+    width: 640,
+    height: 480,
+    format: 1
+  }
+  let surfaceId = abilityConnectionManager.getSurfaceId(streamId, surfaceParam);
+  hilog.info(0x0000, 'testTag', 'surfaceId is'+surfaceId);
+  AppStorage.setOrCreate<string>('surfaceId', surfaceId);
+  abilityConnectionManager.startStream(streamId);
+})
+```

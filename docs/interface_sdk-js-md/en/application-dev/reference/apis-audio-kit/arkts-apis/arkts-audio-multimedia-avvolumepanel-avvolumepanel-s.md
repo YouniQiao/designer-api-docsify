@@ -9,7 +9,7 @@ A panel to set the system audio output volume.
 ## Modules to Import
 
 ```TypeScript
-import { AVVolumePanel, AVVolumePanelParameter } from 'kits/@kit.AudioKit';
+import { AVVolumePanel, AVVolumePanelParameter } from '@kit.AudioKit';
 ```
 
 ## volumeLevel

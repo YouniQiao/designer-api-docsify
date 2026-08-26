@@ -11,7 +11,8 @@ NumberStyleOptions定义了列表型和紧凑型Counter的属性和事件。继�
 ## 导入模块
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUIV2';
 ```
 
 ## onBlurDecrease

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## isAuthorizedApp
@@ -22,20 +21,43 @@ Checks whether this application is authorized by the specified user credential. 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| keyUri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keyUri | string | Yes | Unique identifier of the credential authorized by the user to the application. The value contains up to 256 bytes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return whether the application is authorized. The value **true** means authorized; the value **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;  2. Memory operation error; 3. File operation error. Please try again. |
+
+**Examples**
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri: string = 'test'; /* Unique identifier of the credential. The process for authorizing the credential to the application is omitted here. */
+try {
+  certificateManager.isAuthorizedApp(uri).then((res) => {
+    if (res) {
+      console.info('The application is authorized by the user.');
+    } else {
+      console.info('The application is not authorized by the user.');
+    }
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to check if the application is authorized. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (error) {
+  console.error(`Failed to check if the application is authorized. Code: ${error.code}, message: ${error.message}`);
+}
+```

@@ -26,6 +26,31 @@ Called by system when mission changed.
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+
+distributedMissionManager.registerMissionListener(
+  {
+    deviceId: '123456'
+  },
+  {
+    notifyMissionsChanged: (deviceId: string) => {
+      console.info(`notifyMissionsChanged deviceId: ${JSON.stringify(deviceId)}`);
+    },
+    notifySnapshot: (deviceId: string, mission: number) => {
+      console.info(`notifySnapshot deviceId: ${JSON.stringify(deviceId)}`);
+      console.info(`notifySnapshot mission: ${JSON.stringify(mission)}`);
+    },
+    notifyNetDisconnect: (deviceId: string, state: number) => {
+      console.info(`notifyNetDisconnect deviceId: ${JSON.stringify(deviceId)}`);
+      console.info(`notifyNetDisconnect state: ${JSON.stringify(state)}`);
+    }
+  }
+);
+```
+
 ## notifyNetDisconnect
 
 ```TypeScript
@@ -44,6 +69,31 @@ Called by system when network disconnect.
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+
+distributedMissionManager.registerMissionListener(
+  {
+    deviceId: '123456'
+  },
+  {
+    notifyMissionsChanged: (deviceId: string) => {
+      console.info(`notifyMissionsChanged deviceId: ${JSON.stringify(deviceId)}`);
+    },
+    notifySnapshot: (deviceId: string, mission: number) => {
+      console.info(`notifySnapshot deviceId: ${JSON.stringify(deviceId)}`);
+      console.info(`notifySnapshot mission: ${JSON.stringify(mission)}`);
+    },
+    notifyNetDisconnect: (deviceId: string, state: number) => {
+      console.info(`notifyNetDisconnect deviceId: ${JSON.stringify(deviceId)}`);
+      console.info(`notifyNetDisconnect state: ${JSON.stringify(state)}`);
+    }
+  }
+);
+```
+
 ## notifySnapshot
 
 ```TypeScript
@@ -61,3 +111,28 @@ Called by system when snapshot changed.
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+
+distributedMissionManager.registerMissionListener(
+  {
+    deviceId: '123456'
+  },
+  {
+    notifyMissionsChanged: (deviceId: string) => {
+      console.info(`notifyMissionsChanged deviceId: ${JSON.stringify(deviceId)}`);
+    },
+    notifySnapshot: (deviceId: string, mission: number) => {
+      console.info(`notifySnapshot deviceId: ${JSON.stringify(deviceId)}`);
+      console.info(`notifySnapshot mission: ${JSON.stringify(mission)}`);
+    },
+    notifyNetDisconnect: (deviceId: string, state: number) => {
+      console.info(`notifyNetDisconnect deviceId: ${JSON.stringify(deviceId)}`);
+      console.info(`notifyNetDisconnect state: ${JSON.stringify(state)}`);
+    }
+  }
+);
+```

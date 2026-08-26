@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
+import scan from '@kit.BasicServicesKit';
 ```
 
 ## getPictureScanProgress
@@ -22,18 +22,32 @@ Obtains the progress of scanning a picture. This API uses a promise to return th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scannerId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scannerId | string | Yes | Scanner ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[PictureScanProgress](arkts-basicservices-scan-picturescanprogress-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[PictureScanProgress](arkts-basicservices-scan-picturescanprogress-i.md)&gt; | Promise used to return the progress. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+**Examples**
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let scannerId: string = 'scanner_001';
+scan.getPictureScanProgress(scannerId).then((progress: scan.PictureScanProgress) => {
+    console.info('get picture scan progress success: ' + JSON.stringify(progress));
+}).catch((error: BusinessError) => {
+    console.error('get picture scan progress failed: ' + JSON.stringify(error));
+})
+```

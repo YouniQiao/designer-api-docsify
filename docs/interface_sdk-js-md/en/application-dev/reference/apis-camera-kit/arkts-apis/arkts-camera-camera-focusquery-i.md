@@ -2,7 +2,8 @@
 
 FocusQuery provides APIs to check whether a focus mode is supported.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This interface was first introduced in API version 12. In this version, a compatibility change was made that
 > preserved the initial version information of inner elements. As a result, you might see outer element's
 
@@ -13,7 +14,6 @@ FocusQuery provides APIs to check whether a focus mode is supported.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isFocusModeSupported
@@ -32,21 +32,55 @@ Checks whether a focus mode is supported.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes | Focus mode. If the input parameter is null or undefined, it is treated as 0 and manual focus is used. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result for the support of the focus mode. **true** if supported, **false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isFocusModeSupported(captureSession: camera.CaptureSession): boolean {
+  let status: boolean = false;
+  try {
+    status = captureSession.isFocusModeSupported(camera.FocusMode.FOCUS_MODE_AUTO);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isFocusModeSupported call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isFocusModeSupported(photoSession: camera.PhotoSession): boolean {
+  let status: boolean = false;
+  try {
+    status = photoSession.isFocusModeSupported(camera.FocusMode.FOCUS_MODE_AUTO);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isFocusModeSupported call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
 
 ## isLockFocusTrackingSupported
 
@@ -66,12 +100,12 @@ Checks whether lock focus tracking is supported.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Is the lock focus tracking supported. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |

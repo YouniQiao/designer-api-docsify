@@ -9,7 +9,7 @@ XMPMetadata instance.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## enumerateTags
@@ -32,17 +32,17 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (path: string, tag: XMPTag) = & gt; boolean | Yes |
-| rootPath | string | No |
-| options | [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (path: string, tag: XMPTag) = & gt; boolean | Yes | Callback used to return the XMP node and the corresponding XMPTag. The callback receives a path argument that follows the XMP namespace:path format. |
+| rootPath | string | No | Enumerate root path. If this parameter is not specified, the default value is root path. |
+| options | [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) | No | XMP enumerate option. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
 
 ## getBlob
 
@@ -60,16 +60,112 @@ Obtains the XMP metadata as a blob.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;ArrayBuffer & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;ArrayBuffer & gt; | A Promise instance used to return the ArrayBuffer of blob. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
+
+**Examples**
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg'; // An image containing Exif metadata is required.
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function GetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let pictureObj: image.Picture = await imageSource.createPicture();
+  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
+  if (metaData != null) {
+    let blob = await metaData.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function exifMetadataGetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
+  if (metaData != undefined && metaData.exifMetadata != undefined) {
+    let blob = await metaData.exifMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function makerNoteHuaweiGetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
+  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
+    let blob = await metaData.makerNoteHuaweiMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/heifs.heic';  // An image containing HeifsMetadata is required.
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function heifsMetadataGetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
+  if (metaData != undefined && metaData.heifsMetadata != undefined) {
+    let blob = await metaData.heifsMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+    }
+  }
+}
+```
 
 ## getTag
 
@@ -87,21 +183,21 @@ Get a single XMP tag from specified path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | The specified path of the target XMP tag.(e.g., "dc:title"). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[XMPTag](arkts-image-image-xmptag-i.md) \| null & gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[XMPTag](arkts-image-image-xmptag-i.md) \| null & gt; | Promise used to return the XMP tag. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
 
 ## getTags
 
@@ -119,22 +215,22 @@ Get all XMP tags from specified path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rootPath | string | No |
-| options | [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rootPath | string | No | The specified path. If this parameter is not specified, the default value is root path. |
+| options | [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) | No | XMP enumerate option. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Record&lt;string, [XMPTag](arkts-image-image-xmptag-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Record&lt;string, [XMPTag](arkts-image-image-xmptag-i.md)&gt;&gt; | A Promise instance used to return all XMP tags. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
 
 ## registerXMPNamespace
 
@@ -152,21 +248,21 @@ Register a new namespace according to the xml namespace and prefix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [xmpNamespace](arkts-image-image-xmptag-i.md) | [XMPNamespace](arkts-image-image-xmpnamespace-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| xmpNamespace | [XMPNamespace](arkts-image-image-xmpnamespace-i.md) | Yes | The xmp namespace. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Invalid namespace format. 2. The uri is already registered. 3. The prefix is already registered. |
 
 ## removeTag
 
@@ -184,21 +280,21 @@ Remove the XMP tag from specified path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | The specified path of the target XMP tag.(e.g., "dc:title"). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
 
 ## setBlob
 
@@ -216,21 +312,137 @@ Set a blob into the XMP metadata.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffer | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | ArrayBuffer | Yes | blob data. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. The buffer is empty or invalid. |
+
+**Examples**
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg'; // An image containing Exif metadata is required.
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function setBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let pictureObj: image.Picture = await imageSource.createPicture();
+  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
+  if (metaData != null) {
+    let blob = await metaData.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+      metaData.setBlob(blob);
+    }
+    let new_blob = metaData.getBlob();
+    if (new_blob != undefined) {
+      console.info("new_blob is not undefined");
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function exifMetadataSetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
+  if (metaData != undefined && metaData.exifMetadata != undefined) {
+    let blob = await metaData.exifMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+      metaData.exifMetadata.setBlob(blob);
+    }
+    let new_blob = metaData.exifMetadata.getBlob();
+    if (new_blob != undefined) {
+      console.info("new_blob is not undefined");
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function makerNoteHuaweiSetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
+  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
+    let blob = await metaData.makerNoteHuaweiMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+      metaData.makerNoteHuaweiMetadata.setBlob(blob);
+    }
+    let new_blob = metaData.makerNoteHuaweiMetadata.getBlob();
+    if (new_blob != undefined) {
+      console.info("new_blob is not undefined");
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/heifs.heic';  // An image containing HeifsMetadata is required.
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function heifsMetadataSetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
+  if (metaData != undefined && metaData.heifsMetadata != undefined) {
+    let blob = await metaData.heifsMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+      metaData.heifsMetadata.setBlob(blob);
+    }
+    let new_blob = metaData.heifsMetadata.getBlob();
+    if (new_blob != undefined) {
+      console.info("new_blob is not undefined");
+    }
+  }
+}
+```
 
 ## setValue
 
@@ -248,20 +460,20 @@ Set the XMP type and value of the XMP tag in the specified path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| type | [XMPTagType](arkts-image-image-xmptagtype-e.md) | Yes |
-| value | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | The specified path of the target XMP tag.(e.g., "dc:title"). |
+| type | [XMPTagType](arkts-image-image-xmptagtype-e.md) | Yes | The specified XMP tag type. |
+| value | string | No | The specified value. If this parameter is not specified, the default value is empty. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. 3. The path does not match the type. 4. The value is invalid for the type. |

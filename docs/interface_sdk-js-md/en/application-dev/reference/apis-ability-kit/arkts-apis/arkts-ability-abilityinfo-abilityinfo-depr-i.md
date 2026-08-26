@@ -2,7 +2,8 @@
 
 The module provides information about an ability. Unless otherwise specified, the information is obtained through [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
 > [bundleManager-AbilityInfo](#abilityinfo) instead.
 

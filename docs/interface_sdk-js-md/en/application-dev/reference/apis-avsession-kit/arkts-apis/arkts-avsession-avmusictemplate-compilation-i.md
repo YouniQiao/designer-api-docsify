@@ -11,7 +11,7 @@ The definition of compilation.@extends OperResult @interface Compilation
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import avMusicTemplate from '@kit.AVSessionKit';
 ```
 
 ## hasMoreData

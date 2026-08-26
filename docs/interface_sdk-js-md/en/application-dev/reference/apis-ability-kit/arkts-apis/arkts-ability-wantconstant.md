@@ -19,16 +19,16 @@ The module provides the actions, entities, and flags used in Want objects.
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Action](arkts-ability-wantconstant-action-depr-e.md) |
-| [Entity](arkts-ability-wantconstant-entity-depr-e.md) |
-| [Flags](arkts-ability-wantconstant-flags-depr-e.md) |
+| Name | Description |
+| --- | --- |
+| [Action](arkts-ability-wantconstant-action-depr-e.md) | Enumerates the action constants of the Want object. **action** specifies the operation to execute. |
+| [Entity](arkts-ability-wantconstant-entity-depr-e.md) | Enumerates the entity constants of the Want object. **entity** specifies additional information of the target ability. |
+| [Flags](arkts-ability-wantconstant-flags-depr-e.md) | Enumerates the flags that specify how the Want will be handled. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Flags](arkts-ability-wantconstant-flags-depr-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [Flags](arkts-ability-wantconstant-flags-depr-e-sys.md) | Enumerates the flags that specify how the Want will be handled. |
 <!--DelEnd-->

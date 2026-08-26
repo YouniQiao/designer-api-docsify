@@ -9,7 +9,6 @@ Represents the result returned.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## appUidList

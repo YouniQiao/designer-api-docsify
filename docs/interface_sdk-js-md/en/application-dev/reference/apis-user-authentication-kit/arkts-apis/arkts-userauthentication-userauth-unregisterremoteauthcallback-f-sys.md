@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## unregisterRemoteAuthCallback
@@ -26,8 +27,23 @@ Unregisters a remote authentication callback. This API is used to unregister a r
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  userAuth.unregisterRemoteAuthCallback();
+  console.info('Remote auth callback unregistered successfully');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`failed to unregister remote auth callback. Code is ${err?.code}, message is ${err?.message}`);
+}
+```

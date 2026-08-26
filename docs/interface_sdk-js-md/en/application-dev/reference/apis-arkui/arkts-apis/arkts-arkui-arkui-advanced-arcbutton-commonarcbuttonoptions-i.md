@@ -9,7 +9,7 @@ Defines the default or custom style parameters for the **ArcButton** component.
 ## Modules to Import
 
 ```TypeScript
-import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition, ArcButtonStyleMode, ArcButtonStatus } from 'kits/@kit.ArkUI';
+import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition, ArcButtonStyleMode, ArcButtonStatus } from '@kit.ArkUI';
 ```
 
 ## backgroundBlurStyle

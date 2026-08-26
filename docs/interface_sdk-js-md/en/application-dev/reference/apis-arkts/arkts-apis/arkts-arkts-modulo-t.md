@@ -12,7 +12,7 @@ The type used to set modulo
 
 **System capability:** SystemCapability.Utils.Lang
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Rounding](arkts-arkts-rounding-t.md) |
-| 9 |
+| Type | Description |
+| --- | --- |
+| [Rounding](arkts-arkts-rounding-t.md) |  |
+| 9 |  |

@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import usb from '@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKitManager';
+import serialManager from '@kit.BasicServicesKitManager.serial';
 ```
 
 ## setCurrentFunctions
@@ -26,12 +28,23 @@ Sets the current USB function list in Device mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | Yes | USB function list in numeric mask format. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
+
+**Examples**
+
+```TypeScript
+let funcs : number = usb.FunctionType.HDC;
+usb.setCurrentFunctions(funcs).then(() => {
+    console.info('usb setCurrentFunctions successfully.');
+}).catch((err : BusinessError) => {
+    console.error('usb setCurrentFunctions failed: ' + err.code + ' message: ' + err.message);
+});
+```

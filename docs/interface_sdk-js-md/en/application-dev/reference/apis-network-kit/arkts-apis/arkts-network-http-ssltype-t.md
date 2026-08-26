@@ -12,7 +12,7 @@ Defines the secure communications protocol.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'TLS' |
-| 'TLCP' |
+| Type | Description |
+| --- | --- |
+| 'TLS' | TLS protocol. The value is fixed to **TLS**. |
+| 'TLCP' | TLCP protocol. The value is fixed to **TLCP**.  **NOTE**  (1) The certificate supports the following string specifications:   - UTF8String (English character set)   - PrintableString   - IA5String  Supported since API Version 22:   - TeletexString  (2) The certificate supports the following extended specifications:   - BasicConstraints (OID 2.5.29.19)   - KeyUsage (OID2.5.29.15)   - SubjectKeyIdentifier (OID2.5.29.14)   - AuthorityKeyIdentifier (OID2.5.29.35)  Supported since API Version 22:   - SubjectAltName (OID 2.5.29.17)   - ExtendedKeyUsage (OID 2.5.29.37) |

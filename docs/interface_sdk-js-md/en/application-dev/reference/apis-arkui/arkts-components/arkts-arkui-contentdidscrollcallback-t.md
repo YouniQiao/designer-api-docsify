@@ -16,9 +16,9 @@ Triggered during the swipe action of the **Swiper** component. For details about
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectedIndex | number | Yes |
-| index | number | Yes |
-| position | number | Yes |
-| mainAxisLength | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectedIndex | number | Yes | Index of the currently selected page. |
+| index | number | Yes | Index of a page in the viewport. |
+| position | number | Yes | Position of the page specified by **index** relative to the start position of the **Swiper** main axis (start position of the page corresponding to **selectedIndex**). |
+| mainAxisLength | number | Yes | Length of the page specified by **index** along the main axis, in vp. |

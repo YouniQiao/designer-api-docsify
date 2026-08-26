@@ -9,8 +9,6 @@ LightWeightSet stores a set of values, each of which must be unique.
 ## Modules to Import
 
 ```TypeScript
-import { LightWeightSet } from 'kits/@kit.ArkTS';
-import { LightWeightSetForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -29,15 +27,51 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+
+// Method 1:
+for (let value of lightWeightSet) {
+  console.info("value:", value);
+}
+// value: sparrow
+// value: squirrel
+
+// Method 2:
+let iter = lightWeightSet[Symbol.iterator]();
+let temp: IteratorResult<string> = iter.next();
+while(!temp.done) {
+  console.info("value:", temp.value);
+  temp = iter.next();
+}
+// value: sparrow
+// value: squirrel
+```
+
+```TypeScript
+// You are not advised to use the add, remove, or removeAt APIs in Symbol.iterator because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
+let lightWeightSet = new LightWeightSet<string>();
+for(let i = 0; i < 10; i++) {
+  lightWeightSet.add(i + "123");
+}
+for(let i = 0; i < 10; i++) {
+  lightWeightSet.remove(i + "123");
+}
+```
 
 ## add
 
@@ -55,21 +89,29 @@ Adds an element to this LightWeightSet.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| obj | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| obj | T | Yes | Target element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+let result = lightWeightSet.add("squirrel");
+console.info("result:", result);  // result: true
+```
 
 ## addAll
 
@@ -87,21 +129,34 @@ Adds all elements in a LightWeightSet to this LightWeightSet.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes | LightWeightSet whose elements are to be added to the current LightWeightSet. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The addAll method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+let set = new LightWeightSet<string>();
+set.add("gull");
+lightWeightSet.addAll(set);
+let result = lightWeightSet.has("gull");
+console.info("result:", result);  // result: true
+```
 
 ## clear
 
@@ -119,9 +174,20 @@ Clears this LightWeightSet and sets its length to **0**.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+lightWeightSet.clear();
+let result = lightWeightSet.isEmpty();
+console.info("result:", result);  // result: true
+```
 
 ## constructor
 
@@ -139,9 +205,15 @@ A constructor used to create a **LightWeightSet** instance.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The LightWeightSet's constructor cannot be directly invoked. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<number | string>();
+```
 
 ## entries
 
@@ -159,15 +231,40 @@ Returns an iterator that contains all the elements in this LightWeightSet.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[T, T]&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[T, T]&gt; | Iterator obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+let iter = lightWeightSet.entries();
+for (let item of iter) {
+  console.info("value:", item[1])
+}
+// value: sparrow
+// value: squirrel
+```
+
+```TypeScript
+// You are not advised to use the add, remove, or removeAt APIs in entries because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
+let lightWeightSet = new LightWeightSet<string>();
+for(let i = 0; i < 10; i++) {
+  lightWeightSet.add(i + "123");
+}
+for(let i = 0; i < 10; i++) {
+  lightWeightSet.remove(i + "123");
+}
+```
 
 ## equal
 
@@ -177,7 +274,8 @@ equal(obj: Object): boolean
 
 Checks whether the elements of this LightWeightSet are the same as those of **obj**.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
 
 **Since:** 8
@@ -188,21 +286,32 @@ Checks whether the elements of this LightWeightSet are the same as those of **ob
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| obj | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| obj | Object | Yes | LightWeightSet** instance to be used for comparison. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if **obj** is a LightWeightSet or an array containing only strings or numbers and the elements in them are the same; returns **false** in other cases. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The equal method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+let obj = ["sparrow", "squirrel"];
+let result = lightWeightSet.equal(obj);
+console.info("result:", result);  // result: true
+```
 
 ## forEach
 
@@ -220,16 +329,40 @@ Uses a callback to traverse the elements in this LightWeightSet and obtain their
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: LightWeightSet & lt;T & gt;) = & gt; void | Yes |
-| thisArg | Object | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackFn | (value?: T, key?: T, set?: LightWeightSet & lt;T & gt;) = & gt; void | Yes | Callback invoked to traverse the elements in the LightWeightSet. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("sparrow");
+lightWeightSet.add("gull");
+lightWeightSet.forEach((value: string, key: string) => {
+  console.info("value:" + value, "key:" + key);
+});
+// value:gull key:gull
+// value:sparrow key:sparrow
+```
+
+```TypeScript
+// You are not advised to use the add, remove, or removeAt APIs in forEach because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
+let lightWeightSet = new LightWeightSet<string>();
+for(let i = 0; i < 10; i++) {
+  lightWeightSet.add(i + "123");
+}
+for(let i = 0; i < 10; i++) {
+  lightWeightSet.remove(i + "123");
+}
+```
 
 ## getIndexOf
 
@@ -247,21 +380,31 @@ Obtains the position index of the element with the specified key in this LightWe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | T | Yes | Key of the target element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Position index of the element. If the element does not exist, a negative value is returned. The negative value consists of a minus sign and the position where the element (if available) should be. The position starts from 1. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+let result = lightWeightSet.getIndexOf("sparrow");
+console.info("result:", result);  // result: 0
+```
 
 ## getValueAt
 
@@ -279,21 +422,21 @@ Obtains the value of the element at the specified position in this LightWeightSe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Value obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getValueAt method cannot be bound. |
 
 ## has
 
@@ -311,21 +454,30 @@ Checks whether this LightWeightSet has the specified key.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | T | Yes | Target key. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the specified key is contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<number>();
+lightWeightSet.add(123);
+let result = lightWeightSet.has(123);
+console.info("result:", result);  // result: true
+```
 
 ## hasAll
 
@@ -343,21 +495,33 @@ Checks whether this LightWeightSet contains all elements of the specified LightW
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes | LightWeightSet** instance to be used for comparison. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if all the elements in the specified LightWeightSet are contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasAll method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+let set = new LightWeightSet<string>();
+set.add("sparrow");
+let result = lightWeightSet.hasAll(set);
+console.info("result:", result);  // result: true
+```
 
 ## increaseCapacityTo
 
@@ -375,16 +539,23 @@ Increases the capacity of this LightWeightSet. If the passed-in capacity is grea
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| minimumCapacity | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| minimumCapacity | number | Yes | Minimum number of elements to accommodate in this LightWeightSet. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The increaseCapacityTo method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of minimumCapacity is out of range. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.increaseCapacityTo(10);
+```
 
 ## isEmpty
 
@@ -402,15 +573,23 @@ Checks whether this LightWeightSet is empty (contains no element).
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the LightWeightSet is empty; otherwise, **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+const lightWeightSet = new LightWeightSet<number>();
+let result = lightWeightSet.isEmpty();
+console.info("result:", result);  // result: true
+```
 
 ## remove
 
@@ -428,21 +607,31 @@ Removes an element of the specified key from this LightWeightSet.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | T | Yes | Key of the target element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Value of the element removed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+let result = lightWeightSet.remove("sparrow");
+console.info("result:", result);  // result: sparrow
+```
 
 ## removeAt
 
@@ -460,21 +649,31 @@ Removes the element at the specified position from this LightWeightSet.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2 147483647. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Operation result. The value **true** is returned if the element is removed; otherwise, **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeAt method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+let result = lightWeightSet.removeAt(1);
+console.info("result:", result);  // result: true
+```
 
 ## toArray
 
@@ -492,15 +691,24 @@ Obtains an array that contains all objects in this LightWeightSet.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;T & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;T & gt; | Array obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toArray method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+let result = lightWeightSet.toArray();
+```
 
 ## toString
 
@@ -518,9 +726,19 @@ Obtains a string that contains all elements in this LightWeightSet.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| String |
+| Type | Description |
+| --- | --- |
+| String | String obtained. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+let result = lightWeightSet.toString();
+console.info("result:", result);  // result: sparrow,squirrel
+```
 
 ## values
 
@@ -538,15 +756,29 @@ Returns an iterator that contains all the values in this LightWeightSet.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; | Iterator obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+let values = lightWeightSet.values();
+for (let value of values) {
+  console.info("value:", value);
+}
+// value: sparrow
+// value: squirrel
+```
 
 ## length
 

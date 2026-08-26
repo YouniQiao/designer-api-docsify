@@ -11,7 +11,7 @@ quickFixManager模块提供快速修复的能力，快速修复是系统提供�
 ## 导入模块
 
 ```TypeScript
-import { quickFixManager } from 'kits/@kit.AbilityKit';
+import quickFixManager from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -19,21 +19,21 @@ import { quickFixManager } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md) |
-| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md) |
-| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md) |
-| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md) |
-| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md) |
-| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md) | 快速修复的补丁安装接口。使用callback异步回调。 |
+| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md) | 快速修复的补丁安装接口。使用Promise异步回调。 |
+| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md) | 获取应用的快速修复信息。使用callback异步回调。 |
+| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md) | 获取应用的快速修复信息。使用Promise异步回调。 |
+| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md) | 撤销快速修复的接口，使用callback方式返回结果。 |
+| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md) | 撤销快速修复的接口。使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 |
-| --- |
-| [ApplicationQuickFixInfo](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md) |
-| [HapModuleQuickFixInfo](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [ApplicationQuickFixInfo](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md) | 应用级别的快速修复信息。 |
+| [HapModuleQuickFixInfo](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md) | hap级别的快速修复信息。 |
 <!--DelEnd-->

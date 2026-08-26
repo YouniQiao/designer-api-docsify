@@ -16,13 +16,13 @@ Defines the callback invoked when the custom tab transition animation starts.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| from | number | Yes |
-| to | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | number | Yes | Index of the currently displayed tab before the animation starts. The index is zero-based. Value range: [0, Index value — 1]. If the value exceeds the index value or is less than 0, no transition animation is displayed. |
+| to | number | Yes | Index of the target tab before the animation starts. The index is zero-based. Value range: [0, Index value — 1]. If the value exceeds the index value or is less than 0, no transition animation is displayed. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TabContentAnimatedTransition](arkts-arkui-tabcontentanimatedtransition-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [TabContentAnimatedTransition](arkts-arkui-tabcontentanimatedtransition-i.md) \| undefined | Information about the custom tab switching animation. |

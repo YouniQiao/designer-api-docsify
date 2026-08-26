@@ -11,7 +11,7 @@ Window animation finished callback.@interface WindowAnimationFinishedCallback
 ## Modules to Import
 
 ```TypeScript
-import { windowAnimationManager } from 'kits/@kit.ArkUI';
+import windowAnimationManager from '@kit.ArkUI';
 ```
 
 ## onAnimationFinish
@@ -27,3 +27,7 @@ The function of window animation finished callback.
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
+
+**Examples**
+
+For details, see the sample code under windowAnimationManager.setController.

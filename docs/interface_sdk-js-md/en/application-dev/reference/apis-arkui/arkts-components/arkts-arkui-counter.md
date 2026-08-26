@@ -1,7 +1,7 @@
 # Counter
 
 The **Counter** component provides an operation to increase or decrease the number.
-> **NOTE**>> - This component supports WithTheme since API version 26.0.0.
+> **NOTE** > > - This component supports WithTheme since API version 26.0.0.
 
 ## Child Components
 
@@ -24,3 +24,46 @@ Create Counter component.
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Summary
+
+## Examples
+
+This example shows the basic usage of the Counter component. Users can touch the + or - button to adjust the value.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CounterExample {
+  @State value1: number = 0;
+  @State value2: number = 0;
+
+  build() {
+    Column({ space: 50 }) {
+      Counter() {
+        Text(this.value1.toString())
+      }
+      .onInc(() => {
+        this.value1++;
+      })
+      .onDec(() => {
+        this.value1--;
+      })
+
+      Counter() {
+        Text(this.value2.toString())
+      }
+      .onInc(() => {
+        this.value2++;
+      })
+      .onDec(() => {
+        this.value2--;
+      })
+      .enableInc(true)
+      .enableDec(false)
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```

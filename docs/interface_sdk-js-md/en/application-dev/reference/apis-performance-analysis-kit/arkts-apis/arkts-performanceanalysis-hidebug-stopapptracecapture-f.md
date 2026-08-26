@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## stopAppTraceCapture
@@ -20,7 +19,28 @@ Stops application trace collection. Use [startAppTraceCapture()](arkts-performan
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
-| [11400105](../errorcode-hiviewdfx-hidebug-trace.md#11400105-trace-capture-disabled) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | The status of the trace is abnormal |
+| [11400105](../errorcode-hiviewdfx-hidebug-trace.md#11400105-trace-capture-disabled) | No capture trace running |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tags: number[] = [hidebug.tags.ABILITY_MANAGER, hidebug.tags.ARKUI];
+let flag: hidebug.TraceFlag = hidebug.TraceFlag.MAIN_THREAD;
+let limitSize: number = 1024 * 1024;
+try {
+  let fileName: string = hidebug.startAppTraceCapture(tags, flag, limitSize);
+  console.info(`fileName = ${fileName}`);
+  // code block
+  // ...
+  // code block
+  hidebug.stopAppTraceCapture();
+} catch (error) {
+  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
+}
+```

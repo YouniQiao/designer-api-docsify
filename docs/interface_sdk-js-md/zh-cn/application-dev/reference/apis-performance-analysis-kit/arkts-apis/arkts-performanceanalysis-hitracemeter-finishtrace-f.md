@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## finishTrace
@@ -22,7 +21,31 @@ function finishTrace(name: string, taskId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-| taskId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 要跟踪的任务名称，必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md)对应参数值一致。 |
+| taskId | number | 是 | 任务id，必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md)对应参数值一致。 |
+
+**示例**
+
+```TypeScript
+// 跟踪并行执行的同名任务
+hiTraceMeter.startTrace("myTestFunc", 1);
+// 业务流程...... 
+hiTraceMeter.startTrace("myTestFunc", 2);  // 第二个跟踪的任务开始，同时第一个跟踪的同名任务还没结束，出现了并行执行，需要不同的taskId来区分不同的任务。
+// 业务流程...... 
+hiTraceMeter.finishTrace("myTestFunc", 1);
+// 业务流程...... 
+hiTraceMeter.finishTrace("myTestFunc", 2);
+```
+
+```TypeScript
+// 跟踪串行执行的同名任务
+hiTraceMeter.startTrace("myTestFunc", 1);
+// 业务流程...... 
+hiTraceMeter.finishTrace("myTestFunc", 1);  // 第一个跟踪的任务结束
+// 业务流程...... 
+hiTraceMeter.startTrace("myTestFunc", 1);   // 第二个跟踪的同名任务开始，同名的待跟踪任务串行执行。
+// 业务流程...... 
+hiTraceMeter.finishTrace("myTestFunc", 1);
+```

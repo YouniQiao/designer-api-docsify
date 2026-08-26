@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
+import serial from '@kit.BasicServicesKit';
 ```
 
 ## getSerialPortList
@@ -22,13 +22,13 @@ function getSerialPortList(): Promise<SerialPort[]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;SerialPort[] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;SerialPort[] & gt; | Promise对象，返回串口设备列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |

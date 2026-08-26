@@ -11,7 +11,8 @@ Defines the date style options.
 ## Modules to Import
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUIV2';
 ```
 
 ## onDateChange
@@ -32,9 +33,9 @@ Trigger an event when the date of the counter has been changed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| date | [DateData](arkts-arkui-arkui-advanced-counter-datedata-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| date | [DateData](arkts-arkui-arkui-advanced-counter-datedata-c.md) | Yes |  |
 
 ## day
 

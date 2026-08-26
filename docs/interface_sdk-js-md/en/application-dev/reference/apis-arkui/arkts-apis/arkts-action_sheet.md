@@ -9,31 +9,31 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ActionSheet(ActionSheet)](arkts-arkui-actionsheet-c.md) |
+| Name | Description |
+| --- | --- |
+| [ActionSheet(ActionSheet)](arkts-arkui-actionsheet-c.md) |  |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ActionSheetButtonOptions(ActionSheet)](arkts-arkui-actionsheetbuttonoptions-i.md) |
-| [ActionSheetOffset(ActionSheet)](arkts-arkui-actionsheetoffset-i.md) |
-| [ActionSheetOptions(ActionSheet)](arkts-arkui-actionsheetoptions-i.md) |
-| [DismissDialogAction(ActionSheet)](arkts-arkui-dismissdialogaction-i.md) |
-| [SheetInfo(ActionSheet)](arkts-arkui-sheetinfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [ActionSheetButtonOptions(ActionSheet)](arkts-arkui-actionsheetbuttonoptions-i.md) | Provides button style configuration for the dialog box. |
+| [ActionSheetOffset(ActionSheet)](arkts-arkui-actionsheetoffset-i.md) | Alignment mode of the dialog box. |
+| [ActionSheetOptions(ActionSheet)](arkts-arkui-actionsheetoptions-i.md) | Provides **ActionSheet** configuration options. |
+| [DismissDialogAction(ActionSheet)](arkts-arkui-dismissdialogaction-i.md) | Provides information about the action to dismiss the dialog box. |
+| [SheetInfo(ActionSheet)](arkts-arkui-sheetinfo-i.md) | Defines the option content in the dialog box. You can configure the text, icon, and callback for each option. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ActionSheetOptions(ActionSheet)](arkts-arkui-actionsheetoptions-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ActionSheetOptions(ActionSheet)](arkts-arkui-actionsheetoptions-i-sys.md) | Provides **ActionSheet** configuration options. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ImmersiveMode(ActionSheet)](arkts-arkui-immersivemode-t.md) |
-| [LevelMode(ActionSheet)](arkts-arkui-levelmode-t.md) |
+| Name | Description |
+| --- | --- |
+| [ImmersiveMode(ActionSheet)](arkts-arkui-immersivemode-t.md) | Defines the overlay effect for the dialog box. |
+| [LevelMode(ActionSheet)](arkts-arkui-levelmode-t.md) | Defines the display level mode for the dialog box. |

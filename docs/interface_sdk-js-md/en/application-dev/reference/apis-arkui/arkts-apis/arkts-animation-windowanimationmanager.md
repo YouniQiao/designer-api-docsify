@@ -11,7 +11,7 @@ Window animation manager.@namespace windowAnimationManager
 ## Modules to Import
 
 ```TypeScript
-import { windowAnimationManager } from 'kits/@kit.ArkUI';
+import windowAnimationManager from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -19,20 +19,20 @@ import { windowAnimationManager } from 'kits/@kit.ArkUI';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) |
-| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) |
-| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) | Minimize the window target with animation. |
+| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) | Minimize the window target with animation. |
+| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md) | Set the window animation controller. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md) |
-| [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) |
-| [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) |
-| [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md) | Round rect.@interface RRect |
+| [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | Window animation controller.@interface WindowAnimationController |
+| [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Window animation finished callback.@interface WindowAnimationFinishedCallback |
+| [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Window animation target.@interface WindowAnimationTarget |
 <!--DelEnd-->

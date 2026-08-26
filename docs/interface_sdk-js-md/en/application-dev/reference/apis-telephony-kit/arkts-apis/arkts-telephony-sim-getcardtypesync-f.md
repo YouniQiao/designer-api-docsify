@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCardTypeSync
@@ -20,12 +19,21 @@ Obtains the type of the SIM card in the specified slot.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CardType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-cardemulation-cardtype-e.md) |
+| Type | Description |
+| --- | --- |
+| [CardType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-cardemulation-cardtype-e.md) | Type of the SIM card in the specified slot. |
+
+**Examples**
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+
+let cardType: sim.CardType = sim.getCardTypeSync(0);
+console.info(`the card type is:` + cardType);
+```

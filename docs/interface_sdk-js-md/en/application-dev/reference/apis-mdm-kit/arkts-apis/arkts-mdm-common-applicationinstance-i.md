@@ -9,7 +9,7 @@ Defines application instance data.It is used as an input parameter in the [addUs
 ## Modules to Import
 
 ```TypeScript
-import { common } from 'kits/@kit.MDMKit';
+import common from '@kit.MDMKit';
 ```
 
 ## accountId

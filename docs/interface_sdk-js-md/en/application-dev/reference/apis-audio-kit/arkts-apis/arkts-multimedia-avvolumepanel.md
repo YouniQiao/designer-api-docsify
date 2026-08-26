@@ -3,19 +3,19 @@
 ## Modules to Import
 
 ```TypeScript
-import { AVVolumePanel, AVVolumePanelParameter } from 'kits/@kit.AudioKit';
+import { AVVolumePanel, AVVolumePanelParameter } from '@kit.AudioKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AVVolumePanelParameter(Defines a panel to set the system audio output volume.)](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md) |
+| Name | Description |
+| --- | --- |
+| [AVVolumePanelParameter(Defines a panel to set the system audio output volume.)](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md) | Declare custom parameters used for volume panel. |
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AVVolumePanel(Defines a panel to set the system audio output volume.)](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md) |
+| Name | Description |
+| --- | --- |
+| [AVVolumePanel(Defines a panel to set the system audio output volume.)](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md) | A panel to set the system audio output volume. |

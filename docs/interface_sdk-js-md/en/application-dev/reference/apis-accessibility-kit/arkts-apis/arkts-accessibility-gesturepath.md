@@ -7,13 +7,13 @@ GesturePath represents gesture path information.
 ## Modules to Import
 
 ```TypeScript
-import { GesturePath } from 'kits/@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [GesturePath(Gesture Path)](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) |
+| Name | Description |
+| --- | --- |
+| [GesturePath(Gesture Path)](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Represents gesture path information, used to simulate user touch gestures (such as tap, swipe, etc.) in accessibility services. |

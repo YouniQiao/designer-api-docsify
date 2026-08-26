@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiext } from 'kits/@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKit';
 ```
 
 ## enableHotspot
@@ -26,6 +26,6 @@ function enableHotspot(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 操作结果， true: 成功， false: 失败。 |

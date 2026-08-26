@@ -9,7 +9,6 @@ Enumerates SIM card types and states.
 ## Modules to Import
 
 ```TypeScript
-import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## reason

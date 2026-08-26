@@ -31,9 +31,9 @@ Callback called when the EmbeddedUIExtensionAbility draw the first frame.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback & lt;void & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback & lt;void & gt; | Yes |  |
 
 ## onError
 
@@ -43,7 +43,8 @@ onError(callback: import('../api/@ohos.base').ErrorCallback)
 
 Called when an error occurs during the running of the started EmbeddedUIExtensionAbility. Through the **code**, **name**, and **message** in the callback parameters, error information can be obtained and handled. For details about the error codes, see [UIExtension Error Codes](../errorcode-uiextension.md).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API cannot be called within attributeModifier.
 
 **Since:** 12
@@ -56,9 +57,9 @@ Called when an error occurs during the running of the started EmbeddedUIExtensio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | import('../api/@ohos.base').ErrorCallback | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | import('../api/@ohos.base').ErrorCallback | Yes | Callback used to return the error information of the [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md) type. The error information can be obtained and processed based on the **code**, **name**, and **message** parameters. |
 
 ## onTerminated
 
@@ -68,7 +69,8 @@ onTerminated(callback: import('../api/@ohos.base').Callback<TerminationInfo>)
 
 Triggered when the the launched EmbeddedUIExtensionAbility exits normally by calling [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult) or [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateself).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API cannot be called within attributeModifier.
 
 **Since:** 12
@@ -81,6 +83,6 @@ Triggered when the the launched EmbeddedUIExtensionAbility exits normally by cal
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | import('../api/@ohos.base').Callback&lt;[TerminationInfo](arkts-arkui-terminationinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | import('../api/@ohos.base').Callback&lt;[TerminationInfo](arkts-arkui-terminationinfo-i.md)&gt; | Yes | Callback used to return the result from the EmbeddedUIExtensionAbility. |

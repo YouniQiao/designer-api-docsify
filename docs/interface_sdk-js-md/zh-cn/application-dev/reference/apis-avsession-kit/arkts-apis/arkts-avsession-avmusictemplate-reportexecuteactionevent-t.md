@@ -14,7 +14,7 @@ type ReportExecuteActionEvent = (actionType: string, params: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| actionType | string | 是 |
-| params | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| actionType | string | 是 | 操作类型。 |
+| params | string | 是 |  |

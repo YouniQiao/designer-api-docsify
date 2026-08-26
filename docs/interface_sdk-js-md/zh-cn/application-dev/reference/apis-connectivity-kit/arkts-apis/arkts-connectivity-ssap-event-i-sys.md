@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
+import ssap from '@kit.ConnectivityKit';
 ```
 
 ## eventUuid

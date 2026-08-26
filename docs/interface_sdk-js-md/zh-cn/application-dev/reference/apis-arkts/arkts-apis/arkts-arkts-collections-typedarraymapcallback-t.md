@@ -15,14 +15,14 @@ ArkTS TypedArray转换映射函数类型。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | ElementType | 是 |
-| index | number | 是 |
-| array | ArrayType | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | ElementType | 是 | 当前映射的ArkTS TypedArray元素。 |
+| index | number | 是 | 当前映射的ArkTS TypedArray元素索引，从0开始。 |
+| array | ArrayType | 是 | 当前映射的ArkTS TypedArray实例。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| ElementType |
+| 类型 | 说明 |
+| --- | --- |
+| ElementType | 转换后的元素值。 |

@@ -9,7 +9,7 @@ Represents the configuration of a domain server.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## domain

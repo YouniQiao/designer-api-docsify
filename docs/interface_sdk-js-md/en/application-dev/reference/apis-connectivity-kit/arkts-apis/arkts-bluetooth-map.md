@@ -9,35 +9,35 @@ Provides methods to accessing bluetooth MAP(Message Access Profile)-related capa
 ## Modules to Import
 
 ```TypeScript
-import { map } from 'kits/@kit.ConnectivityKit';
+import map from '@kit.ConnectivityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createMapMseProfile](arkts-connectivity-map-createmapmseprofile-f.md) |
+| Name | Description |
+| --- | --- |
+| [createMapMseProfile](arkts-connectivity-map-createmapmseprofile-f.md) | create the instance of MAP MSE profile. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MapMseProfile](arkts-connectivity-map-mapmseprofile-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [MapMseProfile](arkts-connectivity-map-mapmseprofile-i-sys.md) | Manager MAP MSE profile. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BaseProfile](arkts-connectivity-map-baseprofile-t.md) |
+| Name | Description |
+| --- | --- |
+| [BaseProfile](arkts-connectivity-map-baseprofile-t.md) | Base interface of profile. |
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AccessAuthorization](arkts-connectivity-map-accessauthorization-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AccessAuthorization](arkts-connectivity-map-accessauthorization-t-sys.md) | Indicate the phone book access authorization. |
 <!--DelEnd-->

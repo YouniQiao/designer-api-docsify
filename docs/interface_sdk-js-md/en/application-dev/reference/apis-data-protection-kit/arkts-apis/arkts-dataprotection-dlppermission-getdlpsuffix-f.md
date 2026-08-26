@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import dlpPermission from '@kit.DataProtectionKit';
 ```
 
 ## getDLPSuffix
@@ -20,13 +20,22 @@ Obtains the DLP file name extension. After the API is called successfully, the D
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | DLP file name extension obtained. For example, if the original file name is **test.txt**, the encrypted DLP file name is **test.txt.dlp**, and the returned extension is **.dlp**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+let dlpSuffix = dlpPermission.getDLPSuffix(); // Obtain the DLP file name extension.
+console.info('dlpSuffix:', dlpSuffix);
+```

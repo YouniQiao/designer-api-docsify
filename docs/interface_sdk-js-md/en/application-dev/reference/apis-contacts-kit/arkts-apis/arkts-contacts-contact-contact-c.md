@@ -9,7 +9,7 @@ Defines a contact.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## contactAttributes
@@ -299,3 +299,24 @@ List of websites of the contact.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
+
+**Examples**
+
+Creates contact data in JSON format.
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let myContact: contact.Contact = {
+    phoneNumbers: [{
+        phoneNumber: '138xxxxxxxx'
+    }],
+    name: {
+        fullName: 'fullName',
+        namePrefix: 'namePrefix'
+    },
+    nickName: {
+        nickName: 'nickName'
+    }
+};
+```

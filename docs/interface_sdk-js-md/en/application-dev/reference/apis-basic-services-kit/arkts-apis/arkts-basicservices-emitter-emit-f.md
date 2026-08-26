@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
+import emitter from '@kit.BasicServicesKit';
 ```
 
 ## emit
@@ -22,10 +22,28 @@ Emits a specified event.This API can be used to emit data objects across threads
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | Event to emit, where [EventPriority](arkts-basicservices-emitter-eventpriority-e.md) specifies the emit priority of the event. |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
+
+**Examples**
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+let innerEvent: emitter.InnerEvent = {
+  eventId: 1,
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit(innerEvent, eventData);
+```
 
 
 ## emit
@@ -44,10 +62,35 @@ Emits a specified event.This API can be used to emit data objects across threads
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| eventId | string | Yes |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
+
+**Examples**
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter1.emit('eventId', eventData);
+```
 
 
 ## emit
@@ -66,10 +109,51 @@ Emits a specified event.This API can be used to emit data objects across threads
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| eventId | string | Yes |
-| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
+
+**Examples**
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter1.emit('eventId', eventData);
+```
 
 
 ## emit
@@ -88,11 +172,44 @@ Emits an event of a specified priority.This API can be used to emit data objects
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| eventId | string | Yes |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
+
+**Examples**
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit('eventId', options, eventData);
+```
+
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter1.emit('eventId', options, eventData);
+```
 
 
 ## emit
@@ -111,8 +228,56 @@ Emits an event of a specified priority.This API can be used to emit data objects
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| eventId | string | Yes |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes |
-| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
+
+**Examples**
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter.emit('eventId', options, eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter1.emit('eventId', options, eventData);
+```

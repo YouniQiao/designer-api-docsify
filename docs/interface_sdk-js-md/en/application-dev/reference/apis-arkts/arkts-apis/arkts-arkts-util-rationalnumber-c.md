@@ -9,7 +9,8 @@ Provides APIs to compare rational numbers and obtain numerators and denominators
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## compare
@@ -28,15 +29,25 @@ Compares the current RationalNumber object to the given object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns 0 or 1, or -1, depending on the comparison. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.compare(rational);
+console.info("result = " + result);
+// Output: result = -1
+```
 
 ## compareTo
 
@@ -56,15 +67,25 @@ Compares the current RationalNumber object to the given object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns 0 or 1, or -1, depending on the comparison. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.compareTo(rational);
+console.info("result = " + result);
+// Output: result = -1
+```
 
 ## constructor
 
@@ -84,10 +105,16 @@ A constructor used to create a **RationalNumber** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| numerator | number | Yes |
-| denominator | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| numerator | number | Yes | Numerator, which is an integer. |
+| denominator | number | Yes | Denominator, which is an integer. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+```
 
 ## constructor
 
@@ -103,6 +130,35 @@ A constructor used to create a **RationalNumber** object.
 
 **System capability:** SystemCapability.Utils.Lang
 
+**Examples**
+
+```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// Output: retStr = utf-8
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let base64 = new  util.Base64();
+```
+
 ## createRationalFromString
 
 ```TypeScript
@@ -111,7 +167,8 @@ static createRationalFromString(rationalString: string): RationalNumber
 
 Creates a **RationalNumber** object based on the given string.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The **rationalString** parameter must be a string. If a decimal string is passed in, the function is not
 > intercepted, but the error message "createRationalFromString: The type of Parameter must be integer string" is
 > displayed.
@@ -124,15 +181,21 @@ Creates a **RationalNumber** object based on the given string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rationalString | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rationalString | string | Yes | String used to create the **RationalNumber** object. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) |
+| Type | Description |
+| --- | --- |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
+
+**Examples**
+
+```TypeScript
+let rational = util.RationalNumber.createRationalFromString("3/4");
+```
 
 ## equals
 
@@ -150,15 +213,35 @@ Checks whether this **RationalNumber** object equals the given object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| obj | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| obj | Object | Yes | Object used to compare with this **RationalNumber** object. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the two objects are equal; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.equals(rational);
+console.info("result = " + result);
+// Output: result = false
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.equals(rational);
+console.info("result = " + result);
+// Output: result = false
+```
 
 ## getCommonDivisor
 
@@ -178,16 +261,16 @@ Obtains the greatest common divisor of two specified integers.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| number1 | number | Yes |
-| number2 | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| number1 | number | Yes | The first integer used to get the greatest common divisor. |
+| number2 | number | Yes | The second integer used to get the greatest common divisor. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Greatest common divisor obtained. |
 
 ## getCommonFactor
 
@@ -197,7 +280,8 @@ static getCommonFactor(number1: number, number2: number): number
 
 Obtains the greatest common divisor of two specified integers.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The **number1** and **number2** parameters must be integers. If a decimal number is passed in, the function is
 > not intercepted, but the error message "getCommonFactor: The type of Parameter must be integer" is displayed.
 
@@ -209,16 +293,24 @@ Obtains the greatest common divisor of two specified integers.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| number1 | number | Yes |
-| number2 | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| number1 | number | Yes | The first integer used to get the greatest common divisor. Value range: - Number.MAX_VALUE & lt;= number1 & lt;= Number.MAX_VALUE. |
+| number2 | number | Yes | The second integer used to get the greatest common divisor. Value range: - Number.MAX_VALUE & lt;= number2 & lt;= Number.MAX_VALUE. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Greatest common divisor obtained. |
+
+**Examples**
+
+```TypeScript
+let result = util.RationalNumber.getCommonFactor(4,6);
+console.info("result = " + result);
+// Output: result = 2
+```
 
 ## getDenominator
 
@@ -236,9 +328,27 @@ Obtains the denominator of this **RationalNumber** object.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Denominator of this **RationalNumber** object. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.getDenominator();
+console.info("result = " + result);
+// Output: result = 2
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2)
+let result = rationalNumber.getDenominator();
+console.info("result = " + result);
+// Output: result = 2
+```
 
 ## getNumerator
 
@@ -256,9 +366,27 @@ Obtains the numerator of this **RationalNumber** object.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Numerator of this **RationalNumber** object. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.getNumerator();
+console.info("result = " + result);
+// Output: result = 1
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.getNumerator();
+console.info("result = " + result);
+// Output: result = 1
+```
 
 ## isFinite
 
@@ -276,9 +404,27 @@ Checks whether this **RationalNumber** object represents a finite value.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if this **RationalNumber** object represents a finite value (the denominator is not **0**); otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.isFinite();
+console.info("result = " + result);
+// Output: result = true
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.isFinite();
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isNaN
 
@@ -296,9 +442,27 @@ Checks whether this **RationalNumber** object is a Not a Number (NaN).
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if this **RationalNumber** object is a NaN (the denominator and numerator are both **0**); otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.isNaN();
+console.info("result = " + result);
+// Output: result = false
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.isNaN();
+console.info("result = " + result);
+// Output: result = false
+```
 
 ## isZero
 
@@ -316,9 +480,27 @@ Checks whether this **RationalNumber** object is **0**.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value of this **RationalNumber** object is **0**; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.isZero();
+console.info("result = " + result);
+// Output: result = false
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.isZero();
+console.info("result = " + result);
+// Output: result = false
+```
 
 ## parseRationalNumber
 
@@ -328,7 +510,8 @@ static parseRationalNumber(numerator: number, denominator: number): RationalNumb
 
 Creates a **RationalNumber** instance with a given numerator and denominator.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The **numerator** and **denominator** parameters must be integers. If a decimal number is passed in, the
 > function is not intercepted, but the error message "parseRationalNumber: The type of Parameter must be integer"
 > is displayed.
@@ -341,16 +524,22 @@ Creates a **RationalNumber** instance with a given numerator and denominator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| numerator | number | Yes |
-| denominator | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| numerator | number | Yes | Numerator, which is an integer. Value range: -Number.MAX_VALUE & lt;= numerator & lt;= Number.MAX_VALUE. |
+| denominator | number | Yes | Denominator, which is an integer. Value range: -Number.MAX_VALUE & lt;= denominator & lt;= Number.MAX_VALUE. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) |
+| Type | Description |
+| --- | --- |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | RationalNumber** object obtained. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+```
 
 ## toString
 
@@ -368,9 +557,105 @@ Obtains the string representation of this **RationalNumber** object.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Returns a string in Numerator/Denominator format in normal cases, for example, 3/5; returns **0/1** if the numerator of this object is **0**; returns **Infinity** if the denominator is **0**; returns **NaN** if the numerator and denominator are both **0**. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// Output: result = 1/2
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// Output: result = 1/2
+```
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.get(2);
+pro.get(3);
+console.info(pro.toString());
+// Output: LRUCache[ maxSize = 64, hits = 1, misses = 1, hitRate = 50% ]
+// maxSize: maximum size of the cache. hits: number of matched queries. misses: number of mismatched queries. hitRate: matching rate.
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// Output: result = [30, 40]
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.get(2);
+pro.remove(20);
+let result = pro.toString();
+console.info("result = " + result);
+// Output: result = Lrubuffer[ maxSize = 64, hits = 1, misses = 0, hitRate = 100% ]
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.Scope(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// Output: result = [30, 40]
+```
 
 ## valueOf
 
@@ -388,6 +673,24 @@ Obtains the integer or floating-point value of this **RationalNumber** object.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | An integer or a floating-point number. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.valueOf();
+console.info("result = " + result);
+// Output: result = 0.5
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.valueOf();
+console.info("result = " + result);
+// Output: result = 0.5
+```

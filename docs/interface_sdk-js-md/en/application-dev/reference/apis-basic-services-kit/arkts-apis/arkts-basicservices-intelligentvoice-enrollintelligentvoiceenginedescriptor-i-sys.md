@@ -11,7 +11,7 @@ Describes enroll intelligent voice engine.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
+import intelligentVoice from '@kit.BasicServicesKit';
 ```
 
 ## wakeupPhrase

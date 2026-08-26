@@ -12,12 +12,12 @@ Defines the callback function used to write data to the audio renderer. Once the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | ArrayBuffer | Yes | Data to be written to the buffer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) \| void |
+| Type | Description |
+| --- | --- |
+| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) \| void | If **void** or **AudioDataCallbackResult.VALID** is returned, the data is valid and the audio data is played. If **AudioDataCallbackResult.INVALID** is returned, the data is invalid and the audio data is not played. |

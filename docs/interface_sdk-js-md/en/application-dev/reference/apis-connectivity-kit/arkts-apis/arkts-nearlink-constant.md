@@ -11,24 +11,24 @@ This module provides definitions of common constants for NearLink communication,
 ## Modules to Import
 
 ```TypeScript
-import { nearlinkConstant } from 'kits/@kit.ConnectivityKit';
+import nearlinkConstant from '@kit.ConnectivityKit';
 ```
 
 ## Summary
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AcbState(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-acbstate-e.md) |
-| [ConnectionState(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-connectionstate-e.md) |
-| [DeviceClass(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-deviceclass-e.md) |
-| [PairingState(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-pairingstate-e.md) |
+| Name | Description |
+| --- | --- |
+| [AcbState(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-acbstate-e.md) | Enumerates the logical link connection states with a remote device. |
+| [ConnectionState(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-connectionstate-e.md) | Enumerates the connection states with a remote device. |
+| [DeviceClass(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-deviceclass-e.md) | Enumerates the device types. |
+| [PairingState(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-pairingstate-e.md) | Enumerates the pairing states with a remote device. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ConnectionInterval(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-connectioninterval-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ConnectionInterval(NearLink Common Constants)](arkts-connectivity-nearlinkconstant-connectioninterval-e-sys.md) | Enumerates the connection intervals. A smaller interval indicates a lower latency, higher throughput, but higher power consumption. A larger interval indicates lower power consumption but higher latency. The high-speed mode is suitable for scenarios that require high throughput and low latency, while the low-speed mode is suitable for scenarios that are sensitive to power consumption. |
 <!--DelEnd-->

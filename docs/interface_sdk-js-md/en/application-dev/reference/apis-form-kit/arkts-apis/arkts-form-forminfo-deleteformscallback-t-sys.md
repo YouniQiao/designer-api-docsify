@@ -16,6 +16,17 @@ callback for deleting the forms.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formIds | Array & lt;string & gt; | Yes | the form Id list of the forms to delete. |
+
+**Examples**
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+let deleteFormsCallback: formInfo.DeleteFormsCallback =
+  (formIds: Array<string>): void => {
+    console.info('delete forms callback, form count: ' + formIds.length);
+  };
+```

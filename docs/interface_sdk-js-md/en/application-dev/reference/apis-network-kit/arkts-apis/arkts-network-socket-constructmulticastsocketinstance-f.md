@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## constructMulticastSocketInstance
@@ -20,6 +20,13 @@ Creates a **MulticastSocket** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) |
+| Type | Description |
+| --- | --- |
+| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) | MulticastSocket** object. |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+```

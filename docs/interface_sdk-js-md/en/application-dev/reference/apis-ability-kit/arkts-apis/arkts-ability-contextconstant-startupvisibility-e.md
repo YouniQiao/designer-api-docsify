@@ -33,3 +33,7 @@ The target UIAbility is displayed normally after it is started in the new proces
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+See ContextConstant.ProcessMode.

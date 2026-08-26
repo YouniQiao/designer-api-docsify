@@ -2,7 +2,8 @@
 
 表示中断事件返回类型的枚举。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[InterruptType](arkts-audio-audio-interrupttype-e.md)替代。
 
 **起始版本：** 7

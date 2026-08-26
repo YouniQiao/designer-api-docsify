@@ -9,7 +9,8 @@ Represents the device-cloud file version management class. It allows you to mana
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import cloudSync from '@kit.CoreFileKit';
+import cloudSyncManager from '@kit.CoreFileKitManager';
 ```
 
 ## clearFileConflict
@@ -26,27 +27,52 @@ Clears the version conflict flag of the local file. If a conflict occurs, you ne
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | URI of the file for which the conflict flag is to be cleared. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13600001 |
-| 13900002 |
-| 13900010 |
-| 13900012 |
-| 13900020 |
-| 14000002 |
-| 22400005 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**Examples**
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+
+let isConflict = false;
+fileVersion.isFileConflict(uri).then((isConflictRet: boolean) => {
+  isConflict = isConflictRet;
+  console.info("current file is conflict: " + isConflictRet);
+}).catch((err: BusinessError) => {
+  console.error(`get current file conflict flag failed with error message: ${err.message}, error code: ${err.code}`);
+});
+fileVersion.clearFileConflict(uri).then(() => {
+  console.info("clean file conflict flag success");
+}).catch((err: BusinessError) => {
+  console.error("clean file conflict flag failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ## constructor
 
@@ -62,9 +88,23 @@ A constructor used to create a **FileVersion** instance.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 22400005 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**Examples**
+
+```TypeScript
+let fileSync = new cloudSync.FileSync()
+```
+
+```TypeScript
+let gallerySync = new cloudSync.GallerySync()
+```
+
+```TypeScript
+let download = new cloudSync.Download()
+```
 
 ## downloadHistoryVersion
 
@@ -80,30 +120,59 @@ Obtains the content of a file of a specified version based on the version number
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
-| versionId | string | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | File URI. |
+| versionId | string | Yes | Version ID of a file. The format is returned by the [gethistoryversionlist](#gethistoryversionlist) API. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | Yes | Callback used to return the download progress. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return the URI of the temporary file of a historical version. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13600001 |
-| 13900002 |
-| 13900010 |
-| 13900012 |
-| 13900020 |
-| 14000002 |
-| 22400002 |
-| 22400005 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400002 | Network unavailable. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**Examples**
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+let versionId = '123456'; // The format returned by the getHistoryVersionList method is used as an example.
+
+let callback = (data: cloudSync.VersionDownloadProgress) => {
+  if (data.state == cloudSync.State.RUNNING) {
+    console.info("download progress: " + data.progress);
+  } else if (data.state == cloudSync.State.FAILED) {
+    console.info("download failed errType: " + data.errType);
+  } else if (data.state == cloudSync.State.COMPLETED) {
+    console.info("download version file success");
+  }
+};
+
+fileVersion.downloadHistoryVersion(uri, versionId, callback).then((fileUri: string) => {
+  console.info("success to begin download, downloadFileUri: " + fileUri);
+}).catch((err: BusinessError) => {
+  console.error("download history version file failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ## getHistoryVersionList
 
@@ -119,29 +188,50 @@ Obtains the list of historical versions. The returned versions are sorted by mod
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
-| versionNumLimit | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | File URI. |
+| versionNumLimit | number | Yes | Length limit of the historical version list. The value range is [0, 100000] (unit: number). If the input value is greater than 100,000, the list is returned according to the maximum value. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[HistoryVersion](arkts-corefile-cloudsync-historyversion-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[HistoryVersion](arkts-corefile-cloudsync-historyversion-i.md)&gt;&gt; | Promise used to return the list of historical versions. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13600001 |
-| 13900002 |
-| 13900010 |
-| 13900012 |
-| 13900020 |
-| 14000002 |
-| 22400002 |
-| 22400005 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400002 | Network unavailable. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**Examples**
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+let limit = 10;
+
+fileVersion.getHistoryVersionList(uri, limit).then((versionList: Array<cloudSync.HistoryVersion>) => {
+  for(let i = 0, len = versionList.length; i < len; i++) {
+    console.info("get history versionId: " + versionList[i].versionId);
+  }
+}).catch((err: BusinessError) => {
+  console.error("get history version failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ## isFileConflict
 
@@ -157,27 +247,45 @@ Obtains the version conflict flag of a local file. This API uses a promise to re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | File URI. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the conflict flag between the local file and the cloud file. The value **true** indicates that the local file conflicts with the cloud file, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13600001 |
-| 13900002 |
-| 13900010 |
-| 13900012 |
-| 13900020 |
-| 14000002 |
-| 22400005 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**Examples**
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+
+fileVersion.isFileConflict(uri).then((isConflict: boolean) => {
+  console.info("current file is conflict: " + isConflict);
+}).catch((err: BusinessError) => {
+  console.error("get current file conflict flag failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ## replaceFileWithHistoryVersion
 
@@ -193,28 +301,64 @@ Replaces the local file with the file of a historical version. Before replacemen
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| originalUri | string | Yes |
-| versionUri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| originalUri | string | Yes | URI of the local file. |
+| versionUri | string | Yes | URI of the historical file. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13600001 |
-| 13900002 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900012 |
-| 13900020 |
-| 14000002 |
-| 22400005 |
-| 22400007 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
+| 13900005 | I/O error. |
+| 13900008 | Bad file descriptor. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. Possible causes: 1.originalUri invalid; 2.versionUri invalid. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400007 | The version file specified to replace the original file does not exist. |
+
+**Examples**
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+let versionId = '123456'; // The format returned by the getHistoryVersionList method is used as an example.
+
+let callback = (data: cloudSync.VersionDownloadProgress) => {
+  if (data.state == cloudSync.State.RUNNING) {
+    console.info("download progress: " + data.progress);
+  } else if (data.state == cloudSync.State.FAILED) {
+    console.info("download failed errType: " + data.errType);
+  } else if (data.state == cloudSync.State.COMPLETED) {
+    console.info("download version file success");
+  }
+};
+
+let versionUri = "";
+fileVersion.downloadHistoryVersion(uri, versionId, callback).then((fileUri: string) => {
+  versionUri = fileUri;
+  console.info("success to begin download, downloadFileUri: " + fileUri);
+}).catch((err: BusinessError) => {
+  console.error(`download history version file failed with error message: ${err.message}, error code: ${err.code}`);
+});
+fileVersion.replaceFileWithHistoryVersion(uri, versionUri).then(() => {
+  console.info("replace file with history version success.");
+}).catch((err: BusinessError) => {
+  console.error("replace file with history version failed with error message: " + err.message + ", error code: " + err.code);
+});
+```

@@ -13,7 +13,7 @@ Defines the shared photo asset
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
 ```
 
 ## cameraShotKey

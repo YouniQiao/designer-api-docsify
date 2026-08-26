@@ -16,7 +16,7 @@ Defines the callback for text selection changes or caret position changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectionStart | number | Yes |
-| selectionEnd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectionStart | number | Yes | Start position of the selected text. The start position of text is 0. |
+| selectionEnd | number | Yes | End position of the selected text. |

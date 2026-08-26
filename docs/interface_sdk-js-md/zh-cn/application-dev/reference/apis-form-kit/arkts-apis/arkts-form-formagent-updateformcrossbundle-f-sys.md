@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formAgent } from 'kits/@kit.FormKit';
+import formAgent from '@kit.FormKit';
 ```
 
 ## updateFormCrossBundle
@@ -26,26 +26,49 @@ function updateFormCrossBundle(formId: string, formBindingData: formBindingData.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
-| [formBindingData](arkts-app-form-formbindingdata.md) | formBindingData.FormBindingData | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | 待更新的卡片标识。 |
+| formBindingData | formBindingData.FormBindingData | 是 | 用于更新的卡片数据。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) |
-| [16501001](../errorcode-form.md#16501001-卡片id不存在) |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
-| [16501007](../errorcode-form.md#16501007-卡片不可信) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | Possible cause IPC connection error. Such as the remote object dose not exist. |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) | Possible cause Service State error. Such as the form is recovering. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | Possible cause internal functional error. Such as virtualization failed. |
+| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form to be operated has been deleted already. |
+| [16501007](../errorcode-form.md#16501007-卡片不可信) | The form to be operated is not trusted. |
+
+**示例**
+
+```TypeScript
+import { formBindingData, formAgent } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '123456789'; // 卡片的formId，请替换为实际的formId。
+try {
+  let param: Record<string, string> = {
+    'temperature': '22c',
+    'time': '22:00'
+  };
+  let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+  formAgent.updateFormCrossBundle(formId, obj).then(() => {
+    console.info('formAgent updateFormCrossBundle success');
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error?.code}, message: ${error?.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error?.code}, message: ${error?.message}`);
+}
+```

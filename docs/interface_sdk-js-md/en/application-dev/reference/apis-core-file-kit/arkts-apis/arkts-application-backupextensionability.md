@@ -3,29 +3,27 @@
 ## Modules to Import
 
 ```TypeScript
-import { BackupExtensionAbility, BundleVersion } from 'kits/@kit.CoreFileKit';
-import { BackupExtensionAbility } from 'kits/@kit.CoreFileKit';
-import { BundleVersion } from 'kits/@kit.CoreFileKit';
+import BackupExtensionAbility, { BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c.md) |
+| Name | Description |
+| --- | --- |
+| [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c.md) | Class to be override for backup extension ability. |
 
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c-sys.md) | Class to be override for backup extension ability. |
 <!--DelEnd-->
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) |
+| Name | Description |
+| --- | --- |
+| [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Describe bundle version@interface BundleVersion |

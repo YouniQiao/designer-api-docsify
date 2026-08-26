@@ -23,12 +23,12 @@ Mark moduleNamespace which loaded by dynamic-import is collectable.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| namespace | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| namespace | Object | 是 | moduleNamespace to be marked. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | if type of object is not moduleNameSpace. |

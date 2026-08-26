@@ -14,6 +14,6 @@ Defines a callback invoked by a website safe browsing check.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| threatType | [ThreatType](arkts-arkweb-threattype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| threatType | [ThreatType](arkts-arkweb-threattype-e.md) | Yes | Website threat type. |

@@ -9,7 +9,6 @@ Describes the fold state information about a foldable device.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## foldStatus

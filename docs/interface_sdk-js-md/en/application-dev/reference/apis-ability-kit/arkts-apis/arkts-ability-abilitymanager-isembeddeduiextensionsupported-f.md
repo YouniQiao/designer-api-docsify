@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from 'kits/@kit.AbilityKit';
+import abilityManager from '@kit.AbilityKit';
 ```
 
 ## isEmbeddedUIExtensionSupported
@@ -22,6 +22,6 @@ Indicates whether the current device supports EmbeddedUIExtensionAbility.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { kioskManager } from 'kits/@kit.AbilityKit';
+import kioskManager from '@kit.AbilityKit';
 ```
 
 ## exitKioskMode
@@ -22,21 +22,53 @@ Exits kiosk mode. This API uses a promise to return the result. This API takes e
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) | Yes | Context of the UIAbility that needs to exit kiosk mode. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000110](../errorcode-ability.md#16000110-application-is-not-in-the-kiosk-mode-list) |
-| [16000112](../errorcode-ability.md#16000112-no-application-is-in-kiosk-mode) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
+| [16000110](../errorcode-ability.md#16000110-application-is-not-in-the-kiosk-mode-list) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
+| [16000112](../errorcode-ability.md#16000112-no-application-is-in-kiosk-mode) | The current application is not in Kiosk mode and cannot exit Kiosk mode. |
+
+**Examples**
+
+```TypeScript
+import { common, kioskManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  private uiAbilityContext: common.UIAbilityContext | undefined =
+    this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+  build() {
+    Column() {
+      Button('exitKioskMode').margin({ top: 10 })
+        .onClick(() => {
+          kioskManager.exitKioskMode(this.uiAbilityContext)
+            .then(() => {
+              hilog.info(0x0000, 'testTag', '%{public}s', 'exitKioskMode success');
+            })
+            .catch((error: BusinessError) => {
+              hilog.error(0x0000, 'testTag', '%{public}s', `exitKioskMode failed:${JSON.stringify(error)}`);
+            });
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```

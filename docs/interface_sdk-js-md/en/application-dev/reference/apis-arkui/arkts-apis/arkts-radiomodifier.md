@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [RadioModifier](arkts-arkui-radiomodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [RadioModifier](arkts-arkui-radiomodifier-c.md) | Defines Radio Modifier@extends RadioAttribute @implements AttributeModifier & lt;RadioAttribute & gt; |

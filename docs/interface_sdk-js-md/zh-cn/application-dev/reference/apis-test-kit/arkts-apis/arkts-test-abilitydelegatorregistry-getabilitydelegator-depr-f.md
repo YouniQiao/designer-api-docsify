@@ -23,6 +23,14 @@ function getAbilityDelegator(): AbilityDelegator
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) | [AbilityDelegator]{ |
+
+**示例**
+
+```TypeScript
+import AbilityDelegatorRegistry from '@ohos.application.abilityDelegatorRegistry';
+
+let abilityDelegator = AbilityDelegatorRegistry.getAbilityDelegator();
+```

@@ -9,9 +9,7 @@ Represents detailed file information. Before calling any API of the **Stat()** c
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## isBlockDevice
@@ -28,16 +26,23 @@ Checks whether this file is a block special file. A block special file supports 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the file is a block special file. The value **true** means the file is a block special file; the value **false** means the file is not a block special file. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isBLockDevice = fileIo.statSync(filePath).isBlockDevice();
+```
 
 ## isCharacterDevice
 
@@ -53,16 +58,23 @@ Checks whether this file is a character special file. A character special device
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the file is a character special device. The value **true** means the file is a character special device; the value **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isCharacterDevice = fileIo.statSync(filePath).isCharacterDevice();
+```
 
 ## isDirectory
 
@@ -80,16 +92,23 @@ Checks whether this file is a directory.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the file is a directory. The value **true** means the file is a directory; the value **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let dirPath = pathDir + "/test";
+let isDirectory = fileIo.statSync(dirPath).isDirectory();
+```
 
 ## isFIFO
 
@@ -105,16 +124,23 @@ Checks whether this file is a named pipe (or FIFO). Named pipes are used for int
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the file is an FIFO. The value **true** means the file is an FIFO; the value **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isFIFO = fileIo.statSync(filePath).isFIFO();
+```
 
 ## isFile
 
@@ -132,16 +158,23 @@ Checks whether this file is a regular file.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the file is a regular file. The value **true** means that the file is a regular file; the value **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isFile = fileIo.statSync(filePath).isFile();
+```
 
 ## isSocket
 
@@ -157,16 +190,23 @@ Checks whether this file is a socket.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the file is a socket. The value **true** means that the file is a socket; the value **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isSocket = fileIo.statSync(filePath).isSocket();
+```
 
 ## isSymbolicLink
 
@@ -182,16 +222,23 @@ Checks whether this file is a symbolic link.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the file is a symbolic link. The value **true** means that the file is a symbolic link; the value **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isSymbolicLink = fileIo.statSync(filePath).isSymbolicLink();
+```
 
 ## atime
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ethernet } from 'kits/@kit.NetworkKit';
+import ethernet from '@kit.NetworkKit';
 ```
 
 ## iface

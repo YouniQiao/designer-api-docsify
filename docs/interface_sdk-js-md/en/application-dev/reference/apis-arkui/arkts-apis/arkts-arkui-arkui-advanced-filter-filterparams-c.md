@@ -9,7 +9,7 @@ This parameter is used to define the input of each filtering dimension.
 ## Modules to Import
 
 ```TypeScript
-import { Filter, FilterParams, FilterResult, FilterType } from 'kits/@kit.ArkUI';
+import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 ```
 
 ## name

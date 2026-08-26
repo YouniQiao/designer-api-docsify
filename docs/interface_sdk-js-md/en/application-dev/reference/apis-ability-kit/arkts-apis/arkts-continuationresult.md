@@ -4,6 +4,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ContinuationResult](arkts-ability-continuationresult-continuationresult-i.md) |
+| Name | Description |
+| --- | --- |
+| [ContinuationResult](arkts-ability-continuationresult-continuationresult-i.md) | The ContinuationResult module describes the device information returned by the continuation management entry. |

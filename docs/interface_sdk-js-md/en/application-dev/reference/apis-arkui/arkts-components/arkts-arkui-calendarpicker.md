@@ -23,18 +23,102 @@ Creates a calendar picker.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [CalendarOptions](arkts-arkui-calendaroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [CalendarOptions](arkts-arkui-calendaroptions-i.md) | No | Parameters of the calendar picker. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
+
+## Examples
+
+This example uses calendarPicker to implement the CalendarPicker component and provides a drop-down calendar.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CalendarPickerExample {
+  private selectedDate: Date = new Date('2024-03-05');
+
+  build() {
+    Column() {
+      Column() {
+        CalendarPicker({ hintRadius: 10, selected: this.selectedDate })
+          .edgeAlign(CalendarAlign.END)
+          .textStyle({ color: '#ff182431', font: { size: 20, weight: FontWeight.Normal } })
+          .margin(10)
+          .onChange((value) => {
+            console.info(`CalendarPicker onChange: ${value.toString()}`);
+          })
+      }.alignItems(HorizontalAlign.End).width("100%")
+
+      Text('Calendar picker').fontSize(30)
+    }.width('100%').margin({ top: 350 })
+  }
+}
+```
+
+Since API version 18, the start and end attributes are added to [CalendarOptions](arkts-arkui-calendaroptions-i.md).
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CalendarPickerExample {
+  private selectedDate: Date = new Date('2025-01-15');
+  private startDate: Date = new Date('2025-01-05');
+  private endDate: Date = new Date('2025-01-25');
+
+  build() {
+    Column() {
+      Column() {
+        CalendarPicker({ hintRadius: 10, selected: this.selectedDate, start: this.startDate, end: this.endDate })
+          .edgeAlign(CalendarAlign.END)
+          .textStyle({ color: '#ff182431', font: { size: 20, weight: FontWeight.Normal } })
+          .margin(10)
+          .onChange((value) => {
+            console.info(`CalendarPicker onChange: ${value.toString()}`);
+          })
+      }.alignItems(HorizontalAlign.End).width("100%")
+    }.width('100%').margin({ top: 350 })
+  }
+}
+```
+
+Since API version 19, the [markToday](#marktoday19) API is added, and the disabledDateRange attribute is added to [CalendarOptions](arkts-arkui-calendaroptions-i.md).
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CalendarPickerExample {
+  private disabledDateRange: DateRange[] = [
+    { start: new Date('2025-01-01'), end: new Date('2025-01-02') },
+    { start: new Date('2025-01-09'), end: new Date('2025-01-10') },
+    { start: new Date('2025-01-15'), end: new Date('2025-01-16') },
+    { start: new Date('2025-01-19'), end: new Date('2025-01-19') },
+    { start: new Date('2025-01-22'), end: new Date('2025-01-25') }
+  ];
+
+  build() {
+    Column() {
+      CalendarPicker({ disabledDateRange: this.disabledDateRange })
+        .margin(10)
+        .markToday(true)
+        .onChange((value) => {
+          console.info(`CalendarPicker onChange: ${value.toString()}`);
+        })
+    }.alignItems(HorizontalAlign.End).width('100%')
+  }
+}
+```

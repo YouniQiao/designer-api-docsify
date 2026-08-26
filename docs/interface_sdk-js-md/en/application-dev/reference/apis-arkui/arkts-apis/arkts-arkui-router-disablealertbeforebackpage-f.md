@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import router from '@kit.ArkUI';
 ```
 
 ## disableAlertBeforeBackPage
@@ -21,3 +21,17 @@ Disables the display of a confirm dialog box before returning to the previous pa
 **Substitutes:** [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hidealertbeforebackpage)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+router.disableAlertBeforeBackPage();
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+router.disableAlertBeforeBackPage();
+```

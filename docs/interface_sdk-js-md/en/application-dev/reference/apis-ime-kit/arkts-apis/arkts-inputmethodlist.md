@@ -80,20 +80,20 @@ The **inputMethodList** module is oriented to system applications and input meth
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodListDialog, PatternOptions, Pattern } from 'kits/@kit.IMEKit';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 ```
 
 ## Summary
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [InputMethodListDialog(Input Method List)](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md) |
+| Name | Description |
+| --- | --- |
+| [InputMethodListDialog(Input Method List)](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md) | InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions}) Implements a dialog box showing the input method list. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Pattern(Input Method List)](arkts-ime-inputmethodlist-pattern-i.md) |
-| [PatternOptions(Input Method List)](arkts-ime-inputmethodlist-patternoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [Pattern(Input Method List)](arkts-ime-inputmethodlist-pattern-i.md) |  |
+| [PatternOptions(Input Method List)](arkts-ime-inputmethodlist-patternoptions-i.md) |  |

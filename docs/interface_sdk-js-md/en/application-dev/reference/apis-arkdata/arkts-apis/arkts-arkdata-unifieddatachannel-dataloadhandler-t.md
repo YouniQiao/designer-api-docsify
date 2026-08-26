@@ -16,12 +16,12 @@ Defines a handler for lazy data loading. The data sender can dynamically generat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [acceptableInfo](arkts-arkdata-unifieddatachannel-getdataparams-i.md) | [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| acceptableInfo | [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md) | No | Data type and quantity to receive. The default value is empty. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| UnifiedData \| null |
+| Type | Description |
+| --- | --- |
+| UnifiedData \| null | Returns **UnifiedData** or **null** when the processing function for lazy data loading is triggered. |

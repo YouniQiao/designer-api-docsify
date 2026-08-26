@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import pasteboard from '@kit.BasicServicesKit';
 ```
 
 ## createWantRecord
@@ -24,12 +24,24 @@ Creates a **PasteDataRecord** object of the Want type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want content. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) |
+| Type | Description |
+| --- | --- |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | New **PasteDataRecord** object of the Want type. |
+
+**Examples**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+
+let object: Want = {
+    bundleName: "com.example.aafwk.test",
+    abilityName: "com.example.aafwk.test.TwoAbility"
+};
+let record: pasteboard.PasteDataRecord = pasteboard.createWantRecord(object);
+```

@@ -16,6 +16,6 @@ Defines an OnFontIdUpdatedFn function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [fontId](arkts-ability-app-ability-configuration-configuration-i.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fontId | string | Yes | Indicates the font type of the system |

@@ -12,16 +12,16 @@ This parameter specifies the type of a common encoding format.
 
 **System capability:** SystemCapability.Utils.Lang
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| 'ascii' |
-| 'utf8' |
-| 'utf-8' |
-| 'utf16le' |
-| 'ucs2' |
-| 'ucs-2' |
-| 'base64' |
-| 'base64url' |
-| 'latin1' |
-| 'binary' |
-| 'hex' |
+| Type | Description |
+| --- | --- |
+| 'ascii' |  |
+| 'utf8' |  |
+| 'utf-8' |  |
+| 'utf16le' |  |
+| 'ucs2' |  |
+| 'ucs-2' |  |
+| 'base64' |  |
+| 'base64url' |  |
+| 'latin1' |  |
+| 'binary' |  |
+| 'hex' |  |

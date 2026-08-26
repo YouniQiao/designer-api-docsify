@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import bundleManager from '@kit.AbilityKit';
 ```
 
 ## getAlternateIcons
@@ -22,12 +22,31 @@ Queries the alternate icon information configured in the alternateIcons in the a
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;AlternateIconInfo & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;AlternateIconInfo & gt; & gt; | Promise used to return the list of alternate icons of the current application. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 17700311 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 17700311 | Failed to obtain the alternate icon. |
+
+**Examples**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  bundleManager.getAlternateIcons().then((data) => {
+    hilog.info(0x0000, 'testTag', 'getAlternateIcons successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getAlternateIcons failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAlternateIcons failed. Cause: %{public}s', message);
+}
+```

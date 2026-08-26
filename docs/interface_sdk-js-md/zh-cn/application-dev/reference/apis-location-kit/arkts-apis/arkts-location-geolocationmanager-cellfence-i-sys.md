@@ -11,7 +11,6 @@ CELL围栏信息。
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## cellInfos

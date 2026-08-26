@@ -29,9 +29,9 @@ getEventTargetInfo(): EventTargetInfo
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | 当前手势识别器对应组件的信息。 |
 
 ## getFingerCount
 
@@ -51,9 +51,9 @@ getFingerCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 预设手指识别数阈值。 |
 
 ## getState
 
@@ -73,9 +73,9 @@ getState(): GestureRecognizerState
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [GestureRecognizerState](arkts-arkui-gesturerecognizerstate-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [GestureRecognizerState](arkts-arkui-gesturerecognizerstate-e.md) | 当前手势识别器的状态。 |
 
 ## getTag
 
@@ -95,9 +95,9 @@ getTag(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 当前手势识别器的标志。 |
 
 ## getType
 
@@ -117,9 +117,9 @@ getType(): GestureControl.GestureType
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [GestureControl.GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [GestureControl.GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) | 当前手势识别器的类型。 |
 
 ## isBuiltIn
 
@@ -139,9 +139,9 @@ isBuiltIn(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 当前手势识别器是否为系统内置手势。true表示手势识别器为系统内置手势，false表示非系统内置手势。 |
 
 ## isEnabled
 
@@ -161,9 +161,9 @@ isEnabled(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 当前手势识别器的使能状态。true表示当前手势识别器能够回调应用事件，false表示当前手势识别器不回调应用事件。 |
 
 ## isFingerCountLimit
 
@@ -183,9 +183,9 @@ isFingerCountLimit(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 预设手势是否会检测触摸屏幕上手指识别数量。当绑定手势事件且会检测触摸屏幕上手指的数量时，返回true。当绑定手势事件且不会检测触摸屏幕上手指的数量时，返回false。 |
 
 ## isHostBelongsTo
 
@@ -205,15 +205,15 @@ isHostBelongsTo(uniqueId: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uniqueId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uniqueId | number | 是 | 组件的唯一ID。可以通过[getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid)接口获取该ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 当前手势识别器绑定节点是否为传入组件的后代节点。true表示当前绑定节点为传入组件的后代节点，false表示当前绑定节点非传入组件的后代节点。 |
 
 ## isValid
 
@@ -231,9 +231,9 @@ isValid(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 当前手势识别器是否有效。 |
 
 ## preventBegin
 
@@ -269,6 +269,6 @@ setEnabled(isEnabled: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [isEnabled](#isenabled) | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isEnabled | boolean | 是 | 手势识别器的使能状态。true表示当前手势识别器能够回调应用事件，false表示当前手势识别器不回调应用事件。 |

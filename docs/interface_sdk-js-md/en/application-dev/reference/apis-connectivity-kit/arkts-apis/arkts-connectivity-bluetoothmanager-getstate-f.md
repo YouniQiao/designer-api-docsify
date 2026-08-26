@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import bluetoothManager from '@kit.ConnectivityKit';
 ```
 
 ## getState
@@ -28,15 +28,26 @@ Obtains the Bluetooth status of a device. On API 10 and above, the permission re
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md) |
+| Type | Description |
+| --- | --- |
+| [BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md) | Returns the Bluetooth status, which can be { |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 2900001 |
-| 2900099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
+| 2900099 | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let state: bluetoothManager.BluetoothState = bluetoothManager.getState();
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```

@@ -25,6 +25,12 @@ A constructor used to create a **XComponentController** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+xcomponentController: XComponentController = new XComponentController();
+```
+
 ## getXComponentContext
 
 ```TypeScript
@@ -41,9 +47,9 @@ Obtains the context of an **XComponent** object. This API works only when **type
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Object |
+| Type | Description |
+| --- | --- |
+| Object | Context of the **XComponent** object. The APIs contained in the context are defined by developers. The context is passed as the first parameter of the **onLoad** callback. |
 
 ## getXComponentSurfaceId
 
@@ -61,9 +67,33 @@ Obtains the ID of the surface held by the **XComponent**. This API works only wh
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | ID of the surface held by the **XComponent**. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  myXComponentController: XComponentController = new XComponentController();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      XComponent({
+        type: XComponentType.SURFACE,
+        controller: this.myXComponentController
+      })
+        .onLoad(() => {
+          let surfaceId: string = this.myXComponentController.getXComponentSurfaceId();
+          console.info("XComponent SurfaceId: " + surfaceId);
+        })
+    }
+  }
+}
+```
 
 ## getXComponentSurfaceRect
 
@@ -83,9 +113,9 @@ Obtains the display area for the surface held by the **XComponent**, including t
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SurfaceRect](arkts-arkui-surfacerect-i.md) |
+| Type | Description |
+| --- | --- |
+| [SurfaceRect](arkts-arkui-surfacerect-i.md) | Rectangle of the surface held by the **XComponent**. |
 
 ## getXComponentSurfaceRotation
 
@@ -105,9 +135,9 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Required&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Required&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; | Whether the orientation of the surface held by the current **XComponent** is locked when the screen rotates. |
 
 ## lockCanvas
 
@@ -127,9 +157,9 @@ Obtains a canvas object for drawing content on the **XComponent** component. For
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) \| null |
+| Type | Description |
+| --- | --- |
+| [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) \| null | Returns a Canvas for drawing into the surface created by XComponent. Returns null if the surface is not available. |
 
 ## onSurfaceChanged
 
@@ -149,10 +179,10 @@ Triggered when the surface held by the **XComponent** has its size changed (incl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| surfaceId | string | Yes |
-| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| surfaceId | string | Yes | ID of the surface held by the **XComponent**. |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | Yes | Area for displaying the surface held by the **XComponent**. |
 
 ## onSurfaceCreated
 
@@ -172,9 +202,9 @@ Triggered when the surface held by the **XComponent** is created. This API works
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| surfaceId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| surfaceId | string | Yes | ID of the surface held by the **XComponent**. |
 
 ## onSurfaceDestroyed
 
@@ -194,9 +224,9 @@ Triggered when the surface held by the **XComponent** is destroyed. This API wor
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| surfaceId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| surfaceId | string | Yes | ID of the surface held by the **XComponent**. |
 
 ## setXComponentSurfaceConfig
 
@@ -206,7 +236,8 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 
 Sets the options of the surface created by the **XComponent**, which determine whether the surface held by the **XComponent** is considered opaque during rendering.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API takes effect only when the type of **XComponent** is **TEXTURE** or **SURFACE**.
 
 **Since:** 22
@@ -219,9 +250,9 @@ Sets the options of the surface created by the **XComponent**, which determine w
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | Yes | surface config |
 
 ## setXComponentSurfaceRect
 
@@ -241,9 +272,9 @@ Sets the display area for the surface held by the **XComponent**, including the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | Yes | Rectangle of the surface held by the **XComponent**. |
 
 ## setXComponentSurfaceRotation
 
@@ -263,9 +294,9 @@ Sets whether to lock the orientation of the surface held by this **XComponent** 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | Yes | Whether to lock the orientation of the surface held by the current **XComponent** when the screen rotates. |
 
 ## setXComponentSurfaceSize
 
@@ -288,9 +319,9 @@ Sets the width and height of the surface held by the **XComponent**. This API wo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | {     surfaceWidth: number;     surfaceHeight: number;   } | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | {     surfaceWidth: number;     surfaceHeight: number;   } | Yes | Width and Height of the surface held by the XComponent. |
 
 ## startImageAnalyzer
 
@@ -302,7 +333,8 @@ Starts AI image analysis in the given settings. Before calling this API, make su
 
 > **NOTE：**
 
-> The image analysis type cannot be dynamically modified.&gt;
+> The image analysis type cannot be dynamically modified.
+> 
 > This API depends on device capabilities. If it is called on an incompatible device, an error code is returned.
 
 **Since:** 12
@@ -315,23 +347,23 @@ Starts AI image analysis in the given settings. Before calling this API, make su
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes | Settings of the AI image analyzer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. It is used to indicate AI-based analysis is successfully executed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is unsupported. |
+| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
+| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
 
 ## stopImageAnalyzer
 
@@ -344,7 +376,8 @@ Stops AI image analysis. The content displayed by the AI image analyzer will be 
 > **NOTE：**
 
 > If this API is called when the **startImageAnalyzer** API has not yet returned any result, an error callback is
-> triggered.&gt;
+> triggered.
+> 
 > This feature depends on device capabilities.
 
 **Since:** 12
@@ -373,6 +406,6 @@ Submits the drawn content from a canvas object to the display area of the **XCom
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| canvas | [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| canvas | [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | Yes | The canvas previously obtained from lockCanvas. |

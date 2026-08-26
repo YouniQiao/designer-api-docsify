@@ -11,7 +11,7 @@ Interactive widget extension class. It provides APIs for the widget provider to 
 ## Modules to Import
 
 ```TypeScript
-import { LiveFormExtensionAbility, LiveFormInfo } from 'kits/@kit.FormKit';
+import LiveFormExtensionAbility, { LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## onLiveFormCreate
@@ -32,10 +32,25 @@ Called after the UI content of **LiveFormExtensionAbility** is created.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | Yes |
-| session | [UIExtensionContentSession](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | Yes | Interactive widget information, including the widget ID. |
+| session | [UIExtensionContentSession](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UI information. |
+
+**Examples**
+
+```TypeScript
+import { UIExtensionContentSession } from '@kit.AbilityKit';
+import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
+
+const TAG: string = '[testTag] LiveFormExtAbility';
+
+export default class LiveFormExtAbility extends LiveFormExtensionAbility {
+  onLiveFormCreate(liveFormInfo: LiveFormInfo, session: UIExtensionContentSession) {
+    console.info(TAG, `onLiveFormCreate, formId: ${liveFormInfo.formId}`);
+  }
+}
+```
 
 ## onLiveFormDestroy
 
@@ -55,9 +70,23 @@ Called to clear resources when this **LiveFormExtensionAbility** is destroyed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | Yes | Interactive widget information, including the widget ID. |
+
+**Examples**
+
+```TypeScript
+import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
+
+const TAG: string = '[testTag] LiveFormExtAbility';
+
+export default class LiveFormExtAbility extends LiveFormExtensionAbility {
+  onLiveFormDestroy(liveFormInfo: LiveFormInfo) {
+    console.info(TAG, `onLiveFormDestroy, liveFormInfo: ${liveFormInfo.formId}`);
+  }
+}
+```
 
 ## context
 

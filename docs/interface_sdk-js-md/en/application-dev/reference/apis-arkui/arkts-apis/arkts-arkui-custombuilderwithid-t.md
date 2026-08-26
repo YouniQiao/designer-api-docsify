@@ -16,6 +16,6 @@ Defines a type that can be used for component attributes and method parameters t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | number | Yes |  |

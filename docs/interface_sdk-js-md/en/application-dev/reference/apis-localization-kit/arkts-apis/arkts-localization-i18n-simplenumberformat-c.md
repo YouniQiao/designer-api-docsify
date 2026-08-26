@@ -9,7 +9,7 @@ Formats a number based on the specified skeleton string.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## format
@@ -28,12 +28,28 @@ Formats a number.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Number to be formatted. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Formatted number. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let locale: Intl.Locale = new Intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('%', locale);
+  let formattedNumber: string = formatter.format(10); // formattedNumber = '10%'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call SimpleNumberFormat.format failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```

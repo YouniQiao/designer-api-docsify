@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import privacyManager from '@kit.AbilityKit';
 ```
 
 ## on('activeStateChange')
@@ -29,21 +29,39 @@ function on(type: 'activeStateChange',
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'activeStateChange' | 是 |
-| permissionList | Array & lt;Permissions & gt; | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'activeStateChange' | 是 | 订阅事件类型，固定为'activeStateChange'，权限使用状态变更事件。 |
+| permissionList | Array & lt;Permissions & gt; | 是 | 订阅的权限名列表。为空时表示订阅所有的权限使用状态变化。传入无效值时返回错误码12100001。 取值约束：数组长度不能超过1024。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)&gt; | 是 | 回调函数，返回订阅指定权限使用状态变更事件的对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
-| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
-| [12100008](../errorcode-access-token.md#12100008-内存申请失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission"ohos.permission.PERMISSION_USED_STATS". |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The permissionList exceeds the size limit, or the permissionNames in the list are all invalid. |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is used repeatedly with the same input. |
+| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) | The registration time has exceeded the limit. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
+
+**示例**
+
+```TypeScript
+import { privacyManager, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let permissionList: Array<Permissions> = [];
+try {
+    // 订阅权限使用状态变更事件
+    privacyManager.on('activeStateChange', permissionList, (data: privacyManager.ActiveChangeResponse) => {
+        console.debug(`receive permission state change, data: ${data}`);
+    });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
+}
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from 'kits/@kit.AbilityKit';
+import continuationManager from '@kit.AbilityKit';
 ```
 
 ## startContinuationDeviceManager
@@ -28,19 +28,38 @@ Starts the device selection module to show the list of available devices on the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| token | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
+| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
+
+**Examples**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = -1;
+try {
+  continuationManager.startContinuationDeviceManager(token, (err) => {
+    if (err.code != 0) {
+      console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+      return;
+    }
+    console.info('startContinuationDeviceManager finished. ');
+  });
+} catch (err) {
+  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+}
+```
 
 
 ## startContinuationDeviceManager
@@ -69,20 +88,44 @@ Starts the device selection module to show the list of available devices on the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| token | number | Yes |
-| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | Yes | Extra parameters used to filter the list of available devices. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
+| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
+
+**Examples**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = -1;
+try {
+  continuationManager.startContinuationDeviceManager(
+    token,
+    {
+      deviceType: ["00E"]
+    },
+    (err) => {
+      if (err.code != 0) {
+        console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('startContinuationDeviceManager finished. ');
+  });
+} catch (err) {
+  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+}
+```
 
 
 ## startContinuationDeviceManager
@@ -107,22 +150,44 @@ Starts the device selection module to show the list of available devices on the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| token | number | Yes |
-| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | No | Extra parameters used to filter the list of available devices. This parameter can be null. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types;  2. Parameter verification failed; |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
+| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
+
+**Examples**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = -1;
+try {
+  continuationManager.startContinuationDeviceManager(
+    token,
+    {
+      deviceType: ["00E"]
+    }).then(() => {
+      console.info('startContinuationDeviceManager finished. ');
+    }).catch((err: BusinessError) => {
+      console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+    });
+} catch (err) {
+  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+}
+```

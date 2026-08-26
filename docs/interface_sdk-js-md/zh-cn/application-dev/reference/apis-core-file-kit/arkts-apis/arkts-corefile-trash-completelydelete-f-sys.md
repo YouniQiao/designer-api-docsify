@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { trash } from 'kits/@kit.CoreFileKit';
+import trash from '@kit.CoreFileKit';
 ```
 
 ## completelyDelete
@@ -28,14 +28,22 @@ function completelyDelete(uri: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 回收站文件/文件夹URI。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900002 |
-| 13900020 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900020 | Invalid argument |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let fileinfos = trash.listFile();
+let uri = fileinfos[0].uri;
+trash.completelyDelete(uri);
+```

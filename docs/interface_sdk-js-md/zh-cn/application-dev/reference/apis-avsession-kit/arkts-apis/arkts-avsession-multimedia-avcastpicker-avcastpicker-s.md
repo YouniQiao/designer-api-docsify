@@ -2,8 +2,11 @@
 
 本模块提供创建投播组件AVCastPicker的功能，提供设备发现连接的统一入口。
 
-> **说明：**&gt;
-> - 示例效果请以真机为准，当前DevEco Studio预览器无实际投播功能。<!--Del-->>
+> **说明：**
+> 
+> - 示例效果请以真机为准，当前DevEco Studio预览器无实际投播功能。<!--Del--
+> 
+> 
 > - 当前组件的使用，依赖于设备支持“设备选择界面”。当前暂无OpenHarmony设备支持，需要OEM厂商实现具体的“设备选择界面”。<!--DelEnd-->
 
 **起始版本：** 10
@@ -13,7 +16,8 @@
 ## 导入模块
 
 ```TypeScript
-import { AVCastPicker } from 'kits/@kit.AVSessionKit';
+import AVCastPicker from '@kit.AVSessionKit';
+import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKitParam';
 ```
 
 ## onStateChange
@@ -32,9 +36,9 @@ onStateChange?: (state: AVCastPickerState) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| state | [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| state | [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md) | 是 |  |
 
 ## activeColor
 

@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { FenceExtensionAbility } from 'kits/@kit.LocationKit';
+import FenceExtensionAbility from '@kit.LocationKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FenceExtensionAbility](arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md) |
+| Name | Description |
+| --- | --- |
+| [FenceExtensionAbility](arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md) | Class of fence extension ability. |

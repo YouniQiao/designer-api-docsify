@@ -2,14 +2,17 @@
 
 A navigation controller that manages all child pages in the **Navigation** component with a stack data structure and provides stack operation methods for controlling page transitions.Starting from API version 12, **NavPathStack** is inheritable. Objects of a derived class can replace those of the base class. For details, see [Example 10](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-10-defining-a-derived-class-of-navpathstack).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 1. When multiple navigation controller operations are triggered in succession, the intermediate states are
 > bypassed, and only the final result of the operations is rendered.
 
 > For example, if a Page1 is popped and then immediately pushed back, the system considers that the states before and
 > after these operations are identical, leading to no actual change in the stack. To ensure that a new instance of
-> Page1 is pushed onto the stack despite the consecutive operations, use the **NEW_INSTANCE** mode.&gt;
-> 2. Avoid relying on lifecycle event listeners as a means to manage the navigation controller.&gt;
+> Page1 is pushed onto the stack despite the consecutive operations, use the **NEW_INSTANCE** mode.
+> 
+> 2. Avoid relying on lifecycle event listeners as a means to manage the navigation controller.
+> 
 > 3. When the application is in the background, calling stack operation APIs of **NavPathStack** will trigger a
 > refresh upon the application's return to the foreground.
 
@@ -40,9 +43,9 @@ Clears the routing stack.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
 
 ## constructor
 
@@ -78,9 +81,9 @@ Disables or enables the transition animation in the **Navigation** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to disable the transition animation.Default value: **false**   **true**: Disable the transition animation.   **false**: Enable the transition animation. |
 
 ## getAllPathName
 
@@ -100,9 +103,9 @@ Obtains the names of all navigation destination pages in the routing stack.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Names of all navigation destination pages in the routing stack. |
 
 ## getIndexByName
 
@@ -122,15 +125,15 @@ Obtains the indexes of all the navigation destination pages that match **name**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;number & gt; | Indexes of all the matching navigation destination pages. If no pages with the specified name exist in the routing stack, an empty array is returned. The index range is [0, routing stack size - 1]. |
 
 ## getParamByIndex
 
@@ -150,15 +153,15 @@ Obtains the parameter information of the navigation destination page specified b
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the navigation destination page. The index is zero-based. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| unknown \| undefined |
+| Type | Description |
+| --- | --- |
+| unknown \| undefined | unknown**: parameter information of the corresponding navigation destination page. **unknown** can represent a user-defined type. |
 
 ## getParamByName
 
@@ -178,15 +181,15 @@ Obtains the parameter information of all **NavDestination** pages with the speci
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;unknown & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;unknown & gt; | Parameter information of all **NavDestination** pages with the specified name. **unknown** can represent a user-defined type. |
 
 ## getParent
 
@@ -206,9 +209,9 @@ Obtains the parent navigation path stack.When a **Navigation** component is nest
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [NavPathStack](arkts-arkui-navpathstack-c.md) \| null |
+| Type | Description |
+| --- | --- |
+| [NavPathStack](arkts-arkui-navpathstack-c.md) \| null | Navigation path stack of the outer **Navigation** component in which the current **Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
 
 ## getPathStack
 
@@ -228,9 +231,9 @@ Obtains the array of route page information from this routing stack.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | Array of route page information in the current routing stack. |
 
 ## moveIndexToTop
 
@@ -250,10 +253,10 @@ Moves to the top of the routing stack the navigation destination page specified 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the navigation destination page. The index is zero-based. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
 
 ## moveToTop
 
@@ -273,16 +276,16 @@ Moves the first navigation destination page that matches **name** from the botto
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the routing stack; returns **-1** if such a page does not exist. |
 
 ## pop
 
@@ -292,7 +295,8 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 Pops the top element out of the routing stack.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When multiple navigation controller methods are called consecutively, any pages popped during the sequence are
 > cached. If a page with the same name is later pushed, the system reuses the cached instance instead of
 > instantiating a new page.
@@ -323,15 +327,15 @@ Pops the top element out of the routing stack.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| undefined | NavPathInfo**: information about the navigation destination page at the top of the stack. |
 
 ## pop
 
@@ -341,7 +345,8 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 
 Pops the top element out of the routing stack and invokes the **onPop** callback to pass the page processing result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When multiple navigation controller methods are called consecutively, any pages popped during the sequence are
 > cached. If a page with the same name is later pushed, the system reuses the cached instance instead of
 > instantiating a new page.
@@ -372,16 +377,16 @@ Pops the top element out of the routing stack and invokes the **onPop** callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | Object | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | Object | Yes | Custom processing result on the page. The boolean type is not supported. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| undefined | NavPathInfo**: information about the navigation destination page at the top of the stack. |
 
 ## popToIndex
 
@@ -401,10 +406,10 @@ Returns the routing stack to the page specified by **index**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the navigation destination page. The index is zero-based. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
 
 ## popToIndex
 
@@ -424,11 +429,11 @@ Returns the routing stack to the page specified by **index** and invokes the **o
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| result | Object | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the navigation destination page. The index is zero-based. |
+| result | Object | Yes | Custom processing result on the page. The boolean type is not supported. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
 
 ## popToName
 
@@ -448,16 +453,16 @@ Pops pages until the first navigation destination page that matches **name** fro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the routing stack; returns **-1** if such a page does not exist. |
 
 ## popToName
 
@@ -477,17 +482,17 @@ Pops pages until the first navigation destination page that matches **name** fro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| result | Object | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| result | Object | Yes | Custom processing result on the page. The boolean type is not supported. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the routing stack; returns **-1** if such a page does not exist. |
 
 ## preloadPath
 
@@ -507,24 +512,24 @@ Preloads navigation destination page specified by **info**. The preload page wil
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes |
-| options | [PreloadOptions](arkts-arkui-preloadoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Indicates NavDestination to be preloaded. |
+| options | [PreloadOptions](arkts-arkui-preloadoptions-i.md) | No | Indicates options for preloading. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | The promise returned by function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestination
 
@@ -534,7 +539,8 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 
 Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You are not advised to use stack operations in aboutToAppear, as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
@@ -549,25 +555,25 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestination
 
@@ -577,7 +583,8 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 
 Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be implemented.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You are not advised to use stack operations in aboutToAppear, as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
@@ -592,25 +599,25 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes |
-| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -620,7 +627,8 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 
 Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You are not advised to use stack operations in aboutToAppear, as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
@@ -635,26 +643,26 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| param | Object | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -664,7 +672,8 @@ pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.b
 
 Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses the **onPop** callback to handle the result returned when the page is popped out of the stack. It uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You are not advised to use stack operations in aboutToAppear, as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
@@ -679,27 +688,27 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| param | Object | Yes |
-| [onPop](arkts-arkui-navpathinfo-c.md) | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
+| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. It is triggered only when the **result** parameter is set in [pop](#pop), [popToName](#poptoname), or [popToIndex](#poptoindex). |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushPath
 
@@ -719,10 +728,10 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no If the input parameter is invalid, the value **true** is used.<br>**Since:** 11 |
 
 ## pushPath
 
@@ -742,10 +751,10 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes |
-| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
 ## pushPathByName
 
@@ -765,11 +774,11 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| param | unknown | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| param | unknown | Yes | Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
 
 ## pushPathByName
 
@@ -789,12 +798,12 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| param | Object | Yes |
-| [onPop](arkts-arkui-navpathinfo-c.md) | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
+| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | Yes | Callback used to receive the result. It is triggered only when the **result** parameter is set in [pop](#pop), [popToName](#poptoname), or [popToIndex](#poptoindex). |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
 
 ## removeByIndexes
 
@@ -814,15 +823,15 @@ Removes the navigation destination pages specified by **indexes** from the routi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| indexes | Array & lt;number & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| indexes | Array & lt;number & gt; | Yes | Array of indexes of the navigation destination pages to remove. The index is zero-based. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of the navigation destination pages removed. |
 
 ## removeByName
 
@@ -842,15 +851,15 @@ Removes the navigation destination page specified by **name** from the routing s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page to remove. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of the navigation destination pages removed. |
 
 ## removeByNavDestinationId
 
@@ -870,15 +879,15 @@ Removes the navigation destination page specified by **navDestinationId** from t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| navDestinationId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| navDestinationId | string | Yes | Unique ID of the navigation destination page to remove. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the page is removed successfully. |
 
 ## replaceDestination
 
@@ -898,25 +907,25 @@ Performs a replacement operation on the routing stack. This API uses a promise t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes |
-| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## replacePath
 
@@ -936,10 +945,10 @@ Replaces the top of the routing stack with the navigation destination page speci
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Parameters for the new top page of the routing stack. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
 
 ## replacePath
 
@@ -959,10 +968,10 @@ Replaces the top page on the routing stack. Depending on the [LaunchMode](arkts-
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes |
-| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Parameters for the new top page of the routing stack. |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
 ## replacePathByName
 
@@ -982,11 +991,11 @@ Replaces the top of the routing stack with the page specified by **name**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| param | Object | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
 
 ## setInterception
 
@@ -1006,9 +1015,9 @@ Sets the interception callback for navigation page redirection.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [interception](arkts-arkui-navigationinterception-i.md) | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| interception | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | Yes | Object to be intercepted during navigation redirection. |
 
 ## setPathStack
 
@@ -1018,13 +1027,16 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 
 Updates the array of route page information in this routing stack to the specified content and performs route transitions.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 1. You can add or remove pages in batches based on the existing stack. Among the pages added in batches, only the
 > visible pages will trigger creation; other pages, although added to the stack, will not be created immediately.
-> They will only be created when they become visible.&gt;
+> They will only be created when they become visible.
+> 
 > 2. For routing stacks updated through the batch push functionality, the lifecycle events of each page are
 > triggered from the top to the bottom of the stack. This differs from the triggering order of other push APIs,
-> which are triggered from the bottom to the top of the stack.&gt;
+> which are triggered from the bottom to the top of the stack.
+> 
 > 3. You can operate existing pages using **navDestinationId** (unique ID) in [NavPathInfo](arkts-arkui-navpathinfo-c.md).
 > This ID is system-generated and globally unique (it can be obtained using the
 > [getPathStack](#getpathstack) API and should not be manually reassigned). If the specified ID
@@ -1041,10 +1053,10 @@ Updates the array of route page information in this routing stack to the specifi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | Yes | Array of route page information in the current routing stack.   **NOTE：**The array length is not limited. |
+| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
 
 ## size
 
@@ -1064,6 +1076,6 @@ Obtains the stack size.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Stack size. |

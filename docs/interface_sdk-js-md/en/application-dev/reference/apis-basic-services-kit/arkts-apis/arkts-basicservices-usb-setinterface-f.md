@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import usb from '@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKitManager';
+import serialManager from '@kit.BasicServicesKitManager.serial';
 ```
 
 ## setInterface
@@ -24,13 +26,20 @@ Sets a USB interface.Before you do this, call [usb.getDevices](arkts-basicservic
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes |
-| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | Device pipe, which is used to determine the bus number and device address. |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface to set. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns **0** if the USB interface is successfully set; returns an error code otherwise. |
+
+**Examples**
+
+```TypeScript
+let ret = usb.setInterface(devicepipe, interfaces);
+console.info(`setInterface = ${ret}`);
+```

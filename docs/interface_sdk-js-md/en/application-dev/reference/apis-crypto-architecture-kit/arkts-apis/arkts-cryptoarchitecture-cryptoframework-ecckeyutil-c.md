@@ -11,7 +11,7 @@ Provides utilities for ECC key parameter generation and point conversion based o
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## convertPoint
@@ -22,7 +22,8 @@ static convertPoint(curveName: string, encodedPoint: Uint8Array): Point
 
 Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed and uncompressed point data is supported.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > According to section 2.2 in RFC 5480:
 > 1. The uncompressed point data is represented as **0x04**|x coordinate|y coordinate.
 > 2. The compressed point data in the **Fp** field (the **F2m** field is not supported currently) is represented
@@ -37,24 +38,38 @@ Converts the specified point data into a **Point** object based on the curve nam
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| curveName | string | Yes |
-| encodedPoint | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| curveName | string | Yes | Elliptic curve name, that is, the NID. |
+| encodedPoint | Uint8Array | Yes | Data of the point on the ECC elliptic curve to convert. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) |
+| Type | Description |
+| --- | --- |
+| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Point** object obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+
+**Examples**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+// Randomly generated uncompressed point data.
+let pkData =
+  new Uint8Array([4, 143, 39, 57, 249, 145, 50, 63, 222, 35, 70, 178, 121, 202, 154, 21, 146, 129, 75, 76, 63, 8, 195,
+    157, 111, 40, 217, 215, 148, 120, 224, 205, 82, 83, 92, 185, 21, 211, 184, 5, 19, 114, 33, 86, 85, 228, 123, 242,
+    206, 200, 98, 178, 184, 130, 35, 232, 45, 5, 202, 189, 11, 46, 163, 156, 152]);
+let returnPoint = cryptoFramework.ECCKeyUtil.convertPoint('NID_brainpoolP256r1', pkData);
+console.info('returnPoint: ' + returnPoint.x.toString(16));
+```
 
 ## genECCCommonParamsSpec
 
@@ -74,23 +89,37 @@ Generates common parameters for an asymmetric key pair based on the specified na
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| curveName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| curveName | string | Yes | NID of the elliptic curve. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ECCCommonParamsSpec](arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) |
+| Type | Description |
+| --- | --- |
+| [ECCCommonParamsSpec](arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | ECC common parameters generated. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+
+**Examples**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  let ECCCommonParamsSpec = cryptoFramework.ECCKeyUtil.genECCCommonParamsSpec('NID_brainpoolP160r1');
+  console.info('genECCCommonParamsSpec result: success.');
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`genECCCommonParamsSpec failed: errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```
 
 ## getEncodedPoint
 
@@ -108,22 +137,44 @@ Obtains the point data in the specified format from a **Point** object. Currentl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| curveName | string | Yes |
-| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes |
-| format | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| curveName | string | Yes | Elliptic curve name, that is, the NID. |
+| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes | Point** object of the elliptic curve. |
+| format | string | Yes | Format of the point data to obtain. Currently, the value can be **COMPRESSED** or **UNCOMPRESSED** only. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Uint8Array |
+| Type | Description |
+| --- | --- |
+| Uint8Array | Point data in the specified format. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+
+**Examples**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+async function doTest() {
+  let generator = cryptoFramework.createAsyKeyGenerator('ECC_BrainPoolP256r1');
+  let keyPair = await generator.generateKeyPair();
+  let eccPkX = keyPair.pubKey.getAsyKeySpec(cryptoFramework.AsyKeySpecItem.ECC_PK_X_BN);
+  let eccPkY = keyPair.pubKey.getAsyKeySpec(cryptoFramework.AsyKeySpecItem.ECC_PK_Y_BN);
+  console.info('ECC_PK_X_BN 16: ' + eccPkX.toString(16));
+  console.info('ECC_PK_Y_BN 16: ' + eccPkY.toString(16));
+  // Place eccPkX.toString(16) in x and eccPkY.toString(16) in y.
+  let returnPoint: cryptoFramework.Point = {
+    x: BigInt('0x' + eccPkX.toString(16)),
+    y: BigInt('0x' + eccPkY.toString(16))
+  };
+  let returnData = cryptoFramework.ECCKeyUtil.getEncodedPoint('NID_brainpoolP256r1', returnPoint, 'UNCOMPRESSED');
+  console.info('returnData: ' + returnData);
+}
+```

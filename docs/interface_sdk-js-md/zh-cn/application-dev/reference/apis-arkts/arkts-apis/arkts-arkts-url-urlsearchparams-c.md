@@ -13,7 +13,6 @@ URLSearchParams接口定义了一些处理URL查询字符串的实用方法，�
 ## 导入模块
 
 ```TypeScript
-import { url } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -34,9 +33,34 @@ import { url } from 'kits/@kit.ArkTS';
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;[string, string] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;[string, string] & gt; | 返回一个迭代器，迭代器的每一项为包含name和value的[string, string]数组。 |
+
+**示例**
+
+```TypeScript
+// 构造URLParams对象
+const paramsObject = new url.URLParams('fod=bay&edg=bap');
+// 获取Symbol.iterator迭代器
+let iter = paramsObject[Symbol.iterator]();
+// 遍历键值对
+for (let pair of iter) {
+  console.info(pair[0] + ', ' + pair[1]);
+}
+// fod, bay
+// edg, bap
+```
+
+```TypeScript
+const paramsObject = new url.URLSearchParams('fod=bay&edg=bap');
+let pairs = paramsObject[Symbol.iterator]();
+for (let pair of pairs) {
+  console.info(pair[0] + ', ' + pair[1]);
+}
+// fod, bay
+// edg, bap
+```
 
 ## append
 
@@ -56,10 +80,27 @@ append(name: string, value: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 需要插入搜索参数的键名。 |
+| value | string | 是 | 需要插入搜索参数的值。 |
+
+**示例**
+
+```TypeScript
+// 解析URL字符串
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+// 构造URLParams对象
+let paramsObject = new url.URLParams(urlObject.search.slice(1));
+// 追加键值对
+paramsObject.append('fod', '3');
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
+paramsObject.append('fod', '3');
+```
 
 ## constructor
 
@@ -79,9 +120,19 @@ URLSearchParams的构造函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| init | string[][] \| Record & lt;string, string & gt; \ | string \| URLSearchParams | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| init | string[][] \| Record & lt;string, string & gt; \ | string \| URLSearchParams | 否 | 入参对象。    - string[][]：字符串二维数组，每个内部数组包含两个元素，分别为键名和键值。    - Record & lt;string, string & gt;：对象列表。    - string：字符串，需遵循URL查询参数格式，如'key=value & key2=value2'。    - URLSearchParams：对象。    - 默认值：undefined。 |
+
+**示例**
+
+```TypeScript
+let objectParams = new url.URLSearchParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
+let objectParams1 = new url.URLSearchParams({"fod" : '1' , "bard" : '2'});
+let objectParams2 = new url.URLSearchParams('?fod=1&bard=2');
+let urlObject = new url.URL('https://developer.mozilla.org/?fod=1&bard=2');
+let params = new url.URLSearchParams(urlObject.search);
+```
 
 ## delete
 
@@ -101,9 +152,26 @@ delete(name: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 需要删除的键值名称。 |
+
+**示例**
+
+```TypeScript
+// 解析URL字符串
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+// 构造URLParams对象
+let paramsObject = new url.URLParams(urlObject.search.slice(1));
+// 删除指定名称的键值对
+paramsObject.delete('fod');
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
+paramsObject.delete('fod');
+```
 
 ## entries
 
@@ -123,9 +191,34 @@ entries(): IterableIterator<[string, string]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;[string, string] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;[string, string] & gt; | 返回一个ES6的迭代器。 |
+
+**示例**
+
+```TypeScript
+// 构造URLParams对象
+let paramsObject = new url.URLParams('keyName1=valueName1&keyName2=valueName2');
+// 获取entries迭代器
+let pair = paramsObject.entries();
+// 遍历键值对
+for (let item of pair) {
+  console.info(item[0] + '=' + item[1]);
+}
+// keyName1=valueName1
+// keyName2=valueName2
+```
+
+```TypeScript
+let searchParamsObject = new url.URLSearchParams("keyName1=valueName1&keyName2=valueName2");
+let iter = searchParamsObject.entries();
+for (let pair of iter) {
+  console.info(pair[0]+ ', '+ pair[1]);
+}
+// keyName1, valueName1
+// keyName2, valueName2
+```
 
 ## forEach
 
@@ -145,10 +238,19 @@ forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackFn | (value: string, key: string, searchParams: URLSearchParams) = & gt; void | 是 |
-| thisArg | Object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callbackFn | (value: string, key: string, searchParams: URLSearchParams) = & gt; void | 是 | 回调函数。 |
+| thisArg | Object | 否 | callbackFn被调用时用作this值，默认值是本对象。 |
+
+**示例**
+
+```TypeScript
+const myURLObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+myURLObject.searchParams.forEach((value, name, searchParams) => {
+    console.info(name, value, myURLObject.searchParams === searchParams);
+});
+```
 
 ## get
 
@@ -168,15 +270,31 @@ get(name: string): string | null
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 指定键值对的名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string \| null |
+| 类型 | 说明 |
+| --- | --- |
+| string \| null | 返回第一个值，如果没找到，返回 null。 |
+
+**示例**
+
+```TypeScript
+let paramsObject = new url.URLParams('name=Jonathan&age=18');
+let name = paramsObject.get('name'); // is the string "Jonathan"
+let age = paramsObject.get('age'); // is the string "18"
+let absentValue = paramsObject.get('abc'); // undefined
+```
+
+```TypeScript
+let paramsObject = new url.URLSearchParams('name=Jonathan&age=18');
+let name = paramsObject.get("name"); // is the string "Jonathan"
+let age = paramsObject.get("age"); // is the string '18'
+let getObj = paramsObject.get("abc"); // undefined
+```
 
 ## getAll
 
@@ -196,15 +314,33 @@ getAll(name: string): string[]
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 指定的键值名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string[] |
+| 类型 | 说明 |
+| --- | --- |
+| string[] | 返回指定名称的所有键对应值的集合。 |
+
+**示例**
+
+```TypeScript
+// 解析URL并构造URLParams对象
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+let params = new url.URLParams(urlObject.search.slice(1));
+params.append('fod', '3'); // 追加第二个fod参数值
+// 获取指定名称fod的所有值
+console.info(params.getAll('fod').toString()); // Output ["1","3"]
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let params = new url.URLSearchParams(urlObject.search.slice(1));
+params.append('fod', '3'); // Add a second value for the fod parameter.
+console.info(params.getAll('fod').toString()) // Output ["1","3"].
+```
 
 ## has
 
@@ -224,15 +360,32 @@ has(name: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 要查找的参数的键名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否存在相对应的key值，存在返回true，否则返回false。 |
+
+**示例**
+
+```TypeScript
+// 解析URL字符串
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+// 构造URLParams对象
+let paramsObject = new url.URLParams(urlObject.search.slice(1));
+// 判断键名bard是否存在
+let result = paramsObject.has('bard');
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
+paramsObject.has('bard') === true;
+```
 
 ## keys
 
@@ -252,9 +405,34 @@ keys(): IterableIterator<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;string & gt; | 返回一个所有键值对的name的迭代器。 |
+
+**示例**
+
+```TypeScript
+// 构造URLParams对象
+let paramsObject = new url.URLParams("key1=value1&key2=value2");
+// 获取所有键名的迭代器
+let keys = paramsObject.keys();
+// 遍历输出键名
+for (let key of keys) {
+  console.info(key);
+}
+// key1
+// key2
+```
+
+```TypeScript
+let searchParamsObject = new url.URLSearchParams("key1=value1&key2=value2");
+let keys = searchParamsObject.keys();
+for (let key of keys) {
+  console.info(key);
+}
+// key1
+// key2
+```
 
 ## set
 
@@ -274,10 +452,24 @@ set(name: string, value: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 将要设置的参数的键值名。 |
+| value | string | 是 | 所要设置的参数值。 |
+
+**示例**
+
+```TypeScript
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLParams(urlObject.search.slice(1));
+paramsObject.set('baz', '3'); // Add a third parameter.
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
+paramsObject.set('baz', '3'); // Add a third parameter.
+```
 
 ## sort
 
@@ -294,6 +486,20 @@ sort(): void
 **替代接口：** sort
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**示例**
+
+```TypeScript
+let paramsObject = new url.URLParams("c=3&a=9&b=4&d=2"); // Create a test URLParams object
+paramsObject.sort(); // Sort the key/value pairs
+console.info(paramsObject.toString()); // Display the sorted query string // Output a=9&b=4&c=3&d=2
+```
+
+```TypeScript
+let searchParamsObject = new url.URLSearchParams("c=3&a=9&b=4&d=2"); // Create a test URLSearchParams object
+searchParamsObject.sort(); // Sort the key/value pairs
+console.info(searchParamsObject.toString()); // Display the sorted query string // Output a=9&b=4&c=3&d=2
+```
 
 ## toString
 
@@ -313,9 +519,34 @@ toString(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回序列化为字符串的搜索参数，必要时对字符进行百分比编码。 |
+
+**示例**
+
+```TypeScript
+// 解析URL字符串
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+// 构造URLParams对象
+let params = new url.URLParams(urlObject.search.slice(1));
+// 追加参数
+params.append('fod', '3');
+// 将参数序列化为字符串
+console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
+```
+
+```TypeScript
+const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+let result = urlObject.toString(); // Output 'https://username:password@host:8080/directory/file?query=pppppp#qwer=da'
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let params = new url.URLSearchParams(urlObject.search.slice(1));
+params.append('fod', '3');
+console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
+```
 
 ## values
 
@@ -335,6 +566,31 @@ values(): IterableIterator<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;string & gt; | 返回一个所有键值对的value的迭代器。 |
+
+**示例**
+
+```TypeScript
+// 构造URLParams对象
+let paramsObject = new url.URLParams("key1=value1&key2=value2");
+// 获取所有值的迭代器
+let values = paramsObject.values();
+// 遍历输出值
+for (let value of values) {
+  console.info(value);
+}
+// value1
+// value2
+```
+
+```TypeScript
+let searchParams = new url.URLSearchParams("key1=value1&key2=value2");
+let values = searchParams.values();
+for (let value of values) {
+  console.info(value);
+}
+// value1
+// value2
+```

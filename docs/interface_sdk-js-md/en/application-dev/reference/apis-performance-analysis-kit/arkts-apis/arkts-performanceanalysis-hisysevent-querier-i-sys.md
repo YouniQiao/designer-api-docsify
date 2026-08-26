@@ -11,7 +11,6 @@ Defines an event query instance.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## onComplete
@@ -30,10 +29,10 @@ Callback used to return the query result statistics: (reason: number, total: num
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| reason | number | Yes |
-| total | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| reason | number | Yes |  |
+| total | number | Yes |  |
 
 ## onQuery
 
@@ -51,6 +50,6 @@ Callback used to return the queried system events: (infos: [SysEventInfo](arkts-
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| infos | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| infos | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[] | Yes |  |

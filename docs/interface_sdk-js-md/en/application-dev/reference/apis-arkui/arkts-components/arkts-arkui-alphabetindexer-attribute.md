@@ -29,10 +29,10 @@ Sets the alignment style of the indexer pop-up window.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | Yes |
-| offset | [Length](../arkts-apis/arkts-arkui-length-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | Yes | Alignment style of the indexer pop-up window. The pop-up window can be displayed on the right or left of the indexer.Default value: **IndexerAlign.END |
+| offset | [Length](../arkts-apis/arkts-arkui-length-t.md) | No | Spacing between the pop-up window and the alphabetic index bar. A value greater than or equal to **0** is valid. If this parameter is set to a value less than **0** or is not set, the spacing is the same as **popupPosition**. When this parameter and [popupPosition](#popupposition) are set at the same time, **offset** takes effect in the horizontal direction, and **popupPosition.y** takes effect in the vertical direction.<br>**Since:** 10 |
 
 ## autoCollapse
 
@@ -56,9 +56,9 @@ Sets whether to enable the adaptive collapse behavior for the indexer.When the f
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to auto-collapse or expand the indexer bar.Default value:Before API version 12: **false**Since API version 12: **true**   **true**: Enable the adaptive collapse behavior.    **false**: Disable the adaptive collapse behavior. |
 
 ## color
 
@@ -76,9 +76,9 @@ Sets the text color for unselected items.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of unselected items.Default value: **0x99182431**, which is a slightly transparent brown. |
 
 ## enableHapticFeedback
 
@@ -98,9 +98,9 @@ Sets whether to enable haptic feedback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable haptic feedback.   **true**: To enable haptic feedback.   **false**: Not to enable haptic feedback.Default value: **true**To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project."requestPermissions": [{"name": "ohos.permission.VIBRATE"}] |
 
 ## font
 
@@ -118,9 +118,9 @@ Sets the text style for unselected items.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Font](#font) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Font](#font) | Yes | Text style of unselected items.Default value:API version 11 and earlier:{size:'12.0fp',style:FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12 and later:{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'} |
 
 ## itemBorderRadius
 
@@ -140,9 +140,9 @@ Sets the radius of the index background border corners in the alphabetic index b
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Unit: vp.   - Radius of the index background border corners in the alphabetic index bar.   Default value: **8vp**This parameter cannot be set in percentage. If the value specified is less than **0**, **0** is used.The radius of the index background border corners in the alphabetic index bar is automatically adaptive (radius of the index corners + 4 vp). |
 
 ## itemSize
 
@@ -160,9 +160,9 @@ Sets the size of the index item area.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string \| number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string \| number | Yes | Size of the index item area, which is a square, meaning the side length of the square. This attribute cannot be set in percentage.The actual value is restricted by the component size. The maximum width of an index item is the component width minus the left and right padding, and the maximum height of an index item is (component height minus the top and bottom padding)/number of index items. If the input value is less than or equal to 0, the default value is used.Default value: **16.0**Unit: vp |
 
 ## onPopupSelect
 
@@ -180,9 +180,9 @@ Triggered when a secondary index item in the pop-up window is selected. The call
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | Yes | Event triggered when a secondary index item in the pop- up window is selected.<br>**Since:** 18 |
 
 ## onRequestPopupData
 
@@ -200,9 +200,9 @@ Triggered for a secondary index item content event in the pop-up window. The cal
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | Yes | Callback for setting the secondary index item content event in the pop-up window.<br>**Since:** 18 |
 
 ## onSelect
 
@@ -220,9 +220,9 @@ Triggered when an index item is selected, with the callback parameter being the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnAlphabetIndexerSelectCallback](arkts-arkui-onalphabetindexerselectcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnAlphabetIndexerSelectCallback](arkts-arkui-onalphabetindexerselectcallback-t.md) | Yes | Event triggered when an index item is selected.<br>**Since:** 18 |
 
 ## onSelected
 
@@ -244,9 +244,9 @@ Triggered when an index item is selected, with the callback parameter being the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (index: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (index: number) = & gt; void | Yes | Index of the selected item. |
 
 ## popupBackground
 
@@ -264,9 +264,9 @@ Sets the background color for the pop-up window.If this API is not called or the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the pop-up window.The background blur effect of the pop-up text can affect the background color. You can disable the effect by setting [popupBackgroundBlurStyle](#popupbackgroundblurstyle) to **NONE**. |
 
 ## popupBackgroundBlurStyle
 
@@ -286,9 +286,9 @@ Sets the background blur style of the pop-up window. In versions earlier than AP
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Background blur style of the pop-up window.The background blur effect can affect [popupBackground](#popupbackground). You can disable the effect by setting it to **NONE**. |
 
 ## popupColor
 
@@ -306,9 +306,9 @@ Sets the text color for the primary index item in the pop-up window.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of the primary index item in the pop-up window.Default value: **0xFF007DFF**, which is blue. |
 
 ## popupFont
 
@@ -326,9 +326,9 @@ Sets the text style for the primary index item in the pop-up window.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Font](#font) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Font](#font) | Yes | Text style of the primary index item in the pop-up window.Default value:{size:'24.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'} |
 
 ## popupItemBackgroundColor
 
@@ -348,9 +348,9 @@ Sets the background color for the secondary index item in the pop-up window.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the secondary index item in the pop-up window.Default value:API version 11 and earlier: **#FFFFFFFF**, which is white.API version 12 and later: **#00000000**, which is transparent. |
 
 ## popupItemBorderRadius
 
@@ -370,9 +370,9 @@ Sets the radius of the index border corners in the pop-up window.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Radius of the index background border corners in the pop-up window. Unit: vp. **24vp**.This parameter cannot be set in percentage. If the value specified is less than **0**, **0** is used.The radius of the index background border corners in the pop-up window is automatically adaptive (radius of the index corners + 4 vp). |
 
 ## popupItemFont
 
@@ -392,9 +392,9 @@ Sets the text style for the secondary index item in the pop-up window.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Font](#font) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Font](#font) | Yes | Text style of the secondary index item in the pop-up window.Default value:{size:24,weight:FontWeight.Medium} |
 
 ## popupPosition
 
@@ -412,9 +412,9 @@ Sets the position of the pop-up window relative to the center of the indexer's t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Position](../arkts-apis/arkts-arkui-display-position-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Position](../arkts-apis/arkts-arkui-display-position-i.md) | Yes | Position of the pop-up window relative to the center of the indexer's top border.Default value: **{x: 60.0, y: 48.0} |
 
 ## popupSelectedColor
 
@@ -434,9 +434,9 @@ Sets the text color for the selected secondary index item in the pop-up window.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of the selected secondary index items in the pop-up window.Default value: **#FF182431**, which is dark blue. |
 
 ## popupTitleBackground
 
@@ -456,9 +456,9 @@ Sets the background color for the primary index item in the pop-up window.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color for the primary index item in the pop-up window.Default value:If the pop-up window has only one index: **#00FFFFFF**.If the pop-up window has multiple indexes: **#0c182431**. |
 
 ## popupUnselectedColor
 
@@ -478,9 +478,9 @@ Sets the text color for the unselected secondary index items in the pop-up windo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of the unselected secondary index items in the pop-up window.Default value: **#FF182431**, which is dark blue. |
 
 ## selected
 
@@ -498,9 +498,9 @@ Sets the index of the selected item.Since API version 10, this parameter support
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the selected item.Value range: [0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md).length – 1]Default value: **0 |
 
 ## selectedBackgroundColor
 
@@ -518,9 +518,9 @@ Sets the background color of the selected item.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the selected item.Default value: **0x1A007DFF**, which is semi-transparent blue-green. |
 
 ## selectedColor
 
@@ -538,9 +538,9 @@ Sets the text color for the selected item.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of the selected item.Default value: **0xFF007DFF**, which is blue. |
 
 ## selectedFont
 
@@ -558,9 +558,9 @@ Sets the text style for the selected item.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Font](#font) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Font](#font) | Yes | Text style of the selected item.Default value:API version 11 and earlier:{size:'12.0fp',style:FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12 and later:{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'} |
 
 ## usingPopup
 
@@ -578,6 +578,6 @@ Sets whether to display the pop-up window.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to display the pop-up window.Default value: **false**.   **true**: Display the pop-up window.   **false**: Do not display the pop-up window. |

@@ -29,9 +29,9 @@ Defines the disabled update attribute function.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| instance | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instance | T | 是 |  |
 
 ## applyFocusedAttribute
 
@@ -51,9 +51,9 @@ Defines the focused update attribute function.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| instance | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instance | T | 是 |  |
 
 ## applyHoveredAttribute
 
@@ -73,9 +73,9 @@ applyHoveredAttribute?(instance: T) : void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| instance | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instance | T | 是 |  |
 
 ## applyNormalAttribute
 
@@ -95,9 +95,9 @@ Defines the normal update attribute function.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| instance | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instance | T | 是 |  |
 
 ## applyPressedAttribute
 
@@ -117,9 +117,9 @@ Defines the pressed update attribute function.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| instance | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instance | T | 是 |  |
 
 ## applySelectedAttribute
 
@@ -139,6 +139,6 @@ Defines the selected update attribute function.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| instance | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instance | T | 是 |  |

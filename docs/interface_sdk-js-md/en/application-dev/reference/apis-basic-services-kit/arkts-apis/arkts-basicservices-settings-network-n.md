@@ -9,15 +9,16 @@ Provides methods for setting network information, including the data roaming sta
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import settings from '@kit.BasicServicesKit';
+import settingsLite from '@kit.BasicServicesKitLite';
 ```
 
 ## Summary
 
 ### Constants
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DATA_ROAMING_STATUS](arkts-basicservices-network-con.md#data_roaming_status) |
-| [HTTP_PROXY_CFG](arkts-basicservices-network-con.md#http_proxy_cfg) |
-| [NETWORK_PREFERENCE_USAGE](arkts-basicservices-network-con.md#network_preference_usage) |
+| Name | Description |
+| --- | --- |
+| [DATA_ROAMING_STATUS](arkts-basicservices-network-con.md#data_roaming_status) | Specifies whether data roaming is enabled. & lt;p & gt;If the value is {@code true}, data roaming is enabled. If the value is {@code false}, data roaming is disabled. |
+| [HTTP_PROXY_CFG](arkts-basicservices-network-con.md#http_proxy_cfg) | Indicates the host name and port number of the global HTTP proxy. The host name and port number are separated by a colon (:). |
+| [NETWORK_PREFERENCE_USAGE](arkts-basicservices-network-con.md#network_preference_usage) | Indicates the user preferences of the network to use. |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## createAuxiliaryPicture
@@ -20,20 +20,43 @@ function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: Auxiliary
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| buffer | ArrayBuffer | 是 |
-| size | Size | 是 |
-| type | [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| buffer | ArrayBuffer | 是 | 以buffer形式存放的图像数据。 |
+| size | Size | 是 | 辅助图的尺寸。单位：像素（px）。 |
+| type | [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | 是 | 辅助图类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) | 如果操作成功，则返回AuxiliaryPicture实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+async function CreateAuxiliaryPicture(context: Context) {
+  let funcName = "CreateAuxiliaryPicture";
+  const resourceMgr = context.resourceManager;
+  const rawFile = await resourceMgr.getRawFileContent("hdr.jpg"); // 需要支持hdr的图片。
+  let auxBuffer: ArrayBuffer = rawFile.buffer as ArrayBuffer;
+  let auxSize: image.Size = {
+    height: 180,
+    width: 240
+  };
+  let auxType: image.AuxiliaryPictureType = image.AuxiliaryPictureType.GAINMAP;
+  let auxPictureObj: image.AuxiliaryPicture | null = image.createAuxiliaryPicture(auxBuffer, auxSize, auxType);
+  if(auxPictureObj != null) {
+    let type: image.AuxiliaryPictureType = auxPictureObj.getType();
+    console.info(funcName, `CreateAuxiliaryPicture succeeded this.Aux_picture.type ${type}`);
+  } else {
+    console.error(funcName, 'CreateAuxiliaryPicture failed');
+  }
+}
+```

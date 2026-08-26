@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import text from '@kit.ArkGraphics2D';
 ```
 
 ## addPlaceholder
@@ -28,9 +28,44 @@ addPlaceholder(placeholderSpan: PlaceholderSpan): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| placeholderSpan | [PlaceholderSpan](arkts-arkgraphics2d-text-placeholderspan-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| placeholderSpan | [PlaceholderSpan](arkts-arkgraphics2d-text-placeholderspan-i.md) | 是 | 定义了占位符的尺寸、对齐方式、基线类型以及基线偏移量。 |
+
+**示例**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+function textFunc() {
+  let myParagraphStyle: text.ParagraphStyle = {
+    align: text.TextAlign.END,
+  };
+  let myPlaceholderSpan: text.PlaceholderSpan = {
+    width: 100,
+    height: 100,
+    align: text.PlaceholderAlignment.ABOVE_BASELINE,
+    baseline: text.TextBaseline.ALPHABETIC,
+    baselineOffset: 100
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+  paragraphBuilder.addPlaceholder(myPlaceholderSpan);
+}
+
+@Entry
+@Component
+struct Index {
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
 
 ## addSymbol
 
@@ -48,9 +83,43 @@ addSymbol(symbolId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| symbolId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| symbolId | number | 是 | 要设置的symbol码位，十六进制，当前支持的取值范围为：0xF0000-0xF0C97。可设置的symbol码位（即列表视图下的unicode值）请见 [主题图标库](https://developer.huawei.com/consumer/cn/design/harmonyos-symbol/)。 |
+
+**示例**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+function textFunc() {
+  let myTextStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let myParagraphStyle: text.ParagraphStyle = {
+    textStyle: myTextStyle,
+    align: text.TextAlign.END,
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+  paragraphBuilder.addSymbol(0xF0000);
+  let paragraph = paragraphBuilder.build();
+}
+
+@Entry
+@Component
+struct Index {
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
 
 ## addText
 
@@ -68,9 +137,42 @@ addText(text: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [text](arkts-graphics-text.md) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 段落中插入的具体文本字符串，传入非法Unicode时会显示�。 |
+
+**示例**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+function textFunc() {
+  let myTextStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let myParagraphStyle: text.ParagraphStyle = {
+    textStyle: myTextStyle,
+    align: text.TextAlign.END,
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+  paragraphBuilder.addText("123666");
+}
+
+@Entry
+@Component
+struct Index {
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
 
 ## build
 
@@ -88,9 +190,43 @@ build(): Paragraph
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Paragraph](../../apis-arkui/arkts-apis/arkts-arkui-paragraph-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Paragraph](../../apis-arkui/arkts-apis/arkts-arkui-paragraph-t.md) | 可用于后续渲染的 Paragraph 对象。 |
+
+**示例**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+function textFunc() {
+  let myTextStyle: text.TextStyle = {
+    color : {alpha: 255, red: 255, green: 0, blue: 0},
+    fontSize : 20,
+  };
+  let myParagraphStyle: text.ParagraphStyle = {
+    textStyle : myTextStyle,
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+  paragraphBuilder.addText("123456789");
+  let paragraph = paragraphBuilder.build();
+  paragraph.layoutSync(200);
+}
+
+@Entry
+@Component
+struct Index {
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
 
 ## buildLineTypeset
 
@@ -108,9 +244,38 @@ buildLineTypeset(): LineTypeset
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) | 可用于后续渲染的LineTypeset对象。 |
+
+**示例**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+function test() {
+  let myParagraphStyle: text.ParagraphStyle = {
+    align: text.TextAlign.JUSTIFY,
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+  paragraphBuilder.addText("123456789");
+  let lineTypeset = paragraphBuilder.buildLineTypeset();
+}
+
+@Entry
+@Component
+struct Index {
+  fun: Function = test;
+  build() {
+    Column() {
+      Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
 
 ## constructor
 
@@ -128,10 +293,42 @@ ParagraphBuilder对象的构造函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| paragraphStyle | [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | 是 |
-| fontCollection | [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| paragraphStyle | [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | 是 | 段落样式。 |
+| fontCollection | [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | 是 | 字体集对象，提供文本排版所需的字体资源，用于在段落构建过程中进行字形匹配和文本渲染。 |
+
+**示例**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+function textFunc() {
+  let myTextStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let myParagraphStyle: text.ParagraphStyle = {
+    textStyle: myTextStyle,
+    align: text.TextAlign.END,
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+}
+
+@Entry
+@Component
+struct Index {
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
 
 ## popStyle
 
@@ -141,7 +338,8 @@ popStyle(): void
 
 弹出当前文本样式。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 必须在调用[pushStyle()](#pushstyle)之后才能调用此方法。调用后，后续添加的文本将使用弹出前的文本样式。如果样式栈为空，将使用
 > [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中的textStyle作为默认样式。
 
@@ -151,6 +349,40 @@ popStyle(): void
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+**示例**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+function textFunc() {
+  let myTextStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let myParagraphStyle: text.ParagraphStyle = {
+    textStyle: myTextStyle,
+    align: text.TextAlign.END,
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+  paragraphBuilder.pushStyle(myTextStyle);
+  paragraphBuilder.popStyle();
+}
+
+@Entry
+@Component
+struct Index {
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
+
 ## pushStyle
 
 ```TypeScript
@@ -159,7 +391,8 @@ pushStyle(textStyle: TextStyle): void
 
 更新当前文本块的样式。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 更新当前文本块的样式，之后添加文字均采用该样式。
 
 **起始版本：** 12
@@ -170,6 +403,39 @@ pushStyle(textStyle: TextStyle): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| textStyle | [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| textStyle | [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | 是 | 包含了对文本的各种视觉属性的定义，如字体、字号、颜色、字重、字间距、行距、装饰（如下划线、删除线）、文本阴影等。 |
+
+**示例**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+function textFunc() {
+  let myTextStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let myParagraphStyle: text.ParagraphStyle = {
+    textStyle: myTextStyle,
+    align: text.TextAlign.CENTER,
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+  paragraphBuilder.pushStyle(myTextStyle);
+}
+
+@Entry
+@Component
+struct Index {
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```

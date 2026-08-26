@@ -10,17 +10,17 @@ The module defines the callbacks invoked after synchronization starts. These cal
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | MissionCallback registered by app.@interface MissionCallback |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotifyMissionsChangedCallback](arkts-ability-notifymissionschangedcallback-t-sys.md) |
-| [NotifyNetDisconnectCallback](arkts-ability-notifynetdisconnectcallback-t-sys.md) |
-| [NotifySnapshotCallback](arkts-ability-notifysnapshotcallback-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [NotifyMissionsChangedCallback](arkts-ability-notifymissionschangedcallback-t-sys.md) | Callback function on mission changed. |
+| [NotifyNetDisconnectCallback](arkts-ability-notifynetdisconnectcallback-t-sys.md) | Callback function on network disconnect. |
+| [NotifySnapshotCallback](arkts-ability-notifysnapshotcallback-t-sys.md) | Callback function on snapshot changed. |
 <!--DelEnd-->

@@ -9,7 +9,7 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 ## Modules to Import
 
 ```TypeScript
-import { FormExtensionAbility } from 'kits/@kit.FormKit';
+import FormExtensionAbility from '@kit.FormKit';
 ```
 
 ## onAcquireFormData
@@ -30,16 +30,33 @@ Called when the system acquire the form data.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formId | string | Yes | Indicates the ID of the form. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| object |
-| Record & lt;string, Object & gt; |
+| Type | Description |
+| --- | --- |
+| object | Returns the wantParams object.<br>**Applicable version:** 10 |
+| Record & lt;string, Object & gt; | Returns the wantParams object.<br>**Applicable version:** 11 and later |
+
+**Examples**
+
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onAcquireFormData(formId: string) {
+    console.info(`FormExtensionAbility onAcquireFormData, formId: ${formId}`);
+    let wantParams: Record<string, Object> = {
+      'temperature': '20',
+      'time': '2022-8-8 09:59',
+    };
+    return wantParams;
+  }
+}
+```
 
 ## onShareForm
 
@@ -59,13 +76,30 @@ Called when the system shares the form.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formId | string | Yes | Indicates the ID of the form. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| object |
-| Record & lt;string, Object & gt; |
+| Type | Description |
+| --- | --- |
+| object | Returns the wantParams object.<br>**Applicable version:** 9 - 10 |
+| Record & lt;string, Object & gt; | Returns the wantParams object.<br>**Applicable version:** 11 and later |
+
+**Examples**
+
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onShareForm(formId: string) {
+    console.info(`FormExtensionAbility onShareForm, formId: ${formId}`);
+    let wantParams: Record<string, Object> = {
+      'temperature': '20',
+      'time': '2022-8-8 09:59',
+    };
+    return wantParams;
+  }
+}
+```

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getNativeHeapSize
@@ -20,6 +19,15 @@ function getNativeHeapSize() : bigint
 
 **返回值：**
 
-| 类型 |
-| --- |
-| bigint |
+| 类型 | 说明 |
+| --- | --- |
+| bigint | 内存分配器统计的进程持有的普通块所占用内存的大小（含分配器元数据），单位为Byte。 |
+
+**示例**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let nativeHeapSize: bigint = hidebug.getNativeHeapSize();
+console.info(`nativeHeapSize = ${nativeHeapSize}`);
+```

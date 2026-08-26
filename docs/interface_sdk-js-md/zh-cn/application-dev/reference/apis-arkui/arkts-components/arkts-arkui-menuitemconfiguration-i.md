@@ -35,10 +35,10 @@ index会赋值给事件onSelect 回调中的索引参数； value会返回给Sel
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [index](#index) | number | 是 |
-| [value](#value) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 选中菜单项的索引。 |
+| value | string | 是 | 选中菜单项的文本。 |
 
 ## icon
 

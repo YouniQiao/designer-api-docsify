@@ -26,7 +26,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKit';
 ```
 
 ## onMessage
@@ -52,10 +52,28 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [msgId](../../apis-network-kit/arkts-apis/arkts-network-eap-eapdata-i.md) | string | 是 |
-| msgParam | ArrayBuffer | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| msgId | string | 是 | 接收到的自定义通信数据的标识符。 |
+| msgParam | ArrayBuffer | 否 | 接收到的自定义通信数据的消息体。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility()
+  .on('inputStart',
+    (keyboardController: inputMethodEngine.KeyboardController, inputClient: inputMethodEngine.InputClient) => {
+      let messageHandler: inputMethodEngine.MessageHandler = {
+        onTerminated(): void {
+          console.info('OnTerminated.');
+        },
+        onMessage(msgId: string, msgParam?: ArrayBuffer): void {
+          console.info(`recv message, msgId is ${msgId}, msgParam is ${JSON.stringify(msgParam)}`);
+        }
+      }
+      inputClient.recvMessage(messageHandler);
+    });
+```
 
 ## onTerminated
 
@@ -77,3 +95,21 @@ onTerminated(): void
 **起始版本：** 15
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility()
+  .on('inputStart',
+    (keyboardController: inputMethodEngine.KeyboardController, inputClient: inputMethodEngine.InputClient) => {
+      let messageHandler: inputMethodEngine.MessageHandler = {
+        onTerminated(): void {
+          console.info('OnTerminated.');
+        },
+        onMessage(msgId: string, msgParam?: ArrayBuffer): void {
+          console.info(`recv message, msgId is ${msgId}, msgParam is ${JSON.stringify(msgParam)}`);
+        }
+      }
+      inputClient.recvMessage(messageHandler);
+    });
+```

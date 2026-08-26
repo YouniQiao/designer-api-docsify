@@ -11,7 +11,7 @@ The definition of Single song.@extends MediaEntity @interface Single
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import avMusicTemplate from '@kit.AVSessionKit';
 ```
 
 ## downloadProgress

@@ -4,7 +4,8 @@ Encapsulates the parameters for encryption or decryption using the CCM AEAD mode
 
 Applies to the CCM mode.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Before passing a value to
 > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify
 > **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
@@ -20,7 +21,7 @@ Applies to the CCM mode.
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## aad

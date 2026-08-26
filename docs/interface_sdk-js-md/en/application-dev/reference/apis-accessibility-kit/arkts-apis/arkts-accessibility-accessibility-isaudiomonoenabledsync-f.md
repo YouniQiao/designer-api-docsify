@@ -3,8 +3,11 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
+import config from '@kit.AccessibilityKit.config';
+import accessibility from '@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
+import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
 ## isAudioMonoEnabledSync
@@ -23,6 +26,26 @@ Checks whether mono audio mode is enabled.This API is the synchronous version of
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether mono audio mode is enabled. Returns **true** if mono audio mode is enabled; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+@Entry
+@Component
+struct Index {
+  aboutToAppear(): void {
+    let status: boolean = accessibility.isAudioMonoEnabledSync();
+    console.info(`status: ${JSON.stringify(status)}`);
+  }
+
+  build() {
+    Column() {
+    }
+  }
+}
+```

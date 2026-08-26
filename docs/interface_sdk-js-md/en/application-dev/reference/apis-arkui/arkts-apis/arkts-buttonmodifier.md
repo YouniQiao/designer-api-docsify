@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ButtonModifier](arkts-arkui-buttonmodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [ButtonModifier](arkts-arkui-buttonmodifier-c.md) | Defines Button Modifier@extends ButtonAttribute @implements AttributeModifier & lt;ButtonAttribute & gt; |

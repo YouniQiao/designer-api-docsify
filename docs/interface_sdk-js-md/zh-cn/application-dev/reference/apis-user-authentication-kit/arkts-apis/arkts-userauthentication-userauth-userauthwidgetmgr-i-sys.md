@@ -11,7 +11,8 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## off('command')
@@ -30,17 +31,39 @@ off(type: 'command', callback?: IAuthWidgetCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'command' | 是 |
-| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'command' | 是 | 订阅事件类型。值为'command'，表明取消订阅用户认证框架向身份认证控件发送命令的事件。 |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 否 | 回调函数。指定取消注册的回调函数，需与on方法注册时传入的回调一致；若不传入此参数，则取消所有已注册的回调。使用前需确保已通过 [on](#oncommand)方法注册过相应回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const userAuthWidgetMgrVersion = 1;
+try {
+  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
+  console.info('get userAuthWidgetMgr instance successfully.');
+  userAuthWidgetMgr.off('command', {
+    sendCommand: (cmdData) => {
+      console.info(`The cmdData is ${cmdData}`);
+    }
+  });
+  console.info('cancel subscribe authentication event successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to operate userAuthWidgetMgr. Code: ${err?.code}, message: ${err?.message}`);
+}
+```
 
 ## on('command')
 
@@ -58,14 +81,36 @@ on(type: 'command', callback: IAuthWidgetCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'command' | 是 |
-| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'command' | 是 | 订阅事件类型。值为'command'，表明该事件用于用户认证框架向身份认证控件发送命令。 |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 是 | 回调函数。用于接收来自用户认证框架的命令，身份认证控件需在回调中解析命令并执行相应操作。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const userAuthWidgetMgrVersion = 1;
+try {
+  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
+  console.info('get userAuthWidgetMgr instance successfully.');
+  userAuthWidgetMgr.on('command', {
+    sendCommand: (cmdData) => {
+      console.info(`The cmdData is ${cmdData}`);
+    }
+  });
+  console.info('subscribe authentication event successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to operate userAuthWidgetMgr. Code: ${err?.code}, message: ${err?.message}`);
+}
+```

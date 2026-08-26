@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
+import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## columnsGap
@@ -32,15 +32,15 @@ columnsGap(value: LengthMetrics | undefined): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | LengthMetrics \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | LengthMetrics \| undefined | 是 | 列之间的间距。 默认值：LengthMetrics.vp(0) |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## footer
 
@@ -60,15 +60,15 @@ footer(builder: CustomBuilder | undefined): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | footer生成器函数 传递undefined将删除footer。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## header
 
@@ -88,15 +88,15 @@ header(builder: CustomBuilder | undefined): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | header生成器函数 传递undefined将删除header。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## onVisibleIndexesChange
 
@@ -116,15 +116,15 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 | 回调函数，当可见区域中子组件的索引发生变化时触发。 传递undefined将取消注册回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## rowsGap
 
@@ -144,15 +144,15 @@ rowsGap(value: LengthMetrics | undefined): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | LengthMetrics \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | LengthMetrics \| undefined | 是 | 行之间的间距。 默认值：LengthMetrics.vp(0) |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## sticky
 
@@ -172,12 +172,12 @@ sticky(sticky: StickyStyle | undefined): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [sticky](#sticky) | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | 是 | header和footer的吸顶吸底样式 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |

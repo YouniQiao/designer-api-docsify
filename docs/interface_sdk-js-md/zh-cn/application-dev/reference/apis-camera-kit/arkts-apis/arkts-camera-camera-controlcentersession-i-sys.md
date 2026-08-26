@@ -13,7 +13,6 @@ Control center session object.@extends Beauty, Aperture [since 20 - 24] @extends
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableAutoFraming
@@ -32,17 +31,17 @@ Enable auto-framing effect.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | boolean | 是 | enable auto-framing effect if TRUE. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getAutoFramingStatus
 
@@ -60,15 +59,15 @@ Gets the status of auto-framing effect.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | Is auto-framing active. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## getControlCenterHeight
 
@@ -88,15 +87,15 @@ Gets the control center height.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | the control center height, in units of vp. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## getCurrentDevice
 
@@ -116,16 +115,16 @@ Gets the current camera device.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CameraDevice](arkts-camera-camera-cameradevice-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CameraDevice](arkts-camera-camera-cameradevice-i.md) | the current camera device. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 
 ## isAutoFramingSupported
 
@@ -143,15 +142,15 @@ Checks whether auto-framing is supported.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | Is auto-framing supported. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## release
 
@@ -169,15 +168,87 @@ Release control center session object.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+
+**示例**
+
+```TypeScript
+async function releaseDepthData(depthData: camera.DepthData): Promise<void> {
+  await depthData.release();
+}
+```
+
+```TypeScript
+async function releaseDeferredPhotoProxy(proxyObj: camera.DeferredPhotoProxy): Promise<void> {
+  await proxyObj.release();
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function releasePreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.release().then(() => {
+    console.info('Promise returned to indicate that the preview output instance is released successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to preview output release, error code: ${error.code}`);
+  });
+}
+
+function releaseVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.release().then(() => {
+    console.info('Promise returned to indicate that the video output instance is released successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to video output release, error code: ${error.code}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function releaseCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.release().then(() => {
+    console.info('Promise returned to indicate that the CaptureSession instance is released successfully.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release the CaptureSession instance, error code: ${err.code}.`);
+  });
+}
+```
+
+```TypeScript
+async function releasePhoto(photo: camera.Photo): Promise<void> {
+  await photo.release();
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function releaseCaptureSession(session: camera.Session): void {
+  session.release().then(() => {
+    console.info('Promise returned to indicate that the session instance is released successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the session instance, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { camera } from '@kit.CameraKit';
+
+async function releaseCapturePhoto(capturePhoto: camera.CapturePhoto): Promise<void> {
+  await capturePhoto.release();
+}
+```
 
 ## usedAsPosition
 
@@ -197,14 +268,14 @@ Sets the camera to be used as a camera at the specified position.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | 是 | The positon used for the camera. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |

@@ -11,7 +11,7 @@ Provides APIs for managing DLP files. A **DLPFile** instance indicates a DLP fil
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import dlpPermission from '@kit.DataProtectionKit';
 ```
 
 ## addDLPLinkFile
@@ -32,27 +32,59 @@ Adds a link file to the Filesystem in Userspace (FUSE). FUSE allows you to imple
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| linkFileName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+  
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
+  if (file) {
+    fileIo.closeSync(file);
+  }
+}
+
+ExampleFunction();
+```
 
 ## addDLPLinkFile
 
@@ -72,22 +104,57 @@ Adds a link file to the FUSE. This API uses an asynchronous callback to return t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| linkFileName | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of adding a link file. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+  
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  dlpFile.addDLPLinkFile('test.txt.dlp.link', async (err, res) => {
+    if (err) {
+      console.error('addDLPLinkFile error,', err.code, err.message);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    fileIo.closeSync(file);
+  }); // Add a link file.
+}
+
+ExampleFunction();
+```
 
 ## closeDLPFile
 
@@ -97,7 +164,8 @@ closeDLPFile(): Promise<void>
 
 Closes a **DLPFile** object. This API uses a promise to return the result.After calling [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.This API is used when the file owner decides to close a DLP file.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If a DLP file is no longer used, close the **dlpFile** object to release the memory.
 
 **Since:** 10
@@ -110,20 +178,51 @@ Closes a **DLPFile** object. This API uses a promise to return the result.After 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
+  if (file) {
+    fileIo.closeSync(file);
+  }
+}
+
+ExampleFunction();
+```
 
 ## closeDLPFile
 
@@ -133,7 +232,8 @@ closeDLPFile(callback: AsyncCallback<void>): void
 
 Closes a **DLPFile** object. This API uses an asynchronous callback to return the result.After calling **openDLPFile()** to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.This API is used when the file owner decides to close a DLP file.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If a DLP file is no longer used, close the **dlpFile** instance to release the memory.
 
 **Since:** 10
@@ -146,21 +246,55 @@ Closes a **DLPFile** object. This API uses an asynchronous callback to return th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of closing a **DLPFile** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  dlpFile.closeDLPFile((err, res) => {// Close the DLP file.
+    if (err) {
+      console.error('closeDLPFile error,', err.code, err.message);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    fileIo.closeSync(file);
+  });
+}
+
+ExampleFunction();
+```
 
 ## deleteDLPLinkFile
 
@@ -180,27 +314,60 @@ Deletes a link file from the FUSE. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| linkFileName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  await dlpFile.deleteDLPLinkFile('test.txt.dlp.link'); // Delete a link file.
+  
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
+  if (file) {
+    fileIo.closeSync(file);
+  }
+}
+
+ExampleFunction();
+```
 
 ## deleteDLPLinkFile
 
@@ -220,22 +387,58 @@ Deletes a link file from the FUSE. This API uses an asynchronous callback to ret
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| linkFileName | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of deleting a link file. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  dlpFile.deleteDLPLinkFile('test.txt.dlp.link', async (err, res) => { // Delete a link file.
+    if (err) {
+      console.error('deleteDLPLinkFile error,', err.code, err.message);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    fileIo.closeSync(file);
+  });
+}
+
+ExampleFunction();
+```
 
 ## recoverDLPFile
 
@@ -255,33 +458,69 @@ Recovers the plaintext of a DLP file. This API uses a promise to return the resu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| plaintextFd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| plaintextFd | number | Yes | FD of the target plaintext file. The value range is [0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2 & lt;sup & gt;31 & lt;/sup & gt;-1, the excess part will be truncated. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) |
-| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) |
-| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100010](../errorcode-dlp.md#19100010-read-only-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
+| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) | The file is not a DLP file. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100010](../errorcode-dlp.md#19100010-read-only-dlp-file) | The DLP file is read only. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let destFile: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  destFile = fileIo.openSync('file://docs/storage/Users/currentUser/Desktop/dest.txt').fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.recoverDLPFile(destFile); // Recover the plaintext of a DLP file.
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
+  if (file) {
+    fileIo.closeSync(file);
+  }
+  if (destFile) {
+    fileIo.closeSync(destFile);
+  }
+}
+
+ExampleFunction();
+```
 
 ## recoverDLPFile
 
@@ -301,28 +540,66 @@ Recovers the plaintext of a DLP file. This API uses an asynchronous callback to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| plaintextFd | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| plaintextFd | number | Yes | FD of the target plaintext file. The value range is [0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2 & lt;sup & gt;31 & lt;/sup & gt;-1, the excess part will be truncated. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of recovering the plaintext of a DLP file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) |
-| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) |
-| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100010](../errorcode-dlp.md#19100010-read-only-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
+| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) | The file is not a DLP file. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100010](../errorcode-dlp.md#19100010-read-only-dlp-file) | The DLP file is read only. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let destFile: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  destFile = fileIo.openSync('destUri').fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  dlpFile.recoverDLPFile(destFile, async (err, res) => { // Recover the plaintext of a DLP file.
+    if (err) {
+      console.error('recoverDLPFile error,', err.code, err.message);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    fileIo.closeSync(file);
+    fileIo.closeSync(destFile);
+  });
+}
+
+ExampleFunction();
+```
 
 ## replaceDLPLinkFile
 
@@ -342,27 +619,62 @@ Replaces a link file. This API uses a promise to return the result. After the AP
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| linkFileName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
+  await dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link'); // Replace a link file.
+  await dlpFile.resumeFuseLink(); // Resume read/write on the link file.
+  
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
+  if (file) {
+    fileIo.closeSync(file);
+  }
+}
+
+ExampleFunction();
+```
 
 ## replaceDLPLinkFile
 
@@ -382,22 +694,60 @@ Replaces a link file. This API uses an asynchronous callback to return the resul
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| linkFileName | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of replacing a link file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
+  dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link', async (err, res) => { // Replace a link file.
+    if (err) {
+      console.error('replaceDLPLinkFile error,', err.code, err.message);
+    } else {
+      console.info('res', JSON.stringify(res));
+      await dlpFile?.resumeFuseLink(); // Resume the read and write on the link file.
+    }
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    fileIo.closeSync(file);
+  });
+}
+
+ExampleFunction();
+```
 
 ## resumeFuseLink
 
@@ -417,20 +767,54 @@ Resumes the read and write on the FUSE. This API uses a promise to return the re
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
+  await dlpFile.resumeFuseLink(); // Resume read/write on the link file.
+  
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
+  if (file) {
+    fileIo.closeSync(file);
+  }
+}
+
+ExampleFunction();
+```
 
 ## resumeFuseLink
 
@@ -450,21 +834,58 @@ Resumes the read and write on the FUSE. This API uses an asynchronous callback t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of resuming the read and write on the FUSE. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
+  dlpFile.resumeFuseLink(async (err, res) => {
+    if (err) {
+      console.error('resumeFuseLink error,', err.code, err.message);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    fileIo.closeSync(file);
+  }); // Resume read/write on the link file.
+}
+
+ExampleFunction();
+```
 
 ## stopFuseLink
 
@@ -484,20 +905,52 @@ Stops the read and write on the FUSE. This API uses a promise to return the resu
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
+  if (file) {
+    fileIo.closeSync(file);
+  }
+}
+
+ExampleFunction();
+```
 
 ## stopFuseLink
 
@@ -517,21 +970,57 @@ Stops the read and write on the FUSE. This API uses an asynchronous callback to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of stopping read and write on the FUSE. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  dlpFile.stopFuseLink(async (err, res) => {
+    if (err) {
+      console.error('stopFuseLink error,', err.code, err.message);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    fileIo.closeSync(file);
+  }); // Stop read/write on the link file.
+}
+
+ExampleFunction();
+```
 
 ## dlpProperty
 

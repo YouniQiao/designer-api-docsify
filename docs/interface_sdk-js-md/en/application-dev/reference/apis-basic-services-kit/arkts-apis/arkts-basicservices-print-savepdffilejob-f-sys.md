@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import print from '@kit.BasicServicesKit';
 ```
 
 ## savePdfFileJob
@@ -26,22 +26,22 @@ Save the pdf file for a print job.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| jobId | string | Yes |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| jobId | string | Yes | Indicates the print job ID. The print job ID to which the file to be saved belongs. |
+| fd | number | Yes | Indicates the fd. Fd of the file to be saved. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | the promise returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [13100006](../errorcode-print.md#13100006-invalid-print-job) |
-| 13100007 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [13100006](../errorcode-print.md#13100006-invalid-print-job) | Invalid job ID. |
+| 13100007 | Save file failed. |

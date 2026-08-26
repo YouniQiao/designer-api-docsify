@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## getDownloadInfo
@@ -26,18 +26,18 @@ function getDownloadInfo(url: string): DownloadInfo | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| url | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| url | string | 是 | 待查询的url，最大长度为8192字节。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| DownloadInfo \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| DownloadInfo \| undefined | 返回对应url的下载信息，url未记录时返回undefined。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |

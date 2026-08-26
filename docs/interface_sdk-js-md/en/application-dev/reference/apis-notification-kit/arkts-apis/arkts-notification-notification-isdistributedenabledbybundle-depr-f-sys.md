@@ -3,6 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## isDistributedEnabledByBundle
@@ -27,10 +30,30 @@ Obtains whether an application supports distributed notifications based on the b
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | Application bundle. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let isDistributedEnabledByBundleCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("isDistributedEnabledByBundle failed " + JSON.stringify(err));
+  } else {
+    console.info("isDistributedEnabledByBundle success" + JSON.stringify(data));
+  }
+};
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+
+Notification.isDistributedEnabledByBundle(bundle, isDistributedEnabledByBundleCallback);
+```
 
 
 ## isDistributedEnabledByBundle
@@ -55,12 +78,28 @@ Checks whether a specified application supports distributed notifications. This 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | Application bundle. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+
+Notification.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
+  console.info("isDistributedEnabledByBundle success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isDistributedEnabledByBundle failed, code is ${err}`);
+});
+```

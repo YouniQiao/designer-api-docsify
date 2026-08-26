@@ -37,3 +37,18 @@ Application recovery scenario.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>) {
+    if (reason === AbilityConstant.StateType.CONTINUATION) {
+      console.info('Save the ability data when the ability continuation.');
+    }
+    return AbilityConstant.OnSaveResult.ALL_AGREE;
+  }
+}
+```

@@ -9,6 +9,9 @@ HttpAuthHandler是Web组件用于处理HTTP认证请求的处理类。当服务�
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## cancel
@@ -24,6 +27,29 @@ cancel(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+**示例**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onDataResubmitted((event) => {
+          console.info('onDataResubmitted');
+          event.handler.cancel();
+        })
+    }
+  }
+}
+```
 
 ## confirm
 
@@ -41,16 +67,16 @@ confirm(userName: string, password: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| userName | string | 是 |
-| password | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| userName | string | 是 | HTTP认证用户名，需为非空字符串。 |
+| password | string | 是 | HTTP认证密码，需为非空字符串。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 认证成功时返回true，失败返回false。 |
 
 ## constructor
 
@@ -82,6 +108,6 @@ isHttpAuthInfoSaved(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 存储的凭据适用时返回true，其他返回false。 |

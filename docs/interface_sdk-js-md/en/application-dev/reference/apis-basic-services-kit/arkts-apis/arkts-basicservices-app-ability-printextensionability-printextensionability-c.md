@@ -9,7 +9,7 @@ class of print extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { PrintExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import PrintExtensionAbility from '@kit.BasicServicesKit';
 ```
 
 ## onCancelPrintJob
@@ -28,15 +28,28 @@ Called once to remove the print job has been started.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| jobInfo | print.PrintJob | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| jobInfo | print.PrintJob | Yes | Indicates the information of print job. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 23 |
+
+**Examples**
+
+```TypeScript
+import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onCancelPrintJob(jobInfo: print.PrintJob): void {
+        console.info('onCancelPrintJob, jobId is: ' + jobInfo.jobId);
+        // ...
+    }
+}
+```
 
 ## onConnectPrinter
 
@@ -54,9 +67,22 @@ Called once to connect to the specific printer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| printerId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| printerId | number | Yes | connect the printerId. |
+
+**Examples**
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onConnectPrinter(printerId: number): void {
+        console.info('onConnectPrinter enter');
+        // ...
+    }
+}
+```
 
 ## onCreate
 
@@ -74,9 +100,23 @@ Called once to initialize the extensionAbility.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | call print page want params. |
+
+**Examples**
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onCreate(want: Want): void {
+        console.info('onCreate');
+        // ...
+    }
+}
+```
 
 ## onDestroy
 
@@ -91,6 +131,18 @@ Called once to finalize the extensionAbility.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
+
+**Examples**
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onDestroy(): void {
+        console.info('onDestroy');
+    }
+}
+```
 
 ## onDisconnectPrinter
 
@@ -108,9 +160,22 @@ Called once to disconnect to the specific printer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| printerId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| printerId | number | Yes | connect the printerId. |
+
+**Examples**
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onDisconnectPrinter(printerId: number): void {
+        console.info('onDisconnectPrinter enter');
+        // ...
+    }
+}
+```
 
 ## onRequestPrinterCapability
 
@@ -128,21 +193,40 @@ Called once to request the printer's capabilities.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| printerId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| printerId | number | Yes | Indicates the information of printer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| print.PrinterCapability |
+| Type | Description |
+| --- | --- |
+| print.PrinterCapability | printer capability. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 23 |
+
+**Examples**
+
+```TypeScript
+import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onRequestPrinterCapability(printerId: number): print.PrinterCapability {
+        console.info('onRequestPrinterCapability enter');
+        // ...
+        let tmp : print.PrinterCapability = {
+            colorMode : 1,
+            duplexMode : 1,
+            pageSize : []
+        };
+        return tmp;
+    }
+}
+```
 
 ## onStartDiscoverPrinter
 
@@ -157,6 +241,19 @@ Called once to start to discover the printers connected with the device.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
+
+**Examples**
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onStartDiscoverPrinter(): void {
+        console.info('onStartDiscoverPrinter enter');
+        // ...
+    }
+}
+```
 
 ## onStartPrintJob
 
@@ -174,15 +271,28 @@ Called once to start print job.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| jobInfo | print.PrintJob | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| jobInfo | print.PrintJob | Yes | Indicates the information of print job. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 23 |
+
+**Examples**
+
+```TypeScript
+import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onStartPrintJob(jobInfo: print.PrintJob): void {
+        console.info('onStartPrintJob, jobId is: ' + jobInfo.jobId);
+        // ...
+    }
+}
+```
 
 ## onStopDiscoverPrinter
 
@@ -197,6 +307,19 @@ Called once to stop discovering the printer.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
+
+**Examples**
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onStopDiscoverPrinter(): void {
+        console.info('onStopDiscoverPrinter enter');
+        // ...
+    }
+}
+```
 
 ## context
 

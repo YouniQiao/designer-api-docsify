@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { recent } from 'kits/@kit.CoreFileKit';
+import recent from '@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -28,14 +28,29 @@ function listFile(): Array<FileInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;FileInfo & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;FileInfo & gt; | Returns the next level FileInfo Object. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900002 |
-| 13900020 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900020 | Invalid argument |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let fileinfos = recent.listFile();
+for(let i = 0; i < fileinfos.length; i++){
+  console.info('uri: ' + fileinfos[i].uri);
+  console.info('srcPath: ' + fileinfos[i].srcPath);
+  console.info('fileName: ' + fileinfos[i].fileName);
+  console.info('mode: ' + fileinfos[i].mode);
+  console.info('size: ' + fileinfos[i].size);
+  console.info('mtime: ' + fileinfos[i].mtime);
+  console.info('ctime: ' + fileinfos[i].ctime);
+}
+```

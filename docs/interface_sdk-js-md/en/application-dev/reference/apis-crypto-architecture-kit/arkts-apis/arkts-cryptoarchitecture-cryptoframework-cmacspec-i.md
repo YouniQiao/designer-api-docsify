@@ -2,7 +2,8 @@
 
 Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md). It is used as an input parameter for CMAC computation.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **cipherName** specifies the symmetric cipher algorithm used by CMAC. It is mandatory.
 
 **Inheritance/Implementation:** CmacSpec extends [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)
@@ -14,7 +15,7 @@ Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## cipherName

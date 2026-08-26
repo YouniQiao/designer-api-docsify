@@ -9,7 +9,7 @@ An object that implements the setting of the frame rate and callback. It provide
 ## Modules to Import
 
 ```TypeScript
-import { displaySync } from 'kits/@kit.ArkGraphics2D';
+import displaySync from '@kit.ArkGraphics2D';
 ```
 
 ## off('frame')
@@ -26,10 +26,23 @@ Unsubscribes from change events of each frame.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'frame' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
+
+**Examples**
+
+```TypeScript
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+backDisplaySync?.on("frame", callback)
+
+// Unsubscribe from the event.
+backDisplaySync?.off("frame", callback)
+```
 
 ## on('frame')
 
@@ -45,10 +58,21 @@ Subscribes to change events of each frame.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'frame' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
+
+**Examples**
+
+```TypeScript
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+// Subscribe to the event.
+backDisplaySync?.on("frame", callback)
+```
 
 ## setExpectedFrameRateRange
 
@@ -64,15 +88,28 @@ Sets the expected frame rate range.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](../../apis-arkui/arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rateRange | [ExpectedFrameRateRange](../../apis-arkui/arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes | Expected frame rate range. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. or check if ExpectedFrameRateRange is valid. |
+
+**Examples**
+
+```TypeScript
+let range : ExpectedFrameRateRange = {
+  expected: 10,
+  min:0,
+  max:120
+};
+
+// Set the expected frame rate range.
+backDisplaySync?.setExpectedFrameRateRange(range)
+```
 
 ## start
 
@@ -86,6 +123,53 @@ Starts callback for each frame.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+let range : ExpectedFrameRateRange = {
+  expected: 10,
+  min:0,
+  max:120
+};
+
+backDisplaySync?.setExpectedFrameRateRange(range)
+
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+backDisplaySync?.on("frame", callback)
+
+// Start callback for each frame.
+backDisplaySync?.start()
+```
+
+```TypeScript
+import { displaySync } from '@kit.ArkGraphics2D';
+import { UIContext } from '@kit.ArkUI';
+
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  // Create a DisplaySync instance.
+  backDisplaySync: displaySync.DisplaySync = displaySync.create();
+
+  aboutToAppear() {
+    // Obtain a UIContext instance.
+    let uiContext: UIContext = this.getUIContext();
+    // Call start() in the current UI context.
+    uiContext?.runScopedTask(() => {
+      this.backDisplaySync?.start();
+    })
+  }
+
+  build() {
+    // ...
+  }
+}
+```
+
 ## stop
 
 ```TypeScript
@@ -97,3 +181,28 @@ Stops callback for each frame.
 **Since:** 11
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+let range : ExpectedFrameRateRange = {
+  expected: 10,
+  min:0,
+  max:120
+};
+
+backDisplaySync?.setExpectedFrameRateRange(range)
+
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+backDisplaySync?.on("frame", callback)
+
+backDisplaySync?.start()
+
+// ...
+
+// Stop callback for each frame.
+backDisplaySync?.stop()
+```

@@ -10,8 +10,8 @@ Represents the extension information type. The specific type of the parameter de
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| int |
-| string |
-| boolean |
+| Type | Description |
+| --- | --- |
+| int | Number. |
+| string | String. |
+| boolean | Boolean. |

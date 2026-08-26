@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## clearMem
@@ -33,3 +33,35 @@ clearMem(): void
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
 - API版本9-11：SystemCapability.Security.CryptoFramework
+
+**示例**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+async function testGenerateAesKeyFun() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES256');
+  let key = await symKeyGenerator.generateSymKey();
+  let encodedKey = key.getEncoded();
+  console.info('key blob: '+ encodedKey.data);
+  key.clearMem();
+  encodedKey = key.getEncoded();
+  console.info('key blob: ' + encodedKey.data);
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+async function testClearMem() {
+  let eccGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+  // 使用密钥生成器随机生成非对称密钥对。
+  let keyGenPromise = eccGenerator.generateKeyPair();
+  keyGenPromise.then(keyPair => {
+    let priKey = keyPair.priKey;
+    let returnBlob = priKey.getEncodedDer('PKCS8');
+    console.info('returnBlob data: ' + returnBlob.data);
+    priKey.clearMem(); // 对于非对称私钥，clearMem()释放内部密钥结构。执行clearMem后，不支持getEncoded()。
+  });
+}
+```

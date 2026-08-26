@@ -23,14 +23,14 @@ Opens a file. This API returns the result synchronously.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| flags | number | No | Option for opening the file. You must specify one of the following options. By default, the file is opened in read-only mode.   - **0o0**: Open the file in read-only mode.   - **0o1**: Open the file in write-only mode.   - **0o2**: Open the file in read/write mode.   In addition, you can specify the following options, separated using a bitwise OR operator (\|
-| mode | number | No | Permissions on the file. You can specify multiple permissions, separated using a bitwise OR operator (\|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the file. |
+| flags | number | No | Option for opening the file. You must specify one of the following options. By default, the file is opened in read-only mode.   - **0o0**: Open the file in read-only mode.   - **0o1**: Open the file in write-only mode.   - **0o2**: Open the file in read/write mode.   In addition, you can specify the following options, separated using a bitwise OR operator (\|). By default, no additional option is specified.   - **0o100**: If the file does not exist, create it. If you use this option, you must also specify **mode**.   - **0o200**: If **0o100** is added and the file already exists, throw an exception.   - **0o1000**: If the file exists and is opened in write mode, truncate the file length to 0.   - **0o2000**: Open the file in append mode. New data will be appended to the file (added to the end of the file).   - **0o4000**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the open file and in subsequent I/Os.   - **0o200000**: If **path** does not point to a directory, throw an exception.   - **0o400000**: If **path** points to a symbolic link, throw an exception.   - **0o4010000**: Open the file in synchronous I/O mode. |
+| mode | number | No | Permissions on the file. You can specify multiple permissions, separated using a bitwise OR operator (\|). The default value is **0o660**.   - **0o660**: The owner and user group have the read and write permissions.   - **0o640**: The owner has the read and write permissions, and the user group has the read permission.   - **0o700**: The owner has the read, write, and execute permissions.   - **0o400**: The owner has the read permission.   - **0o200**: The owner has the write permission.   - **0o100**: The owner has the execute permission.   - **0o070**: The user group has the read, write, and execute permissions.   - **0o040**: The user group has the read permission.   - **0o020**: The user group has the write permission.   - **0o010**: The user group has the execute permission.   - **0o007**: Other users have the read, write, and execute permissions.   - **0o004**: Other users have the read permission.   - **0o002**: Other users have the write permission.   - **0o001**: Other users have the execute permission.   The file permissions on newly created files are affected by umask, which is set as the process starts. Currently, the modification of umask is not open. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | File descriptor of the file opened. |

@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## getSupportedFeatures
@@ -24,15 +25,28 @@ function getSupportedFeatures(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回此设备支持的特性。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [2401000](../errorcode-wifi.md#2401000-sta内部异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API is not allowed called by Non-system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [2401000](../errorcode-wifi.md#2401000-sta内部异常) | Operation failed. |
+
+**示例**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+try {
+    let ret = wifiManager.getSupportedFeatures();
+    console.info("supportedFeatures:" + ret);
+} catch (error) {
+    console.error("failed:" + JSON.stringify(error));
+}
+```

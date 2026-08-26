@@ -14,8 +14,8 @@ declare type SegmentButtonItemArray = Array<SegmentButtonTextItem> | Array<Segme
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| Array & lt;SegmentButtonTextItem & gt; |
-| Array & lt;SegmentButtonIconItem & gt; |
-| Array & lt;SegmentButtonIconTextItem & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;SegmentButtonTextItem & gt; | 仅文本按钮信息的数组。 |
+| Array & lt;SegmentButtonIconItem & gt; | 仅图标按钮信息的数组。 |
+| Array & lt;SegmentButtonIconTextItem & gt; | 图标+文本按钮信息的数组。 |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileShare } from 'kits/@kit.CoreFileKit';
+import fileShare from '@kit.CoreFileKit';
 ```
 
 ## activatePermission
@@ -22,22 +22,58 @@ function activatePermission(policies: Array<PolicyInfo>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| policies | Array&lt;[PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| policies | Array&lt;[PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)&gt; | 是 | 需要激活权限的URI策略信息数组。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| 13900001 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 13900001 | Operation not permitted. |
+| 13900042 | Out of memory |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function activatePermissionExample() {
+  try {
+    let uri = 'file://docs/storage/Users/username/tmp.txt';
+    let policyInfo: fileShare.PolicyInfo = {
+      uri: uri,
+      // 可以组合激活多个权限，例如读写权限可使用fileShare.OperationMode.READ_MODE | fileShare.OperationMode.WRITE_MODE
+      operationMode: fileShare.OperationMode.READ_MODE,
+    };
+    let policies: Array<fileShare.PolicyInfo> = [policyInfo];
+    fileShare.activatePermission(policies).then(() => {
+      console.info('activatePermission successfully');
+    }).catch(async (err: BusinessError<Array<fileShare.PolicyErrorResult>>) => {
+      console.error(`activatePermission failed with error message: ${err.message}, error code: ${err.code}`);
+      if (err.code === 13900001 && err.data) {
+        for (let i = 0; i < err.data.length; i++) {
+          console.error(`error code: ${JSON.stringify(err.data[i].code)}`);
+          console.error(`error URI: ${JSON.stringify(err.data[i].uri)}`);
+          console.error(`error reason: ${JSON.stringify(err.data[i].message)}`);
+          if (err.data[i].code === fileShare.PolicyErrorCode.PERMISSION_NOT_PERSISTED) {
+            await fileShare.persistPermission(policies);
+          }
+        }
+      }
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`activatePermission failed with err: ${JSON.stringify(err)}`);
+  }
+}
+```

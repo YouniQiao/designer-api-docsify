@@ -9,7 +9,7 @@ Describes pairing request parameters.
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import remoteDevice from '@kit.ConnectivityKit';
 ```
 
 ## address

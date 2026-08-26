@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCallStateSync
@@ -20,6 +19,13 @@ Obtains the call status.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CallState](arkts-telephony-call-callstate-e.md) |
+| Type | Description |
+| --- | --- |
+| [CallState](arkts-telephony-call-callstate-e.md) | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+let callState: call.CallState = call.getCallStateSync();
+console.info(`the call state is:` + callState);
+```

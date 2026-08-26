@@ -16,7 +16,7 @@ Callback function on network disconnect.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| deviceId | string | Yes |
-| state | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceId | string | Yes | Indicates the deviceId network disconnect. |
+| state | number | Yes | Indicates the state of network. |

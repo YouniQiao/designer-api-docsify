@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DividerModifier](arkts-arkui-dividermodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [DividerModifier](arkts-arkui-dividermodifier-c.md) | Defines Divider Modifier@extends DividerAttribute @implements AttributeModifier & lt;DividerAttribute & gt; |

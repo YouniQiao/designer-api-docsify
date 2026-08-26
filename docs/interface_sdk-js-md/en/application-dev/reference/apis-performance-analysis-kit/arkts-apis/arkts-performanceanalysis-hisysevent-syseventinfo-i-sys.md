@@ -11,7 +11,6 @@ Defines a system event.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## domain

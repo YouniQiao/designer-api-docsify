@@ -27,7 +27,6 @@
 ## 导入模块
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## delete
@@ -46,9 +45,35 @@ delete(callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+httpRequest.request("EXAMPLE_URL").then(data => {
+  const httpResponseCache = http.createHttpResponseCache();
+  httpResponseCache.delete((err: BusinessError) => {
+    try {
+      if (err) {
+        console.error('fail: ' + err);
+      } else {
+        console.info('success');
+      }
+    } catch (err) {
+      console.error('error: ' + err);
+    }
+  });
+  httpRequest.destroy();
+}).catch((error: BusinessError) => {
+  console.error("errcode" + JSON.stringify(error));
+});
+```
 
 ## delete
 
@@ -66,9 +91,29 @@ delete(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+httpRequest.request("EXAMPLE_URL").then(data => {
+  const httpResponseCache = http.createHttpResponseCache();
+  httpResponseCache.delete().then(() => {
+    console.info("success");
+  }).catch((err: BusinessError) => {
+    console.error("fail");
+  });
+  httpRequest.destroy();
+}).catch((error: BusinessError) => {
+  console.error("errcode" + JSON.stringify(error));
+});
+```
 
 ## flush
 
@@ -86,9 +131,34 @@ flush(callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。返回写入结果。当写入成功时，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpResponseCache = http.createHttpResponseCache();
+let httpRequest = http.createHttp();
+httpRequest.request("EXAMPLE_URL", (err: BusinessError, data: http.HttpResponse) => {
+  if (!err) {
+    httpResponseCache.flush((err: BusinessError) => {
+      if (err) {
+        console.error('flush fail');
+      }
+      console.info('flush success');
+    });
+    httpRequest.destroy();
+  } else {
+    console.error('error:' + JSON.stringify(err));
+    // 当该请求使用完毕时，开发者务必调用destroy方法释放资源，避免出现内存泄漏。
+    httpRequest.destroy();
+  }
+});
+```
 
 ## flush
 
@@ -106,6 +176,27 @@ flush(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+let httpResponseCache = http.createHttpResponseCache();
+let promise = httpRequest.request("EXAMPLE_URL");
+
+promise.then((data: http.HttpResponse) => {
+  httpResponseCache.flush().then(() => {
+    console.error('flush success');
+  }).catch((err: BusinessError) => {
+    console.error('flush fail');
+  });
+}).catch((err: Error) => {
+  console.error('error:' + JSON.stringify(err));
+});
+```

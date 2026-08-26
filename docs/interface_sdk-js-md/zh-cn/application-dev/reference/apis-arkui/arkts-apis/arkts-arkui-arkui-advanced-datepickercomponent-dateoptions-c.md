@@ -11,7 +11,7 @@ DateOptions定义日期选择器的选项。继承于[CommonOptions](arkts-arkui
 ## 导入模块
 
 ```TypeScript
-import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from '@kit.ArkUI';
 ```
 
 ## lunar
@@ -26,7 +26,8 @@ lunar?: boolean
 
 > 默认值：false
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 仅在简体中文和繁体中文语言环境下生效，其他语言环境下设置该属性无效果。
 
 **类型：** boolean

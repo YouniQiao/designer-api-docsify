@@ -38,9 +38,9 @@ Obtains or loses the focus of a component. When the component type is set to tex
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | { focus: boolean } | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | { focus: boolean } | Yes | If focus is not passed, the default value true is used. |
 
 ## showError
 
@@ -58,6 +58,6 @@ Displays the error message. This attribute is available when the component type 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | { error: string } | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | { error: string } | Yes |  |

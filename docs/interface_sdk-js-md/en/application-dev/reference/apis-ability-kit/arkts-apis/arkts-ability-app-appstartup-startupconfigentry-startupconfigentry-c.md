@@ -9,7 +9,7 @@ The module provides the capability to configure [AppStartup](../../../applicatio
 ## Modules to Import
 
 ```TypeScript
-import { StartupConfigEntry } from 'kits/@kit.AbilityKit';
+import StartupConfigEntry from '@kit.AbilityKit';
 ```
 
 ## onConfig
@@ -28,9 +28,40 @@ Called if the HAP of the AbilityStage has [defined the AppStartup configuration 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) |
+| Type | Description |
+| --- | --- |
+| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | AppStartup configuration. |
+
+**Examples**
+
+```TypeScript
+import { StartupConfig, StartupConfigEntry, StartupListener } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class MyStartupConfigEntry extends StartupConfigEntry {
+  onConfig() {
+    hilog.info(0x0000, 'testTag', `onConfig`);
+    let onCompletedCallback = (error: BusinessError<void>) => {
+      hilog.info(0x0000, 'testTag', `onCompletedCallback`);
+      if (error) {
+        hilog.info(0x0000, 'testTag', 'onCompletedCallback: %{public}d, message: %{public}s', error.code,
+          error.message);
+      } else {
+        hilog.info(0x0000, 'testTag', `onCompletedCallback: success.`);
+      }
+    }
+    let startupListener: StartupListener = {
+      'onCompleted': onCompletedCallback
+    }
+    let config: StartupConfig = {
+      'timeoutMs': 10000,
+      'startupListener': startupListener
+    }
+    return config;
+  }
+}
+```
 
 ## onRequestCustomMatchRule
 
@@ -48,12 +79,29 @@ Called if the HAP of the AbilityStage has [defined the AppStartup configuration 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Custom matching rule, which is used to determine whether to automatically execute the task. |
+
+**Examples**
+
+```TypeScript
+import { StartupConfigEntry, Want } from '@kit.AbilityKit';
+
+export default class MyStartupConfigEntry extends StartupConfigEntry {
+  // ...
+
+  onRequestCustomMatchRule(want: Want): string {
+    if (want?.parameters?.customParam == 'param1') {
+      return 'customRule1';
+    }
+    return '';
+  }
+}
+```

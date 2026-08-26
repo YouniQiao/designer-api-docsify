@@ -11,7 +11,7 @@ In addition to the universal attributes, the following attributes are supported.
 ## Modules to Import
 
 ```TypeScript
-import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from 'kits/@kit.ArkUI';
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
 ```
 
 ## autoScale
@@ -30,15 +30,15 @@ Sets whether to enable auto-scaling for the **ArcListItem** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable auto-scaling.   **true**: Enable auto-scaling.    **false**: Disable auto-scaling.Default value: **true**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |
+| Type | Description |
+| --- | --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |
 
 ## swipeAction
 
@@ -56,12 +56,12 @@ Sets the swipe action item displayed when the **ArcListItem** component is swipe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[SwipeActionOptions](../arkts-components/arkts-arkui-swipeactionoptions-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[SwipeActionOptions](../arkts-components/arkts-arkui-swipeactionoptions-i.md)&gt; | Yes | Swipe action item displayed when the **ArcListItem** component is swiped out from the screen edge. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |
+| Type | Description |
+| --- | --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |

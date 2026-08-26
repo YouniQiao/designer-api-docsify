@@ -11,7 +11,7 @@ childprocess 对象可用于创建新的进程。
 ## 导入模块
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## close
@@ -44,9 +44,9 @@ getErrorOutput(): Promise<Uint8Array>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Uint8Array & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Uint8Array & gt; | 返回子进程的标准错误输出。 |
 
 ## getOutput
 
@@ -64,9 +64,9 @@ getOutput(): Promise<Uint8Array>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Uint8Array & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Uint8Array & gt; | 返回子进程的标准输出。 |
 
 ## kill
 
@@ -84,9 +84,25 @@ kill(signal: number | string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [signal](arkts-arkts-locks-asynclockoptions-c.md) | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| signal | number \| string | 是 | number 或 string，表示发送的信号。 |
+
+**示例**
+
+```TypeScript
+let pid = process.pid;
+let result = process.kill(28, pid);
+```
+
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// 获取当前进程pid
+let pres = process.pid;
+// 发送信号28结束当前进程
+let result = processManager.kill(28, pres);
+```
 
 ## wait
 
@@ -104,9 +120,9 @@ wait(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | 返回目标进程的退出码。 |
 
 ## exitCode
 

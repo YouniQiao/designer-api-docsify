@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import nfcController from '@kit.ConnectivityKit';
 ```
 
 ## isNfcAvailable
@@ -24,6 +24,6 @@ function isNfcAvailable(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true: 设备具备NFC能力， false: 设备不具备NFC能力。 |

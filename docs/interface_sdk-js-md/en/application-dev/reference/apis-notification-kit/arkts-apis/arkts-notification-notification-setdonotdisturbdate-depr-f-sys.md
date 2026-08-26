@@ -3,6 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## setDoNotDisturbDate
@@ -27,10 +30,32 @@ Sets the DND time. This API uses an asynchronous callback to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let setDoNotDisturbDateCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("setDoNotDisturbDate failed " + JSON.stringify(err));
+  } else {
+    console.info("setDoNotDisturbDate success");
+  }
+}
+
+let doNotDisturbDate: Notification.DoNotDisturbDate = {
+  type: Notification.DoNotDisturbType.TYPE_ONCE,
+  begin: new Date(),
+  end: new Date(2021, 11, 15, 18, 0)
+};
+
+Notification.setDoNotDisturbDate(doNotDisturbDate, setDoNotDisturbDateCallback);
+```
 
 
 ## setDoNotDisturbDate
@@ -55,15 +80,32 @@ Sets the DND time. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let doNotDisturbDate: Notification.DoNotDisturbDate = {
+    type: Notification.DoNotDisturbType.TYPE_ONCE,
+    begin: new Date(),
+    end: new Date(2021, 11, 15, 18, 0)
+};
+Notification.setDoNotDisturbDate(doNotDisturbDate).then(() => {
+  console.info("setDoNotDisturbDate success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`setDoNotDisturbDate failed, code is ${err}`);
+});
+```
 
 
 ## setDoNotDisturbDate
@@ -88,11 +130,34 @@ Sets the DND time for a specified user. This API uses an asynchronous callback t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes |
-| userId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
+| userId | number | Yes | ID of the user for whom you want to set the DND time. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let setDoNotDisturbDateCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("setDoNotDisturbDate failed " + JSON.stringify(err));
+  } else {
+    console.info("setDoNotDisturbDate success");
+  }
+}
+
+let doNotDisturbDate: Notification.DoNotDisturbDate = {
+  type: Notification.DoNotDisturbType.TYPE_ONCE,
+  begin: new Date(),
+  end: new Date(2021, 11, 15, 18, 0)
+};
+
+let userId: number = 1;
+Notification.setDoNotDisturbDate(doNotDisturbDate, userId, setDoNotDisturbDateCallback);
+```
 
 
 ## setDoNotDisturbDate
@@ -117,13 +182,33 @@ Sets the DND time for a specified user. This API uses a promise to return the re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes |
-| userId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
+| userId | number | Yes | ID of the user for whom you want to set the DND time. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let doNotDisturbDate: Notification.DoNotDisturbDate = {
+  type: Notification.DoNotDisturbType.TYPE_ONCE,
+  begin: new Date(),
+  end: new Date(2021, 11, 15, 18, 0)
+};
+
+let userId: number = 1;
+
+Notification.setDoNotDisturbDate(doNotDisturbDate, userId).then(() => {
+  console.info("setDoNotDisturbDate success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`setDoNotDisturbDate failed, code is ${err}`);
+});
+```

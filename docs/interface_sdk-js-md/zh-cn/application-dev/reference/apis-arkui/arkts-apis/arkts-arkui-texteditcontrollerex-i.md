@@ -31,9 +31,9 @@ getCaretOffset(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前光标所在位置。 |
 
 ## getPreviewText
 
@@ -53,9 +53,9 @@ getPreviewText?(): PreviewText
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PreviewText](arkts-arkui-previewtext-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PreviewText](arkts-arkui-previewtext-i.md) | 预上屏信息，包含预上屏起始位置索引和预上屏文本内容。 |
 
 ## isEditing
 
@@ -75,9 +75,9 @@ isEditing(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true为编辑态，false为非编辑态。 |
 
 ## setCaretOffset
 
@@ -97,15 +97,15 @@ setCaretOffset(offset: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 光标偏移位置，取值范围[0, 文本长度]。超出所有内容范围时，设置失败。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 光标是否设置成功。 |
 
 ## stopEditing
 

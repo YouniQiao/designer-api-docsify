@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## write
@@ -22,28 +21,52 @@ Writes events of the **AppEventInfo** type. This API uses a promise to return th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md) | Yes | Application event object. You are advised to avoid the conflict between the custom event name and the system event name constant defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md).<br>**Since:** 11 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [11100001](../errorcode-hiappevent.md#11100001-application-event-logging-disabled) |
-| [11101001](../errorcode-hiappevent.md#11101001-invalid-event-domain-name) |
-| [11101002](../errorcode-hiappevent.md#11101002-invalid-event-name) |
-| [11101003](../errorcode-hiappevent.md#11101003-invalid-number-of-event-parameters) |
-| [11101004](../errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) |
-| [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) |
-| [11101006](../errorcode-hiappevent.md#11101006-invalid-array-length-of-event-parameter-values) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [11100001](../errorcode-hiappevent.md#11100001-application-event-logging-disabled) | Function disabled. Possibly caused by the param disable in ConfigOption is true. |
+| [11101001](../errorcode-hiappevent.md#11101001-invalid-event-domain-name) | Invalid event domain. Possible causes: 1. Contain invalid characters;  2. Length is invalid. |
+| [11101002](../errorcode-hiappevent.md#11101002-invalid-event-name) | Invalid event name. Possible causes: 1. Contain invalid characters;  2. Length is invalid. |
+| [11101003](../errorcode-hiappevent.md#11101003-invalid-number-of-event-parameters) | Invalid number of event parameters. Possibly caused by the number of parameters is over 32. |
+| [11101004](../errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) | Invalid string length of the event parameter. |
+| [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) | Invalid event parameter name. Possible causes: 1. Contain invalid characters;  2. Length is invalid. |
+| [11101006](../errorcode-hiappevent.md#11101006-invalid-array-length-of-event-parameter-values) | Invalid array length of the event parameter. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let eventParams: Record<string, number | string> = {
+  "int_data": 100,
+  "str_data": "strValue",
+};
+
+// Application event logging. This API uses a promise to return the result.
+hiAppEvent.write({
+  domain: "test_domain",
+  name: "test_event",
+  eventType: hiAppEvent.EventType.FAULT,
+  params: eventParams,
+}).then(() => {
+  hilog.info(0x0000, 'hiAppEvent', `success to write event`);
+}).catch((err: BusinessError) => {
+  hilog.error(0x0000, 'hiAppEvent', `code: ${err.code}, message: ${err.message}`);
+});
+```
 
 
 ## write
@@ -62,20 +85,46 @@ Writes events of the **AppEventInfo** type. This API uses an asynchronous callba
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md) | Yes | Application event object. You are advised to avoid the conflict between the custom event name and the system event name constant defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [11100001](../errorcode-hiappevent.md#11100001-application-event-logging-disabled) |
-| [11101001](../errorcode-hiappevent.md#11101001-invalid-event-domain-name) |
-| [11101002](../errorcode-hiappevent.md#11101002-invalid-event-name) |
-| [11101003](../errorcode-hiappevent.md#11101003-invalid-number-of-event-parameters) |
-| [11101004](../errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) |
-| [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) |
-| [11101006](../errorcode-hiappevent.md#11101006-invalid-array-length-of-event-parameter-values) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [11100001](../errorcode-hiappevent.md#11100001-application-event-logging-disabled) | Function disabled. Possibly caused by the param disable in ConfigOption is true. |
+| [11101001](../errorcode-hiappevent.md#11101001-invalid-event-domain-name) | Invalid event domain. Possible causes: 1. Contain invalid characters;  2. Length is invalid. |
+| [11101002](../errorcode-hiappevent.md#11101002-invalid-event-name) | Invalid event name. Possible causes: 1. Contain invalid characters;  2. Length is invalid. |
+| [11101003](../errorcode-hiappevent.md#11101003-invalid-number-of-event-parameters) | Invalid number of event parameters. Possibly caused by the number of parameters is over 32. |
+| [11101004](../errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) | Invalid string length of the event parameter. |
+| [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) | Invalid event parameter name. Possible causes: 1. Contain invalid characters;  2. Length is invalid. |
+| [11101006](../errorcode-hiappevent.md#11101006-invalid-array-length-of-event-parameter-values) | Invalid array length of the event parameter. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let eventParams: Record<string, number | string> = {
+  "int_data": 100,
+  "str_data": "strValue",
+};
+
+// Application event logging. This API uses an asynchronous callback to return the result.
+hiAppEvent.write({
+  domain: "test_domain",
+  name: "test_event",
+  eventType: hiAppEvent.EventType.FAULT,
+  params: eventParams,
+}, (err: BusinessError) => {
+  if (err) {
+    hilog.error(0x0000, 'hiAppEvent', `code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  hilog.info(0x0000, 'hiAppEvent', `success to write event`);
+});
+```

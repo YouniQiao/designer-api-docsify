@@ -11,7 +11,8 @@ DateStyleOptions定义了日期内联型Counter的属性和事件。继承于[Co
 ## 导入模块
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUIV2';
 ```
 
 ## onDateChange
@@ -32,9 +33,9 @@ onDateChange?: (date: DateData) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| date | [DateData](arkts-arkui-arkui-advanced-counter-datedata-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| date | [DateData](arkts-arkui-arkui-advanced-counter-datedata-c.md) | 是 |  |
 
 ## day
 

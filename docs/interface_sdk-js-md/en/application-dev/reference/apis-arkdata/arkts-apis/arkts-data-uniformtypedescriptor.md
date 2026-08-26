@@ -11,38 +11,38 @@ The **uniformTypeDescriptor** module abstracts and defines uniform data types.
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
+import uniformTypeDescriptor from '@kit.ArkData';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getTypeDescriptor](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md) |
-| [getUniformDataTypeByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebyfilenameextension-f.md) |
-| [getUniformDataTypeByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebymimetype-f.md) |
-| [getUniformDataTypesByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypesbyfilenameextension-f.md) |
-| [getUniformDataTypesByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypesbymimetype-f.md) |
+| Name | Description |
+| --- | --- |
+| [getTypeDescriptor](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md) | Obtains the **TypeDescriptor** object based on the uniform data type ID. |
+| [getUniformDataTypeByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebyfilenameextension-f.md) | Obtains the uniform data type ID based on the given file name extension and data type. If there are multiple uniform data type IDs matching the conditions, the first one is returned. |
+| [getUniformDataTypeByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebymimetype-f.md) | Obtains the uniform data type ID based on the given MIME type and data type. If there are multiple uniform data type IDs matching the conditions, the first one is returned. |
+| [getUniformDataTypesByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypesbyfilenameextension-f.md) | Obtains the uniform data type IDs based on the given file name extension and data type. |
+| [getUniformDataTypesByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypesbymimetype-f.md) | Obtains the uniform data type IDs based on the given MIME type and data type. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [registerTypeDescriptors](arkts-arkdata-uniformtypedescriptor-registertypedescriptors-f-sys.md) |
-| [unregisterTypeDescriptors](arkts-arkdata-uniformtypedescriptor-unregistertypedescriptors-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [registerTypeDescriptors](arkts-arkdata-uniformtypedescriptor-registertypedescriptors-f-sys.md) | Register type descriptors into the system. |
+| [unregisterTypeDescriptors](arkts-arkdata-uniformtypedescriptor-unregistertypedescriptors-f-sys.md) | Unregister one or more type descriptors from the system by the given type IDs. |
 <!--DelEnd-->
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) |
+| Name | Description |
+| --- | --- |
+| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | Represents a class for defining a uniform data type. It provides properties and methods for describing a uniform data type and its relationship with other uniform data types. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md) |
+| Name | Description |
+| --- | --- |
+| [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md) | Enumerates the uniform data types. Some data types are related. For example, the JPEG type belongs to the IMAGE type. For more preset data types, see [Preset UTD List].The following table lists the common uniform data types. |

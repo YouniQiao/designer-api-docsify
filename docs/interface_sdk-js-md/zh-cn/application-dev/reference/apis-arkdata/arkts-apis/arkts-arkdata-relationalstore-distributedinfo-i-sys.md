@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import relationalStore from '@kit.ArkData';
 ```
 
 ## flag

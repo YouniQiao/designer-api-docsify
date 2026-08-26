@@ -9,7 +9,7 @@ Defines the data operation performed by the UDMF. It includes three optional par
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## intention

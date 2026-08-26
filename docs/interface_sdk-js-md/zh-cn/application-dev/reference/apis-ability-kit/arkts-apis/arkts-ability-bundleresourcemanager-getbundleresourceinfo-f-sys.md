@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleResourceManager } from 'kits/@kit.AbilityKit';
+import bundleResourceManager from '@kit.AbilityKit';
 ```
 
 ## getBundleResourceInfo
@@ -24,25 +24,62 @@ function getBundleResourceInfo(bundleName: string, resourceFlags?: number): Bund
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| resourceFlags | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 指定查询应用的包名。 |
+| resourceFlags | number | 否 | 指定返回的BundleResourceInfo所包含的信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) | 返回指定应用的BundleResourceInfo。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+
+**示例**
+
+```TypeScript
+import { bundleResourceManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.example.myapplication";
+let resourceFlag = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
+try {
+  let resourceInfo = bundleResourceManager.getBundleResourceInfo(bundleName, resourceFlag);
+  hilog.info(0x0000, 'testTag', 'getBundleResourceInfo successfully. Data label: %{public}s',
+    JSON.stringify(resourceInfo.label));
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleResourceManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.example.myapplication";
+let resourceFlag = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
+let appIndex = 1;
+try {
+  let resourceInfo = bundleResourceManager.getBundleResourceInfo(bundleName, resourceFlag, appIndex);
+  hilog.info(0x0000, 'testTag', 'getBundleResourceInfo successfully. Data label: %{public}s',
+    JSON.stringify(resourceInfo.label));
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed: %{public}s', message);
+}
+```
 
 
 ## getBundleResourceInfo
@@ -63,24 +100,28 @@ function getBundleResourceInfo(bundleName: string, resourceFlags?: number, appIn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| resourceFlags | number | 否 |
-| appIndex | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 指定查询应用的包名。 |
+| resourceFlags | number | 否 | 指定返回的BundleResourceInfo所包含的信息。 |
+| appIndex | number | 否 | 指定查询应用分身的ID，默认值为0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) | 返回指定应用的BundleResourceInfo。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range or not found. |
+
+**示例**
+
+参见 [getBundleResourceInfo](#getbundleresourceinfo)

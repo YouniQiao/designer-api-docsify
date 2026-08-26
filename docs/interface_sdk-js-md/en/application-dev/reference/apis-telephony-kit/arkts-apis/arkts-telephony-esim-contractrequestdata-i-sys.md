@@ -11,7 +11,6 @@ Information required for encryption.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## nonce

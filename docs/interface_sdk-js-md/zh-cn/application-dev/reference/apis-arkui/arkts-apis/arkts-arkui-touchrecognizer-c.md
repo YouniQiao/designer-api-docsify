@@ -45,9 +45,9 @@ getEventTargetInfo(): EventTargetInfo
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | 当前触摸识别器对应组件的信息。 |
 
 ## isHostBelongsTo
 
@@ -67,15 +67,15 @@ Check whether the current gesture binding node is a descendant of the passed-in 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uniqueId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uniqueId | number | 是 | the unique id of the component. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | the query result. |
 
 ## isHostBelongsTo
 
@@ -95,12 +95,12 @@ isHostBelongsTo(uniqueId: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uniqueId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uniqueId | number | 是 | 组件的唯一ID。可以通过[getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid)接口获取该ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 当前触摸识别器绑定节点是否为传入组件的后代节点。true表示当前绑定节点为传入组件的后代节点，false表示当前绑定节点非传入组件的后代节点。 |

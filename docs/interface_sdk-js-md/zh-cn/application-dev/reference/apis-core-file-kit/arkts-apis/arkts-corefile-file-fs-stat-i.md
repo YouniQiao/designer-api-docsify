@@ -9,9 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## isBlockDevice
@@ -28,16 +26,23 @@ isBlockDevice(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 表示文件是否是块特殊设备。true：是块特殊设备；false：不是块特殊设备。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isBLockDevice = fileIo.statSync(filePath).isBlockDevice();
+```
 
 ## isCharacterDevice
 
@@ -53,16 +58,23 @@ isCharacterDevice(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 表示文件是否是字符特殊设备。true：是字符特殊设备；false：不是字符特殊设备。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isCharacterDevice = fileIo.statSync(filePath).isCharacterDevice();
+```
 
 ## isDirectory
 
@@ -80,16 +92,23 @@ isDirectory(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 表示文件是否是目录。true：是目录；false：不是目录。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let dirPath = pathDir + "/test";
+let isDirectory = fileIo.statSync(dirPath).isDirectory();
+```
 
 ## isFIFO
 
@@ -105,16 +124,23 @@ isFIFO(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 表示文件是否是 FIFO。true：是FIFO；false：不是FIFO。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isFIFO = fileIo.statSync(filePath).isFIFO();
+```
 
 ## isFile
 
@@ -132,16 +158,23 @@ isFile(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 表示文件是否是普通文件。true：是普通文件；false：不是普通文件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isFile = fileIo.statSync(filePath).isFile();
+```
 
 ## isSocket
 
@@ -157,16 +190,23 @@ isSocket(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 表示文件是否是套接字。true：是套接字；false：不是套接字。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isSocket = fileIo.statSync(filePath).isSocket();
+```
 
 ## isSymbolicLink
 
@@ -182,16 +222,23 @@ isSymbolicLink(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 表示文件是否是符号链接。true：是符号链接；false：不是符号链接。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isSymbolicLink = fileIo.statSync(filePath).isSymbolicLink();
+```
 
 ## atime
 

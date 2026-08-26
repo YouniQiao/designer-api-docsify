@@ -13,31 +13,32 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
+import systemTime from '@kit.BasicServicesKit';
+import systemTimer from '@kit.BasicServicesKitr';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [getCurrentTime(系统时间、时区)](arkts-basicservices-systemtime-getcurrenttime-f.md) |
-| [getCurrentTime(系统时间、时区)](arkts-basicservices-systemtime-getcurrenttime-f.md) |
-| [getCurrentTime(系统时间、时区)](arkts-basicservices-systemtime-getcurrenttime-f.md) |
-| [getDate(系统时间、时区)](arkts-basicservices-systemtime-getdate-f.md) |
-| [getDate(系统时间、时区)](arkts-basicservices-systemtime-getdate-f.md) |
-| [getRealActiveTime(系统时间、时区)](arkts-basicservices-systemtime-getrealactivetime-f.md) |
-| [getRealActiveTime(系统时间、时区)](arkts-basicservices-systemtime-getrealactivetime-f.md) |
-| [getRealActiveTime(系统时间、时区)](arkts-basicservices-systemtime-getrealactivetime-f.md) |
-| [getRealTime(系统时间、时区)](arkts-basicservices-systemtime-getrealtime-f.md) |
-| [getRealTime(系统时间、时区)](arkts-basicservices-systemtime-getrealtime-f.md) |
-| [getRealTime(系统时间、时区)](arkts-basicservices-systemtime-getrealtime-f.md) |
-| [getTimezone(系统时间、时区)](arkts-basicservices-systemtime-gettimezone-f.md) |
-| [getTimezone(系统时间、时区)](arkts-basicservices-systemtime-gettimezone-f.md) |
-| [setDate(系统时间、时区)](arkts-basicservices-systemtime-setdate-f.md) |
-| [setDate(系统时间、时区)](arkts-basicservices-systemtime-setdate-f.md) |
-| [setTime(系统时间、时区)](arkts-basicservices-systemtime-settime-f.md) |
-| [setTime(系统时间、时区)](arkts-basicservices-systemtime-settime-f.md) |
-| [setTimezone(系统时间、时区)](arkts-basicservices-systemtime-settimezone-f.md) |
-| [setTimezone(系统时间、时区)](arkts-basicservices-systemtime-settimezone-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getCurrentTime(系统时间、时区)](arkts-basicservices-systemtime-getcurrenttime-f.md) | 获取自Unix纪元以来经过的时间，使用callback异步回调。 |
+| [getCurrentTime(系统时间、时区)](arkts-basicservices-systemtime-getcurrenttime-f.md) | 获取自Unix纪元以来经过的时间，使用callback异步回调。 |
+| [getCurrentTime(系统时间、时区)](arkts-basicservices-systemtime-getcurrenttime-f.md) | 获取自Unix纪元以来经过的时间，使用Promise异步回调。 |
+| [getDate(系统时间、时区)](arkts-basicservices-systemtime-getdate-f.md) | 获取当前系统日期，使用callback异步回调。 |
+| [getDate(系统时间、时区)](arkts-basicservices-systemtime-getdate-f.md) | 获取当前系统日期，使用Promise异步回调。 |
+| [getRealActiveTime(系统时间、时区)](arkts-basicservices-systemtime-getrealactivetime-f.md) | 获取自系统启动以来经过的时间，不包括深度睡眠时间，使用callback异步回调。 |
+| [getRealActiveTime(系统时间、时区)](arkts-basicservices-systemtime-getrealactivetime-f.md) | 获取自系统启动以来经过的时间，不包括深度睡眠时间，使用callback异步回调。 |
+| [getRealActiveTime(系统时间、时区)](arkts-basicservices-systemtime-getrealactivetime-f.md) | 获取自系统启动以来经过的时间，不包括深度睡眠时间，使用Promise异步回调。 |
+| [getRealTime(系统时间、时区)](arkts-basicservices-systemtime-getrealtime-f.md) | 获取自系统启动以来经过的时间，包括深度睡眠时间，使用callback异步回调。 |
+| [getRealTime(系统时间、时区)](arkts-basicservices-systemtime-getrealtime-f.md) | 获取自系统启动以来经过的时间，包括深度睡眠时间，使用callback异步回调。 |
+| [getRealTime(系统时间、时区)](arkts-basicservices-systemtime-getrealtime-f.md) | 获取自系统启动以来经过的时间，包括深度睡眠时间，使用Promise异步回调。 |
+| [getTimezone(系统时间、时区)](arkts-basicservices-systemtime-gettimezone-f.md) | 获取系统时区，使用callback异步回调。 |
+| [getTimezone(系统时间、时区)](arkts-basicservices-systemtime-gettimezone-f.md) | 获取系统时区，使用Promise异步回调。 |
+| [setDate(系统时间、时区)](arkts-basicservices-systemtime-setdate-f.md) | 设置系统日期，使用callback异步回调。 |
+| [setDate(系统时间、时区)](arkts-basicservices-systemtime-setdate-f.md) | 设置系统日期，使用Promise异步回调。 |
+| [setTime(系统时间、时区)](arkts-basicservices-systemtime-settime-f.md) | 设置系统时间，使用callback异步回调。 |
+| [setTime(系统时间、时区)](arkts-basicservices-systemtime-settime-f.md) | 设置系统时间，使用Promise异步回调。 |
+| [setTimezone(系统时间、时区)](arkts-basicservices-systemtime-settimezone-f.md) | 设置系统时区，使用callback异步回调。 |
+| [setTimezone(系统时间、时区)](arkts-basicservices-systemtime-settimezone-f.md) | 使用Promise异步回调设置系统时区。 |

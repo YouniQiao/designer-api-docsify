@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import tag from '@kit.ConnectivityKit';
 ```
 
 ## makeMimeRecord
@@ -22,19 +22,19 @@ function makeMimeRecord(mimeType: string, mimeData: number[]): NdefRecord
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mimeType | string | 是 |
-| mimeData | number[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mimeType | string | 是 | 符合RFC规则的MIME类型，比如"text/plain"或"image/jpeg"。 |
+| mimeData | number[] | 是 | MIME数据内容，每个number十六进制表示，范围是0x00~0xFF。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) | NDEF标签的Record，详见NDEF技术规范《NFCForum-TS-NDEF_1.0》。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |

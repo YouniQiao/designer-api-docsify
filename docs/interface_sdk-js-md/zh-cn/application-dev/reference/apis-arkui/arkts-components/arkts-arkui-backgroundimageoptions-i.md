@@ -2,7 +2,8 @@
 
 定义背景图选项。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 背景图片的同步加载可能会带来潜在性能问题，详情可见Image中说明。
 @interface BackgroundImageOptions
 

@@ -9,7 +9,6 @@ Describes a historical page record.@interface HistoryItem [since 9 - 11]
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## historyRawUrl

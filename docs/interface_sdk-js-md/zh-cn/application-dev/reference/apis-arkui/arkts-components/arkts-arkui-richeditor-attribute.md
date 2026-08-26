@@ -31,9 +31,9 @@ aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md), boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md), boolean&gt; | 是 | [RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md) 为准备删除的内容所在的文本或者图片Span信息。 true表示组件执行删除操作，false表示组件不执行删除操作。 输入法删除内容前的回调，英文预上屏点击候选词时会执行该回调。<br>**起始版本：** 12 |
 
 ## aboutToIMEInput
 
@@ -53,9 +53,9 @@ aboutToIMEInput(callback: Callback<RichEditorInsertValue, boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md), boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md), boolean&gt; | 是 | [RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md) 为输入法将要输入内容信息。 true表示组件执行添加内容操作，false表示组件不执行添加内容操作。 输入法输入内容前的回调。<br>**起始版本：** 12 |
 
 ## barState
 
@@ -65,7 +65,8 @@ barState(state: BarState)
 
 RichEditor滚动条的显示模式。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 13
@@ -78,9 +79,9 @@ RichEditor滚动条的显示模式。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | RichEditor滚动条的显示模式。 默认值：BarState.Auto |
 
 ## bindSelectionMenu
 
@@ -101,12 +102,12 @@ bindSelectionMenu(spanType: RichEditorSpanType, content: CustomBuilder, response
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| spanType | [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | 是 |
-| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 |
-| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | 是 |
-| options | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| spanType | [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | 是 | 菜单的类型。 默认值：RichEditorSpanType.TEXT |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 菜单的内容。 |
+| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | 是 | 菜单的响应类型。 默认值： ResponseType.LongPress<br>**起始版本：** 11 |
+| options | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | 否 | 菜单的选项。 当需要自定义菜单弹出/关闭回调、指定菜单类型等信息时传入此参数；不传入时，使用默认选择菜单选项配置。 |
 
 ## caretColor
 
@@ -126,9 +127,9 @@ caretColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 输入框光标、手柄颜色。默认值：'#007DFF' |
 
 ## compressLeadingPunctuation
 
@@ -138,8 +139,10 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 设置是否开启行首标点符号压缩。适用于行首标点符号需要与正文内容对齐的场景。
 
-> **说明：**&gt;
-> 行首标点符号默认不压缩。&gt;
+> **说明：**
+> 
+> 行首标点符号默认不压缩。
+> 
 > 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md)的行首压缩的标点范围。
 
 **起始版本：** 23
@@ -152,9 +155,9 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启行首标点符号压缩。 true表示开启行首标点符号压缩，false表示不开启行首标点符号压缩。 默认值：false。 设置为undefined或null时，取默认值。 |
 
 ## copyOptions
 
@@ -178,9 +181,9 @@ copyOptions不为CopyOptions.None时，长按组件内容，会弹出文本选�
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [CopyOptions](#copyoptions) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [CopyOptions](#copyoptions) | 是 | 文本内容是否支持复制和粘贴。 默认值：CopyOptions.LocalDevice |
 
 ## customKeyboard
 
@@ -191,7 +194,8 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
 
 设置自定义键盘。当设置自定义键盘时，输入框激活后不会打开系统输入法，而是加载指定的自定义组件。自定义键盘的高度可以通过自定义组件根节点的height属性设置，宽度不可设置，使用系统默认键盘宽度。自定义键盘无法获取焦点，但是会拦截手势事件。默认在输入控件失去焦点时，关闭自定义键盘。自定义键盘支持接续功能，使用 [setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)接口，可以设置自定 义键盘之间切换时是否接续。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 23开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 10
@@ -204,10 +208,10 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| ComponentContent \| undefined | 是 |
-| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) \| undefined | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| ComponentContent \| undefined | 是 | 自定义键盘。 传入undefined时默认使用系统键 盘。<br>**起始版本：** 23 |
+| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) \| undefined | 否 | 设置自定义键盘是否支持避让功能。 传入undefined或省略时默认不支持避让。<br>**起始版本：** 23 |
 
 ## dataDetectorConfig
 
@@ -229,9 +233,9 @@ dataDetectorConfig(config: TextDataDetectorConfig)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [TextDataDetectorConfig](../arkts-apis/arkts-arkui-textdatadetectorconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [TextDataDetectorConfig](../arkts-apis/arkts-arkui-textdatadetectorconfig-i.md) | 是 | 文本识别配置。 |
 
 ## editMenuOptions
 
@@ -241,7 +245,8 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 设置系统默认菜单的扩展项，允许配置扩展项的文本内容、图标和回调方法。与[bindSelectionMenu](#bindselectionmenu)的区别：editMenuOptions在系统默认菜单风格基础上添加扩展项，触发条件不变，适合仅需扩展 菜单项的场景；bindSelectionMenu完全自定义菜单风格和触发条件，适合需要深度自定义菜单的场景。调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -254,9 +259,9 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | 是 | 扩展菜单选项。 |
 
 ## enableAutoSpacing
 
@@ -276,9 +281,9 @@ enableAutoSpacing(enable: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启中文与西文的自动间距。 true表示开启自动间距，false表示不开启自动间距。 默认值：false |
 
 ## enableDataDetector
 
@@ -298,9 +303,9 @@ enableDataDetector(enable: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 是否启用文本识别。 true表示启用文本特殊实体识别，false表示不启用文本特殊实体识别。 默认值： false |
 
 ## enableHapticFeedback
 
@@ -310,7 +315,8 @@ enableHapticFeedback(isEnabled: boolean)
 
 设置RichEditor是否支持触感反馈。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 13
@@ -323,9 +329,9 @@ enableHapticFeedback(isEnabled: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isEnabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isEnabled | boolean | 是 | 控制触感反馈的开关。 默认值：true。true表示开启触感反馈，false表示关闭触感反馈。    **说明：** 触感反馈需应用具备ohos.permission.VIBRATE权限，用户已启用触感反馈，且系统硬件支持时才会生效。 不同设备品类对振动硬件的支持情况存在差异，无振动硬件的设备品类上触感反馈功能不可用。 |
 
 ## enableKeyboardOnFocus
 
@@ -335,7 +341,8 @@ enableKeyboardOnFocus(isEnabled: boolean)
 
 设置RichEditor通过点击以外的方式获焦时，是否主动拉起软键盘。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -348,9 +355,9 @@ enableKeyboardOnFocus(isEnabled: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isEnabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isEnabled | boolean | 是 | 通过点击以外的方式获焦时，是否主动拉起软键盘。true表示主动拉起软键盘，false表示不主动拉起软键盘。默认值： true |
 
 ## enablePreviewText
 
@@ -360,7 +367,8 @@ enablePreviewText(enable: boolean)
 
 设置是否开启预上屏功能。开启后，组件内显示输入法输入过程中的拼音、笔画字符。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -373,9 +381,9 @@ enablePreviewText(enable: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 是否启用预上屏功能。 true表示启用，false表示不启用。 默认值： true |
 
 ## enableSelectedDataDetector
 
@@ -395,9 +403,9 @@ enableSelectedDataDetector(enable: boolean | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | boolean \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean \| undefined | 是 | 是否启用文本选择AI菜单功能，true表示启用，false表示不启用。 默认值：true。 设置为undefined或null时，取默认值。 |
 
 ## enterKeyType
 
@@ -417,9 +425,9 @@ enterKeyType(value: EnterKeyType)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [EnterKeyType](#enterkeytype) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [EnterKeyType](#enterkeytype) | 是 | 软键盘输入法回车键类型。 默认为EnterKeyType.NEW_LINE。 各枚举值适用场景请参考EnterKeyType枚举说明。 |
 
 ## fallbackLineSpacing
 
@@ -439,9 +447,9 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 行高是否基于文字实际高度自适应。 true表示行高基于文字实际高度自适应，false表示行高不基于文字实际高度自适应。 默认值：false。 设置为undefined或null时，取默认值。 |
 
 ## horizontalScrolling
 
@@ -461,9 +469,9 @@ horizontalScrolling(enabled: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否启用水平滚动。 true表示启用水平滚动，false表示禁用水平滚动，文本将自动换行。 默认值：false。设置为undefined或null时，不启用水平滚动。 |
 
 ## includeFontPadding
 
@@ -483,9 +491,9 @@ includeFontPadding(include: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否在首行和尾行增加间距以避免文字截断。 true表示在首行和尾行增加间距，false表示在首行和尾行不增加间距。 默认值：false。 设置为undefined或null时，取默认值。 |
 
 ## keyboardAppearance
 
@@ -505,9 +513,9 @@ keyboardAppearance(appearance: Optional<KeyboardAppearance>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | 是 | 键盘外观。 默认值：KeyboardAppearance.NONE_IMMERSIVE。 各枚举值适用场景请参考KeyboardAppearance枚举说明。 设置为undefined或null时，取默认值。 |
 
 ## maxLength
 
@@ -527,9 +535,9 @@ maxLength(maxLength: Optional<number>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [maxLength](#maxlength) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| maxLength | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 内容的最大输入长度。当内容（包含文本、图片、Symbol和Builder）的总长度达到此值时，将无法继续添加内容。 默认值：Infinity，可以无限输入。    **说明：** 取值范围：[0, +∞)。当不设置该属性或设置为undefined或负数时，取默认值Infinity；设置为0时，无法输入内容；设置小数时，取整数部分。 |
 
 ## maxLines
 
@@ -549,9 +557,9 @@ maxLines(maxLines: Optional<number>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [maxLines](#maxlines) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| maxLines | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 设置富文本可显示的最大行数。maxLines为可显示行数，当设置maxLines时，超出内容可滚动显示。同时设置组件高度和最大行数，组件高度优先生效。 取值范围：(0, UINT32_MAX]。 默认值：UINT32_MAX，可以无限输入。 设置为0、负数、undefined或null时，取默认值。 |
 
 ## onCopy
 
@@ -571,9 +579,9 @@ onCopy(callback: Callback<CopyEvent>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[CopyEvent](arkts-arkui-copyevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[CopyEvent](arkts-arkui-copyevent-i.md)&gt; | 是 | 定义用户复制事件。 |
 
 ## onCut
 
@@ -593,9 +601,9 @@ onCut(callback: Callback<CutEvent>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[CutEvent](arkts-arkui-cutevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[CutEvent](arkts-arkui-cutevent-i.md)&gt; | 是 | 定义用户剪切事件。 |
 
 ## onDeleteComplete
 
@@ -615,9 +623,9 @@ onDeleteComplete(callback: Callback<void>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback & lt;void & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback & lt;void & gt; | 是 | 订阅输入法完成删除内容的回调。<br>**起始版本：** 12 |
 
 ## onDidChange
 
@@ -627,7 +635,8 @@ onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 
 在组件执行增删操作后，触发回调。如果文本实际未发生增删，则不触发该回调。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -640,9 +649,9 @@ onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md) | 是 | The triggered function after content changed. |
 
 ## onDidIMEInput
 
@@ -652,7 +661,8 @@ onDidIMEInput(callback: Callback<TextRange>)
 
 输入法输入完成后，触发回调。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -665,9 +675,9 @@ onDidIMEInput(callback: Callback<TextRange>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[TextRange](../arkts-apis/arkts-arkui-textrange-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[TextRange](../arkts-apis/arkts-arkui-textrange-i.md)&gt; | 是 | TextRange为输入法本次输入内容的范围。输入法完成输入时的回调。 |
 
 ## onEditingChange
 
@@ -687,9 +697,9 @@ onEditingChange(callback: Callback<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback & lt;boolean & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback & lt;boolean & gt; | 是 | 编辑状态变化时触发的回调。 true表示编辑态，false表示非编辑态。 |
 
 ## onIMEInputComplete
 
@@ -709,9 +719,9 @@ onIMEInputComplete(callback: Callback<RichEditorTextSpanResult>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | 是 | [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) 为输入法完成输入后的文本Span信息。输入法完成输入后的回调。<br>**起始版本：** 12 |
 
 ## onPaste
 
@@ -731,9 +741,9 @@ onPaste(callback: PasteEventCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [PasteEventCallback](arkts-arkui-pasteeventcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [PasteEventCallback](arkts-arkui-pasteeventcallback-t.md) | 是 | 订阅粘贴时的回调。<br>**起始版本：** 12 |
 
 ## onReady
 
@@ -753,9 +763,9 @@ onReady(callback: Callback<void>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback & lt;void & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback & lt;void & gt; | 是 | 订阅富文本组件初始化完成的回调。<br>**起始版本：** 12 |
 
 ## onSelect
 
@@ -775,9 +785,9 @@ onSelect(callback: Callback<RichEditorSelection>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[RichEditorSelection](arkts-arkui-richeditorselection-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[RichEditorSelection](arkts-arkui-richeditorselection-i.md)&gt; | 是 | [RichEditorSelection](arkts-arkui-richeditorselection-i.md)为选中的所有span信息。选择时触发的回调。<br>**起始版本：** 12 |
 
 ## onSelectionChange
 
@@ -797,9 +807,9 @@ onSelectionChange(callback: Callback<RichEditorRange>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[RichEditorRange](arkts-arkui-richeditorrange-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[RichEditorRange](arkts-arkui-richeditorrange-i.md)&gt; | 是 | [RichEditorRange](arkts-arkui-richeditorrange-i.md)为所有内容的选择区域起始和终止位置。订阅文本 选择区域发生变化或编辑状态下光标位置发生变化时触发的回调。 |
 
 ## onSubmit
 
@@ -819,9 +829,9 @@ onSubmit(callback: SubmitCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [SubmitCallback](arkts-arkui-submitcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [SubmitCallback](arkts-arkui-submitcallback-t.md) | 是 | 按下软键盘回车键时的回调，用于接收回车键类型和提交事件信息。 |
 
 ## onWillAttachIME
 
@@ -841,9 +851,9 @@ onWillAttachIME(callback: Callback<IMEClient> | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)&gt; \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)&gt; \| undefined | 是 | 在组件绑定输入法前触发的回调。 值为undefined时清除已绑定的回调事件。 |
 
 ## onWillChange
 
@@ -853,7 +863,8 @@ onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAtt
 
 在组件执行增删操作前，触发回调。与[onDidChange](#ondidchange)形成will/did时序模式：onWillChange在增删操作前触发， onDidChange在增删操作后触发；onWillChange返回false时，组件不执行增删操作，onDidChange不会触发。两者可同时使用。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -866,9 +877,9 @@ onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAtt
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback&lt;[RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md), boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md), boolean&gt; | 是 | The triggered function before text content is about to change. |
 
 ## orphanCharOptimization
 
@@ -886,9 +897,9 @@ orphanCharOptimization(enabled: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 段落最后一行是否启用孤字优化。 true表示启用孤字优化，false表示不启用孤字优化。 默认值：false。设置为undefined或null时，不启用孤字优化。 |
 
 ## placeholder
 
@@ -898,7 +909,8 @@ placeholder(value: ResourceStr, style?: PlaceholderStyle)
 
 设置无输入时的提示文本。设置后，组件无内容时显示提示文本，用户开始输入内容后提示文本自动消失。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -911,10 +923,10 @@ placeholder(value: ResourceStr, style?: PlaceholderStyle)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
-| style | [PlaceholderStyle](arkts-arkui-placeholderstyle-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 无输入时的提示文本。 |
+| style | [PlaceholderStyle](arkts-arkui-placeholderstyle-i.md) | 否 | 提示文本的字体样式。 当需要自定义placeholder的颜色、字体大小等样式时传入此参数；缺省时，默认跟随主题样式。 |
 
 ## punctuationOverflow
 
@@ -934,9 +946,9 @@ punctuationOverflow(enabled: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否启用行尾标点符号悬挂。 true表示启用行尾标点符号悬挂，false表示不启用行尾标点符号悬挂。 默认值：false。设置为undefined或null时，不启用标点符号悬挂。 |
 
 ## scrollBarColor
 
@@ -956,9 +968,9 @@ scrollBarColor(color: Optional<ColorMetrics>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 | 设置组件滚动条颜色。默认值：'#66182431'，显示为灰色。   **说明：** 设置异常值时按默认值处理。 |
 
 ## selectedBackgroundColor
 
@@ -978,9 +990,9 @@ selectedBackgroundColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 文本选中的底板颜色。默认为20%不透明度。 |
 
 ## selectedDragPreviewStyle
 
@@ -1000,9 +1012,9 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | 是 | 拖动预览样式。如果设置为undefined，样式将被重置。 |
 
 ## singleLine
 
@@ -1012,7 +1024,8 @@ singleLine(isEnable: boolean | undefined)
 
 设置是否启用单行模式。未通过该接口设置时，默认不启用单行模式。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 单行模式下换行符会显示为空格。
 
 **起始版本：** 23
@@ -1025,9 +1038,9 @@ singleLine(isEnable: boolean | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isEnable | boolean \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isEnable | boolean \| undefined | 是 | 是否启用单行模式。 true表示启用单行模式，false表示不启用单行模式。 设置为undefined或null时，按照false处理，不启用单行模式。 |
 
 ## stopBackPress
 
@@ -1047,9 +1060,9 @@ stopBackPress(isStopped: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isStopped | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isStopped | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否阻止返回键。true表示阻止，false表示不阻止。默认值：true。异常值取默认值。 |
 
 ## undoStyle
 
@@ -1069,6 +1082,6 @@ undoStyle(style: Optional<UndoStyle>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[UndoStyle](arkts-arkui-undostyle-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[UndoStyle](arkts-arkui-undostyle-e.md)&gt; | 是 | 撤销还原是否保留原样式选项。 默认值：UndoStyle.CLEAR_STYLE。 设置为undefined或null时，取默认值。 |

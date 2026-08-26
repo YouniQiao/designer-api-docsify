@@ -29,9 +29,9 @@ editable(value: boolean | EditMode)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean \| [EditMode](arkts-arkui-editmode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean \| [EditMode](arkts-arkui-editmode-e.md) | 是 |  |
 
 ## onSelect
 
@@ -51,9 +51,9 @@ ListItem元素被鼠标框选的状态改变时触发回调。外层List组件�
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (isSelected: boolean) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (isSelected: boolean) = & gt; void | 是 |  |
 
 ## selectable
 
@@ -73,9 +73,9 @@ selectable(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 |  |
 
 ## selected
 
@@ -97,9 +97,9 @@ selected(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 当前ListItem选中状态。设置为true时为选中状态，设置为false时为默认状态。默认值：false   **说明：** 需要在设置多态样式前使用才能生效选 中态样式。 |
 
 ## sticky
 
@@ -109,7 +109,8 @@ sticky(value: Sticky)
 
 设置ListItem吸顶效果。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
@@ -122,9 +123,9 @@ sticky(value: Sticky)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Sticky](arkts-arkui-sticky-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Sticky](arkts-arkui-sticky-e.md) | 是 |  |
 
 ## swipeAction
 
@@ -142,6 +143,6 @@ swipeAction(value: SwipeActionOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md) | 是 | ListItem的划出组件配置，用于设置划出时显示的组件、滑动效果和滑动状态回调等。 |

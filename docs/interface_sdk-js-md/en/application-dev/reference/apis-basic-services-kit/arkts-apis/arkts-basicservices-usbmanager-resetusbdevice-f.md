@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## resetUsbDevice
@@ -14,7 +15,8 @@ function resetUsbDevice(pipe: USBDevicePipe): boolean
 
 Resets a USB peripheral.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Previous configurations and APIs will be reset. Ensure that the related services have been completed before
 > calling this API.
 
@@ -24,23 +26,44 @@ Resets a USB peripheral.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the device is reset successfully; returns **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [14400001](../errorcode-usb.md#14400001-usb-device-connection-denied) |
-| [14400008](../errorcode-usb.md#14400008-no-device-disconnected) |
-| [14400010](../errorcode-usb.md#14400010-unrecognized-error) |
-| [14400013](../errorcode-usb.md#14400013-parameter-validity-check-failed) |
-| [14400004](../errorcode-usb.md#14400004-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [14400001](../errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| [14400008](../errorcode-usb.md#14400008-no-device-disconnected) | No such device(it may have been disconnected). |
+| [14400010](../errorcode-usb.md#14400010-unrecognized-error) | Other USB error. Possible causes:  1.Unrecognized discard error code. |
+| [14400013](../errorcode-usb.md#14400013-parameter-validity-check-failed) | The USBDevicePipe validity check failed. Possible causes:  1.The input parameters fail the validation check.  2.The call chain used to obtain the input parameters is not reasonable. |
+| [14400004](../errorcode-usb.md#14400004-service-exception) |  |
+
+**Examples**
+
+```TypeScript
+function resetUsbDevice() {
+  let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
+  if (!devicesList || devicesList.length == 0) {
+    console.error(`device list is empty`);
+    return;
+  }
+
+  usbManager.requestRight(devicesList?.[0]?.name);
+  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
+  try {
+    let ret: boolean = usbManager.resetUsbDevice(devicepipe);
+    console.info(`resetUsbDevice  = ${ret}`);
+  } catch (err) {
+    console.error(`resetUsbDevice failed: ` + err);
+  }
+}
+```

@@ -9,22 +9,23 @@ Provide domain name for query.@namespace domainName
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import settings from '@kit.BasicServicesKit';
+import settingsLite from '@kit.BasicServicesKitLite';
 ```
 
 ## Summary
 
 ### Constants
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DEVICE_SHARED](arkts-basicservices-domainname-con.md#device_shared) |
-| [USER_PROPERTY](arkts-basicservices-domainname-con.md#user_property) |
+| Name | Description |
+| --- | --- |
+| [DEVICE_SHARED](arkts-basicservices-domainname-con.md#device_shared) | Provide the domain name for device shared Key. & lt;p & gt;This constants is a domain name for device level shared key. |
+| [USER_PROPERTY](arkts-basicservices-domainname-con.md#user_property) | Provide the domain name for user property. & lt;p & gt;This constants is a domain name for user level key. |
 
 <!--Del-->
 ### Constants(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [USER_SECURITY](arkts-basicservices-domainname-con-sys.md#user_security) |
+| Name | Description |
+| --- | --- |
+| [USER_SECURITY](arkts-basicservices-domainname-con-sys.md#user_security) | Provide the domain name for user security property. & lt;p & gt;This constants is a domain name for user security level key. |
 <!--DelEnd-->

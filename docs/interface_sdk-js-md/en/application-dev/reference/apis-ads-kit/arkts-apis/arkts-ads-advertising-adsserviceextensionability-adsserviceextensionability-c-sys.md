@@ -11,7 +11,7 @@ Provides the capability of integrating advertising services with vendors.
 ## Modules to Import
 
 ```TypeScript
-import { AdsServiceExtensionAbility, RespCallback } from 'kits/@kit.AdsKit';
+import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit';
 ```
 
 ## onLoadAd
@@ -30,11 +30,26 @@ Called when the media application starts to load an ad. The device vendor needs 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [adParam](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdRequestParams | Yes |
-| [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdOptions | Yes |
-| respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| adParam | advertising.AdRequestParams | Yes | Ad request parameters. |
+| adOptions | advertising.AdOptions | Yes | Ad configuration options. |
+| respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes | Ad request callback. |
+
+**Examples**
+
+```TypeScript
+import { AdsServiceExtensionAbility, advertising, RespCallback } from '@kit.AdsKit';
+
+export default class AdsExtensionAbility extends AdsServiceExtensionAbility {
+  onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions, respCallback: RespCallback) {
+    const respData: Map<string, Array<advertising.Advertisement>> = new Map();
+    // Set the returned ad data.
+    // ...
+    respCallback(respData);
+  }
+}
+```
 
 ## onLoadAdWithMultiSlots
 
@@ -53,8 +68,24 @@ Called when the media application starts to load multiple ads. The device vendor
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| adParams | advertising.AdRequestParams[] | Yes |
-| [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdOptions | Yes |
-| respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| adParams | advertising.AdRequestParams[] | Yes | Ad request parameters. |
+| adOptions | advertising.AdOptions | Yes | Ad configuration options. |
+| respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes | Ad request callback. |
+
+**Examples**
+
+```TypeScript
+import { AdsServiceExtensionAbility, advertising, RespCallback } from '@kit.AdsKit';
+
+export default class AdsExtensionAbility extends AdsServiceExtensionAbility {
+  onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: advertising.AdOptions,
+    respCallback: RespCallback) {
+    const respData: Map<string, Array<advertising.Advertisement>> = new Map();
+    // Set the returned ad data.
+    // ...
+    respCallback(respData);
+  }
+}
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.ConnectivityKit';
+import advertising from '@kit.ConnectivityKit';
 ```
 
 ## stopAdvertising
@@ -24,22 +24,22 @@ Stops NearLink advertising. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| advertisingId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| advertisingId | number | Yes | Advertising ID, which is obtained when advertising is started. The value range is [0, 255]. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 36100003 |
-| 36100040 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
+| 36100003 | NearLink disabled. |
+| 36100040 | Invalid advertising ID. |
+| 36100099 | Operation failed. |

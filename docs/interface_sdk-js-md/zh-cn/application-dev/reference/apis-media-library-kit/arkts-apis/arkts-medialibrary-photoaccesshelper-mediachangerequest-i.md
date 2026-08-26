@@ -2,7 +2,8 @@
 
 媒体变更请求，资产变更请求和相册变更请求的父类型。
 
-> **注意**：&gt;
+> **注意**：
+> 
 > 媒体变更请求需要在调用[applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges)后才会
 > 提交生效。
 
@@ -13,7 +14,7 @@
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import photoAccessHelper from '@kit.MediaLibraryKit';
 ```
 
 ## comment

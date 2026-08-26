@@ -55,3 +55,21 @@ uid: number
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName = 'ohos.samples.etsclock';
+  appManager.getRunningMultiAppInfo(bundleName).then((info: appManager.RunningMultiAppInfo) => {
+      console.info(`getRunningMultiAppInfo success`);
+    }).catch((err: BusinessError) => {
+      console.error(`getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
+    });
+} catch (err: BusinessError) {
+  console.error(`getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
+}
+```

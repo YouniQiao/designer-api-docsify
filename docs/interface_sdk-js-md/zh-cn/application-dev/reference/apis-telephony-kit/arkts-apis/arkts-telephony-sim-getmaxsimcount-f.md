@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getMaxSimCount
@@ -20,6 +19,14 @@ function getMaxSimCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 卡槽数量。 |
+
+**示例**
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+
+console.info("Result: "+ sim.getMaxSimCount());
+```

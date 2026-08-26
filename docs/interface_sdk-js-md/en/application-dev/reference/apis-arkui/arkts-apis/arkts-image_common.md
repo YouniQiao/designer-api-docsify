@@ -9,19 +9,19 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ImageAnalyzerController](arkts-arkui-imageanalyzercontroller-c.md) |
+| Name | Description |
+| --- | --- |
+| [ImageAnalyzerController](arkts-arkui-imageanalyzercontroller-c.md) | Implements an AI image analysis controller, which provides control for image analysis features when bound to supported components. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ImageAIOptions](arkts-arkui-imageaioptions-i.md) |
-| [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) |
+| Name | Description |
+| --- | --- |
+| [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | Provides the AI image analysis options. |
+| [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) | Provides AI image analyzer configuration. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md) |
+| Name | Description |
+| --- | --- |
+| [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md) | Defines the AI image analysis type. If it is not set, subject recognition and text recognition are enabled by default. |

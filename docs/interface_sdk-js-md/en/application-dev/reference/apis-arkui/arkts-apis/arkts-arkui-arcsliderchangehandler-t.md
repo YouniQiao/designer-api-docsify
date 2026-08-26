@@ -14,6 +14,6 @@ Defines the callback invoked to notify the application when the progress value o
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| progress | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| progress | number | Yes | Current progress of the slider. |

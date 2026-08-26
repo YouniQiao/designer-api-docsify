@@ -16,7 +16,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WindowExtensionAbility, WindowExtensionContext } from 'kits/@kit.ArkUI';
+import WindowExtensionAbility, { WindowExtensionContext } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -24,15 +24,15 @@ import { WindowExtensionAbility, WindowExtensionContext } from 'kits/@kit.ArkUI'
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md) | class of window extension ability. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [WindowExtensionContext](arkts-arkui-windowextensioncontext-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [WindowExtensionContext](arkts-arkui-windowextensioncontext-t-sys.md) | The context of window extension. It allows access to windowExtension-specific resources. |
 <!--DelEnd-->

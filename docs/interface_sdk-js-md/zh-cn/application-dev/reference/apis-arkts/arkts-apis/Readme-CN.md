@@ -245,6 +245,7 @@
 - [@arkts.lang](arkts-lang.md)
   - [lang](arkts-arkts-lang-n.md)
     - [ISendable](arkts-arkts-lang-isendable-i.md)
+  - [Retention](arkts-arkts-lang-retention-a.md)
   - [RetentionPolicy](arkts-arkts-lang-retentionpolicy-e.md)
 - [@arkts.math.Decimal](arkts-math-decimal.md)
   - [Decimal](arkts-arkts-math-decimal-decimal-c.md)

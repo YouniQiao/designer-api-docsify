@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FenceExtensionContext } from 'kits/@kit.LocationKit';
+import FenceExtensionContext from '@kit.LocationKit';
 ```
 
 ## Summary
@@ -11,7 +11,7 @@ import { FenceExtensionContext } from 'kits/@kit.LocationKit';
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md) | class of static subscriber extension context.@extends ExtensionContext |
 <!--DelEnd-->

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import print from '@kit.BasicServicesKit';
 ```
 
 ## addPrinterToCups
@@ -26,22 +26,39 @@ Add a printer to cups.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| printerUri | string | Yes |
-| printerName | string | Yes |
-| [printerMake](arkts-basicservices-print-printerinformation-i.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| printerUri | string | Yes | Indicates the printer uri. Printer URI in the process of connecting. |
+| printerName | string | Yes | Indicates the printer name. Printer name in the process of connecting. |
+| printerMake | string | Yes | Indicates the printer make. Printer make in the process of connecting. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | the promise returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [13100003](../errorcode-print.md#13100003-print-service-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [13100003](../errorcode-print.md#13100003-print-service-error) | Add a printer to cups failed. |
+
+**Examples**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let printerUri : string = "testPrinterUri";
+let printerName : string = "testPrinterName";
+let printerMake : string = "testPrinterMake";
+
+print.addPrinterToCups(printerUri, printerName, printerMake).then((result: boolean) => {
+    console.info('addPrinterToCups success' + JSON.stringify(result));
+}).catch((error: BusinessError) => {
+    console.error('addPrinterToCups error : ' + JSON.stringify(error));
+})
+```

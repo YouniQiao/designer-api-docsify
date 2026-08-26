@@ -14,6 +14,6 @@ Defines a callback invoked when the **Web** component enters full screen mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [FullScreenEnterEvent](arkts-arkweb-fullscreenenterevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [FullScreenEnterEvent](arkts-arkweb-fullscreenenterevent-i.md) | Yes | Callback event for the **Web** component to enter full screen mode. |

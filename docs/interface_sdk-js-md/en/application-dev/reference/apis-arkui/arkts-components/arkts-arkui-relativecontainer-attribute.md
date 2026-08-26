@@ -31,9 +31,9 @@ Sets the [barriers](../../../ui/arkts-layout-development-relative-layout.md#sett
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Array&lt;[BarrierStyle](arkts-arkui-barrierstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Array&lt;[BarrierStyle](arkts-arkui-barrierstyle-i.md)&gt; | Yes | Barriers in the **RelativeContainer** component. |
 
 ## barrier
 
@@ -53,9 +53,9 @@ Sets barriers in the **RelativeContainer** component. Each array element defines
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| barrierStyle | Array&lt;[LocalizedBarrierStyle](arkts-arkui-localizedbarrierstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| barrierStyle | Array&lt;[LocalizedBarrierStyle](arkts-arkui-localizedbarrierstyle-i.md)&gt; | Yes | Barriers in the **RelativeContainer** component. |
 
 ## guideLine
 
@@ -75,6 +75,6 @@ Sets the [guidelines](../../../ui/arkts-layout-development-relative-layout.md#po
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Array&lt;[GuideLineStyle](arkts-arkui-guidelinestyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Array&lt;[GuideLineStyle](arkts-arkui-guidelinestyle-i.md)&gt; | Yes | Guidelines in the **RelativeContainer** component. |

@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## getDeviceMacAddress
@@ -28,6 +31,19 @@ Obtains the MAC address of a Wi-Fi device. Wi-Fi must be enabled.<p>The MAC addr
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string[] |
+| Type | Description |
+| --- | --- |
+| string[] | Returns the MAC address of the Wi-Fi device. |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    let ret = wifi.getDeviceMacAddress();
+    console.info("deviceMacAddress:" + JSON.stringify(ret));
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```

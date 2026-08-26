@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityManager } from 'kits/@kit.AbilityKit';
+import abilityManager from '@kit.AbilityKit';
 ```
 
 ## isEmbeddedAllowed

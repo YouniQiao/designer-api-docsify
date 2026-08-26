@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from 'kits/@kit.ArkUI';
+import screenshot from '@kit.ArkUI';
 ```
 
 ## pick
@@ -22,13 +22,33 @@ Obtains this screenshot. Currently, only the screenshot of the display whose ID 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[PickInfo](arkts-arkui-screenshot-pickinfo-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[PickInfo](arkts-arkui-screenshot-pickinfo-i.md)&gt; | Promise used to return the PickInfo object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Call the pick API to obtain the screenshot.
+  let promise = screenshot.pick();
+  promise.then((pickInfo: screenshot.PickInfo) => {
+    console.info(`pick Pixel bytes number: ${pickInfo.pixelMap.getPixelBytesNumber()}`);
+    console.info(`pick Rect: ${pickInfo.pickRect}`);
+    pickInfo.pixelMap.release(); // Release the memory in time after the PixelMap is no longer needed.
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to pick. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  console.error(`Failed to pick. Code: ${exception.code}, message: ${exception.message}`);
+}
+```

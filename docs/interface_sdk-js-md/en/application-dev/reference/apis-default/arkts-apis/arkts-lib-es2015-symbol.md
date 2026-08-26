@@ -9,12 +9,12 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SymbolConstructor](arkts-lib-es2015-symbol-symbolconstructor-i.md) |
+| Name | Description |
+| --- | --- |
+| [SymbolConstructor](arkts-lib-es2015-symbol-symbolconstructor-i.md) |  |
 
 ### Properties
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Symbol](arkts-libes2015symbol-p.md) |
+| Name | Description |
+| --- | --- |
+| [Symbol](arkts-libes2015symbol-p.md) |  |

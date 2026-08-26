@@ -14,6 +14,6 @@ Defines a callback invoked when the **viewport-fit** configuration in the web pa
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| viewportFit | [ViewportFit](arkts-arkweb-viewportfit-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| viewportFit | [ViewportFit](arkts-arkweb-viewportfit-e.md) | Yes | Viewport type for **viewport-fit** in the web page **<meta>** tag. |

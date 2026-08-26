@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## cropAndScaleStrategy
@@ -179,6 +179,36 @@ rotate?: number
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function rotate(pixelMap: image.PixelMap) {
+  const angle: number = 90.0;
+  pixelMap.rotate(angle, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to rotate the PixelMap. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info("Succeeded in rotating the PixelMap.");
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function rotate(pixelMap: image.PixelMap) {
+  const angle: number = 90.0;
+  pixelMap.rotate(angle).then(() => {
+    console.info('Succeeded in rotating the PixelMap.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to rotate the PixelMap. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
 
 ## sampleSize
 

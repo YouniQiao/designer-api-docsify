@@ -9,7 +9,6 @@ Defines the network probe result information.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## lossRate

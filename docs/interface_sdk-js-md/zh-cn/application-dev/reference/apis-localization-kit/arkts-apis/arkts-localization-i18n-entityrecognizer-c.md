@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -28,16 +28,30 @@ constructor(locale?: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 否 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区 组成，例如zh-Hans-CN。 默认值：系统当前区域ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let entityRecognizer: i18n.EntityRecognizer = new i18n.EntityRecognizer('zh-CN');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call new i18n.EntityRecognizer failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## findEntityInfo
 
@@ -55,18 +69,38 @@ findEntityInfo(text: string): Array<EntityInfoItem>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 输入文本。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[EntityInfoItem](arkts-localization-i18n-entityinfoitem-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[EntityInfoItem](arkts-localization-i18n-entityinfoitem-i.md)&gt; | 文本中的实体信息列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let entityRecognizer: i18n.EntityRecognizer = new i18n.EntityRecognizer('zh-CN');
+  let phoneNumberText: string = '如有疑问，请联系158****2312';
+  // phoneNumberEntity[0].type = 'phone_number', phoneNumberEntity[0].begin = 8, phoneNumberEntity[0].end = 19
+  let phoneNumberEntity: Array<i18n.EntityInfoItem> = entityRecognizer.findEntityInfo(phoneNumberText);
+  let dateText: string = '我们2023年12月1日一起吃饭吧。';
+  // dateEntity[0].type = 'date', dateEntity[0].begin = 2, dateEntity[0].end = 12
+  let dateEntity: Array<i18n.EntityInfoItem> = entityRecognizer.findEntityInfo(dateText);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call EntityRecognizer.findEntityInfo failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```

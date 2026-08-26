@@ -23,12 +23,19 @@ declare function lstatSync(path: string): Stat
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 目标文件的应用沙箱路径。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Stat](arkts-corefile-fileio-stat-depr-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) | 表示文件的具体信息。 |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let stat = fileio.lstatSync(filePath);
+```

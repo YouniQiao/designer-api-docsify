@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## isParticipant
@@ -22,6 +21,6 @@ function isParticipant(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 标识此设备现在是否正在参与应用灰度活动，true表示正在参与，false表示未参与。 |

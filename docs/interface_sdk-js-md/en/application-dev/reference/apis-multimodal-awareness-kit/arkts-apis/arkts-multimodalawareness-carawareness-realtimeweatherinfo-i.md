@@ -9,7 +9,7 @@ Interface for realtime weather response info.
 ## Modules to Import
 
 ```TypeScript
-import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
+import carAwareness from '@kit.MultimodalAwarenessKit';
 ```
 
 ## timestamp

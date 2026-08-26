@@ -27,12 +27,43 @@ Registers a listener to observe the mission status.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| listener | [MissionListener](arkts-ability-missionlistener-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| listener | [MissionListener](arkts-ability-missionlistener-i-sys.md) | Yes | Mission status listener to register. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the mission status listener, which is created by the system and allocated when the listener is registered. |
+
+**Examples**
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+
+console.info('registerMissionListener');
+let listenerId = missionManager.registerMissionListener({
+  onMissionCreated: (mission) => {
+    console.info('--------onMissionCreated-------');
+  },
+  onMissionDestroyed: (mission) => {
+    console.info('--------onMissionDestroyed-------');
+  },
+  onMissionSnapshotChanged: (mission) => {
+    console.info('--------onMissionSnapshotChanged-------');
+  },
+  onMissionMovedToFront: (mission) => {
+    console.info('--------onMissionMovedToFront-------');
+  },
+  onMissionIconUpdated: (mission, icon) => {
+    console.info('--------onMissionIconUpdated-------');
+  },
+  onMissionClosed: (mission) => {
+    console.info('--------onMissionClosed-------');
+  },
+  onMissionLabelUpdated: (mission) => {
+    console.info('--------onMissionLabelUpdated-------');
+  }
+});
+```

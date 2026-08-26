@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedAccount } from 'kits/@kit.BasicServicesKit';
+import distributedAccount from '@kit.BasicServicesKit';
 ```
 
 ## getDistributedAccountAbility
@@ -20,6 +20,13 @@ Obtains a **DistributedAccountAbility** instance.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DistributedAccountAbility](arkts-basicservices-distributedaccount-distributedaccountability-i.md) |
+| Type | Description |
+| --- | --- |
+| [DistributedAccountAbility](arkts-basicservices-distributedaccount-distributedaccountability-i.md) | DistributedAccountAbility** instance obtained. This instance provides APIs for querying and updating the login state of a distributed account. |
+
+**Examples**
+
+```TypeScript
+// Obtain a DistributedAccountAbility instance.
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+```

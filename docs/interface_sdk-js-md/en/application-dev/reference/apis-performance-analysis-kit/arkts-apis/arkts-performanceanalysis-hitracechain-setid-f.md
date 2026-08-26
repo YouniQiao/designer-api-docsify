@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## setId
@@ -20,6 +19,15 @@ Sets a trace ID. This API returns the result synchronously.Sets the given HiTrac
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance. |
+
+**Examples**
+
+```TypeScript
+// Obtain the trace ID of the current call chain.
+let traceId = hiTraceChain.getId();
+// Set traceId to the obtained trace ID.
+hiTraceChain.setId(traceId);
+```

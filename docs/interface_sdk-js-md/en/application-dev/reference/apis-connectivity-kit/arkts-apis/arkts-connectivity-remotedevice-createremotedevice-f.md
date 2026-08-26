@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import remoteDevice from '@kit.ConnectivityKit';
 ```
 
 ## createRemoteDevice
@@ -22,19 +22,19 @@ Creates a **RemoteDevice** instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| address | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| address | string | Yes | Address of a remote device. The address format is **11:22:33:AA:BB:FF**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) |
+| Type | Description |
+| --- | --- |
+| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) | RemoteDevice** instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 36100041 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
+| 36100041 | Invalid address. |

@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [RichEditorModifier](arkts-arkui-richeditormodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [RichEditorModifier](arkts-arkui-richeditormodifier-c.md) | Defines RichEditor Modifier |

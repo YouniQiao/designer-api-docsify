@@ -9,6 +9,9 @@ WebKeyboardController is a controller class provided by ArkWeb for controlling t
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## close
@@ -51,9 +54,9 @@ Deletes a specified length of characters after the cursor.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| length | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| length | number | Yes | Number of characters to delete after the cursor. Value range: [-2147483648, 2147483647]. If the parameter value is greater than the character length, all characters after the cursor are deleted by default. If the parameter value is negative, no deletion is performed. |
 
 ## deleteForward
 
@@ -69,9 +72,9 @@ Deletes a specified length of characters before the cursor.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| length | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| length | number | Yes | Deletes a specified length of characters before the cursor. Value range: [-2147483648, 2147483647]. When the parameter value is greater than the character length, all characters before the cursor are deleted by default. When the parameter value is negative, no deletion is performed. |
 
 ## insertText
 
@@ -87,9 +90,9 @@ Inserts characters into the **Web** component text box.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| text | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Text inserted into the web input box at the current cursor position. If there is selected text, it is replaced with this text. An input event is triggered. The cursor moves to the end of the inserted text. |
 
 ## sendFunctionKey
 
@@ -105,6 +108,6 @@ Inserts a function key. Currently, only the Enter key type is supported. For det
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | number | Yes | Type of the function key. Only the Enter key is supported. |

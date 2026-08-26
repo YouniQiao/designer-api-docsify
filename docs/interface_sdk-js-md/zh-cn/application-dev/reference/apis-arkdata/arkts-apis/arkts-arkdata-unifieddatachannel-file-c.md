@@ -11,7 +11,7 @@ File类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedre
 ## 导入模块
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## details
@@ -67,3 +67,30 @@ set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**示例**
+
+```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
+import { fileUri } from '@kit.CoreFileKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let context = this.context;
+    let pathDir = context.filesDir;
+    let file = new unifiedDataChannel.File();
+    file.details = {
+      'name': 'test',
+      'type': 'txt'
+    };
+    let filePath = pathDir + '/test.txt';
+    file.uri = fileUri.getUriFromPath(filePath);
+    // 从API 26.0.0版本开始，支持uri授权策略
+    file.uriAuthorizationPolicies = [
+      unifiedDataChannel.UriPermission.WRITE
+    ];
+  }
+}
+```

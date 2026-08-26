@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TextClockModifier](arkts-arkui-textclockmodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [TextClockModifier](arkts-arkui-textclockmodifier-c.md) | Defines TextClock Modifier |

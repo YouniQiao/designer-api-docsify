@@ -11,7 +11,7 @@ The **systemTimer** module provides system timer features. You can use the APIs 
 ## Modules to Import
 
 ```TypeScript
-import { systemTimer } from 'kits/@kit.BasicServicesKit';
+import systemTimer from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -19,33 +19,33 @@ import { systemTimer } from 'kits/@kit.BasicServicesKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createTimer(System Timer)](arkts-basicservices-systemtimer-createtimer-f-sys.md) |
-| [createTimer(System Timer)](arkts-basicservices-systemtimer-createtimer-f-sys.md) |
-| [destroyTimer(System Timer)](arkts-basicservices-systemtimer-destroytimer-f-sys.md) |
-| [destroyTimer(System Timer)](arkts-basicservices-systemtimer-destroytimer-f-sys.md) |
-| [startTimer(System Timer)](arkts-basicservices-systemtimer-starttimer-f-sys.md) |
-| [startTimer(System Timer)](arkts-basicservices-systemtimer-starttimer-f-sys.md) |
-| [stopTimer(System Timer)](arkts-basicservices-systemtimer-stoptimer-f-sys.md) |
-| [stopTimer(System Timer)](arkts-basicservices-systemtimer-stoptimer-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [createTimer(System Timer)](arkts-basicservices-systemtimer-createtimer-f-sys.md) | Creates a timer. This API uses an asynchronous callback to return the result. |
+| [createTimer(System Timer)](arkts-basicservices-systemtimer-createtimer-f-sys.md) | Creates a timer. This API uses a promise to return the timer ID. |
+| [destroyTimer(System Timer)](arkts-basicservices-systemtimer-destroytimer-f-sys.md) | Destroys a timer. This API uses an asynchronous callback to return the result. |
+| [destroyTimer(System Timer)](arkts-basicservices-systemtimer-destroytimer-f-sys.md) | Destroys a timer. This API uses a promise to return the result. |
+| [startTimer(System Timer)](arkts-basicservices-systemtimer-starttimer-f-sys.md) | Starts a timer. This API uses an asynchronous callback to return the result. |
+| [startTimer(System Timer)](arkts-basicservices-systemtimer-starttimer-f-sys.md) | Starts a timer. This API uses a promise to return the result. |
+| [stopTimer(System Timer)](arkts-basicservices-systemtimer-stoptimer-f-sys.md) | Stops the timer. This API uses an asynchronous callback to return the result. |
+| [stopTimer(System Timer)](arkts-basicservices-systemtimer-stoptimer-f-sys.md) | Stops a timer. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TimerOptions(System Timer)](arkts-basicservices-systemtimer-timeroptions-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [TimerOptions(System Timer)](arkts-basicservices-systemtimer-timeroptions-i-sys.md) | Defines the initialization options for the system timer. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Constants(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TIMER_TYPE_EXACT(System Timer)](arkts-basicservices-systemtimer-con-sys.md#timer_type_exact) |
-| [TIMER_TYPE_IDLE(System Timer)](arkts-basicservices-systemtimer-con-sys.md#timer_type_idle) |
-| [TIMER_TYPE_REALTIME(System Timer)](arkts-basicservices-systemtimer-con-sys.md#timer_type_realtime) |
-| [TIMER_TYPE_WAKEUP(System Timer)](arkts-basicservices-systemtimer-con-sys.md#timer_type_wakeup) |
+| Name | Description |
+| --- | --- |
+| [TIMER_TYPE_EXACT(System Timer)](arkts-basicservices-systemtimer-con-sys.md#timer_type_exact) | Exact type. (If the system time is changed, the offset may be 1s at most.) |
+| [TIMER_TYPE_IDLE(System Timer)](arkts-basicservices-systemtimer-con-sys.md#timer_type_idle) | Idle timer type (supported only for system services). |
+| [TIMER_TYPE_REALTIME(System Timer)](arkts-basicservices-systemtimer-con-sys.md#timer_type_realtime) | CPU time type. (The start time of the timer cannot be later than the current system time.) |
+| [TIMER_TYPE_WAKEUP(System Timer)](arkts-basicservices-systemtimer-con-sys.md#timer_type_wakeup) | Wakeup type. (If the wakeup type is not set, the system does not wake up until it exits the sleep state.) |
 <!--DelEnd-->

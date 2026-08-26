@@ -31,9 +31,9 @@ Creates a content modifier.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md)&gt; | Yes | Content modifier to apply to the text clock.    **modifier**: content modifier. You need to customize a class to implement the **ContentModifier** API. |
 
 ## dateTimeOptions
 
@@ -55,9 +55,9 @@ Sets whether to display a leading zero for the hour.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [dateTimeOptions](#datetimeoptions) | [Optional](arkts-arkui-optional-t.md)&lt;DateTimeOptions&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dateTimeOptions | [Optional](arkts-arkui-optional-t.md)&lt;DateTimeOptions&gt; | Yes | Whether to display leading zeros in the hour. It only supports setting the **hour** parameter. When the parameter value is **{hour: "2-digit"}**, a leading zero is displayed. When the parameter value is **{hour: "numeric"}**, no leading zero is displayed.Default value: **undefined**. By default, leading zeros are displayed in 24-hour format, but not displayed in 12-hour format. |
 
 ## fontColor
 
@@ -77,9 +77,9 @@ Sets the font color.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color.Default value for wearables: '#c5ffffff'; default value for other devices: '#e6182431' |
 
 ## fontFamily
 
@@ -99,9 +99,9 @@ Sets the font family.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font family. Default font: **'HarmonyOS Sans'**The 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md) are supported for applications.Only the 'HarmonyOS Sans'font is supported for widgets. |
 
 ## fontFeature
 
@@ -123,9 +123,9 @@ Sets the font feature, for example, monospaced digits.Format: normal \| \&lt;fea
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Font feature. |
 
 ## fontSize
 
@@ -145,9 +145,9 @@ Sets the font size.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. The default font size is 16 fp. The value cannot be a percentage. |
 
 ## fontStyle
 
@@ -167,9 +167,9 @@ Sets the font style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [FontStyle](#fontstyle) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [FontStyle](#fontstyle) | Yes | Font style.Default value: **FontStyle.Normal**, indicating the standard font style (non-italic) |
 
 ## fontWeight
 
@@ -189,9 +189,9 @@ Sets the font weight of the text. If the value is too large, the text in differe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| FontWeight \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| FontWeight \| string | Yes | Font width of the text. The value range of the number type is [100, 900]. The value interval is 100. A larger value indicates a wider font. If the value of the number type is not within the value range, the default value is **400**. For the string type, only strings that represent a number, for example, **"400"**, and the following enumerated values of **FontWeight** are supported: **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**.Default value: **FontWeight.Normal |
 
 ## format
 
@@ -210,7 +210,7 @@ Sets the time format, for example, **yyyy/MM/dd** or **yyyy-MM-dd**.
 **SS**: centisecond (If the number of S characters in the format is less than 3, all are treated as centiseconds.)  
 **SSS**: millisecond (If the number of S characters in the format is greater than or equal to 3, all are treated as milliseconds.)  
 **a**: morning/afternoon (This parameter does not take effect when the hour part is set to **H**.)Date separators: year, month, day, slash (/), hyphen (-), and period (.) (Custom separator styles are allowed. Letters cannot be used as separators, while Chinese characters can be treated as separators.)The parts of the date can be used alone or combined with each other as needed. The time can be updated as frequent as once per second. As such, whenever possible, avoid setting the centisecond and millisecond parts separately.When an invalid letter is set, the letter is ignored. If all letters in **format** are invalid, the display format follows the system's language and hour format settings.If **format** is an empty string ("") or **undefined**, the default value is used.Default value outside of widgets: 12-hour format: aa hh:mm:ss; 24-hour format: HH:mm:ss.Default value in widgets: 12-hour format: hh:mm, 24-hour format: HH:mm.When used in widgets, the minimum time unit is minute. In this case, if the format contains seconds or centiseconds, the default value will be used.The following table shows how different settings of **format** work out.  
-| Input Format | Display Effect | | ------------------------- | ---------------------- | | EEEE, M, d, yyyy | Saturday, Feb, 4, 2023 | | M d, yyyy | Feb 4, 2023 | | EEEE, M, d | Saturday, Feb, 4 | | M d | Feb 4 | | MM/dd/yyyy | Feb/04/2023 | | EEEE MM dd | Saturday Feb 04 | | yyyy | 2023 | | yy | 23 | | MM | Feb | | M | Feb | | dd (complete date) | 04 | | [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | 4 | | EEEE (full name) | Saturday | | E, EE, EEE (abbreviation) | [Sat](../arkts-apis/arkts-arkui-week-e.md) | | M d, yyyy | Feb 4, 2023 | | yyyy/M/d | 2023/Feb/4 | | yyyy-M-d | 2023-Feb-4 | | yyyy.M.d | 2023.Feb.4 | | HH:mm:ss | 17:00:04 | | aa hh:mm:ss | AM 5:00:04 | | hh:mm:ss | 5:00:04 | | HH:mm | 17:00 | | aa hh:mm | AM 5:00 | | hh:mm | 5:00 | | mm:ss | 00:04 | | mm:ss.SS | 00:04.91 | | mm:ss.SSS | 00:04.536 | | hh:mm:ss aa | 5:00:04 AM | | HH |
+| Input Format | Display Effect | | ------------------------- | ---------------------- | | EEEE, M, d, yyyy | Saturday, Feb, 4, 2023 | | M d, yyyy | Feb 4, 2023 | | EEEE, M, d | Saturday, Feb, 4 | | M d | Feb 4 | | MM/dd/yyyy | Feb/04/2023 | | EEEE MM dd | Saturday Feb 04 | | yyyy | 2023 | | yy | 23 | | MM | Feb | | M | Feb | | dd (complete date) | 04 | | d | 4 | | EEEE (full name) | Saturday | | E, EE, EEE (abbreviation) | Sat | | M d, yyyy | Feb 4, 2023 | | yyyy/M/d | 2023/Feb/4 | | yyyy-M-d | 2023-Feb-4 | | yyyy.M.d | 2023.Feb.4 | | HH:mm:ss | 17:00:04 | | aa hh:mm:ss | AM 5:00:04 | | hh:mm:ss | 5:00:04 | | HH:mm | 17:00 | | aa hh:mm | AM 5:00 | | hh:mm | 5:00 | | mm:ss | 00:04 | | mm:ss.SS | 00:04.91 | | mm:ss.SSS | 00:04.536 | | hh:mm:ss aa | 5:00:04 AM | | HH | 17 |
 
 **Since:** 8
 
@@ -222,9 +222,9 @@ Sets the time format, for example, **yyyy/MM/dd** or **yyyy-MM-dd**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Time format to set.<br>**Since:** 20 |
 
 ## onDateChange
 
@@ -244,9 +244,9 @@ Triggered when the time changes.This event does not take effect when the compone
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (value: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (value: number) = & gt; void | Yes | Unix time stamp, which is the number of seconds that have elapsed since the Unix epoch. |
 
 ## textShadow
 
@@ -268,6 +268,6 @@ Sets the text shadow. It supports input parameters in an array to implement mult
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | Yes | Font shadow of the text. |

@@ -13,7 +13,8 @@
 ## 导入模块
 
 ```TypeScript
-import { vpn } from 'kits/@kit.NetworkKit';
+import vpn from '@kit.NetworkKit';
+import vpnExtension from '@kit.NetworkKitExtension';
 ```
 
 ## ipsecCaCertConfig

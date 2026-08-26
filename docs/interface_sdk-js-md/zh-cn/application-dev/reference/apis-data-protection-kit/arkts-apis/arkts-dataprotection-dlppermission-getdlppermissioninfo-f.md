@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import dlpPermission from '@kit.DataProtectionKit';
 ```
 
 ## getDLPPermissionInfo
@@ -20,17 +20,33 @@ function getDLPPermissionInfo(): Promise<DLPPermissionInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DLPPermissionInfo](arkts-dataprotection-dlppermission-dlppermissioninfo-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DLPPermissionInfo](arkts-dataprotection-dlppermission-dlppermissioninfo-i.md)&gt; | Promise对象。返回查询的DLP文件的权限信息，无异常则表明查询成功。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) | No permission to call this API, which is available only for DLP sandbox applications. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+
+**示例**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.isInSandbox().then(async (inSandbox) => { // 是否在沙箱内。
+  if (inSandbox) {
+    dlpPermission.getDLPPermissionInfo().then((permissionInfo: dlpPermission.DLPPermissionInfo) => {
+      console.info('permissionInfo', JSON.stringify(permissionInfo));
+    }).catch((error: BusinessError)=> {
+      console.error(`Failed to get DLP permission info. Code: ${error.code}, message: ${error.message}`);
+    });
+  }
+});
+```
 
 
 ## getDLPPermissionInfo
@@ -47,15 +63,33 @@ function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPPermissionInfo](arkts-dataprotection-dlppermission-dlppermissioninfo-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPPermissionInfo](arkts-dataprotection-dlppermission-dlppermissioninfo-i.md)&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) | No permission to call this API, which is available only for DLP sandbox applications. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+
+**示例**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.isInSandbox().then((inSandbox) => { // 是否在沙箱内。
+  if (inSandbox) {
+    dlpPermission.getDLPPermissionInfo((err, permissionInfo) => { 
+      if (err) {
+        console.error(`Failed to get DLP permission info. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info('permissionInfo', JSON.stringify(permissionInfo));
+      }
+    }); // 获取当前权限信息。
+  }
+});
+```

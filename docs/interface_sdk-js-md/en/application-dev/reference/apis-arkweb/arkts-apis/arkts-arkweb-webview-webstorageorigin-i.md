@@ -9,7 +9,6 @@ Provides usage information of the Web SQL Database.@interface WebStorageOrigin [
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## origin

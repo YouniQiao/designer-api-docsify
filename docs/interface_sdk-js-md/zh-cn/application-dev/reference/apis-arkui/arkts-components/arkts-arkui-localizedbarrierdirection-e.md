@@ -1,7 +1,7 @@
 # LocalizedBarrierDirection
 
 定义支持镜像模式的屏障线的方向。  
-| 名称 | 值 | 说明 | | ------ | -- | ----------------------------- | | [START](#start) | 0 |屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的起始侧，LTR模式时为最左侧，RTL模式时为最右侧。| | [END](#end) | 1 | 屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的结束侧，LTR模式时为最右侧，RTL模式时为最左侧。| | [TOP](#top) | 2 | 屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的最上方。| | [BOTTOM](#bottom) | 3 |
+| 名称 | 值 | 说明 | | ------ | -- | ----------------------------- | | START | 0 |屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的起始侧，LTR模式时为最左侧，RTL模式时为最右侧。| | END | 1 | 屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的结束侧，LTR模式时为最右侧，RTL模式时为最左侧。| | TOP | 2 | 屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的最上方。| | BOTTOM | 3 | 屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的最下方。|
 
 **起始版本：** 12
 

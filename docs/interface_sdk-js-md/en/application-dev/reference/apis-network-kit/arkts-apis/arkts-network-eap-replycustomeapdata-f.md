@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { eap } from 'kits/@kit.NetworkKit';
+import eap from '@kit.NetworkKit';
 ```
 
 ## replyCustomEapData
@@ -14,9 +14,11 @@ function replyCustomEapData(result: CustomResult, data: EapData): void
 
 Notifies the system of the extensible authentication result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - If this callback is used to process received EAP data packets, the customized portion added by the server must
-> be removed from the EAP data transmitted to the system.&gt;
+> be removed from the EAP data transmitted to the system.
+> 
 > - If this callback is used to process sent EAP data packets, the EAP data transmitted to the system is the EAP
 > data with the customized portion added by the server.
 
@@ -28,17 +30,17 @@ Notifies the system of the extensible authentication result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | [CustomResult](arkts-network-eap-customresult-e.md) | Yes |
-| data | [EapData](arkts-network-eap-eapdata-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | [CustomResult](arkts-network-eap-customresult-e.md) | Yes | Extensible authentication result. |
+| data | [EapData](arkts-network-eap-eapdata-i.md) | Yes | EAP data. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [33200004](../errorcode-net-eap.md#33200004-invalid-eap-result-value) |
-| [33200005](../errorcode-net-eap.md#33200005-invalid-data-length) |
-| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) |
-| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [33200004](../errorcode-net-eap.md#33200004-invalid-eap-result-value) | Invalid result |
+| [33200005](../errorcode-net-eap.md#33200005-invalid-data-length) | Invalid size of eap data |
+| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) | netmanager stop |
+| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) | internal error |

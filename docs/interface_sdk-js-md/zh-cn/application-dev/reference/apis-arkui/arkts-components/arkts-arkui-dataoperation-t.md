@@ -15,11 +15,11 @@ declare type DataOperation =
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [DataAddOperation](arkts-arkui-dataaddoperation-i.md) |
-| [DataDeleteOperation](arkts-arkui-datadeleteoperation-i.md) |
-| [DataChangeOperation](arkts-arkui-datachangeoperation-i.md) |
-| [DataMoveOperation](arkts-arkui-datamoveoperation-i.md) |
-| [DataExchangeOperation](arkts-arkui-dataexchangeoperation-i.md) |
-| [DataReloadOperation](arkts-arkui-datareloadoperation-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataAddOperation](arkts-arkui-dataaddoperation-i.md) | 添加数据操作。 |
+| [DataDeleteOperation](arkts-arkui-datadeleteoperation-i.md) | 删除数据操作。 |
+| [DataChangeOperation](arkts-arkui-datachangeoperation-i.md) | 改变数据操作。 |
+| [DataMoveOperation](arkts-arkui-datamoveoperation-i.md) | 移动数据操作。 |
+| [DataExchangeOperation](arkts-arkui-dataexchangeoperation-i.md) | 交换数据操作。 |
+| [DataReloadOperation](arkts-arkui-datareloadoperation-i.md) | 重载所有数据操作。 |

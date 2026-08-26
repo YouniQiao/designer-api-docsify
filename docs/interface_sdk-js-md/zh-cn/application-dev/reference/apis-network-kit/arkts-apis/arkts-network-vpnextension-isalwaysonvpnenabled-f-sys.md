@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpnExtension } from 'kits/@kit.NetworkKit';
+import vpnExtension from '@kit.NetworkKit';
 ```
 
 ## isAlwaysOnVpnEnabled
@@ -26,20 +26,20 @@ function isAlwaysOnVpnEnabled(bundleName: string): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 设置了always on vpn的包名，通常指三方应用的bundleName。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示应用alway on vpn开启状态；返回false表示关闭状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |

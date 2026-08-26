@@ -1,7 +1,7 @@
 # InterceptorType
 
 Enumerates the types of HTTP interceptors.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) |Description | | ------ | --|-------------------------------------- | | [INITIAL_REQUEST](arkts-network-http-interceptortype-e.md) |'INITIAL_REQUEST' |Intercepts after the initial HTTP request is assembled.| | [REDIRECTION](arkts-network-http-interceptortype-e.md) | 'REDIRECTION' |Intercepts when a redirection response is received.| | [CACHE_CHECKED](arkts-network-http-interceptortype-e.md) | 'READ_CACHE' |Intercepts when the HTTP cache is checked and hit.| | [NETWORK_CONNECT](arkts-network-http-interceptortype-e.md) | 'CONNECT_NETWORK' |Intercepts before the network request is sent.| | [FINAL_RESPONSE](arkts-network-http-interceptortype-e.md) | 'FINAL_RESPONSE' |
+| Name | Value|Description | | ------ | --|-------------------------------------- | | INITIAL_REQUEST |'INITIAL_REQUEST' |Intercepts after the initial HTTP request is assembled.| | REDIRECTION | 'REDIRECTION' |Intercepts when a redirection response is received.| | CACHE_CHECKED | 'READ_CACHE' |Intercepts when the HTTP cache is checked and hit.| | NETWORK_CONNECT | 'CONNECT_NETWORK' |Intercepts before the network request is sent.| | FINAL_RESPONSE | 'FINAL_RESPONSE' |Intercepts when the final HTTP response is obtained.|
 
 **Since:** 22
 

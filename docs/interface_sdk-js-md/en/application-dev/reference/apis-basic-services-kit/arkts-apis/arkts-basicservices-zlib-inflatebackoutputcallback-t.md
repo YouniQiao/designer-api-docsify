@@ -14,14 +14,14 @@ The output data provided by the user is written into the callback function. When
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| outDesc | object | Yes |
-| buf | ArrayBuffer | Yes |
-| length | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| outDesc | object | Yes | Object passed to output function. Object dependency requirement implementation. |
+| buf | ArrayBuffer | Yes | Used to store data to be written. |
+| length | number | Yes | Write the length of the output buffer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Return the number of bytes output. |

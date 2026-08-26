@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ListModifier](arkts-arkui-listmodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [ListModifier](arkts-arkui-listmodifier-c.md) | Defines List Modifier@extends ListAttribute @implements AttributeModifier & lt;ListAttribute & gt; |

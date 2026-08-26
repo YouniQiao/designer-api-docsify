@@ -4,6 +4,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotificationExtensionContent](arkts-notification-notificationextensioncontent-i.md) |
+| Name | Description |
+| --- | --- |
+| [NotificationExtensionContent](arkts-notification-notificationextensioncontent-i.md) | The **NotificationExtensionContent** module describes the notification extension content. |

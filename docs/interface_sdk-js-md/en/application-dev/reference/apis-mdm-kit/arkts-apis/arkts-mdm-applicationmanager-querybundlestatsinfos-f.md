@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from 'kits/@kit.MDMKit';
+import applicationManager from '@kit.MDMKit';
 ```
 
 ## queryBundleStatsInfos
@@ -24,24 +24,77 @@ Queries the accumulated foreground runtime statistics of applications under a sp
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-| startTime | number | Yes |
-| endTime | number | Yes |
-| accountId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| startTime | number | Yes | Query start time, in milliseconds (timestamp). Value range: [0, +∞). |
+| endTime | number | Yes | Query end time, in milliseconds (timestamp). Value range: [0, +∞). |
+| accountId | number | Yes | Account ID. The value is an integer greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;BundleStatsInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;BundleStatsInfo & gt; | Array of application bundle statistics. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+
+**Examples**
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Query data from 2026/4/15 00:00:00.000 to 2026/4/16 23:59:59.999. (The month starts from 0.)
+  let startTime: number = new Date(2026, 3, 15, 0, 0, 0, 0).getTime();
+  let endTime: number = new Date(2026, 3, 16, 23, 59, 59, 999).getTime();
+  let accountId: number = 100;
+  let result: Array<applicationManager.BundleStatsInfo> = applicationManager.queryBundleStatsInfos(wantTemp, startTime, endTime, accountId);
+  console.info(`Succeeded in querying bundle stats infos, result : ${JSON.stringify(result)}`);
+} catch(err) {
+  console.error(`Failed to query bundle stats infos. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Query data of the last month.
+  // Obtain the current date.
+  let currentDate: Date = new Date();
+  // Calculate the first day of the last month. (The month starts from 0. Therefore, subtract 1 from the current month.)
+  let lastMonthFirstDay: Date = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1, 0, 0, 0, 0);
+  // Calculate the last day of the last month. (The 0th day of the next month is the last day of the current month.)
+  let lastMonthLastDay: Date = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0, 23, 59, 59, 999);
+  
+  let startTime: number = lastMonthFirstDay.getTime();
+  let endTime: number = lastMonthLastDay.getTime();
+  let accountId: number = 100;
+  let result: Array<applicationManager.BundleStatsInfo> = applicationManager.queryBundleStatsInfos(wantTemp, startTime, endTime, accountId);
+  console.info(`Succeeded in querying bundle stats infos, result : ${JSON.stringify(result)}`);
+} catch(err) {
+  console.error(`Failed to query bundle stats infos. Code: ${err.code}, message: ${err.message}`);
+}
+```

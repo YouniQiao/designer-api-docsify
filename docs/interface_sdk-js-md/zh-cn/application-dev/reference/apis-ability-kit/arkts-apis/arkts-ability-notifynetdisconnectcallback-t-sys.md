@@ -14,7 +14,7 @@ type NotifyNetDisconnectCallback = (deviceId: string, state: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| deviceId | string | 是 |
-| state | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceId | string | 是 | 设备ID，表示网络断开的远程设备。 |
+| state | number | 是 | 网络连接状态，固定为0，表示网络断开。 |

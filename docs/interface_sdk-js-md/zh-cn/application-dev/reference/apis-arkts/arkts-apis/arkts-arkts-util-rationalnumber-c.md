@@ -9,7 +9,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## compare
@@ -28,15 +29,25 @@ compare(another: RationalNumber): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | 是 | 表示其他有理数的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 根据比较结果返回 0、1 或 -1。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.compare(rational);
+console.info("result = " + result);
+// 输出结果：result = -1
+```
 
 ## compareTo
 
@@ -56,15 +67,25 @@ compareTo(another: RationalNumber): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | 是 | 表示其他有理数的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 根据比较结果返回 0、1 或 -1。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.compareTo(rational);
+console.info("result = " + result);
+// 输出结果：result = -1
+```
 
 ## constructor
 
@@ -84,10 +105,16 @@ constructor(numerator: number, denominator: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| numerator | number | 是 |
-| denominator | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| numerator | number | 是 | 分子，为整数。 |
+| denominator | number | 是 | 分母，为整数。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+```
 
 ## constructor
 
@@ -103,6 +130,35 @@ constructor()
 
 **系统能力：** SystemCapability.Utils.Lang
 
+**示例**
+
+```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// 输出结果：retStr = utf-8
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let base64 = new  util.Base64();
+```
+
 ## createRationalFromString
 
 ```TypeScript
@@ -111,7 +167,8 @@ static createRationalFromString(rationalString: string): RationalNumber
 
 根据给定的字符串创建一个 **RationalNumber** 对象。
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **rationalString** 参数必须为字符串。如果传入小数字符串，该函数不会被拦截，但会显示错误信息
 > "createRationalFromString: The type of Parameter must be integer string"。
 
@@ -123,15 +180,21 @@ static createRationalFromString(rationalString: string): RationalNumber
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| rationalString | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rationalString | string | 是 | 用于创建 **RationalNumber** 对象的字符串。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | 返回根据给定字符串生成的 RationalNumber 对象。 |
+
+**示例**
+
+```TypeScript
+let rational = util.RationalNumber.createRationalFromString("3/4");
+```
 
 ## equals
 
@@ -149,15 +212,35 @@ equals(obj: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| obj | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| obj | Object | 是 | 用于与此 **RationalNumber** 对象进行比较的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果两个对象相等，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.equals(rational);
+console.info("result = " + result);
+// 输出结果：result = false
+```
+
+API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.equals(rational);
+console.info("result = " + result);
+// 输出结果：result = false
+```
 
 ## getCommonDivisor
 
@@ -177,16 +260,16 @@ static getCommonDivisor(number1: number, number2: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| number1 | number | 是 |
-| number2 | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| number1 | number | 是 | 用于获取最大公约数的第一个整数。 |
+| number2 | number | 是 | 用于获取最大公约数的第二个整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 获取到的最大公约数。 |
 
 ## getCommonFactor
 
@@ -196,7 +279,8 @@ static getCommonFactor(number1: number, number2: number): number
 
 获取两个指定整数的最大公约数。
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **number1** 和 **number2** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息
 > "getCommonFactor: The type of Parameter must be integer"。
 
@@ -208,16 +292,24 @@ static getCommonFactor(number1: number, number2: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| number1 | number | 是 |
-| number2 | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| number1 | number | 是 | 用于获取最大公约数的第一个整数。取值范围：-Number.MAX_VALUE & lt;= number1 & lt;= Number.MAX_VALUE。 |
+| number2 | number | 是 | 用于获取最大公约数的第二个整数。取值范围：-Number.MAX_VALUE & lt;= number2 & lt;= Number.MAX_VALUE。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 获取到的最大公约数。 |
+
+**示例**
+
+```TypeScript
+let result = util.RationalNumber.getCommonFactor(4,6);
+console.info("result = " + result);
+// 输出结果：result = 2
+```
 
 ## getDenominator
 
@@ -235,9 +327,27 @@ getDenominator(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 此 **RationalNumber** 对象的分母。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.getDenominator();
+console.info("result = " + result);
+// 输出结果：result = 2
+```
+
+API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2)
+let result = rationalNumber.getDenominator();
+console.info("result = " + result);
+// 输出结果：result = 2
+```
 
 ## getNumerator
 
@@ -255,9 +365,27 @@ getNumerator(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 此 **RationalNumber** 对象的分子。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.getNumerator();
+console.info("result = " + result);
+// 输出结果：result = 1
+```
+
+API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.getNumerator();
+console.info("result = " + result);
+// 输出结果：result = 1
+```
 
 ## isFinite
 
@@ -275,9 +403,27 @@ isFinite(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果此 **RationalNumber** 对象表示有限值（分母不为 **0**），则返回 **true**； 否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.isFinite();
+console.info("result = " + result);
+// 输出结果：result = true
+```
+
+API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.isFinite();
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isNaN
 
@@ -295,9 +441,27 @@ isNaN(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果此 **RationalNumber** 对象为 NaN（分母和分子都为 **0**），则返回 **true**； 否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.isNaN();
+console.info("result = " + result);
+// 输出结果：result = false
+```
+
+API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.isNaN();
+console.info("result = " + result);
+// 输出结果：result = false
+```
 
 ## isZero
 
@@ -315,9 +479,27 @@ isZero(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果此 **RationalNumber** 对象的值为 **0**，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.isZero();
+console.info("result = " + result);
+// 输出结果：result = false
+```
+
+API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.isZero();
+console.info("result = " + result);
+// 输出结果：result = false
+```
 
 ## parseRationalNumber
 
@@ -327,7 +509,8 @@ static parseRationalNumber(numerator: number, denominator: number): RationalNumb
 
 根据给定的分子和分母创建一个 **RationalNumber** 实例。
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **numerator** 和 **denominator** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息
 > "parseRationalNumber: The type of Parameter must be integer"。
 
@@ -339,16 +522,22 @@ static parseRationalNumber(numerator: number, denominator: number): RationalNumb
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| numerator | number | 是 |
-| denominator | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| numerator | number | 是 | 分子，为整数。取值范围：-Number.MAX_VALUE & lt;= numerator & lt;= Number.MAX_VALUE。 |
+| denominator | number | 是 | 分母，为整数。取值范围：-Number.MAX_VALUE & lt;= denominator & lt;= Number.MAX_VALUE。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | 获取到的 **RationalNumber** 对象。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+```
 
 ## toString
 
@@ -366,9 +555,105 @@ toString(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 正常情况下返回以分子/分母格式的字符串，例如 3/5；如果此对象的分子为 **0**，则返回 **0/1**；如果分母为 **0**，则返回 **Infinity**；如果分子和分母都为 **0**，则返回 **NaN**。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// 输出结果：result = 1/2
+```
+
+API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// 输出结果：result = 1/2
+```
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.get(2);
+pro.get(3);
+console.info(pro.toString());
+// 输出结果：LRUCache[ maxSize = 64, hits = 1, misses = 1, hitRate = 50% ]
+// maxSize: 缓存区最大值 hits: 查询值匹配成功的次数 misses: 查询值匹配失败的次数 hitRate: 查询值匹配率
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// 输出结果：result = [30, 40]
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.get(2);
+pro.remove(20);
+let result = pro.toString();
+console.info("result = " + result);
+// 输出结果：result = Lrubuffer[ maxSize = 64, hits = 1, misses = 0, hitRate = 100% ]
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.Scope(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// 输出结果：result = [30, 40]
+```
 
 ## valueOf
 
@@ -386,6 +671,24 @@ valueOf(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 整数或浮点数。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.valueOf();
+console.info("result = " + result);
+// 输出结果：result = 0.5
+```
+
+API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.valueOf();
+console.info("result = " + result);
+// 输出结果：result = 0.5
+```

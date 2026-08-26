@@ -9,7 +9,7 @@ Serial port object, which provides information and communication capabilities of
 ## Modules to Import
 
 ```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
+import serial from '@kit.BasicServicesKit';
 ```
 
 ## close
@@ -28,16 +28,16 @@ Closes the serial port device. This API returns the result asynchronously throug
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## drain
 
@@ -55,17 +55,17 @@ Waits until all write requests are complete. This API returns the result asynchr
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## flush
 
@@ -83,17 +83,17 @@ Flushes the serial port buffer. This API returns the result asynchronously throu
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## getCts
 
@@ -111,17 +111,17 @@ Obtains the CTS signal status. This API returns the result asynchronously throug
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the CTS signal status, indicating whether data can be sent. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## getDsr
 
@@ -139,17 +139,17 @@ Obtains the DSR signal status. This API returns the result asynchronously throug
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates the remote end is ready, and **false** indicates the remote end is not ready. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## offDataRead
 
@@ -167,16 +167,16 @@ Cancels listening for data receiving events on the serial port.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | No | Callback used to return the data received by the serial port. Default value: Clear all listeners for data receiving events on the serial port. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## offDisconnect
 
@@ -194,16 +194,16 @@ This command is used to cancel the monitoring of the USB virtual serial port dis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback of the USB virtual serial port disconnection event. Default value: Clears all callbacks for USB virtual serial port disconnection events. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## onDataRead
 
@@ -221,17 +221,17 @@ Listens for data received by the serial port. This API uses an asynchronous call
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the data received by the serial port. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## onDisconnect
 
@@ -249,16 +249,16 @@ This interface is used to listen to the disconnection event of the USB virtual s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback of the USB virtual serial port disconnection event. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## open
 
@@ -276,25 +276,25 @@ Enables the port. This API returns the result asynchronously through a promise.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [SerialConfigs](arkts-basicservices-serial-serialconfigs-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [SerialConfigs](arkts-basicservices-serial-serialconfigs-i.md) | No | Serial port communication parameter. Default value: Refer to the default value of SerialConfigs. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700002](../errorcode-busmanager-serial.md#35700002-parameter-error) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700004](../errorcode-busmanager-serial.md#35700004-port-in-use) |
-| [35700007](../errorcode-busmanager-serial.md#35700007-user-authorization-rejected) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700002](../errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700004](../errorcode-busmanager-serial.md#35700004-port-in-use) | Port already in use. |
+| [35700007](../errorcode-busmanager-serial.md#35700007-user-authorization-rejected) | User authorization required. |
 
 ## sendBrk
 
@@ -312,17 +312,17 @@ Sends a BRK signal. This API returns the result asynchronously through a promise
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## setDtr
 
@@ -340,23 +340,23 @@ Sets the DTR signal status. Use Promise asynchronous callbacks.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | DTR signal status, indicating whether the local end is ready. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## setRts
 
@@ -374,23 +374,23 @@ Sets the RTS signal. This API returns the result asynchronously through a promis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | RTS signal status, indicating whether to request sending data. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## write
 
@@ -408,26 +408,26 @@ Sends data. This API returns the result asynchronously through a promise.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | Uint8Array | Yes |
-| timeout | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | Uint8Array | Yes | Data to be sent. Length range: (0, 4096] |
+| timeout | number | No | Timeout interval. Length range: [0, 300000]. The value must be an integer, in milliseconds. The default value is 0, indicating that when data cannot be written to the port, the API does not wait and directly returns 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the length of the data written. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700002](../errorcode-busmanager-serial.md#35700002-parameter-error) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) |
-| [35700006](../errorcode-busmanager-serial.md#35700006-transmission-timeout) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700002](../errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700006](../errorcode-busmanager-serial.md#35700006-transmission-timeout) | Transmission timeout. |
 
 ## portInfo
 

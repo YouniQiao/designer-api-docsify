@@ -11,7 +11,6 @@ Stabilization继承自[StabilizationQuery](arkts-camera-camera-stabilizationquer
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getActiveVideoStabilizationMode
@@ -30,15 +29,49 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | 视频防抖是否正在使用。若接口调用失败，返回undefined。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getActiveVideoStabilizationMode(captureSession: camera.CaptureSession): camera.VideoStabilizationMode | undefined {
+  let vsMode: camera.VideoStabilizationMode | undefined = undefined;
+  try {
+    vsMode = captureSession.getActiveVideoStabilizationMode();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The getActiveVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+  return vsMode;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getActiveVideoStabilizationMode(videoSession: camera.VideoSession): camera.VideoStabilizationMode | undefined {
+  let vsMode: camera.VideoStabilizationMode | undefined = undefined;
+  try {
+    vsMode = videoSession.getActiveVideoStabilizationMode();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The getActiveVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+  return vsMode;
+}
+```
 
 ## setVideoStabilizationMode
 
@@ -56,12 +89,42 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | 是 | 需要设置的视频防抖模式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setVideoStabilizationMode(captureSession: camera.CaptureSession): void {
+  try {
+    captureSession.setVideoStabilizationMode(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The setVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setVideoStabilizationMode(videoSession: camera.VideoSession): void {
+  try {
+    videoSession.setVideoStabilizationMode(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The setVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+}
+```

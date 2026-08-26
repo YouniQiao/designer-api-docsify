@@ -11,7 +11,7 @@ Surface配置参数。@interface SurfaceParam
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+import abilityConnectionManager from '@kit.DistributedServiceKit';
 ```
 
 ## flip

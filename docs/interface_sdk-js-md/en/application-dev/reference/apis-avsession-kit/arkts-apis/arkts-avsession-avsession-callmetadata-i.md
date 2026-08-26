@@ -9,7 +9,7 @@ The metadata of the current call.@interface CallMetadata [since 11 - 11]
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import avSession from '@kit.AVSessionKit';
 ```
 
 ## avatar

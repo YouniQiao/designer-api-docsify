@@ -2,8 +2,10 @@
 
 A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves.
 
-> **NOTE：**&gt;
-> - This module uses the physical pixel unit, px.&gt;
+> **NOTE：**
+> 
+> - This module uses the physical pixel unit, px.
+> 
 > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
@@ -14,7 +16,7 @@ A compound geometric path consisting of line segments, arcs, quadratic Bezier cu
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import drawing from '@kit.ArkGraphics2D';
 ```
 
 ## addArc
@@ -34,17 +36,27 @@ In other cases, this API adds an arc by applying the result of **sweepAngle** mo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rect | common2D.Rect | Yes |
-| startAngle | number | Yes |
-| sweepAngle | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rect | common2D.Rect | Yes | Rectangular boundary that encapsulates the oval including the arc. |
+| startAngle | number | Yes | Start angle of the arc, in degrees. The value 0 indicates the positive direction of the X axis. The value is a floating point number. |
+| sweepAngle | number | Yes | Angle to sweep, in degrees. A positive value indicates a clockwise sweep, and a negative value indicates a counterclockwise sweep. The value is a floating point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
+path.addArc(rect, 90, 180);
+```
 
 ## addCircle
 
@@ -60,18 +72,27 @@ Adds a circle to this path in the specified direction. The start point of the ci
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| radius | number | Yes |
-| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X coordinate of the center of the circle. The value is a floating point number. |
+| y | number | Yes | Y coordinate of the center of the circle. The value is a floating point number. |
+| radius | number | Yes | Radius of the circle. The value is a floating point number. If the value is less than or equal to 0, there is no effect. |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | Direction of the path. The default direction is clockwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+path.addCircle(100, 200, 50, drawing.PathDirection.CLOCKWISE);
+```
 
 ## addOval
 
@@ -87,17 +108,27 @@ Adds the inscribed ellipse of a rectangle to this path in the specified directio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rect | common2D.Rect | Yes |
-| start | number | Yes |
-| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rect | common2D.Rect | Yes | Rectangular boundary of the oval. |
+| start | number | Yes | Start point of the oval, where 0, 1, 2, and 3 correspond to the upper, right, lower, and left points, respectively. The value is an integer greater than or equal to 0. If the value is greater than or equal to 4, the remainder of 4 is used. |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | Direction of the path. The default direction is clockwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
+path.addOval(rect, 5, drawing.PathDirection.CLOCKWISE);
+```
 
 ## addPath
 
@@ -113,16 +144,30 @@ Transforms the points in a path by a matrix and stores the resulting path in the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
-| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Source **Path** object. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object. The default value is an identity matrix. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+let matrix = new drawing.Matrix();
+const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
+let roundRect = new drawing.RoundRect(rect, 50, 50);
+path.addRoundRect(roundRect, drawing.PathDirection.CLOCKWISE);
+let dstPath = new drawing.Path();
+dstPath.addPath(path, matrix);
+```
 
 ## addPolygon
 
@@ -138,16 +183,34 @@ Adds a polygon to this path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| points | Array & lt;common2D.Point & gt; | Yes |
-| [close](#close) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| points | Array & lt;common2D.Point & gt; | Yes | Array that holds the vertex coordinates of the polygon. |
+| close | boolean | Yes | Whether to close the path, that is, whether to add a line segment from the start point to the end point of the path. The value **true** means to close the path, and **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let pointsArray = new Array<common2D.Point>();
+const point1: common2D.Point = { x: 200, y: 200 };
+const point2: common2D.Point = { x: 400, y: 200 };
+const point3: common2D.Point = { x: 100, y: 400 };
+const point4: common2D.Point = { x: 300, y: 400 };
+pointsArray.push(point1);
+pointsArray.push(point2);
+pointsArray.push(point3);
+pointsArray.push(point4);
+const path = new drawing.Path();
+path.addPolygon(pointsArray, false);
+```
 
 ## addRect
 
@@ -163,16 +226,26 @@ Adds a rectangle to a path in the specified direction. The start point is the up
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rect | common2D.Rect | Yes |
-| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rect | common2D.Rect | Yes | Rectangle. |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | Direction of the path. The default direction is clockwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
+path.addRect(rect, drawing.PathDirection.CLOCKWISE);
+```
 
 ## addRoundRect
 
@@ -188,16 +261,27 @@ Adds a rounded rectangle to a path in the specified direction. When the path dir
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [roundRect](../../apis-arkui/arkts-components/arkts-arkui-canvaspath-c.md) | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes |
-| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | Rounded rectangle. |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | Direction of the path. The default direction is clockwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
+let roundRect = new drawing.RoundRect(rect, 50, 50);
+path.addRoundRect(roundRect, drawing.PathDirection.CLOCKWISE);
+```
 
 ## approximate
 
@@ -207,11 +291,14 @@ approximate(acceptableError: number): Array<number>
 
 Converts the existing path into an approximate path consisting of consecutive line segments.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting
-> performance and memory usage.&gt;
+> performance and memory usage.
+> 
 > - Setting a high **acceptableError** simplifies the path greatly by keeping only essential points, potentially
-> distorting the original shape.&gt;
+> distorting the original shape.
+> 
 > - When you set a high **acceptableError** for curves such as ellipses, the fitting process often simplifies
 > them to polygons by keeping just the start and end points of their Bezier curve segments.
 
@@ -221,21 +308,35 @@ Converts the existing path into an approximate path consisting of consecutive li
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| acceptableError | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| acceptableError | number | Yes | Acceptable error of each line segment on a path. The value is a floating point number. If the value is less than 0, an error is reported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;number & gt; | An array of points in the approximate path, which contains at least two points. Each point consists of three values: |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+path.moveTo(100, 100);
+path.lineTo(500, 500);
+let points: number[] = path.approximate(0.5);
+for (let i = 0; i < points.length; i += 3) {
+  console.info("PathApproximate Fraction =" + points[i] + ", X =" + points[i + 1] + ", Y =" + points[i + 2] + "\n");
+}
+```
 
 ## arcTo
 
@@ -253,20 +354,30 @@ Draws an arc to this path using angle arc mode. This mode first defines a rectan
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x1 | number | Yes |
-| y1 | number | Yes |
-| x2 | number | Yes |
-| y2 | number | Yes |
-| startDeg | number | Yes |
-| sweepDeg | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x1 | number | Yes | X coordinate of the upper left corner of the rectangle. The value is a floating point number. |
+| y1 | number | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. |
+| x2 | number | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. |
+| y2 | number | Yes | Y coordinate of the lower right corner of the rectangle. The value is a floating point number. |
+| startDeg | number | Yes | Start angle. The start direction (0��) of the angle is the positive direction of the X axis. |
+| sweepDeg | number | Yes | Angle to sweep, in degrees. A positive value indicates a clockwise sweep, and a negative value indicates a counterclockwise sweep. The actual swipe degree is the modulo operation result of the input parameter by 360. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+path.moveTo(10,10);
+path.arcTo(10, 15, 10, 10, 10, 10);
+```
 
 ## buildFromSvgString
 
@@ -282,21 +393,35 @@ Parses the path represented by an SVG string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| str | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| str | string | Yes | String in SVG format, which is used to describe the path. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Result of the parsing operation. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+let svgStr: string =  "M150 100 L75 300 L225 300 Z";
+if(path.buildFromSvgString(svgStr)) {
+  console.info("buildFromSvgString return true");
+} else {
+  console.info("buildFromSvgString return false");
+}
+```
 
 ## close
 
@@ -309,6 +434,17 @@ Closes this path by adding a line segment from the start point to the last point
 **Since:** 11
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+path.moveTo(10,10);
+path.cubicTo(10, 10, 10, 10, 15, 15);
+path.close();
+```
 
 ## conicTo
 
@@ -326,19 +462,28 @@ Draws a conic curve from the last point of this path to the target point. If the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ctrlX | number | Yes |
-| ctrlY | number | Yes |
-| endX | number | Yes |
-| endY | number | Yes |
-| weight | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ctrlX | number | Yes | X coordinate of the control point. The value is a floating point number. |
+| ctrlY | number | Yes | Y coordinate of the control point. The value is a floating point number. |
+| endX | number | Yes | X coordinate of the target point. The value is a floating point number. |
+| endY | number | Yes | Y coordinate of the target point. The value is a floating point number. |
+| weight | number | Yes | Weight of the curve, which determines its shape. The larger the value, the closer of the curve to the control point. If the value is less than or equal to 0, this API has the same effect as [lineTo](#lineto). If the value is 1, it has the same effect as [quadTo](#quadto). The value is a floating point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+path.conicTo(200, 400, 100, 200, 0);
+```
 
 ## constructor
 
@@ -353,6 +498,50 @@ Constructs a path.
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let matrix = new drawing.Matrix();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+```
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    let samplingOptions = new drawing.SamplingOptions();
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+let typeFaceArgument = new drawing.TypefaceArguments();
+```
 
 ## constructor
 
@@ -370,9 +559,29 @@ Constructs a copy of an existing path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path to copy. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+path.moveTo(0, 0);
+path.lineTo(0, 700);
+path.lineTo(700, 0);
+path.close();
+let path1: drawing.Path =  new drawing.Path(path);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+let iter: drawing.PathIterator = new drawing.PathIterator(path);
+```
 
 ## contains
 
@@ -388,22 +597,34 @@ Checks whether a coordinate point is included in this path. For details, see [Pa
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X coordinate. The value is a floating point number. |
+| y | number | Yes | Y coordinate. The value is a floating point number. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** means that the coordinate point is included in the path, and **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+let rect : common2D.Rect = {left: 50, top: 50, right: 250, bottom: 250};
+path.addRect(rect, drawing.PathDirection.CLOCKWISE);
+console.info("test contains: " + path.contains(0, 0));
+console.info("test contains: " + path.contains(60, 60));
+```
 
 ## convertToSvgString
 
@@ -421,9 +642,9 @@ Converts path to an SVG string.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | The SVG string of the path. |
 
 ## cubicTo
 
@@ -441,20 +662,30 @@ Draws a cubic Bezier curve from the last point of this path to the target point.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ctrlX1 | number | Yes |
-| ctrlY1 | number | Yes |
-| ctrlX2 | number | Yes |
-| ctrlY2 | number | Yes |
-| endX | number | Yes |
-| endY | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ctrlX1 | number | Yes | X coordinate of the first control point. The value is a floating point number. |
+| ctrlY1 | number | Yes | Y coordinate of the first control point. The value is a floating point number. |
+| ctrlX2 | number | Yes | X coordinate of the second control point. The value is a floating point number. |
+| ctrlY2 | number | Yes | Y coordinate of the second control point. The value is a floating point number. |
+| endX | number | Yes | X coordinate of the target point. The value is a floating point number. |
+| endY | number | Yes | Y coordinate of the target point. The value is a floating point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+path.moveTo(10,10);
+path.cubicTo(100, 100, 80, 150, 300, 150);
+```
 
 ## getBounds
 
@@ -470,9 +701,31 @@ Obtains the minimum bounding rectangle that encloses this path.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| common2D.Rect |
+| Type | Description |
+| --- | --- |
+| common2D.Rect | Minimum bounding rectangle. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+path.lineTo(50, 40)
+let rect : common2D.Rect = {left: 0, top: 0, right: 0, bottom: 0};
+rect = path.getBounds();
+console.info("test rect.left: " + rect.left);
+console.info("test rect.top: " + rect.top);
+console.info("test rect.right: " + rect.right);
+console.info("test rect.bottom: " + rect.bottom);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let region = new drawing.Region();
+let rect = region.getBounds();
+```
 
 ## getConicWeightData
 
@@ -490,9 +743,9 @@ Gets path conic weight data.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;number & gt; | path conic weight array. |
 
 ## getFillType
 
@@ -508,9 +761,19 @@ Obtains the fill type of a path.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) |
+| Type | Description |
+| --- | --- |
+| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | Fill type of a path. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+const path = new drawing.Path();
+path.setFillType(drawing.PathFillType.WINDING);
+let type = path.getFillType();
+console.info("type :" + type);
+```
 
 ## getLastPoint
 
@@ -528,9 +791,9 @@ Gets the last point of the path.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| common2D.Point |
+| Type | Description |
+| --- | --- |
+| common2D.Point | Returns the last point of the path. |
 
 ## getLength
 
@@ -546,15 +809,26 @@ Obtains the path length.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| forceClosed | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| forceClosed | boolean | Yes | Whether the path is measured as a closed path. The value **true** means that the path is considered closed during measurement, and **false** means that the path is measured based on the actual closed status. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Path length. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+path.arcTo(20, 20, 180, 180, 180, 90);
+let len = path.getLength(false);
+console.info("path length = " + len);
+```
 
 ## getMatrix
 
@@ -570,24 +844,38 @@ Obtains a transformation matrix at a specific position along the path, which rep
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| forceClosed | boolean | Yes |
-| distance | number | Yes |
-| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
-| flags | [PathMeasureMatrixFlags](arkts-arkgraphics2d-drawing-pathmeasurematrixflags-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| forceClosed | boolean | Yes | Whether the path is measured as a closed path. The value **true** means that the path is considered closed during measurement, and **false** means that the path is measured based on the actual closed status. |
+| distance | number | Yes | Distance from the start point. If a negative number is passed in, the value **0** is used. If a value greater than the path length is passed in, the path length is used. The value is a floating point number. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix** object used to store the matrix obtained. |
+| flags | [PathMeasureMatrixFlags](arkts-arkgraphics2d-drawing-pathmeasurematrixflags-e.md) | Yes | Type of the matrix information obtained. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the transformation matrix is obtained. The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+let matrix = new drawing.Matrix();
+if(path.getMatrix(false, 10, matrix, drawing.PathMeasureMatrixFlags.GET_TANGENT_MATRIX)) {
+  console.info("path.getMatrix return true");
+} else {
+  console.info("path.getMatrix return false");
+}
+```
 
 ## getPathIterator
 
@@ -603,9 +891,18 @@ Obtains the operation iterator of this path.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) |
+| Type | Description |
+| --- | --- |
+| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | Iterator** object of the path. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+let iter = path.getPathIterator();
+```
 
 ## getPointData
 
@@ -623,9 +920,9 @@ Gets path point data.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;common2D.Point & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;common2D.Point & gt; | path points array. |
 
 ## getPositionAndTangent
 
@@ -641,24 +938,43 @@ Obtains the coordinates and tangent at a distance from the start point of this p
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| forceClosed | boolean | Yes |
-| distance | number | Yes |
-| position | common2D.Point | Yes |
-| tangent | common2D.Point | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| forceClosed | boolean | Yes | Whether the path is measured as a closed path. The value **true** means that the path is considered closed during measurement, and **false** means that the path is measured based on the actual closed status. |
+| distance | number | Yes | Distance from the start point. If a negative number is passed in, the value **0** is used. If a value greater than the path length is passed in, the path length is used. The value is a floating point number. |
+| position | common2D.Point | Yes | Coordinates obtained. |
+| tangent | common2D.Point | Yes | Tangent obtained, where **tangent.x** and **tangent.y** represent the cosine and sine of the tangent of the point, respectively. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** means that they are obtained, and **false** means the opposite. The values of **position** and **tangent** are not changed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+path.moveTo(0, 0);
+path.lineTo(0, 700);
+path.lineTo(700, 0);
+let position: common2D.Point = { x: 0.0, y: 0.0 };
+let tangent: common2D.Point = { x: 0.0, y: 0.0 };
+if (path.getPositionAndTangent(false, 0.1, position, tangent)) {
+  console.info("getPositionAndTangent-----position:  "+ position.x);
+  console.info("getPositionAndTangent-----position:  "+ position.y);
+  console.info("getPositionAndTangent-----tangent:  "+ tangent.x);
+  console.info("getPositionAndTangent-----tangent:  "+ tangent.y);
+}
+```
 
 ## getSegment
 
@@ -674,19 +990,32 @@ Extracts a segment of a path and appends it to a destination path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| forceClosed | boolean | Yes |
-| start | number | Yes |
-| stop | number | Yes |
-| startWithMoveTo | boolean | Yes |
-| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| forceClosed | boolean | Yes | Whether the path is measured as a closed path. The value **true** means that the path is considered closed during measurement, and **false** means that the path is measured based on the actual closed status. |
+| start | number | Yes | Distance from the start point of the path to the start point of the segment. If it is less than 0, it defaults to 0. If it is greater than or equal to **stop**, the extraction fails. The value is a floating point number. |
+| stop | number | Yes | Distance from the start point of the path to the end point of the segment. If it is less than or equal to **start**, the extraction fails. If it is greater than the path length, it defaults to the path length. The value is a floating point number. |
+| startWithMoveTo | boolean | Yes | Whether to execute [moveTo](#moveto) in the destination path to move to its start point. The value **true** means to move to the start point, and **false** means the opposite. |
+| dst | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Destination path. If the extraction succeeds, the segment is appended to the path. If the extraction fails, nothing changes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Extraction result. The value **true** means that the extraction is successful, and **false** means the opposite. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+path.moveTo(0, 0);
+path.lineTo(0, 700);
+path.lineTo(700, 0);
+let dstPath: drawing.Path = new drawing.Path();
+console.info("getSegment-----result:  "+ path.getSegment(true, 10.0, 20.0, true, dstPath));
+```
 
 ## getVerbData
 
@@ -704,9 +1033,9 @@ Gets path verb data.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md)&gt; | path verbs array. |
 
 ## interpolate
 
@@ -722,23 +1051,43 @@ Interpolates between the existing path and another path based on the given weigh
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
-| weight | number | Yes |
-| interpolatedPath | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Another path object. |
+| weight | number | Yes | Interpolation weight, which must be within the range of [0.0, 1.0]. The value is a floating point number. |
+| interpolatedPath | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Target path object used to store the interpolation result. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether interpolation is successful. **true** means yes; **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+path.moveTo(50, 50);
+path.lineTo(100, 100);
+path.lineTo(200, 200);
+let other: drawing.Path = new drawing.Path();
+other.moveTo(80, 80);
+other.lineTo(300, 300);
+let interpolatedPath: drawing.Path = new drawing.Path();
+if (path.interpolate(other, 0.0, interpolatedPath)) {
+  console.info('interpolate return true');
+} else {
+  console.info('interpolate return false');
+}
+```
 
 ## isClosed
 
@@ -754,9 +1103,24 @@ Checks whether a path is closed.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** means that the path is closed, and **false** means the opposite. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+path.moveTo(0, 0);
+path.lineTo(0, 700);
+if (path.isClosed()) {
+  console.info("path is closed.");
+} else {
+  console.info("path is not closed.");
+}
+```
 
 ## isEmpty
 
@@ -772,9 +1136,48 @@ Checks whether a path is empty.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether a path is empty. **true** means yes; **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+let path = new drawing.Path();
+path.moveTo(10,10);
+path.lineTo(20,20);
+let isEmpty = path.isEmpty();
+console.info('isEmpty:', isEmpty);
+```
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({
+      alpha: 255,
+      red: 255,
+      green: 0,
+      blue: 0
+    });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    let flag: boolean = region.isEmpty();
+    console.info('flag: ', flag);
+    region.setRect(100, 100, 400, 400);
+    flag = region.isEmpty();
+    console.info('flag: ', flag);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
 
 ## isEqual
 
@@ -792,15 +1195,70 @@ Checks if two paths are equal.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Another Path object to compare. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns true if the two paths are equal, otherwise returns false. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let matrix1 = new drawing.Matrix();
+matrix1.setMatrix([2, 1, 3, 1, 2, 1, 3, 1, 2]);
+let matrix2 = new drawing.Matrix();
+matrix2.setMatrix([-2, 1, 3, 1, 0, -1, 3, -1, 2]);
+if (matrix1.isEqual(matrix2)) {
+  console.info("matrix1 and matrix2 are equal.");
+} else {
+  console.info("matrix1 and matrix2 are not equal.");
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(10, 20, 20, 30);
+let rect2 = drawing.RectUtils.makeEmpty();
+let isEqual = drawing.RectUtils.isEqual(rect, rect2);
+console.info('isEqual :', isEqual);
+```
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({
+      alpha: 255,
+      red: 255,
+      green: 0,
+      blue: 0
+    });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    let other = new drawing.Region();
+    region.setRect(100, 100, 400, 400);
+    other.setRect(150, 150, 250, 250);
+    let flag: boolean = false;
+    flag = region.isEqual(other);
+    console.info('flag: ', flag);
+    canvas.drawRegion(region);
+    canvas.drawRegion(other);
+    canvas.detachPen();
+  }
+}
+```
 
 ## isInterpolate
 
@@ -816,15 +1274,33 @@ Checks whether the existing path and another path are compatible for interpolati
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Another path object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the existing path and another path are compatible for interpolation. **true** means yes; **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+path.moveTo(0, 0);
+path.lineTo(100, 100);
+let other: drawing.Path = new drawing.Path();
+other.moveTo(0, 1);
+other.lineTo(200, 200);
+if (path.isInterpolate(other)) {
+  console.info('isInterpolate return true');
+} else {
+  console.info('isInterpolate return false');
+}
+```
 
 ## isInverseFillType
 
@@ -840,9 +1316,23 @@ Checks whether the current path fill type is the inverse fill type. For example,
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the current path fill type is the inverse fill type. **true** means yes; **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+path.setFillType(drawing.PathFillType.WINDING);
+if (path.isInverseFillType()) {
+  console.info("path is inverse FillType.");
+} else {
+  console.info("path is not inverse FillType.");
+}
+```
 
 ## isRect
 
@@ -858,15 +1348,33 @@ Checks whether a path forms a rectangle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rect | common2D.Rect \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rect | common2D.Rect \| null | Yes | Rectangle object, which is used as an output parameter. If the path forms a rectangle, the rectangle object is overwritten with the rectangle represented by the path. Otherwise, the rectangle object remains unchanged. The value can be **null**, indicating that the rectangle represented by the path does not need to be obtained. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether a path forms a rectangle. **true** means yes; **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+path.moveTo(10,10);
+path.lineTo(20,10);
+let isRect = path.isRect(null);
+console.info("isRect: ", isRect);
+let rect: common2D.Rect = { left : 100, top : 100, right : 400, bottom : 500 };
+path.lineTo(20, 20);
+path.lineTo(10, 20);
+path.lineTo(10, 10);
+isRect = path.isRect(rect);
+console.info('isRect: ', isRect);
+```
 
 ## lineTo
 
@@ -884,16 +1392,26 @@ Draws a line segment from the last point of this path to the target point. If th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X coordinate of the target point. The value is a floating point number. |
+| y | number | Yes | Y coordinate of the target point. The value is a floating point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+path.moveTo(10,10);
+path.lineTo(10, 15);
+```
 
 ## moveTo
 
@@ -911,16 +1429,25 @@ Sets the start point of this path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X coordinate of the start point. The value is a floating point number. |
+| y | number | Yes | Y coordinate of the start point. The value is a floating point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+path.moveTo(10,10);
+```
 
 ## offset
 
@@ -936,22 +1463,33 @@ Offsets this path by specified distances along the X axis and Y axis and stores 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dx | number | Yes |
-| dy | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dx | number | Yes | X offset. A positive number indicates an offset towards the positive direction of the X axis, and a negative number indicates an offset towards the negative direction of the X axis. The value is a floating point number. |
+| dy | number | Yes | Y offset. A positive number indicates an offset towards the positive direction of the Y axis, and a negative number indicates an offset towards the negative direction of the Y axis. The value is a floating point number. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) |
+| Type | Description |
+| --- | --- |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | New path generated. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+path.moveTo(200, 200);
+path.lineTo(300, 300);
+const dst = path.offset(200, 200);
+```
 
 ## op
 
@@ -967,22 +1505,33 @@ Combines this path with the passed-in path based on the specified operation mode
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
-| pathOp | [PathOp](arkts-arkgraphics2d-drawing-pathop-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path object, which will be combined with the current path. |
+| pathOp | [PathOp](arkts-arkgraphics2d-drawing-pathop-e.md) | Yes | Defines an enum for the operation modes available for a path. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Result of the path combination result. The value **true** means that the path combination is successful, and **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+const path2 = new drawing.Path();
+path.addCircle(100, 200, 100, drawing.PathDirection.CLOCKWISE);
+console.info("get pathOp: ", path2.op(path, drawing.PathOp.DIFFERENCE));
+```
 
 ## quadTo
 
@@ -1000,18 +1549,28 @@ Draws a quadratic Bezier curve from the last point of this path to the target po
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ctrlX | number | Yes |
-| ctrlY | number | Yes |
-| endX | number | Yes |
-| endY | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ctrlX | number | Yes | X coordinate of the control point. The value is a floating point number. |
+| ctrlY | number | Yes | Y coordinate of the control point. The value is a floating point number. |
+| endX | number | Yes | X coordinate of the target point. The value is a floating point number. |
+| endY | number | Yes | Y coordinate of the target point. The value is a floating point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+path.moveTo(10,10);
+path.quadTo(10, 15, 10, 10);
+```
 
 ## rConicTo
 
@@ -1029,19 +1588,28 @@ Draws a conic curve from the last point of this path to a point relative to the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ctrlX | number | Yes |
-| ctrlY | number | Yes |
-| endX | number | Yes |
-| endY | number | Yes |
-| weight | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ctrlX | number | Yes | X offset of the control point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| ctrlY | number | Yes | Y offset of the control point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
+| endX | number | Yes | X offset of the target point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| endY | number | Yes | Y offset of the target point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
+| weight | number | Yes | Weight of the curve, which determines its shape. The larger the value, the closer of the curve to the control point. If the value is less than or equal to 0, this API is equivalent to [rLineTo](#rlineto), that is, adding a line segment from the last point of the path to the target point. If the value is 1, this API is equivalent to [rQuadTo](#rquadto). The value is a floating point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+path.rConicTo(200, 400, 100, 200, 0);
+```
 
 ## rCubicTo
 
@@ -1059,20 +1627,29 @@ Draws a cubic Bezier curve from the last point of this path to a point relative 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ctrlX1 | number | Yes |
-| ctrlY1 | number | Yes |
-| ctrlX2 | number | Yes |
-| ctrlY2 | number | Yes |
-| endX | number | Yes |
-| endY | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ctrlX1 | number | Yes | X offset of the first control point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| ctrlY1 | number | Yes | Y offset of the first control point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
+| ctrlX2 | number | Yes | X offset of the second control point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| ctrlY2 | number | Yes | Y offset of the second control point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
+| endX | number | Yes | X offset of the target point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| endY | number | Yes | Y offset of the target point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+path.rCubicTo(200, 0, 0, 200, -20, 0);
+```
 
 ## reset
 
@@ -1086,6 +1663,40 @@ Resets the path data.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.reset();
+```
+
+```TypeScript
+import { drawing } from "@kit.ArkGraphics2D";
+
+let matrix = new drawing.Matrix();
+matrix.postScale(2, 3, 4, 5);
+matrix.reset();
+console.info("matrix= "+matrix.getAll().toString());
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+path.moveTo(10,10);
+path.cubicTo(10, 10, 10, 10, 15, 15);
+path.reset();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.reset();
+```
+
 ## rewind
 
 ```TypeScript
@@ -1097,6 +1708,18 @@ Rewinds a path by clearing all its points and lines but reserves the memory spac
 **Since:** 20
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+let path = new drawing.Path();
+path.moveTo(10,10);
+path.lineTo(20,20);
+path.rewind();
+let empty = path.isEmpty();
+console.info('empty : ', empty);
+```
 
 ## rLineTo
 
@@ -1114,16 +1737,25 @@ Draws a line segment from the last point of this path to a point relative to the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dx | number | Yes |
-| dy | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dx | number | Yes | X offset of the target point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| dy | number | Yes | Y offset of the target point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+path.rLineTo(400, 200);
+```
 
 ## rMoveTo
 
@@ -1141,16 +1773,25 @@ Sets the start position relative to the last point of this path. If the path is 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dx | number | Yes |
-| dy | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dx | number | Yes | X offset of the start point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| dy | number | Yes | Y offset of the start point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+path.rMoveTo(10, 10);
+```
 
 ## rQuadTo
 
@@ -1168,18 +1809,27 @@ Draws a quadratic Bezier curve from the last point of this path to a point relat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dx1 | number | Yes |
-| dy1 | number | Yes |
-| dx2 | number | Yes |
-| dy2 | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dx1 | number | Yes | X offset of the control point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| dy1 | number | Yes | Y offset of the control point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
+| dx2 | number | Yes | X offset of the target point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| dy2 | number | Yes | Y offset of the target point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+path.rQuadTo(100, 0, 0, 200);
+```
 
 ## set
 
@@ -1197,9 +1847,22 @@ Updates the existing path with another path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path for the update. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+let path: drawing.Path = new drawing.Path();
+path.moveTo(0, 0);
+path.lineTo(0, 700);
+path.lineTo(700, 0);
+path.close();
+let path1: drawing.Path = new drawing.Path();
+path1.set(path);
+```
 
 ## setFillType
 
@@ -1215,15 +1878,24 @@ Sets the fill type of this path. The fill type determines how "inside" of the pa
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pathFillType | [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pathFillType | [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | Yes | Fill type of the path. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+path.setFillType(drawing.PathFillType.WINDING);
+```
 
 ## setLastPoint
 
@@ -1239,10 +1911,27 @@ Sets the last point of a path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X coordinate of a point. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
+| y | number | Yes | Y coordinate of a point. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+const path = new drawing.Path();
+path.moveTo(0, 0);
+path.lineTo(0, 700);
+let isEmpty = path.isEmpty();
+console.info('isEmpty:', isEmpty);
+path.reset();
+isEmpty = path.isEmpty();
+console.info('isEmpty:', isEmpty);
+path.setLastPoint(50, 50);
+isEmpty = path.isEmpty();
+console.info('isEmpty:', isEmpty);
+```
 
 ## toggleInverseFillType
 
@@ -1255,6 +1944,17 @@ Toggles the fill type of the path to the inverse type. For example, if the **Win
 **Since:** 23
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+path.setFillType(drawing.PathFillType.WINDING);
+path.toggleInverseFillType();
+console.info("path fillType = ", path.getFillType());
+```
 
 ## transform
 
@@ -1270,12 +1970,26 @@ Transforms the points in a path by matrix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+let matrix = new drawing.Matrix();
+matrix.setScale(1.5, 1.5, 10, 10);
+const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
+let roundRect = new drawing.RoundRect(rect, 50, 50);
+path.addRoundRect(roundRect, drawing.PathDirection.CLOCKWISE);
+path.transform(matrix);
+```

@@ -12,7 +12,8 @@ Web(value: WebOptions)
 
 Sets Value.
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 在HTML5侧，调用console.log或console.info对应ConsoleMessage的信息级别都为MessageLevel.Info。
 
 **起始版本：** 8
@@ -23,23 +24,23 @@ Sets Value.
 
 **参数:**
 
-| 参数名 | [类型](#类型) | 必填 |
-| --- | --- | --- |
-| value | [WebOptions](arkts-arkweb-weboptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [WebOptions](arkts-arkweb-weboptions-i.md) | 是 | Web组件的初始化配置选项，用于设置加载的网页资源（src）、绑定的控制器（controller）以及渲染模式等行为参数。具体属性结构请参考WebOptions接口定义。 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 类型
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 枚举
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |

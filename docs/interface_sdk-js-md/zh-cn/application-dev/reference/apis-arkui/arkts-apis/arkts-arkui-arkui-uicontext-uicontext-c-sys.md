@@ -4,7 +4,8 @@ UIContext实例对象。
 
 > **说明：**
 
-> - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。&gt;
+> - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
+> 
 > - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的
 > getUIContext()方法获取UIContext实例，第二种是通过自定
 > 义组件内置方法getUIContext()获取UIContext
@@ -18,10 +19,10 @@ UIContext实例对象。
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## clearResourceCache
@@ -44,9 +45,27 @@ clearResourceCache(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application.<br>**适用版本：** 12 - 22 |
+
+**示例**
+
+```TypeScript
+@Entry
+@Component
+struct MyStateSample {
+  build() {
+    Column() {
+      Button("clearResourceCache")
+        .onClick((event: ClickEvent) => {
+          this.getUIContext().clearResourceCache()
+        })
+        .width('100%')
+    }
+  }
+}
+```
 
 ## freezeUINode
 
@@ -66,16 +85,16 @@ freezeUINode(id: string, isFrozen: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | string | 是 |
-| isFrozen | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | string | 是 | 组件的id。 |
+| isFrozen | boolean | 是 | 是否设置冻结。true表示设置冻结，false表示设置不冻结。默认值为false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## freezeUINode
 
@@ -95,16 +114,16 @@ freezeUINode(uniqueId: number, isFrozen: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uniqueId | number | 是 |
-| isFrozen | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uniqueId | number | 是 | 组件的uniqueId。 |
+| isFrozen | boolean | 是 | 是否设置冻结。true表示设置冻结，false表示设置不冻结。默认值为false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## getLuminanceSampler
 
@@ -124,15 +143,19 @@ getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 目标组件的标识。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LuminanceSampler](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md) \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| [LuminanceSampler](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md) \| undefined | the luminance sampler or undefined. |
+
+**示例**
+
+参考[offBackgroundLuminanceChange](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md#offbackgroundluminancechange)接口的示例。
 
 ## recycleInvisibleImageMemory
 
@@ -152,9 +175,33 @@ recycleInvisibleImageMemory(enabled: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | boolean | 是 | 使能开关项：true开启，false关闭； 默认不开启，由系统应用按需开启。 默认值：false 默认值：false 默认值：false 默认值：false 配置为异常undefined时，恢复为默认值false |
+
+**示例**
+
+```TypeScript
+@Entry
+@Component
+struct ImageRecycleSample {
+  build() {
+    Column({ space: 12 }) {
+      Button('Enable recycle invisible image memory')
+        .onClick(() => {
+          this.getUIContext().recycleInvisibleImageMemory(true)
+        })
+
+      Button('Disable recycle invisible image memory')
+        .onClick(() => {
+          this.getUIContext().recycleInvisibleImageMemory(false)
+        })
+    }
+    .width('100%')
+    .padding(16)
+  }
+}
+```
 
 ## setDynamicDimming
 
@@ -164,7 +211,8 @@ setDynamicDimming(id: string, value: number): void
 
 通过该方法设置组件的压暗程度。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 设置该属性后设置其他效果类属性会导致效果冲突。
 
 **起始版本：** 12
@@ -177,10 +225,32 @@ setDynamicDimming(id: string, value: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | string | 是 |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | string | 是 | 组件id。 |
+| value | number | 是 | 组件压暗程度取值范围[0,1], 由0到1逐渐变亮。 |
+
+**示例**
+
+```TypeScript
+@Entry
+@Component
+struct Index {
+  @State
+  myCount : number = 100
+
+  build() {
+    Column(){
+      Image($r('app.media.testImage')).width(500).height(800).id("test")
+    }.width("100%").height("100%").onClick(()=>{
+      this.getUIContext().setDynamicDimming("test",1)
+      this.getUIContext()?.animateTo({duration:5000 },()=>{
+        this.getUIContext().setDynamicDimming("test",0)
+      })
+    })
+  }
+}
+```
 
 ## setKeyboardAppearanceConfig
 
@@ -200,13 +270,13 @@ setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uniqueId | number | 是 |
-| config | [KeyboardAppearanceConfig](arkts-arkui-keyboardappearanceconfig-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uniqueId | number | 是 | The unique id of the input component. |
+| config | [KeyboardAppearanceConfig](arkts-arkui-keyboardappearanceconfig-i-sys.md) | 是 | The config of keyboard. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |

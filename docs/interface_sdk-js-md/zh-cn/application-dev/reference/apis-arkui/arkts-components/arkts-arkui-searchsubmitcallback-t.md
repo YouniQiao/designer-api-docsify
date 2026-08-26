@@ -16,7 +16,7 @@ declare type SearchSubmitCallback = (searchContent: string, event?: SubmitEvent)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| searchContent | string | 是 |
-| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| searchContent | string | 是 | 当前搜索框中输入的文本内容。 |
+| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | 否 | 提交事件对象，可用于保持Search编辑状态。不传入时无法保持编辑状态。 |

@@ -5,13 +5,13 @@ Provides methods to operate or manage Bluetooth.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import bluetoothManager from '@kit.ConnectivityKit';
 ```
 
 ## Summary
 
 ### Namespaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [bluetoothManager](arkts-connectivity-bluetoothmanager-n.md) |
+| Name | Description |
+| --- | --- |
+| [bluetoothManager](arkts-connectivity-bluetoothmanager-n.md) | Provides methods to operate or manage Bluetooth. |

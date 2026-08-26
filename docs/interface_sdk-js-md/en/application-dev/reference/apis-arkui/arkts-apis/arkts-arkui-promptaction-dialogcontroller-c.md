@@ -15,5 +15,5 @@ Implements a custom dialog controller that inherits from [CommonController](arkt
 ## Modules to Import
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```

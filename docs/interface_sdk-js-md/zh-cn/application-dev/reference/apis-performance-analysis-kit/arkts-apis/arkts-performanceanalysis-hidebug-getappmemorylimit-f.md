@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getAppMemoryLimit
@@ -20,6 +19,16 @@ function getAppMemoryLimit(): MemoryLimit
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) | 应用程序进程内存限制。 |
+
+**示例**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let appMemoryLimit:hidebug.MemoryLimit = hidebug.getAppMemoryLimit();
+console.info(`rssLimit: ${appMemoryLimit.rssLimit}, vssLimit: ${appMemoryLimit.vssLimit},` +
+  `vmHeapLimit: ${appMemoryLimit.vmHeapLimit}, vmTotalHeapSize: ${appMemoryLimit.vmTotalHeapSize}`);
+```

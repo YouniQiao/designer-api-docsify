@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from 'kits/@kit.MDMKit';
+import adminManager from '@kit.MDMKit';
 ```
 
 ## getSuperAdmin
@@ -24,12 +24,25 @@ function getSuperAdmin(): Promise<Want>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 返回超级设备管理应用的Promise对象。当设备没有激活超级管理应用时，返回的Promise中Want的bundleName与abilityName为空串。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+adminManager.getSuperAdmin().then((result) => {
+  console.info(`Succeeded in getting super admin :${JSON.stringify(result)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get super admin. Code: ${err.code}, message: ${err.message}`);
+})
+```

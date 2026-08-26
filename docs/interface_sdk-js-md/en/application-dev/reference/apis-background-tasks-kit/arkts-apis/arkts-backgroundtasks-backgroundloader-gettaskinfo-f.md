@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
+import backgroundLoader from '@kit.BackgroundTasksKit';
 ```
 
 ## getTaskInfo
@@ -14,7 +14,7 @@ function getTaskInfo(taskId: number): Promise<TaskInfo>
 
 Obtains the information of a background load task. This API returns the result via a promise.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -24,20 +24,20 @@ Obtains the information of a background load task. This API returns the result v
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| taskId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| taskId | number | Yes | Id of the background load task. The value range is all integers. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;TaskInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;TaskInfo & gt; | Promise used to return the TaskInfo. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [9700003](../errorcode-workScheduler.md#9700003-system-service-failure) |
-| [9700004](../errorcode-workScheduler.md#9700004-workinfo-verification-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [9700003](../errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
+| [9700004](../errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on taskId failed. |

@@ -18,7 +18,7 @@
 ## 导入模块
 
 ```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+import onScreen from '@kit.MultimodalAwarenessKit';
 ```
 
 ## capList

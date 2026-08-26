@@ -14,8 +14,8 @@ Sets the image smoothness attribute.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| "high" |
-| "low" |
-| "medium" |
+| Type | Description |
+| --- | --- |
+| "high" | High quality. |
+| "low" | Low quality. |
+| "medium" | Medium quality. |

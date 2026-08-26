@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## createImageReceiver
@@ -24,18 +24,24 @@ Creates an ImageReceiver instance by specifying the image width, height, format,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| width | number | Yes |
-| height | number | Yes |
-| format | number | Yes |
-| capacity | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| width | number | Yes | Default image width, in px. This parameter does not affect the width of the received image. The actual width is determined by the producer, for example, the camera. |
+| height | number | Yes | Default image height, in px. This parameter does not affect the height of the received image. The actual height is determined by the producer, for example, the camera. |
+| format | number | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
+| capacity | number | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) |
+| Type | Description |
+| --- | --- |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | ImageReceiver instance. |
+
+**Examples**
+
+```TypeScript
+let receiver: image.ImageReceiver = image.createImageReceiver(8192, 8192, image.ImageFormat.JPEG, 8);
+```
 
 
 ## createImageReceiver
@@ -52,23 +58,33 @@ Creates an ImageReceiver instance by specifying the image size, format, and capa
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | Size | Yes |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes |
-| capacity | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | Size | Yes | Default size of the image. This parameter does not affect the size of the received image. The actual returned size is determined by the producer, for example, the camera. |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
+| capacity | number | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) |
+| Type | Description |
+| --- | --- |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | ImageReceiver instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; |
+
+**Examples**
+
+```TypeScript
+let size: image.Size = {
+  height: 8192,
+  width: 8192
+}
+let receiver: image.ImageReceiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+```
 
 
 ## createImageReceiver
@@ -87,18 +103,28 @@ Creates an ImageReceiver instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md) | No | Initialization options for the ImageReceiver. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| ImageReceiver \| undefined |
+| Type | Description |
+| --- | --- |
+| ImageReceiver \| undefined | ImageReceiver instance created. If the operation fails, undefined is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7900201](../errorcode-image.md#7900201-invalid-parameter) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7900201](../errorcode-image.md#7900201-invalid-parameter) | Invalid parameter. |
+
+**Examples**
+
+```TypeScript
+let options: image.ImageReceiverOptions = {
+  size: { width: 480, height: 480 },
+  capacity: 3
+}
+let receiver: image.ImageReceiver | undefined = image.createImageReceiver(options);
+```

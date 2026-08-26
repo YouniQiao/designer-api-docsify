@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import intl from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -35,6 +35,52 @@ constructor()
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.Global.I18n
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 默认构造函数使用系统当前区域ID创建
+let locale = new intl.Locale();
+// 返回系统当前区域ID
+let localeID = locale.toString();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统当前区域ID创建DateTimeFormat对象
+let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统当前区域ID创建NumberFormat对象
+let formatter: intl.NumberFormat = new intl.NumberFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建Collator对象
+let collator = new intl.Collator();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建PluralRules对象
+let pluralRules = new intl.PluralRules();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建RelativeTimeFormat对象
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
+```
 
 ## constructor
 
@@ -58,10 +104,20 @@ constructor(locale: string, options?: LocaleOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string | 是 |
-| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 是 | 表示区域ID的字符串，由语言、脚本、国家地区组成。 |
+| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | 否 | 创建区域对象的配置项。 默认值：所有属性都取默认值时的配置项。<br>**起始版本：** 12 |
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 创建zh-CN区域对象
+let locale = new intl.Locale('zh-CN');
+let localeID = locale.toString(); // localeID = 'zh-CN'
+```
 
 ## maximize
 
@@ -85,9 +141,27 @@ maximize(): Locale
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Locale](arkts-localization-intl-locale-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Locale](arkts-localization-intl-locale-c.md) | 补齐完脚本、国家地区信息后的区域对象。 |
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 创建zh区域对象
+let locale = new intl.Locale('zh');
+// 补齐区域对象的脚本和地区
+let maximizedLocale = locale.maximize();
+let localeID = maximizedLocale.toString(); // localeID = 'zh-Hans-CN'
+
+// 创建en-US区域对象
+locale = new intl.Locale('en-US');
+// 补齐区域对象的脚本
+maximizedLocale = locale.maximize();
+localeID = maximizedLocale.toString(); // localeID = 'en-Latn-US'
+```
 
 ## minimize
 
@@ -111,9 +185,27 @@ minimize(): Locale
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Locale](arkts-localization-intl-locale-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Locale](arkts-localization-intl-locale-c.md) | 移除完脚本、国家地区信息后的区域对象。 |
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 创建zh-Hans-CN区域对象
+let locale = new intl.Locale('zh-Hans-CN');
+// 移除区域对象的脚本和地区
+let minimizedLocale = locale.minimize();
+let localeID = minimizedLocale.toString(); // localeID = 'zh'
+
+// 创建en-US区域对象
+locale = new intl.Locale('en-US');
+// 移除区域对象的地区
+minimizedLocale = locale.minimize();
+localeID = minimizedLocale.toString(); // localeID = 'en'
+```
 
 ## toString
 
@@ -137,9 +229,19 @@ toString(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 区域对象的字符串。 |
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 创建en-GB区域对象
+let locale = new intl.Locale('en-GB');
+let localeID = locale.toString(); // localeID = 'en-GB'
+```
 
 ## baseName
 

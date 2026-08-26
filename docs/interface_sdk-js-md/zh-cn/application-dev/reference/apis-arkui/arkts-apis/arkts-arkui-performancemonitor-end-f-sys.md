@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { performanceMonitor } from 'kits/@kit.ArkUI';
+import performanceMonitor from '@kit.ArkUI';
 ```
 
 ## end
@@ -24,6 +24,14 @@ function end(scene: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scene | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scene | string | 是 | 用户场景id，与begin配对严格保持一致，否则本次场景监测无效。 |
+
+**示例**
+
+用户点击图标启动应用场景动效结束点。
+
+```TypeScript
+performanceMonitor.end("LAUNCHER_APP_LAUNCH_FROM_ICON");
+```

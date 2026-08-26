@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import taskpool from '@kit.ArkTS';
 ```
 
 ## isConcurrent
@@ -22,12 +22,22 @@ Checks whether a function is a concurrent function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| func | Function | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| func | Function | Yes | Function to check. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the function is a concurrent function, that is, a function decorated with [ |
+
+**Examples**
+
+```TypeScript
+@Concurrent
+function test() {}
+
+let result: Boolean = taskpool.isConcurrent(test);
+console.info("result is: " + result);
+```

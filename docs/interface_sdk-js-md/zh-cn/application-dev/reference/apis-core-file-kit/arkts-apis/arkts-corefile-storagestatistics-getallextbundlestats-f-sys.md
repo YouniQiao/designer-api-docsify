@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
+import storageStatistics from '@kit.CoreFileKit';
 ```
 
 ## getAllExtBundleStats
@@ -26,22 +26,36 @@ function getAllExtBundleStats(userId: number): Promise<Array<ExtBundleStats>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| userId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| userId | number | 是 | 用户id。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[ExtBundleStats](arkts-corefile-storagestatistics-extbundlestats-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[ExtBundleStats](arkts-corefile-storagestatistics-extbundlestats-i-sys.md)&gt;&gt; | Promise对象，返回指定用户下所有系统应用或系统服务的空间占用详情。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13600001 |
-| 13600010 |
-| 13600013 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13600001 | IPC error. |
+| 13600010 | The input parameter is invalid. |
+| 13600013 | Failed to query all business space usage. |
+
+**示例**
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId: number = 100;
+storageStatistics.getAllExtBundleStats(userId).then((bundleStatsList: storageStatistics.ExtBundleStats[]) => {
+  console.info("getAllExtBundleStats successfully");
+}).catch((err: BusinessError) => {
+  console.error(`getAllExtBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```

@@ -22,9 +22,9 @@ Callback function at the end of the interface invoking (executed both successful
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | Object | Yes |  |
 
 ## fail
 
@@ -42,9 +42,9 @@ Callback function for interface invocation failure.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | Object | Yes |  |
 
 ## success
 
@@ -62,9 +62,9 @@ Callback function for successful interface invocation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | Object | Yes |  |
 
 ## duration
 

@@ -9,7 +9,6 @@ Describes the advertising data.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## advertiseName

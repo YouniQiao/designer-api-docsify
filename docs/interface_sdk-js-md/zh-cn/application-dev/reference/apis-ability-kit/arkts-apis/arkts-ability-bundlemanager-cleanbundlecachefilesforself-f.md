@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import bundleManager from '@kit.AbilityKit';
 ```
 
 ## cleanBundleCacheFilesForSelf
@@ -22,6 +22,17 @@ function cleanBundleCacheFilesForSelf(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+bundleManager.cleanBundleCacheFilesForSelf().then(() => {
+  hilog.info(0x0000, 'testTag', 'cleanBundleCacheFilesForSelf complete.');
+});
+```

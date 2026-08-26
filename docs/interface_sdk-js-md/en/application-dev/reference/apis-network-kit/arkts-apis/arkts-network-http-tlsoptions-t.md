@@ -12,7 +12,7 @@ Defines the TLS configuration.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'system' |
-| [TlsConfig](arkts-network-http-tlsconfig-i.md) |
+| Type | Description |
+| --- | --- |
+| 'system' | TLS version of the system. This field is defaulted to **system** when the value is not set. |
+| [TlsConfig](arkts-network-http-tlsconfig-i.md) | Custom TLS version and cipher suites. |

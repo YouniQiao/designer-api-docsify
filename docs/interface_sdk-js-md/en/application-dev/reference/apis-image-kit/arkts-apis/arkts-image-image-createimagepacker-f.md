@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## createImagePacker
@@ -22,6 +22,14 @@ Creates an ImagePacker instance.Images occupy a large amount of memory. When you
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImagePacker](arkts-image-image-imagepacker-i.md) |
+| Type | Description |
+| --- | --- |
+| [ImagePacker](arkts-image-image-imagepacker-i.md) | ImagePacker instance created. |
+
+**Examples**
+
+```TypeScript
+async function CreateImagePacker() {
+  const imagePackerObj: image.ImagePacker = image.createImagePacker();
+}
+```

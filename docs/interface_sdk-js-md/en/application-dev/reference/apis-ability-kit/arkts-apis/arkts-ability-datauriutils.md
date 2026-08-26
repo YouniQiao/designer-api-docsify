@@ -2,7 +2,8 @@
 
 The DataUriUtils module provides APIs to process URI objects. You can use the APIs to attach an ID to the end of a given URI and obtain, delete, or update the ID attached to the end of a given URI.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The APIs of this module are supported since API version 7 and deprecated since API version 9. You are advised to
 > use [@ohos.app.ability.dataUriUtils](arkts-app-ability-datauriutils.md) instead. Newly added APIs
 > will be marked with a superscript to indicate their earliest API version.
@@ -24,9 +25,9 @@ The DataUriUtils module provides APIs to process URI objects. You can use the AP
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [attachId](arkts-ability-datauriutils-attachid-depr-f.md#attachid) |
-| [deleteId](arkts-ability-datauriutils-deleteid-depr-f.md#deleteid) |
-| [getId](arkts-ability-datauriutils-getid-depr-f.md#getid) |
-| [updateId](arkts-ability-datauriutils-updateid-depr-f.md#updateid) |
+| Name | Description |
+| --- | --- |
+| [attachId](arkts-ability-datauriutils-attachid-depr-f.md#attachid) | Attaches an ID to the end of a given URI. |
+| [deleteId](arkts-ability-datauriutils-deleteid-depr-f.md#deleteid) | Deletes the ID from the end of a given URI. |
+| [getId](arkts-ability-datauriutils-getid-depr-f.md#getid) | Obtains the ID attached to the end of a given URI. |
+| [updateId](arkts-ability-datauriutils-updateid-depr-f.md#updateid) | Updates the ID in a given URI. |

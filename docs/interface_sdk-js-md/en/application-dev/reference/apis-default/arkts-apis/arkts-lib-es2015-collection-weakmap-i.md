@@ -15,14 +15,14 @@ Removes the specified element from the WeakMap.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## get
 
 ```TypeScript
@@ -31,14 +31,14 @@ get(key: K): V | undefined
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## has
 
 ```TypeScript
@@ -47,14 +47,14 @@ has(key: K): boolean
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## set
 
 ```TypeScript
@@ -65,12 +65,12 @@ Adds a new element with a specified key and value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
-| value | V | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes |  |
+| value | V | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

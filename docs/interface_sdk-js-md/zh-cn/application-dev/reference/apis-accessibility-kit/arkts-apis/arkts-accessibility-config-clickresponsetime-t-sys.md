@@ -12,8 +12,8 @@ type ClickResponseTime = 'Short' | 'Medium' | 'Long'
 
 **系统接口：** 此接口为系统接口。
 
-| 类型 |
-| --- |
-| 'Short' |
-| 'Medium' |
-| 'Long' |
+| 类型 | 说明 |
+| --- | --- |
+| 'Short' | 表示短（默认）。 |
+| 'Medium' | 表示中。 |
+| 'Long' | 表示长。 |

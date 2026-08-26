@@ -38,16 +38,22 @@ Stores the built-in environment variable key from [Environment](../../../ui/stat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| value | S | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Environment variable name. For details about the value range, see [Built-in Environment Variables](#built-in-environment-variables). |
+| value | S | Yes | Default value used if the value of the environment variable key is not found in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **false** if the property corresponding to the key exists in AppStorage; creates a property with the key and the default value and returns **true** otherwise. |
+
+**Examples**
+
+```TypeScript
+Environment.EnvProp('accessibilityEnabled', 'default');
+```
 
 ## envProp
 
@@ -65,16 +71,20 @@ Stores the built-in environment variable key from [Environment](../../../ui/stat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| value | S | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Environment variable name. For details about the value range, see [Built-in Environment Variables](#built-in-environment-variables). |
+| value | S | Yes | Default value used if the value of the environment variable key is not found in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **false** if the property corresponding to the key exists in AppStorage; creates a property with the key and the default value and returns **true** otherwise. |
+
+**Examples**
+
+For details about how to use envProp, see [Accessing Environment Parameters from the UI](../../../ui/state-management/arkts-environment.md#accessing-environment-parameters-from-the-ui).
 
 ## EnvProps
 
@@ -99,9 +109,18 @@ Works in a way similar to the [EnvProp](#envprop) API, with the difference that 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| props | {       key: string;       defaultValue: any;     }[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| props | {       key: string;       defaultValue: any;     }[] | Yes |  |
+
+**Examples**
+
+```TypeScript
+Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+```
 
 ## envProps
 
@@ -119,9 +138,18 @@ Works in a way similar to the [envProp](#envprop) API, with the difference that 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| props | [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| props | [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md)[] | Yes | Array of key-value pairs consisting of system environment variables and default values. |
+
+**Examples**
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+```
 
 ## Keys
 
@@ -141,9 +169,24 @@ Returns the property key array of environment variables.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Property key array of environment variables. |
+
+**Examples**
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.Keys();
+```
+
+```TypeScript
+Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.Keys(); // keys contains accessibilityEnabled, languageCode, and prop.
+```
 
 ## keys
 
@@ -161,6 +204,21 @@ Returns the property key array of environment variables.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Property key array of environment variables. |
+
+**Examples**
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.keys();
+```
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.keys(); // keys contains accessibilityEnabled, languageCode, and prop.
+```

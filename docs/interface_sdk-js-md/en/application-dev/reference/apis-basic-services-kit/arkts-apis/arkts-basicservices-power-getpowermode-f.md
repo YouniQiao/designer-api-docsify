@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import power from '@kit.BasicServicesKit';
 ```
 
 ## getPowerMode
@@ -20,6 +20,13 @@ Obtains the power mode of this device.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) |
+| Type | Description |
+| --- | --- |
+| [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | Power mode. |
+
+**Examples**
+
+```TypeScript
+let mode = power.getPowerMode();
+console.info('power mode: ' + mode);
+```

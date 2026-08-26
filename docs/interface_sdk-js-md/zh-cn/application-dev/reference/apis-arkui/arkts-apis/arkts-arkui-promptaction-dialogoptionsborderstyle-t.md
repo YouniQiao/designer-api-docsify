@@ -14,7 +14,7 @@ declare type DialogOptionsBorderStyle = BorderStyle | EdgeStyles
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [BorderStyle](arkts-arkui-borderstyle-e.md) |
-| EdgeStyles |
+| 类型 | 说明 |
+| --- | --- |
+| [BorderStyle](arkts-arkui-borderstyle-e.md) |  |
+| EdgeStyles |  |

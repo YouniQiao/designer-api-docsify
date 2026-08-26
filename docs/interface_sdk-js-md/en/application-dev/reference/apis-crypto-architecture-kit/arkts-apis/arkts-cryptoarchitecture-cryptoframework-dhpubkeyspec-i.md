@@ -15,7 +15,7 @@ To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySp
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## params

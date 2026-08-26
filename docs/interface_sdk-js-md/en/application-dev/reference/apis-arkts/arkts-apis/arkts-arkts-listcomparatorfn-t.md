@@ -14,13 +14,13 @@ This type specifies the comparator of sort in comparation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| firstValue | T | Yes |
-| secondValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| firstValue | T | Yes | firstValue (required) previous element. |
+| secondValue | T | Yes | secondValue (required) next element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | the number type |

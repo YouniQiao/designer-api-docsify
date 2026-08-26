@@ -37,9 +37,9 @@ active(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 路由组件是否处于激活状态。设置为true时，组件处于激活态。设置为false时，组件不处于激活态。 |
 
 ## params
 
@@ -63,9 +63,9 @@ params(value: object)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | object | 是 | 跳转时要同时传递到目标页面的数据，可在目标页面使用[router.getParams()](../arkts-apis/arkts-arkui-router-getparams-f.md)获得。 |
 
 ## target
 
@@ -87,9 +87,9 @@ target(value: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | string | 是 | 跳转目标页面的路径。 |
 
 ## type
 
@@ -113,6 +113,6 @@ type(value: NavigationType)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [NavigationType](arkts-arkui-navigationtype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [NavigationType](arkts-arkui-navigationtype-e.md) | 是 | 路由跳转方式。默认值：NavigationType.Push |

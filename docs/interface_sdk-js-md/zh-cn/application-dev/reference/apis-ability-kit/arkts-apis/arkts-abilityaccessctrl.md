@@ -24,20 +24,20 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from 'kits/@kit.AbilityKit';
+import abilityAccessCtrl, { Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 ```
 
 ## 汇总
 
 ### 命名空间
 
-| 名称 |
-| --- |
-| [abilityAccessCtrl(程序访问控制管理)](arkts-ability-abilityaccessctrl-n.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [abilityAccessCtrl(程序访问控制管理)](arkts-ability-abilityaccessctrl-n.md) |  |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [Context(程序访问控制管理)](arkts-ability-context-t.md) |
-| [PermissionRequestResult(程序访问控制管理)](arkts-ability-permissionrequestresult-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [Context(程序访问控制管理)](arkts-ability-context-t.md) | 提供Ability或Application的上下文，可用于访问应用程序的资源。 |
+| [PermissionRequestResult(程序访问控制管理)](arkts-ability-permissionrequestresult-t.md) | 权限请求结果对象，包含申请的权限名列表、每个权限的授权结果、弹窗展示结果及失败原因等信息。 |

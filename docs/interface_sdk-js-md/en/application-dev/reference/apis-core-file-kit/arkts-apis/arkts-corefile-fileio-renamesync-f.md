@@ -23,7 +23,15 @@ Renames a file. This API returns the result synchronously.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| oldPath | string | Yes |
-| newPath | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| oldPath | string | Yes | Application sandbox path of the file to rename. |
+| newPath | string | Yes | Application sandbox path of the file renamed. |
+
+**Examples**
+
+```TypeScript
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + '/new.txt';
+fileio.renameSync(srcFile, dstFile);
+```

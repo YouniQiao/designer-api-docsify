@@ -10,8 +10,8 @@ Enumerates the touch exploration event types. Touch exploration is an interactio
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'touchBegin' |
-| 'touchEnd' |
-| 'touchGuideGesture' |
+| Type | Description |
+| --- | --- |
+| 'touchBegin' | Start of touch. |
+| 'touchEnd' | End of touch. |
+| 'touchGuideGesture' | Represents a touch exploration gesture. [since 26.0.0] |

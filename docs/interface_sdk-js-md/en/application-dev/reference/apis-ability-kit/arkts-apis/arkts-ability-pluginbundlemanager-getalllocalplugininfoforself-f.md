@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pluginBundleManager } from 'kits/@kit.AbilityKit';
+import pluginBundleManager from '@kit.AbilityKit';
 ```
 
 ## getAllLocalPluginInfoForSelf
@@ -24,12 +24,12 @@ Obtains information about all local plugins installed on the current application
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;PluginBundleInfo & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;PluginBundleInfo & gt; & gt; | Promise used to return the list of PluginBundleInfos object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN'. |

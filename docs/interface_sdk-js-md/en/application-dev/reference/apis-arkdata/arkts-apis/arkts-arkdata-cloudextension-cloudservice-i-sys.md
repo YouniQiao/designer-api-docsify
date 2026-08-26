@@ -11,7 +11,7 @@ Provides APIs for interacting with the cloud sync service. You need to inherit t
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import cloudExtension from '@kit.ArkData';
 ```
 
 ## connectAssetLoader
@@ -30,16 +30,35 @@ Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name of the application. |
+| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Yes | Database to connect. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;rpc.RemoteObject & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;rpc.RemoteObject & gt; | Promise used to return the RemoteObject instance of AssetLoader. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class MyAssetLoader implements cloudExtension.AssetLoader {
+  // ...
+}
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  async connectAssetLoader(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
+    // ...
+    console.info(`connect asset loader, bundle: ${bundleName}`);
+    return cloudExtension.createAssetLoaderStub(new MyAssetLoader());
+  }
+}
+```
 
 ## connectDB
 
@@ -57,16 +76,35 @@ Connects to a cloud database by obtaining a RemoteObject instance of CloudDB, wh
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name of the application. |
+| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Yes | Database to connect. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;rpc.RemoteObject & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;rpc.RemoteObject & gt; | Promise used to return the RemoteObject instance of CloudDB. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+}
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+    // ...
+  async connectDB(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
+    console.info(`connect DB, bundleName: ${bundleName}`);
+    return cloudExtension.createCloudDBStub(new MyCloudDB());
+  }
+}
+```
 
 ## connectShareCenter
 
@@ -84,16 +122,35 @@ Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter, whi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| userId | number | Yes |
-| bundleName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| userId | number | Yes | User ID. |
+| bundleName | string | Yes | Bundle name of the application. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;rpc.RemoteObject & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;rpc.RemoteObject & gt; | Promise used to return the RemoteObject instance of ShareCenter. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class MyShareCenter implements cloudExtension.ShareCenter {
+  constructor() {}
+  // ...
+}
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  async connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject> {
+    console.info(`connect share center, bundle: ${bundleName}`);
+    return cloudExtension.createShareServiceStub(new MyShareCenter());
+  }
+}
+```
 
 ## getAppBriefInfo
 
@@ -111,9 +168,31 @@ Obtains brief application information. This API uses a promise to return the res
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; | Promise used to return bundleName and AppBriefInfo, in KV pairs. |
+
+**Examples**
+
+```TypeScript
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  // ...
+  async getAppBriefInfo(): Promise<Record<string, cloudExtension.AppBriefInfo>> {
+    console.info(`get app brief info`);
+    // ...
+    return {
+      "test_bundle":
+      {
+        appId: "test_appID",
+        bundleName: "test_bundlename",
+        cloudSwitch: true,
+        instanceId: 0,
+      }
+    };
+  }
+}
+```
 
 ## getAppSchema
 
@@ -131,15 +210,38 @@ Obtains the application database schema information. This API uses a promise to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name of the application. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; | Promise used to return the schema information obtained. |
+
+**Examples**
+
+```TypeScript
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {
+  }
+  // ...
+  async getAppSchema(bundleName: string): Promise<cloudExtension.Result<cloudExtension.AppSchema>> {
+    console.info(`get app schema, bundleName:${bundleName}`);
+    // ...
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: "get app schema success",
+      value: {
+        bundleName: "test_bundleName",
+        version: 1,
+        databases: []
+      }
+    };
+  }
+}
+```
 
 ## getServiceInfo
 
@@ -157,9 +259,34 @@ Obtains the server information. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; | Promise used to return the server information obtained. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+let testSpace: number = 100;
+let testUserId: number = 1;
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  // ...
+  async getServiceInfo(): Promise<cloudExtension.ServiceInfo> {
+    console.info(`get service info`);
+    // ...
+    return {
+      enableCloud: true,
+      id: "test_id",
+      totalSpace: testSpace,
+      remainingSpace: testSpace,
+      user: testUserId,
+    };
+  }
+}
+```
 
 ## subscribe
 
@@ -180,16 +307,39 @@ Subscribes to data. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| subInfo | Record&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | Yes |
-| expirationTime | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| subInfo | Record&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | Yes | Data to be subscribed to, in KV pairs of the application bundle name and database information. |
+| expirationTime | number | Yes | Subscription expiration time, in ms. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Result & lt;SubscribeInfo & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Result & lt;SubscribeInfo & gt; & gt; | Promise used to return the result, including the subscription expiration time and subscription information. |
+
+**Examples**
+
+```TypeScript
+let testTime: number = 10;
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {
+  }
+  // ...
+  async subscribe(subInfo: Record<string, Array<cloudExtension.Database>>, expirationTime: number): Promise<cloudExtension.Result<cloudExtension.SubscribeInfo>> {
+    console.info(`subscribe expirationTime: ${expirationTime}`);
+    // ...
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: "subscribe success",
+      value: {
+        expirationTime: testTime,
+        subscribe: {}
+      }
+    };
+  }
+}
+```
 
 ## unsubscribe
 
@@ -207,12 +357,27 @@ Unsubscribes from data changes in the cloud. This API uses a promise to return t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| unsubscribeInfo | Record & lt;string, Array & lt;string & gt; & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| unsubscribeInfo | Record & lt;string, Array & lt;string & gt; & gt; | Yes | Data to be unsubscribed from, in an array of KV pairs consisting of the application bundle name and database information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {
+  }
+  // ...
+  async unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<number> {
+    console.info(`unsubscribe`);
+    // ...
+    return cloudExtension.ErrorCode.SUCCESS;
+  }
+}
+```

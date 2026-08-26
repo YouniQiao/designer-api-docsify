@@ -13,7 +13,7 @@ Defines the **EnableAlertBeforeBackPage** parameter.
 ## Modules to Import
 
 ```TypeScript
-import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from 'kits/@kit.ArkUI';
+import SystemRouter, { BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -34,9 +34,9 @@ Called when the **Cancel** button in the confirm dialog box is clicked. **errMsg
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| errMsg | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| errMsg | string | Yes |  |
 
 ## complete
 
@@ -72,9 +72,9 @@ Called when the **OK** button in the confirm dialog box is clicked. **errMsg** i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| errMsg | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| errMsg | string | Yes |  |
 
 ## message
 

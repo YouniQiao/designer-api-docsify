@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from 'kits/@kit.ArkUI';
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
 ```
 
 ## cachedCount
@@ -30,15 +30,15 @@ cachedCount(count: Optional<number>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| count | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| count | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 | ArcListItem的预加载数量。 默认值：根据屏幕内显示的节点个数设置，最大值为16。 取值范围：[0, +∞) 设置为负数时，按1处理。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## chainAnimation
 
@@ -56,15 +56,15 @@ chainAnimation(enable: Optional<boolean>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否启用链式联动动效。仅当边缘效果为[EdgeEffect.Spring](arkts-arkui-edgeeffect-e.md)时，链式联动动效才会生效。 默认值：false，不启用链式联动。true，启用链式联动。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## childrenMainSize
 
@@ -82,15 +82,15 @@ childrenMainSize(size: Optional<ChildrenMainSize>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ChildrenMainSize](../arkts-components/arkts-arkui-childrenmainsize-c.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ChildrenMainSize](../arkts-components/arkts-arkui-childrenmainsize-c.md)&gt; | 是 | 通过[ChildrenMainSize](../arkts-components/arkts-arkui-childrenmainsize-c.md)对象向ArcList组件精确提供所有子组件在主轴方向 的大小信息，能够确保ArcList组件在子组件主轴尺寸不统一、子组件的增删变动、以及使用[scrollToIndex](../arkts-components/arkts-arkui-scroller-c.md#scrolltoindex)等场景时，仍能保持其滑动位置的准确性。进而保 证了scrollTo能够精准跳转至指定位置，currentOffset或 offset准确反映当前的滑动位置，且内置滚动条能够实现平滑移动，避免任何跳跃或突变。从API version 23开始，新增offset接口。    **说明：** 提供的主轴方向大小必须与子组件实际在主轴方向的大小一致，否则可能导致ArcList组件显示异常。子组件在主轴方向大小发生变化或进行增删操作时，必须通过调用ChildrenMainSize对象的方法在变更后通知 ArcList组件，否则可能导致ArcList组件显示异常。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## digitalCrownSensitivity
 
@@ -108,15 +108,15 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcListAttribu
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [sensitivity](../../apis-localization-kit/arkts-apis/arkts-localization-intl-collatoroptions-i.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sensitivity | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | 是 | 表冠响应灵敏度。 默认值：CrownSensitivity.MEDIUM，响应速度适中。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## enableScrollInteraction
 
@@ -134,15 +134,15 @@ enableScrollInteraction(enable: Optional<boolean>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器 [Scroller](../arkts-components/arkts-arkui-scroller-c.md)的滚动接口。 默认值：true |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## fadingEdge
 
@@ -160,15 +160,15 @@ fadingEdge(enable: Optional<boolean>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | fadingEdge生效时，会覆盖原组件的`.overlay()`属性。 fadingEdge生效时，建议不在该组件上设置background相关属性，会影响渐隐的显示效果。 fadingEdge生效时，组件会裁剪到边界，设置组件的clip属性为false不生效。 设置为true时开启边缘渐隐效果，设置为false时不开启边缘渐隐效果。 默认值：false |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## flingSpeedLimit
 
@@ -186,15 +186,15 @@ flingSpeedLimit(speed: Optional<number>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| speed | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| speed | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 惯性滚动动效开始时的最大初始速度。设置为小于等于0的值时，按默认值处理。 默认值：9000 单位：vp/s 取值范围：(0, +∞) |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## friction
 
@@ -212,15 +212,15 @@ friction(friction: Optional<number>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [friction](#friction) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| friction | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 摩擦系数，手动滑动滚动区域时生效，仅影响惯性滚动过程。设置为小于等于0的值时，按默认值处理。 默认值：0.8 取值范围：(0, +∞) |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onDidScroll
 
@@ -238,15 +238,15 @@ onDidScroll(handler: Optional<OnScrollCallback>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnScrollCallback](../arkts-components/arkts-arkui-onscrollcallback-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnScrollCallback](../arkts-components/arkts-arkui-onscrollcallback-t.md)&gt; | 是 | 列表滑动时触发的回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onReachEnd
 
@@ -264,15 +264,15 @@ onReachEnd(handler: Optional<VoidCallback>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 | 列表到达末尾位置时触发。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onReachStart
 
@@ -290,15 +290,15 @@ onReachStart(handler: Optional<VoidCallback>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 | 列表到达起始位置时触发。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onScrollIndex
 
@@ -316,15 +316,15 @@ onScrollIndex(handler: Optional<ArcScrollIndexHandler>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md)&gt; | 是 | 有子组件划入或划出ArcList显示区域时触发该回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onScrollStart
 
@@ -342,15 +342,15 @@ onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 | 列表滑动开始时触发。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onScrollStop
 
@@ -368,15 +368,15 @@ onScrollStop(handler: Optional<VoidCallback>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 | 列表滑动停止时触发。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onWillScroll
 
@@ -394,15 +394,15 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnWillScrollCallback](../arkts-components/arkts-arkui-onwillscrollcallback-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnWillScrollCallback](../arkts-components/arkts-arkui-onwillscrollcallback-t.md)&gt; | 是 | 列表滑动时每帧开始前触发的回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## scrollBar
 
@@ -420,15 +420,15 @@ scrollBar(status: Optional<BarState>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| status | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BarState](arkts-arkui-barstate-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| status | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BarState](arkts-arkui-barstate-e.md)&gt; | 是 | 滚动条状态。 默认值：BarState.Auto |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## scrollBarColor
 
@@ -446,15 +446,15 @@ scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 | 设置滚动条颜色。 默认值：ColorMetrics.numeric(0xA9FFFFFF) |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## scrollBarWidth
 
@@ -472,15 +472,15 @@ scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| width | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 | ArcList滚动条在按压态下的宽度。 默认值：LengthMetrics.vp(24) 非按压态宽度：LengthMetrics.vp(4) 设置为负值、undefined等异常值时，按滚动条的普通态宽度处理。 单位：vp |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## space
 
@@ -498,12 +498,12 @@ space(space: Optional<LengthMetrics>): ArcListAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [space](#space) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| space | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 | 列表子项之间的间距。 默认值：LengthMetrics.vp(0) ArcList子组件的visibility属性设置为None时不显示，但该子组件上下的space还会生效。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |

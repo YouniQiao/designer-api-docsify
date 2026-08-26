@@ -13,7 +13,7 @@ Manages notifications.
 ## Modules to Import
 
 ```TypeScript
-import { Notification, ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit';
+import Notification, { ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
 ```
 
 ## show
@@ -34,6 +34,24 @@ Displays the notification.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md) | No | Notification title. |
+
+**Examples**
+
+```TypeScript
+let notificationObj: notification = {
+  show() {
+    notification.show({
+      contentTitle: 'title info',
+      contentText: 'text',
+      clickAction: {
+        bundleName: 'com.example.testapp',
+        abilityName: 'notificationDemo',
+        uri: '/path/to/notification'
+      }
+    });
+  }
+}
+```

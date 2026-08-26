@@ -4,12 +4,14 @@ Encapsulates the parameters used for encryption or decryption. You need to const
 
 It applies to the symmetric block cipher modes that require parameters such as the initialization vector (IV). If the IV is not required (for example, the ECB mode), pass in **null** to [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > An initialization vector (IV) is a byte sequence used to introduce randomness or uniqueness in symmetric
 > encryption modes (such as CBC, CTR, OFB, CFB, GCM, CCM, and ChaCha20-Poly1305). It ensures that different
 > ciphertexts are generated for the same plaintext under the same key.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The **params** parameter in
 > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) is of the
 > **ParamsSpec** type (parent class). However, a child class object (such as
@@ -26,7 +28,7 @@ It applies to the symmetric block cipher modes that require parameters such as t
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## algName

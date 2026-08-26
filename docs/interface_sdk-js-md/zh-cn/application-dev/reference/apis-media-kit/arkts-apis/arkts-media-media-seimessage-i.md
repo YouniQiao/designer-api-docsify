@@ -1,6 +1,6 @@
 # SeiMessage
 
-Describes the information of an SEI message.
+描述 SEI 消息的信息。
 
 **起始版本：** 18
 
@@ -9,7 +9,7 @@ Describes the information of an SEI message.
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## payload
@@ -18,7 +18,7 @@ import { media } from 'kits/@kit.MediaKit';
 payload: ArrayBuffer
 ```
 
-Payload data of SEI message.
+SEI 消息的有效载荷数据。
 
 **类型：** ArrayBuffer
 
@@ -34,7 +34,7 @@ Payload data of SEI message.
 payloadType: number
 ```
 
-Payload type of SEI message.
+SEI 消息的有效载荷类型。
 
 **类型：** number
 

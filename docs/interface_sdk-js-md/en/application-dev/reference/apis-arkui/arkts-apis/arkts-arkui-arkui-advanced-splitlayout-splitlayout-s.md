@@ -9,7 +9,7 @@ Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts.
 ## Modules to Import
 
 ```TypeScript
-import { SplitLayout } from 'kits/@kit.ArkUI';
+import { SplitLayout } from '@kit.ArkUI';
 ```
 
 ## container

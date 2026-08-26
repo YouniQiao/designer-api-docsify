@@ -13,7 +13,8 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## auth
@@ -41,18 +42,41 @@ auth(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| challenge | Uint8Array | 是 |
-| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 是 |
-| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 是 |
-| callback | [IUserAuthCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| challenge | Uint8Array | 是 | 挑战值，可以传Uint8Array([])。 |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 是 | 认证类型，当前支持FACE和FINGERPRINT。 |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 是 | 认证信任等级。 |
+| callback | [IUserAuthCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 | 回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Uint8Array |
+| 类型 | 说明 |
+| --- | --- |
+| Uint8Array | ContextId，作为取消认证[cancelAuth]{ |
+
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let challenge = new Uint8Array([]);
+auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
+  onResult: (result, extraInfo) => {
+    try {
+      console.info(`auth onResult result = ${result}`);
+      if (result == userAuth.ResultCode.SUCCESS) {
+        // 此处添加认证成功逻辑。
+      } else {
+        // 此处添加认证失败逻辑。
+      }
+    } catch (error) {
+      console.error(`Failed to auth onResult. Code: ${error?.code}, message: ${error?.message}`);
+    }
+  }
+});
+```
 
 ## cancelAuth
 
@@ -74,15 +98,31 @@ cancelAuth(contextID: Uint8Array): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| contextID | Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| contextID | Uint8Array | 是 | 上下文的标识，通过[auth](#auth)接口获取。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 取消认证的结果，结果为SUCCESS时表示取消成功，其他返回值参见[ResultCode]{ |
+
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+// contextId可通过auth接口获取，此处直接定义。
+let contextId = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7]);
+let auth = new userAuth.UserAuth();
+let cancelCode = auth.cancelAuth(contextId);
+if (cancelCode == userAuth.ResultCode.SUCCESS) {
+  console.info('cancel auth successfully.');
+} else {
+  console.error('Failed to cancel auth.');
+}
+```
 
 ## constructor
 
@@ -99,6 +139,14 @@ constructor()
 **替代接口：** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md)
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+```
 
 ## getAvailableStatus
 
@@ -120,16 +168,30 @@ getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): numb
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 是 |
-| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 是 | 认证类型，当前支持FACE和FINGERPRINT。 |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 是 | 认证信任等级。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 查询结果，结果为SUCCESS时表示支持，其他返回值参见[ResultCode]{ |
+
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let checkCode = auth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1);
+if (checkCode == userAuth.ResultCode.SUCCESS) {
+  console.info('check auth support successfully.');
+} else {
+  console.error(`Failed to check auth support. Code: ${checkCode}`);
+}
+```
 
 ## getVersion
 
@@ -149,6 +211,16 @@ getVersion(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 认证器版本信息。 |
+
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let version = auth.getVersion();
+console.info(`auth version = ${version}`);
+```

@@ -11,7 +11,6 @@ Defines the eUICC information.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## osVersion

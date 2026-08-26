@@ -9,7 +9,7 @@ Represents the EAP profile information.
 ## Modules to Import
 
 ```TypeScript
-import { eap } from 'kits/@kit.NetworkKit';
+import eap from '@kit.NetworkKit';
 ```
 
 ## altSubjectMatch

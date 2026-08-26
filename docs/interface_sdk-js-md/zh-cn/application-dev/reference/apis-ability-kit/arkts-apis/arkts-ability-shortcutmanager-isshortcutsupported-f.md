@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
+import shortcutManager from '@kit.AbilityKit';
 ```
 
 ## isShortcutSupported
@@ -22,6 +22,21 @@ function isShortcutSupported(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 表示当前设备是否支持快捷方式。 |
+
+**示例**
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = shortcutManager.isShortcutSupported();
+  console.info('isShortcutSupported data is' + JSON.stringify(data));
+} catch (err) {
+  let message = (err as BusinessError).message;
+  console.error(`isShortcutSupported errData is errCode:${err.code}  message:${err.message}`);
+}
+```

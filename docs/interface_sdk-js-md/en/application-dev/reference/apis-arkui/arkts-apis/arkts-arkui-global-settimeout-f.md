@@ -20,14 +20,14 @@ Sets a timer after which a function will be executed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | Function | Yes |
-| delay | number | No |
-| arguments | any[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | Function | Yes | Indicates the function to be called after the timer goes off. |
+| delay | number | No | Indicates the delay (in milliseconds) after which the function will be called. If this parameter is left empty, default value "0" will be used, which means that the function will be called immediately or as soon as possible. |
+| arguments | any[] | Yes | Indicates additional arguments to pass to "handler" when the timer goes off. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns the timer ID. |

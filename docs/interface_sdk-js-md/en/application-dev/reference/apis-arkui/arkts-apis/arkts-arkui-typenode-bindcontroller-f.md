@@ -18,18 +18,65 @@ Binds a [TextController](../arkts-components/arkts-arkui-textcontroller-c.md) in
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| controller | [TextController](../arkts-components/arkts-arkui-textcontroller-c.md) | Yes |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Text' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node for controller binding. |
+| controller | [TextController](../arkts-components/arkts-arkui-textcontroller-c.md) | Yes | TextController** instance to bind. |
+| nodeType | 'Text' | Yes | Node type. Set to **'Text'**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100023](../errorcode-node.md#100023-parameter-error) |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+
+**Examples**
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  // Configure the TextController instance, which can be obtained from an external source.
+  controller: TextController = new TextController()
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // Create a Text node.
+    let text = typeNode.createNode(uiContext, 'Text');
+    text.initialize('Hello').fontColor(Color.Blue).fontSize(14);
+    typeNode.getAttribute(text, 'Text')?.fontWeight(FontWeight.Bold)
+    // Bind a TextController instance.
+    typeNode.bindController(text, this.controller, 'Text');
+    col.appendChild(text);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  @State line: number = 0
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('Text bindController Sample')
+      NodeContainer(this.myNodeController)
+      Text(`Current line count: ${this.line}`)
+      Button(`Obtain Line Count`)
+        .onClick(() => {
+          this.line = this.myNodeController.controller.getLayoutManager().getLineCount()
+        })
+    }
+  }
+}
+```
 
 
 ## bindController
@@ -50,18 +97,22 @@ Binds a [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| controller | [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md) | Yes |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Swiper' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node for controller binding. |
+| controller | [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md) | Yes | SwiperController** instance. |
+| nodeType | 'Swiper' | Yes | Node type. Set to **'Swiper'**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100023](../errorcode-node.md#100023-parameter-error) |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+
+**Examples**
+
+See the example for createNode('Swiper')12+.
 
 
 ## bindController
@@ -82,18 +133,24 @@ Binds the [Scroller](../arkts-components/arkts-arkui-scroller-c.md) to the [Scro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Scroll' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | Scroll controller. |
+| nodeType | 'Scroll' | Yes | Node type, which is **Scroll** in this API. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. the type of the node is error. 2. the node is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 15 and will not be threw above API version 24.<br>**Applicable version:** 15 - 24 |
+
+**Examples**
+
+```TypeScript
+typeNode.bindController(node, scroller, 'Scroll');
+```
 
 
 ## bindController
@@ -114,18 +171,24 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md) instance to th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'List' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | Scroll controller. |
+| nodeType | 'List' | Yes | Node type. Set to **'List'**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100023](../errorcode-node.md#100023-parameter-error) |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
+
+**Examples**
+
+```TypeScript
+typeNode.bindController(node, scroller, 'List');
+```
 
 
 ## bindController
@@ -146,18 +209,58 @@ Binds the [TextInputController](../arkts-components/arkts-arkui-textinputcontrol
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| controller | [TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md) | Yes |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextInput' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the input box controller is bound. |
+| controller | [TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md) | Yes | Input box controller. |
+| nodeType | 'TextInput' | Yes | Node type. Set to **'TextInput'**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100023](../errorcode-node.md#100023-parameter-error) |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+
+**Examples**
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // Create and initialize TextInput. By default, the focus is obtained.
+    let textInput = typeNode.createNode(uiContext, 'TextInput');
+    textInput.initialize({ text: 'TextInput' })
+      .defaultFocus(true)
+    col.appendChild(textInput);
+    // Bind TextInputController and set the cursor position.
+    let controller: TextInputController = new TextInputController();
+    typeNode.bindController(textInput, controller, 'TextInput');
+    controller.caretPosition(3);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('TextInput bindController sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## bindController
@@ -178,18 +281,24 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md) instance to th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'WaterFlow' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | Scroll controller. |
+| nodeType | 'WaterFlow' | Yes | Node type. Set to **'WaterFlow'**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100023](../errorcode-node.md#100023-parameter-error) |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
+
+**Examples**
+
+```TypeScript
+typeNode.bindController(node, scroller, 'WaterFlow');
+```
 
 
 ## bindController
@@ -210,18 +319,58 @@ Binds a [TextAreaController](../arkts-components/arkts-arkui-textareacontroller-
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| controller | [TextAreaController](../arkts-components/arkts-arkui-textareacontroller-c.md) | Yes |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextArea' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the input box controller is bound. |
+| controller | [TextAreaController](../arkts-components/arkts-arkui-textareacontroller-c.md) | Yes | Input box controller. |
+| nodeType | 'TextArea' | Yes | Node type. Set to **'TextArea'**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100023](../errorcode-node.md#100023-parameter-error) |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+
+**Examples**
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // Create and initialize a TextArea node. By default, the node is focused.
+    let textArea = typeNode.createNode(uiContext, 'TextArea');
+    textArea.initialize({ text: 'TextArea' })
+      .defaultFocus(true)
+    col.appendChild(textArea);
+    // Bind a TextAreaController instance and set the cursor position.
+    let controller: TextAreaController = new TextAreaController()
+    typeNode.bindController(textArea, controller, 'TextArea');
+    controller.caretPosition(3);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('TextArea bindController sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## bindController
@@ -242,15 +391,21 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md) instance to th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Grid' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | Scroll controller. |
+| nodeType | 'Grid' | Yes | Node type. Set to **'Grid'**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100023](../errorcode-node.md#100023-parameter-error) |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
+
+**Examples**
+
+```TypeScript
+typeNode.bindController(node, scroller, 'Grid');
+```

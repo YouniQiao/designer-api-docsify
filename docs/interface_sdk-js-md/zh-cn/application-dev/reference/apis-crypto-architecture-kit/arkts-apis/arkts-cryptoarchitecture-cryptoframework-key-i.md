@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## getEncoded
@@ -24,7 +24,8 @@ getEncoded(): DataBlob
 
 同步方法，获取密钥数据的字节流。密钥可以是对称密钥、公钥或私钥。公钥格式需符合ASN.1语法、X.509规范和DER编码；私钥格式需符合ASN.1 语法、PKCS#8规范和DER编码。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > RSA算法使用密钥参数生成私钥时，私钥对象支持getEncoded。
 
 **起始版本：** 9
@@ -37,17 +38,30 @@ getEncoded(): DataBlob
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 获取的密钥数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | This operation is not supported. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+async function testGenerateAesKey() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES256');
+  let symKey = await symKeyGenerator.generateSymKey();
+  let encodedKey = symKey.getEncoded();
+  console.info('key hex: ' + encodedKey.data);
+}
+```
 
 ## getKeySize
 
@@ -67,17 +81,30 @@ getKeySize(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 密钥大小，单位为bits。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+async function testGenerateAesKey() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES256');
+  let symKey = await symKeyGenerator.generateSymKey();
+  let symKeyLen = symKey.getKeySize();
+  console.info('keysize is: ' + symKeyLen);
+}
+```
 
 ## algName
 

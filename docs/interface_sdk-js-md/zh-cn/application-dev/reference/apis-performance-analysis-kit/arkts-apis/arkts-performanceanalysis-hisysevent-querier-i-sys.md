@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## onComplete
@@ -30,10 +29,10 @@ onComplete: (reason: number, total: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| reason | number | 是 |
-| total | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| reason | number | 是 |  |
+| total | number | 是 |  |
 
 ## onQuery
 
@@ -51,6 +50,6 @@ onQuery: (infos: SysEventInfo[]) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| infos | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| infos | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[] | 是 |  |

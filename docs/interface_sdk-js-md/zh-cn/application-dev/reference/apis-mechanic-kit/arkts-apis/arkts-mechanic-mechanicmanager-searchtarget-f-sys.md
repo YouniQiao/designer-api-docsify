@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## searchTarget
@@ -22,23 +21,38 @@ Searching for a specified target.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 |
-| params | [SearchParams](../../apis-arkui/arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | Target infomation. |
+| params | [SearchParams](../../apis-arkui/arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md) | 是 | Parameters to use when searching. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;SearchResult & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;SearchResult & gt; | Promise that return the Search result. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
-| [33300003](../errorcode-mechanic.md#33300003-功能不支持) |
-| 33300004 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
+| [33300003](../errorcode-mechanic.md#33300003-功能不支持) | Feature not supported. |
+| 33300004 | Camera not opened. |
+
+**示例**
+
+```TypeScript
+let targetInfo: mechanicManager.TargetInfo = {
+    targetType: mechanicManager.TargetType.HUMAN_FACE
+};
+let searchParams: mechanicManager.SearchParams = {
+    direction: mechanicManager.SearchDirection.DEFAULT
+}
+mechanicManager.searchTarget(targetInfo,
+    searchParams).then((searchResult) => {
+    console.info(`'result:' ${searchResult}`);
+});
+```

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setDefaultSmdpAddress
@@ -24,24 +23,37 @@ Sets or updates the default SM-DP+ address stored in the eUICC. This API uses a 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotId | number | Yes |
-| address | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
+| address | string | Yes | Default SM-DP+ address. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;ResultCode & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;ResultCode & gt; | Promise used to return the operation result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [3120001](../errorcode-telephony.md#3120001-service-connection-error) |
-| [3120002](../errorcode-telephony.md#3120002-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
+| [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { eSIM } from '@kit.TelephonyKit';
+
+eSIM.setDefaultSmdpAddress(1, 'testAddress').then(() => {
+    console.info(`setDefaultSmdpAddress invoking succeeded.`);
+}).catch((err: BusinessError<void>) => {
+    console.error(`setDefaultSmdpAddress, ErrorState: err->${JSON.stringify(err)}`);
+});
+```

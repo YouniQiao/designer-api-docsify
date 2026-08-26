@@ -26,15 +26,15 @@ authorize(handshakeData: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handshakeData | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handshakeData | string | 是 | 要发送的握手数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35600002](../errorcode-ability.md#35600002-ipc消息发送失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35600002](../errorcode-ability.md#35600002-ipc消息发送失败) | Failed to send the IPC message. |
 
 ## sendData
 
@@ -54,12 +54,12 @@ sendData(data: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | string | 是 | 要发送的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35600002](../errorcode-ability.md#35600002-ipc消息发送失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35600002](../errorcode-ability.md#35600002-ipc消息发送失败) | Failed to send the IPC message. |

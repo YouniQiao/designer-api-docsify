@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import uiMaterial from '@kit.ArkUI';
 ```
 
 ## getMaterialInfo
@@ -24,6 +24,6 @@ function getMaterialInfo(): MaterialInfo
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md) | 返回当前应用的材质配置信息，包含材质使能状态和材质类型。 |

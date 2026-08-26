@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import pasteboard from '@kit.BasicServicesKit';
 ```
 
 ## createWantData
@@ -24,12 +24,24 @@ function createWantData(want: Want): PasteData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want内容。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 剪贴板内容对象。 |
+
+**示例**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+
+let object: Want = {
+    bundleName: "com.example.aafwk.test",
+    abilityName: "com.example.aafwk.test.TwoAbility"
+};
+let pasteData: pasteboard.PasteData = pasteboard.createWantData(object);
+```

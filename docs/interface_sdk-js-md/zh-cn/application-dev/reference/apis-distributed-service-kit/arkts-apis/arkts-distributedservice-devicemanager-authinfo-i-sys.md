@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceManager } from 'kits/@kit.DistributedServiceKit';
+import deviceManager from '@kit.DistributedServiceKit';
 ```
 
 ## authType

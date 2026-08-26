@@ -29,9 +29,9 @@ onGetIrregularSizeByIndex?: (index: number) => [number, number]
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 |  |
 
 ## onGetRectByIndex
 
@@ -52,9 +52,9 @@ onGetRectByIndex?: (index: number) => [number, number, number, number]
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 |  |
 
 ## irregularIndexes
 

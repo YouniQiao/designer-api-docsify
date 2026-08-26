@@ -31,9 +31,9 @@ Constructor used to create a pinch gesture handler instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [PinchGestureHandlerOptions](arkts-arkui-pinchgesturehandleroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [PinchGestureHandlerOptions](arkts-arkui-pinchgesturehandleroptions-i.md) | No | Parameters of the pinch gesture handler. |
 
 ## onActionCancel
 
@@ -53,15 +53,15 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback & lt;void & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback & lt;void & gt; | Yes | Callback invoked when the pinch gesture is cancelled. No gesture event information is returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) |
+| Type | Description |
+| --- | --- |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
 ## onActionCancel
 
@@ -81,15 +81,15 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when the pinch gesture is cancelled. Gesture event information is returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) |
+| Type | Description |
+| --- | --- |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
 ## onActionEnd
 
@@ -109,15 +109,15 @@ Sets the callback for pinch gesture recognition completion. This callback is tri
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when pinch gesture recognition completes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) |
+| Type | Description |
+| --- | --- |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
 ## onActionStart
 
@@ -137,15 +137,15 @@ Sets the callback for successful pinch gesture recognition.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful pinch gesture recognition. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) |
+| Type | Description |
+| --- | --- |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
 ## onActionUpdate
 
@@ -165,12 +165,12 @@ Sets the callback for pinch gesture movement updates. The callback is triggered 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked during pinch gesture movement. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) |
+| Type | Description |
+| --- | --- |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |

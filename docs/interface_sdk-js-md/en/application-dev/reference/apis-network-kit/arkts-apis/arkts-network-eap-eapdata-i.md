@@ -9,7 +9,7 @@ Defines the EAP data.​
 ## Modules to Import
 
 ```TypeScript
-import { eap } from 'kits/@kit.NetworkKit';
+import eap from '@kit.NetworkKit';
 ```
 
 ## bufferLen

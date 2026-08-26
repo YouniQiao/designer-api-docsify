@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityInfos
@@ -15,7 +15,8 @@ function getLauncherAbilityInfos(bundleName: string,
 
 Obtains an array of the launcher ability information based on a given bundle name. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)
 > instead.
@@ -34,11 +35,11 @@ Obtains an array of the launcher ability information based on a given bundle nam
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| userId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
+| userId | number | Yes | User ID. The value must be greater than or equal to 0. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | Yes | Callback used to return an array of the launcher ability information. |
 
 
 ## getLauncherAbilityInfos
@@ -49,7 +50,8 @@ function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Ar
 
 Obtains an array of the launcher ability information based on a given bundle name. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)
 > instead.
@@ -68,13 +70,13 @@ Obtains an array of the launcher ability information based on a given bundle nam
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| userId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
+| userId | number | Yes | User ID. The value must be greater than or equal to 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | Promise used to return an array of the launcher ability information. |

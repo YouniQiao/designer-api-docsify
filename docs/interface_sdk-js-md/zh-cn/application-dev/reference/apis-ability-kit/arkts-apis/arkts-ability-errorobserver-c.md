@@ -22,9 +22,35 @@ onException?(errObject: Error): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| errObject | Error | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| errObject | Error | 是 | 有关异常事件名字、消息和错误堆栈信息的对象。 |
+
+**示例**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer: errorManager.ErrorObserver = {
+  onUnhandledException(errObject) {
+    console.error('onUnhandledException, errObject: ', errObject);
+  },
+  onException(errorObj) {
+    console.error('onException, name: ', errorObj.name);
+    console.error('onException, message: ', errorObj.message);
+    if (typeof (errorObj.stack) === 'string') {
+      console.error('onException, stack: ', errorObj.stack);
+    }
+  }
+};
+
+try {
+  errorManager.on('error', observer);
+} catch (error) {
+  console.error(`registerErrorObserver failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+}
+```
 
 ## onUnhandledException
 
@@ -42,6 +68,25 @@ onUnhandledException(errMsg: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| errMsg | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| errMsg | string | 是 | 有关异常的消息和错误堆栈跟踪。 |
+
+**示例**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer: errorManager.ErrorObserver = {
+  onUnhandledException(errMsg) {
+    console.error('onUnhandledException, errMsg: ', errMsg);
+  }
+};
+
+try {
+  errorManager.on('error', observer);
+} catch (error) {
+  console.error(`registerErrorObserver failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+}
+```

@@ -27,15 +27,15 @@ Obtains the data item that matches the specified index.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the data record to obtain. The value range is [0, data source length - 1]. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | Data item that matches the specified index. The actual type is determined by the data source implementation. |
 
 ## registerDataChangeListener
 
@@ -53,9 +53,9 @@ Registers a listener for data changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Yes | Listener for data changes. |
 
 ## totalCount
 
@@ -73,9 +73,9 @@ Obtains the total number of data items.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Total number of data items, which is subject to the data source. |
 
 ## unregisterDataChangeListener
 
@@ -93,6 +93,6 @@ Unregisters the listener for data changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Yes | Listener for data changes. |

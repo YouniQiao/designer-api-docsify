@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import pasteboard from '@kit.BasicServicesKit';
 ```
 
 ## createPlainTextRecord
@@ -24,12 +24,18 @@ function createPlainTextRecord(text: string): PasteDataRecord
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 纯文本内容。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 一条新建的纯文本内容条目。 |
+
+**示例**
+
+```TypeScript
+let record: pasteboard.PasteDataRecord = pasteboard.createPlainTextRecord('hello');
+```

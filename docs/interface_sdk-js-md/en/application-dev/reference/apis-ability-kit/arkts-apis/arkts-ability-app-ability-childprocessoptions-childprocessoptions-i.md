@@ -9,7 +9,7 @@ The module describes the startup configuration of a child process. When starting
 ## Modules to Import
 
 ```TypeScript
-import { ChildProcessOptions } from 'kits/@kit.AbilityKit';
+import { ChildProcessOptions } from '@kit.AbilityKit';
 ```
 
 ## isolationMode
@@ -43,3 +43,68 @@ Whether the child process uses an independent UID. **true** if the child process
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+Sample code for the child process:
+
+```TypeScript
+// Create the child process class DemoProcess.ets in src/main/ets/process of the entry module.
+// entry/src/main/ets/process/DemoProcess.ets
+import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
+
+export default class DemoProcess extends ChildProcess {
+  onStart(args?: ChildProcessArgs) {
+    let entryParams = args?.entryParams;
+    let fd = args?.fds?.key1;
+    // Child process code logic
+  }
+}
+```
+
+Sample code for the main process:
+
+```TypeScript
+// Call childProcessManager.startArkChildProcess to start the child process.
+// entry/src/main/ets/pages/Index.ets
+import { ChildProcessArgs, ChildProcessOptions, childProcessManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import DemoProcess from '../process/DemoProcess';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Text('Click')
+          .fontSize(30)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            try {
+              DemoProcess.toString(); // Call any API of the DemoProcess class to prevent the code from being directly optimized by the compiler because it is not being referenced.
+              let options: ChildProcessOptions = {
+                isolationMode: false,
+                isolationUid: false
+              };
+              let args: ChildProcessArgs = {
+                entryParams: "testParam",
+              };
+              childProcessManager.startArkChildProcess("entry/ets/process/DemoProcess.ets", args, options)
+                .then((pid) => {
+                  console.info(`startChildProcess success, pid: ${pid}`);
+                })
+                .catch((err: BusinessError) => {
+                  console.error(`startChildProcess business error, errorCode: ${err.code}, errorMsg:${err.message}`);
+                });
+            } catch (err) {
+              console.error(`startChildProcess error, errorCode: ${err.code}, errorMsg:${err.message}`);
+            }
+          });
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```

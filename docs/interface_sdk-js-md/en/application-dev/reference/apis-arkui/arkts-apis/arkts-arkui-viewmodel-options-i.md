@@ -92,9 +92,9 @@ Called when the user data need to be restored
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [data](#data) | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | Object | Yes | Indicates the user data to restore. |
 
 ## onSaveData
 
@@ -112,15 +112,15 @@ Called when the user data need to be saved
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [data](#data) | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | Object | Yes | Indicates the user data to save. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
 
 ## onShow
 

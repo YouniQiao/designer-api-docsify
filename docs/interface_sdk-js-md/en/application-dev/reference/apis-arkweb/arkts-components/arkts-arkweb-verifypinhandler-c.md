@@ -9,6 +9,9 @@ VerifyPinHandler is a class in the Web component that handles PIN code verificat
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## confirm
@@ -25,9 +28,9 @@ Notifies the Web component of the PIN authentication result. The app calls this 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | [PinVerifyResult](arkts-arkweb-pinverifyresult-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | [PinVerifyResult](arkts-arkweb-pinverifyresult-e.md) | Yes | PIN authentication result. If successful, the Web component allows subsequent page operations; if failed, page navigation or content loading may be blocked. |
 
 ## constructor
 

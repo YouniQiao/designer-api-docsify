@@ -9,7 +9,7 @@ Defines the parameters required when using the **PluginManager.Request** API.
 ## Modules to Import
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## data

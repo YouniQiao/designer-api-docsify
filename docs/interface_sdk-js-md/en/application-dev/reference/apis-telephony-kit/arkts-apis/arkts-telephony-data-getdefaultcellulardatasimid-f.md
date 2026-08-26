@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getDefaultCellularDataSimId
@@ -20,6 +19,14 @@ Obtains the default ID of the SIM card used for mobile data.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Obtains the default ID of the SIM card used for mobile data. |
+
+**Examples**
+
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+
+console.info("Result: "+ data.getDefaultCellularDataSimId());
+```

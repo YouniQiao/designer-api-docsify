@@ -13,14 +13,14 @@
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -29,14 +29,14 @@ new(value?: any): String
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## fromCharCode
 
 ```TypeScript
@@ -45,14 +45,14 @@ fromCharCode(...codes: number[]): string
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| codes | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| codes | number[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## prototype
 
 ```TypeScript

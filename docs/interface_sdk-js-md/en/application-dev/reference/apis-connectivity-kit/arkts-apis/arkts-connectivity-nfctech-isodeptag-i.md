@@ -25,9 +25,19 @@ Obtains the higher-layer response bytes for the given tag. This API applies only
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Higher-layer response bytes obtained, which consist of hexadecimal numbers ranging from **0x00** to **0xFF**. If the IsoDep tag uses the NFC-A technology, **null** will be returned. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct isoDep tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let hiLayerResponse : number[] = isoDep.getHiLayerResponse();
+console.info("isoDep hiLayerResponse: " + hiLayerResponse);
+```
 
 ## getHistoricalBytes
 
@@ -45,9 +55,19 @@ Obtains the historical bytes for the given tag. This API applies only to the Iso
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Historical bytes obtained, which consist of hexadecimal numbers ranging from **0x00** to **0xFF**. If the IsoDep tag uses the NFC-B technology, **null** will be returned. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct isoDep tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let historicalBytes : number[] = isoDep.getHistoricalBytes();
+console.info("isoDep historicalBytes: " + historicalBytes);
+```
 
 ## isExtendedApduSupported
 
@@ -67,18 +87,46 @@ Checks whether extended APDUs are supported. This API uses a promise to return t
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that extended APDUs are supported, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the correct isoDep tag by using the tag.TagInfo API in @ohos.nfc.tag.
+function nfcTechDemo() {
+    // Connect the tag if it has not been connected.
+    if (!isoDep.isTagConnected()) {
+        if (!isoDep.connectTag()) {
+            console.error("isoDep connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        isoDep.isExtendedApduSupported().then((response: boolean) => {
+            console.info("isoDep isExtendedApduSupported Promise response: " + response);
+        }).catch((err: BusinessError) => {
+            console.error(`isoDep isExtendedApduSupported Promise Code: ${err.code}, message: ${err.message}`);
+        });
+    } catch (businessError) {
+        console.error(`isoDep isExtendedApduSupported Promise Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
 
 ## isExtendedApduSupported
 
@@ -98,15 +146,45 @@ Checks whether extended APDUs are supported. This API uses an asynchronous callb
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the operation result. The value **true** indicates that extended APDUs are supported, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the correct isoDep tag by using the tag.TagInfo API in @ohos.nfc.tag.
+function nfcTechDemo() {
+    // Connect the tag if it has not been connected.
+    if (!isoDep.isTagConnected()) {
+        if (!isoDep.connectTag()) {
+            console.error("isoDep connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        isoDep.isExtendedApduSupported((err: BusinessError, response: boolean) => {
+            if (err) {
+                console.error(`isoDep isExtendedApduSupported AsyncCallback Code: ${err.code}, message: ${err. message}`);
+            } else {
+                console.info("isoDep isExtendedApduSupported AsyncCallback response: " + response);
+            }
+        });
+    } catch (businessError) {
+        console.error(`isoDep isExtendedApduSupported AsyncCallback Code: ${(businessError as Business).code}, message: ${(businessError as Business).message}`);
+    }
+}
+```

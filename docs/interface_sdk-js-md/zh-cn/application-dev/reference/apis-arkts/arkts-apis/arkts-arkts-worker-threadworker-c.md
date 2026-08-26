@@ -17,7 +17,7 @@ onAllErrors接口适用于捕获Worker线程中所有类型异常的场景，特
 ## 导入模块
 
 ```TypeScript
-import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from 'kits/@kit.ArkTS';
+import worker, { DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## addEventListener
@@ -36,17 +36,46 @@ addEventListener(type: string, listener: WorkerEventListener): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | string | 是 |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 监听的事件类型。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 是 | 当指定类型的事件发生时调用的回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+
+**示例**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+// 执行 alert 事件类型的回调
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.addEventListener("alert", () => {
+    console.info("alert listener callback");
+  })
+};
+```
 
 ## constructor
 
@@ -64,17 +93,39 @@ ThreadWorker构造函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scriptURL | string | 是 |
-| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scriptURL | string | 是 | Worker线程文件的路径。路径规则详细参考文件路径注意事项。 |
+| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | 否 | Worker构造的选项。此参数不填时，对应各属性取其默认值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200003](../errorcode-utils.md#10200003-worker初始化失败) |
-| [10200007](../errorcode-utils.md#10200007-worker文件路径异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failed. |
+| [10200007](../errorcode-utils.md#10200007-worker文件路径异常) | The worker file path is invalid. |
+
+**示例**
+
+以下示例展示了在Stage模型的entry模块Index.ets文件中加载Worker线程文件的方法，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../../arkts-utils/worker-introduction.md#文件路径注意事项)。
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+// worker文件所在路径："entry/src/main/ets/workers/worker.ets"
+const workerInstance = new worker.ThreadWorker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
+```
+
+此处以在Stage模型的entry模块Index.ets文件中加载Worker线程文件为例，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../../arkts-utils/worker-introduction.md#文件路径注意事项)。
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+// worker文件所在路径："entry/src/main/ets/workers/worker.ets"
+const workerInstance = new worker.Worker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
+```
 
 ## dispatchEvent
 
@@ -92,21 +143,94 @@ dispatchEvent(event: Event): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [Event](arkts-arkts-worker-event-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [Event](arkts-arkts-worker-event-i.md) | 是 | 需要分发的事件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean |  |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+
+**示例**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+let result: boolean = workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
+
+console.info("dispatchEvent result is: ", result);
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.addEventListener("alert", () => {
+    console.info("alert listener callback");
+  });
+
+  workerPort.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
+};
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.addEventListener("alert_add", ()=>{
+  console.info("alert listener callback");
+})
+
+workerPort.dispatchEvent({type: 'alert_add', timeStamp: 0}); // timeStamp暂未支持
+```
+
+分发事件（dispatchEvent）可与监听接口（addEventListener）搭配使用，示例如下：
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.postMessage("hello world");
+workerInstance.onmessage = (): void => {
+    console.info("receive data from worker.ets");
+}
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.addEventListener("alert", ()=>{
+  console.info("alert listener callback");
+})
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.dispatchEvent({type:"alert", timeStamp:0}); // timeStamp暂未支持
+}
+```
 
 ## off
 
@@ -124,17 +248,45 @@ off(type: string, listener?: WorkerEventListener): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | string | 是 |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 需要移除的事件类型。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 否 | listener 要移除的事件监听的回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+
+**示例**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+const handler1 = () => console.info("Handler 1");
+const handler2 = () => console.info("Handler 2");
+
+// 注册两个监听器
+workerInstance.on("alert", handler1);
+workerInstance.on("alert", handler2);
+
+// 首次触发：两个监听器都会执行
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
+
+// 删除 handler1 监听器
+workerInstance.off("alert", handler1);
+
+// 再次触发：只剩 handler2 会执行
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
+
+// 删除"alert"类型所有监听器
+workerInstance.off("alert");
+```
 
 ## on
 
@@ -152,17 +304,34 @@ on(type: string, listener: WorkerEventListener): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | string | 是 |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 监听的事件类型。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 是 | 当指定类型的事件发生时调用的回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+
+**示例**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.on("alert", () => {
+    console.info("alert listener callback");
+})
+
+// 使用on添加的事件监听可以多次执行
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
+```
 
 ## onAllErrors
 
@@ -180,10 +349,10 @@ onAllErrors?: ErrorCallback
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
 
 ## once
 
@@ -201,17 +370,32 @@ once(type: string, listener: WorkerEventListener): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | string | 是 |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 监听的事件类型。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+
+**示例**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.once("alert", () => {
+  console.info("alert listener callback");
+})
+
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
+```
 
 ## onerror
 
@@ -229,16 +413,16 @@ onerror?: (err: ErrorEvent) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | 是 |  |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
 
 ## onexit
 
@@ -256,16 +440,16 @@ onexit?: (code: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| code | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| code | number | 是 |  |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
 
 ## onmessage
 
@@ -283,16 +467,16 @@ onmessage?: (event: MessageEvents) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | 是 |  |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
 
 ## onmessageerror
 
@@ -310,16 +494,16 @@ onmessageerror?: (event: MessageEvents) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | 是 |  |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
 
 ## postMessage
 
@@ -337,17 +521,102 @@ postMessage(message: Object, transfer: ArrayBuffer[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | Object | 是 |
-| [transfer](arkts-arkts-worker-postmessageoptions-i.md) | ArrayBuffer[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | Object | 是 | 发送至Worker的数据，该数据对象必须是可序列化对象。 支持的参数类型请参考序列化支持类型。 |
+| transfer | ArrayBuffer[] | 是 | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权 会被转移到Worker线程，在宿主线程中将会变为不可用，仅在Worker线程中可用。该数组不可传入null。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+
+**示例**
+
+```TypeScript
+// Worker.ets
+import { worker, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+// 创建worker线程中与宿主线程通信的对象
+const workerPort = worker.workerPort;
+
+// worker线程接收宿主线程信息
+workerPort.onmessage = (e: MessageEvents): void => {
+  // data：宿主线程发送的信息
+  let data: ArrayBuffer = e.data;
+  // 往收到的buffer里写入数据
+  const view = new Int8Array(data).fill(3);
+  // worker线程向宿主线程发送信息
+  workerPort.postMessage(view);
+}
+
+// worker线程发生error的回调
+workerPort.onerror = (err: ErrorEvent) => {
+  console.error("worker.ets onerror" + err.message);
+}
+```
+
+```TypeScript
+// Index.ets
+import { worker, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'Hello World';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            // 宿主线程中创建Worker对象
+            const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
+            // 宿主线程向worker线程传递信息
+            const buffer = new ArrayBuffer(8);
+            workerInstance.postMessage(buffer, [buffer]);
+
+            // 此时buffer的所有权转移到了worker线程，在宿主线程中不可用
+            // const view = new Int8Array(buffer).fill(3);
+
+            // 宿主线程接收worker线程信息
+            workerInstance.onmessage = (e: MessageEvents): void => {
+              // data：worker线程发送的信息
+              let data: Int8Array = e.data;
+              console.info("main thread data is  " + data);
+              // 销毁Worker对象
+              workerInstance.terminate();
+            }
+            // 在调用terminate后，执行onexit
+            workerInstance.onexit = (code) => {
+              console.info("main thread terminate");
+            }
+            // 监听Worker错误
+            workerInstance.onAllErrors = (err: ErrorEvent) => {
+              console.error("main error message " + err.message);
+            }
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+  }
+}
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+
+let buffer = new ArrayBuffer(8);
+workerInstance.postMessage(buffer, [buffer]);
+```
 
 ## postMessage
 
@@ -365,17 +634,44 @@ postMessage(message: Object, options?: PostMessageOptions): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | Object | 是 |
-| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | Object | 是 | 发送至Worker的数据，该数据对象必须是可序列化对象。 支持的参数类型请参考序列化支持类型。 |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | 否 | 当填入该参数时，其作用与传入ArrayBuffer[]相同， 该数组中对象的所有权会被转移到Worker线程，在宿主线程中将变为不可用，仅在Worker线程中可用。 若不填入该参数，默认设置为undefined，通过拷贝数据的方式传输信息到Worker线程。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+
+**示例**
+
+```TypeScript
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.postMessage("hello world");
+
+let buffer = new ArrayBuffer(8);
+
+// 填入options参数，buffer的所有权会转移到Worker线程，在宿主线程中将不可用
+workerInstance.postMessage(buffer, {transfer: [buffer]});
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+
+workerInstance.postMessage("hello world");
+
+let buffer = new ArrayBuffer(8);
+workerInstance.postMessage(buffer, [buffer]);
+```
 
 ## postMessageWithSharedSendable
 
@@ -393,17 +689,100 @@ postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | Object | 是 |
-| [transfer](arkts-arkts-worker-postmessageoptions-i.md) | ArrayBuffer[] | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | Object | 是 | 发送至Worker线程的数据，该数据对象必须是可序列化或可共享。 支持的序列化类型请参考序列化支持类型。 支持的共享类型请参考Sendable支持的数据类型。 |
+| transfer | ArrayBuffer[] | 否 | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权 会被转移到Worker线程，转移后该对象仅在Worker线程中可用。该数组不可传入null。默认值为undefined。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+
+**示例**
+
+```TypeScript
+// Index.ets
+// 新建SendableObject实例并通过宿主线程传递至Worker线程
+
+import { worker } from '@kit.ArkTS';
+import { SendableObject } from './sendable';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
+let object: SendableObject = new SendableObject();
+workerInstance.postMessageWithSharedSendable(object);
+
+// 使用postMessage接口传递Sendable对象，使用拷贝数据的方式传递
+workerInstance.postMessage(object);
+```
+
+```TypeScript
+// sendable.ets
+// 定义SendableObject
+
+@Sendable
+export class SendableObject {
+  value:number = 45;
+}
+```
+
+```TypeScript
+// worker文件路径为：entry/src/main/ets/workers/Worker.ets
+// Worker.ets
+// 接收宿主线程传递至Worker线程的数据并访问
+
+import { SendableObject } from '../pages/sendable';
+import { worker, ThreadWorkerGlobalScope, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (e: MessageEvents) => {
+  let obj: SendableObject = e.data;
+  console.info("sendable obj is: " + obj.value);
+}
+```
+
+```TypeScript
+// worker文件路径为：entry/src/main/ets/workers/Worker.ets
+// Worker.ets
+// 新建SendableObject实例并通过Worker线程传递至宿主线程
+
+import { SendableObject } from '../pages/sendable';
+import { worker, ThreadWorkerGlobalScope, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+workerPort.onmessage = (e: MessageEvents) => {
+  let object: SendableObject = new SendableObject();
+  workerPort.postMessageWithSharedSendable(object);
+}
+```
+
+```TypeScript
+// sendable.ets
+// 定义SendableObject
+
+@Sendable
+export class SendableObject {
+  a:number = 45;
+}
+```
+
+```TypeScript
+// Index.ets
+// 接收Worker线程传递至宿主线程的数据并访问其属性
+
+import { worker, MessageEvents } from '@kit.ArkTS';
+import { SendableObject } from './sendable';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
+workerInstance.postMessage(1);
+workerInstance.onmessage = (e: MessageEvents) => {
+  let obj: SendableObject = e.data;
+  console.info("sendable index obj is: " + obj.a);
+}
+```
 
 ## registerGlobalCallObject
 
@@ -421,16 +800,63 @@ registerGlobalCallObject(instanceName: string, globalCallObject: Object): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [instanceName](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-globalerror-i.md) | string | 是 |
-| globalCallObject | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instanceName | string | 是 | 注册对象时使用的键，调用时通过该键值找到被注册的对象。 |
+| globalCallObject | Object | 是 | 被注册的对象，ThreadWorker实例会持有该对象的强引用。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+
+**示例**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+class TestObj {
+  private message : string = "this is a message from TestObj";
+  public getMessage() : string {
+    return this.message;
+  }
+  public getMessageWithInput(str : string) : string {
+    return this.message + " with input: " + str;
+  }
+}
+let registerObj = new TestObj();
+// 在ThreadWorker实例上注册registerObj
+workerInstance.registerGlobalCallObject("myObj", registerObj);
+workerInstance.postMessage("start worker");
+```
+
+```TypeScript
+// worker.ets
+import { worker, MessageEvents } from '@kit.ArkTS';
+
+const workerPort = worker.workerPort;
+workerPort.onmessage = (e: MessageEvents): void => {
+  try {
+    // 调用方法无入参
+    let res : string = workerPort.callGlobalCallObjectMethod("myObj", "getMessage", 0) as string;
+    console.info("worker:", res) // worker: this is a message from TestObj
+  } catch (error) {
+    // 异常处理
+    console.error("worker: error code is " + error.code + " error message is " + error.message);
+  }
+  try {
+    // 调用方法有入参
+    let res : string = workerPort.callGlobalCallObjectMethod("myObj", "getMessageWithInput", 0, "hello there!") as string;
+    console.info("worker:", res); // worker: this is a message from TestObj with input: hello there!
+  } catch (error) {
+    // 异常处理
+    console.error("worker: error code is " + error.code + " error message is " + error.message);
+  }
+}
+```
 
 ## removeAllListener
 
@@ -448,9 +874,50 @@ removeAllListener(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+
+**示例**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+workerInstance.addEventListener("alert", () => {
+    console.info("alert listener callback");
+})
+workerInstance.removeAllListener();
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.addEventListener("alert", () => {
+    console.info("alert listener callback");
+  });
+
+  workerPort.removeAllListener();
+};
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.addEventListener("alert_add", ()=>{
+  console.info("alert listener callback");
+})
+
+workerPort.removeAllListener();
+```
 
 ## removeEventListener
 
@@ -468,16 +935,48 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | string | 是 |
-| callback | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 需要移除的事件类型。 |
+| callback | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 否 | 移除监听事件后执行的回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+
+**示例**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
+
+workerInstance.removeEventListener("alert");
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.addEventListener("alert", () => {
+    console.info("alert listener callback");
+  });
+
+  workerPort.removeEventListener("alert");
+};
+```
 
 ## terminate
 
@@ -495,9 +994,27 @@ terminate(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+
+**示例**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+workerInstance.terminate();
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.terminate();
+```
 
 ## unregisterGlobalCallObject
 
@@ -515,12 +1032,36 @@ unregisterGlobalCallObject(instanceName?: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [instanceName](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-globalerror-i.md) | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instanceName | string | 否 | 注册对象时使用的键。此参数不填时， 会释放ThreadWorker实例中所有已注册的对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+
+**示例**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+class TestObj {
+  private message : string = "this is a message from TestObj";
+  public getMessage() : string {
+    return this.message;
+  }
+  public getMessageWithInput(str : string) : string {
+    return this.message + " with input: " + str;
+  }
+}
+let registerObj = new TestObj();
+workerInstance.registerGlobalCallObject("myObj", registerObj);
+// 取消对象注册
+workerInstance.unregisterGlobalCallObject("myObj");
+// 取消ThreadWorker实例上的所有对象注册
+workerInstance.postMessage("start worker");
+```

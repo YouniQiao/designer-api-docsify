@@ -14,27 +14,27 @@ systemConfiguration模块提供系统环境变化监听回调能力，包括系�
 ## 导入模块
 
 ```TypeScript
-import { systemConfiguration } from 'kits/@kit.AbilityKit';
+import systemConfiguration from '@kit.AbilityKit';
 ```
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
-| [UpdatedCallback(系统环境模块)](arkts-ability-systemconfiguration-updatedcallback-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [UpdatedCallback(系统环境模块)](arkts-ability-systemconfiguration-updatedcallback-i.md) | UpdatedCallback是监听系统环境变化的回调函数，开发者可通过 [ApplicationContext.onSystemConfigurationUpdated](arkts-ability-applicationcontext-c.md#onsystemconfigurationupdated) 方法注册自定义的UpdatedCallback，来监听系统环境变化。 |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [OnColorModeUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-oncolormodeupdatedfn-t.md) |
-| [OnFontIdUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onfontidupdatedfn-t.md) |
-| [OnFontSizeScaleUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onfontsizescaleupdatedfn-t.md) |
-| [OnFontWeightScaleUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onfontweightscaleupdatedfn-t.md) |
-| [OnHasPointerDeviceUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onhaspointerdeviceupdatedfn-t.md) |
-| [OnLanguageUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onlanguageupdatedfn-t.md) |
-| [OnLocaleUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onlocaleupdatedfn-t.md) |
-| [OnMCCUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onmccupdatedfn-t.md) |
-| [OnMNCUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onmncupdatedfn-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [OnColorModeUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-oncolormodeupdatedfn-t.md) | 在注册系统环境变化的监听后，当系统深浅色模式变化时会触发回调。 |
+| [OnFontIdUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onfontidupdatedfn-t.md) | 在注册系统环境变化的监听后，当系统字体ID变化时触发回调。 |
+| [OnFontSizeScaleUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onfontsizescaleupdatedfn-t.md) | 在注册系统环境变化的监听后，当系统字体大小缩放比例变化时触发回调。 |
+| [OnFontWeightScaleUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onfontweightscaleupdatedfn-t.md) | 在注册系统环境变化的监听后，当系统字体粗细缩放比例变化时触发回调。 |
+| [OnHasPointerDeviceUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onhaspointerdeviceupdatedfn-t.md) | 在注册系统环境变化的监听后，当指针设备连接或者断开时触发回调。 |
+| [OnLanguageUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onlanguageupdatedfn-t.md) | 在注册系统环境变化的监听后，当系统语言变化时触发回调。 |
+| [OnLocaleUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onlocaleupdatedfn-t.md) | 在注册系统环境变化的监听后，当系统区域设置变化时触发回调。 |
+| [OnMCCUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onmccupdatedfn-t.md) | 在注册系统环境变化的监听后，当移动设备国家代码变化时触发回调。 |
+| [OnMNCUpdatedFn(系统环境模块)](arkts-ability-systemconfiguration-onmncupdatedfn-t.md) | 在注册系统环境变化的监听后，当移动设备网络代码变化时触发回调。 |

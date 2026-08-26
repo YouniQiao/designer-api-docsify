@@ -2,7 +2,8 @@
 
 圆柱体几何类型，继承自GeometryDefinition。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 开发者需保证参数radius，height，segmentCount设置正确，否则无法创建圆柱体并可能引发不可预期的行为。
 @extends GeometryDefinition
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import curves from '@kit.ArkUI';
 ```
 
 ## stepsCurve
@@ -22,13 +22,20 @@ function stepsCurve(count: number, end: boolean): ICurve
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| count | number | 是 |
-| end | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| count | number | 是 | 阶梯的数量，需要为正整数。取值范围：[1, +∞)   **说明：** 设置小于1的值时，按值为1处理。 |
+| end | boolean | 是 | 在每个间隔的起点或终点发生阶跃变化。   -true：在终点发生阶跃变化。   -false：在起点发生阶跃变化。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | 曲线的插值对象。 |
+
+**示例**
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+curves.stepsCurve(9, true);  // 创建一个阶梯曲线
+```

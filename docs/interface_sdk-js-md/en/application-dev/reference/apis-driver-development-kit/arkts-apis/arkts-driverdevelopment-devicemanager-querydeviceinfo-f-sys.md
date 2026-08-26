@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+import deviceManager from '@kit.DriverDevelopmentKit';
 ```
 
 ## queryDeviceInfo
@@ -24,21 +24,39 @@ Obtains the list of detailed information about peripherals. If the device has no
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| deviceId | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceId | number | No | Device ID, which is obtained through [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md). If no device ID is passed, all device information is obtained by default. If no external device is connected and no device ID is passed, an empty array is returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;Readonly & lt;DeviceInfo & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;Readonly & lt;DeviceInfo & gt; & gt; | List of detailed information about peripherals. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [26300001](../errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application cannot call a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types. |
+| [26300001](../errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
+
+**Examples**
+
+```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // For example, deviceId is 12345678. You can use queryDevices() to obtain the deviceId.
+  let deviceInfos : Array<deviceManager.DeviceInfo> = deviceManager.queryDeviceInfo(12345678);
+  for (let item of deviceInfos) {
+    console.info(`Device id is ${item.deviceId}`)
+  }
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to query device info. Code is ${err.code}, message is ${err.message}`);
+}
+```

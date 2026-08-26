@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import font from '@kit.ArkUI';
 ```
 
 ## getSystemFontList
@@ -14,11 +14,13 @@ function getSystemFontList(): Array<string>
 
 获取系统字体列表。该接口仅在PC/2in1设备上生效，在其他设备上返回空数组。推荐使用[getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md)接口获取系统最新支持的字体列表数据。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > -getSystemFontList需要先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > getFont方法获取
 > [Font](arkts-arkui-arkui-uicontext-uicontext-c.md)对象，然后通过该对象进行调用。且直接使用getSystemFontList可能导致
-> [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。&gt;
+> [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
+> 
 > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > getFont方法获取当前UI上下文关联的
 > [Font](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
@@ -37,6 +39,30 @@ function getSystemFontList(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 系统的字体名列表。 |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+import { font } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct FontExample {
+  fontList: Array<string> = new Array<string>();
+
+  build() {
+    Column() {
+      Button("getSystemFontList")
+        .width('60%')
+        .height('6%')
+        .onClick(() => {
+          this.fontList = font.getSystemFontList(); // 建议使用 this.getUIContext().getFont().getSystemFontList()接口
+        })
+    }.width('100%')
+  }
+}
+```

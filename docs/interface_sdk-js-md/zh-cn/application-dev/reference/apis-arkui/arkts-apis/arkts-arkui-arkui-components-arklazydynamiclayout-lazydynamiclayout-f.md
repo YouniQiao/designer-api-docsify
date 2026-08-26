@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { LazyDynamicLayout, LazyDynamicLayoutAttribute } from 'kits/@kit.ArkUI';
+import { LazyDynamicLayout, LazyDynamicLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## LazyDynamicLayout
@@ -24,12 +24,12 @@ export declare function LazyDynamicLayout(algorithm: LazyLayoutAlgorithm): LazyD
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| algorithm | [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | 是 | Lazy layout algorithm. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |

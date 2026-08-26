@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## createMac
@@ -26,22 +26,37 @@ function createMac(algName: string): Mac
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| algName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| algName | string | 是 | 指定摘要算法，支持算法请参考 [HMAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | 返回对应算法的Mac实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+
+**示例**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Set algName based on the algorithm supported.
+  let mac = cryptoFramework.createMac('SHA256');
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```
 
 
 ## createMac
@@ -62,21 +77,40 @@ function createMac(macSpec: MacSpec): Mac
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| macSpec | [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| macSpec | [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md) | 是 | 根据消息认证码的不同算法，指定入参参数，支持算法请参考 [MAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | 返回对应算法的Mac实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Set algName based on the algorithm supported.
+  let spec: cryptoFramework.HmacSpec = {
+    algName: 'HMAC',
+    mdName: 'SHA256',
+  };
+  let mac = cryptoFramework.createMac(spec);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`sync failed: errCode: ${error.code}, errMsg: ${error.message}`);
+}
+```

@@ -9,7 +9,7 @@ Implements a task group, in which tasks are associated with each other and all t
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import taskpool from '@kit.ArkTS';
 ```
 
 ## addTask
@@ -28,16 +28,29 @@ Adds the function to be executed to this task group. Before using this API, you 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| func | Function | Yes |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| func | Function | Yes | Function that must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| args | Object[] | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
+
+**Examples**
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup();
+taskGroup.addTask(printArgs, 100); // 100: test number
+```
 
 ## addTask
 
@@ -55,17 +68,31 @@ Adds a created task to this task group. Before using this API, you must create a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be added to the task group. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+
+**Examples**
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup();
+let task: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
+taskGroup.addTask(task);
+```
 
 ## constructor
 
@@ -80,6 +107,12 @@ Constructor used to create a **TaskGroup** instance.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+```TypeScript
+let taskGroup = new taskpool.TaskGroup();
+```
 
 ## constructor
 
@@ -97,9 +130,17 @@ A constructor used to create a **TaskGroup** instance, with the task group name 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [name](#name) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Task group name. |
+
+**Examples**
+
+```TypeScript
+let taskGroupName: string = "groupName";
+let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup(taskGroupName);
+let name: string = taskGroup.name;
+```
 
 ## name
 

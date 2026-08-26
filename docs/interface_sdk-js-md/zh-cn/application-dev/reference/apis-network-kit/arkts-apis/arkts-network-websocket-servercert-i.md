@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## certPath

@@ -31,15 +31,15 @@ Sets the position of the navigation indicator relative to the bottom edge of the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Position of the navigation indicator relative to the bottom edge of the **Swiper** component.If neither **top** nor **bottom** is set, the navigation indicator is aligned at the bottom along the cross axis based on its own size and the size of the **Swiper** component, which is the same effect as setting **bottom=0**.If the value specified is **0**, the navigation indicator is placed at the position 0. Priority: lower than the **top** property Value range: [0, Swiper height - Navigation indicator area height]. Values outside this range are adjusted to the nearest boundary. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Current navigation indicator. |
 
 ## bottom
 
@@ -61,16 +61,16 @@ Sets the position of the navigation indicator relative to the bottom edge of the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [bottom](#bottom) | LengthMetrics \| [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
-| ignoreSize | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bottom | LengthMetrics \| [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Position of the navigation indicator relative to the bottom edge of the **Swiper** component.If neither **top** nor **bottom** is set, the navigation indicator is aligned at the bottom along the cross axis based on its own size and the size of the **Swiper** component, which is the same effect as setting **bottom=0**.If the value specified is **0**, the navigation indicator is placed at the position 0.Priority: lower than the **top** property Value range: [0, Swiper height - Navigation indicator area height]. Values outside this range are adjusted to the nearest boundary. |
+| ignoreSize | boolean | Yes | Whether to ignore the size of the navigation indicator.Default value: **false**.Setting **true** positions the indicator closer to the **Swiper** component's bottom. For the usage, see [Example 9: Using the space and bottom APIs on the Navigation Indicator](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-9-using-the-space-and-bottom-apis-on-the-navigation-indicator).    **NOTE：**The **ignoreSize** property does not apply to the digit-style navigation indicator in the following scenarios:? [vertical](arkts-arkui-swiper-attribute.md#vertical) is set to **false** and the value of **bottom** is greater than 0.? When [vertical](arkts-arkui-swiper-attribute.md#vertical) is set to **true**: 1. The value of **bottom** is greater than 0.  2. The value of **bottom** is **undefined**.  3. **isSidebarMiddle** is set to **false**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Current navigation indicator. |
 
 ## digit
 
@@ -92,9 +92,9 @@ Returns a **DigitIndicator** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DigitIndicator](arkts-arkui-digitindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Digit-style indicator. |
 
 ## dot
 
@@ -116,9 +116,9 @@ Returns a **DotIndicator** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Dot-style indicator. |
 
 ## end
 
@@ -140,15 +140,15 @@ Sets the distance between the navigation point indicator and the left edge (in r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Right-to-left scripts: Distance between the navigation indicator and the left edge of the **Swiper** component.Left-to-right scripts: Distance between the navigation indicator and the right edge of the **Swiper** component.Default value: **0**Unit: vp Value range: [0, Swiper width - Navigation indicator area width]. Values outside this range are adjusted to the nearest boundary. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Current navigation indicator. |
 
 ## left
 
@@ -170,15 +170,15 @@ Sets the position of the navigation indicator relative to the left edge of the *
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Position of the navigation indicator relative to the left edge of the **Swiper** component.If neither **left** nor **right** is set, the navigation indicator is centered along the main axis based on its own size and the size of the **Swiper** component.If the value specified is **0**, the navigation indicator is placed at the position 0.Priority: higher than the **right** property Value range: [0, Swiper width - Navigation indicator area width]. Values outside this range are adjusted to the nearest boundary. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Current navigation indicator. |
 
 ## right
 
@@ -200,15 +200,15 @@ Sets the position of the navigation indicator relative to the right edge of the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Position of the navigation indicator relative to the right edge of the **Swiper** component.If neither **left** nor **right** is set, the navigation indicator is centered along the main axis based on its own size and the size of the **Swiper** component.If the value specified is **0**, the navigation indicator is placed at the position 0.Priority: lower than the **left** property.Value range: [0, Swiper width - Navigation indicator area width]. Values outside this range are adjusted to the nearest boundary. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Current navigation indicator. |
 
 ## start
 
@@ -230,15 +230,15 @@ Sets the distance between the navigation indicator and the right edge (in [RTL](
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Right-to-left scripts: Distance between the navigation indicator and the right edge of the **Swiper** component.Left-to-right scripts: Distance between the navigation indicator and the left edge of the **Swiper** component.Default value: **0**Unit: vp Value range: [0, Swiper width - Navigation indicator area width]. Values outside this range are adjusted to the nearest boundary. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Current navigation indicator. |
 
 ## top
 
@@ -260,12 +260,12 @@ Sets the position of the navigation indicator relative to the top edge of the **
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Position of the navigation indicator relative to the top edge of the **Swiper** component.If neither **top** nor **bottom** is set, the navigation indicator is aligned at the bottom along the cross axis based on its own size and the size of the **Swiper** component, which is the same effect as setting **bottom=0**.If the value specified is **0**, the navigation indicator is placed at the position 0. Priority: higher than the **bottom** property Value range: [0, Swiper height - Navigation indicator area height]. Values outside this range are adjusted to the nearest boundary. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Current navigation indicator. |

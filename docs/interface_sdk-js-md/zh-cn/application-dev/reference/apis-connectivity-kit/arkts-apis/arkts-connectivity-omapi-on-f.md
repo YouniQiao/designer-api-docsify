@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { omapi } from 'kits/@kit.ConnectivityKit';
+import omapi from '@kit.ConnectivityKit';
 ```
 
 ## on('stateChanged')
@@ -20,13 +20,13 @@ function on(type: 'stateChanged', callback: Callback<ServiceState>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'stateChanged' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'stateChanged' | 是 | 订阅监听的事件类型，固定填'stateChanged' 。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | 是 | 返回SE服务状态的回调 。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |

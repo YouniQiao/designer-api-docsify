@@ -37,9 +37,9 @@ Sets whether the **Navigator** component is activated. If the component is activ
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the **Navigator** component is activated. The value **true** means that the component is activated, and **false** means the opposite. |
 
 ## params
 
@@ -61,9 +61,9 @@ Sets the data that needs to be passed to the target page during redirection.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | object | Yes | Data that needs to be passed to the target page during redirection. You can use [router.getParams()](../arkts-apis/arkts-arkui-router-getparams-f.md) to obtain the data on the target page. |
 
 ## target
 
@@ -85,9 +85,9 @@ Sets the path of the target page to be redirected to. The target page must be ad
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Path of the target page to be redirected to. |
 
 ## type
 
@@ -109,6 +109,6 @@ Sets the navigation type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [NavigationType](arkts-arkui-navigationtype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [NavigationType](arkts-arkui-navigationtype-e.md) | Yes | Navigation type.Default value: **NavigationType.Push |

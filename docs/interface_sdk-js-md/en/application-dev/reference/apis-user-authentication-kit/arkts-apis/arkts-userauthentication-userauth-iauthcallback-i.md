@@ -9,7 +9,8 @@ Provides callbacks to return the authentication result. This API defines the aut
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## onResult
@@ -28,6 +29,29 @@ Called to return the authentication result. If the authentication is successful,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | [UserAuthResult](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | [UserAuthResult](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | Yes | Authentication result. It contains information such as the authentication result code, authentication token (when the authentication is successful), authentication type, and credential status. The application needs to check the **result.result** field to determine whether the authentication is successful.    - If the value of **result.result** is **SUCCESS(12500000)**, the authentication is successful. In this case, you can use **result.token** to perform the subsequent operations.    - If the value of **result.result** is another value, the authentication fails. In this case, you need to handle the error based on the specific error code. |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let challenge = new Uint8Array([]);
+auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
+  onResult: (result, extraInfo) => {
+    try {
+      console.info(`auth onResult result = ${result}`);
+      if (result == userAuth.ResultCode.SUCCESS) {
+        // Add the logic to be executed when the authentication is successful.
+      }  else {
+        // Add the logic to be executed when the authentication fails.
+      }
+    } catch (error) {
+      console.error(`auth onResult failed. Code: ${error?.code}, message: ${error?.message}`);
+    }
+  }
+});
+```

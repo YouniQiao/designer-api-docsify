@@ -9,7 +9,12 @@ Describes the attributes of the edit box, including the text input type and Ente
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import inputMethod from '@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKitEngine';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
+import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
+import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 ```
 
 ## abilityName

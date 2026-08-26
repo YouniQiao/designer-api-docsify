@@ -2,7 +2,8 @@
 
 Defines the network connection properties.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The values of **linkAddresses**, **routes**, and **dnses** may be empty. You need to protect the empty values.
 > You are advised to check whether the objects exist before using the values.
 
@@ -13,7 +14,6 @@ Defines the network connection properties.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## dnses

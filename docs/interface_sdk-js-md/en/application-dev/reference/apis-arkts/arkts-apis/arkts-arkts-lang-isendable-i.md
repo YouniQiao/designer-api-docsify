@@ -11,5 +11,5 @@ Base interface for all Sendable classes/interfaces.
 ## Modules to Import
 
 ```TypeScript
-import { lang, Retention, RetentionPolicy } from 'kits/@kit.ArkTS';
+import lang, { Retention, RetentionPolicy } from '@kit.ArkTS';
 ```

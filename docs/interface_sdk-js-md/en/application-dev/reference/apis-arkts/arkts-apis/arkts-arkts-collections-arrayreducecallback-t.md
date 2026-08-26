@@ -15,15 +15,15 @@ Defines the ArkTS Array reduction function, which is used by the 'reduceRight' A
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| previousValue | AccType | Yes |
-| [currentValue](../../apis-notification-kit/arkts-apis/arkts-notification-notificationcontent-notificationprogress-i.md) | ElementType | Yes |
-| currentIndex | number | Yes |
-| array | ArrayType | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| previousValue | AccType | Yes | Accumulated value of the current traversal. |
+| currentValue | ElementType | Yes | Element that is being traversed in the ArkTS array. |
+| currentIndex | number | Yes | Index of the element in the ArkTS array. |
+| array | ArrayType | Yes | ArkTS array that is being traversed. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| AccType |
+| Type | Description |
+| --- | --- |
+| AccType | The result of the reduction. |

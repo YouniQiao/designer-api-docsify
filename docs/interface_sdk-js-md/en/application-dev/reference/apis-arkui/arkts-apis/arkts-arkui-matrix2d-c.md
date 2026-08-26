@@ -49,9 +49,9 @@ Constructs a two-dimensional transformation matrix object. The default value is 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | Unit mode of the **Matrix2D** object. The value cannot be dynamically changed once set. The configuration method is the same as that of CanvasRenderingContext2D.For abnormal values NaN and Infinity, the default values are used.Default value: DEFAULT. |
 
 ## identity
 
@@ -71,9 +71,9 @@ Transforms the current 2D matrix back to the identity matrix (i.e., without any 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | Identity matrix. |
 
 ## invert
 
@@ -93,9 +93,9 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | Inverse of the current matrix. |
 
 ## multiply
 
@@ -115,15 +115,15 @@ The matrix is superimposed in right multiplication mode. When the input paramete
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | Target matrix. Invalid values **undefined** and **null** are treated as invalid inputs.Default value: **null**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | Matrix of the multiplication result. |
 
 ## rotate
 
@@ -145,16 +145,16 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rx | number | No |
-| ry | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rx | number | No | Horizontal coordinate of the rotation point. The value range is not limited.Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.Default unit: vp. |
+| ry | number | No | Vertical coordinate of the rotation point. The value range is not limited.Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.Default unit: vp. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## rotate
 
@@ -176,17 +176,17 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| degree | number | Yes |
-| rx | number | No |
-| ry | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| degree | number | Yes | Rotation angle. The value range is not limited. Positive angles represent clockwise rotation. You can convert the angle to radians using the following formula: degree * Math.PI/180. Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.Default unit: radian. |
+| rx | number | No | Horizontal coordinate of the rotation point. The value range is not limited.Default unit: vp.Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.Default value: **0**. |
+| ry | number | No | Vertical coordinate of the rotation point. The value range is not limited.Default unit: vp.Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.Default value: **0**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## scale
 
@@ -206,16 +206,16 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sx | number | No |
-| sy | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sx | number | No | Horizontal scaling ratio coefficient. The value range is not limited.Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.Default value: **1.0**. |
+| sy | number | No | Vertical scaling ratio coefficient. The value range is not limited.Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.Default value: **1.0**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## translate
 
@@ -235,16 +235,16 @@ Performs a left multiplication translation operation on this matrix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tx | number | No |
-| ty | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tx | number | No | Horizontal translation distance. The value range is not limited.Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.Default unit: vp.Default value: **0**. |
+| ty | number | No | Vertical translation distance. The value range is not limited.Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.Default unit: vp.Default value: **0**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | Matrix of the translation result. |
 
 ## rotateX
 

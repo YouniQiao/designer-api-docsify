@@ -9,21 +9,21 @@
 ## 导入模块
 
 ```TypeScript
-import { systemLoad } from 'kits/@kit.BasicServicesKit';
+import systemLoad from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [getLevel(性能功耗热融合档位)](arkts-basicservices-systemload-getlevel-f.md) |
-| [off(性能功耗热融合档位)](arkts-basicservices-systemload-off-f.md#offsystemloadchange) |
-| [on(性能功耗热融合档位)](arkts-basicservices-systemload-on-f.md#onsystemloadchange) |
+| 名称 | 说明 |
+| --- | --- |
+| [getLevel(性能功耗热融合档位)](arkts-basicservices-systemload-getlevel-f.md) | 获取系统负载融合档位，使用promise异步回调。 |
+| [off(性能功耗热融合档位)](arkts-basicservices-systemload-off-f.md#offsystemloadchange) | 取消注册系统负载回调，使用callback异步回调。 |
+| [on(性能功耗热融合档位)](arkts-basicservices-systemload-on-f.md#onsystemloadchange) | 注册系统负载回调，感知系统负载融合档位变化，使用callback异步回调。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [SystemLoadLevel(性能功耗热融合档位)](arkts-basicservices-systemload-systemloadlevel-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [SystemLoadLevel(性能功耗热融合档位)](arkts-basicservices-systemload-systemloadlevel-e.md) | 系统负载融合档位。 |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connectedTag } from 'kits/@kit.ConnectivityKit';
+import connectedTag from '@kit.ConnectivityKit';
 ```
 
 ## on("notify")
@@ -22,7 +22,7 @@ function on(type: "notify", callback: Callback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | "notify" | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | "notify" | 是 | 固定填"notify"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数。注册成功的返回值参见[NfcRfType](arkts-connectivity-connectedtag-nfcrftype-e.md)。 |

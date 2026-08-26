@@ -3,7 +3,22 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import appControl from '@kit.AbilityKit.appControl';
+import bundleManager from '@kit.AbilityKit.bundleManager';
+import bundleMonitor from '@kit.AbilityKit.bundleMonitor';
+import bundleResourceManager from '@kit.AbilityKit.bundleResourceManager';
+import bundle from '@kit.AbilityKit';
+import defaultAppManager from '@kit.AbilityKit.defaultAppManager';
+import distributedBundleManager from '@kit.AbilityKit.distributedBundleManager';
+import freeInstall from '@kit.AbilityKit.freeInstall';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit.innerBundleManager';
+import installer from '@kit.AbilityKit.installer';
+import launcherBundleManager from '@kit.AbilityKit.launcherBundleManager';
+import overlay from '@kit.AbilityKit.overlay';
+import shortcutManager from '@kit.AbilityKit.shortcutManager';
+import skillManager from '@kit.AbilityKit.skillManager';
+import appDomainVerify from '@kit.AbilityKit.appDomainVerify';
+import pluginBundleManager from '@kit.AbilityKit.pluginBundleManager';
 ```
 
 ## getBundleInfo
@@ -27,12 +42,65 @@ Obtains the bundle information based on a given bundle name and bundle options. 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| bundleFlags | number | Yes |
-| options | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| options | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | Yes | Includes **userId**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 1;
+let options: bundle.BundleOptions = {
+  "userId": 100
+};
+
+bundle.getBundleInfo(bundleName, bundleFlags, options)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 1;
+
+bundle.getBundleInfo(bundleName, bundleFlags, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 1;
+let options: bundle.BundleOptions = {
+  "userId": 100
+};
+
+bundle.getBundleInfo(bundleName, bundleFlags, options, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
 
 
 ## getBundleInfo
@@ -55,11 +123,15 @@ Obtains the bundle information based on a given bundle name. This API uses an as
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| bundleFlags | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
+
+**Examples**
+
+See [getBundleInfo](#getbundleinfo)
 
 
 ## getBundleInfo
@@ -82,14 +154,18 @@ Obtains the bundle information based on a given bundle name. This API uses a pro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| bundleFlags | number | Yes |
-| options | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| options | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | No | Options that contain the user ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Promise used to return the bundle information. |
+
+**Examples**
+
+See [getBundleInfo](#getbundleinfo)

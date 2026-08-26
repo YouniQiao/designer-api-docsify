@@ -1,10 +1,13 @@
 # BundleStatusCallback (System API)
 
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The initial APIs of this module are supported since API version 8. Newly added APIs will
-> be marked with a superscript to indicate their earliest API version.&gt;
-> The APIs of this module have been deprecated since API version 9. No substitute is provided.&gt;
+> be marked with a superscript to indicate their earliest API version.
+> 
+> The APIs of this module have been deprecated since API version 9. No substitute is provided.
+> 
 > The APIs provided by this module are system APIs.
 
 **Since:** 8
@@ -41,10 +44,10 @@ Used to obtain information when a bundle is installed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| userId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes |  |
+| userId | number | Yes |  |
 
 ## remove
 
@@ -68,10 +71,10 @@ Used to obtain information when a bundle is uninstalled.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| userId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes |  |
+| userId | number | Yes |  |
 
 ## update
 
@@ -95,7 +98,7 @@ Used to obtain information when a bundle is updated.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| userId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes |  |
+| userId | number | Yes |  |

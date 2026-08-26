@@ -9,7 +9,6 @@ Parse options for XmlPullParser.
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## attributeValueCallbackFunction
@@ -28,10 +27,10 @@ Attribute value callback function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes |  |
+| value | string | Yes |  |
 
 ## attributeWithTagCallbackFunction
 
@@ -63,10 +62,10 @@ Tag value callback function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes |  |
+| value | string | Yes |  |
 
 ## tokenValueCallbackFunction
 
@@ -84,10 +83,10 @@ Token value callback function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| eventType | [EventType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes |
-| value | [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventType | [EventType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes |  |
+| value | [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | Yes |  |
 
 ## ignoreNameSpace
 

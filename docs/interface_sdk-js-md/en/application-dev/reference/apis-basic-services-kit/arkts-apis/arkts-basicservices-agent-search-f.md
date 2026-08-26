@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import request from '@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
 ```
 
 ## search
@@ -20,16 +21,16 @@ Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the task ID. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Incorrect parameter type.   2. Parameter verification failed. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 
 ## search
@@ -46,17 +47,17 @@ Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filter | [Filter](arkts-basicservices-agent-filter-i.md) | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filter | [Filter](arkts-basicservices-agent-filter-i.md) | Yes | Filter criteria. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the task ID. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Incorrect parameter type.   2. Parameter verification failed. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 
 ## search
@@ -73,19 +74,19 @@ Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filter | [Filter](arkts-basicservices-agent-filter-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filter | [Filter](arkts-basicservices-agent-filter-i.md) | No | Filter criteria. The default value is empty. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;string & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the task IDs that meet the filter criteria. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Incorrect parameter type.   2. Parameter verification failed. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |

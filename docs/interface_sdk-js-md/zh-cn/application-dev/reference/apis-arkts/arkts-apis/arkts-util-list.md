@@ -16,22 +16,18 @@ List底层通过单向链表实现，每个节点有一个指向后一个元素�
 ## 导入模块
 
 ```TypeScript
-import { List } from 'kits/@kit.ArkTS';
-import { ListComparatorFn } from 'kits/@kit.ArkTS';
-import { ListForEachCb } from 'kits/@kit.ArkTS';
-import { ListReplaceCb } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
 
 ### 类
 
-| 名称 |
-| --- |
-| [List](arkts-arkts-util-list-list-c.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [List](arkts-arkts-util-list-list-c.md) | List底层通过单向链表实现，每个节点有一个指向后一个元素的引用。查询元素必须从头遍历，因此查询效率低，但插入和删除效率高。List允许元素为null。 |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md) | List中sort方法的回调函数。 |

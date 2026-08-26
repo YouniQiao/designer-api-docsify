@@ -9,8 +9,6 @@ Deque（number-ended queue）基于循环队列的数据结构实现，支持两
 ## 导入模块
 
 ```TypeScript
-import { Deque } from 'kits/@kit.ArkTS';
-import { DequeForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -29,15 +27,52 @@ import { DequeForEachCb } from 'kits/@kit.ArkTS';
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;T & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;T & gt; | 返回一个迭代器，用于遍历Deque实例中的所有元素。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let deque = new Deque<number>();
+deque.insertFront(2);
+deque.insertFront(4);
+deque.insertFront(5);
+deque.insertFront(4);
+
+// 使用方法一：
+for (let item of deque) {
+  console.info("value:" + item);
+}
+/*
+输出结果：
+value:4
+value:5
+value:4
+value:2
+ */
+
+// 使用方法二：
+let iter = deque[Symbol.iterator]();
+let iterResult: IteratorResult<number> = iter.next();
+while (!iterResult.done) {
+  console.info("value:" + iterResult.value);
+  iterResult = iter.next();
+}
+/*
+输出结果：
+value:4
+value:5
+value:4
+value:2
+ */
+```
 
 ## constructor
 
@@ -55,9 +90,16 @@ Deque的构造函数，用于创建一个基于循环队列数据结构的空Deq
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Deque's constructor cannot be directly invoked. |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例
+let deque = new Deque<string | number | boolean | Object>();
+```
 
 ## forEach
 
@@ -75,16 +117,37 @@ forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisAr
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackFn | (value: T, index?: number, deque?: Deque & lt;T & gt;) = & gt; void | 是 |
-| thisArg | Object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callbackFn | (value: T, index?: number, deque?: Deque & lt;T & gt;) = & gt; void | 是 | 遍历每个元素时执行的回调函数，执行时的this值可通过thisArg参数指定。在回调函数执行过程中，不建议修改Deque（如插入或删除元素），否则可能导致遍历行为异常。 |
+| thisArg | Object | 否 | callbackFn被调用时用作this值。当需要改变回调函数中的this指向时传入此参数；不传入时默认值为当前实例对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例并插入元素
+let deque = new Deque<number>();
+deque.insertFront(2);
+deque.insertEnd(3);
+deque.insertFront(1);
+deque.insertEnd(4);
+// 使用forEach遍历Deque中每个元素并执行回调函数
+deque.forEach((value: number, index: number): void => {
+  console.info("value:" + value, "index:" + index);
+});
+/*
+输出结果：value:1 index:0
+         value:2 index:1
+         value:3 index:2
+         value:4 index:3
+ */
+```
 
 ## getFirst
 
@@ -102,16 +165,30 @@ getFirst(): T
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回Deque实例的头元素。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../errorcode-utils.md#10200010-容器为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例并插入元素
+let deque = new Deque<number>();
+deque.insertEnd(2);
+deque.insertEnd(4);
+deque.insertFront(5);
+deque.insertFront(4);
+// 获取Deque的头元素
+let result = deque.getFirst();
+console.info("result:", result);  // result: 4
+```
 
 ## getLast
 
@@ -129,16 +206,30 @@ getLast(): T
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回Deque实例的尾元素。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../errorcode-utils.md#10200010-容器为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLast method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例并插入元素
+let deque = new Deque<number>();
+deque.insertFront(2);
+deque.insertFront(4);
+deque.insertFront(5);
+deque.insertFront(4);
+// 获取Deque的尾元素
+let result = deque.getLast();
+console.info("result:", result);  // result: 2
+```
 
 ## has
 
@@ -156,21 +247,33 @@ has(element: T): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| element | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| element | T | 是 | 要在Deque中查找的指定元素，用于判断Deque是否包含该元素。类型需与Deque实例化时指定的泛型类型T一致。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果包含指定元素返回true，否则返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例
+let deque = new Deque<string>();
+// 在头部插入元素
+deque.insertFront("squirrel");
+// 判断Deque中是否包含指定元素
+let result = deque.has("squirrel");
+console.info("result:", result);  // result: true
+```
 
 ## insertEnd
 
@@ -188,15 +291,37 @@ insertEnd(element: T): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| element | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| element | T | 是 | 在尾部插入的元素。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The insertEnd method cannot be bound. |
+
+**示例**
+
+```TypeScript
+class PersonInfo {
+  name: string = "";
+  age: string = "";
+}
+
+// 创建支持多种类型的Deque实例
+let deque = new Deque<string | number | boolean | Array<number> | PersonInfo>();
+// 在尾部插入字符串元素
+deque.insertEnd("a");
+// 在尾部插入数字元素
+deque.insertEnd(1);
+let numArray = [1, 2, 3];
+deque.insertEnd(numArray);
+let person: PersonInfo = {name : "Dylan", age : "13"};
+deque.insertEnd(person);
+deque.insertEnd(false);
+console.info("result:", deque[0]);  // result: a
+```
 
 ## insertFront
 
@@ -214,15 +339,37 @@ insertFront(element: T): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| element | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| element | T | 是 | 在头部插入的元素，类型需与Deque实例化时指定的泛型类型T一致。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The insertFront method cannot be bound. |
+
+**示例**
+
+```TypeScript
+class PersonInfo {
+  name: string = "";
+  age: string = "";
+}
+
+// 创建支持多种类型的Deque实例
+let deque = new Deque<string | number | boolean | Array<number> | PersonInfo>();
+// 在头部插入字符串元素
+deque.insertFront("a");
+// 在头部插入数字元素
+deque.insertFront(1);
+let numArray = [1, 2, 3];
+deque.insertFront(numArray);
+let person: PersonInfo = {name : "Dylan", age : "13"};
+deque.insertFront(person);
+deque.insertFront(false);
+console.info("result:", deque[0]);  // result: false
+```
 
 ## popFirst
 
@@ -240,16 +387,31 @@ popFirst(): T
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回被删除的首元素。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../errorcode-utils.md#10200010-容器为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The popFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例并插入元素
+let deque = new Deque<number>();
+deque.insertFront(2);
+deque.insertFront(4);
+deque.insertEnd(5);
+deque.insertFront(2);
+deque.insertFront(4);
+// 删除并返回双端队列的首元素
+let result = deque.popFirst();
+console.info("result:", result);  // result: 4
+```
 
 ## popLast
 
@@ -267,16 +429,31 @@ popLast(): T
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回被删除的尾元素。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../errorcode-utils.md#10200010-容器为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The popLast method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例并插入元素
+let deque = new Deque<number>();
+deque.insertFront(2);
+deque.insertEnd(6);
+deque.insertFront(5);
+deque.insertFront(2);
+deque.insertFront(4);
+// 删除并返回双端队列的尾元素
+let result = deque.popLast();
+console.info("result:", result);  // result: 6
+```
 
 ## length
 

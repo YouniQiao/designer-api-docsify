@@ -23,13 +23,47 @@ global \$r function
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | string | 是 |
-| params | any[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | string | 是 | The value format is 'belonging.type.name'. belonging: group to which the resource belongs, which can be 'sys' or 'app'. type: resource type, which can be 'boolean', 'color', 'float', 'intarray', 'integer', 'pattern', 'plural','strarray', 'string', or 'media'. name: resource name, which is determined during resource definition. |
+| params | any[] | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |  |
+
+**示例**
+
+```TypeScript
+@Entry
+@Component
+struct Page {
+  build() {
+    Row() {
+      Column() {
+        Text($r('app.string.app_name'))
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+@Entry
+@Component
+struct Page {
+  build() {
+    Row() {
+      Column() {
+        Text($r('app.string.app_name'))
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```

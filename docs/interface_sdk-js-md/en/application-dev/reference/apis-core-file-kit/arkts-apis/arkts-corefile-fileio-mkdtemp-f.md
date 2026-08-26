@@ -23,15 +23,26 @@ Creates a temporary directory. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| prefix | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise that returns the directory created. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+fileio.mkdtemp(pathDir + "/XXXXXX").then((pathDir: string) => {
+  console.info("mkdtemp succeed:" + pathDir);
+}).catch((err: BusinessError) => {
+  console.error("mkdtemp failed with error:" + err);
+});
+```
 
 
 ## mkdtemp
@@ -52,7 +63,16 @@ Creates a temporary directory. This API uses an asynchronous callback to return 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| prefix | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback invoked when a temporary directory is created asynchronously. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+fileio.mkdtemp(pathDir + "/XXXXXX", (err: BusinessError, res: string) => {
+  // Do something.
+});
+```

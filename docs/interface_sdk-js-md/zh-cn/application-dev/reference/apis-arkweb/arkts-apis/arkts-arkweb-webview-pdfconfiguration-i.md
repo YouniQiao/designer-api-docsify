@@ -2,7 +2,8 @@
 
 [createPdf](arkts-arkweb-webview-webviewcontroller-c.md#createpdf) 函数输入参数。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 英寸与像素之间转换公式：像素 = 96 * 英寸。
 
 **起始版本：** 14
@@ -12,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## height

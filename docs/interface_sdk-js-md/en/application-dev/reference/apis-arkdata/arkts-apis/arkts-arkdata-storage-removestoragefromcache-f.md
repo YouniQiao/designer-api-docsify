@@ -21,10 +21,31 @@ Removes the singleton **Storage** instance of a file from the cache. The removed
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Path of the target file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+let path;
+let context = featureAbility.getContext();
+context.getFilesDir().then((filePath) => {
+  path = filePath;
+  console.info("======================>getFilesDirPromise====================>");
+
+  data_storage.removeStorageFromCache(path + '/mystore', function (err) {
+    if (err) {
+      console.info("Failed to remove storage from cache with err: " + err);
+      return;
+    }
+    console.info("Succeeded in removing storage from cache.");
+  })
+});
+```
 
 
 ## removeStorageFromCache
@@ -43,12 +64,32 @@ Removes the singleton **Storage** instance of a file from the cache. The removed
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Path of the target file. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+let path;
+let context = featureAbility.getContext();
+context.getFilesDir().then((filePath) => {
+  path = filePath;
+  console.info("======================>getFilesDirPromise====================>");
+
+  let promiserevSt = data_storage.removeStorageFromCache(path + '/mystore')
+  promiserevSt.then(() => {
+    console.info("Succeeded in removing storage from cache.");
+  }).catch((err) => {
+    console.info("Failed to remove storage from cache with err: " + err);
+  })
+});
+```

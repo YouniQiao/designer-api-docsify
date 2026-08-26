@@ -9,7 +9,8 @@ Describes the interruption event received by the application when the audio is i
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## eventType

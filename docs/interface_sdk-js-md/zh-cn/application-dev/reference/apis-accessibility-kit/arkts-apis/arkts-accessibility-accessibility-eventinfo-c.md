@@ -9,8 +9,11 @@
 ## 导入模块
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
+import config from '@kit.AccessibilityKit.config';
+import accessibility from '@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
+import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -31,9 +34,21 @@ constructor(jsonObject: Object)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| jsonObject | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| jsonObject | Object | 是 | 包含type、bundleName和triggerAction三个字段的JSON对象，详见示例。 |
+
+**示例**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+let eventInfo = new accessibility.EventInfo({
+  type: 'click',
+  bundleName: 'com.example.MyApplication',
+  triggerAction: 'click',
+});
+```
 
 ## constructor
 
@@ -53,11 +68,20 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [type](#type) | [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md) | 是 |
-| [bundleName](#bundlename) | string | 是 |
-| [triggerAction](#triggeraction) | [Action](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md) | 是 | 无障碍事件类型。 |
+| bundleName | string | 是 | 目标应用的Bundle名称。 |
+| triggerAction | [Action](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | 是 | 触发事件的Action。 |
+
+**示例**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+// 参数依次为：type、bundleName、triggerAction。
+let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication', 'click');
+```
 
 ## beginIndex
 

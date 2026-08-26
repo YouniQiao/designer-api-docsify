@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## getUserTrustedCertificate
@@ -22,21 +21,45 @@ Obtains the detailed information about a user root CA certificate. This API uses
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| certUri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| certUri | string | Yes | Unique identifier of a user's root CA certificate. The value contains up to 256 bytes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise used to return the operation result, that is, **certInfo** in the [CMResult]{ |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) |
-| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;  2. Memory operation error; 3. File operation error. Please try again. |
+| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
+
+**Examples**
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let certUri: string = 'testUserCert'; /* The user needs to use the unique identifier of the CA certificate to obtain the user root CA certificate details, which is not elaborated here. */
+try {
+  certificateManager.getUserTrustedCertificate(certUri).then((cmResult) => {
+    if (cmResult?.certInfo == undefined) {
+      console.info('The result of getting user trusted certificate is undefined.');
+    } else {
+      let cert = cmResult.certInfo;
+      console.info('Succeeded in getting user trusted certificate.');
+    }
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to get user trusted certificate. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (error) {
+  console.error(`Failed to get user trusted certificate. Code: ${error.code}, message: ${error.message}`);
+}
+```

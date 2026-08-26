@@ -11,7 +11,6 @@ Defines event query rules.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## condition

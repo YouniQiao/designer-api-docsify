@@ -45,9 +45,9 @@ Obtains a **LayoutManager** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) |
+| Type | Description |
+| --- | --- |
+| [LayoutManager](arkts-arkui-layoutmanager-i.md) | Layout manager object. |
 
 ## setSelection
 
@@ -72,8 +72,8 @@ the menu remains open and its position remains unchanged.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectionStart | number | Yes |
-| selectionEnd | number | Yes |
-| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectionStart | number | Yes | Start position of the selection.Values less than 0 are treated as **0**. |
+| selectionEnd | number | Yes | End position of the selection.If the value exceeds the text length, the current text length is used instead. |
+| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No | Configuration of options. The default value is inherited from [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md). |

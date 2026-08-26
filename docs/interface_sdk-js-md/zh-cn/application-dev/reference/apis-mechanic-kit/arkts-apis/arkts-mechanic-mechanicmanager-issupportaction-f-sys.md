@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## isSupportAction
@@ -22,21 +21,21 @@ function isSupportAction(mechId: number, actionType: ActionType): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mechId | number | 是 |
-| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mechId | number | 是 | 具身设备ID。 取值限定为整数。 |
+| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | 是 | 动作序列类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否支持该特定动作 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |

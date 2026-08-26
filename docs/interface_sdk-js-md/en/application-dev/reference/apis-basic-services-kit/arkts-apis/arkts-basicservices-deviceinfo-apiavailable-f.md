@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceInfo } from 'kits/@kit.BasicServicesKit';
+import deviceInfo from '@kit.BasicServicesKit';
 ```
 
 ## apiAvailable
@@ -22,12 +22,35 @@ Checks whether a specified API version is available on the current device. This 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| version | string \| number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| version | string \| number | Yes | API version number to be verified. The value can be an integer or in the dotted format.   - String format shall be in M.S.F. (e.g., "26.0.0", "5.0.1"):   - For API 26.0.0 & 26.0.0+ (version & gt;= 26.0.0): Represents both OpenHarmony and Distribution OS API versions   - For API 26.0.0- (version & lt; 26.0.0): Represents Distribution OS API version   - Number format (e.g., 13): Represents OpenHarmony SDK API version (API 26- only)   M & gt;=26,0 & lt;=S & lt;=99,0 & lt;=F & lt;=99. A compilation error occurs when an invalid literal is input. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Boolean value. The value **true** indicates that the current version number is later than or equal to the input parameter version number; **false** indicates that the current device's API version is lower than the input version number, or the input version number is in an invalid format, or the specified version does not exist. |
+
+**Examples**
+
+```TypeScript
+import { deviceInfo } from '@kit.BasicServicesKit';
+
+// Check whether the API version is 26.0.0 or later. If true is returned, the API version of the current device meets the requirements.
+if (deviceInfo.apiAvailable("26.0.0")) {
+   // Method that requires version isolation
+}
+
+
+// Check API 5.0.1 (Distribution OS version, API 26.0.0-)
+if (deviceInfo.apiAvailable("5.0.1")) {
+   // Method that requires version isolation
+}
+
+
+// Check API 13 (OpenHarmony SDK version, API 26.0.0-)
+if (deviceInfo.apiAvailable(13)) {
+   // Method that requires version isolation
+}
+```

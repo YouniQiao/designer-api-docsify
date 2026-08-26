@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## createImageCreator
@@ -24,18 +24,24 @@ Creates an ImageCreator instance by specifying the image width, height, format, 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| width | number | Yes |
-| height | number | Yes |
-| format | number | Yes |
-| capacity | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| width | number | Yes | Default image width, in px. |
+| height | number | Yes | Default image height, in px. |
+| format | number | Yes | Image format, for example, YCBCR_422_SP or JPEG. |
+| capacity | number | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageCreator](arkts-image-image-imagecreator-i.md) |
+| Type | Description |
+| --- | --- |
+| [ImageCreator](arkts-image-image-imagecreator-i.md) | ImageCreator instance. |
+
+**Examples**
+
+```TypeScript
+let creator: image.ImageCreator = image.createImageCreator(8192, 8192, image.ImageFormat.JPEG, 8);
+```
 
 
 ## createImageCreator
@@ -52,20 +58,30 @@ Creates an ImageCreator instance by specifying the image size, format, and capac
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | Size | Yes |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes |
-| capacity | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | Size | Yes | Default size of the image. |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | Image format, for example, YCBCR_422_SP or JPEG. |
+| capacity | number | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageCreator](arkts-image-image-imagecreator-i.md) |
+| Type | Description |
+| --- | --- |
+| [ImageCreator](arkts-image-image-imagecreator-i.md) | ImageCreator instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
+
+**Examples**
+
+```TypeScript
+let size: image.Size = {
+  height: 8192,
+  width: 8192
+}
+let creator: image.ImageCreator = image.createImageCreator(size, image.ImageFormat.JPEG, 8);
+```

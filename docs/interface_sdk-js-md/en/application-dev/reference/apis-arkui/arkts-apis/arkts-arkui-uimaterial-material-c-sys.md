@@ -9,7 +9,7 @@ System material object on the UI.
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import uiMaterial from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -32,6 +32,6 @@ A constructor used to create a **Material** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [MaterialOptions](arkts-arkui-uimaterial-materialoptions-i-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [MaterialOptions](arkts-arkui-uimaterial-materialoptions-i-sys.md) | No | System material options, including the material type. Default value: **{type:MaterialType.NONE}**. |

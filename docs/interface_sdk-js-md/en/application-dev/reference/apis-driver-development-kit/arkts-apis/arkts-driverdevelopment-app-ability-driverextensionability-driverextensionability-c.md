@@ -9,7 +9,7 @@ The **DriverExtensionAbility** module provides the ExtensionAbility related to d
 ## Modules to Import
 
 ```TypeScript
-import { DriverExtensionAbility, DriverExtensionContext } from 'kits/@kit.DriverDevelopmentKit';
+import DriverExtensionAbility, { DriverExtensionContext } from '@kit.DriverDevelopmentKit';
 ```
 
 ## onConnect
@@ -28,15 +28,68 @@ Called following **onCreate()** when a DriverExtensionAbility is started by call
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this DriverExtensionAbility, including the ability name and bundle name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| rpc.RemoteObject \| Promise & lt;rpc.RemoteObject & gt; |
+| Type | Description |
+| --- | --- |
+| rpc.RemoteObject \| Promise & lt;rpc.RemoteObject & gt; | RemoteObject** object used for communication between the server and client, or promise used to return the value. |
+
+**Examples**
+
+```TypeScript
+import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
+import { rpc } from '@kit.IPCKit';
+import { Want } from '@kit.AbilityKit';
+
+class StubTest extends rpc.RemoteObject{
+    constructor(des : string) {
+        super(des);
+    }
+    onRemoteMessageRequest(code : number, data : rpc.MessageSequence, reply : rpc.MessageSequence, option : rpc.MessageOption) {
+      // This interface must be overridden.
+      return true;
+    }
+}
+class DriverExt extends DriverExtensionAbility {
+  onConnect(want : Want) {
+    console.info(`onConnect , want: ${want.abilityName}`);
+    return new StubTest('test');
+  }
+}
+```
+
+If the returned [RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) object depends on an asynchronous API, you can use the asynchronous lifecycle.
+
+```TypeScript
+import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
+import { rpc } from '@kit.IPCKit';
+import { Want } from '@kit.AbilityKit';
+
+class StubTest extends rpc.RemoteObject{
+    constructor(des : string) {
+        super(des);
+    }
+    onRemoteMessageRequest(code : number, data : rpc.MessageSequence, reply : rpc.MessageSequence, option : rpc.MessageOption) {
+      // This interface must be overridden.
+      return true;
+    }
+}
+async function getDescriptor() {
+    // Call the asynchronous function.
+    return "asyncTest";
+}
+class DriverExt extends DriverExtensionAbility {
+  async onConnect(want : Want) {
+    console.info(`onConnect , want: ${want.abilityName}`);
+    let descriptor = await getDescriptor();
+    return new StubTest(descriptor);
+  }
+}
+```
 
 ## onDisconnect
 
@@ -54,9 +107,36 @@ Called when a client is disconnected from this DriverExtensionAbility.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this DriverExtensionAbility, including the ability name and bundle name. |
+
+**Examples**
+
+```TypeScript
+import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
+import { Want } from '@kit.AbilityKit';
+
+class DriverExt extends DriverExtensionAbility {
+  onDisconnect(want : Want) {
+    console.info(`onDisconnect, want: ${want.abilityName}`);
+  }
+}
+```
+
+After the onDisconnect lifecycle callback is executed, the application may exit. As a result, the asynchronous function in onDisconnect may fail to be executed correctly, for example, asynchronously writing data to the database. The asynchronous lifecycle can be used to ensure that the subsequent lifecycle continues after the asynchronous onDisconnect is complete.
+
+```TypeScript
+import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
+import { Want } from '@kit.AbilityKit';
+
+class DriverExt extends DriverExtensionAbility {
+  async onDisconnect(want : Want) {
+    console.info(`onDisconnect, want: ${want.abilityName}`);
+    // Call the asynchronous function.
+  }
+}
+```
 
 ## onDump
 
@@ -74,15 +154,26 @@ Dumps client information. It is recommended that developers don't DUMP sensitive
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| params | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| params | Array & lt;string & gt; | Yes | Parameters in the form of a command. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | String array used to dump client information. |
+
+**Examples**
+
+```TypeScript
+class DriverExt extends DriverExtensionAbility {
+    onDump(params : Array<string>) {
+        console.info(`dump, params: ${JSON.stringify(params)}`);
+        return ['params'];
+    }
+}
+```
 
 ## onInit
 
@@ -100,9 +191,22 @@ Called when a DriverExtensionAbility is created to initialize the service logic.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this DriverExtensionAbility, including the ability name and bundle name. |
+
+**Examples**
+
+```TypeScript
+import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
+import { Want } from '@kit.AbilityKit';
+
+class DriverExt extends DriverExtensionAbility {
+  onInit(want : Want) {
+    console.info(`onInit, want: ${want.abilityName}`);
+  }
+}
+```
 
 ## onRelease
 
@@ -117,6 +221,16 @@ Called when this DriverExtensionAbility is destroyed to clear resources.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
+
+**Examples**
+
+```TypeScript
+class DriverExt extends DriverExtensionAbility {
+  onRelease() {
+    console.info('onRelease');
+  }
+}
+```
 
 ## context
 

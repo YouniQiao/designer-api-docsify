@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import dragController from '@kit.ArkUI';
 ```
 
 ## off('statusChange')
@@ -30,10 +30,10 @@ off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'statusChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'statusChange' | 是 | for status changing |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 否 | with drag event and status information |
 
 ## on('statusChange')
 
@@ -53,10 +53,10 @@ on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'statusChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'statusChange' | 是 | for status changing |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 是 | with drag event and status information |
 
 ## startDrag
 
@@ -76,12 +76,12 @@ startDrag(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |

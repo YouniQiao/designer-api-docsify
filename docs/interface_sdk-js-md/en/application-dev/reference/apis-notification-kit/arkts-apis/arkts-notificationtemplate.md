@@ -4,6 +4,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotificationTemplate(Describes a NotificationTemplate instance)](arkts-notification-notificationtemplate-notificationtemplate-i.md) |
+| Name | Description |
+| --- | --- |
+| [NotificationTemplate(Describes a NotificationTemplate instance)](arkts-notification-notificationtemplate-notificationtemplate-i.md) | This module defines the notification template, which is used to specify the template type for a notification. |

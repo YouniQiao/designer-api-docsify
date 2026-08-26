@@ -16,7 +16,7 @@ Defines the callback used to return the data retrieval progress information and 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| progressInfo | [ProgressInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-progressinfo-i.md) | Yes |
-| data | UnifiedData \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| progressInfo | [ProgressInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-progressinfo-i.md) | Yes | Progress information to report. |
+| data | UnifiedData \| null | Yes | Data obtained when the progress reaches 100. If the progress does not reach 10 0, **null** is returned. |

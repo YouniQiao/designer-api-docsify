@@ -15,7 +15,7 @@ Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is u
 ## Modules to Import
 
 ```TypeScript
-import { fileExtensionInfo } from 'kits/@kit.CoreFileKit';
+import fileExtensionInfo from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -23,8 +23,8 @@ import { fileExtensionInfo } from 'kits/@kit.CoreFileKit';
 <!--Del-->
 ### Constants(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supports_read) |
-| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supports_write) |
+| Name | Description |
+| --- | --- |
+| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supports_read) | The device supports read. |
+| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supports_write) | The device supports write. |
 <!--DelEnd-->

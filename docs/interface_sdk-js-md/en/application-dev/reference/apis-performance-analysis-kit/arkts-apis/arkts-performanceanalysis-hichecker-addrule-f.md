@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## addRule
@@ -24,6 +23,17 @@ Adds one or more rules. HiChecker detects unexpected operations or gives feedbac
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rule | bigint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rule | bigint | Yes | Rule to be added. |
+
+**Examples**
+
+```TypeScript
+// Add a rule.
+hichecker.addRule(hichecker.RULE_CAUTION_PRINT_LOG);
+
+// Add multiple rules.
+hichecker.addRule(
+          hichecker.RULE_CAUTION_PRINT_LOG | hichecker.RULE_CAUTION_TRIGGER_CRASH);
+```

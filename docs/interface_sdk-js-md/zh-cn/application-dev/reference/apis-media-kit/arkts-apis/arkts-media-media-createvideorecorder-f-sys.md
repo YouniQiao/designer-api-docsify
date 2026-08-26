@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## createVideoRecorder
@@ -22,16 +22,32 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoRecorder: media.VideoRecorder;
+media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => {
+  if (video != null) {
+    videoRecorder = video;
+    console.info('video createVideoRecorder success');
+  } else {
+    console.error(`video createVideoRecorder fail, error message:${error.message}`);
+  }
+});
+```
 
 
 ## createVideoRecorder
@@ -50,13 +66,31 @@ function createVideoRecorder(): Promise<VideoRecorder>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)&gt; | Promise对象，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoRecorder: media.VideoRecorder;
+media.createVideoRecorder().then((video: media.VideoRecorder) => {
+  if (video != null) {
+    videoRecorder = video;
+    console.info('video createVideoRecorder success');
+  } else {
+    console.error('video createVideoRecorder fail');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error message:${error.message}`);
+});
+```

@@ -9,7 +9,6 @@ Sets the key event consumption configuration.
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from 'kits/@kit.InputKit';
 ```
 
 ## action

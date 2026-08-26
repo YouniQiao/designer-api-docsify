@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from 'kits/@kit.NetworkKit';
+import policy from '@kit.NetworkKit';
 ```
 
 ## allowCellular

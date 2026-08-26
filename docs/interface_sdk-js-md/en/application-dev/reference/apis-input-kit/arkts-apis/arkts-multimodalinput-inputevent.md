@@ -3,13 +3,12 @@
 ## Modules to Import
 
 ```TypeScript
-import { InputEvent } from 'kits/@kit.InputKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [InputEvent(Input Event)](arkts-input-multimodalinput-inputevent-inputevent-i.md) |
+| Name | Description |
+| --- | --- |
+| [InputEvent(Input Event)](arkts-input-multimodalinput-inputevent-inputevent-i.md) | The **inputEvent** module provides the basic events reported by the device.@interface InputEvent [since 9 - 11] |

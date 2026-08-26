@@ -11,7 +11,7 @@ Implements wakeup management.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
+import intelligentVoice from '@kit.BasicServicesKit';
 ```
 
 ## clearUserData
@@ -32,17 +32,31 @@ Clears user data.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | the promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (wakeupManager != null) {
+  (wakeupManager as intelligentVoice.WakeupManager).clearUserData().then(() => {
+    console.info(`Succeeded in clearing user data.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to clear user data, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
 
 ## enrollWithWakeupFilesForResult
 
@@ -62,27 +76,48 @@ Enrolls with wakeup files for result. This method uses a promise to return the e
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| wakeupFiles | Array&lt;[WakeupSourceFile](arkts-basicservices-intelligentvoice-wakeupsourcefile-i-sys.md)&gt; | Yes |
-| wakeupInfo | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| wakeupFiles | Array&lt;[WakeupSourceFile](arkts-basicservices-intelligentvoice-wakeupsourcefile-i-sys.md)&gt; | Yes | the wakeup source files needed. |
+| wakeupInfo | string | Yes | wakeup information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[EnrollResult](arkts-basicservices-intelligentvoice-enrollresult-e-sys.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[EnrollResult](arkts-basicservices-intelligentvoice-enrollresult-e-sys.md)&gt; | the promise used to return the enroll result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) |
-| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
+| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filesInfo: Array<intelligentVoice.WakeupSourceFile> = [];
+filesInfo[0] = {filePath: "", fileContent: new ArrayBuffer(100)};
+let wakeupInfo: string = "version: 123"
+
+if (wakeupManager != null) {
+  (wakeupManager as intelligentVoice.WakeupManager).enrollWithWakeupFilesForResult(
+    filesInfo, wakeupInfo).then(
+    (data: intelligentVoice.EnrollResult) => {
+      let param: intelligentVoice.EnrollResult = data;
+      console.info(`Succeeded in enrolling with wakeup files for result, param:${param}`);
+    }).catch((err: BusinessError) => {
+    console.error(`Failed to enroll with wakeup files for result, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
 
 ## getParameter
 
@@ -102,25 +137,66 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | the key of the intelligent voice parameter whose value is to be obtained. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | the promise used to return the value of the intelligent voice parameter. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (wakeupManager != null) {
+  (wakeupManager as intelligentVoice.WakeupManager).getParameter('isEnrolled').then((data: string) => {
+    let param: string = data;
+    console.info(`Succeeded in getting parameter, param:${param}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getParameter('key').then((data: string) => {
+    let param: string = data;
+    console.info(`Succeeded in getting parameter, param:${param}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (wakeupIntelligentVoiceEngine != null) {
+  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getParameter('key').then((data: string) => {
+    let param: string = data;
+    console.info(`Succeeded in getting parameter, param:${param}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
 
 ## getUploadFiles
 
@@ -140,26 +216,41 @@ Obtains files needed to upload. This method uses a promise to return the files n
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| maxCount | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| maxCount | number | Yes | the maximum count of upload files. The maxCount should be greater than 0 and smaller than 101 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[UploadFile](arkts-basicservices-intelligentvoice-uploadfile-i-sys.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[UploadFile](arkts-basicservices-intelligentvoice-uploadfile-i-sys.md)&gt;&gt; | the promise used to return the upload files. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) |
-| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
+| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (wakeupManager != null) {
+  (wakeupManager as intelligentVoice.WakeupManager).getUploadFiles(2).then((data: Array<intelligentVoice.UploadFile>) => {
+    let param: Array<intelligentVoice.UploadFile> = data;
+    console.info(`Succeeded in getting upload files, param:${param}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get upload files, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
 
 ## getWakeupSourceFiles
 
@@ -179,18 +270,34 @@ Obtains wakeup source files. This method uses a promise to return the wakeup sou
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[WakeupSourceFile](arkts-basicservices-intelligentvoice-wakeupsourcefile-i-sys.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[WakeupSourceFile](arkts-basicservices-intelligentvoice-wakeupsourcefile-i-sys.md)&gt;&gt; | the promise used to return the wakeup source files. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (wakeupManager != null) {
+  (wakeupManager as intelligentVoice.WakeupManager).getWakeupSourceFiles().then(
+    (data: Array<intelligentVoice.WakeupSourceFile>) => {
+    let param: Array<intelligentVoice.WakeupSourceFile> = data;
+    console.info(`Succeeded in getting wakeup source files, param:${param}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get wakeup source files, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
 
 ## setParameter
 
@@ -210,23 +317,61 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | the key of the intelligent voice parameter to set. |
+| value | string | Yes | the value of the intelligent voice parameter to set. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | the promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (wakeupManager != null) {
+  (wakeupManager as intelligentVoice.WakeupManager).setParameter('wakeup_phrase', 'xiaohuaxiaohua').then(() => {
+    console.info(`Succeeded in setting parameter`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setParameter('scene', '0').then(() => {
+    console.info(`Succeeded in setting parameter`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (wakeupIntelligentVoiceEngine != null) {
+  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setParameter('scene', '0').then(() => {
+    console.info(`Succeeded in setting parameter`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
+  });
+}
+```

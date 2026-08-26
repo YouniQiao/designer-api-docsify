@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
+import linkEnhance from '@kit.DistributedServiceKit';
 ```
 
 ## createServer
@@ -24,21 +24,41 @@ Creates a **Server** object. After **start()** is called, the device can be conn
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Server** object name. The value is a string of up to 255 bytes. It cannot be empty. If the length exceeds the upper limit or an empty string is passed, error code 32390206 is returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Server](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-server-i.md) |
+| Type | Description |
+| --- | --- |
+| [Server](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-server-i.md) | Server** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) |
-| [32390203](../errorcode-link-enhance.md#32390203-duplicate-service-name) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the linkEnhance function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| [32390203](../errorcode-link-enhance.md#32390203-duplicate-service-name) | Duplicate server name. |
+
+**Examples**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  // Construct a Server object using the specified name.
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```

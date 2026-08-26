@@ -9,7 +9,6 @@ Defines the client certificate type.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## certPath

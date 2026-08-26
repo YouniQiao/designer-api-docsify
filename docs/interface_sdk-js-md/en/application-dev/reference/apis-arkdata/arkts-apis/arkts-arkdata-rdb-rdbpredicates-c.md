@@ -33,9 +33,18 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Lisa")
+    .and()
+    .equalTo("SALARY", 200.5)
+```
 
 ## beginsWith
 
@@ -55,16 +64,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.beginsWith("NAME", "os")
+```
 
 ## beginWrap
 
@@ -84,9 +100,21 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap()
+```
 
 ## between
 
@@ -106,17 +134,24 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
-| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value of the range to set. |
+| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.between("AGE", 10, 50)
+```
 
 ## constructor
 
@@ -136,9 +171,15 @@ A constructor used to create an **RdbPredicates** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Database table name. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+```
 
 ## contains
 
@@ -158,16 +199,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.contains("NAME", "os")
+```
 
 ## distinct
 
@@ -187,9 +235,16 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Rose").distinct()
+```
 
 ## endsWith
 
@@ -209,16 +264,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.endsWith("NAME", "se")
+```
 
 ## endWrap
 
@@ -238,9 +300,21 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap()
+```
 
 ## equalTo
 
@@ -260,16 +334,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "lisi")
+```
 
 ## glob
 
@@ -289,16 +370,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match.Wildcards are supported. An asterisk (*) indicates zero, one, or multiple digits or characters, and a question mark (?) indicates a single digit or character. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.glob("NAME", "?h*g")
+```
 
 ## greaterThan
 
@@ -318,16 +406,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.greaterThan("AGE", 18)
+```
 
 ## greaterThanOrEqualTo
 
@@ -347,16 +442,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.greaterThanOrEqualTo("AGE", 18)
+```
 
 ## groupBy
 
@@ -376,15 +478,22 @@ Creates an **RdbPredicates** object to group the query results based on the spec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fields | Array & lt;string & gt; | Yes | Names of columns to group. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.groupBy(["AGE", "NAME"])
+```
 
 ## in
 
@@ -404,16 +513,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | Array & lt;ValueType & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | Array & lt;ValueType & gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.in("AGE", [18, 20])
+```
 
 ## inAllDevices
 
@@ -433,9 +549,16 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.inAllDevices()
+```
 
 ## inDevices
 
@@ -447,7 +570,8 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 > **NOTE：**
 
-> The value of **devices** can be obtained by using <!--RP2-->
+> The value of **devices** can be obtained by using <!--RP2--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > . <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -462,15 +586,43 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| devices | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| devices | Array & lt;string & gt; | Yes | IDs of the remote devices in the same network. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+
+let dmInstance: deviceManager.DeviceManager;
+let deviceIds: Array<string> = [];
+let devices: Array<string> = [];
+
+deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
+  if (err) {
+    console.log("create device manager failed, err=" + err);
+    return;
+  }
+  dmInstance = manager;
+  devices = dmInstance.getTrustedDeviceListSync();
+  for (let i = 0; i < devices.length; i++) {
+    deviceIds[i] = devices[i].deviceId;
+  }
+})
+
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE");
+predicates.inDevices(deviceIds);
+                                  
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE");
+predicates.inDevices(deviceIds);
+```
 
 ## indexedBy
 
@@ -490,15 +642,22 @@ Creates an **RdbPredicates** object to specify the index column.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Name of the index column. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.indexedBy("SALARY_INDEX")
+```
 
 ## isNotNull
 
@@ -518,21 +677,28 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.isNotNull("NAME")
+```
 
 ## isNull
 
@@ -552,15 +718,22 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.isNull("NAME")
+```
 
 ## lessThan
 
@@ -580,16 +753,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.lessThan("AGE", 20)
+```
 
 ## lessThanOrEqualTo
 
@@ -609,16 +789,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.lessThanOrEqualTo("AGE", 20)
+```
 
 ## like
 
@@ -638,16 +825,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.like("NAME", "%os%")
+```
 
 ## limitAs
 
@@ -667,15 +861,22 @@ Creates an **RdbPredicates** object to limit the number of records.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Maximum number of records. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Rose").limitAs(3)
+```
 
 ## notBetween
 
@@ -695,17 +896,24 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
-| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value of the range to set. |
+| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.notBetween("AGE", 10, 50)
+```
 
 ## notEqualTo
 
@@ -725,16 +933,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.notEqualTo("NAME", "lisi")
+```
 
 ## notIn
 
@@ -754,16 +969,23 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | Array & lt;ValueType & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | Array & lt;ValueType & gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.notIn("NAME", ["Lisa", "Rose"])
+```
 
 ## offsetAs
 
@@ -783,15 +1005,22 @@ Creates an **RdbPredicates** object to specify the start position of the returne
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rowOffset | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rowOffset | number | Yes | Start position, which is a positive integer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Rose").limitAs(-1).offsetAs(3)
+```
 
 ## or
 
@@ -811,9 +1040,18 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Lisa")
+    .or()
+    .equalTo("NAME", "Rose")
+```
 
 ## orderByAsc
 
@@ -833,15 +1071,22 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.orderByAsc("NAME")
+```
 
 ## orderByDesc
 
@@ -861,12 +1106,19 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.orderByDesc("AGE")
+```

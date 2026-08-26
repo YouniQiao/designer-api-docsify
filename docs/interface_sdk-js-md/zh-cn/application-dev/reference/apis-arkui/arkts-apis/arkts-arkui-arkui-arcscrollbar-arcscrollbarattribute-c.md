@@ -11,5 +11,5 @@
 ## 导入模块
 
 ```TypeScript
-import { ArcScrollBar, ArcScrollBarAttribute } from 'kits/@kit.ArkUI';
+import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 ```

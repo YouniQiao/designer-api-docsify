@@ -9,7 +9,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## constructor
@@ -25,6 +26,35 @@ constructor()
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**示例**
+
+```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// 输出结果：retStr = utf-8
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let base64 = new  util.Base64();
+```
 
 ## constructor
 
@@ -44,10 +74,16 @@ constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [encoding](#encoding) | string | 否 |
-| options | { fatal?: boolean; ignoreBOM?: boolean } | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。 |
+| options | { fatal?: boolean; ignoreBOM?: boolean } | 否 | 解码相关的选项，包含 **fatal** 和 **ignoreBOM**。此参数不填时，对应各属性取其默认值 **false**。 |
+
+**示例**
+
+```TypeScript
+let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
+```
 
 ## create
 
@@ -65,16 +101,29 @@ static create(encoding?: string, options?: TextDecoderOptions): TextDecoder
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [encoding](#encoding) | string | 否 |
-| options | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。<br>**起始版本：** 11 |
+| options | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | 否 | 解码相关的选项，包含 **fatal** 和 **ignoreBOM**。<br>**起始版本：** 11 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TextDecoder](arkts-arkts-util-textdecoder-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TextDecoder](arkts-arkts-util-textdecoder-c.md) | 创建的 **TextDecoder** 对象。 |
+
+**示例**
+
+```TypeScript
+let textDecoderOptions: util.TextDecoderOptions = {
+  fatal: false,
+  ignoreBOM : true
+}
+let textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// 输出结果：retStr = utf-8
+```
 
 ## decode
 
@@ -84,7 +133,8 @@ decode(input: Uint8Array, options?: { stream?: false }): string
 
 将输入内容解码为字符串。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该接口会正常解析值为\0的字节，将其转换为Unicode字符\u0000（空字符），不会导致解码中断或错误。
 
 **起始版本：** 7
@@ -97,16 +147,33 @@ decode(input: Uint8Array, options?: { stream?: false }): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| input | Uint8Array | 是 |
-| options | { stream?: false } | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| input | Uint8Array | 是 | 要解码的 Uint8Array 对象。 |
+| options | { stream?: false } | 否 | 解码相关的选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 获取到的字符串。 |
+
+**示例**
+
+```TypeScript
+let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
+let uint8 = new Uint8Array(6);
+uint8[0] = 0xEF;
+uint8[1] = 0xBB;
+uint8[2] = 0xBF;
+uint8[3] = 0x61;
+uint8[4] = 0x62;
+uint8[5] = 0x63;
+console.info("input num:");
+let retStr = textDecoder.decode(uint8, {stream: false});
+console.info("retStr = " + retStr);
+// 输出结果：retStr = abc
+```
 
 ## decodeToString
 
@@ -124,16 +191,53 @@ decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| input | Uint8Array | 是 |
-| options | [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| input | Uint8Array | 是 | 要解码的 Uint8Array 对象。 |
+| options | [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | 否 | 解码相关的选项。默认值为 **undefined**。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 获取到的字符串。 |
+
+**示例**
+
+```TypeScript
+// 当解析不含有\0的字节的示例代码
+let textDecoderOptions: util.TextDecoderOptions = {
+  fatal: false,
+  ignoreBOM : true
+}
+let decodeToStringOptions: util.DecodeToStringOptions = {
+  stream: false
+}
+let textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
+let uint8 = new Uint8Array([0xEF, 0xBB, 0xBF, 0x61, 0x62, 0x63]);
+let retStr = textDecoder.decodeToString(uint8, decodeToStringOptions);
+console.info("retStr = " + retStr);
+// 输出结果：retStr = abc
+```
+
+```TypeScript
+// 当解析含有\0的字节的示例代码
+let textDecoderOptions: util.TextDecoderOptions = {
+  fatal: false,
+  ignoreBOM : true
+}
+let decodeToStringOptions: util.DecodeToStringOptions = {
+  stream: false
+}
+let textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
+let uint8 = new Uint8Array([97, 98, 0, 99]);
+let retStr = textDecoder.decodeToString(uint8, decodeToStringOptions);
+console.info("retStr = " + retStr);
+// 输出结果：retStr = abc
+let retJson = JSON.stringify(retStr)
+console.info("retJson = " + retJson);
+// 输出结果：retJson = ab/u0000c
+```
 
 ## decodeWithStream
 
@@ -155,16 +259,40 @@ decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| input | Uint8Array | 是 |
-| options | [DecodeWithStreamOptions](arkts-arkts-util-decodewithstreamoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| input | Uint8Array | 是 | 要解码的 Uint8Array 对象。 |
+| options | [DecodeWithStreamOptions](arkts-arkts-util-decodewithstreamoptions-i.md) | 否 | 解码相关的选项。<br>**起始版本：** 11 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 获取到的字符串。 |
+
+**示例**
+
+```TypeScript
+let textDecoderOptions: util.TextDecoderOptions = {
+  fatal: false,
+  ignoreBOM : true
+}
+let decodeWithStreamOptions: util.DecodeWithStreamOptions = {
+  stream: false
+}
+let textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
+let uint8 = new Uint8Array(6);
+uint8[0] = 0xEF;
+uint8[1] = 0xBB;
+uint8[2] = 0xBF;
+uint8[3] = 0x61;
+uint8[4] = 0x62;
+uint8[5] = 0x63;
+console.info("input num:");
+let retStr = textDecoder.decodeWithStream(uint8, decodeWithStreamOptions);
+console.info("retStr = " + retStr);
+// 输出结果：retStr = abc
+```
 
 ## encoding
 

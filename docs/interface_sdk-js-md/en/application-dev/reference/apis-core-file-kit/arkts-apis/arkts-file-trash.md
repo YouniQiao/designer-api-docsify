@@ -2,7 +2,8 @@
 
 The **file.trash** module provides APIs for querying, recovering, or permanently deleting the files or directories in Recently deleted (trash). Currently, only local files and directories are supported. You can use **delete()** of [@ohos.file.fileAccess](arkts-file-fileaccess.md) to move a file or directory to the trash.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Currently, the APIs of this module can be called only by **FileManager**.
 
 **Since:** 10
@@ -18,7 +19,7 @@ The **file.trash** module provides APIs for querying, recovering, or permanently
 ## Modules to Import
 
 ```TypeScript
-import { trash } from 'kits/@kit.CoreFileKit';
+import trash from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -26,17 +27,17 @@ import { trash } from 'kits/@kit.CoreFileKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [completelyDelete](arkts-corefile-trash-completelydelete-f-sys.md) |
-| [listFile](arkts-corefile-trash-listfile-f-sys.md) |
-| [recover](arkts-corefile-trash-recover-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [completelyDelete](arkts-corefile-trash-completelydelete-f-sys.md) | Permanently deletes a file or directory from the **Recently deleted** list. |
+| [listFile](arkts-corefile-trash-listfile-f-sys.md) | Lists the files and directories in the **Recently deleted** list. |
+| [recover](arkts-corefile-trash-recover-f-sys.md) | Recovers a file or directory from the trash. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FileInfo](arkts-corefile-trash-fileinfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [FileInfo](arkts-corefile-trash-fileinfo-i-sys.md) | Represents information about a file or directory in the **Recently deleted** list. |
 <!--DelEnd-->

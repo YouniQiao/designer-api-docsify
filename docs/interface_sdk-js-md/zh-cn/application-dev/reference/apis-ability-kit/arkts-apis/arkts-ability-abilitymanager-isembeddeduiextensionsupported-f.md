@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityManager } from 'kits/@kit.AbilityKit';
+import abilityManager from '@kit.AbilityKit';
 ```
 
 ## isEmbeddedUIExtensionSupported
@@ -22,6 +22,20 @@ function isEmbeddedUIExtensionSupported(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 当前设备是否支持[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md)。返回 true表示当前设备支持；返回false表示当前设备不支持。 |
+
+**示例**
+
+```TypeScript
+import { abilityManager, UIAbility } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    // 判断当前设备是否支持EmbeddedUIExtensionAbility
+    let isSupported: boolean = abilityManager.isEmbeddedUIExtensionSupported();
+    console.info(`isEmbeddedUIExtensionSupported is ${isSupported}`);
+  }
+}
+```

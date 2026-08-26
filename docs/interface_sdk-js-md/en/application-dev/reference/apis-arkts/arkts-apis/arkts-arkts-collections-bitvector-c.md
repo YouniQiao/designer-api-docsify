@@ -2,7 +2,8 @@
 
 A linear data structure that is implemented on arrays. A bit vector stores bit values and provides bit-level storage and processing.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > **Decorator**: \@Sendable
 
@@ -13,7 +14,6 @@ A linear data structure that is implemented on arrays. A bit vector stores bit v
 ## Modules to Import
 
 ```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -32,15 +32,15 @@ Returns an iterator that iterates over bit vector.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; | A new iterable iterator object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## constructor
 
@@ -58,9 +58,9 @@ Constructor used to create a bit vector.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [length](#length) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| length | number | Yes | Length of the bit vector. |
 
 ## flipBitByIndex
 
@@ -78,17 +78,17 @@ Flips the bit value (from 0 to 1 or from 1 to 0) at a given index in this bit ve
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index. If **index** is less than **0** or greater than or equal to **length**, an error is reported. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The flipBitByIndex method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## flipBitsByRange
 
@@ -106,18 +106,18 @@ Flips the bit values (from 0 to 1 or from 1 to 0) in a given range in this bit v
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fromIndex | number | Yes |
-| toIndex | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
+| toIndex | number | Yes | End index of the range (exclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The flipBitsByRange method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## getBitCountByRange
 
@@ -135,25 +135,25 @@ Counts the number of bit values in a given range of this bit vector.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | number | Yes |
-| fromIndex | number | Yes |
-| toIndex | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | number | Yes | Bit value. The value **0** indicates bit value 0, and other values indicate bit value 1. |
+| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
+| toIndex | number | Yes | End index of the range (exclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of bit values. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getBitCountByRange method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## getBitsByRange
 
@@ -171,24 +171,24 @@ Obtains bit values within a given range of this bit vector.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fromIndex | number | Yes |
-| toIndex | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
+| toIndex | number | Yes | End index of the range (exclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [BitVector](arkts-arkts-collections-bitvector-c.md) |
+| Type | Description |
+| --- | --- |
+| [BitVector](arkts-arkts-collections-bitvector-c.md) | Bit vector containing the bit values obtained. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getBitsByRange method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## getIndexOf
 
@@ -206,25 +206,25 @@ Returns the index of the first occurrence of a bit value in this bit vector. If 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | number | Yes |
-| fromIndex | number | Yes |
-| toIndex | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | number | Yes | Bit value. The value **0** indicates bit value 0, and other values indicate bit value 1. |
+| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
+| toIndex | number | Yes | End index of the range (exclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the first occurrence of the bit value. If the bit value is not found, **-1** is returned. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## getLastIndexOf
 
@@ -242,25 +242,25 @@ Returns the index of the last occurrence of a bit value in this bit vector. If t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | number | Yes |
-| fromIndex | number | Yes |
-| toIndex | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | number | Yes | Bit value. The value **0** indicates bit value 0, and other values indicate bit value 1. |
+| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
+| toIndex | number | Yes | End index of the range (exclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the last occurrence of the bit value. If the bit value is not found, **-1** is returned. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## has
 
@@ -278,25 +278,25 @@ Checks whether a bit value is included in a given range of this bit vector.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | number | Yes |
-| fromIndex | number | Yes |
-| toIndex | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | number | Yes | Bit value. The value **0** indicates bit value 0, and other values indicate bit value 1. |
+| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
+| toIndex | number | Yes | End index of the range (inclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the bit value exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## pop
 
@@ -314,16 +314,16 @@ Removes the last element from this bit vector.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Element (bit value) removed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The pop method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## push
 
@@ -341,22 +341,22 @@ Adds an element at the end of this bit vector.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | number | Yes | Element to add. The value **0** indicates bit value 0, and other values indicate bit value 1. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The push method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## resize
 
@@ -374,16 +374,16 @@ Resizes this bit vector. If **size** is greater than the length of the existing 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes | New length. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The resize method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## setAllBits
 
@@ -401,16 +401,16 @@ Sets all elements in this bit vector to a bit value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | number | Yes | Bit value to set. The value **0** indicates bit value 0, and other values indicate bit value 1. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setAllBits method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## setBitsByRange
 
@@ -428,19 +428,19 @@ Sets elements in a given range in this bit vector to a bit value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | number | Yes |
-| fromIndex | number | Yes |
-| toIndex | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | number | Yes | Bit value to set. The value **0** indicates bit value 0, and other values indicate bit value 1. |
+| fromIndex | number | Yes | Start index of the range (inclusive). If **fromIndex** is less than **0** or greater than or equal to **toIndex**, an error is thrown. |
+| toIndex | number | Yes | End index of the range (exclusive). If **toIndex** is less than **0** or greater than or equal to **length**, an error is thrown. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setBitsByRange method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## values
 
@@ -458,16 +458,16 @@ Returns an iterator object that contains the value of each element in this bit v
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; | Bit vector iterator object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## [index: number]
 

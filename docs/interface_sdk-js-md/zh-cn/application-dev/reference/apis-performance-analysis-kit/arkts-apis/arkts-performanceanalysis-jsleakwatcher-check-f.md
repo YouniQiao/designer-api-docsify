@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## check
@@ -20,6 +19,12 @@ function check(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 触发GC后未被回收的泄漏对象列表。 |
+
+**示例**
+
+```TypeScript
+let leakObjlist:string = jsLeakWatcher.check();
+```

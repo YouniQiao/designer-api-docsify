@@ -13,7 +13,8 @@ Provides an asynchronous callback to return the authentication event information
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## callback
@@ -34,6 +35,53 @@ Called to return the authentication result or authentication tip information.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | [EventInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | [EventInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | Authentication result or tip information. |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
+// Obtain the authentication result via a callback.
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  auth.on('result', {
+    callback: (result: userAuth.AuthResultInfo) => {
+      console.info(`result: ${result.result}`);
+    }
+  } as userAuth.AuthEvent);
+  auth.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
+  // do error.
+}
+// Obtain the authentication tip information via a callback.
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  auth.on('tip', {
+    callback : (result : userAuth.TipInfo) => {
+      switch (result.tip) {
+        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_BRIGHT:
+          // Do something.
+          break;
+        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_DARK:
+          // Do something.
+          break;
+        default:
+          // do others.
+      }
+    }
+  } as userAuth.AuthEvent);
+  auth.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
+  // do error.
+}
+```

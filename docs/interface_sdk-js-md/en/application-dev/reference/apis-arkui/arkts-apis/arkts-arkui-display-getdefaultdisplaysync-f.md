@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import display from '@kit.ArkUI';
 ```
 
 ## getDefaultDisplaySync
@@ -22,12 +22,23 @@ Obtains the **Display** object of the screen where the application is located. I
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Display](arkts-arkui-display-display-i.md) |
+| Type | Description |
+| --- | --- |
+| [Display](arkts-arkui-display-display-i.md) | Default Display object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: Display is not created or destroyed. |
+
+**Examples**
+
+```TypeScript
+let displayClass: display.Display | null = null;
+try {
+  displayClass = display.getDefaultDisplaySync();
+} catch (exception) {
+  console.error(`Failed to get default display. Code: ${exception.code}, message: ${exception.message}`);
+}
+```

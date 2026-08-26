@@ -2,8 +2,10 @@
 
 The editable title bar is a title bar that comes with button icons, typically **Cancel** on the left and **Confirm** on the right, on a multi-select or editing page.
 
-> **NOTE：**&gt;
-> - This component can be used only in the stage model.&gt;
+> **NOTE：**
+> 
+> - This component can be used only in the stage model.
+> 
 > - If the **EditableTitleBar** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -18,7 +20,8 @@ The editable title bar is a title bar that comes with button icons, typically **
 ## Modules to Import
 
 ```TypeScript
-import { EditableLeftIconType, EditableTitleBar, EditableTitleBarMenuItem, EditableTitleBarItem, EditableTitleBarOptions } from 'kits/@kit.ArkUI';
+import { EditableLeftIconType, EditableTitleBar, EditableTitleBarMenuItem, EditableTitleBarItem, EditableTitleBarOptions } from '@kit.ArkUI';
+import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, EditableLeftIconV2Options, EditableTitleV2, EditableTitleV2Options, EditableTitleBarItemV2, EditableTitleBarItemV2Options, EditableTitleBarMenuItemV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2, EditableSaveButtonV2Options, EditableTitleBarStyleV2, EditableTitleBarStyleV2Options } from '@kit.ArkUIV2';
 ```
 
 ## onCancel

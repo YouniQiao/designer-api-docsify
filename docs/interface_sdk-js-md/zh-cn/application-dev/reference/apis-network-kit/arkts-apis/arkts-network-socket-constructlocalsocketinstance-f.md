@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## constructLocalSocketInstance
@@ -20,6 +20,13 @@ function constructLocalSocketInstance(): LocalSocket
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LocalSocket](arkts-network-socket-localsocket-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LocalSocket](arkts-network-socket-localsocket-i.md) | 返回一个LocalSocket对象。 |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+```

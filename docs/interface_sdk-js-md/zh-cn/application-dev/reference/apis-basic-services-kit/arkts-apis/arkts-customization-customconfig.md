@@ -9,13 +9,13 @@
 ## 导入模块
 
 ```TypeScript
-import { customConfig } from 'kits/@kit.BasicServicesKit';
+import customConfig from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [getChannelId](arkts-basicservices-customconfig-getchannelid-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getChannelId](arkts-basicservices-customconfig-getchannelid-f.md) | 获取应用的预装渠道号。 |

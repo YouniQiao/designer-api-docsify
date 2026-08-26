@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+import abilityConnectionManager from '@kit.DistributedServiceKit';
 ```
 
 ## destroyAbilityConnectionSession
@@ -22,6 +22,17 @@ function destroyAbilityConnectionSession(sessionId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sessionId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sessionId | number | 是 | 待销毁的协同会话ID。取值范围是不小于100的整数。 传入小于100的值或不存在的协同会话ID时返回错误码401。 |
+
+**示例**
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+hilog.info(0x0000, 'testTag', 'destroyAbilityConnectionSession called');
+let sessionId = 100;
+abilityConnectionManager.destroyAbilityConnectionSession(sessionId);
+```

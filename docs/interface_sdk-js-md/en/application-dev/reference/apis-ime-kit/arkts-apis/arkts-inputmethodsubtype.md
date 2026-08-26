@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodSubtype } from 'kits/@kit.IMEKit';
+import InputMethodSubtype from '@kit.IMEKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [InputMethodSubtype(Input Method Subtype)](arkts-ime-inputmethodsubtype-i.md) |
+| Name | Description |
+| --- | --- |
+| [InputMethodSubtype(Input Method Subtype)](arkts-ime-inputmethodsubtype-i.md) | The **InputMethodSubtype** module provides APIs for managing the attributes of input method subtypes. The input method subtype allows the input method to switch to a specific mode or language, for example, the Chinese or English keyboard.  > **NOTE：**   >  > The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version. |

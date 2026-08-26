@@ -32,15 +32,15 @@ changeRenderType(type: NodeRenderType): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | 是 | 渲染类型 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回是否成功修改渲染类型。 |
 
 ## constructor
 
@@ -63,13 +63,13 @@ constructor(uiContext: UIContext, options: RenderOptions,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
-| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 是 |
-| id | string | 是 |
-| type | [XComponentType](arkts-arkui-xcomponenttype-e.md) | 是 |
-| libraryName | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 用于创建FrameNode的UIContext |
+| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 是 | Builder Node的渲染选项 |
+| id | string | 是 | 应用定义的XComponent id |
+| type | [XComponentType](arkts-arkui-xcomponenttype-e.md) | 是 | XComponent类型 |
+| libraryName | string | 否 | XComponent要加载的库名称 |
 
 ## onCreate
 
@@ -91,9 +91,9 @@ onCreate(event?: Object): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Object | 否 | 加载库时来自native的事件 |
 
 ## onDestroy
 

@@ -15,28 +15,28 @@
 ## 导入模块
 
 ```TypeScript
-import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
+import FaultLogger from '@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [query(故障日志获取)](arkts-performanceanalysis-faultlogger-query-f.md) |
-| [query(故障日志获取)](arkts-performanceanalysis-faultlogger-query-f.md) |
-| [querySelfFaultLog(故障日志获取)](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md) |
-| [querySelfFaultLog(故障日志获取)](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [query(故障日志获取)](arkts-performanceanalysis-faultlogger-query-f.md) | 获取当前应用故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。 |
+| [query(故障日志获取)](arkts-performanceanalysis-faultlogger-query-f.md) | 获取当前应用故障信息，该方法通过Promise方式返回故障信息数组，故障信息数组内最多上报10份故障信息。 |
+| [querySelfFaultLog(故障日志获取)](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md) | 获取当前应用故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。 |
+| [querySelfFaultLog(故障日志获取)](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md) | 获取当前应用故障信息，该方法通过Promise方式返回故障信息数组，故障信息数组内最多上报10份故障信息。 |
 
 ### 接口
 
-| 名称 |
-| --- |
-| [FaultLogInfo(故障日志获取)](arkts-performanceanalysis-faultlogger-faultloginfo-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [FaultLogInfo(故障日志获取)](arkts-performanceanalysis-faultlogger-faultloginfo-i.md) | 故障信息数据结构，获取到的故障信息的数据结构。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [FaultType(故障日志获取)](arkts-performanceanalysis-faultlogger-faulttype-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [FaultType(故障日志获取)](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 故障类型枚举。 |

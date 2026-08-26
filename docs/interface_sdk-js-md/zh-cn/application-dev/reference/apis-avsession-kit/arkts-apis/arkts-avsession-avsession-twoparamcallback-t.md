@@ -12,7 +12,7 @@ type TwoParamCallback<T, G> = (data1: T, data2: G) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data1 | T | 是 |
-| data2 | G | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data1 | T | 是 |  |
+| data2 | G | 是 |  |

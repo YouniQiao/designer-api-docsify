@@ -3,8 +3,11 @@
 ## 导入模块
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
+import config from '@kit.AccessibilityKit.config';
+import accessibility from '@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
+import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
 ## isSeniorModeEnabled
@@ -23,12 +26,36 @@ function isSeniorModeEnabled(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示系统关怀模式已开启；返回false表示系统关怀模式已关闭。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality. |
+
+**示例**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  aboutToAppear(): void {
+    accessibility.isSeniorModeEnabled().then((data: boolean) => {
+      console.info(`success data:isSeniorModeEnabled : ${JSON.stringify(data)}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to call isSeniorModeEnabled. Code:${err.code}, message:${err.message}`);
+    });
+  }
+
+  build() {
+    Column() {
+    }
+  }
+}
+```

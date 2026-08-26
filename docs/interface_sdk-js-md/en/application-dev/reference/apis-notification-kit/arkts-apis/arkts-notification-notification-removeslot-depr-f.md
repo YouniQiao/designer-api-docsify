@@ -3,6 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## removeSlot
@@ -23,10 +26,27 @@ Removes a notification slot of a specified type. This API uses an asynchronous c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Type of the notification slot, which can be used for social communication, service information, content consultation, and other purposes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+// removeSlot callback
+let removeSlotCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("removeSlot failed " + JSON.stringify(err));
+  } else {
+    console.info("removeSlot success");
+  }
+}
+let slotType: Notification.SlotType = Notification.SlotType.SOCIAL_COMMUNICATION;
+Notification.removeSlot(slotType, removeSlotCallback);
+```
 
 
 ## removeSlot
@@ -47,12 +67,25 @@ Removes a notification slot of a specified type. This API uses a promise to retu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Type of the notification slot, which can be used for social communication, service information, content consultation, and other purposes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let slotType: Notification.SlotType = Notification.SlotType.SOCIAL_COMMUNICATION;
+Notification.removeSlot(slotType).then(() => {
+  console.info("removeSlot success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`removeSlot failed, code is ${err}`);
+});
+```

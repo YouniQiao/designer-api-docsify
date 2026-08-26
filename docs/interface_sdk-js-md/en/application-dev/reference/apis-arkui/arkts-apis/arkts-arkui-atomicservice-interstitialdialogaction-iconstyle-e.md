@@ -1,7 +1,7 @@
 # IconStyle
 
 Sets the color style of the close button. By default, the close button is set to light color.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Description| | - | - | - | | [DARK](#dark) | 0 | The close button is in dark color.| | [LIGHT](#light) | 1 |
+| Name| Value| Description| | - | - | - | | DARK | 0 | The close button is in dark color.| | LIGHT | 1 | The close button is in light color.Default value.|
 
 **Since:** 12
 

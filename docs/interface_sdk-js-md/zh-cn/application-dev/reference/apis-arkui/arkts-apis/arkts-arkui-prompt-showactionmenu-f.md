@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
+import prompt from '@kit.ArkUI';
+import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUIAction';
 ```
 
 ## showActionMenu
@@ -24,10 +25,35 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | 是 | 操作菜单选项。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | 是 | 菜单响应结果回调。 |
+
+**示例**
+
+```TypeScript
+import prompt from '@ohos.prompt'
+prompt.showActionMenu({
+  title: 'Title Info',
+  buttons: [
+    {
+      text: 'item1',
+      color: '#666666'
+    },
+    {
+      text: 'item2',
+      color: '#000000'
+    },
+  ]
+}, (err, data) => {
+  if (err) {
+    console.info('showActionMenu err: ' + err);
+    return;
+  }
+  console.info('showActionMenu success callback, click button: ' + data.index);
+})
+```
 
 
 ## showActionMenu
@@ -48,12 +74,37 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | 是 | 操作菜单选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;ActionMenuSuccessResponse & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;ActionMenuSuccessResponse & gt; | 菜单响应结果。 |
+
+**示例**
+
+```TypeScript
+import prompt from '@ohos.prompt'
+prompt.showActionMenu({
+  title: 'showActionMenu Title Info',
+  buttons: [
+    {
+      text: 'item1',
+      color: '#666666'
+    },
+    {
+      text: 'item2',
+      color: '#000000'
+    },
+  ]
+})
+  .then(data => {
+    console.info('showActionMenu success, click button: ' + data.index);
+  })
+  .catch((err:Error) => {
+    console.info('showActionMenu error: ' + err);
+  })
+```

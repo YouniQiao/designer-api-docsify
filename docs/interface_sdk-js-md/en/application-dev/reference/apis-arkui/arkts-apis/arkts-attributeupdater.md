@@ -4,12 +4,12 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AttributeUpdater](arkts-arkui-attributeupdater-c.md) |
+| Name | Description |
+| --- | --- |
+| [AttributeUpdater](arkts-arkui-attributeupdater-c.md) | **AttributeUpdater** directly set attributes to a component to trigger UI re-renders, without marking them as state variables. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Initializer](arkts-arkui-initializer-t.md) |
+| Name | Description |
+| --- | --- |
+| [Initializer](arkts-arkui-initializer-t.md) | Defines a decorator for updating attributes. |

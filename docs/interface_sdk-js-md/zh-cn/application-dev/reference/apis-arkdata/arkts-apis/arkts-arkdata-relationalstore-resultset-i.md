@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import relationalStore from '@kit.ArkData';
 ```
 
 ## close
@@ -26,10 +26,32 @@ close(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).close();
+}
+```
+
+```TypeScript
+async function closeExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getAsset
 
@@ -45,40 +67,64 @@ getAsset(columnIndex: number): Asset
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | 以Asset形式返回指定列的值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const doc = (resultSet as relationalStore.ResultSet).getAsset((resultSet as relationalStore.ResultSet).getColumnIndex("DOC"));
+}
+```
+
+```TypeScript
+async function getAssetExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const doc = resultSet.getAsset(resultSet.getColumnIndex("DOC"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getAssets
 
@@ -94,40 +140,64 @@ getAssets(columnIndex: number): Assets
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) | 以Assets形式返回指定列的值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const docs = (resultSet as relationalStore.ResultSet).getAssets((resultSet as relationalStore.ResultSet).getColumnIndex("DOCS"));
+}
+```
+
+```TypeScript
+async function getAssetsExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const name = resultSet.getAssets(resultSet.getColumnIndex("DOCS"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getBlob
 
@@ -143,40 +213,64 @@ getBlob(columnIndex: number): Uint8Array
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Uint8Array |
+| 类型 | 说明 |
+| --- | --- |
+| Uint8Array | 以字节数组的形式返回指定列的值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const codes = (resultSet as relationalStore.ResultSet).getBlob((resultSet as relationalStore.ResultSet).getColumnIndex("CODES"));
+}
+```
+
+```TypeScript
+async function getBlobExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const name = resultSet.getBlob(resultSet.getColumnIndex("CODES"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getColumnIndex
 
@@ -192,40 +286,69 @@ getColumnIndex(columnName: string): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| columnName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnName | string | 是 | 表示结果集中指定列的名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回指定列的索引。当结果集中包含重名列时，返回值会不符合预期。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+  const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+  const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+  const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+}
+```
+
+```TypeScript
+async function getColumnIndexExample(store : relationalStore.RdbStore){
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      const idIndex = resultSet.getColumnIndex("ID");
+      const nameIndex = resultSet.getColumnIndex("NAME");
+      const ageIndex = resultSet.getColumnIndex("AGE");
+      const salaryIndex = resultSet.getColumnIndex("SALARY");
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getColumnName
 
@@ -241,40 +364,68 @@ getColumnName(columnIndex: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回指定列的名称。当结果集中包含重名列时，返回值会不符合预期。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const id = (resultSet as relationalStore.ResultSet).getColumnName(0);
+  const name = (resultSet as relationalStore.ResultSet).getColumnName(1);
+  const age = (resultSet as relationalStore.ResultSet).getColumnName(2);
+}
+```
+
+```TypeScript
+async function getColumnNameExample(store : relationalStore.RdbStore){
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      const id = resultSet.getColumnName(0);
+      const name = resultSet.getColumnName(1);
+      const age = resultSet.getColumnName(2);
+      const salary = resultSet.getColumnName(3);
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getColumnNames
 
@@ -292,22 +443,53 @@ getColumnNames(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 返回结果集中所有列的名称。支持获取包含重名列的列名。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+
+**示例**
+
+```TypeScript
+try {
+  // 联表查询EMPLOYEE1和EMPLOYEE2，并获取重名的列名。store为获取到的RdbStore实例。
+  let resultSet: relationalStore.ResultSet = await store.querySql("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
+  if (resultSet != undefined) {
+    const names = resultSet.getColumnNames();
+    resultSet.close();
+  }
+} catch (err) {
+  console.error(`Failed to get column names: code:${err.code}, message:${err.message}`);
+}
+```
+
+```TypeScript
+async function getColumnNamesExample(store: relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    // 联表查询EMPLOYEE1和EMPLOYEE2，并获取重名的列名。store为获取到的RdbStore实例。
+    resultSet = await store.querySqlWithoutRowCount("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
+    if (resultSet != undefined) {
+      const names = resultSet.getColumnNames();
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`Failed to get column names: code:${err.code}, message:${err.message}`);
+  }
+}
+```
 
 ## getColumnType
 
@@ -323,41 +505,83 @@ getColumnType(columnIdentifier: number | string): Promise<ColumnType>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| columnIdentifier | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIdentifier | number \| string | 是 | 表示结果集中指定列的索引或列名。索引必须是非负整数，且必须小于属性columnNames的长度。列名必须是属性columnNames内的名 称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ColumnType](arkts-arkdata-relationalstore-columntype-e.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ColumnType](arkts-arkdata-relationalstore-columntype-e.md)&gt; | Promise对象。返回指定列的数据类型。当结果集中包含重名列时，通过列名获取的结果会不符合预期，建议使用列索引形式获取。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  let idType = await (resultSet as relationalStore.ResultSet).getColumnType("ID") as relationalStore.ColumnType;
+  let nameType = await (resultSet as relationalStore.ResultSet).getColumnType("NAME") as relationalStore.ColumnType;
+  let ageType = await (resultSet as relationalStore.ResultSet).getColumnType("AGE") as relationalStore.ColumnType;
+  let salaryType = await (resultSet as relationalStore.ResultSet).getColumnType("SALARY") as relationalStore.ColumnType;
+  let codesType = await (resultSet as relationalStore.ResultSet).getColumnType("CODES") as relationalStore.ColumnType;
+  let identityType = await (resultSet as relationalStore.ResultSet).getColumnType(5) as relationalStore.ColumnType;
+  let assetDataType = await (resultSet as relationalStore.ResultSet).getColumnType(6) as relationalStore.ColumnType;
+  let assetsDataType = await (resultSet as relationalStore.ResultSet).getColumnType(7) as relationalStore.ColumnType;
+  let floatArrayType = await (resultSet as relationalStore.ResultSet).getColumnType(8) as relationalStore.ColumnType;
+}
+```
+
+```TypeScript
+async function getColumnTypeExample(store : relationalStore.RdbStore){
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      // 方式一：通过列名获取列数据类型
+      let idType = await resultSet.getColumnType("ID");
+      let nameType = await resultSet.getColumnType("NAME");
+      let ageType = await resultSet.getColumnType("AGE");
+      let salaryType = await resultSet.getColumnType("SALARY");
+      let codesType = await resultSet.getColumnType("CODES");
+      // 方式二：通过列索引获取列数据类型
+      let identityType = await resultSet.getColumnType(5);
+      let assetDataType = await resultSet.getColumnType(6);
+      let assetsDataType = await resultSet.getColumnType(7);
+      let floatArrayType = await resultSet.getColumnType(8);
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getColumnTypeSync
 
@@ -373,41 +597,83 @@ getColumnTypeSync(columnIdentifier: number | string): ColumnType
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| columnIdentifier | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIdentifier | number \| string | 是 | 表示结果集中指定列的索引或名称。索引必须是非负整数，最大不能超过属性columnNames的长度。列名必须是属性columnNames内的名 称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ColumnType](arkts-arkdata-relationalstore-columntype-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ColumnType](arkts-arkdata-relationalstore-columntype-e.md) | 返回指定列的数据类型。当结果集中包含重名列时，通过列名获取的结果会不符合预期，建议使用列索引形式获取。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  let idType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("ID") as relationalStore.ColumnType;
+  let nameType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("NAME") as relationalStore.ColumnType;
+  let ageType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("AGE") as relationalStore.ColumnType;
+  let salaryType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("SALARY") as relationalStore.ColumnType;
+  let codesType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("CODES") as relationalStore.ColumnType;
+  let identityType = (resultSet as relationalStore.ResultSet).getColumnTypeSync(5) as relationalStore.ColumnType;
+  let assetDataType = (resultSet as relationalStore.ResultSet).getColumnTypeSync(6) as relationalStore.ColumnType;
+  let assetsDataType = (resultSet as relationalStore.ResultSet).getColumnTypeSync(7) as relationalStore.ColumnType;
+  let floatArrayType = (resultSet as relationalStore.ResultSet).getColumnTypeSync(8) as relationalStore.ColumnType;
+}
+```
+
+```TypeScript
+async function getColumnTypeSyncExample(store : relationalStore.RdbStore){
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      // 方式一：通过列名获取列数据类型
+      let idType = resultSet.getColumnTypeSync("ID");
+      let nameType = resultSet.getColumnTypeSync("NAME");
+      let ageType = resultSet.getColumnTypeSync("AGE");
+      let salaryType = resultSet.getColumnTypeSync("SALARY");
+      let codesType = resultSet.getColumnTypeSync("CODES");
+      // 方式二：通过列索引获取列数据类型
+      let identityType = resultSet.getColumnTypeSync(5);
+      let assetDataType = resultSet.getColumnTypeSync(6);
+      let assetsDataType = resultSet.getColumnTypeSync(7);
+      let floatArrayType = resultSet.getColumnTypeSync(8);
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getCurrentRowData
 
@@ -425,23 +691,57 @@ getCurrentRowData(): RowData
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RowData](arkts-arkdata-relationalstore-rowdata-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RowData](arkts-arkdata-relationalstore-rowdata-t.md) | 返回当前行所有列的值。支持获取包含重名列的值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+
+**示例**
+
+```TypeScript
+try {
+  // 联表查询EMPLOYEE1和EMPLOYEE2，并获取当前行包含重名列名的值。store为获取到的RdbStore实例。
+  let resultSet: relationalStore.ResultSet = await store.querySql("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
+  if (resultSet != undefined) {
+    resultSet.goToFirstRow();
+    const rowData = resultSet.getCurrentRowData();
+    resultSet.close();
+  }
+} catch (err) {
+  console.error(`Failed to get row data: code:${err.code}, message:${err.message}`);
+}
+```
+
+```TypeScript
+async function getCurrentRowDataExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    // 联表查询EMPLOYEE1和EMPLOYEE2，并获取当前行包含重名列名的值。store为获取到的RdbStore实例。
+    resultSet = await store.querySqlWithoutRowCount("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const rowData = resultSet.getCurrentRowData();
+      console.info(`rowData: ${JSON.stringify(rowData)}`);
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`Failed to get row data: code:${err.code}, message:${err.message}`);
+  }
+}
+```
 
 ## getDouble
 
@@ -457,40 +757,70 @@ getDouble(columnIndex: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 以double形式返回指定列的值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet !== undefined) {
+  while (resultSet.goToNextRow()) {
+    const colIndex = resultSet.getColumnIndex("SALARY");
+    if (colIndex > -1) {
+      const salary = resultSet.getDouble(colIndex);
+      console.info(`Get double success, salary is ${salary}`);
+    }
+  }
+}
+```
+
+```TypeScript
+async function getDoubleExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getLong
 
@@ -506,40 +836,70 @@ getLong(columnIndex: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 以Long形式返回指定列的值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet !== undefined) {
+  while (resultSet.goToNextRow()) {
+    const colIndex = resultSet.getColumnIndex("AGE");
+    if (colIndex > -1) {
+      const age = resultSet.getLong(colIndex);
+      console.info(`Get long success, age is ${age}`);
+    }
+  }
+}
+```
+
+```TypeScript
+async function getLongExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getRow
 
@@ -555,33 +915,58 @@ getRow(): ValuesBucket
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 返回指定行的值。当结果集中包含重名列时，返回值会不符合预期，建议使用 [getCurrentRowData]{ |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const row = (resultSet as relationalStore.ResultSet).getRow();
+}
+```
+
+```TypeScript
+async function getRowExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const rowData = resultSet.getRow();
+      console.info(`rowData: ${JSON.stringify(rowData)}`);
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getRows
 
@@ -597,38 +982,101 @@ getRows(maxCount: number, position?: number): Promise<Array<ValuesBucket>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| maxCount | number | 是 |
-| position | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| maxCount | number | 是 | 正整数，指定要从结果集中获取数据的条数。不为正整数则参数非法，抛出错误码401。 |
+| position | number | 否 | 非负整数，指定从结果集中获取数据的起始位置，不填则从结果集的当前行（默认首次获取数据时为当前结果集的第一行）开始获取数据。不为非负整数则参数非法，抛出错误码401。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;ValuesBucket & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;ValuesBucket & gt; & gt; | 返回maxCount条数据，剩余数据不足maxCount条则返回剩余数据，返回空数组时代表已经遍历到结果集的末尾。当结果集中包含重名列时，返回 值会不符合预期，建议使用[getRowsData]{ |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
+
+**示例**
+
+```TypeScript
+// 以查到100条数据为例
+async function processRows(resultSet: relationalStore.ResultSet) {
+  // 示例1：仅指定maxCount
+  if (resultSet != undefined) {
+    let rows: Array<relationalStore.ValuesBucket>;
+    let maxCount: number = 50;
+    // 从结果集的当前行（默认首次获取数据时为当前结果集的第一行，后续为上次获取数据结束位置的下一行）开始获取数据
+    // getRows会自动移动结果集当前行到上次getRows获取结束位置的下一行，无需使用goToFirstRow、goToNextRow等接口移动
+    while ((rows = await (resultSet as relationalStore.ResultSet).getRows(maxCount)).length != 0) {
+      console.info(JSON.stringify(rows[0]));
+    }
+  }
+
+  // 示例2：指定maxCount和起始的position
+  if (resultSet != undefined) {
+    let rows: Array<relationalStore.ValuesBucket>;
+    let maxCount: number = 50;
+    let position: number = 50;
+    while ((rows = await (resultSet as relationalStore.ResultSet).getRows(maxCount, position)).length != 0) {
+      console.info(JSON.stringify(rows[0]));
+      position += rows.length;
+    }
+  }
+}
+```
+
+```TypeScript
+async function getRowsExample(store : relationalStore.RdbStore) {
+  // 以查到100条数据为例
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    // 示例1：仅指定maxCount
+    if (resultSet != undefined) {
+      let rows: Array<relationalStore.ValuesBucket>;
+      let maxCount: number = 50;
+      // 从结果集的当前行（默认首次获取数据时为当前结果集的第一行，后续为上次获取数据结束位置的下一行）开始获取数据
+      // getRows会自动移动结果集当前行到上次getRows获取结束位置的下一行，goToNextRow等接口移动
+      while ((rows = await resultSet.getRows(maxCount)).length != 0) {
+        console.info(JSON.stringify(rows[0]));
+      }
+    }
+  
+    // 示例2：指定maxCount和起始的position
+    if (resultSet != undefined) {
+      let rows: Array<relationalStore.ValuesBucket>;
+      let maxCount: number = 50;
+      let position: number = 50;
+      while ((rows = await resultSet.getRows(maxCount, position)).length != 0) {
+        console.info(JSON.stringify(rows[0]));
+        position += rows.length;
+      }
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getRowsData
 
@@ -646,31 +1094,116 @@ getRowsData(maxCount: number, position?: number): Promise<RowsData>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| maxCount | number | 是 |
-| position | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| maxCount | number | 是 | 正整数，指定从结果集中获取数据的条数。不为正整数则参数非法，抛出错误码14800001。 |
+| position | number | 否 | 非负整数，指定从结果集中获取数据的起始位置，不填则从结果集的当前行（默认首次获取数据时为当前结果集的第一行）开始获取数据。不为非负整数则参数非法，抛出错误码1480000 1。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[RowsData](arkts-arkdata-relationalstore-rowsdata-t.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[RowsData](arkts-arkdata-relationalstore-rowsdata-t.md)&gt; | 返回maxCount条数据，剩余数据不足maxCount条则返回剩余数据，返回空数组时代表已经遍历到结果集的末尾。支持获取包含重名列的值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+
+**示例**
+
+```TypeScript
+try {
+  // 联表查询EMPLOYEE1和EMPLOYEE2，并获取多行包含重名列名的值。store为获取到的RdbStore实例。
+  let resultSet: relationalStore.ResultSet = await store.querySql("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
+  // 以查到50条数据为例
+  // 示例1：仅指定maxCount
+  if (resultSet != undefined) {
+    let rowsData: relationalStore.RowsData;
+    // 从结果集的当前行（默认首次获取数据时为当前结果集的第一行，后续为上次获取数据结束位置的下一行）开始获取数据
+    // getRowsData会自动移动结果集当前行到上次getRowsData获取结束位置的下一行，无需使用goToFirstRow、goToNextRow等接口移动
+    let maxCount: number = 50;
+    let rowCount: number = 0;
+    while ((rowsData = await resultSet.getRowsData(maxCount)).length != 0) {
+      rowsData.forEach((rowData, index) => {
+        // 第rowCount + index + 1行的查询结果
+        console.info(`${rowCount + index + 1}：${rowData}`);
+      });
+      rowCount += rowsData.length;
+    }
+  }
+
+  // 示例2：指定maxCount和起始的position
+  if (resultSet != undefined) {
+    let rowsData: relationalStore.RowsData;
+    let maxCount: number = 50;
+    let position: number = 50;
+    while ((rowsData = await resultSet.getRowsData(maxCount, position)).length != 0) {
+      rowsData.forEach((rowData, index) => {
+        // 第position + index + 1行的查询结果
+        console.info(`${position + index + 1}：${rowData}`);
+      });
+      position += rowsData.length;
+    }
+  }
+  resultSet.close();
+} catch (err) {
+  console.error(`Failed to get rows data: code:${err.code}, message:${err.message}`);
+}
+```
+
+```TypeScript
+async function getRowsDataExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    // 联表查询EMPLOYEE1和EMPLOYEE2，并获取多行包含重名列名的值。store为获取到的RdbStore实例。
+    resultSet = await store.querySqlWithoutRowCount("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
+    // 以查到50条数据为例
+    // 示例1：仅指定maxCount
+    if (resultSet != undefined) {
+      let rowsData: relationalStore.RowsData;
+      // 从结果集的当前行（默认首次获取数据时为当前结果集的第一行，后续为上次获取数据结束位置的下一行）开始获取数据
+      // getRowsData会自动移动结果集当前行到上次getRowsData获取结束位置的下一行，无需使用goToNextRow接口移动
+      let maxCount: number = 50;
+      let rowCount: number = 0;
+      while ((rowsData = await resultSet.getRowsData(maxCount)).length != 0) {
+        rowsData.forEach((rowData, index) => {
+          // 第rowCount + index + 1行的查询结果
+          console.info(`${rowCount + index + 1}：${rowData}`);
+        });
+        rowCount += rowsData.length;
+      }
+    }
+  
+    // 示例2：指定maxCount和起始的position
+    if (resultSet != undefined) {
+      let rowsData: relationalStore.RowsData;
+      let maxCount: number = 50;
+      let position: number = 50;
+      while ((rowsData = await resultSet.getRowsData(maxCount, position)).length != 0) {
+        rowsData.forEach((rowData, index) => {
+          // 第position + index + 1行的查询结果
+          console.info(`${position + index + 1}：${rowData}`);
+        });
+        position += rowsData.length;
+      }
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`Failed to get rows data: code:${err.code}, message:${err.message}`);
+  }
+}
+```
 
 ## getSendableRow
 
@@ -686,33 +1219,83 @@ getSendableRow(): sendableRelationalStore.ValuesBucket
 
 **返回值：**
 
-| 类型 |
-| --- |
-| sendableRelationalStore.ValuesBucket |
+| 类型 | 说明 |
+| --- | --- |
+| sendableRelationalStore.ValuesBucket | 当前行数据的sendable形式，用于跨线程传递。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
+
+**示例**
+
+示例代码中this.context定义见Stage模型的应用[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。
+
+```TypeScript
+// EntryAbility.ets
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { relationalStore } from '@kit.ArkData';
+import { taskpool } from '@kit.ArkTS';
+import { common } from '@kit.AbilityKit';
+import { sendableRelationalStore } from '@kit.ArkData';
+
+@Concurrent
+async function getDataByName(name: string, context: common.UIAbilityContext) {
+  const STORE_CONFIG: relationalStore.StoreConfig = {
+    name: "RdbTest.db",
+    securityLevel: relationalStore.SecurityLevel.S3
+  };
+  const store = await relationalStore.getRdbStore(context, STORE_CONFIG);
+  const predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo("NAME", name);
+  const resultSet = store.querySync(predicates);
+
+  if (resultSet.rowCount > 0) {
+    resultSet.goToFirstRow();
+    const sendableValuesBucket = resultSet.getSendableRow();
+    resultSet.close();
+    return sendableValuesBucket;
+  } else {
+    resultSet.close();
+    return null;
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  async onWindowStageCreate(windowStage: window.WindowStage) {
+    const task = new taskpool.Task(getDataByName, 'Lisa', this.context);
+    const sendableValuesBucket = await taskpool.execute(task) as sendableRelationalStore.ValuesBucket;
+
+    if (sendableValuesBucket) {
+      const columnCount = sendableValuesBucket.size;
+      const age = sendableValuesBucket.get('age');
+      const name = sendableValuesBucket.get('name');
+      console.info(`Query data in taskpool succeeded, name is "${name}", age is "${age}"`);
+    }
+  }
+}
+```
 
 ## getString
 
@@ -728,40 +1311,64 @@ getString(columnIndex: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 以字符串形式返回指定列的值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+}
+```
+
+```TypeScript
+async function getStringExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getValue
 
@@ -777,40 +1384,70 @@ getValue(columnIndex: number): ValueType
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 表示允许的数据字段类型。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
+
+**示例**
+
+```TypeScript
+if (resultSet !== undefined) {
+  while (resultSet.goToNextRow()) {
+    const colIndex = resultSet.getColumnIndex("NAME");
+    if (colIndex > -1) {
+      const name = resultSet.getValue(colIndex);
+      console.info(`Get value success, name is ${name}`);
+    }
+  }
+}
+```
+
+```TypeScript
+async function getValueExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const name = resultSet.getValue(resultSet.getColumnIndex("NAME"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## goTo
 
@@ -826,40 +1463,48 @@ goTo(offset: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 表示相对当前结果集指针位置的偏移量，正值表示向后移动，负值表示向前移动。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).goTo(1);
+}
+```
 
 ## goToFirstRow
 
@@ -875,33 +1520,41 @@ goToFirstRow(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).goToFirstRow();
+}
+```
 
 ## goToLastRow
 
@@ -917,33 +1570,41 @@ goToLastRow(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).goToLastRow();
+}
+```
 
 ## goToNextRow
 
@@ -959,33 +1620,56 @@ goToNextRow(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).goToNextRow();
+}
+```
+
+```TypeScript
+async function goToNextRowExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## goToPreviousRow
 
@@ -1001,33 +1685,41 @@ goToPreviousRow(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).goToPreviousRow();
+}
+```
 
 ## goToRow
 
@@ -1043,40 +1735,48 @@ goToRow(position: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| position | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| position | number | 是 | 表示要移动到的指定位置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).goToRow(5);
+}
+```
 
 ## isColumnNull
 
@@ -1092,40 +1792,70 @@ isColumnNull(columnIndex: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果当前行中指定列的值为null，则返回true，否则返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet !== undefined) {
+  while (resultSet.goToNextRow()) {
+    const colIndex = resultSet.getColumnIndex("CODES");
+    if (colIndex > -1) {
+      const isColumnNull = resultSet.isColumnNull(colIndex);
+      console.info(`Column is null: ${isColumnNull}`);
+    }
+  }
+}
+```
+
+```TypeScript
+async function isColumnNullExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const name = resultSet.isColumnNull(resultSet.getColumnIndex("NAME"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## columnCount
 

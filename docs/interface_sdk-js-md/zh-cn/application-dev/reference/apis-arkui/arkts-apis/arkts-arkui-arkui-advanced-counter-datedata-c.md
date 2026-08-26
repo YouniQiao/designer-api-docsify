@@ -9,7 +9,8 @@ DateData定义了日期通用属性和方法，包括年、月、日。
 ## 导入模块
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUIV2';
 ```
 
 ## constructor
@@ -30,11 +31,11 @@ DateData的构造函数用于初始化日期对象。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [year](#year) | number | 是 |
-| [month](#month) | number | 是 |
-| [day](#day) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| year | number | 是 | 日期内联型的年份。取值范围：[1, 5000]。 |
+| month | number | 是 | 日期内联型的月份。取值范围：[1, 12]。 |
+| day | number | 是 | 日期内联型的日。取值范围：[1, 31]，具体取值由月份的实际天数决定。 |
 
 ## toString
 
@@ -54,9 +55,9 @@ toString(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 当前日期值。 |
 
 ## day
 

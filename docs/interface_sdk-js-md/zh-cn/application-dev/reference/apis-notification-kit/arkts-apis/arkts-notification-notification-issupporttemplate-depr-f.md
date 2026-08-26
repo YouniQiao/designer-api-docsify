@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## isSupportTemplate
@@ -23,10 +26,27 @@ function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| templateName | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| templateName | string | 是 | 模板名称。当前仅支持'downloadTemplate'。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 查询模板是否存在的回调函数。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let templateName: string = 'process';
+function isSupportTemplateCallback(err: Base.BusinessError, data: boolean) {
+  if (err) {
+    console.error("isSupportTemplate failed " + JSON.stringify(err));
+  } else {
+    console.info("isSupportTemplate success");
+  }
+}
+
+Notification.isSupportTemplate(templateName, isSupportTemplateCallback);
+```
 
 
 ## isSupportTemplate
@@ -47,12 +67,25 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| templateName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| templateName | string | 是 | 模板名称。当前仅支持'downloadTemplate'。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise方式返回模板是否存在的结果。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let templateName: string = 'process';
+Notification.isSupportTemplate(templateName).then((data: boolean) => {
+  console.info("isSupportTemplate success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isSupportTemplate failed, code is ${err}`);
+});
+```

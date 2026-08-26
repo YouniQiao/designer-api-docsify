@@ -9,7 +9,7 @@ Definition of the Ad Content Control Interface
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## addAdsMediaSource
@@ -28,22 +28,22 @@ Add an advertisement film source to the advertisement controller, The insertion 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | [MediaSource](arkts-media-media-mediasource-i.md) | Yes |
-| start | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | [MediaSource](arkts-media-media-mediasource-i.md) | Yes | Video source to be inserted into the main content for playback. |
+| start | number | Yes | Progress value of inserting data to the main media asset. Unit: milliseconds. The value should be an integer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Returns the ID of the added media source in the ad controller. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Insert a media asset whose start value exceeds the value of the main content. |
 
 ## disableAllAdsMediaSource
 
@@ -75,9 +75,9 @@ Unregisters the event processing function when the ad content fails to be loaded
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | No | Ad content loading failure processing function. Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsCompleted
 
@@ -95,9 +95,9 @@ Unregisters the processing function of the event triggered by the completion of 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Processing function of the advertisement playing completion event. Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsSkipped
 
@@ -115,9 +115,9 @@ Unregisters the processing function of the event triggered when advertisement is
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Advertisement Skipped Processing Function. Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsStarted
 
@@ -135,9 +135,9 @@ Unregisters the processing function for the event triggered when a new ad conten
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | No | Processing function when the ad content starts to be played. It is usually used to switch the logic of the playback page. Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## onAdsEventListenerLoadingError
 
@@ -155,9 +155,9 @@ Registers the event processing function when the ad content fails to be loaded.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | Yes | This function is used to process ad content loading failures. This function needs to be implemented by the application. The first parameter is used to transfer the advertisement ID, and the second parameter is used to transfer the failure cause. |
 
 ## onAdsListenerAdsCompleted
 
@@ -175,9 +175,9 @@ Registers the processing function of the event triggered by the completion of ad
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Processing function of the ad event, which contains the ID of the ad that is played. |
 
 ## onAdsListenerAdsSkipped
 
@@ -195,9 +195,9 @@ Registers the processing function of the event triggered when advertisement is s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Processing function for the advertisement to be jumped out of date. The parameter is passed as the ID of the skipped advertisement. |
 
 ## onAdsListenerAdsStarted
 
@@ -215,9 +215,9 @@ Registers the processing function for the event triggered when a new ad content 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | Yes | Processing function when the ad content starts to be played. The logic for switching the playback page is commonly used. The first parameter indicates the ID of the advertisement that is being played, and the second parameter indicates the duration of the advertisement. |
 
 ## release
 
@@ -232,6 +232,21 @@ Release the AVAdsController object.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Examples**
+
+```TypeScript
+audioPlayer.release();
+audioPlayer = undefined;
+```
+
+```TypeScript
+audioRecorder.on('release', () => {    // Set the 'release' event callback.
+  console.info('audio recorder release called');
+});
+audioRecorder.release();
+audioRecorder = undefined;
+```
 
 ## removeAdsMediaSource
 
@@ -249,15 +264,15 @@ Remove the ad source specified in the AdsController.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | UUID value of the MediaSource. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the AdsController. |
 
 ## skipCurrentAdsMediaSource
 

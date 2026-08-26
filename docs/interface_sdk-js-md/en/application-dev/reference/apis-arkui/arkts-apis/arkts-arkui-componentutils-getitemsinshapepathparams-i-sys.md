@@ -11,7 +11,7 @@ Image options setted when need to get the image objects.@interface GetItemsInSha
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
+import componentUtils from '@kit.ArkUI';
 ```
 
 ## images

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import request from '@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
 ```
 
 ## getTask
@@ -20,22 +21,22 @@ Obtains task information based on the task ID. This API uses a promise to return
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
-| id | string | Yes |
-| token | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Application-based context. |
+| id | string | Yes | Task ID. |
+| token | string | No | Token for task query. The default value is empty. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Task & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Task & gt; | Promise used to return the created task. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900006](../errorcode-request.md#21900006-task-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |

@@ -14,13 +14,13 @@ Defines the ArkTS Array reduction function, which is used by the 'from' API of t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | FromElementType | Yes |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | FromElementType | Yes | Element that is being processed. |
+| index | number | Yes | Index of the element in the ArkTS array. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| ToElementType |
+| Type | Description |
+| --- | --- |
+| ToElementType | The transformed value. |

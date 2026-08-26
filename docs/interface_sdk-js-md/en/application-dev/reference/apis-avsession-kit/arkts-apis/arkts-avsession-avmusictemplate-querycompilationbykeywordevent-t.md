@@ -14,12 +14,12 @@ The query compilation by keyword event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| keyword | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keyword | string | Yes | keyword |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]&gt; | (Compilation[]) returned through promise |

@@ -22,9 +22,9 @@ Turn on the listener.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | string | Yes |  |
 
 ## unobserve
 

@@ -9,7 +9,6 @@ APN信息。
 ## 导入模块
 
 ```TypeScript
-import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## apn

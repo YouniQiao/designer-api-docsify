@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import text from '@kit.ArkGraphics2D';
 ```
 
 ## setTextHighContrast
@@ -22,6 +22,12 @@ function setTextHighContrast(action : TextHighContrast): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| action | [TextHighContrast](arkts-arkgraphics2d-text-texthighcontrast-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| action | [TextHighContrast](arkts-arkgraphics2d-text-texthighcontrast-e.md) | 是 | 文字渲染高对比度模式。 |
+
+**示例**
+
+```TypeScript
+text.setTextHighContrast(text.TextHighContrast.TEXT_APP_DISABLE_HIGH_CONTRAST)
+```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import print from '@kit.BasicServicesKit';
 ```
 
 ## authSmbDeviceAsRegisteredUser
@@ -26,24 +26,24 @@ function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, passw
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| host | [SharedHost](arkts-basicservices-print-sharedhost-i.md) | 是 |
-| username | string | 是 |
-| password | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| host | [SharedHost](arkts-basicservices-print-sharedhost-i.md) | 是 | 要进行身份验证的SMB主机。 |
+| username | string | 是 | 用于鉴权的用户名。 |
+| password | string | 是 | 用于身份验证的密码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)[]&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)[]&gt; | Promise that resolves with the list of available printers. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13100012 |
-| 13100013 |
-| 13100014 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| 13100012 | SMB account is locked due to multiple failed login attempts. |
+| 13100013 | SMB connection failed (network error, host unreachable, or port blocked). |
+| 13100014 | Invalid login account or password. |

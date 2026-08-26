@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## constructTCPSocketInstance
@@ -20,6 +20,13 @@ function constructTCPSocketInstance(): TCPSocket
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TCPSocket](arkts-network-socket-tcpsocket-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TCPSocket](arkts-network-socket-tcpsocket-i.md) | 返回一个TCPSocket对象。 |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+```

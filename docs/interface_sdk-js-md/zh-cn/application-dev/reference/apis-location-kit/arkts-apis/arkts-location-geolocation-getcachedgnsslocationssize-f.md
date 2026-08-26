@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import geolocation from '@kit.LocationKit';
 ```
 
 ## getCachedGnssLocationsSize
@@ -26,9 +26,23 @@ function getCachedGnssLocationsSize(callback: AsyncCallback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回GNSS芯片缓存位置个数。 |
+
+**示例**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.getCachedGnssLocationsSize((err, size) => {
+    if (err) {
+        console.info('getCachedGnssLocationsSize: err=' + JSON.stringify(err));
+    }
+    if (size) {
+        console.info('getCachedGnssLocationsSize: size=' + JSON.stringify(size));
+    }
+});
+```
 
 
 ## getCachedGnssLocationsSize
@@ -51,6 +65,15 @@ function getCachedGnssLocationsSize(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回GNSS缓存位置的个数。 |
+
+**示例**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.getCachedGnssLocationsSize().then((result) => {
+    console.info('promise, getCachedGnssLocationsSize: ' + JSON.stringify(result));
+});
+```

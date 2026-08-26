@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## quit
@@ -22,6 +21,6 @@ function quit(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 36000001 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 36000001 | Initialization error. Possibly caused by invoking this function before invoking init function. |

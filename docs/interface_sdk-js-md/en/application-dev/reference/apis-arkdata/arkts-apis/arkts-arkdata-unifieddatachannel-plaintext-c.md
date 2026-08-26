@@ -11,7 +11,7 @@ Represents the plain text data. It is a child class of [Text](arkts-arkdata-unif
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## abstract
@@ -49,3 +49,11 @@ Indicates the content of text
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Examples**
+
+```TypeScript
+let text = new unifiedDataChannel.PlainText();
+text.textContent = 'this is textContent';
+text.abstract = 'This is abstract';
+```

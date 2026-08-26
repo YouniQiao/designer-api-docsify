@@ -26,6 +26,18 @@ Closes this result set.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+**Examples**
+
+```TypeScript
+let predicatesClose = new dataRdb.RdbPredicates("EMPLOYEE");
+let promiseClose = rdbStore.query(predicatesClose, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promiseClose.then((resultSet) => {
+  resultSet.close();
+}).catch((err) => {
+  console.log('resultset close failed');
+});
+```
+
 ## getBlob
 
 ```TypeScript
@@ -44,15 +56,21 @@ Obtains the value from the specified column in the current row as a byte array.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnIndex | number | Yes | Index of the specified column, starting from 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Uint8Array |
+| Type | Description |
+| --- | --- |
+| Uint8Array | Value in the specified column as a byte array. |
+
+**Examples**
+
+```TypeScript
+const codes = resultSet.getBlob(resultSet.getColumnIndex("CODES"));
+```
 
 ## getColumnIndex
 
@@ -72,15 +90,27 @@ Obtains the column index based on the column name.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| columnName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnName | string | Yes | Column name specified. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the column obtained. |
+
+**Examples**
+
+```TypeScript
+const success = resultSet.goToFirstRow();
+if (success) {
+  const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+  const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+  const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+  const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+}
+```
 
 ## getColumnName
 
@@ -100,15 +130,23 @@ Obtains the column name based on the column index.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnIndex | number | Yes | Column index specified. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Column name obtained. |
+
+**Examples**
+
+```TypeScript
+const id = resultSet.getColumnName(0);
+const name = resultSet.getColumnName(1);
+const age = resultSet.getColumnName(2);
+```
 
 ## getDouble
 
@@ -128,15 +166,21 @@ Obtains the value from the specified column in the current row as a Double.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnIndex | number | Yes | Index of the specified column, starting from 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Value in the specified column as a Double. |
+
+**Examples**
+
+```TypeScript
+const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+```
 
 ## getLong
 
@@ -156,15 +200,21 @@ Obtains the value from the specified column in the current row as a Long.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnIndex | number | Yes | Index of the specified column, starting from 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Value in the specified column as a Long. |
+
+**Examples**
+
+```TypeScript
+const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+```
 
 ## getString
 
@@ -184,15 +234,21 @@ Obtains the value from the specified column in the current row as a string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnIndex | number | Yes | Index of the specified column, starting from 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Value in the specified column as a string. |
+
+**Examples**
+
+```TypeScript
+const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+```
 
 ## goTo
 
@@ -212,15 +268,28 @@ Moves the result set forward or backward to the specified row with an offset rel
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| offset | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | number | Yes | Offset relative to the current position. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let predicatesgoto = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoto = rdbStore.query(predicatesgoto, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoto.then((resultSet) => {
+  resultSet.goTo(1);
+  resultSet.close();
+}).catch((err) => {
+  console.log('query failed');
+});
+```
 
 ## goToFirstRow
 
@@ -240,9 +309,22 @@ Moves the cursor to the first row of the result set.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let predicatesgoFirst = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoFirst = rdbStore.query(predicatesgoFirst, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoFirst.then((resultSet) => {
+  resultSet.goToFirstRow();
+  resultSet.close();
+}).catch((err) => {
+  console.log('query failed');
+});
+```
 
 ## goToLastRow
 
@@ -262,9 +344,22 @@ Moves the cursor to the last row of the result set.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let predicatesgoLast = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoLast = rdbStore.query(predicatesgoLast, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoLast.then((resultSet) => {
+  resultSet.goToLastRow();
+  resultSet.close();
+}).catch((err) => {
+  console.log('query failed');
+});
+```
 
 ## goToNextRow
 
@@ -284,9 +379,22 @@ Moves the cursor to the next row in the result set.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let predicatesgoNext = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoNext = rdbStore.query(predicatesgoNext, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoNext.then((resultSet) => {
+  resultSet.goToNextRow();
+  resultSet.close();
+}).catch((err) => {
+  console.log('query failed');
+});
+```
 
 ## goToPreviousRow
 
@@ -306,9 +414,22 @@ Moves the cursor to the previous row in the result set.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let predicatesgoPrev = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoPrev = rdbStore.query(predicatesgoPrev, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoPrev.then((resultSet) => {
+  resultSet.goToPreviousRow();
+  resultSet.close();
+}).catch((err) => {
+  console.log('query failed');
+});
+```
 
 ## goToRow
 
@@ -328,15 +449,28 @@ Moves the cursor to the specified row in the result set.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| position | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| position | number | Yes | Position to which the cursor is to be moved. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let predicatesgotorow = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygotorow = rdbStore.query(predicatesgotorow, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygotorow.then((resultSet) => {
+  resultSet.goToRow(5);
+  resultSet.close();
+}).catch((err) => {
+  console.log('query failed');
+});
+```
 
 ## isColumnNull
 
@@ -356,15 +490,21 @@ Checks whether the value in the specified column of the current row is null.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnIndex | number | Yes | Index of the specified column, starting from 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the value is null; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+const isColumnNull = resultSet.isColumnNull(resultSet.getColumnIndex("CODES"));
+```
 
 ## columnCount
 

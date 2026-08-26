@@ -9,6 +9,9 @@ ControllerHandler is a helper class provided by ArkWeb for handling the allocati
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -41,6 +44,6 @@ Sets the WebviewController object for the newly created Web component. If the ap
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| controller | [WebviewController](arkts-arkweb-webviewcontroller-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| controller | [WebviewController](arkts-arkweb-webviewcontroller-t.md) | Yes | WebviewController** object of the **Web** component. If opening a new window is not needed, set it to **null**. |

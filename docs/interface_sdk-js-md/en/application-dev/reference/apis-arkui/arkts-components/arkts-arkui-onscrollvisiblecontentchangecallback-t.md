@@ -6,7 +6,8 @@ declare type OnScrollVisibleContentChangeCallback = (start: VisibleListContentIn
 
 Triggered when a child component enters or leaves the list display area.When the **List** component changes from having child components to being empty, the values of the reported **start** and **end** parameters remain the same as those when the component had child components last time.If the values of **start** and **end** are both **0**, the **List** component contains only one child component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 14.
 
 **Since:** 12
@@ -19,7 +20,7 @@ Triggered when a child component enters or leaves the list display area.When the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | Yes |
-| end | [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | Yes | 1. Index of the first child component in the list display area. 2. If the first child component in the list display area is **ListItemGroup**, you can obtain the area where the first child component belongs. 3. If the first child component in the list display area is **ListItem** in **ListItemGroup**, you can obtain the index of **ListItem** in **ListItemGroup**. |
+| end | [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | Yes | 1. Index of the last child component in the list display area. 2. If the last child component in the list display area is **ListItemGroup**, you can obtain the area where the last child component belongs. 3. If the last child component in the list display area is **ListItem** in **ListItemGroup**, you can obtain the index of **ListItem** in **ListItemGroup**. |

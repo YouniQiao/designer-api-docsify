@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { recent } from 'kits/@kit.CoreFileKit';
+import recent from '@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -28,14 +28,29 @@ Lists the files that are accessed recently.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;FileInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;FileInfo & gt; | Returns the next level FileInfo Object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900002 |
-| 13900020 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900020 | Invalid argument |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let fileinfos = recent.listFile();
+for(let i = 0; i < fileinfos.length; i++){
+  console.info('uri: ' + fileinfos[i].uri);
+  console.info('srcPath: ' + fileinfos[i].srcPath);
+  console.info('fileName: ' + fileinfos[i].fileName);
+  console.info('mode: ' + fileinfos[i].mode);
+  console.info('size: ' + fileinfos[i].size);
+  console.info('mtime: ' + fileinfos[i].mtime);
+  console.info('ctime: ' + fileinfos[i].ctime);
+}
+```

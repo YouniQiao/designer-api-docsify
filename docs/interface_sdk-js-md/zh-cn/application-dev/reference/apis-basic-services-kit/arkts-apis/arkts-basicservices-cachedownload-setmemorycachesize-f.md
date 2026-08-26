@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## setMemoryCacheSize
@@ -22,12 +22,26 @@ function setMemoryCacheSize(bytes: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bytes | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bytes | number | 是 | 设置的缓存上限。默认值为0B，最大值不超过1073741824B（即1GB）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 设置内存缓存大小上限。  
+  cacheDownload.setMemoryCacheSize(10 * 1024 * 1024);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set memory cache size. err code: ${err.code}, err message: ${err.message}`);
+}
+```

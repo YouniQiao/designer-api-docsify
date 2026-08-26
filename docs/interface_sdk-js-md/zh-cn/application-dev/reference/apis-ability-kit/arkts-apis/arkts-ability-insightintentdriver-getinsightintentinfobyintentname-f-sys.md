@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+import insightIntentDriver from '@kit.AbilityKit';
 ```
 
 ## getInsightIntentInfoByIntentName
@@ -26,23 +26,49 @@ function getInsightIntentInfoByIntentName(bundleName: string, moduleName: string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| moduleName | string | 是 |
-| intentName | string | 是 |
-| [intentFlags](arkts-ability-insightintentdriver-insightintentinfofilter-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 应用包名称。   **说明：**若包名不存在，则返回空对象。 |
+| moduleName | string | 是 | 模块名称。   **说明：**若模块名不存在，则返回空对象。 |
+| intentName | string | 是 | 意图名称。   **说明：**若意图名不存在，则返回空对象。 |
+| intentFlags | number | 是 | 意图信息（[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)）的标识，用于表示查询全量意图信息或者简要意 图信息，参考[GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)&gt; | Promise对象，返回意图信息对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service fails to communicate with the dependency module. |
+
+**示例**
+
+```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
+  import { BusinessError } from '@kit.BasicServicesKit';
+  import { hilog } from '@kit.PerformanceAnalysisKit';
+
+  function getInfoByIntentName() {
+    try {
+      let bundleName = "com.example.intent"; // 开发者需自行修改为实际包名
+      let moduleName = "entry"; // 开发者需自行修改为实际模块名
+      let intentName = "PlayMusic"; // 开发者需自行修改为实际意图名
+      insightIntentDriver.getInsightIntentInfoByIntentName(
+        bundleName, moduleName, intentName, insightIntentDriver.GetInsightIntentFlag.GET_FULL_INSIGHT_INTENT | insightIntentDriver.GetInsightIntentFlag.GET_ENTITY_INFO)
+      .then((data) => {
+        hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByIntentName return %{public}s', JSON.stringify(data));
+      }).catch((err: BusinessError) => {
+        hilog.error(0x0000, 'testTag', 'getInsightIntentInfoByIntentName errCode: %{public}d', err.code);
+        hilog.error(0x0000, 'testTag', 'getInsightIntentInfoByIntentName errMessage: %{public}s', err.message);
+      });
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', 'getInsightIntentInfoByIntentName error caught %{public}s', JSON.stringify(error));
+    }
+  }
+```

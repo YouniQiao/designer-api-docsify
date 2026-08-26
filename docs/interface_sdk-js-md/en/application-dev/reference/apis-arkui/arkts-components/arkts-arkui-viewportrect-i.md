@@ -2,7 +2,8 @@
 
 Describes the options of the viewport.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element's
 
@@ -13,6 +14,7 @@ Describes the options of the viewport.
 ## Modules to Import
 
 ```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## height

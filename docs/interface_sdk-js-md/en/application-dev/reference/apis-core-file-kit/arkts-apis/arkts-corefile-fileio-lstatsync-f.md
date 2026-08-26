@@ -23,12 +23,19 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the target file. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Stat](arkts-corefile-fileio-stat-depr-i.md) |
+| Type | Description |
+| --- | --- |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) | File information obtained. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let stat = fileio.lstatSync(filePath);
+```

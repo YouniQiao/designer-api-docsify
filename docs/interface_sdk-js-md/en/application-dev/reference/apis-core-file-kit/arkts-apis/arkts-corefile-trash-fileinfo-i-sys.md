@@ -13,7 +13,7 @@ Represents information about a file or directory in the **Recently deleted** lis
 ## Modules to Import
 
 ```TypeScript
-import { trash } from 'kits/@kit.CoreFileKit';
+import trash from '@kit.CoreFileKit';
 ```
 
 ## ctime

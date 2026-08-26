@@ -24,16 +24,51 @@ Trigger the event callbacks.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | string | Yes |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | string | Yes | Indicates the event. |
+| args | Object[] | Yes | Indicates the callback arguments. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    this.context.eventHub.on('myEvent', this.eventFunc);
+  }
+
+  onDestroy() {
+    try {
+      // Result
+      // eventFunc is called,undefined,undefined
+      this.context.eventHub.emit('myEvent');
+      // Result
+      // eventFunc is called,1,undefined
+      this.context.eventHub.emit('myEvent', 1);
+      // Result
+      // eventFunc is called,1,2
+      this.context.eventHub.emit('myEvent', 1, 2);
+    } catch (e) {
+      let code: number = (e as BusinessError).code;
+      let msg: string = (e as BusinessError).message;
+      console.error(`EventHub emit error, code: ${code}, msg: ${msg}`);
+    }
+  }
+
+  eventFunc(argOne: number, argTwo: number) {
+    console.info(`eventFunc is called, ${argOne}, ${argTwo}`);
+  }
+}
+```
 
 ## off
 
@@ -55,16 +90,47 @@ Unsubscribes from an event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | string | Yes |
-| callback | Function | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | string | Yes | Event name. |
+| callback | Function | No | Callback for the event. If **callback** is unspecified, the given event with all callbacks is unsubscribed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    try {
+      this.context.eventHub.on('myEvent', this.eventFunc1);
+      this.context.eventHub.off('myEvent', this.eventFunc1); // Unsubscribe from the myEvent event with the callback eventFunc1.
+      this.context.eventHub.on('myEvent', this.eventFunc1);
+      this.context.eventHub.on('myEvent', this.eventFunc2);
+      this.context.eventHub.off('myEvent'); // Unsubscribe from the myEvent event with all the callbacks (eventFunc1 and eventFunc2).
+    } catch (e) {
+      let code: number = (e as BusinessError).code;
+      let msg: string = (e as BusinessError).message;
+      console.error(`EventHub emit error, code: ${code}, msg: ${msg}`);
+    }
+  }
+
+  eventFunc1() {
+    console.info('eventFunc1 is called');
+  }
+
+  eventFunc2() {
+    console.info('eventFunc2 is called');
+  }
+}
+```
 
 ## on
 
@@ -74,7 +140,8 @@ on(event: string, callback: Function): void
 
 Subscribes to an event.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of
 > **this** in **callback**, use an arrow function.
 
@@ -88,13 +155,13 @@ Subscribes to an event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | string | Yes |
-| callback | Function | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | string | Yes | Event name. |
+| callback | Function | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |

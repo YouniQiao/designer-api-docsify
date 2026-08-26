@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## close
@@ -24,26 +22,40 @@ Closes a file or directory. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | number \| [File](arkts-corefile-file-fs-file-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| file | number \| [File](arkts-corefile-file-fs-file-i.md) | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900025 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900025 | No space left on device |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.close(file).then(() => {
+  console.info(`Succeeded in closing file.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 
 ## close
@@ -62,18 +74,34 @@ Closes a file or directory. This API uses an asynchronous callback to return the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | number \| [File](arkts-corefile-file-fs-file-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| file | number \| [File](arkts-corefile-file-fs-file-i.md) | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900025 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900025 | No space left on device |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.close(file, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in closing file.`);
+  }
+});
+```

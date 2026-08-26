@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import usb from '@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKitManager';
+import serialManager from '@kit.BasicServicesKitManager.serial';
 ```
 
 ## getCurrentFunctions
@@ -26,6 +28,12 @@ Obtains the numeric mask combination for the USB function list in Device mode.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) |
+| Type | Description |
+| --- | --- |
+| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | Numeric mask combination for the USB function list. |
+
+**Examples**
+
+```TypeScript
+let ret = usb.getCurrentFunctions();
+```

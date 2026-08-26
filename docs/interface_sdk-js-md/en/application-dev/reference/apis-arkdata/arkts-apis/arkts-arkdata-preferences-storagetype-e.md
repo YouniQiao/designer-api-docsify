@@ -2,13 +2,17 @@
 
 Enumerates the storage types of preferences.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Before using this mode, you are advised to call **isStorageTypeSupported** to check whether this storage type
-> is supported.&gt;
+> is supported.
+> 
 > - Once the storage type is selected and data instances are obtained via **getPreferences()**, the storage type
-> cannot be changed.&gt;
+> cannot be changed.
+> 
 > - Data cannot be directly migrated between the **Preferences** instances that use different storage types. To
-> migrate data between them, you need to read the data to be migrated and then write the data.&gt;
+> migrate data between them, you need to read the data to be migrated and then write the data.
+> 
 > - If you need to change the storage directory of preferences, you cannot move or overwrite files. Instead, you
 > need to read the data and then write the data.
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { continueManager } from 'kits/@kit.AbilityKit';
+import continueManager from '@kit.AbilityKit';
 ```
 
 ## resultInfo

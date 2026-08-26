@@ -16,7 +16,7 @@ Defines the length property with number or number in units of vp.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| `\${number}vp` |
-| number |
+| Type | Description |
+| --- | --- |
+| `\${number}vp` |  |
+| number |  |

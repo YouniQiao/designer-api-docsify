@@ -14,9 +14,9 @@ Defines the color which can use resource.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
-| number |
-| string |
-| [Resource](arkts-arkui-resource-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |  |
+| number |  |
+| string |  |
+| [Resource](arkts-arkui-resource-t.md) |  |

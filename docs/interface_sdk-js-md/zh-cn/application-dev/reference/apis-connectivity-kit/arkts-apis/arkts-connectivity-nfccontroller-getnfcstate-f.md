@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import nfcController from '@kit.ConnectivityKit';
 ```
 
 ## getNfcState
@@ -22,6 +22,16 @@ function getNfcState(): NfcState
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) | NFC状态值，详细请见[NfcState]{ |
+
+**示例**
+
+```TypeScript
+import { nfcController } from '@kit.ConnectivityKit';
+
+// 查询nfc状态
+let nfcState: nfcController.NfcState = nfcController.getNfcState();
+console.info("nfcController on callback nfcstate: " + nfcState);
+```

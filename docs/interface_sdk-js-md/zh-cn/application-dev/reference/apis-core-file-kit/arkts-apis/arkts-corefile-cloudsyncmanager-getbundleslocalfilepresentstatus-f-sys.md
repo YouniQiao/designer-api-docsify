@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+import cloudSyncManager from '@kit.CoreFileKit';
 ```
 
 ## getBundlesLocalFilePresentStatus
@@ -24,23 +24,38 @@ function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<A
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleNames | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleNames | Array & lt;string & gt; | 是 | 需要检测的应用包名数组。每个元素为应用的包名字符串。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[LocalFilePresentStatus](arkts-corefile-cloudsyncmanager-localfilepresentstatus-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[LocalFilePresentStatus](arkts-corefile-cloudsyncmanager-localfilepresentstatus-i-sys.md)&gt;&gt; | Promise对象，返回对象数组，数组内每个对象包含指定检测的应用包名及其本地文件存在状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13600001 |
-| 13900010 |
-| 13900020 |
-| 22400005 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900010 | Try again. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameter are left unspecified. 2.The length of the input parameter exceeds the upper limit.  3.The input parameter contains an invalid bundleName. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundles: Array<string> = ['com.example.app1', 'com.example.app2'];
+cloudSyncManager.getBundlesLocalFilePresentStatus(bundles).then((results: Array<cloudSyncManager.LocalFilePresentStatus>) => {
+  results.forEach((item) => {
+    console.info(`bundle: ${item.bundleName}, hasLocalUncloudedFiles: ${item.isLocalFilePresent}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`getBundlesLocalFilePresentStatus failed, code: ${err.code}, message: ${err.message}`);
+});
+```

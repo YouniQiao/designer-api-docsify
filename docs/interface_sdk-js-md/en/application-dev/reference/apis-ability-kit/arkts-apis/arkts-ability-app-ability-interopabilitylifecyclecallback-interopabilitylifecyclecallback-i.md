@@ -9,7 +9,7 @@ The interop ability lifecycle callback.
 ## Modules to Import
 
 ```TypeScript
-import { InteropAbilityLifecycleCallback } from 'kits/@kit.AbilityKit';
+import InteropAbilityLifecycleCallback from '@kit.AbilityKit';
 ```
 
 ## onAbilityBackground

@@ -1,7 +1,7 @@
 # PermissionUsedType (System API)
 
 Enumerates the means for using a sensitive permission.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Description | | ----------------------- | -- | ---------------- | | [NORMAL_TYPE](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 0 | The sensitive permission is used after authorization through a dialog box or a system settings page. | | [PICKER_TYPE](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 1 | Indicates that a sensitive permission is used through a PICKER service, but this method does not grant the permission. | | [SECURITY_COMPONENT_TYPE](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 2 |
+| Name | Value| Description | | ----------------------- | -- | ---------------- | | NORMAL_TYPE | 0 | The sensitive permission is used after authorization through a dialog box or a system settings page. | | PICKER_TYPE | 1 | Indicates that a sensitive permission is used through a PICKER service, but this method does not grant the permission. | | SECURITY_COMPONENT_TYPE | 2 | Indicates that a sensitive permission is used through security component authorization. A security component is a system-provided authorization component; after the user taps it, the application can temporarily obtain the corresponding permission. |
 
 **Since:** 12
 

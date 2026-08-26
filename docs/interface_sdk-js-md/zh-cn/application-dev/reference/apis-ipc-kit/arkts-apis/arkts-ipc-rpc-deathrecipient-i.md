@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import rpc from '@kit.IPCKit';
 ```
 
 ## onRemoteDied
@@ -23,3 +23,16 @@ onRemoteDied(): void
 **起始版本：** 7
 
 **系统能力：** SystemCapability.Communication.IPC.Core
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyDeathRecipient implements rpc.DeathRecipient {
+  onRemoteDied() {
+    hilog.info(0x0000, 'testTag', 'server died');
+  }
+}
+```

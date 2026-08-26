@@ -31,9 +31,9 @@ getCurrentLocalPosition?(): Coordinate2D
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 鼠标光标位置相对于当前组件实时位置的左上角坐标。 |
 
 ## getHorizontalAxisValue
 
@@ -53,9 +53,9 @@ getHorizontalAxisValue(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 水平轴值。 |
 
 ## getPinchAxisScaleValue
 
@@ -75,9 +75,9 @@ getPinchAxisScaleValue(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 双指缩放比例。 |
 
 ## getVerticalAxisValue
 
@@ -97,9 +97,9 @@ getVerticalAxisValue(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 垂直轴值。 |
 
 ## hasAxis
 
@@ -119,15 +119,15 @@ hasAxis(axisType: AxisType): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | 是 | 轴事件的轴类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 此轴事件是否包含指定的轴类型。 |
 
 ## action
 

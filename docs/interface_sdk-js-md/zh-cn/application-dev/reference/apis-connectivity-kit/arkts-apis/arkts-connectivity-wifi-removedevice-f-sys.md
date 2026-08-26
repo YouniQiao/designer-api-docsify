@@ -3,7 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## removeDevice
@@ -28,12 +31,25 @@ function removeDevice(id: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | number | 是 | WLAN网络的ID， 可通过{ |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 操作成功时返回{ |
+
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    let id = 0;
+    wifi.removeDevice(id);        
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```

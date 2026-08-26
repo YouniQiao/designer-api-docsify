@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SpanModifier](arkts-arkui-spanmodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [SpanModifier](arkts-arkui-spanmodifier-c.md) | Defines Span Modifier@extends SpanAttribute @implements AttributeModifier & lt;SpanAttribute & gt; |

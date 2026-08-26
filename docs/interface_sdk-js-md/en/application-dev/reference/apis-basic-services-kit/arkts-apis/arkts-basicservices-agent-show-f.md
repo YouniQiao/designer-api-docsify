@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import request from '@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
 ```
 
 ## show
@@ -20,18 +21,18 @@ Queries the task details based on the task ID. This API uses an asynchronous cal
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | Task ID. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **TaskInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900006](../errorcode-request.md#21900006-task-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 
 
 ## show
@@ -48,20 +49,20 @@ Queries the task details based on the task ID. This API uses a promise to return
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | Task ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;TaskInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;TaskInfo & gt; | Promise used to return the **TaskInfo** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900006](../errorcode-request.md#21900006-task-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900006](../errorcode-request.md#21900006-task-not-found) | Task removed or not found. |

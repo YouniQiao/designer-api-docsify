@@ -14,14 +14,14 @@ AI session creation callback function type. Allows custom model initialization a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string | Yes |
-| params | string | Yes |
-| result | [OnAISessionCallback](arkts-arkweb-onaisessioncallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | The session task ID. |
+| params | string | Yes | Contextual data passed during creation. |
+| result | [OnAISessionCallback](arkts-arkweb-onaisessioncallback-t.md) | Yes | Callback function to notify the system of the creation result. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | The value **true** indicates that custom logic is used, skipping the system default behavior; **false** indicates that the system default logic continues to be executed. |

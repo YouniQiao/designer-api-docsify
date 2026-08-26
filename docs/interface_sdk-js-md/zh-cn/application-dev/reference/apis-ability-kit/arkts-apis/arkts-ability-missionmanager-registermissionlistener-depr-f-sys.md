@@ -27,12 +27,44 @@ function registerMissionListener(listener: MissionListener): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| listener | [MissionListener](arkts-ability-missionlistener-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| listener | [MissionListener](arkts-ability-missionlistener-i-sys.md) | 是 | 系统任务监听器。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 监听器的index值，由系统创建，在注册系统任务状态监听器时分配，和监听器一一对应 。 |
+
+**示例**
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+
+console.info('registerMissionListener');
+// 注册系统任务状态监听器
+let listenerId = missionManager.registerMissionListener({
+  onMissionCreated: (mission) => {
+    console.info('--------onMissionCreated-------');
+  },
+  onMissionDestroyed: (mission) => {
+    console.info('--------onMissionDestroyed-------');
+  },
+  onMissionSnapshotChanged: (mission) => {
+    console.info('--------onMissionSnapshotChanged-------');
+  },
+  onMissionMovedToFront: (mission) => {
+    console.info('--------onMissionMovedToFront-------');
+  },
+  onMissionIconUpdated: (mission, icon) => {
+    console.info('--------onMissionIconUpdated-------');
+  },
+  onMissionClosed: (mission) => {
+    console.info('--------onMissionClosed-------');
+  },
+  onMissionLabelUpdated: (mission) => {
+    console.info('--------onMissionLabelUpdated-------');
+  }
+});
+```

@@ -12,7 +12,7 @@ Action type add & remove.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'add' |
-| 'remove' |
+| Type | Description |
+| --- | --- |
+| 'add' |  |
+| 'remove' |  |

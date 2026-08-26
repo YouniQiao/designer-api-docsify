@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+import distributedDeviceManager from '@kit.DistributedServiceKit';
 ```
 
 ## createDeviceManager
@@ -20,18 +20,32 @@ Creates a **DeviceManager** instance. The **DeviceManager** instance is the entr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name of the application. The value is a string of 1 to 255 characters. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) |
+| Type | Description |
+| --- | --- |
+| [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | DeviceManager** instance created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+} catch(err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('createDeviceManager errCode:' + e.code + ',errMessage:' + e.message);
+}
+```

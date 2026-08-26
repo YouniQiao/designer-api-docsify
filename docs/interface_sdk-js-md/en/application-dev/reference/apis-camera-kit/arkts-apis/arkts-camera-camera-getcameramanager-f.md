@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getCameraManager
@@ -22,19 +21,37 @@ Obtains a CameraManager instance. This API returns the result synchronously.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CameraManager](arkts-camera-camera-cameramanager-i.md) |
+| Type | Description |
+| --- | --- |
+| [CameraManager](arkts-camera-camera-cameramanager-i.md) | CameraManager instance obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getCameraManager(context: common.BaseContext): camera.CameraManager | undefined {
+  let cameraManager: camera.CameraManager | undefined = undefined;
+  try {
+    cameraManager = camera.getCameraManager(context);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getCameraManager call failed. error code: ${err.code}`);
+  }
+  return cameraManager;
+}
+```

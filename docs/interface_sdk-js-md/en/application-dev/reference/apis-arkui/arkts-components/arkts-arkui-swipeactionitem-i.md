@@ -77,9 +77,9 @@ Callback invoked when the swipe state of the list item changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| state | [SwipeActionState](arkts-arkui-swipeactionstate-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| state | [SwipeActionState](arkts-arkui-swipeactionstate-e.md) | Yes |  |
 
 ## actionAreaDistance
 

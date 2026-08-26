@@ -13,5 +13,4 @@ Photo Functions object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```

@@ -9,7 +9,7 @@ Describes the PiP window information.
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
+import PiPWindow from '@kit.ArkUI';
 ```
 
 ## size

@@ -18,12 +18,52 @@ export function edgeColors(all: number): Edges<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| all | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| all | number | 是 | 边框颜色，ARGB格式，示例：0xffff00ff。 取值范围：[0, 0xffffffff] 超出范围时按边界值处理。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt; | 边框颜色均设置为传入值的边框颜色对象。 |
+
+**示例**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, edgeColors } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+renderNode.backgroundColor = 0xffd5d5d5;
+renderNode.borderWidth = { left: 8, top: 8, right: 8, bottom: 8 };
+renderNode.borderColor = edgeColors(0xff519db4);
+
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }.margin(30)
+  }
+}
+```

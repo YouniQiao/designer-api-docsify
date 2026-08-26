@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dialogRequest } from 'kits/@kit.AbilityKit';
+import dialogRequest from '@kit.AbilityKit';
 ```
 
 ## setRequestResult
@@ -28,12 +28,34 @@ setRequestResult(result: RequestResult): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| result | [RequestResult](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-requestresult-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| result | [RequestResult](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-requestresult-i-sys.md) | 是 | 模态弹框请求结果信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 从Want中获取请求方的RequestCallback
+      let requestCallback = dialogRequest.getRequestCallback(want);
+      let myResult: dialogRequest.RequestResult = {
+        result : dialogRequest.ResultCode.RESULT_CANCEL,
+      };
+      // 设置模态弹框的请求结果
+      requestCallback.setRequestResult(myResult);
+    } catch (err) {
+      console.error(`Failed to setRequestResult. Code: ${err.code}, message: ${err.message}`);
+    }
+  }
+}
+```

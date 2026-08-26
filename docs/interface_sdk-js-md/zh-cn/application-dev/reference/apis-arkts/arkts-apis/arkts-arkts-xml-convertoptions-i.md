@@ -2,7 +2,8 @@
 
 转换选项，用于自定义XML到JavaScript对象的转换行为，如控制是否修剪空白字符、是否忽略特定组件（声明、指令、属性、注释、CDATA、Doctype和文本等）， 以及指定输出对象中各类型组件的属性键名称。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 各键属性（declarationKey、instructionKey等）的取值应唯一，不可与其他键属性值重复，否则输出对象可能出现键名冲突。
 
 **起始版本：** 8
@@ -12,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { convertxml } from 'kits/@kit.ArkTS';
+import convertxml from '@kit.ArkTS';
 ```
 
 ## attributesKey

@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## getPortList
@@ -24,15 +25,22 @@ function getPortList(): Array<USBPort>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;USBPort & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;USBPort & gt; | USB端口描述信息列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [14400004](../errorcode-usb.md#14400004-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 18+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Normal application do not have permission to use system api. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| [14400004](../errorcode-usb.md#14400004-服务异常) |  |
+
+**示例**
+
+```TypeScript
+// 获取USB端口列表
+let ret: Array<usbManager.USBPort> = usbManager.getPortList();
+```

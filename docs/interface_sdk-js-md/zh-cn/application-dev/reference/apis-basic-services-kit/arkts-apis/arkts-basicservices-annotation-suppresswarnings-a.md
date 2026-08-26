@@ -13,8 +13,7 @@ export @interface SuppressWarnings
 ## 导入模块
 
 ```TypeScript
-import { Available, SuppressWarnings, SuppressWarningsType } from 'kits/@kit.BasicServicesKit';
-import { Available } from 'kits/@kit.BasicServicesKit';
+import { Available, SuppressWarnings, SuppressWarningsType } from '@kit.BasicServicesKit';
 ```
 
 ## rules

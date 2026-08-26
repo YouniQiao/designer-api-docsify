@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import font from '@kit.ArkUI';
 ```
 
 ## getUIFontConfig
@@ -24,6 +24,6 @@ function getUIFontConfig(): UIFontConfig
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [UIFontConfig](arkts-arkui-font-uifontconfig-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [UIFontConfig](arkts-arkui-font-uifontconfig-i.md) | Returns the ui font config |

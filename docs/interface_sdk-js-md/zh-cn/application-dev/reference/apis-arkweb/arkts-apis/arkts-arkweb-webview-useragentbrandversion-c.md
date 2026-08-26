@@ -9,7 +9,6 @@ UserAgentBrandVersion是ArkWeb框架中用于配置User-Agent客户端提示信�
 ## 导入模块
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getBrand
@@ -28,9 +27,13 @@ getBrand(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回品牌名称字符串。 |
+
+**示例**
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## getFullVersion
 
@@ -48,9 +51,15 @@ getFullVersion(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回完整版本号字符串。 |
+
+**示例**
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## getMajorVersion
 
@@ -68,9 +77,13 @@ getMajorVersion(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回主版本号字符串。 |
+
+**示例**
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setBrand
 
@@ -88,9 +101,13 @@ setBrand(brand: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| brand | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| brand | string | 是 | 品牌名称，不能为空字符串。 |
+
+**示例**
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setFullVersion
 
@@ -108,9 +125,15 @@ setFullVersion(fullVersion: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fullVersion | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fullVersion | string | 是 | 完整版本号，不能为空字符串。 |
+
+**示例**
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setMajorVersion
 
@@ -128,6 +151,10 @@ setMajorVersion(majorVersion: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [majorVersion](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-deviceinfo-con.md) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| majorVersion | string | 是 | 主版本号，不能为空字符串。 |
+
+**示例**
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。

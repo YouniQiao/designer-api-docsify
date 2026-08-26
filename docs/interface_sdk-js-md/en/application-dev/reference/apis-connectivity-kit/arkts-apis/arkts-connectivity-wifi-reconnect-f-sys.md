@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## reconnect
@@ -28,6 +31,18 @@ Re-connects to current network.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | { |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    wifi.reconnect();
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```

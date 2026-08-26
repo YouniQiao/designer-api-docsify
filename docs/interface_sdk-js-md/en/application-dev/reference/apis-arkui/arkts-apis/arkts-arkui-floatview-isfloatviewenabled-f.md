@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from 'kits/@kit.ArkUI';
+import floatView from '@kit.ArkUI';
 ```
 
 ## isFloatViewEnabled
@@ -13,7 +13,7 @@ function isFloatViewEnabled(): boolean
 ```
 
 Checks whether the device supports the float view.  
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Description| |------------|------------| | boolean |
+| Type| Description| |------------|------------| | boolean | Whether the device supports the float view. **true** to support; **false** otherwise.|
 
 **Since:** 26.0.0
 
@@ -23,6 +23,14 @@ Checks whether the device supports the float view.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true if the float view is enabled, otherwise false. |
+
+**Examples**
+
+```TypeScript
+// Check whether the current device supports the float view feature.
+let enable: boolean = floatView.isFloatViewEnabled();
+console.info('Float view enabled is: ' + enable);
+```

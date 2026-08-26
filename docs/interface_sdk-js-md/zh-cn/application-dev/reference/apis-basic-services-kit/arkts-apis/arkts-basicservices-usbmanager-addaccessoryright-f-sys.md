@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## addAccessoryRight
@@ -24,18 +25,48 @@ function addAccessoryRight(tokenId: number, accessory: USBAccessory): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| tokenId | number | 是 |
-| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tokenId | number | 是 | 应用程序的唯一标识符，可通过 [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md)获取。 |
+| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | 是 | USB配件对象，包含配件的标识和属性信息。可通过[getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md)获取 配件列表后获得。详细字段定义参见[USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)接口。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [14400004](../errorcode-usb.md#14400004-服务异常) |
-| [14400005](../errorcode-usb.md#14400005-数据库操作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Normal application do not have permission to use system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| [14400004](../errorcode-usb.md#14400004-服务异常) | Service exception. Possible causes:  1. No accessory is plugged in. |
+| [14400005](../errorcode-usb.md#14400005-数据库操作异常) | Database operation exception. |
+
+**示例**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+async function addAccessoryRightExample() {
+  // 为指定应用添加USB配件访问权限
+  try {
+    // 获取USB配件列表
+    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+    if (accList.length === 0) {
+      console.error('No USB accessory found');
+      return;
+    }
+    // 设置bundle信息标志
+    let flags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION |
+    bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY;
+    // 异步获取当前应用的bundle信息
+    let bundleInfo = await bundleManager.getBundleInfoForSelf(flags);
+    // 获取应用的tokenId
+    let tokenId: number = bundleInfo.appInfo.accessTokenId;
+    // 为应用添加USB配件访问权限
+    usbManager.addAccessoryRight(tokenId, accList[0]);
+    console.info('addAccessoryRight success');
+  } catch (error) {
+    console.error(`addAccessoryRight error ${error.code}, message is ${error.message}`);
+  }
+}
+```

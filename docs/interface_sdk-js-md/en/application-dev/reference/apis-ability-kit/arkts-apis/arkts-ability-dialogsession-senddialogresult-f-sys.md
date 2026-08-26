@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from 'kits/@kit.AbilityKit';
+import dialogSession from '@kit.AbilityKit';
 ```
 
 ## sendDialogResult
@@ -24,27 +24,62 @@ Sends a request for a dialog box. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dialogSessionId | string | Yes |
-| targetWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| isAllowed | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dialogSessionId | string | Yes | Session ID. |
+| targetWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Target of the request. |
+| isAllowed | boolean | Yes | Whether the target ability can be started. **true** if allowed, **false** otherwise. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { dialogSession, Want, UIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class UIExtAbility extends UIExtensionAbility {
+  onSessionCreate(want: Want, session: UIExtensionContentSession) {
+    // want is specified by the system. dialogSessionId is a built-in parameter.
+    let dialogSessionId = want?.parameters?.dialogSessionId.toString();
+
+    // Obtain DialogSessionInfo.
+    let dialogSessionInfo: dialogSession.DialogSessionInfo = dialogSession.getDialogSessionInfo(dialogSessionId);
+
+    let isAllow: boolean = true;
+
+    let targetWant: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+
+    try {
+      dialogSession.sendDialogResult(dialogSessionId, targetWant, isAllow)
+        .then((data) => {
+          console.info(`sendDialogResult success, pid: ${data}`);
+        }, (err: BusinessError) => {
+          console.error(`sendDialogResult error, errorCode: ${err.code}`);
+        });
+    } catch (err) {
+      console.error(`sendDialogResult error, errorCode: ${(err as BusinessError).code}`);
+    }
+  }
+}
+```
 
 
 ## sendDialogResult
@@ -65,19 +100,56 @@ Sends a request for a dialog box. This API uses an asynchronous callback to retu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dialogSessionId | string | Yes |
-| targetWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| isAllowed | boolean | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dialogSessionId | string | Yes | Session ID. |
+| targetWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Target of the request. |
+| isAllowed | boolean | Yes | Whether the target ability can be started. **true** if allowed, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { dialogSession, Want, UIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class UIExtAbility extends UIExtensionAbility {
+  onSessionCreate(want: Want, session: UIExtensionContentSession) {
+    // want is specified by the system. dialogSessionId is a built-in parameter.
+    let dialogSessionId = want?.parameters?.dialogSessionId.toString();
+
+    // Obtain DialogSessionInfo.
+    let dialogSessionInfo: dialogSession.DialogSessionInfo =
+      dialogSession.getDialogSessionInfo(dialogSessionId);
+
+    let isAllow: boolean = true;
+
+    let targetWant: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+
+    try {
+      dialogSession.sendDialogResult(dialogSessionId, targetWant, isAllow, (err, data) => {
+        if (err) {
+          console.error(`sendDialogResult error, errorCode: ${err.code}`);
+        } else {
+          console.info(`sendDialogResult success`);
+        }
+      });
+    } catch (err) {
+      console.error(`sendDialogResult error, errorCode: ${(err as BusinessError).code}`);
+    }
+  }
+}
+```

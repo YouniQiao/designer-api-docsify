@@ -11,6 +11,7 @@ Profiler tools for inspectors.@namespace Profiler
 ## Modules to Import
 
 ```TypeScript
+import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## Summary
@@ -18,8 +19,8 @@ Profiler tools for inspectors.@namespace Profiler
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [registerVsyncCallback](arkts-arkui-profiler-registervsynccallback-f-sys.md) |
-| [unregisterVsyncCallback](arkts-arkui-profiler-unregistervsynccallback-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [registerVsyncCallback](arkts-arkui-profiler-registervsynccallback-f-sys.md) | Registers vsync callback for profiler. |
+| [unregisterVsyncCallback](arkts-arkui-profiler-unregistervsynccallback-f-sys.md) | Unregisters vsync callback. |
 <!--DelEnd-->

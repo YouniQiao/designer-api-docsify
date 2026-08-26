@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## check
@@ -20,6 +19,12 @@ Obtains the list of objects that are leaked and registered using **jsLeakWatcher
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | List of leaked objects that are not reclaimed after GC is triggered. |
+
+**Examples**
+
+```TypeScript
+let leakObjlist:string = jsLeakWatcher.check();
+```

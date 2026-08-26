@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import usb from '@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKitManager';
+import serialManager from '@kit.BasicServicesKitManager.serial';
 ```
 
 ## closePipe
@@ -24,12 +26,19 @@ Closes a USB device pipe.Before you do this, call [usb.getDevices](arkts-basicse
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns **0** if the USB device pipe is closed successfully; returns an error code otherwise. |
+
+**Examples**
+
+```TypeScript
+let ret = usb.closePipe(devicepipe);
+console.info(`closePipe = ${ret}`);
+```

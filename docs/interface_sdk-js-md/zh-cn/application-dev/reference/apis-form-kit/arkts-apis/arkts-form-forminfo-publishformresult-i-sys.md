@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formInfo } from 'kits/@kit.FormKit';
+import formInfo from '@kit.FormKit';
 ```
 
 ## code

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import relationalStore from '@kit.ArkData';
 ```
 
 ## isTokenizerSupported
@@ -20,18 +20,26 @@ function isTokenizerSupported(tokenizer: Tokenizer): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [tokenizer](arkts-arkdata-relationalstore-storeconfig-i.md) | [Tokenizer](arkts-arkdata-relationalstore-tokenizer-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tokenizer | [Tokenizer](arkts-arkdata-relationalstore-tokenizer-e.md) | 是 | 需要被判断是否支持的分词器。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示当前平台支持当前传入的分词器，false表示当前平台不支持当前传入的分词器。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+let customType = relationalStore.Tokenizer.CUSTOM_TOKENIZER;
+let customTypeSupported = relationalStore.isTokenizerSupported(customType);
+console.info("custom tokenizer supported on current platform: " + customTypeSupported);
+```

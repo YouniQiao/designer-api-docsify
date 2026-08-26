@@ -29,15 +29,26 @@ Creates an instance of ChildrenMainSize.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [childDefaultSize](arkts-arkui-childrenmainsize-c.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| childDefaultSize | number | Yes | default main size, in vp. If the main axis is vertical, it indicates height. If the main axis is horizontal, it indicates width. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+@Builder
+function MyBuilder(value: string, size: number) {
+  Text(value)
+    .fontSize(size)
+}
+let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
+```
 
 ## splice
 
@@ -57,17 +68,17 @@ Changes children main size by removing or replacing existing elements and/or add
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| deleteCount | number | No |
-| childrenSize | Array & lt;number & gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Zero-based index at which to start changing the children main size. |
+| deleteCount | number | No | Indicating the number of children main size to remove from start. |
+| childrenSize | Array & lt;number & gt; | No | Add the new children main size, beginning from start. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## update
 
@@ -87,16 +98,16 @@ Updates main size for specified child.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| childSize | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | index of child to be updated. |
+| childSize | number | Yes | new section options. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## childDefaultSize
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## getPixelMap
@@ -30,15 +30,19 @@ getPixelMap(): image.PixelMap
 
 **返回值：**
 
-| 类型 |
-| --- |
-| image.PixelMap |
+| 类型 | 说明 |
+| --- | --- |
+| image.PixelMap | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced by the drawableDescriptor has been released.<br>**适用版本：** 26.0.0+ |
+
+**示例**
+
+示例请参考[LayeredDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)中的示例代码。
 
 ## invalidate
 
@@ -74,9 +78,9 @@ isReleased(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | DrawableDescriptor是否已被释放。true表示已释放，false表示未释放。 |
 
 ## load
 
@@ -94,16 +98,20 @@ load(): Promise<DrawableDescriptorLoadedResult>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)&gt; | 图片资源的加载结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) |
-| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) | resource loading failed. |
+| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced by the drawableDescriptor has been released.<br>**适用版本：** 26.0.0+ |
+
+**示例**
+
+示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)中的示例代码。
 
 ## loadSync
 
@@ -121,16 +129,20 @@ loadSync(): DrawableDescriptorLoadedResult
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md) | 图片资源的加载结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) |
-| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) | resource loading failed. |
+| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced by the drawableDescriptor has been released.<br>**适用版本：** 26.0.0+ |
+
+**示例**
+
+示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)中的示例代码。
 
 ## release
 
@@ -147,3 +159,32 @@ release(): void
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+```TypeScript
+import { DrawableDescriptor } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  private resManager = this.getUIContext().getHostContext()?.resourceManager;
+  // $r('app.media.startIcon')需要替换为开发者所需的图像资源文件。
+  private drawable: DrawableDescriptor | undefined =
+    this.resManager?.getDrawableDescriptor($r('app.media.startIcon').id);
+
+  build() {
+    Column() {
+      Button('release')
+        .onClick(() => {
+          this.drawable?.release()
+        })
+      Button('isReleased')
+        .onClick(() => {
+          let released = this.drawable?.isReleased()
+          console.info(`isReleased = ${released}`)
+        })
+    }
+  }
+}
+```

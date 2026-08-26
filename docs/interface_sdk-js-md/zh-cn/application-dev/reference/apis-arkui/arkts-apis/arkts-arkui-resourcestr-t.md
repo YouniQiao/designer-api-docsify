@@ -14,7 +14,7 @@ Defines the string which can use resource.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| string |
-| [Resource](arkts-arkui-resource-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| string |  |
+| [Resource](arkts-arkui-resource-t.md) |  |

@@ -2,7 +2,8 @@
 
 This module provides common features related to user key management, including user key uninstallation.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This topic describes only the system APIs provided by the module.
 
 **Since:** 15
@@ -12,7 +13,7 @@ This module provides common features related to user key management, including u
 ## Modules to Import
 
 ```TypeScript
-import { keyManager } from 'kits/@kit.CoreFileKit';
+import keyManager from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -20,7 +21,7 @@ import { keyManager } from 'kits/@kit.CoreFileKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [deactivateUserKey](arkts-corefile-keymanager-deactivateuserkey-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [deactivateUserKey](arkts-corefile-keymanager-deactivateuserkey-f-sys.md) | When the screen is locked, the specified user key is uninstalled synchronously. **(Currently, this API is available only to lock screen applications.)** |
 <!--DelEnd-->

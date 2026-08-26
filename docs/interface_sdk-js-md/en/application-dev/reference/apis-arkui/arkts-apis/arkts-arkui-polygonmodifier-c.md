@@ -26,6 +26,6 @@ Defines the normal update attribute function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | [PolygonAttribute](../arkts-components/arkts-arkui-polygon-attribute.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | [PolygonAttribute](../arkts-components/arkts-arkui-polygon-attribute.md) | Yes |  |

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getSimLabelSync
@@ -20,12 +19,22 @@ function getSimLabelSync(slotId: number): SimLabel
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| slotId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SimLabel](arkts-telephony-sim-simlabel-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SimLabel](arkts-telephony-sim-simlabel-i.md) | SIM卡标签。 |
+
+**示例**
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+
+
+let simLabel: sim.SimLabel = sim.getSimLabelSync(0);
+console.info(`The sim label is:` + simLabel);
+```

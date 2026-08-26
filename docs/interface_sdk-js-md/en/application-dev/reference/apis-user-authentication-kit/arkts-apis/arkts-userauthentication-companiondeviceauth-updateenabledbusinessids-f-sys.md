@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import companionDeviceAuth from '@kit.UserAuthenticationKit';
 ```
 
 ## updateEnabledBusinessIds
@@ -26,23 +26,38 @@ Updates the service scope supported by the specified companion device template. 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| templateId | Uint8Array | Yes |
-| [enabledBusinessIds](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| templateId | Uint8Array | Yes | ID of the target template. Unique ID of the template whose service scope is to be updated, which can be obtained through [getTemplateStatus](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#gettemplatestatus). |
+| enabledBusinessIds | number[] | Yes | ID set of services supported by the template. It indicates the list of service scenarios to be enabled, such as [DEFAULT] and [Service ID for unlocking the screen]. Different service IDs correspond to different authentication scenarios. You can configure the service IDs based on service requirements. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
-| [32600002](../errorcode-useriam.md#32600002-template-not-found) |
-| [32600003](../errorcode-useriam.md#32600003-invalid-service-id) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600002](../errorcode-useriam.md#32600002-template-not-found) | The template is not found. |
+| [32600003](../errorcode-useriam.md#32600003-invalid-service-id) | The business ID is invalid. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const templateId = new Uint8Array([1, 2, 3]);
+companionDeviceAuth.updateEnabledBusinessIds(templateId, [companionDeviceAuth.BusinessId.DEFAULT])
+  .then(() => {
+    console.info('business scope updated');
+  })
+  .catch((err: BusinessError) => {
+    console.error(`error has been captured: code: ${err.code}, message: ${err.message}`);
+  })
+```

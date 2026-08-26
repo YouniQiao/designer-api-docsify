@@ -2,10 +2,13 @@
 
 Input event monitor identity object.This object is created and returned by the system, serving as the unique identifier of the monitor.
 
-> **NOTE：**&gt;
-> - The object is empty and does not contain any accessible members.&gt;
+> **NOTE：**
+> 
+> - The object is empty and does not contain any accessible members.
+> 
 > - Developers cannot create this object on their own. It can only be obtained by registering through the
-> addLocalInputEventMonitor API.&gt;
+> addLocalInputEventMonitor API.
+> 
 > - It is used for identity verification when unregistering later.
 
 **Since:** 26.0.0

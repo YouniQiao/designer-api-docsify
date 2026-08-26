@@ -9,7 +9,7 @@ The EnvironmentCallback module provides capabilities to listen for system enviro
 ## Modules to Import
 
 ```TypeScript
-import { EnvironmentCallback } from 'kits/@kit.AbilityKit';
+import EnvironmentCallback from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdated
@@ -30,9 +30,13 @@ Called when the system configuration changes, after [a listener has been registe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | Configuration object after the change. |
+
+**Examples**
+
+See Usage of EnvironmentCallback.
 
 ## onMemoryLevel
 
@@ -52,6 +56,10 @@ Called when the system memory level changes, after [a listener has been register
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| level | AbilityConstant.MemoryLevel | Yes | Memory level, indicating the available memory of the entire device. |
+
+**Examples**
+
+See Usage of EnvironmentCallback.

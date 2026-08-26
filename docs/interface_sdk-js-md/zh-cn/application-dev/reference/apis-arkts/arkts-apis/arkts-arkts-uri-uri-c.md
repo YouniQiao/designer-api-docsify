@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { uri } from 'kits/@kit.ArkTS';
 ```
 
 ## addEncodedSegment
@@ -28,15 +27,23 @@ addEncodedSegment(pathSegment: string): URI
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| pathSegment | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pathSegment | string | 是 | 需要追加到路径部分的编码字段。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | 返回已追加字段的URI对象。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('http://www.test.com');
+const uriWithEncodedSegment = uriInstance.addEncodedSegment('my%20image.jpg');
+console.info(uriWithEncodedSegment.toString()); // http://www.test.com/my%20image.jpg
+```
 
 ## addQueryValue
 
@@ -54,16 +61,24 @@ addQueryValue(key: string, value: string): URI
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 需要添加查询参数的名称。 |
+| value | string | 是 | 需要添加查询参数的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | 返回添加查询部分后的URI对象。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('https://www.test.com');
+const newRoute = uriInstance.addQueryValue('param1', 'hello world');
+console.info(newRoute.toString()); // https://www.test.com?param1=hello%20world
+```
 
 ## addSegment
 
@@ -81,15 +96,23 @@ addSegment(pathSegment: string): URI
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| pathSegment | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pathSegment | string | 是 | 需要追加到路径部分的字段。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | 返回已追加字段的URI对象。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('http://www.test.com');
+const uriWithSegment = uriInstance.addSegment('my image.jpg');
+console.info(uriWithSegment.toString()); // http://www.test.com/my%20image.jpg
+```
 
 ## checkHierarchical
 
@@ -107,9 +130,18 @@ checkHierarchical(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果是分层的URI返回true，否则返回false。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('http://www.test.com/images/pic.jpg');
+console.info(`${uriInstance.checkHierarchical()}`); // true
+const uriInstance1 = new uri.URI('mailto:user@example.com');
+console.info(`${uriInstance1.checkHierarchical()}`); // false
+```
 
 ## checkIsAbsolute
 
@@ -127,9 +159,18 @@ checkIsAbsolute(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果是绝对URI返回true，否则返回false。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('https://username:password@www.qwer.com:8080?query=pppppp');
+console.info(`${uriInstance.checkIsAbsolute()}`); // true
+const uriInstance1 = new uri.URI('xxx.com/suppliers.htm');
+console.info(`${uriInstance1.checkIsAbsolute()}`); // false
+```
 
 ## checkOpaque
 
@@ -147,9 +188,18 @@ checkOpaque(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果是不透明的URI返回true，否则返回false。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('http://www.test.com/images/pic.jpg');
+console.info(`${uriInstance.checkOpaque()}`); // false
+const uriInstance1 = new uri.URI('mailto:user@example.com');
+console.info(`${uriInstance1.checkOpaque()}`); // true
+```
 
 ## checkRelative
 
@@ -167,9 +217,18 @@ checkRelative(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果是相对URI返回true，否则返回false。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('https://username:password@www.qwer.com:8080?query=p');
+console.info(`${uriInstance.checkRelative()}`); // false
+const uriInstance1 = new uri.URI('/images/pic.jpg');
+console.info(`${uriInstance1.checkRelative()}`); // true
+```
 
 ## clearQuery
 
@@ -187,9 +246,16 @@ clearQuery(): URI
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | 返回一个已被清除查询部分的URI对象。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('https://www.test.com?param1=value1');
+console.info(uriInstance.clearQuery().toString()); // https://www.test.com
+```
 
 ## constructor
 
@@ -207,15 +273,26 @@ constructor(uri: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [uri](arkts-uri.md) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 需要解析的URI字符串，需符合RFC3986规范标准。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid uri string. |
+
+**示例**
+
+```TypeScript
+let uriString = 'https://username:password@host:8080/directory/file?foo=1&bar=2#fragment';
+new uri.URI(uriString);
+```
+
+```TypeScript
+new uri.URI('https://username:password@host:8080');
+```
 
 ## createFromParts
 
@@ -233,17 +310,24 @@ static createFromParts(scheme: string, ssp: string, fragment: string): URI
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [scheme](#scheme) | string | 是 |
-| [ssp](arkts-arkts-uri-uri-c.md) | string | 是 |
-| [fragment](arkts-arkts-uri-uri-c.md) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scheme | string | 是 | 此URI方案部分。该参数需符合URI协议标准。 |
+| ssp | string | 是 | 此URI的方案特定部分，即位于协议分隔符“:”和片段分隔符“#”之间的所有内容，这部分将被编码。 |
+| fragment | string | 是 | 此URI的片段部分，即“#”符号后面的内容，如果未定义则为空，这部分也将被编码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | 返回由给定方案、方案特定部分和片段创建的URI对象。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = uri.URI.createFromParts('mailto', 'no body', 'top');
+console.info(uriInstance.toString()); // mailto:no%20body#top
+```
 
 ## equals
 
@@ -263,15 +347,23 @@ equals(other: URI): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| other | [URI](arkts-arkts-uri-uri-c.md) | 是 | 需要比较的URI对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示相等，否则返回false。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+const uriInstance1 = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+uriInstance.equals(uriInstance1); // true
+```
 
 ## equalsTo
 
@@ -289,15 +381,23 @@ equalsTo(other: URI): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| other | [URI](arkts-arkts-uri-uri-c.md) | 是 | 需要比较的URI对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示相等，否则返回false。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+const uriInstance1 = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+let result = uriInstance.equalsTo(uriInstance1); // true
+```
 
 ## getBooleanQueryValue
 
@@ -315,16 +415,31 @@ getBooleanQueryValue(key: string, defaultValue: boolean): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
-| defaultValue | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 要获取的查询参数的名称。 |
+| defaultValue | boolean | 是 | 设置查询参数中未包含指定键时返回的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果指定的查询参数不存在，则返回defaultValue的值；查询参数对应第一个值为“false”或者“0”返回false，否则返回true。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('https://www.test.com/search?active=true');
+console.info(`${uriInstance.getBooleanQueryValue('active', false)}`); // true
+const uriInstance1 = new uri.URI('https://www.test.com/search');
+console.info(`${uriInstance1.getBooleanQueryValue('active', false)}`); // false
+const uriInstance2 = new uri.URI('https://www.test.com/search?active=aa&active=false');
+console.info(`${uriInstance2.getBooleanQueryValue('active', false)}`); // true
+const uriInstance3 = new uri.URI('https://www.test.com/search?active=0');
+console.info(`${uriInstance3.getBooleanQueryValue('active', true)}`); // false
+const uriInstance4 = new uri.URI('https://www.test.com/search');
+console.info(`${uriInstance4.getBooleanQueryValue('active', true)}`); // true
+```
 
 ## getLastSegment
 
@@ -342,9 +457,16 @@ getLastSegment(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回此URI路径中的最后一个段，如果路径为空则返回null。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('content://com.test.provider/files/image.jpg');
+console.info(uriInstance.getLastSegment()); // image.jpg
+```
 
 ## getQueryNames
 
@@ -362,9 +484,17 @@ getQueryNames(): string[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string[] |
+| 类型 | 说明 |
+| --- | --- |
+| string[] | 返回URI查询部分中所有不重复的已解码参数名集合。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('https://www.test.com?param1=value1&param2=value2');
+const paramNames = uriInstance.getQueryNames();
+console.info(paramNames.toString()); // param1,param2
+```
 
 ## getQueryValue
 
@@ -382,15 +512,25 @@ getQueryValue(key: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 此URI查询参数的名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回经解码处理后的URI查询参数的第一个值，若未找到对应值则返回null对象。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('https://www.com?param1=value1&param2=value2');
+console.info(uriInstance.getQueryValue('param1')); // value1
+const uriInstance1 = new uri.URI('https://www.zyy.ss?sa%3D=po%7E');
+console.info(uriInstance1.getQueryValue('sa=')) // po~
+console.info(uriInstance1.getQueryValue('abc')) // null
+```
 
 ## getQueryValues
 
@@ -408,15 +548,23 @@ getQueryValues(key: string): string[]
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 指定键的名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string[] |
+| 类型 | 说明 |
+| --- | --- |
+| string[] | 返回此URI中查询参数内指定键对应所有值的集合，若没有找到则返回一个空字符串数组[]。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('https://www.test.com/search?query=name&query=my');
+console.info(uriInstance.getQueryValues('query').toString()); // name,my
+console.info(JSON.stringify(uriInstance.getQueryValues('abc'))); // []
+```
 
 ## getSegment
 
@@ -434,9 +582,16 @@ getSegment(): string[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string[] |
+| 类型 | 说明 |
+| --- | --- |
+| string[] | 返回此URI中已解码的所有路径段，各段前后均不含 “/”。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('http://www.test.com/path/to/image.jpg');
+console.info(uriInstance.getSegment().toString()); // path,to,image.jpg
+```
 
 ## normalize
 
@@ -446,10 +601,14 @@ normalize(): URI
 
 规范化此URI的路径，适用于处理包含点段（.或..）的路径场景。
 
-> **说明：**&gt;
-> 如果此URI是不透明的，或者其路径已经是规范形式，则返回该URI。否则将构造一个新的URI，该URI与当前URI相同，唯一的区别是其路径通过规范化当前URI的路径来计算，具体规则如下：&gt;
-> 1.移除所有的 .（点）段。&gt;
-> 2.如果 ..（双点）段前面有一个非 .. 段，则将这两个段一起移除。重复此步骤，直到不再适用为止。&gt;
+> **说明：**
+> 
+> 如果此URI是不透明的，或者其路径已经是规范形式，则返回该URI。否则将构造一个新的URI，该URI与当前URI相同，唯一的区别是其路径通过规范化当前URI的路径来计算，具体规则如下：
+> 
+> 1.移除所有的 .（点）段。
+> 
+> 2.如果 ..（双点）段前面有一个非 .. 段，则将这两个段一起移除。重复此步骤，直到不再适用为止。
+> 
 > 如果路径规范化后以 ..（双点）段开头，这表明之前没有足够的非 .. 段可以移除，因此路径将以 .. 段开始。
 
 **起始版本：** 8
@@ -460,9 +619,24 @@ normalize(): URI
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | 返回一个path被规范化后的URI对象。 |
+
+**示例**
+
+```TypeScript
+const uriInstance = new uri.URI('https://username:password@www.qwer.com:8080/path/path1/../path2/./path3?query=pppppp');
+console.info(uriInstance.path); // /path/path1/../path2/./path3
+// 规范化path后，移除所有的.（点）段,如果 ..（双点）段前面有一个非 .. 段，则将这两个段一起移除。
+const uriInstance1 = uriInstance.normalize();
+console.info(uriInstance1.path); // /path/path2/path3
+let uri1 = new uri.URI('http://www.test.com/../../patch/path1/../path2/path3/./path4/../');
+console.info(uri1.path); // /../../patch/path1/../path2/path3/./path4/../
+// 如果路径规范化后以 ..（双点）段开头，这表明之前没有足够的非 .. 段可以移除，因此路径将以 .. 段开始。
+let uri2 = uri1.normalize();
+console.info(uri2.path); // /../../patch/path2/path3
+```
 
 ## toString
 
@@ -480,9 +654,16 @@ toString(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回URI的字符串序列化。 |
+
+**示例**
+
+```TypeScript
+const result = new uri.URI('https://username:password@host:8080/directory/file?ab=pppppp#qwer da');
+let result1 = result.toString(); // https://username:password@host:8080/directory/file?ab=pppppp#qwer%20da
+```
 
 ## authority
 

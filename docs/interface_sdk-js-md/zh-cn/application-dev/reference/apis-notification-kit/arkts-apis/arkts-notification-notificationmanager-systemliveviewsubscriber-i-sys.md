@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import notificationManager from '@kit.NotificationKit';
 ```
 
 ## onResponse
@@ -30,7 +30,7 @@ onResponse?: (notificationId: number, buttonOptions: ButtonOptions) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| notificationId | number | 是 |
-| buttonOptions | [ButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-buttonoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| notificationId | number | 是 |  |
+| buttonOptions | [ButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-buttonoptions-i.md) | 是 |  |

@@ -9,7 +9,7 @@ Preferences实例配置选项。
 ## 导入模块
 
 ```TypeScript
-import { preferences } from 'kits/@kit.ArkData';
+import preferences from '@kit.ArkData';
 ```
 
 ## dataGroupId

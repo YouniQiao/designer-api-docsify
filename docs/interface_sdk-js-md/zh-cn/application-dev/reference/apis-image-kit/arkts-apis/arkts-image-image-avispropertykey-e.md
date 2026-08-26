@@ -2,7 +2,8 @@
 
 表示AVIS图片信息的枚举。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 返回字段类型具体参考[AvisMetadata](arkts-image-image-avismetadata-c.md)。
 
 **起始版本：** 26.0.0

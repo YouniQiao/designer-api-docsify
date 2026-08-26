@@ -13,14 +13,14 @@ new <K extends object = object, V = any>(entries?: readonly [K, V][] | null): We
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| entries | readonly [K, V][] \| null | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| entries | readonly [K, V][] \| null | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## prototype
 
 ```TypeScript

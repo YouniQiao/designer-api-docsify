@@ -43,10 +43,10 @@ fail?: (data: string, code: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | string | 是 |
-| code | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | string | 是 |  |
+| code | number | 是 |  |
 
 ## success
 
@@ -64,9 +64,9 @@ success?: (file: FileResponse) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| file | [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md) | 是 |  |
 
 ## recursive
 

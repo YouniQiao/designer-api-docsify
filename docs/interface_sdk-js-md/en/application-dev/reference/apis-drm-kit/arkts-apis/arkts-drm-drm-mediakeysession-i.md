@@ -9,7 +9,7 @@ MediaKeySession implements media key management. Before calling any API in Media
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'kits/@kit.DrmKit';
+import drm from '@kit.DrmKit';
 ```
 
 ## checkMediaKeyStatus
@@ -28,16 +28,26 @@ Checks the status of the media keys in use.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MediaKeyStatus](arkts-drm-drm-mediakeystatus-i.md)[] |
+| Type | Description |
+| --- | --- |
+| [MediaKeyStatus](arkts-drm-drm-mediakeystatus-i.md)[] | Media key status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+let keyStatus: drm.MediaKeyStatus[] =  mediaKeySession.checkMediaKeyStatus();
+```
 
 ## clearMediaKeys
 
@@ -55,10 +65,25 @@ Clears the media keys in use.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyResponse is obtained from the DRM service. Pass in the actual value as required.
+let mediaKeyResponse = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.processMediaKeyResponse(mediaKeyResponse).then((mediaKeyId: Uint8Array) => {
+  console.info('processMediaKeyResponse:' + mediaKeyId);
+});
+mediaKeySession.clearMediaKeys();
+```
 
 ## destroy
 
@@ -76,10 +101,27 @@ Destroys this MediaKeySession instance.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+mediaKeySession.destroy();
+```
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+mediaKeySystem.destroy();
+```
 
 ## generateMediaKeyRequest
 
@@ -97,26 +139,40 @@ Generates a media key request. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mimeType | string | Yes |
-| initData | Uint8Array | Yes |
-| mediaKeyType | number | Yes |
-| options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mimeType | string | Yes | MIME type. The supported DRM solution names can be obtained by calling [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md). |
+| initData | Uint8Array | Yes | Initial data. |
+| mediaKeyType | number | Yes | Type of the media key. The value **0** means an online media key, and **1** means an offline media key. |
+| options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | No | Optional data. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[MediaKeyRequest](arkts-drm-drm-mediakeyrequest-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[MediaKeyRequest](arkts-drm-drm-mediakeyrequest-i.md)&gt; | Promise used to return the media key request generated. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// Protection System Specific Header (PSSH) data is embedded in the encrypted stream. For MP4 files, it is located in the pssh box. In DASH streams, it is located in the MPD and MP4 pssh box. For HLS + TS streams, it is located in the m3u8 file and each TS segment. Pass in the actual value as required.
+let uint8pssh = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.generateMediaKeyRequest('video/avc', uint8pssh, drm.MediaKeyType.MEDIA_KEY_TYPE_ONLINE).then((mediaKeyRequest: drm.MediaKeyRequest) =>{
+  console.info('generateMediaKeyRequest' + mediaKeyRequest);
+});
+```
 
 ## generateOfflineReleaseRequest
 
@@ -134,23 +190,37 @@ Generates a request to release offline media keys. This API uses a promise to re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mediaKeyId | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mediaKeyId | Uint8Array | Yes | Array of offline media key IDs. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Uint8Array & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Uint8Array & gt; | Promise used to return the request generated if the DRM solution on the device supports the release of offline media keys. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyId is the return value of processMediaKeyResponse or getOfflineMediaKeyIds. Pass in the actual value as required.
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.generateOfflineReleaseRequest(mediaKeyId).then((offlineReleaseRequest: Uint8Array) => {
+  console.info('generateOfflineReleaseRequest:' + offlineReleaseRequest);
+});
+```
 
 ## getContentProtectionLevel
 
@@ -168,16 +238,27 @@ Obtains the content protection level of this media key session.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) |
+| Type | Description |
+| --- | --- |
+| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Content protection level. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+let contentProtectionLevel: drm.ContentProtectionLevel = mediaKeySession.getContentProtectionLevel();
+console.info(`contentProtectionLevel: ${contentProtectionLevel}`);
+```
 
 ## off('keyRequired')
 
@@ -195,17 +276,17 @@ Unsubscribes from events indicating that the application requests a media key. T
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keyRequired' | Yes |
-| callback | (eventInfo: EventInfo) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyRequired' | Yes | Event type. The value is fixed at **'keyRequired'**. |
+| callback | (eventInfo: EventInfo) = & gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## off('keyExpired')
 
@@ -223,17 +304,17 @@ Unsubscribes from events indicating that a media key expires. This API uses an a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keyExpired' | Yes |
-| callback | (eventInfo: EventInfo) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyExpired' | Yes | Event type. The value is fixed at **'keyExpired'**. |
+| callback | (eventInfo: EventInfo) = & gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## off('vendorDefined')
 
@@ -251,17 +332,17 @@ Unsubscribes from vendor-defined events. This API uses an asynchronous callback 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'vendorDefined' | Yes |
-| callback | (eventInfo: EventInfo) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'vendorDefined' | Yes | Event type. The value is fixed at **'vendorDefined'**. |
+| callback | (eventInfo: EventInfo) = & gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## off('expirationUpdate')
 
@@ -279,17 +360,17 @@ Unsubscribes from events indicating that a media key is updated upon expiry. Thi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'expirationUpdate' | Yes |
-| callback | (eventInfo: EventInfo) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'expirationUpdate' | Yes | Event type. The value is fixed at **'expirationUpdate'**. |
+| callback | (eventInfo: EventInfo) = & gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## off('keysChange')
 
@@ -307,17 +388,17 @@ Unsubscribes from events indicating that a media key changes. This API uses an a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keysChange' | Yes |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keysChange' | Yes | Event type. The value is fixed at **'keysChange'**. |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | No | Callback used to return the event information, including a list of key IDs, descriptions of their statuses, and whether each key is available. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## on('keyRequired')
 
@@ -335,17 +416,17 @@ Subscribes to events indicating that the application requests a media key. This 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keyRequired' | Yes |
-| callback | (eventInfo: EventInfo) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyRequired' | Yes | Event type. The value is fixed at **'keyRequired'**, which is triggered when the application requires a media key. |
+| callback | (eventInfo: EventInfo) = & gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## on('keyExpired')
 
@@ -363,17 +444,17 @@ Subscribes to events indicating that a media key expires. This API uses an async
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keyExpired' | Yes |
-| callback | (eventInfo: EventInfo) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyExpired' | Yes | Event type. The value is fixed at **'keyExpired'**, which is triggered when a media key expires. |
+| callback | (eventInfo: EventInfo) = & gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## on('vendorDefined')
 
@@ -391,17 +472,17 @@ Subscribes to vendor-defined events. This API uses an asynchronous callback to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'vendorDefined' | Yes |
-| callback | (eventInfo: EventInfo) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'vendorDefined' | Yes | Event type. The value is fixed at **'vendorDefined'**, which is triggered when a vendor-defined event occurs. |
+| callback | (eventInfo: EventInfo) = & gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## on('expirationUpdate')
 
@@ -419,17 +500,17 @@ Subscribes to events indicating that a media key is updated upon expiry. This AP
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'expirationUpdate' | Yes |
-| callback | (eventInfo: EventInfo) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'expirationUpdate' | Yes | Event type. The value is fixed at **'expirationUpdate'**, which is triggered when a media key is updated upon expiry. |
+| callback | (eventInfo: EventInfo) = & gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## on('keysChange')
 
@@ -447,17 +528,17 @@ Subscribes to events indicating that a media key changes. This API uses an async
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keysChange' | Yes |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keysChange' | Yes | Event type. The value is fixed at **'keysChange'**, which is triggered when a media key changes. |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | Yes | Callback used to return the event information, including a list of key IDs, descriptions of their statuses, and whether each key is available. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## processMediaKeyResponse
 
@@ -475,23 +556,37 @@ Processes a media key response. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| response | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| response | Uint8Array | Yes | Media key response. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Uint8Array & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Uint8Array & gt; | Promise used to return an array of media key IDs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyResponse is obtained from the DRM service. Pass in the actual value as required.
+let mediaKeyResponse = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.processMediaKeyResponse(mediaKeyResponse).then((mediaKeyId: Uint8Array) => {
+  console.info('processMediaKeyResponse:' + mediaKeyId);
+});
+```
 
 ## processOfflineReleaseResponse
 
@@ -509,24 +604,43 @@ Processes a response to a request for releasing offline media keys. This API use
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mediaKeyId | Uint8Array | Yes |
-| response | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mediaKeyId | Uint8Array | Yes | Array of offline media key IDs. |
+| response | Uint8Array | Yes | Response to the request for releasing offline media keys. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result if the DRM solution on the device supports the release of offline media keys. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyId is the return value of processMediaKeyResponse or getOfflineMediaKeyIds. Apply for memory based on the actual length.
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.generateOfflineReleaseRequest(mediaKeyId).then((offlineReleaseRequest: Uint8Array) => {
+  console.info('generateOfflineReleaseRequest:' + offlineReleaseRequest);
+});
+// offlineReleaseResponse is obtained from the DRM service. Apply for memory based on the actual length.
+let offlineReleaseResponse = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.processOfflineReleaseResponse(mediaKeyId, offlineReleaseResponse).then(() => {
+  console.info('processOfflineReleaseResponse');
+});
+```
 
 ## requireSecureDecoderModule
 
@@ -544,23 +658,33 @@ Checks whether secure decoding is required.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mimeType | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mimeType | string | Yes | MIME type. The supported MIME types depend on the DRM solution and can be obtained by calling [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result for whether secure decoding is required. **true** if required, **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+let status: boolean = mediaKeySession.requireSecureDecoderModule('video/avc');
+```
 
 ## restoreOfflineMediaKeys
 
@@ -578,20 +702,34 @@ Restores offline media keys. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mediaKeyId | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mediaKeyId | Uint8Array | Yes | Array of offline media key IDs. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyId is the return value of processMediaKeyResponse or getOfflineMediaKeyIds. Pass in the actual value as required.
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.restoreOfflineMediaKeys(mediaKeyId).then(() => {
+  console.info("restoreOfflineMediaKeys");
+});
+```

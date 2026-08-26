@@ -16,7 +16,7 @@ declare type GestureEventListenerCallback = (event: GestureEvent, node?: FrameNo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [GestureEvent](arkts-arkui-gestureevent-i.md) | 是 |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [GestureEvent](arkts-arkui-gestureevent-i.md) | 是 | 触发事件监听的手势事件的相关信息。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 否 | 触发事件监听的手势事件所绑定的组件。 |

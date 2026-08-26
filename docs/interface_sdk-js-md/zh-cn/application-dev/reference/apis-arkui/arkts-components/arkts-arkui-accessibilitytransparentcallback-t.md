@@ -16,6 +16,6 @@ Defines the callback type used in accessibility hover transparent event.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [TouchEvent](arkts-arkui-touchevent-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [TouchEvent](arkts-arkui-touchevent-i.md) | 是 | The value of event contains information about original accessibility hover event. |

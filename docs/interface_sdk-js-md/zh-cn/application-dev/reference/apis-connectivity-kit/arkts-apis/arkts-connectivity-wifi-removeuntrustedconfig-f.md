@@ -3,7 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## removeUntrustedConfig
@@ -26,15 +29,48 @@ function removeUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | WLAN配置信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | 表示操作结果，{ |
+
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+  let config:wifi.WifiDeviceConfig = {
+    ssid : "****",
+    bssid:  "****",
+    preSharedKey: "****",
+    isHiddenSsid: false,
+    securityType: 0,
+    creatorUid: 0,
+    disableReason: 0,
+    netId: 0,
+    randomMacType: 0,
+    randomMacAddr:  "****",
+    ipType: 0,
+    staticIp: {
+      ipAddress: 0,
+      gateway: 0,
+      dnsServers: [],
+      domains: []
+    }
+  }
+  wifi.removeUntrustedConfig(config).then(result => {
+    console.info("result:" + JSON.stringify(result));
+  });  
+}catch(error){
+  console.error("failed:" + JSON.stringify(error));
+}
+```
 
 
 ## removeUntrustedConfig
@@ -57,7 +93,40 @@ function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | WLAN配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |  |
+
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+  let config:wifi.WifiDeviceConfig = {
+    ssid : "****",
+    bssid:  "****",
+    preSharedKey: "****",
+    isHiddenSsid: false,
+    securityType: 0,
+    creatorUid: 0,
+    disableReason: 0,
+    netId: 0,
+    randomMacType: 0,
+    randomMacAddr:  "****",
+    ipType: 0,
+    staticIp: {
+      ipAddress: 0,
+      gateway: 0,
+      dnsServers: [],
+      domains: []
+    }
+  }
+  wifi.removeUntrustedConfig(config, (error, result) => {
+  console.info("result:" + JSON.stringify(result));
+  });  
+}catch(error){
+  console.error("failed:" + JSON.stringify(error));
+}
+```

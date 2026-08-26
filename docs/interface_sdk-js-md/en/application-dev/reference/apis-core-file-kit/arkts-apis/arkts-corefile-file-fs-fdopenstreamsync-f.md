@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## fdopenStreamSync
@@ -24,45 +22,54 @@ Opens a stream based on an FD. This API returns the result synchronously. To clo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
-| mode | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | FD of the file. |
+| mode | string | Yes | r**: Open a file for reading. The file must exist.   - **r+**: Open a file for both reading and writing. The file must exist.   - **w**: Open a file for writing. If the file exists, clear its content. If the file does not exist, create a file.   - **w+**: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist, create a file.   - **a**: Open a file in append mode for writing at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved).   - **a+**: Open a file in append mode for reading or updating at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Stream](arkts-corefile-file-fs-stream-i.md) |
+| Type | Description |
+| --- | --- |
+| [Stream](arkts-corefile-file-fs-stream-i.md) | File stream. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900001 |
-| 13900002 |
-| 13900004 |
-| 13900006 |
-| 13900008 |
-| 13900010 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900014 |
-| 13900015 |
-| 13900017 |
-| 13900018 |
-| 13900019 |
-| 13900020 |
-| 13900022 |
-| 13900023 |
-| 13900024 |
-| 13900025 |
-| 13900027 |
-| 13900029 |
-| 13900030 |
-| 13900033 |
-| 13900034 |
-| 13900038 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too number |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_ONLY | fileIo.OpenMode.CREATE);
+let stream = fileIo.fdopenStreamSync(file.fd, "r+");
+stream.closeSync();
+```

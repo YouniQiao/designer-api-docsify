@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { installer } from 'kits/@kit.AbilityKit';
+import installer from '@kit.AbilityKit';
 ```
 
 ## moduleName

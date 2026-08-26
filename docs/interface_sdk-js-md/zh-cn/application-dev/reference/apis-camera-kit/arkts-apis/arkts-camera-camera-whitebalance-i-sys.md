@@ -11,7 +11,6 @@ WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getWhiteBalanceGains
@@ -32,16 +31,16 @@ Gets RGB white balance gain values.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [WhiteBalanceGains](arkts-camera-camera-whitebalancegains-i-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [WhiteBalanceGains](arkts-camera-camera-whitebalancegains-i-sys.md) | The current RGB white balance gain values. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setWhiteBalanceGains
 
@@ -61,13 +60,13 @@ Sets RGB white balance gain values.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| gains | [WhiteBalanceGains](arkts-camera-camera-whitebalancegains-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| gains | [WhiteBalanceGains](arkts-camera-camera-whitebalancegains-i-sys.md) | 是 | RGB white balance gain values. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |

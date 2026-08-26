@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from 'kits/@kit.MDMKit';
+import applicationManager from '@kit.MDMKit';
 ```
 
 ## isAppKioskAllowed
@@ -22,12 +22,26 @@ Checks whether an application is allowed to run in kiosk mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| appIdentifier | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| appIdentifier | string | Yes | [Unique identifiers](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md) of an application. You can call the [bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfo-f.md) API to obtain the **bundleInfo.signatureInfo.appIdentifier**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | The value **true** means the application can run in kiosk mode; the value **false** means the opposite. |
+
+**Examples**
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+
+try {
+  // Replace it as required.
+  let isAllowed: boolean = applicationManager.isAppKioskAllowed('6917****3569');
+  console.info(`Succeeded in querying if the app is allowed kiosk, isAllowed: ${isAllowed}`);
+} catch (err) {
+  console.error(`Failed to query if the app is allowed kiosk. Code is ${err.code}, message is ${err.message}`);
+}
+```

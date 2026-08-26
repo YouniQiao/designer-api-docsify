@@ -2,7 +2,8 @@
 
 Boids simulation parameters used to configure the behavioral attributes of each individual.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > A simulation frame refers to the update cycle executed at a fixed time step in the Boids simulation, similar to FixedUpdate in Unity.
 > The default time step is 16 ms (approximately 62.5 FPS). The simulation is driven by accumulating real time and consuming it in fixed steps.
 > The default values of some parameters below are calculated based on this time step:

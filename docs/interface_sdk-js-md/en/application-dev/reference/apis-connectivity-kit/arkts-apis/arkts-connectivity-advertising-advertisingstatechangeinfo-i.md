@@ -9,7 +9,7 @@ Represents the advertising state change information.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.ConnectivityKit';
+import advertising from '@kit.ConnectivityKit';
 ```
 
 ## advertisingId

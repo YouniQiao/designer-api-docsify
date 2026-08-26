@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cdsm } from 'kits/@kit.ConnectivityKit';
+import cdsm from '@kit.ConnectivityKit';
 ```
 
 ## createCdsmClient
@@ -24,23 +24,23 @@ Creates a CDSM client instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| address | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| address | string | Yes | Address of a member device in the paired and connected coordinated devices set. The address format is **11:22:33:AA:BB:FF**. The address must contain six segments, each segment is a string of two hexadecimal characters, and the segments are separated by colons (:). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) |
+| Type | Description |
+| --- | --- |
+| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | CdsmClient** instance used to query and subscribe to the CDSM information of a remote device. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 36100003 |
-| 36100041 |
-| 36100050 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
+| 36100003 | NearLink disabled. |
+| 36100041 | Invalid address. |
+| 36100050 | Coordinated Devices Set Management not supported. |
+| 36100099 | Operation failed. |

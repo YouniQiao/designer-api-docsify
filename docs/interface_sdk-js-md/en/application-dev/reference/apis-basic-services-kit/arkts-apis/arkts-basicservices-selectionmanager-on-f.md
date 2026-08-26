@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
+import selectionManager from '@kit.BasicServicesKit';
 ```
 
 ## on('selectionCompleted')
@@ -21,13 +21,28 @@ off('selectionCompleted') is used to unsubscribe from the event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'selectionCompleted' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'selectionCompleted' | Yes | Event type, which is **'selectionCompleted'**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)&gt; | Yes | Callback used to return [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md). This callback is triggered only when the user selects text using the mouse or touchpad (by number-clicking, triple-clicking, or sliding the left mouse button) and then presses **Ctrl**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [33600003](../errorcode-selection.md#33600003-api-caller-and-word-selection-application-mismatched) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [33600003](../errorcode-selection.md#33600003-api-caller-and-word-selection-application-mismatched) | The application calling the API does not match the application selected in the system settings. |
+
+**Examples**
+
+```TypeScript
+import { selectionManager } from '@kit.BasicServicesKit';
+
+try {
+  // Subscribe to the word selection completion event.
+  selectionManager.on('selectionCompleted', (info: selectionManager.SelectionInfo) => {
+    console.info('Enter the callback function.');
+  });
+} catch (err) {
+  console.error(`Failed to register selectionCompleted callback. Error code: ${err.code}, error message: ${err.message}`);
+}
+```

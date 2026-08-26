@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getSignalInformationSync
@@ -20,12 +19,20 @@ Obtains a list of signal strengths of the network with which the SIM card in the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;SignalInformation & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;SignalInformation & gt; | Array of child class objects derived from [SignalInformation]{ |
+
+**Examples**
+
+```TypeScript
+let slotId: number = 0;
+let signalInfo: Array<radio.SignalInformation> = radio.getSignalInformationSync(slotId);
+console.info(`signal information size is:` + signalInfo.length);
+```

@@ -9,7 +9,6 @@ Defines the configuration information about the camera picker.
 ## Modules to Import
 
 ```TypeScript
-import { cameraPicker } from 'kits/@kit.CameraKit';
 ```
 
 ## cameraPosition

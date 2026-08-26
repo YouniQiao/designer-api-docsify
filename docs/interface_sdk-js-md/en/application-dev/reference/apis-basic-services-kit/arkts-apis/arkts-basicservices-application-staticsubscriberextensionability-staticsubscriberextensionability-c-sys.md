@@ -13,7 +13,7 @@ This module provides extension abilities of Basic Services Kit for static subscr
 ## Modules to Import
 
 ```TypeScript
-import { StaticSubscriberExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import StaticSubscriberExtensionAbility from '@kit.BasicServicesKit';
 ```
 
 ## onReceiveEvent
@@ -34,9 +34,21 @@ Defines a callback to be invoked when a common event is triggered in static mode
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | Yes | Common event data received through static subscription. |
+
+**Examples**
+
+```TypeScript
+import { commonEventManager } from '@kit.BasicServicesKit';
+
+class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
+  onReceiveEvent(event: commonEventManager.CommonEventData) {
+    console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
+  }
+}
+```
 
 ## context
 

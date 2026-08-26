@@ -11,7 +11,7 @@ Implements management of color space objects. ColorSpaceManager is a core class 
 ## Modules to Import
 
 ```TypeScript
-import { sendableColorSpaceManager } from 'kits/@kit.ArkGraphics2D';
+import sendableColorSpaceManager from '@kit.ArkGraphics2D';
 ```
 
 ## getColorSpaceName
@@ -28,15 +28,22 @@ Obtains the color space type.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| colorSpaceManager.ColorSpace |
+| Type | Description |
+| --- | --- |
+| colorSpaceManager.ColorSpace | Color space type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
+
+**Examples**
+
+```TypeScript
+// Obtain the color space type.
+let spaceName: colorSpaceManager.ColorSpace = colorSpace.getColorSpaceName();
+```
 
 ## getGamma
 
@@ -52,15 +59,22 @@ Obtains the gamma of the color space.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Gamma of the color space. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
+
+**Examples**
+
+```TypeScript
+// Obtain the gamma value of the color space.
+let gamma: number = colorSpace.getGamma();
+```
 
 ## getWhitePoint
 
@@ -76,12 +90,20 @@ Obtains the white point value of the color space. The chromaticity coordinates [
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| collections.Array & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| collections.Array & lt;number & gt; | Coordinates [x, y] of the white point. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
+
+**Examples**
+
+```TypeScript
+import { collections } from '@kit.ArkTS';
+// Obtain the white point value [x, y] of the color space.
+let point: collections.Array<number> = colorSpace.getWhitePoint();
+```

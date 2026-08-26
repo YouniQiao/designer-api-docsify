@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
+import uniformTypeDescriptor from '@kit.ArkData';
 ```
 
 ## getTypeDescriptor
@@ -22,18 +22,44 @@ Obtains the **TypeDescriptor** object based on the uniform data type ID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [typeId](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typeId | string | Yes | [Uniform data type ID]. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) |
+| Type | Description |
+| --- | --- |
+| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | TypeDescriptor** object obtained. If the uniform data type does not exist, **null** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('com.adobe.photoshop-image');
+    if (typeObj) {
+        let typeId = typeObj.typeId;
+        let belongingToTypes = typeObj.belongingToTypes;
+        let description = typeObj.description;
+        let referenceURL = typeObj.referenceURL;
+        let iconFile = typeObj.iconFile;
+        let filenameExtensions = typeObj.filenameExtensions;
+        let mimeTypes = typeObj.mimeTypes;
+        console.info(`typeId: ${typeId}, belongingToTypes: ${belongingToTypes}, description: ${description}, referenceURL: ${referenceURL}, iconFile: ${iconFile}, filenameExtensions: ${filenameExtensions}, mimeTypes: ${mimeTypes}`);
+    } else {
+        console.info('type com.adobe.photoshop-image does not exist');
+    }
+} catch(e) {
+    let error: BusinessError = e as BusinessError;
+    console.error(`getTypeDescriptor throws an exception. code is ${error.code}, message is ${error.message} `);
+}
+```

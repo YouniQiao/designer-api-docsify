@@ -11,6 +11,10 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 ## Modules to Import
 
 ```TypeScript
+import { AtomicServiceBar, ComponentUtils, Con@kit.ArkUIMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UICon@kit.ArkUI, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUICon@kit.ArkUI, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@ohos.arkui.UICon@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@ohos.arkui.UICon@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@ohos.arkui.UICon@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@ohos.arkui.UICon@kit.ArkUI';
 ```
 
 ## baselineOffset
@@ -31,9 +35,9 @@ Sets the offset of the text baseline.Percentage values follow default display be
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Offset of the text baseline.Unit: fp. Default value: 0.<br>**Since:** 20 |
 
 ## bindSelectionMenu
 
@@ -44,10 +48,13 @@ bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: 
 
 Sets the custom selection menu.The number-press response duration of **bindSelectionMenu** is 600 ms while that of [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) is 800 ms. When both are bound and their triggering methods are set to number press, **bindSelectionMenu** takes precedence.When the custom menu is too number, it is recommended that nest a Scroll component inside to prevent the keyboard from being obscured.
 
-> **NOTE：**&gt;
-> This API cannot be called within attributeModifier.&gt;
+> **NOTE：**
+> 
+> This API cannot be called within attributeModifier.
+> 
 > When [editMenuOptions](#editmenuoptions) is used for configuring the text selection menu, the
-> system's default style and trigger conditions are preserved.&gt;
+> system's default style and trigger conditions are preserved.
+> 
 > In contrast, when [bindSelectionMenu](#bindselectionmenu) is used, both the menu style and the
 > trigger conditions are fully customizable.
 
@@ -61,12 +68,12 @@ Sets the custom selection menu.The number-press response duration of **bindSelec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| spanType | [TextSpanType](arkts-arkui-textspantype-e.md) | Yes |
-| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
-| responseType | [TextResponseType](arkts-arkui-textresponsetype-e.md) | Yes |
-| options | [SelectionMenuOptions](../arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| spanType | [TextSpanType](arkts-arkui-textspantype-e.md) | Yes | Span type of the menu.Default value: **TextSpanType.TEXT |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Content of the menu. |
+| responseType | [TextResponseType](arkts-arkui-textresponsetype-e.md) | Yes | Response type of the menu.Default value: **TextResponseType.LONG_PRESS |
+| options | [SelectionMenuOptions](../arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | No | Options of the menu. |
 
 ## caretColor
 
@@ -86,9 +93,9 @@ Sets the color of the text selection handle, also known as the caret, in the tex
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the text selection handle.Default value: **'#007DFF' |
 
 ## compressLeadingPunctuation
 
@@ -98,8 +105,10 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 Sets whether to enable leading punctuation compression.
 
-> **NOTE：**&gt;
-> - Leading punctuation is not compressed by default.&gt;
+> **NOTE：**
+> 
+> - Leading punctuation is not compressed by default.
+> 
 > - For the range of punctuation marks that support leading compression, see
 > [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
@@ -113,9 +122,9 @@ Sets whether to enable leading punctuation compression.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable leading punctuation compression.   **true**: Leading punctuation compression is enabled. **false**: Leading punctuation compression is disabled. |
 
 ## contentTransition
 
@@ -135,9 +144,9 @@ Applies a transition animation to text content. Supports numeric flip animation 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| transition | [Optional](arkts-arkui-optional-t.md)&lt;[ContentTransition](../arkts-apis/arkts-arkui-contenttransition-c.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| transition | [Optional](arkts-arkui-optional-t.md)&lt;[ContentTransition](../arkts-apis/arkts-arkui-contenttransition-c.md)&gt; | Yes | Text animation effect. |
 
 ## copyOption
 
@@ -165,9 +174,9 @@ When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Whether copy and paste operations are allowed.Default value: **CopyOptions.None |
 
 ## dataDetectorConfig
 
@@ -187,9 +196,9 @@ Configures text recognition settings, including entity types to detect, display 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [TextDataDetectorConfig](../arkts-apis/arkts-arkui-textdatadetectorconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [TextDataDetectorConfig](../arkts-apis/arkts-arkui-textdatadetectorconfig-i.md) | Yes | Text recognition configuration. |
 
 ## decoration
 
@@ -199,9 +208,11 @@ decoration(value: DecorationStyleInterface)
 
 Style and color of the text decorative line.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When the bottom contour of a character intersects with the decoration, underline avoidance is triggered, commonly
-> affecting characters like "g", "j", "y", "q", and "p."&gt;
+> affecting characters like "g", "j", "y", "q", and "p."
+> 
 > If the decoration color is set to **Color.Transparent**, it inherits the text color of the first character in
 > each line. If the decoration color is set to **"#00FFFFFF"**, the line becomes fully transparent.
 
@@ -215,9 +226,9 @@ Style and color of the text decorative line.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [DecorationStyleInterface](../arkts-apis/arkts-arkui-decorationstyleinterface-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [DecorationStyleInterface](../arkts-apis/arkts-arkui-decorationstyleinterface-i.md) | Yes | Style of the text decorative line.Default value:{ type: TextDecorationType.None, color: Color.Black, style: TextDecorationStyle.SOLID }   **NOTE：**The **style** parameter cannot be used in widgets.<br>**Since:** 12 |
 
 ## draggable
 
@@ -235,9 +246,9 @@ Sets the drag effect of the selected text.This attribute cannot be used together
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Drag effect of the selected text.   **true**: The selected text is draggable. **false**: The selected text is not draggable.Default value: **false |
 
 ## editMenuOptions
 
@@ -248,9 +259,11 @@ editMenuOptions(editMenu: EditMenuOptions)
 Sets the extended options for the custom menu, including the text content, icon, and callback.When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or  
 [disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When [editMenuOptions](#editmenuoptions) is used for configuring the text selection menu, the
-> system's default style and trigger conditions are preserved.&gt;
+> system's default style and trigger conditions are preserved.
+> 
 > In contrast, when [bindSelectionMenu](#bindselectionmenu) is used, both the menu style and the
 > trigger conditions are fully customizable.
 
@@ -264,9 +277,9 @@ Sets the extended options for the custom menu, including the text content, icon,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes | Extended options of the custom menu. |
 
 ## ellipsisMode
 
@@ -287,9 +300,9 @@ Sets the ellipsis position.For the settings to work, **overflow** must be set to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [EllipsisMode](#ellipsismode) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [EllipsisMode](#ellipsismode) | Yes | Ellipsis position.Default value: **EllipsisMode.END |
 
 ## enableAutoSpacing
 
@@ -309,9 +322,9 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable automatic spacing between Chinese and Western characters.   **true** to enable, **false** otherwise.Default value: **false |
 
 ## enableDataDetector
 
@@ -321,8 +334,10 @@ enableDataDetector(enable: boolean)
 
 Sets whether to enable special entity detection within the text. Special entities are detected when **enableDataDetector** is set to **true**.The style of detected entities is as follows: the font color is changed to blue, and a blue underline is added.
 
-> **NOTE：**&gt;
-> - This API takes effect only when the device has an underlying text detection capability.&gt;
+> **NOTE：**
+> 
+> - This API takes effect only when the device has an underlying text detection capability.
+> 
 > - When [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, text special entity
 > detection is not performed.
 <!--RP2--><!--RP2End-->
@@ -337,9 +352,9 @@ Sets whether to enable special entity detection within the text. Special entitie
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to enable text recognition.   **true**: Enable text recognition. **false**: Disable text recognition.Default value: **false |
 
 ## enableHapticFeedback
 
@@ -349,7 +364,8 @@ enableHapticFeedback(isEnabled: boolean)
 
 Sets whether to enable haptic feedback.To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 18.
 
 **Since:** 13
@@ -362,9 +378,9 @@ Sets whether to enable haptic feedback.To enable haptic feedback, you must decla
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isEnabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isEnabled | boolean | Yes | Whether to enable haptic feedback.   **true** to enable, **false** otherwise.Default value: **true |
 
 ## enableSelectedDataDetector
 
@@ -384,9 +400,9 @@ Sets whether to enable entity recognition for selected text. This API only works
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean \| undefined | Yes | Whether to enable entity recognition for selected text.   **true**: Entity recognition is enabled. **false**: Entity recognition is disabled. Default value: **true |
 
 ## fallbackLineSpacing
 
@@ -406,9 +422,9 @@ Adapts the line height to the actual text height for overlapped multi-line text.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether the line height adapts to the actual text height.   **true**: Line height adapts to the actual text height. **false**: Line height does not adapt to the actual text height. |
 
 ## font
 
@@ -428,9 +444,9 @@ Sets the text style, covering the font size, font width, font family, and font s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Font](#font) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Font](#font) | Yes | Text style. |
 
 ## font
 
@@ -452,10 +468,10 @@ Sets the font style, with support for font settings.It is only effective for the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fontValue | [Font](#font) | Yes |
-| options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fontValue | [Font](#font) | Yes | Sets the text style. |
+| options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | No | Font settings. |
 
 ## fontColor
 
@@ -475,9 +491,9 @@ Sets the font color.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color.Default value: **'#e6182431'**Default value for wearables: **'#c5ffffff' |
 
 ## fontFamily
 
@@ -487,7 +503,8 @@ fontFamily(value: string | Resource)
 
 Sets the font family.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You can use [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) to register custom fonts.
 
 **Since:** 7
@@ -500,9 +517,9 @@ Sets the font family.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Font family. Default font: **'HarmonyOS Sans'**To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. |
 
 ## fontFeature
 
@@ -512,19 +529,24 @@ fontFeature(value: string)
 
 Sets the font feature, for example, monospaced digits.Format: normal \| \&lt;feature-tag-value\&gt;Format of **\&lt;feature-tag-value\&gt;**: \&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]There can be multiple **\&lt;feature-tag-value\&gt;** values, which are separated by commas (,).For example, the input format for monospaced clock fonts is "ss01" on.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The **Text** component cannot contain both text and the child component **Span** or **ImageSpan**. If both of
-> them exist, only the content in **Span** or **ImageSpan** is displayed.&gt;
+> them exist, only the content in **Span** or **ImageSpan** is displayed.
+> 
 > The typesetting engine rounds down the value of width to ensure that
 > the value is an integer. If the typesetting engine rounds up the value instead, the right side of the text may be
-> clipped.&gt;
+> clipped.
+> 
 > When multiple **Text** components are placed in the Row container with no specific layout or space
 > allocation settings configured, the components are laid out based on the maximum size of the container. To make
 > sure the sum of the components' main axis sizes does not exceed the main axis size of the container, you can set
-> [layoutWeight](arkts-arkui-commonmethod-c.md#layoutweight) or use the flex layout.&gt;
+> [layoutWeight](arkts-arkui-commonmethod-c.md#layoutweight) or use the flex layout.
+> 
 > The system's default font supports the following ligatures: Th, fb, ff, fb, ffb, ffh, ffi, ffk, ffl, fh, fi, fk,
 > fl, rf, rt, rv, rx, ry. These ligatures may cause unexpected effects of spans and styled strings. Disabling the
-> ligature feature can avoid this issue.&gt;
+> ligature feature can avoid this issue.
+> 
 > Text rendering behavior is closely tied to the font file in use. For instance, the system's default font supports
 > 8-punctuation compression only for left-side punctuation marks. Right-side punctuation, including exclamation
 > marks, enumeration commas, and question marks, is not affected by this feature.
@@ -541,9 +563,9 @@ Sets the font feature, for example, monospaced digits.Format: normal \| \&lt;fea
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Font feature. |
 
 ## fontSize
 
@@ -563,9 +585,9 @@ Sets the text size.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. This parameter cannot be set in percentage.Default value: **16fp**Default value on wearable devices: **15fp |
 
 ## fontStyle
 
@@ -585,9 +607,9 @@ Sets the font style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [FontStyle](#fontstyle) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [FontStyle](#fontstyle) | Yes | Font style.Default value: **FontStyle.Normal |
 
 ## fontVariations
 
@@ -607,9 +629,9 @@ Set the font variation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [fontVariations](#fontvariations) | Array & lt;FontVariation & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fontVariations | Array & lt;FontVariation & gt; | Yes | Indicates the text font variation. |
 
 ## fontWeight
 
@@ -629,9 +651,9 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.Default value: **FontWeight.Normal**Default value on wearable devices: **FontWeight.Regular**The Resource type is supported since API version 20.<br>**Since:** 20 |
 
 ## fontWeight
 
@@ -653,10 +675,10 @@ Sets the text font weight, with support for font settings.It is only effective f
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| weight | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
-| options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| weight | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.The Resource type is supported since API version 20.<br>**Since:** 20 |
+| options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | No | Font setting options.When **enableVariableFontWeight** in **options** is set to **false**, variable font weight adjustment is disabled. If **weight** is set to a value at intervals of 100 within [100, 900], the font weight uses the specified value. If **weight** is set to a value that is not a multiple of 100, the default value **400** is used.When **enableVariableFontWeight** in **options** is set to **true**, variable font weight adjustment is enabled. If **weight** is set to any integer within [100, 900], the font weight uses the specified value. |
 
 ## halfLeading
 
@@ -676,9 +698,9 @@ Whether half leading is enabled. Half leading refers to splitting the leading in
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [halfLeading](#halfleading) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| halfLeading | boolean | Yes | Whether half leading is enabled. Half leading refers to splitting the leading in half and applying it equally to the top and bottom of the line.   **true**: Half leading is enabled. **false**: Half leading is not enabled.Default value: **false |
 
 ## heightAdaptivePolicy
 
@@ -704,9 +726,9 @@ is beyond the layout constraints, the text will shrink to a font size between **
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md) | Yes | How the adaptive height is determined for the text.Default value: **TextHeightAdaptivePolicy.MAX_LINES_FIRST |
 
 ## includeFontPadding
 
@@ -726,9 +748,9 @@ Sets whether to add spacing to the first and last lines to avoid text truncation
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to add spacing to the first and last lines to avoid text truncation.    **true**: Spacing is added to the first and last lines. **false**: Spacing is not added to the first and last lines. |
 
 ## incrementalUpdatePolicy
 
@@ -748,9 +770,9 @@ Sets the incremental update policy for text rendering.This API takes effect only
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| policy | [IncrementalUpdatePolicy](../arkts-apis/arkts-arkui-incrementalupdatepolicy-e.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| policy | [IncrementalUpdatePolicy](../arkts-apis/arkts-arkui-incrementalupdatepolicy-e.md) \| undefined | Yes | Indicates the incremental update policy. Passing `undefined` resets it to the default value. |
 
 ## letterSpacing
 
@@ -770,9 +792,9 @@ Sets the letter spacing for a text style.If the value specified is a percentage 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Letter spacing.Default value: **0**Unit: fpThe Resource type is supported since API version 20.<br>**Since:** 20 |
 
 ## lineBreakStrategy
 
@@ -792,9 +814,9 @@ Sets the line break rule. This attribute takes effect only when [wordBreak](#wor
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md) | Yes | Line break rule.Default value: **LineBreakStrategy.GREEDY |
 
 ## lineHeight
 
@@ -804,7 +826,8 @@ lineHeight(value: number | string | Resource)
 
 Sets the text line height.If the value is less than or equal to **0**, the line height is unrestricted and adapts to the font size. When the value is a number, the unit is fp. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If certain characters have significantly taller glyphs than others in the same line, layout anomalies such as
 > clipping, overlapping, or misalignment may occur. In this case, adjust component attributes such as height and
 > line height to ensure proper layout rendering.
@@ -819,9 +842,9 @@ Sets the text line height.If the value is less than or equal to **0**, the line 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Text line height. |
 
 ## lineHeightMultiple
 
@@ -831,7 +854,8 @@ lineHeightMultiple(value: number | undefined)
 
 Sets the line height of text in multiple mode.The line height equals the input parameter **value** multiplied by **fontHeight**.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When both this API and [lineHeight](#lineheight) are set, only **lineHeightMultiple** takes
 > effect.
 
@@ -847,9 +871,9 @@ Sets the line height of text in multiple mode.The line height equals the input p
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| undefined | Yes | Multiplier for the line height.Value range: ≥ 0Values ≤ 0 are treated as **0**. When the value is set to **0**, the default line height is used. Decimal values are supported. |
 
 ## lineSpacing
 
@@ -869,9 +893,9 @@ Sets the line spacing of the text. If the value specified is less than or equal 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Line spacing. Default value: **0 |
 
 ## lineSpacing
 
@@ -891,10 +915,10 @@ Sets the line spacing for text. When **LineSpacingOptions** is not specified, li
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes |
-| options | [LineSpacingOptions](../arkts-apis/arkts-arkui-linespacingoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Line spacing. Values less than or equal to 0 are treated as the default value **0**. |
+| options | [LineSpacingOptions](../arkts-apis/arkts-arkui-linespacingoptions-i.md) | No | Line spacing configuration options.Default value: **{ onlyBetweenLines: false } |
 
 ## marqueeOptions
 
@@ -914,9 +938,9 @@ Sets the marquee effect for text.The **marqueeOptions** settings take effect onl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;[TextMarqueeOptions](arkts-arkui-textmarqueeoptions-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[TextMarqueeOptions](arkts-arkui-textmarqueeoptions-i.md)&gt; | Yes | Marquee animation properties such as enable/disable, step size, loop count, and direction. |
 
 ## maxFontScale
 
@@ -936,9 +960,9 @@ Sets the maximum font scale factor for text.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Maximum font scale factor for text.Value range: [1, +∞)   **NOTE：**Values less than 1 are treated as **1**. Other invalid values are ineffective by default. |
 
 ## maxFontSize
 
@@ -958,9 +982,9 @@ Sets the maximum font size.For the string type, numeric string values with optio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Maximum font size.Unit: fp |
 
 ## maxLineHeight
 
@@ -982,9 +1006,9 @@ Sets the maximum line height of text. If the value is less than or equal to 0, t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | LengthMetrics \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | LengthMetrics \| undefined | Yes | Maximum line height of text. Percentage values are not supported.Values less than or equal to 0 are treated as **0**. When the value is set to **0**, the maximum line height is unrestricted. |
 
 ## maxLines
 
@@ -1004,9 +1028,9 @@ Sets the maximum number of lines for text.By default, text is automatically fold
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Maximum number of lines of the text.   **NOTE：**Value range: [0, *INT32_MAX*]If this parameter is set to **0**, no text content is displayed. |
 
 ## minFontScale
 
@@ -1026,9 +1050,9 @@ Sets the minimum font scale factor for text.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Minimum font scale factor for text.Value range: [0, 1]   **NOTE：**Values less than 0 are treated as 0, and values greater than 1 are treated as 1. Other invalid values do not take effect by default. |
 
 ## minFontSize
 
@@ -1048,9 +1072,9 @@ Sets the minimum font size.For the string type, numeric string values with optio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Minimum font size.Unit: fp |
 
 ## minLineHeight
 
@@ -1072,9 +1096,9 @@ Sets the minimum line height of text. If the value is less than or equal to 0, t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | LengthMetrics \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | LengthMetrics \| undefined | Yes | Minimum line height of text. Percentage values are not supported.Values less than or equal to 0 are treated as **0**. |
 
 ## minLines
 
@@ -1096,9 +1120,9 @@ Sets the minimum number of lines for text.If the actual text height is less than
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [minLines](#minlines) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| minLines | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Minimum number of lines of the text.Value range: [0, *INT32_MAX*]Values less than 0 are clamped to **0**. |
 
 ## onCopy
 
@@ -1118,9 +1142,9 @@ Called when data is copied to the pasteboard, which is displayed when the text b
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (value: string) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (value: string) = & gt; void | Yes | Callback of the listened event. |
 
 ## onMarqueeStateChange
 
@@ -1140,9 +1164,9 @@ Called when the marquee animation reaches the specified state.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback&lt;[MarqueeState](arkts-arkui-marqueestate-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[MarqueeState](arkts-arkui-marqueestate-e.md)&gt; | Yes | Callback that receives a **MarqueeState** enum value, which indicates the current state of the marquee animation. |
 
 ## onTextSelectionChange
 
@@ -1162,9 +1186,9 @@ Called when the text selection position changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (selectionStart: number, selectionEnd: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (selectionStart: number, selectionEnd: number) = & gt; void | Yes | Callback of the listened event. |
 
 ## onWillCopy
 
@@ -1185,9 +1209,9 @@ Called before the copy operation is performed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback & lt;string, boolean & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback & lt;string, boolean & gt; | Yes | The string type indicates the text to be copied.The boolean type indicates whether the text can be copied. The value **true** means yes and **false** means no. |
 
 ## optimizeTrailingSpace
 
@@ -1210,9 +1234,9 @@ Sets whether to optimize trailing spaces at line endings during text layout, res
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| optimize | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| optimize | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to optimize trailing spaces.   **true** to optimize, **false** otherwise.Default value: **false |
 
 ## orphanCharOptimization
 
@@ -1231,9 +1255,9 @@ Sets whether to enable orphan character optimization during text typesetting. If
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable orphan character optimization for the last line of the paragraph.   **true**: Orphan character optimization is enabled. **false**: Orphan character optimization is disabled.When the value is **undefined** or **null**, orphan character optimization is disabled. |
 
 ## privacySensitive
 
@@ -1255,9 +1279,9 @@ Sets whether to enable privacy mode on widgets.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| supported | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| supported | boolean | Yes | Whether to enable privacy mode on widgets.Default value: **false**. The value **true** means to enable privacy mode, in which case text is obscured with hyphens (-).   **NOTE：**The value **null** means not to enable privacy mode on widgets.Enabling privacy mode requires support from the widget framework. You can use [obscured](arkts-arkui-commonmethod-c.md#obscured) to set how the component content is obscured. |
 
 ## punctuationOverflow
 
@@ -1277,9 +1301,9 @@ Whether to enable punctuation overflow at line ends.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable the feature, the default value is false. |
 
 ## selectedBackgroundColor
 
@@ -1299,9 +1323,9 @@ Sets the background color of the selected text. If the opacity is not set, a 20%
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the selected text.Default value: **'#007DFF' |
 
 ## selectedDragPreviewStyle
 
@@ -1321,9 +1345,9 @@ Applies a transition animation to text content. Supports numeric flip animation 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | Yes | Drag preview style for selected text.If this parameter is set to **undefined**, the drag preview follows the theme: white in light mode and black in dark mode. |
 
 ## selection
 
@@ -1343,10 +1367,10 @@ Sets text selection.The selected text is highlighted, with selection handles and
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectionStart | number | Yes |
-| selectionEnd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectionStart | number | Yes | Start position of the selected text.Default value: **-1 |
+| selectionEnd | number | Yes | End position of the selected text.Default value: **-1 |
 
 ## shaderStyle
 
@@ -1366,9 +1390,9 @@ Applies gradient or solid color effects to text. Supports [RadialGradientStyle](
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shader | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shader | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | Yes | Shader effect.Based on the input, the system applies a radial gradient ([RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)), linear gradient ([LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md)), or solid color ([ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md)).    **NOTE：**If [RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md) is used and the **center** parameter (from [RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md)) is outside the component bounds, setting **repeating** to **true** enhances the gradient effect. |
 
 ## tailIndents
 
@@ -1388,9 +1412,9 @@ Specify the tail indentation for each line in a text block.<p>&lt;strong&gt;NOTE
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics \| Array & lt;LengthMetrics & gt; & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics \| Array & lt;LengthMetrics & gt; & gt; | Yes | The tail indent value(s).Default value is 0. |
 
 ## textAlign
 
@@ -1404,7 +1428,8 @@ Sets the horizontal alignment of the text.The text takes up the full width of th
 - **Alignment.BottomStart**, **Alignment.Bottom**, **Alignment.BottomEnd:** Content aligns to the bottom.  
 When **textAlign** is set to **TextAlign.JUSTIFY**, the [wordBreak](#wordbreak) property must be configured according to the text content. The last line of text aligns to the start horizontally and does not participate in justification.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **textAlign** only adjusts the overall text layout and does not affect character display order. For character
 > display order adjustment, see
 > [Bidirectional Text Layout and Alignment](../../../ui/arkts-internationalization.md#bidirectional-text-layout-and-alignment).
@@ -1419,9 +1444,9 @@ When **textAlign** is set to **TextAlign.JUSTIFY**, the [wordBreak](#wordbreak) 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [TextAlign](#textalign) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [TextAlign](#textalign) | Yes | Horizontal alignment of the text.Default value: **TextAlign.Start**Default value on wearable devices: **TextAlign.Center |
 
 ## textCase
 
@@ -1441,9 +1466,9 @@ Sets the text case.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [TextCase](../arkts-apis/arkts-arkui-textcase-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [TextCase](../arkts-apis/arkts-arkui-textcase-e.md) | Yes | Text case.Default value: **TextCase.Normal |
 
 ## textContentAlign
 
@@ -1463,9 +1488,9 @@ Sets the vertical alignment of the text content area within the component.This A
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [textContentAlign](#textcontentalign) | [Optional](arkts-arkui-optional-t.md)&lt;[TextContentAlign](../arkts-apis/arkts-arkui-textcontentalign-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| textContentAlign | [Optional](arkts-arkui-optional-t.md)&lt;[TextContentAlign](../arkts-apis/arkts-arkui-textcontentalign-e.md)&gt; | Yes | Vertical alignment of the text.If the value is **undefined** or invalid, alignment defaults to **Center**. |
 
 ## textDirection
 
@@ -1485,9 +1510,9 @@ Specifies the text layout direction. If this attribute is not set, the default t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| direction | TextDirection \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| direction | TextDirection \| undefined | Yes | Text layout direction.If this parameter is set to **undefined**, the text layout direction follows the component layout direction as defined by **TextDirection.DEFAULT**. |
 
 ## textIndent
 
@@ -1507,9 +1532,9 @@ Sets the indent of the first line text.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Indent of the first line text.Default value: **0**Unit: fp |
 
 ## textOverflow
 
@@ -1546,9 +1571,9 @@ images are allowed to scroll within a single line.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) | Yes | Display mode when the text is too number.<br>**Since:** 18 |
 
 ## textSelectable
 
@@ -1568,9 +1593,9 @@ Sets whether the text is selectable and focusable.This attribute must be used in
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [TextSelectableMode](../arkts-apis/arkts-arkui-textselectablemode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [TextSelectableMode](../arkts-apis/arkts-arkui-textselectablemode-e.md) | Yes | Whether the text is selectable and focusable.Default value: **TextSelectableMode.SELECTABLE_UNFOCUSABLE |
 
 ## textShadow
 
@@ -1592,9 +1617,9 @@ Sets the text shadow.Intelligent color extraction is not supported for the **typ
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | Yes | Text shadow.<br>**Since:** 11 |
 
 ## textVerticalAlign
 
@@ -1604,9 +1629,11 @@ textVerticalAlign(textVerticalAlign: Optional<TextVerticalAlign>)
 
 Sets the vertical alignment of the text.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - When this API and [halfLeading](#halfleading) are both set, **halfLeading** does not take
-> effect.&gt;
+> effect.
+> 
 > - The effect of this attribute is noticeable only when the same font size is used in a paragraph and
 > [lineHeight](#lineheight) is set, or when different font sizes are mixed in a paragraph.
 > Otherwise, the effect is the same regardless of whether this attribute is set or which enum value is used. The
@@ -1624,9 +1651,9 @@ Sets the vertical alignment of the text.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [textVerticalAlign](#textverticalalign) | [Optional](arkts-arkui-optional-t.md)&lt;TextVerticalAlign&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| textVerticalAlign | [Optional](arkts-arkui-optional-t.md)&lt;TextVerticalAlign&gt; | Yes | Vertical alignment of the text.Default value: **TextVerticalAlign.BASELINE |
 
 ## wordBreak
 
@@ -1646,6 +1673,6 @@ Sets the word break rule.By default, when **wordBreak** is not called or is set 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [WordBreak](#wordbreak) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [WordBreak](#wordbreak) | Yes | Word break rule.Default value: **WordBreak.BREAK_WORD |

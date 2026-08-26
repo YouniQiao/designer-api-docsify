@@ -11,7 +11,8 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import cloudSync from '@kit.CoreFileKit';
+import cloudSyncManager from '@kit.CoreFileKitManager';
 ```
 
 ## error

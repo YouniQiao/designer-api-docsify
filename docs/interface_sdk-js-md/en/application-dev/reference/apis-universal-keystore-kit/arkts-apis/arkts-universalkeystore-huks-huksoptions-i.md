@@ -9,7 +9,8 @@ Defines **options** used in the APIs.
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import huks from '@kit.UniversalKeystoreKit';
+import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 ```
 
 ## inData

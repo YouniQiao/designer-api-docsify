@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
+import storageStatistics from '@kit.CoreFileKit';
 ```
 
 ## listUserdataDirInfo
@@ -26,15 +26,28 @@ Queries the space usage of the **\/data** directory on the user device. This API
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[UserdataDirInfo](arkts-corefile-storagestatistics-userdatadirinfo-i-sys.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[UserdataDirInfo](arkts-corefile-storagestatistics-userdatadirinfo-i-sys.md)&gt;&gt; | Promise used to return the space usage of the **\/data** directory on the user device. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| 13600001 |
-| 13600015 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| 13600001 | IPC error. |
+| 13600015 | Failed to traverse the query data partition directory. |
+
+**Examples**
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+storageStatistics.listUserdataDirInfo().then((dirInfos: storageStatistics.UserdataDirInfo[]) => {
+  console.info("listUserdataDirInfo successfully.");
+}).catch((err: BusinessError) => {
+  console.error(`listUserdataDirInfo failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```

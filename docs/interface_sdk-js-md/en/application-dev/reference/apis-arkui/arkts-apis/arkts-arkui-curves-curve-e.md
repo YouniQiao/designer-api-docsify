@@ -187,3 +187,10 @@ Friction. Damping curves, CubicBezier (0.2, 0.0, 0.2, 1.0).
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+curves.initCurve(Curve.EaseIn); // Create a default ease-in curve, where the interpolation starts slowly and then picks up speed.
+```

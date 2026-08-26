@@ -11,7 +11,7 @@ Definition callback of receiving the query data.@interface Querier
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+import securityGuard from '@kit.SecurityGuardKit';
 ```
 
 ## onComplete
@@ -44,9 +44,9 @@ Triggered when error.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes |  |
 
 ## onQuery
 
@@ -64,6 +64,6 @@ Triggered when data is returned.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| events | Array&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| events | Array&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt; | Yes |  |

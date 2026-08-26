@@ -9,7 +9,7 @@ Defines a **DiscoveryService** object for discovering MDNS services of the speci
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from 'kits/@kit.NetworkKit';
+import mdns from '@kit.NetworkKit';
 ```
 
 ## off('discoveryStart')
@@ -28,10 +28,36 @@ Disables listening for **discoveryStart** events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'discoveryStart' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'discoveryStart' | Yes | Event type. This field has a fixed value of **discoveryStart**.    **discoveryStart**: event of starting discovery of MDNS services on the LAN. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | Callback used to return the MDNS service and error information. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
+
+**Examples**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// See mdns.createDiscoveryService.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let serviceType = "_print._tcp";
+let discoveryService = mdns.createDiscoveryService(context, serviceType);
+discoveryService.startSearchingMDNS();
+
+discoveryService.on('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
+  console.info(JSON.stringify(data));
+});
+
+discoveryService.stopSearchingMDNS();
+
+discoveryService.off('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
+  console.info(JSON.stringify(data));
+});
+```
 
 ## off('discoveryStop')
 
@@ -49,10 +75,10 @@ Disables listening for **discoveryStop** events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'discoveryStop' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'discoveryStop' | Yes | Event type. This field has a fixed value of **discoveryStop**.    **discoveryStop**: event of stopping discovery of MDNS services on the LAN. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | Callback used to return the MDNS service and error information. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 ## off('serviceFound')
 
@@ -70,10 +96,39 @@ Disables listening for **serviceFound** events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'serviceFound' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'serviceFound' | Yes | Event type. This field has a fixed value of **serviceFound**.    **serviceFound**: event indicating an MDNS service is found. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | MDNS service information. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
+
+**Examples**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// See mdns.createDiscoveryService.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let serviceType = "_print._tcp";
+let discoveryService = mdns.createDiscoveryService(context, serviceType);
+discoveryService.startSearchingMDNS();
+
+discoveryService.on('serviceFound', (data: mdns.LocalServiceInfo) => {
+  console.info('serviceFound', JSON.stringify(data));
+  mdns.resolveLocalService(context, data, (error: BusinessError, resolveData: mdns.LocalServiceInfo) =>  {
+    console.info('serviceFound', JSON.stringify(resolveData));
+  });
+});
+
+discoveryService.stopSearchingMDNS();
+
+discoveryService.off('serviceFound', (data: mdns.LocalServiceInfo) => {
+  console.info(JSON.stringify(data));
+});
+```
 
 ## off('serviceLost')
 
@@ -91,10 +146,36 @@ Disables listening for **serviceLost** events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'serviceLost' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'serviceLost' | Yes | Event type. This field has a fixed value of **serviceLost**.    **serviceLost**: event indicating that an MDNS service is removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | MDNS service information. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+
+**Examples**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// See mdns.createDiscoveryService.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let serviceType = "_print._tcp";
+let discoveryService = mdns.createDiscoveryService(context, serviceType);
+discoveryService.startSearchingMDNS();
+
+discoveryService.on('serviceLost', (data: mdns.LocalServiceInfo) => {
+  console.info(JSON.stringify(data));
+});
+
+discoveryService.stopSearchingMDNS();
+
+discoveryService.off('serviceLost', (data: mdns.LocalServiceInfo) => {
+  console.info(JSON.stringify(data));
+});
+```
 
 ## on('discoveryStart')
 
@@ -112,10 +193,32 @@ Enables listening for **discoveryStart** events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'discoveryStart' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'discoveryStart' | Yes | Event type. This field has a fixed value of **discoveryStart**.    **discoveryStart**: event of starting discovery of MDNS services on the LAN. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | Callback used to return the MDNS service and error information.<br>**Since:** 11 |
+
+**Examples**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// See mdns.createDiscoveryService.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let serviceType = "_print._tcp";
+let discoveryService = mdns.createDiscoveryService(context, serviceType);
+discoveryService.startSearchingMDNS();
+
+discoveryService.on('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
+  console.info(JSON.stringify(data));
+});
+
+discoveryService.stopSearchingMDNS();
+```
 
 ## on('discoveryStop')
 
@@ -133,10 +236,32 @@ Enables listening for **discoveryStop** events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'discoveryStop' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'discoveryStop' | Yes | Event type. This field has a fixed value of **discoveryStop**.    **discoveryStop**: event of stopping discovery of MDNS services on the LAN. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | Callback used to return the MDNS service and error information.<br>**Since:** 11 |
+
+**Examples**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// See mdns.createDiscoveryService.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let serviceType = "_print._tcp";
+let discoveryService = mdns.createDiscoveryService(context, serviceType);
+discoveryService.startSearchingMDNS();
+
+discoveryService.on('discoveryStop', (data: mdns.DiscoveryEventInfo) => {
+  console.info(JSON.stringify(data));
+});
+
+discoveryService.stopSearchingMDNS();
+```
 
 ## on('serviceFound')
 
@@ -154,10 +279,35 @@ Enables listening for **serviceFound** events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'serviceFound' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'serviceFound' | Yes | Event type. This field has a fixed value of **serviceFound**.    **serviceFound**: event indicating an MDNS service is found. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | Callback used to return the MDNS service information. You need to call **resolveLocalService** to parse the information. |
+
+**Examples**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// See mdns.createDiscoveryService.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let serviceType = "_print._tcp";
+let discoveryService = mdns.createDiscoveryService(context, serviceType);
+discoveryService.startSearchingMDNS();
+
+discoveryService.on('serviceFound', (data: mdns.LocalServiceInfo) => {
+  console.info('serviceFound', JSON.stringify(data));
+  mdns.resolveLocalService(context, data, (error: BusinessError, resolveData: mdns.LocalServiceInfo) =>  {
+    console.info('serviceFound', JSON.stringify(resolveData));
+  });
+});
+
+discoveryService.stopSearchingMDNS();
+```
 
 ## on('serviceLost')
 
@@ -175,10 +325,32 @@ Enables listening for **serviceLost** events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'serviceLost' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'serviceLost' | Yes | Event type. This field has a fixed value of **serviceLost**.    **serviceLost**: event indicating that an MDNS service is removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | MDNS service information. |
+
+**Examples**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// See mdns.createDiscoveryService.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let serviceType = "_print._tcp";
+let discoveryService = mdns.createDiscoveryService(context, serviceType);
+discoveryService.startSearchingMDNS();
+
+discoveryService.on('serviceLost', (data: mdns.LocalServiceInfo) => {
+  console.info(JSON.stringify(data));
+});
+
+discoveryService.stopSearchingMDNS();
+```
 
 ## startSearchingMDNS
 
@@ -194,6 +366,22 @@ Searches for MDNS services on the LAN.
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
+**Examples**
+
+Stage model:
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the application context.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let serviceType = "_print._tcp";
+let discoveryService = mdns.createDiscoveryService(context, serviceType);
+discoveryService.startSearchingMDNS();
+```
+
 ## stopSearchingMDNS
 
 ```TypeScript
@@ -207,3 +395,19 @@ Stops searching for MDNS services on the LAN.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
+
+**Examples**
+
+Stage model:
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the application context.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let serviceType = "_print._tcp";
+let discoveryService = mdns.createDiscoveryService(context, serviceType);
+discoveryService.stopSearchingMDNS();
+```

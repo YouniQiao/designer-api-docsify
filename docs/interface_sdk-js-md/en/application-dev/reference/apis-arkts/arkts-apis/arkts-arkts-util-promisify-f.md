@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## promisify
@@ -22,13 +23,31 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| original | (err: Object, value: Object) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| original | (err: Object, value: Object) = & gt; void | Yes | Function, in which the first parameter **err** indicates the cause of the rejection (the value is **null** if the promise has been resolved) and the second parameter **value** indicates the resolved value. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [function](arkts-arkts-taskpool-task-c.md) |
-| Function |
+| Type | Description |
+| --- | --- |
+| [function](arkts-arkts-taskpool-task-c.md) | Return a function that returns promises<br>**Applicable version:** 9 - 11 |
+| Function | Promise function.<br>**Applicable version:** 10 and later |
+
+**Examples**
+
+```TypeScript
+async function fn() {
+  return 'hello world';
+}
+const addCall = util.promisify(util.callbackWrapper(fn));
+(async () => {
+  try {
+    let res: string = await addCall();
+    console.info(res);
+    // Output: hello world
+  } catch (err) {
+    console.info(err);
+  }
+})();
+```

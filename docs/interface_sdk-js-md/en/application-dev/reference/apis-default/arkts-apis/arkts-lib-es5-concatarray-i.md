@@ -13,14 +13,14 @@ join(separator?: string): string
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| separator | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| separator | string | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## slice
 
 ```TypeScript
@@ -29,15 +29,15 @@ slice(start?: number, end?: number): T[]
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | No |
-| end | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | No |  |
+| end | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [n: number]
 
 ```TypeScript

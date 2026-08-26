@@ -9,8 +9,7 @@ The **UiWindow** class represents a window on the UI and provides APIs for obtai
 ## Modules to Import
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## close
@@ -29,17 +28,30 @@ Closes a window. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.close();
+}
+```
 
 ## focus
 
@@ -57,16 +69,29 @@ Focuses a window. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.focus();
+}
+```
 
 ## getBounds
 
@@ -84,16 +109,43 @@ Obtains the bounds information of a window. This API uses a promise to return th
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Rect](arkts-test-uitest-rect-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Rect](arkts-test-uitest-rect-i.md)&gt; | Promise used to return the window border information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  let rect = await button.getBounds();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  // Create a Driver object.
+  let driver: Driver = Driver.create();
+  // Search for the active window.
+  let window: UiWindow = await driver.findWindow({ active: true });
+  // Obtain the bounds information of the window.
+  let rect = await window.getBounds();
+}
+```
 
 ## getBundleName
 
@@ -111,16 +163,32 @@ Obtains the bundle name of the application to which a window belongs. This API u
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return the bundle name of the application to which the window belongs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  // Create a Driver object.
+  let driver: Driver = Driver.create();
+  // Search for the active window.
+  let window: UiWindow = await driver.findWindow({ active: true });
+  // Obtain the bundle name of the application to which the window belongs.
+  let name: string = await window.getBundleName();
+}
+```
 
 ## getDisplayId
 
@@ -138,16 +206,40 @@ Obtains the ID of the display to which a window belongs. This API uses a promise
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the ID of the display to which the window belongs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('TextInput'));
+  let displayId = await button.getDisplayId();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiWindow, Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let id = await window.getDisplayId();
+}
+```
 
 ## getTitle
 
@@ -165,16 +257,29 @@ Obtains the window title. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return the window title. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let title = await window.getTitle();
+}
+```
 
 ## getWindowMode
 
@@ -192,16 +297,29 @@ Obtains the window mode. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[WindowMode](arkts-test-uitest-windowmode-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[WindowMode](arkts-test-uitest-windowmode-e.md)&gt; | Promise used to return the window mode information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let mode = await window.getWindowMode();
+}
+```
 
 ## isActive
 
@@ -219,16 +337,29 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let focused = await window.isActive();
+}
+```
 
 ## isActived
 
@@ -248,16 +379,29 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let focused = await window.isActived();
+}
+```
 
 ## isFocused
 
@@ -275,16 +419,59 @@ Checks whether a window is focused. This API uses a promise to return the result
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result of whether the window is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  if (await button.isFocused()) {
+    console.info('This button is focused');
+  } else {
+    console.info('This button is not focused');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let focused = await window.isFocused();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  if (await button.isFocused()) {
+    console.info('This button is focused');
+  } else {
+    console.info('This button is not focused');
+  }
+}
+```
 
 ## maximize
 
@@ -302,17 +489,30 @@ Maximizes a window. A window can be resumed to its previous mode using [resume](
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.maximize();
+}
+```
 
 ## minimize
 
@@ -330,17 +530,30 @@ Minimizes a window. A window can be resumed to its previous mode using [resume](
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.minimize();
+}
+```
 
 ## moveTo
 
@@ -358,25 +571,38 @@ Moves a window to the target point. This API uses a promise to return the result
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| y | number | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.moveTo(100, 100);
+}
+```
 
 ## resize
 
@@ -394,26 +620,26 @@ Resizes a window based on the specified width, height, and direction. This API u
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| wide | number | Yes |
-| height | number | Yes |
-| direction | [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| wide | number | Yes | Width of the adjusted window, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| height | number | Yes | Height of the adjusted window, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| direction | [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | Yes | Resize direction. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## resume
 
@@ -431,17 +657,30 @@ Resumes a window to its previous mode. This API uses a promise to return the res
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.resume();
+}
+```
 
 ## split
 
@@ -459,14 +698,27 @@ Switches to the split-screen mode. A window can be resumed to its previous mode 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.split();
+}
+```

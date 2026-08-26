@@ -14,6 +14,6 @@ Describes a callback function with an error message.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [e](arkts-arkts-math-decimal-decimal-c.md) | Error | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| e | Error | Yes | Error message. |

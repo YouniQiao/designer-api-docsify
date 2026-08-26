@@ -2,7 +2,8 @@
 
 用于保存按钮信息的数组。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > SegmentButtonItemOptionsArray仅支持保存2到5个按钮信息元素。
 
 **继承/实现关系：** SegmentButtonItemOptionsArray extends Array<SegmentButtonItemOptions>
@@ -14,7 +15,8 @@
 ## 导入模块
 
 ```TypeScript
-import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from 'kits/@kit.ArkUI';
+import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from '@kit.ArkUI';
+import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from '@kit.ArkUIV2';
 ```
 
 ## constructor
@@ -35,9 +37,9 @@ constructor(elements: SegmentButtonItemTuple)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| elements | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | 是 | 用于初始化数组的按钮信息元组，包含2到5个按钮选项元素，每个元素定义一个按钮的图标、文本等属性。 |
 
 ## create
 
@@ -57,15 +59,15 @@ static create(elements: SegmentButtonItemTuple): SegmentButtonItemOptionsArray
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| elements | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | 是 | 用于初始化数组的按钮信息元组，包含2到5个按钮选项元素，每个元素定义一个按钮的图标、文本等属性。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SegmentButtonItemOptionsArray](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SegmentButtonItemOptionsArray](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) | 返回创建的SegmentButtonItemOptionsArray对象，用于保存按钮信息的数组。 |
 
 ## pop
 
@@ -85,9 +87,9 @@ pop(): SegmentButtonItemOptions | undefined
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | 被移除的元素。 |
 
 ## push
 
@@ -107,15 +109,15 @@ push(...items: SegmentButtonItemArray): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | 是 | 被添加的按钮信息数组。 默认值：不传入任何按钮信息元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 添加元素后数组的长度。 |
 
 ## shift
 
@@ -135,9 +137,9 @@ shift(): SegmentButtonItemOptions | undefined
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | 被移除的元素。 |
 
 ## splice
 
@@ -157,17 +159,17 @@ splice(start: number, deleteCount: number, ...items: SegmentButtonItemOptions[])
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| start | number | 是 |
-| deleteCount | number | 是 |
-| items | [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| start | number | 是 | 删除元素的起始位置，从0开始计数。 |
+| deleteCount | number | 是 | 删除元素的数量，取值范围大于等于0。若deleteCount超过数组剩余长度，则删除从start位置开始的所有剩余元素。 |
+| items | [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | 是 | 从start开始要加入到数组中的元素。 默认值：不指定任何元素，将从数组中删除元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] |
+| 类型 | 说明 |
+| --- | --- |
+| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | 返回包含了被删除的元素的数组。 |
 
 ## unshift
 
@@ -187,12 +189,12 @@ unshift(...items: SegmentButtonItemArray): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | 是 | 添加的按钮信息数组。 默认值：不传入任何按钮信息元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 添加元素后数组的长度。 |

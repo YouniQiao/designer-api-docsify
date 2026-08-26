@@ -11,7 +11,7 @@ Provides APIs for PIN authentication.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## constructor
@@ -30,9 +30,23 @@ Creates a PIN authentication instance.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+
+**Examples**
+
+```TypeScript
+let userAuth = new osAccount.UserAuth();
+```
+
+```TypeScript
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+```
+
+```TypeScript
+let userIDM = new osAccount.UserIdentityManager();
+```
 
 ## registerInputer
 
@@ -52,20 +66,40 @@ Registers a PIN inputer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | Yes | PIN inputer, which is used to obtain the PIN. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
-| [12300103](../errorcode-account.md#12300103-credential-inputer-already-exists) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid inputer. |
+| [12300103](../errorcode-account.md#12300103-credential-inputer-already-exists) | The credential inputer already exists. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+let password = new Uint8Array([0, 0, 0, 0, 0]);
+try {
+  pinAuth.registerInputer({
+    onGetData: (authSubType: osAccount.AuthSubType, callback: osAccount.IInputData) => {
+      callback.onSetData(authSubType, password);
+    }
+  });
+  console.info('registerInputer success.');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`registerInputer exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## unregisterInputer
 
@@ -85,7 +119,14 @@ Unregisters this PIN inputer.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+
+**Examples**
+
+```TypeScript
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+pinAuth.unregisterInputer();
+```

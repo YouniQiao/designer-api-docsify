@@ -15,14 +15,12 @@ HashMap底层采用数组、链表和红黑树实现，支持高效查询、插�
 ## 导入模块
 
 ```TypeScript
-import { HashMap } from 'kits/@kit.ArkTS';
-import { HashMapCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
 
 ### 类
 
-| 名称 |
-| --- |
-| [HashMap](arkts-arkts-util-hashmap-hashmap-c.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [HashMap](arkts-arkts-util-hashmap-hashmap-c.md) | HashMap底层采用数组、链表和红黑树实现，支持高效查询、插入和删除。HashMap存储内容基于键值对映射，不允许重复的key，且一个key只能对应一个value。 |

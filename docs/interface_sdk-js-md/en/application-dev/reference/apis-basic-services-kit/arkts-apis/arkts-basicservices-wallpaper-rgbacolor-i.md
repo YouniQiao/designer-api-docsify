@@ -11,7 +11,7 @@ RgbaColor definition
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import wallpaper from '@kit.BasicServicesKit';
 ```
 
 ## alpha

@@ -10,6 +10,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | **ConnectOptions** can be used as an input parameter to receive status changes during the connection to a background service. For example, it is used as an input parameter of [connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectserviceextensionability) to connect to a ServiceExtensionAbility. |

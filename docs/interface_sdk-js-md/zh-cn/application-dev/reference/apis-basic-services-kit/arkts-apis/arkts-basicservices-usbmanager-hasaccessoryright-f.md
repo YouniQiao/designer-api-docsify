@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## hasAccessoryRight
@@ -20,22 +21,34 @@ function hasAccessoryRight(accessory: USBAccessory): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | 是 | USB配件，需要通过[getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md)获取。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示应用有权访问USB配件，false表示应用无权访问USB配件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [14401001](../errorcode-usb.md#14401001-目标usb配件未匹配) |
-| [14400004](../errorcode-usb.md#14400004-服务异常) |
-| [14400005](../errorcode-usb.md#14400005-数据库操作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| [14401001](../errorcode-usb.md#14401001-目标usb配件未匹配) | The target USBAccessory not matched. |
+| [14400004](../errorcode-usb.md#14400004-服务异常) | Service exception. Possible causes:  1. No accessory is plugged in. |
+| [14400005](../errorcode-usb.md#14400005-数据库操作异常) | Database operation exception. |
+
+**示例**
+
+```TypeScript
+try {
+  let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+  let flag = usbManager.hasAccessoryRight(accList?.[0]);
+  console.info(`hasAccessoryRight success, ret:${flag}`);
+} catch (error) {
+  console.error(`hasAccessoryRight error ${error.code}, message is ${error.message}`);
+}
+```

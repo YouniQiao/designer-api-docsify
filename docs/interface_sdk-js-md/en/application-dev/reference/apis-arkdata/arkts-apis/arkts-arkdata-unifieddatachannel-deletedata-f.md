@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## deleteData
@@ -24,16 +24,50 @@ Deletes data from the UDMF public data channel. This API uses an asynchronous ca
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;UnifiedData&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | Configuration for the data deletion operation. Both the **key** and **intention** are optional (only the DATA_HUB channel of **intention** is supported). The return value varies depending on the parameters passed in. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;UnifiedData&gt;&gt; | Yes | Callback used to return the data deleted.If only the **key** is specified in **options**, the data corresponding to the key deleted is returned.If only the **intention** is specified in **options**, all data in the **intention** deleted is returned.If both **intention** and **key** are specified, the intersection of the two deleted is returned. If there is no intersection between the two, an error object is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: unifiedDataChannel.Options = {
+  intention: unifiedDataChannel.Intention.DATA_HUB
+};
+
+try {
+  unifiedDataChannel.deleteData(options, (err, data) => {
+    if (err === undefined) {
+      console.info(`Succeeded in deleting data. size = ${data.length}`);
+      for (let i = 0; i < data.length; i++) {
+        let records = data[i].getRecords();
+        for (let j = 0; j < records.length; j++) {
+          if (records[j].getTypes().includes(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT)) {
+            let text =
+              records[j].getEntry(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) as uniformDataStruct.PlainText;
+            console.info(`${i + 1}.${text.textContent}`);
+          }
+        }
+      }
+    } else {
+      console.error(`Failed to delete data. code is ${err.code}, message is ${err.message}`);
+    }
+  });
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`Delete data throws an exception. code is ${error.code}, message is ${error.message}`);
+}
+```
 
 
 ## deleteData
@@ -54,18 +88,50 @@ Deletes data from the UDMF public data channel. This API uses a promise to retur
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | Configuration for the data deletion operation. Both the **key** and **intention** are optional (only the DATA_HUB channel of **intention** is supported). The return value varies depending on the parameters passed in. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;UnifiedData & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;UnifiedData & gt; & gt; | Promise used to return the data deleted. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: unifiedDataChannel.Options = {
+  key: 'udmf://DataHub/com.ohos.test/0123456789'
+};
+
+try {
+  unifiedDataChannel.deleteData(options).then((data) => {
+    console.info(`Succeeded in deleting data. size = ${data.length}`);
+    for (let i = 0; i < data.length; i++) {
+      let records = data[i].getRecords();
+      for (let j = 0; j < records.length; j++) {
+        if (records[j].getTypes().includes(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT)) {
+          let text =
+            records[j].getEntry(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) as uniformDataStruct.PlainText;
+          console.info(`${i + 1}.${text.textContent}`);
+        }
+      }
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to delete data. code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`Delete data throws an exception. code is ${error.code}, message is ${error.message}`);
+}
+```

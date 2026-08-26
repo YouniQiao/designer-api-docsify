@@ -21,12 +21,29 @@ function getStorageSync(path: string): Storage
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 应用程序内部数据存储路径。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Storage](arkts-arkdata-system-storage-storage-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Storage](arkts-arkdata-system-storage-storage-c.md) | 获取到要操作的Storage实例，用于进行数据存储操作。 |
+
+**示例**
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+let path;
+let context = featureAbility.getContext();
+context.getFilesDir().then((filePath) => {
+  path = filePath;
+  console.info("======================>getFilesDirPromise====================>");
+
+  let storage = data_storage.getStorageSync(path + '/mystore');
+  storage.putSync('startup', 'auto');
+  storage.flushSync();
+});
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { autoStartupManager } from 'kits/@kit.AbilityKit';
+import autoStartupManager from '@kit.AbilityKit';
 ```
 
 ## on('systemAutoStartup')
@@ -26,16 +26,38 @@ Registers a callback to listen for auto-startup status changes of an application
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'systemAutoStartup' | Yes |
-| callback | [AutoStartupCallback](arkts-ability-autostartupcallback-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'systemAutoStartup' | Yes | Event type. The value is fixed at **systemAutoStartup**, which can be called only by system applications. |
+| callback | [AutoStartupCallback](arkts-ability-autostartupcallback-i-sys.md) | Yes | Callback used for registration. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, interface caller does not have permission"ohos.permission.MANAGE_APP_BOOT". |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are lef unspecified; 2. Incorrect parameters types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
+
+**Examples**
+
+```TypeScript
+import { autoStartupManager, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  autoStartupManager.on('systemAutoStartup', {
+    onAutoStartupOn(data: common.AutoStartupInfo) {
+      console.info(`autostartupmanager onAutoStartupOn, data: ${JSON.stringify(data)}.`);
+    },
+    onAutoStartupOff(data: common.AutoStartupInfo) {
+      console.info(`autostartupmanager onAutoStartupOff, data: ${JSON.stringify(data)}.`);
+    }
+  });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`autostartupmanager on failed, err code: ${code}, err msg: ${msg}.`);
+}
+```

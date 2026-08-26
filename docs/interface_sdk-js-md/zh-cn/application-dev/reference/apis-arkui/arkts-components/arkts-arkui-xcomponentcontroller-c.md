@@ -25,6 +25,12 @@ constructor()
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**示例**
+
+```TypeScript
+xComponentController: XComponentController = new XComponentController();
+```
+
 ## getXComponentContext
 
 ```TypeScript
@@ -41,9 +47,9 @@ getXComponentContext(): Object
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Object |
+| 类型 | 说明 |
+| --- | --- |
+| Object | XComponent对象的context。 context中包含的接口由开发者定义。 context作为onLoad回调的第一个参数传入。 |
 
 ## getXComponentSurfaceId
 
@@ -61,9 +67,34 @@ getXComponentSurfaceId(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | XComponent所持有的surface的ID。 |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+
+@Entry
+  @Component
+  struct Index {
+    myXComponentController: XComponentController = new XComponentController();
+
+    build() {
+      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+        XComponent({
+          type: XComponentType.SURFACE,
+          controller: this.myXComponentController
+        })
+          .onLoad(() => {
+            let surfaceId: string = this.myXComponentController.getXComponentSurfaceId();
+            console.info("XComponent SurfaceId: " + surfaceId);
+          })
+      }
+    }
+  }
+```
 
 ## getXComponentSurfaceRect
 
@@ -83,9 +114,9 @@ getXComponentSurfaceRect(): SurfaceRect
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SurfaceRect](arkts-arkui-surfacerect-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SurfaceRect](arkts-arkui-surfacerect-i.md) | XComponent所持有的surface的矩形。 |
 
 ## getXComponentSurfaceRotation
 
@@ -105,9 +136,9 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Required&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Required&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; | surface旋转选项的结果。 |
 
 ## lockCanvas
 
@@ -127,9 +158,9 @@ lockCanvas(): DrawingCanvas | null
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) \| null |
+| 类型 | 说明 |
+| --- | --- |
+| [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) \| null | 返回用于在XComponent创建的surface上绘制的Canvas。 如果surface不可用，则返回null。 |
 
 ## onSurfaceChanged
 
@@ -150,10 +181,10 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| surfaceId | string | 是 |
-| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| surfaceId | string | 是 | XComponent所持有的surface的ID。 |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 | 用于显示XComponent所持有的surface的矩形。 |
 
 ## onSurfaceCreated
 
@@ -174,9 +205,9 @@ onSurfaceCreated(surfaceId: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| surfaceId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| surfaceId | string | 是 | XComponent所持有的surface的ID。 |
 
 ## onSurfaceDestroyed
 
@@ -197,9 +228,9 @@ onSurfaceDestroyed(surfaceId: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| surfaceId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| surfaceId | string | 是 | XComponent所持有的surface的ID。 |
 
 ## setXComponentSurfaceConfig
 
@@ -209,7 +240,8 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 
 设置XComponent创建的surface的配置。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 此接口仅在XComponent的type为TEXTURE或SURFACE时生效。
 
 **起始版本：** 22
@@ -222,9 +254,9 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | 是 | surface配置 |
 
 ## setXComponentSurfaceRect
 
@@ -244,9 +276,9 @@ setXComponentSurfaceRect(rect: SurfaceRect): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 | XComponent所持有的surface的矩形。 |
 
 ## setXComponentSurfaceRotation
 
@@ -266,9 +298,9 @@ setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | 是 | 屏幕旋转时是否锁定当前XComponent所持有的surface的方向。 |
 
 ## setXComponentSurfaceSize
 
@@ -291,9 +323,9 @@ setXComponentSurfaceSize(value: {
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | {     surfaceWidth: number;     surfaceHeight: number;   } | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | {     surfaceWidth: number;     surfaceHeight: number;   } | 是 | XComponent所持有的surface的宽度和高度。 |
 
 ## startImageAnalyzer
 
@@ -305,7 +337,8 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 > **说明：**
 
-> 图像分析类型无法动态修改。&gt;
+> 图像分析类型无法动态修改。
+> 
 > 此接口依赖于设备能力。在不兼容的设备上调用将返回错误码。
 
 **起始版本：** 12
@@ -318,23 +351,23 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | 是 | AI图像分析器的设置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 用于返回结果的Promise。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) | 不支持图像分析特性。 |
+| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) | 图像分析正在执行中。 |
+| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) | 图像分析已停止。 |
 
 ## stopImageAnalyzer
 
@@ -346,7 +379,8 @@ stopImageAnalyzer(): void
 
 > **说明：**
 
-> 如果在startImageAnalyzer接口尚未返回任何结果时调用此接口，将触发错误回调。&gt;
+> 如果在startImageAnalyzer接口尚未返回任何结果时调用此接口，将触发错误回调。
+> 
 > 此特性依赖于设备能力。
 
 **起始版本：** 12
@@ -375,6 +409,6 @@ unlockCanvasAndPost(canvas: DrawingCanvas):void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| canvas | [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| canvas | [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) | 是 | 之前通过lockCanvas获取的canvas。 |

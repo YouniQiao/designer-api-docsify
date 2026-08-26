@@ -14,14 +14,14 @@ The type of ParseOptions attributeWithTagCallbackFunction.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tagName | string | Yes |
-| key | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tagName | string | Yes | The tag in xml parse node |
+| key | string | Yes | The key in xml parse node |
+| value | string | Yes | The value in xml parse node |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | whether continue to parse xml data |

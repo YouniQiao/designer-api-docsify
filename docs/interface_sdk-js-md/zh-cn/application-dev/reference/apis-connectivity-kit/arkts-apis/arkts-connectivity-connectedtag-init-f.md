@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connectedTag } from 'kits/@kit.ConnectivityKit';
+import connectedTag from '@kit.ConnectivityKit';
 ```
 
 ## init
@@ -26,6 +26,6 @@ function init(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true：初始化成功。  |

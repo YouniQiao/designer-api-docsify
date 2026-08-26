@@ -29,9 +29,9 @@ Obtains the information about the component corresponding to this gesture recogn
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) |
+| Type | Description |
+| --- | --- |
+| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | Information about the component corresponding to the current gesture recognizer. |
 
 ## getFingerCount
 
@@ -51,9 +51,9 @@ Obtains the number of fingers required to trigger the preset gesture.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of fingers required to trigger the preset gesture. |
 
 ## getState
 
@@ -73,9 +73,9 @@ Obtains the state of this gesture recognizer.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GestureRecognizerState](arkts-arkui-gesturerecognizerstate-e.md) |
+| Type | Description |
+| --- | --- |
+| [GestureRecognizerState](arkts-arkui-gesturerecognizerstate-e.md) | State of the gesture recognizer. |
 
 ## getTag
 
@@ -95,9 +95,9 @@ Obtains the tag of this gesture recognizer.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Tag of the current gesture recognizer. |
 
 ## getType
 
@@ -117,9 +117,9 @@ Obtains the type of this gesture recognizer.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GestureControl.GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) |
+| Type | Description |
+| --- | --- |
+| [GestureControl.GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) | Type of the current gesture recognizer. |
 
 ## isBuiltIn
 
@@ -139,9 +139,9 @@ Obtains whether this gesture recognizer is a built-in gesture.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the current gesture recognizer is a built-in gesture. The value **true** means that the gesture recognizer is a built-in gesture, and **false** means the opposite. |
 
 ## isEnabled
 
@@ -161,9 +161,9 @@ Obtains the enabled state of this gesture recognizer.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Enabled state of the gesture recognizer. The value **true** means that the gesture recognizer is enabled and will trigger events, and **false** means the opposite. |
 
 ## isFingerCountLimit
 
@@ -183,9 +183,9 @@ Checks whether the preset gesture detects the number of fingers on the screen.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the preset gesture will detect the number of fingers on the screen. **true** if the gesture event is bound and detects the number of fingers; **false** otherwise. |
 
 ## isHostBelongsTo
 
@@ -205,15 +205,15 @@ Returns whether the node bound to the current gesture recognizer is a descendant
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uniqueId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uniqueId | number | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid) API. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the node bound to the current gesture recognizer is a descendant of the specified component. Returns **true** if the bound node is a descendant, and **false** otherwise. |
 
 ## isValid
 
@@ -231,9 +231,9 @@ Whether the current gesture recognizer is valid.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the current gesture recognizer is valid. |
 
 ## preventBegin
 
@@ -269,6 +269,6 @@ Sets the enabled state of this gesture recognizer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [isEnabled](#isenabled) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isEnabled | boolean | Yes | Enabled state to set. The value **true** means that the gesture recognizer is enabled and will trigger events, and **false** means the opposite. |

@@ -13,6 +13,7 @@ Provides APIs to create a **Query** object, which defines different data query c
 ## Modules to Import
 
 ```TypeScript
+import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## and
@@ -33,9 +34,24 @@ Creates a **Query** object with the AND condition.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notEqualTo("field", "value1");
+    query.and();
+    query.notEqualTo("field", "value2");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## beginGroup
 
@@ -55,9 +71,24 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.beginGroup();
+    query.isNotNull("field");
+    query.endGroup();
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## constructor
 
@@ -83,8 +114,10 @@ deviceId(deviceId: string): Query
 
 Creates a **Query** object with the device ID as the key prefix.
 
-> **NOTE：**&gt;
-> The value of **deviceId** can be obtained by <!--RP1-->
+> **NOTE：**
+> 
+> The value of **deviceId** can be obtained by <!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -100,15 +133,27 @@ Creates a **Query** object with the device ID as the key prefix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [deviceId](#deviceid) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceId | string | Yes | Device ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.deviceId("deviceId");
+    console.log("query is " + query.getSqlLike());
+} catch (e) {
+    console.log("should be ok on Method Chaining : " + e);
+}
+```
 
 ## endGroup
 
@@ -128,9 +173,24 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.beginGroup();
+    query.isNotNull("field");
+    query.endGroup();
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## equalTo
 
@@ -150,16 +210,29 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | number \| string \| boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
+| value | number \| string \| boolean | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.equalTo("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## getSqlLike
 
@@ -179,9 +252,21 @@ Obtains the query statement of the **Query** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Query statement obtained. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    let sql1 = query.getSqlLike();
+    console.log("GetSqlLike sql=" + sql1);
+} catch (e) {
+    console.log("duplicated calls should be ok : " + e);
+}
+```
 
 ## greaterThan
 
@@ -201,16 +286,29 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | number \| string \| boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
+| value | number \| string \| boolean | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.greaterThan("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## greaterThanOrEqualTo
 
@@ -230,16 +328,29 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
+| value | number \| string | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.greaterThanOrEqualTo("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## inNumber
 
@@ -259,16 +370,29 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| valueList | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
+| valueList | number[] | Yes | List of numbers to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.inNumber("field", [0, 1]);
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## inString
 
@@ -288,16 +412,29 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| valueList | string[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
+| valueList | string[] | Yes | List of strings to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.inString("field", ['test1', 'test2']);
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## isNotNull
 
@@ -317,15 +454,28 @@ Creates a **Query** object to search for the records whose value is not **null**
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.isNotNull("field");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## isNull
 
@@ -345,15 +495,28 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.isNull("field");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## lessThan
 
@@ -373,16 +536,29 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
+| value | number \| string | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.lessThan("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## lessThanOrEqualTo
 
@@ -402,16 +578,29 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
+| value | number \| string | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.lessThanOrEqualTo("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## like
 
@@ -431,16 +620,29 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
+| value | string | Yes | String to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.like("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## limit
 
@@ -460,16 +662,32 @@ Creates a **Query** object to specify the number of records in the query result 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| total | number | Yes |
-| offset | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| total | number | Yes | Number of records in the query result. |
+| offset | number | Yes | Start position. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+let total = 10;
+let offset = 1;
+try {
+    let query = new distributedData.Query();
+    query.notEqualTo("field", "value");
+    query.limit(total, offset);
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## notEqualTo
 
@@ -489,16 +707,29 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | number \| string \| boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
+| value | number \| string \| boolean | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notEqualTo("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## notInNumber
 
@@ -518,16 +749,29 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| valueList | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
+| valueList | number[] | Yes | List of numbers to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notInNumber("field", [0, 1]);
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## notInString
 
@@ -547,16 +791,29 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| valueList | string[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
+| valueList | string[] | Yes | List of strings to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notInString("field", ['test1', 'test2']);
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## or
 
@@ -576,9 +833,24 @@ Creates a **Query** object with the OR condition.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notEqualTo("field", "value1");
+    query.or();
+    query.notEqualTo("field", "value2");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## orderByAsc
 
@@ -598,15 +870,29 @@ Creates a **Query** object to sort the query results in ascending order.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notEqualTo("field", "value");
+    query.orderByAsc("field");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## orderByDesc
 
@@ -626,15 +912,29 @@ Creates a **Query** object to sort the query results in descending order.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notEqualTo("field", "value");
+    query.orderByDesc("field");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## prefixKey
 
@@ -654,15 +954,29 @@ Creates a **Query** object with a specified key prefix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| prefix | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| prefix | string | Yes | Key prefix. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.prefixKey("$.name");
+    query.prefixKey("0");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## reset
 
@@ -682,9 +996,24 @@ Resets the **Query** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object reset. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.equalTo("key", "value");
+    console.log("query is " + query.getSqlLike());
+    query.reset();
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("simply calls should be ok :" + e);
+}
+```
 
 ## setSuggestIndex
 
@@ -704,15 +1033,29 @@ Creates a **Query** object with an index preferentially used for query.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | string | Yes | Index preferentially used for query. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.setSuggestIndex("$.name");
+    query.setSuggestIndex("0");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+   console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## unlike
 
@@ -732,13 +1075,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to query. It cannot contain '^'. |
+| value | string | Yes | String to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.unlike("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```

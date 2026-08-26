@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## domain

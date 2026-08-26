@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from 'kits/@kit.NetworkKit';
 ```
 
 ## isCleartextPermitted
@@ -22,12 +21,25 @@ Checks whether plaintext HTTP access is allowed from the preset **network_config
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Boolean value indicating whether plaintext HTTP is allowed. The value **true** indicates that plaintext HTTP is allowed, and the value **false** indicates the opposite. The default value is **true**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+**Examples**
+
+```TypeScript
+import { networkSecurity } from '@kit.NetworkKit';
+
+try {
+  let result: boolean = networkSecurity.isCleartextPermitted();
+  console.info(`isCleartextPermitted Result: ${JSON.stringify(result)}`);
+} catch (error) {
+  console.error(`isCleartextPermitted Error: ${JSON.stringify(error)}`);
+}
+```

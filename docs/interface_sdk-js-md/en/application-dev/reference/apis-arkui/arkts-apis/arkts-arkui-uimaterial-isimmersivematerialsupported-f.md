@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import uiMaterial from '@kit.ArkUI';
 ```
 
 ## isImmersiveMaterialSupported
@@ -24,6 +24,6 @@ Check whether [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the current device supports ImmersiveMaterial. The value true indicates that the current device supports ImmersiveMaterial, and false indicates the opposite. |

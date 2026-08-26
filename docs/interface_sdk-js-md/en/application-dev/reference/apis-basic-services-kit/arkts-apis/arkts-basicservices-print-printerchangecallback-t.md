@@ -12,7 +12,7 @@ Defines a callback that takes the printer event and printer information as param
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [PrinterEvent](arkts-basicservices-print-printerevent-e.md) | Yes |
-| printerInformation | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [PrinterEvent](arkts-basicservices-print-printerevent-e.md) | Yes | Printer event. |
+| printerInformation | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | Yes | Printer information. |

@@ -12,7 +12,7 @@ Callback triggered when the size of the input method panel changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | window.Size | Yes |
-| keyboardArea | [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | window.Size | Yes | Panel size. |
+| keyboardArea | [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) | No | Size of the keyboard area. |

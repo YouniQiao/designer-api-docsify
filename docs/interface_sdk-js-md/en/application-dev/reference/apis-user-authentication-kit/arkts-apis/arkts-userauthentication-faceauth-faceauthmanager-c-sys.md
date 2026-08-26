@@ -11,7 +11,7 @@ Provides APIs for facial authentication management. It provides management featu
 ## Modules to Import
 
 ```TypeScript
-import { faceAuth } from 'kits/@kit.UserAuthenticationKit';
+import faceAuth from '@kit.UserAuthenticationKit';
 ```
 
 ## constructor
@@ -27,6 +27,14 @@ Creates a face authentication manager object.
 **System capability:** SystemCapability.UserIAM.UserAuth.FaceAuth
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+import { faceAuth } from '@kit.UserAuthenticationKit';
+
+let faceAuthManager = new faceAuth.FaceAuthManager();
+```
 
 ## setSurfaceId
 
@@ -46,14 +54,32 @@ Sets the **SurfaceId** of the face preview page during face enrollment. This API
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| surfaceId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| surfaceId | string | Yes | ID of the surface held by XComponent. This ID is used to display the face preview page during face enrollment.    **Note:** A valid **surfaceId** must be obtained through the [getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid) method after **XComponent** initialization. An invalid **surfaceId** may cause the preview page to fail to display or the API call to fail. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12700001](../errorcode-useriam.md#12700001-facial-authentication-service-unavailable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
+| [12700001](../errorcode-useriam.md#12700001-facial-authentication-service-unavailable) | The service is unavailable. |
+
+**Examples**
+
+```TypeScript
+import { faceAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain this surfaceId through the XComponentController.getXComponentSurfaceId() method from the XComponent component. This is only an example.
+let surfaceId = '123456';
+let faceManager = new faceAuth.FaceAuthManager();
+try {
+  faceManager.setSurfaceId(surfaceId);
+  console.info('set surface id successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`set surface id failed, Code is ${err?.code}, message is ${err?.message}`);
+}
+```

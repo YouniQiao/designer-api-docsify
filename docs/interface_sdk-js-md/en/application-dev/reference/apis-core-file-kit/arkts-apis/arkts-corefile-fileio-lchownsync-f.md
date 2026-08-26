@@ -21,8 +21,16 @@ Changes the file owner based on a file path and changes the owner of the symboli
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| uid | number | Yes |
-| gid | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the file. |
+| uid | number | Yes | New UID. |
+| gid | number | Yes | New GID. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let stat = fileio.statSync(filePath);
+fileio.lchownSync(filePath, stat.uid, stat.gid);
+```

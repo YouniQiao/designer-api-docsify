@@ -9,7 +9,6 @@ Describes the CPU usage of a thread.
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## cpuUsage

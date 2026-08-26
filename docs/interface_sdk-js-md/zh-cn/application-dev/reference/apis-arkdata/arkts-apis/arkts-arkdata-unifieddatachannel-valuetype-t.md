@@ -14,16 +14,16 @@ type ValueType = number | number | number | string | boolean | image.PixelMap | 
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
-| 类型 |
-| --- |
-| int |
-| long |
-| double |
-| string |
-| boolean |
-| image.PixelMap |
-| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) |
-| ArrayBuffer |
-| object |
-| null |
-| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| int | 表示Int的类型。 |
+| long | 表示Long的类型。 |
+| double | 表示Double的类型。 |
+| string | 表示string的类型。 |
+| boolean | 表示boolean的类型。 |
+| image.PixelMap | 表示[image.PixelMap]{ |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 表示[Want]{ |
+| ArrayBuffer | 表示ArrayBuffer的类型。 |
+| object | 表示object的类型。 |
+| null | 表示null。 |
+| undefined | 表示undefined。 |

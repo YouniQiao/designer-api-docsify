@@ -63,9 +63,9 @@ getCaretOffset(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前光标所在位置。 |
 
 ## getCaretRect
 
@@ -85,9 +85,9 @@ getCaretRect(): RectResult | undefined
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RectResult](arkts-arkui-rectresult-i.md) \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| [RectResult](arkts-arkui-rectresult-i.md) \| undefined | 当前光标与RichEditor的相对位置。 |
 
 ## getLayoutManager
 
@@ -107,9 +107,9 @@ getLayoutManager(): LayoutManager
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | 布局管理器对象，可用于获取组件内容的布局位置等信息。 |
 
 ## getPreviewText
 
@@ -129,9 +129,9 @@ getPreviewText(): PreviewText
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) | 预上屏文本信息，包含输入法预显示的候选文本内容及起始位置。 |
 
 ## getTypingStyle
 
@@ -151,9 +151,9 @@ getTypingStyle(): RichEditorTextStyle
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | 用户预设的文本输入样式对象，包含字体颜色、大小、粗细等样式属性，可用于查询当前组件的输入文本样式配置。 |
 
 ## isEditing
 
@@ -173,9 +173,9 @@ isEditing(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示编辑态，false表示非编辑态。 |
 
 ## scrollToVisible
 
@@ -193,9 +193,9 @@ scrollToVisible(range?: TextRange): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | 滚动到可视区域的内容范围，包括内容起始位置和终止位置。 起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于全文长度视为全文长度。 未指定范围时，默认为全部内容。未指定起始位置，默认起始位置为0；未指定结束位置，默认结束位置为全文长度。 |
 
 ## setCaretOffset
 
@@ -215,15 +215,15 @@ setCaretOffset(offset: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 光标偏移位置。超出所有内容范围时，设置失败。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 光标是否设置成功。 |
 
 ## setSelection
 
@@ -246,11 +246,11 @@ setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOp
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| selectionStart | number | 是 |
-| selectionEnd | number | 是 |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| selectionStart | number | 是 | 选中开始位置。 |
+| selectionEnd | number | 是 | 选中结束位置。 |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 | 选择项配置，用于控制选中操作时的菜单弹出策略。 当需要自定义菜单弹出行为（如强制显示或隐藏菜单）时传入此参数； 省略时默认使用MenuPolicy.DEFAULT，遵循系统默认菜单弹出策略。 各MenuPolicy取值的适用场景请参考SelectionOptions对象说明。<br>**起始版本：** 12 |
 
 ## setStyledPlaceholder
 
@@ -270,9 +270,9 @@ setStyledPlaceholder(styledString: StyledString): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 设置属性字符串样式的提示文本，其优先级高于[placeholder](arkts-arkui-richeditor-attribute.md#placeholder)属性设 置的提示文本。 提示文本不支持触发属性字符串[GestureStyle](../arkts-apis/arkts-arkui-gesturestyle-c.md)样式绑定的手势事件，以及[UrlStyle](../arkts-apis/arkts-arkui-urlstyle-c.md)样式的超链接跳转能力。 |
 
 ## setTypingParagraphStyle
 
@@ -292,9 +292,9 @@ setTypingParagraphStyle(style: RichEditorParagraphStyle): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| style | [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| style | [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md) | 是 | 预设段落样式。 |
 
 ## setTypingStyle
 
@@ -314,9 +314,9 @@ setTypingStyle(value: RichEditorTextStyle): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | 是 | 预设的文本输入样式，包含字体颜色、大小、粗细等属性，用于设置后续输入文本的默认样式。 |
 
 ## stopEditing
 

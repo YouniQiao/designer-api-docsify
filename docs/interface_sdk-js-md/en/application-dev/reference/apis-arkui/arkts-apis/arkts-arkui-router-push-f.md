@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import router from '@kit.ArkUI';
 ```
 
 ## push
@@ -24,6 +24,62 @@ Navigates to a specified page in the application.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Page routing parameters. |
+
+**Examples**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+class InnerParams {
+  data3: number[];
+
+  constructor(tuple: number[]) {
+    this.data3 = tuple;
+  }
+}
+
+class RouterParams {
+  data1: string;
+  data2: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.data1 = str;
+    this.data2 = new InnerParams(tuple);
+  }
+}
+
+router.push({
+  url: 'pages/routerpage2',
+  params: new RouterParams('message', [123, 456, 789])
+});
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+class InnerParams {
+  data3: number[];
+
+  constructor(tuple: number[]) {
+    this.data3 = tuple;
+  }
+}
+
+class RouterParams {
+  data1: string;
+  data2: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.data1 = str;
+    this.data2 = new InnerParams(tuple);
+  }
+}
+
+router.push({
+  url: 'pages/routerpage2',
+  params: new RouterParams('message', [123, 456, 789])
+});
+```

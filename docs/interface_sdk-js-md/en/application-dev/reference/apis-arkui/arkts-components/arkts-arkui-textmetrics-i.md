@@ -209,6 +209,40 @@ Height of the text. Read-only.Default unit: vp.If the unit mode of the **CanvasR
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct OffscreenCanvasPage {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(200, 300);
+
+  build() {
+    Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Start, justifyContent: FlexAlign.Start }) {
+      Column() {
+        Canvas(this.context)
+          .width('100%')
+          .height('100%')
+          .borderWidth(5)
+          .borderColor('#057D02')
+          .backgroundColor('#FFFFFF')
+          .onReady(() => {
+            let offContext = this.offCanvas.getContext("2d", this.settings)
+            offContext.fillStyle = '#CDCDCD'
+            offContext.fillRect(0, 0, 100, this.offCanvas.height)
+            let image = this.offCanvas.transferToImageBitmap()
+            this.context.setTransform(1, 0, 0, 1, 50, 200)
+            this.context.transferFromImageBitmap(image)
+          })
+      }
+    }.width('100%').height('100%')
+  }
+}
+```
+
 ## ideographicBaseline
 
 ```TypeScript
@@ -244,3 +278,37 @@ Width of the text. Read-only.Default unit: vp.If the unit mode of the **CanvasRe
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct OffscreenCanvasPage {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(200, 300);
+
+  build() {
+    Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Start, justifyContent: FlexAlign.Start }) {
+      Column() {
+        Canvas(this.context)
+          .width('100%')
+          .height('100%')
+          .borderWidth(5)
+          .borderColor('#057D02')
+          .backgroundColor('#FFFFFF')
+          .onReady(() => {
+            let offContext = this.offCanvas.getContext("2d", this.settings)
+            offContext.fillStyle = '#CDCDCD'
+            offContext.fillRect(0, 0, this.offCanvas.width, 150)
+            let image = this.offCanvas.transferToImageBitmap()
+            this.context.setTransform(1, 0, 0, 1, 50, 200)
+            this.context.transferFromImageBitmap(image)
+          })
+      }
+    }.width('100%').height('100%')
+  }
+}
+```

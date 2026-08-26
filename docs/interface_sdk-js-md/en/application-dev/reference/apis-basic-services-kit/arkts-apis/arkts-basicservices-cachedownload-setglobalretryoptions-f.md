@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## setGlobalRetryOptions
@@ -22,6 +22,20 @@ Sets retry options for all tasks. Used when task-specific retry configuration is
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [RetryOptions](arkts-basicservices-cachedownload-retryoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [RetryOptions](arkts-basicservices-cachedownload-retryoptions-i.md) | No | Task retry configurations. Default value: Refer to the default value of RetryOptions. |
+
+**Examples**
+
+```TypeScript
+try {
+  // Set the maximum number of retries for a task globally.
+  cacheDownload.setGlobalRetryOptions({
+    maxRetryCount: 1
+  });
+  cacheDownload.download("https://www.example.com", {});
+} catch (err) {
+  console.error(`Failed to download the resource. err code: ${err?.code}, err message: ${err?.message}`);
+}
+```

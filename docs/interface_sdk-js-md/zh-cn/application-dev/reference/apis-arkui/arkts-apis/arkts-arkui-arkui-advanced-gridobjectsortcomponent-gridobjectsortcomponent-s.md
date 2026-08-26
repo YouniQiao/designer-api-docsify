@@ -2,8 +2,10 @@
 
 网格对象排序组件，用于网格对象的编辑、拖动排序、新增和删除。
 
-> **说明：**&gt;
-> - 该组件仅可在Stage模型下使用。&gt;
+> **说明：**
+> 
+> - 该组件仅可在Stage模型下使用。
+> 
 > - 如果GridObjectSortComponent设置通用属性和
 > 通用事件，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到
 > GridObjectSortComponent本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议GridObjectSortComponent设置通用属性和通用事件。
@@ -15,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import { GridObjectSortComponentType, GridObjectSortComponentItem, GridObjectSortComponentOptions, GridObjectSortComponent } from 'kits/@kit.ArkUI';
+import { GridObjectSortComponentType, GridObjectSortComponentItem, GridObjectSortComponentOptions, GridObjectSortComponent } from '@kit.ArkUI';
 ```
 
 ## build
@@ -68,10 +70,10 @@ onSave: (select: Array<GridObjectSortComponentItem>, unselect: Array<GridObjectS
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| select | Array&lt;[GridObjectSortComponentItem](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentitem-i.md)&gt; | 是 |
-| unselect | Array&lt;[GridObjectSortComponentItem](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentitem-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| select | Array&lt;[GridObjectSortComponentItem](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentitem-i.md)&gt; | 是 |  |
+| unselect | Array&lt;[GridObjectSortComponentItem](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentitem-i.md)&gt; | 是 |  |
 
 ## dataList
 

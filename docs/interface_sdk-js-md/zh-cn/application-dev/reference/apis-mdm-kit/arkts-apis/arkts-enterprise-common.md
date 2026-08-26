@@ -13,29 +13,29 @@
 ## 导入模块
 
 ```TypeScript
-import { common } from 'kits/@kit.MDMKit';
+import common from '@kit.MDMKit';
 ```
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
-| [ApplicationInstance(Enterprise公共模块)](arkts-mdm-common-applicationinstance-i.md) |
-| [InstallationResult(Enterprise公共模块)](arkts-mdm-common-installationresult-i.md) |
-| [PolicyChangedEvent(Enterprise公共模块)](arkts-mdm-common-policychangedevent-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [ApplicationInstance(Enterprise公共模块)](arkts-mdm-common-applicationinstance-i.md) | 应用的实例数据。该接口目前在[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md)、 [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md)、 [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md)、 [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md)接口 中作为入参使用。 |
+| [InstallationResult(Enterprise公共模块)](arkts-mdm-common-installationresult-i.md) | 应用安装结果。该对象目前在 [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult) 作为回调入参使用。 |
+| [PolicyChangedEvent(Enterprise公共模块)](arkts-mdm-common-policychangedevent-i.md) | 策略变更事件。该接口目前在 [onAdminPolicyChanged](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged) 接口中作为回调入参使用。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [ManagedPolicy(Enterprise公共模块)](arkts-mdm-common-managedpolicy-e.md) |
-| [Result(Enterprise公共模块)](arkts-mdm-common-result-e.md) |
-| [StartupScene(Enterprise公共模块)](arkts-mdm-common-startupscene-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [ManagedPolicy(Enterprise公共模块)](arkts-mdm-common-managedpolicy-e.md) | 企业设备管控策略。 |
+| [Result(Enterprise公共模块)](arkts-mdm-common-result-e.md) | 应用安装结果码。 |
+| [StartupScene(Enterprise公共模块)](arkts-mdm-common-startupscene-e.md) | 开机向导完成场景。端侧系统在首次切换子用户完成（仅限PC）、OTA升级完成、首次开机完成开机向导时会通过 [onStartupGuideCompleted](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onstartupguidecompleted) 回调接口通知设备管理应用。 |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [EnterpriseAdminExtensionContext(Enterprise公共模块)](arkts-mdm-common-enterpriseadminextensioncontext-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [EnterpriseAdminExtensionContext(Enterprise公共模块)](arkts-mdm-common-enterpriseadminextensioncontext-t.md) | EnterpriseAdminExtensionContext是 [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md) 的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 |

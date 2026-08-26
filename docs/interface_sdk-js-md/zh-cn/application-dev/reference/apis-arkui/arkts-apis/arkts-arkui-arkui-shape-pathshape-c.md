@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## commands
@@ -34,15 +34,15 @@ commands(commands: string): PathShape
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [commands](#commands) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| commands | string | 是 | 路径的绘制指令。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) | 返回设置路径绘制指令后的PathShape对象，可用于链式调用继续配置路径形状。 |
 
 ## constructor
 
@@ -64,6 +64,6 @@ constructor(options?: PathShapeOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [PathShapeOptions](arkts-arkui-arkui-shape-pathshapeoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [PathShapeOptions](arkts-arkui-arkui-shape-pathshapeoptions-i.md) | 否 | 路径参数。 |

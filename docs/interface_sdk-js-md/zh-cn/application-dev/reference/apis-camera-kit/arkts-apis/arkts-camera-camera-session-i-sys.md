@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getActiveParameter
@@ -30,24 +29,24 @@ Gets the active value of the given key in camera metadata.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | Tag name in camera metadata. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | The active value of the key in camera metadata. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getCameraOutputCapabilities
 
@@ -65,23 +64,23 @@ Get the supported camera output capability set.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 | Camera device. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md)&gt; | The array of the output capability. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getParameters
 
@@ -101,24 +100,24 @@ Gets the values of the given key in camera metadata.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | Tag name in camera metadata. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | The values of the key in camera metadata. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getSupportedKeys
 
@@ -138,17 +137,17 @@ Gets the supported keys in camera metadata.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | The supported keys in camera metadata. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## setParameters
 
@@ -168,18 +167,18 @@ Sets key-value pairs parameters for the session.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| kvpairs | Record & lt;string, string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| kvpairs | Record & lt;string, string & gt; | 是 | The pairs of tag name and value in camera metadata. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## setUsage
 
@@ -197,17 +196,17 @@ Set usage for the capture session.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| usage | [UsageType](arkts-camera-camera-usagetype-e-sys.md) | 是 |
-| enabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| usage | [UsageType](arkts-camera-camera-usagetype-e-sys.md) | 是 | The capture session usage. |
+| enabled | boolean | 是 | Enable usage for session if TRUE. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |

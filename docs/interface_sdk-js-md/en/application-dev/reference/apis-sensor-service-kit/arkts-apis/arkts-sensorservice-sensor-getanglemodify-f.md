@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getAngleModify
@@ -25,11 +24,29 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| currentRotationMatrix | Array & lt;number & gt; | Yes |
-| preRotationMatrix | Array & lt;number & gt; | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| currentRotationMatrix | Array & lt;number & gt; | Yes | Current rotation matrix. |
+| preRotationMatrix | Array & lt;number & gt; | Yes | The other rotation matrix. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the angle change around the z, x, and y axes, in degrees. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sensor.getAngleModify([1, 0, 0, 0, 1, 0, 0, 0, 1], [1, 0, 0, 0, 0.87, -0.50, 0, 0.50, 0.87],
+                      (err: BusinessError, data: Array<number>) => {
+  if (err) {
+    console.error(`Failed to register data. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  for (let i = 0; i < data.length; i++) {
+    console.info("data[" + i + "]: " + data[i]);
+  }
+})
+```
 
 
 ## getAngleModify
@@ -50,13 +67,31 @@ Obtains the angle change between two rotation matrices. This API uses a promise 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| currentRotationMatrix | Array & lt;number & gt; | Yes |
-| preRotationMatrix | Array & lt;number & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| currentRotationMatrix | Array & lt;number & gt; | Yes | Current rotation matrix. |
+| preRotationMatrix | Array & lt;number & gt; | Yes | The other rotation matrix. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;number & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the angle change around the z, x, and y axes, in degrees. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.getAngleModify([1, 0, 0, 0, 1, 0, 0, 0, 1], [1, 0, 0, 0, 0.87, -0.50, 0, 0.50, 0.87]);
+promise.then((data: Array<number>) => {
+  console.info('Succeeded in getting AngleModify_promise.');
+  for (let i = 0; i < data.length; i++) {
+    console.info("Succeeded in getting data[" + i + "]: " + data[i]);
+  }
+}).catch((reason: BusinessError) => {
+  let e: BusinessError = reason as BusinessError;
+  console.info("Succeeded in getting promise::catch", e);
+})
+```

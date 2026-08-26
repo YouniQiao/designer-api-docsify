@@ -21,7 +21,8 @@ buttonStyle(value: ButtonStyleMode)
 
 设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过 backgroundColor、 [fontColor](#fontcolor)和[role](#role)接口设置，实际显示效果以最后一次设置为准。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -36,9 +37,9 @@ buttonStyle(value: ButtonStyleMode)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | 是 | Button组件的样式和重要程度。默认值：ButtonStyleMode.EMPHASIZED |
 
 ## contentModifier
 
@@ -58,9 +59,9 @@ contentModifier(modifier: ContentModifier<ButtonConfiguration>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md)&gt; | 是 | 在Button组件上，定制内容区的方法。modifier：内容修改器，开发者需要自定义class实现 ContentModifier接口。 |
 
 ## controlSize
 
@@ -70,7 +71,8 @@ controlSize(value: ControlSize)
 
 设置Button组件的尺寸。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -85,9 +87,9 @@ controlSize(value: ControlSize)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ControlSize](arkts-arkui-controlsize-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ControlSize](arkts-arkui-controlsize-e.md) | 是 | Button组件的尺寸。默认值：ControlSize.NORMAL |
 
 ## fontColor
 
@@ -107,9 +109,9 @@ fontColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 文本显示颜色。默认值：\\$r('sys.color.font_on_primary')，显示为白色字体。 |
 
 ## fontFamily
 
@@ -129,9 +131,9 @@ fontFamily(value: string | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和 [注册自定义字体](../arkts-apis/arkts-font.md)。 |
 
 ## fontSize
 
@@ -151,9 +153,9 @@ fontSize(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置文本显示字号。默认值：当controlSize为ControlSize.NORMAL时，默认值为`\\$r('sys.float.Body_L')`。当 controlSize为ControlSize.SMALL时，默认值为`\\$r('sys.float.Body_S')`。   **说明：**设置string类型时，不支持百分比。 |
 
 ## fontStyle
 
@@ -173,9 +175,9 @@ fontStyle(value: FontStyle)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [FontStyle](#fontstyle) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [FontStyle](#fontstyle) | 是 | 文本的字体样式。默认值：FontStyle.Normal |
 
 ## fontWeight
 
@@ -195,9 +197,9 @@ fontWeight(value: number | FontWeight | string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| FontWeight \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| FontWeight \| string | 是 | 文本的字体粗细，number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。默认值：500string类型仅支持number类型取值的字符串形式，例如'400'，以及'bold'、'bolder'、'lighter'、'regular'、'medium'，分别对应FontWeight中相应的枚举值。当 值为异常值或非法值时，字体粗细取值为400。 |
 
 ## labelStyle
 
@@ -217,9 +219,9 @@ labelStyle(value: LabelStyle)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | 是 | Button组件label文本和字体的样式。 |
 
 ## maxFontScale
 
@@ -239,9 +241,9 @@ maxFontScale(scale: number | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 文本最大的字体缩放倍数。取值范围： [1, +∞)   **说明：** 设置的值小于1时，按值为1处理，异常值默认不生效。未设置最大缩放倍数时，圆形按钮最大缩放倍数为1倍，胶囊型按钮、普通按钮、圆角矩形按钮最大缩放倍数跟随系统设置。 |
 
 ## minFontScale
 
@@ -261,9 +263,9 @@ minFontScale(scale: number | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 文本最小的字体缩放倍数。取值范围：[0, 1]   **说明：** 设置的值小于0时，按值为0处理，设置的值大于1，按值为1处理，异 常值默认不生效。 |
 
 ## role
 
@@ -285,9 +287,9 @@ role(value: ButtonRole)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | 是 | Button组件的角色。默认值：ButtonRole.NORMAL |
 
 ## stateEffect
 
@@ -307,9 +309,9 @@ stateEffect(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 按钮按下时是否开启按压态显示效果。true：开启按压效果；false：关闭按压效果。默认值：true |
 
 ## type
 
@@ -329,6 +331,6 @@ type(value: ButtonType)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ButtonType](arkts-arkui-buttontype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ButtonType](arkts-arkui-buttontype-e.md) | 是 | Button样式。API version 18及之后，ButtonType的默认值从ButtonType.Capsule变更为 ButtonType.ROUNDED_RECTANGLE。 |

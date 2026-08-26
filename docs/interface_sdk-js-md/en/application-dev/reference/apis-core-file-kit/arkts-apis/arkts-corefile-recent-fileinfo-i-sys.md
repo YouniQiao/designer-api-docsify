@@ -13,7 +13,7 @@ Represents information about the recent file list.
 ## Modules to Import
 
 ```TypeScript
-import { recent } from 'kits/@kit.CoreFileKit';
+import recent from '@kit.CoreFileKit';
 ```
 
 ## ctime

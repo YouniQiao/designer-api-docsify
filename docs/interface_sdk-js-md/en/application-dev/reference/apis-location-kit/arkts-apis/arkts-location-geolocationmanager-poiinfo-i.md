@@ -9,7 +9,6 @@ Describes the POI information struct.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## poiArray

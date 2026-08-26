@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ToggleModifier](arkts-arkui-togglemodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [ToggleModifier](arkts-arkui-togglemodifier-c.md) | Defines Toggle Modifier@extends ToggleAttribute @implements AttributeModifier & lt;ToggleAttribute & gt; |

@@ -11,7 +11,7 @@ Class for the PartnerAgentExtensionAbility. Applications can use this ability to
 ## Modules to Import
 
 ```TypeScript
-import { PartnerAgentExtensionAbility } from 'kits/@kit.ConnectivityKit';
+import PartnerAgentExtensionAbility from '@kit.ConnectivityKit';
 ```
 
 ## onDestroyWithReason
@@ -30,9 +30,19 @@ Called when the PartnerAgentExtensionAbility is to be destroyed. Applications ca
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| reason | [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragentextensionabilitydestroyreason-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| reason | [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragentextensionabilitydestroyreason-t.md) | Yes | The reason for Ability destruction. |
+
+**Examples**
+
+```TypeScript
+export default class PartnerAgentExtAbility extends PartnerAgentExtensionAbility {
+  onDestroyWithReason(reason: partnerAgent.PartnerAgentExtensionAbilityDestroyReason): void {
+    console.info(`onDestroyWithReason is: ${reason}`);
+  }
+}
+```
 
 ## onDeviceDiscovered
 
@@ -50,9 +60,19 @@ Called when a device is discovered.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes | Address of the discovered device. |
+
+**Examples**
+
+```TypeScript
+export default class PartnerAgentExtAbility extends PartnerAgentExtensionAbility {
+  onDeviceDiscovered(deviceAddress: partnerAgent.PartnerDeviceAddress): void {
+    console.info(`onDeviceDiscovered success: ${deviceAddress.bluetoothAddress}`);
+  }
+}
+```
 
 ## context
 

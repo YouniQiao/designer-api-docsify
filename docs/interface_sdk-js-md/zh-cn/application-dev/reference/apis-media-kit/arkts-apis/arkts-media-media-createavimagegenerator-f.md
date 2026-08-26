@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## createAVImageGenerator
@@ -20,15 +20,33 @@ function createAVImageGenerator(): Promise<AVImageGenerator>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md)&gt; | Promise对象。异步返回AVImageGenerator实例，失败时返回null。可用于获取视频缩略图。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by promise. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avImageGenerator: media.AVImageGenerator;
+media.createAVImageGenerator().then((generator: media.AVImageGenerator) => {
+  if (generator) {
+    avImageGenerator = generator;
+    console.info('Succeeded in creating AVImageGenerator');
+  } else {
+    console.error('Failed to create AVImageGenerator');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create AVImageGenerator, error message:${error.message}`);
+});
+```
 
 
 ## createAVImageGenerator
@@ -45,12 +63,28 @@ function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md)&gt; | 是 | 回调函数。异步返回AVImageGenerator实例，失败时返回null。可用于获取视频缩略图。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by callback. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avImageGenerator: media.AVImageGenerator;
+media.createAVImageGenerator((error: BusinessError, generator: media.AVImageGenerator) => {
+  if (generator) {
+    avImageGenerator = generator;
+    console.info('Succeeded in creating AVImageGenerator');
+  } else {
+    console.error(`Failed to create AVImageGenerator, error message:${error.message}`);
+  }
+});
+```

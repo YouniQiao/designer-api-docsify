@@ -9,7 +9,6 @@ Describes the coordinate options.
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## x

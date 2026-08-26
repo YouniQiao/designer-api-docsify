@@ -14,7 +14,7 @@ Describes the callback invoked for the AVRecorder state change event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| state | [AVRecorderState](arkts-media-media-avrecorderstate-t.md) | Yes |
-| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| state | [AVRecorderState](arkts-media-media-avrecorderstate-t.md) | Yes | AVRecorder state. |
+| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | Yes | Reason for the state change. |

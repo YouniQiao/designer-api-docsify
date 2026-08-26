@@ -16,7 +16,7 @@ Defines the callback type for hover events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isHover | boolean | Yes |
-| event | [HoverEvent](arkts-arkui-hoverevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isHover | boolean | Yes | Whether the element is in the hover state. **true**: yes; **false**: no. |
+| event | [HoverEvent](arkts-arkui-hoverevent-i.md) | Yes | Position coordinates of the hovered mouse or stylus. |

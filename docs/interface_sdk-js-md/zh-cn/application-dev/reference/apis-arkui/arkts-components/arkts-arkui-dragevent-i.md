@@ -29,9 +29,9 @@ executeDropAnimation(customDropAnimation: Callback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 在此回调函数中实现自定义落位动效。   **说明：** 1. 该接口仅在onDrop回调中使用有效。  2. 使用前需设置useCustomDropAnimation为true，否则该接口不生效。  3. 不要在动画callback中实现与动效无关的逻辑，避免影响执行效率。 |
 
 ## getData
 
@@ -51,16 +51,16 @@ getData(): UnifiedData
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [UnifiedData](arkts-arkui-unifieddata-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [UnifiedData](arkts-arkui-unifieddata-t.md) | 从DragEvent中获取拖拽相关数据。数据获取结果请参考错误码说明。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [190001](../errorcode-drag-event.md#190001-数据未找到) |
-| [190002](../errorcode-drag-event.md#190002-获取数据错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [190001](../errorcode-drag-event.md#190001-数据未找到) | Data not found. |
+| [190002](../errorcode-drag-event.md#190002-获取数据错误) | Data error. |
 
 ## getDisplayId
 
@@ -80,9 +80,9 @@ getDisplayId(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前拖拽事件发生时所在的屏幕ID。 |
 
 ## getDisplayX
 
@@ -102,9 +102,9 @@ getDisplayX(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前拖拽点相对于屏幕左上角的x轴坐标，单位为vp。 |
 
 ## getDisplayY
 
@@ -124,9 +124,9 @@ getDisplayY(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前拖拽点相对于屏幕左上角的y轴坐标，单位为vp。 |
 
 ## getDragSource
 
@@ -146,9 +146,9 @@ getDragSource(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 拖起方的包名。 |
 
 ## getGlobalDisplayX
 
@@ -168,9 +168,9 @@ getGlobalDisplayX(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回当前拖拽点相对于全局屏幕的左上角的X坐标。 |
 
 ## getGlobalDisplayY
 
@@ -190,9 +190,9 @@ getGlobalDisplayY(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回当前拖拽点相对于全局屏幕的左上角的Y坐标。 |
 
 ## getModifierKeyState
 
@@ -212,21 +212,21 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| keys | Array & lt;string & gt; | 是 | 获取功能键按压状态。报错信息请参考以下错误码。支持功能键 'Ctrl' \| 'Alt' \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keys | Array & lt;string & gt; | 是 | 获取功能键按压状态。报错信息请参考以下错误码。支持功能键 'Ctrl' \| 'Alt' \| 'Shift'。   **说明：**此接口不支持在手写笔场景 下使用。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否被按下，返回true表示被按下，返回false表示未被按下 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## getPreviewRect
 
@@ -246,9 +246,9 @@ getPreviewRect(): Rectangle
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Rectangle](arkts-arkui-rectangle-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Rectangle](arkts-arkui-rectangle-i.md) | 拖拽预览图相对于当前窗口的位置，以及预览图尺寸信息，单位vp，其中x和y代表预览图左上角的窗口坐标，width和height代表预览图的尺寸。 |
 
 ## getResult
 
@@ -268,9 +268,9 @@ getResult(): DragResult
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DragResult](arkts-arkui-dragresult-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DragResult](arkts-arkui-dragresult-e.md) | 从DragEvent中获取的拖拽结果。 |
 
 ## getSummary
 
@@ -290,9 +290,9 @@ getSummary(): Summary
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Summary](arkts-arkui-summary-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Summary](arkts-arkui-summary-t.md) | 拖拽相关数据的概要。 |
 
 ## getVelocity
 
@@ -312,9 +312,9 @@ getVelocity(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前拖拽的主方向拖动速度。为xy轴方向速度的平方和的算术平方根，单位为vp。 |
 
 ## getVelocityX
 
@@ -334,9 +334,9 @@ getVelocityX(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前拖拽的x轴方向拖动速度。坐标轴原点为屏幕左上角，单位为vp，分正负方向速度，从左往右为正，反之为负。 |
 
 ## getVelocityY
 
@@ -356,9 +356,9 @@ getVelocityY(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前拖拽的y轴方向拖动速度。坐标轴原点为屏幕左上角，单位为vp，分正负方向速度，从上往下为正，反之为负。 |
 
 ## getWindowX
 
@@ -378,9 +378,9 @@ getWindowX(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前拖拽点相对于窗口左上角的x轴坐标，单位为vp。 |
 
 ## getWindowY
 
@@ -400,9 +400,9 @@ getWindowY(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前拖拽点相对于窗口左上角的y轴坐标，单位为vp。 |
 
 ## getX
 
@@ -424,9 +424,9 @@ getX(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回当前拖拽点相对于窗口左上角的x轴坐标。 |
 
 ## getY
 
@@ -448,9 +448,9 @@ getY(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回当前拖拽点相对于窗口左上角的y轴坐标。 |
 
 ## isRemote
 
@@ -470,9 +470,9 @@ isRemote(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否是跨设备拖拽，返回true表示是跨设备拖拽，返回false表示不是跨设备拖拽。 |
 
 ## setData
 
@@ -492,9 +492,9 @@ setData(unifiedData: UnifiedData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| unifiedData | [UnifiedData](arkts-arkui-unifieddata-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| unifiedData | [UnifiedData](arkts-arkui-unifieddata-t.md) | 是 | 拖拽相关的数据。 |
 
 ## setDataLoadParams
 
@@ -514,9 +514,9 @@ setDataLoadParams(dataLoadParams: DataLoadParams): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [dataLoadParams](../arkts-apis/arkts-arkui-dragcontroller-draginfo-i.md) | [DataLoadParams](arkts-arkui-dataloadparams-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| dataLoadParams | [DataLoadParams](arkts-arkui-dataloadparams-t.md) | 是 | 落入操作时使用的数据加载参数。 |
 
 ## setResult
 
@@ -536,9 +536,9 @@ setResult(dragResult: DragResult): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| dragResult | [DragResult](arkts-arkui-dragresult-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| dragResult | [DragResult](arkts-arkui-dragresult-e.md) | 是 | 拖拽结果。 |
 
 ## startDataLoading
 
@@ -558,22 +558,22 @@ startDataLoading(options: DataSyncOptions): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 是 | 获取拖拽数据时的参数，包含目标路径、文件冲突选项、进度条类型等。数据传输过程中可使用 [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading)接口取消数据加载。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 拖拽数据的标识，用于区分每次拖拽。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [190003](../errorcode-drag-event.md#190003-当前阶段不允许操作) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [190003](../errorcode-drag-event.md#190003-当前阶段不允许操作) | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 

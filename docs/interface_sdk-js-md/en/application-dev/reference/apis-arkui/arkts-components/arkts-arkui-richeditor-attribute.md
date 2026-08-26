@@ -31,9 +31,9 @@ Triggered when content is about to be deleted in the input method.This callback 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback&lt;[RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md), boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md), boolean&gt; | Yes | [RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md) indicates the text or image span where the content to be deleted is located.   **true**: Content is deleted.   **false**: Content is not deleted.Callback invoked when content is about to be deleted in the input method. It is executed when a candidate word is touched in preview text.<br>**Since:** 12 |
 
 ## aboutToIMEInput
 
@@ -53,9 +53,9 @@ Triggered when content is about to be entered in the input method.This callback 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback&lt;[RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md), boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md), boolean&gt; | Yes | [RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md) indicates whether content will be entered in the input method.   **true**: The component adds the content.    **false**: The component does not add the content.Callback invoked when content is about to be entered in the input method.<br>**Since:** 12 |
 
 ## barState
 
@@ -65,7 +65,8 @@ barState(state: BarState)
 
 Sets the display mode of the **RichEditor** scrollbar.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -80,9 +81,9 @@ Sets the display mode of the **RichEditor** scrollbar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar display mode.Default value: **BarState.Auto |
 
 ## bindSelectionMenu
 
@@ -103,12 +104,12 @@ Sets the custom context menu on text selection. If the custom menu is too number
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| spanType | [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | Yes |
-| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
-| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | Yes |
-| options | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| spanType | [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | Yes | Menu type.Default value:RichEditorSpanType.TEXT |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Menu content. |
+| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | Yes | Response type of the menu.Default value:ResponseType.LongPress<br>**Since:** 11 |
+| options | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | No | Menu options. |
 
 ## caretColor
 
@@ -128,9 +129,9 @@ Sets the color of the caret and selection handle in the text box.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the caret and selection handle in the text box.Default value: **'#007DFF' |
 
 ## compressLeadingPunctuation
 
@@ -140,8 +141,10 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 Sets whether to enable punctuation compression at the beginning of a line.
 
-> **NOTE：**&gt;
-> By default, the punctuation at the beginning of a line is not compressed.&gt;
+> **NOTE：**
+> 
+> By default, the punctuation at the beginning of a line is not compressed.
+> 
 > For details about the punctuation that supports compression, see the punctuation range of the line header
 > compression of [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
@@ -155,9 +158,9 @@ Sets whether to enable punctuation compression at the beginning of a line.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable punctuation compression at the beginning of a line.true indicates that punctuation compression is enabled at the beginning of a line. false indicates that punctuation compression is disabled at the beginning of a line. |
 
 ## copyOptions
 
@@ -181,9 +184,9 @@ scope.If copyOptions is not set to CopyOptions.None, a text selection menu will 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [CopyOptions](#copyoptions) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [CopyOptions](#copyoptions) | Yes | Whether copy and paste is allowed for text content.Default value: **CopyOptions.LocalDevice |
 
 ## customKeyboard
 
@@ -194,7 +197,8 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
 
 Sets a custom keyboard.When a custom keyboard is set, activating the text box opens the specified custom component, instead of the system input method.The custom keyboard's height can be set through the **height** attribute of the custom component's root node, and its width is fixed at the default value.The custom keyboard cannot obtain focus, but it blocks gesture events.By default, the custom keyboard is closed when the input component loses the focus.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 23.
@@ -209,10 +213,10 @@ Sets a custom keyboard.When a custom keyboard is set, activating the text box op
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| ComponentContent \| undefined | Yes |
-| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) \| undefined | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| ComponentContent \| undefined | Yes | Custom keyboard.When undefined is passed, the system keyboard is used by default.<br>**Since:** 23 |
+| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) \| undefined | No | Whether to support keyboard avoidance.When undefined is passed, avoidance is not supported by default.<br>**Since:** 23 |
 
 ## dataDetectorConfig
 
@@ -234,9 +238,9 @@ Configures special entity recognition settings, including entity types to detect
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [TextDataDetectorConfig](../arkts-apis/arkts-arkui-textdatadetectorconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [TextDataDetectorConfig](../arkts-apis/arkts-arkui-textdatadetectorconfig-i.md) | Yes | Text recognition configuration. |
 
 ## editMenuOptions
 
@@ -247,7 +251,8 @@ editMenuOptions(editMenu: EditMenuOptions)
 Sets the extended options of the default system menu, including the text content, icon, and callback.When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or  
 [disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems) is used to disable system service menu items in the context menu on selection, the disabled menu options will be excluded from the parameter list in the [onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback of **editMenuOptions**.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -262,9 +267,9 @@ Sets the extended options of the default system menu, including the text content
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes | Extended options of the custom context menu on selection. |
 
 ## enableAutoSpacing
 
@@ -284,9 +289,9 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable automatic spacing between Chinese and Western characters.   **true** to enable, **false** otherwise.Default value: **false**. |
 
 ## enableDataDetector
 
@@ -306,9 +311,9 @@ Enables recognition for special entities within the text.For this API to work, t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to enable text recognition.   **true** to enable, **false** otherwise.Default value: **false**. |
 
 ## enableHapticFeedback
 
@@ -318,7 +323,8 @@ enableHapticFeedback(isEnabled: boolean)
 
 Sets whether to enable haptic feedback.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called in
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 20.
@@ -333,9 +339,9 @@ Sets whether to enable haptic feedback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isEnabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isEnabled | boolean | Yes | Whether to enable haptic feedback.Default value: **true**. **true** to enable; **false** otherwise.   **NOTE：**Haptic feedback takes effect only when the application has the ohos.permission.VIBRATE permission, the user has enabled haptic feedback, and the system hardware supports it. |
 
 ## enableKeyboardOnFocus
 
@@ -345,7 +351,8 @@ enableKeyboardOnFocus(isEnabled: boolean)
 
 Sets whether to enable the input method when the **RichEditor** component obtains focus in a way other than clicking.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -360,9 +367,9 @@ Sets whether to enable the input method when the **RichEditor** component obtain
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isEnabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isEnabled | boolean | Yes | Whether to bring up the keyboard when a component obtains focus in a way other than clicking.   **true**: yes; **false**: no Default value: **true |
 
 ## enablePreviewText
 
@@ -372,7 +379,8 @@ enablePreviewText(enable: boolean)
 
 Sets whether to enable preview text.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -387,9 +395,9 @@ Sets whether to enable preview text.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to enable preview text.   **true** to enable, **false** otherwise.Default value: **true |
 
 ## enableSelectedDataDetector
 
@@ -409,9 +417,9 @@ Sets whether to enable the AI menu function for text selection. After this funct
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean \| undefined | Yes | Whether to enable text recognition. The value **true** means to enable text recognition, and **false** means the opposite.If **undefined** or **null** is passed, the attribute is reset to the default value. |
 
 ## enterKeyType
 
@@ -431,9 +439,9 @@ Sets the Enter key type of the soft keyboard.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [EnterKeyType](#enterkeytype) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [EnterKeyType](#enterkeytype) | Yes | Type of the Enter key.Default value: **EnterKeyType.NEW_LINE |
 
 ## fallbackLineSpacing
 
@@ -453,9 +461,9 @@ For multi-line text overlay, the line height can be automatically adjusted based
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether the line height is adaptive based on the actual text height.The value true indicates that the line height is automatically adjusted based on the actual text height. The value false indicates that the line height is not automatically adjusted based on the actual text height. |
 
 ## horizontalScrolling
 
@@ -475,9 +483,9 @@ Whether to enable horizontal scrolling when text is wider than the view. The def
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | whether to enable horizontal scrolling. True means enable this feature, false means disable this feature. |
 
 ## includeFontPadding
 
@@ -497,9 +505,9 @@ Sets whether to add a spacing between the first and last lines to avoid text tru
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to add a spacing between the first and last lines to avoid text truncation.The value true indicates that the space between the first line and the last line is added. The value false indicates that the space between the first line and the last line is not added. |
 
 ## keyboardAppearance
 
@@ -519,9 +527,9 @@ Sets the keyboard appearance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | Yes | Keyboard appearance.Default value: **KeyboardAppearance.NONE_IMMERSIVE |
 
 ## maxLength
 
@@ -541,9 +549,9 @@ Sets the maximum length of the component content. When the total length of the c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [maxLength](#maxlength) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| maxLength | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Maximum number of characters for text input.Default value: **Infinity**, which means unlimited input. The **undefined** type is supported.   **NOTE：**If this attribute is not set or is set to an invalid value, the default value is used. If a decimal number is specified, the integer part is used. |
 
 ## maxLines
 
@@ -563,9 +571,9 @@ Sets the maximum number of lines that the rich text can display. When **maxLines
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [maxLines](#maxlines) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| maxLines | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Maximum number of lines that the rich text can display. When **maxLines** is set, content that exceeds the specified number of lines can be scrolled to display. If both the component height and **maxLines** are set, the component height takes precedence.Default value: **UINT32_MAX**, which means unlimited input. The **undefined** type is supported.Value range: (0, UINT32_MAX] |
 
 ## onCopy
 
@@ -585,9 +593,9 @@ Triggered during copy. You can use this method to override the system's default 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback&lt;[CopyEvent](arkts-arkui-copyevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[CopyEvent](arkts-arkui-copyevent-i.md)&gt; | Yes | User copy event. |
 
 ## onCut
 
@@ -607,9 +615,9 @@ Triggered during cutting. You can use this method to override the system's defau
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback&lt;[CutEvent](arkts-arkui-cutevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[CutEvent](arkts-arkui-cutevent-i.md)&gt; | Yes | Defines a custom cut event. |
 
 ## onDeleteComplete
 
@@ -629,9 +637,9 @@ Triggered when content is deleted in the input method.This callback is not suppo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback & lt;void & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback & lt;void & gt; | Yes | Triggered when deletion in the input method is completed.<br>**Since:** 12 |
 
 ## onDidChange
 
@@ -641,7 +649,8 @@ onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 
 Triggered after an addition or deletion operation is performed in the component. This callback is not executed if there is no actual addition or deletion of text.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -656,9 +665,9 @@ Triggered after an addition or deletion operation is performed in the component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md) | Yes | The triggered function after content changed. |
 
 ## onDidIMEInput
 
@@ -668,7 +677,8 @@ onDidIMEInput(callback: Callback<TextRange>)
 
 Triggered when text input in the input method is complete.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called in
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 20.
@@ -683,9 +693,9 @@ Triggered when text input in the input method is complete.This callback is not s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback&lt;[TextRange](../arkts-apis/arkts-arkui-textrange-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[TextRange](../arkts-apis/arkts-arkui-textrange-i.md)&gt; | Yes | TextRange** indicates the text range for the current input.Callback invoked when text input in the input method is complete. |
 
 ## onEditingChange
 
@@ -705,9 +715,9 @@ Triggered when the content editing state in the component changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback & lt;boolean & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback & lt;boolean & gt; | Yes | Callback invoked when the editing state of all content in the component changes. The value **true** indicates the editing state, and **false** indicates the non-editing state. |
 
 ## onIMEInputComplete
 
@@ -727,9 +737,9 @@ Triggered when text input in the input method is complete.This callback can retu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | Yes | [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) indicates the text span information after text input is complete.Callback invoked when text input in the input method is complete.<br>**Since:** 12 |
 
 ## onPaste
 
@@ -749,9 +759,9 @@ Triggered when a paste operation is performed. You can use this API to override 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [PasteEventCallback](arkts-arkui-pasteeventcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [PasteEventCallback](arkts-arkui-pasteeventcallback-t.md) | Yes | Callback used to subscribe to the pasted text content.<br>**Since:** 12 |
 
 ## onReady
 
@@ -771,9 +781,9 @@ Triggered after the **RichEditor** component is initialized.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback & lt;void & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback & lt;void & gt; | Yes | Triggered when initialization of the **RichEditor** component is complete.<br>**Since:** 12 |
 
 ## onSelect
 
@@ -793,9 +803,9 @@ Invoked when content is selected.If a mouse device is used for selection, this c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback&lt;[RichEditorSelection](arkts-arkui-richeditorselection-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[RichEditorSelection](arkts-arkui-richeditorselection-i.md)&gt; | Yes | [RichEditorSelection](arkts-arkui-richeditorselection-i.md) indicates information about all the selected spans.Callback invoked when content is selected.<br>**Since:** 12 |
 
 ## onSelectionChange
 
@@ -815,9 +825,9 @@ Triggered when the selection area or caret position changes in the editing state
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback&lt;[RichEditorRange](arkts-arkui-richeditorrange-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[RichEditorRange](arkts-arkui-richeditorrange-i.md)&gt; | Yes | [RichEditorRange](arkts-arkui-richeditorrange-i.md) indicates the start and end positions of the content selection area.Callback invoked when the content selection area changes or the caret position changes in the editing state. |
 
 ## onSubmit
 
@@ -837,9 +847,9 @@ Triggered when the Enter key on the soft keyboard is pressed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [SubmitCallback](arkts-arkui-submitcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [SubmitCallback](arkts-arkui-submitcallback-t.md) | Yes | Callback used to return the subscription event. |
 
 ## onWillAttachIME
 
@@ -859,9 +869,9 @@ Triggers a callback before a component is bound to an input method.Call the [set
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback&lt;[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)&gt; \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)&gt; \| undefined | Yes | Callback triggered before the component is bound to an input method.If the value is undefined, the bound callback event is cleared. |
 
 ## onWillChange
 
@@ -871,7 +881,8 @@ onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAtt
 
 Invoked when any addition or deletion operation is about to be performed in the component.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -886,9 +897,9 @@ Invoked when any addition or deletion operation is about to be performed in the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback&lt;[RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md), boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md), boolean&gt; | Yes | The triggered function before text content is about to change. |
 
 ## orphanCharOptimization
 
@@ -906,9 +917,9 @@ Whether to avoid an orphan word on the last line of the paragraph.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | The default value is false, indicates the flag whether to enable this feature. |
 
 ## placeholder
 
@@ -918,7 +929,8 @@ placeholder(value: ResourceStr, style?: PlaceholderStyle)
 
 Sets the placeholder text, which is displayed when there is no input.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within
 > [attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)
 > since API version 18.
@@ -933,10 +945,10 @@ Sets the placeholder text, which is displayed when there is no input.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
-| style | [PlaceholderStyle](arkts-arkui-placeholderstyle-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Placeholder text. |
+| style | [PlaceholderStyle](arkts-arkui-placeholderstyle-i.md) | No | Style of the placeholder text.By default, the style follows the theme. |
 
 ## punctuationOverflow
 
@@ -956,9 +968,9 @@ Whether to enable punctuation overflow at line ends.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable the feature, the default value is false. |
 
 ## scrollBarColor
 
@@ -978,9 +990,9 @@ Sets the color of the scrollbar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | Yes | Color of the scrollbar.Default value: **'#66182431'**, displayed as gray.Note: If an abnormal value is set, the default value is used. |
 
 ## selectedBackgroundColor
 
@@ -1000,9 +1012,9 @@ Sets the background color of the selected text. If the opacity is not set, a 20%
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the selected text.By default, a 20% opacity is applied. |
 
 ## selectedDragPreviewStyle
 
@@ -1022,9 +1034,9 @@ Sets the drag and view style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | Yes | Drag and preview style. If this attribute is set to undefined, the style will be reset. |
 
 ## singleLine
 
@@ -1034,8 +1046,10 @@ singleLine(isEnable: boolean | undefined)
 
 Sets whether to enable the single-line mode. If this interface is not used, the single-line mode is disabled by default.
 
-> **NOTE：**&gt;
-> The scroll bar is not displayed in single-line mode.&gt;
+> **NOTE：**
+> 
+> The scroll bar is not displayed in single-line mode.
+> 
 > In single-line mode, the newline character is displayed as a space.
 
 **Since:** 23
@@ -1048,9 +1062,9 @@ Sets whether to enable the single-line mode. If this interface is not used, the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isEnable | boolean \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isEnable | boolean \| undefined | Yes | Whether to enable the single-line mode.The value true indicates that the single-line mode is enabled, and the value false indicates that the single-line mode is disabled.If this attribute is set to undefined or null, the value false is used and the single-line mode is not enabled. |
 
 ## stopBackPress
 
@@ -1070,9 +1084,9 @@ Sets whether to prevent the back button press from being propagated to other com
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isStopped | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isStopped | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to prevent the back button press from being propagated to other components or applications.   **true** to prevent, **false** otherwise.Default value: **true**. If an invalid value is provided, the default value is used. |
 
 ## undoStyle
 
@@ -1092,6 +1106,6 @@ Sets whether to retain the original content style when undoing or redoing an act
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[UndoStyle](arkts-arkui-undostyle-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[UndoStyle](arkts-arkui-undostyle-e.md)&gt; | Yes | Whether to retain the original style when undoing an operation. Default value: **UndoStyle.CLEAR_STYLE**. |

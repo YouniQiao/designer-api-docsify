@@ -9,7 +9,7 @@ Represents gesture path information, used to simulate user touch gestures (such 
 ## Modules to Import
 
 ```TypeScript
-import { GesturePath } from 'kits/@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -28,9 +28,20 @@ Creates a gesture path object by passing in the total gesture duration. After cr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [durationTime](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| durationTime | number | Yes | Total gesture duration, in ms. The value must be greater than 0. |
+
+**Examples**
+
+```TypeScript
+import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
+
+let gesturePath = new GesturePath(20);
+let startPoint = new GesturePoint(100, 100);
+let endPoint = new GesturePoint(200, 200);
+gesturePath.points = [startPoint, endPoint];
+```
 
 ## durationTime
 

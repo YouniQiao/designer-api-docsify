@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiext } from 'kits/@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKit';
 ```
 
 ## getPowerModel
@@ -26,9 +26,9 @@ Obtains the current Wi-Fi power mode.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt; | Returns the current Wi-Fi power mode. If a value less than zero is returned, it indicates a failure. |
 
 
 ## getPowerModel
@@ -51,6 +51,6 @@ Obtains the current Wi-Fi power mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt; | Yes | callback function, no return value. |

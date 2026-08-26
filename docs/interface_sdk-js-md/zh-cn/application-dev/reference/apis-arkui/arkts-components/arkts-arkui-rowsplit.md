@@ -1,7 +1,7 @@
 # RowSplit
 
 将子组件横向布局，并在每个子组件之间插入纵向分割线。适用于需要横向多区域布局且支持动态调整子组件宽度的场景，如文件管理器的左右分栏、设置页面的双栏布局等。通过可拖拽的分割线，用户可以灵活调整各区域宽度。
-> **说明：**>> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 ## 子组件
 
@@ -22,3 +22,30 @@ RowSplit()
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 汇总
+
+## 示例
+
+RowSplit的基本用法。实现分割线可拖动的横向布局。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct RowSplitExample {
+  build() {
+    Column() {
+      Text('The second line can be dragged').fontSize(9).fontColor(0xCCCCCC).width('90%')
+      // 创建RowSplit组件，实现横向布局
+      RowSplit() {
+        Text('1').width('10%').height(100).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
+        Text('2').width('10%').height(100).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
+        Text('3').width('10%').height(100).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
+        Text('4').width('10%').height(100).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
+        Text('5').width('10%').height(100).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
+      }
+      .resizeable(true) // 可拖拽
+      .width('90%').height(100)
+    }.width('100%').margin({ top: 5 })
+  }
+}
+```

@@ -22,15 +22,32 @@ Obtains a node by path. If no node is obtained, null is returned.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [path](#path) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Path in the scene node tree. Each layer is separated by a slash (/). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Returns the node object. |
+
+**Examples**
+
+```TypeScript
+import { Scene, Node } from '@kit.ArkGraphics3D';
+
+function getNode(): void {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result && result.root) {
+      // Search for a node.
+      let geo : Node | null = result.root.getNodeByPath("scene/node");
+    }
+  });
+}
+```
 
 ## children
 

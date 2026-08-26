@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## isBandTypeSupported
@@ -22,20 +23,34 @@ Check whether the current device supports the specified band.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bandType | [WifiBandType](arkts-connectivity-wifimanager-wifibandtype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bandType | [WifiBandType](arkts-connectivity-wifimanager-wifibandtype-e.md) | Yes | Indicates the band type. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+  try {
+    let type = 0;
+    let isBandTypeSupported = wifiManager.isBandTypeSupported(type);
+    console.info("isBandTypeSupported:" + isBandTypeSupported);    
+  }catch(error){
+    console.error("failed:" + JSON.stringify(error));
+  }
+```

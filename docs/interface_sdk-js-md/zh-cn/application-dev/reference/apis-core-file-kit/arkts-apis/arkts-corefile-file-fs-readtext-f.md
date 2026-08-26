@@ -3,9 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## readText
@@ -27,35 +25,48 @@ declare function readText(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filePath | string | 是 |
-| options | [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filePath | string | 是 | 文件的应用沙箱路径。 |
+| options | [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | 否 | 支持如下选项：   - offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。   - length ，number类型，表示期望读取数据的长度，单位为Byte。可选，默认文件长度。   - encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8'。<br>**起始版本：** 11 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象。返回读取文件的内容。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900001 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900013 |
-| 13900019 |
-| 13900020 |
-| 13900024 |
-| 13900025 |
-| 13900034 |
-| 13900041 |
-| 13900042 |
-| 13900044 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900013 | Bad address |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900034 | Operation would block |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 13900044 | Network is unreachable<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.readText(filePath).then((str: string) => {
+  console.info(`Succeeded in reading text, text is: ${str}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 
 ## readText
@@ -74,28 +85,43 @@ declare function readText(filePath: string, callback: AsyncCallback<string>): vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filePath | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filePath | string | 是 | 文件的应用沙箱路径。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回读取文件的内容。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900001 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900013 |
-| 13900019 |
-| 13900020 |
-| 13900024 |
-| 13900025 |
-| 13900034 |
-| 13900041 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900013 | Bad address |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900034 | Operation would block |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.readText(filePath, (err: BusinessError, str: string) => {
+  if (err) {
+    console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in reading text, text is: ${str}`);
+  }
+});
+```
 
 
 ## readText
@@ -118,26 +144,48 @@ declare function readText(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filePath | string | 是 |
-| options | [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filePath | string | 是 | 文件的应用沙箱路径。 |
+| options | [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | 是 | 支持如下选项：   - offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。   - length ，number类型，表示期望读取数据的长度，单位为Byte。可选，默认文件长度。   - encoding，string类型，表示数据的编码方式，默认'utf-8'，仅支持'utf-8'。<br>**起始版本：** 11 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回读取文件的内容。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900001 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900013 |
-| 13900019 |
-| 13900020 |
-| 13900024 |
-| 13900025 |
-| 13900034 |
-| 13900041 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900013 | Bad address |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900034 | Operation would block |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ReadTextOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stat = fileIo.statSync(filePath);
+let readTextOption: ReadTextOptions = {
+    offset: 1,
+    length: stat.size,
+    encoding: 'utf-8'
+};
+fileIo.readText(filePath, readTextOption, (err: BusinessError, str: string) => {
+  if (err) {
+    console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in reading text, text is: ${str}`);
+  }
+});
+```

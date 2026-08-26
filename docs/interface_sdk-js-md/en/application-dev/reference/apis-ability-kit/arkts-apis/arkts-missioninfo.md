@@ -5,7 +5,7 @@
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MissionInfo](arkts-ability-missioninfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [MissionInfo](arkts-ability-missioninfo-i-sys.md) | The module defines detailed information about a mission. The information can be obtained through [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md). |
 <!--DelEnd-->

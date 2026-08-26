@@ -20,7 +20,7 @@ installation.
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import update from '@kit.BasicServicesKit';
 ```
 
 ## applyNewVersion
@@ -51,19 +51,45 @@ Use scenarios: This method is used to upgrade the system from a local storage de
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | Yes | An array of upgrade files, which is used to specify the local upgrade files to be installed. You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before using this parameter to install the upgrade package. The parameter contains the **fileType** and **filePath** fields. The value of **filePath** is a string of 1 to 255 characters. If the value is out of range, an exception is thrown, and you need to provide the path of the upgrade package. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function used to receive the result of installing the upgrade package. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [11500104](../errorcode-update.md#11500104-ipc-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter verification failed. |
+| [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradeFiles: Array<update.UpgradeFile> = [{
+  fileType: update.ComponentType.OTA, // OTA package
+  filePath: '/data/local/tmp/updater.zip' // Local update package path. The user needs to download the upgrade package from the official website of the vendor or an official channel and save it to an accessible storage path of the device, for example, /data/local/tmp/updater.zip.
+}];
+
+try {
+  // Obtain a LocalUpdater object.
+  let localUpdater = update.getLocalUpdater();
+  // Install the new version.
+  localUpdater.applyNewVersion(upgradeFiles, (applyNewVersionError: BusinessError) => {
+    if (applyNewVersionError) {
+      console.error(`applyNewVersion error, code:${applyNewVersionError.code}, message:${applyNewVersionError.message}.`);
+      return;
+    }
+    console.info(`applyNewVersion success`);
+  });
+} catch (error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```
 
 ## applyNewVersion
 
@@ -93,24 +119,48 @@ Use scenarios: This method is used to upgrade the system from a local storage de
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | Yes | An array of upgrade files, which is used to specify the local upgrade files to be installed. You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before using this parameter to install the upgrade package. The parameter contains the **fileType** and **filePath** fields. The value of **filePath** is a string of 1 to 255 characters. If the value is out of range, an exception is thrown, and you need to provide the path of the upgrade package. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, **resolve** returns no value. If the operation fails, the return value of **reject** is an error message. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [11500104](../errorcode-update.md#11500104-ipc-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter verification failed. |
+| [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradeFiles: Array<update.UpgradeFile> = [{
+  fileType: update.ComponentType.OTA, // OTA package
+  filePath: '/data/local/tmp/updater.zip' // Local update package path. The user needs to download the upgrade package from the official website of the vendor or an official channel and save it to an accessible storage path of the device, for example, /data/local/tmp/updater.zip.
+}];
+
+try {
+  // Obtain a LocalUpdater object.
+  let localUpdater = update.getLocalUpdater();
+  // Install the new version.
+  localUpdater.applyNewVersion(upgradeFiles).then(() => {
+    console.info(`applyNewVersion success`);
+  }).catch((applyNewVersionError: BusinessError) => {
+    console.error(`applyNewVersion error, code:${applyNewVersionError.code}, message:${applyNewVersionError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```
 
 ## off
 
@@ -134,16 +184,63 @@ release resources in a timely manner.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes |
-| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | EventClassifyInfo** object, which is used to specify the type of the upgrade event whose listener needs to be unregistered. You must use **on** to register a listener before using this method to unregister the listener. |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | No | Task callback, which is used to cancel a specified callback listener. Callback signature. In the signature, **eventInfo** is an **EventInfo** object, whose value is **void**. **eventInfo** contains the **eventId** and **taskBody** fields. Pass this parameter when a specific callback listener needs to be unregistered. If this parameter is not passed, the default value is **undefined**, indicating that all listeners for the event type are canceled. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+const eventClassifyInfo: update.EventClassifyInfo = {
+  eventClassify: update.EventClassify.TASK, // Task event type
+  extraInfo: ''
+};
+try {
+  // Define an UpgradeInfo object.
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // App package name
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // Vendor type
+      subType: update.BusinessSubType.FIRMWARE // The update type is firmware.
+    }
+  };
+  // Obtain an OnlineUpdater object.
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // Unregister the event listener.
+  onlineUpdater.off(eventClassifyInfo, (eventInfo: update.EventInfo) => {
+    console.info(`onlineUpdater off ${JSON.stringify(eventInfo)}`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
+
+```TypeScript
+const eventClassifyInfo: update.EventClassifyInfo = {
+  eventClassify: update.EventClassify.TASK, // Task event type
+  extraInfo: ''
+};
+// Define the callback for task updates, which is used to process the upgrade task event.
+let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
+  console.info(`on eventInfo id `, eventInfo.eventId);
+};
+
+try {
+  // Obtain a LocalUpdater object.
+  let localUpdater = update.getLocalUpdater();
+  // Unregister the local upgrade event listener.
+  localUpdater.off(eventClassifyInfo, onTaskUpdate);
+} catch (error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```
 
 ## on
 
@@ -170,16 +267,63 @@ listener when it is no longer needed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes |
-| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | EventClassifyInfo** object, which is used to specify the type of the upgrade event to be listened for. |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | Yes | Task callback, which is used to receive upgrade task event notifications. Callback signature. In the signature, **eventInfo** is an **EventInfo** object, whose value is **void**. **eventInfo** contains the **eventId** (event ID) and **taskBody** (task data) fields. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+const eventClassifyInfo: update.EventClassifyInfo = {
+  eventClassify: update.EventClassify.TASK, // Task event type
+  extraInfo: '' // Additional information. If this parameter is left empty, no additional information is available.
+};
+try {
+  // Define an UpgradeInfo object.
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // App package name
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // Vendor type
+      subType: update.BusinessSubType.FIRMWARE // The update type is firmware.
+    }
+  };
+  // Obtain an OnlineUpdater object.
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // Register an event listener to monitor the update status in real time.
+  onlineUpdater.on(eventClassifyInfo, (eventInfo: update.EventInfo) => {
+    console.info(`updater on ${JSON.stringify(eventInfo)}`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
+
+```TypeScript
+const eventClassifyInfo: update.EventClassifyInfo = {
+  eventClassify: update.EventClassify.TASK, // Task event type
+  extraInfo: ''
+};
+// Define the callback for task updates, which is used to process the upgrade task event.
+let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
+  console.info(`on eventInfo id `, eventInfo.eventId);
+};
+
+try {
+  // Obtain a LocalUpdater object.
+  let localUpdater = update.getLocalUpdater();
+  // Register a local upgrade event listener.
+  localUpdater.on(eventClassifyInfo, onTaskUpdate);
+} catch (error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```
 
 ## verifyUpgradePackage
 
@@ -211,20 +355,49 @@ successful.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | Yes |
-| certsFile | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | Yes | Upgrade file, including the file type and file path, which are used to specify the local upgrade package to be verified. |
+| certsFile | string | Yes | Certificate file path, which is used to verify the upgrade package signature. The certificate file must be downloaded from the official website of the vendor to ensure that the source is trusted. The value can be an absolute path or a relative path. The path length ranges from 1 to 255 characters. Only letters, digits, underscores (_), hyphens (-), dots (.), and slashes (/) are allowed. An exception is thrown if the value is out of range or contains invalid characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the verification result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [11500104](../errorcode-update.md#11500104-ipc-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter verification failed. |
+| [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradeFile: update.UpgradeFile = {
+  fileType: update.ComponentType.OTA, // OTA package
+  filePath: '/data/local/tmp/updater.zip' // Local update package path. The user needs to download the upgrade package from the official website of the vendor or an official channel and save it to an accessible storage path of the device, for example, /data/local/tmp/updater.zip.
+};
+// certsFile is the certificate file path, which needs to be downloaded from the official website of the vendor and saved to an accessible path on the device.
+const certsFile = '/path/to/certificate.cert'; // Certificate file path, which needs to be downloaded from the official website of the vendor.
+
+try {
+  // Obtain a LocalUpdater object.
+  let localUpdater = update.getLocalUpdater();
+  // Verify the upgrade package.
+  localUpdater.verifyUpgradePackage(upgradeFile, certsFile, (verifyUpgradePackageError: BusinessError) => {
+    if (verifyUpgradePackageError) {
+      console.error(`verifyUpgradePackage error, code:${verifyUpgradePackageError.code}, message:${verifyUpgradePackageError.message}.`);
+      return;
+    }
+    console.info(`verifyUpgradePackage success`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Fail to get localUpdater. Code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## verifyUpgradePackage
 
@@ -253,22 +426,49 @@ system may be damaged.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | Yes |
-| certsFile | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | Yes | Upgrade file, including the file type and file path, which are used to specify the local upgrade package to be verified. |
+| certsFile | string | Yes | Certificate file path, which is used to verify the upgrade package signature. The certificate file must be downloaded from the official website of the vendor to ensure that the source is trusted. The value can be an absolute path or a relative path. The path length ranges from 1 to 255 characters. Only letters, digits, underscores (_), hyphens (-), dots (.), and slashes (/) are allowed. An exception is thrown if the value is out of range or contains invalid characters. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, **resolve** returns no value. If the operation fails, the return value of **reject** is an error message. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [11500104](../errorcode-update.md#11500104-ipc-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter verification failed. |
+| [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradeFile: update.UpgradeFile = {
+  fileType: update.ComponentType.OTA, // OTA package
+  filePath: '/data/local/tmp/updater.zip' // Local update package path. The user needs to download the upgrade package from the official website of the vendor or an official channel and save it to an accessible storage path of the device, for example, /data/local/tmp/updater.zip.
+};
+
+// certsFile is the certificate file path, which needs to be downloaded from the official website of the vendor and saved to an accessible path on the device.
+const certsFile = '/path/to/certificate.cert'; // Certificate file path, which needs to be downloaded from the official website of the vendor.
+
+try {
+  // Obtain a LocalUpdater object.
+  let localUpdater = update.getLocalUpdater();
+  // Verify the upgrade package.
+  localUpdater.verifyUpgradePackage(upgradeFile, certsFile).then(() => {
+    console.info(`verifyUpgradePackage success`);
+  }).catch((verifyUpgradePackageError: BusinessError) => {
+    console.error(`verifyUpgradePackage error, code:${verifyUpgradePackageError.code}, message:${verifyUpgradePackageError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```

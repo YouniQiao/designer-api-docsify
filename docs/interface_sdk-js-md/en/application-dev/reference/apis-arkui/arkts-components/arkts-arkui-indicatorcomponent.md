@@ -22,8 +22,8 @@ Called when a indicator is set.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) | No | indicator component controller. |
 
 ## Summary

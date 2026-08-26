@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## getPortSupportModes
@@ -24,21 +25,28 @@ function getPortSupportModes(portId: number): PortModeType
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| portId | number | 是 | USB端口号，可通过[getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md)获取端口列表后得到。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md) | 支持的模式列表的组合掩码。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 18+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Normal application do not have permission to use system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+
+**示例**
+
+```TypeScript
+// 获取端口ID为0的支持模式
+let ret: usbManager.PortModeType = usbManager.getPortSupportModes(0);
+```

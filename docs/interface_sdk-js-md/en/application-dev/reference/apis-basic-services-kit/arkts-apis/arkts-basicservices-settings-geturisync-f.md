@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import settings from '@kit.BasicServicesKit';
+import settingsLite from '@kit.BasicServicesKitLite';
 ```
 
 ## getUriSync
@@ -22,12 +23,19 @@ Get settingsdata uri (synchronous method)
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Indicates the name of the setting to set. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Returns settingsdata uri. |
+
+**Examples**
+
+```TypeScript
+// Obtain the URI of a data item.
+let uriVar:string = settings.getUriSync(settings.display.SCREEN_BRIGHTNESS_STATUS);
+```

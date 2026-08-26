@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## stopJsCpuProfiling
@@ -17,3 +16,18 @@ function stopJsCpuProfiling() : void
 **起始版本：** 9
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**示例**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  hidebug.startJsCpuProfiling("cpu_profiling");
+  // ...
+  hidebug.stopJsCpuProfiling();
+} catch (error) {
+  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
+}
+```

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
+import serial from '@kit.BasicServicesKit';
 ```
 
 ## close
@@ -31,16 +31,16 @@ close(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## drain
 
@@ -65,17 +65,17 @@ drain(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## flush
 
@@ -97,17 +97,17 @@ flush(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## getCts
 
@@ -130,17 +130,17 @@ getCts(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回CTS信号状态，返回true表示可以发送数据，返回false表示不可以发送数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## getDsr
 
@@ -158,17 +158,17 @@ getDsr(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回DSR信号状态；true表示数据设备就绪；false表示数据设备未就绪。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## offDataRead
 
@@ -189,16 +189,16 @@ offDataRead(callback?: Callback<Uint8Array>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | 否 | 回调函数。传入callback时，取消指定的串口数据接收监听；不传入callback时，清除所有串口数据接收监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## offDisconnect
 
@@ -222,16 +222,16 @@ offDisconnect(callback?: Callback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，需先通过onDisconnect()注册回调后才能取消。传入callback时，取消指定的串口断开事件监听； 不传入callback时，清除所有串口断开事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## onDataRead
 
@@ -255,17 +255,17 @@ onDataRead(callback: Callback<Uint8Array>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回串口接收到的数据。用于监听串口数据接收事件，注册回调后，串口接收到数据时会触发该回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## onDisconnect
 
@@ -289,16 +289,16 @@ onDisconnect(callback: Callback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，串口断开时触发。用于监听串口断开事件，注册回调后，串口设备断开连接时会触发该回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## open
 
@@ -319,25 +319,25 @@ open(config?: SerialConfigs): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [SerialConfigs](arkts-basicservices-serial-serialconfigs-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [SerialConfigs](arkts-basicservices-serial-serialconfigs-i.md) | 否 | 串口通信参数。不传入config参数时，使用SerialConfigs的默认配置打开串口。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700002](../errorcode-busmanager-serial.md#35700002-参数错误) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700004](../errorcode-busmanager-serial.md#35700004-端口已被占用) |
-| [35700007](../errorcode-busmanager-serial.md#35700007-需要用户授权) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700002](../errorcode-busmanager-serial.md#35700002-参数错误) | Invalid parameter. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700004](../errorcode-busmanager-serial.md#35700004-端口已被占用) | Port already in use. |
+| [35700007](../errorcode-busmanager-serial.md#35700007-需要用户授权) | User authorization required. |
 
 ## sendBrk
 
@@ -355,17 +355,17 @@ sendBrk(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## setDtr
 
@@ -383,23 +383,23 @@ setDtr(enable: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | DTR信号状态，true表示数据终端就绪；false表示数据终端未就绪。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## setRts
 
@@ -421,23 +421,23 @@ setRts(enable: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | RTS信号状态，true表示请求发送数据，false表示不请求发送数据。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## write
 
@@ -458,26 +458,26 @@ write(data: Uint8Array, timeout?: number): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | Uint8Array | 是 |
-| timeout | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | Uint8Array | 是 | 待发送的数据。长度范围：(0, 4096]。发送超过4096字节的数据时，建议分多次调用write方法发送。 |
+| timeout | number | 否 | 超时时间，取值范围：[0, 300000]，整数，单位为毫秒。默认值0表示当数据无法写入串口时，不等待直接返回写入长度0。 传入负数、非整数或大于300000时返回错误码35700002。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回写入数据长度。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700002](../errorcode-busmanager-serial.md#35700002-参数错误) |
-| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) |
-| [35700006](../errorcode-busmanager-serial.md#35700006-传输超时) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700002](../errorcode-busmanager-serial.md#35700002-参数错误) | Invalid parameter. |
+| [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700006](../errorcode-busmanager-serial.md#35700006-传输超时) | Transmission timeout. |
 
 ## portInfo
 

@@ -12,8 +12,8 @@ Enumerates the identity verification modes of the remote server.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'system' |
-| 'skip' |
-| [ValidationCallback](arkts-network-http-validationcallback-t.md) |
+| Type | Description |
+| --- | --- |
+| 'system' | Use of the system CA. This field is defaulted to **system** when the value is not set. |
+| 'skip' | Skipping of CA verification. This field has a fixed value of **skip**. |
+| [ValidationCallback](arkts-network-http-validationcallback-t.md) | use custom validation. [since 26.0.0] |

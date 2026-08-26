@@ -31,9 +31,9 @@ A constructor used to create a **RadialGradientOptions** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [options](#options) | [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md) | Yes | Options for displaying a radial gradient. |
 
 ## options
 

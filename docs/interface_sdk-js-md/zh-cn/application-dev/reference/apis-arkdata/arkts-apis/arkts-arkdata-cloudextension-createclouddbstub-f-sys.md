@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import cloudExtension from '@kit.ArkData';
 ```
 
 ## createCloudDBStub
@@ -22,12 +22,31 @@ function createCloudDBStub(instance: CloudDB): Promise<rpc.RemoteObject>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| instance | [CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instance | [CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md) | 是 | CloudDB类的实例。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;rpc.RemoteObject & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;rpc.RemoteObject & gt; | Promise对象，返回CloudDB的rpc.RemoteObject对象。 |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+}
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  // ...
+  async connectDB(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
+    console.info(`connect DB, bundleName: ${bundleName}`);
+    return cloudExtension.createCloudDBStub(new MyCloudDB());
+  }
+}
+```

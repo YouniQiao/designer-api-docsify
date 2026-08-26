@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { colorSpaceManager } from 'kits/@kit.ArkGraphics2D';
+import colorSpaceManager from '@kit.ArkGraphics2D';
 ```
 
 ## getColorSpaceName
@@ -26,15 +26,27 @@ getColorSpaceName(): ColorSpace
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) | 返回色域类型枚举值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
+
+**示例**
+
+```TypeScript
+try {
+  // 获取色域类型
+  let spaceName = colorSpace.getColorSpaceName();
+  console.info(`spaceName: ` + spaceName.toString());
+} catch (err) {
+  console.error(`Failed to get colorSpace's name. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## getGamma
 
@@ -50,15 +62,27 @@ getGamma(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回色域gamma值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
+
+**示例**
+
+```TypeScript
+try {
+  // 获取色域gamma值
+  let gamma = colorSpace.getGamma();
+  console.info(`gamma: ` + gamma.toString());
+} catch (err) {
+  console.error(`Failed to get gamma. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## getWhitePoint
 
@@ -74,12 +98,24 @@ getWhitePoint(): Array<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;number & gt; | 返回色域白点值[x, y]。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
+
+**示例**
+
+```TypeScript
+try {
+  // 获取色域白点值
+  let point = colorSpace.getWhitePoint();
+  console.info(`point: ` + point.toString());
+} catch (err) {
+  console.error(`Failed to get white point. Code: ${err.code}, message: ${err.message}`);
+}
+```

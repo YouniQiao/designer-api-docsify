@@ -9,7 +9,6 @@ P12（PKCS #12）数据，包含私钥、证书和其他证书。
 ## 导入模块
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## cert

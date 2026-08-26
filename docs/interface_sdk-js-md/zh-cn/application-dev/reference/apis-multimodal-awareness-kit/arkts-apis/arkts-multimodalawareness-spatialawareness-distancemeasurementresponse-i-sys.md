@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
+import spatialAwareness from '@kit.MultimodalAwarenessKit';
 ```
 
 ## confidence

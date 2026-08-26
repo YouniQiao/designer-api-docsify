@@ -16,9 +16,9 @@ Represents the interception callback invoked before and after page redirection.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| from | [NavDestinationContext](arkts-arkui-navdestinationcontext-i.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes |
-| to | [NavDestinationContext](arkts-arkui-navdestinationcontext-i.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes |
-| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes |
-| isAnimated | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | [NavDestinationContext](arkts-arkui-navdestinationcontext-i.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes | Information about the top page in the routing stack after page redirection. The value **navBar** indicates that the top page is the home page. |
+| to | [NavDestinationContext](arkts-arkui-navdestinationcontext-i.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes | Information about the top page in the routing stack after page redirection. The value **navBar** indicates that the top page is the home page. |
+| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes | Current page redirection type. |
+| isAnimated | boolean | Yes | Whether to enable the transition animation.  **true**: Enable the transition animation. **false**: Disable the transition animation. |

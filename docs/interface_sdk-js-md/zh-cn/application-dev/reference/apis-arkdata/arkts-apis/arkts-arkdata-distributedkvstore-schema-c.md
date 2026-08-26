@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import distributedKVStore from '@kit.ArkData';
 ```
 
 ## constructor
@@ -25,6 +25,26 @@ constructor()
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+**示例**
+
+```TypeScript
+let child1 = new distributedKVStore.FieldNode('id');
+child1.type = distributedKVStore.ValueType.INTEGER;
+child1.nullable = false;
+child1.default = '1';
+let child2 = new distributedKVStore.FieldNode('name');
+child2.type = distributedKVStore.ValueType.STRING;
+child2.nullable = false;
+child2.default = 'zhangsan';
+
+let schema = new distributedKVStore.Schema();
+schema.root.appendChild(child1);
+schema.root.appendChild(child2);
+schema.indexes = ['$.id', '$.name'];
+schema.mode = 1;
+schema.skip = 0;
+```
 
 ## indexes
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from 'kits/@kit.AbilityKit';
+import sendableContextManager from '@kit.AbilityKit';
 ```
 
 ## convertFromContext
@@ -24,18 +24,55 @@ Converts a Context object to a SendableContext object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | common.Context | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | common.Context | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) |
+| Type | Description |
+| --- | --- |
+| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | [SendableContext]{ |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want, sendableContextManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { worker } from '@kit.ArkTS';
+
+@Sendable
+export class SendableObject {
+  constructor(sendableContext: sendableContextManager.SendableContext) {
+    this.sendableContext = sendableContext;
+  }
+
+  sendableContext: sendableContextManager.SendableContext;
+  // other sendable object
+}
+
+export default class EntryAbility extends UIAbility {
+  worker: worker.ThreadWorker = new worker.ThreadWorker('entry/ets/workers/Worker.ets');
+
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+
+    // convert and post
+    try {
+      let sendableContext: sendableContextManager.SendableContext =
+        sendableContextManager.convertFromContext(this.context);
+      let object: SendableObject = new SendableObject(sendableContext);
+      hilog.info(0x0000, 'testTag', '%{public}s', 'Ability post message');
+      this.worker.postMessageWithSharedSendable(object);
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', 'convertFromContext failed %{public}s', JSON.stringify(error));
+    }
+  }
+}
+```

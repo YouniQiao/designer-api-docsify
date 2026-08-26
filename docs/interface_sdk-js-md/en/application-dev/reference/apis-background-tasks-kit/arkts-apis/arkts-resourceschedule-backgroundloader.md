@@ -2,7 +2,7 @@
 
 The **BackgroundLoader** module provides the APIs for registering, unregistering and querying tasks. You can use these APIs to register tasks that need to be loaded in the background. The system schedules and executes these deferred tasks at an appropriate time, subject to the storage space, power consumption.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -11,36 +11,36 @@ The **BackgroundLoader** module provides the APIs for registering, unregistering
 ## Modules to Import
 
 ```TypeScript
-import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
+import backgroundLoader from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md) |
-| [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md) |
-| [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md) |
-| [unregisterTask](arkts-backgroundtasks-backgroundloader-unregistertask-f.md) |
+| Name | Description |
+| --- | --- |
+| [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md) | Finish background load task. |
+| [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md) | Obtains the information of a background load task. This API returns the result via a promise. |
+| [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md) | Register background load task. |
+| [unregisterTask](arkts-backgroundtasks-backgroundloader-unregistertask-f.md) | Unregister background load task. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TaskInfo](arkts-backgroundtasks-backgroundloader-taskinfo-i.md) |
-| [TaskStopInfo](arkts-backgroundtasks-backgroundloader-taskstopinfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [TaskInfo](arkts-backgroundtasks-backgroundloader-taskinfo-i.md) | Represents the background load task information, which is used to register task. |
+| [TaskStopInfo](arkts-backgroundtasks-backgroundloader-taskstopinfo-i.md) | Represents the background load task stop information, which is used to ON_STOP function. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [StopCode](arkts-backgroundtasks-backgroundloader-stopcode-e.md) |
+| Name | Description |
+| --- | --- |
+| [StopCode](arkts-backgroundtasks-backgroundloader-stopcode-e.md) | Enumerates the stop code, which is used to ON_STOP function. |
 
 ### Constants
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ON_START](arkts-backgroundtasks-backgroundloader-con.md#on_start) |
-| [ON_STOP](arkts-backgroundtasks-backgroundloader-con.md#on_stop) |
+| Name | Description |
+| --- | --- |
+| [ON_START](arkts-backgroundtasks-backgroundloader-con.md#on_start) | Start task method. |
+| [ON_STOP](arkts-backgroundtasks-backgroundloader-con.md#on_stop) | Stop task method. |

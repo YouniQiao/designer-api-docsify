@@ -28,7 +28,7 @@ readonly accessTokenId: number
 readonly appDistributionType: string
 ```
 
-应用程序签名证书的分发类型，分为： &lt;li&gt;app_gallery：应用市场安装的应用。<!--RP1--><!--RP1End--> &lt;li&gt; enterprise：企业内部应用，企业自行开发、仅限企业内部员工使用的应用，不通过 应用市场等公开渠道发布，而是通过企业自己的渠道进行内部分发。<!--RP2--><!--RP2End-->&lt;li&gt; enterprise_mdm：企业 [MDM应用](../../../mdm/mdm-kit-term.md#mdm应用设备管理应用)。<!--Del-->需要被激活 [管理员特权](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md) 后，才能安装普通企业应用。<!--DelEnd--><!--RP3--><!--RP3End--> &lt;li&gt;enterprise_normal：普通企业应用，无需上架华为应用市场，可通过企业 [MDM应用](../../../mdm/mdm-kit-term.md#mdm应用设备管理应用)以及离线安装器分发安装。<!--RP4--><!--RP4End-->&lt;li&gt;os_integration：预置应用，三方应用无法 申请配置。&lt;li&gt;crowdtesting：众包测试应用，是由应用市场分发给部分用户，有一定的有效期的特定应用，系统检测到应用的有效期到期后，会通知用户到应用市场更新release版本的应用。从API version 11开始被废 弃。&lt;li&gt;internaltesting：应用市场内测的应用。<!--RP5--><!--RP5End-->&lt;li&gt;none：其他。
+应用程序签名证书的分发类型，分为： &lt;li&gt;app_gallery：应用市场安装的应用。<!--RP1--><!--RP1End--> &lt;li&gt; enterprise：企业内部应用，企业自行开发、仅限企业内部员工使用的应用，不通过 应用市场等公开渠道发布，而是通过企业自己的渠道进行内部分发。<!--RP2--><!--RP2End-->&lt;li&gt; enterprise_mdm：企业 [MDM应用](../../../mdm/mdm-kit-term.md#mdm应用)。<!--Del-->需要被激活 [管理员特权](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md) 后，才能安装普通企业应用。<!--DelEnd--><!--RP3--><!--RP3End--> &lt;li&gt;enterprise_normal：普通企业应用，无需上架华为应用市场，可通过企业 [MDM应用](../../../mdm/mdm-kit-term.md#mdm应用)以及离线安装器分发安装。<!--RP4--><!--RP4End-->&lt;li&gt;os_integration：预置应用，三方应用无法 申请配置。&lt;li&gt;crowdtesting：众包测试应用，是由应用市场分发给部分用户，有一定的有效期的特定应用，系统检测到应用的有效期到期后，会通知用户到应用市场更新release版本的应用。从API version 11开始被废 弃。&lt;li&gt;internaltesting：应用市场内测的应用。<!--RP5--><!--RP5End-->&lt;li&gt;none：其他。
 
 **类型：** string
 

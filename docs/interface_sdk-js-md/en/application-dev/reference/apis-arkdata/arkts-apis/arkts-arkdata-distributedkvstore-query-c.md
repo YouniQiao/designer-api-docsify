@@ -9,7 +9,7 @@ Provides methods to create a **Query** object, which defines different data quer
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import distributedKVStore from '@kit.ArkData';
 ```
 
 ## and
@@ -28,9 +28,29 @@ Creates a **Query** object with the AND condition.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.notEqualTo('field', 'value1');
+      query.and();
+      query.notEqualTo('field', 'value2');
+      console.info('query is ' + query.getSqlLike());
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## beginGroup
 
@@ -48,9 +68,29 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.beginGroup();
+      query.isNotNull('field');
+      query.endGroup();
+      console.info('query is ' + query.getSqlLike());
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## constructor
 
@@ -66,6 +106,26 @@ Defines a constructor used to create a **Query** instance.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+**Examples**
+
+```TypeScript
+let child1 = new distributedKVStore.FieldNode('id');
+child1.type = distributedKVStore.ValueType.INTEGER;
+child1.nullable = false;
+child1.default = '1';
+let child2 = new distributedKVStore.FieldNode('name');
+child2.type = distributedKVStore.ValueType.STRING;
+child2.nullable = false;
+child2.default = 'zhangsan';
+
+let schema = new distributedKVStore.Schema();
+schema.root.appendChild(child1);
+schema.root.appendChild(child2);
+schema.indexes = ['$.id', '$.name'];
+schema.mode = 1;
+schema.skip = 0;
+```
+
 ## deviceId
 
 ```TypeScript
@@ -74,7 +134,8 @@ deviceId(deviceId: string): Query
 
 Creates a **Query** object with the device ID as the key prefix.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 > .
@@ -89,21 +150,38 @@ Creates a **Query** object with the device ID as the key prefix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [deviceId](#deviceid) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceId | string | Yes | ID of the device to be queried. This parameter cannot be left empty. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.deviceId('deviceId');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## endGroup
 
@@ -121,9 +199,29 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.beginGroup();
+      query.isNotNull('field');
+      query.endGroup();
+      console.info('query is ' + query.getSqlLike());
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## equalTo
 
@@ -133,8 +231,10 @@ equalTo(field: string, value: number | number | string | boolean): Query
 
 Creates a **Query** object to match the specified field whose value is equal to the given value.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -147,22 +247,40 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | number \| number \| string \| boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | number \| number \| string \| boolean | Yes | Value specified. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+  if (query != null) {
+    query.equalTo('field', 'value');
+    console.info(`query is ${query.getSqlLike()}`);
+  }
+  query = null;
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getSqlLike
 
@@ -180,9 +298,26 @@ Obtains the query statement of the **Query** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Returns the query statement obtained. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      let sql1 = query.getSqlLike();
+      console.info(`GetSqlLike sql= ${sql1}`);
+    }
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## greaterThan
 
@@ -192,8 +327,10 @@ greaterThan(field: string, value: number | number | string | boolean): Query
 
 Creates a **Query** object to match the specified field whose value is greater than the specified value.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -206,22 +343,40 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | number \| number \| string \| boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Indicates the field, which cannot contain ^. |
+| value | number \| number \| string \| boolean | Yes | Indicates the value to be compared. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.greaterThan('field', 'value');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## greaterThanOrEqualTo
 
@@ -231,8 +386,10 @@ greaterThanOrEqualTo(field: string, value: number | number | string): Query
 
 Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -245,22 +402,40 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | number \| number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | number \| number \| string | Yes | Value specified. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.greaterThanOrEqualTo('field', 'value');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## inNumber
 
@@ -270,8 +445,10 @@ inNumber(field: string, valueList: number[] | number[]): Query
 
 Creates a **Query** object to match the specified field whose value is within the specified list of numbers.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -284,22 +461,40 @@ Creates a **Query** object to match the specified field whose value is within th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| valueList | number[] \| number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| valueList | number[] \| number[] | Yes | List of numbers. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.inNumber('field', [0, 1]);
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## inString
 
@@ -309,8 +504,10 @@ inString(field: string, valueList: string[]): Query
 
 Creates a **Query** object to match the specified field whose value is within the specified list of strings.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -323,22 +520,40 @@ Creates a **Query** object to match the specified field whose value is within th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| valueList | string[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| valueList | string[] | Yes | List of strings. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.inString('field', ['test1', 'test2']);
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## isNotNull
 
@@ -348,8 +563,10 @@ isNotNull(field: string): Query
 
 Creates a **Query** object to match the specified field whose value is not **null**.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -362,21 +579,39 @@ Creates a **Query** object to match the specified field whose value is not **nul
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+  if (query != null) {
+    query.isNotNull('field');
+    console.info(`query is ${query.getSqlLike()}`);
+  }
+  query = null;
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## isNull
 
@@ -386,8 +621,10 @@ isNull(field: string): Query
 
 Creates a **Query** object to match the specified field whose value is **null**.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -400,21 +637,39 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.isNull('field');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## lessThan
 
@@ -424,8 +679,10 @@ lessThan(field: string, value: number | number | string): Query
 
 Creates a **Query** object to match the specified field whose value is less than the specified value.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -438,22 +695,40 @@ Creates a **Query** object to match the specified field whose value is less than
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | number \| number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | number \| number \| string | Yes | Value specified. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.lessThan('field', 'value');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## lessThanOrEqualTo
 
@@ -463,8 +738,10 @@ lessThanOrEqualTo(field: string, value: number | number | string): Query
 
 Creates a **Query** object to match the specified field whose value is less than or equal to the specified value.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -477,22 +754,40 @@ Creates a **Query** object to match the specified field whose value is less than
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | number \| number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | number \| number \| string | Yes | Value specified. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.lessThanOrEqualTo('field', 'value');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## like
 
@@ -502,8 +797,10 @@ like(field: string, value: string): Query
 
 Creates a **Query** object to match the specified field whose value is similar to the specified string.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -516,22 +813,40 @@ Creates a **Query** object to match the specified field whose value is similar t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | string | Yes | String specified. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.like('field', 'value');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## limit
 
@@ -549,22 +864,43 @@ Creates a **Query** object to specify the number of records of the query result 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| total | number | Yes |
-| offset | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| total | number | Yes | Maximum number of results to query. The value must be a non-negative integer.If the value is a negative number, the entire result set is queried. |
+| offset | number | Yes | Start position of the query result. The value must be a non-negative integer.If the value is a negative number, the entire result set is queried.If **offset** exceeds the end of the result set, the query result is empty. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let total = 10;
+let offset = 1;
+try {
+  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+  if (query != null) {
+    query.notEqualTo('field', 'value');
+    query.limit(total, offset);
+    console.info(`query is ${query.getSqlLike()}`);
+  }
+  query = null;
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## notEqualTo
 
@@ -574,8 +910,10 @@ notEqualTo(field: string, value: number | number | string | boolean): Query
 
 Creates a **Query** object to match the specified field whose value is not equal to the specified value.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -588,22 +926,40 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | number \| number \| string \| boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | number \| number \| string \| boolean | Yes | Value specified. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+  if (query != null) {
+    query.notEqualTo('field', 'value');
+    console.info(`query is ${query.getSqlLike()}`);
+  }
+  query = null;
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## notInNumber
 
@@ -613,8 +969,10 @@ notInNumber(field: string, valueList: number[] | number[]): Query
 
 Creates a **Query** object to match the specified field whose value is not within the specified list of numbers.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -627,22 +985,40 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| valueList | number[] \| number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| valueList | number[] \| number[] | Yes | List of numbers. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.notInNumber('field', [0, 1]);
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## notInString
 
@@ -652,8 +1028,10 @@ notInString(field: string, valueList: string[]): Query
 
 Creates a **Query** object to match the specified field whose value is not within the specified list of strings.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -666,22 +1044,40 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| valueList | string[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| valueList | string[] | Yes | List of strings. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.notInString('field', ['test1', 'test2']);
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## or
 
@@ -699,9 +1095,29 @@ Creates a **Query** object with the OR condition.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.notEqualTo('field', 'value1');
+      query.or();
+      query.notEqualTo('field', 'value2');
+      console.info('query is ' + query.getSqlLike());
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## orderByAsc
 
@@ -711,8 +1127,10 @@ orderByAsc(field: string): Query
 
 Creates a **Query** object to sort the query results in ascending order.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -725,21 +1143,40 @@ Creates a **Query** object to sort the query results in ascending order.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.notEqualTo('field', 'value');
+      query.orderByAsc('field');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## orderByDesc
 
@@ -749,8 +1186,10 @@ orderByDesc(field: string): Query
 
 Creates a **Query** object to sort the query results in descending order.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -763,21 +1202,40 @@ Creates a **Query** object to sort the query results in descending order.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.notEqualTo('field', 'value');
+      query.orderByDesc('field');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## prefixKey
 
@@ -795,21 +1253,40 @@ Creates a **Query** object with a specified key prefix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| prefix | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| prefix | string | Yes | Key prefix, which cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.prefixKey('$.name');
+      query.prefixKey('0');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## reset
 
@@ -827,9 +1304,29 @@ Resets the **Query** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object reset. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+  if (query != null) {
+    query.equalTo('key', 'value');
+    console.info('query is ' + query.getSqlLike());
+    query.reset();
+    console.info('query is ' + query.getSqlLike());
+  }
+  query = null;
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## setSuggestIndex
 
@@ -847,21 +1344,40 @@ Creates a **Query** object with an index preferentially used for query.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | string | Yes | Index to set, which cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.setSuggestIndex('$.name');
+      query.setSuggestIndex('0');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## unlike
 
@@ -871,8 +1387,10 @@ unlike(field: string, value: string): Query
 
 Creates a **Query** object to match the specified field whose value is not similar to the specified string.
 
-> **NOTE：**&gt;
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).&gt;
+> **NOTE：**
+> 
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
@@ -885,19 +1403,37 @@ Creates a **Query** object to match the specified field whose value is not simil
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | string | Yes | String specified. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| Type | Description |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.unlike('field', 'value');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```

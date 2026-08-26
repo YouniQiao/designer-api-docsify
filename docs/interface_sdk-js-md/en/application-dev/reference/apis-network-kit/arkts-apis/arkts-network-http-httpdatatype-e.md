@@ -1,7 +1,7 @@
 # HttpDataType
 
 Enumerates HTTP data types.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Description | | ------------------ | -- | ----------- | | [STRING](#string) | 0 | String type.| | [OBJECT](#object) | 1 | Object type. | | [ARRAY_BUFFER](#array_buffer) | 2 |
+| Name| Value| Description | | ------------------ | -- | ----------- | | STRING | 0 | String type.| | OBJECT | 1 | Object type. | | ARRAY_BUFFER | 2 | Binary array type.|
 
 **Since:** 9
 

@@ -15,15 +15,15 @@ Converts a JavaScript Object Notation (JSON) string into an object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| text | string | Yes |
-| reviver | (this: any, key: string, value: any) = & gt; any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes |  |
+| reviver | (this: any, key: string, value: any) = & gt; any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## stringify
 
 ```TypeScript
@@ -34,16 +34,16 @@ Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | any | Yes |
-| replacer | (this: any, key: string, value: any) = & gt; any | No |
-| space | string \| number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | any | Yes |  |
+| replacer | (this: any, key: string, value: any) = & gt; any | No |  |
+| space | string \| number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## stringify
 
 ```TypeScript
@@ -54,13 +54,13 @@ Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | any | Yes |
-| replacer | (number \| string)[] \| null | No |
-| space | string \| number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | any | Yes |  |
+| replacer | (number \| string)[] \| null | No |  |
+| space | string \| number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

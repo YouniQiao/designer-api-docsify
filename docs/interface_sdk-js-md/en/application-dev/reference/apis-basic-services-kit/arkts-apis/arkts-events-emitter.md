@@ -20,50 +20,50 @@ published through **emit** but have not been executed are also canceled and no c
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
+import emitter from '@kit.BasicServicesKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [emit(Emitter)](arkts-basicservices-emitter-emit-f.md) |
-| [emit(Emitter)](arkts-basicservices-emitter-emit-f.md) |
-| [emit(Emitter)](arkts-basicservices-emitter-emit-f.md) |
-| [emit(Emitter)](arkts-basicservices-emitter-emit-f.md) |
-| [emit(Emitter)](arkts-basicservices-emitter-emit-f.md) |
-| [getListenerCount(Emitter)](arkts-basicservices-emitter-getlistenercount-f.md) |
-| [off(Emitter)](arkts-basicservices-emitter-off-f.md) |
-| [off(Emitter)](arkts-basicservices-emitter-off-f.md) |
-| [off(Emitter)](arkts-basicservices-emitter-off-f.md) |
-| [off(Emitter)](arkts-basicservices-emitter-off-f.md) |
-| [off(Emitter)](arkts-basicservices-emitter-off-f.md) |
-| [on(Emitter)](arkts-basicservices-emitter-on-f.md) |
-| [on(Emitter)](arkts-basicservices-emitter-on-f.md) |
-| [on(Emitter)](arkts-basicservices-emitter-on-f.md) |
-| [once(Emitter)](arkts-basicservices-emitter-once-f.md) |
-| [once(Emitter)](arkts-basicservices-emitter-once-f.md) |
-| [once(Emitter)](arkts-basicservices-emitter-once-f.md) |
+| Name | Description |
+| --- | --- |
+| [emit(Emitter)](arkts-basicservices-emitter-emit-f.md) | Emits a specified event.This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event. |
+| [emit(Emitter)](arkts-basicservices-emitter-emit-f.md) | Emits a specified event.This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event. |
+| [emit(Emitter)](arkts-basicservices-emitter-emit-f.md) | Emits a specified event.This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event. |
+| [emit(Emitter)](arkts-basicservices-emitter-emit-f.md) | Emits an event of a specified priority.This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event. |
+| [emit(Emitter)](arkts-basicservices-emitter-emit-f.md) | Emits an event of a specified priority.This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event. |
+| [getListenerCount(Emitter)](arkts-basicservices-emitter-getlistenercount-f.md) | Obtains the number of subscriptions to a specified event. |
+| [off(Emitter)](arkts-basicservices-emitter-off-f.md) | Unsubscribes from all events with the specified event ID.After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed. |
+| [off(Emitter)](arkts-basicservices-emitter-off-f.md) | Unsubscribes from all events with the specified event ID.After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed. |
+| [off(Emitter)](arkts-basicservices-emitter-off-f.md) | Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\ & lt;EventData & gt;** has been registered through the on or once API. Otherwise, no processing is performed.After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed. |
+| [off(Emitter)](arkts-basicservices-emitter-off-f.md) | Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\ & lt;EventData & gt;** has been registered through the on or once API. Otherwise, no processing is performed.After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed. |
+| [off(Emitter)](arkts-basicservices-emitter-off-f.md) | Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\&lt;EventData&gt;** has been registered through the [on](arkts-basicservices-emitter-emitter-c.md#on) or [once](arkts-basicservices-emitter-emitter-c.md#once) API. Otherwise, no processing is performed.After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed. |
+| [on(Emitter)](arkts-basicservices-emitter-on-f.md) | Subscribes to an event in persistent manner and executes a callback after the event is received. |
+| [on(Emitter)](arkts-basicservices-emitter-on-f.md) | Subscribes to an event in persistent manner and executes a callback after the event is received. |
+| [on(Emitter)](arkts-basicservices-emitter-on-f.md) | Subscribes to an event in persistent manner and executes a callback after the event is received. |
+| [once(Emitter)](arkts-basicservices-emitter-once-f.md) | Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed. |
+| [once(Emitter)](arkts-basicservices-emitter-once-f.md) | Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed. |
+| [once(Emitter)](arkts-basicservices-emitter-once-f.md) | Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed. |
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Emitter(Emitter)](arkts-basicservices-emitter-emitter-c.md) |
+| Name | Description |
+| --- | --- |
+| [Emitter(Emitter)](arkts-basicservices-emitter-emitter-c.md) | This module provides the capabilities of sending and processing inter- or intra-thread events in a process of the same **Emitter** instance. You can use the following APIs to subscribe to an event in persistent or one-shot manner, cancel the subscription, or emit an event to the event queue. This module is applicable when inter-thread communication and event management are required based on independent instances. Different **Emitter** instances are isolated from each other. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [EventData(Emitter)](arkts-basicservices-emitter-eventdata-i.md) |
-| [GenericEventData(Emitter)](arkts-basicservices-emitter-genericeventdata-i.md) |
-| [InnerEvent(Emitter)](arkts-basicservices-emitter-innerevent-i.md) |
-| [Options(Emitter)](arkts-basicservices-emitter-options-i.md) |
+| Name | Description |
+| --- | --- |
+| [EventData(Emitter)](arkts-basicservices-emitter-eventdata-i.md) | Describes data carried by the emitted event. |
+| [GenericEventData(Emitter)](arkts-basicservices-emitter-genericeventdata-i.md) | Describes the generic data carried by the emitted event. |
+| [InnerEvent(Emitter)](arkts-basicservices-emitter-innerevent-i.md) | Describes an event to subscribe to or emit. The **EventPriority** settings do not take effect under event subscription. |
+| [Options(Emitter)](arkts-basicservices-emitter-options-i.md) | Describes the event emit priority. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [EventPriority(Emitter)](arkts-basicservices-emitter-eventpriority-e.md) |
+| Name | Description |
+| --- | --- |
+| [EventPriority(Emitter)](arkts-basicservices-emitter-eventpriority-e.md) | Enumerates the event priorities. |

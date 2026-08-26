@@ -14,8 +14,8 @@ Represents the callback triggered when a child component enters or leaves the vi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| end | number | Yes |
-| center | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Index of the first child component in the visible area of the **ArcList** component. |
+| end | number | Yes | Index of the last child component in the visible area of the **ArcList** component. |
+| center | number | Yes | Index of the center child component in the visible area of the **ArcList** component. |

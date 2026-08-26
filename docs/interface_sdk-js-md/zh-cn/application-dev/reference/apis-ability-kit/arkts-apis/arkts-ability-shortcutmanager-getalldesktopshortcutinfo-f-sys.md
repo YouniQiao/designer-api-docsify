@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
+import shortcutManager from '@kit.AbilityKit';
 ```
 
 ## getAllDesktopShortcutInfo
@@ -24,21 +24,53 @@ function getAllDesktopShortcutInfo(userId: number): Promise<Array<ShortcutInfo>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| userId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| userId | number | 是 | 被查询的用户id。可以通过 [getOsAccountLocalId接口](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;ShortcutInfo & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;ShortcutInfo & gt; & gt; | Promise对象，返回应用配置文件中定义的快捷方式信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Verify permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
+
+**示例**
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct ShortcutExample {
+  build() {
+    Column({ space: 20 }) {
+      Row({ space: 20 }) {
+        Button('getall').onClick(() => {
+          try {
+            shortcutManager.getAllDesktopShortcutInfo(100)
+              .then((data: shortcutManager.ShortcutInfo[]) => {
+                console.info("Shortcut data is " + JSON.stringify(data));
+              }).catch((err: BusinessError) => {
+              console.error(`getAllDesktopShortcutInfo errData is errCode:${err.code}  message:${err.message}`);
+            });
+          } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getAllDesktopShortcutInfo error is errCode:${code}  message:${message}`);
+          }
+        })
+      }
+    }
+  }
+}
+```

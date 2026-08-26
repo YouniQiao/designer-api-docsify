@@ -2,8 +2,10 @@
 
 继承于[StyledString](arkts-arkui-styledstring-c.md)类。
 
-> **以下接口异常入参处理统一说明：**&gt;
-> 当start和length越界或者必填传入undefined时，会抛出异常；&gt;
+> **以下接口异常入参处理统一说明：**
+> 
+> 当start和length越界或者必填传入undefined时，会抛出异常；
+> 
 > 当styledKey和styledValue传入异常值或者两者对应关系不匹配时，会抛出异常。
 
 **继承/实现关系：** MutableStyledString extends [StyledString](arkts-arkui-styledstring-c.md)
@@ -35,9 +37,9 @@ appendStyledString(other: StyledString): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 新的属性字符串对象。 |
 
 ## clearStyles
 
@@ -73,16 +75,16 @@ insertString(start: number, other: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| start | number | 是 |
-| other | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| start | number | 是 | 插入位置的下标。 |
+| other | string | 是 | 插入的新文本内容。    **说明：** 插入的字符串使用的是start-1位置字符的样式。若start-1位置字符未设置样式，则使用start位置字符样式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## insertStyledString
 
@@ -102,16 +104,16 @@ insertStyledString(start: number, other: StyledString): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| start | number | 是 |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| start | number | 是 | 开始插入位置的下标。 |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 新的属性字符串对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## removeString
 
@@ -131,16 +133,16 @@ removeString(start: number, length: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| start | number | 是 |
-| length | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| start | number | 是 | 指定范围的下标。 |
+| length | number | 是 | 指定范围的长度。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## removeStyle
 
@@ -160,17 +162,17 @@ removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| start | number | 是 |
-| length | number | 是 |
-| styledKey | [StyledStringKey](arkts-arkui-styledstringkey-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| start | number | 是 | 指定范围开始位置的下标。 |
+| length | number | 是 | 指定范围的长度。 |
+| styledKey | [StyledStringKey](arkts-arkui-styledstringkey-e.md) | 是 | 样式类型枚举值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## removeStyles
 
@@ -190,16 +192,16 @@ removeStyles(start: number, length: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| start | number | 是 |
-| length | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| start | number | 是 | 指定范围开始位置的下标。 |
+| length | number | 是 | 指定范围的长度。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## replaceString
 
@@ -219,17 +221,17 @@ replaceString(start: number, length: number, other: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| start | number | 是 |
-| length | number | 是 |
-| other | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| start | number | 是 | 指定范围的下标。 |
+| length | number | 是 | 指定范围的长度。 |
+| other | string | 是 | 替换的新文本内容。    **说明：** 替换的字符串使用的是start位置字符的样式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## replaceStyle
 
@@ -249,15 +251,15 @@ replaceStyle(spanStyle: SpanStyle): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | 是 | 样式对象。    **说明：** 默认清空原有样式，替换为新样式。 当SpanStyle的styledKey为IMAGE或CUSTOM_SPAN时，只有当start的位置当前是image或CustomSpan且长度为1，才会生效，其余情况无效果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## replaceStyledString
 
@@ -277,17 +279,17 @@ replaceStyledString(start: number, length: number, other: StyledString): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| start | number | 是 |
-| length | number | 是 |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| start | number | 是 | 指定范围开始位置的下标。 |
+| length | number | 是 | 指定范围的长度。 |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 新的属性字符串对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## setStyle
 
@@ -307,12 +309,12 @@ setStyle(spanStyle: SpanStyle): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | 是 | 样式对象。 默认不清空原有样式，叠加新样式。如果StyledStringValue类型相同，则新样式将覆盖旧样式。 当SpanStyle的styledKey为IMAGE或CUSTOM_SPAN时，只有当start的位置当前是image或CustomSpan且长度为1，才会生效，其余情况无效果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. |

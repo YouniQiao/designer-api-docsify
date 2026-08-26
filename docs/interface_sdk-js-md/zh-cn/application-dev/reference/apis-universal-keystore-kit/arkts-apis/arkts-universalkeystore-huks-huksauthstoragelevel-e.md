@@ -2,7 +2,8 @@
 
 表示生成或导入密钥时，指定该密钥的存储安全等级。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 业务在使用存储等级为ECE的密钥时，建议通过感知[锁屏事件](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_screen_locked)来清理使用该密钥创建的会话资源，以保证安全性。
 
 **起始版本：** 11

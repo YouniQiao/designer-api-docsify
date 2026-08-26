@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## registerTraceListener
@@ -22,12 +21,33 @@ function registerTraceListener(callback: TraceEventListener): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [TraceEventListener](arkts-performanceanalysis-hitracemeter-traceeventlistener-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [TraceEventListener](arkts-performanceanalysis-hitracemeter-traceeventlistener-t.md) | 是 | 注册的回调函数，用于监听应用trace捕获开关状态变化。当trace捕获开关状态发生变化时 （从开启变为关闭或从关闭变为开启），会触发此回调并传入当前的trace状态。注册成功后会立即执行一次回调，后续每次trace捕获开关状态变化 都会触发回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 回调注册状态。 & gt;= 0：注册成功，返回用于注销的回调索引，索引范围[0, 9]； -1：已达到最大回调函数注册数量； -2：无效参数，参数非TraceEventListener类型。 |
+
+**示例**
+
+```TypeScript
+// 注册的回调函数定义
+let callback: hiTraceMeter.TraceEventListener = (traceStatus: boolean) => {
+  if (traceStatus) {
+    // 当前应用trace捕获开启
+    // ...
+  } else {
+    // 当前应用trace捕获关闭
+    // ...
+  }
+};
+
+// 注册应用trace捕获开关通知回调
+let index = hiTraceMeter.registerTraceListener(callback);
+if (index < 0) {
+  // 异常处理......
+}
+```

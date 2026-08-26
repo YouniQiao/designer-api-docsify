@@ -2,7 +2,8 @@
 
 The **TabTitleBar** component is a tab title bar used to switch between tabs pages. It is applicable only to level-1 pages.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - If the **TabTitleBar** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -17,7 +18,7 @@ The **TabTitleBar** component is a tab title bar used to switch between tabs pag
 ## Modules to Import
 
 ```TypeScript
-import { TabTitleBar, TabTitleBarMenuItem, TabTitleBarTabItem } from 'kits/@kit.ArkUI';
+import { TabTitleBar, TabTitleBarMenuItem, TabTitleBarTabItem } from '@kit.ArkUI';
 ```
 
 ## swiperContent

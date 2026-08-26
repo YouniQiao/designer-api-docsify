@@ -9,7 +9,6 @@ Defines the event configuration for the data processor to report.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## domain

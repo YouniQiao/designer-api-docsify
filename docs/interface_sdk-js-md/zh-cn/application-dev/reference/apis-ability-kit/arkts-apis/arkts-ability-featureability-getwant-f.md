@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import featureAbility from '@kit.AbilityKit';
 ```
 
 ## getWant
@@ -22,9 +22,24 @@ function getWant(callback: AsyncCallback<Want>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数，返回want信息。 |
+
+**示例**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+// 获取要拉起的Ability对应的Want
+featureAbility.getWant((error, data) => {
+  if (error && error.code !== 0) {
+    console.error(`getWant fail, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`getWant success, data: ${JSON.stringify(data)}`);
+  }
+});
+```
 
 
 ## getWant
@@ -43,6 +58,17 @@ function getWant(): Promise<Want>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Promise对象，返回want信息。 |
+
+**示例**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+// 获取要拉起的Ability对应的Want
+featureAbility.getWant().then((data) => {
+  console.info(`getWant data: ${JSON.stringify(data)}`);
+});
+```

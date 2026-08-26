@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
+import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## bindToDisplay
@@ -26,24 +26,24 @@ Bind input devices to a display. Only external USB and Bluetooth mice, touchpads
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| inputDeviceId | number | Yes |
-| displayId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| inputDeviceId | number | Yes | ID of the specified input device. If the input service restarts or the input device is reconnects, its ID may change. |
+| displayId | number | Yes | ID of the target display. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [3900001](../errorcode-inputdevice.md#3900001-device-not-exist) |
-| 3900004 |
-| 3900005 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. The application does not have the required permission. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [3900001](../errorcode-inputdevice.md#3900001-device-not-exist) | The specified input device does not exist. |
+| 3900004 | The specified display does not exist. |
+| 3900005 | Unsupported input device. |

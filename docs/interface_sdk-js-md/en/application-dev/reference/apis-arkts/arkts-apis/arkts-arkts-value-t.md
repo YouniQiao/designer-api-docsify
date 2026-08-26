@@ -12,8 +12,8 @@ The type used to denote decimal value
 
 **System capability:** SystemCapability.Utils.Lang
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
-| double |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| string |  |
+| double |  |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |  |

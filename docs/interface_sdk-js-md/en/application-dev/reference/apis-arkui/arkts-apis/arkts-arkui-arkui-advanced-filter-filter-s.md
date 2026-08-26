@@ -9,7 +9,7 @@ Declare Filter.The Filter is used in scenarios where multi-dimensional filtering
 ## Modules to Import
 
 ```TypeScript
-import { Filter, FilterParams, FilterResult, FilterType } from 'kits/@kit.ArkUI';
+import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 ```
 
 ## container
@@ -46,9 +46,9 @@ FilterParams, Callback method after a user clicks a filter item.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filterResults | Array&lt;[FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filterResults | Array&lt;[FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md)&gt; | Yes |  |
 
 ## additionFilters
 

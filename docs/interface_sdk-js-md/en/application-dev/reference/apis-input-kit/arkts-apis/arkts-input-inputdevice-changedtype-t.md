@@ -10,7 +10,7 @@ Enumerates hot swap events.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'add' |
-| 'remove' |
+| Type | Description |
+| --- | --- |
+| 'add' | Device insertion. |
+| 'remove' | Device removal. |

@@ -10,8 +10,8 @@ Defines the private data type, which varies depending on its function.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| int |
-| string |
-| boolean |
+| Type | Description |
+| --- | --- |
+| int | Number. |
+| string | String. |
+| boolean | Boolean. |

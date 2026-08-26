@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## setWifiCapability
@@ -26,16 +27,24 @@ Set Wi-Fi capability
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| capability | [WifiCapability](arkts-connectivity-wifimanager-wificapability-e.md) | Yes |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| capability | [WifiCapability](arkts-connectivity-wifimanager-wificapability-e.md) | Yes | Identifies the Wi-Fi capability |
+| enable | boolean | Yes | Identifies enable or disable specified Wi-Fi capability. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+wifiManager.setWifiCapability(wifiManager.WifiCapability.WIFI_AUTO_ENABLE, true);
+```

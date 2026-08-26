@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## setDownloadInfoListSize
@@ -25,6 +25,19 @@ list size is decreased, the LRU mode is used by default to clear excess cached d
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes | Size of the download information list. The value ranges from 0 to 8192. The default value is **0**, indicating that no download information is stored. |
+
+**Examples**
+
+```TypeScript
+import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Set the size of the download information list. 
+  cacheDownload.setDownloadInfoListSize(2048);
+} catch (err) {
+  console.error(`Failed to set download information list size. err code: ${err.code}, err message: ${err.message}`);
+}
+```

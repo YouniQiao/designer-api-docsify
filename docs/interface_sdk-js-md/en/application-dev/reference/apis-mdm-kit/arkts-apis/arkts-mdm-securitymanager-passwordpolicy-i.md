@@ -9,7 +9,7 @@ Represents a device screen lock password policy.
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from 'kits/@kit.MDMKit';
+import securityManager from '@kit.MDMKit';
 ```
 
 ## additionalDescription

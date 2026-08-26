@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## sendNotice
@@ -24,16 +25,50 @@ Sends a notification from the user authentication widget. When the unified authe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| noticeType | [NoticeType](arkts-userauthentication-userauth-noticetype-e-sys.md) | Yes |
-| eventData | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| noticeType | [NoticeType](arkts-userauthentication-userauth-noticetype-e-sys.md) | Yes | Notification type. It identifies the source of a notification. Currently, **WIDGET_NOTICE (1)** is supported, indicating that the notification is from the authentication widget. |
+| eventData | string | Yes | Event data. It is a string in JSON format, containing the notification details, such as the authentication type and ready event. The data length ranges from 0 to 65536 bytes. The JSON object must contain the following fields: **widgetContextId** (context ID of the component, number type), **event** (event type, string type), **version** (version number, string type), and **payload** (event payload object, object type). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+interface  EventData {
+  widgetContextId: number;
+  event: string;
+  version: string;
+  payload: Payload;
+}
+interface Payload {
+  type: string[];
+}
+try {
+  const eventData : EventData = {
+    widgetContextId: 123456,
+    event: 'EVENT_AUTH_TYPE_READY',
+    version: '1',
+    payload: {
+      type: ['pin']
+    } as Payload,
+  };
+  const jsonEventData = JSON.stringify(eventData);
+  let noticeType = userAuth.NoticeType.WIDGET_NOTICE;
+  userAuth.sendNotice(noticeType, jsonEventData);
+  console.info('sendNotice successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`sendNotice failed. Code is ${err?.code}, message is ${err?.message}`);
+}
+```

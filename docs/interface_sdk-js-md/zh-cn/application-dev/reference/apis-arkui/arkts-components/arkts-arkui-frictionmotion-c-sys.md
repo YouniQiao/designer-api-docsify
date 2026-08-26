@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@ohos.@kit.ArkUI';
 ```
 
 ## constructor
@@ -33,8 +34,8 @@ constructor(friction: number, position: number, velocity: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| friction | number | 是 |
-| position | number | 是 |
-| velocity | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| friction | number | 是 |  |
+| position | number | 是 |  |
+| velocity | number | 是 |  |

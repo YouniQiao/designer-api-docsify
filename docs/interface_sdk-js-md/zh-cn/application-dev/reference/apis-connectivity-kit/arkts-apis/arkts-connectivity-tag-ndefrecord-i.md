@@ -9,7 +9,7 @@ NDEF标签Record属性的定义，参考NDEF标签技术规范《NFCForum-TS-NDE
 ## 导入模块
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import tag from '@kit.ConnectivityKit';
 ```
 
 ## id

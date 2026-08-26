@@ -38,6 +38,6 @@ Triggered when the paste button is clicked, returning the authorization result. 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md) | Yes | Callback for the click event, used to handle the authorization result after the paste button is clicked. Starting from API version 18, **PasteButtonCallback** is adopted uniformly, which additionally provides error information.<br>**Since:** 18 |

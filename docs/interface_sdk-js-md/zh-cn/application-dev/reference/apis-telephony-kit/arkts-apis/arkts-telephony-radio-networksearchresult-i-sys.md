@@ -11,7 +11,6 @@ Obtains the network search results.
 ## 导入模块
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isNetworkSearchSuccess

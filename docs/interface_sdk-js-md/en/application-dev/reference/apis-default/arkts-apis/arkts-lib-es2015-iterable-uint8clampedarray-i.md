@@ -13,8 +13,8 @@
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## entries
 
 ```TypeScript
@@ -25,8 +25,8 @@ Returns an array of key, value pairs for every entry in the array
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## keys
 
 ```TypeScript
@@ -37,8 +37,8 @@ Returns an list of keys in the array
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## values
 
 ```TypeScript
@@ -49,5 +49,5 @@ Returns an list of values in the array
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

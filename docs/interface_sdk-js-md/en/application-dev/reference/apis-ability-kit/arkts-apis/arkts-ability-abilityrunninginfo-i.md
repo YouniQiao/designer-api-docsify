@@ -101,3 +101,27 @@ UID of the application.
 **Since:** 14
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  abilityManager.getAbilityRunningInfos()
+    .then((data: abilityManager.AbilityRunningInfo[]) => {
+      for (let i = 0; i < data.length; i++) {
+        let abilityInfo = data[i];
+        console.info(`getAbilityRunningInfos success, data: ${JSON.stringify(abilityInfo)}`);
+      }
+    })
+    .catch((error: BusinessError) => {
+      console.error(`getAbilityRunningInfos fail, error code: ${JSON.stringify(error.code)}, error msg: ${JSON.stringify(error.message)}`);
+    })
+} catch (e) {
+  let code = (e as BusinessError).code;
+  let msg = (e as BusinessError).message;
+  console.error(`getAbilityRunningInfos fail, error code: ${JSON.stringify(code)}, error msg: ${JSON.stringify(msg)}`);
+}
+```

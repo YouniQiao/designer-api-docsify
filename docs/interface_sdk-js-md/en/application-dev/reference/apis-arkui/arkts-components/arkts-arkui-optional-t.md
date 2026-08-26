@@ -16,7 +16,7 @@ Defines the Optional type. The value can be **undefined**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
-| undefined |
+| Type | Description |
+| --- | --- |
+| T | The object can be of any custom type. |
+| undefined | The object can be **undefined**. |

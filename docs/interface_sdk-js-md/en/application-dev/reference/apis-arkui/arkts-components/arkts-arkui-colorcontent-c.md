@@ -9,6 +9,7 @@ Defines the content for color filling.
 ## Modules to Import
 
 ```TypeScript
+import @kit.ArkUIGeneration from '@ohos.arkui.intelligence.@kit.ArkUIGeneration';
 ```
 
 ## ORIGIN

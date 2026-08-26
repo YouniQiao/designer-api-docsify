@@ -16,6 +16,6 @@ Represents the callback invoked when the popup state changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [PopupStateChangeParam](arkts-arkui-popupstatechangeparam-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [PopupStateChangeParam](arkts-arkui-popupstatechangeparam-i.md) | Yes | Display state of the popup. |

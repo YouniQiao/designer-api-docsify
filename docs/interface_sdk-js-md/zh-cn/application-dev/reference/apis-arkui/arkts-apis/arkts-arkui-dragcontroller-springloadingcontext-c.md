@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import dragController from '@kit.ArkUI';
 ```
 
 ## abort
@@ -46,9 +46,9 @@ updateConfiguration(config: DragSpringLoadingConfiguration): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md) | 是 | 悬停检测配置。 |
 
 ## currentConfig
 

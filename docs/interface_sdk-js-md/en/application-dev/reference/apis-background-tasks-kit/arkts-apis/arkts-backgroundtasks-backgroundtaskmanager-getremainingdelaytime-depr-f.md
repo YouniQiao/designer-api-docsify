@@ -23,10 +23,26 @@ Obtains the remaining duration before the application is suspended. This API use
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| requestId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the remaining duration before the application is suspended, in milliseconds. |
+
+**Examples**
+
+```TypeScript
+import backgroundTaskManager from '@ohos.backgroundTaskManager';
+import { BusinessError } from '@ohos.base';
+
+let delayInfo = backgroundTaskManager.requestSuspendDelay("test", () => {});
+backgroundTaskManager.getRemainingDelayTime(delayInfo.requestId, (err: BusinessError, res: number) => {
+    if(err) {
+        console.info('callback => Operation getRemainingDelayTime failed. Cause: ' + err.code);
+    } else {
+        console.info('callback => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
+    }
+})
+```
 
 
 ## getRemainingDelayTime
@@ -47,12 +63,26 @@ Obtains the remaining duration before the application is suspended. This API use
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| requestId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the remaining duration before the application is suspended, in milliseconds. |
+
+**Examples**
+
+```TypeScript
+import backgroundTaskManager from '@ohos.backgroundTaskManager';
+import { BusinessError } from '@ohos.base';
+
+let delayInfo = backgroundTaskManager.requestSuspendDelay("test", () => {});
+    backgroundTaskManager.getRemainingDelayTime(delayInfo.requestId).then((res:number) => {
+    console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
+}).catch((err : BusinessError) => {
+    console.info('promise => Operation getRemainingDelayTime failed. Cause: ' + err.code);
+})
+```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## set24HourClock
@@ -26,12 +26,21 @@ export function set24HourClock(option: boolean): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| option | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| option | boolean | 是 | true表示开启系统24小时制开关，false表示关闭系统24小时制开关。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示修改成功，false表示修改失败。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// 将系统时间设置为24小时制
+let success: boolean = i18n.set24HourClock(true);
+```

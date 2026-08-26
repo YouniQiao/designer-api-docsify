@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## hasMatchedCallLog
@@ -26,25 +26,44 @@ Checks whether there are call records that meet the specified conditions. By def
 
 **Parameters:**
 
-| [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
-| phoneNumber | string | Yes |
-| minDuration | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Indicates the context of the application or capability. |
+| phoneNumber | string | Yes | Phone number of the contacts. |
+| minDuration | number | Yes | Minimum call duration, in seconds. The value must be greater than 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result of whether there are call records that meet the specified conditions. The value **true** indicates that there are such records, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
-| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
+
+**Examples**
+
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context in the component.
+const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+const phoneNumber = '138xxxxxxxx';
+const minDuration = 60;
+// Call the API to query. By default, call logs within the last 6 hours are queried.
+contact.hasMatchedCallLog(context, phoneNumber, minDuration).then((hasMatch:boolean) => {
+  console.info(`Has matched call log: ${hasMatch}`);
+});
+```
 
 
 ## hasMatchedCallLog
@@ -67,23 +86,44 @@ Checks whether there are call records that meet the specified conditions. This A
 
 **Parameters:**
 
-| [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
-| phoneNumber | string | Yes |
-| minDuration | number | Yes |
-| withinTime | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Indicates the context of the application or capability. |
+| phoneNumber | string | Yes | Phone number of the contacts. |
+| minDuration | number | Yes | Minimum call duration, in seconds. The value must be greater than 0. |
+| withinTime | number | Yes | Period of time that the start time and end time of calls should be within, in seconds. This period starts from the current time. A maximum of six hours can be set. If the query duration exceeds six hours, the query duration is six hours by default. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result of whether there are call records that meet the specified conditions. The value **true** indicates that there are such records, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
-| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
+
+**Examples**
+
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context in the component.
+const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+const phoneNumber = '138xxxxxxxx';
+const minDuration = 60;
+const withinTime = 2 * 60 *60;
+
+// Call the API to query.
+contact.hasMatchedCallLog(context, phoneNumber, minDuration, withinTime).then((hasMatch:boolean) => {
+  console.info(`Has matched call log: ${hasMatch}`);
+});
+```

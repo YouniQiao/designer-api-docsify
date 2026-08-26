@@ -43,10 +43,10 @@ fail?: (data: string, code: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | string | 是 |
-| code | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | string | 是 |  |
+| code | number | 是 |  |
 
 ## success
 
@@ -64,9 +64,9 @@ success?: (data: FileReadTextResponse) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md) | 是 |  |
 
 ## encoding
 

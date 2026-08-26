@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
+import ssap from '@kit.ConnectivityKit';
 ```
 
 ## createClient
@@ -24,22 +24,22 @@ Creates an SSAP client instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| address | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| address | string | Yes | Address of the remote server device. The address format is **11:22:33:AA:BB:FF**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Client](arkts-connectivity-ssap-client-i.md) |
+| Type | Description |
+| --- | --- |
+| [Client](arkts-connectivity-ssap-client-i.md) | SSAP client instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 36100003 |
-| 36100041 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
+| 36100003 | NearLink disabled. |
+| 36100041 | Invalid address. |
+| 36100099 | Operation failed. |

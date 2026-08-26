@@ -2,13 +2,16 @@
 
 Defines a contact's portrait.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Since API version 22, contact portraits can be set in URI or [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 > format. (Currently, contact avatars cannot be set through the [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md) or
-> [saveToExistingContactViaUI](arkts-contacts-contact-savetoexistingcontactviaui-f.md) API.)&gt;
+> [saveToExistingContactViaUI](arkts-contacts-contact-savetoexistingcontactviaui-f.md) API.)
+> 
 > URI indicates the address of the contact portrait file that can be accessed, and
 > [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) indicates the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
-> object generated based on the contact portrait resource.&gt;
+> object generated based on the contact portrait resource.
+> 
 > Since API version 22, the profile picture resource can be read through URI. The resource can be opened only in
 > [fs.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md) mode and cannot be directly displayed in the **Image** component using a URI. You need to read
 > the resource and display it in [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) format.
@@ -20,7 +23,7 @@ Defines a contact's portrait.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## photo
@@ -54,3 +57,25 @@ Contact portrait in URI format.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
+
+**Examples**
+
+Create data using JSON format.
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+import { image } from '@kit.ImageKit';
+
+async function SetPortraitUri(uri: string) {
+  let portrait: contact.Portrait = {
+    uri: uri
+  };
+}
+
+async function SetPortraitPixelMap(photo: image.PixelMap) {
+  let portrait: contact.Portrait = {
+    uri: '',
+    photo: photo
+  };
+}
+```

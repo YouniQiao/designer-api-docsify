@@ -14,6 +14,6 @@ Defines a listener for progress data changes. If the default progress indicator 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| progress | [ProgressInfo](arkts-basicservices-pasteboard-progressinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| progress | [ProgressInfo](arkts-basicservices-pasteboard-progressinfo-i.md) | Yes | Defines the progress information. This information is reported only when [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md) is set to **NONE**. |

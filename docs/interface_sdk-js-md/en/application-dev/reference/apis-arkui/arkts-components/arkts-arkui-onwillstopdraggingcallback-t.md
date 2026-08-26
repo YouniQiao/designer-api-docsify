@@ -18,6 +18,6 @@ On scroll callback using in scrollable onWillStopDragging.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| velocity | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| velocity | number | Yes | The veolicity of the scroll view at the moment the touch was released. |

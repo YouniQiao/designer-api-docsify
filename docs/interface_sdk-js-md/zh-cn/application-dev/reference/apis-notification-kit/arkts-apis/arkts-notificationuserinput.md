@@ -4,6 +4,6 @@
 
 ### 接口
 
-| 名称 |
-| --- |
-| [NotificationUserInput(Describes a NotificationUserInput instance)](arkts-notification-notificationuserinput-notificationuserinput-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [NotificationUserInput(Describes a NotificationUserInput instance)](arkts-notification-notificationuserinput-notificationuserinput-i.md) | 保存用户输入的通知消息。 |

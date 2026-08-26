@@ -12,7 +12,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## pressKey
@@ -33,23 +32,56 @@ pressKey(keyCode: KeyCode): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| keyCode | [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keyCode | [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | 是 | 要按下的按键键码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The key is already pressed and is not the most recently pressed key. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+
+**示例**
+
+```TypeScript
+import { inputEventClient, KeyCode } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputEventClient.createKeyboardController()
+            .then((keyboardController: inputEventClient.KeyboardController) => {
+              keyboardController.pressKey(KeyCode.KEYCODE_A);
+              return keyboardController;
+            })
+            .then((keyboardController: inputEventClient.KeyboardController) => {
+              keyboardController.releaseKey(KeyCode.KEYCODE_A);
+            })
+            .then(() => {
+              console.info('Succeeded in releasing key');
+            })
+            .catch((error: BusinessError) => {
+              console.error(`Failed to release key. Code: ${error.code}, message: ${error.message}.`);
+            });
+        })
+    }
+  }
+}
+```
 
 ## releaseKey
 
@@ -69,20 +101,24 @@ releaseKey(keyCode: KeyCode): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| keyCode | [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keyCode | [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | 是 | 要抬起的按键键码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The key is not pressed. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+
+**示例**
+
+参见[pressKey](#presskey)示例。

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Environment } from 'kits/@kit.CoreFileKit';
+import Environment from '@kit.CoreFileKit';
 ```
 
 ## getUserDataDir
@@ -22,17 +22,28 @@ function getUserDataDir(): Promise<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | 返回公共文件根目录。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13900020 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
+| 13900020 | Invalid argument |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+Environment.getUserDataDir().then((path: string) => {
+  console.info("getUserDataDir successfully, Path: " + path);
+}).catch((err: BusinessError) => {
+  console.error("getUserDataDir failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 
 ## getUserDataDir
@@ -51,14 +62,27 @@ function getUserDataDir(callback: AsyncCallback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 异步获取公共文件根目录之后的回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13900020 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
+| 13900020 | Invalid argument |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+Environment.getUserDataDir((err: BusinessError, path: string) => {
+  if (err) {
+    console.error("getUserDataDir failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("getUserDataDir successfully, Path: " + path);
+  }
+});
+```

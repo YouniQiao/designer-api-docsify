@@ -31,9 +31,9 @@ Sets the size of all text within the menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Font](#font) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Font](#font) | Yes | Size of all text within the menu.Default value:{size: 16,family: 'HarmonyOS Sans',weight: FontWeight.Medium,style: FontStyle.Normal} |
 
 ## fontColor
 
@@ -53,9 +53,9 @@ Sets the font color of all text within the menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of all text within the menu. |
 
 ## fontSize
 
@@ -77,9 +77,9 @@ Sets the size of all text within the menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Size of all text within the menu. If the value of the Length type is a number, the unit is fp. Percentage values are not supported. |
 
 ## menuItemDivider
 
@@ -99,9 +99,9 @@ Sets the style of the menu item divider. If this attribute is not set, the divid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [DividerStyleOptions](../arkts-apis/arkts-arkui-dividerstyleoptions-i.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [DividerStyleOptions](../arkts-apis/arkts-arkui-dividerstyleoptions-i.md) \| undefined | Yes | Style of the menu item divider.   - **strokeWidth**: stroke width of the divider.   - **color**: color of the divider.   - **startMargin**: distance between the divider and the start edge of the menu item.   - **endMargin**: distance between the divider and the end edge of the menu item.   - **mode**: mode of the divider, which is **FLOATING_ABOVE_MENU** by default. |
 
 ## menuItemGroupDivider
 
@@ -121,9 +121,9 @@ Sets the style of the top and bottom dividers for the menu item group. If this a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [DividerStyleOptions](../arkts-apis/arkts-arkui-dividerstyleoptions-i.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [DividerStyleOptions](../arkts-apis/arkts-arkui-dividerstyleoptions-i.md) \| undefined | Yes | Style of the top and bottom dividers for the menu item group.   - **strokeWidth**: stroke width of the divider. The default value is 1 px.   - **color**: color of the divider. The default value is **#33000000**.   - **startMargin**: distance between the divider and the start edge of the menu item group. The default value is 16 vp.   - **endMargin**: distance between the divider and the end edge of the menu item group. The default value is 16 vp.   - **mode**: mode of the divider, which is **FLOATING_ABOVE_MENU** by default. |
 
 ## radius
 
@@ -143,9 +143,9 @@ Sets the radius of the menu border corners.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) | Yes | Radius of the menu border corners.Default value: **8vp** for 2- in-1 devices and **20vp** for other devices Since API version 12, if the sum of the two maximum corner radii in the horizontal direction exceeds the menu width, or if the sum of the two maximum corner radii in the vertical direction exceeds the menu height, the default corner radius will be used for all four corners of the menu.When the Dimension type is used: Invalid input values will trigger a fallback to the default corner radius.When the BorderRadiuses type is used: Invalid input values will result in the menu having no rounded corners by default. |
 
 ## subMenuExpandingMode
 
@@ -165,9 +165,9 @@ Sets the submenu expanding mode of the menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | Yes | Submenu expanding mode of the menu.Default value: **SubMenuExpandingMode.SIDE_EXPAND |
 
 ## subMenuExpandSymbol
 
@@ -187,6 +187,6 @@ Sets the submenu expand symbol of the menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| symbol | [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| symbol | [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes | Submenu expand symbol of the menu. 1. **SubMenuExpandingMode.SIDE_EXPAND**: The expand symbol is not displayed. 2. **SubMenuExpandingMode.EMBEDDED_EXPAND**: The symbol rotates 180° clockwise upon expansion. Default value: **\\$r('sys.symbol.chevron_down').fontSize('24vp')** 3. **SubMenuExpandingMode.STACK_EXPAND**: The symbol rotates 90° clockwise upon expansion. Default value: **\\$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp') |

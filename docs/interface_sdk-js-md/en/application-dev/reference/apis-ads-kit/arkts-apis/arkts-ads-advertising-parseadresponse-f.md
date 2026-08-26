@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { AdComponent } from '@kit.AdsKit.AdComponent';
+import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
+import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
+import advertising from '@kit.AdsKit';
 ```
 
 ## parseAdResponse
@@ -21,17 +24,44 @@ Parses and processes the body of an ad response (this API is only open to some p
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| adResponse | string | Yes |
-| listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | Yes |
-| context | common.UIAbilityContext | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| adResponse | string | Yes | Ad response body. |
+| listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | Yes | Callback listener for ad requests. |
+| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../errorcode-ads.md#801-ad-request-failure) |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
-| [21800005](../errorcode-ads.md#21800005-ad-data-parsing-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported. |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| [21800005](../errorcode-ads.md#21800005-ad-data-parsing-failure) | Failed to parse the ad response. |
+
+**Examples**
+
+For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { advertising } from '@kit.AdsKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+function parseAdResponse(adResponse: string, context: common.UIAbilityContext): void {
+  // Listen for the ad parsing callback.
+  const multiSlotsAdLoaderListener: advertising.MultiSlotsAdLoadListener = {
+    onAdLoadFailure: (errorCode: number, errorMsg: string) => {
+      hilog.error(0x0000, 'testTag', `Failed to load multiSlots ad. Code is ${errorCode}, message is ${errorMsg}`);
+    },
+    onAdLoadSuccess: (ads: Map<string, Array<advertising.Advertisement>>) => {
+      hilog.info(0x0000, 'testTag', 'Succeeded in loading multiSlots ad');
+      // Save the parsed ad content for display.
+      const returnAds: advertising.Advertisement[] = [];
+      ads.forEach((adsArray) => returnAds.push(...adsArray));
+    }
+  };
+  // Call the API to parse the response body.
+  advertising.parseAdResponse(adResponse, multiSlotsAdLoaderListener, context);
+}
+```

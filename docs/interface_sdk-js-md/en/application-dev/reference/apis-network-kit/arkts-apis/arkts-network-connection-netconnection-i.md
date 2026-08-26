@@ -2,12 +2,16 @@
 
 Represents the network connection object type.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > (1) When the network transitions from unavailable to available, the **netAvailable**, **netCapabilitiesChange**,
-> and **netConnectionPropertiesChange** events are triggered.&gt;
+> and **netConnectionPropertiesChange** events are triggered.
+> 
 > (2) If the network transitions from available to unavailable after a **netAvailable** event is received, a
-> **netLost** event is triggered.&gt;
-> (3) If no **netAvailable** event is received, a **netUnavailable** event is directly triggered.&gt;
+> **netLost** event is triggered.
+> 
+> (3) If no **netAvailable** event is received, a **netUnavailable** event is directly triggered.
+> 
 > (4) When the network transitions from Wi-Fi to cellular, a **netLost** event is first triggered to indicate that
 > the Wi-Fi network is lost and then a **netAvailable** event is triggered to indicate that the cellular network is
 > available.
@@ -19,7 +23,6 @@ Represents the network connection object type.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## on('netAvailable')
@@ -38,10 +41,35 @@ Registers a listener for **netAvailable** events. Before you call this API, make
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'netAvailable' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'netAvailable' | Yes | Event type. This field has a fixed value of **netAvailable**.    **netAvailable**: event indicating that the data network is available. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes | Callback used to return the network handle. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Create a NetConnection object.
+let netCon: connection.NetConnection = connection.createNetConnection();
+
+// Use the on API to enable listening for netAvailable events.
+netCon.on('netAvailable', (data: connection.NetHandle) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+
+// Register a listener for network status change events. This API must be called after the on API.
+netCon.register((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+
+// Use the unregister API to unsubscribe from netAvailable events.
+netCon.unregister((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```
 
 ## on('netBlockStatusChange')
 
@@ -57,10 +85,35 @@ Registers a listener for **netBlockStatusChange** events. Before you call this A
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'netBlockStatusChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'netBlockStatusChange' | Yes | Event type. This field has a fixed value of **netBlockStatusChange**.    **netBlockStatusChange**: event indicating a change in the network blocking status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Create a NetConnection object.
+let netCon: connection.NetConnection = connection.createNetConnection();
+
+// Use the on API to enable listening for netBlockStatusChange events.
+netCon.on('netBlockStatusChange', (data: connection.NetBlockStatusInfo) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+
+// Register a listener for network status change events. This API must be called after the on API.
+netCon.register((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+
+// Use the unregister API to remove the listener for netBlockStatusChange events.
+netCon.unregister((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```
 
 ## on('netCapabilitiesChange')
 
@@ -78,10 +131,35 @@ Registers a listener for **netCapabilitiesChange** events. Before you call this 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'netCapabilitiesChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetCapabilityInfo](arkts-network-connection-netcapabilityinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'netCapabilitiesChange' | Yes | Event type. This field has a fixed value of **netCapabilitiesChange**.    **netCapabilitiesChange**: event indicating that the network capabilities have changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetCapabilityInfo](arkts-network-connection-netcapabilityinfo-i.md)&gt; | Yes | Callback used to return the network handle (**netHandle**) and capability information (**netCap**). |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Create a NetConnection object.
+let netCon: connection.NetConnection = connection.createNetConnection();
+
+// Use the on API to enable listening for netCapChange events.
+netCon.on('netCapabilitiesChange', (data: connection.NetCapabilityInfo) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+
+// Register a listener for network status change events. This API must be called after the on API.
+netCon.register((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+
+// Unsubscribe from netCapabilitiesChange events.
+netCon.unregister((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```
 
 ## on('netConnectionPropertiesChange')
 
@@ -97,10 +175,35 @@ Registers a listener for **netConnectionPropertiesChange** events. Before you ca
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'netConnectionPropertiesChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetConnectionPropertyInfo](arkts-network-connection-netconnectionpropertyinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'netConnectionPropertiesChange' | Yes | Event type. This field has a fixed value of **netConnectionPropertiesChange**.    **netConnectionPropertiesChange**: event indicating that network connection properties have changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetConnectionPropertyInfo](arkts-network-connection-netconnectionpropertyinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Create a NetConnection object.
+let netCon: connection.NetConnection = connection.createNetConnection();
+
+// Use the on API to enable listening for netConnectionChange events.
+netCon.on('netConnectionPropertiesChange', (data: connection.NetConnectionPropertyInfo) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+
+// Register a listener for network status change events. This API must be called after the on API.
+netCon.register((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+
+// Use the unregister API to remove the listener for netConnectionPropertiesChange events.
+netCon.unregister((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```
 
 ## on('netLost')
 
@@ -118,10 +221,35 @@ Registers a listener for **netLost** events. Before you call this API, make sure
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'netLost' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'netLost' | Yes | Event type. This field has a fixed value of **netLost**.    **netLost**: event indicating that the network is interrupted or normally disconnected. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes | Callback used to return the result, which is a **netHandle** object. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Create a NetConnection object.
+let netCon: connection.NetConnection = connection.createNetConnection();
+
+// Use the on API to enable listening for netLost events.
+netCon.on('netLost', (data: connection.NetHandle) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+
+// Register a listener for network status change events. This API must be called after the on API.
+netCon.register((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+
+// Use the unregister API to remove the listener for netLost events.
+netCon.unregister((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```
 
 ## on('netUnavailable')
 
@@ -139,10 +267,35 @@ Registers a listener for **netUnavailable** events. Before you call this API, ma
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'netUnavailable' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'netUnavailable' | Yes | Event type. This field has a fixed value of **netUnavailable**.    **netUnavailable**: event indicating that the network is unavailable. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result, which is empty. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Create a NetConnection object.
+let netCon: connection.NetConnection = connection.createNetConnection();
+
+// Use the on API to enable listening for netUnavailable events.
+netCon.on('netUnavailable', () => {
+  console.info("Succeeded to get unavailable net event");
+});
+
+// Register a listener for network status change events. This API must be called after the on API.
+netCon.register((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+
+// Use the unregister API to remove the listener for netUnavailable events.
+netCon.unregister((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```
 
 ## register
 
@@ -152,7 +305,8 @@ register(callback: AsyncCallback<void>): void
 
 Registers a listener for network status changes. To listen for a specific type of events, call **on** to enable listening and then call **register** to register an event listener.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After using the **register** API, you need to call **unregister** to deregister the listener.
 > **Required permission**: ohos.permission.GET_NETWORK_INFO
 
@@ -166,20 +320,32 @@ Registers a listener for network status changes. To listen for a specific type o
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If a listener for network status changes is registered successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-| [2101008](../errorcode-net-connection.md#2101008-callback-already-exists) |
-| [2101022](../errorcode-net-connection.md#2101022-number-of-requests-exceeding-the-maximum) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2101008](../errorcode-net-connection.md#2101008-callback-already-exists) | The callback already exists. |
+| [2101022](../errorcode-net-connection.md#2101022-number-of-requests-exceeding-the-maximum) | The number of requests exceeded the maximum allowed. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let netCon: connection.NetConnection = connection.createNetConnection();
+netCon.register((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```
 
 ## unregister
 
@@ -197,16 +363,28 @@ Unregisters the listener for network status changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If a listener for network status changes is unregistered successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-| [2101007](../errorcode-net-connection.md#2101007-callback-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 8 - 11 |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2101007](../errorcode-net-connection.md#2101007-callback-not-exist) | The callback does not exist. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let netCon: connection.NetConnection = connection.createNetConnection();
+netCon.unregister((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```

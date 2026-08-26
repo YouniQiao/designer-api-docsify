@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
+import serial from '@kit.BasicServicesKit';
 ```
 
 ## addPortAuthorization
@@ -24,22 +24,22 @@ Adds the permission for applications to access the serial port. This API is open
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tokenId | string | Yes |
-| deviceId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tokenId | string | Yes | Token ID of the authorized application. |
+| deviceId | string | Yes | Serial port device ID. For an onboard serial port, the value is portName. For a USB virtual serial port, the value is the combination of VID+PID+SN. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700002](../errorcode-busmanager-serial.md#35700002-parameter-error) |
-| [35700008](../errorcode-busmanager-serial.md#35700008-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700002](../errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
+| [35700008](../errorcode-busmanager-serial.md#35700008-permission-denied) | Permission denied. |

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cdsm } from 'kits/@kit.ConnectivityKit';
+import cdsm from '@kit.ConnectivityKit';
 ```
 
 ## address

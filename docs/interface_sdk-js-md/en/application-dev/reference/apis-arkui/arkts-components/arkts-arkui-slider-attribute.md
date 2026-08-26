@@ -31,9 +31,9 @@ Sets the border color of the slider in the block direction.When **SliderBlockTyp
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Border color of the slider in the block direction.Default value: **'#00000000' |
 
 ## blockBorderWidth
 
@@ -53,9 +53,9 @@ Sets the border width of the slider in the block direction.When **SliderBlockTyp
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Border width of the slider in the block direction.   **NOTE：**For the string type, percentage values are not supported. |
 
 ## blockColor
 
@@ -75,9 +75,9 @@ Sets the color of the thumb.When **SliderBlockType.DEFAULT** is used, **blockCol
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the thumb.Default value: **\\$r('sys.color.ohos_id_color_foreground_contrary') |
 
 ## blockColor
 
@@ -99,9 +99,9 @@ Sets the color of the slider. Gradient colors are supported.When **SliderBlockTy
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes | Color of the thumb.Default value: **\\$r('sys.color.ohos_id_color_foreground_contrary') |
 
 ## blockSize
 
@@ -121,9 +121,9 @@ Sets the size of the slider in the block direction.When the slider type is set t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes | Size of the slider in the block direction.Default value:   - For [SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet: **{width: 18, height: 18}**   - For [SliderStyle](arkts-arkui-sliderstyle-e.md).InSet: **{width: 12, height: 12}**   - For [SliderStyle](arkts-arkui-sliderstyle-e.md).NONE: This parameter is not effective.   If the set **blockSize** has different width and height values, the smaller value is taken. If one or both of the width and height values are less than or equal to 0, the default value is used instead. |
 
 ## blockStyle
 
@@ -143,9 +143,9 @@ Sets the style of the slider in the block direction.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [SliderBlockStyle](arkts-arkui-sliderblockstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [SliderBlockStyle](arkts-arkui-sliderblockstyle-i.md) | Yes | Style of the slider in the block direction.Default value: **SliderBlockType.DEFAULT**, indicating the round slider. |
 
 ## contentModifier
 
@@ -165,9 +165,9 @@ Creates a content modifier.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[SliderConfiguration](arkts-arkui-sliderconfiguration-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[SliderConfiguration](arkts-arkui-sliderconfiguration-i.md)&gt; | Yes | Content modifier to apply to the slider.    **ContentModifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## digitalCrownSensitivity
 
@@ -177,7 +177,8 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 Sets the sensitivity to the digital crown rotation.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API cannot be called within attributeModifier.
 
 **Since:** 18
@@ -190,9 +191,9 @@ Sets the sensitivity to the digital crown rotation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes | Sensitivity to the digital crown rotation.Default value: **CrownSensitivity.MEDIUM |
 
 ## enableHapticFeedback
 
@@ -212,9 +213,9 @@ Specifies whether to enable haptic feedback.To enable haptic feedback, you must 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Whether to enable haptic feedback.   **true**: Enable haptic feedback. **false**: Disable haptic feedback.Default value: **true |
 
 ## maxLabel
 
@@ -224,7 +225,8 @@ maxLabel(value: string)
 
 Sets the maximum value.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use
 > **max** instead. **max** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md).
 
@@ -238,9 +240,9 @@ Sets the maximum value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Maximum value. |
 
 ## minLabel
 
@@ -250,7 +252,8 @@ minLabel(value: string)
 
 Sets the minimum value.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use
 > **min** instead. **min** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md).
 
@@ -264,9 +267,9 @@ Sets the minimum value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Minimum value. |
 
 ## minResponsiveDistance
 
@@ -286,9 +289,9 @@ Sets the minimum distance required for the slider to respond.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Minimum distance required for the slider to respond. The slider will only move when the sliding distance exceeds this threshold.Default value: **0**   **NOTE：**The unit is consistent with that of the **min** and **max** properties in [SliderOptions](arkts-arkui-slideroptions-i.md).If the value is less than 0, greater than the result of (**max** – **min**), or invalid, the default value is used. |
 
 ## onChange
 
@@ -308,9 +311,9 @@ Triggered when the slider is dragged or clicked.The **Begin** and **End** states
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (value: number, mode: SliderChangeMode) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (value: number, mode: SliderChangeMode) = & gt; void | Yes |  |
 
 ## prefix
 
@@ -330,10 +333,10 @@ Sets the prefix of the slider.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes |
-| options | [SliderPrefixOptions](arkts-arkui-sliderprefixoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes | Visual content of the slider prefix, which will be displayed at the start of the slider. |
+| options | [SliderPrefixOptions](arkts-arkui-sliderprefixoptions-i.md) | No | Accessibility configuration of the slider prefix. |
 
 ## selectedBorderRadius
 
@@ -353,9 +356,9 @@ Set the corner radius of the selected (highlighted) part of the slider.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Corner radius of the selected part of the slider.Default value:   - For **SliderStyle.InSet** or **SliderStyle.OutSet**: same as the corner radius of the background   - **SliderStyle.NONE**: **0**   **NOTE：**Percentage values are not supported. If the value is less than 0, the default value is used. |
 
 ## selectedColor
 
@@ -375,9 +378,9 @@ Sets the color of the portion of the track between the minimum value and the thu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the portion of the track between the minimum value and the thumb.Default value: **\\$r('sys.color.ohos_id_color_emphasize') |
 
 ## selectedColor
 
@@ -399,9 +402,9 @@ Sets the color of the portion of the track between the minimum value and the thu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [selectedColor](#selectedcolor) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectedColor | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes | Color of the portion of the track between the minimum value and the thumb.Default value: **\\$r('sys.color.ohos_id_color_emphasize')**   **NOTE：**With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied. |
 
 ## showSteps
 
@@ -421,9 +424,9 @@ Sets whether to display the step markers along the slider track.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to display the step markers along the slider track.   **true**: Display the step markers. **false**: Do not display the step markers.Default value: **false |
 
 ## showSteps
 
@@ -445,10 +448,10 @@ Sets whether to display the step markers along the slider track.You can set cust
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
-| options | [SliderShowStepOptions](arkts-arkui-slidershowstepoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to display the step markers along the slider track.   **true**: Display the step markers. **false**: Do not display the step markers.Default value: **false |
+| options | [SliderShowStepOptions](arkts-arkui-slidershowstepoptions-i.md) | No | Accessibility configuration of step markers.Default value: **null |
 
 ## showTips
 
@@ -468,10 +471,10 @@ Sets whether to display a tooltip when the user drags the slider.When **directio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to display a tooltip when the user drags the slider.   **true**: Display a tooltip. **false**: Do not display a tooltip.Default value: **false |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | No | Content of the tooltip. By default, the tooltip shows the current percentage value.<br>**Since:** 10 |
 
 ## slideRange
 
@@ -491,9 +494,9 @@ Sets the slide range.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [SlideRange](arkts-arkui-sliderange-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [SlideRange](arkts-arkui-sliderange-i.md) | Yes | Slide range. |
 
 ## sliderInteractionMode
 
@@ -513,9 +516,9 @@ Sets the interaction mode between the user and the slider.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [SliderInteraction](arkts-arkui-sliderinteraction-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [SliderInteraction](arkts-arkui-sliderinteraction-e.md) | Yes | Interaction mode between the user and the slider.Default value: **SliderInteraction.SLIDE_AND_CLICK |
 
 ## stepColor
 
@@ -535,9 +538,9 @@ Sets the step color.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Step color.Default value:   **\\$r('sys.color.ohos_id_color_foreground')** mixed with **\\$r('sys.color.ohos_id_alpha_normal_bg') |
 
 ## stepSize
 
@@ -557,9 +560,9 @@ Sets the step size (diameter). If the value is 0, the step size is not displayed
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Step size (diameter).Default value: **'4vp'**Value range: [0, [trackThickness](#trackthickness)) |
 
 ## suffix
 
@@ -579,10 +582,10 @@ Sets the suffix of the slider.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes |
-| options | [SliderSuffixOptions](arkts-arkui-slidersuffixoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes | Visual content of the slider suffix, which will be displayed at the end of the slider. |
+| options | [SliderSuffixOptions](arkts-arkui-slidersuffixoptions-i.md) | No | Accessibility configuration of the slider suffix. |
 
 ## trackBorderRadius
 
@@ -602,9 +605,9 @@ Sets the radius of the rounded corner of the track.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Radius of the rounded corner of the track.Default value:   **'2vp'** when **style** is **SliderStyle.OutSet**   **'10vp'** when **style** is **SliderStyle.InSet**   **NOTE：**If the value is less than 0, the default value is used. |
 
 ## trackColor
 
@@ -624,9 +627,9 @@ Sets the background color of the track.Since API version 12, **LinearGradient** 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes | Background color of the track.Default value: **\\$r('sys.color.ohos_id_color_component_normal')**   **NOTE：** 1. With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied. 2. The LinearGradient type cannot be used in atomic services.<br>**Since:** 12 |
 
 ## trackColorMetrics
 
@@ -646,9 +649,9 @@ Sets the linear gradient background color of the track.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | [ColorMetricsLinearGradient](arkts-arkui-colormetricslineargradient-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | [ColorMetricsLinearGradient](arkts-arkui-colormetricslineargradient-c.md) | Yes | Linear gradient background color of the track.If **color** is **undefined**, the gradient color setting is invalid. The default background color of the track is **\\$r('sys.color.ohos_id_color_component_normal')**. |
 
 ## trackThickness
 
@@ -668,6 +671,6 @@ Sets the thickness of the track. If the value is less than or equal to 0, the de
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Thickness of the track.Default value: 4.0vp when **style** is set to **[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet**; 20.0vp when **style** is set to **[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet |

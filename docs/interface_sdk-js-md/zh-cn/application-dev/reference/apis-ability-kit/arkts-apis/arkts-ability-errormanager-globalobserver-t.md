@@ -14,6 +14,6 @@ export type GlobalObserver = (reason: GlobalError) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| reason | [GlobalError](arkts-ability-errormanager-globalerror-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| reason | [GlobalError](arkts-ability-errormanager-globalerror-i.md) | 是 | 有关异常事件名字、消息、错误堆栈信息、异常线程名称和类型的对象。 |

@@ -14,10 +14,10 @@ type Capability = 'retrieve' | 'touchGuide' | 'keyEventObserver' | 'zoom' | 'ges
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-| 类型 |
-| --- |
-| 'retrieve' |
-| 'touchGuide' |
-| 'keyEventObserver' |
-| 'zoom' |
-| 'gesture' |
+| 类型 | 说明 |
+| --- | --- |
+| 'retrieve' | 具有检索窗口内容的能力。 |
+| 'touchGuide' | 具有触摸浏览模式的能力。 |
+| 'keyEventObserver' | 具有过滤按键事件的能力。 |
+| 'zoom' | 具有控制显示放大的能力，当前版本暂不支持。 |
+| 'gesture' | 具有执行手势动作的能力。 |

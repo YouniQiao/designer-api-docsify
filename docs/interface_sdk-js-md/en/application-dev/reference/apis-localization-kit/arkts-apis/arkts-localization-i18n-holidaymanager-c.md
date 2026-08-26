@@ -9,7 +9,7 @@ Provides holiday data parsing capabilities, such as determining holidays and obt
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -28,16 +28,31 @@ Creates a **HolidayManager** object for parsing holiday data.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| icsPath | String | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| icsPath | String | Yes | Path of the **.ics** file with the read permission granted for applications. iCalendar is a standard Internet calendar format for storing calendar data. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // Replace /system/lib/US.ics with the actual ICS file path.
+  let holidayManager = new i18n.HolidayManager('/system/lib/US.ics');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.HolidayManager failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getHolidayInfoItemArray
 
@@ -55,22 +70,38 @@ Obtains the holiday information list of the specified year.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| year | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| year | number | No | Specified year, for example, 2023. The default value is the current year. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[HolidayInfoItem](arkts-localization-i18n-holidayinfoitem-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[HolidayInfoItem](arkts-localization-i18n-holidayinfoitem-i.md)&gt; | Holiday information list. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // Replace /system/lib/US.ics with the actual ICS file path.
+  let holidayManager: i18n.HolidayManager = new i18n.HolidayManager('/system/lib/US.ics');
+  let holidayInfoItemArray: Array<i18n.HolidayInfoItem> = holidayManager.getHolidayInfoItemArray(2023);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call holidayManager.getHolidayInfoItemArray failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## isHoliday
 
@@ -88,18 +119,35 @@ Determines whether the specified date is a holiday.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| date | Date | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| date | Date | No | Date and time. Note: The month starts from **0**. For example, **0** indicates January. The default value is the current date. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the specified date is a holiday, and **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // Replace /system/lib/US.ics with the actual ICS file path.
+  let holidayManager: i18n.HolidayManager = new i18n.HolidayManager('/system/lib/US.ics');
+  let isHoliday: boolean = holidayManager.isHoliday();
+  isHoliday = holidayManager.isHoliday(new Date(2023, 5, 25)); // The date is 2023.06.25.
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call holidayManager.isHoliday failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```

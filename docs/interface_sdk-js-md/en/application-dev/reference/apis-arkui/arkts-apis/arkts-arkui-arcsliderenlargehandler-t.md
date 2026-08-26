@@ -14,6 +14,6 @@ Defines the callback invoked to notify the application when the arc slider is en
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isEnlarged | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isEnlarged | boolean | Yes | Whether the arc slider is enlarged. **false**: The arc slider is in a reduced state. **true**: The arc slider is in an enlarged state. |

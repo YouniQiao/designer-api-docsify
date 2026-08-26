@@ -14,7 +14,7 @@ management.
 ## Modules to Import
 
 ```TypeScript
-import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
+import userAccessCtrl from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary
@@ -22,23 +22,23 @@ import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [verifyAuthToken(User Access Control)](arkts-userauthentication-useraccessctrl-verifyauthtoken-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [verifyAuthToken(User Access Control)](arkts-userauthentication-useraccessctrl-verifyauthtoken-f-sys.md) | Verifies an authentication token. This API is used to verify the validity of an **AuthToken**, including the integrity and validity check. After the verification is successful, the detailed information about the parsed **AuthToken** is returned. This API uses a promise to return the result.The integrity check verifies the digital signature of the **AuthToken** to ensure that the token has not been tampered with. The validity check compares the issuance time of the **AuthToken** with the current time and determines whether the token is within the validity period based on the **allowableDuration** parameter. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AuthToken(User Access Control)](arkts-userauthentication-useraccessctrl-authtoken-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AuthToken(User Access Control)](arkts-userauthentication-useraccessctrl-authtoken-i-sys.md) | Defines the authentication token data. It indicates the parsed **AuthToken** data returned after the verification is successful, including detailed authentication information such as the challenge value, authentication trust level, authentication type, and user ID. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AuthTokenType(User Access Control)](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AuthTokenType(User Access Control)](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md) | Enumerates the authentication token types. They are used to identify the source of the token. |
 <!--DelEnd-->

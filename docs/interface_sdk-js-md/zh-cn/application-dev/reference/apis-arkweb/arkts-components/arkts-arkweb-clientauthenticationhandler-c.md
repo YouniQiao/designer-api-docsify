@@ -9,6 +9,9 @@ ClientAuthenticationHandler是Web组件中处理SSL客户端证书认证请求�
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## cancel
@@ -24,6 +27,29 @@ cancel(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+**示例**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onDataResubmitted((event) => {
+          console.info('onDataResubmitted');
+          event.handler.cancel();
+        })
+    }
+  }
+}
+```
 
 ## confirm
 
@@ -41,10 +67,10 @@ confirm(priKeyFile: string, certChainFile: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| priKeyFile | string | 是 |
-| certChainFile | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| priKeyFile | string | 是 | 存放私钥文件的完整路径。 |
+| certChainFile | string | 是 | 存放证书链文件的完整路径。 |
 
 ## confirm
 
@@ -62,9 +88,9 @@ confirm(authUri: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| authUri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| authUri | string | 是 | 凭据的关键值。 |
 
 ## confirm
 
@@ -80,16 +106,16 @@ confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| identity | string | 是 |
-| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-credentialtype-e.md) \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| identity | string | 是 | 用于识别凭据的唯一标识值。 |
+| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-credentialtype-e.md) \| string | 是 | 类型为CredentialType时，代表凭据类型；类型为string时，表示证书链文件路径。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## constructor
 

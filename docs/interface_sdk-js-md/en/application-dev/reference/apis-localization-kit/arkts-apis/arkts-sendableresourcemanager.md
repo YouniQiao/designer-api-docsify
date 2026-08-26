@@ -9,21 +9,21 @@ This module provides the mutual conversion between [Resource](arkts-localization
 ## Modules to Import
 
 ```TypeScript
-import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
+import sendableResourceManager from '@kit.LocalizationKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [resourceToSendableResource(Resource Manager)](arkts-localization-sendableresourcemanager-resourcetosendableresource-f.md) |
-| [sendableResourceToResource(Resource Manager)](arkts-localization-sendableresourcemanager-sendableresourcetoresource-f.md) |
+| Name | Description |
+| --- | --- |
+| [resourceToSendableResource(Resource Manager)](arkts-localization-sendableresourcemanager-resourcetosendableresource-f.md) | Converts a `Resource` object to a `SendableResource` object that can be used for cross-thread transmission. |
+| [sendableResourceToResource(Resource Manager)](arkts-localization-sendableresourcemanager-sendableresourcetoresource-f.md) | Converts a `SendableResource` object transmitted across threads to a `Resource` object. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Resource(Resource Manager)](arkts-localization-sendableresourcemanager-resource-t.md) |
-| [SendableResource(Resource Manager)](arkts-localization-sendableresourcemanager-sendableresource-t.md) |
+| Name | Description |
+| --- | --- |
+| [Resource(Resource Manager)](arkts-localization-sendableresourcemanager-resource-t.md) | Represents resource-related information, including the application bundle name, application module name, resource ID, resource type, and other resource parameters. |
+| [SendableResource(Resource Manager)](arkts-localization-sendableresourcemanager-sendableresource-t.md) | Represents Sendable resource-related information for cross-thread transmission, including the application bundle name, application module name, resource ID, resource type, and other resource parameters. |

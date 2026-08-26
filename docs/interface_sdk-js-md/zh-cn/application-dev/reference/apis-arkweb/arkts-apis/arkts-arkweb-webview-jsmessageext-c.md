@@ -9,7 +9,6 @@ JsMessageExt是ArkWeb框架中用于封装 [runJavaScriptExt](arkts-arkweb-webvi
 ## 导入模块
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getArray
@@ -28,15 +27,15 @@ getArray(): Array<string | number | boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string \ | number \| boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string \ | number \| boolean & gt; | 返回runJavaScriptExt接口脚本执行后得到的数组类型的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## getArrayBuffer
 
@@ -54,15 +53,15 @@ getArrayBuffer(): ArrayBuffer
 
 **返回值：**
 
-| 类型 |
-| --- |
-| ArrayBuffer |
+| 类型 | 说明 |
+| --- | --- |
+| ArrayBuffer | 返回runJavaScriptExt接口脚本执行后得到的原始二进制数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## getBoolean
 
@@ -80,15 +79,15 @@ getBoolean(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回runJavaScriptExt接口脚本执行后得到的布尔类型的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## getErrorDescription
 
@@ -104,9 +103,9 @@ getErrorDescription(): string | null
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string \| null | 若JavaScript脚本执行过程中发生异常，或返回值为object类型，系统会将异常信息或object对象格式化为"Not support type: & lt;{exception \ |
+| 类型 | 说明 |
+| --- | --- |
+| string \| null | 若JavaScript脚本执行过程中发生异常，或返回值为object类型，系统会将异常信息或object对象格式化为"Not support type: & lt;{exception \ | object} & gt;"字符串返回，该字符串长度不超过2048个字符，超长部分将被截断；若object对象中包含callback类型的成员，则序列化时将自动忽略该成员；其余情况，接口均返回null。 |
 
 ## getNumber
 
@@ -124,15 +123,15 @@ getNumber(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回runJavaScriptExt接口脚本执行后得到的数值类型的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## getString
 
@@ -150,15 +149,15 @@ getString(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回runJavaScriptExt接口脚本执行后得到的字符串类型的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## getType
 
@@ -176,6 +175,6 @@ getType(): JsMessageType
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) | [runJavaScriptExt]{ |

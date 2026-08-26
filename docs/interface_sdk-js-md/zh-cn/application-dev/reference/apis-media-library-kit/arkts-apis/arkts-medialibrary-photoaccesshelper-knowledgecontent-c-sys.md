@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import photoAccessHelper from '@kit.MediaLibraryKit';
 ```
 
 ## getRelatedEntity
@@ -34,26 +34,26 @@ static getRelatedEntity (topic: string, context: ContextMap, option?: Options): 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| topic | string | 是 |
-| context | [ContextMap](arkts-medialibrary-photoaccesshelper-contextmap-i-sys.md) | 是 |
-| option | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| topic | string | 是 | Searching topic string. |
+| context | [ContextMap](arkts-medialibrary-photoaccesshelper-contextmap-i-sys.md) | 是 | Context Map indicates topic filed. |
+| option | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 否 | Options for getRelatedEntity. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Entity[] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Entity[] & gt; | 返回推荐标签内容 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13900020 |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by nonsystem application |
+| 13900020 | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
 
 ## getSearchResult
 
@@ -75,24 +75,24 @@ static getSearchResult(query: SearchQuery): Promise<SearchResult>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| query | [SearchQuery](arkts-medialibrary-photoaccesshelper-searchquery-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| query | [SearchQuery](arkts-medialibrary-photoaccesshelper-searchquery-i-sys.md) | 是 | 搜索查询配置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;SearchResult & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;SearchResult & gt; | Promise用于返回包含匹配资产的搜索结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Invalid input data format.  2. The length of **queryString** or **param** in **SearchQuery** exceeds 16KB. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. Possible causes:  1. IPC timeout;  2. System exception. |
 
 ## getSearchSuggestion
 
@@ -114,21 +114,21 @@ static getSearchSuggestion( searchSuggestionTypes: Array<SearchSuggestionType>):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| searchSuggestionTypes | Array&lt;[SearchSuggestionType](arkts-medialibrary-photoaccesshelper-searchsuggestiontype-e-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| searchSuggestionTypes | Array&lt;[SearchSuggestionType](arkts-medialibrary-photoaccesshelper-searchsuggestiontype-e-sys.md)&gt; | 是 | 搜索推荐词场景类型列表 最大长度为7且不能为空。 The maximum length is 7 and cannot be empty. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[SearchSuggestionResult](arkts-medialibrary-photoaccesshelper-searchsuggestionresult-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[SearchSuggestionResult](arkts-medialibrary-photoaccesshelper-searchsuggestionresult-i-sys.md)&gt;&gt; | 搜索推荐词结果 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by nonsystem application |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:  1. The searchSuggestionTypes list is empty.  2. The searchSuggestionTypes error. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |

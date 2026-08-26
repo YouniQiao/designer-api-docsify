@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## dup
@@ -22,24 +20,36 @@ Duplicates the file descriptor and returns the corresponding **File** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | File descriptor. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [File](arkts-corefile-file-fs-file-i.md) |
+| Type | Description |
+| --- | --- |
+| [File](arkts-corefile-file-fs-file-i.md) | File object opened. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900014 |
-| 13900020 |
-| 13900022 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900014 | Device or resource busy |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file1 = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+let fd: number = file1.fd;
+let file2 = fileIo.dup(fd);
+console.info(`Succeeded in getting file name of the file2 is ${file2.name}`);
+fileIo.closeSync(file1);
+fileIo.closeSync(file2);
+```

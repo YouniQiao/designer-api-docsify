@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import print from '@kit.BasicServicesKit';
 ```
 
 ## addPrinterToCups
@@ -26,22 +26,39 @@ function addPrinterToCups(printerUri: string, printerName: string, printerMake: 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| printerUri | string | 是 |
-| printerName | string | 是 |
-| [printerMake](arkts-basicservices-print-printerinformation-i.md) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| printerUri | string | 是 | 表示打印机uri。 |
+| printerName | string | 是 | 表示打印机名称。 |
+| printerMake | string | 是 | 表示打印机型号。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回true表示添加打印机到cups成功；返回false表示添加打印机到cups失败。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [13100003](../errorcode-print.md#13100003-打印服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [13100003](../errorcode-print.md#13100003-打印服务异常) | Add a printer to cups failed. |
+
+**示例**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let printerUri : string = 'testPrinterUri';
+let printerName : string = 'testPrinterName';
+let printerMake : string = 'testPrinterMake';
+
+print.addPrinterToCups(printerUri, printerName, printerMake).then((result: boolean) => {
+    console.info('addPrinterToCups success' + JSON.stringify(result));
+}).catch((error: BusinessError) => {
+    console.error(`Failed to add printer to cups. Code: ${error.code}, message: ${error.message}`);
+});
+```

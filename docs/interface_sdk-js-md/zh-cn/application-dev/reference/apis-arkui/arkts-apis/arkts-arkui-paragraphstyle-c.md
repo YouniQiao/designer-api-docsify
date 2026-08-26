@@ -29,9 +29,9 @@ constructor(value?: ParagraphStyleInterface)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) | 否 | 段落样式设置项。 默认值：不传入时继承ParagraphStyleInterface各属性的默认值。 |
 
 ## leadingMargin
 

@@ -11,7 +11,7 @@ Provides APIs for obtaining and modifying **Preferences** instances. **Preferenc
 ## Modules to Import
 
 ```TypeScript
-import { sendablePreferences } from 'kits/@kit.ArkData';
+import sendablePreferences from '@kit.ArkData';
 ```
 
 ## clear
@@ -30,15 +30,28 @@ Clears this **Preferences** instance. This API uses a promise to return the resu
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = preferences.clear();
+promise.then(() => {
+  console.info("Succeeded in clearing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to clear. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## clearSync
 
@@ -56,9 +69,15 @@ Clears this **Preferences** instance. This API returns the result synchronously.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+preferences.clearSync();
+```
 
 ## delete
 
@@ -76,22 +95,35 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = preferences.delete('startup');
+promise.then(() => {
+  console.info("Succeeded in deleting the key 'startup'.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to delete the key 'startup'. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## deleteSync
 
@@ -109,16 +141,22 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+preferences.deleteSync('startup');
+```
 
 ## flush
 
@@ -136,15 +174,28 @@ Flushes the data in this **Preferences** instance to the persistent file. This A
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = preferences.flush();
+promise.then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## flushSync
 
@@ -162,9 +213,15 @@ Flushes the data in the cached **Preferences** instance to the persistent file.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+preferences.flushSync();
+```
 
 ## get
 
@@ -182,23 +239,38 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| defValue | lang.ISendable | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| defValue | lang.ISendable | Yes | Default value to be returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;lang.ISendable & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;lang.ISendable & gt; | Promise used to return the value obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { lang } from '@kit.ArkTS';
+
+let promise = preferences.get('startup', 'default');
+promise.then((data: lang.ISendable) => {
+  let dataStr = data as string;
+  console.info(`Succeeded in getting value of 'startup'. Data: ${dataStr}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get value of 'startup'. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getAll
 
@@ -216,15 +288,31 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;lang.ISendable & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;lang.ISendable & gt; | Promise used to return the KV pairs obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { lang } from '@kit.ArkTS';
+
+let promise = preferences.getAll();
+promise.then((keyValues: lang.ISendable) => {
+  for (let value of Object.keys(keyValues)) {
+    console.info("getAll " + JSON.stringify(value));
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get all key-values. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getAllSync
 
@@ -242,15 +330,26 @@ Obtains all KV pairs from this **Preferences** instance. This API returns the re
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| lang.ISendable |
+| Type | Description |
+| --- | --- |
+| lang.ISendable | All KV pairs obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { lang } from '@kit.ArkTS';
+
+let keyValues: lang.ISendable = preferences.getAllSync();
+for (let value of Object.keys(keyValues)) {
+  console.info("getAll " + JSON.stringify(value));
+}
+```
 
 ## getSync
 
@@ -268,23 +367,30 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| defValue | lang.ISendable | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| defValue | lang.ISendable | Yes | Default value to be returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| lang.ISendable |
+| Type | Description |
+| --- | --- |
+| lang.ISendable | Value obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { lang } from '@kit.ArkTS';
+let value: lang.ISendable = preferences.getSync('startup', 'default');
+```
 
 ## has
 
@@ -302,22 +408,39 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the **Preferences** instance contains the KV pair; the value **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = preferences.has('startup');
+promise.then((val: boolean) => {
+  if (val) {
+    console.info("The key 'startup' is contained.");
+  } else {
+    console.error("The key 'startup' does not contain.");
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check the key 'startup'. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## hasSync
 
@@ -335,22 +458,33 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | The value **true** means the **Preferences** instance contains the KV pair; the value **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+let isExist: boolean = preferences.hasSync('startup');
+if (isExist) {
+  console.info("The key 'startup' is contained.");
+} else {
+  console.error("The key 'startup' does not contain.");
+}
+```
 
 ## off('change')
 
@@ -368,17 +502,35 @@ Unsubscribes from data changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'change' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('change', observer);
+preferences.putSync('startup', 'auto');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+  preferences.off('change', observer);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## off('multiProcessChange')
 
@@ -396,17 +548,35 @@ Unsubscribes from inter-process data changes. This API is provided for applicati
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'multiProcessChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('multiProcessChange', observer);
+preferences.putSync('startup', 'auto');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+  preferences.off('multiProcessChange', observer);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## off('dataChange')
 
@@ -424,18 +594,39 @@ Unsubscribes from changes of specific data.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'dataChange' | Yes |
-| keys | Array & lt;string & gt; | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
+| keys | Array & lt;string & gt; | Yes | Keys to be unsubscribed from. If this parameter is not specified, this API unsubscribes from the changes of all keys. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { lang } from '@kit.ArkTS';
+
+let observer = (data: lang.ISendable) => {
+  console.info(`observer : ${data}`);
+};
+let keys = ['name', 'age'];
+preferences.on('dataChange', keys, observer);
+preferences.putSync('name', 'xiaohong');
+preferences.putSync('weight', 125);
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+  preferences.off('dataChange', keys, observer);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## on('change')
 
@@ -453,17 +644,34 @@ Subscribes to data changes. The registered callback will be invoked to return th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'change' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('change', observer);
+preferences.putSync('startup', 'manual');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## on('multiProcessChange')
 
@@ -481,18 +689,35 @@ Subscribes to data changes between processes. When multiple processes hold the s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'multiProcessChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
-| [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('multiProcessChange', observer);
+preferences.putSync('startup', 'manual');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## on('dataChange')
 
@@ -510,18 +735,38 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'dataChange' | Yes |
-| keys | Array & lt;string & gt; | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
+| keys | Array & lt;string & gt; | Yes | Keys to be observed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | Yes | Callback used to return the KV pairs changed. The keys are the keys observed, and the values are the new values. The values support the following types: number, string, boolean, bigint, and serializable object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { lang } from '@kit.ArkTS';
+
+let observer = (data: lang.ISendable) => {
+  console.info(`observer : ${data}`);
+};
+let keys = ['name', 'age'];
+preferences.on('dataChange', keys, observer);
+preferences.putSync('name', 'xiaohong');
+preferences.putSync('weight', 125);
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## put
 
@@ -539,23 +784,36 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| value | lang.ISendable | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| value | lang.ISendable | Yes | Value to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = preferences.put('startup', 'auto');
+promise.then(() => {
+  console.info("Succeeded in putting value of 'startup'.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to put value of 'startup'. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## putSync
 
@@ -573,14 +831,20 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| value | lang.ISendable | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| value | lang.ISendable | Yes | Value to write. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+preferences.putSync('startup', 'auto');
+```

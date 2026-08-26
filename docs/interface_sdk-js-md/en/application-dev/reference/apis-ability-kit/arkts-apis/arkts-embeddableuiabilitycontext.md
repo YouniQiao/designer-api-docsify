@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [EmbeddableUIAbilityContext](arkts-ability-embeddableuiabilitycontext-c.md) |
+| Name | Description |
+| --- | --- |
+| [EmbeddableUIAbilityContext](arkts-ability-embeddableuiabilitycontext-c.md) | EmbeddableUIAbilityContext provides the context environment for the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). It inherits from [UIAbilityContext](arkts-ability-uiabilitycontext-c.md).When an EmbeddableUIAbility component is instantiated, the system automatically creates the corresponding EmbeddableUIAbilityContext. |

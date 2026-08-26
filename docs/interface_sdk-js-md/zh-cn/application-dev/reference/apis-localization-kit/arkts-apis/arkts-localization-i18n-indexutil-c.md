@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## addLocale
@@ -28,9 +28,18 @@ addLocale(locale: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
+indexUtil.addLocale('en-US');
+```
 
 ## getIndex
 
@@ -48,15 +57,24 @@ getIndex(text: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 输入文本。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 输入文本对应的索引值。无合适索引时返回空字符串。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
+let index: string = indexUtil.getIndex('hi'); // index = 'H'
+```
 
 ## getIndexList
 
@@ -74,6 +92,17 @@ getIndexList(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 当前区域的索引列表。第一个元素和最后一个元素为“...”。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
+// indexList = [ '...', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
+// 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '...' ]
+let indexList: Array<string> = indexUtil.getIndexList();
+```

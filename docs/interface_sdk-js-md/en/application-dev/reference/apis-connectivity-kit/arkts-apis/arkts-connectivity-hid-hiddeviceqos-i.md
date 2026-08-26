@@ -9,7 +9,6 @@ Represents the Quality of Service (QoS) settings for a bluetooth hid device appl
 ## Modules to Import
 
 ```TypeScript
-import { hid } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## delayVariation

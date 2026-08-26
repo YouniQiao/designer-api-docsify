@@ -41,9 +41,9 @@ Called back when a local ability migration is complete. <p>You can define the pr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | number | Yes | Indicates the migration result code. The value {@code 0} indicates that the migration is successful, and {@code -1} indicates that the migration fails. |
 
 ## onCreate
 
@@ -117,9 +117,9 @@ Called when the system has determined to trim the memory, for example, when the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| level | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| level | number | Yes | Indicates the memory trim level, which shows the current memory usage status. |
 
 ## onNewWant
 
@@ -137,9 +137,9 @@ Called when the launch mode of an ability is set to singleton.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the new {@code want} containing information about the ability. |
 
 ## onRemoteTerminated
 
@@ -171,9 +171,9 @@ This method is called if an ability was destroyed at a certain time due to resou
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| inState | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| inState | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes | Indicates the {@code PacMap} object used for storing data and states. This parameter can not be null. |
 
 ## onRestoreData
 
@@ -191,9 +191,9 @@ Restores the user data saved during the migration for an ability on the remote d
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | Object | Yes | Indicates the user data to restore. |
 
 ## onSaveAbilityState
 
@@ -211,9 +211,9 @@ This method is called when the system determines that the ability may be destroy
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| outState | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| outState | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes | Indicates the {@code PacMap} object used for storing user data and states. This parameter cannot be null. |
 
 ## onSaveData
 
@@ -231,15 +231,15 @@ Saves the user data of a local ability generated during runtime. After the migra
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | Object | Yes | Indicates the user data to save. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
 
 ## onShow
 
@@ -271,6 +271,6 @@ Asks a user whether to start the migration.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |

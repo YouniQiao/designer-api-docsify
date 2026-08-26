@@ -2,7 +2,8 @@
 
 Provides the detailed information of the permissions to request from the system.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - If multiple packages of an application have requested the same permission but with different reasons, the system
 > returns only one reason based on a descending priority order: entry HAP
 > feature HAP

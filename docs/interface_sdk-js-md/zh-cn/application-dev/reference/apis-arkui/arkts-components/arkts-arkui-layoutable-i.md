@@ -29,9 +29,9 @@ getBorderWidth() : DirectionalEdgesT<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的borderWidth信息。 |
 
 ## getMargin
 
@@ -51,9 +51,9 @@ getMargin() : DirectionalEdgesT<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的margin信息。 |
 
 ## getPadding
 
@@ -73,9 +73,9 @@ getPadding() : DirectionalEdgesT<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的padding信息。 |
 
 ## layout
 
@@ -95,9 +95,9 @@ layout(position: Position): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| position | [Position](../arkts-apis/arkts-arkui-display-position-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| position | [Position](../arkts-apis/arkts-arkui-display-position-i.md) | 是 | 绝对位置。 |
 
 ## measureResult
 

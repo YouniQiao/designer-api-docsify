@@ -9,6 +9,9 @@ ConsoleMessage is an object that encapsulates JavaScript console output informat
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -29,12 +32,12 @@ Constructs a **ConsoleMessage** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
-| sourceId | string | Yes |
-| [lineNumber](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-linemetrics-i.md) | number | Yes |
-| messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes | Log output information of **ConsoleMessage**. |
+| sourceId | string | Yes | Path and name of the web page source file. |
+| lineNumber | number | Yes | Line number of **ConsoleMessage**. |
+| messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | Yes | Log level of **ConsoleMessage**. |
 
 ## constructor
 
@@ -66,9 +69,9 @@ Obtains the line number of the console output in the web source file.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Line number of the console output in the web source file. |
 
 ## getMessage
 
@@ -86,9 +89,9 @@ Obtains the log message of the console output.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Log information output to the console. |
 
 ## getMessageLevel
 
@@ -106,9 +109,9 @@ Obtains the level of this console message.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MessageLevel](arkts-arkweb-messagelevel-e.md) |
+| Type | Description |
+| --- | --- |
+| [MessageLevel](arkts-arkweb-messagelevel-e.md) | Level of the console message. |
 
 ## getSource
 
@@ -124,9 +127,9 @@ Obtains the log source of this console message.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) |
+| Type | Description |
+| --- | --- |
+| [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) | Log source of the console message. |
 
 ## getSourceId
 
@@ -144,6 +147,6 @@ Obtains the path and file name of the web source file.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Path and file name of the web source file. |

@@ -9,7 +9,6 @@ Describes the sensor data reporting frequency.
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## interval

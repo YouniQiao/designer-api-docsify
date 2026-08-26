@@ -23,12 +23,12 @@ global \$rawfile function
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | string | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |  |

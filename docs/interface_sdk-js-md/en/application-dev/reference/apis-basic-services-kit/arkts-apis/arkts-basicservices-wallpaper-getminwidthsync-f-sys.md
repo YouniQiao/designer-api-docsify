@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import wallpaper from '@kit.BasicServicesKit';
 ```
 
 ## getMinWidthSync
@@ -22,12 +22,23 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | the number returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
+
+**Examples**
+
+```TypeScript
+try {
+  let minWidth = wallpaper.getMinWidthSync();
+  console.info(`success to getMinWidthSync: ${JSON.stringify(minWidth)}`);
+} catch (error) {
+  console.error(`failed to getMinWidthSync. Code: ${error.code}, Message: ${error.message}`);
+}
+```

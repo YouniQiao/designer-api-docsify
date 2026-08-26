@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
+import linkEnhance from '@kit.DistributedServiceKit';
 ```
 
 ## deviceId

@@ -9,7 +9,6 @@ Advertising state change information.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## advertisingId

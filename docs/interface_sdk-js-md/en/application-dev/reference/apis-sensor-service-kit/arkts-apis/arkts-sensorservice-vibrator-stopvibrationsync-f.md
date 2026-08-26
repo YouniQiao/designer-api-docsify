@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## stopVibrationSync
@@ -24,7 +23,24 @@ Stops any form of motor vibration.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
+
+**Examples**
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  // Stop any form of vibration.
+  vibrator.stopVibrationSync()
+  console.info('Succeed in stopping vibration');
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```

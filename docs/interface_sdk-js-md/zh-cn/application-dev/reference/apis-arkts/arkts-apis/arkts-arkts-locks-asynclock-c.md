@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import ArkTSUtils from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -42,21 +42,21 @@ lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 | 获取锁后要调用的函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;T & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;T & gt; | 回调执行后将解决的Promise。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
 
 ## lockAsync
 
@@ -74,22 +74,22 @@ lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 |
-| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 | 获取锁后要调用的函数。 |
+| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | 是 | 锁的操作模式。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;T & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;T & gt; | 回调执行后将解决的Promise。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
 
 ## lockAsync
 
@@ -108,24 +108,24 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 |
-| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | 是 |
-| options | [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md)&lt;U&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 | 获取锁后要调用的函数。 |
+| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | 是 | 锁的操作模式。 |
+| options | [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md)&lt;U&gt; | 是 | 锁的操作选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;T \ | U & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;T \ | U & gt; | 回调执行后解决的Promise，或者在超时情况下被拒绝。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) |
-| [10200031](../errorcode-utils.md#10200031-lockasync超时) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
+| [10200031](../errorcode-utils.md#10200031-lockasync超时) | Timeout exceeded. |
 
 ## query
 
@@ -143,21 +143,21 @@ static query(name: string): AsyncLockState
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [name](#name) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 要查询的锁的名称，仅可查询通过request接口获取的锁（即与request接口入参锁名称保持一致）。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) | 包含状态描述的异步锁状态实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
 
 ## queryAll
 
@@ -175,9 +175,9 @@ static queryAll(): AsyncLockState[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md)[] |
+| 类型 | 说明 |
+| --- | --- |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md)[] | 包含锁状态信息的异步锁状态数组。 |
 
 ## request
 
@@ -195,15 +195,15 @@ static request(name: string): AsyncLock
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [name](#name) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 要查找或创建的锁的名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AsyncLock](arkts-arkts-locks-asynclock-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AsyncLock](arkts-arkts-locks-asynclock-c.md) | 返回AsyncLock实例。 |
 
 ## name
 

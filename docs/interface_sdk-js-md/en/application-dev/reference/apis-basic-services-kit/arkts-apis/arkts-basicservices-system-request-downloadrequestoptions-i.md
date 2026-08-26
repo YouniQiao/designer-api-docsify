@@ -1,7 +1,8 @@
 # DownloadRequestOptions
 
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API has been supported since API version 3 and deprecated since API version 9. You are advised to use
 > [UploadConfig](arkts-basicservices-agent-config-i.md) instead.
 
@@ -16,7 +17,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from 'kits/@kit.BasicServicesKit';
+import Request, { DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -53,10 +54,10 @@ Called when downloading fails.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | any | Yes |
-| code | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | any | Yes |  |
+| code | number | Yes |  |
 
 ## success
 
@@ -76,9 +77,9 @@ Called when the files are successfully downloaded.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [DownloadResponse](arkts-basicservices-system-request-downloadresponse-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | [DownloadResponse](arkts-basicservices-system-request-downloadresponse-i.md) | Yes |  |
 
 ## description
 

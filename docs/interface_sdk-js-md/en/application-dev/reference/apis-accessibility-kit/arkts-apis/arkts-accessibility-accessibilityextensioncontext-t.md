@@ -11,3 +11,15 @@ Indicates the context of the accessibility extension. For details, see [Accessib
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Property type:** _AccessibilityExtensionContext.default
+
+**Examples**
+
+```TypeScript
+import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
+
+class EntryAbility extends AccessibilityExtensionAbility {
+  onConnect(): void {
+    let accessibilityContext = this.context;
+  } 
+}
+```

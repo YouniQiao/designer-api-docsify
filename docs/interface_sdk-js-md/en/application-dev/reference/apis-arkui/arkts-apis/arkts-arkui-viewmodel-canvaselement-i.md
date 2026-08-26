@@ -24,16 +24,16 @@ Obtains the context of 2D canvas drawing. Only parameters related to 2D canvas d
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | "2d" | Yes |
-| options | [ContextAttrOptions](arkts-arkui-viewmodel-contextattroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | "2d" | Yes | identifier defining the drawing context associated to the canvas. |
+| options | [ContextAttrOptions](arkts-arkui-viewmodel-contextattroptions-i.md) | No | use this context attributes to creating rendering context. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CanvasRenderingContext2D](arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md) |
+| Type | Description |
+| --- | --- |
+| [CanvasRenderingContext2D](arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md) |  |
 
 ## getContext("webgl")
 
@@ -51,16 +51,16 @@ Obtains the context of webgl canvas drawing. Only parameters related to webgl ca
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | "webgl" | Yes |
-| options | [WebGLContextAttributes](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | "webgl" | Yes | identifier defining the drawing context associated to the canvas. |
+| options | [WebGLContextAttributes](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | No | use this context attributes to creating rendering context. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLRenderingContext](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglrenderingcontext-i.md) |
+| Type | Description |
+| --- | --- |
+| [WebGLRenderingContext](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglrenderingcontext-i.md) |  |
 
 ## getContext("webgl2")
 
@@ -78,16 +78,16 @@ Obtains the context of webgl2 canvas drawing. Only parameters related to webgl2 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | "webgl2" | Yes |
-| options | [WebGLContextAttributes](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | "webgl2" | Yes | identifier defining the drawing context associated to the canvas. |
+| options | [WebGLContextAttributes](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | No | use this context attributes to creating rendering context. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGL2RenderingContext](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl2-webgl2renderingcontext-i.md) |
+| Type | Description |
+| --- | --- |
+| [WebGL2RenderingContext](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl2-webgl2renderingcontext-i.md) |  |
 
 ## toDataURL
 
@@ -105,13 +105,13 @@ Creates a data URI that contains the image display.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | string | No |
-| quality | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | string | No | A DOMString indicating the image format. The default type is image/png. |
+| quality | number | No | A Number between 0 and 1 indicating image quality if the type option is image/jpeg or image/webp. If this argument is anything else, the default value for image quality is used. Other arguments are ignored. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string |  |

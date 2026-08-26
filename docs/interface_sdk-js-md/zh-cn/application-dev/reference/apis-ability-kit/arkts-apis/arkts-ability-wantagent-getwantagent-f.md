@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wantAgent, WantAgent } from 'kits/@kit.AbilityKit';
+import wantAgent, { WantAgent } from '@kit.AbilityKit';
 ```
 
 ## getWantAgent
@@ -22,18 +22,72 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | 是 | 表示创建WantAgent所需的配置信息，包括目标UIAbility、操作类型、请求码等。三方应用在WantAgentInfo中只能设置本应用的UIAbility。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | 是 | 回调函数。当创建WantAgent成功，err中code为0，data为创建的WantAgent；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [16000007](../errorcode-ability.md#16000007-服务未响应) |
-| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000007](../errorcode-ability.md#16000007-服务未响应) | Service busy. There are concurrent tasks. Try again later. |
+| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) | Invalid wantAgent object. |
+
+**示例**
+
+```TypeScript
+import { wantAgent, Want } from '@kit.AbilityKit';
+import type { WantAgent } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// wantAgent对象
+let wantAgentData: WantAgent;
+// WantAgentInfo对象
+let wantAgentInfo: wantAgent.WantAgentInfo = {
+  wants: [
+    {
+      deviceId: 'deviceId',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility',
+      action: 'action1',
+      entities: ['entity1'],
+      type: 'MIMETYPE',
+      uri: 'key={true,true,false}',
+      parameters:
+      {
+        mykey0: 2222,
+        mykey1: [1, 2, 3],
+        mykey2: '[1, 2, 3]',
+        mykey3: 'ssssssssssssssssssssssssss',
+        mykey4: [false, true, false],
+        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
+        mykey6: true,
+      }
+    } as Want
+  ],
+  actionType: wantAgent.OperationType.START_ABILITY,
+  requestCode: 0,
+  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+};
+
+// getWantAgent回调
+let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
+  if (err.code) {
+      console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
+    } else {
+      wantAgentData = data;
+    }
+}
+
+try {
+  // 调用getWantAgent接口创建WantAgent对象
+wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
+} catch (err) {
+  console.error(`getWantAgent failed, error: ${JSON.stringify(err)}`);
+}
+```
 
 
 ## getWantAgent
@@ -52,20 +106,68 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | 是 | 表示创建WantAgent所需的配置信息，包括目标UIAbility、操作类型、请求码等。三方应用在WantAgentInfo中只能设置本应用的UIAbility。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | Promise对象，返回创建的WantAgent。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [16000007](../errorcode-ability.md#16000007-服务未响应) |
-| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000007](../errorcode-ability.md#16000007-服务未响应) | Service busy. There are concurrent tasks. Try again later. |
+| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) | Invalid wantAgent object. |
+
+**示例**
+
+```TypeScript
+import { wantAgent, Want } from '@kit.AbilityKit';
+import type { WantAgent } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantAgentData: WantAgent;
+// WantAgentInfo对象
+let wantAgentInfo: wantAgent.WantAgentInfo = {
+  wants: [
+    {
+      deviceId: 'deviceId',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility',
+      action: 'action1',
+      entities: ['entity1'],
+      type: 'MIMETYPE',
+      uri: 'key={true,true,false}',
+      parameters:
+      {
+        mykey0: 2222,
+        mykey1: [1, 2, 3],
+        mykey2: '[1, 2, 3]',
+        mykey3: 'ssssssssssssssssssssssssss',
+        mykey4: [false, true, false],
+        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
+        mykey6: true,
+      }
+    } as Want
+  ],
+  actionType: wantAgent.OperationType.START_ABILITY,
+  requestCode: 0,
+  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+};
+
+try {
+  wantAgent.getWantAgent(wantAgentInfo).then((data) => {
+    // 创建WantAgent成功，保存返回的WantAgent对象
+    wantAgentData = data;
+  }).catch((err: BusinessError) => {
+    console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
+  });
+} catch (err) {
+  console.error(`getWantAgent failed! ${err.code} ${err.message}`);
+}
+```

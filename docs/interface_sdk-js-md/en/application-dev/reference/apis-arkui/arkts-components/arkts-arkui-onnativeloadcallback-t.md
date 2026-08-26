@@ -16,6 +16,6 @@ Triggered after the surface held by **XComponent** is created.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | object | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | object | No | Context of the **XComponent** object. The APIs contained in the context are defined at the native layer by developers. |

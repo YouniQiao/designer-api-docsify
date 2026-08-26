@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { manager } from 'kits/@kit.ConnectivityKit';
+import manager from '@kit.ConnectivityKit';
 ```
 
 ## getState
@@ -22,13 +22,13 @@ Queries the NearLink status.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md) |
+| Type | Description |
+| --- | --- |
+| [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md) | NearLink status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
+| 36100099 | Operation failed. |

@@ -10,8 +10,8 @@ type TouchGuideType = 'touchBegin' | 'touchEnd' | 'touchGuideGesture'
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-| 类型 |
-| --- |
-| 'touchBegin' |
-| 'touchEnd' |
-| 'touchGuideGesture' |
+| 类型 | 说明 |
+| --- | --- |
+| 'touchBegin' | 表示触摸浏览时开始触摸。 |
+| 'touchEnd' | 表示触摸浏览时结束触摸。 |
+| 'touchGuideGesture' | 表示触摸浏览手势。 [since 26.0.0] |

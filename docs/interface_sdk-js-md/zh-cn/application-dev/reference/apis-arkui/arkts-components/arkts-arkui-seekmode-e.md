@@ -1,7 +1,7 @@
 # SeekMode
 
 视频跳转模式选项。  
-| 名称 |值| 说明 | | ---------------- |--| ---------------------------- | | [PreviousKeyframe](arkts-arkui-seekmode-e.md) |0| 跳转到当前播放位置之前最近的关键帧。 | | [NextKeyframe](arkts-arkui-seekmode-e.md) |1| 跳转到当前播放位置之后最近的关键帧。 | | [ClosestKeyframe](arkts-arkui-seekmode-e.md) |2| 跳转到距离当前播放位置最近的关键帧。 | | [Accurate](arkts-arkui-seekmode-e.md) |3|
+| 名称 |值| 说明 | | ---------------- |--| ---------------------------- | | PreviousKeyframe |0| 跳转到当前播放位置之前最近的关键帧。 | | NextKeyframe |1| 跳转到当前播放位置之后最近的关键帧。 | | ClosestKeyframe |2| 跳转到距离当前播放位置最近的关键帧。 | | Accurate |3| 精准跳转到指定时间点，不论是否为关键帧。精度高但可能需要解码更多帧。 |
 
 **起始版本：** 8
 

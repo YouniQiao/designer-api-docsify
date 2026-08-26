@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
+import componentUtils from '@kit.ArkUI';
 ```
 
 ## angle

@@ -27,11 +27,26 @@ Obtains information about all missions. This API uses an asynchronous callback t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| deviceId | string | Yes |
-| numMax | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
+| numMax | number | Yes | Maximum number of missions whose information can be obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the array of mission information obtained. |
+
+**Examples**
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+
+missionManager.getMissionInfos('', 10, (error, missions) => {
+  if (error.code) {
+    console.error(`getMissionInfos failed, error.code: ${error.code}, error.message: ${error.message}`);
+    return;
+  }
+  console.info(`size = ${missions.length}`);
+  console.info(`missions = ${JSON.stringify(missions)}`);
+});
+```
 
 
 ## getMissionInfos
@@ -56,13 +71,30 @@ Obtains information about all missions. This API uses a promise to return the re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| deviceId | string | Yes |
-| numMax | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
+| numMax | number | Yes | Maximum number of missions whose information can be obtained. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Promise used to return the array of mission information obtained. |
+
+**Examples**
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+try {
+  missionManager.getMissionInfos('', 10).then((data) => {
+    console.info(`getMissionInfos successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`getMissionInfos failed. Cause: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`getMissionInfos failed. Cause: ${error.message}`);
+}
+```

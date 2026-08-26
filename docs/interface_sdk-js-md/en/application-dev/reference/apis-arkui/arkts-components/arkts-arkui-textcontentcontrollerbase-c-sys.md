@@ -31,12 +31,12 @@ Obtains the text content within a specified range.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Range of the text content to obtain, defined by start and end positions.If the range is not specified, the entire text is obtained by default. If the start position is not specified, it defaults to index 0. If the end position is not specified, it defaults to the end of the text. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Text content within the specified range. |

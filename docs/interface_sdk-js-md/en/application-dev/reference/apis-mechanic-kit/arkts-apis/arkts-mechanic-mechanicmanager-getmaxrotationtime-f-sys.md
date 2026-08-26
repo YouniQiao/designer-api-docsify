@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## getMaxRotationTime
@@ -22,20 +21,28 @@ Obtains the maximum continuous rotation duration of a mechanical device.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mechId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mechId | number | Yes | ID of the mechanical device. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Maximum rotation duration. Unit: millisecond. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+
+**Examples**
+
+```TypeScript
+console.info('Query maximum rotation time');
+let maxTime = mechanicManager.getMaxRotationTime(0);
+console.info(`'Query maximum rotation time successful, maximum time:' ${maxTime}`);
+```

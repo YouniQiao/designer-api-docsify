@@ -201,7 +201,7 @@ Obtains the cover of an audio album.This function must be called after [OH_AVMet
 | Parameter | Description |
 | -- | -- |
 | [OH_AVMetadataExtractor](capi-avmetadataextractor-oh-avmetadataextractor.md)* extractor | Pointer to the **OH_AVMetadataExtractor** instance. |
-| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)** pixelMap | Double pointer to the album cover obtained. |
+| OH_PixelmapNative** pixelMap | Double pointer to the album cover obtained. |
 
 **Returns**:
 
@@ -229,7 +229,7 @@ Extracts an image at a specified time point from the video source. This function
 | int64_t timeUs | Time (in microseconds) at which an image is extracted from the video resource. |
 | OH_AVMedia_SeekMode seekMode | Seek mode that defines the relationship between the specified time and the key frame. For details,see [OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode). |
 | const OH_AVMetadataExtractor_OutputParam* outputParam | Output parameter of the image, for example, the height or width of the image. For details, see [OH_AVMetadataExtractor_OutputParam](capi-avmetadataextractor-oh-avmetadataextractor-outputparam.md).If this parameter is a null pointer, the original size of the video is used. Note: You need to use [OH_PixelmapNative_Destroy](../ImageKit/capi-pixelmap-native-h.md#oh_pixelmapnative_destroy)to release the pixel map after using it. |
-| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)** pixelMap | Used to receive images extracted from the video source. For details, see [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md). |
+| OH_PixelmapNative** pixelMap | Used to receive images extracted from the video source. For details, see [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md). |
 
 **Returns**:
 

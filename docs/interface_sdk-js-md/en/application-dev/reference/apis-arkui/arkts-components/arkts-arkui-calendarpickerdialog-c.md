@@ -29,6 +29,6 @@ Defines a calendar picker dialog box.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | No | Parameters of the calendar picker dialog box. |

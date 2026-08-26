@@ -14,7 +14,7 @@ declare type DialogOptionsBorderColor = ResourceColor | EdgeColors
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [ResourceColor](arkts-arkui-resourcecolor-t.md) |
-| EdgeColors |
+| 类型 | 说明 |
+| --- | --- |
+| [ResourceColor](arkts-arkui-resourcecolor-t.md) |  |
+| EdgeColors |  |

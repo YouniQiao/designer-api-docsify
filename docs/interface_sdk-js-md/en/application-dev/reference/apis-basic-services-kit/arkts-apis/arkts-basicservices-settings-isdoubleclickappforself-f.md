@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import settings from '@kit.BasicServicesKit';
+import settingsLite from '@kit.BasicServicesKitLite';
 ```
 
 ## isDoubleClickAppForSelf
@@ -23,6 +24,16 @@ function isDoubleClickAppForSelf(): Promise<boolean>
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Check result. { |
+
+**Examples**
+
+```TypeScript
+import { settings } from '@kit.BasicServicesKit';
+
+settings.isDoubleClickAppForSelf().then((result: boolean) => {
+  console.info(`isDoubleClickAppForSelf result: ${result}`);
+})
+```

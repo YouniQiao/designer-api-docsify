@@ -1,7 +1,7 @@
 # HttpDataType
 
 HTTP的数据类型。  
-| 名称 | 值 | 说明 | | ------------------ | -- | ----------- | | [STRING](#string) | 0 | 字符串类型。 | | [OBJECT](#object) | 1 | 对象类型。 | | [ARRAY_BUFFER](#array_buffer) | 2 |
+| 名称 | 值 | 说明 | | ------------------ | -- | ----------- | | STRING | 0 | 字符串类型。 | | OBJECT | 1 | 对象类型。 | | ARRAY_BUFFER | 2 | 二进制数组类型。|
 
 **起始版本：** 9
 

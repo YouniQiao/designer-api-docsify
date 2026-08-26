@@ -13,7 +13,7 @@ AudioRecorder is a class for audio recording management. It provides APIs to rec
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
@@ -34,10 +34,10 @@ Subscribes to the audio recording events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'   - 'prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.   - 'start': triggered when the **start()** API is called and audio recording starts.   - 'pause': triggered when the **pause()** API is called and audio recording is paused.   - 'resume': triggered when the **resume()** API is called and audio recording is resumed.   - 'stop': triggered when the **stop()** API is called and audio recording stops.   - 'release': triggered when the **release()** API is called and the recording resources are released.   - 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -57,10 +57,10 @@ Subscribes to the audio recording events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'   - 'prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.   - 'start': triggered when the **start()** API is called and audio recording starts.   - 'pause': triggered when the **pause()** API is called and audio recording is paused.   - 'resume': triggered when the **resume()** API is called and audio recording is resumed.   - 'stop': triggered when the **stop()** API is called and audio recording stops.   - 'release': triggered when the **release()** API is called and the recording resources are released.   - 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -80,10 +80,10 @@ Subscribes to the audio recording events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'   - 'prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.   - 'start': triggered when the **start()** API is called and audio recording starts.   - 'pause': triggered when the **pause()** API is called and audio recording is paused.   - 'resume': triggered when the **resume()** API is called and audio recording is resumed.   - 'stop': triggered when the **stop()** API is called and audio recording stops.   - 'release': triggered when the **release()** API is called and the recording resources are released.   - 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -103,10 +103,10 @@ Subscribes to the audio recording events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'   - 'prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.   - 'start': triggered when the **start()** API is called and audio recording starts.   - 'pause': triggered when the **pause()** API is called and audio recording is paused.   - 'resume': triggered when the **resume()** API is called and audio recording is resumed.   - 'stop': triggered when the **stop()** API is called and audio recording stops.   - 'release': triggered when the **release()** API is called and the recording resources are released.   - 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -126,10 +126,10 @@ Subscribes to the audio recording events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'   - 'prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.   - 'start': triggered when the **start()** API is called and audio recording starts.   - 'pause': triggered when the **pause()** API is called and audio recording is paused.   - 'resume': triggered when the **resume()** API is called and audio recording is resumed.   - 'stop': triggered when the **stop()** API is called and audio recording stops.   - 'release': triggered when the **release()** API is called and the recording resources are released.   - 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -149,10 +149,10 @@ Subscribes to the audio recording events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'   - 'prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.   - 'start': triggered when the **start()** API is called and audio recording starts.   - 'pause': triggered when the **pause()** API is called and audio recording is paused.   - 'resume': triggered when the **resume()** API is called and audio recording is resumed.   - 'stop': triggered when the **stop()** API is called and audio recording stops.   - 'release': triggered when the **release()** API is called and the recording resources are released.   - 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -172,10 +172,10 @@ Subscribes to the audio recording events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'   - 'prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.   - 'start': triggered when the **start()** API is called and audio recording starts.   - 'pause': triggered when the **pause()** API is called and audio recording is paused.   - 'resume': triggered when the **resume()** API is called and audio recording is resumed.   - 'stop': triggered when the **stop()** API is called and audio recording stops.   - 'release': triggered when the **release()** API is called and the recording resources are released.   - 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('error')
 
@@ -195,10 +195,10 @@ Subscribes to audio recording error events. After an error event is reported, yo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'error' | Yes |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.This event is triggered when an error occurs during audio recording. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
 
 ## pause
 
@@ -215,6 +215,22 @@ Pauses audio recording. This API can be called only after the **'start'** event 
 **Substitutes:** [pause](arkts-media-media-avrecorder-i.md#pause)(callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('pause', () => {    // Set the 'pause' event callback.
+  console.info('audio pause called');
+});
+audioPlayer.pause();
+```
+
+```TypeScript
+audioRecorder.on('pause', () => {    // Set the 'pause' event callback.
+  console.info('audio recorder pause called');
+});
+audioRecorder.pause();
+```
 
 ## prepare
 
@@ -236,15 +252,33 @@ Prepares for recording.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [AudioRecorderConfig](arkts-media-media-audiorecorderconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [AudioRecorderConfig](arkts-media-media-audiorecorderconfig-i.md) | Yes | Audio recording parameters, including the audio output URI, encoding format, sample rate, audio channel count, and output format. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+let audioRecorderConfig: media.AudioRecorderConfig = {
+  audioEncoder : media.AudioEncoder.AAC_LC,
+  audioEncodeBitRate : 64000,
+  audioSampleRate : 44100,
+  numberOfChannels : 2,
+  format : media.AudioOutputFormat.AAC_ADTS,
+  uri : 'fd://1',       // The file must be created by the caller and granted with proper permissions.
+  location : { latitude : 30, longitude : 130},
+};
+audioRecorder.on('prepare', () => {    // Set the 'prepare' event callback.
+  console.info('prepare called');
+});
+audioRecorder.prepare(audioRecorderConfig);
+```
 
 ## release
 
@@ -262,6 +296,21 @@ Releases the audio recording resources.
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
+**Examples**
+
+```TypeScript
+audioPlayer.release();
+audioPlayer = undefined;
+```
+
+```TypeScript
+audioRecorder.on('release', () => {    // Set the 'release' event callback.
+  console.info('audio recorder release called');
+});
+audioRecorder.release();
+audioRecorder = undefined;
+```
+
 ## reset
 
 ```TypeScript
@@ -277,6 +326,22 @@ Resets audio recording.Before resetting audio recording, you must call **stop()*
 **Substitutes:** [reset](arkts-media-media-avrecorder-i.md#reset)(callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('reset', () => {    // Set the 'reset' event callback.
+  console.info('audio reset called');
+});
+audioPlayer.reset();
+```
+
+```TypeScript
+audioRecorder.on('reset', () => {    // Set the 'reset' event callback.
+  console.info('audio recorder reset called');
+});
+audioRecorder.reset();
+```
 
 ## resume
 
@@ -294,6 +359,15 @@ Resumes audio recording. This API can be called only after the **'pause'** event
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
+**Examples**
+
+```TypeScript
+audioRecorder.on('resume', () => {    // Set the 'resume' event callback.
+  console.info('audio recorder resume called');
+});
+audioRecorder.resume();
+```
+
 ## start
 
 ```TypeScript
@@ -310,6 +384,15 @@ Starts audio recording. This API can be called only after the **'prepare'** even
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
+**Examples**
+
+```TypeScript
+audioRecorder.on('start', () => {    // Set the 'start' event callback.
+  console.info('audio recorder start called');
+});
+audioRecorder.start();
+```
+
 ## stop
 
 ```TypeScript
@@ -325,3 +408,19 @@ Stops audio recording.
 **Substitutes:** [stop](arkts-media-media-avrecorder-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('stop', () => {    // Set the 'stop' event callback.
+  console.info('audio stop called');
+});
+audioPlayer.stop();
+```
+
+```TypeScript
+audioRecorder.on('stop', () => {    // Set the 'stop' event callback.
+  console.info('audio recorder stop called');
+});
+audioRecorder.stop();
+```

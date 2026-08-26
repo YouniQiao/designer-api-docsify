@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { DataShareResultSet, DataType } from 'kits/@kit.ArkData';
+import DataShareResultSet, { DataType } from '@kit.ArkData';
 ```
 
 ## close
@@ -29,6 +29,14 @@ close(): void
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as DataShareResultSet).close();
+}
+```
 
 ## getBlob
 
@@ -48,15 +56,30 @@ getBlob(columnIndex: number): Uint8Array
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Uint8Array |
+| 类型 | 说明 |
+| --- | --- |
+| Uint8Array | 以字节数组的形式返回指定列的值。 |
+
+**示例**
+
+```TypeScript
+let columnIndex = 1;
+if (resultSet != undefined) {
+  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getBlob = (resultSet as DataShareResultSet).getBlob(columnIndex);
+    console.info('resultSet.getBlob: ' + getBlob);
+  }
+}
+```
 
 ## getColumnIndex
 
@@ -76,15 +99,25 @@ getColumnIndex(columnName: string): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| columnName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnName | string | 是 | 表示结果集中指定列的名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回指定列的索引。 |
+
+**示例**
+
+```TypeScript
+let columnName = "name";
+if (resultSet != undefined) {
+  let getColumnIndex = (resultSet as DataShareResultSet).getColumnIndex(columnName);
+  console.info('resultSet.getColumnIndex: ' + getColumnIndex);
+}
+```
 
 ## getColumnName
 
@@ -104,15 +137,25 @@ getColumnName(columnIndex: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 表示结果集中指定列的索引。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回指定列的名称。 |
+
+**示例**
+
+```TypeScript
+let columnIndex = 1;
+if (resultSet != undefined) {
+  let getColumnName = (resultSet as DataShareResultSet).getColumnName(columnIndex);
+  console.info('resultSet.getColumnName: ' + getColumnName);
+}
+```
 
 ## getDataType
 
@@ -132,15 +175,30 @@ getDataType(columnIndex: number): DataType
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 表示结果集中指定列的索引。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataType](arkts-arkdata-data-datashareresultset-datatype-e-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataType](arkts-arkdata-data-datashareresultset-datatype-e-sys.md) | 返回指定列的类型。 |
+
+**示例**
+
+```TypeScript
+let columnIndex = 1;
+if (resultSet != undefined) {
+  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getDataType = (resultSet as DataShareResultSet).getDataType(columnIndex);
+    console.info('resultSet.getDataType: ' + getDataType);
+  }
+}
+```
 
 ## getDouble
 
@@ -160,15 +218,30 @@ getDouble(columnIndex: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | Value obtained. |
+
+**示例**
+
+```TypeScript
+let columnIndex = 1;
+if (resultSet != undefined) {
+  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getDouble = (resultSet as DataShareResultSet).getDouble(columnIndex);
+    console.info('resultSet.getDouble: ' + getDouble);
+  }
+}
+```
 
 ## getLong
 
@@ -188,15 +261,30 @@ getLong(columnIndex: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 以长整数值形式返回指定列的值。 |
+
+**示例**
+
+```TypeScript
+let columnIndex = 1;
+if (resultSet != undefined) {
+  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getLong = (resultSet as DataShareResultSet).getLong(columnIndex);
+    console.info('resultSet.getLong: ' + getLong);
+  }
+}
+```
 
 ## getString
 
@@ -216,15 +304,30 @@ getString(columnIndex: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| columnIndex | number | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 以字符串形式返回指定列的值。 |
+
+**示例**
+
+```TypeScript
+let columnIndex = 1;
+if (resultSet != undefined) {
+  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getString = (resultSet as DataShareResultSet).getString(columnIndex);
+    console.info('resultSet.getString: ' + getString);
+  }
+}
+```
 
 ## goTo
 
@@ -244,15 +347,25 @@ goTo(offset: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 表示相对于当前位置的偏移量。offset为负值表示向前偏移，正值则表示向后偏移。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+
+**示例**
+
+```TypeScript
+let goToNum = 1;
+if (resultSet != undefined) {
+  let isGoTo = (resultSet as DataShareResultSet).goTo(goToNum);
+  console.info('resultSet.goTo: ' + isGoTo);
+}
+```
 
 ## goToFirstRow
 
@@ -272,9 +385,19 @@ goToFirstRow(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+
+**示例**
+
+```TypeScript
+// resultSet需依照本页的使用说明进行创建。
+if (resultSet != undefined) {
+  let isGoToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  console.info('resultSet.goToFirstRow: ' + isGoToFirstRow);
+}
+```
 
 ## goToLastRow
 
@@ -294,9 +417,18 @@ goToLastRow(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  let isGoToLastRow = (resultSet as DataShareResultSet).goToLastRow();
+  console.info('resultSet.goToLastRow: ' + isGoToLastRow);
+}
+```
 
 ## goToNextRow
 
@@ -316,9 +448,18 @@ goToNextRow(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  let isGoToNextRow = (resultSet as DataShareResultSet).goToNextRow();
+  console.info('resultSet.goToNextRow: ' + isGoToNextRow);
+}
+```
 
 ## goToPreviousRow
 
@@ -338,9 +479,18 @@ goToPreviousRow(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  let isGoToPreviousRow = (resultSet as DataShareResultSet).goToPreviousRow();
+  console.info('resultSet.goToPreviousRow: ' + isGoToPreviousRow);
+}
+```
 
 ## goToRow
 
@@ -360,15 +510,25 @@ goToRow(position: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| position | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| position | number | 是 | 表示要移动到的指定位置，从 0 开始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+
+**示例**
+
+```TypeScript
+let goToRowNum = 2;
+if (resultSet != undefined) {
+  let isGoToRow = (resultSet as DataShareResultSet).goToRow(goToRowNum);
+  console.info('resultSet.goToRow: ' + isGoToRow);
+}
+```
 
 ## columnCount
 

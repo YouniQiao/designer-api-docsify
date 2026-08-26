@@ -2,7 +2,8 @@
 
 进程数据的对象定义。使用接口 [appManager.on('applicationState')](arkts-ability-appmanager-on-f.md#onapplicationstate) 注册生命周期变化监听后，当应用或组件的生命周期变化时，系统通过ApplicationStateObserver的 [onProcessCreated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronprocesscreated) 等方法回调给开发者。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 本模块首批接口从API version 14开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 ## 导入模块  
 ```ts

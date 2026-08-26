@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startBluetoothDiscovery
@@ -26,10 +25,25 @@ Starts scanning Bluetooth devices.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 2900001 |
-| 2900003 |
-| 2900099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
+| 2900003 | Bluetooth disabled. |
+| 2900099 | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+function onReceiveEvent(data: Array<string>) {
+    console.info('data length' + data.length);
+}
+try {
+    connection.on('bluetoothDeviceFind', onReceiveEvent);
+    connection.startBluetoothDiscovery();
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```

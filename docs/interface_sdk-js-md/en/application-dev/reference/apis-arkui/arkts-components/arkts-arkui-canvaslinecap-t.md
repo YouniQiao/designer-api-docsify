@@ -14,8 +14,8 @@ Specifies the attribute of drawing the end of each line segment.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| "butt" |
-| "round" |
-| "square" |
+| Type | Description |
+| --- | --- |
+| "butt" | The ends of the line are squared off, and the line does not extend beyond its two endpoints. |
+| "round" | The line is extended at the endpoints by a half circle whose diameter is equal to the line width. |
+| "square" | The line is extended at the endpoints by a rectangle whose width is equal to half the line width and height equal to the line width. |

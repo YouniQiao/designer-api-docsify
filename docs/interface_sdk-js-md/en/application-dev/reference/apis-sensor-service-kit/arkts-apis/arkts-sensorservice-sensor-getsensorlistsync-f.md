@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getSensorListSync
@@ -20,12 +19,30 @@ Obtains information about all sensors on the device. This API returns the result
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;Sensor & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;Sensor & gt; | List of sensor attributes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  let ret = sensor.getSensorListSync()
+  for (let i = 0; i < ret.length; i++) {
+    console.info('Succeeded in getting sensor: ' + JSON.stringify(ret[i]));
+  }
+} catch(error) {
+    let e: BusinessError = error as BusinessError;
+    console.error(`Failed to get singleSensor . Code: ${e.code}, message: ${e.message}`);
+}
+```

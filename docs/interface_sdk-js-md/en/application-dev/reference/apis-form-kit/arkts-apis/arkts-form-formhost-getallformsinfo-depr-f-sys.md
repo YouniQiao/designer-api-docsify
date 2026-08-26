@@ -27,9 +27,24 @@ Obtains the widget information provided by all applications on the device. This 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
+
+**Examples**
+
+```TypeScript
+import formInfo from '@ohos.app.form.formInfo';
+import Base from '@ohos.base';
+
+formHost.getAllFormsInfo((error: Base.BusinessError, data: formInfo.FormInfo[]) => {
+  if (error.code) {
+    console.error(`formHost getAllFormsInfo, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`formHost getAllFormsInfo, data: ${JSON.stringify(data)}`);
+  }
+});
+```
 
 
 ## getAllFormsInfo
@@ -54,6 +69,19 @@ Obtains the widget information provided by all applications on the device. This 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; | Promise used to return the information obtained. |
+
+**Examples**
+
+```TypeScript
+import formInfo from '@ohos.app.form.formInfo';
+import Base from '@ohos.base';
+
+formHost.getAllFormsInfo().then((data: formInfo.FormInfo[]) => {
+  console.info(`formHost getAllFormsInfo data: ${JSON.stringify(data)}`);
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost getAllFormsInfo, error: ${JSON.stringify(error)}`);
+});
+```

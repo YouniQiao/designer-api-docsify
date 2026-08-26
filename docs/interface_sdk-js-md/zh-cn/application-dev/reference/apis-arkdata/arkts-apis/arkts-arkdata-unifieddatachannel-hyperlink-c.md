@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## description
@@ -49,3 +49,11 @@ set url(value: string)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**示例**
+
+```TypeScript
+let link = new unifiedDataChannel.Hyperlink();
+link.url = 'www.XXX.com';
+link.description = 'This is description';
+```

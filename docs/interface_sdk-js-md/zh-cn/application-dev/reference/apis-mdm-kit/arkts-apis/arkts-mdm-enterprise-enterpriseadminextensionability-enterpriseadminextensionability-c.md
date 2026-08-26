@@ -16,7 +16,7 @@
 ## 导入模块
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from 'kits/@kit.MDMKit';
+import EnterpriseAdminExtensionAbility from '@kit.MDMKit';
 ```
 
 ## onAccountAdded
@@ -35,9 +35,36 @@ onAccountAdded(accountId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| accountId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| accountId | number | 是 | 新增的用户ID。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_ACCOUNT_ADDED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onAccountAdded(accountId: number) {
+    console.info(`Succeeded in calling onAccountAdded callback, added accountId: ${accountId}`);
+  }
+}
+```
 
 ## onAccountRemoved
 
@@ -55,9 +82,36 @@ onAccountRemoved(accountId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| accountId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| accountId | number | 是 | 被删除的用户ID。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_ACCOUNT_REMOVED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onAccountRemoved(accountId: number) {
+    console.info(`Succeeded in calling onAccountRemoved callback, removed accountId: ${accountId}`);
+  }
+}
+```
 
 ## onAccountSwitched
 
@@ -75,9 +129,36 @@ onAccountSwitched(accountId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| accountId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| accountId | number | 是 | 切换后的用户ID。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_ACCOUNT_SWITCHED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onAccountSwitched(accountId: number) {
+    console.info(`Succeeded in calling onAccountSwitched callback, switched accountId: ${accountId}`);
+  }
+}
+```
 
 ## onAdminDisabled
 
@@ -92,6 +173,18 @@ onAdminDisabled(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onAdminDisabled() {
+    console.info(`Succeeded in calling onAdminDisabled callback.`);
+  }
+}
+```
 
 ## onAdminEnabled
 
@@ -110,6 +203,18 @@ onAdminEnabled(): void
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onAdminEnabled() {
+    console.info(`Succeeded in calling onAdminEnabled callback.`);
+  }
+}
+```
+
 ## onAdminPolicyChanged
 
 ```TypeScript
@@ -126,9 +231,37 @@ onAdminPolicyChanged(event: common.PolicyChangedEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | common.PolicyChangedEvent | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | common.PolicyChangedEvent | 是 | 策略变更事件，包含策略变更的详细信息，如变更的应用包名（bundleName）、变更的函数名（functionName）、变更的参数（ parameters）和变更时间（time），超级设备管理应用可根据这些信息进行策略审计或同步。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager, common } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_POLICIES_CHANGED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onAdminPolicyChanged(event: common.PolicyChangedEvent) {
+    // 例如当MDM应用调用setPasswordPolicy接口设置密码策略时，输出示例为： Policy changed, bundleName : com.example.test, functionName: setPasswordPolicy, parameters: {"policy":{"complexityRegex":"^(?=.*[a-zA-Z])(?=.*\\d).{8},$","validityPeriod":1808309786000,"additionalDescription":"至少8个字符，且包含数字和字母。"}}, time: 1776773305379.
+    console.info(`Policy changed, bundleName : ${event.bundleName}, functionName: ${event.functionName}, parameters: ${event.parameters}, time: ${event.time}.`);
+  }
+}
+```
 
 ## onAppStart
 
@@ -146,9 +279,36 @@ onAppStart(bundleName: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 启动应用的包名。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_APP_START];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onAppStart(bundleName: string) {
+    console.info(`Succeeded in calling onAppStart callback, started bundle name : ${bundleName}`);
+  }
+}
+```
 
 ## onAppStop
 
@@ -166,9 +326,36 @@ onAppStop(bundleName: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 停止应用的包名。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_APP_STOP];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onAppStop(bundleName: string) {
+    console.info(`Succeeded in calling onAppStop callback, stopped bundle name : ${bundleName}`);
+  }
+}
+```
 
 ## onBundleAdded
 
@@ -186,9 +373,36 @@ onBundleAdded(bundleName: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 被安装应用的包名。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_ADDED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onBundleAdded(bundleName: string) {
+    console.info(`Succeeded in calling onBundleAdded callback, added bundle name : ${bundleName}`);
+  }
+}
+```
 
 ## onBundleAdded
 
@@ -206,10 +420,38 @@ onBundleAdded(bundleName: string, accountId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| accountId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 被安装应用的包名。 |
+| accountId | number | 是 | 被安装应用所在的用户ID。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_ADDED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  // 由于存在同名回调方法onBundleAdded(bundleName: string)，该回调方法无accountId参数，因此在实际调用时accountId必须为可选参数，写法请参考示例代码。如果删除accountId后的问号"?"，编译会报错。
+  onBundleAdded(bundleName: string, accountId?: number) {
+    console.info(`Succeeded in calling onBundleAdded callback, added bundle name : ${bundleName}, accountId: ${accountId}`);
+  }
+}
+```
 
 ## onBundleRemoved
 
@@ -227,9 +469,36 @@ onBundleRemoved(bundleName: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 被卸载应用的包名。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_REMOVED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onBundleRemoved(bundleName: string) {
+    console.info(`Succeeded in calling onBundleRemoved callback, removed bundle name : ${bundleName}`);
+  }
+}
+```
 
 ## onBundleRemoved
 
@@ -247,10 +516,38 @@ onBundleRemoved(bundleName: string, accountId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| accountId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 被卸载应用的包名。 |
+| accountId | number | 是 | 被卸载应用所在的用户ID。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_REMOVED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  // 由于存在同名回调方法onBundleRemoved(bundleName: string)，该回调方法无accountId参数，因此在实际调用时accountId必须为可选参数，写法请参考示例代码。如果删除accountId后的问号"?"，编译会报错。
+  onBundleRemoved(bundleName: string, accountId?: number) {
+    console.info(`Succeeded in calling onBundleRemoved callback, removed bundle name : ${bundleName}, accountId: ${accountId}`);
+  }
+}
+```
 
 ## onBundleUpdated
 
@@ -268,10 +565,37 @@ onBundleUpdated(bundleName: string, accountId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| accountId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 被更新应用的包名。 |
+| accountId | number | 是 | 被更新应用所在的用户ID。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_UPDATED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onBundleUpdated(bundleName: string, accountId: number) {
+    console.info(`Succeeded in calling onBundleUpdated callback, update bundle name : ${bundleName}, accountId: ${accountId}`);
+  }
+}
+```
 
 ## onDeviceAdminDisabled
 
@@ -289,9 +613,21 @@ onDeviceAdminDisabled(bundleName: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 被解除激活应用的包名。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onDeviceAdminDisabled(bundleName: string) {
+    console.info(`Succeeded in calling onDeviceAdminDisabled callback, bundleName:${bundleName}`);
+  }
+}
+```
 
 ## onDeviceAdminEnabled
 
@@ -309,9 +645,21 @@ onDeviceAdminEnabled(bundleName: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 被激活应用的包名。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onDeviceAdminEnabled(bundleName: string) {
+    console.info(`Succeeded in calling onDeviceAdminEnabled callback, bundleName:${bundleName}`);
+  }
+}
+```
 
 ## onDeviceBootCompleted
 
@@ -326,6 +674,33 @@ onDeviceBootCompleted(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BOOT_COMPLETED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onDeviceBootCompleted() {
+    console.info("EnterpriseAdminExtensionAbility onDeviceBootCompleted");
+  }
+}
+```
 
 ## onKeyEvent
 
@@ -343,9 +718,108 @@ onKeyEvent(keyEvent: systemManager.KeyEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [keyEvent](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyeventdata-i-sys.md) | systemManager.KeyEvent | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keyEvent | systemManager.KeyEvent | 是 | 当前发生的按键事件信息，包含按键码（keyCode）、按键动作（keyAction，如按下/抬起）、触发时间（actionTime）、已按下 按键列表（keyItems）等，用于识别和处理用户的按键操作。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+
+ /* MDM应用下发按键事件监听后，用户按键行为匹配监听策略时，将触发该事件，事件回调携带当前匹配的按键信息。
+  * 
+  * 例如：
+  * 1.用户短按电源键时触发回调（以电源键为例）
+  * 1.1 下发按键监听事件
+  * 请参考systemManager.addKeyEventPolicies。
+  * 下发keyCode为0，keyPolicy为1。
+  * 1.2 用户短按电源键
+  * 1.3 触发回调
+  * 结果：按下：onKeyEvent event:{"actionTime": 1895101259, "keyCode": 0, "keyAction": 0,
+  *          "keyItems": [{"pressed": true, "keyCode": 0, "downTime": 1895101259}]}
+  *       抬起：onKeyEvent event:{"actionTime": 1895478977, "keyCode": 0, "keyAction": 1,
+  *         "keyItems": [{"pressed": false, "keyCode": 0, "downTime": 1895101259}]}
+  *
+  * 2.用户长按电源键时触发回调（以电源键为例）
+  * 2.1 下发按键监听事件
+  * 请参考systemManager.addKeyEventPolicies。
+  * 下发keyCode为0，keyPolicy为1。
+  * 2.2 用户长按电源键
+  * 2.3 触发回调
+  * 结果：按下：onKeyEvent event:{"actionTime": 14468236859, "keyCode": 0, "keyAction": 0,
+  *         "keyItems": [{"pressed": true, "keyCode": 0, "downTime": 14468236859}]}
+  *      长按：onKeyEvent event:{"actionTime": 14468236859, "keyCode": 0, "keyAction": 0,
+  *         "keyItems": [{"pressed": true, "keyCode": 0, "downTime": 14468236859}]}
+  *          ......
+  *       抬起：onKeyEvent event:{"actionTime": 14471425448, "keyCode": 0, "keyAction": 1,
+  *         "keyItems": [{"pressed": false, "keyCode": 0, "downTime": 14468236859}]}
+  * 
+  * 组合键根据下发策略不同，分为下面多种场景：
+  * 3.用户按组合键触发回调1（以电源键和音量+键为例）
+  * 3.1 下发按键监听事件
+  * 请参考systemManager.addKeyEventPolicies。
+  * 下发keyCode为0，keyPolicy为1；keyCode为1，keyPolicy为1；
+  * 3.2 用户同时按下电源键和音量+键
+  * 3.3 触发回调
+  * 结果：同时按下（电源键先，音量+键后）
+  *      onKeyEvent event:{"actionTime": 20991450446, "keyCode": 1, "keyAction": 0,
+  *   "keyItems": [{"pressed": true, "keyCode": 0, "downTime": 20991432293},
+  *   {"pressed": true, "keyCode": 1, "downTime": 20991450446}]}
+  *      同时抬起 （音量+键先，电源键后）
+  *      onKeyEvent event:{"actionTime": 20590590293, "keyCode": 1, "keyAction": 1,
+  *   "keyItems": [{"pressed": true, "keyCode": 0, "downTime": 28588682984},
+  *   {"pressed": false, "keyCode": 1, "downTime": 21588900860}]}
+  * 
+  * 4.用户按组合键触发回调2（以电源键和音量+键为例）
+  * 4.1 下发按键监听事件
+  * 请参考systemManager.addKeyEventPolicies。
+  * 下发keyCode为0，keyPolicy为1；keyCode为1，keyPolicy为0；
+  * 4.2 用户同时按下电源键和音量+键
+  * 4.3 触发回调
+  * 结果：同时按下（音量+键先，电源键后）
+  *      onKeyEvent event:{"actionTime": 28991115400, "keyCode": 0, "keyAction": 0,
+  *   "keyItems": [{"pressed": true, "keyCode": 1, "downTime": 28990731985},
+  *   {"pressed": true, "keyCode": 0, "downTime": 20991115400}]}
+  *      同时抬起 （音量+键先，电源键后）
+  *      onKeyEvent event:{"actionTime": 28992721560, "keyCode": 0, "keyAction": 1,
+  *   "keyItems": [{"pressed": false, "keyCode": 0, "downTime": 28991115400}]}
+  * 
+  * 5.用户按组合键触发回调3（以电源键和音量+键为例）
+  * 5.1 下发按键监听事件
+  * 请参考systemManager.addKeyEventPolicies。
+  * 下发keyCode为0，keyPolicy为1；
+  * 5.2 用户同时按下电源键和音量+键
+  * 5.3 触发回调
+  * 结果：同时按下（音量+键先，电源键后）
+  *      onKeyEvent event:{"actionTime": 29979014190, "keyCode": 0, "keyAction": 0,
+  *   "keyItems": [{"pressed": true, "keyCode": 1, "downTime": 29978420634},
+  *   {"pressed": true, "keyCode": 0, "downTime": 29979014190}]}
+  *      同时抬起 （电源键先，音量+键后）
+  *      onKeyEvent event:{"actionTime": 29982420773, "keyCode": 0, "keyAction": 1,
+  *   "keyItems": [{"pressed": true, "keyCode": 1, "downTime": 29978420634},
+  *   {"pressed": false, "keyCode": 0, "downTime": 29979014190}]}
+  * 
+  * 6.用户按组合键触发回调4（以电源键和导航键-最近打开为例）
+  * 6.1 下发按键监听事件
+  * 请参考systemManager.addKeyEventPolicies。
+  * 下发keyCode为0，keyPolicy为1；keyCode为5，keyPolicy为1；
+  * 6.2 用户同时按下电源键和导航键-最近打开
+  * 6.3 触发回调
+  * 结果：同时按下（各自执行回调，互不影响）
+  *      onKeyEvent event:{"actionTime": 34073626894, "keyCode": 0, "keyAction": 0,
+  *   "keyItems": [{"pressed": true, "keyCode": 0, "downTime": 34073626894}]}
+  *      onKeyEvent event:{"actionTime": 34075144844, "keyCode": 5, "keyAction": 0,
+  *   "keyItems": [{"pressed": true, "keyCode": 5, "downTime": 0}]}
+  */
+  onKeyEvent(keyEvent: systemManager.KeyEvent): void {
+    console.info(`Succeeded in calling onKeyEvent callback, key event:${JSON.stringify(keyEvent)}`);
+  }
+}
+```
 
 ## onKioskModeEntering
 
@@ -363,10 +837,22 @@ onKioskModeEntering(bundleName: string, accountId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| accountId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 进入Kiosk模式应用的包名。 |
+| accountId | number | 是 | 进入Kiosk模式应用所在的用户ID。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onKioskModeEntering(bundleName: string, accountId: number): void {
+    console.info(`Succeeded in calling onKioskModeEntering callback, bundleName:${bundleName}, accountId:${accountId}`);
+  }
+}
+```
 
 ## onKioskModeExiting
 
@@ -384,10 +870,22 @@ onKioskModeExiting(bundleName: string, accountId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| accountId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 退出Kiosk模式应用的包名。 |
+| accountId | number | 是 | 退出Kiosk模式应用所在的用户ID。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onKioskModeExiting(bundleName: string, accountId: number): void {
+    console.info(`Succeeded in calling onKioskModeExiting callback, bundleName:${bundleName}, accountId:${accountId}`);
+  }
+}
+```
 
 ## onLogCollected
 
@@ -397,7 +895,8 @@ onLogCollected(result: common.Result): void
 
 通过[systemManager.startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md)接口成功创建日志收集任务后， 当日志收集完成时，将触发该回调。回调中包含日志收集结果。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 日志收集成功时，必须在应用的EnterpriseAdminExtensionAbility中访问沙箱目录（/data/edm/log）获取日志，获取日志方式参考下列示例代码。应用取走日志后，建议调用
 > [systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md)删除已收集到的日
 > 志。
@@ -410,9 +909,51 @@ onLogCollected(result: common.Result): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| result | common.Result | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| result | common.Result | 是 | 日志收集结果，用于标识日志收集是否成功，常见值为SUCCESS（收集成功）或FAIL（收集失败），开发者可根据结果判断是否执行后续的日志获取操作。 |
+
+**示例**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { EnterpriseAdminExtensionAbility, common, systemManager } from '@kit.MDMKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  /**
+   * MDM应用调用systemManager.startCollectLog接口启动日志收集任务后，将触发该回调函数，回调携带日志收集结果。
+   * 若result为common.Result.SUCCESS，表示日志收集成功。请取走日志，并调用systemManager.finishLogCollected删除已收集到的日志。
+   * 若result为common.Result.FAIL，表示日志收集失败。
+   */
+  onLogCollected(result: common.Result): void {
+    console.info(`Succeeded in calling onLogCollected callback, result:${result}`);
+    if (result === common.Result.SUCCESS) {
+      let filesDir = '/data/edm/log';
+      // 应用沙箱路径，需根据实际情况进行替换
+      let targetPath = this.context.tempDir;
+      try {
+        let files: string[] = fileIo.listFileSync(filesDir);
+        // 从/data/edm/log沙箱目录取走日志
+        files.forEach(value => {
+          fileIo.copyFileSync(filesDir + '/' + value, targetPath + '/' + value);
+        });
+        let wantTemp: Want = {
+          // 需根据实际情况进行替换
+          bundleName: 'com.example.myapplication',
+          abilityName: 'EnterpriseAdminAbility'
+        };
+        systemManager.finishLogCollected(wantTemp);
+      } catch (error) {
+        console.error("onLogCollected", "error: " + JSON.stringify(error));
+      }
+    }
+    if (result === common.Result.FAIL) {
+      console.error("onLogCollected", "Failed to collect log.");
+    }
+  }
+}
+```
 
 ## onMarketAppInstallResult
 
@@ -430,10 +971,22 @@ onMarketAppInstallResult(bundleName: string, result: common.InstallationResult):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| result | common.InstallationResult | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 应用市场应用包名。 |
+| result | common.InstallationResult | 是 | 安装结果，表示应用市场应用的安装状态，包含安装成功或失败的状态信息。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, common } from '@kit.MDMKit';
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onMarketAppInstallResult(bundleName: string, result: common.InstallationResult): void {
+    console.info(`Succeeded in calling onMarketAppInstallResult callback, bundleName:${bundleName}, result:${result}`);
+  }
+}
+```
 
 ## onStart
 
@@ -448,6 +1001,18 @@ EnterpriseAdminExtensionAbility启动事件回调。
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onStart() {
+    console.info(`Succeeded in calling onStart callback.`);
+  }
+}
+```
 
 ## onStartupGuideCompleted
 
@@ -465,9 +1030,42 @@ onStartupGuideCompleted(scene: common.StartupScene): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scene | common.StartupScene | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scene | common.StartupScene | 是 | 开机向导完成场景，标识触发回调的具体场景类型，如用户设置完成（USER_SETUP）、OTA升级完成（OTA）、设备配置完成（ DEVICE_PROVISION）等，开发者可根据不同场景执行相应的业务逻辑。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager, common } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_STARTUP_GUIDE_COMPLETED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onStartupGuideCompleted(scene: common.StartupScene) {
+    if (scene === common.StartupScene.USER_SETUP) {
+      console.info('onStartupGuideCompleted scene is USER_SETUP');
+    } else if (scene === common.StartupScene.OTA) {
+      console.info('onStartupGuideCompleted scene is OTA');
+    } else if (scene === common.StartupScene.DEVICE_PROVISION) {
+      console.info('onStartupGuideCompleted scene is DEVICE_PROVISION');
+    }
+  }
+}
+```
 
 ## onSystemUpdate
 
@@ -485,9 +1083,36 @@ onSystemUpdate(systemUpdateInfo: systemManager.SystemUpdateInfo): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| systemUpdateInfo | systemManager.SystemUpdateInfo | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| systemUpdateInfo | systemManager.SystemUpdateInfo | 是 | 系统更新的版本信息，用于通知设备管理应用系统版本更新情况。 |
+
+**示例**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager, systemManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_SYSTEM_UPDATE];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onSystemUpdate(systemUpdateInfo: systemManager.SystemUpdateInfo) {
+    console.info(`Succeeded in calling onSystemUpdate callback, version name  : ${systemUpdateInfo.versionName}`);
+  }
+}
+```
 
 ## context
 

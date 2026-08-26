@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import application from '@kit.AbilityKit';
 ```
 
 ## demoteCurrentFromCandidateMasterProcess
@@ -22,14 +22,39 @@ Removes the current process from the candidate master process list. This API use
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [16000116](../errorcode-ability.md#16000116-process-is-already-a-master-process) |
-| [16000117](../errorcode-ability.md#16000117-process-is-not-a-candidate-master-process) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [16000116](../errorcode-ability.md#16000116-process-is-already-a-master-process) | The current process is already a master process and does not support cancellation. |
+| [16000117](../errorcode-ability.md#16000117-process-is-not-a-candidate-master-process) | The current process is not a candidate master process and does not support cancellation. |
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      application.demoteCurrentFromCandidateMasterProcess()
+        .then(() => {
+          console.info('demote succeed');
+        })
+        .catch((err: BusinessError) => {
+          console.error(`demote failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (error) {
+      let code: number = (error as BusinessError).code;
+      let message: string = (error as BusinessError).message;
+      console.error(`demoteCurrentFromCandidateMasterProcess failed, error.code: ${code}, error.message: ${message}`);
+    }
+  }
+}
+```

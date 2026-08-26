@@ -16,6 +16,6 @@ export type OnSelectedIndexChange = (selectedIndex: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| selectedIndex | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| selectedIndex | number | 是 | 分段按钮选项下标。第一项编号为0，之后按顺序递增。 |

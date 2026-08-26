@@ -18,14 +18,12 @@ LightWeightSet stores a set of values, each of which must be unique.
 ## Modules to Import
 
 ```TypeScript
-import { LightWeightSet } from 'kits/@kit.ArkTS';
-import { LightWeightSetForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md) |
+| Name | Description |
+| --- | --- |
+| [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md) | LightWeightSet stores a set of values, each of which must be unique. |

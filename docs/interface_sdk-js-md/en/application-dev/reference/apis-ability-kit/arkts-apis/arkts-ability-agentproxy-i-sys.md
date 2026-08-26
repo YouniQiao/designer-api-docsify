@@ -26,15 +26,15 @@ Send authentication to the AgentExtensionAbility.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handshakeData | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handshakeData | string | Yes | Indicates the handshake data to send. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) | Failed to send the IPC message. |
 
 ## sendData
 
@@ -54,12 +54,12 @@ Send data to the AgentExtensionAbility.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | string | Yes | Indicates the data to send. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) | Failed to send the IPC message. |

@@ -9,7 +9,8 @@ CommonOptions定义了Counter的通用属性和事件。
 ## 导入模块
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUIV2';
 ```
 
 ## onHoverDecrease
@@ -30,9 +31,9 @@ onHoverDecrease?: (isHover: boolean) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isHover | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isHover | boolean | 是 |  |
 
 ## onHoverIncrease
 
@@ -52,9 +53,9 @@ onHoverIncrease?: (isHover: boolean) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isHover | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isHover | boolean | 是 |  |
 
 ## focusable
 

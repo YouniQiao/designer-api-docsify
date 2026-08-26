@@ -9,7 +9,7 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+import distributedDeviceManager from '@kit.DistributedServiceKit';
 ```
 
 ## getDeviceIconInfo
@@ -30,25 +30,55 @@ Obtains the device icon. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [filterOptions](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioplaybackcaptureconfig-i.md) | [DeviceIconInfoFilterOptions](arkts-distributedservice-distributeddevicemanager-deviceiconinfofilteroptions-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filterOptions | [DeviceIconInfoFilterOptions](arkts-distributedservice-distributeddevicemanager-deviceiconinfofilteroptions-i-sys.md) | Yes | Filter options. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DeviceIconInfo](arkts-distributedservice-distributeddevicemanager-deviceiconinfo-i-sys.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DeviceIconInfo](arkts-distributedservice-distributeddevicemanager-deviceiconinfo-i-sys.md)&gt; | Promise used to return the device icon information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  let productIds:Array<string> = ['M0D2', 'M0D3', 'M0D5', 'M0AB', 'M0BD', 'M0E9', 'M0BC', 'M0EA'];
+  let options:distributedDeviceManager.DeviceIconInfoFilterOptions = {
+    productId: 'P14U',
+    imageType: 'ID',
+    specName: 'lg',
+  };
+  if (productIds.indexOf(options.productId) != -1) {
+    options.internalModel = '';
+  } else {
+    options.subProductId = '';
+  }
+  dmInstance.getDeviceIconInfo(options).then((data: distributedDeviceManager.DeviceIconInfo) => {
+    console.info('getDeviceIconInfo' + JSON.stringify(data));
+  }).catch((e : BusinessError) => {
+    console.error('getDeviceIconInfo errCode:' + e.code + ',errMessage:' + e.message);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('getDeviceIconInfo errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
 
 ## getDeviceNetworkIdList
 
@@ -68,25 +98,48 @@ Obtains the list of network devices according to the specified filter options.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [filterOptions](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioplaybackcaptureconfig-i.md) | [NetworkIdQueryFilter](arkts-distributedservice-distributeddevicemanager-networkidqueryfilter-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filterOptions | [NetworkIdQueryFilter](arkts-distributedservice-distributeddevicemanager-networkidqueryfilter-i-sys.md) | Yes | Filter options. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;string & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the device list. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [11600107](../errorcode-device-manager.md#11600107-login-account-required) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Parameter verification failed; |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [11600107](../errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let queryFiler: distributedDeviceManager.NetworkIdQueryFilter = {
+    wiseDeviceId: '',
+    onlineStatus: 1,
+  }
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.getDeviceNetworkIdList(queryFiler).then((data:Array<string>) => {
+    console.info('getDeviceNetworkIdList name:' + JSON.stringify(data));
+  }).catch((e: BusinessError) => {
+    console.error('getDeviceNetworkIdList errCode:' + e.code + ',errMessage:' + e.message);
+  })
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('getDeviceNetworkIdList errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
 
 ## getDeviceProfileInfoList
 
@@ -106,26 +159,45 @@ Obtains the list of devices under the same account. This API uses a promise to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [filterOptions](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioplaybackcaptureconfig-i.md) | [DeviceProfileInfoFilterOptions](arkts-distributedservice-distributeddevicemanager-deviceprofileinfofilteroptions-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filterOptions | [DeviceProfileInfoFilterOptions](arkts-distributedservice-distributeddevicemanager-deviceprofileinfofilteroptions-i-sys.md) | Yes | Filter options. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[DeviceProfileInfo](arkts-distributedservice-distributeddevicemanager-deviceprofileinfo-i-sys.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[DeviceProfileInfo](arkts-distributedservice-distributeddevicemanager-deviceprofileinfo-i-sys.md)&gt;&gt; | Promise used to return the device list. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
-| [11600107](../errorcode-device-manager.md#11600107-login-account-required) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
+| [11600107](../errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.getDeviceProfileInfoList({"isCloud": false}).then((data: Array<distributedDeviceManager.DeviceProfileInfo>) => {
+    console.info('getDeviceProfileInfoList' + JSON.stringify(data));
+  }).catch((e: BusinessError) => {
+    console.error('getDeviceProfileInfoList errCode:' + e.code + ',errMessage:' + e.message);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('getDeviceProfileInfoList errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
 
 ## getIdentificationByDeviceIds
 
@@ -147,24 +219,51 @@ Query device identification by device IDs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| deviceIds | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceIds | Array & lt;string & gt; | Yes | A list of device IDs that could be obtained by the application, with a maximum list size of 50. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[DeviceIdentification](arkts-distributedservice-distributeddevicemanager-deviceidentification-i-sys.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[DeviceIdentification](arkts-distributedservice-distributeddevicemanager-deviceidentification-i-sys.md)&gt; | Returns a list of DeviceIdentification. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | User permission verify failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit'
+private idsLists: undefined|Array<distributedDeviceManager.DeviceIdentification> = [];
+getDeviceUdids(deviceIds: Array<string>): void {
+  let deviceManager: distributedDeviceManager.DeviceManager | null = null;
+  try {
+    deviceManager = distributedDeviceManager.createDeviceManager('com.example.myapplication');
+    this.idsLists = deviceManager?.getIdentificationByDeviceIds(deviceIds);
+    console.info("Successfully retrieved UDID list");
+  } catch (error) {
+    console.error('Get device UDID failed:', error);
+    this.idsLists = [];
+  } finally {
+    if (deviceManager) {
+      try {
+        distributedDeviceManager.releaseDeviceManager(deviceManager);
+        console.info("deviceManager released successfully");
+      } catch (releaseError) {
+        console.error('Release device manager failed:', releaseError);
+      }
+    }
+  }
+}
+```
 
 ## getLocalDisplayDeviceName
 
@@ -184,24 +283,44 @@ Obtains the local device's display name with the specified length. This API uses
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| maxNameLength | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| maxNameLength | number | Yes | Length of the local device's display name, in bytes. The value range is [18, 100]. If the value is **0**, the length is not limited. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Maximum number of bytes in the local device's display name. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  let maxNameLength:number = 21;
+  dmInstance.getLocalDisplayDeviceName(maxNameLength).then((data:string)=>{
+    console.info('getLocalDisplayDeviceName name:' + JSON.stringify(data));
+  }).catch((e: BusinessError)=>{
+    console.error('getLocalDisplayDeviceName errCode:' + e.code + ',errMessage:' + e.message);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('getLocalDisplayDeviceName errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
 
 ## getOsTypeByNetworkId
 
@@ -223,24 +342,24 @@ Query the device operating system type by device network ID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| networkId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| networkId | string | Yes | The device's network ID |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns the device operating system type. Possible return: |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| 11600110 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | User permission verify failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| 11600110 | Invalid network ID. |
 
 ## off('replyResult')
 
@@ -260,18 +379,33 @@ Unsubscribes from the reply to the UI operation result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'replyResult' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | No |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.off('replyResult');
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('replyResult errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
 
 ## on('replyResult')
 
@@ -291,18 +425,46 @@ Subscribes to the reply to the UI operation result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'replyResult' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | Yes |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class Data {
+  param: string = '';
+}
+
+interface TmpStr {
+  verifyFailed: boolean;
+}
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.on('replyResult', (data: Data) => {
+    console.info('replyResult executed, dialog closed' + JSON.stringify(data));
+    let tmpStr: TmpStr = JSON.parse(data.param);
+    let isShow = tmpStr.verifyFailed;
+    console.info('replyResult executed, dialog closed' + isShow);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('replyResult errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
 
 ## putDeviceProfileInfoList
 
@@ -322,24 +484,44 @@ Updates the device list. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| deviceProfileInfoList | Array&lt;[DeviceProfileInfo](arkts-distributedservice-distributeddevicemanager-deviceprofileinfo-i-sys.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceProfileInfoList | Array&lt;[DeviceProfileInfo](arkts-distributedservice-distributeddevicemanager-deviceprofileinfo-i-sys.md)&gt; | Yes | Device list. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Operation result. The value **0** indicates that the operation is successful. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  let deviceProfileInfoList:Array<distributedDeviceManager.DeviceProfileInfo> = [];
+  dmInstance.putDeviceProfileInfoList(deviceProfileInfoList).then((data:number) => {
+    console.info('put device profile info:' + JSON.stringify(data));
+  }).catch((e: BusinessError) => {
+    console.error('putDeviceProfileInfoList errCode:' + e.code + ',errMessage:' + e.message);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('putDeviceProfileInfoList errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
 
 ## replyUiAction
 
@@ -359,18 +541,42 @@ Replies to the user's UI operation. This API can be used only by the PIN HAP of 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| action | number | Yes |
-| actionResult | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| action | number | Yes | User operation.    - **0**: Grant the permission.    - **1**. Remove the permission.    -**2**: Time out the user operation in the permission request dialog.    - **3**: Cancel the display of the PIN box.    - **4**: Cancel the display of the PIN input box.    - **5**: Confirm the input in the PIN input box. |
+| actionResult | string | Yes | User operation result. The value is a string of 1 to 255 characters. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified actionResult is greater than 255. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  /**
+   * action = 0 - Grant the permission.
+   * action = 1 - Revoke the permission.
+   * action = 2 - Time out the user operation in the permission request dialog.
+   * action = 3 - Cancel the display of the PIN box.
+   * action = 4 - Cancel the display of the PIN input box.
+   * action = 5 - Confirm the input in the PIN input box.
+   */
+  let operation = 0;
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.replyUiAction(operation, 'extra');
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('replyUiAction errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
 
 ## restoreLocalDeivceName
 
@@ -394,11 +600,26 @@ Restores the local device name by resetting the network settings.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.restoreLocalDeivceName();
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('restoreLocalDeivceName errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
 
 ## restoreLocalDeviceName
 
@@ -420,11 +641,26 @@ Restores the local device name.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.restoreLocalDeviceName();
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('restoreLocalDeviceName errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
 
 ## setHeartbeatPolicy
 
@@ -444,19 +680,36 @@ Sets the heartbeat broadcast policy.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| policy | [StrategyForHeartbeat](arkts-distributedservice-distributeddevicemanager-strategyforheartbeat-e-sys.md) | Yes |
-| delayTime | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| policy | [StrategyForHeartbeat](arkts-distributedservice-distributeddevicemanager-strategyforheartbeat-e-sys.md) | Yes | Heartbeat broadcast policy. |
+| delayTime | number | Yes | Duration for temporarily disabling heartbeat broadcast. The value ranges from 1000 to 15000, in milliseconds. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let policy = distributedDeviceManager.StrategyForHeartbeat.TEMP_STOP_HEARTBEAT;
+  let delayTime = 1000;
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.setHeartbeatPolicy(policy, delayTime);
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('setHeartbeatPolicy errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
 
 ## setLocalDeviceName
 
@@ -476,27 +729,47 @@ Sets the local device name. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| deviceName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceName | string | Yes | Device name to set. The value is a string of 1 to 255 characters. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Operation result. The value **0** indicates that the operation is successful. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
-| [11600107](../errorcode-device-manager.md#11600107-login-account-required) |
-| [11600108](../errorcode-device-manager.md#11600108-unlawful-information-in-device-name) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
+| [11600107](../errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+| [11600108](../errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  let deviceName:string = 'xxx';
+  dmInstance.setLocalDeviceName(deviceName).then((data:number)=>{
+    console.info('setLocalDeviceName name:' + JSON.stringify(data));
+  }).catch((e: BusinessError)=>{
+    console.error('setLocalDeviceName errCode:' + e.code + ',errMessage:' + e.message);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('setLocalDeviceName errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
 
 ## setRemoteDeviceName
 
@@ -516,25 +789,46 @@ Sets the remote device name. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| deviceId | string | Yes |
-| deviceName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceId | string | Yes | UDID of the remote device. If the device does not have a UDID, the MAC address or SN of the device is used as the device ID. The SN is used preferentially. |
+| deviceName | string | Yes | Device name to set. The value is a string of 1 to 255 characters. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Operation result. The value **0** indicates that the operation is successful. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
-| [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
-| [11600107](../errorcode-device-manager.md#11600107-login-account-required) |
-| [11600108](../errorcode-device-manager.md#11600108-unlawful-information-in-device-name) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
+| [11600107](../errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+| [11600108](../errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  let deviceId:string = 'xxx';
+  let deviceName:string = 'xxx';
+  dmInstance.setRemoteDeviceName(deviceId, deviceName).then((data:number)=>{
+    console.info('setRemoteDeviceName name:' + JSON.stringify(data));
+  }).catch((e: BusinessError)=>{
+    console.error('setRemoteDeviceName errCode:' + e.code + ',errMessage:' + e.message);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('setRemoteDeviceName errCode:' + e.code + ',errMessage:' + e.message);
+}
+```

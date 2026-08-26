@@ -33,9 +33,9 @@ count(totalCount: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| totalCount | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| totalCount | number | 是 |  |
 
 ## initialIndex
 
@@ -57,9 +57,9 @@ initialIndex(index: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 |  |
 
 ## loop
 
@@ -81,9 +81,9 @@ loop(isLoop: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isLoop | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isLoop | boolean | 是 |  |
 
 ## onChange
 
@@ -105,9 +105,9 @@ Called when the index value changes.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback & lt;number & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback & lt;number & gt; | 是 |  |
 
 ## style
 
@@ -129,9 +129,9 @@ style(indicatorStyle: DotIndicator | DigitIndicator)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) | 是 | 可选导航点指示器样式。    - DotIndicator：圆点指示器样式。    - DigitIndicator：数字指示器样式。     默认类型：DotIndicator。 |
 
 ## vertical
 
@@ -153,6 +153,6 @@ vertical(isVertical: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isVertical | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isVertical | boolean | 是 |  |

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from 'kits/@kit.ArkUI';
+import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -30,9 +30,9 @@ constructor(options: ProgressButtonV2ColorOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [ProgressButtonV2ColorOptions](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [ProgressButtonV2ColorOptions](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | 是 |  |
 
 ## backgroundColor
 

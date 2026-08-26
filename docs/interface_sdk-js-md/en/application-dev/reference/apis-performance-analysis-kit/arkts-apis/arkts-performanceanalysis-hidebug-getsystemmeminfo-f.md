@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getSystemMemInfo
@@ -20,6 +19,17 @@ Obtains system memory information. This API is implemented by reading data from 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | System memory information. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let systemMemInfo: hidebug.SystemMemInfo = hidebug.getSystemMemInfo();
+
+console.info(`totalMem: ${systemMemInfo.totalMem}, freeMem: ${systemMemInfo.freeMem}, ` +
+  `availableMem: ${systemMemInfo.availableMem}`);
+```

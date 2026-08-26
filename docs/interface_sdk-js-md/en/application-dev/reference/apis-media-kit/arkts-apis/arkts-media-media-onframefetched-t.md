@@ -14,7 +14,7 @@ Describes the callback invoked when thumbnails are obtained in batches.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| frameInfo | [FrameInfo](arkts-media-media-frameinfo-i.md) | Yes |
-| err | [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| frameInfo | [FrameInfo](arkts-media-media-frameinfo-i.md) | Yes | Thumbnail information. |
+| err | [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | No | Error that occurs when the thumbnail is obtained. The default value is **null**. |

@@ -31,15 +31,15 @@ Indicates whether to enable anti-aliasing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## fill
 
@@ -59,15 +59,15 @@ Fill color.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## fillOpacity
 
@@ -87,15 +87,15 @@ fill Opacity
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## stroke
 
@@ -115,15 +115,15 @@ border Color
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## strokeDashArray
 
@@ -143,15 +143,15 @@ Sets the gap for the border.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Array & lt;any & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Array & lt;any & gt; | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## strokeDashOffset
 
@@ -171,15 +171,15 @@ Offset from the start point of the border drawing.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## strokeLineCap
 
@@ -199,15 +199,15 @@ Path endpoint drawing style.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [LineCapStyle](../arkts-apis/arkts-arkui-linecapstyle-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [LineCapStyle](../arkts-apis/arkts-arkui-linecapstyle-e.md) | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## strokeLineJoin
 
@@ -227,15 +227,15 @@ Border corner drawing style.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [LineJoinStyle](../arkts-apis/arkts-arkui-linejoinstyle-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [LineJoinStyle](../arkts-apis/arkts-arkui-linejoinstyle-e.md) | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## strokeMiterLimit
 
@@ -255,15 +255,15 @@ Limits for drawing acute angles as bevels
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## strokeOpacity
 
@@ -283,15 +283,15 @@ Sets the opacity of the border.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
 
 ## strokeWidth
 
@@ -311,12 +311,12 @@ Sets the width of the dividing line.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |

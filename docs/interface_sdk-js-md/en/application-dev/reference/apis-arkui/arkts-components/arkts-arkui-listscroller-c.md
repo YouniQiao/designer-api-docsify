@@ -2,7 +2,8 @@
 
 Implements the scroll controller of the **List** component. A **List** component is bound to a **ListScroller** on a one-to-one basis.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **ListScroller** inherits from [Scroller](arkts-arkui-scroller-c.md) and has all methods of
 > [Scroller](arkts-arkui-scroller-c.md).
 
@@ -35,16 +36,16 @@ Collapses the list items in the [EXPANDED](arkts-arkui-swipeactionstate-e.md) st
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | No | Callback events for collapsing list items in the [EXPANDED](arkts-arkui-swipeactionstate-e.md) state. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getItemRectInGroup
 
@@ -54,7 +55,8 @@ getItemRectInGroup(index: number, indexInGroup: number): RectResult
 
 Obtains the size of a list item in a list item group and its position relative to the list.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The value of **index** must be the index of a child component visible in the display area. Otherwise, the value is considered invalid.
 > - The child component for which **index** is set must be a list item group. Otherwise, the **index** value is considered invalid.
 > - The value of **indexInGroup** must be the index of a list item in the list item group visible in the display area. Otherwise, the value is considered invalid.
@@ -70,23 +72,23 @@ Obtains the size of a list item in a list item group and its position relative t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| indexInGroup | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the list item group in the list. |
+| indexInGroup | number | Yes | Index of the list item in the list item group. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RectResult](arkts-arkui-rectresult-i.md) |
+| Type | Description |
+| --- | --- |
+| [RectResult](arkts-arkui-rectresult-i.md) | Size of the list item in the list item group and its position relative to the list. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getVisibleListContentInfo
 
@@ -106,23 +108,23 @@ Obtains the index information of the child component at the specified coordinate
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X-coordinate, in vp. |
+| y | number | Yes | Y-coordinate, in vp. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | Index information of a child component at the specified coordinates. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## scrollToItemInGroup
 
@@ -142,16 +144,16 @@ Scrolls to the specified list item in the specified list item group.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| indexInGroup | number | Yes |
-| [smooth](../arkts-apis/arkts-arkui-viewmodel-scrollparam-i.md) | boolean | No |
-| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the target list item group in the current container.   **NOTE：**If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
+| indexInGroup | number | Yes | Index of the target list item in the list item group specified by **index**.   **NOTE：**If the value set is a negative value or greater than the maximum index of the items in the list item group, the value is deemed abnormal, and no scrolling will be performed. |
+| smooth | boolean | No | Whether the scroll animation is enabled. The options are **true** (enabled) and **false** (disabled).Default value: **false**   **NOTE：**When **smooth** is set to **true**, all passed items are loaded and counted in layout calculation. This may result in performance issues if a large number of items are involved. |
+| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No | How the list item to scroll to is aligned with the container.Default value: **ScrollAlign.START |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |

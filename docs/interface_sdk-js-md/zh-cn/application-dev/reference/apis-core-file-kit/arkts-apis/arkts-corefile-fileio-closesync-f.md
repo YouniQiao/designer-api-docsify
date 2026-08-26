@@ -23,6 +23,14 @@ declare function closeSync(fd: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fd | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fd | number | 是 | 待关闭文件的文件描述符。 |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+fileio.closeSync(fd);
+```

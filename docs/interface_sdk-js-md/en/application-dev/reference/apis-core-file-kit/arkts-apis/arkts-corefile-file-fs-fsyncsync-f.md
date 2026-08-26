@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## fsyncSync
@@ -22,18 +20,27 @@ Synchronizes the cached data of a file to storage. This API returns the result s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | FD of the file. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900005 |
-| 13900008 |
-| 13900020 |
-| 13900025 |
-| 13900027 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.fsyncSync(file.fd);
+fileIo.closeSync(file);
+```

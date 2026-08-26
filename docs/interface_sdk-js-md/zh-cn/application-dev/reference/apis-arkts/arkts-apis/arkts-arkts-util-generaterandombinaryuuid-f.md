@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## generateRandomBinaryUUID
@@ -22,12 +23,20 @@ function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| entropyCache | boolean | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| entropyCache | boolean | 否 | 是否使用已缓存的UUID，true表示使用缓存的UUID以提升性能（最多缓存128个UUID，缓存用尽后会重新生成以保证随机性）， false表示不使用缓存的UUID，默认true。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Uint8Array |
+| 类型 | 说明 |
+| --- | --- |
+| Uint8Array | 表示此UUID的Uint8Array值。 |
+
+**示例**
+
+```TypeScript
+let uuid = util.generateRandomBinaryUUID(true);
+console.info(JSON.stringify(uuid));
+// 输出随机生成的UUID
+```

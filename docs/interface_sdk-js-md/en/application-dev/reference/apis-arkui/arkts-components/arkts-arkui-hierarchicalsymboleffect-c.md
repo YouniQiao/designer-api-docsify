@@ -33,9 +33,9 @@ A constructor used to create a **HierarchicalSymbolEffect** instance, which come
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [fillStyle](#fillstyle) | [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fillStyle | [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | No | Effect fill style.Default value: **EffectFillStyle.CUMULATIVE |
 
 ## fillStyle
 

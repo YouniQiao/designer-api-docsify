@@ -13,7 +13,8 @@ Sets the time information for a calendar reminder.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import reminderAgent from '@kit.BackgroundTasksKit';
+import reminderAgentManager from '@kit.BackgroundTasksKitManager';
 ```
 
 ## day

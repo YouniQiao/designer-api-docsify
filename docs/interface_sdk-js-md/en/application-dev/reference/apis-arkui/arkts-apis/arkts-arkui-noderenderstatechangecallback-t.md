@@ -16,7 +16,7 @@ Defines the callback type for listening for the rendering state of a specific no
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| state | [NodeRenderState](arkts-arkui-arkui-uicontext-noderenderstate-e.md) | Yes |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| state | [NodeRenderState](arkts-arkui-arkui-uicontext-noderenderstate-e.md) | Yes | Information about the gesture event that triggers the callback. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | No | Component bound to the gesture event that triggers the listener; returns **null** if the component has been released. |

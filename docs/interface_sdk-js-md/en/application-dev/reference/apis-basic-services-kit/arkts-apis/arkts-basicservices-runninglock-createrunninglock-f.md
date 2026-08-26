@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from 'kits/@kit.BasicServicesKit';
+import runningLock from '@kit.BasicServicesKit';
 ```
 
 ## createRunningLock
@@ -26,11 +26,23 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Indicates the [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) name. A recommended name consists of the package or class name and a suffix. |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Indicates the [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md). |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
+
+**Examples**
+
+```TypeScript
+runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND, (err: Error, lock: runningLock.RunningLock) => {
+    if (typeof err === 'undefined') {
+        console.info('created running lock: ' + lock);
+    } else {
+        console.error('create running lock failed, err: ' + err);
+    }
+});
+```
 
 
 ## createRunningLock
@@ -53,13 +65,25 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Indicates the [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) name. A recommended name consists of the package or class name and a suffix. |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Indicates the [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Promise used to return the { |
+
+**Examples**
+
+```TypeScript
+runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
+.then((lock: runningLock.RunningLock) => {
+    console.info('created running lock: ' + lock);
+})
+.catch((err: Error) => {
+    console.error('create running lock failed, err: ' + err);
+});
+```

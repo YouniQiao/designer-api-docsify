@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getSimpleNumberFormatBySkeleton
@@ -22,22 +22,37 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| skeleton | string | Yes |
-| locale | Intl.Locale | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| skeleton | string | Yes | Valid skeleton. For details about the supported characters and their meanings, see [Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons). |
+| locale | Intl.Locale | No | Locale** object. The default value is the current system locale. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) |
+| Type | Description |
+| --- | --- |
+| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let locale: Intl.Locale = new Intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('%', locale);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call SimpleDateTimeFormat.getSimpleNumberFormatBySkeleton failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 
 ## getSimpleNumberFormatBySkeleton
@@ -60,19 +75,34 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| skeleton | string | Yes |
-| locale | intl.Locale | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| skeleton | string | Yes | Valid skeleton. For details about the supported characters and their meanings, see [Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons). |
+| locale | intl.Locale | No | Locale** object. The default value is the current system locale. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) |
+| Type | Description |
+| --- | --- |
+| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n, intl } from '@kit.LocalizationKit';
+
+try {
+  let locale: intl.Locale = new intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('%', locale);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call SimpleDateTimeFormat.getSimpleNumberFormatBySkeleton failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```

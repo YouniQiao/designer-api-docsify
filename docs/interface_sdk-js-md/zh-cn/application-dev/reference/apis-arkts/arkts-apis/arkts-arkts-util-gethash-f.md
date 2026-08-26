@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## getHash
@@ -22,12 +23,27 @@ function getHash(object: object): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| object | object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| object | object | 是 | 要获取哈希值的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 哈希值。 |
+
+**示例**
+
+```TypeScript
+interface Person {
+  name: string,
+  age: number
+}
+let obj: Person = { name: 'Jack', age: 20 };
+let result1 = util.getHash(obj);
+console.info('result1 is ' + result1);
+let result2 = util.getHash(obj);
+console.info('result2 is ' + result2);
+// 输出结果：result1 与 result2 的值相等，且为随机的Hash值。
+```

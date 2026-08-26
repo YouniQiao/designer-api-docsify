@@ -21,7 +21,8 @@ enableAnalyzer(enable: boolean): CanvasAttribute
 
 设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能，支持attributeModifier 动态设置属性方法。需要搭配[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)中的 StartImageAnalyzer和 StopImageAnalyzer 一起使用。不能和overlay属性同时使用， 两者同时设置时overlay中CustomBuilder属性将失效。该特性依赖设备能力。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 20开始，该接口支持在
 > attributeModifier
 > 中调用。
@@ -36,15 +37,15 @@ enableAnalyzer(enable: boolean): CanvasAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 组件支持AI分析，需要组件内容支持主体识别、文字识别或对象查找。 设置为true时，组件可进行AI分析，设置为false时，组件不可进行AI分析。 异常值null和undefined按默认值处理。 默认值：false |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |
 
 ## onReady
 
@@ -64,15 +65,15 @@ Canvas组件初始化完成或者发生大小变化时的事件回调，支持at
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) | 是 | Canvas组件初始化完成或者发生大小变化时的回调事件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |
 
 ## onReady
 
@@ -94,12 +95,12 @@ Canvas组件初始化完成或者发生大小变化时的事件回调，支持at
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) \| undefined & gt; \ | undefined | 是 | Canvas组件初始化完成或者发生大小变化时的回调事件。 关于Callback & lt;DrawingRenderingContext \ |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) \| undefined & gt; \ | undefined | 是 | Canvas组件初始化完成或者发生大小变化时的回调事件。 关于Callback & lt;DrawingRenderingContext \ |undefined&gt;类型的入参：  1. 只有使用[CanvasParams](arkts-arkui-canvasparams-i.md)创建的Canvas组件在该回调中返回DrawingRenderingContext对象，否则返回undefined。  2. 该回调返回的DrawingRenderingContext对象不允许作为参数创建Canvas组件，否则会导致应用崩溃。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |

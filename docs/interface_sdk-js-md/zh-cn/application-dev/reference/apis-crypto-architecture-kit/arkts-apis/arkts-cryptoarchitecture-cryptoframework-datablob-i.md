@@ -2,7 +2,8 @@
 
 二进制数据的封装接口，核心字段data为Uint8Array类型。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > Uint8Array类型数据表示8位无符号整数的数组。
 
 **起始版本：** 9
@@ -12,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## data

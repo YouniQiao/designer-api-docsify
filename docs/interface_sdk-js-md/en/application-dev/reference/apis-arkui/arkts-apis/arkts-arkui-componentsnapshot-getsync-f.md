@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import componentSnapshot from '@kit.ArkUI';
 ```
 
 ## getSync
@@ -14,7 +14,8 @@ function getSync(id: string, options?: SnapshotOptions): image.PixelMap
 
 Obtains the snapshot of a component that has been loaded based on the provided component ID. This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) object.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
 > update, the re-rendered content will not be included in the obtained snapshot.
 
@@ -28,22 +29,64 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string | Yes |
-| options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | ID of the target component. |
+| options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| image.PixelMap |
+| Type | Description |
+| --- | --- |
+| image.PixelMap | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [160002](../errorcode-snapshot.md#160002-snapshot-timeout) |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+
+**Examples**
+
+```TypeScript
+import { componentSnapshot } from '@kit.ArkUI';
+import { image } from '@kit.ImageKit';
+
+@Entry
+@Component
+struct SnapshotExample {
+  @State pixmap: image.PixelMap | undefined = undefined
+
+  build() {
+    Column() {
+      Row() {
+        Image(this.pixmap).width(200).height(200).border({ color: Color.Black, width: 2 }).margin(5)
+        // Replace $r('app.media.img') with the image resource file you use.
+        Image($r('app.media.img'))
+          .autoResize(true)
+          .width(200)
+          .height(200)
+          .margin(5)
+          .id('root')
+      }
+
+      Button('click to generate UI snapshot')
+        .onClick(() => {
+          try {
+            // You are advised to use this.getUIContext().getComponentSnapshot().getSync().
+            let pixelmap = componentSnapshot.getSync('root', { scale: 2, waitUntilRenderFinished: true });
+            this.pixmap = pixelmap;
+          } catch (error) {
+            console.error(`getSync error message:${error.message}`);
+          }
+        }).margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .alignItems(HorizontalAlign.Center)
+  }
+}
+```

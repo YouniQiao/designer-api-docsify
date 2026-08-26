@@ -14,7 +14,7 @@ Called when a paste operation is performed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pasteValue | string | Yes |
-| event | [PasteEvent](../arkts-components/arkts-arkui-pasteevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pasteValue | string | Yes | Text to be pasted. |
+| event | [PasteEvent](../arkts-components/arkts-arkui-pasteevent-i.md) | Yes | Custom paste event. |

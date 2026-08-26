@@ -9,27 +9,27 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CustomDialogController(CustomDialog)](arkts-arkui-customdialogcontroller-c.md) |
+| Name | Description |
+| --- | --- |
+| [CustomDialogController(CustomDialog)](arkts-arkui-customdialogcontroller-c.md) | Defines the controller of the custom dialog box. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CustomDialogControllerOptions(CustomDialog)](arkts-arkui-customdialogcontrolleroptions-i.md) |
-| [DismissDialogAction(CustomDialog)](arkts-arkui-dismissdialogaction-i.md) |
+| Name | Description |
+| --- | --- |
+| [CustomDialogControllerOptions(CustomDialog)](arkts-arkui-customdialogcontrolleroptions-i.md) | Defines the style of the custom dialog box. |
+| [DismissDialogAction(CustomDialog)](arkts-arkui-dismissdialogaction-i.md) | Provides information about the action to dismiss the dialog box. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CustomDialogControllerOptions(CustomDialog)](arkts-arkui-customdialogcontrolleroptions-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [CustomDialogControllerOptions(CustomDialog)](arkts-arkui-customdialogcontrolleroptions-i-sys.md) | Defines the style of the custom dialog box. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PromptActionCommonState(CustomDialog)](arkts-arkui-promptactioncommonstate-t.md) |
+| Name | Description |
+| --- | --- |
+| [PromptActionCommonState(CustomDialog)](arkts-arkui-promptactioncommonstate-t.md) | Defines the state of the custom dialog box. |

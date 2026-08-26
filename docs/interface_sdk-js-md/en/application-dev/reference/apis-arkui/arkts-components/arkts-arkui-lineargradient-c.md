@@ -29,6 +29,6 @@ Creates a linear gradient color object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| colorStops | [ColorStop](arkts-arkui-colorstop-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| colorStops | [ColorStop](arkts-arkui-colorstop-i.md)[] | Yes | Gradient colors and color stops. |

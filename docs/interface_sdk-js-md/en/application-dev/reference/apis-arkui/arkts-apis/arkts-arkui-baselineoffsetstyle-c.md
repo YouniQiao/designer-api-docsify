@@ -29,9 +29,9 @@ A constructor used to create a text baseline offset style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text baseline offset options. This API does not work if **unit** of **LengthMetrics** is percent. |
 
 ## baselineOffset
 

@@ -2,7 +2,8 @@
 
 Describes the badge style. It includes the font color, font size, badge color, badge size, etc.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the
 > badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes
 > the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is

@@ -4,6 +4,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Advertisement(Defines the advertisement data model)](arkts-ads-advertisement-advertisement-i.md) |
+| Name | Description |
+| --- | --- |
+| [Advertisement(Defines the advertisement data model)](arkts-ads-advertisement-advertisement-i.md) | This module provides the requested ad content. |

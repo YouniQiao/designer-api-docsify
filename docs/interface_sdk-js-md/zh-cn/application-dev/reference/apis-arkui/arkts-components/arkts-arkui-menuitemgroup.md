@@ -22,13 +22,13 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 **参数:**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | 否 | 设置MenuItemGroup的标题和尾部信息。  未设置时，不显示标题和尾部信息。 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |

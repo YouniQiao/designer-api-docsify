@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## getP2pLinkedInfo
@@ -26,9 +29,27 @@ Obtains information about a P2P connection.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;WifiP2pLinkedInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;WifiP2pLinkedInfo & gt; | Returns the P2P connection information. |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getP2pLinkedInfo((err, data:wifi.WifiP2pLinkedInfo) => {
+   if (err) {
+       console.error("get p2p linked info error");
+       return;
+   }
+  console.info("get wifi p2p linked info: " + JSON.stringify(data));
+});
+
+wifi.getP2pLinkedInfo().then(data => {
+  console.info("get wifi p2p linked info: " + JSON.stringify(data));
+});
+```
 
 
 ## getP2pLinkedInfo
@@ -51,6 +72,10 @@ Obtains information about a P2P connection.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pLinkedInfo&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pLinkedInfo&gt; | Yes |  |
+
+**Examples**
+
+See [getP2pLinkedInfo](#getp2plinkedinfo)

@@ -17,14 +17,14 @@ Called before scroll to allow developer to control real offset the Scrollable ca
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scrollOffset | number | Yes |
-| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes |
-| scrollSource | [ScrollSource](../arkts-apis/arkts-arkui-scrollsource-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scrollOffset | number | Yes | offset this frame will scroll, which may or may not be reached. |
+| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes | current scroll state. |
+| scrollSource | [ScrollSource](../arkts-apis/arkts-arkui-scrollsource-e.md) | Yes | source of current scroll. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| void \| [ScrollResult](arkts-arkui-scrollresult-c.md) |
+| Type | Description |
+| --- | --- |
+| void \| [ScrollResult](arkts-arkui-scrollresult-c.md) | the remain offset for the scrollable, same as scrollOffset when no ScrollResult is returned. |

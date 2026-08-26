@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceInfo } from 'kits/@kit.MDMKit';
+import deviceInfo from '@kit.MDMKit';
 ```
 
 ## getDeviceInfo
@@ -24,23 +24,44 @@ Obtains device information.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-| label | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Enterprise device management extension component, which is used to specify the target application that has the device management capability. The **Want** object must contain **abilityName** (extended ability name) and **bundleName** (application bundle name) parameters. |
+| label | string | Yes | Device information label that can be obtained.    - **deviceName**: device name.    - **deviceSerial**: device serial number.    - **simInfo**: SIM card information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Device information obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
-| [9200007](../errorcode-enterpriseDeviceManager.md#9200007-system-ability-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200007](../errorcode-enterpriseDeviceManager.md#9200007-system-ability-error) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { deviceInfo } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Replace with actual values.
+  let result: string = deviceInfo.getDeviceInfo(wantTemp, 'deviceName');
+  console.info(`Succeeded in getting device name, result : ${result}`);
+} catch (err) {
+  console.error(`Failed to get device name. Code: ${err.code}, message: ${err.message}`);
+}
+```

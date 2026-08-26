@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cooperate } from 'kits/@kit.DistributedServiceKit';
+import cooperate from '@kit.DistributedServiceKit';
 ```
 
 ## activateCooperateWithOptions
@@ -26,22 +26,40 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: nu
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| targetNetworkId | string | 是 |
-| inputDeviceId | number | 是 |
-| cooperateOptions | [CooperateOptions](arkts-distributedservice-cooperate-cooperateoptions-i-sys.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| targetNetworkId | string | 是 | 键鼠穿越目标设备描述符。 |
+| inputDeviceId | number | 是 | 发起穿越操作的输入设备ID。 |
+| cooperateOptions | [CooperateOptions](arkts-distributedservice-cooperate-cooperateoptions-i-sys.md) | 否 | 穿越可选控制参数，用于控制穿出点具体位置等。不设置此参数时，本接口能力 与[cooperate.activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md) 相同。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [20900001](../errorcode-devicestatus.md#20900001-操作输入设备失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [20900001](../errorcode-devicestatus.md#20900001-操作输入设备失败) | Service exception. Possible causes:  1. A system error, such as null pointer, container-related exception, or IPC exception.  2. N-API invocation exception or invalid N-API status. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetNetworkId = "networkId";
+let inputDeviceId = 0;
+try {
+  cooperate.activateCooperateWithOptions(targetNetworkId, inputDeviceId).then(() => {
+    console.info(`activateCooperateWithOptions success.`);
+  }, (error: BusinessError) => {
+    console.error(`activateCooperateWithOptions, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`activateCooperateWithOptions, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```

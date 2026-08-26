@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from 'kits/@kit.FormKit';
+import formProvider from '@kit.FormKit';
 ```
 
 ## getPublishedFormInfoById
@@ -14,7 +14,8 @@ function getPublishedFormInfoById(formId: string): Promise<formInfo.FormInfo>
 
 Obtains the information of the widget that has been added to the home screen on the device. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This field is supported since API version 18 and deprecated since API version 20. You are advised to use
 > [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md) instead.
 
@@ -30,20 +31,38 @@ Obtains the information of the widget that has been added to the home screen on 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formId | string | Yes | Widget ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;formInfo.FormInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;formInfo.FormInfo & gt; | Promise used to return the information obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+**Examples**
+
+```TypeScript
+import { formInfo, formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const formId: string = '388344236';
+try {
+  formProvider.getPublishedFormInfoById(formId).then((data: formInfo.FormInfo) => {
+    console.info(`formProvider getPublishedFormInfoById, data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```

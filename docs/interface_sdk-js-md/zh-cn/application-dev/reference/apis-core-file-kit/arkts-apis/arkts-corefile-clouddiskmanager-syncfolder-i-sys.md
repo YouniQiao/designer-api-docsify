@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudDiskManager } from 'kits/@kit.CoreFileKit';
+import cloudDiskManager from '@kit.CoreFileKit';
 ```
 
 ## bundleName

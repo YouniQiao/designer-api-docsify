@@ -21,6 +21,21 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Path of the target file. |
+
+**Examples**
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+let path;
+let context = featureAbility.getContext();
+context.getFilesDir().then((filePath) => {
+    path = filePath;
+    console.info("======================>getFilesDirPromise====================>");
+
+    data_storage.deleteStorageSync(path + '/mystore');
+});
+```

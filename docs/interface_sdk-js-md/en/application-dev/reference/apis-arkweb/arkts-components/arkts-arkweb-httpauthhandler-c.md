@@ -9,6 +9,9 @@ HttpAuthHandler is a handler class used by the Web component to process HTTP aut
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## cancel
@@ -24,6 +27,29 @@ Cancels HTTP authentication as requested by the user.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onDataResubmitted((event) => {
+          console.info('onDataResubmitted');
+          event.handler.cancel();
+        })
+    }
+  }
+}
+```
 
 ## confirm
 
@@ -41,16 +67,16 @@ Performs HTTP authentication with the user name and password provided by the use
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| userName | string | Yes |
-| password | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| userName | string | Yes | HTTP authentication user name, which must be a non-empty string. |
+| password | string | Yes | HTTP authentication password, which must be a non-empty string. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if authentication succeeds; returns **false** otherwise. |
 
 ## constructor
 
@@ -82,6 +108,6 @@ Checks whether the credentials stored for the current host are applicable. The c
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true if the stored credentials are applicable; false otherwise. |

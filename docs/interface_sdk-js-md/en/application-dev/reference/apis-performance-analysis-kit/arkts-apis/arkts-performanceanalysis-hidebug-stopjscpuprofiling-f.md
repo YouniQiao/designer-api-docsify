@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## stopJsCpuProfiling
@@ -17,3 +16,18 @@ Stops the VM profiling method. **stopJsCpuProfiling()** and **startJsCpuProfilin
 **Since:** 9
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  hidebug.startJsCpuProfiling("cpu_profiling");
+  // ...
+  hidebug.stopJsCpuProfiling();
+} catch (error) {
+  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
+}
+```

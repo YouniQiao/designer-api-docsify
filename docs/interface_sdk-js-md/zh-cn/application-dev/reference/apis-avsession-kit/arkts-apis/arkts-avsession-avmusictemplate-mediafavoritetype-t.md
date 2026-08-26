@@ -12,7 +12,7 @@ type MediaFavoriteType = 'addFavorite' | 'removeFavorite'
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| 类型 |
-| --- |
-| 'addFavorite' |
-| 'removeFavorite' |
+| 类型 | 说明 |
+| --- | --- |
+| 'addFavorite' |  |
+| 'removeFavorite' |  |

@@ -15,14 +15,14 @@ Matches a string with this regular expression, and returns an array containing t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| string | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| string | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [Symbol.replace]
 
 ```TypeScript
@@ -33,15 +33,15 @@ Replaces text in a string, using this regular expression.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| string | string | Yes |
-| replaceValue | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| string | string | Yes |  |
+| replaceValue | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [Symbol.replace]
 
 ```TypeScript
@@ -52,15 +52,15 @@ Replaces text in a string, using this regular expression.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| string | string | Yes |
-| replacer | (substring: string, ...args: any[]) = & gt; string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| string | string | Yes |  |
+| replacer | (substring: string, ...args: any[]) = & gt; string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [Symbol.search]
 
 ```TypeScript
@@ -71,14 +71,14 @@ Finds the position beginning first substring match in a regular expression searc
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| string | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| string | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [Symbol.split]
 
 ```TypeScript
@@ -89,12 +89,12 @@ Returns an array of substrings that were delimited by strings in the original in
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| string | string | Yes |
-| limit | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| string | string | Yes |  |
+| limit | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

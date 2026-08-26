@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appMemoryOptimizer } from 'kits/@kit.AbilityKit';
+import appMemoryOptimizer from '@kit.AbilityKit';
 ```
 
 ## evictFilePages
@@ -22,18 +22,18 @@ Sends a request to the system to release file page cache of specified files. The
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fileNames | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fileNames | Array & lt;string & gt; | Yes | Array of file names for which file page cache needs to be released. File names must end with .so, .hap, or .hsp. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 16000163 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 16000163 | File type error. File name does not end with .so, .hap, or .hsp. |

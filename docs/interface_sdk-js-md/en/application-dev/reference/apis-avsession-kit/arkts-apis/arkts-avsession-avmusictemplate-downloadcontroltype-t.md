@@ -12,9 +12,9 @@ Download control type startDownload & deleteDownload, resumeDownload, pauseDownl
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'startDownload' |
-| 'deleteDownload' |
-| 'resumeDownload' |
-| 'pauseDownload' |
+| Type | Description |
+| --- | --- |
+| 'startDownload' |  |
+| 'deleteDownload' |  |
+| 'resumeDownload' |  |
+| 'pauseDownload' |  |

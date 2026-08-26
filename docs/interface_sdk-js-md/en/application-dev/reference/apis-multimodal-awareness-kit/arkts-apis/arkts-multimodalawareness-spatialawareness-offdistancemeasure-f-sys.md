@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
+import spatialAwareness from '@kit.MultimodalAwarenessKit';
 ```
 
 ## offDistanceMeasure
@@ -27,18 +27,39 @@ Unsubscribe from distance measurement result data.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DistanceMeasurementResponse](arkts-multimodalawareness-spatialawareness-distancemeasurementresponse-i-sys.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | Yes | Configuration parameters of the distance measurement. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DistanceMeasurementResponse](arkts-multimodalawareness-spatialawareness-distancemeasurementresponse-i-sys.md)&gt; | No | Callback of the ranging result |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [35100001](../errorcode-spatialAwareness.md#35100001-service-exception) |
-| [35100003](../errorcode-spatialAwareness.md#35100003-unsubscription-failed) |
-| [35100004](../errorcode-spatialAwareness.md#35100004-invalid-parameter) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited device capabilities. |
+| [35100001](../errorcode-spatialAwareness.md#35100001-service-exception) | Service exception. |
+| [35100003](../errorcode-spatialAwareness.md#35100003-unsubscription-failed) | UnSubscription failed. |
+| [35100004](../errorcode-spatialAwareness.md#35100004-invalid-parameter) | Parameter invalid. |
+
+**Examples**
+
+```TypeScript
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
+   console.info('call offDistanceMeasure before');
+   let configParams: spatialAwareness.DistanceMeasurementConfigParams = {
+      deviceList: ["123456"],
+      techType: 2,
+      reportMode: 0,
+      reportFrequency: 340
+   };
+   console.info('call offDistanceMeasure start');
+   try {
+      spatialAwareness.offDistanceMeasure(configParams, (data:spatialAwareness.DistanceMeasurementResponse) => {
+         console.info('result = ${data.distance}');
+      });
+   } catch (err) {
+      console.error('call offDistanceMeasure failed, errCode = ' + err.code);
+   }
+```

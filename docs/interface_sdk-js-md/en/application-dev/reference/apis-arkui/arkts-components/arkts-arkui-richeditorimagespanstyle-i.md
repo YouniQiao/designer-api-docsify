@@ -47,6 +47,24 @@ Scale mode of the image.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## resizable
+
+```TypeScript
+resizable?: ResizableOptions
+```
+
+Resizable image options.
+
+**Type:** [ResizableOptions](arkts-arkui-resizableoptions-i.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## size
 
 ```TypeScript

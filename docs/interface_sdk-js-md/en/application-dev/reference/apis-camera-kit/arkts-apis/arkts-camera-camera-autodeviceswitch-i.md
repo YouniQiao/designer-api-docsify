@@ -11,7 +11,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableAutoDeviceSwitch
@@ -22,7 +21,8 @@ enableAutoDeviceSwitch(enabled: boolean): void
 
 Enables or disables automatic camera switch. You can use [isAutoDeviceSwitchSupported](arkts-camera-camera-autodeviceswitchquery-i.md#isautodeviceswitchsupported) to check whether the device supports automatic camera switch.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is used only for foldable devices with multiple front cameras. In different fold states, the system
 > can automatically switch to an available front camera. It does not enable automatic switching between front and
 > rear cameras.
@@ -35,15 +35,30 @@ Enables or disables automatic camera switch. You can use [isAutoDeviceSwitchSupp
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Whether to enable automatic camera switch. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameters verification failed.<br>**Applicable version:** 19 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableAutoDeviceSwitch(session: camera.PhotoSession, isEnable: boolean): void {
+  try {
+    session.enableAutoDeviceSwitch(isEnable);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The enableAutoDeviceSwitch call failed, error code: ${err.code}, error message: ${err.message}`);
+  }
+}
+```

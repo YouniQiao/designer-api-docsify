@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import router from '@kit.ArkUI';
 ```
 
 ## enableAlertBeforeBackPage
@@ -24,6 +24,24 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) | Yes | Description of the dialog box. |
+
+**Examples**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+router.enableAlertBeforeBackPage({
+  message: 'Message Info'
+});
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+router.enableAlertBeforeBackPage({
+  message: 'Message Info'
+});
+```

@@ -9,7 +9,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## compareTo
@@ -28,12 +29,38 @@ compareTo(other: ScopeComparable): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| other | [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| other | [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | 是 | 与当前值进行比较的另一个值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果当前值大于等于输入值，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+构造新类，实现compareTo方法。后续示例代码中，均以此Temperature类为例。
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+```

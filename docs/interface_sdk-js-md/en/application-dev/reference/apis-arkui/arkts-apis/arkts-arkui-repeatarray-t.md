@@ -16,8 +16,8 @@ Defines a union type for **Repeat** data source parameters.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;T & gt; |
-| ReadonlyArray & lt;T & gt; |
-| Readonly & lt;Array & lt;T & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;T & gt; | Regular array type. |
+| ReadonlyArray & lt;T & gt; | Read-only array type, where the array object cannot be modified. |
+| Readonly & lt;Array & lt;T & gt; & gt; | Read-only array type, where the array object cannot be modified. |

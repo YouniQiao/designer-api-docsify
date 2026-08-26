@@ -6,11 +6,16 @@
 
 必须包含两个子组件，其中第二个子组件必须为NavDestination。
 
-> **说明：**&gt;
-> 子组件个数异常时：&gt;
-> 1. 有且仅有1个时，触发路由到NavDestination的能力失效。&gt;
-> 2. 有且仅有1个时，且使用NavDestination场景下，不进行路由。&gt;
-> 3. 大于2个时，后续的子组件不显示。&gt;
+> **说明：**
+> 
+> 子组件个数异常时：
+> 
+> 1. 有且仅有1个时，触发路由到NavDestination的能力失效。
+> 
+> 2. 有且仅有1个时，且使用NavDestination场景下，不进行路由。
+> 
+> 3. 大于2个时，后续的子组件不显示。
+> 
 > 4. 第二个子组件不为NavDestination时，触发路由功能失效。
 
 ## NavRouter
@@ -53,18 +58,100 @@ NavRouter(value: RouteInfo)
 
 **参数:**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [RouteInfo](arkts-arkui-routeinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [RouteInfo](arkts-arkui-routeinfo-i.md) | 是 | 路由信息。 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 枚举
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
+
+## 示例
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct NavRouterExample {
+  @State isActiveWLAN: boolean = false
+  @State isActiveBluetooth: boolean = false
+
+  build() {
+    Navigation() {
+      NavRouter() {
+        Row() {
+          Row()
+            .width(30)
+            .height(30)
+            .borderRadius(30)
+            .margin({ left: 3, right: 10 })
+            .backgroundColor(Color.Pink)
+          Text(`WLAN`)
+            .fontSize(22)
+            .fontWeight(500)
+            .textAlign(TextAlign.Center)
+        }
+        .width('90%')
+        .height(60)
+
+        NavDestination() {
+          Flex({ direction: FlexDirection.Row }) {
+            Text('未找到可用WLAN').fontSize(30).padding({ left: 15 })
+          }
+        }.title("WLAN")
+      }
+      .margin({ top: 10, bottom: 10 })
+      .backgroundColor(this.isActiveWLAN ? '#ccc' : '#fff')
+      .borderRadius(20)
+      .mode(NavRouteMode.PUSH_WITH_RECREATE)
+      .onStateChange((isActivated: boolean) => {
+        this.isActiveWLAN = isActivated
+      })
+
+      NavRouter() {
+        Row() {
+          Row()
+            .width(30)
+            .height(30)
+            .borderRadius(30)
+            .margin({ left: 3, right: 10 })
+            .backgroundColor(Color.Pink)
+          Text(`蓝牙`)
+            .fontSize(22)
+            .fontWeight(500)
+            .textAlign(TextAlign.Center)
+        }
+        .width('90%')
+        .height(60)
+
+        NavDestination() {
+          Flex({ direction: FlexDirection.Row }) {
+            Text('未找到可用蓝牙').fontSize(30).padding({ left: 15 })
+          }
+        }.title("蓝牙")
+      }
+      .margin({ top: 10, bottom: 10 })
+      .backgroundColor(this.isActiveBluetooth ? '#ccc' : '#fff')
+      .borderRadius(20)
+      .mode(NavRouteMode.REPLACE)
+      .onStateChange((isActivated: boolean) => {
+        this.isActiveBluetooth = isActivated
+      })
+    }
+    .height('100%')
+    .width('100%')
+    .title('设置')
+    .backgroundColor("#F2F3F5")
+    .titleMode(NavigationTitleMode.Free)
+    .mode(NavigationMode.Auto)
+  }
+}
+```

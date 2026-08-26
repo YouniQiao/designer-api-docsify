@@ -9,7 +9,6 @@ Describes the request/response header returned by the **Web** component.@interfa
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## headerKey

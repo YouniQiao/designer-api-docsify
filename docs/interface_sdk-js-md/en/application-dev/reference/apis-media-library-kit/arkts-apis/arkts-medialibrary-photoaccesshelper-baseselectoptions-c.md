@@ -9,7 +9,7 @@ Defines the basic options for selecting media files from Gallery.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import photoAccessHelper from '@kit.MediaLibraryKit';
 ```
 
 ## assetCompatibleCapability

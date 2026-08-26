@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import sendableImage from '@kit.ImageKit';
 ```
 
 ## height

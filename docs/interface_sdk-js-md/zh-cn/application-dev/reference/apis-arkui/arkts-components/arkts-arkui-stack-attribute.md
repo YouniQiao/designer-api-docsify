@@ -31,9 +31,9 @@ alignContent(value: Alignment)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | 是 | 所有子组件在容器内的对齐方式。 默认值：Alignment.Center 非法值：按默认值处理。 |
 
 ## syncLoad
 
@@ -53,6 +53,6 @@ syncLoad(enable: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 是否同步加载Stack区域内所有子组件。 true表示同步加载；false表示异步加载。 默认值：true    **说明：** 设置为false时，在首次显示场景，若当前帧布局耗时超过50ms，会将Stack区域内尚未布局的子组件延后到下一帧进行布局。 |

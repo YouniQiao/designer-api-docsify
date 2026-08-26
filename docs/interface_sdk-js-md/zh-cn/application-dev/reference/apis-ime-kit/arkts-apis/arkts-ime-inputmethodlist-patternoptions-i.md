@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { InputMethodListDialog, PatternOptions, Pattern } from 'kits/@kit.IMEKit';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 ```
 
 ## action
@@ -26,9 +26,9 @@ action: (index: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 |  |
 
 ## defaultSelected
 

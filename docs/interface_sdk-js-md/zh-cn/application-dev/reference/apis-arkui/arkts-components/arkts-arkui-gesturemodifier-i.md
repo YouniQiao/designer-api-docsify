@@ -29,6 +29,6 @@ applyGesture(event: UIGestureEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [UIGestureEvent](arkts-arkui-uigestureevent-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [UIGestureEvent](arkts-arkui-uigestureevent-i.md) | 是 | UIGestureEvent对象，用于设置组件需要绑定的手势。 |

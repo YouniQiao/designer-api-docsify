@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import display from '@kit.ArkUI';
 ```
 
 ## getFoldDisplayMode
@@ -22,12 +22,19 @@ function getFoldDisplayMode(): FoldDisplayMode
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | FoldDisplayMode对象，返回可折叠设备当前的显示模式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+**示例**
+
+```TypeScript
+let data: display.FoldDisplayMode = display.getFoldDisplayMode();
+console.info(`Succeeded in obtaining fold display mode. Data: ${data}`);
+```

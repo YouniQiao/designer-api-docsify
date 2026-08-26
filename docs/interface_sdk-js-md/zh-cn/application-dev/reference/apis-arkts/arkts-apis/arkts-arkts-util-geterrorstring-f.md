@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## getErrorString
@@ -24,12 +25,21 @@ function getErrorString(errno: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [errno](../../apis-universal-keystore-kit/arkts-apis/arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| errno | number | 是 | 生成的错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 错误码的详细信息。 |
+
+**示例**
+
+```TypeScript
+let errnum = -1; // -1 : a system error number
+let result = util.getErrorString(errnum);
+console.info("result = " + result);
+// 输出结果：result = operation not permitted
+```

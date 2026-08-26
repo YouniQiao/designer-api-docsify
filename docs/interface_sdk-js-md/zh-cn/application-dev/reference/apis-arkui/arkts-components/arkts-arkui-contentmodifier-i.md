@@ -31,6 +31,6 @@ applyContent(): WrappedBuilder<[T]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;[T]&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;[T]&gt; | 组件的属性类，用来区别不同组件自定义内容区后所需要的不同信息，比如Button组件的ButtonConfiguration，Checkbox组件的 CheckBoxConfiguration等。 |

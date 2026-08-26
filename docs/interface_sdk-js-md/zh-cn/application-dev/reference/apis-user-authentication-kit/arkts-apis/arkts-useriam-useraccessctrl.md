@@ -12,7 +12,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
+import userAccessCtrl from '@kit.UserAuthenticationKit';
 ```
 
 ## 汇总
@@ -20,23 +20,23 @@ import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [verifyAuthToken(用户访问控制)](arkts-userauthentication-useraccessctrl-verifyauthtoken-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [verifyAuthToken(用户访问控制)](arkts-userauthentication-useraccessctrl-verifyauthtoken-f-sys.md) | 验证认证令牌。该接口用于校验AuthToken的有效性，包括完整性校验和时效性校验，校验通过后返回解析后的AuthToken详细信息。使用Promise异步回调。完整性校验通过验证AuthToken的数字签名确保令牌未被篡改；时效性校验通过比对AuthToken的签发时间与当前时间，并结合allowableDuration参数判断令牌是否在有效期内。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 |
-| --- |
-| [AuthToken(用户访问控制)](arkts-userauthentication-useraccessctrl-authtoken-i-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [AuthToken(用户访问控制)](arkts-userauthentication-useraccessctrl-authtoken-i-sys.md) | 认证令牌数据。表示校验通过后返回解析后的AuthToken数据，包含认证的详细信息，如挑战值、认证信任等级、认证类型、用户ID等。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 |
-| --- |
-| [AuthTokenType(用户访问控制)](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [AuthTokenType(用户访问控制)](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md) | 认证令牌类型枚举。该枚举定义了认证令牌的类型，用于标识令牌的签发来源。 |
 <!--DelEnd-->

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getPreferredLanguageList
@@ -24,6 +24,20 @@ Obtains the list of preferred languages.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | List of preferred languages. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let preferredLanguageList: Array<string> = i18n.System.getPreferredLanguageList();
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let preferredLanguageList: Array<string> = i18n.getPreferredLanguageList();
+```

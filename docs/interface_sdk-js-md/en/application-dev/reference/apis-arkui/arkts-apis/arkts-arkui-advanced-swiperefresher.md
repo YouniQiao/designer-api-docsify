@@ -3,13 +3,14 @@
 ## Modules to Import
 
 ```TypeScript
-import { SwipeRefresher } from 'kits/@kit.ArkUI';
+import { SwipeRefresher } from '@kit.ArkUI';
+import { SwipeRefresherV2 } from '@kit.ArkUIV2';
 ```
 
 ## Summary
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SwipeRefresher](arkts-arkui-arkui-advanced-swiperefresher-swiperefresher-s.md) |
+| Name | Description |
+| --- | --- |
+| [SwipeRefresher](arkts-arkui-arkui-advanced-swiperefresher-swiperefresher-s.md) | Declare component SwipeRefresher |

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getActiveGeoFences
@@ -22,13 +21,35 @@ Get all active fences.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Map & lt;number, Geofence & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Map & lt;number, Geofence & gt; & gt; | The promise returned by the function. The key of the map represents the fence ID. The value of the map represents the detailed information of the fence. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call \\${geoLocationManager.getActiveGeoFences} due to limited device capabilities. |
+
+**Examples**
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+
+try {
+  geoLocationManager.getActiveGeoFences().then((res) => {
+    if (res) {
+      console.info("fence num:" + res.size);
+      for (const item of res) {
+        console.info("data=" + JSON.stringify(item));
+      }
+    }
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, getActiveGeoFences: error=' + JSON.stringify(error));
+    });
+} catch (error) {
+  console.error("getActiveGeoFences: errCode" + error.code + ", errMessage" + error.message);
+}
+```

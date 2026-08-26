@@ -31,9 +31,9 @@ Obtains all historical touch points for the current frame. The touch event frequ
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[HistoricalPoint](arkts-arkui-historicalpoint-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[HistoricalPoint](arkts-arkui-historicalpoint-i.md)&gt; | Array of historical points. |
 
 ## preventDefault
 
@@ -54,9 +54,9 @@ Blocks the default event.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100017](../errorcode-event.md#100017-component-does-not-support-default-event-prevention) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100017](../errorcode-event.md#100017-component-does-not-support-default-event-prevention) | Component does not support prevent function. |
 
 ## stopPropagation
 

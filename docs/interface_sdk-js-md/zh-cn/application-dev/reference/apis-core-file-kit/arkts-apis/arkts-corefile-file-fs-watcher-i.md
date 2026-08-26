@@ -9,9 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## start
@@ -28,22 +26,31 @@ start(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900002 |
-| 13900005 |
-| 13900008 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900015 |
-| 13900018 |
-| 13900020 |
-| 13900021 |
-| 13900022 |
-| 13900025 |
-| 13900030 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
+| 13900021 | File table overflow |
+| 13900022 | Too many open files |
+| 13900025 | No space left on device |
+| 13900030 | File name too number |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let watcher = fileIo.createWatcher(filePath, 0xfff, () => {});
+watcher.start();
+watcher.stop();
+```
 
 ## stop
 
@@ -59,19 +66,28 @@ stop(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900002 |
-| 13900005 |
-| 13900008 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900015 |
-| 13900018 |
-| 13900020 |
-| 13900021 |
-| 13900022 |
-| 13900025 |
-| 13900030 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
+| 13900021 | File table overflow |
+| 13900022 | Too many open files |
+| 13900025 | No space left on device |
+| 13900030 | File name too number |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let watcher = fileIo.createWatcher(filePath, 0xfff, () => {});
+watcher.start();
+watcher.stop();
+```

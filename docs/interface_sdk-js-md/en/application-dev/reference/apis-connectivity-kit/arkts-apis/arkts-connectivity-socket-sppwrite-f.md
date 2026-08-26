@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.ConnectivityKit';
+import socket from '@kit.ConnectivityKit';
 ```
 
 ## sppWrite
@@ -20,16 +20,32 @@ Write data through the socket.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| clientSocket | number | Yes |
-| data | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| clientSocket | number | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md). |
+| data | ArrayBuffer | Yes | Indicates the data to write. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 2901054 |
-| 2900099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2901054 | IO error. |
+| 2900099 | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let clientNumber = 1; // clientNumber is obtained by sppAccept or sppConnect.
+let arrayBuffer = new ArrayBuffer(8);
+let data = new Uint8Array(arrayBuffer);
+data[0] = 123;
+try {
+    socket.sppWrite(clientNumber, arrayBuffer);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```

@@ -11,7 +11,7 @@ SystemDefinedRecord是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedre
 ## 导入模块
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## details
@@ -31,3 +31,16 @@ details?: Record<string, number | number | number | string | Uint8Array>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**示例**
+
+```TypeScript
+let sdr = new unifiedDataChannel.SystemDefinedRecord();
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+sdr.details = {
+  title: 'recordTitle',
+  version: 1,
+  content: u8Array
+};
+let unifiedData = new unifiedDataChannel.UnifiedData(sdr);
+```

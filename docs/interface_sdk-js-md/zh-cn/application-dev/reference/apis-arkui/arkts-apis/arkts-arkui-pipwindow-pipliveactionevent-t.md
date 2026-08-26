@@ -12,7 +12,7 @@ type PiPLiveActionEvent = 'playbackStateChanged' | 'voiceStateChanged'
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-| 类型 |
-| --- |
-| 'playbackStateChanged' |
-| 'voiceStateChanged' |
+| 类型 | 说明 |
+| --- | --- |
+| 'playbackStateChanged' | 播放或暂停直播。 |
+| 'voiceStateChanged' | 静音或解除静音。 [since 12] |

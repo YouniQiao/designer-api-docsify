@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { recent } from 'kits/@kit.CoreFileKit';
+import recent from '@kit.CoreFileKit';
 ```
 
 ## ctime

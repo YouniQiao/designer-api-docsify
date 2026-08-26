@@ -13,7 +13,8 @@ Provides callbacks to return the authentication result.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## onAcquireInfo
@@ -37,11 +38,41 @@ Called to acquire authentication tip information. This API is optional.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| module | number | Yes |
-| acquire | number | Yes |
-| extraInfo | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| module | number | Yes |  |
+| acquire | number | Yes |  |
+| extraInfo | any | Yes |  |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let challenge = new Uint8Array([]);
+auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
+  onResult: (result, extraInfo) => {
+    try {
+      console.info(`auth onResult result = ${result}`);
+      if (result == userAuth.ResultCode.SUCCESS) {
+        // Add the logic to be executed when the authentication is successful.
+      }  else {
+        // Add the logic to be executed when the authentication fails.
+      }
+    } catch (error) {
+      console.error(`auth onResult failed. Code: ${error?.code}, message: ${error?.message}`);
+    }
+  },
+  onAcquireInfo: (module, acquire, extraInfo : userAuth.AuthResult) => {
+    try {
+      console.info('auth onAcquireInfo successfully.');
+    } catch (error) {
+      console.error(`auth onAcquireInfo failed. Code: ${error?.code}, message: ${error?.message}`);
+    }
+  }
+});
+```
 
 ## onResult
 
@@ -64,7 +95,30 @@ is successful, the user authentication token will be returned in **extraInfo**. 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | number | Yes |
-| extraInfo | [AuthResult](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-appaccount-authresult-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | number | Yes |  |
+| extraInfo | [AuthResult](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-appaccount-authresult-i.md) | Yes |  |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let challenge = new Uint8Array([]);
+auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
+  onResult: (result, extraInfo) => {
+    try {
+      console.info(`auth onResult result = ${result}`);
+      if (result == userAuth.ResultCode.SUCCESS) {
+        // Add the logic to be executed when the authentication is successful.
+      }  else {
+        // Add the logic to be executed when the authentication fails.
+      }
+    } catch (error) {
+      console.error(`auth onResult failed. Code: ${error?.code}, message: ${error?.message}`);
+    }
+  }
+});
+```

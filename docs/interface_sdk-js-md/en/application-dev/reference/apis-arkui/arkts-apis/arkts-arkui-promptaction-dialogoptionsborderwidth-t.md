@@ -14,7 +14,7 @@ Defines the allowed data types for specifying the background border width of a d
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Dimension](arkts-arkui-dimension-t.md) |
-| EdgeWidths |
+| Type | Description |
+| --- | --- |
+| [Dimension](arkts-arkui-dimension-t.md) |  |
+| EdgeWidths |  |

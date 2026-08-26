@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dataAbility } from 'kits/@kit.ArkData';
+import dataAbility from '@kit.ArkData';
 ```
 
 ## createRdbPredicates
@@ -20,13 +20,22 @@ function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPre
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 数据库表中的表名，不能为空字符串。 |
+| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 是 | DataAbility谓词。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| rdb.RdbPredicates |
+| 类型 | 说明 |
+| --- | --- |
+| rdb.RdbPredicates | 返回RdbPredicates对象。 |
+
+**示例**
+
+```TypeScript
+let dataAbilityPredicates = new dataAbility.DataAbilityPredicates();
+dataAbilityPredicates.equalTo("NAME", "Rose");
+// EMPLOYEE是使用关系型数据库创建的表。
+let predicates = dataAbility.createRdbPredicates("EMPLOYEE", dataAbilityPredicates);
+```

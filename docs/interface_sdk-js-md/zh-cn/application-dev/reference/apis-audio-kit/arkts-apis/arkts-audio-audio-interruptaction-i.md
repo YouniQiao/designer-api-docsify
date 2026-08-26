@@ -2,7 +2,8 @@
 
 音频打断/获取焦点事件的回调方法。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[InterruptEvent](arkts-audio-audio-interruptevent-i.md)替代。
 
 **起始版本：** 7
@@ -16,7 +17,8 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## actionType

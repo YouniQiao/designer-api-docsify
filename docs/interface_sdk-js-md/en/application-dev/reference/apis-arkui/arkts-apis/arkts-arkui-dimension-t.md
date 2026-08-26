@@ -16,11 +16,11 @@ Defines the dimension property with number with units(vp|px|fp|lpx|%), and resou
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PX](arkts-arkui-px-t.md) |
-| [VP](arkts-arkui-vp-t.md) |
-| [FP](arkts-arkui-fp-t.md) |
-| [LPX](arkts-arkui-lpx-t.md) |
-| [Percentage](arkts-arkui-percentage-t.md) |
-| [Resource](arkts-arkui-resource-t.md) |
+| Type | Description |
+| --- | --- |
+| [PX](arkts-arkui-px-t.md) |  |
+| [VP](arkts-arkui-vp-t.md) |  |
+| [FP](arkts-arkui-fp-t.md) |  |
+| [LPX](arkts-arkui-lpx-t.md) |  |
+| [Percentage](arkts-arkui-percentage-t.md) |  |
+| [Resource](arkts-arkui-resource-t.md) |  |

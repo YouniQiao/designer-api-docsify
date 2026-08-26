@@ -17,13 +17,13 @@ declare type GestureCollectInterceptCallback = (recognizers: Array<GestureRecogn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | 是 |
-| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | 是 | 响应链上组件的手势识别器对象。 |
+| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | 否 | 响应链上组件的触摸识别器对象。 默认值为null。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [GestureCollectIntervention](../arkts-apis/arkts-arkui-gesturecollectintervention-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [GestureCollectIntervention](../arkts-apis/arkts-arkui-gesturecollectintervention-e.md) | 手势收集干预结果。 |

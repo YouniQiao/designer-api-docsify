@@ -9,7 +9,7 @@ Provides the ImageProcessor type, including the processing function.
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from 'kits/@kit.ImageKit';
+import videoProcessingEngine from '@kit.ImageKit';
 ```
 
 ## enhanceDetail
@@ -28,26 +28,40 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sourceImage | image.PixelMap | Yes |
-| width | number | Yes |
-| height | number | Yes |
-| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceImage | image.PixelMap | Yes | The source pixelmap. |
+| width | number | Yes | The zoom value of width. |
+| height | number | Yes | The zoom value of height. |
+| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;image.PixelMap & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;image.PixelMap & gt; | A Promise instance used to return the PixelMap object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetail can not work correctly due to limited device capabilities. |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for all of the following error conditions: 1 - Invalid input or output image buffer - The image buffer width(height) is too large or colorspace is incorrect. 2 - Invalid parameter - The parameter does not contain valid information, such as detail enhancer level is incorrect. |
+
+**Examples**
+
+```TypeScript
+import { image, videoProcessingEngine } from '@kit.ImageKit';
+
+async function enhanceDetail(sourceImage: image.PixelMap, width: number, height: number) {
+  videoProcessingEngine.initializeEnvironment();
+  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
+  // Example: The width can be set to 1024, and the height can be set to 1280.
+  let enhancedPixelmap: Promise<image.PixelMap> =
+    imageProcessor.enhanceDetail(sourceImage, width, height, videoProcessingEngine.QualityLevel.HIGH);
+}
+```
 
 ## enhanceDetail
 
@@ -65,25 +79,39 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sourceImage | image.PixelMap | Yes |
-| scale | number | Yes |
-| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceImage | image.PixelMap | Yes | The source pixelmap. |
+| scale | number | Yes | The zoom ratio. |
+| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;image.PixelMap & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;image.PixelMap & gt; | A Promise instance used to return the PixelMap object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetail can not work correctly due to limited device capabilities. |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for all of the following error conditions: 1 - Invalid input or output image buffer - The image buffer width(height) is too large or colorspace is incorrect. 2 - Invalid parameter - The parameter does not contain valid information, such as detail enhancer level is incorrect. |
+
+**Examples**
+
+```TypeScript
+import { image, videoProcessingEngine } from '@kit.ImageKit';
+
+async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
+  videoProcessingEngine.initializeEnvironment();
+  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
+  // Example: The scale can be set to 2.0.
+  let enhancedPixelmap: Promise<image.PixelMap> =
+    imageProcessor.enhanceDetail(sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
+}
+```
 
 ## enhanceDetailSync
 
@@ -101,27 +129,41 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sourceImage | image.PixelMap | Yes |
-| width | number | Yes |
-| height | number | Yes |
-| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceImage | image.PixelMap | Yes | The source pixelmap. |
+| width | number | Yes | The zoom value of width. |
+| height | number | Yes | The zoom value of height. |
+| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| image.PixelMap |
+| Type | Description |
+| --- | --- |
+| image.PixelMap | Returns the destination pixelmap instance . |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetailSync can not work correctly due to limited device capabilities. |
+| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for all of the following error conditions: 1 - Invalid input or output image buffer - The image buffer width(height) is too large or colorspace is incorrect. 2 - Invalid parameter - The parameter does not contain valid information, such as detail enhancer level is incorrect. |
+
+**Examples**
+
+```TypeScript
+import { image, videoProcessingEngine } from '@kit.ImageKit';
+
+async function enhanceDetailSync(sourceImage: image.PixelMap, width: number, height: number) {
+  videoProcessingEngine.initializeEnvironment();
+  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
+  // Example: The width can be set to 1024, and the height can be set to 1280.
+  let enhancedPixelmap: image.PixelMap = imageProcessor.enhanceDetailSync(
+    sourceImage, width, height, videoProcessingEngine.QualityLevel.HIGH);
+}
+```
 
 ## enhanceDetailSync
 
@@ -139,23 +181,37 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sourceImage | image.PixelMap | Yes |
-| scale | number | Yes |
-| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceImage | image.PixelMap | Yes | The source pixelmap. |
+| scale | number | Yes | The zoom ratio. |
+| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| image.PixelMap |
+| Type | Description |
+| --- | --- |
+| image.PixelMap | Returns the destination pixelmap instance |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetailSync can not work correctly due to limited device capabilities. |
+| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for all of the following error conditions: 1 - Invalid input or output image buffer - The image buffer width(height) is too large or colorspace is incorrect. 2 - Invalid parameter - The parameter does not contain valid information, such as detail enhancer level is incorrect. |
+
+**Examples**
+
+```TypeScript
+import { image, videoProcessingEngine } from '@kit.ImageKit';
+
+async function enhanceDetailSync(sourceImage: image.PixelMap, scale: number) {
+  videoProcessingEngine.initializeEnvironment();
+  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
+  // Example: The scale can be set to 2.0.
+  let enhancedPixelmap: image.PixelMap = imageProcessor.enhanceDetailSync(
+    sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
+}
+```

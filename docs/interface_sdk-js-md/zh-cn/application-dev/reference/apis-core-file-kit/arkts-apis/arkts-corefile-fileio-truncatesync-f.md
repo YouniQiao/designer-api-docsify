@@ -23,7 +23,15 @@ declare function truncateSync(path: string, len?: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
-| len | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 待截断文件的应用沙箱路径。 |
+| len | number | 否 | 文件截断后的长度，单位为Byte。默认为0。 |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let len = 5;
+fileio.truncateSync(filePath, len);
+```

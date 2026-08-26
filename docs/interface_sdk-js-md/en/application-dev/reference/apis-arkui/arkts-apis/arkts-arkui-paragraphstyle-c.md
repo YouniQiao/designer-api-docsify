@@ -29,9 +29,9 @@ A constructor used to create a text paragraph style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) | No | Paragraph style options. |
 
 ## leadingMargin
 

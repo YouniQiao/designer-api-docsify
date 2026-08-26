@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## copyFile
@@ -24,40 +22,54 @@ Copies a file. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | string \| number | Yes |
-| dest | string \| number | Yes |
-| mode | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | string \| number | Yes | Path or FD of the file to copy. |
+| dest | string \| number | Yes | Destination path of the file or FD of the file created. |
+| mode | number | No | Whether to overwrite the file with the same name in the destination directory. The default value is **0**, which is the only value supported.   **0**: overwrite the file with the same name and truncate the part that is not overwritten. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900002 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900018 |
-| 13900019 |
-| 13900020 |
-| 13900030 |
-| 13900031 |
-| 13900033 |
-| 13900034 |
-| 13900038 |
-| 13900042 |
-| 13900044 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900030 | File name too number |
+| 13900031 | Function not implemented |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900042 | Unknown error |
+| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fileIo.copyFile(srcPath, dstPath, 0).then(() => {
+  console.info(`Succeeded in copying file.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to copy file. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 
 ## copyFile
@@ -76,33 +88,49 @@ Copies a file. This API overwrites the file with the same name in the destinatio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | string \| number | Yes |
-| dest | string \| number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | string \| number | Yes | Path or FD of the file to copy. |
+| dest | string \| number | Yes | Destination path of the file or FD of the file created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked immediately after the file is copied. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900002 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900018 |
-| 13900019 |
-| 13900020 |
-| 13900030 |
-| 13900031 |
-| 13900033 |
-| 13900034 |
-| 13900038 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900030 | File name too number |
+| 13900031 | Function not implemented |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fileIo.copyFile(srcPath, dstPath, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to copy file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in copying file.`);
+  }
+});
+```
 
 
 ## copyFile
@@ -126,31 +154,47 @@ Copies a file with the specified mode. This API uses an asynchronous callback to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | string \| number | Yes |
-| dest | string \| number | Yes |
-| mode | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | string \| number | Yes | Path or FD of the file to copy. |
+| dest | string \| number | Yes | Destination path of the file or FD of the file created. |
+| mode | number | Yes | Whether to overwrite the file with the same name in the destination directory. The default value is **0**, which is the only value supported.   **0**: overwrite the file with the same name and truncate the part that is not overwritten. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked immediately after the file is copied. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900002 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900018 |
-| 13900019 |
-| 13900020 |
-| 13900030 |
-| 13900031 |
-| 13900033 |
-| 13900034 |
-| 13900038 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900030 | File name too number |
+| 13900031 | Function not implemented |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fileIo.copyFile(srcPath, dstPath, 0, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to copy file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in copying file.`);
+  }
+});
+```

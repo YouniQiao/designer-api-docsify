@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## getSupportedModes
@@ -26,18 +27,24 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| portId | number | Yes | Port number. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md) |
+| Type | Description |
+| --- | --- |
+| [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md) | Mask combination for the supported mode list. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+let ret: number = usbManager.getSupportedModes(0);
+```

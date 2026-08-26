@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## getWifiCapability
@@ -26,21 +27,30 @@ function getWifiCapability(capability: WifiCapability): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| capability | [WifiCapability](arkts-connectivity-wifimanager-wificapability-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| capability | [WifiCapability](arkts-connectivity-wifimanager-wificapability-e.md) | 是 | 标识WLAN能力枚举。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果指定的能力已使能，返回{ |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API is not allowed called by Non-system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [2501000](../errorcode-wifi.md#2501000-sta内部异常) | Operation failed. |
+
+**示例**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+let result = wifiManager.getWifiCapability(wifiManager.WifiCapability.WIFI_AUTO_ENABLE);
+console.info("result:" + result);
+```

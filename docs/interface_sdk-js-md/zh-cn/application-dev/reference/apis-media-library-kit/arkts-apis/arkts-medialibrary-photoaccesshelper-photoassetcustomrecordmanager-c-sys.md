@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import photoAccessHelper from '@kit.MediaLibraryKit';
 ```
 
 ## addLcdJumpCount
@@ -30,23 +30,23 @@ addLcdJumpCount(ids: Array<number>): Promise<Array<number>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ids | Array & lt;number & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ids | Array & lt;number & gt; | 是 | [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)中的fileId集合。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;number & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;number & gt; & gt; | 更新失败的自定义用户统计行为数据中的fileId。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:  1. The ids list is empty.  2. The number of ids lists exceeds 500. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
 
 ## addShareCount
 
@@ -64,23 +64,23 @@ addShareCount(ids: Array<number>): Promise<Array<number>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ids | Array & lt;number & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ids | Array & lt;number & gt; | 是 | [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)中的fileId集合。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;number & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;number & gt; & gt; | 更新失败的自定义用户统计行为数据中的fileId。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:  1. The ids list is empty. 2. The number of ids lists exceeds 500. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
 
 ## createCustomRecords
 
@@ -98,23 +98,42 @@ createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| customRecords | Array&lt;[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| customRecords | Array&lt;[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)&gt; | 是 | 新增自定义用户统计行为数据。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:  1. The value range of mandatory parameters in photoAssetCustomRecord does not meet the requirements.  2. The transferred record already exists. 3. The number of transferred records exceeds 200. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(context: Context) {
+  console.info('createCustomRecords');
+  let crManager = photoAccessHelper.PhotoAssetCustomRecordManager.getCustomRecordManagerInstance(context);
+  let crArray:Array<photoAccessHelper.PhotoAssetCustomRecord> = [
+    {fileId:1,shareCount:1,lcdJumpCount:1}
+  ];
+  crManager.createCustomRecords(crArray).then(() => {
+    console.info('createCustomRecords successful');
+  }).catch((err: BusinessError) => {
+    console.error(`createCustomRecords fail with error: ${err.code}, ${err.message}`);
+  });
+}
+```
 
 ## getCustomRecordManagerInstance
 
@@ -132,22 +151,38 @@ static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordM
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PhotoAssetCustomRecordManager](arkts-medialibrary-photoaccesshelper-photoassetcustomrecordmanager-c-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PhotoAssetCustomRecordManager](arkts-medialibrary-photoaccesshelper-photoassetcustomrecordmanager-c-sys.md) | 用户自定义行为统计实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [23800107](../errorcode-medialibrary.md#23800107-context为空或者无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [23800107](../errorcode-medialibrary.md#23800107-context为空或者无效) | Context is invalid |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(context: Context) {
+  console.info('getCustomRecordManagerInstance');
+  try {
+    let crManager = photoAccessHelper.PhotoAssetCustomRecordManager.getCustomRecordManagerInstance(context);
+  } catch(err) {
+    console.error(`getCustomRecordManagerInstance failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
 
 ## getCustomRecords
 
@@ -165,23 +200,47 @@ getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCusto
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| optionCheck | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| optionCheck | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;FetchResult&lt;[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;FetchResult&lt;[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)&gt;&gt; | Promise对象，返回自定义用户统计行为数据集合。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes: 1. The filter criteria or fetchColumns that are not supported by options are transferred. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+
+**示例**
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(context: Context) {
+  console.info('getCustomRecords');
+  let crManager = photoAccessHelper.PhotoAssetCustomRecordManager.getCustomRecordManagerInstance(context);
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  predicates.equalTo('file_id', 1);
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  crManager.getCustomRecords(fetchOption).then(async (fetchResult) => {
+    let record = await fetchResult.getFirstObject();
+    console.info('record file id is ' + record.fileId);
+  }).catch((err: BusinessError) => {
+    console.error('getCustomRecords fail with error: ${err.code}, ${err.message}');
+  });
+}
+```
 
 ## removeCustomRecords
 
@@ -199,23 +258,46 @@ removeCustomRecords(optionCheck: FetchOptions): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| optionCheck | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| optionCheck | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:  1. The filter criteria or fetchColumns that are not supported by options are transferred. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+
+**示例**
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(context: Context) {
+  console.info('removeCustomRecords');
+  let crManager = photoAccessHelper.PhotoAssetCustomRecordManager.getCustomRecordManagerInstance(context);
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  predicates.equalTo('file_id', 1);
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  crManager.removeCustomRecords(fetchOption).then(() => {
+    console.info('removeCustomRecords successful');
+  }).catch((err: BusinessError) => {
+    console.error(`removeCustomRecords fail with error: ${err.code}, ${err.message}`);
+  });
+}
+```
 
 ## setCustomRecords
 
@@ -233,20 +315,40 @@ setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<nu
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| customRecords | Array&lt;[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| customRecords | Array&lt;[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)&gt; | 是 | 自定义用户统计行为数据。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;number & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;number & gt; & gt; | 更新失败的自定义用户统计行为数据中的fileId。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:  1. The value range of mandatory parameters in photoAssetCustomRecord does not meet the requirements.  2. The number of transferred records exceeds 200. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(context: Context) {
+  console.info('setCustomRecords');
+  let crManager = photoAccessHelper.PhotoAssetCustomRecordManager.getCustomRecordManagerInstance(context);
+  let UpdateArray: Array<photoAccessHelper.PhotoAssetCustomRecord> = [
+    {fileId:1,shareCount:2,lcdJumpCount:3},
+    {fileId:2,shareCount:2,lcdJumpCount:3}
+  ];
+  crManager.setCustomRecords(UpdateArray).then((failIds) => {
+    console.info('setCustomRecords successful');
+  }).catch((err: BusinessError) => {
+    console.error('setCustomRecords file with err: ${err.code}, ${err.message}');
+  });
+}
+```

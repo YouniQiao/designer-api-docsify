@@ -14,13 +14,13 @@ export type OnContentWillChangeCallback = (currentIndex: number, comingIndex: nu
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| currentIndex | number | 是 |
-| [comingIndex](../arkts-components/arkts-arkui-swipercontentwillscrollresult-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| currentIndex | number | 是 | 当前页签索引。 |
+| comingIndex | number | 是 | 即将切换的页签索引。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | - |

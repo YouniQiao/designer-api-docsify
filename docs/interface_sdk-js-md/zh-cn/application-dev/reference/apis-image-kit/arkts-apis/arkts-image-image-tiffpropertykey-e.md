@@ -2,7 +2,8 @@
 
 表示TIFF图片信息的枚举。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 返回字段类型具体参考[TiffMetadata](arkts-image-image-tiffmetadata-c.md)。
 > | 名称 | 值 | 说明 |
 > | ---- | -- | ---- |
@@ -22,7 +23,7 @@
 - 5表示LZW（基于字典的无损压缩算法）。  
 - 7表示JPEG基线。  
 - 8表示Deflate（基于LZ77+Huffman的无损压缩算法） |  
-| [SOFTWARE](#software) | 'TiffSoftware' | 用于生成图像的软件名称和版本。 | | [PRIMARY_CHROMATICITIES](#primary_chromaticities) | 'TiffPrimaryChromaticities' | 图像中RGB三原色的色度坐标。 | | [ARTIST](#artist) | 'TiffArtist' |
+| SOFTWARE | 'TiffSoftware' | 用于生成图像的软件名称和版本。 | | PRIMARY_CHROMATICITIES | 'TiffPrimaryChromaticities' | 图像中RGB三原色的色度坐标。 | | ARTIST | 'TiffArtist' | 创建图像的用户名称。 |
 
 **起始版本：** 26.0.0
 

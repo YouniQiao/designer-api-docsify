@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDeviceCooperate } from 'kits/@kit.InputKit';
+import inputDeviceCooperate from '@kit.InputKit';
 ```
 
 ## 汇总
@@ -21,24 +21,24 @@ import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [enable(键鼠穿越)](arkts-input-inputdevicecooperate-enable-f-sys.md) |
-| [enable(键鼠穿越)](arkts-input-inputdevicecooperate-enable-f-sys.md) |
-| [getState(键鼠穿越)](arkts-input-inputdevicecooperate-getstate-f-sys.md) |
-| [getState(键鼠穿越)](arkts-input-inputdevicecooperate-getstate-f-sys.md) |
-| off(键鼠穿越) |
-| on(键鼠穿越) |
-| [start(键鼠穿越)](arkts-input-inputdevicecooperate-start-f-sys.md) |
-| [start(键鼠穿越)](arkts-input-inputdevicecooperate-start-f-sys.md) |
-| [stop(键鼠穿越)](arkts-input-inputdevicecooperate-stop-f-sys.md) |
-| [stop(键鼠穿越)](arkts-input-inputdevicecooperate-stop-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [enable(键鼠穿越)](arkts-input-inputdevicecooperate-enable-f-sys.md) | 开启、关闭键鼠穿越，使用callback异步回调。 |
+| [enable(键鼠穿越)](arkts-input-inputdevicecooperate-enable-f-sys.md) | 开启、关闭键鼠穿越，使用Promise异步回调。 |
+| [getState(键鼠穿越)](arkts-input-inputdevicecooperate-getstate-f-sys.md) | 获取键鼠穿越开关的状态，使用callback异步回调。 |
+| [getState(键鼠穿越)](arkts-input-inputdevicecooperate-getstate-f-sys.md) | 获取键鼠穿越开关的状态，使用Promise异步回调。 |
+| off(键鼠穿越) | 关闭监听键鼠穿越状态，使用callback异步回调。 |
+| on(键鼠穿越) | 注册监听键鼠穿越状态，使用callback异步回调。 |
+| [start(键鼠穿越)](arkts-input-inputdevicecooperate-start-f-sys.md) | 启动键鼠穿越，使用callback异步回调。 |
+| [start(键鼠穿越)](arkts-input-inputdevicecooperate-start-f-sys.md) | 启动键鼠穿越，使用Promise异步回调。 |
+| [stop(键鼠穿越)](arkts-input-inputdevicecooperate-stop-f-sys.md) | 停止键鼠穿越，使用callback异步回调。 |
+| [stop(键鼠穿越)](arkts-input-inputdevicecooperate-stop-f-sys.md) | 停止键鼠穿越，使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 |
-| --- |
-| [EventMsg(键鼠穿越)](arkts-input-inputdevicecooperate-eventmsg-e-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [EventMsg(键鼠穿越)](arkts-input-inputdevicecooperate-eventmsg-e-sys.md) | 键鼠穿越事件。 |
 <!--DelEnd-->

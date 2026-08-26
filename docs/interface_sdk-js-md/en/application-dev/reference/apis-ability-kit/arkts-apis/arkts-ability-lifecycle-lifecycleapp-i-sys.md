@@ -29,7 +29,7 @@ Called when the window display mode of this ability changes, for example, from f
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isShownInMultiWindow | boolean | Yes |
-| newConfig | resourceManager.Configuration | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isShownInMultiWindow | boolean | Yes | Specifies whether this ability is currently in multi-window mode.The value {@code true} indicates the multi-window mode, and {@code false} indicates another mode. |
+| newConfig | resourceManager.Configuration | Yes | Indicates the new configuration information about Page ability. |

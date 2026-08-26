@@ -9,7 +9,7 @@ Provides APIs for implementing HCE, including receiving Application Protocol Dat
 ## Modules to Import
 
 ```TypeScript
-import { cardEmulation } from 'kits/@kit.ConnectivityKit';
+import cardEmulation from '@kit.ConnectivityKit';
 ```
 
 ## off('hceCmd')
@@ -30,17 +30,52 @@ Unsubscribes from events indicating receiving of APDUs from the peer card reader
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'hceCmd' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'hceCmd' | Yes | Event type. It has a fixed value of **hceCmd**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | No | Event callback. Each number is represented in hexadecimal notation, with values ranging from 0x00 to 0xFF. If this parameter is not set, this API unregisters the callback for the specified **type**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+// Applicable to devices other than lite wearables
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
+import { AsyncCallback } from '@kit.BasicServicesKit';
+import { bundleManager, AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+let hceService: cardEmulation.HceService = new cardEmulation.HceService();
+let element: bundleManager.ElementName;
+const apduCallback: AsyncCallback<number[]> = (err, data) => {
+  // Implement data processing and handle exceptions.
+  console.info("AsyncCallback got apdu data");
+};
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, param: AbilityConstant.LaunchParam) {
+    hilog.info(0x0000, 'testHce', '%{public}s', 'Ability onCreate');
+    element = {
+      bundleName: want.bundleName ?? '',
+      abilityName: want.abilityName ?? '',
+      moduleName: want.moduleName
+    }
+    hceService.on('hceCmd', apduCallback);
+  }
+  onDestroy() {
+    hilog.info(0x0000, 'testHce', '%{public}s', 'Ability onDestroy');
+    hceService.off('hceCmd', apduCallback);
+    hceService.stop(element);
+  }
+  // Other functions in the lifecycle
+}
+```
 
 ## on('hceCmd')
 
@@ -60,18 +95,18 @@ Subscribes to events indicating receiving of APDUs from the peer card reader. Th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'hceCmd' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'hceCmd' | Yes | Event type. It has a fixed value of **hceCmd**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes | Event callback used to return the data array that complies with the APDU. Each number is represented in hexadecimal notation, with values ranging from 0x00 to 0xFF. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter.<br>**Applicable version:** 12 and later |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 12 and later |
 
 ## sendResponse
 
@@ -81,7 +116,8 @@ sendResponse(responseApdu: number[]): void
 
 Sends a response to the peer card reader.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [transmit](#transmit) instead.
 
@@ -99,9 +135,9 @@ Sends a response to the peer card reader.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| responseApdu | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| responseApdu | number[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 ## start
 
@@ -121,19 +157,19 @@ Starts HCE, including enabling this application to run in the foreground prefere
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes |
-| aidList | string[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | Information about the page, on which the application declares the NFC card emulation capability. It must contain at least **bundleName** and **abilityName** and cannot be empty. |
+| aidList | string[] | Yes | List of AIDs to register. This parameter can be left empty. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
 
 ## startHCE
 
@@ -143,7 +179,8 @@ startHCE(aidList: string[]): boolean
 
 Starts HCE, including enabling this application to run in the foreground preferentially and dynamically registering the AID list.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [start](#start) instead.
 
@@ -161,15 +198,15 @@ Starts HCE, including enabling this application to run in the foreground prefere
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| aidList | string[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| aidList | string[] | Yes | List of AIDs to register. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if HCE is started or has been started; returns **false** otherwise. |
 
 ## stop
 
@@ -189,18 +226,18 @@ Stops HCE, including canceling the subscription of APDU data, exiting this appli
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | Information about the page, on which the application declares the NFC card emulation capability. It must contain at least **bundleName** and **abilityName** and cannot be empty. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
 
 ## stopHCE
 
@@ -210,7 +247,8 @@ stopHCE(): boolean
 
 Stops HCE, including exiting the current application from the foreground, releasing the dynamically registered AID list, and canceling the subscription of **hceCmd**.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [stop](#stop) instead.
 
@@ -228,9 +266,9 @@ Stops HCE, including exiting the current application from the foreground, releas
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if HCE is stopped or disabled; **false** otherwise. |
 
 ## transmit
 
@@ -250,24 +288,58 @@ Transmits an APDU to the peer card reader. This API uses a promise to return the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| response | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| response | number[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+
+**Examples**
+
+```TypeScript
+// Applicable to devices other than lite wearables
+import { cardEmulation } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hceService: cardEmulation.HceService = new cardEmulation.HceService();
+
+// Data to be sent by the application. The following data is for reference only.
+const responseData = [0x1, 0x2];
+hceService.transmit(responseData).then(() => {
+  // Process the promise.
+  console.info("transmit Promise success.");
+}).catch((err: BusinessError) => {
+  console.error("transmit Promise error:", err);
+});
+```
+
+```TypeScript
+// Applicable to lite wearables
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+let hceService = new cardEmulation.HceService();
+
+// Data to be sent by the application. The following data is for reference only.
+let responseData = [0x1, 0x2];
+hceService.transmit(responseData).then(() => {
+  // Process the promise.
+  console.info("transmit Promise success.");
+});
+console.info("transmit Promise end.");
+```
 
 ## transmit
 
@@ -287,16 +359,56 @@ Sends APDU data to the peer card reader. The application can call this API only 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| response | number[] | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| response | number[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+
+**Examples**
+
+```TypeScript
+// Applicable to devices other than lite wearables
+import { cardEmulation } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hceService: cardEmulation.HceService = new cardEmulation.HceService();
+
+// Data to be sent by the application. The following data is for reference only.
+try {
+  const responseData = [0x1, 0x2];
+
+  hceService.transmit(responseData, (err : BusinessError)=> {
+    if (err) {
+      console.error(`transmit AsyncCallback err Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info("transmit AsyncCallback success.");
+    }
+  });
+} catch (error) {
+  console.error(`transmit AsyncCallback catch Code: ${(error as BusinessError).code}, ` +
+    `message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+// Applicable to lite wearables
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+let hceService = new cardEmulation.HceService();
+
+// Data to be sent by the application. The following data is for reference only.
+let responseData = [0x1, 0x2];
+hceService.transmit(responseData, () => {
+  console.info("transmit Promise success.");
+});
+console.info("transmit Promise end.");
+```

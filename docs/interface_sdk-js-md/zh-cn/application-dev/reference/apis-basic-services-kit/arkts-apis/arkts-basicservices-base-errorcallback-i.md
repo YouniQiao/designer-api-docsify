@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AsyncCallback, BusinessError, Callback, ErrorCallback } from 'kits/@kit.BasicServicesKit';
-import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from 'kits/@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
 ```
 
 ## [[Call]]
@@ -27,6 +26,6 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| err | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| err | T | 是 | 接口调用失败的公共错误信息，类型默认为[BusinessError](arkts-basicservices-base-businesserror-i.md)，包含错误码（code）和可选附加数据（data）。 |

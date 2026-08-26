@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getSimpleDateTimeFormatByPattern
@@ -22,22 +22,37 @@ export function getSimpleDateTimeFormatByPattern(pattern: string, locale?: Intl.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | 是 |
-| locale | Intl.Locale | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pattern | string | 是 | 合法的模式字符串，支持 [日期字段符号表](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)中Field Patterns值的自由组合。同 时，pattern支持传入自定义文本，文本内容以`''`标识。 |
+| locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | SimpleDateTimeFormat对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let locale: Intl.Locale = new Intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatByPattern("'month('M')'", locale);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.getSimpleDateTimeFormatByPattern failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 
 ## getSimpleDateTimeFormatByPattern
@@ -60,19 +75,34 @@ export function getSimpleDateTimeFormatByPattern(pattern: string, locale?: intl.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | 是 |
-| locale | intl.Locale | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pattern | string | 是 | 合法的模式字符串，支持 [日期字段符号表](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)中Field Patterns值的自由组合。同 时，pattern支持传入自定义文本，文本内容以`''`标识。 |
+| locale | intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | SimpleDateTimeFormat对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n, intl } from '@kit.LocalizationKit';
+
+try {
+  let locale: intl.Locale = new intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatByPattern("'month('M')'", locale);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.getSimpleDateTimeFormatByPattern failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```

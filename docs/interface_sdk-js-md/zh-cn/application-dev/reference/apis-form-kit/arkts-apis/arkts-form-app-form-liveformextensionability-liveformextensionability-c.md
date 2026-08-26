@@ -11,7 +11,7 @@ Interactive widget extension class. It provides APIs for the widget provider to 
 ## 导入模块
 
 ```TypeScript
-import { LiveFormExtensionAbility, LiveFormInfo } from 'kits/@kit.FormKit';
+import LiveFormExtensionAbility, { LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## onLiveFormCreate
@@ -32,10 +32,25 @@ Called after the UI content of **LiveFormExtensionAbility** is created.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | 是 |
-| session | [UIExtensionContentSession](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | 是 | Interactive widget information, including the widget ID. |
+| session | [UIExtensionContentSession](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 | UI information. |
+
+**示例**
+
+```TypeScript
+import { UIExtensionContentSession } from '@kit.AbilityKit';
+import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
+
+const TAG: string = '[testTag] LiveFormExtAbility';
+
+export default class LiveFormExtAbility extends LiveFormExtensionAbility {
+  onLiveFormCreate(liveFormInfo: LiveFormInfo, session: UIExtensionContentSession) {
+    console.info(TAG, `onLiveFormCreate, formId: ${liveFormInfo.formId}`);
+  }
+}
+```
 
 ## onLiveFormDestroy
 
@@ -55,9 +70,23 @@ Called to clear resources when this **LiveFormExtensionAbility** is destroyed.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | 是 | Interactive widget information, including the widget ID. |
+
+**示例**
+
+```TypeScript
+import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
+
+const TAG: string = '[testTag] LiveFormExtAbility';
+
+export default class LiveFormExtAbility extends LiveFormExtensionAbility {
+  onLiveFormDestroy(liveFormInfo: LiveFormInfo) {
+    console.info(TAG, `onLiveFormDestroy, liveFormInfo: ${liveFormInfo.formId}`);
+  }
+}
+```
 
 ## context
 

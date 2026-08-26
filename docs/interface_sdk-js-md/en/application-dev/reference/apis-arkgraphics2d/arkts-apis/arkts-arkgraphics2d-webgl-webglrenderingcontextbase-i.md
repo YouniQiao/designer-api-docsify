@@ -22,9 +22,9 @@ Selects active texture unit
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [texture](#texture) | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| texture | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture unit to activate |
 
 ## attachShader
 
@@ -42,10 +42,10 @@ Attaches a shader to a program
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program to attach the shader to |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader to attach |
 
 ## bindAttribLocation
 
@@ -63,11 +63,11 @@ Binds a generic vertex index to a named attribute variable
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program to bind the attribute location |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the generic vertex attribute |
+| name | string | Yes | The name of the attribute variable |
 
 ## bindBuffer
 
@@ -85,10 +85,10 @@ Binds a buffer to a target
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the buffer to |
+| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | The buffer to bind |
 
 ## bindFramebuffer
 
@@ -106,10 +106,10 @@ Binds a framebuffer to a target
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [framebuffer](#framebuffer) | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the framebuffer to |
+| framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes | The framebuffer to bind |
 
 ## bindRenderbuffer
 
@@ -127,10 +127,10 @@ Binds a renderbuffer to a target
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [renderbuffer](#renderbuffer) | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the renderbuffer to |
+| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer to bind |
 
 ## bindTexture
 
@@ -148,10 +148,10 @@ Binds a texture to a target
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [texture](#texture) | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the texture to |
+| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture to bind |
 
 ## blendColor
 
@@ -169,12 +169,12 @@ Sets the blend color
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| red | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
-| green | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
-| blue | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
-| [alpha](#alpha) | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| red | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Red component |
+| green | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Green component |
+| blue | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Blue component |
+| alpha | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Alpha component |
 
 ## blendFunc
 
@@ -192,10 +192,10 @@ Sets the blend function
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sfactor | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| dfactor | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sfactor | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Source blend factor |
+| dfactor | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Destination blend factor |
 
 ## blendFuncSeparate
 
@@ -213,12 +213,12 @@ Sets the blend function for RGB and alpha separately
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| srcRGB | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| dstRGB | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| srcAlpha | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| dstAlpha | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| srcRGB | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Source RGB blend factor |
+| dstRGB | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Destination RGB blend factor |
+| srcAlpha | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Source alpha blend factor |
+| dstAlpha | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Destination alpha blend factor |
 
 ## checkFramebufferStatus
 
@@ -236,15 +236,15 @@ Returns the framebuffer status
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target framebuffer |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GLenum](arkts-arkgraphics2d-glenum-t.md) |
+| Type | Description |
+| --- | --- |
+| [GLenum](arkts-arkgraphics2d-glenum-t.md) | The framebuffer status |
 
 ## clear
 
@@ -262,9 +262,9 @@ Clears buffers
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mask | [GLbitfield](arkts-arkgraphics2d-glbitfield-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mask | [GLbitfield](arkts-arkgraphics2d-glbitfield-t.md) | Yes | Which buffers to clear |
 
 ## clearColor
 
@@ -282,12 +282,12 @@ Sets the clear color
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| red | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
-| green | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
-| blue | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
-| [alpha](#alpha) | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| red | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Red component |
+| green | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Green component |
+| blue | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Blue component |
+| alpha | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Alpha component |
 
 ## clearDepth
 
@@ -305,9 +305,9 @@ Sets the clear depth
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| depth | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| depth | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Depth clear value |
 
 ## clearStencil
 
@@ -325,9 +325,9 @@ Sets the clear stencil
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| s | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| s | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Stencil clear value |
 
 ## colorMask
 
@@ -345,12 +345,12 @@ Sets the color mask
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| red | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
-| green | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
-| blue | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
-| [alpha](#alpha) | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| red | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write red |
+| green | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write green |
+| blue | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write blue |
+| alpha | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write alpha |
 
 ## compileShader
 
@@ -368,9 +368,9 @@ Compiles a shader
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader to compile |
 
 ## copyTexImage2D
 
@@ -397,16 +397,16 @@ Copies pixels from the framebuffer into a 2D texture image
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border width |
 
 ## copyTexSubImage2D
 
@@ -433,16 +433,16 @@ Copies a portion of a texture image
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 
 ## createBuffer
 
@@ -460,9 +460,9 @@ Creates a buffer
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | The created buffer |
 
 ## createFramebuffer
 
@@ -480,9 +480,9 @@ Creates a framebuffer
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | The created framebuffer |
 
 ## createProgram
 
@@ -500,9 +500,9 @@ Creates a program
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | The created program |
 
 ## createRenderbuffer
 
@@ -520,9 +520,9 @@ Creates a renderbuffer
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | The created renderbuffer |
 
 ## createShader
 
@@ -540,15 +540,15 @@ Creates a shader
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Shader type |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | The created shader |
 
 ## createTexture
 
@@ -566,9 +566,9 @@ Creates a texture
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | The created texture |
 
 ## cullFace
 
@@ -586,9 +586,9 @@ Sets the cull face mode
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Cull face mode |
 
 ## deleteBuffer
 
@@ -606,9 +606,9 @@ Deletes a buffer
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | The buffer to delete |
 
 ## deleteFramebuffer
 
@@ -626,9 +626,9 @@ Deletes a framebuffer
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [framebuffer](#framebuffer) | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes | The framebuffer to delete |
 
 ## deleteProgram
 
@@ -646,9 +646,9 @@ Deletes a program
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes | The program to delete |
 
 ## deleteRenderbuffer
 
@@ -666,9 +666,9 @@ Deletes a renderbuffer
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [renderbuffer](#renderbuffer) | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer to delete |
 
 ## deleteShader
 
@@ -686,9 +686,9 @@ Deletes a shader
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | Yes | The shader to delete |
 
 ## deleteTexture
 
@@ -706,9 +706,9 @@ Deletes a texture
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [texture](#texture) | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture to delete |
 
 ## depthFunc
 
@@ -726,9 +726,9 @@ Sets the depth function
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Depth function |
 
 ## depthMask
 
@@ -746,9 +746,9 @@ Sets the depth mask
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| flag | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| flag | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write to depth buffer |
 
 ## depthRange
 
@@ -766,10 +766,10 @@ Sets the depth range
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [zNear](../../apis-arkui/arkts-components/arkts-arkui-depthcameraparams-i-sys.md) | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
-| [zFar](../../apis-arkui/arkts-components/arkts-arkui-depthcameraparams-i-sys.md) | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| zNear | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Near depth |
+| zFar | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Far depth |
 
 ## detachShader
 
@@ -787,10 +787,10 @@ Detaches a shader from a program
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader to detach |
 
 ## disable
 
@@ -808,9 +808,9 @@ Disables a capability
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The capability to disable |
 
 ## disableVertexAttribArray
 
@@ -828,9 +828,9 @@ Disables a vertex attribute array
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the vertex attribute |
 
 ## drawArrays
 
@@ -848,11 +848,11 @@ Draws arrays
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| first | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| count | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Drawing mode |
+| first | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Starting index |
+| count | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Number of indices |
 
 ## drawElements
 
@@ -870,12 +870,12 @@ Draws elements
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| count | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Drawing mode |
+| count | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Number of indices |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Type of indices |
+| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset in the buffer |
 
 ## enable
 
@@ -893,9 +893,9 @@ Enables a capability
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The capability to enable |
 
 ## enableVertexAttribArray
 
@@ -913,9 +913,9 @@ Enables a vertex attribute array
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the vertex attribute |
 
 ## finish
 
@@ -966,12 +966,12 @@ Attaches a renderbuffer to a framebuffer
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| renderbuffertarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [renderbuffer](#renderbuffer) | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Framebuffer target |
+| attachment | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Attachment point |
+| renderbuffertarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Renderbuffer target |
+| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer to attach |
 
 ## framebufferTexture2D
 
@@ -995,13 +995,13 @@ Attaches a texture to a framebuffer
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| textarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [texture](#texture) | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Framebuffer target |
+| attachment | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Attachment point |
+| textarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture to attach |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
 
 ## frontFace
 
@@ -1019,9 +1019,9 @@ Sets the front face direction
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Front face mode |
 
 ## generateMipmap
 
@@ -1039,9 +1039,9 @@ Generates mipmaps for a texture
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
 
 ## getActiveAttrib
 
@@ -1059,16 +1059,16 @@ Returns information about an active attribute
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the attribute |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null | Information about the active attribute |
 
 ## getActiveUniform
 
@@ -1086,16 +1086,16 @@ Returns information about an active uniform
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the uniform |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null | Information about the active uniform |
 
 ## getAttachedShaders
 
@@ -1113,15 +1113,15 @@ Returns the shaders attached to a program
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md)[] \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md)[] \| null | Array of attached shaders |
 
 ## getAttribLocation
 
@@ -1139,16 +1139,16 @@ Returns the location of an attribute variable
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
+| name | string | Yes | The name of the attribute |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GLint](arkts-arkgraphics2d-glint-t.md) |
+| Type | Description |
+| --- | --- |
+| [GLint](arkts-arkgraphics2d-glint-t.md) | The location of the attribute |
 
 ## getBufferParameter
 
@@ -1166,16 +1166,16 @@ Returns a buffer parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | The buffer parameter value |
 
 ## getContextAttributes
 
@@ -1193,9 +1193,9 @@ Returns the WebGLContextAttributes for the current context
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLContextAttributes](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLContextAttributes](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) \| null | The WebGLContextAttributes object |
 
 ## getError
 
@@ -1213,9 +1213,9 @@ Returns the error code
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GLenum](arkts-arkgraphics2d-glenum-t.md) |
+| Type | Description |
+| --- | --- |
+| [GLenum](arkts-arkgraphics2d-glenum-t.md) | The error code |
 
 ## getExtension
 
@@ -1233,15 +1233,15 @@ Enables a WebGL extension
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | The name of the extension |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | The extension object if available |
 
 ## getFramebufferAttachmentParameter
 
@@ -1259,17 +1259,17 @@ Returns a framebuffer attachment parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Framebuffer target |
+| attachment | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Attachment point |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | The attachment parameter value |
 
 ## getParameter
 
@@ -1287,15 +1287,15 @@ Returns a parameter value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | The parameter value |
 
 ## getProgramInfoLog
 
@@ -1313,15 +1313,15 @@ Returns the program info log
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string \| null |
+| Type | Description |
+| --- | --- |
+| string \| null | The program info log |
 
 ## getProgramParameter
 
@@ -1339,16 +1339,16 @@ Returns a program parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | The program parameter value |
 
 ## getRenderbufferParameter
 
@@ -1366,16 +1366,16 @@ Returns a renderbuffer parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Renderbuffer target |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | The renderbuffer parameter value |
 
 ## getShaderInfoLog
 
@@ -1393,15 +1393,15 @@ Returns the shader info log
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string \| null |
+| Type | Description |
+| --- | --- |
+| string \| null | The shader info log |
 
 ## getShaderParameter
 
@@ -1419,16 +1419,16 @@ Returns a shader parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | The shader parameter value |
 
 ## getShaderPrecisionFormat
 
@@ -1446,16 +1446,16 @@ Returns the shader precision format
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shadertype | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| precisiontype | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shadertype | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Shader type |
+| precisiontype | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Precision type |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLShaderPrecisionFormat](arkts-arkgraphics2d-webgl-webglshaderprecisionformat-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLShaderPrecisionFormat](arkts-arkgraphics2d-webgl-webglshaderprecisionformat-i.md) \| null | The precision format |
 
 ## getShaderSource
 
@@ -1473,15 +1473,15 @@ Returns the shader source
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string \| null |
+| Type | Description |
+| --- | --- |
+| string \| null | The shader source |
 
 ## getSupportedExtensions
 
@@ -1499,9 +1499,9 @@ Returns a list of supported extensions
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string[] \| null |
+| Type | Description |
+| --- | --- |
+| string[] \| null | List of supported extensions |
 
 ## getTexParameter
 
@@ -1519,16 +1519,16 @@ Returns a texture parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | The texture parameter value |
 
 ## getUniform
 
@@ -1546,16 +1546,16 @@ Returns the value of a uniform
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) | Yes | The uniform location |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | The uniform value |
 
 ## getUniformLocation
 
@@ -1573,16 +1573,16 @@ Returns the location of a uniform variable
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
+| name | string | Yes | The name of the uniform |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | The uniform location |
 
 ## getVertexAttrib
 
@@ -1600,16 +1600,16 @@ Returns a vertex attribute parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the vertex attribute |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | The vertex attribute parameter value |
 
 ## getVertexAttribOffset
 
@@ -1627,16 +1627,16 @@ Returns the offset of a vertex attribute
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the vertex attribute |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GLintptr](arkts-arkgraphics2d-glintptr-t.md) |
+| Type | Description |
+| --- | --- |
+| [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | The vertex attribute offset |
 
 ## hint
 
@@ -1654,10 +1654,10 @@ Sets a hint
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Hint target |
+| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Hint mode |
 
 ## isBuffer
 
@@ -1675,15 +1675,15 @@ Returns whether a buffer is valid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | The buffer |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
+| Type | Description |
+| --- | --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the buffer is valid |
 
 ## isContextLost
 
@@ -1701,9 +1701,9 @@ Returns whether the context is lost
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the context is lost |
 
 ## isEnabled
 
@@ -1721,15 +1721,15 @@ Returns whether a capability is enabled
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The capability |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
+| Type | Description |
+| --- | --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the capability is enabled |
 
 ## isFramebuffer
 
@@ -1747,15 +1747,15 @@ Returns whether a framebuffer is valid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [framebuffer](#framebuffer) | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes | The framebuffer |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
+| Type | Description |
+| --- | --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the framebuffer is valid |
 
 ## isProgram
 
@@ -1773,15 +1773,15 @@ Returns whether a program is valid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes | The program |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
+| Type | Description |
+| --- | --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the program is valid |
 
 ## isRenderbuffer
 
@@ -1799,15 +1799,15 @@ Returns whether a renderbuffer is valid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [renderbuffer](#renderbuffer) | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
+| Type | Description |
+| --- | --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the renderbuffer is valid |
 
 ## isShader
 
@@ -1825,15 +1825,15 @@ Returns whether a shader is valid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | Yes | The shader |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
+| Type | Description |
+| --- | --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the shader is valid |
 
 ## isTexture
 
@@ -1851,15 +1851,15 @@ Returns whether a texture is valid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [texture](#texture) | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
+| Type | Description |
+| --- | --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the texture is valid |
 
 ## lineWidth
 
@@ -1877,9 +1877,9 @@ Sets the line width
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| width | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| width | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Line width |
 
 ## linkProgram
 
@@ -1897,9 +1897,9 @@ Links a program
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program to link |
 
 ## pixelStorei
 
@@ -1917,10 +1917,10 @@ Sets pixel storage parameters
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| param | [GLint](arkts-arkgraphics2d-glint-t.md) \| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| param | [GLint](arkts-arkgraphics2d-glint-t.md) \| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Parameter value |
 
 ## polygonOffset
 
@@ -1938,10 +1938,10 @@ Sets the polygon offset
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| units | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| factor | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Scale factor |
+| units | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Units |
 
 ## renderbufferStorage
 
@@ -1959,12 +1959,12 @@ Sets the renderbuffer storage
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Renderbuffer target |
+| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 
 ## sampleCoverage
 
@@ -1982,10 +1982,10 @@ Sets the sample coverage
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
-| [invert](#invert) | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Coverage value |
+| invert | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Invert coverage |
 
 ## scissor
 
@@ -2003,12 +2003,12 @@ Sets the scissor box
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 
 ## shaderSource
 
@@ -2026,10 +2026,10 @@ Sets the shader source
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
-| source | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader |
+| source | string | Yes | The source code |
 
 ## stencilFunc
 
@@ -2047,11 +2047,11 @@ Sets the stencil function
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| ref | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Stencil function |
+| ref | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Reference value |
+| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) |
 
 ## stencilFuncSeparate
 
@@ -2069,12 +2069,12 @@ Sets the stencil function separately for front and back faces
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| ref | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Face mode |
+| func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Stencil function |
+| ref | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Reference value |
+| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) |
 
 ## stencilMask
 
@@ -2092,9 +2092,9 @@ Sets the stencil mask
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Stencil mask |
 
 ## stencilMaskSeparate
 
@@ -2112,10 +2112,10 @@ Sets the stencil mask separately for front and back faces
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Face mode |
+| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Stencil mask |
 
 ## stencilOp
 
@@ -2133,11 +2133,11 @@ Sets the stencil operation
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| zfail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| zpass | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when stencil test fails |
+| zfail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when depth test fails |
+| zpass | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when depth test passes |
 
 ## stencilOpSeparate
 
@@ -2155,12 +2155,12 @@ Sets the stencil operation separately for front and back faces
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| fail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| zfail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| zpass | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Face mode |
+| fail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when stencil test fails |
+| zfail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when depth test fails |
+| zpass | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when depth test passes |
 
 ## texParameterf
 
@@ -2178,11 +2178,11 @@ Sets a texture parameter (float)
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| param | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| param | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Parameter value |
 
 ## texParameteri
 
@@ -2200,11 +2200,11 @@ Sets a texture parameter (number)
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| param | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| param | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Parameter value |
 
 ## uniform1f
 
@@ -2222,10 +2222,10 @@ Sets a uniform1f value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
 
 ## uniform1i
 
@@ -2243,10 +2243,10 @@ Sets a uniform1i value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
 
 ## uniform2f
 
@@ -2264,11 +2264,11 @@ Sets a uniform2f value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
+| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
 
 ## uniform2i
 
@@ -2286,11 +2286,11 @@ Sets a uniform2i value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y value |
 
 ## uniform3f
 
@@ -2308,12 +2308,12 @@ Sets a uniform3f value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
+| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
+| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
 
 ## uniform3i
 
@@ -2331,12 +2331,12 @@ Sets a uniform3i value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| z | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y value |
+| z | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z value |
 
 ## uniform4f
 
@@ -2354,13 +2354,13 @@ Sets a uniform4f value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| w | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
+| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
+| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
+| w | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | W value |
 
 ## uniform4i
 
@@ -2378,13 +2378,13 @@ Sets a uniform4i value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| z | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| w | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y value |
+| z | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z value |
+| w | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | W value |
 
 ## useProgram
 
@@ -2402,9 +2402,9 @@ Uses a program
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes | The program to use |
 
 ## validateProgram
 
@@ -2422,9 +2422,9 @@ Validates a program
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program to validate |
 
 ## vertexAttrib1f
 
@@ -2442,10 +2442,10 @@ Sets a vertex attrib1f value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
 
 ## vertexAttrib1fv
 
@@ -2463,10 +2463,10 @@ Sets a vertex attrib1fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
-| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
 
 ## vertexAttrib2f
 
@@ -2484,11 +2484,11 @@ Sets a vertex attrib2f value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
+| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
 
 ## vertexAttrib2fv
 
@@ -2506,10 +2506,10 @@ Sets a vertex attrib2fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
-| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
 
 ## vertexAttrib3f
 
@@ -2527,12 +2527,12 @@ Sets a vertex attrib3f value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
+| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
+| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
 
 ## vertexAttrib3fv
 
@@ -2550,10 +2550,10 @@ Sets a vertex attrib3fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
-| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
 
 ## vertexAttrib4f
 
@@ -2571,13 +2571,13 @@ Sets a vertex attrib4f value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
-| w | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
+| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
+| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
+| w | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | W value |
 
 ## vertexAttrib4fv
 
@@ -2595,10 +2595,10 @@ Sets a vertex attrib4fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
-| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
 
 ## vertexAttribPointer
 
@@ -2623,14 +2623,14 @@ Sets vertex attrib pointer
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
-| size | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| normalized | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
-| stride | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
+| size | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Number of components |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Data type |
+| normalized | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to normalize |
+| stride | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Stride |
+| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
 
 ## viewport
 
@@ -2648,12 +2648,12 @@ Sets the viewport
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 
 ## ACTIVE_ATTRIBUTES
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import print from '@kit.BasicServicesKit';
 ```
 
 ## getPrinterDefaultPreferences
@@ -26,20 +26,20 @@ function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPrefere
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| printerId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| printerId | string | 是 | 打印机ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md)&gt; | Promise that resolves with the default preferences of the printer. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [13100005](../errorcode-print.md#13100005-无效的打印机) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [13100005](../errorcode-print.md#13100005-无效的打印机) | Can not find the printer or printer's ppd file in system. |

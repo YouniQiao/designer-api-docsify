@@ -2,7 +2,8 @@
 
 Defines the configuration object for text overflow behavior.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
 > 's
@@ -14,6 +15,10 @@ Defines the configuration object for text overflow behavior.
 ## Modules to Import
 
 ```TypeScript
+import { AtomicServiceBar, ComponentUtils, Con@kit.ArkUIMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UICon@kit.ArkUI, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUICon@kit.ArkUI, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@ohos.arkui.UICon@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@ohos.arkui.UICon@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@ohos.arkui.UICon@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@ohos.arkui.UICon@kit.ArkUI';
 ```
 
 ## overflow

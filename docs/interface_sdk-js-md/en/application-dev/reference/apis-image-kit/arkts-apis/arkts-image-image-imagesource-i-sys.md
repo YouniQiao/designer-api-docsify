@@ -9,7 +9,7 @@ The **ImageSource** class provides APIs to obtain image information.Before calli
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## createWideGamutSdrPixelMap
@@ -28,18 +28,53 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible. For a SDR ImageSou
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;PixelMap & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;PixelMap & gt; | Decoded PixelMap. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700103](../errorcode-image.md#7700103-image-oversized) |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+
+**Examples**
+
+```TypeScript
+async function CreateWideGamutSdrPixelMap(context: Context) {
+  // 'sdr.jpg' is only an example. Replace it with the actual one.
+  let filePath: string = context.filesDir + "/sdr.jpg";
+  let sdrImageSource = image.createImageSource(filePath);
+  let pixelmap = sdrImageSource.createWideGamutSdrPixelMap();
+  if (pixelmap != undefined) {
+    console.info('Succeeded in creating sdr pixelMap object.');
+  } else {
+    console.error('Failed to create pixelMap.');
+  }
+
+  // 'singleChannelGainmapFilePath.jpg' is only an example. Replace it with the actual one.
+  let singleChannelGainmapFilePath: string = context.filesDir + "/singleChannelGainmapFilePath.jpg";
+  let singleChannelGainmapImageSource = image.createImageSource(singleChannelGainmapFilePath);
+  let singleChannelGainmapPixelmap = singleChannelGainmapImageSource.createWideGamutSdrPixelMap();
+  if (singleChannelGainmapPixelmap != undefined) {
+    console.info('Succeeded in creating sdr pixelMap object by using singleChannelGainmapImageSource.');
+  } else {
+    console.error('Failed to create pixelMap.');
+  }
+  // 'threeChannelGainmapFilePath.jpg' is only an example. Replace it with the actual one.
+  let threeChannelGainmapFilePath: string = context.filesDir + "/threeChannelGainmapFilePath.jpg";
+  let threeChannelGainmapImageSource = image.createImageSource(threeChannelGainmapFilePath);
+  let threeChannelGainmapPixelmap = threeChannelGainmapImageSource.createWideGamutSdrPixelMap();
+  if (threeChannelGainmapPixelmap != undefined) {
+    console.info('Succeeded in creating sdr pixelMap using DISPLAY_BT2020_SRGB.');
+  } else {
+    console.error('Failed to create pixelMap.');
+  }
+}
+```
 
 ## isJpegProgressive
 
@@ -59,16 +94,31 @@ Checks whether a JPEG image is progressive. This API uses a promise to return th
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise object. The value **true** indicates that the JPEG image is progressive, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function IsJpegProgressive(imageSource : image.ImageSource) {
+  imageSource.isJpegProgressive()
+    .then((isProgressive: boolean) => {
+      console.info("isJpegProgressive: " + isProgressive);
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to obtain the jpeg image isprogressive error.code is ${error.code}, message is ${error.message}`);
+    })
+}
+```
 
 ## modifyImageAllProperties
 
@@ -88,21 +138,36 @@ Modify the value of properties in an image with the specified keys.The HwMnote r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| records | Record & lt;string, string \ | null & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| records | Record & lt;string, string \ | null & gt; | Yes | Property Records whose values are to be modified, when the value is set to null the tag will be removed. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
-| [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
+| [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
+
+**Examples**
+
+```TypeScript
+async function ModifyImageAllProperties(imageSource: image.ImageSource) {
+  try {
+    let record: Record<string, string | null> = {
+      "HwMnotePhysicalAperture": "13",
+    }
+    await imageSource.modifyImageAllProperties(record);
+  } catch (err) {
+    console.error('[modifyImageAllProperties]', `modify image property failed.err: ${err.code}, errorMessage: ${err.message}`);
+  }
+}
+```

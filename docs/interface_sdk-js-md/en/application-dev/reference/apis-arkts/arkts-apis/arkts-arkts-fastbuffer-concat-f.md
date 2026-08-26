@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
+import fastbuffer from '@kit.ArkTS';
 ```
 
 ## concat
@@ -22,19 +22,31 @@ Returns a new `FastBuffer` which is the result of concatenating all the `FastBuf
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| list | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md)[] \| Uint8Array[] | Yes |
-| [totalLength](../../apis-arkui/arkts-components/arkts-arkui-computedbarattribute-i.md) | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| list | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md)[] \| Uint8Array[] | Yes | Array of FastBuffer or Uint8Array instances to concatenate |
+| totalLength | number | No | Total length of the FastBuffer instances when concatenated |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
+| Type | Description |
+| --- | --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a new allocated FastBuffer |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+
+**Examples**
+
+```TypeScript
+import { fastbuffer } from '@kit.ArkTS';
+
+let buf1 = fastbuffer.from("1234");
+let buf2 = fastbuffer.from("abcd");
+let buf = fastbuffer.concat([buf1, buf2]);
+console.info(buf.toString('hex'));
+// Output: 3132333461626364
+```

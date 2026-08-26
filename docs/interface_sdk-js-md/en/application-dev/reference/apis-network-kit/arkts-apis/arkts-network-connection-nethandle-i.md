@@ -9,7 +9,6 @@ Represents the network handle.Before invoking **NetHandle** APIs, call **getNetH
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## bindSocket
@@ -26,19 +25,81 @@ Binds the TCPSocket or UDPSocket to the network specified by **NetHandle**. This
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| socketParam | TCPSocket \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| socketParam | TCPSocket \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | Yes | TCPSocket** or **UDPSocket** object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **TCPSocket** or **UDPSocket** object is successfully bound to the current network, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection, socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+interface Data {
+  message: ArrayBuffer,
+  remoteInfo: socket.SocketRemoteInfo
+}
+
+  connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
+  }
+  let tcp : socket.TCPSocket = socket.constructTCPSocketInstance();
+  let udp : socket.UDPSocket = socket.constructUDPSocketInstance();
+  let socketType = "TCPSocket";
+  if (socketType == "TCPSocket") {
+    tcp.bind({address:"192.168.xxx.xxx",
+              port:8080,
+              family:1} as socket.NetAddress, (error: Error) => {
+      if (error) {
+        console.error('bind fail');
+        return;
+      }
+      netHandle.bindSocket(tcp, (error: BusinessError, data: void) => {
+        if (error) {
+          console.error(`Failed to bind socket. Code:${error.code}, message:${error.message}`);
+          return;
+        } else {
+          console.info(JSON.stringify(data));
+        }
+      });
+    });
+  } else {
+    let callback: (value: Data) => void = (value: Data) => {
+      console.info("on message, message:" + value.message + ", remoteInfo:" + value.remoteInfo);
+    };
+    udp.bind({address:"192.168.xxx.xxx",
+              port:8080,
+              family:1} as socket.NetAddress, (error: BusinessError) => {
+      if (error) {
+        console.error(`Failed to bind. Code:${error.code}, message:${error.message}`);
+        return;
+      }
+      udp.on('message', (data: Data) => {
+        console.info("Succeeded to get data: " + JSON.stringify(data));
+      });
+      netHandle.bindSocket(udp, (error: BusinessError, data: void) => {
+        if (error) {
+          console.error(`Failed to bind socket. Code:${error.code}, message:${error.message}`);
+          return;
+        } else {
+          console.info(JSON.stringify(data));
+        }
+      });
+    });
+  }
+})
+```
 
 ## bindSocket
 
@@ -54,24 +115,81 @@ Binds the TCPSocket or UDPSocket to the network specified by **NetHandle**. This
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| socketParam | TCPSocket \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| socketParam | TCPSocket \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | Yes | TCPSocket** or **UDPSocket** object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection, socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+interface Data {
+  message: ArrayBuffer,
+  remoteInfo: socket.SocketRemoteInfo
+}
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
+    return;
+  }
+  let tcp : socket.TCPSocket = socket.constructTCPSocketInstance();
+  let udp : socket.UDPSocket = socket.constructUDPSocketInstance();
+  let socketType = "TCPSocket";
+  if (socketType == "TCPSocket") {
+    tcp.bind({address:"192.168.xxx.xxx",
+              port:8080,
+              family:1} as socket.NetAddress, (error: Error) => {
+      if (error) {
+        console.error('bind fail');
+        return;
+      }
+      netHandle.bindSocket(tcp).then(() => {
+        console.info("bind socket success");
+      }).catch((error: BusinessError) => {
+        console.error(`Failed to bind socket. Code:${error.code}, message:${error.message}`);
+      });
+    });
+  } else {
+    let callback: (value: Data) => void = (value: Data) => {
+      console.info("on message, message:" + value.message + ", remoteInfo:" + value.remoteInfo);
+    }
+    udp.bind({address:"192.168.xxx.xxx",
+              port:8080,
+              family:1} as socket.NetAddress, (error: BusinessError) => {
+      if (error) {
+        console.error(`Failed to bind. Code:${error.code}, message:${error.message}`);
+        return;
+      }
+      udp.on('message', (data: Data) => {
+        console.info("Succeeded to get data: " + JSON.stringify(data));
+      });
+      netHandle.bindSocket(udp).then(() => {
+        console.info("bind socket success");
+      }).catch((error: BusinessError) => {
+        console.error(`Failed to bind socket. Code:${error.code}, message:${error.message}`);
+      });
+    });
+  }
+});
+```
 
 ## getAddressByName
 
@@ -89,20 +207,42 @@ Obtains the first IP address by using the network specified by **NetHandle** to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| host | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| host | string | Yes | Host name to resolve. For example, www.example.com. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | Yes | Callback used to return the result. If the first IP address is obtained successfully, **error** is **undefined**, and **data** is the first obtained IP address. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
+    return;
+  }
+  let host = "www.example.com";
+  netHandle.getAddressByName(host, (error: BusinessError, data: connection.NetAddress) => {
+    if (error) {
+      console.error(`Failed to get address. Code:${error.code}, message:${error.message}`);
+      return;
+    }
+    console.info("Succeeded to get data: " + JSON.stringify(data));
+  });
+});
+```
 
 ## getAddressByName
 
@@ -120,25 +260,42 @@ Obtains the first IP address by using the network specified by **NetHandle** to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| host | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| host | string | Yes | Host name to resolve. For example, www.example.com. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;NetAddress & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;NetAddress & gt; | Promise used to return the first IP address. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
+    return;
+  }
+  let host = "www.example.com";
+  netHandle.getAddressByName(host).then((data: connection.NetAddress) => {
+    console.info("Succeeded to get data: " + JSON.stringify(data));
+  });
+});
+```
 
 ## getAddressesByName
 
@@ -158,20 +315,55 @@ Obtains all IP addresses by using the network specified by **NetHandle** to reso
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| host | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetAddress&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| host | string | Yes | Host name to resolve. For example, www.example.com. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetAddress&gt;&gt; | Yes | Callback used to return the result. If all IP addresses are successfully obtained, **error** is **undefined**, and **data** is the list of all obtained IP addresses. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getAddressesByName("xxxx", (error: BusinessError, data: connection.NetAddress[]) => {
+  if (error) {
+    console.error(`Failed to get addresses. Code:${error.code}, message:${error.message}`);
+    return;
+  }
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
+    return;
+  }
+  let host = "www.example.com";
+  netHandle.getAddressesByName(host, (error: BusinessError, data: connection.NetAddress[]) => {
+    if (error) {
+      console.error(`Failed to get addresses. Code:${error.code}, message:${error.message}`);
+      return;
+    }
+    console.info("Succeeded to get data: " + JSON.stringify(data));
+  });
+});
+```
 
 ## getAddressesByName
 
@@ -191,25 +383,50 @@ Obtains all IP addresses by using the network specified by **NetHandle** to reso
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| host | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| host | string | Yes | Host name to resolve. For example, www.example.com. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;NetAddress & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;NetAddress & gt; & gt; | Promise used to return all IP addresses. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getAddressesByName("xxxx").then((data: connection.NetAddress[]) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
+    return;
+  }
+  let host = "www.example.com";
+  netHandle.getAddressesByName(host).then((data: connection.NetAddress[]) => {
+    console.info("Succeeded to get data: " + JSON.stringify(data));
+  });
+});
+```
 
 ## getAddressesByNameWithOptions
 
@@ -229,25 +446,61 @@ Performs DNS resolution using the network specified by **NetHandle** based on th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| host | string | Yes |
-| option | [QueryOptions](arkts-network-connection-queryoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| host | string | Yes | Host name to resolve. For example, www.example.com. |
+| option | [QueryOptions](arkts-network-connection-queryoptions-i.md) | No | Type of the IP address to be queried. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;NetAddress & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;NetAddress & gt; & gt; | Promise used to return the queried IP address. In the command output, the port field has a fixed value of 0. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+let option: connection.QueryOptions = {
+  family: connection.FamilyType.FAMILY_TYPE_IPV4
+};
+connection.getAddressesByNameWithOptions("www.example.com", option).then((data: connection.NetAddress[]) => {
+  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`get ERROR msg: ${JSON.stringify(err)}`)
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
+    return;
+  }
+  let host = "www.example.com";
+  let option: connection.QueryOptions = {
+      family: connection.FamilyType.FAMILY_TYPE_IPV4
+    };
+  netHandle.getAddressesByNameWithOptions(host, option).then((data: connection.NetAddress[]) => {
+    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+  }).catch((err: BusinessError) => {
+    console.error(`get ERROR msg: ${JSON.stringify(err)}`)
+  });
+});
+```
 
 ## netId
 

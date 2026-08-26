@@ -14,7 +14,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## beginAxis
@@ -35,24 +34,61 @@ beginAxis(axis: Axis, value: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 | 轴类型。 |
+| value | number | 是 | 轴值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The axis event is in progress. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+
+**示例**
+
+```TypeScript
+import { inputEventClient, Axis } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputEventClient.createMouseController()
+            .then((mouseController: inputEventClient.MouseController) => {
+              mouseController.beginAxis(Axis.SCROLL_VERTICAL, 10);
+              return mouseController;
+            })
+            .then((mouseController: inputEventClient.MouseController) => {
+              mouseController.updateAxis(Axis.SCROLL_VERTICAL, 20);
+              return mouseController;
+            })
+            .then((mouseController: inputEventClient.MouseController) => {
+              mouseController.endAxis(Axis.SCROLL_VERTICAL);
+            })
+            .then(() => {
+              console.info('Succeeded in ending axis event');
+            })
+            .catch((error: BusinessError) => {
+              console.error(`Failed to end axis event. Code: ${error.code}, message: ${error.message}.`);
+            });
+        })
+    }
+  }
+}
+```
 
 ## endAxis
 
@@ -72,23 +108,27 @@ endAxis(axis: Axis): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 | 轴类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The axis event is not in progress. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+
+**示例**
+
+参见[beginAxis](#beginaxis)示例。
 
 ## moveTo
 
@@ -108,25 +148,54 @@ moveTo(displayId: number, displayX: number, displayY: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| displayId | number | 是 |
-| displayX | number | 是 |
-| displayY | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| displayId | number | 是 | 目标显示器ID。 |
+| displayX | number | 是 | 目标位置相对于显示器左边缘的X坐标，单位为像素（px）。若超出显示器有效范围，则实际坐标值会规约到有效范围[0, 显示器宽度-1]。 |
+| displayY | number | 是 | 目标位置相对于显示器上边缘的Y坐标，单位为像素（px）。若超出显示器有效范围，则实际坐标值会规约到有效范围[0, 显示器高度-1]。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [4300002](../errorcode-inputeventclient.md#4300002-显示器不存在) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300002](../errorcode-inputeventclient.md#4300002-显示器不存在) | The display does not exist. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+
+**示例**
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputEventClient.createMouseController()
+            .then(mouseController => {
+              return mouseController.moveTo(0, 100, 200);
+            })
+            .then(() => {
+              console.info('Succeeded in moving mouse');
+            })
+            .catch((error: BusinessError) => {
+              console.error(`Failed to move mouse. Code: ${error.code}, message: ${error.message}.`);
+            });
+        })
+    }
+  }
+}
+```
 
 ## pressButton
 
@@ -146,23 +215,56 @@ pressButton(button: Button): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | 是 | 要按下的鼠标按键。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The mouse button is already pressed. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+
+**示例**
+
+```TypeScript
+import { inputEventClient, Button } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputEventClient.createMouseController()
+            .then((mouseController: inputEventClient.MouseController) => {
+              mouseController.pressButton(Button.LEFT);
+              return mouseController;
+            })
+            .then((mouseController: inputEventClient.MouseController) => {
+              mouseController.releaseButton(Button.LEFT);
+            })
+            .then(() => {
+              console.info('Succeeded in releasing mouse button');
+            })
+            .catch((error: BusinessError) => {
+              console.error(`Failed to release mouse button. Code: ${error.code}, message: ${error.message}.`);
+            });
+        })
+    }
+  }
+}
+```
 
 ## releaseButton
 
@@ -182,23 +284,27 @@ releaseButton(button: Button): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | 是 | 要抬起的鼠标按键。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The mouse button is not pressed. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+
+**示例**
+
+参见[pressButton](#pressbutton)示例。
 
 ## updateAxis
 
@@ -218,21 +324,25 @@ updateAxis(axis: Axis, value: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 | 轴类型。 |
+| value | number | 是 | 轴值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The axis event is not in progress. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+
+**示例**
+
+参见[beginAxis](#beginaxis)示例。

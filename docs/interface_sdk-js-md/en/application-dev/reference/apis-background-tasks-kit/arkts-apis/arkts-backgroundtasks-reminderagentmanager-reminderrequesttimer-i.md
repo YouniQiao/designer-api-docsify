@@ -11,7 +11,7 @@ ReminderRequestTimer extends ReminderRequest Defines a reminder for a scheduled 
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import reminderAgentManager from '@kit.BackgroundTasksKit';
 ```
 
 ## repeatCount

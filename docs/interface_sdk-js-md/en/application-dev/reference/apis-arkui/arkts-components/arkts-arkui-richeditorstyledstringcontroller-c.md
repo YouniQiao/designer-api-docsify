@@ -31,9 +31,9 @@ Obtains the current selection range of the **RichEditor** component.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RichEditorRange](arkts-arkui-richeditorrange-i.md) |
+| Type | Description |
+| --- | --- |
+| [RichEditorRange](arkts-arkui-richeditorrange-i.md) | Selection range. |
 
 ## getStyledString
 
@@ -53,9 +53,9 @@ Obtains the styled string displayed in the **RichEditor** component.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) |
+| Type | Description |
+| --- | --- |
+| [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) | Styled string displayed in the rich text component. |
 
 ## onContentChanged
 
@@ -75,9 +75,9 @@ Registers the callback for the text content change. This callback is triggered o
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| listener | [StyledStringChangedListener](../arkts-apis/arkts-arkui-styledstringchangedlistener-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| listener | [StyledStringChangedListener](../arkts-apis/arkts-arkui-styledstringchangedlistener-i.md) | Yes | Callback listener for text content changes. |
 
 ## setStyledString
 
@@ -87,9 +87,11 @@ setStyledString(styledString: StyledString): void
 
 Sets the styled string displayed in the **RichEditor** component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - When this interface is called, the StyledString of the rich text component is fully replaced and rendered
-> again.&gt;
+> again.
+> 
 > - When the content exceeds the component area, the component automatically scrolls up until the content is
 > visible at the end.
 
@@ -103,6 +105,6 @@ Sets the styled string displayed in the **RichEditor** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string.   **NOTE：**The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |

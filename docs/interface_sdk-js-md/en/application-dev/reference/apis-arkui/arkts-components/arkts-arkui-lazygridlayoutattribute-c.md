@@ -31,15 +31,15 @@ Sets the gap between columns. Values less than 0 are treated as the default valu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Gap between columns.Default value: **0vp**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T |  |
 
 ## footer
 
@@ -59,15 +59,15 @@ Sets the footer of the lazy grid layout.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes | The footer builder function. Passing undefined will remove the footer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T |  |
 
 ## header
 
@@ -87,15 +87,15 @@ Sets the header of the lazy grid layout.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes | The header builder function. Passing undefined will remove the header. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T |  |
 
 ## onVisibleIndexesChange
 
@@ -115,15 +115,15 @@ Sets a callback for **onVisibleIndexesChange**. This callback is triggered when 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | Callback for the **onVisibleIndexesChange** event. If the input parameter is **undefined**, the listening is canceled. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T |  |
 
 ## rowsGap
 
@@ -143,15 +143,15 @@ Sets the gap between rows. Values less than 0 are treated as the default value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Gap between rows.Default value: **0vp |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T |  |
 
 ## sticky
 
@@ -171,12 +171,12 @@ Sets the sticky style for header and footer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [sticky](#sticky) | [StickyStyle](arkts-arkui-stickystyle-e.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sticky | [StickyStyle](arkts-arkui-stickystyle-e.md) \| undefined | Yes | The sticky style for header and footer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T |  |

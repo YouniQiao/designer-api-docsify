@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import curves from '@kit.ArkUI';
 ```
 
 ## initCurve
@@ -22,12 +22,12 @@ function initCurve(curve?: Curve): ICurve
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| curve | [Curve](arkts-arkui-curve-e.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| curve | [Curve](arkts-arkui-curve-e.md) | 否 | 曲线类型。默认值：Curve.Linear |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | 曲线的插值对象。 |

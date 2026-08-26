@@ -9,7 +9,9 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import floatingBall from '@kit.ArkUI.floatingBall';
+import floatView from '@kit.ArkUI.floatView';
+import window from '@kit.ArkUI';
 ```
 
 ## disableWindowDecor
@@ -30,11 +32,27 @@ disableWindowDecor(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300005](../errorcode-window.md#1300005-windowstage异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
+
+**示例**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility, Want } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    console.info('disableWindowDecor');
+    windowStage.disableWindowDecor();
+  }
+};
+```
 
 ## setImageForRecent
 
@@ -42,8 +60,9 @@ disableWindowDecor(): void
 setImageForRecent(imageResource: number | image.PixelMap, value: ImageFit): Promise<void>
 ```
 
-设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。  
-> **说明：**&gt;
+设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。   
+> **说明：**
+> 
 > 调用该接口前，建议先通过loadContent方法或者setUIContent
 > 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
 
@@ -60,27 +79,87 @@ setImageForRecent(imageResource: number | image.PixelMap, value: ImageFit): Prom
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| imageResource | number \| image.PixelMap | 是 |
-| value | [ImageFit](arkts-arkui-imagefit-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| imageResource | number \| image.PixelMap | 是 | 应用自定义的图片资源，可传入资源id或PixelMap位图。传入资源id时， 图片资源需放在resources/base/media目录下，通过\\$r资源访问方式获取对应图片的资源id，这里以获取startIcon图片的资源id 为例给出示意：\\$r("app.media.startIcon").id。 |
+| value | [ImageFit](arkts-arkui-imagefit-e.md) | 是 | 应用自定义图片的填充方式。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**适用版本：** 26.0.0+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 22 - 24 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The WindowStage is running in the background. 3. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    windowStage.loadContent('pages/Index', (err) => {
+      if (err.code) {
+        console.error('Failed to load the content. Cause: %{public}s', JSON.stringify(err));
+        return;
+      }
+      console.info('Succeeded in loading the content.');
+      let color = new ArrayBuffer(512 * 512 * 4); // 创建一个ArrayBuffer对象，用于存储图像像素。该对象的大小为（height * width * 4）字节。
+      let pixelMap: image.PixelMap;
+      let bufferArr = new Uint8Array(color);
+      for (let i = 0; i < bufferArr.length; i += 4) {
+        bufferArr[i] = 255;
+        bufferArr[i + 1] = 0;
+        bufferArr[i + 2] = 122;
+        bufferArr[i + 3] = 255;
+      }
+      image.createPixelMap(color, {
+        editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 512, width: 512 }
+      }).then((data) => {
+        pixelMap = data;
+        console.info(`Succeeded in creating pixelMap`);
+        try {
+          let promise = windowStage.setImageForRecent(pixelMap, ImageFit.Fill);
+          promise.then(() => {
+            console.info(`Succeeded in setting image for recent`);
+          }).catch((err: BusinessError) => {
+            console.error(`Failed to set image for recent. Cause code: ${err.code}, message: ${err.message}`);
+          });
+        } catch (exception) {
+          console.error(`Failed to set image for recent. Cause code: ${exception.code}, message: ${exception.message}`);
+        }
+      })
+
+      let imgResourceId = $r("app.media.startIcon").id;
+      try {
+        let imgResourcePromise = windowStage.setImageForRecent(imgResourceId, ImageFit.Fill);
+        imgResourcePromise.then(() => {
+          console.info(`Succeeded in setting image for recent`);
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to set image for recent. Cause code: ${err.code}, message: ${err.message}`);
+        });
+      } catch (exception) {
+        console.error(`Failed to set image for recent. Cause code: ${exception.code}, message: ${exception.message}`);
+      }
+    });
+  }
+};
+```
 
 ## setImageForRecent
 
@@ -88,8 +167,9 @@ setImageForRecent(imageResource: number | image.PixelMap, value: ImageFit): Prom
 setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>
 ```
 
-设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。  
-> **说明：**&gt;
+设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。   
+> **说明：**
+> 
 > 调用该接口前，建议先通过loadContent方法或者setUIContent
 > 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
 
@@ -103,26 +183,52 @@ setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| imgResourceId | number | 是 |
-| value | [ImageFit](arkts-arkui-imagefit-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| imgResourceId | number | 是 | 应用自定义图片的资源id，图片资源需放在resources/base/media目录下，通过`\\$r`资源访问方式获取对应图片的资源id，这里以获取 startIcon图片的资源id为例给出示意：`\\$r("app.media.startIcon").id`。 |
+| value | [ImageFit](arkts-arkui-imagefit-e.md) | 是 | 应用自定义图片的填充方式。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. 3. Incorrect parameter format. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let imgResourceId = $r("app.media.startIcon").id;
+    try {
+      let promise = windowStage.setImageForRecent(imgResourceId, ImageFit.Fill);
+      promise.then(() => {
+        console.info(`Succeeded in setting image for recent`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to set image for recent. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    } catch (exception) {
+      console.error(`Failed to set image for recent.`);
+    }
+  }
+};
+```
 
 ## setShowOnLockScreen
 
@@ -142,15 +248,35 @@ setShowOnLockScreen(showOnLockScreen: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| showOnLockScreen | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| showOnLockScreen | boolean | 是 | 是否设置应用显示在锁屏之上。true表示显示在锁屏之上；false表示不显示在锁屏之上。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300005](../errorcode-window.md#1300005-windowstage异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    console.info('onWindowStageCreate');
+    try {
+      windowStage.setShowOnLockScreen(true);
+    } catch (exception) {
+      console.error(`Failed to show on lockscreen. Cause code: ${exception.code}, message: ${exception.message}`);
+    }
+  }
+};
+```

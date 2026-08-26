@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## getMainThreadStackTrace
@@ -22,6 +23,14 @@ Obtains the stack trace information of the main thread. A maximum of 64 call fra
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Stack trace information of the main thread. If the main thread is not executing JavaScript code, an empty string is returned. |
+
+**Examples**
+
+```TypeScript
+let stack = util.getMainThreadStackTrace();
+console.info(stack);
+// Obtain the stack trace information of the main thread.
+```

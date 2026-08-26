@@ -21,7 +21,8 @@ backButtonIcon(value: string | PixelMap | Resource | SymbolGlyphModifier)
 
 Sets the icon of the back button in the title bar.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The following are not allowed: modify the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
 > the type of animation effects through the **symbolEffect** attribute.
@@ -34,9 +35,9 @@ Sets the icon of the back button in the title bar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string \| PixelMap \| Resource \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string \| PixelMap \| Resource \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes | Icon of the back button in the title bar.<br>**Since:** 12 |
 
 ## backButtonIcon
 
@@ -46,8 +47,10 @@ backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier, accessi
 
 Sets the icon and accessibility text for the back button on the title bar.
 
-> **NOTE：**&gt;
-> This API cannot be called within attributeModifier.&gt;
+> **NOTE：**
+> 
+> This API cannot be called within attributeModifier.
+> 
 > The following are not allowed: modify the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
 > the type of animation effects through the **symbolEffect** attribute.
@@ -62,10 +65,10 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| icon | string \| PixelMap \| Resource \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes |
-| accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| icon | string \| PixelMap \| Resource \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes | Icon of the back button in the title bar. |
+| accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | No | Accessibility text for the back button.Default value: **back** when the system language is English. |
 
 ## configuration
 
@@ -85,9 +88,9 @@ Sets Navigation configuration.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [NavigationConfiguration](arkts-arkui-navigationconfiguration-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [NavigationConfiguration](arkts-arkui-navigationconfiguration-i.md) | Yes | Navigation configuration options. |
 
 ## customNavContentTransition
 
@@ -98,7 +101,8 @@ customNavContentTransition(delegate: (from: NavContentInfo, to: NavContentInfo, 
 
 Defines the callback of the custom transition animation.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called in attributeModifier since API version 20.
 
 **Since:** 11
@@ -111,9 +115,9 @@ Defines the callback of the custom transition animation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| delegate | (from: NavContentInfo, to: NavContentInfo, operation: NavigationOperation)     = & gt; NavigationAnimatedTransition \ | undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| delegate | (from: NavContentInfo, to: NavContentInfo, operation: NavigationOperation)     = & gt; NavigationAnimatedTransition \ | undefined | Yes | Defines the callback of the custom transition animation.from: Destination page to exit.to: Destination page to enter.operation: Transition type.    **NavigationAnimatedTransition**: protocol object for custom transition animations.   **undefined**: undefined, executing the default transition animation effect. |
 
 ## divider
 
@@ -133,9 +137,9 @@ Sets the divider style in the split-column mode of the **Navigation** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [NavigationDividerStyle](arkts-arkui-navigationdividerstyle-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [NavigationDividerStyle](arkts-arkui-navigationdividerstyle-i.md) \| null | Yes | Sets the divider style of the split-column layout.    - null: The divider is hidden. |
 
 ## enableDragBar
 
@@ -155,9 +159,9 @@ Sets whether to display a drag bar in split-column scenarios. This attribute has
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable the drag bar. By default, there is no drag bar.    **true**: yes; **false**: no If the input parameter is invalid, the value **false** is used. |
 
 ## enableModeChangeAnimation
 
@@ -177,9 +181,9 @@ Sets whether to enable the animation for switching between single- and split-col
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable the animation for switching between single- and split- column modes.   **true**: yes; **false**: no If the input parameter is invalid, the value **true** is used. |
 
 ## enableToolBarAdaptation
 
@@ -199,9 +203,9 @@ Sets whether to enable toolbar adaptation ([toolbarConfiguration](#toolbarconfig
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable toolbar adaptation.Default value: **true**   **true**: Enable toolbar adaptation.   **false**: Disable toolbar adaptation. |
 
 ## enableVisibilityLifecycleWithContentCover
 
@@ -221,9 +225,9 @@ Sets whether to enable the linkage between the [onShown](arkts-arkui-navdestinat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable the linkage between the **onShown** and **onHidden** lifecycle callbacks of the NavDestination page and the full-modal triggering.Default value: **true**    **true**: When a full-modal page is shown, the current **NavDestination** page triggers **onHidden**. When the full-modal pages is dismissed, the page triggers **onShown**.   **false**: The **onShown** and **onHidden** callbacks of the **NavDestination** page are not triggered by the showing or dismissing of a full-modal page. |
 
 ## hideBackButton
 
@@ -241,9 +245,9 @@ Sets whether to hide the back button in the title bar. The back button takes eff
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to hide the back button in the title bar.   **true**: Hide the back button in the title bar.   **false**: Show the back button in the title bar.If the input parameter is invalid, the value **false** is used. |
 
 ## hideNavBar
 
@@ -261,9 +265,9 @@ Sets whether to hide the navigation page. If the value is set to **true**, the n
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to hide the navigation page.   **true**: yes   **false**: no If the input parameter is invalid, the value **false** is used. |
 
 ## hideTitleBar
 
@@ -281,9 +285,9 @@ Specifies whether to hide the title bar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to hide the title bar.   **true**: yes   **false**: no If the input parameter is invalid, the value **false** is used. |
 
 ## hideTitleBar
 
@@ -303,10 +307,10 @@ Specifies whether to hide the title bar. Compared with [hideTitleBar](#hidetitle
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| hide | boolean | Yes |
-| animated | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| hide | boolean | Yes | Whether to hide the title bar.   **true**: yes   **false**: no If the input parameter is invalid, the value **false** is used. |
+| animated | boolean | Yes | Whether to animate the visibility change.   **true**: yes    **false**: no If the input parameter is invalid, the value **false** is used. |
 
 ## hideToolBar
 
@@ -324,9 +328,9 @@ Specifies whether to hide the toolbar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to hide the toolbar.   **true**: Hide the toolbar.    **false**: Display the toolbar.If the input parameter is invalid, the value **false** is used. |
 
 ## hideToolBar
 
@@ -346,10 +350,10 @@ Specifies whether to hide the toolbar. Compared with [hideToolBar](#hidetoolbar)
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| hide | boolean | Yes |
-| animated | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| hide | boolean | Yes | Whether to hide the toolbar.   **true**: Hide the toolbar.    **false**: Display the toolbar.If the input parameter is invalid, the value **false** is used. |
+| animated | boolean | Yes | Whether to animate the visibility change.   **true**: yes   **false**: no If the input parameter is invalid, the value **false** is used. |
 
 ## ignoreLayoutSafeArea
 
@@ -359,14 +363,17 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 
 Ignores the layout safe area by allowing the component to extend into the non-safe areas of the screen.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Prerequisites for the **ignoreLayoutSafeArea** attribute to take effect:
 > 
 > When **LayoutSafeAreaType.SYSTEM** is set, the component can extend into the non-safe area if its boundaries
-> overlap with it.&gt;
+> overlap with it.
+> 
 > - If the component extends into the non-safe area, events triggered within that area (such as click events) might
 > be intercepted by the system. This allows the system to prioritize responses to system components such as the
-> status bar.&gt;
+> status bar.
+> 
 > - To allow a component to extend into non-safe areas, the title bar and toolbar must be hidden or set to
 > [STACK](arkts-arkui-barstyle-e.md) mode.
 
@@ -380,10 +387,10 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[LayoutSafeAreaType](arkts-arkui-layoutsafeareatype-e.md)&gt; | No |
-| edges | Array&lt;[LayoutSafeAreaEdge](arkts-arkui-layoutsafeareaedge-e.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| types | Array&lt;[LayoutSafeAreaType](arkts-arkui-layoutsafeareatype-e.md)&gt; | No | Types of non-safe areas to extend into.Default value:    [LayoutSafeAreaType.SYSTEM] |
+| edges | Array&lt;[LayoutSafeAreaEdge](arkts-arkui-layoutsafeareaedge-e.md)&gt; | No | Edges for expanding the safe area.Default value:    [LayoutSafeAreaEdge.TOP, LayoutSafeAreaEdge.BOTTOM] |
 
 ## menus
 
@@ -393,7 +400,8 @@ menus(value: Array<NavigationMenuItem> | CustomBuilder)
 
 Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. When the value type is Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
-&gt; **NOTE：**&gt;
+&gt; **NOTE：**
+> 
 > The following are not allowed: modify the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
 > the type of animation effects through the **symbolEffect** attribute.
@@ -406,9 +414,9 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Menu items in the upper right corner of the page. |
 
 ## menus
 
@@ -418,8 +426,10 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenu
 
 Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. Compared with [menus](#menus), this API adds menu options. When the value type is Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
-&gt; **NOTE：**&gt;
-> This API cannot be called within attributeModifier.&gt;
+&gt; **NOTE：**
+> 
+> This API cannot be called within attributeModifier.
+> 
 > The following are not allowed: modify the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
 > the type of animation effects through the **symbolEffect** attribute.
@@ -434,10 +444,10 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| items | Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
-| options | [NavigationMenuOptions](arkts-arkui-navigationmenuoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| items | Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Menu items in the upper right corner of the page. |
+| options | [NavigationMenuOptions](arkts-arkui-navigationmenuoptions-i.md) | No | Configuration options for menu items in the upper right corner of the page. |
 
 ## minContentWidth
 
@@ -457,9 +467,9 @@ Minimum width of the navigation bar content area (effective in split-column mode
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Minimum width of the content area on the navigation page.Default value: **360**Unit: vp   **undefined**: No action is taken, and the minimum width of the navigation page remains consistent with the default value.Breakpoint calculation in Auto mode: default 600 vp = minNavBarWidth (240 vp) + minContentWidth (360 vp) |
 
 ## mode
 
@@ -477,9 +487,9 @@ Sets the display mode of the navigation page.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [NavigationMode](arkts-arkui-navigationmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [NavigationMode](arkts-arkui-navigationmode-e.md) | Yes | Display mode of the navigation page.Default value: **NavigationMode.Auto**At the default settings, the component adapts to a single column or two columns based on the component width. |
 
 ## navBarPosition
 
@@ -497,9 +507,9 @@ Sets the position of the navigation page. It takes effect only when [mode](#mode
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [NavBarPosition](arkts-arkui-navbarposition-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [NavBarPosition](arkts-arkui-navbarposition-e.md) | Yes | Position of the navigation page.Default value: **NavBarPosition.Start |
 
 ## navBarWidth
 
@@ -517,9 +527,9 @@ Set the width of the navigation page. It takes effect only when [mode](#mode) is
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the navigation page.Default value: **240**Unit: vp   **undefined**: No action is taken, and the navigation page width remains consistent with the default value. |
 
 ## navBarWidthRange
 
@@ -528,7 +538,7 @@ navBarWidthRange(value: [Dimension, Dimension])
 ```
 
 Sets the minimum and maximum widths of the navigation page (effective in split-column mode). When this API is not used, the minimum width defaults to 240 vp, and the maximum width defaults to 40% of the component width (not exceeding 432 vp). When dragging the divider changes the navigation page width, the content area will be compressed.Divider dragging range:  
-| Condition| Dragging Range | | ----| ----------- | |Both **navBarWidthRange** and **minContentWidth** are set.| Range set by **navBarWidthRange** if the value set by **minContentWidth** is satisfied| |Neither **navBarWidthRange** nor **minContentWidth** is set.| Default minimum and maximum ranges of **navBarWidthRange**| |Only the **navBarWidthRange** attribute is set.| Range set by **navBarWidthRange**, where the maximum dragging range cannot exceed the default value of **minContentWidth**| |Only the **minContentWidth** attribute is set.| Default minimum and maximum ranges of **navBarWidthRange**| |Only the **navBarWidth** attribute is set.|
+| Condition| Dragging Range | | ----| ----------- | |Both **navBarWidthRange** and **minContentWidth** are set.| Range set by **navBarWidthRange** if the value set by **minContentWidth** is satisfied| |Neither **navBarWidthRange** nor **minContentWidth** is set.| Default minimum and maximum ranges of **navBarWidthRange**| |Only the **navBarWidthRange** attribute is set.| Range set by **navBarWidthRange**, where the maximum dragging range cannot exceed the default value of **minContentWidth**| |Only the **minContentWidth** attribute is set.| Default minimum and maximum ranges of **navBarWidthRange**| |Only the **navBarWidth** attribute is set.| Dragging not supported|
 
 **Since:** 10
 
@@ -540,9 +550,9 @@ Sets the minimum and maximum widths of the navigation page (effective in split-c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Dimension, Dimension] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Dimension, Dimension] | Yes | Minimum and maximum widths of the navigation page. If an invalid value is set, the default value is used. |
 
 ## navDestination
 
@@ -562,9 +572,9 @@ Creates a **NavDestination** component. The builder receives the **name** and **
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| builder | (name: string, param: unknown) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| builder | (name: string, param: unknown) = & gt; void | Yes | Builder for a **NavDestination** component. **name**: name of the **NavDestination** page. **param**: detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
 
 ## onNavBarStateChange
 
@@ -582,9 +592,9 @@ Callback invoked when the navigation page visibility status changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (isVisible: boolean) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (isVisible: boolean) = & gt; void | Yes | Whether the navigation bar is visible. The value **true** means that the navigation bar is visible, and **false** means the opposite.<br>**Since:** 10 |
 
 ## onNavigationModeChange
 
@@ -604,9 +614,9 @@ Triggered when the **Navigation** component is displayed for the first time or i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (mode: NavigationMode) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (mode: NavigationMode) = & gt; void | Yes | NavigationMode.Split**: The component is displayed in split-column mode.    **NavigationMode.Stack**: The component is displayed in single-column mode. |
 
 ## onTitleModeChange
 
@@ -624,9 +634,9 @@ Triggered when [titleMode](#titlemode) is set to **NavigationTitleMode.Free** an
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (titleMode: NavigationTitleMode) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (titleMode: NavigationTitleMode) = & gt; void | Yes | Title mode.<br>**Since:** 10 |
 
 ## recoverable
 
@@ -636,13 +646,17 @@ recoverable(recoverable: Optional<boolean>)
 
 Sets whether the **Navigation** component is recoverable. If set to recoverable, when the application process exits unexpectedly and restarts, the **Navigation** component can be automatically re-created and its routing stack restored to the state at the time of the unexpected exit.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 1. For this API to work properly, you must first set the universal attribute id of the
-> **Navigation** component.&gt;
+> **Navigation** component.
+> 
 > 2. This API must be used together with the recoverable API of
-> **NavDestination**.&gt;
+> **NavDestination**.
+> 
 > 3. Non-serializable information, such as non-serializable parameters and custom **onPop**, is discarded and
-> cannot be restored during the recovery process.&gt;
+> cannot be restored during the recovery process.
+> 
 > 4. If an application is terminated due to insufficient system resources after it is switched to the background,
 > any page configured as recoverable will be automatically restored when the application is revived to the
 > foreground. For details, see
@@ -658,9 +672,9 @@ Sets whether the **Navigation** component is recoverable. If set to recoverable,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [recoverable](#recoverable) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| recoverable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether the **Navigation** component is recoverable. By default, it is not recoverable.   **true**: yes   **false**: no If the input parameter is invalid, the value **false** is used. |
 
 ## splitPlaceholder
 
@@ -680,9 +694,9 @@ Sets a default placeholder page for the right column in the **Navigation** compo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| placeholder | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| placeholder | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes | Default placeholder page for the right column in the **Navigation** component's split-column mode. |
 
 ## subTitle
 
@@ -704,9 +718,9 @@ Sets the page subtitle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Page subtitle. |
 
 ## systemBarStyle
 
@@ -716,25 +730,36 @@ systemBarStyle(style: Optional<SystemBarStyle>)
 
 Sets the style of the system status bar when the home page of the **Navigation** component is displayed.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 1. Avoid using the **systemBarStyle** attribute in conjunction with the status bar style APIs in the **Window**
 > module, such as
-> [setWindowSystemBarProperties](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowsystembarproperties).&gt;>
+> [setWindowSystemBarProperties](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowsystembarproperties).
+> 
+> 
 > 2. When you first set the **systemBarStyle** attribute for a **Navigation** or **NavDestination** component, the
-> current status bar style is saved for potential future restoration.&gt;
+> current status bar style is saved for potential future restoration.
+> 
 > 3. **Navigation** always uses the status bar style defined by the home page (when no **NavDestination** exists in
-> the routing stack) or the top **NavDestination** in the stack.&gt;
+> the routing stack) or the top **NavDestination** in the stack.
+> 
 > 4. If the home page or any top **NavDestination** page has a valid **systemBarStyle** set, that style will be
 > used. If no style is set, and there is a previously saved style available, the saved style will be used. If no
-> style has been set or saved, no changes will be made.&gt;
+> style has been set or saved, no changes will be made.
+> 
 > 5. In [Split](arkts-arkui-navigationmode-e.md) mode, if there is no **NavDestination** in the content area, the settings of
 > the **Navigation** home page will apply. Otherwise, the settings of the top **NavDestination** page on the
-> routing stack will apply.&gt;
-> 6. The **systemBarStyle** attribute is effective only for the main page of the main window.&gt;
+> routing stack will apply.
+> 
+> 6. The **systemBarStyle** attribute is effective only for the main page of the main window.
+> 
 > 7. The set style will only take effect if the **Navigation** component spans the entire page. If it does not, and
-> there is a previously saved style available, the saved style will be used instead.&gt;
-> 8. When different styles are set for pages, the new style takes effect at the start of the page transition.&gt;
-> 9. The status bar style set by **Navigation** or **NavDestination** does not apply in non-fullscreen windows.&gt;
+> there is a previously saved style available, the saved style will be used instead.
+> 
+> 8. When different styles are set for pages, the new style takes effect at the start of the page transition.
+> 
+> 9. The status bar style set by **Navigation** or **NavDestination** does not apply in non-fullscreen windows.
+> 
 > This API can be called in attributeModifier since API version 20.
 
 **Since:** 12
@@ -747,9 +772,9 @@ Sets the style of the system status bar when the home page of the **Navigation**
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[SystemBarStyle](arkts-arkui-systembarstyle-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[SystemBarStyle](arkts-arkui-systembarstyle-t.md)&gt; | Yes | Style of the system status bar. |
 
 ## title
 
@@ -759,7 +784,8 @@ title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | NavigationCus
 
 Sets the page title.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 8
@@ -770,10 +796,10 @@ Sets the page title.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) \| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | Yes |
-| options | [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) \| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | Yes | Page title. When the NavigationCustomTitle type is used to set the height, [titleMode](#titlemode) does not take effect.When the title string is too number:   - If no subtitle is set, the string is scaled down, wrapped in two lines, and then clipped.    - If a subtitle is set, the subtitle is scaled down and then clipped.<br>**Since:** 10 |
+| options | [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | No | Defines the title bar options. Title bar options include the background color, background blur style, blur options, background properties, layout style, and padding at the start and end of the title bar, as well as main title attribute modifier, subtitle attribute modifier, and whether to respond when the device is in semi-folded mode..<br>**Since:** 11 |
 
 ## titleMode
 
@@ -791,9 +817,9 @@ Sets the display mode of the page title bar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [NavigationTitleMode](arkts-arkui-navigationtitlemode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [NavigationTitleMode](arkts-arkui-navigationtitlemode-e.md) | Yes | Display mode of the page title bar.Default value: **NavigationTitleMode.Free |
 
 ## toolBar
 
@@ -814,9 +840,9 @@ Sets the content of the toolbar. If this attribute is not set, no toolbar is dis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | object \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | object \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Content of the toolbar. |
 
 ## toolbarConfiguration
 
@@ -826,8 +852,10 @@ toolbarConfiguration(value: Array<ToolbarItem> | CustomBuilder, options?: Naviga
 
 Sets the content of the toolbar. If this attribute is not set, no toolbar is displayed.
 
-> **NOTE：**&gt;
-> This API can be called in attributeModifier since API version 20.&gt;
+> **NOTE：**
+> 
+> This API can be called in attributeModifier since API version 20.
+> 
 > The following are not allowed: modify the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
 > the type of animation effects through the **symbolEffect** attribute.
@@ -842,7 +870,7 @@ Sets the content of the toolbar. If this attribute is not set, no toolbar is dis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Array&lt;[ToolbarItem](arkts-arkui-toolbaritem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
-| options | [NavigationToolbarOptions](arkts-arkui-navigationtoolbaroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Array&lt;[ToolbarItem](arkts-arkui-toolbaritem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Content of the toolbar. When configured with Array&lt;[ToolbarItem](arkts-arkui-toolbaritem-i.md)&gt;, the toolbar follows the rules below:Toolbar items are evenly distributed on the bottom toolbar, with text and icons evenly spaced in each content area.In portrait mode, the toolbar shows a maximum of five icons, with any additional icons placed into an automatically generated **More** icon. In landscape mode, toolbar behavior depends on the display mode:    - If the display mode is [Split](arkts-arkui-navigationmode-e.md), the toolbar maintains the portrait mode.    - If the display mode is [Stack](arkts-arkui-navigationmode-e.md), the toolbar must be used together with Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; of the **menus** attribute; in this configuration, the bottom toolbar is automatically hidden, and all items on the toolbar are relocated to the menu in the upper right corner of the screen.   When configured with [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8), the toolbar does not follow the above rules. |
+| options | [NavigationToolbarOptions](arkts-arkui-navigationtoolbaroptions-i.md) | No | Toolbar options. Toolbar options include the background color, background blur style and blur option, background properties, and layout mode of the toolbar, as well as whether to hide the toolbar text, and options for the toolbar's more button menu..<br>**Since:** 11 |

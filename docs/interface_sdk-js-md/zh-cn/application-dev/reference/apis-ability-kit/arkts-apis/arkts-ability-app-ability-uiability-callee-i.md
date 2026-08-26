@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from 'kits/@kit.AbilityKit';
+import UIAbility, { Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## off
@@ -28,17 +28,37 @@ off(method: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| method | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| method | string | 是 | 已注册的通知事件字符串。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [16200005](../errorcode-ability.md#16200005-方法未注册) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200005](../errorcode-ability.md#16200005-方法未注册) | The method has not been registered. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+
+**示例**
+
+```TypeScript
+import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
+
+let method = 'call_Function';
+
+export default class MainUIAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info('Callee onCreate is called');
+    try {
+      // 取消注册消息监听
+      this.callee.off(method);
+    } catch (error) {
+      console.error(`Callee.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
+    }
+  }
+}
+```
 
 ## on
 
@@ -56,15 +76,69 @@ on(method: string, callback: CalleeCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| method | string | 是 |
-| callback | [CalleeCallback](arkts-ability-app-ability-uiability-calleecallback-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| method | string | 是 | 由Caller和Callee双方约定好的方法名，Callee方通过该字段区分消息类型。 |
+| callback | [CalleeCallback](arkts-ability-app-ability-uiability-calleecallback-i.md) | 是 | 一个[rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md)类型入参的js通知同步回调函数, 回 调函数至少要返回一个空的[rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md)数据对象, 其他视为函数执行错误。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [16200004](../errorcode-ability.md#16200004-方法已注册) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200004](../errorcode-ability.md#16200004-方法已注册) | The method has been registered. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+
+**示例**
+
+```TypeScript
+import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+class MyMessageAble implements rpc.Parcelable {
+  name: string
+  str: string
+  num: number = 1
+
+  constructor(name: string, str: string) {
+    this.name = name;
+    this.str = str;
+  }
+
+  marshalling(messageSequence: rpc.MessageSequence) {
+    messageSequence.writeInt(this.num);
+    messageSequence.writeString(this.str);
+    console.info(`MyMessageAble marshalling num[${this.num}] str[${this.str}]`);
+    return true;
+  }
+
+  unmarshalling(messageSequence: rpc.MessageSequence) {
+    this.num = messageSequence.readInt();
+    this.str = messageSequence.readString();
+    console.info(`MyMessageAble unmarshalling num[${this.num}] str[${this.str}]`);
+    return true;
+  }
+}
+
+let method = 'call_Function';
+
+// 定义Callee端的消息处理回调函数
+function funcCallBack(pdata: rpc.MessageSequence) {
+  let msg = new MyMessageAble('test', '');
+  pdata.readParcelable(msg);
+  // 返回处理结果给Caller
+  return new MyMessageAble('test1', 'Callee test');
+}
+
+export default class MainUIAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info('Callee onCreate is called');
+    try {
+      // 注册消息监听，当Caller发送指定方法名时会触发回调
+      this.callee.on(method, funcCallBack);
+    } catch (error) {
+      console.error(`Callee.on catch error, error.code: ${error.code}, error.message: ${error.message}`);
+    }
+  }
+}
+```

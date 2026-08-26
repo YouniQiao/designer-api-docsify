@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## getPublicCertificate
@@ -22,22 +21,46 @@ Obtains detailed information about a public credential. This API uses a promise 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| keyUri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keyUri | string | Yes | Unique identifier of a user's public credential. The value contains up to 256 bytes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise used to return the detailed information about the user's public credential obtained, that is, **credential** in the [CMResult]{ |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) |
-| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) |
-| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;  2. Memory operation error; 3. File operation error. Please try again. |
+| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
+| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user. |
+
+**Examples**
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri: string = 'test'; /* The user needs to use the unique identifier of the credential to obtain the public credential details, which is not elaborated here. */
+try {
+  certificateManager.getPublicCertificate(uri).then((cmResult) => {
+    if (cmResult?.credential == undefined) {
+      console.info('The result of getting public certificate is undefined.');
+    } else {
+      let cred = cmResult.credential;
+      console.info('Succeeded in getting Public certificate.');
+    }
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to get Public certificate. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (error) {
+  console.error(`Failed to get Public certificate. Code: ${error.code}, message: ${error.message}`);
+}
+```

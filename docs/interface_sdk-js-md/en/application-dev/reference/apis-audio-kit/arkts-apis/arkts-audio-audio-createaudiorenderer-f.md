@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## createAudioRenderer
@@ -20,10 +21,44 @@ Obtains an [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) instance. This 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | Yes | Renderer configurations. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioRenderer instance obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let audioStreamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000, // Sampling rate.
+  channels: audio.AudioChannel.CHANNEL_2, // Channel.
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE, // Sampling format.
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW // Encoding format.
+};
+
+let audioRendererInfo: audio.AudioRendererInfo = {
+  usage: audio.StreamUsage.STREAM_USAGE_MUSIC, // Audio stream usage type: music. Set this parameter based on the service scenario.
+  rendererFlags: 0 // AudioRenderer flag.
+};
+
+let audioRendererOptions: audio.AudioRendererOptions = {
+  streamInfo: audioStreamInfo,
+  rendererInfo: audioRendererInfo
+};
+
+let audioRenderer: audio.AudioRenderer;
+
+audio.createAudioRenderer(audioRendererOptions,(err, data) => {
+  if (err) {
+    console.error(`AudioRenderer Created: Error: ${err}`);
+  } else {
+    console.info('AudioRenderer Created: SUCCESS');
+    audioRenderer = data;
+  }
+});
+```
 
 
 ## createAudioRenderer
@@ -40,12 +75,45 @@ Obtains an [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) instance. This 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | Yes | Renderer configurations. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; | Promise used to return the AudioRenderer instance. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioStreamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000, // Sampling rate.
+  channels: audio.AudioChannel.CHANNEL_2, // Channel.
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE, // Sampling format.
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW // Encoding format.
+};
+
+let audioRendererInfo: audio.AudioRendererInfo = {
+  usage: audio.StreamUsage.STREAM_USAGE_MUSIC, // Audio stream usage type: music. Set this parameter based on the service scenario.
+  rendererFlags: 0 // AudioRenderer flag.
+};
+
+let audioRendererOptions: audio.AudioRendererOptions = {
+  streamInfo: audioStreamInfo,
+  rendererInfo: audioRendererInfo
+};
+
+let audioRenderer: audio.AudioRenderer;
+
+audio.createAudioRenderer(audioRendererOptions).then((data) => {
+  audioRenderer = data;
+  console.info('AudioFrameworkRenderLog: AudioRenderer Created : SUCCESS');
+}).catch((err: BusinessError) => {
+  console.error(`AudioFrameworkRenderLog: AudioRenderer Created : ERROR : ${err}`);
+});
+```

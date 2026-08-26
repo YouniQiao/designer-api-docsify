@@ -3,7 +3,8 @@
 Vector是一种线性数据结构，底层基于数组实现，解决了需要动态扩容、高效随机访问的数据存储问题。 当Vector的内存用尽时，会自动分配更大的连续内存区，将原先的元素复制到新的内存区，并释放旧的内存区。 使用Vector能够高效快速地访问元素，其2倍扩容策略减少了频繁的内存重分配，同时丰富的操作接口提供了更灵活的数据管理能力。 Vector和[ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)相似，都是基于数组实现，但Vector提供了更多操作数组的接口。 它们都可以动态调整容量，但Vector每次扩容增加1倍，ArrayList只扩容0.5倍。 **推荐使用场景：** 当需要频繁按索引随机访问元素且数据量较大时，推荐使用Vector来存取数据。 文档中使用了泛型，涉及以下泛型标记符：  
 - T：Type，类
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 此模块提供的接口从API version 9开始废弃。建议使用
 > [@ohos.util.ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)。
 
@@ -18,7 +19,7 @@ Vector是一种线性数据结构，底层基于数组实现，解决了需要�
 ## 导入模块
 
 ```TypeScript
-import { Vector } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -37,9 +38,33 @@ import { Vector } from 'kits/@kit.ArkTS';
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;T & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;T & gt; | 返回一个迭代器，用于遍历Vector实例中的元素。 |
+
+**示例**
+
+```TypeScript
+// 创建Vector实例并添加元素
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+// 使用方法一：通过convertToArray将Vector转为数组后使用for-of遍历
+let nums: Array<number> =  vector.convertToArray()
+for (let item of nums) {
+  console.info("value:" + item);
+}
+
+// 使用方法二：通过Symbol.iterator获取迭代器，使用next()逐个访问元素
+let iter = vector[Symbol.iterator]();
+let temp: IteratorResult<number> = iter.next().value;
+while(temp != undefined) {
+  console.info("value:" + temp);
+  temp = iter.next().value;
+}
+```
 
 ## add
 
@@ -57,15 +82,37 @@ add(element: T): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| element | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| element | T | 是 | 添加的元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 插入成功返回true，失败返回false。 |
+
+**示例**
+
+```TypeScript
+// 定义自定义类PersonInfo
+class PersonInfo {
+  name: string = ""
+  age: string = ""
+}
+// 创建Vector实例
+let vector : Vector<string | number | PersonInfo | Array<number>> = new Vector();
+// 添加字符串元素
+let result = vector.add("a");
+// 添加数字元素
+let result1 = vector.add(1);
+let numArray = [1, 2, 3];
+// 添加数组元素
+let result2 = vector.add(numArray);
+let personInfo: PersonInfo = {name : "Jack", age : "13"};
+// 添加自定义类实例
+let result3 = vector.add(personInfo);
+```
 
 ## clear
 
@@ -80,6 +127,17 @@ clear(): void
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.clear();
+```
 
 ## clone
 
@@ -97,9 +155,20 @@ clone(): Vector<T>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | 返回与原实例内容相同的克隆Vector对象实例，修改克隆实例不影响原实例。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.clone();
+```
 
 ## constructor
 
@@ -114,6 +183,12 @@ Vector的构造函数。
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**示例**
+
+```TypeScript
+let vector : Vector<string | number | Array<number>> = new Vector();
+```
 
 ## convertToArray
 
@@ -131,9 +206,20 @@ convertToArray(): Array<T>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;T & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;T & gt; | 返回包含Vector中所有元素的数组。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.convertToArray();
+```
 
 ## copyToArray
 
@@ -151,9 +237,9 @@ copyToArray(array: Array<T>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| array | Array & lt;T & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| array | Array & lt;T & gt; | 是 | 接收复制元素的目标数组。 |
 
 ## forEach
 
@@ -171,10 +257,25 @@ forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, this
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; void | 是 |
-| thisArg | Object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; void | 是 | 回调函数，用于遍历Vector中的每个元素。 |
+| thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
+
+**示例**
+
+```TypeScript
+// 创建Vector实例并添加元素
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+// 遍历Vector中的每个元素，打印元素值和下标
+vector.forEach((value : number, index?: number) : void => {
+  console.info("value:" + value, "index:" + index);
+});
+```
 
 ## get
 
@@ -192,15 +293,26 @@ get(index: number): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 查找的下标值，取值范围：0 ≤ index & lt; length。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回获取到的元素。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.get(2);
+```
 
 ## getCapacity
 
@@ -218,9 +330,20 @@ getCapacity(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回Vector的容量大小。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.getCapacity();
+```
 
 ## getFirstElement
 
@@ -238,9 +361,20 @@ getFirstElement(): T
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回Vector实例中的第一个元素；若Vector为空，返回undefined。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.getFirstElement();
+```
 
 ## getIndexFrom
 
@@ -258,16 +392,27 @@ getIndexFrom(element: T, index: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| element | T | 是 |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| element | T | 是 | 要查找的元素。 |
+| index | number | 是 | 从指定索引向前搜索的起始位置，取值范围为[0, length-1]。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回该元素的下标，如果查找失败，则返回 -1。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.getIndexFrom(4, 3);
+```
 
 ## getIndexOf
 
@@ -285,15 +430,29 @@ getIndexOf(element: T): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| element | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| element | T | 是 | 指定元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回指定元素第一次出现时的下标值，查找失败返回-1。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(2);
+vector.add(1);
+vector.add(2);
+vector.add(4);
+let result = vector.getIndexOf(2);
+```
 
 ## getLastElement
 
@@ -311,9 +470,20 @@ getLastElement(): T
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回Vector实例中的最后一个元素；若Vector为空，返回undefined。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.getLastElement();
+```
 
 ## getLastIndexFrom
 
@@ -331,16 +501,27 @@ getLastIndexFrom(element: T, index: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| element | T | 是 |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| element | T | 是 | 要查找的元素。 |
+| index | number | 是 | 从指定索引开始搜索，取值范围[0, length-1]。超出范围时返回-1。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回该元素的下标，如果查找失败，则返回-1。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.getLastIndexFrom(4,3);
+```
 
 ## getLastIndexOf
 
@@ -358,15 +539,29 @@ getLastIndexOf(element: T): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| element | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| element | T | 是 | 指定元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回指定元素最后一次出现时的下标值，查找失败返回-1。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(2);
+vector.add(1);
+vector.add(2);
+vector.add(4);
+let result = vector.getLastIndexOf(2);
+```
 
 ## has
 
@@ -384,15 +579,28 @@ has(element: T): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| element | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| element | T | 是 | 指定的元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否包含指定元素，true表示包含该元素，false表示不包含。 |
+
+**示例**
+
+```TypeScript
+// 创建Vector实例
+let vector : Vector<string> = new Vector();
+// 在添加元素前判断是否包含"squirrel"，预期返回false
+let result = vector.has("squirrel");
+// 添加元素"squirrel"
+vector.add("squirrel");
+// 在添加元素后判断是否包含"squirrel"，预期返回true
+let result1 = vector.has("squirrel");
+```
 
 ## increaseCapacityTo
 
@@ -410,9 +618,24 @@ increaseCapacityTo(newCapacity: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| newCapacity | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| newCapacity | number | 是 | 新容量，需大于或等于当前Vector中的元素个数。传入值小于元素个数时不生效。 |
+
+**示例**
+
+```TypeScript
+// 创建Vector实例并添加元素
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+// 传入容量2小于元素个数4，不会变更容量
+vector.increaseCapacityTo(2);
+// 传入容量12大于元素个数4，容量变更为12
+vector.increaseCapacityTo(12);
+```
 
 ## insert
 
@@ -430,10 +653,23 @@ insert(element: T, index: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| element | T | 是 |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| element | T | 是 | 被插入的元素。 |
+| index | number | 是 | 被插入的位置索引，取值范围为[0, length]。 |
+
+**示例**
+
+```TypeScript
+// 创建Vector实例
+let vector : Vector<string | number | Object | Array<number>> = new Vector();
+// 在索引0处插入字符串"A"
+vector.insert("A", 0);
+// 在索引1处插入数字0
+vector.insert(0, 1);
+// 在索引2处插入布尔值true
+vector.insert(true, 2);
+```
 
 ## isEmpty
 
@@ -451,9 +687,20 @@ isEmpty(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 为空返回true，不为空返回false。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.isEmpty();
+```
 
 ## remove
 
@@ -471,15 +718,26 @@ remove(element: T): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| element | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| element | T | 是 | 待删除的元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 删除成功返回true，删除失败返回false。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.remove(2);
+```
 
 ## removeByIndex
 
@@ -497,15 +755,27 @@ removeByIndex(index: number): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 要删除元素的位置下标值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回被删除的元素。Vector为空时返回undefined，下标越界时抛出异常。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(2);
+vector.add(4);
+let result = vector.removeByIndex(2);
+```
 
 ## removeByRange
 
@@ -523,10 +793,23 @@ removeByRange(fromIndex: number, toIndex: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fromIndex | number | 是 |
-| toIndex | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fromIndex | number | 是 | 起始下标，包含该下标对应的元素。 |
+| toIndex | number | 是 | 终止下标，不包含该下标对应的元素。 |
+
+**示例**
+
+```TypeScript
+// 创建Vector实例并添加元素
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+// 删除索引2到4之间的元素（包含起始索引2，不包含终止索引4）
+vector.removeByRange(2,4);
+```
 
 ## replaceAllElements
 
@@ -544,10 +827,26 @@ replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) =>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; T | 是 |
-| thisArg | Object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; T | 是 | 回调函数，用于操作Vector中的元素，并用操作后的结果替换原元素。 |
+| thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
+
+**示例**
+
+```TypeScript
+// 创建Vector实例并添加元素
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+// 对Vector中的每个元素执行替换操作，回调函数返回替换后的元素
+vector.replaceAllElements((value : number) : number => {
+  // 用户操作逻辑根据实际场景进行添加。
+  return value;
+});
+```
 
 ## set
 
@@ -565,16 +864,16 @@ set(index: number, element: T): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
-| element | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 查找的下标值，取值范围为[0, length-1]。 |
+| element | T | 是 | 用来替换的元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回被替换位置上的原元素。 |
 
 ## setLength
 
@@ -592,9 +891,21 @@ setLength(newSize: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| newSize | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| newSize | number | 是 | 设置的新长度，取值原则：newSize ≥ 0。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.setLength(8);
+vector.setLength(2);
+```
 
 ## sort
 
@@ -612,9 +923,26 @@ sort(comparator?: (firstValue: T, secondValue: T) => number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) = & gt; number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| comparator | (firstValue: T, secondValue: T) = & gt; number | 否 | 回调函数，若不传入此参数，则按照默认排序规则对元素进行排序。 |
+
+**示例**
+
+```TypeScript
+// 创建Vector实例并添加元素
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+// 按升序排序
+vector.sort((a: number, b: number) => a - b);
+// 按降序排序
+vector.sort((a: number, b: number) => b - a);
+// 使用默认排序规则
+vector.sort();
+```
 
 ## subVector
 
@@ -632,16 +960,33 @@ subVector(fromIndex: number, toIndex: number): Vector<T>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fromIndex | number | 是 |
-| toIndex | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fromIndex | number | 是 | 起始下标，取值范围：0 ≤ fromIndex & lt; length。 |
+| toIndex | number | 是 | 终止下标，取值范围：0 ≤ toIndex ≤ length，且toIndex应大于fromIndex。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | 返回包含从起始下标到终止下标（不包括终止下标）元素的Vector对象实例。 |
+
+**示例**
+
+```TypeScript
+// 创建Vector实例并添加元素
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.add(6);
+vector.add(8);
+// 截取索引0到4之间的元素（包含起始索引0，不包含终止索引4，且toIndex大于fromIndex）
+let result = vector.subVector(0,4);
+// 截取索引2到4之间的元素（包含起始索引2，不包含终止索引4）
+let result1 = vector.subVector(2,4);
+```
 
 ## toString
 
@@ -659,9 +1004,20 @@ toString(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回用","将Vector中的元素按顺序拼接成的字符串。 |
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.toString();
+```
 
 ## trimToCurrentLength
 
@@ -676,6 +1032,17 @@ trimToCurrentLength(): void
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**示例**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.trimToCurrentLength();
+```
 
 ## length
 

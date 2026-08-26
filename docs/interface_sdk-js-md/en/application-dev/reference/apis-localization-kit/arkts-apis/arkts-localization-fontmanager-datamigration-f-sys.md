@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from 'kits/@kit.LocalizationKit';
+import fontManager from '@kit.LocalizationKit';
 ```
 
 ## dataMigration
@@ -24,21 +24,47 @@ Data migration API used during device upgrades to start a migration task, provid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [DataMigrationCallback](arkts-localization-fontmanager-datamigrationcallback-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [DataMigrationCallback](arkts-localization-fontmanager-datamigrationcallback-i-sys.md) | Yes | Callback function for data migration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Result of the migration task startup. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [31100110](../errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) |
-| [31100111](../errorcode-font-manager.md#31100111-migration-task-being-executed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [31100110](../errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) | Call failed due to system error. |
+| [31100111](../errorcode-font-manager.md#31100111-migration-task-being-executed) | Data migration is in progress. |
+
+**Examples**
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+
+async function dataMigration() {
+  const callback: fontManager.DataMigrationCallback = {
+    onHeartBeat: () => {
+      console.info('onHeartBeat callback');
+    },
+    onProgress: (progress : fontManager.DataMigrationProgress) => {
+      console.info('onProgress callback');
+    },
+    onResult: (result : number) => {
+      console.info('onResult callback');
+    }
+  }
+  try {
+    let res = await fontManager.dataMigration(callback);
+    console.info('dataMigration suc. res is ' + res);
+  } catch (error) {
+    console.error('dataMigration err.' + error.code);
+  }
+}
+```

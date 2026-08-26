@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { PrintExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import PrintExtensionAbility from '@kit.BasicServicesKit';
 ```
 
 ## onCancelPrintJob
@@ -28,15 +28,28 @@ public onCancelPrintJob(jobInfo: print.PrintJob): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| jobInfo | print.PrintJob | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| jobInfo | print.PrintJob | 是 | 表示打印任务的信息，包含任务ID、打印机ID、文档信息等详细配置和状态，需为已通过onStartPrintJob启动的打印任务， 用于取消打印任务时定位目标任务。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 23 |
+
+**示例**
+
+```TypeScript
+import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class CustomPrintExtension extends PrintExtensionAbility {
+    onCancelPrintJob(jobInfo: print.PrintJob): void {
+        console.info('onCancelPrintJob, jobId is: ' + jobInfo.jobId);
+        // ...
+    }
+}
+```
 
 ## onConnectPrinter
 
@@ -54,9 +67,22 @@ onConnectPrinter(printerId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| printerId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| printerId | number | 是 | 表示打印机ID，应为已发现的打印机，取值于打印机发现流程上报的有效打印机标识。 |
+
+**示例**
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class CustomPrintExtension extends PrintExtensionAbility {
+    onConnectPrinter(printerId: number): void {
+        console.info('onConnectPrinter enter');
+        // ...
+    }
+}
+```
 
 ## onCreate
 
@@ -74,9 +100,23 @@ onCreate(want: Want): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 表示创建打印扩展时传入的Want意图信息，包含调用方指定的信息（如action、uri等），用于初始化打印扩展能力。 |
+
+**示例**
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+
+export default class CustomPrintExtension extends PrintExtensionAbility {
+    onCreate(want: Want): void {
+        console.info('onCreate');
+        // ...
+    }
+}
+```
 
 ## onDestroy
 
@@ -91,6 +131,18 @@ onDestroy(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
+
+**示例**
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class CustomPrintExtension extends PrintExtensionAbility {
+    onDestroy(): void {
+        console.info('onDestroy');
+    }
+}
+```
 
 ## onDisconnectPrinter
 
@@ -108,9 +160,22 @@ onDisconnectPrinter(printerId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| printerId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| printerId | number | 是 | 表示打印机ID，应为已连接的打印机，取值于打印机发现流程上报的有效打印机标识。 |
+
+**示例**
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class CustomPrintExtension extends PrintExtensionAbility {
+    onDisconnectPrinter(printerId: number): void {
+        console.info('onDisconnectPrinter enter');
+        // ...
+    }
+}
+```
 
 ## onRequestPrinterCapability
 
@@ -128,21 +193,40 @@ public onRequestPrinterCapability(printerId: number): print.PrinterCapability
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| printerId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| printerId | number | 是 | 表示打印机ID，应为已连接的打印机，取值于打印机发现流程上报的有效打印机标识。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| print.PrinterCapability |
+| 类型 | 说明 |
+| --- | --- |
+| print.PrinterCapability | printer capability. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 23 |
+
+**示例**
+
+```TypeScript
+import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class CustomPrintExtension extends PrintExtensionAbility {
+    onRequestPrinterCapability(printerId: number): print.PrinterCapability {
+        console.info('onRequestPrinterCapability enter');
+        // ...
+        const printerCapability: print.PrinterCapability = {
+            colorMode : 1,
+            duplexMode : 1,
+            pageSize : []
+        };
+        return printerCapability;
+    }
+}
+```
 
 ## onStartDiscoverPrinter
 
@@ -157,6 +241,19 @@ onStartDiscoverPrinter(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
+
+**示例**
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class CustomPrintExtension extends PrintExtensionAbility {
+    onStartDiscoverPrinter(): void {
+        console.info('onStartDiscoverPrinter enter');
+        // ...
+    }
+}
+```
 
 ## onStartPrintJob
 
@@ -174,15 +271,28 @@ public onStartPrintJob(jobInfo: print.PrintJob): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| jobInfo | print.PrintJob | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| jobInfo | print.PrintJob | 是 | 表示打印任务的信息，包含任务ID、打印机ID、文档信息等详细配置和状态，用于指定要开始的打印任务。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 23 |
+
+**示例**
+
+```TypeScript
+import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class CustomPrintExtension extends PrintExtensionAbility {
+    onStartPrintJob(jobInfo: print.PrintJob): void {
+        console.info('onStartPrintJob, jobId is: ' + jobInfo.jobId);
+        // ...
+    }
+}
+```
 
 ## onStopDiscoverPrinter
 
@@ -197,6 +307,19 @@ onStopDiscoverPrinter(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
+
+**示例**
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class CustomPrintExtension extends PrintExtensionAbility {
+    onStopDiscoverPrinter(): void {
+        console.info('onStopDiscoverPrinter enter');
+        // ...
+    }
+}
+```
 
 ## context
 

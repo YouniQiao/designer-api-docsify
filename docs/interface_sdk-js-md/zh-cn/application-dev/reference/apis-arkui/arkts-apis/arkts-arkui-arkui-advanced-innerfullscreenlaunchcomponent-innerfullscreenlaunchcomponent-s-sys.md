@@ -2,8 +2,10 @@
 
 非显式全屏拉起原子化服务组件，拉起方可以选择拉起原子化服务的时机。当被拉起方授权使用方嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。
 
-> **说明：**&gt;
-> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。&gt;
+> **说明：**
+> 
+> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> 
 > 当需要在该组件中实现一个可嵌入式运行的原子化服务时，必须继承自
 > [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)。若不继承自EmbeddableUIAbility，系统无
 > 法保证原子化服务功能正常。
@@ -17,7 +19,7 @@
 ## 导入模块
 
 ```TypeScript
-import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkUI';
+import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 ```
 
 ## content

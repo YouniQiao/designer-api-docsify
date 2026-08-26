@@ -9,30 +9,30 @@
 ## 导入模块
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import ArkTSUtils from '@kit.ArkTS';
 ```
 
 ## 汇总
 
 ### 类
 
-| 名称 |
-| --- |
-| [AsyncLock(Defines the utils for ArkTS)](arkts-arkts-locks-asynclock-c.md) |
-| [AsyncLockOptions(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockoptions-c.md) |
-| [AsyncLockState(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockstate-c.md) |
-| [AsyncLockInfo(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockinfo-c.md) |
-| [AbortSignal(Defines the utils for ArkTS)](arkts-arkts-locks-abortsignal-c.md) |
-| [ConditionVariable(Defines the utils for ArkTS)](arkts-arkts-locks-conditionvariable-c.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [AsyncLock(Defines the utils for ArkTS)](arkts-arkts-locks-asynclock-c.md) | 实现异步锁功能的类，允许在锁下执行异步操作。该类使用@Sendable装饰器装饰。 |
+| [AsyncLockOptions(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockoptions-c.md) | 表示锁操作选项的类。 |
+| [AsyncLockState(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockstate-c.md) | 用于存储异步锁实例上当前执行的所有锁操作的信息的类。 |
+| [AsyncLockInfo(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockinfo-c.md) | 关于锁的信息。 |
+| [AbortSignal(Defines the utils for ArkTS)](arkts-arkts-locks-abortsignal-c.md) | 用于终止异步操作的对象。该类的实例必须在其创建的同一线程中访问。从其他线程访问此类的字段会导致未定义的行为。 |
+| [ConditionVariable(Defines the utils for ArkTS)](arkts-arkts-locks-conditionvariable-c.md) | 实现异步等待功能的类，支持异步等待通知操作。该类使用@Sendable装饰器装饰。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [AsyncLockMode(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockmode-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [AsyncLockMode(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockmode-e.md) | 锁操作对应的模式枚举。 |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [AsyncLockCallback(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockcallback-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [AsyncLockCallback(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockcallback-t.md) | 这是一个补充类型别名，表示lockAsync函数所有重载中的回调。 |

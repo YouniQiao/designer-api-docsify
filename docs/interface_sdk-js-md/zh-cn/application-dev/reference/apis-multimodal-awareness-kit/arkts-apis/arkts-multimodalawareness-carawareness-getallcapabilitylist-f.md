@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
+import carAwareness from '@kit.MultimodalAwarenessKit';
 ```
 
 ## getAllCapabilityList
@@ -22,13 +22,13 @@ function getAllCapabilityList(): Promise<Capability[]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Capability[] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Capability[] & gt; | Promise用于返回所有的能力列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [34000001](../errorcode-carAwareness.md#34000001-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Car awareness not supported. Function can not work correctly due to limited device capabilities. |
+| [34000001](../errorcode-carAwareness.md#34000001-服务异常) | Service exception. |

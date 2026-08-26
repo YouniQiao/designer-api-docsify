@@ -3,21 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from 'kits/@kit.ArkUI';
+import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Animator](arkts-arkui-animator-animator-c.md) |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
+| Name | Description |
+| --- | --- |
+| [Animator](arkts-arkui-animator-animator-c.md) | Creates an **Animator** object. |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Defines a simple animation parameter object. Unlike **AnimatorOptions**, this object comes with some default values for certain animation parameters, so you do not have to set them manually. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) |
+| Name | Description |
+| --- | --- |
+| [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Animator options. |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Defines the animator result. |

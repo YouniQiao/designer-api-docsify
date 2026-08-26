@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## getAuthInstance
@@ -14,7 +15,8 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 
 Obtains an **AuthInstance** instance for user authentication.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Each **AuthInstance** can perform authentication only once. To perform authentication again, obtain a new
 > **AuthInstance**.
 
@@ -28,23 +30,40 @@ Obtains an **AuthInstance** instance for user authentication.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| challenge | Uint8Array | Yes |
-| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes |
-| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| challenge | Uint8Array | Yes | Challenge value. It cannot exceed 32 bytes and can be passed in Uint8Array([]) format. |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Authentication trust level. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) |
+| Type | Description |
+| --- | --- |
+| [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) | AuthInstance** instance obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
-| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
+| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
+
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  console.info('get auth instance successfully.');
+} catch (error) {
+  console.error(`get auth instance failed. Code: ${error?.code}, message: ${error?.message}`);
+}
+```

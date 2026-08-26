@@ -14,8 +14,7 @@ APIs such as [ON.isBefore](#isbefore) and [ON.isAfter](#isafter) can be used to 
 ## Modules to Import
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## afterComponent
@@ -34,21 +33,34 @@ Specifies that the target component is located after the given feature component
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| com | [Component](arkts-test-uitest-component-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| com | [Component](arkts-test-uitest-component-c.md) | Yes | The feature component after which the target component is located. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | Returns the On object that specifies the target component is located after the given feature component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, On, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let component: Component = await driver.findComponent(ON.type('Text'));
+  let on: On = ON.text('123').afterComponent(component); // Search for the component whose text is 123 after the first text component.
+}
+```
 
 ## beforeComponent
 
@@ -66,21 +78,34 @@ Specifies that the target component is located before the given feature componen
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| com | [Component](arkts-test-uitest-component-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| com | [Component](arkts-test-uitest-component-c.md) | Yes | The feature component before which the target component is located. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | Returns the On object that specifies the target component is located before the given feature component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, On, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let component: Component = await driver.findComponent(ON.type('Text'));
+  let on: On = ON.text('123').beforeComponent(component); // Search for the component whose text is 123 before the first text component.
+}
+```
 
 ## belongingDisplay
 
@@ -98,21 +123,30 @@ Specifies the display to which the target component belongs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| displayId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0.    **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md) to obtain all current **display** objects and use them to obtain the corresponding display IDs. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | The **On** object of the display to which the specified component belongs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.belongingDisplay(0); // Use the static constructor ON to create an On object and specify the ID of the display to which the target component belongs.
+```
 
 ## checkable
 
@@ -130,21 +164,30 @@ Specifies the checkable attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Checkable status of the component. The value **true** indicates that the component is checkable, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the checkable attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.checkable(true); // Use the static constructor ON to create an On object and specify the checkable attribute of the target component.
+```
 
 ## checked
 
@@ -162,21 +205,30 @@ Specifies the checked attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Checked status of the component. The value **true** indicates that the component is checked, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the checked attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.checked(true); // Use the static constructor ON to create an On object and specify the checked attribute of the target component.
+```
 
 ## clickable
 
@@ -194,21 +246,30 @@ Specifies the clickable attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Clickable status of the component. The value **true** indicates that the component is clickable, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the clickable attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.clickable(true); // Use the static constructor ON to create an On object and specify the clickable attribute of the target component.
+```
 
 ## description
 
@@ -226,22 +287,31 @@ Specifies the description of the target component. Multiple match patterns are s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| val | string | Yes |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| val | string | Yes | Description of the component. |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md) . Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.description('123'); // Use the static constructor ON to create an On object and specify the description attribute of the target component.
+```
 
 ## enabled
 
@@ -259,21 +329,30 @@ Specifies the enabled attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Enabled status of the component. The value **true** indicates that the component is enabled, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the enabled attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.enabled(true); // Use the static constructor ON to create an On object and specify the enabled attribute of the target component.
+```
 
 ## focused
 
@@ -291,21 +370,30 @@ Specifies the focused attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Focused status of the component. The value **true** indicates that the component is focused, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the focused attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.focused(true); // Use the static constructor ON to create an On object and specify the focused attribute of the target component.
+```
 
 ## hint
 
@@ -323,22 +411,31 @@ Specifies the hint text attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| val | string | Yes |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| val | string | Yes | The specified hint text of the component. |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md). Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the **hint** attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { MatchPattern, On, ON } from '@kit.TestKit';
+
+let on: On = ON.hint('welcome', MatchPattern.EQUALS); // Use the static constructor ON to create an On object with the hint text attribute of the target component specified.
+```
 
 ## id
 
@@ -356,21 +453,30 @@ Specifies the ID attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [id](#id) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | Component ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the ID attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('123'); // Use the static constructor ON to create an On object and specify the ID attribute of the target component.
+```
 
 ## id
 
@@ -388,22 +494,31 @@ Specifies the **id** attribute and match pattern of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [id](#id) | string | Yes |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | Component ID. |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | Text matching pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the ID attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { MatchPattern, On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // Use case-insensitive regular expression to match the ID attribute value of the component.
+```
 
 ## inWindow
 
@@ -421,21 +536,30 @@ Specifies that the target component is located within the given application wind
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name of the application window. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.inWindow('com.uitestScene.acts'); // Use the static constructor ON to create an On object and specify that the target component is located within the given application window.
+```
 
 ## isAfter
 
@@ -453,21 +577,31 @@ Specifies that the target component is located after the given attribute compone
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Information about the attribute component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+// Use the static constructor ON to create an On object and specify that the target component is located after the given attribute component.
+let on: On = ON.type('Text').isAfter(ON.text('123')); // Search for the first Text component located after the component whose text is 123.
+```
 
 ## isBefore
 
@@ -485,21 +619,31 @@ Specifies that the target component is located before the given attribute compon
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Information about the attribute component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+// Use the static constructor ON to create an On object and specify that the target component is located before the given attribute component.
+let on: On = ON.type('Button').isBefore(ON.text('123')); // Search for the first Button component located before the component whose text is 123.
+```
 
 ## longClickable
 
@@ -517,21 +661,30 @@ Specifies the number-clickable attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Long-clickable status of the component. The value **true** indicates that the component is number -clickable, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the number-clickable attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.longClickable(true); // Use the static constructor ON to create an On object and specify the longClickable attribute of the target component.
+```
 
 ## originalText
 
@@ -541,7 +694,8 @@ originalText(text: string, pattern?: MatchPattern): On
 
 Specifies the text content and text matching pattern of the component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If the accessibilityLevel
 > of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of
 > the target component for searching for the component. In this case, the [On.text()](#text) API does not
@@ -555,22 +709,31 @@ Specifies the text content and text matching pattern of the component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [text](#text) | string | Yes |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Component text, used to match the target component. |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md). Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the text attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.originalText('123'); // Use the static constructor ON to create an On object and specify the originalText attribute of the target component.
+```
 
 ## scrollable
 
@@ -588,21 +751,30 @@ Specifies the scrollable attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Whether the specified component is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the scrollable attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.scrollable(true); // Use the static constructor ON to create an On object and specify the scrollable attribute of the target component.
+```
 
 ## selected
 
@@ -620,21 +792,30 @@ Specifies the selected attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Selected status of the component. The value **true** indicates that the component is selected, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the selected attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.selected(true); // Use the static constructor ON to create an On object and specify the selected attribute of the target component.
+```
 
 ## text
 
@@ -644,7 +825,8 @@ text(txt: string, pattern?: MatchPattern): On
 
 Specifies the text attribute of the target component. Multiple match patterns are supported.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If the accessibilityLevel
 > of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute
 > of the target component for searching for the component. In this case, you can use the
@@ -658,22 +840,31 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| txt | string | Yes |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| txt | string | Yes | Component text, used to match the target component. |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md) . Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the text attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.text('123'); // Use the static constructor ON to create an On object and specify the text attribute of the target component.
+```
 
 ## type
 
@@ -691,21 +882,30 @@ Specifies the type attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tp | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tp | string | Yes | Component type. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the type attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.type('Button'); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
+```
 
 ## type
 
@@ -723,22 +923,31 @@ Specifies the **type** attribute and match pattern of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tp | string | Yes |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tp | string | Yes | Component type. |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | Text matching pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object that matches the type attribute of the target component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON, MatchPattern } from '@kit.TestKit';
+
+let on: On = ON.type('Button', MatchPattern.EQUALS); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
+```
 
 ## within
 
@@ -756,21 +965,31 @@ Specifies that the target component is located within the given attribute compon
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Information about the attribute component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | On** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+// Use the static constructor ON to create an On object and specify that the target component is located within the given attribute component.
+let on: On = ON.text('java').within(ON.type('Scroll')); // Search for the child component whose text is java within the Scroller component.
+```
 
 ## withinComponent
 
@@ -788,18 +1007,31 @@ Specifies that the target component is located within the given feature componen
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| com | [Component](arkts-test-uitest-component-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| com | [Component](arkts-test-uitest-component-c.md) | Yes | The feature component within which the target component is located. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [On](arkts-test-uitest-on-c.md) |
+| Type | Description |
+| --- | --- |
+| [On](arkts-test-uitest-on-c.md) | Returns the On object that specifies the target component is located within the given feature component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, On, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let component: Component = await driver.findComponent(ON.type('Text'));
+  let on: On = ON.text('123').withinComponent(component); // Search for the component whose text is 123 within the first text component.
+}
+```

@@ -2,7 +2,8 @@
 
 Layout information for the semi-folded state.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 1. In semi-folded state, the device contains an avoidance area, and layout calculations must account for
 > the impact of this avoidance area on the overall layout.
 > 2. In semi-folded mode, the upper screen is dedicated to content display, and the lower screen is
@@ -15,7 +16,7 @@ Layout information for the semi-folded state.
 ## Modules to Import
 
 ```TypeScript
-import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from 'kits/@kit.ArkUI';
+import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from '@kit.ArkUI';
 ```
 
 ## extraRegionPosition

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import font from '@kit.ArkUI';
 ```
 
 ## getFontByName
@@ -14,7 +14,8 @@ function getFontByName(fontName: string): FontInfo
 
 Obtains information about a system font based on the font name.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Since API version 10, you can use the
 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Font](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated with
@@ -34,12 +35,12 @@ Obtains information about a system font based on the font name.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fontName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fontName | string | Yes | System font name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [FontInfo](arkts-arkui-font-fontinfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [FontInfo](arkts-arkui-font-fontinfo-i.md) | Information about the system font. |

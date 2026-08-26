@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
+import shortcutManager from '@kit.AbilityKit';
 ```
 
 ## setShortcutVisibleForSelf
@@ -20,19 +20,34 @@ Sets whether to display the specified shortcut for the current application. This
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string | Yes |
-| visible | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | Shortcut ID, which is the value of the **shortcutId** field under the **shortcuts** tag in the [module.json5](../../../quick-start/module-configuration-file.md) file. The value is a string of up to 63 bytes. |
+| visible | boolean | Yes | Whether to display the shortcut. **true** to display, **false** otherwise. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is not exist. |
+
+**Examples**
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Replace it with the shortcutId field under the shortcuts tag of the module.json5 file.
+shortcutManager.setShortcutVisibleForSelf("shortcut_id", false)
+  .then(() => {
+    console.info('setShortcutVisibleForSelf success');
+  }).catch((err: BusinessError) => {
+  console.error(`setShortcutVisibleForSelf errData is errCode:${err.code}  message:${err.message}`);
+});
+```

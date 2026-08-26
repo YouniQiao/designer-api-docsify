@@ -12,8 +12,8 @@ type Value = string | number | Decimal
 
 **系统能力：** SystemCapability.Utils.Lang
 
-| 类型 |
-| --- |
-| string |
-| double |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| string |  |
+| double |  |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |  |

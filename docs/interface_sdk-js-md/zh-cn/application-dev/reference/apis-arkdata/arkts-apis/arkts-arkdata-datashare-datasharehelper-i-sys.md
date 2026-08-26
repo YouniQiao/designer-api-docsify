@@ -11,7 +11,8 @@ DataShare管理工具实例，可使用此实例访问或管理服务端的数�
 ## 导入模块
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import dataShare from '@kit.ArkData';
+import dataSharePredicates from '@kit.ArkDataPredicates';
 ```
 
 ## addTemplate
@@ -32,20 +33,42 @@ addTemplate(uri: string, subscriberId: string, template: Template): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| subscriberId | string | 是 |
-| template | [Template](arkts-arkdata-datashare-template-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要插入的数据的路径。 |
+| subscriberId | string | 是 | 要添加模板的订阅者ID，每个订阅者的ID是唯一的。 |
+| template | [Template](arkts-arkdata-datashare-template-i-sys.md) | 是 | 要添加的数据模板。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI is not exist. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+let uri = "datashareproxy://com.samples.datasharetest.DataShare";
+let subscriberId = '11';
+let key1: string = "p1";
+let value1: string = "select cityColumn as city_1, visitedColumn as visited_1 from citys where like = true";
+let key2: string = "p2";
+let value2: string = "select cityColumn as city_2, visitedColumn as visited_2 from citys where like = false";
+let template: dataShare.Template = {
+  predicates : {
+    key1 : value1,
+    key2 : value2,
+  },
+  scheduler : "select remindTimer(time) from TBL00",
+  update : "update TBL00 set cityColumn = 'visited' where cityColumn = 'someCity'"
+};
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).addTemplate(uri, subscriberId, template);
+}
+```
 
 ## batchInsert
 
@@ -65,19 +88,47 @@ batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<nu
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要插入的数据的路径。 |
+| values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 | 要插入的数据。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当将批量数据插入数据库成功，err为undefined，data为获取到的插入的数据记录数；否则为错误对象。因部分数据库（ 如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回插入的数据记录数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let vbs: ValuesBucket[] = [
+  { "name": "roe11", "age": 21, "salary": 20.5 }
+]
+
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).batchInsert(uri, vbs, (err, data) => {
+      if (err !== undefined) {
+        console.error(`Failed to batch insert. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info("batchInsert succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to batch insert. Code: ${code}, message: ${message}`);
+}
+```
 
 ## batchInsert
 
@@ -97,24 +148,50 @@ batchInsert(uri: string, values: Array<ValuesBucket>): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要插入的数据的路径。 |
+| values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 | 要插入的数据。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。返回插入的数据记录数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let vbs: ValuesBucket[] = [
+  { "name": "roe11", "age": 21, "salary": 20.5 }
+]
+
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).batchInsert(uri, vbs).then((data: number) => {
+      console.info("batchInsert succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to batch insert. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to batch insert. Code: ${code}, message: ${message}`);
+}
+```
 
 ## batchUpdate
 
@@ -134,24 +211,82 @@ batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| operations | Record & lt;string, Array & lt;UpdateOperation & gt; & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| operations | Record & lt;string, Array & lt;UpdateOperation & gt; & gt; | 是 | 要更新数据的路径、筛选条件和数据集合。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Record & lt;string, Array & lt;number & gt; & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Record & lt;string, Array & lt;number & gt; & gt; & gt; | Promise used to return an array of updated data records. The value **-1** means the update operation fails. The number of updated data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: 1.The internal status is abnormal; 2.The interface is incorrectly used; 3.Permission configuration error; 4.A system error. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+
+**示例**
+
+```TypeScript
+import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let record: Record<string, Array<dataShare.UpdateOperation>> = {};
+let operations1: Array<dataShare.UpdateOperation> = [];
+let operations2: Array<dataShare.UpdateOperation> = [];
+
+let pre1: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+pre1.equalTo("name", "ZhangSan");
+let vb1: ValuesBucket = {
+  "name": "ZhangSan1",
+};
+let operation1: dataShare.UpdateOperation = {
+  values: vb1,
+  predicates: pre1
+};
+operations1.push(operation1);
+
+let pre2: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+pre2.equalTo("name", "ZhangSan2");
+let vb2: ValuesBucket = {
+  "name": "ZhangSan3",
+};
+let operation2: dataShare.UpdateOperation = {
+  values: vb2,
+  predicates: pre2
+};
+operations2.push(operation2);
+record["uri1"] = operations1;
+record["uri2"] = operations2;
+
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).batchUpdate(record).then((data: Record<string, Array<number>>) => {
+      // 遍历data获取每条数据的更新结果， value为更新成功的数据记录数，若小于0，说明该次更新失败
+      let entries = Object.entries(data);
+      for (let i = 0; i < entries.length; i++) {
+        let key = entries[i][0];
+        let values = entries[i][1];
+        console.info(`Update uri:${key}`);
+        for (const value of values) {
+          console.info(`Update result:${value}`);
+        }
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to batch update. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to batch update. Code: ${code}, message: ${message}`);
+}
+```
 
 ## close
 
@@ -171,16 +306,24 @@ close(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).close();
+}
+```
 
 ## delete
 
@@ -200,19 +343,45 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callbac
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要删除的数据的路径。 |
+| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除 目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当从数据库中删除一条或多条数据记录成功，err为undefined，data为获取到的已删除的数据记录数；否则为错误对象。因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回删除的数据记录数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError, data: number) => {
+      if (err !== undefined) {
+        console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info("delete succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to delete. Code: ${code}, message: ${message}`);
+}
+```
 
 ## delete
 
@@ -232,24 +401,48 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promis
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要删除的数据的路径。 |
+| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除 目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。返回已删除的数据记录数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da).then((data: number) => {
+      console.info("delete succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to delete. Code: ${code}, message: ${message}`);
+}
+```
 
 ## delTemplate
 
@@ -269,19 +462,41 @@ delTemplate(uri: string, subscriberId: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| subscriberId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要删除的数据的路径。 |
+| subscriberId | string | 是 | 订阅者ID，每个订阅者的ID是唯一的。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI is not exist. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+let uri = "datashareproxy://com.samples.datasharetest.DataShare";
+let subscriberId = '11';
+let key1: string = "p1";
+let value1: string = "select cityColumn as city_1, visitedColumn as visited_1 from citys where like = true";
+let key2: string = "p2";
+let value2: string = "select cityColumn as city_2, visitedColumn as visited_2 from citys where like = false";
+let template: dataShare.Template = {
+  predicates : {
+    key1 : value1,
+    key2 : value2,
+  },
+  scheduler : "select remindTimer(time) from TBL00"
+};
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).addTemplate(uri, subscriberId, template);
+  (dataShareHelper as dataShare.DataShareHelper).delTemplate(uri, subscriberId);
+}
+```
 
 ## denormalizeUri
 
@@ -301,18 +516,35 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要反规范化的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当将指定的URI转换为非规范化URI，err为undefined，data为获取到的反规范化URI（如果反规范化成功，则返回反规 范化的URI；如果无需进行反规范化，则返回原始URI；若不支持则返回空）；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).denormalizeUri(uri, (err: BusinessError, data: string) => {
+    if (err !== undefined) {
+      console.error(`Failed to denormalize URI. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info("denormalizeUri = " + data);
+    }
+  });
+}
+```
 
 ## denormalizeUri
 
@@ -332,23 +564,38 @@ denormalizeUri(uri: string): Promise<string>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要反规范化的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象。如果反规范化成功，则返回反规范化的URI；如果无需执行任何操作，则返回原始URI；若不支持则返回空。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).denormalizeUri(uri).then((data: string) => {
+    console.info("denormalizeUri = " + data);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to denormalize URI. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
 
 ## getPublishedData
 
@@ -368,19 +615,32 @@ getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 表示数据所属的APP。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt;&gt; | 是 | 回调函数，返回给定的APP和模板发布的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700012](../errorcode-datashare.md#15700012-数据区不存在) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area does not exist. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let publishCallback: (err: BusinessError, data: Array<dataShare.PublishedItem>) => void = (err: BusinessError, result: Array<dataShare.PublishedItem>): void => {
+  console.info("**** Observer publish callback ****");
+};
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest", publishCallback);
+}
+```
 
 ## getPublishedData
 
@@ -400,24 +660,32 @@ getPublishedData(bundleName: string): Promise<Array<PublishedItem>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 表示数据所属的APP。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt;&gt; | Promise对象，返回给定的APP和模板发布的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700012](../errorcode-datashare.md#15700012-数据区不存在) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area does not exist. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (dataShareHelper != undefined) {
+  let publishedData: Promise<Array<dataShare.PublishedItem>> = (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest");
+}
+```
 
 ## insert
 
@@ -437,19 +705,54 @@ insert(uri: string, value: ValuesBucket, callback: AsyncCallback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要插入的数据的路径。 |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要插入的数据的值。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当将单条数据插入数据库成功，err为undefined，data为获取到的插入数据记录的索引；否则为错误对象。因部分数据库 （如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此callback也无法返回索引值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let key1: string = "name";
+let value1: string = "rose";
+let key2: string = "age";
+let value2: number = 22;
+let key3: string = "salary";
+let value3: number = 200.5;
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).insert(uri, valueBucket, (err: BusinessError, data: number) => {
+      if (err !== undefined) {
+        console.error(`Failed to insert. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info("insert succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to insert. Code: ${code}, message: ${message}`);
+}
+```
 
 ## insert
 
@@ -469,24 +772,57 @@ insert(uri: string, value: ValuesBucket): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要插入的数据的路径。 |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要插入的数据的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。返回插入数据记录的索引。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ValuesBucket } from '@kit.ArkData';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let key1: string = "name";
+let value1: string = "rose1";
+let key2: string = "age";
+let value2: number = 21;
+let key3: string = "salary";
+let value3: number = 20.5;
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).insert(uri, valueBucket).then((data: number) => {
+      console.info("insert succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to insert. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to insert. Code: ${code}, message: ${message}`);
+}
+```
 
 ## normalizeUri
 
@@ -506,18 +842,35 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要规范化的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当将给定的DataShare URI转换为规范化URI成功，err为undefined，data为获取到的规范化URI（如果支持 URI规范化，则返回规范化URI，否则返回空）；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).normalizeUri(uri, (err: BusinessError, data: string) => {
+    if (err !== undefined) {
+      console.error(`Failed to normalize URI. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info("normalizeUri = " + data);
+    }
+  });
+}
+```
 
 ## normalizeUri
 
@@ -537,23 +890,38 @@ normalizeUri(uri: string): Promise<string>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要规范化的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象。如果支持URI规范化，则返回规范化URI，否则返回空。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).normalizeUri(uri).then((data: string) => {
+    console.info("normalizeUri = " + data);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to normalize URI. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
 
 ## notifyChange
 
@@ -573,18 +941,29 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 表示指定的数据路径。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知已注册的观察者指定URI对应的数据资源已发生变更成功，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Mandatory parameters are left unspecified.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).notifyChange(uri, () => {
+    console.info("***** notifyChange *****");
+  });
+}
+```
 
 ## notifyChange
 
@@ -604,23 +983,32 @@ notifyChange(uri: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 表示指定的数据路径。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Mandatory parameters are left unspecified.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).notifyChange(uri);
+}
+```
 
 ## notifyChange
 
@@ -640,23 +1028,41 @@ notifyChange(data: ChangeInfo): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | [ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | [ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md) | 是 | 表示数据变更类型、变化的uri、变更的数据内容。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+
+**示例**
+
+```TypeScript
+import { ValuesBucket } from '@kit.ArkData';
+
+let dsUri = "datashare:///com.acts.datasharetest";
+let people: ValuesBucket[] = [
+  { "name": "LiSi" },
+  { "name": "WangWu" },
+  { "name": "ZhaoLiu" }
+]
+
+let changeData:dataShare.ChangeInfo= { type:dataShare.ChangeType.INSERT, uri:dsUri, values:people};
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).notifyChange(changeData);
+}
+```
 
 ## off('dataChange')
 
@@ -676,19 +1082,32 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'dataChange' | 是 |
-| uri | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'dataChange' | 是 | 取消订阅的事件/回调类型，支持的事件为'dataChange'。 |
+| uri | string | 是 | 表示指定的数据路径。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+let callback: () => void = (): void => {
+  console.info("**** Observer on callback ****");
+}
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).on("dataChange", uri, callback);
+  (dataShareHelper as dataShare.DataShareHelper).off("dataChange", uri, callback);
+}
+```
 
 ## off
 
@@ -708,20 +1127,35 @@ off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | 'dataChange' | 是 |
-| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | 是 |
-| uri | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | 'dataChange' | 是 | 取消订阅的事件/回调类型，支持的事件为'dataChange'。 |
+| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | 是 | 表示数据更改时按指定数据路径通知变更。 |
+| uri | string | 是 | 表示指定的数据路径。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | 否 | 表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。如果不为空， 传入的callback必须和注册为同一个。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.acts.datasharetest";
+export function callback(error:BusinessError, ChangeInfo:dataShare.ChangeInfo) {
+    console.info(' **** Observer callback **** ChangeInfo:' + JSON.stringify(ChangeInfo));
+}
+if (dataShareHelper !== undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).on("dataChange", dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
+  (dataShareHelper as dataShare.DataShareHelper).off("dataChange", dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
+}
+```
 
 ## off('rdbDataChange')
 
@@ -746,26 +1180,36 @@ off(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'rdbDataChange' | 是 |
-| uris | Array & lt;string & gt; | 是 |
-| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'rdbDataChange' | 是 | 取消订阅的事件类型，支持的事件为'rdbDataChange'，表示rdb数据的变更事件。 |
+| uris | Array & lt;string & gt; | 是 | 要操作的数据的路径。 |
+| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | 是 | 处理回调的templateId。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | 否 | 回调函数。表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有 的通知事件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | 返回操作结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+let uri = "datashareproxy://com.samples.datasharetest.DataShare";
+let templateId:dataShare.TemplateId = {subscriberId:"11", bundleNameOfOwner:"com.acts.ohos.data.datasharetest"};
+if (dataShareHelper != undefined) {
+  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).off("rdbDataChange", [uri], templateId);
+}
+```
 
 ## off('publishedDataChange')
 
@@ -790,26 +1234,41 @@ off(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'publishedDataChange' | 是 |
-| uris | Array & lt;string & gt; | 是 |
-| subscriberId | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'publishedDataChange' | 是 | 取消订阅的事件类型，支持的事件为'publishedDataChange'，表示已发布数据的变更事件。 |
+| uris | Array & lt;string & gt; | 是 | 要操作的数据的路径。 |
+| subscriberId | string | 是 | 指定处理回调的用户ID。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | 否 | 回调函数。表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该 uri下所有的通知事件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | 返回操作结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let offCallback: (err: BusinessError, node: dataShare.PublishedDataChangeNode) => void = (err: BusinessError, node:dataShare.PublishedDataChangeNode): void => {
+  console.info("**** Observer off callback ****");
+}
+let uris:Array<string> = ["city", "datashareproxy://com.acts.ohos.data.datasharetest/appInfo", "key2"];
+let subscriberId = '11';
+if (dataShareHelper != undefined) {
+  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).off("publishedDataChange", uris, subscriberId, offCallback);
+}
+```
 
 ## on('dataChange')
 
@@ -829,19 +1288,31 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'dataChange' | 是 |
-| uri | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'dataChange' | 是 | 订阅的事件/回调类型，支持的事件为'dataChange'，当数据更改时，触发该事件。 |
+| uri | string | 是 | 表示指定的数据路径。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当有其他用户触发了变更通知时调用，err为undefined；否则不被触发或为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+let onCallback: () => void = (): void => {
+  console.info("**** Observer on callback ****");
+}
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper !== undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).on("dataChange", uri, onCallback);
+}
+```
 
 ## on
 
@@ -861,20 +1332,34 @@ on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallb
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | 'dataChange' | 是 |
-| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | 是 |
-| uri | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | 'dataChange' | 是 | 订阅的事件/回调类型，支持的事件为'dataChange'，当有其他用户触发了变更通知时，触发该事件。 |
+| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | 是 | 表示数据更改时按指定数据路径通知变更。 |
+| uri | string | 是 | 表示指定的数据路径。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | 是 | 回调函数。当有其他用户触发了变更通知时会回调该函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.acts.datasharetest";
+export function callback(error:BusinessError, ChangeInfo:dataShare.ChangeInfo) {
+    console.info(' **** Observer callback **** ChangeInfo:' + JSON.stringify(ChangeInfo));
+}
+if (dataShareHelper !== undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).on('dataChange', dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
+}
+```
 
 ## on('rdbDataChange')
 
@@ -899,26 +1384,51 @@ on(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'rdbDataChange' | 是 |
-| uris | Array & lt;string & gt; | 是 |
-| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'rdbDataChange' | 是 | 订阅的事件类型，支持的事件为'rdbDataChange'，表示rdb数据的变更事件。type是固定值以外时，接口无响应。 |
+| uris | Array & lt;string & gt; | 是 | 要操作的数据的路径。 |
+| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | 是 | 处理回调的templateId。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | 是 | 回调函数。当触发变更通知时调用，err为undefined，node为订阅数据变更结果；否则不被触发或为错误对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | 返回操作结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let onCallback: (err: BusinessError, node: dataShare.RdbDataChangeNode) => void = (err: BusinessError, node:dataShare.RdbDataChangeNode): void => {
+  if (!node.data.length) {
+    console.info("node.data is empty");
+    return;
+  }
+  console.info("onCallback " + JSON.stringify(node.uri));
+  console.info("onCallback " + JSON.stringify(node.templateId));
+  console.info("onCallback " + node.data.length);
+  for (let i = 0; i < node.data.length; i++) {
+    console.info("onCallback " + typeof node.data[i] + " " + node.data[i]);
+  }
+}
+
+let uri = "datashareproxy://com.samples.datasharetest.DataShare";
+let templateId:dataShare.TemplateId = {subscriberId:"11", bundleNameOfOwner:"com.acts.ohos.data.datasharetest"};
+if (dataShareHelper != undefined) {
+  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).on("rdbDataChange", [uri], templateId, onCallback);
+}
+```
 
 ## on('publishedDataChange')
 
@@ -943,26 +1453,51 @@ on(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'publishedDataChange' | 是 |
-| uris | Array & lt;string & gt; | 是 |
-| subscriberId | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'publishedDataChange' | 是 | 订阅的事件类型，支持的事件为'publishedDataChange'，表示已发布数据的变更事件。 |
+| uris | Array & lt;string & gt; | 是 | 要操作的数据的路径。 |
+| subscriberId | string | 是 | 指定处理回调的用户ID。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | 是 | 回调函数。当触发变更通知时调用，err为undefined，node为订阅数据变更结果；否则不被触发或为 错误对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | 返回操作结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let onPublishCallback: (err: BusinessError, node: dataShare.PublishedDataChangeNode) => void = (err: BusinessError, node:dataShare.PublishedDataChangeNode): void => {
+  console.info("onPublishCallback node bundleName " + JSON.stringify(node.bundleName));
+  console.info("onPublishCallback node data size" + node.data.length);
+  for (let i = 0; i < node.data.length; i++) {
+    console.info("onPublishCallback node " + typeof node.data[i].data);
+    if (typeof node.data[i].data != 'string') {
+      let array: ArrayBuffer = node.data[i].data as ArrayBuffer;
+      let data: Uint8Array = new Uint8Array(array);
+      console.info("onPublishCallback " + i + " " + JSON.stringify(data));
+    }
+    console.info("onPublishCallback data " + i + " " + JSON.stringify(node.data[i]));
+  }
+}
+let uris:Array<string> = ['city', 'datashareproxy://com.acts.ohos.data.datasharetest/appInfo', 'key2'];
+let subscriberId = '11';
+if (dataShareHelper != undefined) {
+  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).on('publishedDataChange', uris, subscriberId, onPublishCallback);
+}
+```
 
 ## publish
 
@@ -987,21 +1522,42 @@ publish(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt; | 是 |
-| bundleName | string | 是 |
-| version | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt; | 是 | 要发布的数据。 |
+| bundleName | string | 是 | 表示要发布数据所属的APP，对发布的私有数据生效，仅该app可以读取数据。 |
+| version | number | 是 | 要发布的数据版本，越大表示数据版本越新。如果发布的版本号小于数据库中的记录，则更新失败。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | 是 | 回调函数。当发布数据时调用，err为undefined，result为发布数据结果；否则不被触发或为错误对 象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700012](../errorcode-datashare.md#15700012-数据区不存在) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area is not exist. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let arrayBuffer = new ArrayBuffer(1);
+let version = 1;
+let dataArray : Array<dataShare.PublishedItem> = [{key:"key2", subscriberId:"11", data:arrayBuffer}];
+let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
+  console.info("publishCallback " + JSON.stringify(result));
+}
+try {
+  console.info("dataArray length is:", dataArray.length);
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", version, publishCallback);
+  }
+} catch (e) {
+  console.error(`Failed to publish. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 ## publish
 
@@ -1025,20 +1581,37 @@ publish(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt; | 是 |
-| bundleName | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt; | 是 | 要发布的数据。 |
+| bundleName | string | 是 | 表示要发布数据所属的APP，对发布的私有数据生效，仅该app可以读取数据。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | 是 | 回调函数。当发布数据时调用，err为undefined，result为发布数据结果；否则不被触发或为错误对 象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700012](../errorcode-datashare.md#15700012-数据区不存在) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area is not exist. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
+  console.info("publishCallback " + JSON.stringify(result));
+}
+let dataArray : Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", publishCallback);
+}
+```
 
 ## publish
 
@@ -1058,26 +1631,38 @@ publish(data: Array<PublishedItem>, bundleName: string, version?: number): Promi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt; | 是 |
-| bundleName | string | 是 |
-| version | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt; | 是 | 要发布的数据。 |
+| bundleName | string | 是 | 表示要发布数据所属的APP，对发布的私有数据生效，仅该app可以读取数据。 |
+| version | number | 否 | 要发布的数据版本，越大表示数据版本越新。如果发布的版本号小于数据库中的记录，则更新失败。 如果不检查要发布的数据版本，则不填。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | 发布数据结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700012](../errorcode-datashare.md#15700012-数据区不存在) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area is not exist. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+let dataArray: Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
+}
+```
 
 ## query
 
@@ -1102,20 +1687,47 @@ query(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 |
-| columns | Array & lt;string & gt; | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要查询的数据的路径。 |
+| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支 持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
+| columns | Array & lt;string & gt; | 是 | 要查询的列。如果此参数为空，则查询所有列。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | 是 | 回调函数。当查询数据库中的数据成功，err为undefined，data为获取到的查询到的结果集；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { dataSharePredicates, DataShareResultSet } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let columns = ["*"];
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).query(uri, da, columns, (err: BusinessError, data: DataShareResultSet) => {
+      if (err !== undefined) {
+        console.error(`Failed to query. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info("query succeed, rowCount : " + data.rowCount);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to query. Code: ${code}, message: ${message}`);
+}
+```
 
 ## query
 
@@ -1139,25 +1751,50 @@ query(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 |
-| columns | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要查询的数据的路径。 |
+| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支 持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
+| columns | Array & lt;string & gt; | 是 | 要查询的列。如果此参数为空，则查询所有列。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Promise对象。返回查询到的结果集。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { dataSharePredicates, DataShareResultSet } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let columns = ["*"];
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).query(uri, da, columns).then((data: DataShareResultSet) => {
+      console.info("query succeed, rowCount : " + data.rowCount);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to query. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to query. Code: ${code}, message: ${message}`);
+}
+```
 
 ## update
 
@@ -1182,20 +1819,57 @@ update(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要更新的数据的路径。 |
+| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。update接口是否支持谓词筛选条件取决于服务端所选用的数据库，如KVDB目 前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当更新数据库中的数据记录成功，err为undefined，data为获取到的更新的数据记录数；否则为错误对象。因部分数据库 （如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回更新的数据记录数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+let key1: string = "name";
+let value1: string = "roe1";
+let key2: string = "age";
+let value2: number = 21;
+let key3: string = "salary";
+let value3: number = 20.5;
+const va: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).update(uri, da, va, (err: BusinessError, data: number) => {
+      if (err !== undefined) {
+        console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info("update succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to update. Code: ${code}, message: ${message}`);
+}
+```
 
 ## update
 
@@ -1215,22 +1889,57 @@ update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要更新的数据的路径。 |
+| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。update接口是否支持谓词筛选条件取决于服务端所选用的数据库，如KVDB目 前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。返回更新的数据记录数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+let key1: string = "name";
+let value1: string = "roe1";
+let key2: string = "age";
+let value2: number = 21;
+let key3: string = "salary";
+let value3: number = 20.5;
+const va: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).update(uri, da, va).then((data: number) => {
+      console.info("update succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to update. Code: ${code}, message: ${message}`);
+}
+```

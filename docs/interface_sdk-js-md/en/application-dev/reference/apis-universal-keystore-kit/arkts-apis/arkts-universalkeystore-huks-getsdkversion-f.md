@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import huks from '@kit.UniversalKeystoreKit';
+import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 ```
 
 ## getSdkVersion
@@ -14,7 +15,8 @@ function getSdkVersion(options: HuksOptions): string
 
 Obtains the SDK version of the current system.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 8 and deprecated since API version 11.
 
 **Since:** 8
@@ -25,12 +27,24 @@ Obtains the SDK version of the current system.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | SDK version obtained. |
+
+**Examples**
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Set options to emptyOptions. */
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+let result = huks.getSdkVersion(emptyOptions);
+```

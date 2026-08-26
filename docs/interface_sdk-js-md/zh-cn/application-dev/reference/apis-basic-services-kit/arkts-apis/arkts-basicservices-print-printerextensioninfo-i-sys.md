@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import print from '@kit.BasicServicesKit';
 ```
 
 ## extensionId

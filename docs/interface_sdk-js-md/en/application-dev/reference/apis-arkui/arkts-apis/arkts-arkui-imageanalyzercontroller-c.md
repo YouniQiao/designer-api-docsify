@@ -45,6 +45,6 @@ Obtains the analysis types supported by the corresponding component.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[] |
+| Type | Description |
+| --- | --- |
+| [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[] | Analysis type supported by the corresponding component. |

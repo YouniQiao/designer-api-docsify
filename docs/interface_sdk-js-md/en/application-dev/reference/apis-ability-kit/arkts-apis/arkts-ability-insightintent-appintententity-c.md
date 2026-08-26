@@ -11,7 +11,9 @@ Define AppIntentEntity.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from 'kits/@kit.AbilityKit';
+import insightIntent from '@kit.AbilityKit';
+import insightIntentDriver from '@kit.AbilityKitDriver';
+import insightIntentProvider from '@kit.AbilityKitProvider';
 ```
 
 ## onQueryEntity
@@ -32,15 +34,15 @@ Called when query entity execute.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| params | [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| params | [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md) | Yes | The params of query entity. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;T & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;T & gt; & gt; | Returns an array of subclasses of the AppIntentEntity class, support promise. |
 
 ## displayName
 

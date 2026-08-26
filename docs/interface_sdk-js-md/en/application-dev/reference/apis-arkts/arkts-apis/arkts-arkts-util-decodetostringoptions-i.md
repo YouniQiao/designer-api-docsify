@@ -9,7 +9,8 @@ Describes the behavioral parameters for the **decodeToString** method when decod
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## stream

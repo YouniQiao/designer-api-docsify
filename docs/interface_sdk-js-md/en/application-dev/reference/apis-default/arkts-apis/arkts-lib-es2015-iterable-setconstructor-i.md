@@ -13,11 +13,11 @@ new <T>(iterable?: Iterable<T> | null): Set<T>
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| iterable | Iterable & lt;T & gt; \ | null | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| iterable | Iterable & lt;T & gt; \ | null | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

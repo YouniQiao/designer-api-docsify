@@ -19,12 +19,12 @@ The **FormBindingData** module provides APIs for widget data binding. You can us
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createformbindingdata) |
+| Name | Description |
+| --- | --- |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createformbindingdata) | Creates a **FormBindingData** object. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md) |
+| Name | Description |
+| --- | --- |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md) | Describes a **FormBindingData** object. |

@@ -1,6 +1,6 @@
 # Stack
 
-The **Stack** component provides a stack container where child components are successively stacked and the latter one overwrites the previous one.> **NOTE**>> - The general attribute align supports the mirroring capability on this component.>> **Child Components**>> Supported
+The **Stack** component provides a stack container where child components are successively stacked and the latter one overwrites the previous one. > **NOTE** > > - The general attribute align supports the mirroring capability on this component. > > **Child Components** > > Supported
 
 ## Stack
 
@@ -9,7 +9,8 @@ Stack(options?: StackOptions)
 ```
 
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Excessive component nesting can lead to performance degradation. In some scenarios, using component attributes
 > directly or leveraging system APIs can achieve the same effect as the stack container, reducing the number of
 > nested components and optimizing performance. For best practices, see
@@ -26,13 +27,36 @@ Stack(options?: StackOptions)
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [StackOptions](arkts-arkui-stackoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [StackOptions](arkts-arkui-stackoptions-i.md) | No | Alignment of child components in the container. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
+
+## Examples
+
+The syncLoad attribute is added since API version 26.0.0.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct StackExample {
+  build() {
+    // Set the child component to align at the bottom of the Stack container.
+    Stack({ alignContent: Alignment.Bottom }) {
+      // The first child component, displayed at the bottom.
+      Text('First child, show in bottom').width('90%').height('100%').backgroundColor(0xd2cab3).align(Alignment.Top)
+      // The second child component, displayed on the upper layer.
+      Text('Second child, show in top').width('70%').height('60%').backgroundColor(0xc1cbac).align(Alignment.Top)
+    }.width('100%').height(150).margin({ top: 5 })
+    // Since API version 26.0.0, the syncLoad attribute is added. Setting it to true means synchronously loading all child components in the Stack area.
+    .syncLoad(true)
+  }
+}
+```

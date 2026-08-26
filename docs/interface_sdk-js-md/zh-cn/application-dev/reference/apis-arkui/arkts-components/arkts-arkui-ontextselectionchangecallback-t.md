@@ -16,7 +16,7 @@ declare type OnTextSelectionChangeCallback = (selectionStart: number, selectionE
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| selectionStart | number | 是 |
-| selectionEnd | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| selectionStart | number | 是 | 所选文本的起始位置，文字的起始位置为0。 |
+| selectionEnd | number | 是 | 所选文本的结束位置。 |

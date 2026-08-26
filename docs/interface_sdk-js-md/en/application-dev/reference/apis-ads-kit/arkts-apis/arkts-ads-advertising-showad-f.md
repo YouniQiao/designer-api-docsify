@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { AdComponent } from '@kit.AdsKit.AdComponent';
+import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
+import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
+import advertising from '@kit.AdsKit';
 ```
 
 ## showAd
@@ -14,8 +17,10 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 
 Shows a full-screen ad.
 
-> **NOTE：**&gt;
-> 1. To ensure that ads can be displayed correctly, this API must be used together with the ad request API.&gt;
+> **NOTE：**
+> 
+> 1. To ensure that ads can be displayed correctly, this API must be used together with the ad request API.
+> 
 > 2. This API only supports displaying rewarded ads and interstitial ads.
 
 **Since:** 11
@@ -26,16 +31,32 @@ Shows a full-screen ad.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | Yes |
-| options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | Yes |
-| context | common.UIAbilityContext | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | Yes | Ad object. |
+| options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | Yes | Ad display parameters. |
+| context | common.UIAbilityContext | No | Context of the UIAbility. If this parameter is not set, the value is obtained from @ohos.app.ability.common.<br>**Since:** 12 |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
-| [21800004](../errorcode-ads.md#21800004-ad-display-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| [21800004](../errorcode-ads.md#21800004-ad-display-failure) | Failed to display the ad. |
+
+**Examples**
+
+For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { advertising } from '@kit.AdsKit';
+
+function showAd(ad: advertising.Advertisement, context?: common.UIAbilityContext): void {
+  // Ad display parameters. You can set the parameters based on the project requirements.
+  const adDisplayOptions: advertising.AdDisplayOptions = {};
+  // Show the ad.
+  advertising.showAd(ad, adDisplayOptions, context);
+}
+```

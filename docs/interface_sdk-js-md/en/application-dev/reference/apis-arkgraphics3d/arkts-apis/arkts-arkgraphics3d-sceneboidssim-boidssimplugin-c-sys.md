@@ -26,12 +26,37 @@ Gets the Boids simulation world instance associated with the specified scene.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | Yes | Object of the target scene. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimworld-c-sys.md) \| null |
+| Type | Description |
+| --- | --- |
+| [BoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimworld-c-sys.md) \| null | Returns the Boids simulation world instance, or null if it does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BoidsSimPlugin, BoidsSimWorld, Scene, RenderContext } from '@kit.ArkGraphics3D';
+
+async function initBoidsSim(): Promise<BoidsSimWorld | null> {
+  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
+  if (!renderContext) {
+    return null;
+  }
+  // Boids simulation plugin UUID
+  const BOIDS_SIM_PLUGIN_UUID: string = 'a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d';
+  // Load the Boids simulation plugin
+  const loaded: boolean = await renderContext.loadPlugin(BOIDS_SIM_PLUGIN_UUID);
+  if (!loaded) {
+    return null;
+  }
+  // Create an empty scene
+  const scene: Scene = await Scene.load();
+  // Get the Boids simulation world instance
+  const world: BoidsSimWorld | null = BoidsSimPlugin.getDefaultBoidsSimWorld(scene);
+  return world;
+}
+```

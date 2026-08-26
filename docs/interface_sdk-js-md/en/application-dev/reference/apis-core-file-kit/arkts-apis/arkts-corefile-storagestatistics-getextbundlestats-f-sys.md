@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
+import storageStatistics from '@kit.CoreFileKit';
 ```
 
 ## getExtBundleStats
@@ -26,23 +26,38 @@ Obtains the space usage of a specified user, system application bundle name, or 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| userId | number | Yes |
-| [businessName](arkts-corefile-storagestatistics-extbundlestats-i-sys.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| userId | number | Yes | User ID. |
+| businessName | string | Yes | System application bundle name or system service name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ExtBundleStats](arkts-corefile-storagestatistics-extbundlestats-i-sys.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ExtBundleStats](arkts-corefile-storagestatistics-extbundlestats-i-sys.md)&gt; | Promise used to return the space usage of a specified user, system application bundle name, or system service name. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| 13600001 |
-| 13600010 |
-| 13600012 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| 13600001 | IPC error. |
+| 13600010 | The input parameter is invalid. |
+| 13600012 | Failed to query the specified business space usage. |
+
+**Examples**
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId: number = 100;
+let businessName: string = 'com.example.storagedemo';
+storageStatistics.getExtBundleStats(userId, businessName).then((bundleStats: storageStatistics.ExtBundleStats) => {
+  console.info("getExtBundleStats successfully.");
+}).catch((err: BusinessError) => {
+  console.error(`getExtBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```

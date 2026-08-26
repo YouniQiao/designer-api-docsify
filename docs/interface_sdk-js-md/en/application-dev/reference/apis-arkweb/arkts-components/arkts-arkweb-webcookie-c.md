@@ -13,6 +13,9 @@ Manages behavior of cookies in **Web** components. All **Web** components in an 
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -23,7 +26,8 @@ constructor()
 
 Constructs a **WebCookie** object.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 8 and deprecated since API version 23. No API is provided for substitute.
 
 **Since:** 8

@@ -13,7 +13,6 @@ ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sy
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getColorEffect
@@ -32,16 +31,25 @@ Obtains the color effect in use.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md) |
+| Type | Description |
+| --- | --- |
+| [ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md) | Color effect. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+function getColorEffect(session: camera.PhotoSessionForSys): camera.ColorEffectType {
+  let colorEffect: camera.ColorEffectType = session.getColorEffect();
+  return colorEffect;
+}
+```
 
 ## setColorEffect
 
@@ -59,13 +67,21 @@ Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md) | Yes | The type of color effect. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+function setColorEffect(session: camera.PhotoSessionForSys, colorEffect: camera.ColorEffectType): void {
+  session.setColorEffect(colorEffect);
+}
+```

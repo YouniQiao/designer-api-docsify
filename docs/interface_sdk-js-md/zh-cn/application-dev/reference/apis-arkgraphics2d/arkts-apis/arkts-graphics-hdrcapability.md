@@ -9,13 +9,13 @@
 ## 导入模块
 
 ```TypeScript
-import { hdrCapability } from 'kits/@kit.ArkGraphics2D';
+import hdrCapability from '@kit.ArkGraphics2D';
 ```
 
 ## 汇总
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [HDRFormat(HDR能力)](arkts-arkgraphics2d-hdrcapability-hdrformat-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [HDRFormat(HDR能力)](arkts-arkgraphics2d-hdrcapability-hdrformat-e.md) | HDR格式枚举。 |

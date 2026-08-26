@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## renameSync
@@ -16,7 +14,8 @@ declare function renameSync(oldPath: string, newPath: string): void
 
 Renames a file or directory. This API returns the result synchronously.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is not supported in a distributed directory.
 
 **Since:** 9
@@ -27,31 +26,39 @@ Renames a file or directory. This API returns the result synchronously.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| oldPath | string | Yes |
-| newPath | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| oldPath | string | Yes | Application sandbox path of the file or directory to rename. |
+| newPath | string | Yes | Application sandbox path of the renamed file or directory. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900001 |
-| 13900002 |
-| 13900008 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900014 |
-| 13900015 |
-| 13900016 |
-| 13900018 |
-| 13900019 |
-| 13900020 |
-| 13900025 |
-| 13900027 |
-| 13900028 |
-| 13900032 |
-| 13900033 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900032 | Directory not empty |
+| 13900033 | Too many symbolic links encountered |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/new.txt";
+fileIo.renameSync(srcFile, dstFile);
+```

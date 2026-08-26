@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settingsLite } from 'kits/@kit.BasicServicesKit';
+import settingsLite from '@kit.BasicServicesKit';
 ```
 
 ## isDoubleClickAppForSelf
@@ -23,6 +23,6 @@ function isDoubleClickAppForSelf(callback: ClickCallback): void
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ClickCallback](arkts-basicservices-settingslite-clickcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ClickCallback](arkts-basicservices-settingslite-clickcallback-i.md) | Yes | Callback used to return the execution result. |

@@ -9,7 +9,6 @@ Defines the call transfer result.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## number

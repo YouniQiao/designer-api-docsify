@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## constructLocalSocketInstance
@@ -20,6 +20,13 @@ Creates a **LocalSocket** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LocalSocket](arkts-network-socket-localsocket-i.md) |
+| Type | Description |
+| --- | --- |
+| [LocalSocket](arkts-network-socket-localsocket-i.md) | LocalSocket** object. |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+```

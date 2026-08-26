@@ -18,7 +18,7 @@ The **companionDeviceAuth** module is an important part of the OpenHarmony user 
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import companionDeviceAuth from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary
@@ -26,49 +26,49 @@ import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getStatusMonitor(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md) |
-| [registerDeviceSelectCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-registerdeviceselectcallback-f-sys.md) |
-| [registerPasscodePromptCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-registerpasscodepromptcallback-f-sys.md) |
-| [unregisterDeviceSelectCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-unregisterdeviceselectcallback-f-sys.md) |
-| [unregisterPasscodePromptCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-unregisterpasscodepromptcallback-f-sys.md) |
-| [updateEnabledBusinessIds(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getStatusMonitor(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md) | Obtains the status monitor. This API is used to obtain the status monitor object of a specified user. The object can be used to query and subscribe to the template status, continuous authentication status, and available device status of the companion device. |
+| [registerDeviceSelectCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-registerdeviceselectcallback-f-sys.md) | Registers a callback for companion device selection. When the system requires the user to select a companion device, this callback is triggered. The application needs to return the information about the selected device in the callback. Through this callback, the application can implement custom device selection logic, for example, displaying a device selection screen for the user to select a device. |
+| [registerPasscodePromptCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-registerpasscodepromptcallback-f-sys.md) | Registers the callback invoked when the framework needs a companion device passcode. If a callback has already been registered, the new one replaces it. |
+| [unregisterDeviceSelectCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-unregisterdeviceselectcallback-f-sys.md) | Unregisters a callback for companion device selection. After the callback is unregistered, the system will no longer invoke the device selection callback registered by the application, and the device selection will fall back to the default system behavior. |
+| [unregisterPasscodePromptCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-unregisterpasscodepromptcallback-f-sys.md) | Unregisters the callback used to prompt for a companion device passcode. |
+| [updateEnabledBusinessIds(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md) | Updates the service scope supported by the specified companion device template. This API is used to modify the list of service IDs enabled for a registered template, thereby controlling the service scenarios in which the template can be used. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ContinuousAuthParam(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-continuousauthparam-i-sys.md) |
-| [DeviceKey(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md) |
-| [DeviceSelectResult(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-deviceselectresult-i-sys.md) |
-| [DeviceStatus(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-devicestatus-i-sys.md) |
-| [PasscodePromptParams(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-passcodepromptparams-i-sys.md) |
-| [StatusMonitor(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) |
-| [TemplateStatus(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ContinuousAuthParam(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-continuousauthparam-i-sys.md) | Defines continuous authentication parameters. They are used to configure parameters related to the subscription to the continuous authentication status, for example, specifying the target template to be subscribed to. |
+| [DeviceKey(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md) | Defines the device service ID. It uniquely identifies a device and its user, including the device ID type, device ID, and user ID. |
+| [DeviceSelectResult(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-deviceselectresult-i-sys.md) | Returns the result of companion device selection. It is used to return the device information and extended context selected by the user in the device selection callback. |
+| [DeviceStatus(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-devicestatus-i-sys.md) | Defines the device status information. It describes the current status of the companion device, including the device service ID, user name, model information, device name, online status, and list of supported service IDs. |
+| [PasscodePromptParams(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-passcodepromptparams-i-sys.md) | Params carried by the framework when prompting for a companion device passcode.@interface PasscodePromptParams |
+| [StatusMonitor(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | Status monitor object. It is used to listen for or obtain information such as the template status, continuous authentication status, and available device status. This object can be obtained by calling [getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md). |
+| [TemplateStatus(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) | Describes the complete status information about a registered companion device authentication template, including the template ID, data confirmation status, validity, user ID, time when the template is added, supported services, and associated device status. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BusinessId(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-businessid-e-sys.md) |
-| [DeviceIdType(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md) |
-| [SelectPurpose(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-selectpurpose-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [BusinessId(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-businessid-e-sys.md) | Enumerates service IDs. A service ID uniquely identifies a service scenario supported by the companion device. The service scenarios supported by different companion devices vary according to the authentication security. For example, executing voice commands without screen unlocking.The companion device relationships of different service IDs are independent of each other and do not interfere with each other. They can be added, deleted, and authenticated independently.Currently, the services of the companion device module include the default services of OpenHarmony, screen unlocking, application unlocking, and identity authentication before voice commands are executed on the lock screen.Adding services has requirements on the scenarios supported by the server device. For example, the multi-screen collaboration service requires that the server device support the agency authentication scenario. |
+| [DeviceIdType(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md) | Enumerates device ID types. They are used to define the device service identifier type. System-defined types and vendor-defined types are supported. |
+| [SelectPurpose(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-selectpurpose-e-sys.md) | Selects the purpose of the companion device. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AvailableDeviceStatusCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) |
-| [ContinuousAuthStatusCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) |
-| [DeviceSelectCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-deviceselectcallback-t-sys.md) |
-| [PasscodePromptCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-passcodepromptcallback-t-sys.md) |
-| [PasscodeSubmitCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-passcodesubmitcallback-t-sys.md) |
-| [TemplateStatusCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AvailableDeviceStatusCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | Defines the callback triggered for receiving notifications of available device status changes. When the list of available devices changes (for example, a new device goes online or a device goes offline), the system notifies the application through this callback. |
+| [ContinuousAuthStatusCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | Defines the callback triggered for receiving notifications of continuous authentication status changes. When the authentication status of a companion device changes, the system applies the current authentication result and authentication reliability level through this callback notification. |
+| [DeviceSelectCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-deviceselectcallback-t-sys.md) | Defines the callback triggered for the companion device selection. When the system requires the user to select a companion device (for example, when adding a template or performing authentication), this callback is triggered. The application needs to return the information about the selected device. |
+| [PasscodePromptCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-passcodepromptcallback-t-sys.md) | Defines the callback invoked when the framework needs a passcode for a companion device. |
+| [PasscodeSubmitCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-passcodesubmitcallback-t-sys.md) | Defines the callback used to submit a passcode entered by the user. |
+| [TemplateStatusCallback(Companion Device Authentication)](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | Defines the callback triggered for receiving notifications of template status changes. When the template status changes (for example, the template is added, deleted, or its validity changes), the system notifies the application through this callback. |
 <!--DelEnd-->

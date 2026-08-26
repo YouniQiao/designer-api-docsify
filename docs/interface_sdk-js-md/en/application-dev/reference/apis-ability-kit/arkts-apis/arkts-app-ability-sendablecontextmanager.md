@@ -11,24 +11,24 @@ The sendableContextManager module provides APIs for converting between Context a
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from 'kits/@kit.AbilityKit';
+import sendableContextManager from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [convertFromContext](arkts-ability-sendablecontextmanager-convertfromcontext-f.md) |
-| [convertToAbilityStageContext](arkts-ability-sendablecontextmanager-converttoabilitystagecontext-f.md) |
-| [convertToApplicationContext](arkts-ability-sendablecontextmanager-converttoapplicationcontext-f.md) |
-| [convertToContext](arkts-ability-sendablecontextmanager-converttocontext-f.md) |
-| [convertToUIAbilityContext](arkts-ability-sendablecontextmanager-converttouiabilitycontext-f.md) |
-| [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md) |
+| Name | Description |
+| --- | --- |
+| [convertFromContext](arkts-ability-sendablecontextmanager-convertfromcontext-f.md) | Converts a Context object to a SendableContext object. |
+| [convertToAbilityStageContext](arkts-ability-sendablecontextmanager-converttoabilitystagecontext-f.md) | Converts a SendableContext object to an AbilityStageContext object. |
+| [convertToApplicationContext](arkts-ability-sendablecontextmanager-converttoapplicationcontext-f.md) | Converts a SendableContext object to an ApplicationContext object. |
+| [convertToContext](arkts-ability-sendablecontextmanager-converttocontext-f.md) | Converts a SendableContext object to a Context object. |
+| [convertToUIAbilityContext](arkts-ability-sendablecontextmanager-converttouiabilitycontext-f.md) | Converts a SendableContext object to a UIAbilityContext object. |
+| [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md) | Enables the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md) in Context. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) |
+| Name | Description |
+| --- | --- |
+| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | Level-2 module SendableContext. |

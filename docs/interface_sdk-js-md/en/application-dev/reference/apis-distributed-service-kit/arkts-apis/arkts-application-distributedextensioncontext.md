@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { DistributedExtensionContext } from 'kits/@kit.DistributedServiceKit';
+import DistributedExtensionContext from '@kit.DistributedServiceKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DistributedExtensionContext(Distributed Extension Context)](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md) |
+| Name | Description |
+| --- | --- |
+| [DistributedExtensionContext(Distributed Extension Context)](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md) | Class inherited for the distributed extension function. |

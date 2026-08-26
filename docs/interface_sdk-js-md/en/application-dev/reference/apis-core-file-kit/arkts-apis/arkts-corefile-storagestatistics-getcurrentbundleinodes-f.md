@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
+import storageStatistics from '@kit.CoreFileKit';
 ```
 
 ## getCurrentBundleInodes
@@ -22,14 +22,26 @@ Get the current bundle inodes.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | return Promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13600001 |
-| 13600002 |
-| 13600017 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13600001 | IPC error. |
+| 13600002 | File system not supported. |
+| 13600017 | Failed to query the inode information of the application. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+storageStatistics.getCurrentBundleInodes().then((curInodes: number) => {
+  console.info("getCurrentBundleInodes successfully: " + curInodes);
+}).catch((err: BusinessError) => {
+  console.error(`getCurrentBundleInodes failed. Code: ${err.code}, Message: ${err.message}`);
+});
+```

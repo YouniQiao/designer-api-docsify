@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpnExtension } from 'kits/@kit.NetworkKit';
+import vpnExtension from '@kit.NetworkKit';
 ```
 
 ## addresses
@@ -183,3 +183,48 @@ VPN唯一标识。
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
+
+**示例**
+
+```TypeScript
+import { vpnExtension} from '@kit.NetworkKit';
+
+let vpnConfig: vpnExtension.VpnConfig = {
+  addresses: [],
+  vpnId: '123',
+  routes: [{
+    // 网卡名称配置为空时，系统默认将路由配置到VPN虚拟网卡。
+    // 如填写非虚拟网卡实际名称，可能导致路由配置异常。
+    interface: "vpn-tun",
+    destination: {
+      address: {
+        address:'',
+        family:1,
+        port:8080
+      },
+      prefixLength:1
+    },
+    gateway: {
+      // 网关地址配置为空时，系统默认将VPN虚拟网卡地址作为网关地址。
+      // 如需使用非VPN虚拟网卡地址，请确保地址可达，否则可能导致路由配置失败。
+      address:'',
+      family:1,
+      port:8080
+    },
+    hasGateway: true,
+    isDefaultRoute: true,
+  }],
+  mtu: 1400,
+  dnsAddresses: ["223.5.5.5", "223.6.6.6"],
+  trustedApplications: [],
+  blockedApplications: [],
+}
+let context: vpnExtension.VpnExtensionContext;
+
+function vpnCreate(){
+  let vpnConnection: vpnExtension.VpnConnection = vpnExtension.createVpnConnection(context);
+  vpnConnection.create(vpnConfig).then((data) => {
+    console.info("VPN create " + JSON.stringify(data));
+  })
+}
+```

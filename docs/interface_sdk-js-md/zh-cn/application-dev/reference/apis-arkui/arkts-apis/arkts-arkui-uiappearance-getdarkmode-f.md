@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uiAppearance } from 'kits/@kit.ArkUI';
+import uiAppearance from '@kit.ArkUI';
 ```
 
 ## getDarkMode
@@ -30,13 +30,28 @@ function getDarkMode(): DarkMode
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DarkMode](arkts-arkui-uiappearance-darkmode-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DarkMode](arkts-arkui-uiappearance-darkmode-e.md) | current dark-mode. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [500001](../errorcode-uiappearance.md#500001-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10 - 19 |
+| [500001](../errorcode-uiappearance.md#500001-内部错误) | Internal error. |
+
+**示例**
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let darkMode = uiAppearance.getDarkMode();
+  console.info('Get dark-mode ' + darkMode);
+} catch (error) {
+  let err = error as BusinessError;
+  console.error(`Get dark-mode failed. Code: ${err.code}, message: ${err.message}`);
+}
+```

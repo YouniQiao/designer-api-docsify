@@ -33,9 +33,15 @@ Performs the reverse operation of [PersistProp](#persistprop). Specifically, thi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Property name in PersistentStorage. |
+
+**Examples**
+
+```TypeScript
+PersistentStorage.DeleteProp('highScore');
+```
 
 ## deleteProp
 
@@ -53,9 +59,15 @@ Performs the reverse operation of [persistProp](#persistprop). Specifically, thi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Property name in PersistentStorage. |
+
+**Examples**
+
+```TypeScript
+PersistentStorage.deleteProp('highScore');
+```
 
 ## Keys
 
@@ -75,9 +87,24 @@ Returns an array of all persisted property names.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Returns an array of all persisted property names. |
+
+**Examples**
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.Keys();
+```
+
+```TypeScript
+Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.Keys(); // keys contains accessibilityEnabled, languageCode, and prop.
+```
 
 ## keys
 
@@ -95,9 +122,24 @@ Returns an array of all persisted property names.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Returns an array of all persisted property names. |
+
+**Examples**
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.keys();
+```
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.keys(); // keys contains accessibilityEnabled, languageCode, and prop.
+```
 
 ## PersistProp
 
@@ -123,10 +165,16 @@ the property. If the property is found, it is persisted.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| defaultValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Property name. |
+| defaultValue | T | Yes | Default value used for initialization if the specified **key** is not found in PersistentStorage and AppStorage. The value cannot be **null** or **undefined**. |
+
+**Examples**
+
+```TypeScript
+PersistentStorage.PersistProp('highScore', '0');
+```
 
 ## persistProp
 
@@ -150,10 +198,14 @@ the property. If the property is found, it is persisted.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| defaultValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Property name. |
+| defaultValue | T | Yes | Default value used for initialization if the specified **key** is not found in PersistentStorage and AppStorage. Since API version 12, the value can be **null** or **undefined**. |
+
+**Examples**
+
+For details about how to use persistProp, see [Accessing a PersistentStorage-Initialized Property from AppStorage](../../../ui/state-management/arkts-persiststorage.md#accessing-a-persistentstorage-initialized-property-from-appstorage).
 
 ## PersistProps
 
@@ -178,9 +230,15 @@ Persists multiple properties. This API is similar to [PersistProp](#persistprop)
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| properties | {       key: string;       defaultValue: any;     }[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| properties | {       key: string;       defaultValue: any;     }[] | Yes |  |
+
+**Examples**
+
+```TypeScript
+PersistentStorage.PersistProps([{ key: 'highScore', defaultValue: '0' }, { key: 'weightScore', defaultValue: '1' }]);
+```
 
 ## persistProps
 
@@ -198,6 +256,12 @@ Persists multiple properties. This API is similar to [persistProp](#persistprop)
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | Yes | Array of properties to persist. |
+
+**Examples**
+
+```TypeScript
+PersistentStorage.persistProps([{ key: 'highScore', defaultValue: '0' }, { key: 'weightScore', defaultValue: '1' }]);
+```

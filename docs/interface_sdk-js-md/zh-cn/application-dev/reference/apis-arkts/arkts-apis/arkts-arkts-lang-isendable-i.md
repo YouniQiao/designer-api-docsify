@@ -11,5 +11,5 @@
 ## 导入模块
 
 ```TypeScript
-import { lang, Retention, RetentionPolicy } from 'kits/@kit.ArkTS';
+import lang, { Retention, RetentionPolicy } from '@kit.ArkTS';
 ```

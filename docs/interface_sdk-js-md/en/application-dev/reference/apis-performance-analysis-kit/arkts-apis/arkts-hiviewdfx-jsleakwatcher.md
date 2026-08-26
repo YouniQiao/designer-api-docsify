@@ -9,30 +9,29 @@ This module provides the capability of monitoring whether ArkTS objects are leak
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [check](arkts-performanceanalysis-jsleakwatcher-check-f.md) |
-| [dump](arkts-performanceanalysis-jsleakwatcher-dump-f.md) |
-| [enable](arkts-performanceanalysis-jsleakwatcher-enable-f.md) |
-| [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md) |
-| [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md) |
-| [watch](arkts-performanceanalysis-jsleakwatcher-watch-f.md) |
+| Name | Description |
+| --- | --- |
+| [check](arkts-performanceanalysis-jsleakwatcher-check-f.md) | Obtains the list of objects that are leaked and registered using **jsLeakWatcher.watch()**. Objects that are not reclaimed after GC is triggered are marked as leaked. |
+| [dump](arkts-performanceanalysis-jsleakwatcher-dump-f.md) | Dumps the list of leaked objects and VM memory snapshot. |
+| [enable](arkts-performanceanalysis-jsleakwatcher-enable-f.md) | Enables the detection for ArkTS object leaks. This function is disabled by default. |
+| [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md) | Enables the ArkTS object leak detection.This API can detect the ArkTS object memory leak, which is simpler than the method that needs to call the **enable**, **watch**, **check**, and **dump** functions. |
+| [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md) | Enables the ArkTS object leak detection.This API can detect memory leaks of ArkTS objects with a single call, which is simpler than the previous method that requires four functions (**enable**, **watch**, **check**, and **dump**). You can use the **configs** parameter to customize the properties of monitoring items, greatly improving the leak detection performance. |
+| [watch](arkts-performanceanalysis-jsleakwatcher-watch-f.md) | Registers the object to be checked. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md) |
+| Name | Description |
+| --- | --- |
+| [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md) | Defines the **LeakWatcherConfig** object, which contains multiple configurable properties for memory leak monitoring. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md) |
+| Name | Description |
+| --- | --- |
+| [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md) | Enumerates the types of component objects to be monitored. |

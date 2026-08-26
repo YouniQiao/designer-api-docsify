@@ -13,22 +13,22 @@ The **fileExtensionInfo** module defines attributes in **RootInfo** and **FileIn
 ## Modules to Import
 
 ```TypeScript
-import { fileExtensionInfo } from 'kits/@kit.CoreFileKit';
+import fileExtensionInfo from '@kit.CoreFileKit';
 ```
 
 ## Summary
 
 ### Namespaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-n.md) |
-| [DocumentFlag](arkts-corefile-fileextensioninfo-documentflag-n.md) |
+| Name | Description |
+| --- | --- |
+| [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-n.md) | Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is used to determine whether a capability is available through the AND operation. |
+| [DocumentFlag](arkts-corefile-fileextensioninfo-documentflag-n.md) | Defines the values of **mode** used in **FileInfo**. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DeviceType](arkts-corefile-fileextensioninfo-devicetype-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [DeviceType](arkts-corefile-fileextensioninfo-devicetype-e-sys.md) | Defines the values of **deviceType** used in **RootInfo**. |
 <!--DelEnd-->

@@ -9,7 +9,7 @@ Defines the Measure interface.
 ## Modules to Import
 
 ```TypeScript
-import { MeasureText, MeasureOptions } from 'kits/@kit.ArkUI';
+import MeasureText, { MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## measureText
@@ -20,11 +20,13 @@ static measureText(options: MeasureOptions): number
 
 Measures the single-line display width of the specified text. For multi-line text (separated by newline characters **\n**), this API returns the width of the longest line.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Since API version 12, you can use the
 > [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils) API in
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [MeasureUtils](arkts-arkui-arkui-uicontext-uicontext-c.md) object
-> associated with the current UI context.&gt;
+> associated with the current UI context.
+> 
 > - **measureText** always measures single-line text width. Layout constraints in **options** (**constraintWidth**,
 > **maxLines**, and more) do not affect results. For layout-constrained width measurement, use
 > [measureTextSize](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretextsize12).
@@ -41,15 +43,41 @@ Measures the single-line display width of the specified text. For multi-line tex
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Yes | Information about the measured text. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Text width. |
+
+**Examples**
+
+```TypeScript
+import { MeasureText } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @State textWidth: number = MeasureText.measureText({
+    // You are advised to use this.getUIContext().getMeasureUtils().measureText().
+    textContent: "Hello World",
+    fontSize: '50px'
+  });
+
+  build() {
+    Row() {
+      Column() {
+        Text(`The width of 'Hello World': ${this.textWidth}`)
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## measureTextSize
 
@@ -59,7 +87,8 @@ static measureTextSize(options: MeasureOptions): SizeOptions
 
 Measures the width and height of the given text.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Since API version 12, you can use the
 > [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils) API in
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [MeasureUtils](arkts-arkui-arkui-uicontext-uicontext-c.md) object
@@ -79,12 +108,39 @@ Measures the width and height of the given text.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Yes | Information about the measured text. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) |
+| Type | Description |
+| --- | --- |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | Layout width and height occupied by the text. |
+
+**Examples**
+
+```TypeScript
+import { MeasureText } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  textSize: SizeOptions = MeasureText.measureTextSize({
+    // You are advised to use this.getUIContext().getMeasureUtils().measureTextSize().
+    textContent: "Hello World",
+    fontSize: '50px'
+  });
+
+  build() {
+    Row() {
+      Column() {
+        Text(`The width of 'Hello World': ${this.textSize.width}`)
+        Text(`The height of 'Hello World': ${this.textSize.height}`)
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```

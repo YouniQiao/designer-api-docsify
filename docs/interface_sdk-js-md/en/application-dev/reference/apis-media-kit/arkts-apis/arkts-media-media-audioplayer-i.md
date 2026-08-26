@@ -13,7 +13,7 @@ AudioPlayer is a class for audio playback management. It provides APIs to manage
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## getTrackDescription
@@ -34,9 +34,51 @@ Obtains the audio track information. It can be called only after the **'dataLoad
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
+  if (arrList != null) {
+    console.info('Succeeded in getting TrackDescription');
+  } else {
+    console.error(`Failed to get TrackDescription, error:${error}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
+  avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
+    if ((arrList) != null) {
+      console.info('Succeeded in doing getTrackDescription');
+    } else {
+      console.error(`Failed to do getTrackDescription, error:${error}`);
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
+  if ((arrList) != null) {
+    console.info('Succeeded in getting TrackDescription');
+  } else {
+    console.error(`Failed to get TrackDescription, error:${error}`);
+  }
+});
+```
 
 ## getTrackDescription
 
@@ -56,9 +98,49 @@ Obtains the audio track information. It can be called only after the **'dataLoad
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Promise used to return a **MediaDescription** array, which records the audio track information. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
+  console.info('Succeeded in getting TrackDescription');
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get TrackDescription, error:${error}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
+  avPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
+    console.info('Succeeded in getting TrackDescription');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get TrackDescription, error:${error}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
+  if (arrList != null) {
+    console.info('Succeeded in getting TrackDescription');
+  } else {
+    console.error('Failed to get TrackDescription');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## on('bufferingUpdate')
 
@@ -78,10 +160,10 @@ Subscribes to the audio buffering update event. This API works only under online
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'bufferingUpdate' | Yes |
-| callback | (infoType: BufferingInfoType, value: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
+| callback | (infoType: BufferingInfoType, value: number) = & gt; void | Yes | Callback invoked when the event is triggered.The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md) is fixed at **0**. |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -101,10 +183,10 @@ Subscribes to the audio playback events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:   - 'play': triggered when the [play()](#play) API is called and audio playback starts.   - 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.   - 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.   - 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.   - 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.   - 'finish': triggered when the audio playback is finished.   - 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -124,10 +206,10 @@ Subscribes to the audio playback events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:   - 'play': triggered when the [play()](#play) API is called and audio playback starts.   - 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.   - 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.   - 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.   - 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.   - 'finish': triggered when the audio playback is finished.   - 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -147,10 +229,10 @@ Subscribes to the audio playback events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:   - 'play': triggered when the [play()](#play) API is called and audio playback starts.   - 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.   - 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.   - 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.   - 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.   - 'finish': triggered when the audio playback is finished.   - 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -170,10 +252,10 @@ Subscribes to the audio playback events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:   - 'play': triggered when the [play()](#play) API is called and audio playback starts.   - 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.   - 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.   - 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.   - 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.   - 'finish': triggered when the audio playback is finished.   - 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -193,10 +275,10 @@ Subscribes to the audio playback events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:   - 'play': triggered when the [play()](#play) API is called and audio playback starts.   - 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.   - 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.   - 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.   - 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.   - 'finish': triggered when the audio playback is finished.   - 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -216,10 +298,10 @@ Subscribes to the audio playback events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:   - 'play': triggered when the [play()](#play) API is called and audio playback starts.   - 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.   - 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.   - 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.   - 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.   - 'finish': triggered when the audio playback is finished.   - 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -239,10 +321,10 @@ Subscribes to the audio playback events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:   - 'play': triggered when the [play()](#play) API is called and audio playback starts.   - 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.   - 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.   - 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.   - 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.   - 'finish': triggered when the audio playback is finished.   - 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
+| callback | () = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('timeUpdate')
 
@@ -262,10 +344,10 @@ Subscribes to the **'timeUpdate'** event. This event is reported every second wh
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'timeUpdate' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'timeUpdate' | Yes | Event type, which is **'timeUpdate'** in this case.The **'timeUpdate'** event is triggered when the audio playback starts after an audio playback timestamp update. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback invoked when the event is triggered. The input parameter is the updated timestamp. |
 
 ## on('audioInterrupt')
 
@@ -285,10 +367,10 @@ Subscribes to the audio interruption event. For details, see [audio.InterruptEve
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'audioInterrupt' | Yes |
-| callback | (info: audio.InterruptEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
+| callback | (info: audio.InterruptEvent) = & gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('error')
 
@@ -308,10 +390,10 @@ Subscribes to audio playback error events. After an error event is reported, you
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'error' | Yes |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.This event is triggered when an error occurs during audio playback. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
 
 ## pause
 
@@ -329,6 +411,22 @@ Pauses audio playback.
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
 
+**Examples**
+
+```TypeScript
+audioPlayer.on('pause', () => {    // Set the 'pause' event callback.
+  console.info('audio pause called');
+});
+audioPlayer.pause();
+```
+
+```TypeScript
+audioRecorder.on('pause', () => {    // Set the 'pause' event callback.
+  console.info('audio recorder pause called');
+});
+audioRecorder.pause();
+```
+
 ## play
 
 ```TypeScript
@@ -344,6 +442,15 @@ Starts to play an audio asset. This API can be called only after the **'dataLoad
 **Substitutes:** [play](arkts-media-media-avplayer-i.md#play)(callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('play', () => {    // Set the 'play' event callback.
+  console.info('audio play called');
+});
+audioPlayer.play();
+```
 
 ## release
 
@@ -361,6 +468,21 @@ Releases the audio playback resources.
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
 
+**Examples**
+
+```TypeScript
+audioPlayer.release();
+audioPlayer = undefined;
+```
+
+```TypeScript
+audioRecorder.on('release', () => {    // Set the 'release' event callback.
+  console.info('audio recorder release called');
+});
+audioRecorder.release();
+audioRecorder = undefined;
+```
+
 ## reset
 
 ```TypeScript
@@ -376,6 +498,22 @@ Resets the audio asset to be played.
 **Substitutes:** [reset](arkts-media-media-avplayer-i.md#reset)(callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('reset', () => {    // Set the 'reset' event callback.
+  console.info('audio reset called');
+});
+audioPlayer.reset();
+```
+
+```TypeScript
+audioRecorder.on('reset', () => {    // Set the 'reset' event callback.
+  console.info('audio recorder reset called');
+});
+audioRecorder.reset();
+```
 
 ## seek
 
@@ -395,9 +533,22 @@ Seeks to the specified playback position.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| timeMs | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| timeMs | number | Yes | Position to seek to, in ms. The value range is [0, duration]. |
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('timeUpdate', (seekDoneTime: number) => {    // Set the 'timeUpdate' event callback.
+  if (seekDoneTime == null) {
+    console.error('Failed to seek');
+    return;
+  }
+  console.info('Succeeded in seek. seekDoneTime: ' + seekDoneTime);
+});
+audioPlayer.seek(30000);    // Seek to 30000 ms.
+```
 
 ## setVolume
 
@@ -417,9 +568,18 @@ Sets the volume.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| vol | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| vol | number | Yes | Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicates the maximum volume (100%). |
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('volumeChange', () => {    // Set the 'volumeChange' event callback.
+  console.info('audio volumeChange called');
+});
+audioPlayer.setVolume(1);    // Set the volume to 100%.
+```
 
 ## stop
 
@@ -436,6 +596,22 @@ Stops audio playback.
 **Substitutes:** [stop](arkts-media-media-avplayer-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('stop', () => {    // Set the 'stop' event callback.
+  console.info('audio stop called');
+});
+audioPlayer.stop();
+```
+
+```TypeScript
+audioRecorder.on('stop', () => {    // Set the 'stop' event callback.
+  console.info('audio recorder stop called');
+});
+audioRecorder.stop();
+```
 
 ## audioInterruptMode
 

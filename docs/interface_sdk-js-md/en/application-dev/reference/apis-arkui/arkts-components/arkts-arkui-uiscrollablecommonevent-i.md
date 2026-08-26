@@ -31,9 +31,9 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling reaches the end position. |
 
 ## setOnReachStart
 
@@ -53,9 +53,9 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling reaches the start position. |
 
 ## setOnScrollFrameBegin
 
@@ -75,9 +75,9 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling begin each frame. |
 
 ## setOnScrollStart
 
@@ -97,9 +97,9 @@ Set or reset the callback which is triggered when the scrolling started.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling started. |
 
 ## setOnScrollStop
 
@@ -119,6 +119,6 @@ Set or reset the callback which is triggered when the scrolling stoped.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling stoped. |

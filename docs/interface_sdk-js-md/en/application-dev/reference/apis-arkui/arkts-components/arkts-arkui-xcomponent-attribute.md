@@ -31,9 +31,9 @@ Sets whether to enable the AI image analyzer, which supports subject recognition
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to enable the AI image analyzer.   **true**: enable; **false**: disable Default value: **false**. |
 
 ## enableSecure
 
@@ -53,9 +53,9 @@ Sets whether to enable the secure surface to protect the content rendered within
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isSecure | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isSecure | boolean | Yes | Whether to enable the secure surface.The value **true** means to enable the secure surface, and **false** means the opposite.Default value: **false**. |
 
 ## hdrBrightness
 
@@ -75,9 +75,9 @@ Sets the brightness of HDR video playback for the component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| brightness | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| brightness | number | Yes | Brightness of HDR video playback.Value range: 0.0 to 1.0. Values less than 0.0 are equivalent to 0.0, and values greater than 1.0 are equivalent to 1.0. **0.0** indicates the brightness of the SDR video, and **1.0** indicates the brightness of the HDR video.Default value: **1.0**. |
 
 ## hdrBrightness
 
@@ -97,10 +97,10 @@ Set hdrBrightness for XComponent.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| brightness | number | Yes |
-| type | [HdrType](arkts-arkui-hdrtype-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| brightness | number | Yes | control the brightness of HDR video. |
+| type | [HdrType](arkts-arkui-hdrtype-e.md) | No | the HDR type of the XComponent. |
 
 ## onDestroy
 
@@ -118,9 +118,9 @@ Triggered when the plugin is destroyed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback triggered after **XComponent** is destroyed.<br>**Since:** 18 |
 
 ## onLoad
 
@@ -138,6 +138,6 @@ Triggered when the plugin is loaded.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | Yes | Callback triggered after the surface held by **XComponent** is created.<br>**Since:** 18 |

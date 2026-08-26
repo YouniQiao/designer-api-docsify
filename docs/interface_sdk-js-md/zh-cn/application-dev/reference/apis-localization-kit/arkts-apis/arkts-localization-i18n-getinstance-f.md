@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getInstance
@@ -22,12 +22,20 @@ export function getInstance(locale?:string): IndexUtil
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 否 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 默认值：系统当前区域ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [IndexUtil](arkts-localization-i18n-indexutil-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | 根据区域ID创建的IndexUtil对象。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
+```

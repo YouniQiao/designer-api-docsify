@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
+import stationary from '@kit.MultimodalAwarenessKit';
 ```
 
 ## state

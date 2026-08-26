@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import display from '@kit.ArkUI';
 ```
 
 ## getPrimaryDisplaySync
@@ -22,12 +22,20 @@ Obtains the information about the primary display. For devices other than 2-in-1
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Display](arkts-arkui-display-display-i.md) |
+| Type | Description |
+| --- | --- |
+| [Display](arkts-arkui-display-display-i.md) | Display object of the primary screen. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: Invalid display id. |
+
+**Examples**
+
+```TypeScript
+let displayClass: display.Display | null = null;
+
+displayClass = display.getPrimaryDisplaySync();
+```

@@ -22,9 +22,9 @@ Prints "debug" logs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes | Text to print @static |
 
 ## error
 
@@ -42,9 +42,9 @@ Prints "error" logs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes | Text to print @static |
 
 ## info
 
@@ -62,9 +62,9 @@ Prints "info" logs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes | Text to print @static |
 
 ## log
 
@@ -82,9 +82,9 @@ Prints "log" logs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes | Text to print @static |
 
 ## warn
 
@@ -102,6 +102,6 @@ Prints "warn" logs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes | Text to print @static |

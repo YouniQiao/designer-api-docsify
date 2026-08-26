@@ -9,7 +9,6 @@ Base class for the test framework. If you want to implement your own unit test f
 ## Modules to Import
 
 ```TypeScript
-import { TestRunner } from 'kits/@kit.TestKit';
 ```
 
 ## onPrepare
@@ -26,6 +25,23 @@ Prepare the unit testing environment for running test cases.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Examples**
+
+```TypeScript
+import { TestRunner } from '@kit.TestKit';
+
+// Implement a custom test runner.
+export default class UserTestRunner implements TestRunner {
+  // Prepare the unit test environment.
+  onPrepare() {
+    console.info('Trigger onPrepare');
+  }
+
+  onRun() {
+  }
+}
+```
+
 ## onRun
 
 ```TypeScript
@@ -39,6 +55,23 @@ Run all test cases.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { TestRunner } from '@kit.TestKit';
+
+// Implement a custom test runner.
+export default class UserTestRunner implements TestRunner {
+  onPrepare() {
+  }
+
+  // Run test cases.
+  onRun() {
+    console.info('Trigger onRun');
+  }
+}
+```
 
 ## onStop
 
@@ -55,3 +88,27 @@ Stop all test cases.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { TestRunner } from '@kit.TestKit';
+
+// Implement a custom test runner.
+export default class UserTestRunner implements TestRunner {
+  // Prepare the unit test environment.
+  onPrepare() {
+    console.info('Trigger onPrepare');
+  }
+
+  // Run test cases.
+  onRun() {
+    console.info('Trigger onRun');
+  }
+
+  // Callback processing when the test is complete
+  onStop() {
+    console.info('Trigger onStop');
+  }
+}
+```

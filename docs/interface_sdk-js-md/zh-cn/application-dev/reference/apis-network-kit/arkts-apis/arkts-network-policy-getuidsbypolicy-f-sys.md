@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from 'kits/@kit.NetworkKit';
+import policy from '@kit.NetworkKit';
 ```
 
 ## getUidsByPolicy
@@ -24,21 +24,32 @@ function getUidsByPolicy(policy: NetUidPolicy, callback: AsyncCallback<Array<num
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [policy](arkts-net-policy.md) | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | 是 | 应用对应的计量网络下的策略。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 回调函数。成功返回应用的 uid 数组，失败返回错误码错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy.getUidsByPolicy(11111, (error: BusinessError, data: number[]) => {
+  console.error(JSON.stringify(error));
+  console.info(JSON.stringify(data));
+});
+```
 
 
 ## getUidsByPolicy
@@ -59,23 +70,38 @@ function getUidsByPolicy(policy: NetUidPolicy): Promise<Array<number>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [policy](arkts-net-policy.md) | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | 是 | app 对应的计量网络下的策略。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;number & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;number & gt; & gt; | 以 Promise 形式返回应用的 uid 数组，失败返回错误码错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .getUidsByPolicy(11111)
+  .then((data: object) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```

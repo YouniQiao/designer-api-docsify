@@ -1,7 +1,7 @@
 # MenuItem
 
 The **MenuItem** component represents an item in a menu.
-> **NOTE**>> This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate> their
+> **NOTE** > > This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate > their
 
 ## Child Components
 
@@ -21,13 +21,13 @@ MenuItem(value?: MenuItemOptions | CustomBuilder)
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [MenuItemOptions](arkts-arkui-menuitemoptions-i.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [MenuItemOptions](arkts-arkui-menuitemoptions-i.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | Information about the menu item. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |

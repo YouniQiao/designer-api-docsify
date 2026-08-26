@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { configPolicy } from 'kits/@kit.BasicServicesKit';
+import configPolicy from '@kit.BasicServicesKit';
 ```
 
 ## getCfgDirListSync
@@ -22,6 +22,21 @@ Obtains a list of configuration level directories, in ascending order of priorit
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Obtains the list of configuration level directories. This API returns the result synchronously. |
+
+**Examples**
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let result: Array<string> = configPolicy.getCfgDirListSync();
+  console.info('result is ' + result);
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error('error:' + code + ', ' + message);
+}
+```

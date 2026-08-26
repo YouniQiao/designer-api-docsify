@@ -20,17 +20,17 @@ Sets the property of target, equivalent to `target[propertyKey] = value` when `r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| propertyKey | P | Yes |
-| value | P extends keyof T ? T[P] : any | Yes |
-| receiver | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| propertyKey | P | Yes |  |
+| value | P extends keyof T ? T[P] : any | Yes |  |
+| receiver | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 
 ## set
 
@@ -40,14 +40,14 @@ function set(target: object, propertyKey: PropertyKey, value: any, receiver?: an
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | object | Yes |
-| propertyKey | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |
-| value | any | Yes |
-| receiver | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | object | Yes |  |
+| propertyKey | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |  |
+| value | any | Yes |  |
+| receiver | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

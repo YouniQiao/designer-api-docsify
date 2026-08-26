@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithUrl
@@ -22,20 +22,20 @@ Creates a media source for streaming media to be pre-downloaded.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| url | string | Yes |
-| headers | Record & lt;string, string & gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| url | string | Yes | URL of the media source. The following streaming media formats are supported: HLS, HTTP- FLV, DASH, and HTTPS.    - FD path of the local M3U8 file. |
+| headers | Record & lt;string, string & gt; | No | HTTP header customized for streaming media pre-download. If this parameter is not passed, the default HTTP header of the network request is used.<br>**Since:** 13 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MediaSource](arkts-media-media-mediasource-i.md) |
+| Type | Description |
+| --- | --- |
+| [MediaSource](arkts-media-media-mediasource-i.md) | MediaSource instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |

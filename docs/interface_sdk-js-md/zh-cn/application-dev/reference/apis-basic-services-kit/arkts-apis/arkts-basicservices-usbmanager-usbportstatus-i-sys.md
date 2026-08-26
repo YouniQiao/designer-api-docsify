@@ -11,7 +11,8 @@ USB设备端口角色信息。currentMode表示端口的当前USB模式，其值
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## currentDataRole

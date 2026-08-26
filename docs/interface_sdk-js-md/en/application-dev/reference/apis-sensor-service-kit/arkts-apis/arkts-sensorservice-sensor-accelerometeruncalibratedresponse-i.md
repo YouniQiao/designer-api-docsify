@@ -11,7 +11,6 @@ Describes the uncalibrated acceleration sensor data. It extends from [Response](
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## biasX

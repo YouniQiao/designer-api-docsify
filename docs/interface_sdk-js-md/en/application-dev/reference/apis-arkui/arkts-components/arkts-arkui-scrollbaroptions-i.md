@@ -2,13 +2,17 @@
 
 Parameters of the **ScrollBar** component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The **ScrollBar** component defines the behavior style of the scrollable area, and its child nodes define the
-> behavior style of the scrollbar.&gt;
+> behavior style of the scrollbar.
+> 
 > - This component is bound to a scrollable component through **scroller**, and can be used to scroll the scrollable
 > component only when their directions are the same. The **ScrollBar** component can be bound to only one scrollable
-> component, and vice versa.&gt;
-> - Since API version 12, the **ScrollBar** component displays a default scrollbar style when without child nodes.&gt;
+> component, and vice versa.
+> 
+> - Since API version 12, the **ScrollBar** component displays a default scrollbar style when without child nodes.
+> 
 > - The visibility of the **ScrollBar** component is set through **BarState**. The component automatically adjusts
 > **opacity** based on the **BarState** setting to control its visibility. Therefore, setting the
 > opacity attribute for the **ScrollBar**

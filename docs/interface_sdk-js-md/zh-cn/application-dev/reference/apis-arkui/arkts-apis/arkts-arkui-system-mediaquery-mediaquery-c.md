@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from 'kits/@kit.ArkUI';
+import SystemMediaQuery, { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
 ## matchMedia
@@ -28,12 +28,18 @@ static matchMedia(condition: string): MediaQueryList
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| condition | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| condition | string | 是 | 用于查询的条件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MediaQueryList](arkts-arkui-system-mediaquery-mediaquerylist-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [MediaQueryList](arkts-arkui-system-mediaquery-mediaquerylist-i.md) | 创建MediaQueryList对象，详情见下表说明。 |
+
+**示例**
+
+```TypeScript
+let mMediaQueryList = mediaquery.matchMedia('(max-width: 466)');
+```

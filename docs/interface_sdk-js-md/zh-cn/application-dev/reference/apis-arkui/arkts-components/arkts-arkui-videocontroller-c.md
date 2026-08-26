@@ -75,9 +75,9 @@ requestFullscreen(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 是否全屏（填充满应用窗口）播放。 true：请求全屏播放；false：不请求全屏播放。 默认值：false |
 
 ## reset
 
@@ -103,7 +103,8 @@ setCurrentTime(value: number)
 
 指定视频播放的进度位置。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
 
 **起始版本：** 7
@@ -114,9 +115,9 @@ setCurrentTime(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 视频播放进度位置。 取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md)] 当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。 单位：s 从API version 8开始，支持设置视频的跳转模式，详见 [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](#setcurrenttime)。 |
 
 ## setCurrentTime
 
@@ -126,7 +127,8 @@ setCurrentTime(value: number, seekMode: SeekMode)
 
 指定视频播放的进度位置，并指定跳转模式。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
 
 **起始版本：** 8
@@ -137,10 +139,10 @@ setCurrentTime(value: number, seekMode: SeekMode)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
-| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 视频播放进度位置。 取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md)] 当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。 单位：s |
+| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | 是 | 跳转模式。 异常值undefined、null、NaN和Infinity按PreviousKeyframe处理。 |
 
 ## start
 

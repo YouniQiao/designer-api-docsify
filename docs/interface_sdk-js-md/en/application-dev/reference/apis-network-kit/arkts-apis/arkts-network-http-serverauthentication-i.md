@@ -9,7 +9,6 @@ Defines HTTP server identity verification information.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## authenticationType

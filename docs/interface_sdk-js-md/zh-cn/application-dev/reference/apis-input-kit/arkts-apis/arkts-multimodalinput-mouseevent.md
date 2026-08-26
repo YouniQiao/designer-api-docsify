@@ -6,23 +6,22 @@
 ## 导入模块
 
 ```TypeScript
-import { Action as MouseAction, Axis, AxisValue, Button, MouseEvent, ToolType as MouseToolType } from 'kits/@kit.InputKit';
 ```
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
-| [AxisValue(鼠标输入事件)](arkts-input-multimodalinput-mouseevent-axisvalue-i.md) |
-| [MouseEvent(鼠标输入事件)](arkts-input-multimodalinput-mouseevent-mouseevent-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [AxisValue(鼠标输入事件)](arkts-input-multimodalinput-mouseevent-axisvalue-i.md) | 鼠标轴类型和轴的值。 |
+| [MouseEvent(鼠标输入事件)](arkts-input-multimodalinput-mouseevent-mouseevent-i.md) | 鼠标事件。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [Action(鼠标输入事件)](arkts-input-multimodalinput-mouseevent-action-e.md) |
-| [Axis(鼠标输入事件)](arkts-input-multimodalinput-mouseevent-axis-e.md) |
-| [Button(鼠标输入事件)](arkts-input-multimodalinput-mouseevent-button-e.md) |
-| [ToolType(鼠标输入事件)](arkts-input-multimodalinput-mouseevent-tooltype-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [Action(鼠标输入事件)](arkts-input-multimodalinput-mouseevent-action-e.md) | 鼠标事件类型。 |
+| [Axis(鼠标输入事件)](arkts-input-multimodalinput-mouseevent-axis-e.md) | 鼠标轴类型。 |
+| [Button(鼠标输入事件)](arkts-input-multimodalinput-mouseevent-button-e.md) | 鼠标按键。 |
+| [ToolType(鼠标输入事件)](arkts-input-multimodalinput-mouseevent-tooltype-e.md) | 工具类型。 |

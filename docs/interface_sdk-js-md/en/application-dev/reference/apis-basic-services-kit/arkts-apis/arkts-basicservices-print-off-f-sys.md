@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import print from '@kit.BasicServicesKit';
 ```
 
 ## off('printerStateChange')
@@ -24,18 +24,28 @@ Unregisters the listener for printer state change events. This API uses a callba
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'printerStateChange' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'printerStateChange' | Yes | Listening type. The value is fixed at **'printerStateChange'**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.off('printerStateChange', (data: boolean) => {
+    console.info('off printerStateChange data : ' + JSON.stringify(data));
+})
+```
 
 
 ## off('jobStateChange')
@@ -56,18 +66,28 @@ Unregisters the listener for print job state change events. This API uses a call
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'jobStateChange' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'jobStateChange' | Yes | Listening type. The value is fixed at **'jobStateChange'**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.off('jobStateChange', (data: boolean) => {
+    console.info('offJobStateChanged data : ' + JSON.stringify(data));
+})
+```
 
 
 ## off('extInfoChange')
@@ -88,15 +108,25 @@ Unregisters the listener for printer extension information change events. This A
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'extInfoChange' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'extInfoChange' | Yes | Listening type. The value is fixed at **'extInfoChange'**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.off('extInfoChange', (data: boolean) => {
+    console.info('offExtInfoChange data : ' + JSON.stringify(data));
+})
+```

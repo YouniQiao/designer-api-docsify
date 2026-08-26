@@ -9,7 +9,7 @@ CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](#onat
 ## 导入模块
 
 ```TypeScript
-import { CompletionHandlerForAtomicService, FailureCode } from 'kits/@kit.AbilityKit';
+import CompletionHandlerForAtomicService, { FailureCode } from '@kit.AbilityKit';
 ```
 
 ## onAtomicServiceRequestFailure
@@ -30,11 +30,15 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| appId | string | 是 |
-| failureCode | [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | 是 |
-| failureMessage | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appId | string | 是 | 被拉起原子化服务的appId。 |
+| failureCode | [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | 是 | 失败原因的错误码。 |
+| failureMessage | string | 是 | 失败原因的描述。 |
+
+**示例**
+
+参见CompletionHandlerForAtomicService示例。
 
 ## onAtomicServiceRequestSuccess
 
@@ -54,6 +58,10 @@ onAtomicServiceRequestSuccess(appId: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| appId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appId | string | 是 | 被拉起原子化服务的appId。 |
+
+**示例**
+
+参见CompletionHandlerForAtomicService示例。

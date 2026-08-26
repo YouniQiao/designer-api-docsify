@@ -9,7 +9,7 @@ Represents a gesture touch point, which is the basic unit that constitutes a Ges
 ## Modules to Import
 
 ```TypeScript
-import { GesturePoint } from 'kits/@kit.AccessibilityKit';
+import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -28,10 +28,18 @@ Creates a **GesturePoint** instance based on the given X and Y coordinates.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [positionX](#positionx) | number | Yes |
-| [positionY](#positiony) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| positionX | number | Yes | X coordinate of the touch point, in pixels (px). |
+| positionY | number | Yes | Y coordinate of the touch point, in pixels (px). |
+
+**Examples**
+
+```TypeScript
+import { GesturePoint } from '@kit.AccessibilityKit';
+
+let gesturePoint = new GesturePoint(1, 2);
+```
 
 ## positionX
 

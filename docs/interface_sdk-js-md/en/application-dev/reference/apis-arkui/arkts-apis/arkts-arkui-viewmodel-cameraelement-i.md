@@ -24,6 +24,6 @@ Take photos with specified parameters.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [CameraTakePhotoOptions](arkts-arkui-viewmodel-cameratakephotooptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [CameraTakePhotoOptions](arkts-arkui-viewmodel-cameratakephotooptions-i.md) | Yes | the parameters of camera. |

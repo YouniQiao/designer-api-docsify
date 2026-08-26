@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## setFileCacheSize
@@ -24,12 +24,25 @@ in the file.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bytes | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bytes | number | Yes | Upper limit of the cache, in bytes. The default value is **104857600** (100 MB), and the maximum value is **4294967296** (4 GB). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Set the upper limit of the file cache size. 
+  cacheDownload.setFileCacheSize(100 * 1024 * 1024);
+} catch (err) {
+  console.error(`Failed to set file cache size. err code: ${err.code}, err message: ${err.message}`);
+}
+```

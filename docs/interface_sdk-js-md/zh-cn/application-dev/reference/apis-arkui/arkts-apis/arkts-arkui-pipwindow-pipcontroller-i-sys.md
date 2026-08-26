@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
+import PiPWindow from '@kit.ArkUI';
 ```
 
 ## isPiPSupported
@@ -28,13 +28,13 @@ isPiPSupported(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 当前设备是否支持画中画功能。true表示支持，false表示不支持。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |

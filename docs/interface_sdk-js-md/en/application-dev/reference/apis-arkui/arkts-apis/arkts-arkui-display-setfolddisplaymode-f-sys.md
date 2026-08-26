@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import display from '@kit.ArkUI';
 ```
 
 ## setFoldDisplayMode
@@ -22,17 +22,31 @@ Sets the display mode of the foldable device.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Yes | Display mode. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+
+try {
+  let mode: display.FoldDisplayMode = display.FoldDisplayMode.FOLD_DISPLAY_MODE_FULL;
+  // Set the display mode to full-screen display.
+  display.setFoldDisplayMode(mode);
+} catch (exception) {
+  console.error(`Failed to change the fold display mode. Code: ${exception.code}, message: ${exception.message}`);
+}
+```
 
 
 ## setFoldDisplayMode
@@ -51,14 +65,28 @@ Sets the display mode of the foldable device, with the reason for the change spe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Yes |
-| reason | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Yes | Display mode. |
+| reason | string | Yes | Reason for changing the display mode. If this parameter is not set, an empty string is used by default. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+
+try {
+  let mode: display.FoldDisplayMode = display.FoldDisplayMode.FOLD_DISPLAY_MODE_MAIN;
+  // Set the display mode to main screen display and specify the reason as "backSelfie".
+  display.setFoldDisplayMode(mode, 'backSelfie');
+} catch (exception) {
+  console.error(`Failed to change the fold display mode. Code: ${exception.code}, message: ${exception.message}`);
+}
+```

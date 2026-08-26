@@ -9,7 +9,7 @@ Before a card with tags is read or written, **[TagInfo](arkts-connectivity-tag-t
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import tag from '@kit.ConnectivityKit';
 ```
 
 ## extrasData

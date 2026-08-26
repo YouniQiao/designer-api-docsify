@@ -45,10 +45,10 @@ abstract onDraw(context: DrawContext,  drawInfo: CustomSpanDrawInfo): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 是 |
-| drawInfo | [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 是 | 图形绘制上下文。    **说明：** DrawContext的canvas方法获取的画布是Text组件的画布，绘制时不会超出Text组件的范围。 |
+| drawInfo | [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | 是 | 自定义绘制Span的绘制信息。 |
 
 ## onMeasure
 
@@ -68,12 +68,12 @@ abstract onMeasure(measureInfo: CustomSpanMeasureInfo) : CustomSpanMetrics
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| measureInfo | [CustomSpanMeasureInfo](arkts-arkui-customspanmeasureinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| measureInfo | [CustomSpanMeasureInfo](arkts-arkui-customspanmeasureinfo-i.md) | 是 | 自定义绘制Span的测量信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) | 自定义绘制Span的尺寸信息。 |

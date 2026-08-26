@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getAppVMObjectUsedSize
@@ -20,6 +19,14 @@ Obtains the VM memory size occupied by ArkTS objects.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| bigint |
+| Type | Description |
+| --- | --- |
+| bigint | VM memory size occupied by ArkTS objects, in KB. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+console.info(`getAppVMObjectUsedSize = ${hidebug.getAppVMObjectUsedSize()}`);
+```

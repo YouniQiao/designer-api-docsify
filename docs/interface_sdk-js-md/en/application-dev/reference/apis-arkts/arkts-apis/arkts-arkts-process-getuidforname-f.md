@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## getUidForName
@@ -24,12 +24,23 @@ Obtains the UID of a user from the user database of the system based on the spec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| v | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| v | string | Yes | User name. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | UID of the user. |
+
+**Examples**
+
+```TypeScript
+let pres = process.getUidForName("tool");
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+let pres = pro.getUidForName("tool");
+```

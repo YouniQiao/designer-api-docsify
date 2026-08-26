@@ -53,7 +53,8 @@ currentProgressRate?: number | string | PlaybackSpeed
 
 Video playback speed.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The value of the number type can only be **0.75**, **1.0**, **1.25**, **1.75**, or **2.0**. Values **0.5**,
 > **1.5**, **3**, **0.25**, and **0.125** are supported since API version 22.
 For the string type, numeric string values, for example, **0.75**, **1.0**, **1.25**, **1.75**, and **2.0**, are supported. Values **"0.5"**, **"1.5"**, **"3"**, **"0.25"**, and **"0.125"** are supported since API version 22.Other values, for example, **"abc"** or **"1.5+1.5"**, are considered as invalid values.Default value: 1.0 | PlaybackSpeed.Speed_Forward_1_00_X If an invalid value is passed, the default value will be used.
@@ -140,7 +141,8 @@ Video source, which can be either a local or a network video.The Resource type a
 - Strings with the **file://** prefix, that is,  
 [application sandbox URIs](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor): **file://`&lt;bundleName&gt;`/`&lt;sandboxPath&gt;`**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.The default value is an empty string.If an invalid value is passed, the default value will be used.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The supported video formats are MP4, MKV, and TS.
 
 **Type:** string \| Resource

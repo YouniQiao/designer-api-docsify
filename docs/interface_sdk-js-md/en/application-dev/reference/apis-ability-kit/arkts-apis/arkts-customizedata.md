@@ -4,6 +4,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md) |
+| Name | Description |
+| --- | --- |
+| [CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md) | The CustomizeData module provides custom metadata. |

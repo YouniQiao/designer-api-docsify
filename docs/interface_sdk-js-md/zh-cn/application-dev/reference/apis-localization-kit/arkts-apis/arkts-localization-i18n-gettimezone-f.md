@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getTimeZone
@@ -22,12 +22,20 @@ export function getTimeZone(zoneID?: string): TimeZone
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| zoneID | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| zoneID | string | 否 | 时区ID。默认值：系统时区。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | 时区ID对应的时区对象。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
+```

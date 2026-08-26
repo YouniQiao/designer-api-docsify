@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mediaquery } from 'kits/@kit.ArkUI';
+import mediaquery from '@kit.ArkUI';
 ```
 
 ## off('change')
@@ -32,10 +32,27 @@ off(type: 'change', callback?: Callback<MediaQueryResult>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'change' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'change' | 是 | 必须填写字符串'change'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 否 | 需要取消注册的回调，如果参数缺省则注销该句柄下所有的回调。 |
+
+**示例**
+
+```TypeScript
+import { mediaquery } from '@kit.ArkUI';
+
+let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // 监听横屏事件
+function onPortrait(mediaQueryResult:mediaquery.MediaQueryResult) {
+  if (mediaQueryResult.matches) {
+    // do something here
+  } else {
+    // do something here
+  }
+}
+listener.on('change', onPortrait) // 注册回调
+listener.off('change', onPortrait) // 注销回调
+```
 
 ## on('change')
 
@@ -45,7 +62,8 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 
 通过句柄向对应的查询条件注册回调，当媒体属性发生变更时会触发该回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 注册的回调中不允许进一步调用on或off。
 
 **起始版本：** 7
@@ -58,7 +76,11 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'change' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'change' | 是 | 必须填写字符串'change'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 是 | 向媒体查询注册的回调。 |
+
+**示例**
+
+详见[off('change')](#offchange)示例。

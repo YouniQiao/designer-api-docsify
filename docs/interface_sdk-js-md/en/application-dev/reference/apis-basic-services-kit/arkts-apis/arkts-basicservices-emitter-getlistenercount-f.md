@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
+import emitter from '@kit.BasicServicesKit';
 ```
 
 ## getListenerCount
@@ -22,12 +22,18 @@ Obtains the number of subscriptions to a specified event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| eventId | number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventId | number \| string | Yes | Event ID. The value is a string, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of subscriptions to a specified event. |
+
+**Examples**
+
+```TypeScript
+let count: number = emitter.getListenerCount('eventId');
+```

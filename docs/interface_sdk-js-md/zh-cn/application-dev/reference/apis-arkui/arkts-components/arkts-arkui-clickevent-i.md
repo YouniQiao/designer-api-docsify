@@ -31,9 +31,9 @@ getCurrentLocalPosition?(): Coordinate2D
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## preventDefault
 
@@ -54,9 +54,9 @@ preventDefault: () => void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [100017](../errorcode-event.md#100017-组件不支持阻止默认事件) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [100017](../errorcode-event.md#100017-组件不支持阻止默认事件) | Component does not support prevent function. |
 
 ## displayX
 

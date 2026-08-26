@@ -11,70 +11,71 @@ The **DataShare** module allows an application to manage its own data and share 
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import dataShare from '@kit.ArkData';
+import dataSharePredicates from '@kit.ArkDataPredicates';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md) |
+| Name | Description |
+| --- | --- |
+| [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md) | Creates a **DataProxyHandle** instance. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) |
-| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) |
-| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) |
-| [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md) |
-| [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | Creates a **DataShareHelper** instance. This API uses an asynchronous callback to return the result. |
+| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in proxy mode. This API uses an asynchronous callback to return the result. |
+| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in proxy mode. This API uses a promise to return the result. |
+| [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md) | Disables silent access. This API uses a promise to return the result.Observe the following when using this API:  - The data provider calls this API to disable silent access.  - Whether silent access is disabled is determined based on the return value of this API and the  **isSilentProxyEnable** field in the [data_share_config.json](../../../database/share-data-by-datashareextensionability-sys.md) file together.  - If silent access is disabled for a URI using this API, the setting takes effect when the related  **datashareHelper** API is called. Otherwise, the setting of **isSilentProxyEnable** in the **data_share_config.json** file is used to determine whether to disable silent access. |
+| [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md) | Enables silent access. This API uses a promise to return the result.Observe the following when using this API:  - The data provider calls this API to enable silent access.  - Whether silent access is enabled is determined based on the return value of this API and the  **isSilentProxyEnable** field in the [data_share_config.json](../../../database/share-data-by-datashareextensionability-sys.md) file together.  - If silent access is enabled for a URI using this API, the setting takes effect when the related  **datashareHelper** API is called. Otherwise, the setting of **isSilentProxyEnable** in the **data_share_config.json** file is used to determine whether to enable silent access. |
 <!--DelEnd-->
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md) |
-| [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) |
-| [DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md) |
-| [DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md) |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md) |
-| [ProxyData](arkts-arkdata-datashare-proxydata-i.md) |
+| Name | Description |
+| --- | --- |
+| [DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md) | Defines a struct for notifying subscribers of the shared configuration changes, including data change type, URI, and content. |
+| [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Defines a struct for the data proxy configuration. |
+| [DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md) | Defines a struct for obtaining the batch operation result of shared configuration. |
+| [DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md) | Defines the data proxy handle, which can be used to access or manage shared configuration information. Before calling an API provided by **DataProxyHandle**, you must create a **DataProxyHandle** instance using [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md). |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md) | Defines a struct for the batch operation result of shared configuration. |
+| [ProxyData](arkts-arkdata-datashare-proxydata-i.md) | Defines a struct for shared configurations. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ChangeInfo](arkts-arkdata-datashare-changeinfo-i-sys.md) |
-| [DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md) |
-| [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) |
-| [OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md) |
-| [PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md) |
-| [PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md) |
-| [RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md) |
-| [Template](arkts-arkdata-datashare-template-i-sys.md) |
-| [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) |
-| [UpdateOperation](arkts-arkdata-datashare-updateoperation-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ChangeInfo](arkts-arkdata-datashare-changeinfo-i-sys.md) | Represents the data change information, including the data change type, URI of the data changed, and changed data content. |
+| [DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md) | Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by **DataShareHelper**, you must create a **DataShareHelper** instance using [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md). |
+| [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | Represents the optional parameters of [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md). |
+| [OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md) | Defines the result of the operation for subscribing to or unsubscribing from the data changes or published data. |
+| [PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md) | Defines the subscription/unsubscription result of the changes in the published data. |
+| [PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md) | Defines the data to publish. |
+| [RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md) | Represents the RDB data change result. The data returned by the callback is not larger than 10 MB in size. |
+| [Template](arkts-arkdata-datashare-template-i-sys.md) | Defines the struct of the template used in a subscription. |
+| [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | Defines the **TemplateId** struct. **TemplateId** is generated by [**addTemplate**](arkts-arkdata-datashare-datasharehelper-i-sys.md#addtemplate) to identify a template. |
+| [UpdateOperation](arkts-arkdata-datashare-updateoperation-i-sys.md) | Represents the batch update operation information. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ChangeType](arkts-arkdata-datashare-changetype-e.md) |
-| [DataProxyErrorCode](arkts-arkdata-datashare-dataproxyerrorcode-e.md) |
-| [DataProxyMaxValueLength](arkts-arkdata-datashare-dataproxymaxvaluelength-e.md) |
-| [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md) |
+| Name | Description |
+| --- | --- |
+| [ChangeType](arkts-arkdata-datashare-changetype-e.md) | Enumerates the data change types. |
+| [DataProxyErrorCode](arkts-arkdata-datashare-dataproxyerrorcode-e.md) | Enumerates the status code returned by the batch operations of shared configuration. |
+| [DataProxyMaxValueLength](arkts-arkdata-datashare-dataproxymaxvaluelength-e.md) | The maximum length of [value](arkts-arkdata-datashare-proxydata-i.md#value), [value](arkts-arkdata-datashare-dataproxychangeinfo-i.md#value), [value](arkts-arkdata-datashare-dataproxygetresult-i.md#value). |
+| [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md) | Enumerates the data proxy types. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Enumerates the data subscription types. |
 <!--DelEnd-->

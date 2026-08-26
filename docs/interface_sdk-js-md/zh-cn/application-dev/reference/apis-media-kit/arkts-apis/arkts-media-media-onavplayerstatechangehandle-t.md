@@ -14,7 +14,7 @@ type OnAVPlayerStateChangeHandle = (state: AVPlayerState, reason: StateChangeRea
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| state | [AVPlayerState](arkts-media-media-avplayerstate-t.md) | 是 |
-| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| state | [AVPlayerState](arkts-media-media-avplayerstate-t.md) | 是 | 当前播放状态。 |
+| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | 是 | 当前播放状态的切换原因。 |

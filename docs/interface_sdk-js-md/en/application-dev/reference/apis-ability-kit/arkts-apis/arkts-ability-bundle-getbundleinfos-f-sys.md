@@ -3,7 +3,22 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import appControl from '@kit.AbilityKit.appControl';
+import bundleManager from '@kit.AbilityKit.bundleManager';
+import bundleMonitor from '@kit.AbilityKit.bundleMonitor';
+import bundleResourceManager from '@kit.AbilityKit.bundleResourceManager';
+import bundle from '@kit.AbilityKit';
+import defaultAppManager from '@kit.AbilityKit.defaultAppManager';
+import distributedBundleManager from '@kit.AbilityKit.distributedBundleManager';
+import freeInstall from '@kit.AbilityKit.freeInstall';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit.innerBundleManager';
+import installer from '@kit.AbilityKit.installer';
+import launcherBundleManager from '@kit.AbilityKit.launcherBundleManager';
+import overlay from '@kit.AbilityKit.overlay';
+import shortcutManager from '@kit.AbilityKit.shortcutManager';
+import skillManager from '@kit.AbilityKit.skillManager';
+import appDomainVerify from '@kit.AbilityKit.appDomainVerify';
+import pluginBundleManager from '@kit.AbilityKit.pluginBundleManager';
 ```
 
 ## getBundleInfos
@@ -28,11 +43,28 @@ Obtains all BundleInfo for a specified user in the system. This API uses an asyn
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes |
-| userId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| userId | number | Yes | User ID. Value range: greater than or equal to 0. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and the BundleInfo of all bundles under the specified user as the input parameter at program startup. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleFlag: number = bundle.BundleFlag.GET_BUNDLE_DEFAULT;
+let userId: number = 100;
+
+bundle.getBundleInfos(bundleFlag, userId, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
 
 
 ## getBundleInfos
@@ -57,10 +89,26 @@ Obtains all BundleInfo for the current user. This API uses an asynchronous callb
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and all available BundleInfo as the input parameter at program startup. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleFlag: number = bundle.BundleFlag.GET_BUNDLE_DEFAULT;
+
+bundle.getBundleInfos(bundleFlag, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
 
 
 ## getBundleInfos
@@ -85,13 +133,30 @@ Obtains all BundleInfo for a specified user. This API uses a promise to return t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes |
-| userId | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| userId | number | No | User ID.Default value: the user to which the caller belongs. Value range: greater than or equal to 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Promise used to return all available BundleInfo. |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleFlag: number = bundle.BundleFlag.GET_BUNDLE_DEFAULT;
+let userId: number = 100;
+
+bundle.getBundleInfos(bundleFlag, userId)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```

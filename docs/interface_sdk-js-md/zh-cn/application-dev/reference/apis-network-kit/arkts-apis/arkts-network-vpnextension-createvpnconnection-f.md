@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpnExtension } from 'kits/@kit.NetworkKit';
+import vpnExtension from '@kit.NetworkKit';
 ```
 
 ## createVpnConnection
@@ -14,7 +14,8 @@ function createVpnConnection(context: VpnExtensionContext): VpnConnection
 
 创建一个三方VPN连接对象。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 调用createVpnConnection接口前，需要先调用startVpnExtensionAbility接口启用VPN功能。
 
 **起始版本：** 11
@@ -25,18 +26,18 @@ function createVpnConnection(context: VpnExtensionContext): VpnConnection
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [VpnExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-vpnextensioncontext-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [VpnExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-vpnextensioncontext-t.md) | 是 | 指定 context。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) | 返回一个VPN连接对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |

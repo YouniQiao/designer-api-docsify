@@ -13,12 +13,12 @@ The type of media center control command, which can be used to determine the but
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'playNext' |
-| 'playPrevious' |
-| 'fastForward' |
-| 'rewind' |
-| 'setSpeed' |
-| 'setLoopMode' |
-| 'toggleFavorite' |
+| Type | Description |
+| --- | --- |
+| 'playNext' |  |
+| 'playPrevious' |  |
+| 'fastForward' |  |
+| 'rewind' |  |
+| 'setSpeed' |  |
+| 'setLoopMode' |  |
+| 'toggleFavorite' |  |

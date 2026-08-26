@@ -9,7 +9,7 @@ Session controller,used to control media playback and get media information@inte
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import avSession from '@kit.AVSessionKit';
 ```
 
 ## destroy
@@ -26,16 +26,40 @@ Destroy the server controller
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.destroy((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to destroy, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in destroying.');
+});
+```
+
+```TypeScript
+avcontroller.destroy((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to destroy controller, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in destroying.');
+});
+```
 
 ## destroy
 
@@ -53,16 +77,30 @@ Destroy the server controller
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | void promise when executed successfully |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+currentAVSession.destroy().then(() => {
+  console.info('Succeeded in destroying.');
+});
+```
+
+```TypeScript
+avcontroller.destroy().then(() => {
+  console.info('Succeeded in destroying.');
+});
+```
 
 ## getAVCallState
 
@@ -78,17 +116,25 @@ Get the call status of the current session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVCallState). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getAVCallState((err: BusinessError, callstate: avSession.AVCallState) => {
+  console.info(`Succeeded in getting AV call state: ${callstate.state}`);
+});
+```
 
 ## getAVCallState
 
@@ -104,17 +150,25 @@ Get the call status of the current session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | (AVCallState) returned through promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getAVCallState().then((callstate: avSession.AVCallState) => {
+  console.info(`Succeeded in getting AV call state: ${callstate.state}`);
+});
+```
 
 ## getAVMetadata
 
@@ -130,17 +184,29 @@ Get the metadata of the current session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | Yes | The triggered asyncCallback when (getAVMetadata). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getAVMetadata((err: BusinessError, metadata: avSession.AVMetadata) => {
+  if (err) {
+    console.error(`Failed to get AV metadata, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting AV metadata, assetId: ${metadata.assetId}`);
+});
+```
 
 ## getAVMetadata
 
@@ -158,17 +224,25 @@ Get the metadata of the current session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;AVMetadata & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;AVMetadata & gt; | (AVMetadata) returned through promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getAVMetadata().then((metadata: avSession.AVMetadata) => {
+  console.info(`Succeeded in getting AV metadata, assetId: ${metadata.assetId}`);
+});
+```
 
 ## getAVMetadataSync
 
@@ -186,17 +260,23 @@ Get the metadata of the current session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) |
+| Type | Description |
+| --- | --- |
+| [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | (AVMetadata) returned |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+let metaData: avSession.AVMetadata = avcontroller.getAVMetadataSync();
+```
 
 ## getAVPlaybackState
 
@@ -212,17 +292,35 @@ Get the playback status of the current session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVPlaybackState). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avCastController.getAVPlaybackState((state: avSession.AVPlaybackState) => {
+  console.info('Succeeded in getting AV playback state.');
+});
+```
+
+```TypeScript
+avcontroller.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
+  if (err) {
+    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting AV playback state.');
+});
+```
 
 ## getAVPlaybackState
 
@@ -240,17 +338,31 @@ Get the playback status of the current session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | (AVPlaybackState) returned through promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avCastController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
+  console.info('Succeeded in getting AV playback state.');
+});
+```
+
+```TypeScript
+avcontroller.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
+  console.info('Succeeded in getting AV playback state.');
+});
+```
 
 ## getAVPlaybackStateSync
 
@@ -268,17 +380,23 @@ Get the playback status of the current session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) |
+| Type | Description |
+| --- | --- |
+| [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | (AVPlaybackState) returned |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+let playbackState: avSession.AVPlaybackState = avcontroller.getAVPlaybackStateSync();
+```
 
 ## getAVQueueItems
 
@@ -294,17 +412,29 @@ Get the playlist of the current session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | Yes | The triggered asyncCallback when (getAVQueueItems). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getAVQueueItems((err: BusinessError, items: avSession.AVQueueItem[]) => {
+  if (err) {
+    console.error(`Failed to get AV queue items, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting AV queue items, length: ${items.length}`);
+});
+```
 
 ## getAVQueueItems
 
@@ -322,17 +452,25 @@ Get the playlist of the current session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | (Array & lt;AVQueueItem & gt;) returned through promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getAVQueueItems().then((items: avSession.AVQueueItem[]) => {
+  console.info(`Succeeded in getting AV queue items, length: ${items.length}`);
+});
+```
 
 ## getAVQueueItemsSync
 
@@ -350,17 +488,23 @@ Get the playlist of the current session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | (Array & lt;AVQueueItem & gt;) returned |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+let currentQueueItems: Array<avSession.AVQueueItem> = avcontroller.getAVQueueItemsSync();
+```
 
 ## getAVQueueTitle
 
@@ -376,17 +520,29 @@ Get the name of the playlist of the current session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The triggered asyncCallback when (getAVQueueTitle). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getAVQueueTitle((err: BusinessError, title: string) => {
+  if (err) {
+    console.error(`Failed to get AV queue title, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting AV queue title: ${title}`);
+});
+```
 
 ## getAVQueueTitle
 
@@ -404,17 +560,25 @@ Get the name of the playlist of the current session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | (string) returned through promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getAVQueueTitle().then((title: string) => {
+  console.info(`Succeeded in getting AV queue title: ${title}`);
+});
+```
 
 ## getAVQueueTitleSync
 
@@ -432,17 +596,23 @@ Get the name of the playlist of the current session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | (string) returned |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+let currentQueueTitle: string = avcontroller.getAVQueueTitleSync();
+```
 
 ## getCallMetadata
 
@@ -458,17 +628,25 @@ Get the call metadata of the current session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The triggered asyncCallback when (getCallMetadata). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getCallMetadata((calldata: avSession.CallMetadata) => {
+  console.info(`Succeeded in getting call metadata, name: ${calldata.name}`);
+});
+```
 
 ## getCallMetadata
 
@@ -484,17 +662,25 @@ Get the call metadata of the current session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | (CallMetadata) returned through promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getCallMetadata().then((calldata: avSession.CallMetadata) => {
+  console.info(`Succeeded in getting call metadata, name: ${calldata.name}`);
+});
+```
 
 ## getDesktopLyricState
 
@@ -512,19 +698,34 @@ Get desktop lyric state such as lock state for this session.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | void promise when executed successfully |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
-| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
+
+**Examples**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).getDesktopLyricState()
+    .then((state: avSession.DesktopLyricState) => {
+    console.info(`getDesktopLyricState: ${state.isLocked}`);
+  })
+}
+```
+
+```TypeScript
+avcontroller.getDesktopLyricState();
+```
 
 ## getExtras
 
@@ -540,20 +741,32 @@ Get custom media packets provided by the corresponding session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{[key: string]: Object}&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{[key: string]: Object}&gt; | Yes |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getExtras((err: BusinessError, extras) => {
+  if (err) {
+    console.error(`Failed to get extras, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting extras: ${extras}`);
+});
+```
 
 ## getExtras
 
@@ -571,20 +784,64 @@ Get custom media packets provided by the corresponding session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;{[key: string]: Object |
+| Type | Description |
+| --- | --- |
+| Promise & lt;{[key: string]: Object | > } the parameters of extras |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+**Examples**
+
+```TypeScript
+// Index.ets
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  private tag: string = "createNewSession";
+  private sessionId: string = "";
+  private controller: avSession.AVSessionController | undefined = undefined;
+  private currentAVSession?: avSession.AVSession;
+  context = this.getUIContext();
+
+  aboutToAppear(): void {
+
+    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
+      .then(async (data: avSession.AVSession) => {
+        this.currentAVSession = data;
+        this.sessionId = this.currentAVSession.sessionId;
+        this.controller = await this.currentAVSession.getController();
+        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
+      });
+    if (this.controller !== undefined) {
+      (this.controller as avSession.AVSessionController).getExtras().then((extras) => {
+        console.info(`Succeeded in getting extras: ${extras}`);
+      });
+    }
+  }
+
+  build() {
+    Column() {
+      Text('AVSession Demo')
+        .fontSize(20)
+        .margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
 
 ## getExtrasWithEvent
 
@@ -600,24 +857,46 @@ Get extra information for remote device, such as volume level, connected devices
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| extraEvent | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| extraEvent | string | Yes | the event name to get |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ExtraInfo](arkts-avsession-avsession-extrainfo-t.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ExtraInfo](arkts-avsession-avsession-extrainfo-t.md)&gt; | the value returned for such event |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+
+**Examples**
+
+```TypeScript
+let controller: avSession.AVSessionController | ESObject;
+const COMMON_COMMAND_STRING_1 = 'AUDIO_GET_VOLUME';
+const COMMON_COMMAND_STRING_2 = 'AUDIO_GET_AVAILABLE_DEVICES';
+const COMMON_COMMAND_STRING_3 = 'AUDIO_GET_PREFERRED_OUTPUT_DEVICE_FOR_RENDERER_INFO';
+if (controller !== undefined) {
+  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_1).then(() => {
+    console.info(`${[COMMON_COMMAND_STRING_1]}`);
+  })
+
+  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_2).then(() => {
+    console.info(`${[COMMON_COMMAND_STRING_2]}`);
+  })
+
+  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_3).then(() => {
+    console.info(`${[COMMON_COMMAND_STRING_3]}`);
+  })
+}
+```
 
 ## getLaunchAbility
 
@@ -633,17 +912,29 @@ Get the WantAgent of this session that can launch the session ability
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Yes | The asyncCallback triggered when getting the WantAgent. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getLaunchAbility((err: BusinessError, agent: object) => {
+  if (err) {
+    console.error(`Failed to get launch ability, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting launch ability: ${agent}`);
+});
+```
 
 ## getLaunchAbility
 
@@ -661,17 +952,25 @@ Get the WantAgent of this session that can launch the session ability
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | WantAgent promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getLaunchAbility().then((agent: object) => {
+  console.info(`Succeeded in getting launch ability: ${agent}`);
+});
+```
 
 ## getMediaCenterControlType
 
@@ -689,16 +988,24 @@ Get media control type that the can be displayed on the media center.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | The control types that the app sets to be displayed on the media center. The default value is empty, indicating that the types of the customized display control is not set. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getMediaCenterControlType().then((types: avSession.AVMediaCenterControlType[]) => {
+  console.info(`Succeeded in getting media center control types, size: ${types.length}`);
+});
+```
 
 ## getOutputDevice
 
@@ -714,16 +1021,40 @@ Get output device information
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | Yes | The triggered asyncCallback when (getOutputDevice). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 600101 |
-| 600103 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 600101 | Session service exception. |
+| 600103 | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.getOutputDevice((err: BusinessError, outputDeviceInfo: avSession.OutputDeviceInfo) => {
+  if (err) {
+    console.error(`Failed to get output device, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting output device, devices length: ${outputDeviceInfo.devices.length}`);
+});
+```
+
+```TypeScript
+avcontroller.getOutputDevice((err: BusinessError, deviceInfo: avSession.OutputDeviceInfo) => {
+  if (err) {
+    console.error(`Failed to get output device, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting output device.');
+});
+```
 
 ## getOutputDevice
 
@@ -741,16 +1072,30 @@ Get output device information
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | (OutputDeviceInfo) returned through promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 600101 |
-| 600103 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 600101 | Session service exception. |
+| 600103 | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+currentAVSession.getOutputDevice().then((outputDeviceInfo: avSession.OutputDeviceInfo) => {
+  console.info(`Succeeded in getting output device, devices length: ${outputDeviceInfo.devices.length}`);
+})
+```
+
+```TypeScript
+avcontroller.getOutputDevice().then((deviceInfo: avSession.OutputDeviceInfo) => {
+  console.info('Succeeded in getting output device.');
+});
+```
 
 ## getOutputDeviceSync
 
@@ -768,16 +1113,26 @@ Get output device information
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) | (OutputDeviceInfo) returned |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+let currentOutputDevice: avSession.OutputDeviceInfo = currentAVSession.getOutputDeviceSync();
+```
+
+```TypeScript
+let currentOutputDevice: avSession.OutputDeviceInfo = avcontroller.getOutputDeviceSync();
+```
 
 ## getRealPlaybackPositionSync
 
@@ -795,16 +1150,22 @@ Get the adjusted playback position. The time automatically calculated by the sys
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | current playback position in ms.Note that the returns value of each call will be different. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+let time: number = avcontroller.getRealPlaybackPositionSync();
+```
 
 ## getSupportedLoopModes
 
@@ -824,16 +1185,24 @@ Get supported loop modes supplied by application.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | supported loop modes returned through promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getSupportedLoopModes().then((loopModes: avSession.LoopMode[]) => {
+  console.info(`Succeeded in getting supported loop modes, size: ${loopModes.length}`);
+});
+```
 
 ## getSupportedPlaySpeeds
 
@@ -853,16 +1222,33 @@ Get supported speeds supplied by application.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;number & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;number & gt; & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avCastController.getSupportedPlaySpeeds().then((nums: number[]) => {
+  console.info(`Succeeded in getting supported play speeds, length: ${nums.length}`);
+  if (nums.length > 0 ) {
+    console.info(`Succeeded in getting supported play speed: ${nums[0]}`);
+  }
+});
+```
+
+```TypeScript
+avcontroller.getSupportedPlaySpeeds().then((speeds: number[]) => {
+  console.info(`Succeeded in getting supported play speeds, size: ${speeds.length}`);
+});
+```
 
 ## getValidCommands
 
@@ -878,17 +1264,29 @@ Get commands supported by the current session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes | The triggered asyncCallback when (getValidCommands). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getValidCommands((err: BusinessError, validCommands: avSession.AVControlCommandType[]) => {
+  if (err) {
+    console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting valid commands, size: ${validCommands.length}`);
+});
+```
 
 ## getValidCommands
 
@@ -906,17 +1304,25 @@ Get commands supported by the current session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | array of AVControlCommandType promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.getValidCommands().then((validCommands: avSession.AVControlCommandType[]) => {
+  console.info(`Succeeded in getting valid commands, size: ${validCommands.length}`);
+});
+```
 
 ## getValidCommandsSync
 
@@ -934,17 +1340,23 @@ Get commands supported by the current session
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt; | array of AVControlCommandType |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+let validCommands: Array<avSession.AVControlCommandType> = avcontroller.getValidCommandsSync();
+```
 
 ## isActive
 
@@ -960,17 +1372,29 @@ Check if the current session is active
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The triggered asyncCallback when (isActive). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.isActive((err: BusinessError, isActive: boolean) => {
+  if (err) {
+    console.error(`Failed to check active state, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in checking active state: ${isActive}`);
+});
+```
 
 ## isActive
 
@@ -988,17 +1412,25 @@ Check if the current session is active
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | boolean promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.isActive().then((isActive: boolean) => {
+  console.info(`Succeeded in checking active state: ${isActive}`);
+});
+```
 
 ## isActiveSync
 
@@ -1016,17 +1448,23 @@ Check if the current session is active
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | boolean |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+let isActive: boolean = avcontroller.isActiveSync();
+```
 
 ## isDesktopLyricEnabled
 
@@ -1044,18 +1482,18 @@ Query desktop lyric enabled state for this session.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | return the enabled status |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
 ## isDesktopLyricVisible
 
@@ -1073,19 +1511,33 @@ Query desktop lyric visible state for this session.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | return desktop lyric visible state |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
-| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
+
+**Examples**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).isDesktopLyricVisible().then((visible: boolean) => {
+    console.info(`isDesktopLyricVisible: ${visible}`);
+  })
+}
+```
+
+```TypeScript
+avcontroller.isDesktopLyricVisible();
+```
 
 ## off('metadataChange')
 
@@ -1103,18 +1555,18 @@ Unregister metadata changed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'metadataChange' | Yes |
-| callback | (data: AVMetadata) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'metadataChange' | Yes |  |
+| callback | (data: AVMetadata) = & gt; void | No | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('playbackStateChange')
 
@@ -1132,18 +1584,18 @@ Unregister playback state changed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'playbackStateChange' | Yes |
-| callback | (state: AVPlaybackState) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'playbackStateChange' | Yes |  |
+| callback | (state: AVPlaybackState) = & gt; void | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('callMetadataChange')
 
@@ -1161,18 +1613,18 @@ Unregister call metadata changed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'callMetadataChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'callMetadataChange' | Yes | 'callMetadataChange' |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | No | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('callStateChange')
 
@@ -1190,18 +1642,18 @@ Unregister playback state changed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'callStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'callStateChange' | Yes | 'callStateChange' |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | No | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('sessionDestroy')
 
@@ -1219,18 +1671,18 @@ Unregister current session destroyed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'sessionDestroy' | Yes |
-| callback | () = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'sessionDestroy' | Yes | 'sessionDestroy' |
+| callback | () = & gt; void | No | The callback used to handle current session destroyed event. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('activeStateChange')
 
@@ -1248,18 +1700,18 @@ Unregister the active state of this session changed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'activeStateChange' | Yes |
-| callback | (isActive: boolean) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'activeStateChange' | Yes | 'activeStateChange' |
+| callback | (isActive: boolean) = & gt; void | No | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('validCommandChange')
 
@@ -1277,18 +1729,18 @@ Unregister the valid commands of the session changed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'validCommandChange' | Yes |
-| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'validCommandChange' | Yes | 'validCommandChange' |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | No | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('outputDeviceChange')
 
@@ -1306,18 +1758,18 @@ Unregister session output device change callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'outputDeviceChange' | Yes |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'outputDeviceChange' | Yes | Registration Type 'outputDeviceChange' |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('sessionEvent')
 
@@ -1335,18 +1787,18 @@ Unregister session event callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'sessionEvent' | Yes |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'sessionEvent' | Yes | 'sessionEvent' |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | No | Used to cancel a specific listener The callback function provides the event string and key-value pair parameters. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('queueItemsChange')
 
@@ -1364,18 +1816,18 @@ Unregister session playlist change callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'queueItemsChange' | Yes |
-| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'queueItemsChange' | Yes | Registration Type 'queueItemsChange' |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | No | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('queueTitleChange')
 
@@ -1393,18 +1845,18 @@ Unregister the name of session playlist change callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'queueTitleChange' | Yes |
-| callback | (title: string) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'queueTitleChange' | Yes | Registration Type 'queueTitleChange' |
+| callback | (title: string) = & gt; void | No | Used to handle name of playlist changed. The callback provides the new name. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('extrasChange')
 
@@ -1422,18 +1874,18 @@ Unregister the custom media packets change callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'extrasChange' | Yes |
-| callback | (extras: {[key: string]: Object}) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'extrasChange' | Yes | Registration Type 'extrasChange' |
+| callback | (extras: {[key: string]: Object}) = & gt; void | No | Used to handle custom media packets changed. The callback provides the new media packets. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('customDataChange')
 
@@ -1451,17 +1903,17 @@ Unregister listener for custom data.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'customDataChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offDesktopLyricEnabled
 
@@ -1479,16 +1931,22 @@ Unregister desktop lyric enable state change callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | a callback to receive desktop lyric enable state. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.offDesktopLyricEnabled();
+```
 
 ## offDesktopLyricStateChanged
 
@@ -1506,16 +1964,28 @@ Unregister desktop lyric state changed callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | No | a callback to receive desktop lyric state. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).offDesktopLyricStateChanged();
+}
+```
+
+```TypeScript
+avcontroller.offDesktopLyricStateChanged();
+```
 
 ## offDesktopLyricVisibilityChanged
 
@@ -1533,16 +2003,28 @@ Unregister desktop lyric visible state change callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | a callback to receive desktop lyric window visible state. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).offDesktopLyricVisibilityChanged();
+}
+```
+
+```TypeScript
+avcontroller.offDesktopLyricVisibilityChanged();
+```
 
 ## offMediaCenterControlTypeChanged
 
@@ -1560,16 +2042,22 @@ Unregister media center control type changed callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | No | Callback to receive the changed control types. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.offMediaCenterControlTypeChanged();
+```
 
 ## offSupportedLoopModesChange
 
@@ -1589,16 +2077,22 @@ Unregister listener for supported loop modes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | No | Callback used to retrieve supported loop modes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.offSupportedLoopModesChange();
+```
 
 ## offSupportedPlaySpeedsChange
 
@@ -1618,16 +2112,22 @@ Unregister listener for supported play speeds.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt; | No | Callback used to retrieve supported play speeds. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.offSupportedPlaySpeedsChange();
+```
 
 ## on('metadataChange')
 
@@ -1645,19 +2145,19 @@ Register metadata changed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'metadataChange' | Yes |
-| filter | Array & lt;keyof AVMetadata & gt; \ | 'all' | Yes |
-| callback | (data: AVMetadata) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'metadataChange' | Yes |  |
+| filter | Array & lt;keyof AVMetadata & gt; \ | 'all' | Yes | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) that you cared about |
+| callback | (data: AVMetadata) = & gt; void | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('playbackStateChange')
 
@@ -1675,19 +2175,19 @@ Register playback state changed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'playbackStateChange' | Yes |
-| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | Yes |
-| callback | (state: AVPlaybackState) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'playbackStateChange' | Yes |  |
+| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
+| callback | (state: AVPlaybackState) = & gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('callMetadataChange')
 
@@ -1705,19 +2205,19 @@ Register call metadata changed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'callMetadataChange' | Yes |
-| filter | Array & lt;keyof CallMetadata & gt; \ | 'all' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'callMetadataChange' | Yes | 'callMetadataChange' |
+| filter | Array & lt;keyof CallMetadata & gt; \ | 'all' | Yes | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('callStateChange')
 
@@ -1735,19 +2235,19 @@ Register call state changed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'callStateChange' | Yes |
-| filter | Array & lt;keyof AVCallState & gt; \ | 'all' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'callStateChange' | Yes | 'callStateChange' |
+| filter | Array & lt;keyof AVCallState & gt; \ | 'all' | Yes | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('sessionDestroy')
 
@@ -1765,18 +2265,18 @@ Register current session destroyed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'sessionDestroy' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'sessionDestroy' | Yes |  |
+| callback | () = & gt; void | Yes | The callback used to handle current session destroyed event. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('activeStateChange')
 
@@ -1794,18 +2294,18 @@ Register the active state of this session changed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'activeStateChange' | Yes |
-| callback | (isActive: boolean) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'activeStateChange' | Yes | 'activeStateChange' |
+| callback | (isActive: boolean) = & gt; void | Yes | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('validCommandChange')
 
@@ -1823,18 +2323,18 @@ Register the valid commands of the session changed callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'validCommandChange' | Yes |
-| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'validCommandChange' | Yes | 'validCommandChange' |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | Yes | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('outputDeviceChange')
 
@@ -1852,18 +2352,18 @@ Register session output device change callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'outputDeviceChange' | Yes |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'outputDeviceChange' | Yes | Registration Type 'outputDeviceChange' |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('sessionEvent')
 
@@ -1881,18 +2381,18 @@ Register session event callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'sessionEvent' | Yes |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'sessionEvent' | Yes | 'sessionEvent' |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | Yes | The callback used to handle session event changed event. The callback function provides the event string and key-value pair parameters. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('queueItemsChange')
 
@@ -1910,18 +2410,18 @@ Register session playlist change callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'queueItemsChange' | Yes |
-| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'queueItemsChange' | Yes | Registration Type 'queueItemsChange' |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | Yes | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('queueTitleChange')
 
@@ -1939,18 +2439,18 @@ Register the name of session playlist change callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'queueTitleChange' | Yes |
-| callback | (title: string) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'queueTitleChange' | Yes | Registration Type 'queueTitleChange' |
+| callback | (title: string) = & gt; void | Yes | Used to handle name of playlist changed. The callback provides the new name. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('extrasChange')
 
@@ -1968,18 +2468,18 @@ Register the custom media packets change callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'extrasChange' | Yes |
-| callback | (extras: {[key: string]: Object}) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'extrasChange' | Yes | Registration Type 'extrasChange' |
+| callback | (extras: {[key: string]: Object}) = & gt; void | Yes | Used to handle custom media packets changed. The callback provides the new media packets. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('customDataChange')
 
@@ -1997,17 +2497,17 @@ Register listener for custom data.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'customDataChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onDesktopLyricEnabled
 
@@ -2025,16 +2525,24 @@ Register desktop lyric enable state change callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric enable state. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.onDesktopLyricEnabled((enabled: boolean) => {
+  console.info(`desktop lyric enabled state : ${enabled}`);
+})
+```
 
 ## onDesktopLyricStateChanged
 
@@ -2052,16 +2560,32 @@ Register desktop lyric state changed callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | Yes | a callback to receive desktop lyric state. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
+    console.info(`desktop lyric isLocked : ${state.isLocked}`);
+  })
+}
+```
+
+```TypeScript
+avcontroller.onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
+  console.info(`desktop lyric isLocked : ${state.isLocked}`);
+})
+```
 
 ## onDesktopLyricVisibilityChanged
 
@@ -2079,16 +2603,32 @@ Register desktop lyric visible state change callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric window visible state. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).onDesktopLyricVisibilityChanged((visible: boolean) => {
+    console.info(`desktop lyric visible state: ${visible}`);
+  });
+}
+```
+
+```TypeScript
+avcontroller.onDesktopLyricVisibilityChanged((visible: boolean) => {
+  console.info(`desktop lyric visible state: ${visible}`);
+});
+```
 
 ## onMediaCenterControlTypeChanged
 
@@ -2106,16 +2646,24 @@ Register media center control type changed callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | Yes | Callback to receive the changed control types. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.onMediaCenterControlTypeChanged((types: avSession.AVMediaCenterControlType[]) => {
+  console.info(`Media center control types changed, size: ${types.length}`);
+});
+```
 
 ## onSupportedLoopModesChange
 
@@ -2135,16 +2683,24 @@ Register listener for supported loop modes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | Yes | Callback used to retrieve supported loop modes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.onSupportedLoopModesChange((loopModes: avSession.LoopMode[]) => {
+  console.info(`Supported loop modes changed, size: ${loopModes.length}`);
+});
+```
 
 ## onSupportedPlaySpeedsChange
 
@@ -2164,16 +2720,24 @@ Register listener for supported play speeds.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to retrieve supported play speeds. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avcontroller.onSupportedPlaySpeedsChange((speeds: number[]) => {
+  console.info(`Supported play speeds changed, size: ${speeds.length}`);
+});
+```
 
 ## sendAVKeyEvent
 
@@ -2189,21 +2753,38 @@ Send media key event to this session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | The KeyEvent |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 600101 |
-| 600102 |
-| 600103 |
-| 600105 |
-| 600106 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 600101 | Session service exception. |
+| 600102 | The session does not exist. |
+| 600103 | The session controller does not exist. |
+| 600105 | Invalid session command. |
+| 600106 | The session is not activated. |
+
+**Examples**
+
+```TypeScript
+import { Key, KeyEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let keyItem: Key = {code:0x49, pressedTime:2, deviceId:0};
+let event:KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
+avcontroller.sendAVKeyEvent(event, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to send AV key event, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in sending AV key event.');
+});
+```
 
 ## sendAVKeyEvent
 
@@ -2221,26 +2802,39 @@ Send media key event to this session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | The KeyEvent |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | void promise when executed successfully |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 600101 |
-| 600102 |
-| 600103 |
-| 600105 |
-| 600106 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 600101 | Session service exception. |
+| 600102 | The session does not exist. |
+| 600103 | The session controller does not exist. |
+| 600105 | Invalid session command. |
+| 600106 | The session is not activated. |
+
+**Examples**
+
+```TypeScript
+import { Key, KeyEvent } from '@kit.InputKit';
+
+let keyItem: Key = {code:0x49, pressedTime:2, deviceId:0};
+let event:KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
+
+avcontroller.sendAVKeyEvent(event).then(() => {
+  console.info('Succeeded in sending AV key event.');
+});
+```
 
 ## sendCommonCommand
 
@@ -2256,23 +2850,36 @@ Send common commands to this session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| command | string | Yes |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | {[key: string]: Object} | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| command | string | Yes | The command name to be sent. |
+| args | {[key: string]: Object} | Yes | The parameters of session event |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600106](../errorcode-avsession.md#6600106-session-not-activated) |
-| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+**Examples**
+
+```TypeScript
+let commandName = "my_command";
+avcontroller.sendCommonCommand(commandName, {command : "This is my command"}, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to send common command, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in sending common command.');
+})
+```
 
 ## sendCommonCommand
 
@@ -2290,28 +2897,37 @@ Send common commands to this session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| command | string | Yes |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | {[key: string]: Object} | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| command | string | Yes | The command name to be sent. |
+| args | {[key: string]: Object} | Yes | The parameters of session event |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | void promise when executed successfully |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600106](../errorcode-avsession.md#6600106-session-not-activated) |
-| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+**Examples**
+
+```TypeScript
+let commandName = "my_command";
+avcontroller.sendCommonCommand(commandName, {command : "This is my command"}).then(() => {
+  console.info('Succeeded in sending common command.');
+});
+```
 
 ## sendControlCommand
 
@@ -2327,22 +2943,35 @@ Send control commands to this session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600106](../errorcode-avsession.md#6600106-session-not-activated) |
-| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+**Examples**
+
+```TypeScript
+let avCommand: avSession.AVControlCommand = {command:'play'};
+avcontroller.sendControlCommand(avCommand, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in sending control command.');
+});
+```
 
 ## sendControlCommand
 
@@ -2360,27 +2989,36 @@ Send control commands to this session
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | void promise when executed successfully |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600106](../errorcode-avsession.md#6600106-session-not-activated) |
-| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+**Examples**
+
+```TypeScript
+let avCommand: avSession.AVControlCommand = {command:'play'};
+avcontroller.sendControlCommand(avCommand).then(() => {
+  console.info('Succeeded in sending control command.');
+});
+```
 
 ## sendCustomData
 
@@ -2398,23 +3036,75 @@ Send custom data to this avsession.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | Record & lt;string, Object & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | Record & lt;string, Object & gt; | Yes | The custom data populated by application. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | void result promise when executed successfully |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. You are advised to:1.Scheduled retry.2.Destroy the current session or session controller and re-create it. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+avCastController.sendCustomData({customData : "This is custom data"});
+```
+
+```TypeScript
+currentAVSession.sendCustomData({customData : "This is custom data"}).then(() => {
+  console.info('Succeeded in sending custom data.');
+});
+```
+
+```TypeScript
+// Index.ets
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  private tag: string = "createNewSession";
+  private sessionId: string = "";
+  private controller: avSession.AVSessionController | undefined = undefined;
+  private currentAVSession?: avSession.AVSession;
+  context = this.getUIContext();
+
+  aboutToAppear(): void {
+    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
+      .then(async (data: avSession.AVSession) => {
+        this.currentAVSession = data;
+        this.sessionId = this.currentAVSession.sessionId;
+        this.controller = await this.currentAVSession.getController();
+        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
+      });
+
+    if (this.controller !== undefined) {
+      (this.controller as avSession.AVSessionController).sendCustomData({ customData: "This is my data" })
+    }
+  }
+
+  build() {
+    Column() {
+      Text('AVSession Demo')
+        .fontSize(20)
+        .margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
 
 ## setDesktopLyricState
 
@@ -2432,25 +3122,43 @@ Set desktop lyric state such as lock state for this session.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| state | [DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| state | [DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md) | Yes | The desktop lyric state |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | void promise when executed successfully |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
-| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
+
+**Examples**
+
+```TypeScript
+let state: avSession.DesktopLyricState = {
+  isLocked: true,
+};
+currentAVSession.setDesktopLyricState(state).then(() => {
+  console.info('Succeeded in setting desktop lyric state.');
+})
+```
+
+```TypeScript
+let state: avSession.DesktopLyricState = {
+  isLocked: true,
+};
+avcontroller.setDesktopLyricState(state);
+```
 
 ## setDesktopLyricVisible
 
@@ -2468,25 +3176,37 @@ Set desktop lyric visible state for this session.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| visible | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| visible | boolean | Yes | make desktop lyric window visible or not |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | void promise when executed successfully |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
-| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
+
+**Examples**
+
+```TypeScript
+currentAVSession.setDesktopLyricVisible(true).then(() => {
+  console.info('Succeeded in setting desktop lyric visible.');
+});
+```
+
+```TypeScript
+avcontroller.setDesktopLyricVisible(true);
+```
 
 ## skipToQueueItem
 
@@ -2502,19 +3222,32 @@ Set the item in the playlist to be played
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [itemId](arkts-avsession-avsession-avqueueitem-i.md) | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| itemId | number | Yes | The serial number of the item to be played |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+let queueItemId = 0;
+avcontroller.skipToQueueItem(queueItemId, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to skip to queue item, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in skipping to queue item.');
+});
+```
 
 ## skipToQueueItem
 
@@ -2532,24 +3265,33 @@ Set the item in the playlist to be played
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [itemId](arkts-avsession-avsession-avqueueitem-i.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| itemId | number | Yes | The serial number of the item to be played |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | void promise when executed successfully |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+let queueItemId = 0;
+avcontroller.skipToQueueItem(queueItemId).then(() => {
+  console.info('Succeeded in skipping to queue item.');
+});
+```
 
 ## sessionId
 

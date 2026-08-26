@@ -14,7 +14,7 @@ type OnAVDownloadTaskStateHandle = (taskId: string, state: AVDownloadTaskState) 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| taskId | string | 是 |
-| state | [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| taskId | string | 是 | 状态变化的离线下载任务ID。 |
+| state | [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) | 是 |  |

@@ -71,6 +71,6 @@ To the specified element.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | { year: number; month: number; day: number } | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | { year: number; month: number; day: number } | 是 |  |

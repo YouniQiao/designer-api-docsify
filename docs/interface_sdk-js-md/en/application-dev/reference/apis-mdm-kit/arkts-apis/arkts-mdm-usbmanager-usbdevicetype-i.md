@@ -9,7 +9,7 @@ Represents the USB device type information.You can obtain the list of USB device
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.MDMKit';
+import usbManager from '@kit.MDMKit';
 ```
 
 ## baseClass

@@ -12,6 +12,10 @@ This callback is triggered when the first screen rendering is detected to be com
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| firstScreenPaint | [FirstScreenPaint](arkts-arkweb-firstscreenpaint-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| firstScreenPaint | [FirstScreenPaint](arkts-arkweb-firstscreenpaint-i.md) | Yes | Details about the first screen paint. |
+
+**Examples**
+
+For details about the complete sample code, see [onFirstScreenPaint](./arkts-basic-components-web-events.md#onfirstscreenpaint).

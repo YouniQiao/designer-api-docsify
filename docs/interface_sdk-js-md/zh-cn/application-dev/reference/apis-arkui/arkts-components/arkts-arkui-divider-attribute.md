@@ -31,9 +31,9 @@ color(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 分割线颜色。默认值：'#33182431' 非法值：按默认值处理。 支持通过 WithTheme设置通用分割线颜色。 |
 
 ## lineCap
 
@@ -53,9 +53,9 @@ lineCap(value: LineCapStyle)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [LineCapStyle](../arkts-apis/arkts-arkui-linecapstyle-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [LineCapStyle](../arkts-apis/arkts-arkui-linecapstyle-e.md) | 是 | 分割线的端点样式。默认值：LineCapStyle.Butt 非法值：按默认值处理。 |
 
 ## strokeWidth
 
@@ -65,11 +65,15 @@ strokeWidth(value: number | string)
 
 设置分割线的宽度，支持attributeModifier动态设置属性方法。
 
-> **说明：**&gt;
-> - 分割线的宽度不支持百分比设置。&gt;
+> **说明：**
+> 
+> - 分割线的宽度不支持百分比设置。
+> 
 > - 使用水平分割线时，strokeWidth控制高度，优先级低于通用属性height；使用垂直分割线时，strokeWidth控制宽度，优
-> 先级低于通用属性width。&gt;
-> - 超过通用属性设置大小时，按照通用属性进行裁切。&gt;
+> 先级低于通用属性width。
+> 
+> - 超过通用属性设置大小时，按照通用属性进行裁切。
+> 
 > - 如果设备硬件存在1像素取整后分割线不显示问题，建议使用2像素。
 
 **起始版本：** 7
@@ -82,9 +86,9 @@ strokeWidth(value: number | string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string | 是 | 分割线宽度。默认值：1px 非法值：按默认值处理。 单位：vp |
 
 ## vertical
 
@@ -104,6 +108,6 @@ vertical(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 使用水平分割线还是垂直分割线。false：水平分割线；true：垂直分割线。默认值：false 非法值：按默认值处理。 |

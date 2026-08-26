@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## addDeviceConfig
@@ -28,15 +31,48 @@ Adds Wi-Fi connection configuration to the device.<p>The configuration will be u
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Returns { |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    let config:wifi.WifiDeviceConfig = {
+        ssid : "****",
+        bssid:  "****",
+        preSharedKey: "****",
+        isHiddenSsid: false,
+        securityType: 0,
+        creatorUid: 0,
+        disableReason: 0,
+        netId: 0,
+        randomMacType: 0,
+        randomMacAddr:  "****",
+        ipType: 0,
+        staticIp: {
+            ipAddress: "",
+            gateway: "",
+            dnsServers: [],
+            domains: []
+        }
+    }
+    wifi.addDeviceConfig(config).then(result => {
+        console.info("result:" + JSON.stringify(result));
+    });    
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```
 
 
 ## addDeviceConfig
@@ -61,7 +97,40 @@ Adds Wi-Fi connection configuration to the device.<p>The configuration will be u
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    let config:wifi.WifiDeviceConfig = {
+        ssid : "****",
+        bssid:  "****",
+        preSharedKey: "****",
+        isHiddenSsid: false,
+        securityType: 0,
+        creatorUid: 0,
+        disableReason: 0,
+        netId: 0,
+        randomMacType: 0,
+        randomMacAddr:  "****",
+        ipType: 0,
+        staticIp: {
+            ipAddress: "",
+            gateway: "",
+            dnsServers: [],
+            domains: []
+        }
+    }
+    wifi.addDeviceConfig(config,(error,result) => {
+        console.info("result:" + JSON.stringify(result));
+    });    
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```

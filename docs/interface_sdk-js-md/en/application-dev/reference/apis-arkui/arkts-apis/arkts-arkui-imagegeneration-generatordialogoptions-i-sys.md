@@ -11,7 +11,7 @@ Parameters used to open the ImageGeneratorDialog.@interface GeneratorDialogOptio
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'kits/@kit.ArkUI';
+import imageGeneration from '@kit.ArkUI';
 ```
 
 ## content

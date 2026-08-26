@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## participate
@@ -22,12 +21,12 @@ Participate the HiRetrieval project with given HiRetrievalConfig.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [HiRetrievalConfig](arkts-performanceanalysis-hiretrieval-hiretrievalconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [HiRetrievalConfig](arkts-performanceanalysis-hiretrieval-hiretrievalconfig-i.md) | Yes | The config set by the developers. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 36000001 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 36000001 | Initialization error. Possibly caused by invoking this function before invoking init function. |

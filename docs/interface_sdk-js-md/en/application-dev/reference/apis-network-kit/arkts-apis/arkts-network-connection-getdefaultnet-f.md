@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getDefaultNet
@@ -14,15 +13,19 @@ function getDefaultNet(callback: AsyncCallback<NetHandle>): void
 
 Obtains the network handle used by the system by default, including the network ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Default network used by the system. The network must have the
-> [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.&gt;
+> [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.
+> 
 > - The return value of this interface is determined by the system and is irrelevant to whether the application
-> specifies a network.&gt;
+> specifies a network.
+> 
 > - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch)
 > Wi-Fi
 > Cellular. In special cases,
-> the actual return result prevails.&gt;
+> the actual return result prevails.
+> 
 > - [NetHandle](arkts-network-connection-nethandle-i.md) is the unique identifier of the network. If no network is available,
 > **0** is returned. It can be used by [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md) to query more
 > network information.
@@ -38,18 +41,33 @@ Obtains the network handle used by the system by default, including the network 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | Yes | Callback used to return the result. When the network handle of the default activated network is successfully obtained, **error** is **undefined** and **data** is the network handle of the default network; otherwise, **error** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultNet((error: BusinessError, data: connection.NetHandle) => {
+  if (error) {
+    console.error(`Failed to get default net. Code:${error.code}, message:${error.message}`);
+    return;
+  }
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+```
 
 
 ## getDefaultNet
@@ -60,15 +78,19 @@ function getDefaultNet(): Promise<NetHandle>
 
 Obtains the network handle used by the system by default, including the network ID. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Default network used by the system. The network must have the
-> [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.&gt;
+> [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.
+> 
 > - The return value of this interface is determined by the system and is irrelevant to whether the application
-> specifies a network.&gt;
+> specifies a network.
+> 
 > - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch)
 > Wi-Fi
 > Cellular. In special cases,
-> the actual returned result prevails.&gt;
+> the actual returned result prevails.
+> 
 > - [NetHandle](arkts-network-connection-nethandle-i.md) is the unique identifier of the network. If no network is available,
 > **0** is returned. It can be used by [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md) to query more
 > network information.
@@ -84,14 +106,24 @@ Obtains the network handle used by the system by default, including the network 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;NetHandle & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;NetHandle & gt; | Promise used to return the network handle of the default network. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((data: connection.NetHandle) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+```

@@ -1,12 +1,15 @@
 # ChipGroup
 
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 1. When **multiple** is set to **false**, if **selectedIndexes** is not passed in, the first chip is automatically
 > selected by default. However, if the provided **selectedIndexes** includes multiple elements, the chip at the first
-> index is selected by default.&gt;
+> index is selected by default.
+> 
 > 2. To use the suffix functionality, the **IconGroupSuffix** API must be imported. If this API is not provided, the
-> suffix area will remain empty.&gt;
+> suffix area will remain empty.
+> 
 > 3. The icon fill colors (**fillColor** and **activedFillColor**) must match the font color (**fontColor**). If
 > different colors need to be set, use **prefixSymbol** when passing in
 > [ChipGroupSpaceOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md).
@@ -18,7 +21,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from 'kits/@kit.ArkUI';
+import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
+import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUIV2';
 ```
 
 ## backgroundSystemMaterial

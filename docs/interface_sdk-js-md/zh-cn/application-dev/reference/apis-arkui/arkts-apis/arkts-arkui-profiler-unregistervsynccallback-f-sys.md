@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## unregisterVsyncCallback

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { LazyDynamicLayout, LazyDynamicLayoutAttribute } from 'kits/@kit.ArkUI';
+import { LazyDynamicLayout, LazyDynamicLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## onVisibleIndexesChange
@@ -32,12 +32,12 @@ onVisibleIndexesChange(callback: Callback<number[]> | undefined): LazyDynamicLay
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback & lt;number[] & gt; \ | undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback & lt;number[] & gt; \ | undefined | 是 | 可见索引变化时回调的回调函数。 传递undefined将取消注册回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |

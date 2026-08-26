@@ -9,8 +9,7 @@ Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键�
 ## 导入模块
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## assertComponentExist
@@ -29,23 +28,35 @@ assertComponentExist(on: On): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000003](../errorcode-uitest.md#17000003-断言失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000003](../errorcode-uitest.md#17000003-断言失败) | Assertion failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.assertComponentExist(ON.text('next page'));
+}
+```
 
 ## click
 
@@ -63,23 +74,47 @@ click(x: number, y: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
+| y | number | 是 | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 在坐标(100,100)处执行点击操作。
+  await driver.click(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.click(100, 100);
+}
+```
 
 ## clickAt
 
@@ -97,22 +132,34 @@ clickAt(point: Point): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.clickAt({ x: 100, y: 100, displayId: 0 });
+}
+```
 
 ## clickAtWithOptions
 
@@ -130,23 +177,39 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 单击操作的选项。 只有''属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, TouchOptions } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let options: TouchOptions = {
+    pressure: 0.5
+  };
+  // 在目标坐标点进行单击，并指定触摸压力。
+  await driver.clickAtWithOptions({ x: 100, y: 100, displayId: 0 }, options);
+}
+```
 
 ## create
 
@@ -164,15 +227,26 @@ static create(): Driver
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Driver](arkts-test-uitest-driver-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Driver](arkts-test-uitest-driver-c.md) | 返回构造的Driver对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000001](../errorcode-uitest.md#17000001-初始化失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000001](../errorcode-uitest.md#17000001-初始化失败) | Initialization failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+}
+```
 
 ## createUIEventObserver
 
@@ -190,15 +264,27 @@ createUIEventObserver(): UIEventObserver
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [UIEventObserver](arkts-test-uitest-uieventobserver-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [UIEventObserver](arkts-test-uitest-uieventobserver-i.md) | 返回找到的目标窗口对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UIEventObserver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let observer: UIEventObserver = driver.createUIEventObserver();
+}
+```
 
 ## crownRotate
 
@@ -216,24 +302,39 @@ crownRotate(d: number, speed?: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| d | number | 是 | 手表表冠旋转的格数，正值表示顺时针旋转，负值表示逆时针旋转，取值需为整数。 |
+| speed | number | 否 | 手表表冠旋转的格数，正值表示顺时针旋转，负值表示逆时针旋转，取值需为整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // 顺时针旋转50格，旋转速度为30格/秒。
+  await driver.crownRotate(50, 30);
+  // 逆时针旋转20格，旋转速度为30格/秒。
+  await driver.crownRotate(-20, 30);
+}
+```
 
 ## delayMs
 
@@ -251,22 +352,44 @@ delayMs(duration: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| duration | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| duration | number | 是 | 给定的时间，单位：ms，取值范围：大于等于0的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.delayMs(1000);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.delayMs(1000);
+}
+```
 
 ## doubleClick
 
@@ -284,23 +407,45 @@ doubleClick(x: number, y: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
+| y | number | 是 | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.doubleClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.doubleClick(100, 100);
+}
+```
 
 ## doubleClickAt
 
@@ -318,22 +463,34 @@ doubleClickAt(point: Point): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.doubleClickAt({ x: 100, y: 100, displayId: 0 });
+}
+```
 
 ## drag
 
@@ -351,26 +508,38 @@ drag(startx: number, starty: number, endx: number, endy: number, speed?: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| startx | number | 是 |
-| starty | number | 是 |
-| endx | number | 是 |
-| endy | number | 是 |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| startx | number | 是 | 以number的形式传入起始点的横坐标信息，取值范围：大于等于0的整数。 |
+| starty | number | 是 | 以number的形式传入起始点的纵坐标信息，取值范围：大于等于0的整数。 |
+| endx | number | 是 | 以number的形式传入目的点的横坐标信息，取值范围：大于等于0的整数。 |
+| endy | number | 是 | 以number的形式传入目的点的纵坐标信息，取值范围：大于等于0的整数。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.drag(100, 100, 200, 200, 600);
+}
+```
 
 ## dragBetween
 
@@ -388,25 +557,37 @@ dragBetween(from: Point, to: Point, speed?: number, duration?: number): Promise<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 |
-| speed | number | 否 |
-| duration | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。   **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
+| duration | number | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.dragBetween({ x: 100, y: 100, displayId: 0 }, { x: 1000, y: 1000, displayId: 0 }, 800, 1500);
+}
+```
 
 ## dragBetweenWithOptions
 
@@ -424,24 +605,42 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 手指离开屏幕的坐标点。 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 拖动操作的选项。 只有“压力”、“速度”和“持续时间”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, TouchOptions } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let options: TouchOptions = {
+    speed: 800,     // 拖拽速率800px/s。
+    duration: 2000, // 拖拽前长按2000ms。
+    pressure: 0.5   // 触摸压力值。
+  };
+  // 从起始坐标点拖拽至目标坐标点，并指定拖拽速率、长按时长和触摸压力。
+  await driver.dragBetweenWithOptions({ x: 100, y: 100, displayId: 0 }, { x: 1000, y: 1000, displayId: 0 }, options);
+}
+```
 
 ## dumpLayout
 
@@ -459,23 +658,36 @@ Get the current layout information and save as file with json format.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| savePath | string | 是 |
-| displayId | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| savePath | string | 是 | the path where to store the json, must be in the application sandbox directory. The path must be the [sandbox path](../../../file-management/app-sandbox-directory.md) of the current application. |
+| displayId | number | 否 | the Id of the specified display, default is the displayId of the main screen. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | true if dump layout and file-storing are completed successfully,false otherwise. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // 获取当前布局信息并保存为JSON文件。
+  await driver.dumpLayout('/data/storage/el2/base/cache/layout.json', 0);
+}
+```
 
 ## findComponent
 
@@ -493,22 +705,36 @@ findComponent(on: On): Promise<Component>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; | Promise对象，返回控件对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 查找text为'next page'的控件。
+  let button: Component = await driver.findComponent(ON.text('next page'));
+}
+```
 
 ## findComponents
 
@@ -526,22 +752,36 @@ findComponents(on: On): Promise<Array<Component>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt;&gt; | Promise对象，返回控件对象的列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 查找所有text为'next page'的控件。
+  let buttonList: Array<Component> = await driver.findComponents(ON.text('next page'));
+}
+```
 
 ## findWindow
 
@@ -559,22 +799,34 @@ findWindow(filter: WindowFilter): Promise<UiWindow>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | 是 | 目标窗口的属性。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md)&gt; | Promise对象，返回目标窗口对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+}
+```
 
 ## fling
 
@@ -592,25 +844,37 @@ fling(from: Point, to: Point, stepLen: number, speed: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 |
-| stepLen | number | 是 |
-| speed | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的起始点坐标。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 手指离开屏幕时的坐标点。 |
+| stepLen | number | 是 | 间隔距离，取值大于等于0的整数，单位：px。 |
+| speed | number | 是 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling({ x: 500, y: 480 }, { x: 450, y: 480 }, 5, 600);
+}
+```
 
 ## fling
 
@@ -628,23 +892,35 @@ fling(direction: UiDirection, speed: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 |
-| speed | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 | 进行抛滑的方向。 |
+| speed | number | 是 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000);
+}
+```
 
 ## fling
 
@@ -662,24 +938,36 @@ fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 |
-| speed | number | 是 |
-| displayId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 | 进行抛滑的方向。 |
+| speed | number | 是 | 滑动速率，取值范围为200-40000，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
+| displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000, 0);
+}
+```
 
 ## getDisplayDensity
 
@@ -697,15 +985,27 @@ getDisplayDensity(): Promise<Point>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise对象，返回Point对象，当前设备屏幕的分辨率为Point.x*Point.y。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let density = await driver.getDisplayDensity();
+}
+```
 
 ## getDisplayDensity
 
@@ -723,22 +1023,34 @@ getDisplayDensity(displayId: number): Promise<Point>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| displayId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。   **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise对象，返回Point对象，当前设备指定屏幕的分辨率为Point.x*Point.y。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let density = await driver.getDisplayDensity(0);
+}
+```
 
 ## getDisplayRotation
 
@@ -756,15 +1068,27 @@ getDisplayRotation(): Promise<DisplayRotation>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; | Promise对象，返回当前设备的显示方向。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { DisplayRotation, Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let rotation: DisplayRotation = await driver.getDisplayRotation();
+}
+```
 
 ## getDisplayRotation
 
@@ -782,22 +1106,34 @@ getDisplayRotation(displayId: number): Promise<DisplayRotation>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| displayId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。   **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; | Promise对象，返回指定屏幕的显示方向。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { DisplayRotation, Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
+}
+```
 
 ## getDisplaySize
 
@@ -815,15 +1151,27 @@ getDisplaySize(): Promise<Point>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise对象，返回Point对象，当前设备屏幕的大小为Point.x * Point.y。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let size = await driver.getDisplaySize();
+}
+```
 
 ## getDisplaySize
 
@@ -841,22 +1189,34 @@ getDisplaySize(displayId: number): Promise<Point>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| displayId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise对象，返回Point对象，当前设备指定屏幕的大小为Point.x * Point.y。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let size = await driver.getDisplaySize(0);
+}
+```
 
 ## injectKnucklePointerAction
 
@@ -866,7 +1226,8 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<voi
 
 模拟指关节多点注入滑动操作。使用Promise异步回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 若设备关闭了指关节手势，则调用本接口返回17000005错误码。
 
 **起始版本：** 22
@@ -877,24 +1238,44 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。   **说明：**当前仅支持单指操作，PointerMatrix中的操作手指个数fingers必须设置为1。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, PointerMatrix } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // 模拟指关节滑动在屏幕上画'S'。
+  let pointers: PointerMatrix = PointerMatrix.create(1, 6);
+  pointers.setPoint(0, 0, { x: 750, y: 300 });
+  pointers.setPoint(0, 1, { x: 500, y: 100 });
+  pointers.setPoint(0, 2, { x: 250, y: 300 });
+  pointers.setPoint(0, 3, { x: 750, y: 800 });
+  pointers.setPoint(0, 4, { x: 500, y: 1000 });
+  pointers.setPoint(0, 5, { x: 250, y: 800 });
+  await driver.injectKnucklePointerAction(pointers);
+}
+```
 
 ## injectMultiPointerAction
 
@@ -912,23 +1293,51 @@ injectMultiPointerAction(pointers: PointerMatrix, speed?: number): Promise<boole
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回操作是否成功完成。true：完成，false：未完成。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, PointerMatrix } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 创建2指5步的滑动轨迹矩阵。
+  let pointers: PointerMatrix = PointerMatrix.create(2, 5);
+  // 设置第一根手指的滑动轨迹。
+  pointers.setPoint(0, 0, { x: 250, y: 480 });
+  pointers.setPoint(0, 1, { x: 250, y: 440 });
+  pointers.setPoint(0, 2, { x: 250, y: 400 });
+  pointers.setPoint(0, 3, { x: 250, y: 360 });
+  pointers.setPoint(0, 4, { x: 250, y: 320 });
+  // 设置第二根手指的滑动轨迹。
+  pointers.setPoint(1, 0, { x: 250, y: 480 });
+  pointers.setPoint(1, 1, { x: 250, y: 440 });
+  pointers.setPoint(1, 2, { x: 250, y: 400 });
+  pointers.setPoint(1, 3, { x: 250, y: 360 });
+  pointers.setPoint(1, 4, { x: 250, y: 320 });
+  // 注入双指滑动操作。
+  await driver.injectMultiPointerAction(pointers);
+}
+```
 
 ## injectPenPointerAction
 
@@ -946,24 +1355,43 @@ injectPenPointerAction(pointers: PointerMatrix, speed?: number, pressure?: numbe
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 |
-| speed | number | 否 |
-| pressure | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。   **说明：**当前仅支持单指操作，PointerMatrix中的操作手指个数fingers必须设置为1。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
+| pressure | number | 否 | 手写笔多点连续注入的压力，默认为1.0，取值范围为0.0到1.0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, PointerMatrix } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // 创建单指8步的滑动轨迹矩阵。
+  let pointer = PointerMatrix.create(1, 8);
+  // 循环设置每步坐标点，模拟从下向上的滑动。
+  for (let step = 0; step < 8; step++) {
+    pointer.setPoint(0, step, { x: 500, y: 1100 - 100 * step });
+  }
+  // 以600px/s速率和0.5压力值注入手写笔滑动操作。
+  await driver.injectPenPointerAction(pointer, 600, 0.5);
+}
+```
 
 ## inputText
 
@@ -981,23 +1409,41 @@ inputText(p: Point, text: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 |
-| text | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 输入文本的坐标点。 |
+| text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 查找TextInput类型的目标控件。
+  let text: Component = await driver.findComponent(ON.type('TextInput'));
+  // 获取控件中心点坐标。
+  let point = await text.getBoundsCenter();
+  // 在坐标点处输入文本'123'。
+  await driver.inputText(point, '123');
+}
+```
 
 ## inputText
 
@@ -1015,25 +1461,47 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 |
-| text | string | 是 |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 输入文本的坐标点。 |
+| text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | 是 | 输入文本的方式，取值请参考[InputTextMode](arkts-test-uitest-inputtextmode-i.md)。   **说明：**InputTextMode.addition取值为true时，将光标移动至文本末尾后输入指定文本。取值为false时，将在坐标点位置输入指定文本。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |  |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.type('TextInput'));
+  let point = await text.getBoundsCenter();
+  await driver.inputText(point, '123', { paste: true, addition: false });
+}
+
+async function demoChinese() {
+  let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.type('TextInput'));
+  let point = await text.getBoundsCenter();
+  await driver.inputText(point, '中文&', { paste: false, addition: true });
+  // 以复制粘贴方式输入中文、特殊符号，指定文本追加到指定坐标所在文本段的末尾。
+}
+```
 
 ## isComponentPresentWhenDrag
 
@@ -1051,26 +1519,38 @@ isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: number, durat
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 |
-| speed | number | 否 |
-| duration | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。   **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
+| duration | number | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回拖拽操作期间目标控件是否存在。true：存在。false：不存在。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let isExist = await driver.isComponentPresentWhenDrag(ON.id('123'), { x: 100, y: 100 }, { x: 200, y: 200 }, 1000, 2000);
+}
+```
 
 ## isComponentPresentWhenLongClick
 
@@ -1088,24 +1568,36 @@ isComponentPresentWhenLongClick(on: On, point: Point, duration?: number): Promis
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 |
-| duration | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 长按的坐标点。 |
+| duration | number | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回长按操作期间目标控件是否存在。true：存在。false：不存在。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let isExist = await driver.isComponentPresentWhenLongClick(ON.id('123'), { x: 100, y: 100 }, 2000);
+}
+```
 
 ## isComponentPresentWhenSwipe
 
@@ -1123,25 +1615,37 @@ isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: number): Pro
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。   **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回滑动操作期间目标控件是否存在。true：存在。false：不存在。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let isExist = await driver.isComponentPresentWhenSwipe(ON.id('123'), { x: 100, y: 100 }, { x: 200, y: 200 }, 1000);
+}
+```
 
 ## knuckleKnock
 
@@ -1151,7 +1655,8 @@ knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
 
 模拟指关节敲击屏幕操作。使用Promise异步回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 若设备关闭了指关节手势，则调用本接口返回17000005错误码。
 
 **起始版本：** 22
@@ -1162,24 +1667,38 @@ knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| pointers | Array&lt;[Point](arkts-test-uitest-point-i.md)&gt; | 是 |
-| times | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pointers | Array&lt;[Point](arkts-test-uitest-point-i.md)&gt; | 是 | 指关节敲击屏幕坐标点的数组，数组长度取值为1或2。 |
+| times | number | 是 | 指关节连续敲击屏幕的次数，取值为1或2。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, Point } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // 模拟指关节单指双击手势。
+  let points: Array<Point> = [{ x: 100, y: 100 }];
+  await driver.knuckleKnock(points, 2);
+}
+```
 
 ## longClick
 
@@ -1197,23 +1716,45 @@ longClick(x: number, y: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
+| y | number | 是 | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.longClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.longClick(100, 100);
+}
+```
 
 ## longClickAt
 
@@ -1231,23 +1772,35 @@ longClickAt(point: Point, duration?: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 |
-| duration | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
+| duration | number | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.longClickAt({ x: 100, y: 100, displayId: 0 }, 1500);
+}
+```
 
 ## longClickAtWithOptions
 
@@ -1265,23 +1818,40 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 用于长单击操作的选项。 只有“持续时间”和“压力”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, TouchOptions } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let options: TouchOptions = {
+    duration: 2000, // 长按持续2000ms。
+    pressure: 0.8  // 触摸压力值。
+  };
+  // 在目标坐标点进行长按，并指定长按时长和触摸压力。
+  await driver.longClickAtWithOptions({ x: 100, y: 100, displayId: 0 }, options);
+}
+```
 
 ## mouseClick
 
@@ -1299,25 +1869,37 @@ mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 |
-| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 |
-| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
-| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
+| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
+| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, MouseButton } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072);
+}
+```
 
 ## mouseDoubleClick
 
@@ -1335,25 +1917,37 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Pr
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 |
-| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 |
-| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
-| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标双击的坐标。 |
+| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
+| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值0。 |
+| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, MouseButton } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseDoubleClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072);
+}
+```
 
 ## mouseDrag
 
@@ -1371,24 +1965,36 @@ mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 起始点坐标。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点坐标。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码 。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600);
+}
+```
 
 ## mouseDrag
 
@@ -1406,25 +2012,37 @@ mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 |
-| speed | number | 否 |
-| duration | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 起始点坐标。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点坐标。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
+| duration | number | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出401错误码，为null或undefined时使用默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
+}
+```
 
 ## mouseDragWithOptions
 
@@ -1442,25 +2060,46 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 |
-| touchOptions | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 |
-| keyOptions | [KeyOptions](arkts-test-uitest-keyoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 起点。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点。 |
+| touchOptions | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 速度和持续时间设置的触摸选项。 在此方法中，只有“速度”和“持续时间”属性有效。 设置其他属性会导致BusinessError 17000007。 默认值：参考TouchOptions的默认值。 |
+| keyOptions | [KeyOptions](arkts-test-uitest-keyoptions-i.md) | 否 | 拖动期间要按的键代码的键选项。 默认值：参考keyOptions的默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, TouchOptions, KeyOptions } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let touchOptions: TouchOptions = {
+    speed: 800,     // 拖拽速率800px/s。
+    duration: 2000  // 拖拽前长按2000ms。
+  };
+  let keyOptions: KeyOptions = {
+    key1: 2072,  // Ctrl键。
+    key2: 2019   // C键。
+  };
+  // 鼠标拖拽并同时按下Ctrl+C组合键。
+  await driver.mouseDragWithOptions({ x: 100, y: 100 }, { x: 200, y: 200 }, touchOptions, keyOptions);
+}
+```
 
 ## mouseLongClick
 
@@ -1478,25 +2117,38 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 |
-| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 |
-| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
-| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标长按的坐标。 |
+| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
+| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
+| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, MouseButton } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // 键码值为2072时，按下Ctrl并进行鼠标长按动作。
+  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072);
+}
+```
 
 ## mouseLongClick
 
@@ -1514,26 +2166,39 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, durat
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 |
-| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 |
-| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
-| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
-| duration | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标长按的坐标。 |
+| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
+| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| duration | number | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出401错误码，为null或undefined时使用默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, MouseButton } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // 键码值为2072时，按下Ctrl并进行鼠标长按动作，长按时长2000ms。
+  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
+}
+```
 
 ## mouseMoveTo
 
@@ -1551,22 +2216,34 @@ mouseMoveTo(p: Point): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 目标点的坐标。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseMoveTo({ x: 100, y: 100 });
+}
+```
 
 ## mouseMoveWithTrack
 
@@ -1584,24 +2261,36 @@ mouseMoveWithTrack(from: Point, to: Point, speed?: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 起始点坐标。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点坐标。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseMoveWithTrack({ x: 100, y: 100 }, { x: 200, y: 200 }, 600);
+}
+```
 
 ## mouseScroll
 
@@ -1619,26 +2308,38 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 |
-| [down](../../apis-arkui/arkts-components/arkts-arkui-focusmovement-i.md) | boolean | 是 |
-| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
-| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
-| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
+| down | boolean | 是 | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
+| d | number | 是 | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
+| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072);
+}
+```
 
 ## mouseScroll
 
@@ -1656,27 +2357,39 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, sp
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 |
-| [down](../../apis-arkui/arkts-components/arkts-arkui-focusmovement-i.md) | boolean | 是 |
-| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
-| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
-| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
+| down | boolean | 是 | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
+| d | number | 是 | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
+| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| speed | number | 否 | 鼠标滚轮滚动的速度，范围：1-500的整数，单位：格/秒。为不在范围内的非负数或为null/undefined时设为默认值20。为负数时抛出401错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
+}
+```
 
 ## penClick
 
@@ -1694,22 +2407,34 @@ penClick(point: Point): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 点击的坐标点。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.penClick({ x: 100, y: 100 });
+}
+```
 
 ## penDoubleClick
 
@@ -1727,22 +2452,34 @@ penDoubleClick(point: Point): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 双击的坐标点。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.penDoubleClick({ x: 100, y: 100 });
+}
+```
 
 ## penLongClick
 
@@ -1760,23 +2497,35 @@ penLongClick(point: Point, pressure?: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 |
-| pressure | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 长按的坐标点。 |
+| pressure | number | 否 | 手写笔滑动操作的压力，默认为1.0，取值范围为0.0到1.0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.penLongClick({ x: 100, y: 100 }, 0.5);
+}
+```
 
 ## penSwipe
 
@@ -1794,25 +2543,37 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: number, pressure?: number):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| startPoint | [Point](arkts-test-uitest-point-i.md) | 是 |
-| endPoint | [Point](arkts-test-uitest-point-i.md) | 是 |
-| speed | number | 否 |
-| pressure | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| startPoint | [Point](arkts-test-uitest-point-i.md) | 是 | 起始位置的坐标点。 |
+| endPoint | [Point](arkts-test-uitest-point-i.md) | 是 | 结束位置的坐标点。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
+| pressure | number | 否 | 手写笔滑动操作的压力，默认为1.0，取值范围为0.0到1.0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.penSwipe({ x: 100, y: 100 }, { x: 100, y: 500 }, 600, 0.5);
+}
+```
 
 ## pressBack
 
@@ -1830,15 +2591,37 @@ pressBack(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.pressBack();
+}
+```
 
 ## pressBack
 
@@ -1856,22 +2639,34 @@ pressBack(displayId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| displayId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| displayId | number | 是 | 指定的屏幕ID，取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack(0);
+}
+```
 
 ## pressHome
 
@@ -1889,15 +2684,27 @@ pressHome(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressHome();
+}
+```
 
 ## pressHome
 
@@ -1915,22 +2722,34 @@ pressHome(displayId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| displayId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。   **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressHome(0);
+}
+```
 
 ## screenCap
 
@@ -1948,22 +2767,44 @@ screenCap(savePath: string): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| savePath | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| savePath | string | 是 | 文件保存路径。路径需为当前应用的[沙箱路径](../../../file-management/app-sandbox-directory.md)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回截图操作是否成功完成。true：完成，false：未完成。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png');
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png');
+}
+```
 
 ## screenCap
 
@@ -1981,23 +2822,35 @@ screenCap(savePath: string, displayId: number): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| savePath | string | 是 |
-| displayId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| savePath | string | 是 | 文件保存路径。路径需为当前应用的[沙箱路径](../../../file-management/app-sandbox-directory.md)。 |
+| displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回截图操作是否成功完成。true：完成。false：未完成。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
+}
+```
 
 ## screenCapture
 
@@ -2015,23 +2868,40 @@ screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| savePath | string | 是 |
-| rect | [Rect](arkts-test-uitest-rect-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| savePath | string | 是 | 文件保存路径。路径需为当前应用的[沙箱路径](../../../file-management/app-sandbox-directory.md)。 |
+| rect | [Rect](arkts-test-uitest-rect-i.md) | 否 | 截图区域，默认为全屏。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回截图操作是否成功完成。true：成功完成，false：未成功完成。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCapture('/data/storage/el2/base/cache/1.png', {
+    left: 0,
+    top: 0,
+    right: 100,
+    bottom: 100
+  });
+}
+```
 
 ## setDisplayRotation
 
@@ -2049,22 +2919,34 @@ setDisplayRotation(rotation: DisplayRotation): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| rotation | [DisplayRotation](arkts-test-uitest-displayrotation-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rotation | [DisplayRotation](arkts-test-uitest-displayrotation-e.md) | 是 | 设备的显示方向。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, DisplayRotation } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.setDisplayRotation(DisplayRotation.ROTATION_180);
+}
+```
 
 ## setDisplayRotationEnabled
 
@@ -2082,22 +2964,34 @@ setDisplayRotationEnabled(enabled: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | boolean | 是 | 能否旋转屏幕的标识。true：可以旋转。false：不可以旋转。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.setDisplayRotationEnabled(false);
+}
+```
 
 ## swipe
 
@@ -2115,26 +3009,40 @@ swipe(startx: number, starty: number, endx: number, endy: number, speed?: number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| startx | number | 是 |
-| starty | number | 是 |
-| endx | number | 是 |
-| endy | number | 是 |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| startx | number | 是 | 以number的形式传入起始点的横坐标信息，取值范围：大于等于0的整数。 |
+| starty | number | 是 | 以number的形式传入起始点的纵坐标信息，取值范围：大于等于0的整数。 |
+| endx | number | 是 | 以number的形式传入目的点的横坐标信息，取值范围：大于等于0的整数。 |
+| endy | number | 是 | 以number的形式传入目的点的纵坐标信息，取值范围：大于等于0的整数。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 从坐标(100,100)滑动到坐标(200,200)，滑动速率为600px/s。
+  await driver.swipe(100, 100, 200, 200, 600);
+}
+```
 
 ## swipeBetween
 
@@ -2152,24 +3060,36 @@ swipeBetween(from: Point, to: Point, speed?: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。   **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.swipeBetween({ x: 100, y: 100, displayId: 0 }, { x: 1000, y: 1000, displayId: 0 }, 800);
+}
+```
 
 ## swipeBetweenWithOptions
 
@@ -2187,24 +3107,41 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 手指离开屏幕的坐标点。 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 滑动操作的选项。 只有“速度”和“压力”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, TouchOptions } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let options: TouchOptions = {
+    speed: 800,   // 滑动速率800px/s。
+    pressure: 0.5  // 触摸压力值。
+  };
+  // 从起始坐标点滑向目标坐标点，并指定滑动速率和触摸压力。
+  await driver.swipeBetweenWithOptions({ x: 100, y: 100, displayId: 0 }, { x: 1000, y: 1000, displayId: 0 }, options);
+}
+```
 
 ## touchPadMultiFingerSwipe
 
@@ -2222,25 +3159,37 @@ touchPadMultiFingerSwipe(fingers: number, direction: UiDirection, options?: Touc
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fingers | number | 是 |
-| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 |
-| options | [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fingers | number | 是 | 触摸板多指滑动的手指数。取值为3或者4。 |
+| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 | 触摸板多指滑动的方向。 |
+| options | [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | 否 | 触摸板多指滑动手势附加选项，默认取TouchPadSwipeOptions中各属性的默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) |  |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.touchPadMultiFingerSwipe(3, UiDirection.UP);
+}
+```
 
 ## touchPadTwoFingersScroll
 
@@ -2258,26 +3207,38 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: number, speed?
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 |
-| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 |
-| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 触摸板双指滚动时鼠标光标的位置。 |
+| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 | 触摸板双指滚动的方向。 |
+| d | number | 是 | 触摸板双指滚动的格数，取值为大于等于0的整数，每格对应目标点位移120px。 |
+| speed | number | 否 | 触摸板双指滚动的速度，范围：1-500的整数，单位：格/秒。为不在范围内的非负数或为null/undefined时设为默认值20。为负数时抛出17000007错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.touchPadTwoFingersScroll({ x: 100, y: 100 }, UiDirection.UP, 20, 10);
+}
+```
 
 ## triggerCombineKeys
 
@@ -2295,24 +3256,37 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key0 | number | 是 |
-| [key1](arkts-test-uitest-keyoptions-i.md) | number | 是 |
-| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key0 | number | 是 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key1 | number | 是 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key2 | number | 否 | 指定的第三个key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)， 默认值为0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // 注入Ctrl+Alt+Delete组合键。
+  await driver.triggerCombineKeys(2072, 2047, 2035);
+}
+```
 
 ## triggerCombineKeys
 
@@ -2330,25 +3304,37 @@ triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key0 | number | 是 |
-| [key1](arkts-test-uitest-keyoptions-i.md) | number | 是 |
-| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
-| displayId | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key0 | number | 是 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key1 | number | 是 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key2 | number | 否 | 指定的第三个key值，取值范围：大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
+| displayId | number | 否 | 指定的屏幕ID，取值范围：大于等于0的整数，默认值为设备默认屏幕ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
+}
+```
 
 ## triggerKey
 
@@ -2366,22 +3352,46 @@ triggerKey(keyCode: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| keyCode | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keyCode | number | 是 | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键。
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键。
+}
+```
 
 ## triggerKey
 
@@ -2399,23 +3409,36 @@ triggerKey(keyCode: number, displayId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| keyCode | number | 是 |
-| displayId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keyCode | number | 是 | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| displayId | number | 是 | 指定的屏幕ID，取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // 返回键。
+}
+```
 
 ## triggerPenKey
 
@@ -2436,26 +3459,43 @@ HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK opera
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | [PenKey](arkts-test-uitest-penkey-e.md) | 是 |
-| mode | [PenMode](arkts-test-uitest-penmode-e.md) | 是 |
-| operation | [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | 是 |
-| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | [PenKey](arkts-test-uitest-penkey-e.md) | 是 | the pen key to operate. |
+| mode | [PenMode](arkts-test-uitest-penmode-e.md) | 是 | the pen mode. |
+| operation | [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | 是 | the operation type. |
+| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | 否 | the operation options, including optional coordinate point. Default value: Refer to the default value of PenKeyOperationOption. 默认值：参考PenKeyOperationOption的默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. Unsupported key, mode, and operation combination. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, PenKey, PenMode, PenKeyOperation } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // 手写模式下触发手写键单击。
+  await driver.triggerPenKey(PenKey.HANDWRITING, PenMode.HANDWRITING, PenKeyOperation.CLICK);
+  // 空鼠模式下触发空鼠键双击。
+  await driver.triggerPenKey(PenKey.AIR_MOUSE, PenMode.AIR_MOUSE, PenKeyOperation.DOUBLE_CLICK, { point: { x: 500, y: 500 } });
+  // 空鼠模式下触发智慧键单击。
+  await driver.triggerPenKey(PenKey.SMART, PenMode.AIR_MOUSE, PenKeyOperation.CLICK);
+}
+```
 
 ## waitForComponent
 
@@ -2473,23 +3513,35 @@ waitForComponent(on: On, time: number): Promise<Component>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 |
-| time | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
+| time | number | 是 | 查找目标控件的持续时间。单位ms，取值范围：大于等于0的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; | Promise对象，返回控件对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.waitForComponent(ON.text('next page'), 500);
+}
+```
 
 ## waitForIdle
 
@@ -2507,23 +3559,35 @@ waitForIdle(idleTime: number, timeout: number): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| idleTime | number | 是 |
-| timeout | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| idleTime | number | 是 | 空闲时间的阈值。在这个时间段控件不发生变化，视为该控件空闲，单位：毫秒，取值范围：大于等于0的整数。 |
+| timeout | number | 是 | 等待空闲的最大时间，单位：毫秒，取值范围：大于等于0的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回当前界面的所有控件是否已经空闲。true：已经空闲，false：不空闲。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let idled: boolean = await driver.waitForIdle(4000, 5000);
+}
+```
 
 ## wakeUpDisplay
 
@@ -2541,12 +3605,24 @@ wakeUpDisplay(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.wakeUpDisplay();
+}
+```

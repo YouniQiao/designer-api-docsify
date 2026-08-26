@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+import systemDateTime from '@kit.BasicServicesKit';
 ```
 
 ## updateNtpTime
@@ -22,13 +22,30 @@ function updateNtpTime(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [13000001](../errorcode-time.md#13000001-网络或操作系统异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [13000001](../errorcode-time.md#13000001-网络或操作系统异常) | Network connection error or OS error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.updateNtpTime().then(() => {
+    console.info(`Succeeded in updating ntp time.`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to update ntp time. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to update ntp time. Code: ${error.code}, message: ${error.message}`);
+}
+```

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## getAudioManager
@@ -22,6 +23,14 @@ Obtains an AudioManager instance.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AudioManager](arkts-audio-audio-audiomanager-i.md) |
+| Type | Description |
+| --- | --- |
+| [AudioManager](arkts-audio-audio-audiomanager-i.md) | AudioManager instance. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let audioManager = audio.getAudioManager();
+```

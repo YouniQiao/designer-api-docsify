@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## createKVManager
@@ -23,10 +24,35 @@ Creates a **KVManager** instance to manage KV stores. This API uses an asynchron
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVManager&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVManager&gt; | Yes | Callback used to return the **KVManager** instance created. |
+
+**Examples**
+
+```TypeScript
+let kvManager;
+try {
+    const kvManagerConfig = {
+        bundleName : 'com.example.datamanagertest',
+        userInfo : {
+            userId : '0',
+            userType : distributedData.UserType.SAME_USER_ID
+        }
+    }
+    distributedData.createKVManager(kvManagerConfig, function (err, manager) {
+        if (err) {
+            console.log("Failed to create KVManager: "  + JSON.stringify(err));
+            return;
+        }
+        console.log("Succeeded in creating KVManager");
+        kvManager = manager;
+    });
+} catch (e) {
+    console.log("An unexpected error occurred. Error:" + e);
+}
+```
 
 
 ## createKVManager
@@ -47,12 +73,34 @@ Creates a **KVManager** instance to manage KV stores. This API uses a promise to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;KVManager & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;KVManager & gt; | Promise used to return the **KVManager** instance created. |
+
+**Examples**
+
+```TypeScript
+try {
+  const kvManagerConfig = {
+    bundleName: 'com.example.datamanagertest',
+    userInfo: {
+      userId: '0',
+      userType: distributedData.UserType.SAME_USER_ID
+    }
+  }
+  distributedData.createKVManager(kvManagerConfig).then((manager) => {
+    console.log("Succeeded in creating KVManager");
+    kvManager = manager;
+  }).catch((err) => {
+    console.error("Failed to create KVManager: " + JSON.stringify(err));
+  });
+} catch (e) {
+  console.log("An unexpected error occurred. Error:" + e);
+}
+```

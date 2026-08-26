@@ -31,9 +31,9 @@ Obtains the direction for recognizing swipe gestures.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SwipeDirection](arkts-arkui-swipedirection-e.md) |
+| Type | Description |
+| --- | --- |
+| [SwipeDirection](arkts-arkui-swipedirection-e.md) | Direction for recognizing swipe gestures. |
 
 ## getVelocityThreshold
 
@@ -53,6 +53,6 @@ Obtains the minimum velocity required for the swipe gesture to be recognized.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Minimum velocity required for the swipe gesture to be recognized, in vp/s. |

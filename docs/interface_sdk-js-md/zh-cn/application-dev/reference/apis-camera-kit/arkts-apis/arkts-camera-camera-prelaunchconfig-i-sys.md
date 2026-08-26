@@ -11,7 +11,6 @@ Defines the camera prelaunch configuration. Currently, the configuration is used
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## activeTime

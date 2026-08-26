@@ -13,7 +13,7 @@ class of window extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { WindowExtensionAbility, WindowExtensionContext } from 'kits/@kit.ArkUI';
+import WindowExtensionAbility, { WindowExtensionContext } from '@kit.ArkUI';
 ```
 
 ## onConnect
@@ -36,9 +36,22 @@ Called back when a window extension is first connected to an ability.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates connection information about the Window ability. |
+
+**Examples**
+
+```TypeScript
+import { WindowExtensionAbility } from '@kit.ArkUI';
+import { Want } from '@kit.AbilityKit';
+
+export default class MyWindowExtensionAbility extends WindowExtensionAbility {
+  onConnect(want: Want) {
+    console.info(`WindowExtAbility onConnect, abilityName: ${want.abilityName}`);
+  }
+}
+```
 
 ## onDisconnect
 
@@ -60,9 +73,22 @@ Called back when all abilities connected to a window extension are disconnected.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates disconnection information about the window extension. |
+
+**Examples**
+
+```TypeScript
+import { WindowExtensionAbility } from '@kit.ArkUI';
+import { Want } from '@kit.AbilityKit';
+
+export default class MyWindowExtensionAbility extends WindowExtensionAbility {
+  onDisconnect(want: Want) {
+    console.info(`WindowExtAbility onDisconnect, abilityName: ${want.abilityName}`);
+  }
+}
+```
 
 ## onWindowReady
 
@@ -84,9 +110,26 @@ Called back when window is created.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [window](arkts-arkui-window-n.md) | window.Window | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| window | window.Window | Yes | Current Window instance. |
+
+**Examples**
+
+```TypeScript
+import { WindowExtensionAbility, window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyWindowExtensionAbility extends WindowExtensionAbility {
+  onWindowReady(window: window.Window) {
+    window.setUIContent('WindowExtAbility/pages/index1',(err:BusinessError) => {
+      let pro = window.getWindowProperties();
+      console.info(`WindowExtension pro: ${JSON.stringify(pro)}`);
+      window.showWindow();
+    });
+  }
+}
+```
 
 ## context
 

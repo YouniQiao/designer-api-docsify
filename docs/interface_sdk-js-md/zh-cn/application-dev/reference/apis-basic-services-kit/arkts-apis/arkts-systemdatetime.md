@@ -9,51 +9,51 @@
 ## 导入模块
 
 ```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+import systemDateTime from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [getAutoTimeStatus(系统时间、时区)](arkts-basicservices-systemdatetime-getautotimestatus-f.md) |
-| [getCurrentTime(系统时间、时区)](arkts-basicservices-systemdatetime-getcurrenttime-f.md) |
-| [getCurrentTime(系统时间、时区)](arkts-basicservices-systemdatetime-getcurrenttime-f.md) |
-| [getCurrentTime(系统时间、时区)](arkts-basicservices-systemdatetime-getcurrenttime-f.md) |
-| [getDate(系统时间、时区)](arkts-basicservices-systemdatetime-getdate-f.md) |
-| [getDate(系统时间、时区)](arkts-basicservices-systemdatetime-getdate-f.md) |
-| [getRealActiveTime(系统时间、时区)](arkts-basicservices-systemdatetime-getrealactivetime-f.md) |
-| [getRealActiveTime(系统时间、时区)](arkts-basicservices-systemdatetime-getrealactivetime-f.md) |
-| [getRealActiveTime(系统时间、时区)](arkts-basicservices-systemdatetime-getrealactivetime-f.md) |
-| [getRealTime(系统时间、时区)](arkts-basicservices-systemdatetime-getrealtime-f.md) |
-| [getRealTime(系统时间、时区)](arkts-basicservices-systemdatetime-getrealtime-f.md) |
-| [getRealTime(系统时间、时区)](arkts-basicservices-systemdatetime-getrealtime-f.md) |
-| [getTime(系统时间、时区)](arkts-basicservices-systemdatetime-gettime-f.md) |
-| [getTimezone(系统时间、时区)](arkts-basicservices-systemdatetime-gettimezone-f.md) |
-| [getTimezone(系统时间、时区)](arkts-basicservices-systemdatetime-gettimezone-f.md) |
-| [getTimezoneSync(系统时间、时区)](arkts-basicservices-systemdatetime-gettimezonesync-f.md) |
-| [getUptime(系统时间、时区)](arkts-basicservices-systemdatetime-getuptime-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getAutoTimeStatus(系统时间、时区)](arkts-basicservices-systemdatetime-getautotimestatus-f.md) | 获取自动设置时间开关状态，使用同步方式。 |
+| [getCurrentTime(系统时间、时区)](arkts-basicservices-systemdatetime-getcurrenttime-f.md) | 获取自Unix纪元以来经过的时间，使用callback异步回调。 |
+| [getCurrentTime(系统时间、时区)](arkts-basicservices-systemdatetime-getcurrenttime-f.md) | 获取自Unix纪元以来经过的时间，使用callback异步回调。 |
+| [getCurrentTime(系统时间、时区)](arkts-basicservices-systemdatetime-getcurrenttime-f.md) | 获取自Unix纪元以来经过的时间，使用Promise异步回调。 |
+| [getDate(系统时间、时区)](arkts-basicservices-systemdatetime-getdate-f.md) | 获取当前系统日期，使用callback异步回调。 |
+| [getDate(系统时间、时区)](arkts-basicservices-systemdatetime-getdate-f.md) | 获取当前系统日期，使用Promise异步回调。 |
+| [getRealActiveTime(系统时间、时区)](arkts-basicservices-systemdatetime-getrealactivetime-f.md) | 获取自系统启动以来经过的时间，不包括深度睡眠时间，使用callback异步回调。 |
+| [getRealActiveTime(系统时间、时区)](arkts-basicservices-systemdatetime-getrealactivetime-f.md) | 获取自系统启动以来经过的时间，不包括深度睡眠时间，使用callback异步回调。 |
+| [getRealActiveTime(系统时间、时区)](arkts-basicservices-systemdatetime-getrealactivetime-f.md) | 获取自系统启动以来经过的时间，不包括深度睡眠时间，使用Promise异步回调。 |
+| [getRealTime(系统时间、时区)](arkts-basicservices-systemdatetime-getrealtime-f.md) | 获取自系统启动以来经过的时间，包括深度睡眠时间，使用callback异步回调。 |
+| [getRealTime(系统时间、时区)](arkts-basicservices-systemdatetime-getrealtime-f.md) | 获取自系统启动以来经过的时间，包括深度睡眠时间，使用callback异步回调。 |
+| [getRealTime(系统时间、时区)](arkts-basicservices-systemdatetime-getrealtime-f.md) | 获取自系统启动以来经过的时间，包括深度睡眠时间，使用Promise异步回调。 |
+| [getTime(系统时间、时区)](arkts-basicservices-systemdatetime-gettime-f.md) | 使用同步方式获取自Unix纪元以来到当前系统时间所经过的时间。 |
+| [getTimezone(系统时间、时区)](arkts-basicservices-systemdatetime-gettimezone-f.md) | 获取系统时区，使用callback异步回调。 |
+| [getTimezone(系统时间、时区)](arkts-basicservices-systemdatetime-gettimezone-f.md) | 获取系统时区，使用Promise异步回调。 |
+| [getTimezoneSync(系统时间、时区)](arkts-basicservices-systemdatetime-gettimezonesync-f.md) | 获取系统时区，使用同步方式。 |
+| [getUptime(系统时间、时区)](arkts-basicservices-systemdatetime-getuptime-f.md) | 使用同步方式获取自系统启动以来经过的时间。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [getNtpTime(系统时间、时区)](arkts-basicservices-systemdatetime-getntptime-f-sys.md) |
-| [setAutoTimeStatus(系统时间、时区)](arkts-basicservices-systemdatetime-setautotimestatus-f-sys.md) |
-| [setDate(系统时间、时区)](arkts-basicservices-systemdatetime-setdate-f-sys.md) |
-| [setDate(系统时间、时区)](arkts-basicservices-systemdatetime-setdate-f-sys.md) |
-| [setTime(系统时间、时区)](arkts-basicservices-systemdatetime-settime-f-sys.md) |
-| [setTime(系统时间、时区)](arkts-basicservices-systemdatetime-settime-f-sys.md) |
-| [setTimezone(系统时间、时区)](arkts-basicservices-systemdatetime-settimezone-f-sys.md) |
-| [setTimezone(系统时间、时区)](arkts-basicservices-systemdatetime-settimezone-f-sys.md) |
-| [updateNtpTime(系统时间、时区)](arkts-basicservices-systemdatetime-updatentptime-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getNtpTime(系统时间、时区)](arkts-basicservices-systemdatetime-getntptime-f-sys.md) | 使用同步方式获取基于上次更新的NTP时间所计算出的真实时间。 |
+| [setAutoTimeStatus(系统时间、时区)](arkts-basicservices-systemdatetime-setautotimestatus-f-sys.md) | 设置自动设置时间开关状态，使用Promise异步回调。 |
+| [setDate(系统时间、时区)](arkts-basicservices-systemdatetime-setdate-f-sys.md) | 设置系统日期，使用callback异步回调。 |
+| [setDate(系统时间、时区)](arkts-basicservices-systemdatetime-setdate-f-sys.md) | 设置系统日期，使用Promise异步回调。 |
+| [setTime(系统时间、时区)](arkts-basicservices-systemdatetime-settime-f-sys.md) | 设置系统时间，使用callback异步回调。 |
+| [setTime(系统时间、时区)](arkts-basicservices-systemdatetime-settime-f-sys.md) | 设置系统时间，使用Promise异步回调。 |
+| [setTimezone(系统时间、时区)](arkts-basicservices-systemdatetime-settimezone-f-sys.md) | 设置系统时区，使用callback异步回调。 |
+| [setTimezone(系统时间、时区)](arkts-basicservices-systemdatetime-settimezone-f-sys.md) | 设置系统时区，使用Promise异步回调。 |
+| [updateNtpTime(系统时间、时区)](arkts-basicservices-systemdatetime-updatentptime-f-sys.md) | 使用异步方式从NTP服务器更新NTP时间。该方法一小时内只会从NTP服务器更新一次NTP时间。 |
 <!--DelEnd-->
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [TimeType(系统时间、时区)](arkts-basicservices-systemdatetime-timetype-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [TimeType(系统时间、时区)](arkts-basicservices-systemdatetime-timetype-e.md) | 定义获取时间的枚举类型。 |

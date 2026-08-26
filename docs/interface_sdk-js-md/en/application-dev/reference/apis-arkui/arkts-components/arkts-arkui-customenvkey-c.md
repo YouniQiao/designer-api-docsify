@@ -27,6 +27,17 @@ constructor.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+@Builder
+function MyBuilder(value: string, size: number) {
+  Text(value)
+    .fontSize(size)
+}
+let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
+```
+
 ## create
 
 ```TypeScript
@@ -45,9 +56,9 @@ create CustomEnvKey
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CustomEnvKey](arkts-arkui-customenvkey-c.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [CustomEnvKey](arkts-arkui-customenvkey-c.md)&lt;T&gt; | [CustomEnvKey](arkts-arkui-customenvkey-c.md) |
 
 ## type
 

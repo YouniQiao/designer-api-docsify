@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [RowSplitModifier](arkts-arkui-rowsplitmodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [RowSplitModifier](arkts-arkui-rowsplitmodifier-c.md) | Defines RowSplit Modifier@extends RowSplitAttribute @implements AttributeModifier & lt;RowSplitAttribute & gt; |

@@ -11,7 +11,7 @@ Provides interfaces to get system capability. @namespace systemCapability
 ## Modules to Import
 
 ```TypeScript
-import { systemCapability } from 'kits/@kit.BasicServicesKit';
+import systemCapability from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -19,8 +19,8 @@ import { systemCapability } from 'kits/@kit.BasicServicesKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md) |
-| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md) | Get System Capability. |
+| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md) | Get System Capability. |
 <!--DelEnd-->

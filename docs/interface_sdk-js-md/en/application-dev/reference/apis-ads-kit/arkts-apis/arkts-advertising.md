@@ -13,41 +13,44 @@ The advertising module provides APIs for requesting and displaying ads.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { AdComponent } from '@kit.AdsKit.AdComponent';
+import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
+import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
+import advertising from '@kit.AdsKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [deleteWebAdInterface(Ads Service Framework)](arkts-ads-advertising-deletewebadinterface-f.md) |
-| [getAdRequestBody(Ads Service Framework)](arkts-ads-advertising-getadrequestbody-f.md) |
-| [parseAdResponse(Ads Service Framework)](arkts-ads-advertising-parseadresponse-f.md) |
-| [registerWebAdInterface(Ads Service Framework)](arkts-ads-advertising-registerwebadinterface-f.md) |
-| [registerWebAdInterface(Ads Service Framework)](arkts-ads-advertising-registerwebadinterface-f.md) |
-| [showAd(Ads Service Framework)](arkts-ads-advertising-showad-f.md) |
+| Name | Description |
+| --- | --- |
+| [deleteWebAdInterface(Ads Service Framework)](arkts-ads-advertising-deletewebadinterface-f.md) | Deletes the ad JavaScript object injected through **registerWebAdInterface** (this API is only open to some pre-installed system applications). |
+| [getAdRequestBody(Ads Service Framework)](arkts-ads-advertising-getadrequestbody-f.md) | Obtains the body of an ad request. This API uses a promise to return the result (this API is only open to some pre-installed system applications). |
+| [parseAdResponse(Ads Service Framework)](arkts-ads-advertising-parseadresponse-f.md) | Parses and processes the body of an ad response (this API is only open to some pre-installed system applications). |
+| [registerWebAdInterface(Ads Service Framework)](arkts-ads-advertising-registerwebadinterface-f.md) | Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications). |
+| [registerWebAdInterface(Ads Service Framework)](arkts-ads-advertising-registerwebadinterface-f.md) | Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications). |
+| [showAd(Ads Service Framework)](arkts-ads-advertising-showad-f.md) | Shows a full-screen ad. |
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AdLoader(Ads Service Framework)](arkts-ads-advertising-adloader-c.md) |
+| Name | Description |
+| --- | --- |
+| [AdLoader(Ads Service Framework)](arkts-ads-advertising-adloader-c.md) | Provides the APIs for loading ads. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AdDisplayOptions(Ads Service Framework)](arkts-ads-advertising-addisplayoptions-i.md) |
-| [AdInteractionListener(Ads Service Framework)](arkts-ads-advertising-adinteractionlistener-i.md) |
-| [AdLoadListener(Ads Service Framework)](arkts-ads-advertising-adloadlistener-i.md) |
-| [AdOptions(Ads Service Framework)](arkts-ads-advertising-adoptions-i.md) |
-| [AdRequestParams(Ads Service Framework)](arkts-ads-advertising-adrequestparams-i.md) |
-| [MultiSlotsAdLoadListener(Ads Service Framework)](arkts-ads-advertising-multislotsadloadlistener-i.md) |
+| Name | Description |
+| --- | --- |
+| [AdDisplayOptions(Ads Service Framework)](arkts-ads-advertising-addisplayoptions-i.md) | Defines the ad display parameters. |
+| [AdInteractionListener(Ads Service Framework)](arkts-ads-advertising-adinteractionlistener-i.md) | Defines the ad status change callback. |
+| [AdLoadListener(Ads Service Framework)](arkts-ads-advertising-adloadlistener-i.md) | Enumerates the callbacks used for the request for loading an ad. |
+| [AdOptions(Ads Service Framework)](arkts-ads-advertising-adoptions-i.md) | Defines the ad configuration. |
+| [AdRequestParams(Ads Service Framework)](arkts-ads-advertising-adrequestparams-i.md) | Defines the ad request parameters. |
+| [MultiSlotsAdLoadListener(Ads Service Framework)](arkts-ads-advertising-multislotsadloadlistener-i.md) | Enumerates the callbacks used for the request for loading multiple ads. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Advertisement(Ads Service Framework)](arkts-ads-advertising-advertisement-t.md) |
+| Name | Description |
+| --- | --- |
+| [Advertisement(Ads Service Framework)](arkts-ads-advertising-advertisement-t.md) | Defines the requested ad content. |

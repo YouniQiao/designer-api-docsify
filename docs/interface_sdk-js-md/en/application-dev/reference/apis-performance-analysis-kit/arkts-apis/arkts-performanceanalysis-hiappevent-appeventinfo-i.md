@@ -9,7 +9,6 @@ Defines parameters of the event information.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## domain

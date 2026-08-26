@@ -2,7 +2,8 @@
 
 The **charger** module enumerates charging types.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The APIs provided by this module are system APIs.
 
 **Since:** 10
@@ -14,7 +15,7 @@ The **charger** module enumerates charging types.
 ## Modules to Import
 
 ```TypeScript
-import { charger } from 'kits/@kit.BasicServicesKit';
+import charger from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -22,7 +23,7 @@ import { charger } from 'kits/@kit.BasicServicesKit';
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ChargeType](arkts-basicservices-charger-chargetype-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ChargeType](arkts-basicservices-charger-chargetype-e-sys.md) | Enumerates charging types. |
 <!--DelEnd-->

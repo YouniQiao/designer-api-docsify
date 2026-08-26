@@ -14,7 +14,15 @@ type KeyRequestCallback = (assetId: string, requestData: Uint8Array) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| assetId | string | 是 |
-| requestData | Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| assetId | string | 是 | 媒体ID。 |
+| requestData | Uint8Array | 是 | 媒体许可证请求数据。 |
+
+**示例**
+
+```TypeScript
+let keyRequestCallback: avSession.KeyRequestCallback = async(assetId: string, requestData: Uint8Array) => {
+  console.info(`Succeeded in keyRequestCallback. assetId: ${assetId}, requestData: ${requestData}`);
+};
+```

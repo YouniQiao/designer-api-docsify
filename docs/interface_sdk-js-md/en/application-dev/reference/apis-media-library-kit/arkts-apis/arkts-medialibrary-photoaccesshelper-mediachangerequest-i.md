@@ -2,7 +2,8 @@
 
 Media change request, which is the parent class of the asset change request and album change request.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The media change request takes effect only after
 > [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called.
 
@@ -13,7 +14,7 @@ Media change request, which is the parent class of the asset change request and 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import photoAccessHelper from '@kit.MediaLibraryKit';
 ```
 
 ## comment

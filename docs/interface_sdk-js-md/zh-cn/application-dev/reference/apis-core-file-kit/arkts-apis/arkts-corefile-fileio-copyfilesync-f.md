@@ -23,8 +23,16 @@ declare function copyFileSync(src: string | number, dest: string | number, mode?
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| src | string \| number | 是 |
-| dest | string \| number | 是 |
-| mode | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| src | string \| number | 是 | 待复制文件的路径或待复制文件的描述符。 |
+| dest | string \| number | 是 | 目标文件路径或目标文件描述符。 |
+| mode | number | 否 | mode提供覆盖文件的选项，当前仅支持0，且默认为0。0：完全覆盖目标文件，未覆盖部分将被裁切掉。 |
+
+**示例**
+
+```TypeScript
+let srcPath = pathDir + "srcDir/test.txt";
+let dstPath = pathDir + "dstDir/test.txt";
+fileio.copyFileSync(srcPath, dstPath);
+```

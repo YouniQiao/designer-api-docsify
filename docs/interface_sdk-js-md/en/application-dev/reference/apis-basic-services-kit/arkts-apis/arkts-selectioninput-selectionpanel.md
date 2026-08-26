@@ -20,19 +20,19 @@ The text selection panel is an operation panel that pops up after a user selects
 ## Modules to Import
 
 ```TypeScript
-import { PanelInfo, PanelType } from 'kits/@kit.BasicServicesKit';
+import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PanelInfo(Word Selection Panel)](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [PanelInfo(Word Selection Panel)](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Defines attributes of the word selection panel, including its type, position, and size. You can specify the panel type (menu panel or main panel) using **panelType**, set the coordinates of the upper left corner of the panel using **x** and **y**, and set the panel size using **width** and **height**. These attributes collectively define the display form of the panel. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PanelType(Word Selection Panel)](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) |
+| Name | Description |
+| --- | --- |
+| [PanelType(Word Selection Panel)](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | Enumerates the word selection panel types, which defines the two-level architecture of the panel: menu panel (level 1) and main panel (level 2). |

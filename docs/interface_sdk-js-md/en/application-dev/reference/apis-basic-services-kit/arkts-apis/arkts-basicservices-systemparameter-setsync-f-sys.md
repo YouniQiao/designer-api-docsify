@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from 'kits/@kit.BasicServicesKit';
+import systemParameter from '@kit.BasicServicesKit';
 ```
 
 ## setSync
@@ -26,7 +26,17 @@ Sets a value for the specified key.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Target key. |
+| value | string | Yes | Value to set. |
+
+**Examples**
+
+```TypeScript
+try {
+    systemParameter.setSync("test.parameter.key", "default");
+} catch(e) {
+    console.error("set unexpected error: " + e);
+}
+```

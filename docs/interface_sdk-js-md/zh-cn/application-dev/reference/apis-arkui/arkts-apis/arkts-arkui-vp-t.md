@@ -16,7 +16,7 @@ declare type VP = `${number}vp` | number
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| `\${number}vp` |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| `\${number}vp` |  |
+| number |  |

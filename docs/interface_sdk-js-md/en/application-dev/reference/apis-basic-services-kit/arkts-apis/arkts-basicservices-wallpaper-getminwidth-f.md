@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import wallpaper from '@kit.BasicServicesKit';
 ```
 
 ## getMinWidth
@@ -22,9 +22,23 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of getMinWidth. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.getMinWidth((error: BusinessError, data: Number) => {
+    if (error) {
+        console.error(`failed to getMinWidth because: ${JSON.stringify(error)}`);
+        return;
+    }
+    console.info(`success to getMinWidth: ${JSON.stringify(data)}`);
+});
+```
 
 
 ## getMinWidth
@@ -43,6 +57,18 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | the promise returned by the function. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.getMinWidth().then((data: Number) => {
+    console.info(`success to getMinWidth: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`failed to getMinWidth because: ${JSON.stringify(error)}`);
+});
+```

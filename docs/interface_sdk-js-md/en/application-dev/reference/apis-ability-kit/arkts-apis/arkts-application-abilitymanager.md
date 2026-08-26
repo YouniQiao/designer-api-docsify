@@ -22,18 +22,18 @@ The AbilityManager module provides APIs for obtaining, adding, and modifying abi
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos) |
-| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos) |
-| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateconfiguration) |
-| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateconfiguration) |
+| Name | Description |
+| --- | --- |
+| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos) | Obtains the ability running information. This API uses a promise to return the result. |
+| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos) | Obtains the ability running information. This API uses an asynchronous callback to return the result. |
+| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateconfiguration) | Updates the configuration. This API uses an asynchronous callback to return the result. |
+| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateconfiguration) | Updates the configuration. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AbilityState](arkts-ability-abilitymanager-abilitystate-depr-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AbilityState](arkts-ability-abilitymanager-abilitystate-depr-e-sys.md) | Enumerates the ability states. |
 <!--DelEnd-->

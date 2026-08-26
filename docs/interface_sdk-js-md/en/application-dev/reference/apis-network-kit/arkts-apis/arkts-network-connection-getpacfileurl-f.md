@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getPacFileUrl
@@ -20,12 +19,21 @@ Obtains the URL of the current PAC script.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | URL of the current PAC script. If no PAC script is available, an empty string is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+let pacFileUrl = connection.getPacFileUrl();
+console.info(pacFileUrl);
+```

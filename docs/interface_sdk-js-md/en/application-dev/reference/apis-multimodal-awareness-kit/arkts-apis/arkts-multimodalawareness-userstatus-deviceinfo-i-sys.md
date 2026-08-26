@@ -11,7 +11,7 @@ Defines device information.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+import userStatus from '@kit.MultimodalAwarenessKit';
 ```
 
 ## deviceId

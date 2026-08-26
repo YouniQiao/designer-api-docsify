@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { serialManager } from 'kits/@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit';
 ```
 
 ## hasSerialRight
@@ -22,21 +22,48 @@ function hasSerialRight(portId: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| portId | number | 是 | 端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)返回的 [SerialPort](arkts-basicservices-serialmanager-serialport-i.md)对象，必须使用getPortList返回的有效端口号，传入无效值时抛出错误码31400003异常。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示已授权，false表示未授权。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14400005](../errorcode-usb.md#14400005-数据库操作异常) |
-| [31400001](../errorcode-usb.md#31400001-串口服务异常) |
-| [31400003](../errorcode-usb.md#31400003-端口号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+| [14400005](../errorcode-usb.md#14400005-数据库操作异常) |  |
+| [31400001](../errorcode-usb.md#31400001-串口服务异常) |  |
+| [31400003](../errorcode-usb.md#31400003-端口号不存在) |  |
+
+**示例**
+
+以下示例代码只是调用hasSerialRight接口的必要流程，需要放入具体的方法中执行。实际调用时，设备开发者需要遵循设备相关协议进行调用。
+
+```TypeScript
+import { JSON } from '@kit.ArkTS';
+import { serialManager } from '@kit.BasicServicesKit';
+
+// 获取串口列表
+function hasSerialRightExample() {
+  let portList: serialManager.SerialPort[] = serialManager.getPortList();
+  console.info('portList: ' + JSON.stringify(portList));
+  if (!portList || portList.length === 0) {
+    console.error('portList is empty');
+    return;
+  }
+  let portId: number = portList[0].portId;
+
+  // 检测设备是否可被应用访问
+  if (serialManager.hasSerialRight(portId)) {
+    console.info('The serial port is accessible');
+  } else {
+    console.error('No permission to access the serial port');
+  }
+}
+```

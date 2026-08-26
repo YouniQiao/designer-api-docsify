@@ -11,7 +11,7 @@ Provides callbacks for user authentication.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## onAcquireInfo
@@ -30,11 +30,27 @@ Called to acquire identity authentication information.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| module | number | Yes |
-| acquire | number | Yes |
-| extraInfo | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| module | number | Yes |  |
+| acquire | number | Yes |  |
+| extraInfo | Uint8Array | Yes |  |
+
+**Examples**
+
+```TypeScript
+let authCallback: osAccount.IUserAuthCallback = {
+  onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+    console.info('auth result = ' + result)
+    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+  },
+  onAcquireInfo: (module: number, acquire: number, extraInfo: Uint8Array) => {
+    console.info('auth module = ' + module);
+    console.info('auth acquire = ' + acquire);
+    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+  }
+};
+```
 
 ## onResult
 
@@ -52,7 +68,18 @@ Called to return the result code and authentication result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | number | Yes |
-| extraInfo | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | number | Yes |  |
+| extraInfo | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | Yes |  |
+
+**Examples**
+
+```TypeScript
+let authCallback: osAccount.IUserAuthCallback = {
+  onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+    console.info('auth result = ' + result);
+    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+  }
+};
+```

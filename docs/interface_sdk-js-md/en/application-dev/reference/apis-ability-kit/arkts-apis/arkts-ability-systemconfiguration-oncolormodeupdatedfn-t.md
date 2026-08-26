@@ -16,6 +16,6 @@ Defines an OnColorModeUpdatedFn function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| colorMode | ConfigurationConstant.ColorMode | Yes | Indicates the system's light or dark color mode |

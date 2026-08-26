@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mdns } from 'kits/@kit.NetworkKit';
+import mdns from '@kit.NetworkKit';
 ```
 
 ## errorCode

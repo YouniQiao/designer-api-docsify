@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from 'kits/@kit.AdsKit';
+import { AdComponent } from '@kit.AdsKit';
 ```
 
 ## Summary
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AdComponent(Ad Component)](arkts-ads-advertising-adcomponent-adcomponent-s.md) |
+| Name | Description |
+| --- | --- |
+| [AdComponent(Ad Component)](arkts-ads-advertising-adcomponent-adcomponent-s.md) | This module provides the capability of displaying ads, covering native, roll, splash, and other ad styles. |

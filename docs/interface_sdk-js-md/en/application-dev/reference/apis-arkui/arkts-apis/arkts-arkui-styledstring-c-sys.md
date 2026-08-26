@@ -29,16 +29,16 @@ Marshals a styled string by defining a callback to marshal [StyledStringMarshall
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes |
-| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | Styled string to marshal. |
+| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Yes | Callback defining how to marshal [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| ArrayBuffer |
+| Type | Description |
+| --- | --- |
+| ArrayBuffer | Buffer information after marshalling. |
 
 ## marshalling
 
@@ -58,15 +58,15 @@ Marshals a styled string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | Styled string to marshal. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| ArrayBuffer |
+| Type | Description |
+| --- | --- |
+| ArrayBuffer | Buffer information after marshalling. |
 
 ## unmarshalling
 
@@ -86,23 +86,23 @@ Unmarshals a styled string by defining a callback to [StyledStringMarshallingVal
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffer | ArrayBuffer | Yes |
-| callback | [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | ArrayBuffer | Yes | Data marshaled from a styled string. |
+| callback | [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | Yes | Callback defining how to marshal **ArrayBuffer**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
 
 ## unmarshalling
 
@@ -122,19 +122,19 @@ Unmarshals a buffer to obtain a styled string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffer | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | ArrayBuffer | Yes | Data marshaled from a styled string. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |

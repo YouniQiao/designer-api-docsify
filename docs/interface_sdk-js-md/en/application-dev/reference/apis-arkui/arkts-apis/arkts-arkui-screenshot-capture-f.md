@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from 'kits/@kit.ArkUI';
+import screenshot from '@kit.ArkUI';
 ```
 
 ## capture
@@ -26,21 +26,45 @@ Takes a screenshot of the entire screen. This API uses a promise to return the r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [CaptureOption](arkts-arkui-screenshot-captureoption-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [CaptureOption](arkts-arkui-screenshot-captureoption-i.md) | No | Capture options. If this parameter is left blank, the display with ID 0 is captured by default.<br>**Since:** 22 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;image.PixelMap & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;image.PixelMap & gt; | Promise used to return a PixelMap object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types. 2.Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+// Set screenshot parameters and specify the screen whose displayId is 0.
+let captureOption: screenshot.CaptureOption = {
+  "displayId": 0
+};
+try {
+  // Call the capture API to obtain a full-screen screenshot.
+  let promise = screenshot.capture(captureOption);
+  promise.then((pixelMap: image.PixelMap) => {
+    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
+    pixelMap.release(); // Release the memory in time after the PixelMap is used.
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
+}
+```

@@ -11,7 +11,7 @@ hap级别的快速修复信息。
 ## 导入模块
 
 ```TypeScript
-import { quickFixManager } from 'kits/@kit.AbilityKit';
+import quickFixManager from '@kit.AbilityKit';
 ```
 
 ## moduleName

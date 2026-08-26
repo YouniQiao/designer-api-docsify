@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -27,6 +26,24 @@ constructor()
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**示例**
+
+```TypeScript
+let writableStream = new stream.Writable();
+```
+
+```TypeScript
+let readableStream = new stream.Readable();
+```
+
+```TypeScript
+let duplex = new stream.Duplex();
+```
+
+```TypeScript
+let transformStream = new stream.Transform();
+```
 
 ## doFlush
 
@@ -44,9 +61,33 @@ doFlush(callback: Function): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Function | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Function | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+class TestTransform extends stream.Transform {
+  constructor() {
+    super();
+  }
+
+  doTransform(chunk: string, encoding: string, callback: Function) {
+    callback();
+  }
+
+  doFlush(callback: Function) {
+    callback(null, "test");
+  }
+}
+
+let transformStream = new TestTransform();
+transformStream.end("my test");
+transformStream.on("data", (data) => {
+  console.info("data is", data.data); // data is test
+});
+```
 
 ## doTransform
 
@@ -64,8 +105,28 @@ doTransform(chunk: string, encoding: string, callback: Function): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| chunk | string | 是 |
-| encoding | string | 是 |
-| callback | Function | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| chunk | string | 是 | 需要写入的数据。 |
+| encoding | string | 是 | 字符编码类型。当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
+| callback | Function | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+class TestTransform extends stream.Transform {
+  constructor() {
+    super();
+  }
+
+  doTransform(chunk: string, encoding: string, callback: Function) {
+    let stringChunk = chunk.toString().toUpperCase();
+    console.info("Transform test doTransform", stringChunk); // Transform test doTransform HELLO
+    this.push(stringChunk);
+    callback();
+  }
+}
+
+let transformStream = new TestTransform();
+transformStream.write("hello");
+```

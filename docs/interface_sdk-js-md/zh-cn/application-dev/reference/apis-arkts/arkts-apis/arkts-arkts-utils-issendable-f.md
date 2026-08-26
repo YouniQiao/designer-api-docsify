@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import ArkTSUtils from '@kit.ArkTS';
 ```
 
 ## isSendable
@@ -24,12 +24,12 @@ function isSendable(value: Object | null | undefined): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object \| null \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object \| null \| undefined | 是 | 要检查的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果值为Sendable则返回true，否则返回false。 |

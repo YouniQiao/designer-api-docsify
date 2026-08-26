@@ -9,6 +9,9 @@ SslErrorHandler is a class in the Web component for handling SSL certificate ver
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -53,9 +56,9 @@ Cancels this request and determines whether to stop loading based on the **abort
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| abortLoading | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| abortLoading | boolean | Yes | Whether to stop loading the page after canceling the request. The value **true** indicates that the page stops loading, and **false** indicates that the page continues loading. |
 
 ## handleConfirm
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appRecovery } from 'kits/@kit.AbilityKit';
+import appRecovery from '@kit.AbilityKit';
 ```
 
 ## restartApp
@@ -21,3 +21,23 @@ function restartApp(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { appRecovery, errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer: errorManager.ErrorObserver = {
+  onUnhandledException(errorMsg) {
+    console.error('onUnhandledException, errorMsg: ', errorMsg);
+    appRecovery.restartApp();
+  }
+};
+
+try {
+  errorManager.on('error', observer);
+} catch (paramError) {
+  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+}
+```

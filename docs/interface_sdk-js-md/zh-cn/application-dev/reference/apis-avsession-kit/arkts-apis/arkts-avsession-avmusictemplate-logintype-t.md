@@ -12,9 +12,9 @@ type LoginType = 'queryLoginInfo' | 'refreshLoginInfo' | 'cancel' | 'logout'
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| 类型 |
-| --- |
-| 'queryLoginInfo' |
-| 'refreshLoginInfo' |
-| 'cancel' |
-| 'logout' |
+| 类型 | 说明 |
+| --- | --- |
+| 'queryLoginInfo' |  |
+| 'refreshLoginInfo' |  |
+| 'cancel' |  |
+| 'logout' |  |

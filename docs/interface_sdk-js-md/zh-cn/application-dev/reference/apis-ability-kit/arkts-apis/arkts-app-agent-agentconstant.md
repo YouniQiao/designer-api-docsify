@@ -11,21 +11,21 @@ agentConstant模块提供Agent相关的常量，包括Agent卡片类型[AgentCar
 ## 导入模块
 
 ```TypeScript
-import { agentConstant } from 'kits/@kit.AbilityKit';
+import agentConstant from '@kit.AbilityKit';
 ```
 
 ## 汇总
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md) | Agent卡片的类型。 |
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 |
-| --- |
-| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e-sys.md) | Agent卡片的类型。 |
 <!--DelEnd-->

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { intelligence } from 'kits/@kit.ArkData';
+import intelligence from '@kit.ArkData';
 ```
 
 ## cachePath

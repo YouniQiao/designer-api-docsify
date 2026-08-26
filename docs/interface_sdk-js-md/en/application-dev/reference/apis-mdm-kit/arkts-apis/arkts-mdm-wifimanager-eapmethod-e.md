@@ -2,7 +2,8 @@
 
 Enumerates the EAP authentication methods.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Currently, only the EAP_PEAP and EAP_TLS authentication methods are supported.
 
 **Since:** 12

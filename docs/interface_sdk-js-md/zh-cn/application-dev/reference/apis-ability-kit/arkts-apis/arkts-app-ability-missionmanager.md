@@ -11,7 +11,7 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 ## 导入模块
 
 ```TypeScript
-import { missionManager } from 'kits/@kit.AbilityKit';
+import missionManager from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -19,43 +19,43 @@ import { missionManager } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md) |
-| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md) |
-| [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md) |
-| [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md) |
-| [getLowResolutionMissionSnapShot](arkts-ability-missionmanager-getlowresolutionmissionsnapshot-f-sys.md) |
-| [getLowResolutionMissionSnapShot](arkts-ability-missionmanager-getlowresolutionmissionsnapshot-f-sys.md) |
-| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md) |
-| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md) |
-| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md) |
-| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md) |
-| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md) |
-| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md) |
-| [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md) |
-| [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md) |
-| [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md) |
-| [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md) |
-| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md) |
-| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md) |
-| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md) |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) |
-| off |
-| off |
-| on |
-| [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md) |
-| [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md) | 清理所有未锁定的任务。使用callback异步回调。 |
+| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md) | 清理所有未锁定的任务。使用Promise异步回调。 |
+| [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md) | 清理指定任务ID的任务，无论该任务是否被锁定。使用callback异步回调。 |
+| [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md) | 清理指定任务ID的任务，无论该任务是否被锁定。使用Promise异步回调。 |
+| [getLowResolutionMissionSnapShot](arkts-ability-missionmanager-getlowresolutionmissionsnapshot-f-sys.md) | 获取任务低分辨率快照。使用callback异步回调。 |
+| [getLowResolutionMissionSnapShot](arkts-ability-missionmanager-getlowresolutionmissionsnapshot-f-sys.md) | 获取任务低分辨率快照。使用Promise异步回调。 |
+| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md) | 获取任务信息。使用callback异步回调。 |
+| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md) | 获取任务信息。使用Promise异步回调。 |
+| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md) | 获取所有任务信息。使用callback异步回调。 |
+| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md) | 获取所有任务信息。使用Promise异步回调。 |
+| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md) | 获取任务快照。使用callback异步回调。 |
+| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md) | 获取任务快照。使用Promise异步回调。 |
+| [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md) | 锁定指定任务ID的任务。使用callback异步回调。 |
+| [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md) | 锁定指定任务ID的任务。使用Promise异步回调。 |
+| [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md) | 将指定任务批量切到后台，返回的结果任务ID按被隐藏时的任务层级排序。使用callback异步回调。 |
+| [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md) | 将指定任务批量切到后台，返回的结果按被隐藏时的任务层级排序。使用Promise异步回调。 |
+| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md) | 将指定任务批量切到前台。使用callback异步回调。 |
+| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md) | 将指定任务批量切换到前台，并将任务ID等于topMission的任务移动到最顶层。使用callback异步回调。 |
+| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md) | 将指定任务批量切到前台，并将任务ID等于topMission的任务移动到最顶层。使用Promise异步回调。 |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) | 把指定任务ID的任务切到前台。使用callback异步回调。 |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) | 把指定任务ID的任务切到前台，同时指定任务切换到前台时的启动参数，例如窗口模式、设备ID等。使用callback异步回调。 |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) | 把指定任务ID的任务切到前台，同时指定任务切换到前台时的启动参数，例如窗口模式、设备ID等。使用Promise异步回调。 |
+| off | 解注册任务状态监听器。使用callback异步回调。 |
+| off | 解注册任务状态监听。使用Promise异步回调。 |
+| on | 注册系统任务状态监听器。 |
+| [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md) | 解锁指定任务ID的任务。使用callback异步回调。 |
+| [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md) | 解锁指定任务ID的任务。使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 类型（系统接口）
 
-| 名称 |
-| --- |
-| [MissionInfo](arkts-ability-missionmanager-missioninfo-t-sys.md) |
-| [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) |
-| [MissionSnapshot](arkts-ability-missionmanager-missionsnapshot-t-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [MissionInfo](arkts-ability-missionmanager-missioninfo-t-sys.md) | 表示任务的详细信息。 |
+| [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) | 定义系统任务状态监听。 |
+| [MissionSnapshot](arkts-ability-missionmanager-missionsnapshot-t-sys.md) | 任务的任务快照对象。 |
 <!--DelEnd-->

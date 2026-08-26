@@ -11,20 +11,20 @@ Namespace for managing and organizing script information.@namespace scriptManage
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from 'kits/@kit.AbilityKit';
+import scriptManager from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md) |
+| Name | Description |
+| --- | --- |
+| [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md) | complete arkTS script for in-app skills. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ArkTSScriptInfo](arkts-ability-scriptmanager-arktsscriptinfo-i.md) |
-| [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) |
+| Name | Description |
+| --- | --- |
+| [ArkTSScriptInfo](arkts-ability-scriptmanager-arktsscriptinfo-i.md) | arkTS script info. |
+| [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) | Result of arkTS script execution. |

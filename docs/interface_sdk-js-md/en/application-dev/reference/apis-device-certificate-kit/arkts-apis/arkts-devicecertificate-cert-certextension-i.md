@@ -9,7 +9,6 @@ Provides APIs for operating on certificate extensions.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## checkCA
@@ -28,17 +27,56 @@ Checks whether the certificate is a CA certificate.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | If the key usage extension contains the keyCertSign bit and the CA field in the basic constraints is **true**, the certificate is a CA certificate. Returns **-1** if the certificate is not a CA certificate; returns the path length in the basic constraints otherwise. Returns **-2** if the certificate is a CA certificate but the path length is not specified in the basic constraints, which means the path length is not limited. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+
+**Examples**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Binary data of the certificate extension, which needs to be set to match your case.
+let extData = new Uint8Array([
+  0x30, 0x40, 0x30, 0x0F, 0x06, 0x03, 0x55, 0x1D,
+  0x13, 0x01, 0x01, 0xFF, 0x04, 0x05, 0x30, 0x03,
+  0x01, 0x01, 0xFF, 0x30, 0x0E, 0x06, 0x03, 0x55,
+  0x1D, 0x0F, 0x01, 0x01, 0xFF, 0x04, 0x04, 0x03,
+  0x02, 0x01, 0xC6, 0x30, 0x1D, 0x06, 0x03, 0x55,
+  0x1D, 0x0E, 0x04, 0x16, 0x04, 0x14, 0xE0, 0x8C,
+  0x9B, 0xDB, 0x25, 0x49, 0xB3, 0xF1, 0x7C, 0x86,
+  0xD6, 0xB2, 0x42, 0x87, 0x0B, 0xD0, 0x6B, 0xA0,
+  0xD9, 0xE4
+]);
+
+let encodingBlob: cert.EncodingBlob = {
+  data: extData,
+  // Assign a value based on the encodingData format. Currently, only FORMAT_DER is supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_DER
+};
+cert.createCertExtension(encodingBlob, (error, certExt) => {
+  if (error) {
+    console.error(`createCertExtension failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  } else {
+    console.info('createCertExtension result: success.');
+    try {
+      let res = certExt.checkCA();
+    } catch (err) {
+      let e: BusinessError = err as BusinessError;
+      console.error(`ext checkCA failed, errCode: ${e.code}, errMsg: ${e.message}`);
+    }
+  }
+});
+```
 
 ## getEncoded
 
@@ -56,17 +94,79 @@ Obtains the serialized data of the certificate extensions.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) |
+| Type | Description |
+| --- | --- |
+| [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Serialized data obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+
+**Examples**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Binary data of the certificate extension, which needs to be set to match your case.
+let extData = new Uint8Array([
+  0x30, 0x40, 0x30, 0x0F, 0x06, 0x03, 0x55, 0x1D,
+  0x13, 0x01, 0x01, 0xFF, 0x04, 0x05, 0x30, 0x03,
+  0x01, 0x01, 0xFF, 0x30, 0x0E, 0x06, 0x03, 0x55,
+  0x1D, 0x0F, 0x01, 0x01, 0xFF, 0x04, 0x04, 0x03,
+  0x02, 0x01, 0xC6, 0x30, 0x1D, 0x06, 0x03, 0x55,
+  0x1D, 0x0E, 0x04, 0x16, 0x04, 0x14, 0xE0, 0x8C,
+  0x9B, 0xDB, 0x25, 0x49, 0xB3, 0xF1, 0x7C, 0x86,
+  0xD6, 0xB2, 0x42, 0x87, 0x0B, 0xD0, 0x6B, 0xA0,
+  0xD9, 0xE4
+]);
+
+let encodingBlob: cert.EncodingBlob = {
+  data: extData,
+  // Assign a value based on the encodingData format. Currently, only FORMAT_DER is supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_DER
+};
+
+cert.createCertExtension(encodingBlob, (error, certExt) => {
+  if (error) {
+    console.error(`createCertExtension failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  } else {
+    console.info('createCertExtension result: success.');
+    try {
+      let extEncodedBlob = certExt.getEncoded();
+    } catch (err) {
+      let e: BusinessError = err as BusinessError;
+      console.error(`ext getEncoded failed, errCode: ${e.code}, errMsg: ${e.message}`);
+    }
+  }
+});
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let nameStr = '/CN=Example CA/OU=test cert/O=test/L=XA/ST=SX/C=CN/CN=RSA CA/CN=XTS';
+async function getEncoded() {
+  try {
+    cert.createX500DistinguishedName(nameStr)
+      .then((data) => {
+        console.info('createX500DistinguishedName result: success.');
+        let encodingBlobData = data.getEncoded();
+      })
+      .catch((err: BusinessError) => {
+        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
+      })
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
 
 ## getEntry
 
@@ -84,25 +184,69 @@ Obtains the value of a specific certificate extension entry by OID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [valueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-scanneroptionvalue-i.md) | [ExtensionEntryType](arkts-devicecertificate-cert-extensionentrytype-e.md) | Yes |
-| oid | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| valueType | [ExtensionEntryType](arkts-devicecertificate-cert-extensionentrytype-e.md) | Yes | Type of the information to obtain. |
+| oid | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Yes | OID of the certificate extension to obtain. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) |
+| Type | Description |
+| --- | --- |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Certificate extension object information obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+
+**Examples**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Binary data of the certificate extension, which needs to be set to match your case.
+let extData = new Uint8Array([
+  0x30, 0x40, 0x30, 0x0F, 0x06, 0x03, 0x55, 0x1D,
+  0x13, 0x01, 0x01, 0xFF, 0x04, 0x05, 0x30, 0x03,
+  0x01, 0x01, 0xFF, 0x30, 0x0E, 0x06, 0x03, 0x55,
+  0x1D, 0x0F, 0x01, 0x01, 0xFF, 0x04, 0x04, 0x03,
+  0x02, 0x01, 0xC6, 0x30, 0x1D, 0x06, 0x03, 0x55,
+  0x1D, 0x0E, 0x04, 0x16, 0x04, 0x14, 0xE0, 0x8C,
+  0x9B, 0xDB, 0x25, 0x49, 0xB3, 0xF1, 0x7C, 0x86,
+  0xD6, 0xB2, 0x42, 0x87, 0x0B, 0xD0, 0x6B, 0xA0,
+  0xD9, 0xE4
+]);
+
+let encodingBlob: cert.EncodingBlob = {
+  data: extData,
+  // Assign a value based on the encodingData format. Currently, only FORMAT_DER is supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_DER
+};
+
+cert.createCertExtension(encodingBlob, (error, certExt) => {
+  if (error) {
+    console.error(`createCertExtension failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  } else {
+    console.info('createCertExtension result: success.');
+    let oid = new Uint8Array([0x32, 0x2e, 0x35, 0x2e, 0x32, 0x39, 0x2e, 0x31, 0x35]);
+    let oidBlob: cert.DataBlob = {
+      data: oid
+    }
+    try {
+      let entry = certExt.getEntry(cert.ExtensionEntryType.EXTENSION_ENTRY_TYPE_ENTRY, oidBlob);
+    } catch (err) {
+      let e: BusinessError = err as BusinessError;
+      console.error(`ext getEntry failed, errCode: ${e.code}, errMsg: ${e.message}`);
+    }
+  }
+});
+```
 
 ## getOidList
 
@@ -120,24 +264,64 @@ Obtains the OIDs of the certificate extensions.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [valueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-scanneroptionvalue-i.md) | [ExtensionOidType](arkts-devicecertificate-cert-extensionoidtype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| valueType | [ExtensionOidType](arkts-devicecertificate-cert-extensionoidtype-e.md) | Yes | Type of the OIDs to obtain. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) |
+| Type | Description |
+| --- | --- |
+| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | OIDs obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+
+**Examples**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Binary data of the certificate extension, which needs to be set to match your case.
+let extData = new Uint8Array([
+  0x30, 0x40, 0x30, 0x0F, 0x06, 0x03, 0x55, 0x1D,
+  0x13, 0x01, 0x01, 0xFF, 0x04, 0x05, 0x30, 0x03,
+  0x01, 0x01, 0xFF, 0x30, 0x0E, 0x06, 0x03, 0x55,
+  0x1D, 0x0F, 0x01, 0x01, 0xFF, 0x04, 0x04, 0x03,
+  0x02, 0x01, 0xC6, 0x30, 0x1D, 0x06, 0x03, 0x55,
+  0x1D, 0x0E, 0x04, 0x16, 0x04, 0x14, 0xE0, 0x8C,
+  0x9B, 0xDB, 0x25, 0x49, 0xB3, 0xF1, 0x7C, 0x86,
+  0xD6, 0xB2, 0x42, 0x87, 0x0B, 0xD0, 0x6B, 0xA0,
+  0xD9, 0xE4
+]);
+
+let encodingBlob: cert.EncodingBlob = {
+  data: extData,
+  // Assign a value based on the encodingData format. Currently, only FORMAT_DER is supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_DER
+};
+
+cert.createCertExtension(encodingBlob, (error, certExt) => {
+  if (error) {
+    console.error(`createCertExtension failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  } else {
+    console.info('createCertExtension result: success.');
+    try {
+      let oidList = certExt.getOidList(cert.ExtensionOidType.EXTENSION_OID_TYPE_ALL);
+    } catch (err) {
+      let e: BusinessError = err as BusinessError;
+      console.error(`ext getOidList failed, errCode: ${e.code}, errMsg: ${e.message}`);
+    }
+  }
+});
+```
 
 ## hasUnsupportedCriticalExtension
 
@@ -155,14 +339,45 @@ Checks whether there is a critical extension that is not supported.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if an unsupported critical extension is found; returns **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+
+**Examples**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let encodingData = new Uint8Array([
+  0x30, 0x40, 0x30, 0x0F, 0x06, 0x03, 0x55, 0x1D,
+  0x13, 0x01, 0x01, 0xFF, 0x04, 0x05, 0x30, 0x03,
+  0x01, 0x01, 0xFF, 0x30, 0x0E, 0x06, 0x03, 0x55,
+  0x1D, 0x0F, 0x01, 0x01, 0xFF, 0x04, 0x04, 0x03,
+  0x02, 0x01, 0xC6, 0x30, 0x1D, 0x06, 0x03, 0x55,
+  0x1D, 0x0E, 0x04, 0x16, 0x04, 0x14, 0xE0, 0x8C,
+  0x9B, 0xDB, 0x25, 0x49, 0xB3, 0xF1, 0x7C, 0x86,
+  0xD6, 0xB2, 0x42, 0x87, 0x0B, 0xD0, 0x6B, 0xA0,
+  0xD9, 0xE4
+]);
+let encodingBlob: cert.EncodingBlob = {
+  data: new Uint8Array(encodingData),
+  encodingFormat: cert.EncodingFormat.FORMAT_DER
+};
+
+cert.createCertExtension(encodingBlob).then((extensionObj) => {
+  console.info('createCertExtension result: success.');
+  const result = extensionObj.hasUnsupportedCriticalExtension()
+  console.info('has unsupported critical extension result =' + result);
+}).catch((err: BusinessError) => {
+  console.error(`createCertExtension failed, errCode: ${err.code}, errMsg: ${err.message}`);
+});
+```

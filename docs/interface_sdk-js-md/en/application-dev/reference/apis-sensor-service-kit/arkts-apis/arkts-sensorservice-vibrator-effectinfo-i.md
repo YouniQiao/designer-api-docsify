@@ -9,7 +9,6 @@ Defines the preset effect.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## isEffectSupported

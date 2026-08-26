@@ -9,7 +9,7 @@ Provides callbacks to be invoked when the scheduling conditions are met or the s
 ## Modules to Import
 
 ```TypeScript
-import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from 'kits/@kit.BackgroundTasksKit';
+import WorkSchedulerExtensionAbility, { WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
 ```
 
 ## onWorkStart
@@ -28,9 +28,23 @@ Called when the system starts scheduling the deferred task.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| work | workScheduler.WorkInfo | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| work | workScheduler.WorkInfo | Yes | Deferred task that starts. |
+
+**Examples**
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+import { WorkSchedulerExtensionAbility } from '@kit.BackgroundTasksKit';
+
+export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
+  onWorkStart(workInfo: workScheduler.WorkInfo) {
+      console.info(`MyWorkSchedulerExtensionAbility onWorkStart, workId: ${workInfo.workId},
+          bundleName: ${workInfo.bundleName}, abilityName: ${workInfo.abilityName}.`);
+  }
+}
+```
 
 ## onWorkStop
 
@@ -48,9 +62,23 @@ Called when the system stops scheduling the deferred task. This callback is trig
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| work | workScheduler.WorkInfo | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| work | workScheduler.WorkInfo | Yes | Deferred task that stops. |
+
+**Examples**
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+import { WorkSchedulerExtensionAbility } from '@kit.BackgroundTasksKit';
+
+export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
+  onWorkStop(workInfo: workScheduler.WorkInfo) {
+      console.info(`MyWorkSchedulerExtensionAbility onWorkStop, workId: ${workInfo.workId},
+          bundleName: ${workInfo.bundleName}, abilityName: ${workInfo.abilityName}.`);
+  }
+}
+```
 
 ## context
 

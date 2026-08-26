@@ -14,17 +14,16 @@ The **Base** module defines the public callback types of ArkTS APIs, including t
 ## Modules to Import
 
 ```TypeScript
-import { AsyncCallback, BusinessError, Callback, ErrorCallback } from 'kits/@kit.BasicServicesKit';
-import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from 'kits/@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AsyncCallback(Public Callback Information)](arkts-basicservices-base-asynccallback-i.md) |
-| [BusinessError(Public Callback Information)](arkts-basicservices-base-businesserror-i.md) |
-| [Callback(Public Callback Information)](arkts-basicservices-base-callback-i.md) |
-| [ErrorCallback(Public Callback Information)](arkts-basicservices-base-errorcallback-i.md) |
+| Name | Description |
+| --- | --- |
+| [AsyncCallback(Public Callback Information)](arkts-basicservices-base-asynccallback-i.md) | Defines a common callback that carries an error parameter and asynchronous return value. It is used to return error information or success data when an asynchronous operation is complete.The error parameter is of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type.The type of the asynchronous return value is defined by the developer. |
+| [BusinessError(Public Callback Information)](arkts-basicservices-base-businesserror-i.md) | Defines an error parameter. This API inherits from the **Error** class and is used to pass standard error information, including the error code and optional additional information. |
+| [Callback(Public Callback Information)](arkts-basicservices-base-callback-i.md) | Defines a common callback used to return the processing result when an asynchronous operation is successful. You need to define the callback type. |
+| [ErrorCallback(Public Callback Information)](arkts-basicservices-base-errorcallback-i.md) | Defines a common callback that carries an error parameter. It is used to return error information when an asynchronous operation fails. The specific error code is defined by each API. For details, please refer to the error code description of the corresponding API.The information returned by the callback is an error parameter of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type. |

@@ -16,6 +16,6 @@ Triggered when an error occurs during image loading.This event is not triggered 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| error | [ImageError](arkts-arkui-imageerror-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| error | [ImageError](arkts-arkui-imageerror-i.md) | Yes | Object returned by the callback triggered when an exception occurs during image loading. |

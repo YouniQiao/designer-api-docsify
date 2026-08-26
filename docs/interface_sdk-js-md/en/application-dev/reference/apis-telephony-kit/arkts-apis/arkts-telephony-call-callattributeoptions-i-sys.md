@@ -11,7 +11,6 @@ Defines the call attribute options.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## accountId

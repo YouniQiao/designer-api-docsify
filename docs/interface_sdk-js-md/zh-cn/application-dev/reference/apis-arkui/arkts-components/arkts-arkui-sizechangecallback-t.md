@@ -18,7 +18,7 @@ declare type SizeChangeCallback = (oldValue: SizeOptions, newValue: SizeOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| oldValue | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | 是 |
-| newValue | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| oldValue | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | 是 |  |
+| newValue | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | 是 |  |

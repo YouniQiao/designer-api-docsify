@@ -11,7 +11,7 @@ The ServiceExtensionAbility module provides extended capabilities for background
 ## Modules to Import
 
 ```TypeScript
-import { ServiceExtensionAbility } from 'kits/@kit.AbilityKit';
+import ServiceExtensionAbility from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate
@@ -32,9 +32,21 @@ Called when the configuration of this ServiceExtensionAbility is updated.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | New configuration. |
+
+**Examples**
+
+```TypeScript
+import { ServiceExtensionAbility, Configuration } from '@kit.AbilityKit';
+
+class ServiceExt extends ServiceExtensionAbility {
+  onConfigurationUpdate(newConfig: Configuration) {
+    console.info(`onConfigurationUpdate, config: ${JSON.stringify(newConfig)}`);
+  }
+}
+```
 
 ## onConnect
 
@@ -54,15 +66,62 @@ Called following **onCreate()** when a ServiceExtensionAbility is started by cal
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| rpc.RemoteObject \| Promise & lt;rpc.RemoteObject & gt; |
+| Type | Description |
+| --- | --- |
+| rpc.RemoteObject \| Promise & lt;rpc.RemoteObject & gt; | RemoteObject or Promise used to return a RemoteObject, which is used for communication between the client and server. |
+
+**Examples**
+
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+class StubTest extends rpc.RemoteObject{
+  constructor(des: string) {
+    super(des);
+  }
+  onConnect(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
+  }
+}
+class ServiceExt extends ServiceExtensionAbility {
+  onConnect(want: Want) {
+    console.info('onConnect , want: ${want.abilityName}');
+    return new StubTest('test');
+  }
+}
+```
+
+If the returned RemoteObject depends on an asynchronous API, you can use the asynchronous lifecycle.
+
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+class StubTest extends rpc.RemoteObject{
+  constructor(des: string) {
+    super(des);
+  }
+  onConnect(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
+  }
+}
+async function getDescriptor() {
+  // Call the asynchronous function.
+  return "asyncTest"
+}
+class ServiceExt extends ServiceExtensionAbility {
+  async onConnect(want: Want) {
+    console.info(`onConnect , want: ${want.abilityName}`);
+    let descriptor = await getDescriptor();
+    return new StubTest(descriptor);
+  }
+}
+```
 
 ## onCreate
 
@@ -82,9 +141,21 @@ Called to initialize the service logic when a ServiceExtensionAbility is being c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
+
+**Examples**
+
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+
+class ServiceExt extends ServiceExtensionAbility {
+  onCreate(want: Want) {
+    console.info(`onCreate, want: ${want.abilityName}`);
+  }
+}
+```
 
 ## onDestroy
 
@@ -101,6 +172,18 @@ Called to clear resources when this ServiceExtensionAbility is being destroyed.
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+import { ServiceExtensionAbility } from '@kit.AbilityKit';
+
+class ServiceExt extends ServiceExtensionAbility {
+  onDestroy() {
+    console.info('onDestroy');
+  }
+}
+```
 
 ## onDisconnect
 
@@ -120,9 +203,36 @@ Called when a client is disconnected from this ServiceExtensionAbility. This API
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
+
+**Examples**
+
+A synchronous callback example is as follows:
+
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+
+class ServiceExt extends ServiceExtensionAbility {
+  onDisconnect(want: Want) {
+    console.info(`onDisconnect, want: ${want.abilityName}`);
+  }
+}
+```
+
+A promise asynchronous callback example is as follows:
+
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+
+class ServiceExt extends ServiceExtensionAbility {
+  async onDisconnect(want: Want) {
+    console.info(`onDisconnect, want: ${want.abilityName}`);
+    // Call the asynchronous function.
+  }
+}
+```
 
 ## onDump
 
@@ -142,15 +252,28 @@ Dumps the client information.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| params | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| params | Array & lt;string & gt; | Yes | Parameters in the form of a command. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Array of client information. |
+
+**Examples**
+
+```TypeScript
+import { ServiceExtensionAbility } from '@kit.AbilityKit';
+
+class ServiceExt extends ServiceExtensionAbility {
+  onDump(params: Array<string>) {
+    console.info(`dump, params: ${JSON.stringify(params)}`);
+    return ['params'];
+  }
+}
+```
 
 ## onReconnect
 
@@ -170,9 +293,21 @@ Called when a new client attempts to connect to this ServiceExtensionAbility aft
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
+
+**Examples**
+
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+
+class ServiceExt extends ServiceExtensionAbility {
+  onReconnect(want: Want) {
+    console.info('onReconnect, want: ${want.abilityName}');
+  }
+}
+```
 
 ## onRequest
 
@@ -192,10 +327,22 @@ Called following **onCreate()** when a ServiceExtensionAbility is started by cal
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| startId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
+| startId | number | Yes | Number of times the instance has been started. The initial value is **1** for the first start, and it increments automatically for subsequent starts. |
+
+**Examples**
+
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+
+class ServiceExt extends ServiceExtensionAbility {
+  onRequest(want: Want, startId: number) {
+    console.info('onRequest, want: ${want.abilityName}');
+  }
+}
+```
 
 ## context
 

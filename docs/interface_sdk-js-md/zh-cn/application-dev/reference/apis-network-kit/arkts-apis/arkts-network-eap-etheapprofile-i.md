@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { eap } from 'kits/@kit.NetworkKit';
+import eap from '@kit.NetworkKit';
 ```
 
 ## altSubjectMatch

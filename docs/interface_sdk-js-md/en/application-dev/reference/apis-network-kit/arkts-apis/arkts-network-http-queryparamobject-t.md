@@ -6,7 +6,8 @@ export type QueryParamObject = Record<string, QueryParamValue | QueryParamValue[
 
 Defines the key-value object type used to construct URL query parameters.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > (1) The property name is used as the key of the **QueryParamObject** parameter. The corresponding property value
 > can be a single **QueryParamValue** or a **QueryParamValue** array.
 

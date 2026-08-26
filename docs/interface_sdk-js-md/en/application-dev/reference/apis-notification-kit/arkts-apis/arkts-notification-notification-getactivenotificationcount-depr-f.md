@@ -3,6 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## getActiveNotificationCount
@@ -23,9 +26,25 @@ Obtains the number of active notifications of this application. This API uses an
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let getActiveNotificationCountCallback = (err: Base.BusinessError, data: number) => {
+  if (err) {
+    console.error("getActiveNotificationCount failed " + JSON.stringify(err));
+  } else {
+    console.info("getActiveNotificationCount success");
+  }
+}
+
+Notification.getActiveNotificationCount(getActiveNotificationCountCallback);
+```
 
 
 ## getActiveNotificationCount
@@ -46,6 +65,18 @@ Obtains the number of active notifications of this application. This API uses a 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.getActiveNotificationCount().then((data: number) => {
+  console.info("getActiveNotificationCount success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`getActiveNotificationCount failed, code is ${err}`);
+});
+```

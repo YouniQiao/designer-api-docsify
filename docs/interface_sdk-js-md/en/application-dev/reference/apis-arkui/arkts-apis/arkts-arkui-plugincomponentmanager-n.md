@@ -9,50 +9,50 @@ Implements a plugin component manager.
 ## Modules to Import
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [push(PluginComponentManager)](arkts-arkui-plugincomponentmanager-push-f.md) |
-| [request(PluginComponentManager)](arkts-arkui-plugincomponentmanager-request-f.md) |
-| [on(PluginComponentManager)](arkts-arkui-plugincomponentmanager-on-f.md) |
+| Name | Description |
+| --- | --- |
+| [push(PluginComponentManager)](arkts-arkui-plugincomponentmanager-push-f.md) | Pushes the component and data to the component user. |
+| [request(PluginComponentManager)](arkts-arkui-plugincomponentmanager-request-f.md) | Requests the component from the component provider. |
+| [on(PluginComponentManager)](arkts-arkui-plugincomponentmanager-on-f.md) | Listens for events of the request type and returns the requested data, or listens for events of the push type and receives the data pushed by the provider. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [push(PluginComponentManager)](arkts-arkui-plugincomponentmanager-push-f-sys.md) |
-| [request(PluginComponentManager)](arkts-arkui-plugincomponentmanager-request-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [push(PluginComponentManager)](arkts-arkui-plugincomponentmanager-push-f-sys.md) | Plugin component push method used to send the information of the template it provides. |
+| [request(PluginComponentManager)](arkts-arkui-plugincomponentmanager-request-f-sys.md) | Plugin component request method used to send a request for the information of the template it wants. |
 <!--DelEnd-->
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PushParameters(PluginComponentManager)](arkts-arkui-plugincomponentmanager-pushparameters-i.md) |
-| [RequestParameters(PluginComponentManager)](arkts-arkui-plugincomponentmanager-requestparameters-i.md) |
-| [RequestCallbackParameters(PluginComponentManager)](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md) |
-| [RequestEventResult(PluginComponentManager)](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) |
+| Name | Description |
+| --- | --- |
+| [PushParameters(PluginComponentManager)](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | Defines the parameters required when using the **PluginManager.Push** API. |
+| [RequestParameters(PluginComponentManager)](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | Defines the parameters required when using the **PluginManager.Request** API. |
+| [RequestCallbackParameters(PluginComponentManager)](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md) | Provides the result returned after the **PluginManager.Request** API is called. |
+| [RequestEventResult(PluginComponentManager)](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | Provides the result returned after the request listener is registered and the requested event is received. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PushParameterForStage(PluginComponentManager)](arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) |
-| [RequestParameterForStage(PluginComponentManager)](arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [PushParameterForStage(PluginComponentManager)](arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) | Plugin component push parameters which is used in push function. |
+| [RequestParameterForStage(PluginComponentManager)](arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) | Plugin component request parameters which is used in request function. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [KVObject(PluginComponentManager)](arkts-arkui-plugincomponentmanager-kvobject-t.md) |
-| [OnPushEventCallback(PluginComponentManager)](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) |
-| [OnRequestEventCallback(PluginComponentManager)](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) |
+| Name | Description |
+| --- | --- |
+| [KVObject(PluginComponentManager)](arkts-arkui-plugincomponentmanager-kvobject-t.md) | Defines a key-value pair data structure that conforms to JSON format. |
+| [OnPushEventCallback(PluginComponentManager)](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) | Registers the listener for the push event. |
+| [OnRequestEventCallback(PluginComponentManager)](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | Registers the listener for the request event. |

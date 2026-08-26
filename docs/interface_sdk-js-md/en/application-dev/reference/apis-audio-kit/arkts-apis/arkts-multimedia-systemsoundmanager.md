@@ -9,86 +9,86 @@ This module provides basic capabilities for managing system sound effects, inclu
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
+import systemSoundManager from '@kit.AudioKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md) |
+| Name | Description |
+| --- | --- |
+| [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md) | Creates a SystemSoundPlayer instance. This function uses a promise to return the result. This player can be used to play some system sounds for media or camera actions. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md) |
-| [getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md) | Create customized tone attributes. |
+| [getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f-sys.md) | Gets system sound manager for all type sound. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md) |
-| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) |
-| [ToneHapticsAttrs](arkts-audio-systemsoundmanager-tonehapticsattrs-i-sys.md) |
-| [ToneHapticsSettings](arkts-audio-systemsoundmanager-tonehapticssettings-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md) | System sound manager object. |
+| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) | Tone attributes. |
+| [ToneHapticsAttrs](arkts-audio-systemsoundmanager-tonehapticsattrs-i-sys.md) | Haptics attributes in tone scenario. |
+| [ToneHapticsSettings](arkts-audio-systemsoundmanager-tonehapticssettings-i-sys.md) | Haptics settings in tone scenario. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SystemSoundType](arkts-audio-systemsoundmanager-systemsoundtype-e.md) |
+| Name | Description |
+| --- | --- |
+| [SystemSoundType](arkts-audio-systemsoundmanager-systemsoundtype-e.md) | Enumerates the system sound effect types. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MediaType](arkts-audio-systemsoundmanager-mediatype-e-sys.md) |
-| [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) |
-| [SystemSoundError](arkts-audio-systemsoundmanager-systemsounderror-e-sys.md) |
-| [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e-sys.md) |
-| [ToneCustomizedType](arkts-audio-systemsoundmanager-tonecustomizedtype-e-sys.md) |
-| [ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e-sys.md) |
-| [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e-sys.md) |
-| [ToneHapticsType](arkts-audio-systemsoundmanager-tonehapticstype-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [MediaType](arkts-audio-systemsoundmanager-mediatype-e-sys.md) | Enum for media type. |
+| [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | Enum for ringtone type. |
+| [SystemSoundError](arkts-audio-systemsoundmanager-systemsounderror-e-sys.md) | Error enum for system sound. |
+| [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e-sys.md) | Enum for system tone type. |
+| [ToneCustomizedType](arkts-audio-systemsoundmanager-tonecustomizedtype-e-sys.md) | Enum for tone customized type. |
+| [ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e-sys.md) | Definition of haptics feature in tone scenario. |
+| [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e-sys.md) | Enum for haptics mode in tone scenario. |
+| [ToneHapticsType](arkts-audio-systemsoundmanager-tonehapticstype-e-sys.md) | Enum for haptics in tone scenario. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SystemSoundPlayer](arkts-audio-systemsoundmanager-systemsoundplayer-t.md) |
+| Name | Description |
+| --- | --- |
+| [SystemSoundPlayer](arkts-audio-systemsoundmanager-systemsoundplayer-t.md) | Represents the system sound effect player object. |
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [RingtoneOptions](arkts-audio-systemsoundmanager-ringtoneoptions-t-sys.md) |
-| [RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md) |
-| [SystemToneOptions](arkts-audio-systemsoundmanager-systemtoneoptions-t-sys.md) |
-| [SystemTonePlayer](arkts-audio-systemsoundmanager-systemtoneplayer-t-sys.md) |
-| [ToneAttrsArray](arkts-audio-systemsoundmanager-toneattrsarray-t-sys.md) |
-| [ToneHapticsAttrsArray](arkts-audio-systemsoundmanager-tonehapticsattrsarray-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [RingtoneOptions](arkts-audio-systemsoundmanager-ringtoneoptions-t-sys.md) | Interface for ringtone options. |
+| [RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md) | Ringtone player object. |
+| [SystemToneOptions](arkts-audio-systemsoundmanager-systemtoneoptions-t-sys.md) | System tone options. |
+| [SystemTonePlayer](arkts-audio-systemsoundmanager-systemtoneplayer-t-sys.md) | SystemTone player object. |
+| [ToneAttrsArray](arkts-audio-systemsoundmanager-toneattrsarray-t-sys.md) | Array of tone attributes. |
+| [ToneHapticsAttrsArray](arkts-audio-systemsoundmanager-tonehapticsattrsarray-t-sys.md) | Type definition of tone haptics array. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Constants(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TONE_CATEGORY_ALARM](arkts-audio-systemsoundmanager-con-sys.md#tone_category_alarm) |
-| [TONE_CATEGORY_CONTACTS](arkts-audio-systemsoundmanager-con-sys.md#tone_category_contacts) |
-| [TONE_CATEGORY_NOTIFICATION](arkts-audio-systemsoundmanager-con-sys.md#tone_category_notification) |
-| [TONE_CATEGORY_NOTIFICATION_APP](arkts-audio-systemsoundmanager-con-sys.md#tone_category_notification_app) |
-| [TONE_CATEGORY_RINGTONE](arkts-audio-systemsoundmanager-con-sys.md#tone_category_ringtone) |
-| [TONE_CATEGORY_TEXT_MESSAGE](arkts-audio-systemsoundmanager-con-sys.md#tone_category_text_message) |
+| Name | Description |
+| --- | --- |
+| [TONE_CATEGORY_ALARM](arkts-audio-systemsoundmanager-con-sys.md#tone_category_alarm) | Define the alarm tone category. |
+| [TONE_CATEGORY_CONTACTS](arkts-audio-systemsoundmanager-con-sys.md#tone_category_contacts) | Define the contact tone category. |
+| [TONE_CATEGORY_NOTIFICATION](arkts-audio-systemsoundmanager-con-sys.md#tone_category_notification) | Define the notification tone category. |
+| [TONE_CATEGORY_NOTIFICATION_APP](arkts-audio-systemsoundmanager-con-sys.md#tone_category_notification_app) | Define the app notification tone category. |
+| [TONE_CATEGORY_RINGTONE](arkts-audio-systemsoundmanager-con-sys.md#tone_category_ringtone) | Define the ringtone category. |
+| [TONE_CATEGORY_TEXT_MESSAGE](arkts-audio-systemsoundmanager-con-sys.md#tone_category_text_message) | Define the text message tone category. |
 <!--DelEnd-->

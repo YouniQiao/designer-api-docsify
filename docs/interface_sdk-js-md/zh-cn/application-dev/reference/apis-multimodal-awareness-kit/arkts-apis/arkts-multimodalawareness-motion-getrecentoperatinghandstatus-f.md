@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { motion } from 'kits/@kit.MultimodalAwarenessKit';
+import motion from '@kit.MultimodalAwarenessKit';
 ```
 
 ## getRecentOperatingHandStatus
@@ -24,14 +24,28 @@ function getRecentOperatingHandStatus(): OperatingHandStatus
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md) | 返回触控操作手状态信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [31500001](../errorcode-motion.md#31500001-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to get the recent operating hand status forbidden by permission: ohos.permission.ACTIVITY_MOTION 或 ohos.permission.DETECT_GESTURE. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited device capabilities. |
+| [31500001](../errorcode-motion.md#31500001-服务异常) | Service exception. Possible causes: 1. A system error, such as null pointer, container-related exception;   2. N-API invocation exception, invalid N-API status. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let data:motion.OperatingHandStatus = motion.getRecentOperatingHandStatus();
+    console.info('get succeeded: ' + data);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`Failed to get recent operating hand status. Code: ${error.code}, message: ${error.message}`);
+}
+```

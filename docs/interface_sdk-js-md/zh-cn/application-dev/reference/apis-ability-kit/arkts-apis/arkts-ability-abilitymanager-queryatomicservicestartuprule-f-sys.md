@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityManager } from 'kits/@kit.AbilityKit';
+import abilityManager from '@kit.AbilityKit';
 ```
 
 ## queryAtomicServiceStartupRule
@@ -24,21 +24,45 @@ function queryAtomicServiceStartupRule(context: Context, appId: string): Promise
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | 是 |
-| appId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [Context](arkts-ability-context-c.md) | 是 | 嵌入式拉起EmbeddableUIAbility的调用方Context。   **说明：**目前仅支持 [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)。 |
+| appId | string | 是 | 应用的唯一标识，由云端统一分配。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[AtomicServiceStartupRule](arkts-ability-abilitymanager-atomicservicestartuprule-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AtomicServiceStartupRule](arkts-ability-abilitymanager-atomicservicestartuprule-i-sys.md)&gt; | Promise对象。返回嵌入式拉起原子化服务的规则。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+
+**示例**
+
+```TypeScript
+import { abilityManager, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    // 应用的唯一标识
+    let appId: string = '6918661953712445909';
+    try {
+      abilityManager.queryAtomicServiceStartupRule(this.context, appId).then((data: abilityManager.AtomicServiceStartupRule) => {
+        console.info(`queryAtomicServiceStartupRule data: ${JSON.stringify(data)}`);
+      }).catch((err: BusinessError) => {
+        console.error(`queryAtomicServiceStartupRule failed, code is ${err.code}, message is ${err.message}`);
+      });
+    } catch (err) {
+      // 处理入参错误异常
+      console.error(`param is invalid, code is ${err.code}, message is ${err.message}`);
+    }
+  }
+}
+```

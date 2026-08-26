@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceManager } from 'kits/@kit.DistributedServiceKit';
+import deviceManager from '@kit.DistributedServiceKit';
 ```
 
 ## createDeviceManager
@@ -26,14 +26,36 @@ function createDeviceManager(bundleName: string, callback: AsyncCallback<DeviceM
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceManager&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 指示应用程序的Bundle名称。长度范围1~255字符。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceManager&gt; | 是 | DeviceManager实例创建时调用的回调，返回设备管理器对象实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+import { BusinessError } from '@ohos.base';
+
+let dmInstance: deviceManager.DeviceManager | null = null;
+try {
+  deviceManager.createDeviceManager("ohos.samples.jshelloworld", (err: BusinessError, data: deviceManager.DeviceManager) => {
+    if (err) { 
+      console.error("createDeviceManager errCode:" + err.code + ",errMessage:" + err.message);
+      return;
+    }
+    console.info("createDeviceManager success");
+    dmInstance = data;
+  });
+} catch(err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("createDeviceManager errCode:" + e.code + ",errMessage:" + e.message);
+}
+```

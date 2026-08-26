@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { scan } from 'kits/@kit.ConnectivityKit';
+import scan from '@kit.ConnectivityKit';
 ```
 
 ## duration

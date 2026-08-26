@@ -14,7 +14,7 @@ export type NavDestinationBuilder = (name: string, param?: Object) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-| param | Object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | NavDestination页面名称。 |
+| param | Object | 否 | NavDestination页面详细参数。默认值为空。 |

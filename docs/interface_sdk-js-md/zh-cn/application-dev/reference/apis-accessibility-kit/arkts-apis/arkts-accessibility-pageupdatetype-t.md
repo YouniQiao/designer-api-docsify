@@ -10,7 +10,7 @@ type PageUpdateType = 'pageContentUpdate' | 'pageStateUpdate'
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-| 类型 |
-| --- |
-| 'pageContentUpdate' |
-| 'pageStateUpdate' |
+| 类型 | 说明 |
+| --- | --- |
+| 'pageContentUpdate' | 表示页面内容更新。 |
+| 'pageStateUpdate' | 表示页面状态更新。 |

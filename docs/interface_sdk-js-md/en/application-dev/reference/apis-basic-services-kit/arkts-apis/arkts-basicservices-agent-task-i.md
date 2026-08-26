@@ -2,7 +2,8 @@
 
 Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through [request.agent.create](arkts-basicservices-agent-create-f.md) or from a callback through [request.agent.create](arkts-basicservices-agent-create-f.md).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The **Task** object and its mounting callback function are released and automatically reclaimed by the system
 > after the **remove** method is called.
 
@@ -13,7 +14,8 @@ Implements an upload or download task. Before using this API, you must obtain a 
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import request from '@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
 ```
 
 ## off
@@ -24,7 +26,8 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task progress events.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -37,17 +40,17 @@ Unsubscribes from task progress events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'progress' | Yes |
-| callback | (progress: Progress) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'progress' | Yes | Event type.   - **'progress'**: task progress. |
+| callback | (progress: Progress) = & gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task progress events are unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 |
 
 ## off
 
@@ -57,7 +60,8 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task completion events.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -70,17 +74,17 @@ Unsubscribes from task completion events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'completed' | Yes |
-| callback | (progress: Progress) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'completed' | Yes | Event type.   - **'completed'**: task completion. |
+| callback | (progress: Progress) = & gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task completion events are unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 
 ## off
 
@@ -90,7 +94,8 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task failure events.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -103,17 +108,17 @@ Unsubscribes from task failure events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'failed' | Yes |
-| callback | (progress: Progress) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'failed' | Yes | Event type.   - **'failed'**: task failure. |
+| callback | (progress: Progress) = & gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task failure events are unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 
 ## off
 
@@ -123,7 +128,8 @@ off(event: 'pause', callback?: (progress: Progress) => void): void
 
 Unsubscribes from the foreground task pause event.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -134,16 +140,16 @@ Unsubscribes from the foreground task pause event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'pause' | Yes |
-| callback | (progress: Progress) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'pause' | Yes | Event type.   - **'pause'**: task pause. |
+| callback | (progress: Progress) = & gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task pause events are unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
 
 ## off
 
@@ -153,7 +159,8 @@ off(event: 'resume', callback?: (progress: Progress) => void): void
 
 Unsubscribes from foreground task resume events.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -164,16 +171,16 @@ Unsubscribes from foreground task resume events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'resume' | Yes |
-| callback | (progress: Progress) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'resume' | Yes | Event type.   - **'resume'**: task resume. |
+| callback | (progress: Progress) = & gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task resume events are unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
 
 ## off
 
@@ -183,7 +190,8 @@ off(event: 'remove', callback?: (progress: Progress) => void): void
 
 Unsubscribes from the task removal event.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -194,16 +202,16 @@ Unsubscribes from the task removal event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'remove' | Yes |
-| callback | (progress: Progress) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'remove' | Yes | Event type.   - **'remove'**: task removal. |
+| callback | (progress: Progress) = & gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task removal events are unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameter types.   3. Parameter verification failed. |
 
 ## off
 
@@ -213,7 +221,8 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 
 Unsubscribes from task response headers.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -226,16 +235,16 @@ Unsubscribes from task response headers.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'response' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'response' | Yes | Event type.   - **response**: task response. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
 
 ## off
 
@@ -245,7 +254,8 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 
 Unsubscribes from task failure events.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -256,16 +266,16 @@ Unsubscribes from task failure events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'faultOccur' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'faultOccur' | Yes | Event type.   - **'faultOccur'**: task failure. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
 
 ## off
 
@@ -275,7 +285,8 @@ off(event: 'wait', callback?: Callback<WaitingReason>): void
 
 Unsubscribes from task waiting events.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -286,16 +297,16 @@ Unsubscribes from task waiting events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'wait' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'wait' | Yes | Event type.   - 'wait': The task is waiting. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
 
 ## on
 
@@ -305,7 +316,8 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 
 Subscribes to task progress changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -318,17 +330,17 @@ Subscribes to task progress changes. This API uses an asynchronous callback to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'progress' | Yes |
-| callback | (progress: Progress) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'progress' | Yes | Event type.   - **'progress'**: task progress. |
+| callback | (progress: Progress) = & gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 |
 
 ## on
 
@@ -338,7 +350,8 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 
 Subscribes to task completion events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -351,17 +364,17 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'completed' | Yes |
-| callback | (progress: Progress) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'completed' | Yes | Event type.   - **'completed'**: task completion. |
+| callback | (progress: Progress) = & gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 |
 
 ## on
 
@@ -371,7 +384,8 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 
 Subscribes to task failure events. This API uses an asynchronous callback to return the result. You can call [request.agent.show](arkts-basicservices-agent-show-f.md) to view the error cause.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -384,17 +398,17 @@ Subscribes to task failure events. This API uses an asynchronous callback to ret
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'failed' | Yes |
-| callback | (progress: Progress) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'failed' | Yes | Event type.   - **'failed'**: task failure. |
+| callback | (progress: Progress) = & gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 
 ## on
 
@@ -404,7 +418,8 @@ on(event: 'pause', callback: (progress: Progress) => void): void
 
 Subscribes to task pause events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -415,16 +430,16 @@ Subscribes to task pause events. This API uses an asynchronous callback to retur
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'pause' | Yes |
-| callback | (progress: Progress) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'pause' | Yes | Event type.   - **'pause'**: task pause. |
+| callback | (progress: Progress) = & gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
 
 ## on
 
@@ -434,7 +449,8 @@ on(event: 'resume', callback: (progress: Progress) => void): void
 
 Subscribes to task resume events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -445,16 +461,16 @@ Subscribes to task resume events. This API uses an asynchronous callback to retu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'resume' | Yes |
-| callback | (progress: Progress) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'resume' | Yes | Event type.   - **'resume'**: task resume. |
+| callback | (progress: Progress) = & gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
 
 ## on
 
@@ -464,7 +480,8 @@ on(event: 'remove', callback: (progress: Progress) => void): void
 
 Subscribes to task removal events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -475,16 +492,16 @@ Subscribes to task removal events. This API uses an asynchronous callback to ret
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'remove' | Yes |
-| callback | (progress: Progress) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'remove' | Yes | Event type.   - **'remove'**: task removal. |
+| callback | (progress: Progress) = & gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
 
 ## on
 
@@ -494,7 +511,8 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 
 Subscribes to task response headers. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -507,16 +525,16 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'response' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'response' | Yes | Event type.   - **'response'**: task response. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the data structure of the task response header. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
 
 ## on
 
@@ -526,7 +544,8 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 
 Subscribes to task failure events. This API uses a callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -537,16 +556,16 @@ Subscribes to task failure events. This API uses a callback to return the result
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'faultOccur' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'faultOccur' | Yes | Event type.   - **'faultOccur'**: task failure. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | Callback used to return the failure cause of the task. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
 
 ## on
 
@@ -556,7 +575,8 @@ on(event: 'wait', callback: Callback<WaitingReason>): void
 
 Subscribes to task wait events. This API uses a callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -567,16 +587,16 @@ Subscribes to task wait events. This API uses a callback to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'wait' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'wait' | Yes | Event type.   - 'wait': The task is waiting. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | Callback used to return the waiting reason of the task. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
 
 ## pause
 
@@ -592,17 +612,76 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+```TypeScript
+downloadTask.pause((err: BusinessError) => {
+  if(err) {
+    console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in pausing the download task.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskPauseTest',
+  description: 'Sample code for pause the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.pause((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in pausing a download task. `);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## pause
 
@@ -618,17 +697,72 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+```TypeScript
+downloadTask.pause().then(() => {    
+  console.info('Succeeded in pausing the download task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskPauseTest',
+  description: 'Sample code for pause the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.pause().then(() => {
+    console.info(`Succeeded in pausing a download task. `);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## resume
 
@@ -646,18 +780,82 @@ Resumes a paused task. This API uses an asynchronous callback to return the resu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+```TypeScript
+downloadTask.resume((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in resuming the download task.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskResumeTest',
+  description: 'Sample code for resume the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.pause();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.resume((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in resuming a download task. `);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## resume
 
@@ -675,18 +873,78 @@ Resumes a paused task. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+```TypeScript
+downloadTask.resume().then(() => {
+  console.info('Succeeded in resuming the download task.')
+}).catch((err: BusinessError) => {
+  console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskResumeTest',
+  description: 'Sample code for resume the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.pause();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.resume().then(() => {
+    console.info(`Succeeded in resuming a download task. `);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## setMaxSpeed
 
@@ -702,22 +960,47 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| speed | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| speed | number | Yes | Maximum number of bytes that can be transmitted by a task per second, with a minimum of 16384 bytes. The value cannot be less than the minimum speed value specified by [MinSpeed](arkts-basicservices-agent-minspeed-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  saveas: "./",
+};
+request.agent.create(context, config).then((task: request.agent.Task) => {
+  // Set the maximum transmission speed.
+  task.setMaxSpeed(10 * 1024 * 1024).then(() => {
+    console.info(`Succeeded in setting the max speed of the task. result: ${task.tid}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set the max speed of the task. result: ${task.tid}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## start
 
@@ -729,7 +1012,8 @@ Starts a task. This API uses an asynchronous callback to return the result.Tasks
 1. Task created by **request.agent.create**.
 2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -744,17 +1028,61 @@ Starts a task. This API uses an asynchronous callback to return the result.Tasks
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskStartTest',
+  description: 'Sample code for start the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then((task: request.agent.Task) => {
+  task.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in starting a download task.`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## start
 
@@ -766,7 +1094,8 @@ Starts a task. This API uses a promise to return the result.Tasks in the followi
 1. Task created by **request.agent.create**.
 2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -781,17 +1110,59 @@ Starts a task. This API uses a promise to return the result.Tasks in the followi
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskStartTest',
+  description: 'Sample code for start the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then((task: request.agent.Task) => {
+  task.start().then(() => {
+    console.info(`Succeeded in starting a download task.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to start the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## stop
 
@@ -809,16 +1180,65 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskStopTest',
+  description: 'Sample code for stop the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in stopping a download task. `);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## stop
 
@@ -836,16 +1256,63 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskStopTest',
+  description: 'Sample code for stop the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.stop().then(() => {
+    console.info(`Succeeded in stopping a download task. `);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to stop the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## config
 

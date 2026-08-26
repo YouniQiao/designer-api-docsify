@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cliManager } from 'kits/@kit.AbilityKit';
+import cliManager from '@kit.AbilityKit';
 ```
 
 ## background

@@ -11,7 +11,7 @@ System material options.
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import uiMaterial from '@kit.ArkUI';
 ```
 
 ## type

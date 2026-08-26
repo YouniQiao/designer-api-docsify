@@ -16,6 +16,6 @@ declare type OnRadioChangeCallback = (isChecked: boolean) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isChecked | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isChecked | boolean | 是 |  |

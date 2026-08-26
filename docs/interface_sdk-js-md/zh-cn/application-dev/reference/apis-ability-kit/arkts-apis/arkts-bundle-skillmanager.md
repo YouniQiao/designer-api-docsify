@@ -11,30 +11,30 @@
 ## 导入模块
 
 ```TypeScript
-import { skillManager } from 'kits/@kit.AbilityKit';
+import skillManager from '@kit.AbilityKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [getAllSkillInfos](arkts-ability-skillmanager-getallskillinfos-f.md) |
-| [getSkillInfo](arkts-ability-skillmanager-getskillinfo-f.md) |
-| [getSkillInfoForSelf](arkts-ability-skillmanager-getskillinfoforself-f.md) |
-| [getSkillInfos](arkts-ability-skillmanager-getskillinfos-f.md) |
-| [getSkillInfosForSelf](arkts-ability-skillmanager-getskillinfosforself-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getAllSkillInfos](arkts-ability-skillmanager-getallskillinfos-f.md) | 获取设备上安装应用的所有技能信息。使用Promise异步回调。 |
+| [getSkillInfo](arkts-ability-skillmanager-getskillinfo-f.md) | 获取指定应用中指定模块下指定名称的技能信息。使用Promise异步回调。 |
+| [getSkillInfoForSelf](arkts-ability-skillmanager-getskillinfoforself-f.md) | 获取本应用中指定模块下指定名称的技能信息。使用Promise异步回调。 |
+| [getSkillInfos](arkts-ability-skillmanager-getskillinfos-f.md) | 获取指定应用的所有技能信息。使用Promise异步回调。 |
+| [getSkillInfosForSelf](arkts-ability-skillmanager-getskillinfosforself-f.md) | 获取本应用的所有技能信息。使用Promise异步回调。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) | 技能信息标志，指示需要获取的技能信息的内容。@enum { number } |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [SkillInfo](arkts-ability-skillmanager-skillinfo-t.md) |
-| [SkillType](arkts-ability-skillmanager-skilltype-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [SkillInfo](arkts-ability-skillmanager-skillinfo-t.md) | 技能配置信息，用于定义AI代理的技能能力。 |
+| [SkillType](arkts-ability-skillmanager-skilltype-t.md) | 技能类型的枚举。 |

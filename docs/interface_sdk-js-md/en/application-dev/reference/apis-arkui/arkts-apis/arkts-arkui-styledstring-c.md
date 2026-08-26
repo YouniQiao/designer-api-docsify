@@ -29,10 +29,10 @@ A constructor used to create a styled string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string \| [ImageAttachment](arkts-arkui-imageattachment-c.md) \| [CustomSpan](arkts-arkui-customspan-c.md) | Yes |
-| styles | Array&lt;[StyleOptions](arkts-arkui-styleoptions-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string \| [ImageAttachment](arkts-arkui-imageattachment-c.md) \| [CustomSpan](arkts-arkui-customspan-c.md) | Yes | Text of the styled string.   **NOTE：**If this parameter is of the ImageAttachment or CustomSpan type, the **styles** parameter has no effect.To set **styles**, use methods such as [setStyle](arkts-arkui-mutablestyledstring-c.md#setstyle). |
+| styles | Array&lt;[StyleOptions](arkts-arkui-styleoptions-i.md)&gt; | No | Initialization options of the styled string.   **NOTE：**If **start** is set to an invalid value, it uses the default value **0**.If the **length** value is invalid, **length** will default to the actual length of the styled string starting from the start position.If **StyledStringKey** does not match **StyledStringValue**, **styles** has no effect. |
 
 ## equals
 
@@ -52,15 +52,15 @@ Checks whether this styled string the same as another styled string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | StyledString** object to compare. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether two styled strings are equal. |
 
 ## fromHtml
 
@@ -69,7 +69,7 @@ static fromHtml(html: string): Promise<StyledString>
 ```
 
 Converts an HTML string into a styled string. Currently, the following HTML tags are supported for conversion: \<p>, \&lt;span&gt;, \&lt;img&gt;, \, \&lt;strong&gt;, \&lt;b&gt;, \&lt;a&gt;, \&lt;i&gt;, \&lt;em&gt;, \&lt;s&gt;, \&lt;u&gt;, \&lt;del&gt;, \&lt;sup&gt;, \&lt;sub&gt;. The **style** attribute within tags can be converted to the corresponding style in the styled string.For details about how to use this API, see [Example 12: Implementing Conversion Using fromHtml and toHtml] (../../../reference/apis-arkui/arkui-ts/ ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml).  
-| Tag Name| Description | | ------------- | ---------------------------- | | \ & lt;p\ & gt; | Paragraph tag, which separates text into paragraphs. | | \ & lt;span\ & gt; | Inline text supporting style configuration. | | \ & lt;img\ & gt; | Image tag, used to insert an image. | | \ & lt;strong\ & gt; | Bold text tag. | |  & lt;br & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Line break tag. | | \ & lt;b\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Bold text tag. | | \ & lt;a\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Hyperlink tag. | | \ & lt;i\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Italic text tag. | | \ & lt;em\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Italic text tag. | | \ & lt;s\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Strikethrough tag, which adds a line through the text. | | \ & lt;u\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Underline tag, which adds a decorative underline to the text. | | \ & lt;del\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Strikethrough tag, which adds a line through the text. | | \ & lt;sup\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Superscript tag. | | \ & lt;sub\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; |
+| Tag Name| Description | | ------------- | ---------------------------- | | \&lt;p\&gt; | Paragraph tag, which separates text into paragraphs. | | \&lt;span\&gt; | Inline text supporting style configuration. | | \&lt;img\&gt; | Image tag, used to insert an image. | | \&lt;strong\&gt; | Bold text tag. | | <br>&lt;sup&gt;20+&lt;/sup&gt; | Line break tag. | | \&lt;b\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Bold text tag. | | \&lt;a\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Hyperlink tag. | | \&lt;i\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Italic text tag. | | \&lt;em\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Italic text tag. | | \&lt;s\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Strikethrough tag, which adds a line through the text. | | \&lt;u\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Underline tag, which adds a decorative underline to the text. | | \&lt;del\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Strikethrough tag, which adds a line through the text. | | \&lt;sup\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Superscript tag. | | \&lt;sub\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Subscript tag. |
 
 **Since:** 12
 
@@ -81,22 +81,22 @@ Converts an HTML string into a styled string. Currently, the following HTML tags
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| html | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| html | string | Yes | HTML-formatted string. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Styled string. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [170001](../errorcode-styled-string.md#170001-conversion-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [170001](../errorcode-styled-string.md#170001-conversion-error) | Convert Error. |
 
 ## getString
 
@@ -116,9 +116,9 @@ Obtains the text of this styled string.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Text of the styled string. |
 
 ## getStyles
 
@@ -138,23 +138,23 @@ Obtains the styles in the specified range of a styled string. The specified rang
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| [length](#length) | number | Yes |
-| styledKey | [StyledStringKey](arkts-arkui-styledstringkey-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Subscript that corresponds to the target range in the styled string. |
+| length | number | Yes | Length of the target range in the styled string. |
+| styledKey | [StyledStringKey](arkts-arkui-styledstringkey-e.md) | No | Style key of the styled string. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[SpanStyle](arkts-arkui-spanstyle-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[SpanStyle](arkts-arkui-spanstyle-i.md)&gt; | Array of styles. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## subStyledString
 
@@ -174,22 +174,22 @@ Obtains a substring of this styled string. The specified range must not exceed t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| [length](#length) | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Subscript that corresponds to the start position of the styled substring. |
+| length | number | No | Length of the styled substring. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [StyledString](arkts-arkui-styledstring-c.md) |
+| Type | Description |
+| --- | --- |
+| [StyledString](arkts-arkui-styledstring-c.md) | Styled substring. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## toHtml
 
@@ -209,21 +209,21 @@ Converts a styled string into an HTML-formatted string. The supported styled str
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | Styled string. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | HTML string. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## length
 

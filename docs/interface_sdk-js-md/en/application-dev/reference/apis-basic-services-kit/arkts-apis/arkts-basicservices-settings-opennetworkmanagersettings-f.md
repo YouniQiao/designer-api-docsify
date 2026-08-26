@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import settings from '@kit.BasicServicesKit';
+import settingsLite from '@kit.BasicServicesKitLite';
 ```
 
 ## openNetworkManagerSettings
@@ -20,19 +21,33 @@ Open the network manager settings page.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and UIExtensionContext are supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | The promise returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [14800000](../errorcode-settings.md#14800000-parameter-check-failed) |
-| [14800010](../errorcode-settings.md#14800010-uiability-required) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [14800000](../errorcode-settings.md#14800000-parameter-check-failed) | Parameter error. |
+| [14800010](../errorcode-settings.md#14800010-uiability-required) | Original service error. @atomicservice |
+
+**Examples**
+
+```TypeScript
+import { settings } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Redirect to the network manager settings page.
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+settings.openNetworkManagerSettings(context).then((status) => {
+  console.info(`callback:return whether settings is open.`);
+});
+```

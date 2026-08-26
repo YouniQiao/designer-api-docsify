@@ -3,7 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## getDeviceConfigs
@@ -28,6 +31,19 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;WifiDeviceConfig & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;WifiDeviceConfig & gt; | 网络配置信息的数组。 |
+
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    let configs = wifi.getDeviceConfigs();
+    console.info("configs:" + JSON.stringify(configs));
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```

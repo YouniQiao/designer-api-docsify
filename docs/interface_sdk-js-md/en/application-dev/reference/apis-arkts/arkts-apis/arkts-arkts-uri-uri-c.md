@@ -9,7 +9,6 @@ URI Represents a Uniform Resource Identifier (URI) reference.
 ## Modules to Import
 
 ```TypeScript
-import { uri } from 'kits/@kit.ArkTS';
 ```
 
 ## addEncodedSegment
@@ -28,15 +27,23 @@ Appends an encoded field to the path component of this URI to create a new URI a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pathSegment | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pathSegment | string | Yes | Encoding path segment to be added. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| Type | Description |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | After adding, return the URI object. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("http://www.test.com");
+const newRoute = uriInstance.addEncodedSegment("my%20image.jpg");
+console.info(newRoute.toString()); // http://www.test.com/my%20image.jpg
+```
 
 ## addQueryValue
 
@@ -54,16 +61,24 @@ Adds a query parameter to this URI to create a new URI, while keeping the existi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the query parameter. |
+| value | string | Yes | Value of the query parameter. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| Type | Description |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | Return URI object. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("https://www.test.com");
+const newRoute = uriInstance.addQueryValue("param1", "hello world");
+console.info(newRoute.toString()); // https://www.test.com?param1=hello%20world
+```
 
 ## addSegment
 
@@ -81,15 +96,23 @@ Encodes a given field, appends it to the path component of this URI to create a 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pathSegment | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pathSegment | string | Yes | path segment to be added. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| Type | Description |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | After adding, return the URI object. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("http://www.test.com");
+const newRoute = uriInstance.addSegment("my image.jpg");
+console.info(newRoute.toString()); // http://www.test.com/my%20image.jpg
+```
 
 ## checkHierarchical
 
@@ -107,9 +130,18 @@ Checks whether this URI is a hierarchical URI. The URI that starts with a slash 
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Return true as Hierarchical, otherwise return false. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("http://www.test.com/images/pic.jpg");
+console.info(`${uriInstance.checkHierarchical()}`); // true
+const uriInstance1 = new uri.URI("mailto:user@example.com");
+console.info(`${uriInstance1.checkHierarchical()}`); // false
+```
 
 ## checkIsAbsolute
 
@@ -127,9 +159,18 @@ Checks whether this URI is an absolute URI (whether the scheme component is defi
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | boolean Indicates whether the URI is an absolute URI (whether the scheme component is defined). |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI('https://username:password@www.qwer.com:8080?query=pppppp');
+console.info(`${uriInstance.checkIsAbsolute()}`); // true
+const uriInstance1 = new uri.URI('xxx.com/suppliers.htm');
+console.info(`${uriInstance1.checkIsAbsolute()}`); // false
+```
 
 ## checkOpaque
 
@@ -147,9 +188,18 @@ Checks whether this URI is an opaque URI. The URI that does not start with a sla
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Return true as Opaque, otherwise return false. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("http://www.test.com/images/pic.jpg");
+console.info(`${uriInstance.checkOpaque()}`); // false
+const uriInstance1 = new uri.URI("mailto:user@example.com");
+console.info(`${uriInstance1.checkOpaque()}`); // true
+```
 
 ## checkRelative
 
@@ -167,9 +217,18 @@ Determine whether URI is Relative.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Return true as Relative, otherwise return false. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("https://username:password@www.qwer.com:8080?query=p");
+console.info(`${uriInstance.checkRelative()}`); // false
+const uriInstance1 = new uri.URI("/images/pic.jpg");
+console.info(`${uriInstance1.checkRelative()}`); // true
+```
 
 ## clearQuery
 
@@ -187,9 +246,16 @@ Clears the query component of this URI to create a new URI, while keeping the ex
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| Type | Description |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | After clearing, return the URI object. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("https://www.test.com?param1=value1");
+console.info(uriInstance.clearQuery().toString()); // https://www.test.com
+```
 
 ## constructor
 
@@ -207,15 +273,26 @@ A constructor used to create a URI instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [uri](arkts-uri.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | Input object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid uri string. |
+
+**Examples**
+
+```TypeScript
+let mm = 'https://username:password@host:8080/directory/file?foo=1&bar=2#fragment';
+new uri.URI(mm);
+```
+
+```TypeScript
+new uri.URI('https://username:password@host:8080');
+```
 
 ## createFromParts
 
@@ -233,17 +310,24 @@ Creates a URI based on the provided scheme, scheme-specific-part, and fragment c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [scheme](#scheme) | string | Yes |
-| [ssp](arkts-arkts-uri-uri-c.md) | string | Yes |
-| [fragment](arkts-arkts-uri-uri-c.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scheme | string | Yes | of the URI. |
+| ssp | string | Yes | scheme-specific-part, everything between the scheme separator (':') and the fragment separator ('#'), which will get encoded. |
+| fragment | string | Yes | fragment, everything after the '#', null if undefined, will get encoded. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| Type | Description |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | Return Uri consisting of a given scheme, SSP, and fragment. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = uri.URI.createFromParts("mailto", "no body", "top");
+console.info(uriInstance.toString()); // mailto:no%20body#top
+```
 
 ## equals
 
@@ -263,15 +347,23 @@ Check whether this URI is equivalent to other URI objects.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| other | [URI](arkts-arkts-uri-uri-c.md) | Yes | other other URI object to be compared |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | boolean Tests whether this URI is equivalent to other URI objects. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+const uriInstance1 = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+uriInstance.equals(uriInstance1); // true
+```
 
 ## equalsTo
 
@@ -289,15 +381,23 @@ Checks whether this URI is the same as another URI object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| other | [URI](arkts-arkts-uri-uri-c.md) | Yes | URI object to compare. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | boolean Tests whether this URI is equivalent to other URI objects. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+const uriInstance1 = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+let result = uriInstance.equalsTo(uriInstance1); // true
+```
 
 ## getBooleanQueryValue
 
@@ -315,16 +415,31 @@ Obtains the value of the Boolean type of a query parameter in this URI.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| defaultValue | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Indicates the key value to be queried. |
+| defaultValue | boolean | Yes | The default value returned when the key has no query parameters. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Query returns defaultValue if the key does not exist. Query returns false if the value of the key is "false" or "0", otherwise returns true. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("https://www.test.com/search?active=true");
+console.info(`${uriInstance.getBooleanQueryValue("active", false)}`); // true
+const uriInstance1 = new uri.URI("https://www.test.com/search");
+console.info(`${uriInstance1.getBooleanQueryValue("active", false)}`); // false
+const uriInstance2 = new uri.URI("https://www.test.com/search?active=aa&active=false");
+console.info(`${uriInstance2.getBooleanQueryValue("active", false)}`); // true
+const uriInstance3 = new uri.URI("https://www.test.com/search?active=0");
+console.info(`${uriInstance3.getBooleanQueryValue("active", true)}`); // false
+const uriInstance4 = new uri.URI("https://www.test.com/search");
+console.info(`${uriInstance4.getBooleanQueryValue("active", true)}`); // true
+```
 
 ## getLastSegment
 
@@ -342,9 +457,16 @@ Obtains the last segment of this URI.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Returns the last decoded segment, or null if the path is empty. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("content://com.test.provider/files/image.jpg");
+console.info(uriInstance.getLastSegment()); // image.jpg
+```
 
 ## getQueryNames
 
@@ -362,9 +484,17 @@ Obtains all non-repeated keys in the query component of this URI.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string[] |
+| Type | Description |
+| --- | --- |
+| string[] | Return a set of decoded names. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("https://www.test.com?param1=value1&param2=value2");
+const paramNames = uriInstance.getQueryNames();
+console.info(paramNames.toString()); // param1,param2
+```
 
 ## getQueryValue
 
@@ -382,15 +512,25 @@ Obtains the first value of a given key from the query component of this URI. If 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the query parameter. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Return decoded value. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("https://www.com?param1=value1&param2=value2");
+console.info(uriInstance.getQueryValue("param1")); // value1
+let uriInstance1 = new uri.URI('https://www.zyy.ss?sa%3D=po%7E');
+console.info(uriInstance1.getQueryValue('sa=')) // po~
+console.info(uriInstance1.getQueryValue('abc')) // null
+```
 
 ## getQueryValues
 
@@ -408,15 +548,23 @@ Obtains the values of a given key from the query component of this URI.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the URI query parameter. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string[] |
+| Type | Description |
+| --- | --- |
+| string[] | Return a set of decoded values. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("https://www.test.com/search?query=name&query=my");
+console.info(uriInstance.getQueryValues("query").toString()); // name,my
+console.info(JSON.stringify(uriInstance.getQueryValues("abc"))); // []
+```
 
 ## getSegment
 
@@ -434,9 +582,16 @@ Gets the decoded path segments.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string[] |
+| Type | Description |
+| --- | --- |
+| string[] | Return decoded path segments, each without a leading or trailing "/". |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI("http://www.test.com/path/to/image.jpg");
+console.info(uriInstance.getSegment().toString()); // path,to,image.jpg
+```
 
 ## normalize
 
@@ -454,9 +609,24 @@ Normalizes the path of this URI.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| Type | Description |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | URI Used to normalize the path of this URI and return a URI object whose path has been normalized. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI('https://username:password@www.qwer.com:8080/path/path1/../path2/./path3?query=pppppp');
+console.info(uriInstance.path); // /path/path1/../path2/./path3
+// Following path normalization, all . (dot) segments are removed. If a .. (double-dot) segment is immediately preceded by a segment that is not .., both segments are removed.
+let uriInstance1 = uriInstance.normalize();
+console.info(uriInstance1.path); // /path/path2/path3
+let uri1 = new uri.URI('http://www.test.com/../../patch/path1/../path2/path3/./path4/../');
+console.info(uri1.path); // /../../patch/path1/../path2/path3/./path4/../
+// If normalization result in a path starting with a .. (double-dot) segment, it indicates that there were insufficient preceding non-.. segments for removal. As a result, the path will start with a .. segment.
+let uri2 = uri1.normalize();
+console.info(uri2.path); // /../../patch/path2/path3
+```
 
 ## toString
 
@@ -474,9 +644,16 @@ Converts this URI into an encoded string.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | URI in a serialized string. |
+
+**Examples**
+
+```TypeScript
+const result = new uri.URI('https://username:password@host:8080/directory/file?ab=pppppp#qwer da');
+let result1 = result.toString(); // https://username:password@host:8080/directory/file?ab=pppppp#qwer%20da
+```
 
 ## authority
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mdns } from 'kits/@kit.NetworkKit';
+import mdns from '@kit.NetworkKit';
 ```
 
 ## createDiscoveryService
@@ -22,19 +22,35 @@ function createDiscoveryService(context: Context, serviceType: string): Discover
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 |
-| serviceType | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用的上下文。 FA模型的应用Context定义见Context。 Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
+| serviceType | string | 是 | 需要发现的MDNS服务类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DiscoveryService](arkts-network-mdns-discoveryservice-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DiscoveryService](arkts-network-mdns-discoveryservice-i.md) | 基于指定服务类型（serviceType）和Context的发现服务对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+
+**示例**
+
+Stage模型示例：
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 获取context。
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+let serviceType = "_print._tcp";
+let discoveryService : Object = mdns.createDiscoveryService(context, serviceType);
+```

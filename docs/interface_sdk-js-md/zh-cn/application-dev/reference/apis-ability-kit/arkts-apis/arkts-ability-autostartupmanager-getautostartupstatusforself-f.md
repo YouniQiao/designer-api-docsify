@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { autoStartupManager } from 'kits/@kit.AbilityKit';
+import autoStartupManager from '@kit.AbilityKit';
 ```
 
 ## getAutoStartupStatusForSelf
@@ -22,13 +22,37 @@ function getAutoStartupStatusForSelf(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示当前应用已被用户设置为开机自启动，false表示当前应用未被用户设置为开机自启动。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
+
+**示例**
+
+```TypeScript
+import { autoStartupManager, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    try {
+      // 获取当前应用的开机自启动状态
+      autoStartupManager.getAutoStartupStatusForSelf().then((isAutoStartup: boolean) => {
+        console.info(`getAutoStartupStatusForSelf success, isAutoStartup: ${JSON.stringify(isAutoStartup)}.`);
+      }).catch((err: BusinessError) => {
+        console.error(`getAutoStartupStatusForSelf failed, err code: ${err.code}, err msg: ${err.message}.`);
+      });
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let msg = (err as BusinessError).message;
+      console.error(`getAutoStartupStatusForSelf failed, err code: ${code}, err msg: ${msg}.`);
+    }
+  }
+}
+```

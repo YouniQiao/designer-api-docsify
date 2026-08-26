@@ -2,7 +2,8 @@
 
 音频监听事件传入的参数。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 7开始支持，从API version 9开始废弃，无替代接口。
 
 **起始版本：** 7
@@ -16,7 +17,8 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## contentType

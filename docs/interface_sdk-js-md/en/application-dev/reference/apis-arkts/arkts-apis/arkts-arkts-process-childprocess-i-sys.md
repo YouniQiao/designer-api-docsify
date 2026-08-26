@@ -11,7 +11,7 @@ The childprocess object can be used to create a new process.
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## close
@@ -44,9 +44,9 @@ Return it as 'Uint8Array of the stderr until EOF
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Uint8Array & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Uint8Array & gt; | Return subprocess standard error output. |
 
 ## getOutput
 
@@ -64,9 +64,9 @@ Return it as 'Uint8Array' of the stdout until EOF
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Uint8Array & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Uint8Array & gt; | Return subprocess standard output. |
 
 ## kill
 
@@ -84,9 +84,22 @@ Send a signal to process
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [signal](arkts-arkts-locks-asynclockoptions-c.md) | number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| signal | number \| string | Yes | Number or string represents the signal sent. |
+
+**Examples**
+
+```TypeScript
+let pres = process.pid;
+let result = process.kill(28, pres);
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+let pres = process.pid;
+let result = pro.kill(28, pres);
+```
 
 ## wait
 
@@ -104,9 +117,9 @@ Return 'number' is the target process exit code
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Return the target process exit code. |
 
 ## exitCode
 

@@ -11,7 +11,7 @@ Describes the configurations for setting disposed rules in batches.
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from 'kits/@kit.AbilityKit';
+import appControl from '@kit.AbilityKit';
 ```
 
 ## appId

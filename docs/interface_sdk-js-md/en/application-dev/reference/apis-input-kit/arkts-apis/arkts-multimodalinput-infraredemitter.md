@@ -9,21 +9,20 @@ The **infraredEmitter** module generates IR signals of the specified frequency a
 ## Modules to Import
 
 ```TypeScript
-import { infraredEmitter } from 'kits/@kit.InputKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getInfraredFrequencies(IR Management)](arkts-input-infraredemitter-getinfraredfrequencies-f.md) |
-| [hasIrEmitter(IR Management)](arkts-input-infraredemitter-hasiremitter-f.md) |
-| [transmitInfrared(IR Management)](arkts-input-infraredemitter-transmitinfrared-f.md) |
+| Name | Description |
+| --- | --- |
+| [getInfraredFrequencies(IR Management)](arkts-input-infraredemitter-getinfraredfrequencies-f.md) | Queries the frequency range of IR signals supported by the device. |
+| [hasIrEmitter(IR Management)](arkts-input-infraredemitter-hasiremitter-f.md) | Checks whether the device has an infrared transmitter. This API uses a promise to return the result. |
+| [transmitInfrared(IR Management)](arkts-input-infraredemitter-transmitinfrared-f.md) | Generates IR signals at the specified frequency and level. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [InfraredFrequency(IR Management)](arkts-input-infraredemitter-infraredfrequency-i.md) |
+| Name | Description |
+| --- | --- |
+| [InfraredFrequency(IR Management)](arkts-input-infraredemitter-infraredfrequency-i.md) | Defines the frequency range of IR signals. |

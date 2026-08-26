@@ -13,7 +13,7 @@ The module provides the capability to manage and invoke functions in the system.
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from 'kits/@kit.AbilityKit';
+import functionManager from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -21,17 +21,17 @@ import { functionManager } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [invokeFunction](arkts-ability-functionmanager-invokefunction-f-sys.md) |
-| [queryFunctions](arkts-ability-functionmanager-queryfunctions-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [invokeFunction](arkts-ability-functionmanager-invokefunction-f-sys.md) | Invoke a function by functionNamespace and functionName. |
+| [queryFunctions](arkts-ability-functionmanager-queryfunctions-f-sys.md) | Query all available functions. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) |
-| [InvokeResult](arkts-ability-functionmanager-invokeresult-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) | Invoke options for function execution. |
+| [InvokeResult](arkts-ability-functionmanager-invokeresult-i-sys.md) | Encapsulates the success or failure status of function invocation. |
 <!--DelEnd-->

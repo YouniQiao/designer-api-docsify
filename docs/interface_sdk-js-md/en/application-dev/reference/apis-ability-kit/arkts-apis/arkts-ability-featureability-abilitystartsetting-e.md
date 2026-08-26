@@ -47,3 +47,11 @@ Display device ID.
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
+
+**Examples**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+featureAbility.AbilityStartSetting.BOUNDS_KEY
+```

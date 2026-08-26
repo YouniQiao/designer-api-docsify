@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityInfos
@@ -15,7 +15,8 @@ function getLauncherAbilityInfos(bundleName: string,
 
 根据给定的Bundle名称获取LauncherAbilityInfos，使用callback异步回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)
 > 替代。
@@ -34,11 +35,11 @@ function getLauncherAbilityInfos(bundleName: string,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| userId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 要查询的应用Bundle名称。 |
+| userId | number | 是 | 用户ID。取值范围：大于等于0。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | 是 | 程序启动作为入参的回调函数，返回程序信息。 |
 
 
 ## getLauncherAbilityInfos
@@ -49,7 +50,8 @@ function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Ar
 
 根据给定的Bundle名称获取LauncherAbilityInfos，使用Promise异步回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)
 > 替代。
@@ -68,13 +70,13 @@ function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Ar
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| userId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 要查询的应用Bundle名称。 |
+| userId | number | 是 | 用户ID。取值范围：大于等于0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | Promise形式返回程序信息。 |

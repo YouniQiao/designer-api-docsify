@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## enableFlag
@@ -20,7 +19,25 @@ function enableFlag(id: HiTraceId, flag: HiTraceFlag): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 |
-| flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 | 需要启用指定跟踪标志的HiTraceId实例。 |
+| flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | 是 | 指定的跟踪标志。 |
+
+**示例**
+
+```TypeScript
+// 开始跟踪，跟踪标志是INCLUDE_ASYNC。
+let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.INCLUDE_ASYNC);
+// enabledDoNotCreateSpanFlag为false。
+let enabledDoNotCreateSpanFlag = hiTraceChain.isFlagEnabled(traceId, hiTraceChain.HiTraceFlag.DONOT_CREATE_SPAN);
+// 设置DONOT_CREATE_SPAN跟踪标志。
+hiTraceChain.enableFlag(traceId, hiTraceChain.HiTraceFlag.DONOT_CREATE_SPAN);
+// enabledDoNotCreateSpanFlag为true。
+enabledDoNotCreateSpanFlag = hiTraceChain.isFlagEnabled(traceId, hiTraceChain.HiTraceFlag.DONOT_CREATE_SPAN);
+if (enabledDoNotCreateSpanFlag) {
+// 基于DONOT_CREATE_SPAN跟踪标志已设置场景的处理逻辑。
+}
+// 业务结束，结束跟踪。
+hiTraceChain.end(traceId);
+```

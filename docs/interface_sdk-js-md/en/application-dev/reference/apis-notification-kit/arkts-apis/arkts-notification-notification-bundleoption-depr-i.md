@@ -13,6 +13,9 @@ Describes the **BundleOption** information, that is, the bundle information of a
 ## Modules to Import
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## bundle

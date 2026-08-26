@@ -16,13 +16,13 @@ Defines the callback invoked when a new page is about to be displayed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| currentIndex | number | Yes |
-| [comingIndex](arkts-arkui-swipercontentwillscrollresult-i.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| currentIndex | number | Yes | Index of the active tab. The index starts from 0. |
+| comingIndex | number | Yes | Index of the new tab to be displayed. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | The return value **true** means that the tab can switch to the new page. |

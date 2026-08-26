@@ -24,23 +24,234 @@ Creates a time picker, which uses the 24-hour time format by default.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [TimePickerOptions](arkts-arkui-timepickeroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [TimePickerOptions](arkts-arkui-timepickeroptions-i.md) | No | Parameters of the time picker. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
+
+## Examples
+
+This example demonstrates how to customize the text style in a time picker using [disappearTextStyle](#disappeartextstyle10), [textStyle](#textstyle10), and [selectedTextStyle](#selectedtextstyle10).
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TimePickerExample {
+  private selectedTime: Date = new Date('2022-07-22T08:00:00');
+
+  build() {
+    TimePicker({
+      selected: this.selectedTime
+    })
+      .disappearTextStyle({ color: '#004aaf', font: { size: 24, weight: FontWeight.Lighter } })
+      .textStyle({ color: Color.Black, font: { size: 26, weight: FontWeight.Normal } })
+      .selectedTextStyle({ color: Color.Blue, font: { size: 30, weight: FontWeight.Bolder } })
+      .onChange((value: TimePickerResult) => {
+        if (value.hour >= 0) {
+          this.selectedTime.setHours(value.hour, value.minute);
+          console.info('select current date is: ' + JSON.stringify(value));
+        }
+      })
+  }
+}
+```
+
+This example demonstrates how to switch between 12-hour and 24-hour formats using useMilitaryTime.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TimePickerExample {
+  @State isMilitaryTime: boolean = false;
+  private selectedTime: Date = new Date('2022-07-22T08:00:00');
+
+  build() {
+    Column() {
+      Button('Switch Time Format')
+        .margin(30)
+        .onClick(() => {
+          this.isMilitaryTime = !this.isMilitaryTime;
+        })
+
+      TimePicker({
+        selected: this.selectedTime
+      })
+        .useMilitaryTime(this.isMilitaryTime)
+        .onChange((value: TimePickerResult) => {
+          if (value.hour >= 0) {
+            this.selectedTime.setHours(value.hour, value.minute);
+            console.info('select current time is: ' + JSON.stringify(value));
+          }
+        })
+        .onEnterSelectedArea((value: TimePickerResult) => {
+            console.info('item enter selected area, time is: ' + JSON.stringify(value));
+        })
+    }.width('100%')
+  }
+}
+```
+
+This example shows how to set the time format using format and dateTimeOptions.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TimePickerExample {
+  private selectedTime: Date = new Date('2022-07-22T08:00:00');
+
+  build() {
+    Column() {
+      TimePicker({
+        selected: this.selectedTime,
+        format: TimePickerFormat.HOUR_MINUTE_SECOND
+      })
+        .dateTimeOptions({ hour: "numeric", minute: "2-digit", second: "2-digit" })
+        .onChange((value: TimePickerResult) => {
+          if (value.hour >= 0) {
+            this.selectedTime.setHours(value.hour, value.minute);
+            console.info('select current date is: ' + JSON.stringify(value));
+          }
+        })
+    }.width('100%')
+  }
+}
+```
+
+This example demonstrates how to set whether to enable loop scrolling using [loop](#loop11).
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TimePickerExample {
+  @State isLoop: boolean = true;
+  @State selectedTime: Date = new Date('2022-07-22T12:00:00');
+
+  build() {
+    Column() {
+      TimePicker({
+        selected: this.selectedTime
+      })
+        .loop(this.isLoop)
+        .onChange((value: TimePickerResult) => {
+          if (value.hour >= 0) {
+            this.selectedTime.setHours(value.hour, value.minute);
+            console.info('select current date is: ' + JSON.stringify(value));
+          }
+        })
+
+      Row() {
+        Text('Loopable scrolling').fontSize(20)
+
+        Toggle({ type: ToggleType.Switch, isOn: true })
+          .onChange((isOn: boolean) => {
+            this.isLoop = isOn;
+          })
+      }.position({ x: '60%', y: '40%' })
+
+    }.width('100%')
+  }
+}
+```
+
+This example demonstrates how to set the start time for the time picker.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TimePickerExample {
+  private selectedTime: Date = new Date('2022-07-22T08:50:00');
+
+  build() {
+    Column() {
+      TimePicker({
+        selected: this.selectedTime,
+        format: TimePickerFormat.HOUR_MINUTE_SECOND,
+        start: new Date('2022-07-22T08:30:00')
+      })
+        .dateTimeOptions({ hour: "numeric", minute: "2-digit", second: "2-digit" })
+        .onChange((value: TimePickerResult) => {
+          if (value.hour >= 0) {
+            this.selectedTime.setHours(value.hour, value.minute);
+            console.info('select current date is: ' + JSON.stringify(value));
+          }
+        })
+    }.width('100%')
+  }
+}
+```
+
+This example demonstrates how to set the end time for the time picker.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TimePickerExample {
+  private selectedTime: Date = new Date('2022-07-22T08:50:00');
+
+  build() {
+    Column() {
+      TimePicker({
+        selected: this.selectedTime,
+        format: TimePickerFormat.HOUR_MINUTE_SECOND,
+        end: new Date('2022-07-22T15:20:00'),
+      })
+        .dateTimeOptions({ hour: "numeric", minute: "2-digit", second: "2-digit" })
+        .onChange((value: TimePickerResult) => {
+          if (value.hour >= 0) {
+            this.selectedTime.setHours(value.hour, value.minute);
+            console.info('select current date is: ' + JSON.stringify(value));
+          }
+        })
+    }.width('100%')
+  }
+}
+```
+
+The enableCascade API is added since API version 18.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TimePickerExample {
+  private selectedTime: Date = new Date('2022-07-22T08:00:00');
+
+  build() {
+    Column() {
+      TimePicker({
+        selected: this.selectedTime,
+      })
+        .enableCascade(true)
+        .loop(true)
+        .onChange((value: TimePickerResult) => {
+          if (value.hour >= 0) {
+            this.selectedTime.setHours(value.hour, value.minute);
+            console.info('select current date is: ' + JSON.stringify(value));
+          }
+        })
+    }.width('100%')
+  }
+}
+```

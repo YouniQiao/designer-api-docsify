@@ -9,7 +9,7 @@ The definition of SearchPlayMusicItem.@interface SearchPlayMusicItem
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import avMusicTemplate from '@kit.AVSessionKit';
 ```
 
 ## entityId

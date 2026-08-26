@@ -2,8 +2,10 @@
 
 Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md).
 
-> **NOTE：**&gt;
-> The host controller schedules the endpoint based on the endpoint type.&gt;
+> **NOTE：**
+> 
+> The host controller schedules the endpoint based on the endpoint type.
+> 
 > The transmission characteristics are determined by the type during protocol layer packaging.
 
 **Since:** 9
@@ -13,7 +15,8 @@ Represents the USB endpoint from which data is sent or received. You can obtain 
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## address

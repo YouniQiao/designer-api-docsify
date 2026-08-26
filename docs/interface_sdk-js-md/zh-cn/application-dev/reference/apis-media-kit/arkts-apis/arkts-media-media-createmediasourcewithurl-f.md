@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithUrl
@@ -22,20 +22,20 @@ function createMediaSourceWithUrl(url: string, headers?: Record<string, string>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| url | string | 是 |
-| headers | Record & lt;string, string & gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| url | string | 是 | 流媒体预下载媒体来源url，支持的流媒体格式：HLS、HTTP-FLV、Dash、Https。    - 本地m3u8的fd路径。 |
+| headers | Record & lt;string, string & gt; | 否 | 支持流媒体预下载HttpHeader自定义。不传时为网络请求默认的HttpHeader。<br>**起始版本：** 13 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MediaSource](arkts-media-media-mediasource-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [MediaSource](arkts-media-media-mediasource-i.md) | MediaSource返回值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. |

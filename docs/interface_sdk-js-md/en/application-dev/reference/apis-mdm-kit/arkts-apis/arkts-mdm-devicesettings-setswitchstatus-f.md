@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from 'kits/@kit.MDMKit';
+import deviceSettings from '@kit.MDMKit';
 ```
 
 ## setSwitchStatus
@@ -24,20 +24,43 @@ Sets the state of a switch. This API can enable or disable NearLink, Bluetooth, 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-| key | [SwitchKey](arkts-mdm-devicesettings-switchkey-e.md) | Yes |
-| status | [SwitchStatus](arkts-mdm-devicesettings-switchstatus-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| key | [SwitchKey](arkts-mdm-devicesettings-switchkey-e.md) | Yes | Switch name. An application that has obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been activated as the built-in device administrator application via [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md) can use this API to set the following switches: NearLink, Bluetooth, and Wi-Fi. Attempting to set the NFC switch will result in error code 9200002. |
+| status | [SwitchStatus](arkts-mdm-devicesettings-switchstatus-e.md) | Yes | Switch state. An application that has obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been activated as the built-in device administrator application via [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md) can use this API to set the following states: ON and OFF. Attempting to set the FORCE_ON state will result in error code 9200002. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| 9201042 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| 9201042 | Failed to toggle the switch state. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+
+**Examples**
+
+```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Replace with actual values.
+  let key: deviceSettings.SwitchKey = deviceSettings.SwitchKey.BLUETOOTH;
+  let status: deviceSettings.SwitchStatus  = deviceSettings.SwitchStatus.ON;
+  deviceSettings.setSwitchStatus(wantTemp, key, status);
+  console.info(`Succeeded in setting switch status.`);
+} catch (err) {
+  console.error(`Failed to set switch status. Code: ${err.code}, message: ${err.message}`);
+}
+```

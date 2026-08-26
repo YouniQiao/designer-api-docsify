@@ -2,7 +2,8 @@
 
 The module provides APIs for querying the [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) of an application with the overlay feature, and disabling and enabling the feature.An application with the overlay feature contains an overlay resource package. For details about this package, see [Overlay Mechanism](../../../quick-start/resource-categories-and-access.md#overlay-mechanism).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The APIs provided by this module apply only to the stage model and
 > [static overlay](../../../quick-start/resource-categories-and-access.md#using-overlay-in-static-mode) mode.
 
@@ -13,39 +14,39 @@ The module provides APIs for querying the [OverlayModuleInfo](arkts-ability-over
 ## Modules to Import
 
 ```TypeScript
-import { overlay } from 'kits/@kit.AbilityKit';
+import overlay from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md) |
-| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md) |
-| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md) |
-| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md) |
-| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md) |
-| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md) |
+| Name | Description |
+| --- | --- |
+| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md) | Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses an asynchronous callback to return the result. |
+| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md) | Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses a promise to return the result. |
+| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md) | Obtains the OverlayModuleInfo associated with the specified target module. Modules with the overlay feature generally provide an overlay resource file for other modules (target module) on the device. This API uses an asynchronous callback to return the result. |
+| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md) | Obtains the OverlayModuleInfo associated with the specified target module. Modules with the overlay feature generally provide an overlay resource file for other modules (target module) on the device. This API uses a promise to return the result. |
+| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md) | Enables or disables a module with the overlay feature in the current application. This API uses an asynchronous callback to return the result. |
+| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md) | Enables or disables a module with the overlay feature in the current application. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) |
-| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md) |
-| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) | Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result.No permission is required when the specified application is the caller itself. |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) | Obtains the information about a module with the overlay feature in another application. This API uses an asynchronous callback to return the result.No permission is required when the specified application is the caller itself. |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) | Obtains the information about a module with the overlay feature in another application. This API uses a promise to return the result.No permission is required when the specified application is the caller itself. |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) | Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result.No permission is required when the specified application is the caller itself. |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) | Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses an asynchronous callback to return the result.No permission is required when the specified application is the caller itself. |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) | Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses a promise to return the result.No permission is required when the specified application is the caller itself. |
+| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md) | Enables or disables a module with the overlay feature in another application. This API uses an asynchronous callback to return the result.No permission is required when the specified application is the caller itself. |
+| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md) | Enables or disables a module with the overlay feature in another application. This API uses a promise to return the result.No permission is required when the specified application is the caller itself. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md) |
+| Name | Description |
+| --- | --- |
+| [OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md) | Defines the information about a module with the overlay feature. |

@@ -9,7 +9,7 @@ Defines domain name parameters of a firewall rule. Currently, Chinese domain nam
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from 'kits/@kit.NetworkKit';
+import netFirewall from '@kit.NetworkKit';
 ```
 
 ## domain

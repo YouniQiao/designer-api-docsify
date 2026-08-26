@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+import bundleState from '@kit.BackgroundTasksKit';
 ```
 
 ## merge
@@ -28,9 +28,9 @@ Merges a specified BundleActiveInfo object with this BundleActiveInfo object. Th
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| toMerge | [BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| toMerge | [BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md) | 是 | Indicates the { |
 
 ## abilityInFgTotalTime
 

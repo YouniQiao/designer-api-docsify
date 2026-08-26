@@ -9,7 +9,7 @@ Defines the callback of the registration message notification of the UIAbility.
 ## Modules to Import
 
 ```TypeScript
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from 'kits/@kit.AbilityKit';
+import UIAbility, { Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## [[Call]]
@@ -28,12 +28,12 @@ Defines the callback of Callee.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| indata | rpc.MessageSequence | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| indata | rpc.MessageSequence | Yes | Data to be transferred. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| rpc.Parcelable |
+| Type | Description |
+| --- | --- |
+| rpc.Parcelable | Returned data object. |

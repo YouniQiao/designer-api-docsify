@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
+import scan from '@kit.BasicServicesKit';
 ```
 
 ## getScannerParameter
@@ -22,18 +22,32 @@ Obtains scanner parameters. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scannerId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scannerId | string | Yes | Scanner ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ScannerParameter](arkts-basicservices-scan-scannerparameter-i.md)[]&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ScannerParameter](arkts-basicservices-scan-scannerparameter-i.md)[]&gt; | Promise used to return the scanner parameters. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+**Examples**
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let scannerId: string = 'scanner_001';
+scan.getScannerParameter(scannerId).then((parameters: scan.ScannerParameter[]) => {
+    console.info('get scanner parameters success: ' + JSON.stringify(parameters));
+}).catch((error: BusinessError) => {
+    console.error('get scanner parameters failed: ' + JSON.stringify(error));
+})
+```

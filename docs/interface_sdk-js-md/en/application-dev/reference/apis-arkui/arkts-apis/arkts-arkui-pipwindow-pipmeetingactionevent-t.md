@@ -12,9 +12,9 @@ Defines the PiP action event in a video meeting.
 
 **System capability:** SystemCapability.Window.SessionManager
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'hangUp' |
-| 'voiceStateChanged' |
-| 'videoStateChanged' |
-| 'micStateChanged' |
+| Type | Description |
+| --- | --- |
+| 'hangUp' | The video meeting is hung up. |
+| 'voiceStateChanged' | The speaker is muted or unmuted. |
+| 'videoStateChanged' | The camera is turned on or off. |
+| 'micStateChanged' | The microphone is muted or unmuted. [since 12] |

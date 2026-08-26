@@ -15,14 +15,14 @@ Creates a Promise that is resolved with an array of results when all of the prov
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| values | Iterable & lt;T \ | PromiseLike & lt;T & gt; & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| values | Iterable & lt;T \ | PromiseLike & lt;T & gt; & gt; | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## race
 
 ```TypeScript
@@ -33,11 +33,11 @@ Creates a Promise that is resolved or rejected when any of the provided Promises
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| values | Iterable & lt;T \ | PromiseLike & lt;T & gt; & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| values | Iterable & lt;T \ | PromiseLike & lt;T & gt; & gt; | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

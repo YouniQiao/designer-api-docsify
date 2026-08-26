@@ -29,9 +29,9 @@ getCurrentLocalPosition?(): Coordinate2D
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 触摸位置相对于当前组件实时位置的左上角坐标。 |
 
 ## displayX
 

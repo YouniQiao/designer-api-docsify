@@ -28,13 +28,13 @@ Set value.
 
 **参数:**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | {     date: { year: number; month: number; day: number };     currentData: MonthData;     preData: MonthData;     nextData: MonthData;     controller?: CalendarController;   } | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | {     date: { year: number; month: number; day: number };     currentData: MonthData;     preData: MonthData;     nextData: MonthData;     controller?: CalendarController;   } | 是 |  |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |

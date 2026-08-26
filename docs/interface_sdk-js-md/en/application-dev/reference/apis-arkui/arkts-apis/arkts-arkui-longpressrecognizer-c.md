@@ -31,9 +31,9 @@ Obtains the maximum movement distance allowed for gesture recognition by the num
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Maximum movement distance recognized by the number press gesture recognizer, in px. |
 
 ## getDuration
 
@@ -53,9 +53,9 @@ Obtains the minimum duration required for the number press gesture to be recogni
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Minimum duration, in ms. |
 
 ## isRepeat
 
@@ -75,6 +75,6 @@ Checks whether the number press gesture recognizer is set to trigger repeated ca
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the number press gesture recognizer is set to trigger repeated callbacks. **false**: Repeated callbacks are not triggered. **true**: Repeated callbacks are triggered. |

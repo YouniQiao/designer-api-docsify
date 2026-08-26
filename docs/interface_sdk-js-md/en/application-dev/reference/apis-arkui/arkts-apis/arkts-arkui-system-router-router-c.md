@@ -13,7 +13,7 @@ The **Router** module provides APIs to access pages through URIs.
 ## Modules to Import
 
 ```TypeScript
-import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from 'kits/@kit.ArkUI';
+import SystemRouter, { BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
 ```
 
 ## back
@@ -24,7 +24,8 @@ static back(options?: BackRouterOptions): void
 
 Returns to the previous or a specified page.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > In the example, the **uri** field indicates the page route, which is specified by the **pages** list in the
 > configuration file.
 
@@ -38,9 +39,70 @@ Returns to the previous or a specified page.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [BackRouterOptions](arkts-arkui-system-router-backrouteroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [BackRouterOptions](arkts-arkui-system-router-backrouteroptions-i.md) | No | For details, see **BackRouterOptions**. |
+
+**Examples**
+
+```TypeScript
+// index page
+import router from '@system.router';
+class D{
+  indexPushPage() {
+    router.push({
+      uri: 'pages/detail/detail'
+    });
+  }
+}
+export default new D()
+```
+
+```TypeScript
+// detail page
+import router from '@system.router';
+class E{
+  detailPushPage() {
+    router.push({
+      uri: 'pages/mall/mall'
+    });
+  }
+}
+export default new E()
+```
+
+```TypeScript
+// Navigate from the mall page to the detail page through router.back().
+import router from '@system.router';
+class F{
+  mallBackPage() {
+    router.back();
+  }
+}
+export default new F()
+```
+
+```TypeScript
+// Navigate from the detail page to the index page through router.back().
+import router from '@system.router';
+class G{
+  defaultBack() {
+    router.back();
+  }
+}
+export default new G()
+```
+
+```TypeScript
+// Return to the detail page through router.back().
+import router from '@system.router';
+class H{
+  backToDetail() {
+    router.back({uri:'pages/detail/detail'});
+  }
+}
+export default new H()
+```
 
 ## clear
 
@@ -57,6 +119,18 @@ Clears all historical pages in the stack and retains only the current page at th
 **Substitutes:** clear
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import router from '@system.router';
+class I{
+  clearPage() {
+    router.clear();
+  }
+}
+export default new I()
+```
 
 ## disableAlertBeforeBackPage
 
@@ -76,9 +150,28 @@ Disables the display of a confirm dialog box before returning to the previous pa
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [DisableAlertBeforeBackPageOptions](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [DisableAlertBeforeBackPageOptions](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | No | For details, see **DisableAlertBeforeBackPageOptions**. |
+
+**Examples**
+
+```TypeScript
+import router from '@system.router';
+class Z{
+  disableAlertBeforeBackPage() {
+    router.disableAlertBeforeBackPage({
+      success: ()=> {
+        console.info('success');
+      },
+      cancel: ()=> {
+        console.info('cancel');
+      }
+    });
+  }
+}
+export default new Z()
+```
 
 ## enableAlertBeforeBackPage
 
@@ -98,9 +191,29 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [EnableAlertBeforeBackPageOptions](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [EnableAlertBeforeBackPageOptions](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | Yes | For details, see **EnableAlertBeforeBackPageOptions**. |
+
+**Examples**
+
+```TypeScript
+import router from '@system.router';
+class L{
+  enableAlertBeforeBackPage() {
+    router.enableAlertBeforeBackPage({
+      message: 'Message Info',
+      success: ()=> {
+        console.info('success');
+      },
+      cancel: ()=> {
+        console.info('cancel');
+      }
+    });
+  }
+}
+export default new L()
+```
 
 ## getLength
 
@@ -120,9 +233,22 @@ Obtains the number of pages in the current stack.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Number of pages in the stack. The maximum value is **32**. |
+
+**Examples**
+
+```TypeScript
+import router from '@system.router';
+class J{
+  getLength() {
+    let size = router.getLength();
+    console.info('pages stack size = ' + size);
+  }
+}
+export default new J()
+```
 
 ## getParams
 
@@ -142,9 +268,9 @@ Obtains parameter information about the current page.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ParamsInterface](arkts-arkui-paramsinterface-t.md) |
+| Type | Description |
+| --- | --- |
+| [ParamsInterface](arkts-arkui-paramsinterface-t.md) | For details, see **ParamsInterface**. |
 
 ## getState
 
@@ -164,9 +290,24 @@ Obtains state information about the current page.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RouterState](arkts-arkui-system-router-routerstate-i.md) |
+| Type | Description |
+| --- | --- |
+| [RouterState](arkts-arkui-system-router-routerstate-i.md) | For details, see **RouterState**. |
+
+**Examples**
+
+```TypeScript
+import router from '@system.router';
+class K{
+  getState() {
+    let page = router.getState();
+    console.info('current index = ' + page.index);
+    console.info('current name = ' + page.name);
+    console.info('current path = ' + page.path);
+  }
+}
+export default new K()
+```
 
 ## push
 
@@ -176,7 +317,8 @@ static push(options: RouterOptions): void
 
 Navigates to a specified page in the application.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The page routing stack supports a maximum of 32 pages.
 
 **Since:** 3
@@ -189,9 +331,43 @@ Navigates to a specified page in the application.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Page routing parameters. For details, see **RouterOptions**. |
+
+**Examples**
+
+```TypeScript
+// Current page
+import router from '@system.router';
+class A{
+  pushPage() {
+    router.push({
+      uri: 'pages/routerpage2/routerpage2',
+      params: {
+        data1: 'message',
+        data2: {
+          data3: [123, 456, 789]
+        }
+      }
+    });
+  }
+}
+export default new A()
+```
+
+```TypeScript
+// routerpage2 page
+class B{
+  data:Record<string,string> = {'data1': 'default'}
+  data2:Record<string,number[]> = {'data3': [1, 2, 3]}
+  onInit() {
+    console.info('showData1:' + this.data.data1);
+    console.info('showData3:' + this.data2.data3);
+  }
+}
+export default new B()
+```
 
 ## replace
 
@@ -211,6 +387,35 @@ Replaces the current page with another one in the application and destroys the c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Page routing parameters. For details, see **RouterOptions**. |
+
+**Examples**
+
+```TypeScript
+// Current page
+import router from '@system.router';
+class C{
+  replacePage() {
+    router.replace({
+      uri: 'pages/detail/detail',
+      params: {
+        data1: 'message'
+      }
+    });
+  }
+}
+export default new C()
+```
+
+```TypeScript
+// detail page
+class Area {
+  data:Record<string,string> = {'data1': 'default'}
+  onInit() {
+    console.info(`showData1: ${JSON.stringify(this.data)}`);
+  }
+}
+export default new Area()
+```

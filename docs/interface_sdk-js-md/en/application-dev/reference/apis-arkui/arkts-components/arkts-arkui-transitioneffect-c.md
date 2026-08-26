@@ -31,15 +31,15 @@ Animation settings.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [AnimateParam](arkts-arkui-animateparam-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [AnimateParam](arkts-arkui-animateparam-i.md) | Yes | Animation parameters.The **onFinish** callback in **AnimateParam** does not work here.If **combine** is used for combining transition effects, the animation settings of a transition effect are applicable to the one following it. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TransitionEffect](arkts-arkui-transitioneffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Current animation effect. |
 
 ## asymmetric
 
@@ -64,16 +64,16 @@ Sets the asymmetric transition effect.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| appear | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes |
-| disappear | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| appear | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes | Transition effect for appearance.If the **asymmetric** function is not used for **TransitionEffect**, the transition effect takes effect for both appearance and disappearance of the component. |
+| disappear | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes | Transition effect for disappearance.If the **asymmetric** function is not used for **TransitionEffect**, the transition effect takes effect for both appearance and disappearance of the component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"asymmetric"&gt; |
+| Type | Description |
+| --- | --- |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"asymmetric"&gt; | Asymmetric transition effect for the current animation. |
 
 ## combine
 
@@ -95,15 +95,15 @@ Combination of transition effects.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| transitionEffect | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| transitionEffect | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes | Combined transition effect. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TransitionEffect](arkts-arkui-transitioneffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Combined transition effect. |
 
 ## constructor
 
@@ -125,10 +125,21 @@ Constructs a **TransitionEffect** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Yes |
-| effect | [Effect](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-effect-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Yes | Transition type. |
+| effect | [Effect](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-effect-i.md) | Yes | Transition parameter. |
+
+**Examples**
+
+```TypeScript
+@Builder
+function MyBuilder(value: string, size: number) {
+  Text(value)
+    .fontSize(size)
+}
+let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
+```
 
 ## move
 
@@ -150,15 +161,15 @@ Sets the slide-in and slide-out effects for component transitions from the scree
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| edge | [TransitionEdge](arkts-arkui-transitionedge-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| edge | [TransitionEdge](arkts-arkui-transitionedge-e.md) | Yes | The slide-in and slide-out effects for component transitions from the screen edges. This is essentially a translation effect, specifying the start point of insertion and the end point of deletion. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"move"&gt; |
+| Type | Description |
+| --- | --- |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"move"&gt; | Current animation's slide-in and slide-out effects from the screen edges. |
 
 ## opacity
 
@@ -180,15 +191,15 @@ Sets the opacity for component transition.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| alpha | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| alpha | number | Yes | Opacity of the component during transition, which is the value of the start point of insertion and the end point of deletion.Value range: [0, 1].   **NOTE：**If the value specified is less than 0, the value **0** is used. If the value specified is greater than 1, the value **1** is used. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"opacity"&gt; |
+| Type | Description |
+| --- | --- |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"opacity"&gt; | Opacity of component transition. |
 
 ## rotate
 
@@ -210,15 +221,15 @@ Sets the rotation effect for component transitions.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [RotateOptions](arkts-arkui-rotateoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [RotateOptions](arkts-arkui-rotateoptions-i.md) | Yes | Rotation effect for component transitions, specifying the start point of insertion and the end point of deletion.   - **x**: X-component of the rotation vector.   - **y**: Y- component of the rotation vector.   - **z**: Z-component of the rotation vector.   - **centerX** and **centerY**: rotation center point. The default values are both **"50%"**, indicating the center point of the page.   - If the center point is (0, 0), it refers to the upper left corner of the component.   - **centerZ**: z-axis anchor point, that is, the z-component of the 3D rotation center point. The default value is **0**.   - **perspective**: viewing distance. It is not supported for use in transition animations. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"rotate"&gt; |
+| Type | Description |
+| --- | --- |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"rotate"&gt; | Rotation effect for the current animation. |
 
 ## scale
 
@@ -240,15 +251,15 @@ Sets the scaling effect for component transitions.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | Yes | Scaling effect for component transitions, specifying the start point of insertion and the end point of deletion. The scale value set here is multiplied by the component's **scale** attribute. For example, if the component's scale is 0.8 and the transition scale is set to 0.5, the component entry animation starts from a scale of 0.4.   - **x**: scale factor along the x-axis.   - **y**: scale factor along the y-axis.   -z: currently invalid in two-dimensional display.   - **centerX** and **centerY**: scale center point. The default values are both **"50%"**, indicating the center point of the page.   - If the center point is (0, 0), it refers to the upper left corner of the component.   **NOTE：**If **centerX** or **centerY** is set to an invalid string (for example, **"illegalString"**), the default value **"0"** is used. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"scale"&gt; |
+| Type | Description |
+| --- | --- |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"scale"&gt; | Scaling effect for component transitions. |
 
 ## translate
 
@@ -270,15 +281,15 @@ Sets the translation effect for component transitions.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes | Translation effect for component transitions, specifying the start point of insertion and the end point of deletion.   -**x**: distance to translate along the x-axis.   -**y**: distance to translate along the y-axis.   -**z**: distance to translate along the z-axis. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"translate"&gt; |
+| Type | Description |
+| --- | --- |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"translate"&gt; | Translation effect for the current animation. |
 
 ## IDENTITY
 

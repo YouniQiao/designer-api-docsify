@@ -21,12 +21,57 @@ declare function mutableBuilder<Args extends Object[]>(builder: BuilderCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| builder | [BuilderCallback](arkts-arkui-buildercallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| builder | [BuilderCallback](arkts-arkui-buildercallback-t.md) | 是 | `@Builder`装饰的全局函数，作为`mutableBuilder`封装的目标构建函数。该函数需符合`BuilderCallback`类型，即 `(...args: Args) =&gt; void`，是一个无返回值的函数，其参数列表`...args`的类型由泛型`Args`指定。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MutableBuilder](arkts-arkui-mutablebuilder-c.md)&lt;Args&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [MutableBuilder](arkts-arkui-mutablebuilder-c.md)&lt;Args&gt; | `MutableBuilder&lt;Args&gt;`的实例，用于封装全局` |
+
+**示例**
+
+```TypeScript
+class TextContent {
+  text: string = '';
+}
+
+@Builder
+function textBuilder(textContent: TextContent) {
+  Text(textContent.text)
+    .margin(20)
+}
+
+@Builder
+function buttonBuilder(buttonContent: TextContent) {
+  Button(buttonContent.text)
+    .margin(20)
+}
+
+let counter: number = 1;
+
+@Entry
+@ComponentV2
+struct MyApp {
+  @Local message: string = 'init';
+  @Local switchingBuilder: MutableBuilder<[TextContent]> = mutableBuilder(textBuilder);
+  build() {
+    Column() {
+      this.switchingBuilder.builder({ text: this.message })
+      Button('Click to change')
+        .onClick(() => {
+          counter++; // 每次点击按钮修改counter来动态改变全局@Builder
+          if (counter % 2 === 0) {
+            this.message += 'B';
+            this.switchingBuilder = mutableBuilder(buttonBuilder); // textBuilder ---> buttonBuilder
+          } else {
+            this.message += 'T';
+            this.switchingBuilder = mutableBuilder(textBuilder);   // buttonBuilder ---> textBuilder
+          }
+        })
+    }.position({x: 120, y: 60})
+  }
+}
+```

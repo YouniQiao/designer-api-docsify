@@ -26,15 +26,38 @@ createAreaModeContext(areaMode: contextConstant.AreaMode): Context
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [areaMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-statemanagement-connectoptions-c.md) | contextConstant.AreaMode | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| areaMode | contextConstant.AreaMode | 是 | 指定的数据加密等级。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Context](arkts-ability-context-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Context](arkts-ability-context-c.md) | 指定数据加密等级的上下文。 |
+
+**示例**
+
+```TypeScript
+import { common, UIAbility, contextConstant } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    let areaMode: contextConstant.AreaMode = contextConstant.AreaMode.EL2;
+    let areaModeContext: common.Context;
+    try {
+      // 创建特定数据加密级别的应用上下文
+      areaModeContext = this.context.createAreaModeContext(areaMode);
+    } catch (error) {
+      const err: BusinessError = error as BusinessError;
+    hilog.error(0x0000, 'testTag', 'Failed to create area mode context. Code: %{public}d, message: %{public}s', err.code, err.message);
+    }
+  }
+}
+```
 
 ## createDisplayContext
 
@@ -54,21 +77,43 @@ createDisplayContext(displayId: number): Context
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| displayId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| displayId | number | 是 | 物理屏幕ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Context](arkts-ability-context-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Context](arkts-ability-context-c.md) | 带有指定物理屏幕信息的上下文。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    let displayContext: common.Context;
+    try {
+      // displayId通过display.getDefaultDisplay()等接口获取，详见屏幕管理开发指导
+      displayContext = this.context.createDisplayContext(0);
+    } catch (error) {
+      const err: BusinessError = error as BusinessError;
+      hilog.error(0x0000, 'testTag', 'Failed to create display context. Code: %{public}d, message: %{public}s', err.code, err.message);
+    }
+  }
+}
+```
 
 ## createModuleContext
 
@@ -78,7 +123,8 @@ createModuleContext(moduleName: string): Context
 
 根据模块名创建上下文。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 仅支持获取本应用中其他Module的Context和应用内HSP的Context，不支持获取其他应用的Context。
 > - 由于创建模块上下文的过程涉及资源查询与初始化，耗时相对较长，在对应用流畅性要求较高的场景下，不建议频繁或多次调用createModuleContext接口创建多个Context实例，以免影响用户体验。
 
@@ -96,21 +142,41 @@ createModuleContext(moduleName: string): Context
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| moduleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| moduleName | string | 是 | 模块名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Context](arkts-ability-context-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Context](arkts-ability-context-c.md) | 模块的上下文。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let moduleContext: common.Context;
+    try {
+      // 根据模块名创建上下文
+      moduleContext = this.context.createModuleContext('entry');
+    } catch (error) {
+      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## getApplicationContext
 
@@ -130,15 +196,35 @@ getApplicationContext(): ApplicationContext
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) | 应用上下文。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let applicationContext: common.Context;
+    try {
+      // 获取当前应用上下文
+      applicationContext = this.context.getApplicationContext();
+    } catch (error) {
+      console.error(`Failed to get application context. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## getGroupDir
 
@@ -158,17 +244,40 @@ getGroupDir(dataGroupID: string, callback: AsyncCallback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| dataGroupID | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| dataGroupID | string | 是 | 原子化服务类型的应用创建时，系统会指定分配唯一Group ID。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取共享目录成功，err为undefined，data为对应的共享目录，如果不存在则返回为空；否则为错误对象。   **说明：**仅支持应用el2加密级别。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+
+**示例**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let getGroupDirContext: common.Context = this.context;
+
+    // 通过Group ID获取共享目录（callback方式）
+    getGroupDirContext.getGroupDir('1', (err: BusinessError, data) => {
+      if (err) {
+        console.error(`getGroupDir failed, err: ${JSON.stringify(err)}`);
+      } else {
+        console.info(`getGroupDir result is: ${JSON.stringify(data)}`);
+      }
+    });
+  }
+}
+```
 
 ## getGroupDir
 
@@ -188,22 +297,45 @@ getGroupDir(dataGroupID: string): Promise<string>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| dataGroupID | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| dataGroupID | string | 是 | 原子化服务类型的应用创建时，系统会指定分配唯一Group ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回对应的共享目录。如果不存在则返回为空，仅支持应用el2加密级别。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+
+**示例**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let groupId = '1';
+    let getGroupDirContext: common.Context = this.context;
+    try {
+      // 通过Group ID获取共享目录（Promise方式）
+      getGroupDirContext.getGroupDir(groupId).then(data => {
+        console.info('getGroupDir result:' + data);
+      })
+    } catch (error) {
+      console.error(`Failed to get group directory. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## isContextOf
 
@@ -223,15 +355,31 @@ isContextOf(contextType: contextConstant.ContextType): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| contextType | contextConstant.ContextType | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| contextType | contextConstant.ContextType | 是 | 上下文类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否为指定类型的上下文。返回true表示Context类型为指定类型，返回false表示Context类型匹配失败。 |
+
+**示例**
+
+```TypeScript
+import { UIAbility, contextConstant } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', `%{public}s`, 'Ability onCreate');
+    // 判断当前Context是否为指定的ContextType类型
+    let result = this.context.isContextOf(contextConstant.ContextType.UIABILITY_CONTEXT);
+    hilog.info(0x0000, 'testTag', `match contextType result is:%{public}s`, JSON.stringify(result));
+  }
+}
+```
 
 ## applicationInfo
 
@@ -457,7 +605,8 @@ resourceDir: string
 
 资源目录。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 需要开发者手动在`\&lt;module-name&gt;\resource`路径下创建`resfile`目录。创建的`resfile`目录仅支持以只读方式访问。
 
 **类型：** string

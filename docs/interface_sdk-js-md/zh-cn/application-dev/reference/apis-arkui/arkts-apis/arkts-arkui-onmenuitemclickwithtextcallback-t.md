@@ -16,13 +16,13 @@ export type OnMenuItemClickWithTextCallback = (menuItem: TextMenuItem, value: st
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | 是 | 当前点击的菜单项。 |
+| value | string | 是 | 选中文本内容。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 菜单项点击事件的处理结果。返回true表示事件已处理，返回false表示未处理。 |

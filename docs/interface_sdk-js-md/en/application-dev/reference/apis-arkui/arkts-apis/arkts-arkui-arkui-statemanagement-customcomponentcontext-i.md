@@ -9,7 +9,7 @@ The **CustomComponentContext** class provides access to component-level services
 ## Modules to Import
 
 ```TypeScript
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from 'kits/@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## getReusePool
@@ -30,6 +30,43 @@ Obtains the global reuse pool of the custom component. If the component does not
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [IReusePool](arkts-arkui-arkui-statemanagement-ireusepool-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [IReusePool](arkts-arkui-arkui-statemanagement-ireusepool-i.md) \| undefined | If a global reuse pool is configured for the current component, the reuse pool information is returned. Otherwise, **undefined** is returned. |
+
+**Examples**
+
+```TypeScript
+import { UIUtils } from '@kit.ArkUI';
+
+@ReusableV2
+@ComponentV2
+struct ReusableChild {
+  build() {
+    Text('ReusableChild')
+  }
+}
+
+@Entry
+@ComponentV2({ reusePool: 'perInstance', poolAccepts: [ReusableChild], freezeWhenInactive: false })
+struct PoolOwner {
+  checkPool() {
+    const pool = UIUtils.getCustomComponentContext(this).getReusePool();
+    if (pool) {
+      console.info('Global reuse pool configured.');
+    } else {
+      console.info('No global reuse pool configured.');
+    }
+  }
+
+  build() {
+    Column() {
+      ReusableChild()
+      Button('Check Pool')
+        .onClick(() => {
+          this.checkPool();
+        })
+    }
+  }
+}
+```

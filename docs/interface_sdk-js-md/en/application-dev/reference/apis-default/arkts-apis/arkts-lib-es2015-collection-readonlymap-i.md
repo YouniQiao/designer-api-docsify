@@ -13,10 +13,10 @@ forEach(callbackfn: (value: V, key: K, map: ReadonlyMap<K, V>) => void, thisArg?
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackfn | (value: V, key: K, map: ReadonlyMap & lt;K, V & gt;) = & gt; void | Yes |
-| thisArg | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackfn | (value: V, key: K, map: ReadonlyMap & lt;K, V & gt;) = & gt; void | Yes |  |
+| thisArg | any | No |  |
 
 ## get
 
@@ -26,14 +26,14 @@ get(key: K): V | undefined
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## has
 
 ```TypeScript
@@ -42,14 +42,14 @@ has(key: K): boolean
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## size
 
 ```TypeScript

@@ -29,15 +29,15 @@ Creates a pan gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-ges
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } \| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } \| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## [[Call]]
 
@@ -57,15 +57,15 @@ Creates a pan gesture. Compared with PanGesture | PanGestureOptions)}, this API 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | No | Parameters of the swipe gesture handler. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -83,15 +83,15 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback for pan gesture cancellation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -111,15 +111,15 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for pan gesture cancellation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionEnd
 
@@ -137,15 +137,15 @@ Registers the callback for pan gesture completion. This callback is triggered wh
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | Yes | Callback for pan gesture completion. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionStart
 
@@ -163,15 +163,15 @@ Registers the callback for successful pan gesture recognition.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | Yes | Callback for successful pan gesture recognition. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionUpdate
 
@@ -189,12 +189,12 @@ Registers the callback for pan gesture updates. If **fingerList** contains multi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | Yes | Callback for pan gesture updates. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## scan
@@ -26,8 +27,20 @@ Scan Wi-Fi hotspot.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+  try {
+    wifiManager.scan();
+  }catch(error){
+    console.error("failed:" + JSON.stringify(error));
+  }
+```

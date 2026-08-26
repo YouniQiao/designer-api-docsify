@@ -13,7 +13,7 @@ Defines the input parameters of **cipher.aes()**.
 ## Modules to Import
 
 ```TypeScript
-import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from 'kits/@kit.CryptoArchitectureKit';
+import Cipher, { CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
 ## complete
@@ -50,10 +50,10 @@ Called when data fails to be encrypted or decrypted.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | string | Yes |  |
+| code | number | Yes |  |
 
 ## success
 
@@ -73,9 +73,9 @@ Called when data is encrypted or decrypted successfully.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [CipherResponse](arkts-cryptoarchitecture-system-cipher-cipherresponse-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | [CipherResponse](arkts-cryptoarchitecture-system-cipher-cipherresponse-i.md) | Yes |  |
 
 ## action
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import wallpaper from '@kit.BasicServicesKit';
 ```
 
 ## isChangePermitted
@@ -22,9 +22,23 @@ Checks whether to allow the application to change the wallpaper for the current 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isChangePermitted. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.isChangePermitted((error: BusinessError, data: Boolean) => {
+    if (error) {
+        console.error(`failed to isChangePermitted because: ${JSON.stringify(error)}`);
+        return;
+    }
+    console.info(`success to isChangePermitted: ${JSON.stringify(data)}`);
+});
+```
 
 
 ## isChangePermitted
@@ -43,6 +57,18 @@ Checks whether to allow the application to change the wallpaper for the current 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | the promise returned by the function. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.isChangePermitted().then((data: Boolean) => {
+    console.info(`success to isChangePermitted: ${JSON.stringify(data)}`);
+}).catch((error: BusinessError) => {
+    console.error(`failed to isChangePermitted because: ${JSON.stringify(error)}`);
+});
+```

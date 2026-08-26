@@ -13,8 +13,8 @@ The module provides information about the shared bundle. The information can be 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SharedBundleInfo](arkts-ability-sharedbundleinfo-i-sys.md) |
-| [SharedModuleInfo](arkts-ability-sharedbundleinfo-sharedmoduleinfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [SharedBundleInfo](arkts-ability-sharedbundleinfo-i-sys.md) | Defines the shared bundle information. |
+| [SharedModuleInfo](arkts-ability-sharedbundleinfo-sharedmoduleinfo-i-sys.md) | Defines the shared module information. |
 <!--DelEnd-->

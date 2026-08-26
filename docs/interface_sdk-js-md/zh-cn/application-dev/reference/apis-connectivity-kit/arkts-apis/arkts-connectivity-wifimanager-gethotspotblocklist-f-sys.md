@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## getHotspotBlockList
@@ -24,16 +25,29 @@ function getHotspotBlockList(): Array<StationInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;StationInfo & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;StationInfo & gt; | 黑名单中的站点。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [2601000](../errorcode-wifi.md#2601000-hotspot模块异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API is not allowed called by Non-system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [2601000](../errorcode-wifi.md#2601000-hotspot模块异常) | Operation failed. |
+
+**示例**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+try {
+  let data = wifiManager.getHotspotBlockList();
+  console.info("result:" + JSON.stringify(data));
+} catch (error) {
+  console.error("failed:" + JSON.stringify(error));
+}
+```

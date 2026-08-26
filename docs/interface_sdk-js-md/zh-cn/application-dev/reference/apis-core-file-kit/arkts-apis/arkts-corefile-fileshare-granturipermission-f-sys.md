@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileShare } from 'kits/@kit.CoreFileKit';
+import fileShare from '@kit.CoreFileKit';
 ```
 
 ## grantUriPermission
@@ -29,21 +29,46 @@ function grantUriPermission(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| bundleName | string | 是 |
-| flag | wantConstant.Flags | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 公共目录文件URI。 |
+| bundleName | string | 是 | 分享目标的包名。 |
+| flag | wantConstant.Flags | 是 | 授权的权限，可取wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION或 wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步授权之后的回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 14300001 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| 14300001 | IPC error |
+
+**示例**
+
+```TypeScript
+import { wantConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+let uri: string =
+  'file://docs/storage/Users/currentUser/Document/1.txt'; // 推荐使用系统接口生成URI。fileUri.getUriFromPath('沙箱路径');
+let bundleName: string = 'com.demo.test';
+try {
+  fileShare.grantUriPermission(uri, bundleName, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION |
+    wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION, (err: BusinessError) => {
+    if (err) {
+      console.error(`grantUriPermission failed with error: ${JSON.stringify(err)}`);
+      return;
+    }
+    console.info('grantUriPermission success!');
+  });
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error(`grantUriPermission failed with error: ${JSON.stringify(error)}`);
+}
+```
 
 
 ## grantUriPermission
@@ -64,26 +89,49 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| bundleName | string | 是 |
-| flag | wantConstant.Flags | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 公共目录文件URI。 |
+| bundleName | string | 是 | 分享目标的包名。 |
+| flag | wantConstant.Flags | 是 | 授权的权限，可取wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION或 wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 14300001 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| 14300001 | IPC error |
+
+**示例**
+
+```TypeScript
+import { wantConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+let uri: string =
+  'file://docs/storage/Users/currentUser/Document/1.txt'; // 推荐使用系统接口生成URI。fileUri.getUriFromPath('沙箱路径');
+let bundleName: string = 'com.demo.test';
+try {
+  fileShare.grantUriPermission(uri, bundleName, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION |
+    wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION).then(() => {
+    console.info('grantUriPermission success!');
+  }).catch((error: BusinessError) => {
+    console.error(`grantUriPermission failed with error: ${JSON.stringify(error)}`);
+  });
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error(`grantUriPermission failed with error: ${JSON.stringify(error)}`);
+}
+```
 
 
 ## grantUriPermission
@@ -104,24 +152,49 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| policies | Array&lt;[PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)&gt; | 是 |
-| targetBundleName | string | 是 |
-| appCloneIndex | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| policies | Array&lt;[PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)&gt; | 是 | 需要授权URI的策略信息数组。 |
+| targetBundleName | string | 是 | 被授权应用的应用包名。 |
+| appCloneIndex | number | 是 | 被授权应用的分身索引，取值为0时表示主应用。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| 13900001 |
-| 13900011 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 13900001 | Operation not permitted. |
+| 13900011 | Out of memory. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+async function grantUriPermissionExample() {
+  try {
+    let uri = 'file://docs/storage/Users/currentUser/Documents/1.txt';
+    let policyInfo: fileShare.PolicyInfo = {
+      uri: uri,
+      operationMode: fileShare.OperationMode.CREATE_MODE | fileShare.OperationMode.READ_MODE,
+    };
+    let policies: Array<fileShare.PolicyInfo> = [policyInfo];
+
+    fileShare.grantUriPermission(policies, 'com.example.myapplicationtest', 0).then(() => {
+    }).catch((err: BusinessError<Array<fileShare.PolicyErrorResult>>) => {
+      console.error(`grantUriPermission failed. Code: ${err.code}, message: ${err.message}`);
+    });
+  } catch (error) {
+    console.info(`grantUriPermission error, Code: ${error.code}, message: ${error.message}`);
+  }
+}
+```

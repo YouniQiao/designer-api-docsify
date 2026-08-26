@@ -3,19 +3,20 @@
 ## Modules to Import
 
 ```TypeScript
-import { ProgressButton } from 'kits/@kit.ArkUI';
+import { ProgressButton } from '@kit.ArkUI';
+import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUIV2';
 ```
 
 ## Summary
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ProgressButton](arkts-arkui-arkui-advanced-progressbutton-progressbutton-s.md) |
+| Name | Description |
+| --- | --- |
+| [ProgressButton](arkts-arkui-arkui-advanced-progressbutton-progressbutton-s.md) | Declare Component ProgressButton |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ProgressButtonColorOptions](arkts-arkui-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [ProgressButtonColorOptions](arkts-arkui-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md) | Declare Color options of the ProgressButton.@interface ProgressButtonColorOptions |

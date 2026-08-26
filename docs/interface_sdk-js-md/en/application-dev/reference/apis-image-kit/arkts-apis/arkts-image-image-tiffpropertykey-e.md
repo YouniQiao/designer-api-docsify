@@ -2,7 +2,8 @@
 
 Enumerates the properties available for the metadata of a TIFF image.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about the return value type, see [TiffMetadata](arkts-image-image-tiffmetadata-c.md).
 
 **Since:** 26.0.0

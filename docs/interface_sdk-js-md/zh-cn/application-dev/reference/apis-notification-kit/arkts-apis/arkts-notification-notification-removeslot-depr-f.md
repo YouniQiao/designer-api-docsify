@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## removeSlot
@@ -23,10 +26,27 @@ function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 | 通知渠道类型,目前分为社交通信、服务提醒、内容咨询和其他类型。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定的回调方法。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+// removeSlot回调
+let removeSlotCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("removeSlot failed " + JSON.stringify(err));
+  } else {
+    console.info("removeSlot success");
+  }
+}
+let slotType: Notification.SlotType = Notification.SlotType.SOCIAL_COMMUNICATION;
+Notification.removeSlot(slotType, removeSlotCallback);
+```
 
 
 ## removeSlot
@@ -47,12 +67,25 @@ function removeSlot(slotType: SlotType): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 | 通知渠道类型,目前分为社交通信、服务提醒、内容咨询和其他类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let slotType: Notification.SlotType = Notification.SlotType.SOCIAL_COMMUNICATION;
+Notification.removeSlot(slotType).then(() => {
+  console.info("removeSlot success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`removeSlot failed, code is ${err}`);
+});
+```

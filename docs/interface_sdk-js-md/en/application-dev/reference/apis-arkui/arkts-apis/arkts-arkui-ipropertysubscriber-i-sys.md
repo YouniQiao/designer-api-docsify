@@ -29,9 +29,17 @@ Called when the object is about to be destroyed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Component that owns the current property. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let link = AppStorage.setAndLink('PropB', 49); // PropA -> 47, PropB -> 49
+link.aboutToBeDeleted();
+```
 
 ## id
 
@@ -49,6 +57,6 @@ Obtains the ID.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Variable ID obtained. |

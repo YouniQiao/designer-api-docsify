@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Vibrator, VibrateOptions } from 'kits/@kit.SensorServiceKit';
+import Vibrator, { VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## vibrate
@@ -24,7 +24,8 @@ static vibrate(options?: VibrateOptions): void
 
 触发设备振动，根据指定的振动模式执行短振动或长振动效果。该接口通过callback方式返回调用结果。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 除Lite Wearable外，从API version 8开始，建议使用
 > [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md)
 > 替代。
@@ -43,6 +44,6 @@ static vibrate(options?: VibrateOptions): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [VibrateOptions](arkts-sensorservice-system-vibrator-vibrateoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [VibrateOptions](arkts-sensorservice-system-vibrator-vibrateoptions-i.md) | 否 | 振动配置参数，用于指定振动模式及回调函数。不传时使用默认配置（mode默认为'number'），此时仅触发success和complete回调（说明调用后不会触发fail回调）。 |

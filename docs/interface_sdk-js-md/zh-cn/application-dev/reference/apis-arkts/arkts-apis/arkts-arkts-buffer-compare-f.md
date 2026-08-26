@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## compare
@@ -22,13 +21,26 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): -1 | 0 |
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| buf1 | Buffer \| Uint8Array | 是 |
-| buf2 | Buffer \| Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| buf1 | Buffer \| Uint8Array | 是 | 待比较的第一个Buffer或Uint8Array实例。 |
+| buf2 | Buffer \| Uint8Array | 是 | 待比较的第二个Buffer或Uint8Array实例。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| -1 \| 0 \| 1 |
+| 类型 | 说明 |
+| --- | --- |
+| -1 \| 0 \| 1 | 如果buf1与buf2相同，则返回0。 |
+
+**示例**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from('1234');
+let buf2 = buffer.from('0123');
+let res = buffer.compare(buf1, buf2);
+
+console.info(Number(res).toString());
+// 输出结果：1
+```

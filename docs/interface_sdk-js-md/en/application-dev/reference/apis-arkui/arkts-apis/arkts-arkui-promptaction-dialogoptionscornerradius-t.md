@@ -14,7 +14,7 @@ Defines the allowed data types for specifying the background corner radius of a 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Dimension](arkts-arkui-dimension-t.md) |
-| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) |
+| Type | Description |
+| --- | --- |
+| [Dimension](arkts-arkui-dimension-t.md) |  |
+| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) |  |

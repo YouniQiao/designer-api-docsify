@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## findProxyForUrl
@@ -14,7 +13,8 @@ function findProxyForUrl(url: string): string
 
 Parses the specified URL proxy address based on the configured PAC script and returns the corresponding PAC proxy information.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 1. You can use [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) or [setPacUrl](arkts-network-connection-setpacurl-f.md) to set
 > the PAC script.
 
@@ -33,12 +33,21 @@ Parses the specified URL proxy address based on the configured PAC script and re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| url | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| url | string | Yes | URL used to search for the proxy information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Proxy information. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+let proxyInfo = connection.findProxyForUrl("http://example.com");
+console.info(proxyInfo);
+```

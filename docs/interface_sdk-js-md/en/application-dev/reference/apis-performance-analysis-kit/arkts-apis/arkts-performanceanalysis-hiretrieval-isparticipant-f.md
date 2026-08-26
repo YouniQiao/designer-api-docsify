@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## isParticipant
@@ -22,6 +21,6 @@ Query if the app is participating the HiRetrieval project.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns true if this app is participating HiRetrieval project, false otherwise. |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appRecovery } from 'kits/@kit.AbilityKit';
+import appRecovery from '@kit.AbilityKit';
 ```
 
 ## enableAppRecovery
@@ -24,8 +24,24 @@ Enables application recovery. After this API is called, the first ability that i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| restart | [RestartFlag](arkts-ability-apprecovery-restartflag-e.md) | No |
-| saveOccasion | [SaveOccasionFlag](arkts-ability-apprecovery-saveoccasionflag-e.md) | No |
-| saveMode | [SaveModeFlag](arkts-ability-apprecovery-savemodeflag-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| restart | [RestartFlag](arkts-ability-apprecovery-restartflag-e.md) | No | Whether the application is restarted upon a fault. By default, the application is restarted. |
+| saveOccasion | [SaveOccasionFlag](arkts-ability-apprecovery-saveoccasionflag-e.md) | No | Scenario for saving the application state. By default, the state is saved when a fault occurs. |
+| saveMode | [SaveModeFlag](arkts-ability-apprecovery-savemodeflag-e.md) | No | Application state saving mode. By default, the application state is written to the local file cache. |
+
+**Examples**
+
+```TypeScript
+import { appRecovery, AbilityStage } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onCreate() {
+    appRecovery.enableAppRecovery(
+      appRecovery.RestartFlag.ALWAYS_RESTART,
+      appRecovery.SaveOccasionFlag.SAVE_WHEN_ERROR,
+      appRecovery.SaveModeFlag.SAVE_WITH_FILE
+    );
+  }
+}
+```

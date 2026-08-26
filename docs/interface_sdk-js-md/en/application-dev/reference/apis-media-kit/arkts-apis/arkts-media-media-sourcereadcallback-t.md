@@ -6,7 +6,8 @@ type SourceReadCallback = (uuid: number, requestedOffset: number, requestedLengt
 
 This callback function is implemented by applications to handle resource read requests. When data is available, applications should push it to the player using the [respondData](arkts-media-media-mediasourceloadingrequest-i.md#responddata) API of the corresponding MediaSourceLoadingRequest object.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The client must return the handle immediately after processing the request.
 
 **Since:** 18
@@ -17,8 +18,17 @@ This callback function is implemented by applications to handle resource read re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uuid | number | Yes |
-| requestedOffset | number | Yes |
-| requestedLength | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uuid | number | Yes | ID for the resource handle. |
+| requestedOffset | number | Yes | Offset of the current media data relative to the start of the resource. |
+| requestedLength | number | Yes | Length of the current request. The value **-1** indicates reaching the end of the resource. After pushing the data, call [finishLoading](arkts-media-media-mediasourceloadingrequest-i.md#finishloading) to notify the player that the push is complete. |
+
+**Examples**
+
+```TypeScript
+let sourceReadCallback: media.SourceReadCallback = (uuid: number, requestedOffset: number, requestedLength: number) => {
+  console.info(`Reading resource with handle ${uuid}, offset: ${requestedOffset}, length: ${requestedLength}`);
+  // Check whether the UUID is valid and store the read request. Avoid blocking the request while pushing data and header information.
+};
+```

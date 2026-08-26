@@ -22,8 +22,8 @@ Called when a indicator is set.
 
 **参数:**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) | 否 | indicator component controller. |
 
 ## 汇总

@@ -12,8 +12,8 @@ type BundleChangedEvent = 'add' | 'update' | 'remove'
 
 **系统接口：** 此接口为系统接口。
 
-| 类型 |
-| --- |
-| 'add' |
-| 'update' |
-| 'remove' |
+| 类型 | 说明 |
+| --- | --- |
+| 'add' |  |
+| 'update' |  |
+| 'remove' |  |

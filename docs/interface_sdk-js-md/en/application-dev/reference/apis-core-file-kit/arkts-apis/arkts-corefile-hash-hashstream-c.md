@@ -11,7 +11,7 @@ The **HashStream** class is a utility for creating a message digest of data. You
 ## Modules to Import
 
 ```TypeScript
-import { hash } from 'kits/@kit.CoreFileKit';
+import hash from '@kit.CoreFileKit';
 ```
 
 ## digest
@@ -28,16 +28,28 @@ Generates a message digest.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Hash value, which is a hexadecimal string consisting of digits and uppercase letters. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+// Create a hash stream.
+const hs = hash.createHash('sha256');
+hs.update(new Uint8Array('1234567890'?.split('').map((x: string) => x.charCodeAt(0))).buffer);
+hs.update(new Uint8Array('abcdefg'?.split('').map((x: string) => x.charCodeAt(0))).buffer);
+const hashResult = hs.digest();
+// 88A00F46836CD629D0B79DE98532AFDE3AEAD79A5C53E4848102F433046D0106
+console.info(`hashResult: ${hashResult}`);
+```
 
 ## update
 
@@ -53,13 +65,25 @@ Updates the data for generating a message digest. This API can be called multipl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | ArrayBuffer | Yes | Data to be calculated. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+// Create a hash stream.
+const hs = hash.createHash('sha256');
+hs.update(new Uint8Array('1234567890'?.split('').map((x: string) => x.charCodeAt(0))).buffer);
+hs.update(new Uint8Array('abcdefg'?.split('').map((x: string) => x.charCodeAt(0))).buffer);
+const hashResult = hs.digest();
+// 88A00F46836CD629D0B79DE98532AFDE3AEAD79A5C53E4848102F433046D0106
+console.info(`hashResult: ${hashResult}`);
+```

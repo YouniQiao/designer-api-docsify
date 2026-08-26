@@ -15,8 +15,8 @@ Iterates over values in the set.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## entries
 
 ```TypeScript
@@ -27,8 +27,8 @@ Returns an iterable of [v,v] pairs for every value `v` in the set.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## keys
 
 ```TypeScript
@@ -39,8 +39,8 @@ Despite its name, returns an iterable of the values in the set.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## values
 
 ```TypeScript
@@ -51,5 +51,5 @@ Returns an iterable of values in the set.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

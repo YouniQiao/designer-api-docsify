@@ -9,7 +9,7 @@ Subscribes to death notifications of a remote object. When the remote object is 
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import rpc from '@kit.IPCKit';
 ```
 
 ## onRemoteDied
@@ -23,3 +23,16 @@ Called to perform subsequent operations when a death notification of the remote 
 **Since:** 7
 
 **System capability:** SystemCapability.Communication.IPC.Core
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyDeathRecipient implements rpc.DeathRecipient {
+  onRemoteDied() {
+    hilog.info(0x0000, 'testTag', 'server died');
+  }
+}
+```

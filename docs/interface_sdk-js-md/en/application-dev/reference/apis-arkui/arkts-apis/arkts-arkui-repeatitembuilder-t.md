@@ -16,6 +16,6 @@ Defines builder function to render one template type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| repeatItem | [RepeatItem](arkts-arkui-repeatitem-i.md)&lt;T&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| repeatItem | [RepeatItem](arkts-arkui-repeatitem-i.md)&lt;T&gt; | Yes | State variable that combines **item** and **index**. |

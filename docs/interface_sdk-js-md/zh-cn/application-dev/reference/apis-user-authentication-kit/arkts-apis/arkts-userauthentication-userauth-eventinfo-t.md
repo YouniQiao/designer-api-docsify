@@ -14,7 +14,7 @@ type EventInfo = AuthResultInfo | TipInfo
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
-| 类型 |
-| --- |
-| [AuthResultInfo](arkts-userauthentication-userauth-authresultinfo-i.md) |
-| [TipInfo](arkts-userauthentication-userauth-tipinfo-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AuthResultInfo](arkts-userauthentication-userauth-authresultinfo-i.md) | 获取到的认证结果信息。 |
+| [TipInfo](arkts-userauthentication-userauth-tipinfo-i.md) | 认证过程中的提示信息。 |

@@ -9,7 +9,7 @@ Define a client property write request.
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
+import ssap from '@kit.ConnectivityKit';
 ```
 
 ## address

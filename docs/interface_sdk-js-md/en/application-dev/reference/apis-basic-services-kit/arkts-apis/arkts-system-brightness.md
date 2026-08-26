@@ -3,25 +3,25 @@
 ## Modules to Import
 
 ```TypeScript
-import { Brightness, BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from 'kits/@kit.BasicServicesKit';
+import Brightness, { BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Brightness](arkts-basicservices-system-brightness-brightness-c.md) |
+| Name | Description |
+| --- | --- |
+| [Brightness](arkts-basicservices-system-brightness-brightness-c.md) | The module provides APIs for querying and adjusting the screen brightness and mode. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md) |
-| [BrightnessResponse](arkts-basicservices-system-brightness-brightnessresponse-i.md) |
-| [GetBrightnessModeOptions](arkts-basicservices-system-brightness-getbrightnessmodeoptions-i.md) |
-| [GetBrightnessOptions](arkts-basicservices-system-brightness-getbrightnessoptions-i.md) |
-| [SetBrightnessModeOptions](arkts-basicservices-system-brightness-setbrightnessmodeoptions-i.md) |
-| [SetBrightnessOptions](arkts-basicservices-system-brightness-setbrightnessoptions-i.md) |
-| [SetKeepScreenOnOptions](arkts-basicservices-system-brightness-setkeepscreenonoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md) | Defines a response that returns the screen brightness mode. |
+| [BrightnessResponse](arkts-basicservices-system-brightness-brightnessresponse-i.md) | Defines a response that returns the screen brightness. |
+| [GetBrightnessModeOptions](arkts-basicservices-system-brightness-getbrightnessmodeoptions-i.md) | Options for obtaining the screen brightness mode. |
+| [GetBrightnessOptions](arkts-basicservices-system-brightness-getbrightnessoptions-i.md) | Options for obtaining the screen brightness. |
+| [SetBrightnessModeOptions](arkts-basicservices-system-brightness-setbrightnessmodeoptions-i.md) | Options for setting the screen brightness mode. |
+| [SetBrightnessOptions](arkts-basicservices-system-brightness-setbrightnessoptions-i.md) | Options for setting the screen brightness. |
+| [SetKeepScreenOnOptions](arkts-basicservices-system-brightness-setkeepscreenonoptions-i.md) | Options for setting the screen to be steady on. |

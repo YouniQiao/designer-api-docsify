@@ -9,7 +9,6 @@ The XmlPullParser interface is used to parse the existing xml file.
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -28,10 +27,26 @@ Creates and returns an XmlPullParser object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffer | ArrayBuffer \| DataView | Yes |
-| encoding | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | ArrayBuffer \| DataView | Yes | A instance, the new XmlPullParser with. |
+| encoding | string | No | [encoding='utf8'] this is its encoding. |
+
+**Examples**
+
+```TypeScript
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer, "utf-8");
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml = '<title>Happy</title>'
+let textEncoder = new util.TextEncoder();
+let uint8Array = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(uint8Array.buffer as object as ArrayBuffer, 'UTF-8');
+```
 
 ## parse
 
@@ -53,9 +68,41 @@ Starts parsing the XML file.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes | Parse options for XmlPullParser, the interface including two Boolean variables and three callback functions. |
+
+**Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml =
+  '<?xml version="1.0" encoding="utf-8"?>' +
+  '<note importance="high" logged="true">' +
+    '<company>John &amp; Hans</company>' +
+    '<title>Happy</title>' +
+  '</note>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer, 'UTF-8');
+let str = '';
+function func(name: string, value: string) {
+  str = name + value;
+  console.info(str);
+  return true;
+}
+let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:true, tagValueCallbackFunction:func}
+that.parse(options);
+// note
+// company
+// John & Hans
+// company
+// title
+// Happy
+// title
+// note
+```
 
 ## parseXml
 
@@ -73,6 +120,6 @@ Parses XML information.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes | XML parsing options. |

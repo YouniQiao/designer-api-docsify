@@ -5,13 +5,14 @@ This module provides settings data access abilities.@namespace settings
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import settings from '@kit.BasicServicesKit';
+import settingsLite from '@kit.BasicServicesKitLite';
 ```
 
 ## Summary
 
 ### Namespaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [settings](arkts-basicservices-settings-n.md) |
+| Name | Description |
+| --- | --- |
+| [settings](arkts-basicservices-settings-n.md) | This module provides settings data access abilities.@namespace settings |

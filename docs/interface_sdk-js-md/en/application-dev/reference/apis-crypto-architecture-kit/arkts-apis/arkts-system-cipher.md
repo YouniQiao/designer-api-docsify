@@ -3,21 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from 'kits/@kit.CryptoArchitectureKit';
+import Cipher, { CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Cipher](arkts-cryptoarchitecture-system-cipher-cipher-c.md) |
+| Name | Description |
+| --- | --- |
+| [Cipher](arkts-cryptoarchitecture-system-cipher-cipher-c.md) | Defines the cipher functions. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CipherAesOptions](arkts-cryptoarchitecture-system-cipher-cipheraesoptions-i.md) |
-| [CipherResponse](arkts-cryptoarchitecture-system-cipher-cipherresponse-i.md) |
-| [CipherRsaOptions](arkts-cryptoarchitecture-system-cipher-cipherrsaoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [CipherAesOptions](arkts-cryptoarchitecture-system-cipher-cipheraesoptions-i.md) | Defines the input parameters of **cipher.aes()**. |
+| [CipherResponse](arkts-cryptoarchitecture-system-cipher-cipherresponse-i.md) | Defines the response to the cipher interface called. |
+| [CipherRsaOptions](arkts-cryptoarchitecture-system-cipher-cipherrsaoptions-i.md) | Defines the input parameters of **cipher.rsa()**. |

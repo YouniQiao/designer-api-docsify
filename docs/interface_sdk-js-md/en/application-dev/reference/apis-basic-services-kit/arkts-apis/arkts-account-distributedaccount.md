@@ -9,34 +9,34 @@ The distributedAccount module provides APIs for managing distributed accounts, i
 ## Modules to Import
 
 ```TypeScript
-import { distributedAccount } from 'kits/@kit.BasicServicesKit';
+import distributedAccount from '@kit.BasicServicesKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getDistributedAccountAbility(Distributed Account Management)](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md) |
+| Name | Description |
+| --- | --- |
+| [getDistributedAccountAbility(Distributed Account Management)](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md) | Obtains a **DistributedAccountAbility** instance. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DistributedAccountAbility(Distributed Account Management)](arkts-basicservices-distributedaccount-distributedaccountability-i.md) |
-| [DistributedInfo(Distributed Account Management)](arkts-basicservices-distributedaccount-distributedinfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [DistributedAccountAbility(Distributed Account Management)](arkts-basicservices-distributedaccount-distributedaccountability-i.md) | Provides APIs for querying and updating the login state of a distributed account. You must obtain a **DistributedAccountAbility** instance first. |
+| [DistributedInfo(Distributed Account Management)](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Represents the distributed account information about an OS account. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DistributedAccountAbility(Distributed Account Management)](arkts-basicservices-distributedaccount-distributedaccountability-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [DistributedAccountAbility(Distributed Account Management)](arkts-basicservices-distributedaccount-distributedaccountability-i-sys.md) | Provides APIs for querying and updating the login state of a distributed account. You must obtain a **DistributedAccountAbility** instance first. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DistributedAccountStatus(Distributed Account Management)](arkts-basicservices-distributedaccount-distributedaccountstatus-e.md) |
+| Name | Description |
+| --- | --- |
+| [DistributedAccountStatus(Distributed Account Management)](arkts-basicservices-distributedaccount-distributedaccountstatus-e.md) | Enumerates the statuses of a distributed account. |

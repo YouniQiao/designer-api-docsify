@@ -9,7 +9,6 @@ Represents a custom vibration pattern. It is supported only by certain devices. 
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## hapticFd

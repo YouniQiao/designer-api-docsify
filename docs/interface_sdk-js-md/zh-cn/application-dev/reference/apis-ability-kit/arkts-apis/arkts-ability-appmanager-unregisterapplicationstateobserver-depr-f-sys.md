@@ -27,10 +27,28 @@ function unregisterApplicationStateObserver(observerId: number, callback: AsyncC
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| observerId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| observerId | number | 是 | 表示观察者的编号代码。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示指定的callback回调方法。 |
+
+**示例**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+let observerId = 100;
+
+function unregisterApplicationStateObserverCallback(err: BusinessError) {
+  if (err) {
+    console.error(`UnregisterApplicationStateObserverCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
+    return;
+  }
+}
+
+appManager.unregisterApplicationStateObserver(observerId, unregisterApplicationStateObserverCallback);
+```
 
 
 ## unregisterApplicationStateObserver
@@ -55,12 +73,29 @@ function unregisterApplicationStateObserver(observerId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| observerId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| observerId | number | 是 | 表示观察者的编号代码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+let observerId = 100;
+
+appManager.unregisterApplicationStateObserver(observerId)
+.then((data) => {
+    console.info(`unregisterApplicationStateObserver success, data: ${data}.`);
+})
+.catch((err: BusinessError) => {
+    console.error(`unregisterApplicationStateObserver failed, err code: ${err.code}, err msg: ${err.message}.`);
+});
+```

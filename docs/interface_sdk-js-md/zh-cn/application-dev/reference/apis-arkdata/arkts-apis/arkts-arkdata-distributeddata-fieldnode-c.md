@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## appendChild
@@ -33,15 +34,37 @@ appendChild(child: FieldNode): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [child](../../apis-arkui/arkts-components/arkts-arkui-nestedscrollinfo-i.md) | [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| child | [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md) | 是 | 要附加的域节点。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示子节点成功添加到FieldNode；返回false则表示操作失败。 |
+
+**示例**
+
+```TypeScript
+import ddm from '@ohos.data.distributedData';
+try {
+    let node = new ddm.FieldNode("root");
+    let child1 = new ddm.FieldNode("child1");
+    let child2 = new ddm.FieldNode("child2");
+    let child3 = new ddm.FieldNode("child3");
+    node.appendChild(child1);
+    node.appendChild(child2);
+    node.appendChild(child3);
+    console.log("appendNode " + JSON.stringify(node));
+    child1 = null;
+    child2 = null;
+    child3 = null;
+    node = null;
+} catch (e) {
+    console.log("AppendChild " + e);
+}
+```
 
 ## constructor
 
@@ -61,9 +84,9 @@ constructor(name: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | FieldNode的值。 |
 
 ## default
 

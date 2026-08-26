@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+import deviceManager from '@kit.DriverDevelopmentKit';
 ```
 
 ## busType

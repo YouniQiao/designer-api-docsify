@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from 'kits/@kit.SensorServiceKit';
+import Sensor, { AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
 ```
 
 ## getOnBodyState
@@ -34,9 +34,9 @@ Obtains the wearing state of a wearable device.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [GetOnBodyStateOptions](arkts-sensorservice-system-sensor-getonbodystateoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [GetOnBodyStateOptions](arkts-sensorservice-system-sensor-getonbodystateoptions-i.md) | Yes | Callback invoked when obtaining the wearing state of the device that houses the sensor. |
 
 ## subscribeAccelerometer
 
@@ -46,7 +46,8 @@ static subscribeAccelerometer(options: subscribeAccelerometerOptions): void
 
 Subscribes to data changes of the acceleration sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > ACCELEROMETER
 > instead. since API Version 8.
@@ -65,9 +66,9 @@ Subscribes to data changes of the acceleration sensor. If this API is called mul
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [subscribeAccelerometerOptions](arkts-sensorservice-system-sensor-subscribeaccelerometeroptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [subscribeAccelerometerOptions](arkts-sensorservice-system-sensor-subscribeaccelerometeroptions-i.md) | Yes | Type of data to return. |
 
 ## subscribeBarometer
 
@@ -77,7 +78,8 @@ static subscribeBarometer(options: SubscribeBarometerOptions): void
 
 Subscribes to data changes of the barometer sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > BAROMETER
 > instead. since API Version 8.
@@ -94,9 +96,9 @@ Subscribes to data changes of the barometer sensor. If this API is called multip
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SubscribeBarometerOptions](arkts-sensorservice-system-sensor-subscribebarometeroptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SubscribeBarometerOptions](arkts-sensorservice-system-sensor-subscribebarometeroptions-i.md) | Yes | Type of data to return. |
 
 ## subscribeCompass
 
@@ -106,7 +108,8 @@ static subscribeCompass(options: SubscribeCompassOptions): void
 
 Subscribes to data changes of the compass sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > ORIENTATION
 > since API Version 8.
@@ -123,9 +126,9 @@ Subscribes to data changes of the compass sensor. If this API is called multiple
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SubscribeCompassOptions](arkts-sensorservice-system-sensor-subscribecompassoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SubscribeCompassOptions](arkts-sensorservice-system-sensor-subscribecompassoptions-i.md) | Yes | Type of data to return. |
 
 ## subscribeDeviceOrientation
 
@@ -135,7 +138,8 @@ static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): v
 
 Subscribes to data changes of the device orientation sensor.If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > ORIENTATION
 > instead. since API Version 8.
@@ -152,9 +156,9 @@ Subscribes to data changes of the device orientation sensor.If this API is calle
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SubscribeDeviceOrientationOptions](arkts-sensorservice-system-sensor-subscribedeviceorientationoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SubscribeDeviceOrientationOptions](arkts-sensorservice-system-sensor-subscribedeviceorientationoptions-i.md) | Yes | Type of data to return. |
 
 ## subscribeGyroscope
 
@@ -164,7 +168,8 @@ static subscribeGyroscope(options: SubscribeGyroscopeOptions): void
 
 Subscribes to data changes of the gyroscope sensor.If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > GYROSCOPE
 > instead. since API Version 8.
@@ -183,9 +188,9 @@ Subscribes to data changes of the gyroscope sensor.If this API is called multipl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SubscribeGyroscopeOptions](arkts-sensorservice-system-sensor-subscribegyroscopeoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SubscribeGyroscopeOptions](arkts-sensorservice-system-sensor-subscribegyroscopeoptions-i.md) | Yes | Type of data to return. |
 
 ## subscribeHeartRate
 
@@ -195,7 +200,8 @@ static subscribeHeartRate(options: SubscribeHeartRateOptions): void
 
 Subscribes to data changes of the heart rate sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > HEART_RATE
 > instead. since API Version 8.
@@ -214,9 +220,9 @@ Subscribes to data changes of the heart rate sensor. If this API is called multi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SubscribeHeartRateOptions](arkts-sensorservice-system-sensor-subscribeheartrateoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SubscribeHeartRateOptions](arkts-sensorservice-system-sensor-subscribeheartrateoptions-i.md) | Yes | Type of data to return. |
 
 ## subscribeLight
 
@@ -226,7 +232,8 @@ static subscribeLight(options: SubscribeLightOptions): void
 
 Subscribes to data changes of the ambient light sensor. If this API is called multiple times, the last call takes effect.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > AMBIENT_LIGHT
 > since API Version 8.
@@ -243,9 +250,9 @@ Subscribes to data changes of the ambient light sensor. If this API is called mu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SubscribeLightOptions](arkts-sensorservice-system-sensor-subscribelightoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SubscribeLightOptions](arkts-sensorservice-system-sensor-subscribelightoptions-i.md) | Yes | Type of data to return. |
 
 ## subscribeOnBodyState
 
@@ -255,7 +262,8 @@ static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void
 
 Subscribes to wearing status changes of a wearable device. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > WEAR_DETECTION
 > instead. since API Version 8.
@@ -272,9 +280,9 @@ Subscribes to wearing status changes of a wearable device. If this API is called
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md) | Yes | Type of data to return. |
 
 ## subscribeProximity
 
@@ -284,7 +292,8 @@ static subscribeProximity(options: SubscribeProximityOptions): void
 
 Subscribes to data changes of the proximity sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > PROXIMITY
 > instead. since API Version 8.
@@ -301,9 +310,9 @@ Subscribes to data changes of the proximity sensor. If this API is called multip
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SubscribeProximityOptions](arkts-sensorservice-system-sensor-subscribeproximityoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SubscribeProximityOptions](arkts-sensorservice-system-sensor-subscribeproximityoptions-i.md) | Yes | Type of data to return. |
 
 ## subscribeStepCounter
 
@@ -313,7 +322,8 @@ static subscribeStepCounter(options: SubscribeStepCounterOptions): void
 
 Subscribes to data changes of the step counter sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > PEDOMETER
 > instead. since API Version 8.
@@ -332,9 +342,9 @@ Subscribes to data changes of the step counter sensor. If this API is called mul
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SubscribeStepCounterOptions](arkts-sensorservice-system-sensor-subscribestepcounteroptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SubscribeStepCounterOptions](arkts-sensorservice-system-sensor-subscribestepcounteroptions-i.md) | Yes | Type of data to return. |
 
 ## unsubscribeAccelerometer
 
@@ -344,7 +354,8 @@ static unsubscribeAccelerometer(): void
 
 Unsubscribes from data changes of the acceleration sensor.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > ACCELEROMETER
 > instead. since API Version 8.
@@ -369,7 +380,8 @@ static unsubscribeBarometer(): void
 
 Unsubscribes from data changes of the barometer sensor.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > BAROMETER
 > instead. since API Version 8.
@@ -392,7 +404,8 @@ static unsubscribeCompass(): void
 
 Unsubscribes from data changes of the compass sensor.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > ORIENTATION
 > instead.
@@ -415,7 +428,8 @@ static unsubscribeDeviceOrientation(): void
 
 Unsubscribes from data changes of the device orientation sensor.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > ORIENTATION
 > instead. since API Version 8.
@@ -438,7 +452,8 @@ static unsubscribeGyroscope(): void
 
 Unsubscribes from data changes of the gyroscope sensor.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > GYROSCOPE
 > instead. since API Version 8.
@@ -463,7 +478,8 @@ static unsubscribeHeartRate(): void
 
 Unsubscribes from data changes of the heart rate sensor.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > HEART_RATE
 > instead. since API Version 8.
@@ -488,7 +504,8 @@ static unsubscribeLight(): void
 
 Unsubscribes from data changes of the ambient light sensor.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > AMBIENT_LIGHT
 > instead. since API Version 8.
@@ -511,7 +528,8 @@ static unsubscribeOnBodyState(): void
 
 Unsubscribes from wearing status changes of a wearable device.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > WEAR_DETECTION
 > instead. since API Version 8.
@@ -534,7 +552,8 @@ static unsubscribeProximity(): void
 
 Unsubscribes from data changes of the proximity sensor.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > PROXIMITY
 > instead. since API Version 8.
@@ -557,7 +576,8 @@ static unsubscribeStepCounter(): void
 
 Unsubscribes from data changes of the step counter sensor.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables, You are advised to use
 > PEDOMETER
 > instead. since API Version 8.

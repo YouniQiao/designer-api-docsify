@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getSimLabelSync
@@ -20,12 +19,22 @@ Obtains the SIM card label based on the specified SIM card slot ID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SimLabel](arkts-telephony-sim-simlabel-i.md) |
+| Type | Description |
+| --- | --- |
+| [SimLabel](arkts-telephony-sim-simlabel-i.md) | SIM card label. |
+
+**Examples**
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+
+
+let simLabel: sim.SimLabel = sim.getSimLabelSync(0);
+console.info(`The sim state is:` + simLabel);
+```

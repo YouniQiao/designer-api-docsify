@@ -22,22 +22,18 @@ List is implemented based on the singly linked list. Each node has a reference p
 ## Modules to Import
 
 ```TypeScript
-import { List } from 'kits/@kit.ArkTS';
-import { ListComparatorFn } from 'kits/@kit.ArkTS';
-import { ListForEachCb } from 'kits/@kit.ArkTS';
-import { ListReplaceCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [List](arkts-arkts-util-list-list-c.md) |
+| Name | Description |
+| --- | --- |
+| [List](arkts-arkts-util-list-list-c.md) | List is implemented based on the singly linked list. Each node has a reference pointing to the next element. When querying an element, the system traverses the list from the beginning. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md) |
+| Name | Description |
+| --- | --- |
+| [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md) | This type specifies the comparator of sort in comparation. |

@@ -9,7 +9,6 @@ Implements a **MediaSourceInfo** object to provide the information about the med
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## format

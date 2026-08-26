@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## getStations
@@ -28,6 +31,19 @@ Obtains the list of clients that are connected to a Wi-Fi hotspot.<p>This method
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;StationInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;StationInfo & gt; | Returns the list of clients that are connected to the Wi-Fi hotspot. |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    let stations = wifi.getStations();
+    console.info("result:" + JSON.stringify(stations));        
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```

@@ -1,7 +1,8 @@
 # CheckPackageHasInstalledOptions
 
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API has been supported since API version 3 and deprecated since API version 9.
 Checks whether a bundle has been installed.
 
@@ -14,7 +15,7 @@ Checks whether a bundle has been installed.
 ## Modules to Import
 
 ```TypeScript
-import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from 'kits/@kit.AbilityKit';
+import Package, { CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
 ```
 
 ## complete
@@ -47,10 +48,10 @@ Called when API call has failed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | any | Yes |
-| code | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | any | Yes |  |
+| code | number | Yes |  |
 
 ## success
 
@@ -68,9 +69,9 @@ Called when API call is successful.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md) | Yes |  |
 
 ## bundleName
 

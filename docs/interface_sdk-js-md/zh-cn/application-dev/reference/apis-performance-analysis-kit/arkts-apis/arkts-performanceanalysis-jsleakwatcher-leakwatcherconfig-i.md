@@ -9,7 +9,6 @@ LeakWatcherConfig对象类型，对象中包含多个用于内存泄漏监测的
 ## 导入模块
 
 ```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## bgLeakCountThreshold

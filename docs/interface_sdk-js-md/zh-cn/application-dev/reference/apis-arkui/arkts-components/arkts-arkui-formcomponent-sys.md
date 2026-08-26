@@ -18,18 +18,18 @@ Set a new value of form info.
 
 **参数:**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [FormInfo](arkts-arkui-forminfo-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [FormInfo](arkts-arkui-forminfo-i-sys.md) | 是 | [since 9 - 11] |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 枚举
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |

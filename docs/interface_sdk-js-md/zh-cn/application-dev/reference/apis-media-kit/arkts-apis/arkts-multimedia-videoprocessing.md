@@ -11,27 +11,27 @@
 ## 导入模块
 
 ```TypeScript
-import { videoProcessing } from 'kits/@kit.MediaKit';
+import videoProcessing from '@kit.MediaKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [createVideoProcessor(提供视频画质处理能力。)](arkts-media-videoprocessing-createvideoprocessor-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [createVideoProcessor(提供视频画质处理能力。)](arkts-media-videoprocessing-createvideoprocessor-f.md) | 创建视频处理实例。 |
 
 ### 接口
 
-| 名称 |
-| --- |
-| [VideoProcessor(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessor-i.md) |
-| [VideoProcessorAiHdrStatus(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessoraihdrstatus-i.md) |
-| [VideoProcessorStatus(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessorstatus-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [VideoProcessor(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessor-i.md) | 提供VideoProcessor类型，包括AIHDR相关功能。 |
+| [VideoProcessorAiHdrStatus(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessoraihdrstatus-i.md) | 提供AIHDR功能状态。 |
+| [VideoProcessorStatus(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessorstatus-i.md) | 提供统一的视频处理功能状态。 |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [VideoProcessorStatusCallback(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [VideoProcessorStatusCallback(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md) | 视频处理功能状态变化的回调类型。 |

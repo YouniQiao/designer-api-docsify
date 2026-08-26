@@ -9,7 +9,7 @@ Represents the size of the input method panel.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKit';
 ```
 
 ## landscapeRect

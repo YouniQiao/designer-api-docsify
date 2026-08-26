@@ -9,6 +9,9 @@ WebContextMenuParam is a parameter class in the ArkWeb component used to carry c
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -41,9 +44,9 @@ Checks whether there is image content at the current number press or right-click
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true if an image exists at the number-press position; false otherwise. |
 
 ## getContextMenuMediaType
 
@@ -59,9 +62,9 @@ Obtains the type of the web element that the user number presses or right-clicks
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ContextMenuDataMediaType](arkts-arkweb-contextmenudatamediatype-e.md) |
+| Type | Description |
+| --- | --- |
+| [ContextMenuDataMediaType](arkts-arkweb-contextmenudatamediatype-e.md) | Media type of the web element, including image, video, audio, and other types, used to distinguish the type of web element tapped by the user. |
 
 ## getEditStateFlags
 
@@ -79,9 +82,9 @@ Obtains the edit state flag of the web element. This is used to finely control t
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Obtains the editable flag of the web element. See [ContextMenuEditStateFlags]{ |
 
 ## getInputFieldType
 
@@ -99,9 +102,9 @@ Obtains the input field type of the web element (such as text box, password box,
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ContextMenuInputFieldType](arkts-arkweb-contextmenuinputfieldtype-e.md) |
+| Type | Description |
+| --- | --- |
+| [ContextMenuInputFieldType](arkts-arkweb-contextmenuinputfieldtype-e.md) | Type of the web element input field, including text, password, email, and other types. It is used to identify the type of the input element that currently has focus. |
 
 ## getLinkUrl
 
@@ -111,7 +114,8 @@ getLinkUrl(): string
 
 Obtains the URL link address that has passed the security check. This can be used to provide operations such as "Open Link", "Share Link", and "Copy Link" when building a custom menu.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Compared with getUnfilteredLinkUrl(), this method performs a security check on the URL. Compared with
 > getSourceUrl(), this method obtains the link URL at the number press position, whereas getSourceUrl() obtains the
 > URL of the **src** attribute of the selected element (such as images, media, and other resources).
@@ -124,9 +128,9 @@ Obtains the URL link address that has passed the security check. This can be use
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Security-checked URL if the number-press position is a link; otherwise, an empty string. |
 
 ## getMediaType
 
@@ -136,7 +140,8 @@ getMediaType(): ContextMenuMediaType
 
 Obtains the media type of the web element.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Since API version 22, [getContextMenuMediaType](#getcontextmenumediatype) provides
 > richer media type identification capabilities.
 
@@ -148,9 +153,9 @@ Obtains the media type of the web element.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ContextMenuMediaType](arkts-arkweb-contextmenumediatype-e.md) |
+| Type | Description |
+| --- | --- |
+| [ContextMenuMediaType](arkts-arkweb-contextmenumediatype-e.md) | Media type of the web page element. |
 
 ## getPreviewHeight
 
@@ -166,9 +171,9 @@ Obtains the height of a preview image.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Height of a preview image. |
 
 ## getPreviewWidth
 
@@ -184,9 +189,9 @@ Obtains the width of a preview image.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Width of a preview image. |
 
 ## getSelectionText
 
@@ -204,9 +209,9 @@ Obtains the content when right-clicking selected text. This is used to provide t
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Selected text content. If selected text exists at the right-click position, the selected text is returned; otherwise, an empty string is returned. |
 
 ## getSourceType
 
@@ -224,9 +229,9 @@ Obtains the trigger source type of the context menu event (such as mouse right-c
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ContextMenuSourceType](arkts-arkweb-contextmenusourcetype-e.md) |
+| Type | Description |
+| --- | --- |
+| [ContextMenuSourceType](arkts-arkweb-contextmenusourcetype-e.md) | Type of the trigger source for the context menu event, including right-click, number press, and other trigger methods. |
 
 ## getSourceUrl
 
@@ -244,9 +249,9 @@ Obtains the URL link address corresponding to the **src** attribute of the eleme
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | If the selected element has the **src** attribute, the URL in the **src** is returned. The maximum size of the returned URL is 2 MB. If the size exceeds the upper limit, an empty string is returned. |
 
 ## getUnfilteredLinkUrl
 
@@ -264,9 +269,9 @@ Obtains the original URL link address that has not passed the security check.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | If the number-press position is a link, returns the original URL link; otherwise, returns an empty string. |
 
 ## isEditable
 
@@ -284,9 +289,9 @@ Checks whether a web element is editable. This is used to dynamically show or hi
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true if the web element is editable; false otherwise. |
 
 ## x
 
@@ -304,9 +309,9 @@ X coordinate of the context menu, which is the horizontal distance relative to t
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Non-negative integer if successful; -1 otherwise. |
 
 ## y
 
@@ -324,6 +329,6 @@ Y coordinate of the context menu, which is the vertical distance relative to the
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Non-negative integer when obtained successfully, and -1 otherwise. |

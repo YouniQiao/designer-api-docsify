@@ -9,7 +9,7 @@ Represents a paragraph style, which controls the overall layout behavior of a pa
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import text from '@kit.ArkGraphics2D';
 ```
 
 ## align

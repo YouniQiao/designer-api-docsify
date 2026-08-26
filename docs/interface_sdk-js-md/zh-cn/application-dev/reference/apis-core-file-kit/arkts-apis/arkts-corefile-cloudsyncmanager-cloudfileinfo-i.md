@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+import cloudSyncManager from '@kit.CoreFileKit';
 ```
 
 ## bothFileCount

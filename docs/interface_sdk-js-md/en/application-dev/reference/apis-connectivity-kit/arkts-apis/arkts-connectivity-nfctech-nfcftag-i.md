@@ -25,9 +25,19 @@ Obtains the PMm (consisting of the IC code and manufacturer parameters) informat
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | PMm information obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcF tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let pmm : number[] = nfcF.getPmm();
+console.info("nfcF pmm: " + pmm);
+```
 
 ## getSystemCode
 
@@ -45,6 +55,16 @@ Obtains the system code from this NFC-F tag.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | System code obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcF tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let systemCode : number[] = nfcF.getSystemCode();
+console.info("nfcF systemCode: " + systemCode);
+```

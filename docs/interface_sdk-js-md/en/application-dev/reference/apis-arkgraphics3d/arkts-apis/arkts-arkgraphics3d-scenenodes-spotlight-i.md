@@ -2,7 +2,8 @@
 
 Spotlight, which inherits from Light.A spotlight emits a conical beam of light in a specific direction, with the intensity of the light decaying according to the angles defined by the innerAngle and outerAngle parameters. Like a point light, a spotlight's intensity also diminishes with distance from the source.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Ensure that the innerAngle and outerAngle values are proper.
 > If the value set for outerAngle is greater than PI/2, it is forcibly set to PI/2 internally.
 > If the value set for outerAngle is less than innerAngle, it is forcibly set to innerAngle internally.

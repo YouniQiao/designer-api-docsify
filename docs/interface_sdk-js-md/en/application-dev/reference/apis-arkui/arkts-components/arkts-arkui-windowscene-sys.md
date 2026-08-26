@@ -20,8 +20,8 @@ Called when the WindowScene is used.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| persistentId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| persistentId | number | Yes | indicates the persistent identifier of WindowScene. |
 
 ## Summary

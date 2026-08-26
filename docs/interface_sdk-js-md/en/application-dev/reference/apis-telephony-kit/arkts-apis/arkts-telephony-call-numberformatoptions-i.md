@@ -9,7 +9,6 @@ Provides an option for number formatting.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## countryCode

@@ -9,7 +9,6 @@ Defines the options for initiating an HTTP request.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## addressFamily

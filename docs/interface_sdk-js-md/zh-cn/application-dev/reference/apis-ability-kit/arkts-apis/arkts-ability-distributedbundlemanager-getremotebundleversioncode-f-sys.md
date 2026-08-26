@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedBundleManager } from 'kits/@kit.AbilityKit';
+import distributedBundleManager from '@kit.AbilityKit';
 ```
 
 ## getRemoteBundleVersionCode
@@ -26,24 +26,43 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| deviceId | string | 是 |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceId | string | 是 | 远程设备ID。可以通过 [getAvailableDeviceList](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) 获取所有可信设备列表，取值为可信设备信息下networkId字段。 |
+| bundleName | string | 是 | 应用的包名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，调用成功返回版本信息；调用失败返回错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
-| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) |
-| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+
+**示例**
+
+```TypeScript
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  distributedBundleManager.getRemoteBundleVersionCode('1111', 'com.hap.myapplication').then((data: number) => {
+    console.info(`getRemoteBundleVersionCode succeed:` + data);
+  }).catch((err: BusinessError) => {
+    console.error(`getRemoteBundleVersionCode failed: error code is ${err.code}  and error msg is ${err.message}`);
+  });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`getRemoteBundleVersionCode failed: error code is ${code}  and error msg is ${message}`);
+}
+```

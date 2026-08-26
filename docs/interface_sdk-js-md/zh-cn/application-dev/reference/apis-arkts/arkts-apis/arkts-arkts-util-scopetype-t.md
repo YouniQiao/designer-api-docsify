@@ -12,7 +12,7 @@ type ScopeType = ScopeComparable | number
 
 **系统能力：** SystemCapability.Utils.Lang
 
-| 类型 |
-| --- |
-| [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | 值类型为 ScopeComparable。 |
+| number | 值类型为 number。 |

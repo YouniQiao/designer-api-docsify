@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## getAuthenticator
@@ -24,6 +25,14 @@ function getAuthenticator(): Authenticator
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Authenticator](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-appaccount-authenticator-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Authenticator](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-appaccount-authenticator-c.md) | 认证器对象。 |
+
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let authenticator = userAuth.getAuthenticator();
+```

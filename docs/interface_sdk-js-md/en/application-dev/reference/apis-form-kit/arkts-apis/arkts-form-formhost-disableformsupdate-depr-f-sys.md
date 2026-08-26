@@ -27,10 +27,23 @@ Instructs the widget framework to make a widget not updatable. After this API is
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formIds | Array & lt;string & gt; | Yes | List of widget IDs. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget not updatable, **error** is undefined; otherwise, **error** is an error object. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[] = ['12400633174999288'];
+formHost.disableFormsUpdate(formIds, (error: Base.BusinessError) => {
+  if (error.code) {
+    console.error(`formHost disableFormsUpdate, error: ${JSON.stringify(error)}`);
+  }
+});
+```
 
 
 ## disableFormsUpdate
@@ -55,12 +68,25 @@ Instructs the widget framework to make a widget not updatable. After this API is
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formIds | Array & lt;string & gt; | Yes | List of widget IDs. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[] = ['12400633174999288'];
+formHost.disableFormsUpdate(formIds).then(() => {
+  console.info('formHost disableFormsUpdate success');
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost disableFormsUpdate, error: ${JSON.stringify(error)}`);
+});
+```

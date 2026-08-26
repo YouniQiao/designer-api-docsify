@@ -1,7 +1,7 @@
 # SkipIntervals
 
 表示session支持的快进快退时间间隔的枚举。  
-| 名称 | 值 | 说明 | | ---------------------- | -- | ----------------------- | | [SECONDS_10](arkts-avsession-avsession-skipintervals-e.md) | 10 | 时间为10秒。 | | [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md) | 15 | 时间为15秒。 | | [SECONDS_30](arkts-avsession-avsession-skipintervals-e.md) | 30 |
+| 名称 | 值 | 说明 | | ---------------------- | -- | ----------------------- | | SECONDS_10 | 10 | 时间为10秒。 | | SECONDS_15 | 15 | 时间为15秒。 | | SECONDS_30 | 30 | 时间为30秒。 |
 
 **起始版本：** 11
 

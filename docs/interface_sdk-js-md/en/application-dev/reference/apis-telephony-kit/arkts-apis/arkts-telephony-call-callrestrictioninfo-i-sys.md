@@ -11,7 +11,6 @@ Defines the call restriction information.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## mode

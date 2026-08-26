@@ -11,7 +11,6 @@ Describes the result of bluetooth dialog.
 ## Modules to Import
 
 ```TypeScript
-import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## dialogResult

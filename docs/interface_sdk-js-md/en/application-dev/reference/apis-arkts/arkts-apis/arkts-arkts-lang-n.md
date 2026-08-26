@@ -9,13 +9,13 @@ ArkTS language
 ## Modules to Import
 
 ```TypeScript
-import { lang, Retention, RetentionPolicy } from 'kits/@kit.ArkTS';
+import lang, { Retention, RetentionPolicy } from '@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ISendable](arkts-arkts-lang-isendable-i.md) |
+| Name | Description |
+| --- | --- |
+| [ISendable](arkts-arkts-lang-isendable-i.md) | Base interface for all Sendable classes/interfaces. |

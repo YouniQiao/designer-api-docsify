@@ -13,7 +13,8 @@
 ## 导入模块
 
 ```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
+import prompt from '@kit.ArkUI';
+import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUIAction';
 ```
 
 ## buttons

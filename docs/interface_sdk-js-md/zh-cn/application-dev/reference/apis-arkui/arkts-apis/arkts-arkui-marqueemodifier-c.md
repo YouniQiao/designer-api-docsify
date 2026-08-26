@@ -26,6 +26,6 @@ Defines the normal update attribute function.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| instance | [MarqueeAttribute](../arkts-components/arkts-arkui-marquee-attribute.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instance | [MarqueeAttribute](../arkts-components/arkts-arkui-marquee-attribute.md) | 是 |  |

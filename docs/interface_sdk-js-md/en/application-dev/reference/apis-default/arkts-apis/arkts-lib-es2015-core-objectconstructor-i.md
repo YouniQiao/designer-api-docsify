@@ -15,15 +15,15 @@ Copy the values of all of the enumerable own properties from one or more source 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| source | U | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| source | U | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## assign
 
 ```TypeScript
@@ -34,16 +34,16 @@ Copy the values of all of the enumerable own properties from one or more source 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| source1 | U | Yes |
-| source2 | V | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| source1 | U | Yes |  |
+| source2 | V | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## assign
 
 ```TypeScript
@@ -54,17 +54,17 @@ Copy the values of all of the enumerable own properties from one or more source 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | T | Yes |
-| source1 | U | Yes |
-| source2 | V | Yes |
-| source3 | W | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| source1 | U | Yes |  |
+| source2 | V | Yes |  |
+| source3 | W | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## assign
 
 ```TypeScript
@@ -75,15 +75,15 @@ Copy the values of all of the enumerable own properties from one or more source 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | object | Yes |
-| sources | any[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | object | Yes |  |
+| sources | any[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getOwnPropertySymbols
 
 ```TypeScript
@@ -94,14 +94,14 @@ Returns an array of all symbol properties found directly on object o.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## is
 
 ```TypeScript
@@ -112,15 +112,15 @@ Returns true if the values are the same value, false otherwise.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value1 | any | Yes |
-| value2 | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value1 | any | Yes |  |
+| value2 | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## keys
 
 ```TypeScript
@@ -131,14 +131,14 @@ Returns the names of the enumerable string properties and methods of an object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | {} | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | {} | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setPrototypeOf
 
 ```TypeScript
@@ -149,12 +149,12 @@ Sets the prototype of a specified object o to object proto or null. Returns the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | any | Yes |
-| proto | object \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | any | Yes |  |
+| proto | object \| null | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

@@ -14,8 +14,8 @@ Defines the data types allowed.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
-| string |
-| boolean |
+| Type | Description |
+| --- | --- |
+| number | Number. |
+| string | String. |
+| boolean | Boolean. |

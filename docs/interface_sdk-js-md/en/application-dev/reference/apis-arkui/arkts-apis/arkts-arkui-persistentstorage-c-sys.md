@@ -31,7 +31,14 @@ Constructor.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [appStorage](arkts-arkui-commontsetsapi-p-sys.md) | [AppStorage](arkts-arkui-appstorage-c.md) | Yes |
-| storage | [Storage](../../apis-arkdata/arkts-apis/arkts-arkdata-system-storage-storage-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| appStorage | [AppStorage](arkts-arkui-appstorage-c.md) | Yes | Application-level storage. |
+| storage | [Storage](../../apis-arkdata/arkts-apis/arkts-arkdata-system-storage-storage-c.md) | Yes | Storage. |
+
+**Examples**
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+```

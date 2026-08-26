@@ -14,10 +14,10 @@ The percentage length union type is not supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PX](arkts-arkui-px-t.md) |
-| [VP](arkts-arkui-vp-t.md) |
-| [FP](arkts-arkui-fp-t.md) |
-| [LPX](arkts-arkui-lpx-t.md) |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
+| Type | Description |
+| --- | --- |
+| [PX](arkts-arkui-px-t.md) | Length in px. |
+| [VP](arkts-arkui-vp-t.md) | Length in vp. |
+| [FP](arkts-arkui-fp-t.md) | Length in fp. |
+| [LPX](arkts-arkui-lpx-t.md) | Length in lpx. |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Resource reference type, which is used to set the value of a component attribute. |

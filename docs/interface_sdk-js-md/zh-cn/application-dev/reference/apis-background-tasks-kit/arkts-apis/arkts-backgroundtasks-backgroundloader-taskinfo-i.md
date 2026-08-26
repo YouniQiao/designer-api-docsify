@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
+import backgroundLoader from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName

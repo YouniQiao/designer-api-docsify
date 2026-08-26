@@ -7,7 +7,7 @@ The **DataShareResultSet** module provides APIs for accessing the result set obt
 ## Modules to Import
 
 ```TypeScript
-import { DataShareResultSet, DataType } from 'kits/@kit.ArkData';
+import DataShareResultSet, { DataType } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -15,15 +15,15 @@ import { DataShareResultSet, DataType } from 'kits/@kit.ArkData';
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md) | Provides APIs for accessing the result sets returned.The column or key names are returned as a string array, in which the strings are in the same order as the columns or keys in the result set. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DataType](arkts-arkdata-data-datashareresultset-datatype-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [DataType](arkts-arkdata-data-datashareresultset-datatype-e-sys.md) | Enumerates the data types. |
 <!--DelEnd-->

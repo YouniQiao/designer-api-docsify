@@ -9,7 +9,6 @@ HTTP拦截器链。
 ## 导入模块
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## addChain
@@ -20,7 +19,8 @@ public addChain(chain: HttpInterceptor[]): boolean
 
 向HTTP客户端添加拦截器。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 拦截器链中不能包含相同类型的拦截器实例。如果传入相同类型的拦截器，会抛出错误码2300802（Duplicated interceptor type in the chain）。
 
 **起始版本：** 22
@@ -31,23 +31,66 @@ public addChain(chain: HttpInterceptor[]): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| chain | [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| chain | [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | 是 | 拦截器实例组成的拦截链，支持传入单个或者多个不同类型的拦截器。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 拦截器是否添加成功。true表示拦截器添加成功，false表示拦截器没有添加成功。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 2300801 |
-| 2300802 |
-| [2300999](../errorcode-net-http.md#2300999-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 2300801 | Parameter type not supported by the interceptor. |
+| 2300802 | Duplicated interceptor type in the chain. |
+| [2300999](../errorcode-net-http.md#2300999-内部错误) | Internal error. |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+// 创建认证拦截器
+class AuthInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.INITIAL_REQUEST;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // 在初始请求阶段添加认证头
+    reqContext.header['Authorization'] = 'Bearer token';
+    console.info('Interceptor: Added authorization header');
+    return true; // 继续处理拦截器链
+  }
+}
+
+class LoggingInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.FINAL_RESPONSE;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // 在最终响应阶段记录日志
+    console.info(`LoggingInterceptor: Request to ${reqContext.url} completed with status ${rspContext.responseCode}`);
+    return true; // 继续处理拦截器链
+  }
+}
+
+// 创建拦截器链并应用到请求
+let interceptorChain = new http.HttpInterceptorChain();
+let authInterceptor = new AuthInterceptor();
+let loggingInterceptor = new LoggingInterceptor();
+
+// 添加拦截器到链中
+try {
+  let success = interceptorChain.addChain([authInterceptor, loggingInterceptor]);
+  if (!success) {
+    console.error('Failed to add interceptor chain');
+  }
+} catch (e) {
+  console.error(`Interceptor chain add failed: code=${e.code}, message=${e.message}`);
+}
+```
 
 ## apply
 
@@ -57,7 +100,8 @@ public apply(httpRequest: HttpRequest): boolean
 
 将拦截器链附加到目标HTTP请求。每个HTTP请求实例只能附加一个拦截器链。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 将拦截器链附加到[HttpRequest](arkts-network-http-httprequest-i.md)实例后，当该实例发起HTTP请求时，会触发已附加的拦截器链中相应类型的拦截器。
 
 > 更多使用HTTP请求触发拦截器功能，可以参考[HTTP拦截器功能代码示例](../../../network/http-request.md#http拦截器)。
@@ -76,22 +120,87 @@ public apply(httpRequest: HttpRequest): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| httpRequest | [HttpRequest](arkts-network-connection-httprequest-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| httpRequest | [HttpRequest](arkts-network-connection-httprequest-t.md) | 是 | 要发起HTTP请求的[HttpRequest](arkts-network-http-httprequest-i.md)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 拦截器是否附加成功。true表示拦截器附加成功，false表示拦截器没有附加成功。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 2300801 |
-| [2300999](../errorcode-net-http.md#2300999-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 2300801 | Parameter type not supported by the interceptor. |
+| [2300999](../errorcode-net-http.md#2300999-内部错误) | Internal error. |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+// 创建认证拦截器
+class AuthInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.INITIAL_REQUEST;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // 在初始请求阶段添加认证头
+    reqContext.header['Authorization'] = 'Bearer token';
+    console.info('Interceptor: Added authorization header');
+    return true; // 继续处理拦截器链
+  }
+}
+
+class LoggingInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.FINAL_RESPONSE;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // 在最终响应阶段记录日志
+    console.info(`LoggingInterceptor: Request to ${reqContext.url} completed with status ${rspContext.responseCode}`);
+    return true; // 继续处理拦截器链
+  }
+}
+
+// 创建拦截器链
+let interceptorChain = new http.HttpInterceptorChain();
+let authInterceptor = new AuthInterceptor();
+let loggingInterceptor = new LoggingInterceptor();
+
+// 创建HTTP请求
+let httpRequest = http.createHttp();
+
+try {
+  // 添加拦截器到链中
+  let success = interceptorChain.addChain([authInterceptor, loggingInterceptor]);
+  if (!success) {
+    console.error('Failed to add interceptor chain');
+  }
+
+  // 将拦截器链应用到HTTP请求
+  let applySuccess = interceptorChain.apply(httpRequest);
+  if (!applySuccess) {
+    console.error('Failed to apply interceptor chain');
+  }
+} catch (e) {
+  console.error(`Interceptor chain add failed: code=${e.code}, message=${e.message}`);
+}
+
+// 发起HTTP请求。如需使用拦截，仅支持通过request接口发起请求
+httpRequest.request("EXAMPLE_URL", {
+  method: http.RequestMethod.GET,
+  header: { 'Content-Type': 'application/json' }
+}, (err: Error, data: http.HttpResponse) => {
+  if (!err) {
+    console.info('Request completed with response code: ' + data.responseCode);
+  } else {
+    console.error('Request failed: ' + JSON.stringify(err));
+  }
+  httpRequest.destroy();
+});
+```
 
 ## getChain
 
@@ -109,6 +218,50 @@ public getChain(): HttpInterceptor[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] |
+| 类型 | 说明 |
+| --- | --- |
+| [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | 返回通过[addChain]{ |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+// 创建自定义拦截器
+class CustomInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.INITIAL_REQUEST;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // 在初始请求阶段添加认证头
+    reqContext.header['Authorization'] = 'Bearer token';
+    console.info('Interceptor: Added authorization header');
+    return true; // 继续处理拦截器链
+  }
+}
+
+// 创建拦截器链并应用到请求
+let interceptorChain = new http.HttpInterceptorChain();
+let customInterceptor = new CustomInterceptor();
+
+// 添加拦截器到链中
+try {
+  let success = interceptorChain.addChain([customInterceptor]);
+  if (!success) {
+    console.error('Failed to add interceptor chain');
+  }
+} catch (e) {
+  console.error(`Interceptor chain add failed: code=${e.code}, message=${e.message}`);
+}
+
+// 获取当前拦截器链中的所有拦截器
+let chain = interceptorChain.getChain();
+console.info(`Current interceptor chain has ${chain.length} interceptors`);
+```
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let interceptorChain = new http.HttpInterceptorChain();
+```

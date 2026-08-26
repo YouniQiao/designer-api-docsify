@@ -3,6 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## publish
@@ -23,10 +26,39 @@ Publishes a notification. This API uses an asynchronous callback to return the r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | Content and related configuration of the notification to publish. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import NotificationManager from '@ohos.notificationManager';
+import Base from '@ohos.base';
+
+// publish callback
+let publishCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error(`publish failed, code is ${err}`);
+  } else {
+    console.info("publish success");
+  }
+}
+// NotificationRequest object
+let notificationRequest: NotificationManager.NotificationRequest = {
+  id: 1,
+  content: {
+    contentType: Notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+    normal: {
+      title: "test_title",
+      text: "test_text",
+      additionalText: "test_additionalText"
+    }
+  }
+};
+Notification.publish(notificationRequest, publishCallback);
+```
 
 
 ## publish
@@ -47,12 +79,37 @@ Publishes a notification. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | Content and related configuration of the notification to publish. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import NotificationManager from '@ohos.notificationManager';
+import Base from '@ohos.base';
+
+// NotificationRequest object
+let notificationRequest: NotificationManager.NotificationRequest = {
+  id: 1,
+  content: {
+    contentType: Notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+    normal: {
+      title: "test_title",
+      text: "test_text",
+      additionalText: "test_additionalText"
+    }
+  }
+};
+Notification.publish(notificationRequest).then(() => {
+  console.info("publish success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`publish failed, code is ${err}`);
+});
+```

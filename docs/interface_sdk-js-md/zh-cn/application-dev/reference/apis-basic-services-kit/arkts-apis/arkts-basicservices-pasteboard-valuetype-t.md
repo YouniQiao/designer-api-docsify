@@ -12,9 +12,9 @@ type ValueType = string | image.PixelMap | Want | ArrayBuffer
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
-| 类型 |
-| --- |
-| string |
-| image.PixelMap |
-| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) |
-| ArrayBuffer |
+| 类型 | 说明 |
+| --- | --- |
+| string | 表示string的类型。 |
+| image.PixelMap | 表示[image.PixelMap]{ |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 表示[Want]{ |
+| ArrayBuffer | 表示ArrayBuffer的类型。 |

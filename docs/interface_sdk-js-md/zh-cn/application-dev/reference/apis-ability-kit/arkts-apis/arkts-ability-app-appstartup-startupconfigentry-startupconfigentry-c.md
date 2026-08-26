@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { StartupConfigEntry } from 'kits/@kit.AbilityKit';
+import StartupConfigEntry from '@kit.AbilityKit';
 ```
 
 ## onConfig
@@ -28,9 +28,40 @@ onConfig?(): StartupConfig
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | 启动框架配置信息。 |
+
+**示例**
+
+```TypeScript
+import { StartupConfig, StartupConfigEntry, StartupListener } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class MyStartupConfigEntry extends StartupConfigEntry {
+  onConfig() {
+    hilog.info(0x0000, 'testTag', `onConfig`);
+    let onCompletedCallback = (error: BusinessError<void>) => {
+      hilog.info(0x0000, 'testTag', `onCompletedCallback`);
+      if (error) {
+        hilog.error(0x0000, 'testTag', 'onCompletedCallback: %{public}d, message: %{public}s', error.code,
+          error.message);
+      } else {
+        hilog.info(0x0000, 'testTag', `onCompletedCallback: success.`);
+      }
+    };
+    let startupListener: StartupListener = {
+      'onCompleted': onCompletedCallback
+    };
+    let config: StartupConfig = {
+      'timeoutMs': 10000,
+      'startupListener': startupListener
+    };
+    return config;
+  }
+}
+```
 
 ## onRequestCustomMatchRule
 
@@ -48,12 +79,29 @@ onRequestCustomMatchRule(want: Want): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回自定义匹配规则值，用于匹配启动任务是否自动执行。 |
+
+**示例**
+
+```TypeScript
+import { StartupConfigEntry, Want } from '@kit.AbilityKit';
+
+export default class MyStartupConfigEntry extends StartupConfigEntry {
+  // ...
+
+  onRequestCustomMatchRule(want: Want): string {
+    if (want?.parameters?.customParam == 'param1') {
+      return 'customRule1';
+    }
+    return '';
+  }
+}
+```

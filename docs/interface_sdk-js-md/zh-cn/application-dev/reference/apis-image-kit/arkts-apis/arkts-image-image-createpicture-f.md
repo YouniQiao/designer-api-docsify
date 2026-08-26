@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## createPicture
@@ -20,18 +20,38 @@ function createPicture(mainPixelmap : PixelMap): Picture
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mainPixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mainPixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 主图的PixelMap。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Picture](arkts-image-image-picture-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Picture](arkts-image-image-picture-i.md) | 返回Picture对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+async function CreatePicture(context: Context) {
+  const resourceMgr = context.resourceManager;
+  const rawFile = await resourceMgr.getRawFileContent("test.jpg");
+  let opts: image.SourceOptions = {
+    sourceDensity: 98,
+  }
+  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, opts);
+  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
+  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
+  if (pictureObj != null) {
+    console.info('Succeeded in creating picture');
+  } else {
+    console.error('Failed to create picture');
+  }
+}
+```

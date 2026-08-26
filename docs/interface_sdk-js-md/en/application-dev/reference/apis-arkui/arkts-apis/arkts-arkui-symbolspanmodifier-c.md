@@ -26,9 +26,9 @@ Defines the normal update attribute function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| attribute | [SymbolSpanAttribute](../arkts-components/arkts-arkui-symbolspan-attribute.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| attribute | [SymbolSpanAttribute](../arkts-components/arkts-arkui-symbolspan-attribute.md) | Yes |  |
 
 ## constructor
 
@@ -48,6 +48,6 @@ constructor
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | No |  |

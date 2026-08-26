@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
+import workScheduler from '@kit.BackgroundTasksKit';
 ```
 
 ## interval

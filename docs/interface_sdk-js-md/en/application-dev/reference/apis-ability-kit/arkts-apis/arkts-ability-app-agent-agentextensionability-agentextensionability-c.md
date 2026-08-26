@@ -11,7 +11,7 @@ The class of agent extension ability. This class cannot be used in Harmony Archi
 ## Modules to Import
 
 ```TypeScript
-import { AgentExtensionAbility } from 'kits/@kit.AbilityKit';
+import AgentExtensionAbility from '@kit.AbilityKit';
 ```
 
 ## onAuth
@@ -32,10 +32,10 @@ Called back when authentication is sent.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | Yes |
-| handshakeData | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | Yes | Indicates the agent service host proxy. |
+| handshakeData | string | Yes | Indicates the received handshake data. |
 
 ## onConnect
 
@@ -55,10 +55,10 @@ Called back when an agent extension is connected to an ability.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates connection information about the AgentExtensionAbility. |
+| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | Yes | Indicates the agent service host proxy. |
 
 ## onCreate
 
@@ -78,9 +78,9 @@ Called back when an agent extension is started for initialization.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information, including the ability name and bundle name. |
 
 ## onData
 
@@ -100,10 +100,10 @@ Called back when data is sent.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | Yes |
-| data | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | Yes | Indicates the agent service host proxy. |
+| data | string | Yes | Indicates the received data. |
 
 ## onDestroy
 
@@ -139,10 +139,10 @@ Called back when ability connected to an agent service extension is disconnected
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates disconnection information about the agent service extension. |
+| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | Yes | Indicates the agent service host proxy. |
 
 ## context
 

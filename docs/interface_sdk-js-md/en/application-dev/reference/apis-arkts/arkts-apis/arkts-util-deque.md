@@ -22,14 +22,12 @@ Double-Ended Queue (Deque) is a data structure implemented based on a circular q
 ## Modules to Import
 
 ```TypeScript
-import { Deque } from 'kits/@kit.ArkTS';
-import { DequeForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Deque](arkts-arkts-util-deque-deque-c.md) |
+| Name | Description |
+| --- | --- |
+| [Deque](arkts-arkts-util-deque-deque-c.md) | Double-ended queue (deque) is a sequence container implemented based on the queue data structure that follows the principles of First In First Out (FIFO) and Last In First Out (LIFO). It allows insertion and removal of elements at both the ends. |

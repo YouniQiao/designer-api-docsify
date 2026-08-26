@@ -16,7 +16,7 @@ Defines a callback for drag events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [DragEvent](arkts-arkui-dragevent-i.md) | Yes |
-| extraParams | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [DragEvent](arkts-arkui-dragevent-i.md) | Yes | event**: drag event information, including the coordinates of the drag point. |
+| extraParams | string | No | extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |

@@ -3,7 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## addDeviceConfig
@@ -28,15 +31,48 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | WLAN配置信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | 返回添加的网络配置ID，如果值为{ |
+
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    let config:wifi.WifiDeviceConfig = {
+        ssid : "****",
+        bssid:  "****",
+        preSharedKey: "****",
+        isHiddenSsid: false,
+        securityType: 0,
+        creatorUid: 0,
+        disableReason: 0,
+        netId: 0,
+        randomMacType: 0,
+        randomMacAddr:  "****",
+        ipType: 0,
+        staticIp: {
+            ipAddress: "",
+            gateway: "",
+            dnsServers: [],
+            domains: []
+        }
+    }
+    wifi.addDeviceConfig(config).then(result => {
+        console.info("result:" + JSON.stringify(result));
+    });    
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```
 
 
 ## addDeviceConfig
@@ -61,7 +97,40 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | WLAN配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |  |
+
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    let config:wifi.WifiDeviceConfig = {
+        ssid : "****",
+        bssid:  "****",
+        preSharedKey: "****",
+        isHiddenSsid: false,
+        securityType: 0,
+        creatorUid: 0,
+        disableReason: 0,
+        netId: 0,
+        randomMacType: 0,
+        randomMacAddr:  "****",
+        ipType: 0,
+        staticIp: {
+            ipAddress: "",
+            gateway: "",
+            dnsServers: [],
+            domains: []
+        }
+    }
+    wifi.addDeviceConfig(config,(error,result) => {
+        console.info("result:" + JSON.stringify(result));
+    });    
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```

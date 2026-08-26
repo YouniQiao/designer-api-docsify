@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) |
+| Name | Description |
+| --- | --- |
+| [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | The module describes the callback invoked to return the UIExtensionAbility startup result. |

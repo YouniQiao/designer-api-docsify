@@ -1,7 +1,8 @@
 # Package
 
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API has been supported since API version 3 and deprecated since API version 9.
 Checks whether a bundle has been installed.
 
@@ -14,7 +15,7 @@ Checks whether a bundle has been installed.
 ## Modules to Import
 
 ```TypeScript
-import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from 'kits/@kit.AbilityKit';
+import Package, { CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
 ```
 
 ## hasInstalled
@@ -35,6 +36,30 @@ Checks whether an application exists, or whether a native application has been i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | Yes | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) |
+
+**Examples**
+
+```TypeScript
+import Package from '@system.package';
+
+@Entry
+@Component
+struct MainPage {
+  hasInstalled() {
+    Package.hasInstalled({
+      bundleName: 'com.example.bundlename',
+      success: (data) => {
+        console.log('package has installed: ' + data);
+      },
+      fail: (msg:string, code) => {
+        console.log('query package fail, code: ' + code + ', data: ' + msg);
+      },
+    });
+  }
+  build() {
+  }
+}
+```

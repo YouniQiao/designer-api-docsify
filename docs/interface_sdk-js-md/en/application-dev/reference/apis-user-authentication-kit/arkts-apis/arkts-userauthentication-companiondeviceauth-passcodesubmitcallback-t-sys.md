@@ -16,6 +16,6 @@ Defines the callback used to submit a passcode entered by the user.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| passcode | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| passcode | Uint8Array | Yes | Passcode entered by the user (for example, the Passcode of a USB security key). |

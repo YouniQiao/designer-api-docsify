@@ -23,13 +23,47 @@ global \$r function
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
-| params | any[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | The value format is 'belonging.type.name'. belonging: group to which the resource belongs, which can be 'sys' or 'app'. type: resource type, which can be 'boolean', 'color', 'float', 'intarray', 'integer', 'pattern', 'plural','strarray', 'string', or 'media'. name: resource name, which is determined during resource definition. |
+| params | any[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
+| Type | Description |
+| --- | --- |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |  |
+
+**Examples**
+
+```TypeScript
+@Entry
+@Component
+struct Page {
+  build() {
+    Row() {
+      Column() {
+        Text($r('app.string.app_name'))
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+@Entry
+@Component
+struct Page {
+  build() {
+    Row() {
+      Column() {
+        Text($r('app.string.app_name'))
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```

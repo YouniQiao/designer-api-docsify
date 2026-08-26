@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTimer } from 'kits/@kit.BasicServicesKit';
+import systemTimer from '@kit.BasicServicesKit';
 ```
 
 ## createTimer
@@ -14,7 +14,8 @@ function createTimer(options: TimerOptions, callback: AsyncCallback<number>): vo
 
 创建定时器，使用callback异步回调。
 
-> **注意：**&gt;
+> **注意：**
+> 
 > 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md)结合使用，否则会造
 > 成内存泄漏
 
@@ -26,17 +27,40 @@ function createTimer(options: TimerOptions, callback: AsyncCallback<number>): vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [TimerOptions](arkts-basicservices-systemtimer-timeroptions-i-sys.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [TimerOptions](arkts-basicservices-systemtimer-timeroptions-i-sys.md) | 是 | 创建系统定时器的初始化选项，包括定时器类型、是否循环触发、间隔时间、WantAgent通知机制等。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回定时器的ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameter types.   3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: systemTimer.TimerOptions = {
+  type: systemTimer.TIMER_TYPE_REALTIME,
+  repeat: false
+};
+try {
+  systemTimer.createTimer(options, (error: BusinessError, timerId: number) => {
+    if (error) {
+      console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info(`Succeeded in creating timer. timerId: ${timerId}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 
 ## createTimer
@@ -47,7 +71,8 @@ function createTimer(options: TimerOptions): Promise<number>
 
 创建定时器，使用Promise异步回调返回定时器的ID。
 
-> **注意：**&gt;
+> **注意：**
+> 
 > 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md)结合使用，否则会造
 > 成内存泄漏
 
@@ -59,19 +84,40 @@ function createTimer(options: TimerOptions): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [TimerOptions](arkts-basicservices-systemtimer-timeroptions-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [TimerOptions](arkts-basicservices-systemtimer-timeroptions-i-sys.md) | 是 | 创建系统定时器的初始化选项，包括定时器类型、是否循环触发、间隔时间、WantAgent通知机制等。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回定时器的ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameter types.   3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: systemTimer.TimerOptions = {
+  type: systemTimer.TIMER_TYPE_REALTIME,
+  repeat:false
+};
+try {
+  systemTimer.createTimer(options).then((timerId: number) => {
+    console.info(`Succeeded in creating timer. timerId: ${timerId}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
+}
+```

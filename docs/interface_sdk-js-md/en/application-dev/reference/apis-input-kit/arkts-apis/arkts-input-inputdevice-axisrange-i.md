@@ -9,7 +9,7 @@ Defines the axis range of an input device.
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
+import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## axis

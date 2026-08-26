@@ -2,8 +2,10 @@
 
 调用接口返回的result。
 
-> **说明：**&gt;
-> - 从API version 8开始，从API version 9开始废弃，建议使用[HuksReturnResult&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksreturnresult-i.md)替代。&gt;
+> **说明：**
+> 
+> - 从API version 8开始，从API version 9开始废弃，建议使用[HuksReturnResult&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksreturnresult-i.md)替代。
+> 
 > - errorCode的具体信息，请参考[HUKS错误码](../errorcode-huks.md)。
 
 **起始版本：** 8
@@ -17,7 +19,8 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import huks from '@kit.UniversalKeystoreKit';
+import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 ```
 
 ## certChains

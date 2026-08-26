@@ -15,13 +15,13 @@ Defines the types of persistent collection data supported by **globalConnect** u
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;S & gt; |
-| Map & lt;string |
-| number, S & gt; |
-| Set & lt;S & gt; |
-| collections.Array & lt;S & gt; |
-| collections.Map & lt;string |
-| number, S & gt; |
-| collections.Set & lt;S & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;S & gt; | The value is of the array type. |
+| Map & lt;string |  |
+| number, S & gt; |  |
+| Set & lt;S & gt; | The value is of the Set type. |
+| collections.Array & lt;S & gt; | The value is of the collections.Array type. |
+| collections.Map & lt;string |  |
+| number, S & gt; |  |
+| collections.Set & lt;S & gt; | The value is of the collections.Set type. |

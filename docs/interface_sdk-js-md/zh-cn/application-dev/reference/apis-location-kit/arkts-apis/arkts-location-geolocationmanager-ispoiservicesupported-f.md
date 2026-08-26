@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## isPoiServiceSupported
@@ -22,6 +21,15 @@ function isPoiServiceSupported(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true:POI服务可用。 false:POI服务不可用。 |
+
+**示例**
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+
+let poiServiceState = geoLocationManager.isPoiServiceSupported();
+console.info("poiServiceState:" + poiServiceState);
+```

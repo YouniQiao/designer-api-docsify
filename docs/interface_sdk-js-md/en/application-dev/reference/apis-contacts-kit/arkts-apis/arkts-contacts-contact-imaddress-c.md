@@ -9,7 +9,7 @@ Enumerates IM addresses.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## CUSTOM_LABEL
@@ -203,3 +203,23 @@ Name of the instant message type.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
+
+**Examples**
+
+Create data in JSON format.
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let imAddress: contact.ImAddress = {
+    imAddress: 'imAddress',
+    labelName: 'labelName'
+};
+```
+
+Or create data by instantiating an ImAddress object with new.
+
+```TypeScript
+let imAddress = new contact.ImAddress();
+imAddress.imAddress = 'imAddress';
+```

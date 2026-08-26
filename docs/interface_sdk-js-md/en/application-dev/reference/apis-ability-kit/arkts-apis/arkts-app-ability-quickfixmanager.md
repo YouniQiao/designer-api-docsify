@@ -11,7 +11,7 @@ The quickFixManager module provides APIs for quick fix. With quick fix, you can 
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from 'kits/@kit.AbilityKit';
+import quickFixManager from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -19,21 +19,21 @@ import { quickFixManager } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md) |
-| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md) |
-| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md) |
-| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md) |
-| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md) |
-| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md) | Applies a quick fix patch. This API uses an asynchronous callback to return the result. |
+| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md) | Applies a quick fix patch. This API uses a promise to return the result. |
+| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md) | Obtains the quick fix information of the application. This API uses an asynchronous callback to return the result. |
+| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md) | Obtains the quick fix information of the application. This API uses a promise to return the result. |
+| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md) | Revokes quick fix. This API uses an asynchronous callback to return the result. |
+| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md) | Revokes quick fix. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ApplicationQuickFixInfo](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md) |
-| [HapModuleQuickFixInfo](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ApplicationQuickFixInfo](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md) | Defines the quick fix information at the application level. |
+| [HapModuleQuickFixInfo](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md) | Defines the quick fix information at the HAP file level. |
 <!--DelEnd-->

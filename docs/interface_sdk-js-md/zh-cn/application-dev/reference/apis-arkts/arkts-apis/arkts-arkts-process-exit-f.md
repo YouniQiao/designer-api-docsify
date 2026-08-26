@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## exit
@@ -24,6 +24,17 @@ function exit(code: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| code | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| code | number | 是 | 进程的退出码。 |
+
+**示例**
+
+```TypeScript
+process.exit(0);
+```
+
+```TypeScript
+let processManager = new process.ProcessManager();
+processManager.exit(0);
+```

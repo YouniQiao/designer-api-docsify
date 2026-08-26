@@ -9,25 +9,25 @@ The appRecovery module provides APIs for recovering faulty applications.
 ## Modules to Import
 
 ```TypeScript
-import { appRecovery } from 'kits/@kit.AbilityKit';
+import appRecovery from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [enableAppRecovery(Application Recovery)](arkts-ability-apprecovery-enableapprecovery-f.md) |
-| [restartApp(Application Recovery)](arkts-ability-apprecovery-restartapp-f.md) |
-| [saveAppState(Application Recovery)](arkts-ability-apprecovery-saveappstate-f.md) |
-| [saveAppState(Application Recovery)](arkts-ability-apprecovery-saveappstate-f.md) |
-| [setRestartWant(Application Recovery)](arkts-ability-apprecovery-setrestartwant-f.md) |
+| Name | Description |
+| --- | --- |
+| [enableAppRecovery(Application Recovery)](arkts-ability-apprecovery-enableapprecovery-f.md) | Enables application recovery. After this API is called, the first ability that is displayed when the application is started from the initiator can be restored. |
+| [restartApp(Application Recovery)](arkts-ability-apprecovery-restartapp-f.md) | Restarts the current process and starts the first ability that is displayed when the application is started. If the state of this ability is saved, the saved state data is passed into the **wantParam** property in the **want** parameter of the **onCreate** lifecycle callback of the ability.In API version 10, the ability specified by [setRestartWant](arkts-ability-apprecovery-setrestartwant-f.md) is started. If no ability is specified, the following rules are used:If the ability of the current application running in the foreground supports recovery, that ability is started.If multiple abilities that support recovery is running in the foreground, only the last ability is started.If no ability is running in the foreground, none of them is started.This API can be used together with the APIs of [errorManager](arkts-app-ability-errormanager.md). The interval between two restarts must be greater than one minute. If this API is called repeatedly within one minute, the application exits but does not restart. The behavior of automatic restart is the same as that of proactive restart. |
+| [saveAppState(Application Recovery)](arkts-ability-apprecovery-saveappstate-f.md) | Saves the application state. This API can be used together with the APIs of [errorManager](arkts-app-ability-errormanager.md). |
+| [saveAppState(Application Recovery)](arkts-ability-apprecovery-saveappstate-f.md) | Saves the ability state, which will be used for recovery. This API can be used together with the APIs of [errorManager](arkts-app-ability-errormanager.md). |
+| [setRestartWant(Application Recovery)](arkts-ability-apprecovery-setrestartwant-f.md) | Sets an ability that will be recovered. The ability must be a UIAbility in the current bundle. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [RestartFlag(Application Recovery)](arkts-ability-apprecovery-restartflag-e.md) |
-| [SaveModeFlag(Application Recovery)](arkts-ability-apprecovery-savemodeflag-e.md) |
-| [SaveOccasionFlag(Application Recovery)](arkts-ability-apprecovery-saveoccasionflag-e.md) |
+| Name | Description |
+| --- | --- |
+| [RestartFlag(Application Recovery)](arkts-ability-apprecovery-restartflag-e.md) | Enumerates the application restart flags. This enum is used as an input parameter of [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md). |
+| [SaveModeFlag(Application Recovery)](arkts-ability-apprecovery-savemodeflag-e.md) | Enumerates the application state saving modes. This enum is used as an input parameter of [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md). |
+| [SaveOccasionFlag(Application Recovery)](arkts-ability-apprecovery-saveoccasionflag-e.md) | Enumerates the scenarios for saving the application state. This enum is used as an input parameter of [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md). |

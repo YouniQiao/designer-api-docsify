@@ -9,7 +9,7 @@ Notify progress data.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+import backgroundTaskManager from '@kit.BackgroundTasksKit';
 ```
 
 ## fileName

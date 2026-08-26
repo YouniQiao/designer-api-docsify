@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
+import fastbuffer from '@kit.ArkTS';
 ```
 
 ## allocUninitialized
@@ -22,12 +22,22 @@ Allocates a new un-pooled FastBuffer for a fixed size bytes. The FastBuffer will
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes | The desired size (in bytes) of the new FastBuffer |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
+| Type | Description |
+| --- | --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a new allocated FastBuffer |
+
+**Examples**
+
+```TypeScript
+import { fastbuffer } from '@kit.ArkTS';
+
+let buf = fastbuffer.allocUninitialized(10);
+buf.fill(0);
+// "buf":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+```

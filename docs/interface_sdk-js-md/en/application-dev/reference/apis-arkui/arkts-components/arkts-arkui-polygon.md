@@ -1,6 +1,6 @@
 # Polygon
 
-The **Polygon** component is used to draw a polygon.> **NOTE**>> This component supports dynamic constructor parameter updates using the> [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the> [AttributeUpdater](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md) class since API version 20.>> **Child Components**>> None
+The **Polygon** component is used to draw a polygon. > **NOTE** > > This component supports dynamic constructor parameter updates using the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > [AttributeUpdater](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md) class since API version 20. > > **Child Components** > > None
 
 ## Polygon
 
@@ -21,9 +21,9 @@ Uses new to create Polygon. Anonymous Object Rectification.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | No | Polygon options |
 
 ## Polygon
 
@@ -43,13 +43,13 @@ Defines the constructor of Polygon component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | No | Options of the polygon. The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |

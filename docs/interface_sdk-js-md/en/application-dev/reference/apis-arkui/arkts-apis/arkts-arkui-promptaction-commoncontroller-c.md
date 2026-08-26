@@ -9,7 +9,7 @@ Implements a common controller for managing components related to **promptAction
 ## Modules to Import
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## close
@@ -62,6 +62,6 @@ Obtains the state of the custom dialog box.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CommonState](arkts-arkui-promptaction-commonstate-e.md) |
+| Type | Description |
+| --- | --- |
+| [CommonState](arkts-arkui-promptaction-commonstate-e.md) | State of the custom dialog box. |

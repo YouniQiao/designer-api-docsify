@@ -9,7 +9,7 @@ Describes the properties and behavior of the arc dot navigation indicator.
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from 'kits/@kit.ArkUI';
+import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from '@kit.ArkUI';
 ```
 
 ## arcDirection
@@ -28,15 +28,15 @@ Sets the direction of the arc navigation indicator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| direction | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcDirection](arkts-arkui-arkui-arcswiper-arcdirection-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| direction | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcDirection](arkts-arkui-arkui-arcswiper-arcdirection-e.md)&gt; | Yes | Direction of the arc navigation indicator.Default value: **ArcDirection.SIX_CLOCK_DIRECTION** (6 o'clock direction) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
 
 ## backgroundColor
 
@@ -54,15 +54,15 @@ Sets the color of the arc navigation indicator when it is number-pressed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | Yes | Color of the arc navigation indicator when it is number-pressed.Default value: **'#FF404040' |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
 
 ## constructor
 
@@ -94,15 +94,15 @@ Sets the color of the unselected navigation points in the arc navigation indicat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | Yes | Color of the unselected navigation points in the arc navigation indicator.Default value: **'#A9FFFFFF' |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
 
 ## maskColor
 
@@ -120,15 +120,15 @@ Sets the mask gradient color of the arc navigation indicator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;LinearGradient&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;LinearGradient&gt; | Yes | Mask gradient color of the arc navigation indicator.Default start color: **'#00000000'**Default end color: **'#FF000000' |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
 
 ## selectedItemColor
 
@@ -146,12 +146,12 @@ Sets the color of the selected navigation point in the arc navigation indicator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | Yes | Color of the selected navigation point in the arc navigation indicator.Default value: **#FF5EA1FF |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |

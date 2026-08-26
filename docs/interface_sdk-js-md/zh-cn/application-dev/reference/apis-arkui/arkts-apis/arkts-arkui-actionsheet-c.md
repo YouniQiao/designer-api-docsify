@@ -39,6 +39,6 @@ showActionSheet需先获取[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.m
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | 是 | 配置列表选择弹窗的参数。 |

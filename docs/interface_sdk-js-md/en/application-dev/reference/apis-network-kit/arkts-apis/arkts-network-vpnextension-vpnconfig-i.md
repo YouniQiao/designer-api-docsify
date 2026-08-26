@@ -9,7 +9,7 @@ Defines the VPN configuration.
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from 'kits/@kit.NetworkKit';
+import vpnExtension from '@kit.NetworkKit';
 ```
 
 ## addresses
@@ -181,3 +181,44 @@ Unique VPN ID.
 **Since:** 20
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
+
+**Examples**
+
+```TypeScript
+import { vpnExtension} from '@kit.NetworkKit';
+
+let vpnConfig: vpnExtension.VpnConfig = {
+  addresses: [],
+  vpnId: '123',
+  routes: [{
+    interface: "eth0",
+    destination: {
+      address: {
+        address:'',
+        family:1,
+        port:8080
+      },
+      prefixLength:1
+    },
+    gateway: {
+      address:'',
+      family:1,
+      port:8080
+    },
+    hasGateway: true,
+    isDefaultRoute: true,
+  }],
+  mtu: 1400,
+  dnsAddresses: ["223.5.5.5", "223.6.6.6"],
+  trustedApplications: [],
+  blockedApplications: [],
+}
+let context: vpnExtension.VpnExtensionContext;
+
+function vpnCreate(){
+  let vpnConnection: vpnExtension.VpnConnection = vpnExtension.createVpnConnection(context);
+  vpnConnection.create(vpnConfig).then((data) => {
+    console.info("VPN create " + JSON.stringify(data));
+  })
+}
+```

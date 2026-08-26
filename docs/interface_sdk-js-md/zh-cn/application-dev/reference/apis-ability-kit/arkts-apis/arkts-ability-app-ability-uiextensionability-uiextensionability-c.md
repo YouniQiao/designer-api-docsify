@@ -11,7 +11,7 @@ UIExtensionAbility组件是带界面的ExtensionAbility组件，继承自 [Exten
 ## 导入模块
 
 ```TypeScript
-import { UIExtensionAbility } from 'kits/@kit.AbilityKit';
+import UIExtensionAbility from '@kit.AbilityKit';
 ```
 
 ## onBackground
@@ -27,6 +27,21 @@ onBackground(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**示例**
+
+```TypeScript
+// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
+import { ShareExtensionAbility } from '@kit.AbilityKit';
+
+const TAG: string = '[testTag] ShareExtAbility';
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  onBackground() {
+    console.info(TAG, `onBackground`);
+  }
+}
+```
 
 ## onCreate
 
@@ -44,9 +59,24 @@ onCreate(launchParam: AbilityConstant.LaunchParam): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| launchParam | AbilityConstant.LaunchParam | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| launchParam | AbilityConstant.LaunchParam | 是 | 应用启动参数，包含应用启动原因、应用上次退出原因等。<br>**起始版本：** 12 |
+
+**示例**
+
+```TypeScript
+// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
+import { ShareExtensionAbility, AbilityConstant } from '@kit.AbilityKit';
+
+const TAG: string = '[testTag] ShareExtAbility';
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  onCreate(launchParam: AbilityConstant.LaunchParam) {
+    console.info(TAG, `onCreate, launchParam: ${JSON.stringify(launchParam)}`);
+  }
+}
+```
 
 ## onDestroy
 
@@ -62,6 +92,50 @@ onDestroy(): void | Promise<void>
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+**示例**
+
+同步回调示例如下：
+
+```TypeScript
+// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
+import { ShareExtensionAbility } from '@kit.AbilityKit';
+
+const TAG: string = '[testTag] ShareExtAbility';
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  onDestroy() {
+    console.info(TAG, `onDestroy`);
+  }
+}
+```
+
+异步回调示例如下：
+
+```TypeScript
+// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
+import { ShareExtensionAbility } from '@kit.AbilityKit';
+
+const TAG: string = '[testTag] ShareExtAbility';
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  // 实现异步回调需要使用async/await语法糖，通过async声明onDestroy是一个异步函数。
+  async onDestroy(): Promise<void> {
+    console.info(TAG, `onDestroy begin`);
+    try {
+      const result: string = await new Promise((resolve: Function) => {
+        setTimeout(() => {
+          resolve('Hello, world!');
+        }, 3000);
+      });
+      console.info(TAG, result); // result is 'Hello, world!'
+    } catch (e) {
+      console.error(TAG, `Get exception: ${e}`);
+    }
+    console.info(TAG, `onDestroy end`);
+  }
+}
+```
+
 ## onForeground
 
 ```TypeScript
@@ -75,6 +149,21 @@ onForeground(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**示例**
+
+```TypeScript
+// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
+import { ShareExtensionAbility } from '@kit.AbilityKit';
+
+const TAG: string = '[testTag] ShareExtAbility';
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  onForeground() {
+    console.info(TAG, `onForeground`);
+  }
+}
+```
 
 ## onSessionCreate
 
@@ -92,10 +181,33 @@ onSessionCreate(want: Want, session: UIExtensionContentSession): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 调用方拉起该UIExtensionAbility组件时传递的数据。 |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 | UIExtensionContentSession实例对象。 |
+
+**示例**
+
+```TypeScript
+// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
+import { ShareExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const TAG: string = '[testTag] ShareExtAbility';
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  onSessionCreate(want: Want, session: UIExtensionContentSession) {
+    console.info(TAG, `onSessionCreate, want: ${JSON.stringify(want)}`);
+    try {
+      session.loadContent('pages/Index');
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`Failed to load content, code: ${code}, msg: ${message}`);
+    }
+  }
+}
+```
 
 ## onSessionDestroy
 
@@ -113,9 +225,24 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 | UIExtensionContentSession实例对象。 |
+
+**示例**
+
+```TypeScript
+// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
+import { ShareExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
+
+const TAG: string = '[testTag] ShareExtAbility';
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  onSessionDestroy(session: UIExtensionContentSession) {
+    console.info(TAG, `onSessionDestroy`);
+  }
+}
+```
 
 ## context
 

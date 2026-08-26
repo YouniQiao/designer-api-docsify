@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wantAgent, WantAgent } from 'kits/@kit.AbilityKit';
+import wantAgent, { WantAgent } from '@kit.AbilityKit';
 ```
 
 ## getWantAgent
@@ -22,18 +22,71 @@ Obtains a WantAgent object. This API uses an asynchronous callback to return the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Yes | Information about the WantAgent object to obtain. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | Yes | Callback used to return the WantAgent object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16000007](../errorcode-ability.md#16000007-service-unresponsive) |
-| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
+
+**Examples**
+
+```TypeScript
+import { wantAgent, Want } from '@kit.AbilityKit';
+import type { WantAgent } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// WantAgent object.
+let wantAgentData: WantAgent;
+// WantAgentInfo object.
+let wantAgentInfo: wantAgent.WantAgentInfo = {
+  wants: [
+    {
+      deviceId: 'deviceId',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility',
+      action: 'action1',
+      entities: ['entity1'],
+      type: 'MIMETYPE',
+      uri: 'key={true,true,false}',
+      parameters:
+      {
+        mykey0: 2222,
+        mykey1: [1, 2, 3],
+        mykey2: '[1, 2, 3]',
+        mykey3: 'ssssssssssssssssssssssssss',
+        mykey4: [false, true, false],
+        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
+        mykey6: true,
+      }
+    } as Want
+  ],
+  actionType: wantAgent.OperationType.START_ABILITY,
+  requestCode: 0,
+  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+};
+
+// getWantAgent callback.
+function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+  if (err.code) {
+    console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
+  } else {
+    wantAgentData = data;
+  }
+}
+
+try {
+  wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
+} catch (err) {
+  console.error(`getWantAgent failed, error: ${JSON.stringify(err)}`);
+}
+```
 
 
 ## getWantAgent
@@ -52,20 +105,67 @@ Obtains a WantAgent object. This API uses a promise to return the result. If the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Yes | Information about the WantAgent object to obtain. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | Promise used to return the WantAgent object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16000007](../errorcode-ability.md#16000007-service-unresponsive) |
-| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
+
+**Examples**
+
+```TypeScript
+import { wantAgent, Want } from '@kit.AbilityKit';
+import type { WantAgent } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantAgentData: WantAgent;
+// WantAgentInfo object.
+let wantAgentInfo: wantAgent.WantAgentInfo = {
+  wants: [
+    {
+      deviceId: 'deviceId',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility',
+      action: 'action1',
+      entities: ['entity1'],
+      type: 'MIMETYPE',
+      uri: 'key={true,true,false}',
+      parameters:
+      {
+        mykey0: 2222,
+        mykey1: [1, 2, 3],
+        mykey2: '[1, 2, 3]',
+        mykey3: 'ssssssssssssssssssssssssss',
+        mykey4: [false, true, false],
+        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
+        mykey6: true,
+      }
+    } as Want
+  ],
+  actionType: wantAgent.OperationType.START_ABILITY,
+  requestCode: 0,
+  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+};
+
+try {
+  wantAgent.getWantAgent(wantAgentInfo).then((data) => {
+    wantAgentData = data;
+  }).catch((err: BusinessError) => {
+    console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
+  });
+} catch (err) {
+  console.error(`getWantAgent failed! ${err.code} ${err.message}`);
+}
+```

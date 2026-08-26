@@ -15,12 +15,12 @@ Sets the prototype of a specified object o to object proto or null.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | object | Yes |
-| proto | object \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | object | Yes |  |
+| proto | object \| null | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

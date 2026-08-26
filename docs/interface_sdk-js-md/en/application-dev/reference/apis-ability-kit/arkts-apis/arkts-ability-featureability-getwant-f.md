@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import featureAbility from '@kit.AbilityKit';
 ```
 
 ## getWant
@@ -22,9 +22,23 @@ Obtains the Want corresponding to the ability to start. This API uses an asynchr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want. |
+
+**Examples**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+featureAbility.getWant((error, data) => {
+  if (error && error.code !== 0) {
+    console.error(`getWant fail, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`getWant success, data: ${JSON.stringify(data)}`);
+  }
+});
+```
 
 
 ## getWant
@@ -43,6 +57,16 @@ Obtains the Want corresponding to the ability to start. This API uses a promise 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Promise used to return the Want. |
+
+**Examples**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+featureAbility.getWant().then((data) => {
+  console.info(`getWant data: ${JSON.stringify(data)}`);
+});
+```

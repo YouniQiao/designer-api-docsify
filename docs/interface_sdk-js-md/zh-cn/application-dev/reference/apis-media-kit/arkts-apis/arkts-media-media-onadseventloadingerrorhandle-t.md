@@ -14,7 +14,7 @@ type OnAdsEventLoadingErrorHandle = (adsId: string, reason: BusinessError) => vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| adsId | string | 是 |
-| reason | [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| adsId | string | 是 | 加载失败的广告资源ID。 |
+| reason | [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md) | 是 | 加载失败的原因。 |

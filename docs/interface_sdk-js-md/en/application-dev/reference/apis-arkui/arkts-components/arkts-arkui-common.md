@@ -22,17 +22,17 @@ Constructor
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Context](arkts-arkui-context-t.md) |
-| [PointerStyle](arkts-arkui-pointerstyle-t.md) |
+| Name | Description |
+| --- | --- |
+| [Context](arkts-arkui-context-t.md) | Get context. |
+| [PointerStyle](arkts-arkui-pointerstyle-t.md) | Defines the pointer style. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |

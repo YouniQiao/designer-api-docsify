@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import geolocation from '@kit.LocationKit';
 ```
 
 ## isGeoServiceAvailable
@@ -26,9 +26,23 @@ Obtain geocode service status
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the geocode service status. |
+
+**Examples**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.isGeoServiceAvailable((err, data) => {
+    if (err) {
+        console.info('isGeoServiceAvailable: err=' + JSON.stringify(err));
+    }
+    if (data) {
+        console.info('isGeoServiceAvailable: data=' + JSON.stringify(data));
+    }
+});
+```
 
 
 ## isGeoServiceAvailable
@@ -51,6 +65,15 @@ Obtain geocode service status
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | The promise returned by the function. |
+
+**Examples**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.isGeoServiceAvailable().then((result) => {
+    console.info('promise, isGeoServiceAvailable: ' + JSON.stringify(result));
+});
+```

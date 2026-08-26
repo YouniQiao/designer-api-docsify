@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { displaySync } from 'kits/@kit.ArkGraphics2D';
+import displaySync from '@kit.ArkGraphics2D';
 ```
 
 ## off('frame')
@@ -26,10 +26,25 @@ off(type: 'frame', callback?: Callback<IntervalInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'frame' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'frame' | 是 | 设置回调的类型（只能是'frame'类型）。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 否 | 传入调用on('frame')时注册的回调函数，用于取消订阅该回调函数。必须在已通过on('frame')注册回调后使用。 |
+
+**示例**
+
+```TypeScript
+// 定义回调函数
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+// 注册回调函数
+backDisplaySync?.on("frame", callback)
+
+// 取消回调函数
+backDisplaySync?.off("frame", callback)
+```
 
 ## on('frame')
 
@@ -45,10 +60,25 @@ on(type: 'frame', callback: Callback<IntervalInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'frame' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'frame' | 是 | 设置回调的类型（只能是'frame'类型）。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 是 | 订阅帧变化的回调函数。IntervalInfo包含timestamp（当前帧到达时间）和targetTimestamp（下一帧预期到达时间）两个属性，单位均为纳秒。 |
+
+**示例**
+
+```TypeScript
+// 定义回调函数
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+// 注册回调函数
+backDisplaySync?.on("frame", callback)
+
+// 生效回调函数
+backDisplaySync?.start()
+```
 
 ## setExpectedFrameRateRange
 
@@ -64,15 +94,32 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](../../apis-arkui/arkts-components/arkts-arkui-expectedframeraterange-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rateRange | [ExpectedFrameRateRange](../../apis-arkui/arkts-components/arkts-arkui-expectedframeraterange-i.md) | 是 | 设置DisplaySync期望的帧率范围，包含expected、min和max三个字段，单位为帧/秒（fps）， 字段需为非负整数，取值范围为[0, 设备最大帧率]，且满足min & lt;= expected & lt;= max。超出有效范围时会抛出401错误码。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. or check if ExpectedFrameRateRange is valid. |
+
+**示例**
+
+```TypeScript
+// 定义期望帧率范围
+let range: ExpectedFrameRateRange = {
+  expected: 10, // 期望帧率
+  min: 0, // 最小帧率
+  max: 120 // 最大帧率
+};
+
+// 设置DisplaySync期望帧率范围
+backDisplaySync?.setExpectedFrameRateRange(range)
+
+// 生效期望帧率范围
+backDisplaySync?.start()
+```
 
 ## start
 
@@ -86,6 +133,56 @@ start(): void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**示例**
+
+```TypeScript
+// 定义期望帧率范围
+let range: ExpectedFrameRateRange = {
+  expected: 10, // 期望帧率
+  min: 0, // 最小帧率
+  max: 120 // 最大帧率
+};
+// 设置DisplaySync期望帧率范围
+backDisplaySync?.setExpectedFrameRateRange(range)
+
+// 定义回调函数
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+// 注册回调函数
+backDisplaySync?.on("frame", callback)
+
+// 生效期望帧率范围并且开始每帧回调
+backDisplaySync?.start()
+```
+
+```TypeScript
+import { displaySync } from '@kit.ArkGraphics2D';
+import { UIContext } from '@kit.ArkUI';
+
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  // 创建DisplaySync实例
+  backDisplaySync: displaySync.DisplaySync = displaySync.create();
+
+  aboutToAppear() {
+    // 获取UIContext实例
+    let uiContext: UIContext = this.getUIContext();
+    // 在当前UI上下文中执行DisplaySync的start接口
+    uiContext?.runScopedTask(() => {
+      this.backDisplaySync?.start();
+    })
+  }
+
+  build() {
+    // ...
+  }
+}
+```
+
 ## stop
 
 ```TypeScript
@@ -97,3 +194,33 @@ stop(): void
 **起始版本：** 11
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+```TypeScript
+// 定义期望帧率范围
+let range: ExpectedFrameRateRange = {
+  expected: 10, // 期望帧率
+  min: 0, // 最小帧率
+  max: 120 // 最大帧率
+};
+
+// 设置DisplaySync期望帧率范围
+backDisplaySync?.setExpectedFrameRateRange(range)
+
+// 定义回调函数
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+// 注册回调函数
+backDisplaySync?.on("frame", callback)
+
+// 生效期望帧率范围并且开始每帧回调
+backDisplaySync?.start()
+
+// ...
+
+// 停止生效期望帧率范围并且停止每帧回调
+backDisplaySync?.stop()
+```

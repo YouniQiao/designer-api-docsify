@@ -4,6 +4,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [RawFileDescriptor](arkts-localization-rawfiledescriptor-rawfiledescriptor-i.md) |
+| Name | Description |
+| --- | --- |
+| [RawFileDescriptor](arkts-localization-rawfiledescriptor-rawfiledescriptor-i.md) | This module provides file descriptor information of the HAP where the `rawfile` file is located, including the file descriptor, start offset, and file length. |

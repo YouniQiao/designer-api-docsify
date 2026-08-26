@@ -11,7 +11,7 @@ Creates an **AtomicServiceMenuBar** object based on the context of the current a
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceMenuBar } from 'kits/@kit.ArkUI';
+import { AtomicServiceMenuBar } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -34,9 +34,9 @@ A constructor used to create an **AtomicServiceMenuBar** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | Context information of the current atomic service. |
 
 ## setVisible
 
@@ -58,6 +58,6 @@ Sets whether to display or hide the menu function capsule of the current atomic 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| visible | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| visible | boolean | Yes | Expected status of the menu function capsule. true: The menu function capsule is displayed. false: The menu function capsule is hidden. |

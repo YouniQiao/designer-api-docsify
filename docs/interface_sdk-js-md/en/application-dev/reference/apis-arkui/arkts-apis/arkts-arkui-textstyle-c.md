@@ -29,9 +29,9 @@ A constructor used to create a text style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | No | Font style options. |
 
 ## fontColor
 

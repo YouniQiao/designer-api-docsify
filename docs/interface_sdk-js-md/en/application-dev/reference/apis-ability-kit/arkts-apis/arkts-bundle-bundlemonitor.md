@@ -11,7 +11,7 @@ Bundle monitor@namespace bundleMonitor
 ## Modules to Import
 
 ```TypeScript
-import { bundleMonitor } from 'kits/@kit.AbilityKit';
+import bundleMonitor from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -19,24 +19,24 @@ import { bundleMonitor } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [off](arkts-ability-bundlemonitor-off-f-sys.md) |
-| [on](arkts-ability-bundlemonitor-on-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [off](arkts-ability-bundlemonitor-off-f-sys.md) | Unregister to monitor the installation status |
+| [on](arkts-ability-bundlemonitor-on-f-sys.md) | Register to monitor the installation status |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md) | This module defines the result information of monitoring install, update and uninstall. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | Indicates the event type of bundle change |
 <!--DelEnd-->

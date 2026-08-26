@@ -29,9 +29,9 @@ public addOwningProperty(subscriber: IPropertySubscriber): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| subscriber | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| subscriber | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 | 要添加的订阅者，该订阅者将接收属性变化通知。 |
 
 ## constructor
 
@@ -46,6 +46,13 @@ constructor()
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+```
 
 ## notifyPropertyHasChanged
 
@@ -63,10 +70,10 @@ protected notifyPropertyHasChanged(propName: string, newValue: any): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| propName | string | 是 |
-| newValue | any | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| propName | string | 是 | 要通知变更的属性名称。 |
+| newValue | any | 是 | 更改后的新值。 |
 
 ## removeOwningProperty
 
@@ -84,9 +91,9 @@ public removeOwningProperty(property: IPropertySubscriber): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 | 要删除的订阅者， 需为已通过[addOwningProperty](#addowningproperty)添加的订阅者。 |
 
 ## removeOwningPropertyById
 
@@ -104,9 +111,9 @@ public removeOwningPropertyById(subscriberId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| subscriberId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| subscriberId | number | 是 | 要删除的订阅者ID， 需为已通过[addOwningProperty](#addowningproperty)添加的订阅者ID， 通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)方法获取。 |
 
 ## owningProperties_
 

@@ -9,7 +9,7 @@ Represents the configuration for saving images or videos to the media library, i
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import photoAccessHelper from '@kit.MediaLibraryKit';
 ```
 
 ## fileNameExtension

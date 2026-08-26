@@ -18,12 +18,12 @@ export declare function extendViewModel<T extends ViewModel, Data>(
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [CombinedOptions](arkts-arkui-combinedoptions-t-sys.md)&lt;T, Data&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [CombinedOptions](arkts-arkui-combinedoptions-t-sys.md)&lt;T, Data&gt; | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md) & Data |
+| Type | Description |
+| --- | --- |
+| [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md) & Data |  |

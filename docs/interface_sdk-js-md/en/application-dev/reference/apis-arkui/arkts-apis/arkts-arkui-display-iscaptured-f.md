@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import display from '@kit.ArkUI';
 ```
 
 ## isCaptured
@@ -22,15 +22,23 @@ Checks whether the device's screen content is being captured.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result for whether the device's screen content is being captured. **true** is returned when screen content is being captured (including active screen capture, casting, recording, or the creation of a virtual screen that could be captured). **false** is returned when screen content is no longer being captured. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+**Examples**
+
+```TypeScript
+let ret: boolean = false;
+// Check whether the screen content is captured.
+ret = display.isCaptured();
+```
 
 
 ## isCaptured
@@ -51,19 +59,31 @@ Check whether the device is captured, projected, or recorded by any app in the b
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleNameList | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleNameList | Array & lt;string & gt; | Yes | The list of application bundle names that need to be checked. The max size of array is 100. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true means the device is captured, projected, or recorded by any app in the bundle name list. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
-| [1400004](../errorcode-display.md#1400004-parameter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1.The size of bundleNameList is larger than 100. |
+
+**Examples**
+
+```TypeScript
+try {
+  const bundleList: Array<string> = ['com.example.app'];
+  let ret = display.isCaptured(bundleList);
+  console.info(`The screen is captured or not: ${ret}`);
+} catch (err) {
+  console.error(`Failed to get display isCaptured. Code: ${err.code}, message: ${err.message}`);
+}
+```

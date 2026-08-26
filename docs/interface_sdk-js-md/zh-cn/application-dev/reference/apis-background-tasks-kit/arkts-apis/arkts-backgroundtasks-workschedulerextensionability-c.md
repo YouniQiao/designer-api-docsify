@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from 'kits/@kit.BackgroundTasksKit';
+import WorkSchedulerExtensionAbility, { WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
 ```
 
 ## onWorkStart
@@ -28,9 +28,23 @@ onWorkStart(work: workScheduler.WorkInfo): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| work | workScheduler.WorkInfo | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| work | workScheduler.WorkInfo | 是 | 要添加到执行队列的任务。 |
+
+**示例**
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+import { WorkSchedulerExtensionAbility } from '@kit.BackgroundTasksKit';
+
+export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
+  onWorkStart(work: workScheduler.WorkInfo) {
+    console.info(`MyWorkSchedulerExtensionAbility onWorkStart, workId: ${work.workId},
+      bundleName: ${work.bundleName}, abilityName: ${work.abilityName}.`);
+  }
+}
+```
 
 ## onWorkStop
 
@@ -48,9 +62,23 @@ onWorkStop(work: workScheduler.WorkInfo): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| work | workScheduler.WorkInfo | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| work | workScheduler.WorkInfo | 是 | 执行队列中要结束回调的任务。 |
+
+**示例**
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+import { WorkSchedulerExtensionAbility } from '@kit.BackgroundTasksKit';
+
+export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
+  onWorkStop(work: workScheduler.WorkInfo) {
+    console.info(`MyWorkSchedulerExtensionAbility onWorkStop, workId: ${work.workId},
+      bundleName: ${work.bundleName}, abilityName: ${work.abilityName}.`);
+  }
+}
+```
 
 ## context
 

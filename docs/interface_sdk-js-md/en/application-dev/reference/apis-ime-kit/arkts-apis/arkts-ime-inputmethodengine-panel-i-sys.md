@@ -9,7 +9,7 @@ You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.m
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKit';
 ```
 
 ## off('sizeUpdate')
@@ -33,10 +33,20 @@ Disables listening for the panel size change. This API uses an asynchronous call
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'sizeUpdate' | Yes |
-| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'sizeUpdate' | Yes | Event type, which is **'sizeUpdate'**. |
+| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | No | Callback used to return the size of the soft keyboard panel, including the width and height. |
+
+**Examples**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+panel.off('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
+  console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
+});
+```
 
 ## on('sizeUpdate')
 
@@ -59,10 +69,21 @@ Listens for the panel size change. This API uses an asynchronous callback to ret
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'sizeUpdate' | Yes |
-| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'sizeUpdate' | Yes | Event type, which is **'sizeUpdate'**. |
+| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | Yes | Callback used to return the size of the soft keyboard panel, including the width and height. |
+
+**Examples**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
+  console.info(`panel size changed, windowSize: ${windowSize.width}, ${windowSize.height}, ` +
+    `keyboardArea: ${keyboardArea.top}, ${keyboardArea.bottom}, ${keyboardArea.left}, ${keyboardArea.right}`);
+});
+```
 
 ## setShadow
 
@@ -85,17 +106,23 @@ Sets the shadow effect of the input method window.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| radius | number | Yes |
-| color | string | Yes |
-| offsetX | number | Yes |
-| offsetY | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| radius | number | Yes | Radius of the shadow. The value is a floating-point number greater than or equal to 0. 0, in px. The value **0.0** means that the shadow is disabled for the window borders. |
+| color | string | Yes | Color of the shadow. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, `#000000` or `#FF000000`. |
+| offsetX | number | Yes | Offset of the shadow along the x-axis, in pixels. The value is a floating-point number. |
+| offsetY | number | Yes | Offset of the shadow along the y-axis, in pixels. The value is a floating-point number. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: Panel's flag is FLG_FIXED. |
+
+**Examples**
+
+```TypeScript
+panel.setShadow(20, '#000000', 20, 20);
+```

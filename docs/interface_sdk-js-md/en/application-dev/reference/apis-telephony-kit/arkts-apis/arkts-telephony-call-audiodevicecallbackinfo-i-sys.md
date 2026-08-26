@@ -11,7 +11,6 @@ Defines the audio device information.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## audioDeviceList

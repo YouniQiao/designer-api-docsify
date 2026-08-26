@@ -11,7 +11,7 @@ Params carried by the framework when prompting for a companion device passcode.@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import companionDeviceAuth from '@kit.UserAuthenticationKit';
 ```
 
 ## challenge

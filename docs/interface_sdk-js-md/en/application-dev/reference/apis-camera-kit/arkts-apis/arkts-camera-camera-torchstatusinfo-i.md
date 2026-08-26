@@ -9,7 +9,6 @@ Describes the flashlight status information.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isTorchActive

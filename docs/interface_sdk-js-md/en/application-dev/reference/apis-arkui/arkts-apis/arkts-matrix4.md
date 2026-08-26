@@ -10,32 +10,32 @@ Provides matrix transformation capabilities for components, including translatio
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import matrix4 from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [combine](arkts-arkui-matrix4-combine-f.md) |
-| [copy](arkts-arkui-matrix4-copy-f.md) |
-| [identity](arkts-arkui-matrix4-identity-f.md) |
-| [init](arkts-arkui-matrix4-init-f.md) |
-| [invert](arkts-arkui-matrix4-invert-f.md) |
-| [rotate](arkts-arkui-matrix4-rotate-f.md) |
-| [scale](arkts-arkui-matrix4-scale-f.md) |
-| [transformPoint](arkts-arkui-matrix4-transformpoint-f.md) |
-| [translate](arkts-arkui-matrix4-translate-f.md) |
+| Name | Description |
+| --- | --- |
+| [combine](arkts-arkui-matrix4-combine-f.md) | Combines the effects of two matrices to generate a new matrix object. |
+| [copy](arkts-arkui-matrix4-copy-f.md) | Copies this matrix object. |
+| [identity](arkts-arkui-matrix4-identity-f.md) | Constructs an identity matrix. |
+| [init](arkts-arkui-matrix4-init-f.md) | Matrix constructor, which is used to create a 4 x 4 matrix with the input parameters. Column-major order is used. |
+| [invert](arkts-arkui-matrix4-invert-f.md) | Inverts this matrix object. |
+| [rotate](arkts-arkui-matrix4-rotate-f.md) | Rotates this matrix object along the x, y, and z axes. |
+| [scale](arkts-arkui-matrix4-scale-f.md) | Scales this matrix object along the x, y, and z axes. |
+| [transformPoint](arkts-arkui-matrix4-transformpoint-f.md) | Applies the current transformation effect to a coordinate point. |
+| [translate](arkts-arkui-matrix4-translate-f.md) | Translates this matrix object along the x, y, and z axes. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |
-| [Point](arkts-arkui-matrix4-point-i.md) |
-| [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) |
-| [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) |
-| [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) |
-| [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) |
+| Name | Description |
+| --- | --- |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Implements a **Matrix4Transit** object. |
+| [Point](arkts-arkui-matrix4-point-i.md) | Defines the data structure of a coordinate point. |
+| [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Describes the configuration options for polygon-to-polygon transformation mapping. |
+| [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Describes the rotation parameters. |
+| [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Describes the scale parameters. |
+| [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Describes the translation parameters. |

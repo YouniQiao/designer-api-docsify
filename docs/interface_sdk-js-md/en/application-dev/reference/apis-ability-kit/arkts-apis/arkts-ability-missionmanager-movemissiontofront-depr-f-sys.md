@@ -27,10 +27,29 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| missionId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| missionId | number | Yes | Mission ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is switched to the foreground, **err** is **undefined**. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+
+let testMissionId = 2;
+try {
+  missionManager.moveMissionToFront(testMissionId, (err, data) => {
+    if (err) {
+      console.error(`moveMissionToFront failed: ${err.message}`);
+    } else {
+      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
+    }
+  });
+} catch (err) {
+  console.error(`moveMissionToFront failed: ${err.message}`);
+}
+```
 
 
 ## moveMissionToFront
@@ -55,11 +74,30 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| missionId | number | Yes |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| missionId | number | Yes | Mission ID. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is switched to the foreground, **err** is **undefined**. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+
+let testMissionId = 2;
+try {
+  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 }, (err, data) => {
+    if (err) {
+      console.error(`moveMissionToFront failed: ${err.message}`);
+    } else {
+      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
+    }
+  });
+} catch (err) {
+  console.error(`moveMissionToFront failed: ${err.message}`);
+}
+```
 
 
 ## moveMissionToFront
@@ -84,13 +122,31 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| missionId | number | Yes |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| missionId | number | Yes | Mission ID. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+let testMissionId = 2;
+try {
+  missionManager.moveMissionToFront(testMissionId).then((data) => {
+    console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`moveMissionToFront failed. Cause: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`moveMissionToFront failed. Cause: ${error.message}`);
+}
+```

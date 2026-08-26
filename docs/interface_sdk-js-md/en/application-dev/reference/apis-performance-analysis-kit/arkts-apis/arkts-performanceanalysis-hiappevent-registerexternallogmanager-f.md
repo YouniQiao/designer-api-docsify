@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## registerExternalLogManager
@@ -22,12 +21,12 @@ Register external log manager
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| logMngr | [ExternalLogManager](arkts-performanceanalysis-hiappevent-externallogmanager-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| logMngr | [ExternalLogManager](arkts-performanceanalysis-hiappevent-externallogmanager-c.md) | Yes | the external log manager. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 11106001 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 11106001 | State error. Possible causes: 1. Log manager already registered; |

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## queryApnIds
@@ -22,18 +21,39 @@ Obtains the APN ID corresponding to the specified **ApnInfo**. This API returns 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| apnInfo | [ApnInfo](arkts-telephony-data-apninfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| apnInfo | [ApnInfo](arkts-telephony-data-apninfo-i.md) | Yes | APN to query. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;number & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+**Examples**
+
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let apnInfo: data.ApnInfo;
+apnInfo = {
+  apnName: "CMNET",
+  apn: "cmnet",
+  mcc: "460",
+  mnc: "07",
+};
+
+data.queryApnIds(apnInfo).then((apnIds: Array<number>) => {
+    console.info(`queryApnIds success, apnIds: ${apnIds}`);
+}).catch((err: BusinessError) => {
+    console.error(`queryApnIds failed. code: ${err.code}, message: ${err.message}`);
+});
+```

@@ -16,6 +16,6 @@ Defines the callback function when the preloaded [UIExtensionAbility](arkts-abil
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| preloadId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| preloadId | number | Yes | The preload UIExtensionAbility ID. |

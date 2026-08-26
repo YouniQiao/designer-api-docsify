@@ -2,7 +2,8 @@
 
 Custom layout algorithm class.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The object of the **CustomLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as
 > the input parameter of the
 > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the
@@ -22,7 +23,8 @@ onLayout(self: FrameNode, position: Position): void
 
 Customizes the position of the child component to be arranged. When the position of the dynamic layout component is determined, the ArkUI framework will transfer the FrameNode and layout position of the component to you through **onLayout**. State variables should not be changed in this callback.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > In this callback, you can call
 > [getChild()](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#getchild12) of
 > [FrameNode](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#framenode-1) to obtain the child
@@ -44,10 +46,10 @@ Customizes the position of the child component to be arranged. When the position
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| position | [Position](arkts-arkui-position-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Entity node of the dynamic layout component in the component tree. |
+| position | [Position](arkts-arkui-position-t.md) | Yes | Position information used in layout of the dynamic layout component. |
 
 ## onMeasure
 
@@ -57,7 +59,8 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint): void
 
 Customizes the size of the child component to be measured. When the size of the dynamic layout component is determined, the ArkUI framework will transfer the FrameNode and layout constraint of the component to you through **onMeasure**. State variables should not be changed in this callback.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > In this callback, you can call
 > [getChild()](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#getchild12) of
 > [FrameNode](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#framenode-1) to obtain the child
@@ -79,7 +82,7 @@ Customizes the size of the child component to be measured. When the size of the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Entity node of the dynamic layout component in the component tree. |
+| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes | Layout constraint used by the dynamic layout component for measurement. |

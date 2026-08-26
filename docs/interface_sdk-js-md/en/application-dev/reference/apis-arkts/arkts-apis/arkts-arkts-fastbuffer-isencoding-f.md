@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
+import fastbuffer from '@kit.ArkTS';
 ```
 
 ## isEncoding
@@ -22,12 +22,27 @@ Returns true if encoding is the name of a supported character encoding, or false
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| encoding | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encoding | string | Yes | The character encoding name to validate |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true or false |
+
+**Examples**
+
+```TypeScript
+import { fastbuffer } from '@kit.ArkTS';
+
+console.info(fastbuffer.isEncoding('utf-8').toString());
+// Output: true
+console.info(fastbuffer.isEncoding('hex').toString());
+// Output: true
+console.info(fastbuffer.isEncoding('utf/8').toString());
+// Output: false
+console.info(fastbuffer.isEncoding('').toString());
+// Output: false
+```

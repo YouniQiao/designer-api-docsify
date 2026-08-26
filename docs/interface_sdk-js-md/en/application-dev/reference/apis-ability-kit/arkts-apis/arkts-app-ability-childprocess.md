@@ -3,13 +3,15 @@
 ## Modules to Import
 
 ```TypeScript
-import { ChildProcess } from 'kits/@kit.AbilityKit';
+import ChildProcess from '@kit.AbilityKit';
+import { ChildProcessArgs } from '@kit.AbilityKitArgs';
+import { ChildProcessOptions } from '@kit.AbilityKitOptions';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ChildProcess](arkts-ability-app-ability-childprocess-childprocess-c.md) |
+| Name | Description |
+| --- | --- |
+| [ChildProcess](arkts-ability-app-ability-childprocess-childprocess-c.md) | ChildProcess is the base class for you to customize child processes. When starting a child process through [childProcessManager](arkts-app-ability-childprocessmanager.md), you must inherit this class and override the entrypoint method. |

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { DynamicLayout, DynamicLayoutAttribute } from 'kits/@kit.ArkUI';
+import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## [[Call]]
@@ -34,12 +34,12 @@ import { DynamicLayout, DynamicLayoutAttribute } from 'kits/@kit.ArkUI';
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | 是 | 指定动态布局组件的布局算法。取非法值时，按照[堆叠布局算法](arkts-arkui-layoutalgorithm-stacklayoutalgorithm-c.md) 布局子组件，子组件堆叠排列。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |  |

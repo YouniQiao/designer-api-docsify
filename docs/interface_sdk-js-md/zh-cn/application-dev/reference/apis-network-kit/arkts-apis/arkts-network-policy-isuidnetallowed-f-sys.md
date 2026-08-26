@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from 'kits/@kit.NetworkKit';
+import policy from '@kit.NetworkKit';
 ```
 
 ## isUidNetAllowed
@@ -24,22 +24,33 @@ function isUidNetAllowed(uid: number, isMetered: boolean, callback: AsyncCallbac
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uid | number | 是 |
-| isMetered | boolean | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uid | number | 是 | app 唯一标识符，取值范围为int32_t范围内的正整数。 |
+| isMetered | boolean | 是 | 是否为计量网络。true：是计量网络；false：不是计量网络。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回 true 表示这个 uid 可以访问对应的计量网络。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy.isUidNetAllowed(11111, true, (error: BusinessError, data: boolean) => {
+  console.error(JSON.stringify(error));
+  console.info(JSON.stringify(data));
+});
+```
 
 
 ## isUidNetAllowed
@@ -60,27 +71,42 @@ function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uid | number | 是 |
-| isMetered | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uid | number | 是 | app 唯一标识符，取值范围为int32_t范围内的正整数。 |
+| isMetered | boolean | 是 | 是否为计量网络。true：是计量网络；false：不是计量网络。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise 对象。 返回 true 表示这个uid可以访问计量或非计量网络，返回false表示这个uid不可以访问计量或非计量网络。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .isUidNetAllowed(11111, true)
+  .then((data: boolean) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
 
 
 ## isUidNetAllowed
@@ -101,22 +127,33 @@ function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uid | number | 是 |
-| iface | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uid | number | 是 | app 唯一标识符，取值范围为int32_t范围内的正整数。 |
+| iface | string | 是 | 网络对应的名称 。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回 true 表示这个 uid 可以访问对应 iface 的网络。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy.isUidNetAllowed(11111, 'wlan0', (error: BusinessError, data: boolean) => {
+  console.error(JSON.stringify(error));
+  console.info(JSON.stringify(data));
+});
+```
 
 
 ## isUidNetAllowed
@@ -137,24 +174,39 @@ function isUidNetAllowed(uid: number, iface: string): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uid | number | 是 |
-| iface | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uid | number | 是 | app 唯一标识符，取值范围为int32_t范围内的正整数。 |
+| iface | string | 是 | 网络对应的名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise 对象。 返回 true 表示对应 uid 能访问指定的 iface 的网络，返回false则表示不能访问。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .isUidNetAllowed(11111, 'wlan0')
+  .then((data: boolean) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```

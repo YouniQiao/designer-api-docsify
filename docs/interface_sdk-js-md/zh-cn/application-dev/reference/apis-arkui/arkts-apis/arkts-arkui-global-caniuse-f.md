@@ -21,12 +21,12 @@ export declare function canIUse(syscap: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| syscap | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| syscap | string | 是 | 待查询的系统能力名称。不支持输入null、undefined。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 系统能力查询结果，true表示系统具备该能力，false表示系统不具备。 |

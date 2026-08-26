@@ -24,6 +24,6 @@ Displays the menu. x and y specify the position of the displayed menu. x indicat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| position | { x: number; y: number } | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| position | { x: number; y: number } | Yes |  |

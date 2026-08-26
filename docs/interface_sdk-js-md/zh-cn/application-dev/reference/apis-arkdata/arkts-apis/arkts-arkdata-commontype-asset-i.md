@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { commonType } from 'kits/@kit.ArkData';
+import commonType from '@kit.ArkData';
 ```
 
 ## createTime

@@ -15,14 +15,14 @@ Describes the assertion function of the ArkTS typed array.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | ElementType | Yes |
-| index | number | Yes |
-| array | ArrayType | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ElementType | Yes | Element that is being traversed in the ArkTS typed array. |
+| index | number | Yes | Index of the element. |
+| array | ArrayType | Yes | ArkTS typed array that is being traversed. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | True if the value meets the predicate, otherwise false. |

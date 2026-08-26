@@ -13,8 +13,8 @@ get?(): any
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## set
 
 ```TypeScript
@@ -23,9 +23,9 @@ set?(v: any): void
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| v | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| v | any | Yes |  |
 
 ## configurable
 

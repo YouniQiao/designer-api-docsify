@@ -27,11 +27,34 @@ function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCall
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| deviceId | string | 是 |
-| missionId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceId | string | 是 | 设备ID，本机默认为空字符串。 |
+| missionId | number | 是 | 任务ID。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | 是 | 回调函数，返回任务信息。 |
+
+**示例**
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+
+let missionId: number = 0;
+
+// 获取指定任务信息
+missionManager.getMissionInfo('', missionId, (error, mission) => {
+  if (error.code) {
+    console.error(`getMissionInfo failed, error.code: ${error.code}, error.message: ${error.message}`);
+    return;
+  }
+
+  console.info(`mission.missionId = ${mission.missionId}`);
+  console.info(`mission.runningState = ${mission.runningState}`);
+  console.info(`mission.lockedState = ${mission.lockedState}`);
+  console.info(`mission.timestamp = ${mission.timestamp}`);
+  console.info(`mission.label = ${mission.label}`);
+  console.info(`mission.iconPath = ${mission.iconPath}`);
+});
+```
 
 
 ## getMissionInfo
@@ -56,13 +79,32 @@ function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInf
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| deviceId | string | 是 |
-| missionId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceId | string | 是 | 设备ID，本机默认为空字符串。 |
+| missionId | number | 是 | 任务ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | Promise对象，返回任务信息。 |
+
+**示例**
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+let testMissionId = 1;
+try {
+  // 获取指定任务信息
+  missionManager.getMissionInfo('', testMissionId).then((data) => {
+    console.info(`getMissionInfo successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`getMissionInfo failed. Cause: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`getMissionInfo failed. Cause: ${error.message}`);
+}
+```

@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## promisify
@@ -22,12 +23,30 @@ function promisify(original: (err: Object, value: Object) => void): Function
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| original | (err: Object, value: Object) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| original | (err: Object, value: Object) = & gt; void | 是 | 回调函数中第一个参数 **err** 是拒绝原因（如果Promise已解决，则为null），第二个参数 **value** 是已解决的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Function |
+| 类型 | 说明 |
+| --- | --- |
+| Function | 返回一个Promise函数，该Promise在原始回调函数成功执行时resolve为回调的value值，在原始回调函数执行出错时reject为错误对象。 |
+
+**示例**
+
+```TypeScript
+async function fn() {
+  return 'hello world';
+}
+const addCall = util.promisify(util.callbackWrapper(fn));
+(async () => {
+  try {
+    let res: string = await addCall();
+    console.info(res);
+    // 输出结果：hello world
+  } catch (err) {
+    console.info(err);
+  }
+})();
+```

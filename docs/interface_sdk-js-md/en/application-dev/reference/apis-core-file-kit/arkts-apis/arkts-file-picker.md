@@ -9,40 +9,40 @@ The **Picker** module encapsulates APIs such as **DocumentViewPicker**, **AudioV
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
+import picker from '@kit.CoreFileKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-c.md) |
-| [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-c.md) |
-| [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md) |
-| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) |
-| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) |
-| [DocumentViewPicker](arkts-corefile-picker-documentviewpicker-c.md) |
-| [PhotoSaveOptions](arkts-corefile-picker-photosaveoptions-c.md) |
-| [PhotoSelectOptions](arkts-corefile-picker-photoselectoptions-c.md) |
-| [PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md) |
-| [PhotoViewPicker](arkts-corefile-picker-photoviewpicker-c.md) |
+| Name | Description |
+| --- | --- |
+| [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-c.md) | Defines the options for saving audio clips. |
+| [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-c.md) | Defines the options for selecting audio clips. |
+| [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md) | Provides APIs for selecting and saving audio clips. Before using the APIs of **AudioViewPicker**, you need to create an **AudioViewPicker** instance. |
+| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | Defines the options for saving documents. |
+| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | Defines the options for selecting documents. |
+| [DocumentViewPicker](arkts-corefile-picker-documentviewpicker-c.md) | Provides APIs for selecting and saving documents in different formats. Before using the APIs of **DocumentViewPicker**, you need to create a **DocumentViewPicker** instance. |
+| [PhotoSaveOptions](arkts-corefile-picker-photosaveoptions-c.md) | Defines the options for saving images or videos. |
+| [PhotoSelectOptions](arkts-corefile-picker-photoselectoptions-c.md) | Defines the options for selecting images or videos. |
+| [PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md) | Defines information about the images or videos selected. |
+| [PhotoViewPicker](arkts-corefile-picker-photoviewpicker-c.md) | Provides APIs for selecting and saving images or videos. You are advised to use [PhotoViewPicker of PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md) to select a file. Before using the APIs of **PhotoViewPicker**, you need to create a **PhotoViewPicker** instance. |
 
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c-sys.md) |
-| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c-sys.md) | Defines the options for saving documents. |
+| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c-sys.md) | Defines the options for selecting documents. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DocumentPickerMode](arkts-corefile-picker-documentpickermode-e.md) |
-| [DocumentSelectMode](arkts-corefile-picker-documentselectmode-e.md) |
-| [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md) |
-| [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md) |
+| Name | Description |
+| --- | --- |
+| [DocumentPickerMode](arkts-corefile-picker-documentpickermode-e.md) | Enumerates the modes for saving documents. |
+| [DocumentSelectMode](arkts-corefile-picker-documentselectmode-e.md) | Enumerates the types of documents selected. |
+| [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md) | Enumerates file aggregation types. |
+| [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md) | Enumerates the media file types that can be selected. |

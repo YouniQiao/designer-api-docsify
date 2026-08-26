@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PopupV2, PopupV2InitInfo, PopupV2Button } from 'kits/@kit.ArkUI';
+import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 ```
 
 ## PopupV2
@@ -22,6 +22,6 @@ Build function of PopupV2. This component is implemented based on state manageme
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [PopupV2InitInfo](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [PopupV2InitInfo](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md) | Yes | popup option. |

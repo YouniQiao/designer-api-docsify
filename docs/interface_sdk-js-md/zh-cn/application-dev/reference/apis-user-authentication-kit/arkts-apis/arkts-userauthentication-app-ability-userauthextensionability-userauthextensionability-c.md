@@ -15,5 +15,5 @@
 ## 导入模块
 
 ```TypeScript
-import { UserAuthExtensionAbility } from 'kits/@kit.UserAuthenticationKit';
+import UserAuthExtensionAbility from '@kit.UserAuthenticationKit';
 ```

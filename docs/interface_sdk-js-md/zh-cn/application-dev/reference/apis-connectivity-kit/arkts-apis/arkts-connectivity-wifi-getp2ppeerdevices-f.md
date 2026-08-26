@@ -3,7 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## getP2pPeerDevices
@@ -26,9 +29,27 @@ function getP2pPeerDevices(): Promise<WifiP2pDevice[]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;WifiP2pDevice[] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;WifiP2pDevice[] & gt; | 发现的设备列表。 |
+
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getP2pPeerDevices((err, data:wifi.WifiP2pDevice) => {
+   if (err) {
+       console.error("get P2P peer devices error");
+       return;
+   }
+  console.info("get P2P peer devices: " + JSON.stringify(data));
+});
+
+wifi.getP2pPeerDevices().then(data => {
+  console.info("get P2P peer devices: " + JSON.stringify(data));
+});
+```
 
 
 ## getP2pPeerDevices
@@ -51,6 +72,10 @@ function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice[]&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice[]&gt; | 是 |  |
+
+**示例**
+
+参见 [getP2pPeerDevices](#getp2ppeerdevices)

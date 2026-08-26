@@ -26,9 +26,9 @@ Called back when authentication is received.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handshakeData | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handshakeData | string | Yes | Indicates the received handshake data. |
 
 ## onData
 
@@ -48,9 +48,9 @@ Called back when data is received.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | string | Yes | Indicates the received data. |
 
 ## onDisconnect
 

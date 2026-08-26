@@ -3,19 +3,19 @@
 ## Modules to Import
 
 ```TypeScript
-import { ContentFormCard, FormType } from 'kits/@kit.ArkData';
+import { ContentFormCard, FormType } from '@kit.ArkData';
 ```
 
 ## Summary
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ContentFormCard](arkts-arkdata-data-udmfcomponents-contentformcard-s.md) |
+| Name | Description |
+| --- | --- |
+| [ContentFormCard](arkts-arkdata-data-udmfcomponents-contentformcard-s.md) | Defines a content form card. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md) |
+| Name | Description |
+| --- | --- |
+| [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md) | Enumerates the form card types. |

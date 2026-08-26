@@ -22,9 +22,9 @@ Requests or cancels the crown rotation focus for a component. If focus is set to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \| false } |
 
 ## scrollTo
 
@@ -42,6 +42,6 @@ Scrolls the list to the position of the item at the specified index.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| position | [ListScrollToOptions](arkts-arkui-viewmodel-listscrolltooptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| position | [ListScrollToOptions](arkts-arkui-viewmodel-listscrolltooptions-i.md) | Yes |  |

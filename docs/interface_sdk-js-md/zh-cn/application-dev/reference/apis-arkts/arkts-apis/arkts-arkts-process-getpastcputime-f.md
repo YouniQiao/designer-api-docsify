@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## getPastCpuTime
@@ -22,6 +22,12 @@ function getPastCpuTime(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回经过的 CPU 时间。单位：毫秒。 |
+
+**示例**
+
+```TypeScript
+let result = process.getPastCpuTime();
+```

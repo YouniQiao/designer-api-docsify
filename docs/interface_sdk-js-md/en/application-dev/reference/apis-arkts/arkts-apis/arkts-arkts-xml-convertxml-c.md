@@ -9,7 +9,7 @@ ConvertXML representation refers to extensible markup language.
 ## Modules to Import
 
 ```TypeScript
-import { convertxml } from 'kits/@kit.ArkTS';
+import convertxml from '@kit.ArkTS';
 ```
 
 ## convert
@@ -30,16 +30,47 @@ Converts an XML text to a JavaScript object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [xml](arkts-convertxml.md) | string | Yes |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| xml | string | Yes | Input XML text. |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object, which consists of the default values of the attributes in the object. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Object |
+| Type | Description |
+| --- | --- |
+| Object | JavaScript object. |
+
+**Examples**
+
+```TypeScript
+let xml =
+  '<?xml version="1.0" encoding="utf-8"?>' +
+    '<note importance="high" logged="true">' +
+    '    <title>Happy</title>' +
+    '    <todo>Work</todo>' +
+    '    <todo>Play</todo>' +
+    '</note>';
+let conv = new convertxml.ConvertXML();
+let options: convertxml.ConvertOptions = {
+  trim: false,
+  declarationKey: "_declaration",
+  instructionKey: "_instruction",
+  attributesKey: "_attributes",
+  textKey: "_text",
+  cdataKey: "_cdata",
+  doctypeKey: "_doctype",
+  commentKey: "_comment",
+  parentKey: "_parent",
+  typeKey: "_type",
+  nameKey: "_name",
+  elementsKey: "_elements"
+};
+let result = JSON.stringify(conv.convert(xml, options));
+console.info(result);
+// Output (non-compact)
+// {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"element","_name":"note","_attributes":{"importance":"high","logged":"true"},"_elements":[{"_type":"element","_name":"title","_elements":[{"_type":"text","_text":"Happy"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Work"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Play"}]}]}]}
+```
 
 ## convertToJSObject
 
@@ -61,22 +92,57 @@ Converts an XML text to an object of the object type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [xml](arkts-convertxml.md) | string | Yes |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| xml | string | Yes | If the XML text to convert contains the ampersand ( & ), replace it with the entity reference ** & amp;**. |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object, which consists of the default values of the attributes in the object. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Object |
+| Type | Description |
+| --- | --- |
+| Object | JavaScript object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
+
+**Examples**
+
+```TypeScript
+try {
+  let xml =
+    '<?xml version="1.0" encoding="utf-8"?>' +
+      '<note importance="high" logged="true">' +
+      '    <title>Happy</title>' +
+      '    <todo>Work</todo>' +
+      '    <todo>Play</todo>' +
+      '</note>';
+  let conv = new convertxml.ConvertXML();
+  let options: convertxml.ConvertOptions = {
+    trim: false,
+    declarationKey: "_declaration",
+    instructionKey: "_instruction",
+    attributesKey: "_attributes",
+    textKey: "_text",
+    cdataKey: "_cdata",
+    doctypeKey: "_doctype",
+    commentKey: "_comment",
+    parentKey: "_parent",
+    typeKey: "_type",
+    nameKey: "_name",
+    elementsKey: "_elements"
+  };
+  let result = JSON.stringify(conv.convertToJSObject(xml, options));
+  console.info(result);
+} catch (e) {
+  console.error((e as Object).toString());
+}
+// Output (non-compact)
+// {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"element","_name":"note","_attributes":{"importance":"high","logged":"true"},"_elements":[{"_type":"element","_name":"title","_elements":[{"_type":"text","_text":"Happy"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Work"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Play"}]}]}]}
+```
 
 ## fastConvertToJSObject
 
@@ -86,9 +152,11 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 
 Converts an XML text to an object of the object type.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This API cannot parse XML files with a large amount of data. If the text content of a single element exceeds
-> 10 MB, an error message is displayed and an object that contains only the XML tag header will be returned.&gt;
+> 10 MB, an error message is displayed and an object that contains only the XML tag header will be returned.
+> 
 > - In Windows, a newline is usually represented by the carriage return (CR) followed by the line feed (LF).
 > However, the object obtained by calling this API uses only the LF to indicate a new line.
 
@@ -100,22 +168,56 @@ Converts an XML text to an object of the object type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [xml](arkts-convertxml.md) | string | Yes |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| xml | string | Yes | XML text to convert. If the XML text contains the ampersand ( & ), replace it with the entity reference ** & amp;**. |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object, which consists of the default values of the attributes in the object. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Object |
+| Type | Description |
+| --- | --- |
+| Object | JavaScript object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
+
+**Examples**
+
+```TypeScript
+try {
+  let xml =
+    '<?xml version="1.0" encoding="utf-8"?>' +
+    '<note importance="high" logged="true">' +
+    '   <title>Hello\r\nWorld</title>' +
+    '   <todo><![CDATA[Work\r\n]]></todo>' +
+    '</note>';
+  let conv = new convertxml.ConvertXML();
+  let options: convertxml.ConvertOptions = {
+    trim: false,
+    declarationKey: "_declaration",
+    instructionKey: "_instruction",
+    attributesKey: "_attributes",
+    textKey: "_text",
+    cdataKey: "_cdata",
+    doctypeKey: "_doctype",
+    commentKey: "_comment",
+    parentKey: "_parent",
+    typeKey: "_type",
+    nameKey: "_name",
+    elementsKey: "_elements"
+  };
+  let result = JSON.stringify(conv.fastConvertToJSObject(xml, options));
+  console.info(result);
+} catch (e) {
+  console.error((e as Object).toString());
+}
+// Output (non-compact)
+// {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"element","_name":"note","_attributes":{"importance":"high","logged":"true"},"_elements":[{"_type":"element","_name":"title","_elements":[{"_type":"text","_text":"Hello\nWorld"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"cdata","_cdata":"Work\n"}]}]}]}
+```
 
 ## largeConvertToJSObject
 
@@ -135,19 +237,61 @@ Convert XML text to JavaScript objects, this method supports parsing large XML t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [xml](arkts-convertxml.md) | string | Yes |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| xml | string | Yes | XML text to convert. If the XML text contains the ampersand ( & ), replace it with the entity reference & amp;. |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a ConvertOptions object, which consists of the default values of the attributes in the object. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Object |
+| Type | Description |
+| --- | --- |
+| Object | Returns a JavaScript object converting from XML text. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
+
+**Examples**
+
+```TypeScript
+try {
+  let xmlstr =
+    '<?xml version="1.0" encoding="utf-8"?>' +
+    '<?custom-pi processing="example"?>' +
+    '<catalog id="books">' +
+      '<!-- Bestseller Example -->' +
+      '<book category="fiction" ref="B101">' +
+        '<title>Echoes &amp; Whispers</title>' +
+        '<price unit="USD">19.99</price>' +
+        '<descr>' +
+          '<![CDATA[<b>suspense</b>novel & Legendary Stories]]>' +
+        '</descr>' +
+        '<popular/>' +
+      '</book>' +
+    '</catalog>';
+  let conv = new convertxml.ConvertXML();
+  let options: convertxml.ConvertOptions = {
+    trim: false,
+    declarationKey: "_declaration",
+    instructionKey: "_instruction",
+    attributesKey: "_attributes",
+    textKey: "_text",
+    cdataKey: "_cdata",
+    doctypeKey: "_doctype",
+    commentKey: "_comment",
+    parentKey: "_parent",
+    typeKey: "_type",
+    nameKey: "_name",
+    elementsKey: "_elements"
+  };
+  let result = JSON.stringify(conv.largeConvertToJSObject(xmlstr, options));
+  console.info(result);
+} catch (e) {
+  console.error((e as Object).toString());
+}
+// Output (non-compact)
+// {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"instruction","_name":"custom-pi","_instruction":"processing=\"example\""},{"_type":"element","_name":"catalog","_attributes":{"id":"books"},"_elements":[{"_type":"comment","_comment":" Bestseller Example "},{"_type":"element","_name":"book","_parent":"catalog","_attributes":{"category":"fiction","ref":"B101"},"_elements":[{"_type":"element","_name":"title","_parent":"book","_elements":[{"_type":"text","_text":"Echoes & Whispers"}]},{"_type":"element","_name":"price","_parent":"book","_attributes":{"unit":"USD"},"_elements":[{"_type":"text","_text":"19.99"}]},{"_type":"element","_name":"descr","_parent":"book","_elements":[{"_type":"cdata","_cdata":"<b>suspense</b>novel & Legendary Stories"}]},{"_type":"element","_name":"popular","_parent":"book"}]}]}]}
+```

@@ -11,7 +11,6 @@ Defines the original MMS message reading index.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## date

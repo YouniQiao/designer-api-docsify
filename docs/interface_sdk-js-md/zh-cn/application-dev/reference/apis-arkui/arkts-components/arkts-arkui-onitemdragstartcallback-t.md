@@ -14,13 +14,13 @@ declare type OnItemDragStartCallback = (event: ItemDragInfo, itemIndex: number) 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [ItemDragInfo](arkts-arkui-itemdraginfo-i.md) | 是 |
-| itemIndex | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [ItemDragInfo](arkts-arkui-itemdraginfo-i.md) | 是 | 拖拽点的信息。 |
+| itemIndex | number | 是 | 被拖拽列表元素索引值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CustomBuilder](arkts-arkui-custombuilder-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CustomBuilder](arkts-arkui-custombuilder-t.md) | 返回CustomBuilder用于构建被拖拽元素的拖拽图。返回void表示不能拖拽。 |

@@ -9,7 +9,7 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 ## Modules to Import
 
 ```TypeScript
-import { StartupTask } from 'kits/@kit.AbilityKit';
+import StartupTask from '@kit.AbilityKit';
 ```
 
 ## init
@@ -28,15 +28,39 @@ Called when all the dependent startup tasks are complete. You can initialize the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes | Context environment of the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Object \ | void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Object \ | void & gt; | Promise used to return the execution result. |
+
+**Examples**
+
+```TypeScript
+import { StartupTask, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+@Sendable
+export default class StartupTask_001 extends StartupTask {
+  constructor() {
+    super();
+  }
+  async init(context: common.AbilityStageContext) {
+    hilog.info(0x0000, 'testTag', 'StartupTask_001 init.');
+    // ...
+    
+    return "StartupTask_001";
+  }
+
+  onDependencyCompleted(dependency: string, result: Object): void {
+    // ...
+  }
+}
+```
 
 ## onDependencyCompleted
 
@@ -54,7 +78,31 @@ Called when the dependent startup task is complete.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dependency | string | Yes |
-| result | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dependency | string | Yes | Name of the dependent startup task. |
+| result | Object | Yes | Execution result of [init](#init) of the dependent startup task. |
+
+**Examples**
+
+```TypeScript
+import { StartupTask, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+@Sendable
+export default class StartupTask_001 extends StartupTask {
+  constructor() {
+    super();
+  }
+
+  async init(context: common.AbilityStageContext) {
+    // ...
+  }
+
+  onDependencyCompleted(dependency: string, result: Object): void {
+    hilog.info(0x0000, 'testTag', 'StartupTask_001 onDependencyCompleted, dependency: %{public}s, result: %{public}s',
+      dependency, JSON.stringify(result));
+    // ...
+  }
+}
+```

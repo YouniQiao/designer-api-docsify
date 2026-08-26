@@ -9,18 +9,18 @@
 ## 导入模块
 
 ```TypeScript
-import { statfs } from 'kits/@kit.CoreFileKit';
+import statfs from '@kit.CoreFileKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [getFreeSize(@ohos.file.statvfs (文件系统空间统计))](arkts-corefile-statfs-getfreesize-f.md) |
-| [getFreeSize(@ohos.file.statvfs (文件系统空间统计))](arkts-corefile-statfs-getfreesize-f.md) |
-| [getFreeSizeSync(@ohos.file.statvfs (文件系统空间统计))](arkts-corefile-statfs-getfreesizesync-f.md) |
-| [getTotalSize(@ohos.file.statvfs (文件系统空间统计))](arkts-corefile-statfs-gettotalsize-f.md) |
-| [getTotalSize(@ohos.file.statvfs (文件系统空间统计))](arkts-corefile-statfs-gettotalsize-f.md) |
-| [getTotalSizeSync(@ohos.file.statvfs (文件系统空间统计))](arkts-corefile-statfs-gettotalsizesync-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getFreeSize(@ohos.file.statvfs (文件系统空间统计))](arkts-corefile-statfs-getfreesize-f.md) | 获取指定文件或目录所在文件系统的空闲字节数。使用Promise异步回调。 |
+| [getFreeSize(@ohos.file.statvfs (文件系统空间统计))](arkts-corefile-statfs-getfreesize-f.md) | 获取指定文件或目录所在文件系统的空闲字节数。使用callback异步回调。 |
+| [getFreeSizeSync(@ohos.file.statvfs (文件系统空间统计))](arkts-corefile-statfs-getfreesizesync-f.md) | 以同步方法获取指定文件或目录所在文件系统的空闲字节数。 |
+| [getTotalSize(@ohos.file.statvfs (文件系统空间统计))](arkts-corefile-statfs-gettotalsize-f.md) | 获取指定文件或目录所在文件系统的总字节数。使用Promise异步回调。 |
+| [getTotalSize(@ohos.file.statvfs (文件系统空间统计))](arkts-corefile-statfs-gettotalsize-f.md) | 获取指定文件或目录所在文件系统的总字节数。使用callback异步回调。 |
+| [getTotalSizeSync(@ohos.file.statvfs (文件系统空间统计))](arkts-corefile-statfs-gettotalsizesync-f.md) | 以同步方法获取指定文件或目录所在文件系统的总字节数。 |

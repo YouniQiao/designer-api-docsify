@@ -9,7 +9,6 @@ Represents vibration of the specified duration.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## duration

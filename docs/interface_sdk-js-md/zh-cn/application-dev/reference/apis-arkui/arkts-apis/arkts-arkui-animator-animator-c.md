@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from 'kits/@kit.ArkUI';
+import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## create
@@ -20,8 +20,10 @@ static create(options: AnimatorOptions): AnimatorResult
 
 创建animator动画结果对象（AnimatorResult）。
 
-> **说明：**&gt;
-> -&gt;
+> **说明：**
+> 
+> -
+> 
 > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > createAnimator来明确UI的执行上下文。
 
@@ -37,21 +39,41 @@ static create(options: AnimatorOptions): AnimatorResult
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 | 定义动画选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator结果接口。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+
+**示例**
+
+推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的createAnimator接口明确UI上下文。
+
+```TypeScript
+import { Animator as animator, AnimatorOptions } from '@kit.ArkUI';
+
+let options: AnimatorOptions = {
+  duration: 1500,
+  easing: 'friction',
+  delay: 0,
+  fill: "forwards",
+  direction: "normal",
+  iterations: 3,
+  begin: 200.0,
+  end: 400.0
+};
+animator.create(options); // 建议使用 UIContext.createAnimator()接口
+```
 
 ## create
 
@@ -71,21 +93,31 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | 是 | 定义动画参数选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator结果接口。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+
+**示例**
+
+推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的createAnimator接口明确UI上下文。
+
+```TypeScript
+import { Animator as animator, SimpleAnimatorOptions } from '@kit.ArkUI';
+let options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duration(2000);
+animator.create(options); // 建议使用 UIContext.createAnimator()接口
+```
 
 ## createAnimator
 
@@ -107,12 +139,32 @@ static createAnimator(options: AnimatorOptions): AnimatorResult
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 | 定义动画选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator结果接口。 |
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { Animator as animator, AnimatorOptions } from '@kit.ArkUI';
+
+let options: AnimatorOptions = { // xxx.js文件中不需要强调显式类型AnimatorOptions
+  duration: 1500,
+  easing: "friction",
+  delay: 0,
+  fill: "forwards",
+  direction: "normal",
+  iterations: 3,
+  begin: 200.0,
+  end: 400.0,
+};
+this.animator = animator.createAnimator(options);
+```

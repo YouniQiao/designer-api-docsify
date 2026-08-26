@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## removeWatcher
@@ -22,13 +21,28 @@ function removeWatcher(watcher: Watcher): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md) | 是 | 事件观察者。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [11102001](../errorcode-hiappevent.md#11102001-非法的观察者名称) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [11102001](../errorcode-hiappevent.md#11102001-非法的观察者名称) | Invalid watcher name. Possible causes: 1. Contain invalid characters;  2. Length is invalid. |
+
+**示例**
+
+```TypeScript
+// 1. 定义一个事件观察者
+let watcher: hiAppEvent.Watcher = {
+  name: "watcher1",
+}
+
+// 2. 添加一个事件观察者来订阅事件
+hiAppEvent.addWatcher(watcher);
+
+// 3. 移除该事件观察者以取消订阅事件
+hiAppEvent.removeWatcher(watcher);
+```

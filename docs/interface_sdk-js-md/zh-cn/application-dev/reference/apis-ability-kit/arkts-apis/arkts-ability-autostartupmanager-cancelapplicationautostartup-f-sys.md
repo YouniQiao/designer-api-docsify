@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { autoStartupManager } from 'kits/@kit.AbilityKit';
+import autoStartupManager from '@kit.AbilityKit';
 ```
 
 ## cancelApplicationAutoStartup
@@ -26,21 +26,46 @@ function cancelApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCall
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | 是 | 要取消的开机自启动应用组件信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当取消应用组件开机自启动成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission"ohos.permission.MANAGE_APP_BOOT". |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+
+**示例**
+
+```TypeScript
+import { autoStartupManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 取消应用组件开机自启动
+  autoStartupManager.cancelApplicationAutoStartup({
+    bundleName: 'com.example.autostartupapp',
+    abilityName: 'EntryAbility'
+  }, (err: BusinessError) => {
+    if (err) {
+      console.error(`cancelApplicationAutoStartup failed, err code: ${err.code}, msg: ${err.message}.`);
+      return;
+    }
+    console.info(`cancelApplicationAutoStartup success.`);
+  });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`cancelApplicationAutoStartup failed, err code: ${code}, err msg: ${msg}.`);
+}
+```
 
 
 ## cancelApplicationAutoStartup
@@ -63,23 +88,46 @@ function cancelApplicationAutoStartup(info: AutoStartupInfo): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | 是 | 要取消的开机自启动应用组件信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission"ohos.permission.MANAGE_APP_BOOT". |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+
+**示例**
+
+```TypeScript
+import { autoStartupManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 取消应用组件开机自启动
+  autoStartupManager.cancelApplicationAutoStartup({
+    bundleName: 'com.example.autostartupapp',
+    abilityName: 'EntryAbility'
+  }).then(() => {
+    console.info(`cancelApplicationAutoStartup success.`);
+  }).catch((err: BusinessError) => {
+    console.error(`cancelApplicationAutoStartup failed, err code: ${err.code}, msg: ${err.message}.`);
+  });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`cancelApplicationAutoStartup failed, err code: ${code}, err msg: ${msg}.`);
+}
+```

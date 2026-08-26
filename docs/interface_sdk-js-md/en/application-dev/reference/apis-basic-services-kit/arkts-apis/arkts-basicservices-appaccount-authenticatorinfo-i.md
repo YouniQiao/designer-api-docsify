@@ -9,7 +9,7 @@ Defines OAuth authenticator information.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import appAccount from '@kit.BasicServicesKit';
 ```
 
 ## iconId

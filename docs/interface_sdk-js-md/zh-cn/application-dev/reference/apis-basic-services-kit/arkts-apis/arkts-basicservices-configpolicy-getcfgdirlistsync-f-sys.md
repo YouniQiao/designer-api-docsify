@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { configPolicy } from 'kits/@kit.BasicServicesKit';
+import configPolicy from '@kit.BasicServicesKit';
 ```
 
 ## getCfgDirListSync
@@ -22,6 +22,21 @@ function getCfgDirListSync(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 返回配置层级目录列表。 |
+
+**示例**
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let result: Array<string> = configPolicy.getCfgDirListSync();
+  console.info('result is ' + result);
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error('error:' + code + ', ' + message);
+}
+```

@@ -3,9 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## truncateSync
@@ -24,28 +22,36 @@ declare function truncateSync(file: string | number, len?: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| number | 是 |
-| len | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| file | string \| number | 是 | 文件的应用沙箱路径或已打开的文件描述符fd。 |
+| len | number | 否 | 文件截断后的长度，单位为Byte。默认为0。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900001 |
-| 13900002 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900012 |
-| 13900013 |
-| 13900018 |
-| 13900019 |
-| 13900020 |
-| 13900023 |
-| 13900024 |
-| 13900027 |
-| 13900030 |
-| 13900033 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900023 | Text file busy |
+| 13900024 | File too large |
+| 13900027 | Read-only file system |
+| 13900030 | File name too number |
+| 13900033 | Too many symbolic links encountered |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let len: number = 5;
+fileIo.truncateSync(filePath, len);
+```

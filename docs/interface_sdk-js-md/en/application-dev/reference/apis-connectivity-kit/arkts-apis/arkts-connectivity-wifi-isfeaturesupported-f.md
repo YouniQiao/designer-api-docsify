@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## isFeatureSupported
@@ -26,12 +29,26 @@ Checks whether this device supports a specified feature.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| featureId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| featureId | number | Yes | Indicates the ID of the feature. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+  let featureId = 0;
+  let ret = wifi.isFeatureSupported(featureId);
+  console.info("isFeatureSupported:" + ret);
+}catch(error){
+  console.error("failed:" + JSON.stringify(error));
+}
+```

@@ -16,12 +16,24 @@ publish form cross bundle control callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [PublishFormCrossBundleInfo](arkts-form-forminfo-publishformcrossbundleinfo-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [PublishFormCrossBundleInfo](arkts-form-forminfo-publishformcrossbundleinfo-i-sys.md) | Yes | Publish form cross bundle info. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Publish form cross bundle control result, true indicates success, false indicates failure. |
+
+**Examples**
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+let publishFormCrossBundleControlCallback: formInfo.PublishFormCrossBundleControlCallback =
+  (info: formInfo.PublishFormCrossBundleInfo): boolean => {
+    console.info('publish form cross bundle info callback success.');
+    return true;
+  };
+```

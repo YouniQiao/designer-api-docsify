@@ -11,7 +11,6 @@ Parameters for configuring the location simulation function.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## locations

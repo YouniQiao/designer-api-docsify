@@ -1,7 +1,7 @@
 # CapitalizeMode
 
 Enumerates the modes of capitalizing the first letter of a text.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Description| | -------- | -- | -------- | | [NONE](#none) | 0 | The first letter is not capitalized.| | [SENTENCES](#sentences) | 1 | The first letter of each sentence is capitalized.| | [WORDS](#words) | 2 | The first letter of each word is capitalized.| | [CHARACTERS](#characters) | 3 |
+ | Name| Value| Description| | -------- | -- | -------- | | NONE | 0 | The first letter is not capitalized.| | SENTENCES | 1 | The first letter of each sentence is capitalized.| | WORDS | 2 | The first letter of each word is capitalized.| | CHARACTERS | 3 | All letters are capitalized.|
 
 **Since:** 20
 

@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## deleteEntries
@@ -50,6 +51,18 @@ deviceId: string
 **替代接口：** deviceId
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.deviceId("deviceId");
+    console.log("query is " + query.getSqlLike());
+} catch (e) {
+    console.log("should be ok on Method Chaining : " + e);
+}
+```
 
 ## insertEntries
 

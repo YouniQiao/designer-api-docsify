@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
+import picker from '@kit.CoreFileKit';
 ```
 
 ## newFileNames

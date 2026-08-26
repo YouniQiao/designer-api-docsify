@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## setProcDumpInSharedOOM
@@ -14,11 +13,14 @@ function setProcDumpInSharedOOM(enable: boolean): void
 
 Changes the dump heap snapshot from the thread-level to the process-level.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > To dump a process-level heap snapshot, you must call this API and pass **true**. In addition, SharedHeap OOM must
-> occur.&gt;
+> occur.
+> 
 > This API does not affect the heap snapshot dumped in other scenarios. For example, it does not affect the result
-> of [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md).&gt;
+> of [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md).
+> 
 > This API can be called multiple times in the application lifecycle, but only the last call takes effect.
 
 **Since:** 24
@@ -31,6 +33,14 @@ Changes the dump heap snapshot from the thread-level to the process-level.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | When SharedHeap OOM occurs in a process, the system dumps the heap snapshot of the corresponding level based on the information recorded when the process calls the API for the last time in its lifecycle.    **true**: process level.    **false**: thread level. The default value is **false**. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+hidebug.setProcDumpInSharedOOM(true);
+```

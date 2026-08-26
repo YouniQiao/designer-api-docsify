@@ -12,7 +12,7 @@ WebGL 2.0
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Uint32Array |
-| webgl.GLuint[] |
+| Type | Description |
+| --- | --- |
+| Uint32Array |  |
+| webgl.GLuint[] |  |

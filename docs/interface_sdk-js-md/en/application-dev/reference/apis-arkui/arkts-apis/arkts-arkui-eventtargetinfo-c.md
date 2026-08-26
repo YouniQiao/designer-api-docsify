@@ -29,9 +29,9 @@ Obtains the ID of this component.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | [ID]{ |
 
 ## getUniqueId
 
@@ -51,6 +51,6 @@ Returns the unique ID of the current component.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Unique ID of the current component. |

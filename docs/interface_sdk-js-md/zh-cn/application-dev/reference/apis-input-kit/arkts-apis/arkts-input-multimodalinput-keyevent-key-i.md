@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { Action, Key, KeyEvent } from 'kits/@kit.InputKit';
 ```
 
 ## code

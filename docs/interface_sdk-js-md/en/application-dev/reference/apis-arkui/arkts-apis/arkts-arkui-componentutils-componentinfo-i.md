@@ -9,7 +9,7 @@ Implements a **ComponentInfo** object, which provides the size, position, transl
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
+import componentUtils from '@kit.ArkUI';
 ```
 
 ## localOffset

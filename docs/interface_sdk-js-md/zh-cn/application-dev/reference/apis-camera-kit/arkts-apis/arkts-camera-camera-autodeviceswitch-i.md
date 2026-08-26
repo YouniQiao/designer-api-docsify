@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableAutoDeviceSwitch
@@ -22,7 +21,8 @@ enableAutoDeviceSwitch(enabled: boolean): void
 
 使能或去使能自动切换镜头。可以先通过[isAutoDeviceSwitchSupported](arkts-camera-camera-autodeviceswitchquery-i.md#isautodeviceswitchsupported)获取 当前设备是否支持自动切换镜头。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该接口仅用于有多个前置镜头的折叠设备，在不同的折叠状态下可自动切换到当前可使用的前置镜头。无法实现前后置镜头的切换。
 
 **起始版本：** 13
@@ -33,15 +33,30 @@ enableAutoDeviceSwitch(enabled: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | boolean | 是 | 使能或去使能自动切换镜头。true表示使能，false表示不使能。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameters verification failed.<br>**适用版本：** 19+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableAutoDeviceSwitch(session: camera.PhotoSession, isEnable: boolean): void {
+  try {
+    session.enableAutoDeviceSwitch(isEnable);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The enableAutoDeviceSwitch call failed, error code: ${err.code}, error message: ${err.message}`);
+  }
+}
+```

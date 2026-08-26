@@ -14,12 +14,12 @@ Describes a generic callback function for rotation event notifications.In this c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | T | Yes | Parameter of type [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) passed by the system when the callback function is called. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| U |
+| Type | Description |
+| --- | --- |
+| U | Value of type [RotationChangeResult]{ |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { thermal } from 'kits/@kit.BasicServicesKit';
+import thermal from '@kit.BasicServicesKit';
 ```
 
 ## getLevel
@@ -20,6 +20,13 @@ function getLevel(): ThermalLevel
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) | 当前设备的热档位等级，反映设备的温度状态，可用于指导业务的热控策略调整。 |
+
+**示例**
+
+```TypeScript
+let level = thermal.getLevel();
+console.info('thermal level is: ' + level);
+```

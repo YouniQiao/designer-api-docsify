@@ -14,7 +14,7 @@ declare type CustomBuilder = (() => any) | void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| () = & gt; any) |
-| void |
+| 类型 | 说明 |
+| --- | --- |
+| () = & gt; any) |  |
+| void |  |

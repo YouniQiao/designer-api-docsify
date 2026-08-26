@@ -26,6 +26,6 @@ Adds the matrix transformation effect to the current template.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| transform | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| transform | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | No | transformation matrix |

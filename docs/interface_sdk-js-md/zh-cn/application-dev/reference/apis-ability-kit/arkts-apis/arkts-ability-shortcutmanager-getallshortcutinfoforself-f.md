@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
+import shortcutManager from '@kit.AbilityKit';
 ```
 
 ## getAllShortcutInfoForSelf
@@ -20,6 +20,20 @@ function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;ShortcutInfo & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;ShortcutInfo & gt; & gt; | Promise对象，返回应用配置文件中定义的所有快捷方式信息。 |
+
+**示例**
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+shortcutManager.getAllShortcutInfoForSelf()
+  .then((data: shortcutManager.ShortcutInfo[]) => {
+    console.info('getAllShortcutInfoForSelf shortcut data is' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+  console.error(`getAllShortcutInfoForSelf errData is errCode:${err.code}  message:${err.message}`);
+});
+```

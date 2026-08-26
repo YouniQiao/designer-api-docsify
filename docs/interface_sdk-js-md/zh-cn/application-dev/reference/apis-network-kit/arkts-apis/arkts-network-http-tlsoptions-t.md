@@ -12,7 +12,7 @@ TLS配置。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-| 类型 |
-| --- |
-| 'system' |
-| [TlsConfig](arkts-network-http-tlsconfig-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| 'system' | 表示使用系统的TLS版本，是未进行TLS设置的默认值，值固定为'system'字符串。 |
+| [TlsConfig](arkts-network-http-tlsconfig-i.md) | 表示使用自定义的TLS版本号和加密套件。 |

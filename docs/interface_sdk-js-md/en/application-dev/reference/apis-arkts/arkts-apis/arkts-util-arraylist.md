@@ -17,22 +17,18 @@ ArrayList is a linear data structure that is implemented based on arrays. ArrayL
 ## Modules to Import
 
 ```TypeScript
-import { ArrayList } from 'kits/@kit.ArkTS';
-import { ArrayListComparatorFn } from 'kits/@kit.ArkTS';
-import { ArrayListForEachCb } from 'kits/@kit.ArkTS';
-import { ArrayListReplaceCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md) |
+| Name | Description |
+| --- | --- |
+| [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md) | ArrayList is a linear data structure that is implemented based on arrays. ArrayList can dynamically adjust the capacity based on project requirements. It increases the capacity by 50% each time. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md) |
+| Name | Description |
+| --- | --- |
+| [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md) | This type specifies the comparator of sort in comparation. |

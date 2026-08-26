@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { batteryStats } from 'kits/@kit.BasicServicesKit';
+import batteryStats from '@kit.BasicServicesKit';
 ```
 
 ## power

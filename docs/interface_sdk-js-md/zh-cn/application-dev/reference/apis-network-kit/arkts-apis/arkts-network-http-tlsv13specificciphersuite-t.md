@@ -12,8 +12,8 @@ TLS1.3及以上版本支持的加密套件。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-| 类型 |
-| --- |
-| 'TLS_AES_128_GCM_SHA256' |
-| 'TLS_AES_256_GCM_SHA384' |
-| 'TLS_CHACHA20_POLY1305_SHA256' |
+| 类型 | 说明 |
+| --- | --- |
+| 'TLS_AES_128_GCM_SHA256' | 表示值的类型为字符串，可取'TLS_AES_128_GCM_SHA256'。 |
+| 'TLS_AES_256_GCM_SHA384' | 表示值的类型为字符串，可取'TLS_AES_256_GCM_SHA384'。 |
+| 'TLS_CHACHA20_POLY1305_SHA256' | 表示值的类型为字符串，可取'TLS_CHACHA20_POLY1305_SHA256'。 |

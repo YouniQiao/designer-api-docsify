@@ -9,7 +9,7 @@ The module is used to listen for state changes of the current application proces
 ## Modules to Import
 
 ```TypeScript
-import { ApplicationStateChangeCallback } from 'kits/@kit.AbilityKit';
+import ApplicationStateChangeCallback from '@kit.AbilityKit';
 ```
 
 ## onApplicationBackground
@@ -27,6 +27,50 @@ Called when the current process switches from the foreground to the background. 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**Examples**
+
+```TypeScript
+import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let applicationStateChangeCallback: ApplicationStateChangeCallback = {
+  onApplicationForeground() {
+    console.info('applicationStateChangeCallback onApplicationForeground');
+  },
+  onApplicationBackground() {
+    console.info('applicationStateChangeCallback onApplicationBackground');
+  }
+};
+
+export default class MyAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    // 1. Obtain an applicationContext object.
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2. Register a listener for the current process state changes through applicationContext.
+      if (applicationContext != undefined) {
+        applicationContext.on('applicationStateChange', applicationStateChangeCallback);
+      }
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+    console.info('Register applicationStateChangeCallback');
+  }
+  onDestroy() {
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 1. Unregister the listener for the current process state changes through applicationContext.
+      if (applicationContext != undefined) {
+        applicationContext.off('applicationStateChange', applicationStateChangeCallback);
+      } 
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## onApplicationForeground
 

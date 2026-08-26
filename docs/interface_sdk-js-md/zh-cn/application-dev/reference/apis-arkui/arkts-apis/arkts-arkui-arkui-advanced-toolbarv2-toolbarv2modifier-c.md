@@ -9,7 +9,7 @@ Declare ToolBarV2Modifier used in ToolBar
 ## 导入模块
 
 ```TypeScript
-import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from 'kits/@kit.ArkUI';
+import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -30,15 +30,15 @@ Sets the backgroundColor of the toolBarV2.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [backgroundColor](#backgroundcolor) | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| backgroundColor | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 是 | toolBarV2's backgroundColor. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
 
 ## height
 
@@ -58,15 +58,15 @@ Sets the height of the toolBarV2.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [height](#height) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| height | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 | toolBarV2's height. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
 
 ## padding
 
@@ -86,15 +86,15 @@ Sets the left and right padding of the toolbarV2.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [padding](#padding) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| padding | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 | left and right padding. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
 
 ## stateEffect
 
@@ -114,12 +114,12 @@ Sets whether or not to display the press status effect.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [stateEffect](#stateeffect) | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| stateEffect | boolean | 是 | press status effect. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |

@@ -11,7 +11,6 @@ Describes the heart rate sensor data. It extends from [Response](arkts-sensorser
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## heartRate

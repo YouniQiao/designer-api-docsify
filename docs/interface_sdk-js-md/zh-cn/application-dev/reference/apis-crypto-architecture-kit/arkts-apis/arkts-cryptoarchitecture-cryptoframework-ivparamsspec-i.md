@@ -4,7 +4,8 @@
 
 适用于CBC、CTR、OFB、CFB这些需要iv作为参数的加解密模式。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需要
 > 指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
 
@@ -19,7 +20,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## iv

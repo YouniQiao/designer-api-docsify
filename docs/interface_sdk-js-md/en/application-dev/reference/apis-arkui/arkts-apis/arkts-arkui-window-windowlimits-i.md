@@ -6,13 +6,19 @@ Describes the parameters for window size limits. Applications can obtain the cur
 3. Window size limits configured by the application in [abilities in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities).
 4. Default system limits (which vary depending on the product and window type).
 
-> **NOTE：**&gt;
-> For the **maxWidth**, **maxHeight**, **minWidth**, and **minHeight** properties:&gt;
+> **NOTE：**
+> 
+> For the **maxWidth**, **maxHeight**, **minWidth**, and **minHeight** properties:
+> 
 > - The default unit is px. Starting from API version 22, the unit can be px or vp, depending on the setting of
-> **pixelUnit**.&gt;
-> - The value is an integer. Floating-point values will be rounded down.&gt;
-> - The default value is **0**, indicating that the property does not change.&gt;
-> - The lower bound of the effective range is the minimum height/width limited by the system.&gt;
+> **pixelUnit**.
+> 
+> - The value is an integer. Floating-point values will be rounded down.
+> 
+> - The default value is **0**, indicating that the property does not change.
+> 
+> - The lower bound of the effective range is the minimum height/width limited by the system.
+> 
 > - The upper bound of the effective range is the maximum height/width limited by the system.
 
 **Since:** 11
@@ -22,7 +28,9 @@ Describes the parameters for window size limits. Applications can obtain the cur
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import floatingBall from '@kit.ArkUI.floatingBall';
+import floatView from '@kit.ArkUI.floatView';
+import window from '@kit.ArkUI';
 ```
 
 ## maxHeight

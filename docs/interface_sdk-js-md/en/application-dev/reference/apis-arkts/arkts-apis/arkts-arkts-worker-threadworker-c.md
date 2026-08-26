@@ -11,7 +11,7 @@ Before using the following APIs, you must create a ThreadWorker instance. The Th
 ## Modules to Import
 
 ```TypeScript
-import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from 'kits/@kit.ArkTS';
+import worker, { DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## addEventListener
@@ -30,17 +30,46 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | string | Yes |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | string | Yes | Type of the event to listen for. |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes | Callback to invoke when an event of the specified type occurs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+
+**Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+// Execute the callback of the alert type.
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.addEventListener("alert", () => {
+    console.info("alert listener callback");
+  })
+};
+```
 
 ## constructor
 
@@ -58,17 +87,39 @@ A constructor used to create a ThreadWorker instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scriptURL | string | Yes |
-| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scriptURL | string | Yes | URL of the Worker thread file. For details about the rules, see Precautions for File URLs. |
+| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | No | Options that can be set for the Worker instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
-| [10200007](../errorcode-utils.md#10200007-abnormal-worker-file-path) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed. |
+| [10200007](../errorcode-utils.md#10200007-abnormal-worker-file-path) | The worker file path is invalid. |
+
+**Examples**
+
+The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+// URL of the Worker file: "entry/src/main/ets/workers/worker.ets"
+const workerInstance = new worker.ThreadWorker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
+```
+
+The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+// URL of the Worker file: "entry/src/main/ets/workers/worker.ets"
+const workerInstance = new worker.Worker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
+```
 
 ## dispatchEvent
 
@@ -86,21 +137,94 @@ Dispatches the event defined for the Worker thread.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [Event](arkts-arkts-worker-event-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [Event](arkts-arkts-worker-event-i.md) | Yes | Event to dispatch. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+
+**Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+let result: Boolean = workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+
+console.info("dispatchEvent result is: ", result);
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.addEventListener("alert", () => {
+    console.info("alert listener callback");
+  });
+
+  workerPort.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+};
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.addEventListener("alert_add", ()=>{
+  console.info("alert listener callback");
+})
+
+workerPort.dispatchEvent({type: 'alert_add', timeStamp: 0}); // timeStamp is not supported yet.
+```
+
+The dispatchEvent API can be used together with the addEventListener API. The sample code is as follows:
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.postMessage("hello world");
+workerInstance.onmessage = (): void => {
+    console.info("receive data from worker.ets");
+}
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.addEventListener("alert", ()=>{
+  console.info("alert listener callback");
+})
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.dispatchEvent({type:"alert", timeStamp:0}); // timeStamp is not supported yet.
+}
+```
 
 ## off
 
@@ -118,17 +242,45 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | string | Yes |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | string | Yes | Type of the event for which the event listener is removed. |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | No | listener Callback of the event listener to remove. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+
+**Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+const handler1 = () => console.info("Handler 1");
+const handler2 = () => console.info("Handler 2");
+
+// Register two listeners.
+workerInstance.on("alert", handler1);
+workerInstance.on("alert", handler2);
+
+// First trigger: Both listeners are executed.
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+
+// Remove the handler1 listener.
+workerInstance.off("alert", handler1);
+
+// Second trigger: Only handler2 is executed.
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+
+// Remove all listeners of the alert type.
+workerInstance.off("alert");
+```
 
 ## on
 
@@ -146,17 +298,34 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | string | Yes |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | string | Yes | Type of the event to listen for. |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes | Callback to invoke when an event of the specified type occurs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+
+**Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.on("alert", () => {
+    console.info("alert listener callback");
+})
+
+// Event listeners added using on can be executed multiple times.
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+```
 
 ## onAllErrors
 
@@ -174,10 +343,10 @@ Called when an exception occurs within the lifecycle of the Worker thread. The e
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
 
 ## once
 
@@ -195,17 +364,35 @@ Adds an event listener for the Worker thread and removes the event listener afte
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | string | Yes |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | string | Yes | Type of the event to listen for |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes | listener Callback to invoke when an event of the specified type occurs |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+
+**Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.once("alert", () => {
+  console.info("alert listener callback");
+})
+
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+
+// Event listeners added using once are automatically removed after being executed once and cannot be executed multiple times.
+// workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+```
 
 ## onerror
 
@@ -223,16 +410,16 @@ Called when an exception occurs during worker execution. The event handler is ex
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
 
 ## onexit
 
@@ -250,16 +437,16 @@ Called when the Worker thread exits. The event handler is executed in the host t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| code | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| code | number | Yes |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
 
 ## onmessage
 
@@ -277,16 +464,16 @@ Called when the host thread receives a message sent by the Worker thread through
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
 
 ## onmessageerror
 
@@ -304,16 +491,16 @@ Called when the Worker thread receives a message that cannot be serialized. The 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
 
 ## postMessage
 
@@ -331,17 +518,102 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | Object | Yes |
-| [transfer](arkts-arkts-worker-postmessageoptions-i.md) | ArrayBuffer[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | Object | Yes | Data to be sent to the Worker thread. The data object must be sequenceable. For details about the supported parameter types, see Sequenceable Data Types. |
+| transfer | ArrayBuffer[] | Yes | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the Worker thread. After the transfer, the objects are available only in the Worker thread. The array cannot be null. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+
+**Examples**
+
+```TypeScript
+// Worker.ets
+import { worker, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+// Create an object in the Worker thread for communicating with the host thread.
+const workerPort = worker.workerPort;
+
+// The Worker thread receives information from the host thread.
+workerPort.onmessage = (e: MessageEvents): void => {
+  // data carries the information sent by the host thread.
+  let data: ArrayBuffer = e.data;
+  // Write data to the received buffer.
+  const view = new Int8Array(data).fill(3);
+  // The Worker thread sends information to the host thread.
+  workerPort.postMessage(view);
+}
+
+// Trigger a callback when an error occurs in the Worker thread.
+workerPort.onerror = (err: ErrorEvent) => {
+  console.error("worker.ets onerror" + err.message);
+}
+```
+
+```TypeScript
+// Index.ets
+import { worker, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'Hello World';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            // Create a Worker instance in the host thread.
+            const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
+            // The host thread transfers information to the Worker thread.
+            const buffer = new ArrayBuffer(8);
+            workerInstance.postMessage(buffer, [buffer]);
+
+            // The ownership of the buffer is transferred to the Worker thread and is unavailable in the host thread.
+            // const view = new Int8Array(buffer).fill(3);
+
+            // The host thread receives information from the Worker thread.
+            workerInstance.onmessage = (e: MessageEvents): void => {
+              // data carries the information sent by the Worker thread.
+              let data: Int8Array = e.data;
+              console.info("main thread data is  " + data);
+              // Terminate the Worker instance.
+              workerInstance.terminate();
+            }
+            // Call onexit().
+            workerInstance.onexit = (code) => {
+              console.info("main thread terminate");
+            }
+            // Listen for Worker errors.
+            workerInstance.onAllErrors = (err: ErrorEvent) => {
+              console.error("main error message " + err.message);
+            }
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+  }
+}
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+
+let buffer = new ArrayBuffer(8);
+workerInstance.postMessage(buffer, [buffer]);
+```
 
 ## postMessage
 
@@ -359,17 +631,47 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | Object | Yes |
-| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | Object | Yes | Data to be sent to the Worker thread. The data object must be sequenceable. For details about the supported parameter types, see Sequenceable Data Types. |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | If this parameter is specified, it functions the same as ArrayBuffer[]. Specifically, the ownership of the objects in the array is transferred to the Worker thread and becomes unavailable in the host thread. The objects are available only in the Worker thread. If this parameter is not specified, the default value undefined is used, and information is transferred to the Worker thread by copying data. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+
+**Examples**
+
+```TypeScript
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.postMessage("hello world");
+
+let buffer = new ArrayBuffer(8);
+
+// When the options parameter is specified, the ownership of the buffer is transferred to the Worker thread and will no longer be accessible from the host thread.
+workerInstance.postMessage(buffer, [buffer]);
+
+// When the options parameter is not provided, it defaults to undefined, and the buffer is sent to the Worker thread by copying the data.
+workerInstance.postMessage(buffer);
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+
+workerInstance.postMessage("hello world");
+
+let buffer = new ArrayBuffer(8);
+workerInstance.postMessage(buffer, [buffer]);
+```
 
 ## postMessageWithSharedSendable
 
@@ -387,17 +689,100 @@ Sends a message from the host thread to the Worker thread. In the message, a sen
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | Object | Yes |
-| [transfer](arkts-arkts-worker-postmessageoptions-i.md) | ArrayBuffer[] | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | Object | Yes | Data to be sent to the Worker thread. The data object must be sequenceable or sendable. For details about the supported sequenceable types, see Sequenceable Data Types. For details about the supported sendable types, see Sendable Data Types. |
+| transfer | ArrayBuffer[] | No | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the Worker thread. After the transfer, the objects are available only in the Worker thread. The array cannot be null. The default value is an empty array. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+
+**Examples**
+
+```TypeScript
+// Index.ets
+// Create a SendableObject instance and pass it to the Worker thread through the host thread.
+
+import { worker } from '@kit.ArkTS';
+import { SendableObject } from './sendable';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
+let object: SendableObject = new SendableObject();
+workerInstance.postMessageWithSharedSendable(object);
+
+// Use the postMessage API to pass Sendable objects by copying the data.
+workerInstance.postMessage(object);
+```
+
+```TypeScript
+// sendable.ets
+// Define SendableObject.
+
+@Sendable
+export class SendableObject {
+  a:number = 45;
+}
+```
+
+```TypeScript
+// The worker file path is entry/src/main/ets/workers/Worker.ets.
+// Worker.ets
+// Receive and access the data passed from the host thread to the Worker thread.
+
+import { SendableObject } from '../pages/sendable';
+import { worker, ThreadWorkerGlobalScope, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (e: MessageEvents) => {
+  let obj: SendableObject = e.data;
+  console.info("sendable obj is: " + obj.a);
+}
+```
+
+```TypeScript
+// The worker file path is entry/src/main/ets/workers/Worker.ets.
+// Worker.ets
+// Create a SendableObject instance and pass it to the host thread through the Worker thread.
+
+import { SendableObject } from '../pages/sendable';
+import { worker, ThreadWorkerGlobalScope, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+workerPort.onmessage = (e: MessageEvents) => {
+  let object: SendableObject = new SendableObject();
+  workerPort.postMessageWithSharedSendable(object);
+}
+```
+
+```TypeScript
+// sendable.ets
+// Define SendableObject.
+
+@Sendable
+export class SendableObject {
+  a:number = 45;
+}
+```
+
+```TypeScript
+// Index.ets
+// Receive the data passed from the Worker thread to the host thread and access its properties.
+
+import { worker, MessageEvents } from '@kit.ArkTS';
+import { SendableObject } from './sendable';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
+workerInstance.postMessage(1);
+workerInstance.onmessage = (e: MessageEvents) => {
+  let obj: SendableObject = e.data;
+  console.info("sendable index obj is: " + obj.a);
+}
+```
 
 ## registerGlobalCallObject
 
@@ -415,16 +800,63 @@ Registers an object with the ThreadWorker instance of the host thread. In this w
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [instanceName](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-globalerror-i.md) | string | Yes |
-| globalCallObject | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instanceName | string | Yes | Key used for registration, based on which the registered object is identified during method calling. |
+| globalCallObject | Object | Yes | Object to register. The ThreadWorker instance holds a strong reference to the object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+
+**Examples**
+
+```TypeScript
+//Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+class TestObj {
+  private message : string = "this is a message from TestObj";
+  public getMessage() : string {
+    return this.message;
+  }
+  public getMessageWithInput(str : string) : string {
+    return this.message + " with input: " + str;
+  }
+}
+let registerObj = new TestObj();
+// Register registerObj with the ThreadWorker instance.
+workerInstance.registerGlobalCallObject("myObj", registerObj);
+workerInstance.postMessage("start worker");
+```
+
+```TypeScript
+// worker.ets
+import { worker, MessageEvents } from '@kit.ArkTS';
+
+const workerPort = worker.workerPort;
+workerPort.onmessage = (e: MessageEvents): void => {
+  try {
+    // The method to call does not carry an input parameter.
+    let res : string = workerPort.callGlobalCallObjectMethod("myObj", "getMessage", 0) as string;
+    console.info("worker:", res) // worker: this is a message from TestObj
+  } catch (error) {
+    // Exception handling.
+    console.error("worker: error code is " + error.code + " error message is " + error.message);
+  }
+  try {
+    // The method to call carries input parameters.
+    let res : string = workerPort.callGlobalCallObjectMethod("myObj", "getMessageWithInput", 0, "hello there!") as string;
+    console.info("worker:", res); //worker: this is a message from TestObj with input: hello there!
+  } catch (error) {
+    // Exception handling.
+    console.error("worker: error code is " + error.code + " error message is " + error.message);
+  }
+}
+```
 
 ## removeAllListener
 
@@ -442,9 +874,50 @@ Removes all event listeners for the Worker thread.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+
+**Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+workerInstance.addEventListener("alert", () => {
+    console.info("alert listener callback");
+})
+workerInstance.removeAllListener();
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.addEventListener("alert", () => {
+    console.info("alert listener callback");
+  });
+
+  workerPort.removeAllListener();
+};
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.addEventListener("alert_add", ()=>{
+  console.info("alert listener callback");
+})
+
+workerPort.removeAllListener();
+```
 
 ## removeEventListener
 
@@ -462,16 +935,48 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | string | Yes |
-| callback | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | string | Yes | Type of the event for which the event listener is to be removed. |
+| callback | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | No | Callback to invoke when the listener is removed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+
+**Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+
+workerInstance.removeEventListener("alert");
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.addEventListener("alert", () => {
+    console.info("alert listener callback");
+  });
+
+  workerPort.removeEventListener("alert");
+};
+```
 
 ## terminate
 
@@ -489,9 +994,27 @@ Terminates the Worker thread to stop it from receiving messages.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+
+**Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+workerInstance.terminate();
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.terminate();
+```
 
 ## unregisterGlobalCallObject
 
@@ -509,12 +1032,37 @@ Unregisters an object with the ThreadWorker instance of the host thread. This AP
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [instanceName](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-globalerror-i.md) | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instanceName | string | No | Key used for registration. If this parameter is left blank, all registered objects registered in the ThreadWorker instance are unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+
+**Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+class TestObj {
+  private message : string = "this is a message from TestObj";
+  public getMessage() : string {
+    return this.message;
+  }
+  public getMessageWithInput(str : string) : string {
+    return this.message + " with input: " + str;
+  }
+}
+let registerObj = new TestObj();
+workerInstance.registerGlobalCallObject("myObj", registerObj);
+// Unregister the object.
+workerInstance.unregisterGlobalCallObject("myObj");
+// Unregister all objects from the ThreadWorker instance.
+//workerInstance.unregisterGlobalCallObject();
+workerInstance.postMessage("start worker");
+```

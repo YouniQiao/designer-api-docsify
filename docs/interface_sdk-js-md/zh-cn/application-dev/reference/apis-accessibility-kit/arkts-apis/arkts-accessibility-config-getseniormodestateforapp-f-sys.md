@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from 'kits/@kit.AccessibilityKit';
+import config from '@kit.AccessibilityKit';
 ```
 
 ## getSeniorModeStateForApp
@@ -26,22 +26,35 @@ function getSeniorModeStateForApp(bundleName: string, appIndex?: number): Promis
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| appIndex | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 查询“长辈模式”的应用包名。 |
+| appIndex | number | 否 | 应用包的分身索引标识。 取值范围：大于等于0的整数。缺省时，appIndex默认为0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示应用已启用“长辈模式”；返回false表示应用未启用“长辈模式”。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
-| [9300008](../errorcode-accessibility.md#9300008-应用分身索引不合法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality. |
+| [9300008](../errorcode-accessibility.md#9300008-应用分身索引不合法) | The appIndex is invalid. Possible causes:  1.The appIndex is out of the valid range.  2.The application corresponding to the appIndex does not exist. |
+
+**示例**
+
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+config.getSeniorModeStateForApp('com.example.myapplication', 0).then((data: boolean) => {
+  console.info(`Succeeded in getting seniorModeState for app, data: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get seniorModeState for app. Code: ${err.code}, message: ${err.message}`);
+});
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
+import proxyChannelManager from '@kit.DistributedServiceKit';
 ```
 
 ## openProxyChannel
@@ -24,25 +24,65 @@ Opens a proxy channel. This API uses a promise to return the result. Based on th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| channelInfo | [ChannelInfo](arkts-distributedservice-proxychannelmanager-channelinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| channelInfo | [ChannelInfo](arkts-distributedservice-proxychannelmanager-channelinfo-i.md) | Yes | Link type of the proxy channel, MAC address of the peer device, and UUID of the listening service on the peer device. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the result. When the proxy channel is opened successfully, the promise is resolved, and the channelId of the proxy channel is returned. The value ranges from 1 to 2147483647. The lifecycle of the channelId is the same as that of the proxy channel. If the proxy is not closed, passing the same input parameters returns the same channelId. If the operation fails, the promise is rejected with error information. For details about the error codes, see the error code table. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [32390001](../errorcode-proxyChannelManager.md#32390001-bluetooth-disabled) |
-| [32390002](../errorcode-proxyChannelManager.md#32390002-bluetooth-unpaired) |
-| [32390006](../errorcode-proxyChannelManager.md#32390006-parameter-verification-error) |
-| [32390100](../errorcode-proxyChannelManager.md#32390100-internal-error) |
-| [32390101](../errorcode-proxyChannelManager.md#32390101-call-restricted) |
-| [32390102](../errorcode-proxyChannelManager.md#32390102-operation-failed-or-connection-timed-out) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because bluetooth proxy function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
+| [32390001](../errorcode-proxyChannelManager.md#32390001-bluetooth-disabled) | BR is disabled. |
+| [32390002](../errorcode-proxyChannelManager.md#32390002-bluetooth-unpaired) | Device not paired. |
+| [32390006](../errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
+| [32390100](../errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
+| [32390101](../errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
+| [32390102](../errorcode-proxyChannelManager.md#32390102-operation-failed-or-connection-timed-out) | Operation failed or Connection timed out. |
+
+**Examples**
+
+```TypeScript
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Button('Test')
+        .onClick(() => {
+          let channelInfo: proxyChannelManager.ChannelInfo = {
+            linkType: proxyChannelManager.LinkType.LINK_BR,
+            peerDevAddr: 'xx:xx:xx:xx:xx:xx', // Bluetooth MAC address of the wearable
+            peerUuid: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx', // Service UUID of the peer device
+          };
+          // The following sample code uses try/catch as an example.
+          try {
+            proxyChannelManager.openProxyChannel(channelInfo)
+              .then((channelId: number) => {
+                // Obtain the channel ID.
+              })
+              .catch((error: BusinessError) => {
+                console.error(`Failed to open proxy channel. Code: ${error.code}, message: ${error.message}`);
+              });
+          } catch (err) {
+            let error = err as BusinessError;
+            console.error(`Failed to open proxy channel. Code: ${error.code}, message: ${error.message}`);
+            // If the returned error.code is undefined and error.message is "Cannot read property openProxyChannel of undefined", this API is not supported in the current image.
+          }
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```

@@ -11,8 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { shortKey } from 'kits/@kit.InputKit';
-import { FingerprintEvent } from 'kits/@kit.InputKit';
 ```
 
 ## action

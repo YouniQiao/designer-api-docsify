@@ -13,7 +13,8 @@ Defines the response of ShowDialog.@interface ShowDialogSuccessResponse
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
+import prompt from '@kit.ArkUI';
+import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUIAction';
 ```
 
 ## index

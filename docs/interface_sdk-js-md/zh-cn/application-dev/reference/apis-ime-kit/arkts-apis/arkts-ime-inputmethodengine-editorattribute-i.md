@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKit';
 ```
 
 ## abilityName

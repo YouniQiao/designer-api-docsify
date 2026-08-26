@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { recent } from 'kits/@kit.CoreFileKit';
+import recent from '@kit.CoreFileKit';
 ```
 
 ## remove
@@ -28,14 +28,21 @@ Removes the file of the specified URI from the recent file list.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | File URI. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900002 |
-| 13900020 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900020 | Invalid argument |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let uri = 'file://docs/storage/Users/currentUser/<publicPath>';
+recent.remove(uri);
+```

@@ -3,7 +3,12 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import inputMethod from '@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKitEngine';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
+import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
+import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 ```
 
 ## getSystemInputMethodConfigAbility
@@ -24,22 +29,30 @@ Get the system input method config ability of a specified user.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| userId | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| userId | number | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) |
+| Type | Description |
+| --- | --- |
+| [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | the information of system input method config ability. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
-| 12800023 |
-| 12800024 |
-| 12800025 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 12800023 | the specified user does not exist. |
+| 12800024 | the specified user is not in the foreground. |
+| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+
+**Examples**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+
+let inputMethodConfig: bundleManager.ElementName = inputMethod.getSystemInputMethodConfigAbility();
+```

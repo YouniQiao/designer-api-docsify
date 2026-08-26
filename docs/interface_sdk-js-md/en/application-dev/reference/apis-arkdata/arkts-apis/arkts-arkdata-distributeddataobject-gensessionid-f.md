@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from 'kits/@kit.ArkData';
+import distributedDataObject from '@kit.ArkData';
 ```
 
 ## genSessionId
@@ -20,6 +20,12 @@ Creates a random session ID.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Session ID created. |
+
+**Examples**
+
+```TypeScript
+let sessionId: string = distributedDataObject.genSessionId();
+```

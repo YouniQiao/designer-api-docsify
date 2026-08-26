@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dialogRequest } from 'kits/@kit.AbilityKit';
+import dialogRequest from '@kit.AbilityKit';
 ```
 
 ## height

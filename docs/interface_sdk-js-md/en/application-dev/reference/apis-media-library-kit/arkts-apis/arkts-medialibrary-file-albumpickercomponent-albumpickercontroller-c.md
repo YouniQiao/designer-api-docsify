@@ -9,7 +9,7 @@ A controller that enables applications to send data to the **AlbumPickerComponen
 ## Modules to Import
 
 ```TypeScript
-import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from 'kits/@kit.MediaLibraryKit';
+import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from '@kit.MediaLibraryKit';
 ```
 
 ## setFontSize
@@ -28,6 +28,6 @@ Sets the font size of the album list.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fontSize | number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fontSize | number \| string | Yes | Font size. For details about the value range, see fontSize. |

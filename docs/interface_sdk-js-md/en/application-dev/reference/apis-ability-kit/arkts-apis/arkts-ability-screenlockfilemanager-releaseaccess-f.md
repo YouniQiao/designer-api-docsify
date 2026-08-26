@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLockFileManager } from 'kits/@kit.AbilityKit';
+import screenLockFileManager from '@kit.AbilityKit';
 ```
 
 ## releaseAccess
@@ -20,15 +20,35 @@ Releases the access permission for the caller app's sensitive data under the loc
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ReleaseStatus](arkts-ability-screenlockfilemanager-releasestatus-e.md) |
+| Type | Description |
+| --- | --- |
+| [ReleaseStatus](arkts-ability-screenlockfilemanager-releasestatus-e.md) | Release status of the access permission for sensitive data under lock screen. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) |
-| [29300003](../errorcode-screenLockFileManager.md#29300003-sensitive-data-access-management-under-lock-screen-is-not-enabled) |
-| [29300005](../errorcode-screenLockFileManager.md#29300005-permission-to-access-sensitive-data-on-the-lock-screen-is-not-requested) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found. |
+| [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) | The system ability works abnormally. |
+| [29300003](../errorcode-screenLockFileManager.md#29300003-sensitive-data-access-management-under-lock-screen-is-not-enabled) | The application is not enabled the data protection under lock screen. |
+| [29300005](../errorcode-screenLockFileManager.md#29300005-permission-to-access-sensitive-data-on-the-lock-screen-is-not-requested) | File access was not acquired. |
+
+**Examples**
+
+```TypeScript
+// Release the permission to access sensitive data on the lock screen.
+import { screenLockFileManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+    // Release access permission
+    let releaseStatus = screenLockFileManager.releaseAccess();
+    if (releaseStatus === screenLockFileManager.ReleaseStatus.RELEASE_GRANTED) {
+        hilog.info(0x0000, 'testTag', 'releaseAccess successfully.');
+    }
+} catch (err) {
+    let message = (err as BusinessError).message;
+    hilog.error(0x0000, 'testTag', 'releaseAccess failed: %{public}s', message);
+}
+```

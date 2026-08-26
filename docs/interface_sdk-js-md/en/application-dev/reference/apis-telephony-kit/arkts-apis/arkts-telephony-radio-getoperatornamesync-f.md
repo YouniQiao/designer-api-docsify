@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getOperatorNameSync
@@ -20,12 +19,20 @@ Obtains the carrier name of the SIM card in the specified slot.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Carrier name, for example, China Mobile. |
+
+**Examples**
+
+```TypeScript
+let slotId: number = 0;
+let operatorName: string = radio.getOperatorNameSync(slotId);
+console.info(`operator name is:` + operatorName);
+```

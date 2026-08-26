@@ -4,13 +4,15 @@ The **ArcListItem** component is used to display individual child components in 
 
 > **NOTE：**
 
-> - This component can be used only as a child of ArcList.&gt;
+> - This component can be used only as a child of ArcList.
+> 
 > - When this component is used with
 > [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), its child components are
 > created when it is created. When this component is used with
 > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) or
 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), or when the parent component is
-> ArcList, its child components are created when it is laid out.&gt;
+> ArcList, its child components are created when it is laid out.
+> 
 > - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables. In API version 22 and
 > earlier versions, a compilation warning will be reported when this component is used on phones, PCs, 2-in-1 devices
 > , tablets, and TVs, but the component can still run properly.
@@ -22,7 +24,7 @@ The **ArcListItem** component is used to display individual child components in 
 ## Modules to Import
 
 ```TypeScript
-import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from 'kits/@kit.ArkUI';
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
 ```
 
 ## [[Call]]
@@ -41,6 +43,6 @@ Creates an item for the **ArcList** component.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |
+| Type | Description |
+| --- | --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |

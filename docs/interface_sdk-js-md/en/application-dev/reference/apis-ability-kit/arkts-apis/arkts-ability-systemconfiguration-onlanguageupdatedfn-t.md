@@ -16,6 +16,6 @@ Defines an OnLanguageUpdatedFn function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| language | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| language | string | Yes | Indicates the system's language |

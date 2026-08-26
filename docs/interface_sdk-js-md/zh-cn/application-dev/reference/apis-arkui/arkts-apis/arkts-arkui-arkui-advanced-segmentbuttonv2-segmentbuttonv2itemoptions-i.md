@@ -2,8 +2,10 @@
 
 配置分段按钮选项参数。
 
-> **说明：**&gt;
-> 1. 当配置`symbol`和`icon`时，`symbol`的显示优先级更高。&gt;
+> **说明：**
+> 
+> 1. 当配置`symbol`和`icon`时，`symbol`的显示优先级更高。
+> 
 > 2. 当`symbol`和`symbolModifier`同时设置HM Symbol资源时，`symbolModifier`设置的资源具有更高的显示优先级。
 
 **起始版本：** 18
@@ -13,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from 'kits/@kit.ArkUI';
+import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription

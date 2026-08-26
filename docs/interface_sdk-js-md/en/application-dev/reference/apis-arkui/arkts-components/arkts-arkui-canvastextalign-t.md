@@ -14,10 +14,10 @@ Defines the type of text alignment. The value type is a union of the types liste
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| "center" |
-| "end" |
-| "left" |
-| "right" |
-| "start" |
+| Type | Description |
+| --- | --- |
+| "center" | The text is center-aligned. |
+| "end" | The text is aligned with the end bound (left alignment refers to the local from left to right, and right alignment refers to the local from right to left). |
+| "left" | The text is left-aligned. |
+| "right" | The text is right-aligned. |
+| "start" | The text is aligned with the start bound (left alignment refers to the local from left to right, and right alignment refers to the local from right to left). |

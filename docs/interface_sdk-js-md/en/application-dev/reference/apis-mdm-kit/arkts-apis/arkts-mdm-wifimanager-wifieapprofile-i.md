@@ -9,7 +9,7 @@ Represents EAP profile (configuration) information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.MDMKit';
+import wifiManager from '@kit.MDMKit';
 ```
 
 ## altSubjectMatch

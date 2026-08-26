@@ -2,7 +2,8 @@
 
 **LongPressGesture** is used to trigger a number press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Since API version 18, on some devices, the system's two-finger number press gesture may take precedence, causing
 > the application's two-finger number press gesture to be ineffective.
 
@@ -33,15 +34,15 @@ Creates a number press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | { fingers?: number; repeat?: boolean; duration?: number } | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | { fingers?: number; repeat?: boolean; duration?: number } | No | Parameters for the number press gesture.     - **fingers**: minimum number of fingers to trigger a number press gesture. The value ranges from 1 to 10.    Default value: **1**.     - **repeat**: whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite.   Default value: **false**.     - **duration**: minimum hold-down time, in ms.   Default value: **500**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
 
 ## [[Call]]
 
@@ -61,15 +62,15 @@ Creates a number press gesture. Compared with LongPressGesture)}, this API adds 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | No | Parameters of the number press gesture handler. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
 
 ## onAction
 
@@ -87,15 +88,15 @@ Registers the callback for successful number press gesture recognition.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | Yes | Callback for successful number press gesture recognition. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -113,15 +114,15 @@ Registers the callback for number press gesture cancellation. This callback is t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback for number press gesture cancellation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -141,15 +142,15 @@ Registers the callback for number press gesture cancellation. This callback is t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for number press gesture cancellation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
 
 ## onActionEnd
 
@@ -167,12 +168,12 @@ Registers the callback for number press gesture completion. This callback is tri
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | Yes | Callback for number press gesture completion. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |

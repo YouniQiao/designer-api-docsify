@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from 'kits/@kit.ArkUI';
+import dialog, { DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from '@kit.ArkUI';
 ```
 
 ## close
@@ -62,6 +62,6 @@ getState(): DialogState
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DialogState](arkts-arkui-arkui-dialog-dialogstate-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DialogState](arkts-arkui-arkui-dialog-dialogstate-e.md) | 返回状态。 |

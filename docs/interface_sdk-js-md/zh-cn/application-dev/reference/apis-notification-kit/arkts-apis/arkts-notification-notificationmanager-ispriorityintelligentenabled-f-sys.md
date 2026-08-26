@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import notificationManager from '@kit.NotificationKit';
 ```
 
 ## isPriorityIntelligentEnabled
@@ -26,16 +26,29 @@ function isPriorityIntelligentEnabled(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回包含优先通知智能服务使能状态的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+notificationManager.isPriorityIntelligentEnabled().then((result: boolean) => {
+  hilog.info(0x0000, 'testTag', `isPriorityIntelligentEnabled result: ${result}`);
+}).catch((err: BusinessError) => {
+  hilog.error(0x0000, 'testTag', `isPriorityIntelligentEnabled failed, code is ${err.code}, message is ${err.message}`);
+});
+```

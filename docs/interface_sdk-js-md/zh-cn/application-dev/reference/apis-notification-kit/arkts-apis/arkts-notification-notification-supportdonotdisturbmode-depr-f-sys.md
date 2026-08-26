@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## supportDoNotDisturbMode
@@ -27,9 +30,25 @@ function supportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 查询是否支持免打扰功能回调函数。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let supportDoNotDisturbModeCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("supportDoNotDisturbMode failed " + JSON.stringify(err));
+  } else {
+    console.info("supportDoNotDisturbMode success");
+  }
+}
+
+Notification.supportDoNotDisturbMode(supportDoNotDisturbModeCallback);
+```
 
 
 ## supportDoNotDisturbMode
@@ -54,6 +73,18 @@ function supportDoNotDisturbMode(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | 以Promise形式返回获取是否支持免打扰功能的结果。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.supportDoNotDisturbMode().then((data: boolean) => {
+  console.info("supportDoNotDisturbMode success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`supportDoNotDisturbMode failed, code is ${err}`);
+});
+```

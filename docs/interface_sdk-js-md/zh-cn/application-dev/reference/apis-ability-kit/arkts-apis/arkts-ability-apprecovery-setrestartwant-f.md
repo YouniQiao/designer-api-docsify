@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appRecovery } from 'kits/@kit.AbilityKit';
+import appRecovery from '@kit.AbilityKit';
 ```
 
 ## setRestartWant
@@ -24,6 +24,31 @@ function setRestartWant(want: Want): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 通过设置Want中"bundleName"和"abilityName"字段来指定恢复重启的Ability。 |
+
+**示例**
+
+```TypeScript
+import { appRecovery, Want } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Button("启动到恢复Ability")
+      .fontSize(40)
+      .fontWeight(FontWeight.Bold)
+      .onClick(() => {
+        // set restart want
+        let want: Want = {
+          bundleName: "ohos.samples.recovery",
+          abilityName: "RecoveryAbility"
+        };
+
+        appRecovery.setRestartWant(want);
+      })
+  }
+}
+```

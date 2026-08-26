@@ -20,8 +20,8 @@ Called when the Screen is used.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| screenId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| screenId | number | Yes | indicates the identifier of a screen. |
 
 ## Summary

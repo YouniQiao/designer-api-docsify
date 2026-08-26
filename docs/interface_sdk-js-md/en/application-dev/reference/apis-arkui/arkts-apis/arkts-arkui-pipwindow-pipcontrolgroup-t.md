@@ -13,9 +13,9 @@ Describes the optional component groups of the PiP controller. An application ca
 
 **System capability:** SystemCapability.Window.SessionManager
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md) |
-| [VideoCallControlGroup](arkts-arkui-pipwindow-videocallcontrolgroup-e.md) |
-| [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md) |
-| [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md) |
+| Type | Description |
+| --- | --- |
+| [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md) | Video playback component group. |
+| [VideoCallControlGroup](arkts-arkui-pipwindow-videocallcontrolgroup-e.md) | Video call component group. |
+| [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md) | Video meeting component group. |
+| [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md) | Live video component group. |

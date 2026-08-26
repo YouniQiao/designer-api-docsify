@@ -9,7 +9,7 @@ Provides the prefetching capability. It works with **LazyForEach** to prefetch d
 ## Modules to Import
 
 ```TypeScript
-import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from 'kits/@kit.ArkUI';
+import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from '@kit.ArkUI';
 ```
 
 ## setDataSource
@@ -30,9 +30,9 @@ Sets the prefetching-capable data source to bind to the **Prefetcher**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | Yes | Prefetching-capable data source. |
 
 ## visibleAreaChanged
 
@@ -52,7 +52,7 @@ Called when the boundary of the visible area changes. It notifies **Prefetcher**
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| minVisible | number | Yes |
-| maxVisible | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| minVisible | number | Yes | Index of the first data item in the current visible area. |
+| maxVisible | number | Yes | Index of the last data item in the current visible area. |

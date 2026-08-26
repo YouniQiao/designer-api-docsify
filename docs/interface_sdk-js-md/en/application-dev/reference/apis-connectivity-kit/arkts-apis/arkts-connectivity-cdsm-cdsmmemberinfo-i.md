@@ -9,7 +9,7 @@ Represents the information about member devices in the coordinated devices set.
 ## Modules to Import
 
 ```TypeScript
-import { cdsm } from 'kits/@kit.ConnectivityKit';
+import cdsm from '@kit.ConnectivityKit';
 ```
 
 ## address

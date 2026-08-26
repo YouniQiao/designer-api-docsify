@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import pasteboard from '@kit.BasicServicesKit';
 ```
 
 ## getSystemPasteboard
@@ -22,6 +22,13 @@ Obtains **SystemPasteboard** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i.md) |
+| Type | Description |
+| --- | --- |
+| [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i.md) | SystemPasteboard** object. |
+
+**Examples**
+
+```TypeScript
+// Obtain the SystemPasteboard object.
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+```

@@ -31,10 +31,10 @@ Sets how the picker is aligned with the entry component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [CalendarAlign](arkts-arkui-calendaralign-e.md) | Yes |
-| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| alignType | [CalendarAlign](arkts-arkui-calendaralign-e.md) | Yes | Alignment type.Default value: **CalendarAlign.END**. |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.Default value: **{dx: 0, dy: 0} |
 
 ## edgeAlign
 
@@ -54,10 +54,10 @@ Sets how the picker is aligned with the entry component. Compared with [edgeAlig
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[CalendarAlign](arkts-arkui-calendaralign-e.md)&gt; | Yes |
-| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| alignType | [Optional](arkts-arkui-optional-t.md)&lt;[CalendarAlign](arkts-arkui-calendaralign-e.md)&gt; | Yes | Alignment type.Default value: **CalendarAlign.END**.If the value of **alignType** is **undefined**, the default value is used. |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.Default value: **{dx: 0, dy: 0} |
 
 ## markToday
 
@@ -77,9 +77,9 @@ Whether to highlight the current system date.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Whether to highlight the current system date.   - **true**: Highlight the current system date.   - **false**: Do not highlight the current system date.   Default value: **false**. |
 
 ## onChange
 
@@ -99,9 +99,9 @@ Triggered when a date is selected. This event cannot be triggered by two-way bou
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback & lt;Date & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback & lt;Date & gt; | Yes | Selected date value.<br>**Since:** 18 |
 
 ## onChange
 
@@ -111,7 +111,8 @@ onChange(callback: Optional<Callback<Date>>)
 
 Triggered when a date is selected. This event cannot be triggered by two-way bound state variables. Compared with [onChange](#onchange), this API supports the **undefined** type for the **callback** parameter.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 18
@@ -124,9 +125,9 @@ Triggered when a date is selected. This event cannot be triggered by two-way bou
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;Date&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;Date&gt;&gt; | Yes | Selected date value.If **callback** is set to **undefined**, the callback function is not used. |
 
 ## textStyle
 
@@ -146,9 +147,9 @@ Sets the font color, font size, and font weight in the entry area.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Font color, font size, and font weight in the entry area.Default value:{color: '#ff182431',font: {size: '16fp', weight: FontWeight.Regular}} |
 
 ## textStyle
 
@@ -168,6 +169,6 @@ Sets the font color, font size, and font weight in the entry area. Compared with
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes | Font color, font size, and font weight in the entry area.Default value:{color: '#ff182431',font: {size: '16fp', weight: FontWeight.Regular}}If the value of **style** is **undefined**, the default value is used. |

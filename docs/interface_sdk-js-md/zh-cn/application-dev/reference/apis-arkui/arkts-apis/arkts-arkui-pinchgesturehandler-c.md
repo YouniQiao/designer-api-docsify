@@ -31,9 +31,9 @@ constructor(options?: PinchGestureHandlerOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [PinchGestureHandlerOptions](arkts-arkui-pinchgesturehandleroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [PinchGestureHandlerOptions](arkts-arkui-pinchgesturehandleroptions-i.md) | 否 | 捏合手势处理器配置参数。 |
 
 ## onActionCancel
 
@@ -53,15 +53,15 @@ onActionCancel(event: Callback<void>): PinchGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback & lt;void & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback & lt;void & gt; | 是 | 捏合手势处理器取消回调。不返回手势事件信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | 返回当前捏合手势处理器对象。 |
 
 ## onActionCancel
 
@@ -81,15 +81,15 @@ onActionCancel(event: Callback<GestureEvent>): PinchGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 捏合手势处理器取消回调。返回手势事件信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | 返回当前捏合手势处理器对象。 |
 
 ## onActionEnd
 
@@ -109,15 +109,15 @@ onActionEnd(event: Callback<GestureEvent>): PinchGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 捏合手势处理器结束回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | 返回当前捏合手势处理器对象。 |
 
 ## onActionStart
 
@@ -137,15 +137,15 @@ onActionStart(event: Callback<GestureEvent>): PinchGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 捏合手势处理器识别成功回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | 返回当前捏合手势处理器对象。 |
 
 ## onActionUpdate
 
@@ -165,12 +165,12 @@ onActionUpdate(event: Callback<GestureEvent>): PinchGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 捏合手势处理器更新回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | 返回当前捏合手势处理器对象。 |

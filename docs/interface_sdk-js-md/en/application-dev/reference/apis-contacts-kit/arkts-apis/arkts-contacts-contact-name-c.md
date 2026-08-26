@@ -9,7 +9,7 @@ Defines a contact's name.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## familyName
@@ -171,3 +171,16 @@ Suffix of the contact name.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
+
+**Examples**
+
+Create data in JSON format.
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let name: contact.Name = {
+    familyName: 'familyName',
+    fullName: 'fullName'
+};
+```

@@ -9,7 +9,7 @@ Defines the progress information. This information is reported only when [Progre
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import pasteboard from '@kit.BasicServicesKit';
 ```
 
 ## progress

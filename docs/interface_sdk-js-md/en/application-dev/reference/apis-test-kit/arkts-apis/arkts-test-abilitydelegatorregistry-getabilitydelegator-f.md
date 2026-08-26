@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
 ```
 
 ## getAbilityDelegator
@@ -22,6 +21,31 @@ Obtains an [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-ab
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) |
+| Type | Description |
+| --- | --- |
+| [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) | [AbilityDelegator]{ |
+
+**Examples**
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the AbilityDelegator object of the application.
+let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+// Construct a Want parameter to specify the target ability.
+let want: Want = {
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EntryAbility'
+};
+
+// Start the specified ability.
+abilityDelegator.startAbility(want, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed start ability. code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Success start ability.');
+  }
+});
+```

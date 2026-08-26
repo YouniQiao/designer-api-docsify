@@ -9,7 +9,7 @@ Implements a floating ball controller instance, which is used to start, update, 
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from 'kits/@kit.ArkUI';
+import floatingBall from '@kit.ArkUI';
 ```
 
 ## getFloatingBallWindowInfo
@@ -26,20 +26,33 @@ Obtains the floating ball window information. This API uses a promise to return 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[FloatingBallWindowInfo](arkts-arkui-floatingball-floatingballwindowinfo-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[FloatingBallWindowInfo](arkts-arkui-floatingball-floatingballwindowinfo-i.md)&gt; | Promise used to return the floating ball window information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
-| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: Internal error, the window type is not a floating ball. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: The process ID calling the API does not match the process ID of the session that created the floating ball. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible causes:  1. The floating ball controller has been destroyed.  2. The floating ball window is not created or has been destroyed. |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the window information of the floating ball.
+floatingBallController.getFloatingBallWindowInfo().then((data: floatingBall.FloatingBallWindowInfo) => {
+  console.info('Succeeded in getting floating ball window info. Info: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get floating ball window info. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## off('stateChange')
 
@@ -55,18 +68,33 @@ Unregisters the listener for lifecycle state changes of the floating ball.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'stateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the floating ball lifecycle state changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No | Callback used to return the floating ball lifecycle state. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes:  1.Mandatory parameters are left unspecified.  2.Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+
+**Examples**
+
+```TypeScript
+// Define the callback function for status changes (the callback function must be the same as that registered).
+let onStateChange = (state: floatingBall.FloatingBallState) => {
+  console.info('Floating ball stateChange: ' + state);
+};
+try {
+  // Unregister the callback for listening to floating ball state changes.
+  floatingBallController.off('stateChange', onStateChange);
+} catch (e) {
+  console.error(`Failed to off stateChange floating ball. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## off('click')
 
@@ -82,18 +110,33 @@ Unregisters the listener for click events of the floating ball.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'click' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'click' | Yes | Event type. The event **'click'** is triggered when the floating ball is tapped. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback invoked when the floating ball is tapped. It does not return any parameter. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes:  1.Mandatory parameters are left unspecified.  2.Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+
+**Examples**
+
+```TypeScript
+// Define the callback function for the click event (the callback function must be the same as that registered).
+let onClick = () => {
+  console.info('Floating ball onClick');
+};
+try {
+  // Unregister the callback for listening to click events of the floating ball.
+  floatingBallController.off('click', onClick);
+} catch (e) {
+  console.error(`Failed to off click floating ball. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## offDestroy
 
@@ -111,17 +154,38 @@ Unregister floating ball destroy event listener.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible cause: Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+
+**Examples**
+
+```TypeScript
+// Define the callback function for the destruction event (the callback function must be the same as that registered).
+let onDestroy = (reason: string) => {
+  console.info('Floating ball has destroyed, reason: ' + reason);
+};
+try {
+  // Unregister the callback for listening to floating ball destruction events.
+  floatingBallController?.offDestroy(onDestroy);
+} catch (e) {
+  console.error(`Failed to offDestroy floating ball. Cause:${e.code}, message:${e.message}`);
+}
+// Unregister all callbacks.
+try {
+  floatingBallController?.offDestroy();
+} catch (e) {
+  console.error(`Failed to offDestroy all listeners. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## on('stateChange')
 
@@ -137,19 +201,34 @@ Registers a listener for lifecycle state changes of the floating ball. To preven
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'stateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the floating ball lifecycle state changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes | Callback used to return the floating ball lifecycle state. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes:  1.Mandatory parameters are left unspecified.  2.Callback is null or not callable. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+
+**Examples**
+
+```TypeScript
+// Define the callback function for status changes.
+let onStateChange = (state: floatingBall.FloatingBallState) => {
+  console.info('Floating ball stateChange: ' + state);
+};
+try {
+  // Register the callback for listening to floating ball state changes.
+  floatingBallController.on('stateChange', onStateChange);
+} catch (e) {
+  console.error(`Failed to on stateChange floating ball. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## on('click')
 
@@ -165,19 +244,34 @@ Registers a listener for click events of the floating ball. To prevent memory le
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'click' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'click' | Yes | Event type. The event **'click'** is triggered when the floating ball is tapped. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the floating ball is tapped. It does not return any parameter. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes:  1.Mandatory parameters are left unspecified.  2.Callback is null or not callable. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+
+**Examples**
+
+```TypeScript
+// Define the click event callback function.
+let onClick = () => {
+  console.info('Floating ball onClick');
+};
+try {
+  // Register the callback for listening to click events of the floating ball.
+  floatingBallController.on('click', onClick);
+} catch (e) {
+  console.error(`Failed to on click floating ball. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## onDestroy
 
@@ -195,18 +289,33 @@ Register floating ball destroy event listener.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Used to handle {'destroy'} command. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible cause: Callback is null or not callable. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+
+**Examples**
+
+```TypeScript
+// Define the callback function for the destruction event.
+let onDestroy = (reason: string) => {
+  console.info('Floating ball has destroyed, reason: ' + reason);
+};
+try {
+  // Register the callback for listening to floating ball destruction events.
+  floatingBallController?.onDestroy(onDestroy);
+} catch (e) {
+  console.error(`Failed to onDestroy floating ball. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## restoreMainWindow
 
@@ -224,29 +333,52 @@ Restores the main window of the application and loads the specified page. This A
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want used for loading the specified page. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
-| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300026](../errorcode-window.md#1300026-failure-in-launch-an-application-window-via-a-floating-ball) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually returned by VerifyAccessToken. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: Internal error, the window type is not a floating ball. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: The process ID calling the API does not match the process ID of the session that created the floating ball. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible cause: Want parameter is null or invalid. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible causes:  1.The floating ball controller has been destroyed.  2.The floating ball window is not created or has been destroyed. |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
+| [1300026](../errorcode-window.md#1300026-failure-in-launch-an-application-window-via-a-floating-ball) | Failed to restore the main window. Possible causes: 1. Invalid parameter. The provided bundleName does not match the caller's application bundleName. 2. The application lacks the ohos.permission.AUTO_RESTORE_MAIN_WINDOW permission, and no user interaction (click) on the floating ball has occurred. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+
+// Set the Want parameter of the main window to be restored.
+let want: Want = {
+  bundleName: 'xxx.xxx.xxx',
+  abilityName: 'EntryAbility'
+};
+try {
+  // Restore the main window of the application and load the specified page.
+  floatingBallController.restoreMainWindow(want).then(() => {
+    console.info('Succeeded in restoring floating ball main window.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to restore floating ball main window. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  console.error(`Failed to restore floating ball main window. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## setFloatingBallVisibilityInApp
 
@@ -270,23 +402,36 @@ is in the foreground (the [lifecycle state](../../../windowmanager/window-overvi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isVisible | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isVisible | boolean | Yes | true** indicates that the floating ball is visible in the application, and **false** indicates the opposite. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: The floating ball controller is null. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible causes: The floating ball window has not been created or has been destroyed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Set the floating ball to be invisible in the application.
+floatingBallController?.setFloatingBallVisibilityInApp(false).then(() => {
+  console.info('Succeeded in setting floating ball visibility.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set floating ball visibility. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## startFloatingBall
 
@@ -304,29 +449,52 @@ Starts the floating ball. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| params | [FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| params | [FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | Yes | Parameters for starting the floating ball. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300020](../errorcode-window.md#1300020-failure-in-creating-a-floating-ball-window) |
-| [1300021](../errorcode-window.md#1300021-failure-in-starting-multiple-floating-balls) |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
-| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually returned by VerifyAccessToken. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes:  1. FloatingBallParams parameter is null.  2. Parameter is invalid, such as invalid icon object, template type, or title (empty or exceeds 64 bytes). |
+| [1300020](../errorcode-window.md#1300020-failure-in-creating-a-floating-ball-window) | Failed to create the floating ball window. Possible cause: The main window is not shown. |
+| [1300021](../errorcode-window.md#1300021-failure-in-starting-multiple-floating-balls) | Failed to start multiple floating ball windows. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible causes:  1.The floating ball controller has been destroyed.  2.Internal error, failed to show the floating ball window. Such as insufficient resources or abnormal window service. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: The floating ball state is stopping. |
+| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**Applicable version:** 26.0.0 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Set the parameters for starting the floating ball.
+let startParams: floatingBall.FloatingBallParams = {
+  template: floatingBall.FloatingBallTemplate.EMPHATIC,
+  title: 'title',
+  content: 'content'
+};
+try {
+  // Start the floating ball.
+  floatingBallController.startFloatingBall(startParams).then(() => {
+    console.info('Succeeded in starting floating ball.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to start floating ball. Cause:${err.code}, message:${err.message}`);
+  });
+} catch (e) {
+  console.error(`Failed to start floating ball. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## stopFloatingBall
 
@@ -342,17 +510,30 @@ Stops the floating ball. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Stop the floating ball.
+floatingBallController.stopFloatingBall().then(() => {
+  console.info('Succeeded in stopping floating ball.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to stop floating ball. Cause:${err.code}, message:${err.message}`);
+});
+```
 
 ## updateFloatingBall
 
@@ -368,26 +549,49 @@ Updates the floating ball. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| params | [FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| params | [FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | Yes | Parameters for updating the floating ball. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
-| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300027](../errorcode-window.md#1300027-cannot-change-template-type-when-updating-the-floating-ball) |
-| [1300028](../errorcode-window.md#1300028-floating-ball-based-on-a-static-template-cannot-be-updated) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: Internal error, the window type is not a floating ball. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: The process ID calling the API does not match the process ID of the session that created the floating ball. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes:  1.FloatingBallParams parameter is null.  2.Parameter is invalid, such as invalid icon object, template type, or title (empty or exceeds 64 bytes). |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
+| [1300027](../errorcode-window.md#1300027-cannot-change-template-type-when-updating-the-floating-ball) | When updating the floating ball, the template type cannot be changed. |
+| [1300028](../errorcode-window.md#1300028-floating-ball-based-on-a-static-template-cannot-be-updated) | Updating static template-based floating balls is not supported. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Set the parameters for updating the floating ball.
+let updateParams: floatingBall.FloatingBallParams = {
+  template: floatingBall.FloatingBallTemplate.EMPHATIC,
+  title: 'title2',
+  content: 'content2'
+};
+try {
+  // Update the floating ball.
+  floatingBallController.updateFloatingBall(updateParams).then(() => {
+    console.info('Succeeded in updating floating ball.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to update floating ball. Cause:${err.code}, message:${err.message}`);
+  });
+} catch (e) {
+  console.error(`Failed to update floating ball. Cause:${e.code}, message:${e.message}`);
+}
+```

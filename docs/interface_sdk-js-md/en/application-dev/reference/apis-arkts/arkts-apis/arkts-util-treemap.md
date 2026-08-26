@@ -3,15 +3,12 @@
 ## Modules to Import
 
 ```TypeScript
-import { TreeMap } from 'kits/@kit.ArkTS';
-import { TreeMapForEachCb } from 'kits/@kit.ArkTS';
-import { TreeMapComparator } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TreeMap](arkts-arkts-util-treemap-treemap-c.md) |
+| Name | Description |
+| --- | --- |
+| [TreeMap](arkts-arkts-util-treemap-treemap-c.md) | TreeMap stores key-value (KV) pairs. Each key must be unique and have only one value. TreeMap is implemented using a red-black tree, which is a binary search tree where keys are stored in sorted order for efficient insertion and removal. |

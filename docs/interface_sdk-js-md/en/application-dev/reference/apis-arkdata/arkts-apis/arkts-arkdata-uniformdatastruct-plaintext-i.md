@@ -9,7 +9,7 @@ Represents data of the plain text type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import uniformDataStruct from '@kit.ArkData';
 ```
 
 ## abstract
@@ -75,3 +75,27 @@ Uniform data type, which has a fixed value of **general.plain-text**. For detail
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Examples**
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+let plainTextDetails : Record<string, string> = {
+  'attr1': 'value1',
+  'attr2': 'value2'
+}
+let plainText : uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent : 'This is plainText textContent example',
+  abstract : 'this is abstract',
+  details : plainTextDetails
+}
+console.info('plainText.uniformDataType: ' + plainText.uniformDataType);
+if(plainText.details != undefined){
+  let plainTextDetailsObj : Record<string, string> = plainText.details;
+  for(let kv of Object.entries(plainTextDetailsObj)) {
+    console.info('plainText.details.attr: ' + kv[0] + ', value:' + kv[1]);
+  }
+}
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+```

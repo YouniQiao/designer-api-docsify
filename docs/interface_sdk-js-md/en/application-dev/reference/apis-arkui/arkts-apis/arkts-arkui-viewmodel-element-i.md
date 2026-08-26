@@ -22,9 +22,9 @@ Adds a node to the end of the child node list of the current node.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [child](../arkts-components/arkts-arkui-nestedscrollinfo-i.md) | [Element](arkts-arkui-viewmodel-element-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| child | [Element](arkts-arkui-viewmodel-element-i.md) | Yes | Subnode object to be added |
 
 ## animate
 
@@ -42,16 +42,16 @@ Creates and runs an animation shortcut on the component. Specify the keyframes a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| keyframes | Array&lt;[AnimateStyle](arkts-arkui-viewmodel-animatestyle-i.md)&gt; | Yes |
-| options | [AnimateOptions](arkts-arkui-viewmodel-animateoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keyframes | Array&lt;[AnimateStyle](arkts-arkui-viewmodel-animatestyle-i.md)&gt; | Yes | keyframes is used to describe key frame parameters of the animation. |
+| options | [AnimateOptions](arkts-arkui-viewmodel-animateoptions-i.md) | Yes | Options. is used to describe animation parameters. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AnimationResult](arkts-arkui-viewmodel-animationresult-i.md) |
+| Type | Description |
+| --- | --- |
+| [AnimationResult](arkts-arkui-viewmodel-animationresult-i.md) | This method returns the animation object. |
 
 ## createIntersectionObserver
 
@@ -69,15 +69,15 @@ If 0.5 is returned, 50% of the current component is visible.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | { ratios: Array & lt;number & gt; } | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | { ratios: Array & lt;number & gt; } | Yes | Scope of Monitoring components. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [observer](arkts-arkui-viewmodel-observer-i.md) |
+| Type | Description |
+| --- | --- |
+| [observer](arkts-arkui-viewmodel-observer-i.md) |  |
 
 ## focus
 
@@ -95,9 +95,9 @@ Requests or cancels the focus for a component. If focus is set to true, the focu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \| false } |
 
 ## getBoundingClientRect
 
@@ -115,9 +115,9 @@ Obtains the size and position of the element.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RectObj](arkts-arkui-viewmodel-rectobj-i.md) |
+| Type | Description |
+| --- | --- |
+| [RectObj](arkts-arkui-viewmodel-rectobj-i.md) | RectObj the size position of the element. |
 
 ## rotation
 
@@ -135,9 +135,9 @@ Requests or cancels the crown rotation focus for a component. If focus is set to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \| false } |
 
 ## setAttribute
 
@@ -155,10 +155,10 @@ Sets the value of an attribute on a specified element. If the attribute already 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | attribute name |
+| value | string | Yes | attribute value¡¢ |
 
 ## setStyle
 
@@ -176,13 +176,13 @@ Sets a style value on a specified element. If the style exists and the style val
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | style name |
+| value | string | Yes | style value |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | If the setting is successful, true is returned. If the setting fails, false is returned. |

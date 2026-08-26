@@ -12,7 +12,7 @@ Defines the type of values in a **Scope** object.
 
 **System capability:** SystemCapability.Utils.Lang
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) |
-| number |
+| Type | Description |
+| --- | --- |
+| [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | The value type is ScopeComparable. |
+| number | The value type is a number. |

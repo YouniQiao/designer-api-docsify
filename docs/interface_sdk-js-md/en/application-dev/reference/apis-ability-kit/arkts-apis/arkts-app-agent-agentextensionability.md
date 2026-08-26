@@ -3,21 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { AgentExtensionAbility } from 'kits/@kit.AbilityKit';
+import AgentExtensionAbility from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md) |
+| Name | Description |
+| --- | --- |
+| [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md) | The class of agent extension ability. This class cannot be used in Harmony Archive(HAR).@extends ExtensionAbility |
 
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c-sys.md) | The class of agent extension ability. This class cannot be used in Harmony Archive(HAR).@extends ExtensionAbility |
 <!--DelEnd-->

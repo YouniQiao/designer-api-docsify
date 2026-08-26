@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formAgent } from 'kits/@kit.FormKit';
+import formAgent from '@kit.FormKit';
 ```
 
 ## updateFormCrossBundle
@@ -26,26 +26,49 @@ Updates a widget by cross bundle. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formId | string | Yes |
-| [formBindingData](arkts-app-form-formbindingdata.md) | formBindingData.FormBindingData | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formId | string | Yes | ID of the widget to update. |
+| formBindingData | formBindingData.FormBindingData | Yes | Data to be used for the update. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
-| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
-| [16501007](../errorcode-form.md#16501007-untrusted-widget) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | Possible cause IPC connection error. Such as the remote object dose not exist. |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Possible cause Service State error. Such as the form is recovering. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | Possible cause internal functional error. Such as virtualization failed. |
+| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) | The ID of the form to be operated does not exist. |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form to be operated has been deleted already. |
+| [16501007](../errorcode-form.md#16501007-untrusted-widget) | The form to be operated is not trusted. |
+
+**Examples**
+
+```TypeScript
+import { formBindingData, formAgent } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '123456789'; // Widget ID of the form. Replace it with the actual widget ID.
+try {
+  let param: Record<string, string> = {
+    'temperature': '22c',
+    'time': '22:00'
+  };
+  let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+  formAgent.updateFormCrossBundle(formId, obj).then(() => {
+    console.info('formAgent updateFormCrossBundle success');
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error?.code}, message: ${error?.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error?.code}, message: ${error?.message}`);
+}
+```

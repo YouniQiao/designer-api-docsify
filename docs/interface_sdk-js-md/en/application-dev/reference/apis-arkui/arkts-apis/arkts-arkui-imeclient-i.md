@@ -29,9 +29,9 @@ Sets the extension configuration of an input method.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | Yes | Extension configuration of an input method. |
 
 ## nodeId
 

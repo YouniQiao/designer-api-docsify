@@ -29,9 +29,9 @@ Obtains the styled string displayed in the rich text component.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) |
+| Type | Description |
+| --- | --- |
+| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | Styled string displayed in the rich text component. |
 
 ## setStyledString
 
@@ -51,6 +51,6 @@ Sets the styled string displayed in the rich text component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | Styled string to set.   **NOTE：**The child class [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |

@@ -20,17 +20,39 @@ Clones a node in the current scene. Cross-scene node cloning is not supported.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to be cloned. |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Target parent node of the cloned node in the current scene. The cloned node and the target parent node must belong to the same scene. |
+| name | string | Yes | Name of the cloned node, which can be customized and has no special requirements. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Returns the cloned node. If the operation fails, null is returned. |
+
+**Examples**
+
+```TypeScript
+import { Scene, Node } from '@kit.ArkGraphics3D';
+
+function CloneNode() {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.gltf"))
+    .then(async (result: Scene) => {
+      let node = result.getNodeByPath("rootNode_/Unnamed Node 1/AnimatedCube") as Node;
+      let parent = result.root as Node;
+      let name = "cloneNode_";
+      let clone = result.cloneNode(node, parent, name);
+      if (clone) {
+        console.info("cloneNode success");
+      } else {
+        console.error("cloneNode failed");
+      }
+    });
+}
+```
 
 ## createComponent
 
@@ -46,16 +68,40 @@ Creates a component and attaches it to a node. This API uses a promise to return
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to which the component will be attached. |
+| name | string | Yes | Name of the component to create, which is defined by individual plugins. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md)&gt; | Promise used to return the SceneComponent object created. |
+
+**Examples**
+
+```TypeScript
+import { Scene, SceneComponent } from '@kit.ArkGraphics3D';
+
+function createComponentTest(): Promise<SceneComponent> {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  return Scene.load($rawfile("gltf/DamagedHelmet/glTF/DamagedHelmet.glb"))
+    .then(scene => {
+      if (!scene) {
+        return Promise.reject(new Error("Scene load failed"));
+      }
+      // RenderConfigurationComponent is an internal component of the engine. You do not need to install plugins when creating the component.
+      return scene.createComponent(scene.root, "RenderConfigurationComponent");
+    })
+    .then(component => {
+      if (!component) {
+        return Promise.reject(new Error("createComponent failed"));
+      }
+      return component;
+    });
+}
+```
 
 ## destroy
 
@@ -68,6 +114,23 @@ Destroys this scene and releases all scene resources.
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
+
+**Examples**
+
+```TypeScript
+import { Scene } from '@kit.ArkGraphics3D';
+
+function destroy(): void {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result) {
+         // Destroy the scene.
+        result.destroy();
+    }
+  });
+}
+```
 
 ## getComponent
 
@@ -83,16 +146,40 @@ Obtains the component instance from a node based on the component name.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to which the component is attached. |
+| name | string | Yes | Name of the component to obtain. The value must be a system predefined or registered custom component name, and follow the naming conventions. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) \| null | SceneComponent object corresponding to the given name, or null if not found. |
+
+**Examples**
+
+```TypeScript
+import { Scene } from '@kit.ArkGraphics3D';
+
+function getComponentTest() {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  Scene.load($rawfile("gltf/DamagedHelmet/glTF/DamagedHelmet.glb"))
+    .then(async (result: Scene | undefined) => {
+      if (!result) {
+        console.error("Scene load failed");
+        return;
+      }
+      console.info("TEST getComponentTest");
+      let component = result.getComponent(result.root, "myComponent");
+      if (component) {
+        console.info("getComponent success");
+      } else {
+        console.warn("Component not found");
+      }
+    });
+}
+```
 
 ## getDefaultRenderContext
 
@@ -108,9 +195,25 @@ Obtains the rendering context associated with the current graphics object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) \| null | Rendering context associated with the current object, or null if no rendering context is associated. |
+
+**Examples**
+
+```TypeScript
+import { Scene, RenderContext } from '@kit.ArkGraphics3D';
+
+function getDefaultRenderContextTest() {
+  console.info("TEST getDefaultRenderContextTest");
+  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
+  if (renderContext) {
+    console.info("getDefaultRenderContext success");
+  } else {
+    console.error("RenderContext is null");
+  }
+}
+```
 
 ## getNodeByPath
 
@@ -126,16 +229,33 @@ Obtains a node by path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| type | [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Path in the scene node tree. Each layer is separated by a slash (/). |
+| type | [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md) | No | Expected type of the node to be returned. The default value is null. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Returns the instance of the requested node. Returns null if not found or if the type of the found node does not match the passed parameter. |
+
+**Examples**
+
+```TypeScript
+import { Scene, Node } from '@kit.ArkGraphics3D';
+
+function getNode(): void {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result) {
+         // Search for a node in the specified path.
+        let node : Node | null = result.getNodeByPath("rootNode_");
+    }
+  });
+}
+```
 
 ## getResourceFactory
 
@@ -151,9 +271,26 @@ Obtains the scene resource factory.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) |
+| Type | Description |
+| --- | --- |
+| [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) | Scene resource factory. |
+
+**Examples**
+
+```TypeScript
+import { SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
+
+function getFactory(): void {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result) {
+         // Obtain a SceneResourceFactory object.
+        let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+    }
+  });
+}
+```
 
 ## importNode
 
@@ -169,17 +306,41 @@ Generally used for importing nodes from other scenes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the imported node, which can be customized and has no special requirements. |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to be imported. |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | Parent node of the imported node in the new scene. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) |
+| Type | Description |
+| --- | --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Node to be imported. |
+
+**Examples**
+
+```TypeScript
+import { Scene } from '@kit.ArkGraphics3D';
+
+function ImportNodeTest() {
+  Scene.load().then(async (result: Scene | undefined) => {
+    if (!result) {
+      return;
+    }
+    // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+    Scene.load($rawfile("gltf/AnimatedCube/glTF/AnimatedCube.glb"))
+      .then(async (extScene: Scene) => {
+        let extNode = extScene.getNodeByPath("rootNode_/Unnamed Node 1/AnimatedCube");
+        console.info("TEST ImportNodeTest");
+        let node = result.importNode("scene", extNode, result.root);
+        if (node) {
+          node.position.x = 5;
+        }
+      });
+  });
+}
+```
 
 ## importScene
 
@@ -195,17 +356,35 @@ Imports another scene into the current one.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | Yes |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the root node of the imported scene, which can be customized and has no special requirements. |
+| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | Yes | Scene to import. |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | Parent node of the imported scene in the new scene. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) |
+| Type | Description |
+| --- | --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Root node of the imported scene. |
+
+**Examples**
+
+```TypeScript
+import { Scene } from '@kit.ArkGraphics3D';
+
+function ImportSceneTest() {
+  Scene.load().then(async (result: Scene | undefined) => {
+    if (!result) {
+      return;
+    }
+    // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+    let content = await result.getResourceFactory().createScene($rawfile("gltf/DamagedHelmet/glTF/DamagedHelmet.glb"))
+    console.info("TEST ImportSceneTest");
+    result.importScene("helmet", content, null);
+  });
+}
+```
 
 ## load
 
@@ -221,15 +400,63 @@ Loads a resource by path. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | No | Path of the model file resource to load. The default value is undefined. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise used to return the Scene object created. |
+
+**Examples**
+
+Example 1: Load resources via rawfile (a relative path).
+
+```TypeScript
+import { Scene } from '@kit.ArkGraphics3D';
+
+function loadModel(): void {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then((result: Scene) => {
+    console.info("Scene loaded, root node: " + result.root?.name);
+  });
+}
+```
+
+Example 2: Load via an absolute path (from /data/storage/el2/base/files in the application sandbox directory).
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { Scene } from '@kit.ArkGraphics3D';
+
+async function loadModelFromAbsolutePath(context: common.UIAbilityContext): Promise<void> {
+  // Obtain the application sandbox directory. (Scene.load can read only files written by the application itself, not files written by hdc/adb push.)
+  const appCtx = context.getApplicationContext();
+  const filesDir = appCtx.filesDir; // /data/storage/el2/base/files
+
+  // Read the model content from rawfile. (In practice, you can replace rawfile with data from other sources.)
+  // Use a .glb file for easier copying and loading. If the file is in.gltf format, copy its .bin file and texture files to the same directory.
+  const src = 'gltf/CubeWithFloor/glTF/AnimatedCube.glb';
+  const load_uri = `${filesDir}/AnimatedCube.glb`;
+
+  // Write the model file to the application sandbox directory to create a file accessible by Scene.load (absolute path).
+  const rawData = await context.resourceManager.getRawFileContent(src);
+  const file = fileIo.openSync(load_uri, fileIo.OpenMode.CREATE | fileIo.OpenMode.TRUNC | fileIo.OpenMode.WRITE_ONLY);
+  fileIo.writeSync(file.fd, rawData.buffer.slice(rawData.byteOffset, rawData.byteOffset + rawData.byteLength));
+  fileIo.closeSync(file);
+
+  // Load the model using the absolute path.
+  Scene.load(load_uri).then((scene: Scene) => {
+    // Handle the loaded scene.
+  }).catch((error: string) => {
+    console.error('Scene load failed: ' + error);
+  });
+}
+```
 
 ## renderFrame
 
@@ -245,15 +472,33 @@ Renders frames on demand, such as controlling the frame rate.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| params | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| params | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | No | Rendering parameters. The default value is undefined. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Rendering result. The value true is returned if rendering is successfully scheduled; returns false otherwise. |
+
+**Examples**
+
+```TypeScript
+import { Scene } from '@kit.ArkGraphics3D';
+
+function RenderFrameTest() {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  Scene.load($rawfile("gltf/DamagedHelmet/glTF/DamagedHelmet.glb"))
+    .then(async (result: Scene | undefined) => {
+      if (!result) {
+        return;
+      }
+      console.info("TEST RenderFrameTest");
+      result.renderFrame({ alwaysRender: true });
+  });
+}
+```
 
 ## animations
 

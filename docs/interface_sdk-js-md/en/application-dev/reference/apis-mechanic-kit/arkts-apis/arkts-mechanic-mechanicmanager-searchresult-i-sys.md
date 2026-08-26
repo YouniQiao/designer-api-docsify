@@ -11,7 +11,6 @@ Search result.
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## targetCount

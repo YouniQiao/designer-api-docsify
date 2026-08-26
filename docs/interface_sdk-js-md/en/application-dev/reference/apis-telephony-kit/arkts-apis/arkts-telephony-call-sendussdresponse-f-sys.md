@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## sendUssdResponse
@@ -24,17 +23,37 @@ Sends a response to the Unstructured Supplementary Service Data (USSD) service t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotId | number | Yes |
-| content | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotId | number | Yes | ID of the card slot that sends the response. |
+| content | string | Yes | Response content. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| 8400001 |
-| 8400002 |
-| 8400003 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| 8400001 | Invalid parameter value. |
+| 8400002 | Operation failed. Cannot connect to service. |
+| 8400003 | System internal error, system database write fail. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { call } from '@kit.TelephonyKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+function testSendUssdResponse() {
+    const slotId: number = 0;
+    const content: string = "OK";
+
+    try {
+        call.sendUssdResponse(slotId, content);
+    } catch (error) {
+        const err = error as BusinessError;
+        hilog.error(0x0000, 'testTag', `Failed to send USSD response. Code: ${err.code}, Message: ${err.message}`);
+    }
+}
+```

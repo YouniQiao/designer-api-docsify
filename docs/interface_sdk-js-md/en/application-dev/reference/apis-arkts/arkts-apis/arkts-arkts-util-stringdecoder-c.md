@@ -9,7 +9,8 @@ Provides the capability of decoding binary streams into strings. The following e
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## constructor
@@ -28,9 +29,19 @@ Constructor used to create a **StringDecoder** instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| encoding | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encoding | string | No | Encoding type of the input data. The default value is **utf-8**. |
+
+**Examples**
+
+```TypeScript
+let textEncoder = new util.TextEncoder("utf-8");
+```
+
+```TypeScript
+let decoder = new util.StringDecoder();
+```
 
 ## end
 
@@ -48,15 +59,28 @@ Ends the decoding process and returns any remaining input stored in the internal
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| chunk | string \| Uint8Array | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| chunk | string \| Uint8Array | No | String to decode. The default value is **undefined**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String decoded. |
+
+**Examples**
+
+```TypeScript
+let decoder = new util.StringDecoder('utf-8');
+let input = new Uint8Array([0xE4, 0xBD, 0xA0, 0xE5, 0xA5, 0xBD]);
+const writeString = decoder.write(input.slice(0, 5));
+const endString = decoder.end(input.slice(5));
+console.info("writeString:", writeString);
+// Output: writeString: Hello
+console.info("endString:", endString);
+// Output: endString: World
+```
 
 ## write
 
@@ -74,12 +98,22 @@ Decodes a string. Any incomplete multi-byte characters at the end of Uint8Array 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| chunk | string \| Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| chunk | string \| Uint8Array | Yes | String to decode. Decoding is performed based on the input encoding type. If the input is of the Uint8Array type, decoding is performed normally. If the input is of the string type, the parameter is directly returned. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String decoded. |
+
+**Examples**
+
+```TypeScript
+let decoder = new util.StringDecoder('utf-8');
+let input =  new Uint8Array([0xE4, 0xBD, 0xA0, 0xE5, 0xA5, 0xBD]);
+const decoded = decoder.write(input);
+console.info("decoded:", decoded);
+// Output: decoded: Hello, World
+```

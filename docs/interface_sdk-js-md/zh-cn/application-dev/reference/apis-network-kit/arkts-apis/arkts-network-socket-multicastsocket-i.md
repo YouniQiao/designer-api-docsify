@@ -11,7 +11,7 @@ MulticastSocket连接。在调用MulticastSocket的方法前，需要先通过 [
 ## 导入模块
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## addMembership
@@ -22,8 +22,10 @@ addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 
 加入多播组。使用callback异步回调。
 
-> **说明：**&gt;
-> 多播使用的IP地址属于特定的范围（例如224.0.0.0到239.255.255.255）。&gt;
+> **说明：**
+> 
+> 多播使用的IP地址属于特定的范围（例如224.0.0.0到239.255.255.255）。
+> 
 > 加入多播组后，既可以是发送端，也可以是接收端，相互之间以广播的形式传递数据，不区分客户端或服务端。
 
 **起始版本：** 11
@@ -34,20 +36,39 @@ addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 目标地址信息，参考 [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 2301022 |
-| 2301088 |
-| 2301098 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301022 | Invalid argument. |
+| 2301088 | Not a socket. |
+| 2301098 | Address in use. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let addr: socket.NetAddress = {
+  address: '239.255.0.1',
+  port: 8080
+}
+multicast.addMembership(addr, (err: Object) => {
+  if (err) {
+    console.error('add membership fail, err: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('add membership success');
+})
+```
 
 ## addMembership
 
@@ -57,8 +78,10 @@ addMembership(multicastAddress: NetAddress): Promise<void>
 
 加入多播组。使用Promise异步回调。
 
-> **说明：**&gt;
-> 多播使用的IP地址属于特定的范围（例如224.0.0.0到239.255.255.255）。&gt;
+> **说明：**
+> 
+> 多播使用的IP地址属于特定的范围（例如224.0.0.0到239.255.255.255）。
+> 
 > 加入多播组后，既可以是发送端，也可以是接收端，相互之间以广播的形式传递数据，不区分客户端或服务端。
 
 **起始版本：** 11
@@ -69,24 +92,41 @@ addMembership(multicastAddress: NetAddress): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 目标地址信息，参考 [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 以Promise形式返回MulticastSocket加入多播组的行为结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 2301088 |
-| 2301098 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301088 | Not a socket. |
+| 2301098 | Address in use. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let addr: socket.NetAddress = {
+  address: '239.255.0.1',
+  port: 8080
+}
+multicast.addMembership(addr).then(() => {
+  console.info('addMembership success');
+}).catch((err: Object) => {
+  console.error('addMembership fail');
+});
+```
 
 ## dropMembership
 
@@ -96,8 +136,10 @@ dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): voi
 
 退出多播组。使用callback异步回调。
 
-> **说明：**&gt;
-> 多播使用的IP地址属于特定的范围（例如224.0.0.0到239.255.255.255）。&gt;
+> **说明：**
+> 
+> 多播使用的IP地址属于特定的范围（例如224.0.0.0到239.255.255.255）。
+> 
 > 从已加入的多播组中退出，必须在加入多播组
 > [addMembership](#addmembership)
 > 之后退出才有效。
@@ -110,19 +152,38 @@ dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 目标地址信息，参考 [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 2301088 |
-| 2301098 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301088 | Not a socket. |
+| 2301098 | Address in use. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let addr: socket.NetAddress = {
+  address: '239.255.0.1',
+  port: 8080
+}
+multicast.dropMembership(addr, (err: Object) => {
+  if (err) {
+    console.error('drop membership fail, err: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('drop membership success');
+})
+```
 
 ## dropMembership
 
@@ -132,8 +193,10 @@ dropMembership(multicastAddress: NetAddress): Promise<void>
 
 退出多播组。使用Promise异步回调。
 
-> **说明：**&gt;
-> 多播使用的IP地址属于特定的范围（例如224.0.0.0到239.255.255.255）。&gt;
+> **说明：**
+> 
+> 多播使用的IP地址属于特定的范围（例如224.0.0.0到239.255.255.255）。
+> 
 > 从已加入的多播组中退出，必须在加入多播组
 > [addMembership](#addmembership)
 > 之后退出才有效。
@@ -146,24 +209,41 @@ dropMembership(multicastAddress: NetAddress): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 目标地址信息，参考 [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 以Promise形式返回MulticastSocket加入多播组的执行结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 2301088 |
-| 2301098 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301088 | Not a socket. |
+| 2301098 | Address in use. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let addr: socket.NetAddress = {
+  address: '239.255.0.1',
+  port: 8080
+}
+multicast.dropMembership(addr).then(() => {
+  console.info('drop membership success');
+}).catch((err: Object) => {
+  console.error('drop membership fail');
+});
+```
 
 ## getLoopbackMode
 
@@ -173,9 +253,12 @@ getLoopbackMode(callback: AsyncCallback<boolean>): void
 
 获取多播通信中的环回模式状态。使用callback异步回调。
 
-> **说明：**&gt;
-> 用于获取当前环回模式开启或关闭的状态。&gt;
-> 如果获取的属性值为 true，表示环回模式是开启的状态，允许主机在本地循环接收自己发送的多播数据包。如果为 false，则表示环回模式是关闭的状态，主机不会接收到自己发送的多播数据包。&gt;
+> **说明：**
+> 
+> 用于获取当前环回模式开启或关闭的状态。
+> 
+> 如果获取的属性值为 true，表示环回模式是开启的状态，允许主机在本地循环接收自己发送的多播数据包。如果为 false，则表示环回模式是关闭的状态，主机不会接收到自己发送的多播数据包。
+> 
 > 在调用
 > [addMembership](#addmembership)
 > 之后，调用此接口才有效。
@@ -186,16 +269,31 @@ getLoopbackMode(callback: AsyncCallback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回值为环回模式状态，true表示环回模式开启，false表示环回模式关闭。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 2301088 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301088 | Not a socket. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.getLoopbackMode((err: Object, value: Boolean) => {
+  if (err) {
+    console.error('get loopback mode fail, err: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('get loopback mode success, value: ' + JSON.stringify(value));
+})
+```
 
 ## getLoopbackMode
 
@@ -205,9 +303,12 @@ getLoopbackMode(): Promise<boolean>
 
 获取多播通信中的环回模式状态。使用Promise异步回调。
 
-> **说明：**&gt;
-> 用于获取当前环回模式开启或关闭的状态。&gt;
-> 如果获取的属性值为 true，表示环回模式是开启的状态，允许主机在本地循环接收自己发送的多播数据包。如果为 false，则表示环回模式是关闭的状态，主机不会接收到自己发送的多播数据包。&gt;
+> **说明：**
+> 
+> 用于获取当前环回模式开启或关闭的状态。
+> 
+> 如果获取的属性值为 true，表示环回模式是开启的状态，允许主机在本地循环接收自己发送的多播数据包。如果为 false，则表示环回模式是关闭的状态，主机不会接收到自己发送的多播数据包。
+> 
 > 在调用
 > [addMembership](#addmembership)
 > 之后，调用此接口才有效。
@@ -218,16 +319,29 @@ getLoopbackMode(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示环回模式开启，返回false表示环回模式关闭。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 2301088 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301088 | Not a socket. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.getLoopbackMode().then((value: Boolean) => {
+  console.info('loopback mode: ', JSON.stringify(value));
+}).catch((err: Object) => {
+  console.error('get loopback mode failed');
+});
+```
 
 ## getMulticastTTL
 
@@ -237,10 +351,14 @@ getMulticastTTL(callback: AsyncCallback<number>): void
 
 获取数据包在网络传输过程中路由器最大跳数(TTL)的值。使用callback异步回调。
 
-> **说明：**&gt;
-> 用于限制数据包在网络中传输时能够经过的最大路由器跳数的字段，TTL (Time to live)。&gt;
-> 范围为 0～255，默认值为 1 。&gt;
-> 如果一个多播数据包的 TTL 值为 1，那么它只能被直接连接到发送者的主机接收。如果 TTL 被设置为一个较大的值，那么数据包就能够被传送到更远的网络范围内。&gt;
+> **说明：**
+> 
+> 用于限制数据包在网络中传输时能够经过的最大路由器跳数的字段，TTL (Time to live)。
+> 
+> 范围为 0～255，默认值为 1 。
+> 
+> 如果一个多播数据包的 TTL 值为 1，那么它只能被直接连接到发送者的主机接收。如果 TTL 被设置为一个较大的值，那么数据包就能够被传送到更远的网络范围内。
+> 
 > 在调用
 > [addMembership](#addmembership)
 > 之后，调用此接口才有效。
@@ -251,16 +369,31 @@ getMulticastTTL(callback: AsyncCallback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 2301088 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301088 | Not a socket. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.getMulticastTTL((err: Object, value: Number) => {
+  if (err) {
+    console.error('set ttl fail, err: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('set ttl success, value: ' + JSON.stringify(value));
+})
+```
 
 ## getMulticastTTL
 
@@ -270,10 +403,14 @@ getMulticastTTL(): Promise<number>
 
 获取数据包在网络传输过程中路由器最大跳数(TTL)的值。使用Promise异步回调。
 
-> **说明：**&gt;
-> 用于限制数据包在网络中传输时能够经过的最大路由器跳数的字段，TTL (Time to live)。&gt;
-> 范围为 0～255，默认值为 1 。&gt;
-> 如果一个多播数据包的 TTL 值为 1，那么它只能被直接连接到发送者的主机接收。如果 TTL 被设置为一个较大的值，那么数据包就能够被传送到更远的网络范围内。&gt;
+> **说明：**
+> 
+> 用于限制数据包在网络中传输时能够经过的最大路由器跳数的字段，TTL (Time to live)。
+> 
+> 范围为 0～255，默认值为 1 。
+> 
+> 如果一个多播数据包的 TTL 值为 1，那么它只能被直接连接到发送者的主机接收。如果 TTL 被设置为一个较大的值，那么数据包就能够被传送到更远的网络范围内。
+> 
 > 在调用
 > [addMembership](#addmembership)
 > 之后，调用此接口才有效。
@@ -284,16 +421,29 @@ getMulticastTTL(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | 以Promise形式返回当前TTL数值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 2301088 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301088 | Not a socket. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.getMulticastTTL().then((value: Number) => {
+  console.info('ttl: ', JSON.stringify(value));
+}).catch((err: Object) => {
+  console.error('set ttl failed');
+});
+```
 
 ## getSocketFd
 
@@ -303,9 +453,12 @@ getSocketFd(): Promise<number>
 
 获取MulticastSocket的文件描述符。使用Promise异步回调。
 
-> **说明：**&gt;
-> - [bind](arkts-network-socket-udpsocket-i.md#bind)方法调用成功后，才可调用此方法。&gt;
-> - bind异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。&gt;
+> **说明：**
+> 
+> - [bind](arkts-network-socket-udpsocket-i.md#bind)方法调用成功后，才可调用此方法。
+> 
+> - bind异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。
+> 
 > - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-udpsocket-i.md#close)方法关闭Socket连接，避免直接操作
 > 文件描述符进行关闭。
 
@@ -319,15 +472,303 @@ getSocketFd(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回Socket的文件描述符。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+    address: '192.168.xx.xxx',
+    port: 8080
+}
+udp.bind(bindAddr)
+  .then(() => {
+    udp.getSocketFd()
+      .then((fd: number) => {
+        console.info(`Socket FD：${fd}`);
+      }).catch((err: BusinessError) => {
+      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+    });
+  }).catch((err: BusinessError) => {
+  console.error('bind fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let bindAddr: socket.NetAddress = {
+    address: '192.168.xx.xxx',
+    port: 8080
+}
+multicast.bind(bindAddr)
+  .then(() => {
+    console.info('bind success');
+    multicast.getSocketFd().then((fd: number) => {
+      console.info(`Socket FD：${fd}`);
+    }).catch((err: BusinessError) => {
+      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+    });
+  }).catch((err: BusinessError) => {
+  console.error('bind fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let bindAddr: socket.NetAddress = {
+    address: '192.168.xx.xxx',
+  // 绑定指定网络接口
+}
+tcp.bind(bindAddr)
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions)
+tcp.getSocketFd().then((data: number) => {
+  console.info("socketFd: " + data);
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr).then(() => {
+  console.info('listen success');
+  tcpServer.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD：${fd}`);
+  }).catch((err: BusinessError) => {
+    console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error('listen fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address: "192.168.xx.xx",
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+    client.getSocketFd().then((fd: number) => {
+      console.info(`Socket FD：${fd}`);
+    }).catch((err: BusinessError) => {
+      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+    });
+  })
+}).catch((err: BusinessError) => {
+  console.error('listen fail');
+});
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect ok')
+}).catch((err: Object) => {
+  console.error('connect fail: ' + JSON.stringify(err))
+})
+client.getSocketFd().then((data: number) => {
+  console.info("fd: " + data);
+}).catch((err: Object) => {
+  console.error("getSocketFd failed: " + JSON.stringify(err));
+})
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let listenAddr : socket.LocalAddress = {
+  address: sandboxPath
+}
+
+server.listen(listenAddr).then(() => {
+  console.info("listen success");
+  server.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD：${fd}`);
+  }).catch((err: Object) => {
+    console.error(`getSocketFd fail: ${JSON.stringify(err)}`);
+  });
+}).catch((err: Object) => {
+  console.error("listen fail: " + JSON.stringify(err));
+})
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let listenAddr : socket.LocalAddress = {
+  address: sandboxPath
+}
+server.on('connect', (connection: socket.LocalSocketConnection) => {
+  connection.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD：${fd}`);
+  }).catch((err: Object) => {
+    console.error(`getSocketFd fail: ${JSON.stringify(err)}`);
+  });
+});
+server.listen(listenAddr).then(() => {
+  console.info("listen success");
+}).catch((err: Object) => {
+  console.error(`listen fail: ${JSON.stringify(err)}`);
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+tls.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+tls.getSocketFd().then((data: number) => {
+  console.info("tls socket fd: " + data);
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen success");
+  tlsServer.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD：${fd}`);
+  }).catch((err: BusinessError) => {
+    console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`listen failed: ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen success");
+  tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+    client.getSocketFd().then((fd: number) => {
+      console.info(`Socket FD：${fd}`);
+    }).catch((err: BusinessError) => {
+      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+    })
+  });
+}).catch((err: BusinessError) => {
+  console.error(`listen failed: ${JSON.stringify(err)}`);
+});
+```
 
 ## setLoopbackMode
 
@@ -337,9 +778,12 @@ setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void
 
 设置多播通信中的环回模式标志位。使用callback异步回调。
 
-> **说明：**&gt;
-> 用于设置环回模式，开启或关闭两种状态，默认为开启状态。&gt;
-> 如果一个多播通信中环回模式设置值为 true，那么它允许主机在本地循环接收自己发送的多播数据包。如果为 false，则主机不会接收到自己发送的多播数据包。&gt;
+> **说明：**
+> 
+> 用于设置环回模式，开启或关闭两种状态，默认为开启状态。
+> 
+> 如果一个多播通信中环回模式设置值为 true，那么它允许主机在本地循环接收自己发送的多播数据包。如果为 false，则主机不会接收到自己发送的多播数据包。
+> 
 > 在调用
 > [addMembership](#addmembership)
 > 之后，调用此接口才有效。
@@ -350,17 +794,32 @@ setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| flag | boolean | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| flag | boolean | 是 | 是否开启环回模式。true表示环回模式开启，false表示环回模式关闭。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 2301088 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301088 | Not a socket. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.setLoopbackMode(false, (err: Object) => {
+  if (err) {
+    console.error('set loopback mode fail, err: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('set loopback mode success');
+})
+```
 
 ## setLoopbackMode
 
@@ -370,9 +829,12 @@ setLoopbackMode(flag: boolean): Promise<void>
 
 设置多播通信中的环回模式标志位。使用Promise异步回调。
 
-> **说明：**&gt;
-> 用于设置环回模式，开启或关闭两种状态，默认为开启状态。&gt;
-> 如果一个多播通信中环回模式设置值为 true，那么它允许主机在本地循环接收自己发送的多播数据包。如果为 false，则主机不会接收到自己发送的多播数据包。&gt;
+> **说明：**
+> 
+> 用于设置环回模式，开启或关闭两种状态，默认为开启状态。
+> 
+> 如果一个多播通信中环回模式设置值为 true，那么它允许主机在本地循环接收自己发送的多播数据包。如果为 false，则主机不会接收到自己发送的多播数据包。
+> 
 > 在调用
 > [addMembership](#addmembership)
 > 之后，调用此接口才有效。
@@ -383,22 +845,35 @@ setLoopbackMode(flag: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| flag | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| flag | boolean | 是 | 是否开启环回模式。true表示环回模式开启，false表示环回模式关闭。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 以Promise形式返回MulticastSocket设置环回模式的结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 2301088 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301088 | Not a socket. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.setLoopbackMode(false).then(() => {
+  console.info('set loopback mode success');
+}).catch((err: Object) => {
+  console.error('set loopback mode failed');
+});
+```
 
 ## setMulticastTTL
 
@@ -408,10 +883,14 @@ setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void
 
 设置多播通信时数据包在网络传输过程中路由器最大跳数。使用callback异步回调。
 
-> **说明：**&gt;
-> 用于限制数据包在网络中传输时能够经过的最大路由器跳数的字段，TTL (Time to live)。&gt;
-> 范围为 0～255，默认值为 1 。&gt;
-> 如果一个多播数据包的 TTL 值为 1，那么它只能被直接连接到发送者的主机接收。如果 TTL 被设置为一个较大的值，那么数据包就能够被传送到更远的网络范围内。&gt;
+> **说明：**
+> 
+> 用于限制数据包在网络中传输时能够经过的最大路由器跳数的字段，TTL (Time to live)。
+> 
+> 范围为 0～255，默认值为 1 。
+> 
+> 如果一个多播数据包的 TTL 值为 1，那么它只能被直接连接到发送者的主机接收。如果 TTL 被设置为一个较大的值，那么数据包就能够被传送到更远的网络范围内。
+> 
 > 在调用
 > [addMembership](#addmembership)
 > 之后，调用此接口才有效。
@@ -422,18 +901,34 @@ setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ttl | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ttl | number | 是 | ttl设置数值，类型为数字number。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 2301022 |
-| 2301088 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301022 | Invalid argument. |
+| 2301088 | Not a socket. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let ttl = 8
+multicast.setMulticastTTL(ttl, (err: Object) => {
+  if (err) {
+    console.error('set ttl fail, err: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('set ttl success');
+})
+```
 
 ## setMulticastTTL
 
@@ -443,10 +938,14 @@ setMulticastTTL(ttl: number): Promise<void>
 
 设置多播通信时数据包在网络传输过程中路由器最大跳数。使用Promise异步回调。
 
-> **说明：**&gt;
-> 用于限制数据包在网络中传输时能够经过的最大路由器跳数的字段，TTL (Time to live)。&gt;
-> 范围为 0～255，默认值为 1 。&gt;
-> 如果一个多播数据包的 TTL 值为 1，那么它只能被直接连接到发送者的主机接收。如果 TTL 被设置为一个较大的值，那么数据包就能够被传送到更远的网络范围内。&gt;
+> **说明：**
+> 
+> 用于限制数据包在网络中传输时能够经过的最大路由器跳数的字段，TTL (Time to live)。
+> 
+> 范围为 0～255，默认值为 1 。
+> 
+> 如果一个多播数据包的 TTL 值为 1，那么它只能被直接连接到发送者的主机接收。如果 TTL 被设置为一个较大的值，那么数据包就能够被传送到更远的网络范围内。
+> 
 > 在调用
 > [addMembership](#addmembership)
 > 之后，调用此接口才有效。
@@ -457,23 +956,36 @@ setMulticastTTL(ttl: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ttl | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ttl | number | 是 | ttl设置数值，类型为数字Number。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 以Promise形式返回MulticastSocket设置TTL数值的结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 2301022 |
-| 2301088 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 2301022 | Invalid argument. |
+| 2301088 | Not a socket. |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.setMulticastTTL(8).then(() => {
+  console.info('set ttl success');
+}).catch((err: Object) => {
+  console.error('set ttl failed');
+});
+```
 
 ## setReuseAddress
 
@@ -483,8 +995,10 @@ setReuseAddress(reuse: boolean): void
 
 设置多播Socket是否支持地址复用。使用同步方式调用。
 
-> **说明：**&gt;
-> 用于控制多播Socket绑定端口时是否开启地址复用能力。&gt;
+> **说明：**
+> 
+> 用于控制多播Socket绑定端口时是否开启地址复用能力。
+> 
 > 如需绑定已被占用的端口，确保占用方开启了地址复用能力，同时本业务也需在调用
 > [bind](arkts-network-socket-udpsocket-i.md#bind)前调用本接口以开启地址复用能力。
 
@@ -496,6 +1010,32 @@ setReuseAddress(reuse: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| reuse | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| reuse | boolean | 是 | 是否开启地址复用。true表示开启，false表示关闭。 |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let bindAddr: socket.NetAddress = {
+  // 0.0.0.0 表示绑定本机所有IPv4网络接口上的 8080 端口，常用于多播场景接收该端口的数据。
+  address: '0.0.0.0',
+  port: 8080
+}
+
+try {
+  multicast.setReuseAddress(true);
+  multicast.bind(bindAddr).then(() => {
+    console.info('setReuseAddress success');
+  }).catch((err: BusinessError) => {
+    console.error(`bind failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`setReuseAddress failed, code is ${error.code}, message is ${error.message}`);
+}
+```

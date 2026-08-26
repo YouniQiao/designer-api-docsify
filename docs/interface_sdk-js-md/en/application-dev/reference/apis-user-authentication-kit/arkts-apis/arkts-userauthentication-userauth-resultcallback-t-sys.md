@@ -16,7 +16,7 @@ Triggered to return the remote authentication result. This callback type is used
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| challenge | Uint8Array | Yes |
-| result | [UserAuthResult](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| challenge | Uint8Array | Yes | Challenge value. It is a one-time random number used to prevent replay attacks, and is the same as the challenge value passed during authentication initiation. |
+| result | [UserAuthResult](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | Yes | User authentication result. It contains information such as the authentication result code and authentication token. |

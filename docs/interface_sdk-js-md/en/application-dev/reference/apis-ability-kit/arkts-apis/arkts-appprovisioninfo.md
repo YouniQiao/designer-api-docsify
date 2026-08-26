@@ -15,8 +15,8 @@ The module provides information in the
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AppProvisionInfo](arkts-ability-appprovisioninfo-i-sys.md) |
-| [Validity](arkts-ability-appprovisioninfo-validity-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AppProvisionInfo](arkts-ability-appprovisioninfo-i-sys.md) | The module provides information in the [HarmonyAppProvision configuration file](../../../security/app-provision-structure.md). |
+| [Validity](arkts-ability-appprovisioninfo-validity-i-sys.md) | Validity period in the configuration file. |
 <!--DelEnd-->

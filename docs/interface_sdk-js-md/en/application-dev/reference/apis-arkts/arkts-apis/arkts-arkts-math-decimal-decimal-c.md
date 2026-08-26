@@ -9,7 +9,6 @@ An arbitrary-precision Decimal type
 ## Modules to Import
 
 ```TypeScript
-import { Decimal } from 'kits/@kit.ArkTS';
 ```
 
 ## abs
@@ -28,9 +27,9 @@ Return a new Decimal whose value is the absolute value of this Decimal.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## abs
 
@@ -48,21 +47,21 @@ Return a new Decimal whose value is the absolute value of `n`.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## acos
 
@@ -80,15 +79,15 @@ Return a new Decimal whose value is the arccosine (inverse cosine) in radians of
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## acos
 
@@ -106,22 +105,22 @@ Return a new Decimal whose value is the arccosine in radians of `n`.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## acosh
 
@@ -139,15 +138,15 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine in radi
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## acosh
 
@@ -165,22 +164,22 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## add
 
@@ -198,21 +197,21 @@ Return a new Decimal whose value is the value of this Decimal plus `n`, rounded 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## add
 
@@ -230,22 +229,22 @@ Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precisio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
-| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## asin
 
@@ -263,15 +262,15 @@ Return a new Decimal whose value is the arcsine (inverse sine) in radians of the
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## asin
 
@@ -289,22 +288,22 @@ Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `p
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## asinh
 
@@ -322,15 +321,15 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine in radian
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## asinh
 
@@ -348,22 +347,22 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan
 
@@ -381,15 +380,15 @@ Return a new Decimal whose value is the arctangent (inverse tangent) in radians 
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan
 
@@ -407,22 +406,22 @@ Return a new Decimal whose value is the arctangent in radians of `n`, rounded to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan2
 
@@ -440,23 +439,23 @@ Return a new Decimal whose value is the arctangent in radians of `y/x` in the ra
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
-| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} The y-coordinate. |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} The x-coordinate. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atanh
 
@@ -474,15 +473,15 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent in rad
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atanh
 
@@ -500,22 +499,22 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## cbrt
 
@@ -533,9 +532,9 @@ Return a new Decimal whose value is the cube root of the value of this Decimal, 
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## cbrt
 
@@ -553,21 +552,21 @@ Return a new Decimal whose value is the cube root of `n`, rounded to `precision`
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## ceil
 
@@ -585,9 +584,9 @@ Return a new Decimal whose value is the value of this Decimal rounded to a whole
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## ceil
 
@@ -605,21 +604,21 @@ Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## clamp
 
@@ -637,23 +636,23 @@ Return a new Decimal whose value is the value of this Decimal clamped to the ran
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [min](#min) | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
-| [max](#max) | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| min | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| max | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
 
 ## clamp
 
@@ -671,24 +670,24 @@ Return a new Decimal whose value is `n` clamped to the range delineated by `min`
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
-| [min](#min) | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
-| [max](#max) | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| min | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| max | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
 
 ## comparedTo
 
@@ -706,21 +705,21 @@ Return 1 if the value of this Decimal is greater than the value of `n`, -1 if th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | the number type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## constructor
 
@@ -738,15 +737,15 @@ Return a new Decimal whose value is the absolute value of this Decimal.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## cos
 
@@ -764,9 +763,9 @@ Return a new Decimal whose value is the cosine of the value in radians of this D
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## cos
 
@@ -784,21 +783,21 @@ Return a new Decimal whose value is the cosine of `n`, rounded to `precision` si
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## cosh
 
@@ -816,9 +815,9 @@ Return a new Decimal whose value is the hyperbolic cosine of the value in radian
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## cosh
 
@@ -836,21 +835,21 @@ Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to pre
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## decimalPlaces
 
@@ -868,9 +867,9 @@ Return the number of decimal places of the value of this Decimal.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | the number type |
 
 ## div
 
@@ -888,21 +887,21 @@ Return a new Decimal whose value is the value of this Decimal divided by `n`, ro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## div
 
@@ -920,22 +919,22 @@ Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
-| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## dividedToIntegerBy
 
@@ -953,21 +952,21 @@ Return a new Decimal whose value is the integer part of dividing the value of th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## equals
 
@@ -985,21 +984,21 @@ Return true if the value of this Decimal is equal to the value of `n`, otherwise
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | the boolean type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## exp
 
@@ -1017,15 +1016,15 @@ Return a new Decimal whose value is the natural exponential of the value of this
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## exp
 
@@ -1043,22 +1042,22 @@ Return a new Decimal whose value is the natural exponential of `n`, rounded to `
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## floor
 
@@ -1076,9 +1075,9 @@ Return a new Decimal whose value is the value of this Decimal rounded to a whole
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## floor
 
@@ -1096,21 +1095,21 @@ Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## greaterThan
 
@@ -1128,21 +1127,21 @@ Return true if the value of this Decimal is greater than the value of `n`, other
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | the boolean type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -1160,21 +1159,21 @@ Return true if the value of this Decimal is greater than or equal to the value o
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | the boolean type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## hypot
 
@@ -1192,21 +1191,21 @@ Return a new Decimal whose value is the square root of the sum of the squares of
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \| Decimal} Decimal |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## isFinite
 
@@ -1224,9 +1223,9 @@ Return true if the value of this Decimal is a finite number, otherwise return fa
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | the boolean type |
 
 ## isInteger
 
@@ -1244,9 +1243,9 @@ Return true if the value of this Decimal is an integer, otherwise return false.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | the boolean type |
 
 ## isNaN
 
@@ -1264,9 +1263,9 @@ Return true if the value of this Decimal is NaN, otherwise return false.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | the boolean type |
 
 ## isNegative
 
@@ -1284,9 +1283,9 @@ Return true if the value of this Decimal is negative, otherwise return false.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | the boolean type |
 
 ## isPositive
 
@@ -1304,9 +1303,9 @@ Return true if the value of this Decimal is positive, otherwise return false.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | the boolean type |
 
 ## isZero
 
@@ -1324,9 +1323,9 @@ Return true if the value of this Decimal is 0 or -0, otherwise return false.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | the boolean type |
 
 ## lessThan
 
@@ -1344,21 +1343,21 @@ Return true if the value of this Decimal is less than `n`, otherwise return fals
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | the boolean type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -1376,21 +1375,21 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | the boolean type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## ln
 
@@ -1408,15 +1407,15 @@ Return a new Decimal whose value is the natural logarithm of the value of this D
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## ln
 
@@ -1434,22 +1433,22 @@ Return a new Decimal whose value is the natural logarithm of `n`, rounded to `pr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log
 
@@ -1467,22 +1466,22 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log
 
@@ -1500,23 +1499,23 @@ Return a new Decimal whose value is the log of `n` to the base `base`, rounded t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
-| base | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| base | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log10
 
@@ -1534,22 +1533,22 @@ Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `pr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log2
 
@@ -1567,22 +1566,22 @@ Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `pre
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## max
 
@@ -1600,21 +1599,21 @@ Return a new Decimal whose value is the maximum of the arguments.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## min
 
@@ -1632,21 +1631,21 @@ Return a new Decimal whose value is the minimum of the arguments.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mod
 
@@ -1664,21 +1663,21 @@ Return a new Decimal whose value is the value of this Decimal modulo `n`, rounde
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mod
 
@@ -1696,22 +1695,22 @@ Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` signi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
-| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mul
 
@@ -1729,21 +1728,21 @@ Return a new Decimal whose value is this Decimal times `n`, rounded to `precisio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mul
 
@@ -1761,22 +1760,22 @@ Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
-| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## negate
 
@@ -1794,9 +1793,9 @@ Return a new Decimal whose value is the value of this Decimal negated, i.e. as i
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## pow
 
@@ -1814,22 +1813,22 @@ Return a new Decimal whose value is the value of this Decimal raised to the powe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## pow
 
@@ -1847,23 +1846,23 @@ Return a new Decimal whose value is `base` raised to the power `exponent`, round
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| base | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
-| exponent | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| base | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} The base. |
+| exponent | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} The exponent. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## precision
 
@@ -1881,9 +1880,9 @@ Return the number of significant digits of the value of this Decimal.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | the number type |
 
 ## precision
 
@@ -1901,21 +1900,21 @@ Return the number of significant digits of the value of this Decimal, whether to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| includeZeros | boolean \| number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| includeZeros | boolean \| number | Yes | Whether to count integer-part trailing zeros: true, false, 1 or 0. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | the number type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `includeZeros` is out of range. |
 
 ## random
 
@@ -1933,15 +1932,15 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
 
 ## random
 
@@ -1959,22 +1958,22 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| significantDigits | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| significantDigits | number | Yes | {number} Significant digits. Integer, 0 to MAX_DIGITS inclusive. [since 12 - 17] |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
 
 ## round
 
@@ -1992,21 +1991,21 @@ Return a new Decimal whose value is `n` rounded to an integer using rounding mod
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## set
 
@@ -2024,17 +2023,17 @@ Configures the 'global' settings for this particular Decimal constructor.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [DecimalConfig](arkts-arkts-math-decimal-decimalconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [DecimalConfig](arkts-arkts-math-decimal-decimalconfig-i.md) | Yes |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `DecimalConfig.properties` is out of range. |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
 
 ## sign
 
@@ -2052,22 +2051,22 @@ Return the sign of the passed value to the method. 1 if x &gt; 0, -1 if x &lt; 0
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
-| number |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type<br>**Applicable version:** 12 - 17 |
+| number | the Decimal type<br>**Applicable version:** 18 and later |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sin
 
@@ -2085,9 +2084,9 @@ Return a new Decimal whose value is the sine of the value in radians of this Dec
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## sin
 
@@ -2105,21 +2104,21 @@ Return a new Decimal whose value is the sine of `n`, rounded to `precision` sign
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sinh
 
@@ -2137,9 +2136,9 @@ Return a new Decimal whose value is the hyperbolic sine of the value in radians 
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## sinh
 
@@ -2157,21 +2156,21 @@ Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `prec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sqrt
 
@@ -2189,9 +2188,9 @@ Return a new Decimal whose value is the square root of this Decimal, rounded to 
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## sqrt
 
@@ -2209,21 +2208,21 @@ Return a new Decimal whose value is the square root of `n`, rounded to `precisio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sub
 
@@ -2241,21 +2240,21 @@ Return a new Decimal whose value is the value of this Decimal minus `n`, rounded
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sub
 
@@ -2273,22 +2272,22 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
-| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sum
 
@@ -2306,21 +2305,21 @@ Return a new Decimal whose value is the sum of the arguments, rounded to `precis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## tan
 
@@ -2338,9 +2337,9 @@ Return a new Decimal whose value is the tangent of the value in radians of this 
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## tan
 
@@ -2358,21 +2357,21 @@ Return a new Decimal whose value is the tangent of `n`, rounded to `precision` s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## tanh
 
@@ -2390,9 +2389,9 @@ Return a new Decimal whose value is the hyperbolic tangent of the value in radia
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## tanh
 
@@ -2410,21 +2409,21 @@ Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `p
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toBinary
 
@@ -2442,9 +2441,9 @@ Return a string representing the value of this Decimal in base 2.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 ## toBinary
 
@@ -2462,21 +2461,21 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| significantDigits | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| significantDigits | number | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toBinary
 
@@ -2494,22 +2493,22 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| significantDigits | number | Yes |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| significantDigits | number | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toDecimalPlaces
 
@@ -2527,9 +2526,9 @@ Return a new Decimal whose value is the value of this Decimal.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## toDecimalPlaces
 
@@ -2547,21 +2546,21 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| decimalPlaces | number | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
 ## toDecimalPlaces
 
@@ -2579,22 +2578,22 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| decimalPlaces | number | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \|
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toExponential
 
@@ -2612,9 +2611,9 @@ Return a string representing the value of this Decimal in exponential notation.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 ## toExponential
 
@@ -2632,21 +2631,21 @@ Return a string representing the value of this Decimal in exponential notation r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| decimalPlaces | number | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
 ## toExponential
 
@@ -2664,22 +2663,22 @@ Return a string representing the value of this Decimal in exponential notation r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| decimalPlaces | number | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \|
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toFixed
 
@@ -2697,9 +2696,9 @@ Return a string representing the value of this Decimal in normal (fixed-point).
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 ## toFixed
 
@@ -2718,21 +2717,21 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| decimalPlaces | number | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
 ## toFixed
 
@@ -2750,22 +2749,22 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| decimalPlaces | number | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \|
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toFraction
 
@@ -2783,9 +2782,9 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md)[] |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md)[] | the Decimal[] type |
 
 ## toFraction
 
@@ -2803,21 +2802,21 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| maxDenominator | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| maxDenominator | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md)[] |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md)[] | the Decimal[] type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toHexadecimal
 
@@ -2835,9 +2834,9 @@ Return a string representing the value of this Decimal in base 16
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 ## toHexadecimal
 
@@ -2855,21 +2854,21 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| significantDigits | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| significantDigits | number | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toHexadecimal
 
@@ -2887,22 +2886,22 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| significantDigits | number | Yes |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| significantDigits | number | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toNearest
 
@@ -2920,21 +2919,21 @@ Returns a new Decimal whose value is the nearest multiple of `n`.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toNearest
 
@@ -2952,23 +2951,23 @@ Returns a new Decimal whose value is the nearest multiple of `n` in the directio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `rounding` is out of range. |
 
 ## toNumber
 
@@ -2986,9 +2985,9 @@ Return the value of this Decimal converted to a number primitive. Zero keeps its
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | the number type |
 
 ## toOctal
 
@@ -3006,9 +3005,9 @@ Return a string representing the value of this Decimal in base 8.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 ## toOctal
 
@@ -3026,21 +3025,21 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| significantDigits | number | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| significantDigits | number | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toOctal
 
@@ -3058,22 +3057,22 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| significantDigits | number | Yes | {number \| string \|
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| significantDigits | number | Yes | {number \| string \| Decimal} |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toPrecision
 
@@ -3091,9 +3090,9 @@ Return a string representing the value of this Decimal.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 ## toPrecision
 
@@ -3111,21 +3110,21 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| significantDigits | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| significantDigits | number | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toPrecision
 
@@ -3143,22 +3142,22 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| significantDigits | number | Yes |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| significantDigits | number | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toSignificantDigits
 
@@ -3176,9 +3175,9 @@ Return a new Decimal whose value is the value of this Decimal.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## toSignificantDigits
 
@@ -3196,21 +3195,21 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| significantDigits | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| significantDigits | number | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toSignificantDigits
 
@@ -3228,22 +3227,22 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| significantDigits | number | Yes |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| significantDigits | number | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toString
 
@@ -3261,9 +3260,9 @@ Return a string representing the value of this Decimal. Return exponential notat
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 ## trunc
 
@@ -3281,9 +3280,9 @@ Return a new Decimal whose value is the value of this Decimal truncated to a who
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## trunc
 
@@ -3301,21 +3300,21 @@ Return a new Decimal whose value is `n` truncated to an integer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \| Decimal} |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| Type | Description |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## valueOf
 
@@ -3333,9 +3332,9 @@ Return a string representing the value of this Decimal. Unlike `toString`, negat
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the string type |
 
 ## d
 

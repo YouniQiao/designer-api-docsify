@@ -11,7 +11,6 @@ Out Of Band data used in Bluetooth device pairing.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## confirmationHash

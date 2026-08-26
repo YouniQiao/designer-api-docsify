@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## getAuthorizationManager
@@ -24,12 +24,18 @@ Obtains the current OS account authorization manager.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AuthorizationManager](arkts-basicservices-osaccount-authorizationmanager-i-sys.md) |
+| Type | Description |
+| --- | --- |
+| [AuthorizationManager](arkts-basicservices-osaccount-authorizationmanager-i-sys.md) | Instance object of the OS account authorization manager. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+
+**Examples**
+
+```TypeScript
+let authorizationManager: osAccount.AuthorizationManager = osAccount.getAuthorizationManager();
+```

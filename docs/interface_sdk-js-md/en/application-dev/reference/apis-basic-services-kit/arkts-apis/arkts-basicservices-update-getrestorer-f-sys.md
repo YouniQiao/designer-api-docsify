@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import update from '@kit.BasicServicesKit';
 ```
 
 ## getRestorer
@@ -41,12 +41,19 @@ or on the screen.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Restorer](arkts-basicservices-update-restorer-i-sys.md) |
+| Type | Description |
+| --- | --- |
+| [Restorer](arkts-basicservices-update-restorer-i-sys.md) | Utility object used to perform factory reset operations. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+// Obtain a Restorer object for restoring factory settings.
+  let factoryRestorer = update.getRestorer();
+```

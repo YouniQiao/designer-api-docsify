@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from 'kits/@kit.AbilityKit';
+import skillManager from '@kit.AbilityKit';
 ```
 
 ## getSkillInfosForSelf
@@ -24,18 +24,18 @@ Obtains all SkillInfo objects of the calling application.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| flags | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| flags | number | Yes | { |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;SkillInfo & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;SkillInfo & gt; & gt; | Returns the list of SkillInfo objects. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17700101](../errorcode-bundle.md#17700101-bundle-manager-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17700101](../errorcode-bundle.md#17700101-bundle-manager-service-abnormal) | Bundle manager service is exception. Possible causes: 1. Failed to connect to the system service. 2. IPC data transmission failed. 3. Failed to obtain the object constructor. |

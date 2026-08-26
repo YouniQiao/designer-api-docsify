@@ -2,7 +2,8 @@
 
 Provides lazy loading capabilities for FrameNode data, implementing LazyForEach API functionality.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Negative input parameters are ignored and trigger no processing.
 
 **Since:** 12
@@ -17,7 +18,8 @@ static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 
 Attaches a FrameNode to a NodeAdapter. Each node can be bound to only one NodeAdapter. Attempts to re-attach to a NodeAdapter that has already been attached to will fail and return **false**.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The following components can be bound: **Column**, **Row**, **Stack**, **GridRow**, **Flex**, **Swiper**,
 > **RelativeContainer**, **List**, **ListItemGroup**, **WaterFlow**, and **Grid**.
 
@@ -31,16 +33,16 @@ Attaches a FrameNode to a NodeAdapter. Each node can be bound to only one NodeAd
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| adapter | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Yes |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| adapter | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Yes | NodeAdapter class for lazy loading. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to be attached. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Attachment result. Returns **true** if the attachment is successful; returns **false** otherwise. |
 
 ## constructor
 
@@ -76,9 +78,9 @@ Detaches a FrameNode from its NodeAdapter.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to detach. |
 
 ## dispose
 
@@ -95,6 +97,94 @@ Disposes of this **NodeAdapter** object. Bindings, if any, of the object will be
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { NodeController, FrameNode, BuilderNode } from '@kit.ArkUI';
+
+@Component
+struct TestComponent {
+  build() {
+    Column() {
+      Text('This is a BuilderNode.')
+        .fontSize(16)
+        .fontWeight(FontWeight.Bold)
+    }
+    .width('100%')
+    .backgroundColor(Color.Gray)
+  }
+
+  aboutToAppear() {
+    console.info('aboutToAppear');
+  }
+
+  aboutToDisappear() {
+    console.info('aboutToDisappear');
+  }
+}
+
+@Builder
+function buildComponent() {
+  TestComponent()
+}
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private builderNode: BuilderNode<[]> | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+    this.builderNode = new BuilderNode(uiContext, { selfIdealSize: { width: 200, height: 100 } });
+    this.builderNode.build(new WrappedBuilder(buildComponent));
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.size = { width: 200, height: 200 };
+      rootRenderNode.backgroundColor = 0xffd5d5d5;
+      rootRenderNode.appendChild(this.builderNode!.getFrameNode()!.getRenderNode());
+    }
+
+    return this.rootNode;
+  }
+
+  disposeFrameNode() {
+    if (this.rootNode !== null && this.builderNode !== null) {
+      // Remove all child nodes from rootNode before clearing the reference relationships.
+      this.rootNode.removeChild(this.builderNode.getFrameNode());
+      // Release the reference between builderNode and FrameNode.
+      this.builderNode.dispose();
+      // Release the reference between rootNode and FrameNode.
+      this.rootNode.dispose();
+    }
+  }
+
+  removeBuilderNode() {
+    const rootRenderNode = this.rootNode!.getRenderNode();
+    if (rootRenderNode !== null && this.builderNode !== null && this.builderNode.getFrameNode() !== null) {
+      rootRenderNode.removeChild(this.builderNode!.getFrameNode()!.getRenderNode());
+    }
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 4 }) {
+      NodeContainer(this.myNodeController)
+      Button('FrameNode dispose')
+        .onClick(() => {
+          this.myNodeController.disposeFrameNode();
+        })
+        .width('100%')
+    }
+  }
+}
+```
 
 ## getAllAvailableItems
 
@@ -114,9 +204,9 @@ Obtains all available items. Available nodes include both currently displayed an
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[FrameNode](arkts-arkui-framenode-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[FrameNode](arkts-arkui-framenode-c.md)&gt; | Array of items in the FrameNode. |
 
 ## insertItem
 
@@ -136,10 +226,10 @@ Inserts a specified number of items starting from a specific index.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| count | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Starting index of the items to insert. Value range: 0, +∞). |
+| count | number | Yes | Number of the items to insert. Value range: [0, +∞). |
 
 ## isDisposed
 
@@ -159,9 +249,15 @@ Checks whether the NodeAdapter's backend reference has been released. Frontend n
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the reference to the backend node is released. The value **true** means that the reference to backend node is released, and **false** means the opposite. |
+
+**Examples**
+
+See [FrameNode Validity Check Example.
+
+See NodeAdapter Validity Check Example.
 
 ## moveItem
 
@@ -181,10 +277,10 @@ Moves items from the starting index to the ending index.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| from | number | Yes |
-| to | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | number | Yes | Original index from which the data will be moved. Value range: [0, +∞). |
+| to | number | Yes | Target index to which the data will be moved. Value range: [0, +∞). |
 
 ## onAttachToNode
 
@@ -194,11 +290,13 @@ onAttachToNode?(target: FrameNode): void
 
 Called when a FrameNode is attached to the NodeAdapter.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > In versions earlier than API version 26.0.0, this callback is triggered when the host node is attached to the
 > main tree. If you set this callback by dynamically assigning a value, you can complete the setting after calling
 > [attachNodeAdapter](#attachnodeadapter) and before the host node is attached to the main tree.
-> In this case, you will receive this callback when the host node is attached to the main tree.&gt;
+> In this case, you will receive this callback when the host node is attached to the main tree.
+> 
 > In API version 26.0.0 and later, this callback is triggered immediately when the NodeAdapter is bound to the host
 > node, instead of when the host node is attached to the main tree. In this case, the host node may not have been
 > attached to the main tree. If the node on which the callback logic depends has been mounted (for example,
@@ -217,9 +315,9 @@ Called when a FrameNode is attached to the NodeAdapter.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode attached to the NodeAdapter. |
 
 ## onCreateChild
 
@@ -239,15 +337,15 @@ Called during node initialization or when new child nodes are detected. When add
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the loaded node. Value range: [0, +∞). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [FrameNode](arkts-arkui-framenode-c.md) |
+| Type | Description |
+| --- | --- |
+| [FrameNode](arkts-arkui-framenode-c.md) | FrameNode created by you. |
 
 ## onDetachFromNode
 
@@ -283,10 +381,10 @@ Called when a child node is about to be disposed. Nodes that are neither display
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | number | Yes |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | number | Yes | ID of the child node to be disposed of. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to be disposed of. |
 
 ## onGetChildId
 
@@ -306,15 +404,15 @@ Called during node initialization or when new child nodes are detected. The **in
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the loaded node. Value range: [0, +∞). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Custom ID. Make sure the ID is unique. |
 
 ## onUpdateChild
 
@@ -334,10 +432,10 @@ Called when a loaded node is reused. Node reuse occurs when the key value of a c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | number | Yes |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | number | Yes | ID of the node to be reused. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode that is reused. |
 
 ## reloadAllItems
 
@@ -373,10 +471,10 @@ Reloads a specified number of items starting from a specific index.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| count | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Starting index of the items to reload. Value range: 0, +∞). |
+| count | number | Yes | Number of the items to reload. Value range: [0, +∞). |
 
 ## removeItem
 
@@ -396,10 +494,10 @@ Removes a specified number of items starting from a specific index.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| count | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes | Starting index of the items to remove. Value range: [0, +∞). |
+| count | number | Yes | Number of the items to remove. Value range: [0, +∞). |
 
 ## totalNodeCount
 
@@ -418,3 +516,7 @@ Get the total number of node count.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See the example for [NodeAdapter Usage Example.

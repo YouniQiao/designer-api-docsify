@@ -5,7 +5,7 @@
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotificationSorting(Provides sorting information about an active notification)](arkts-notification-notificationsorting-notificationsorting-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [NotificationSorting(Provides sorting information about an active notification)](arkts-notification-notificationsorting-notificationsorting-i-sys.md) | The **NotificationSorting** module provides APIs for defining the sorting information of active notifications. |
 <!--DelEnd-->

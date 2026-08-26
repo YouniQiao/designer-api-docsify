@@ -3,22 +3,23 @@
 ## Modules to Import
 
 ```TypeScript
-import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOptions } from '@kit.ArkUI';
+import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUIV2';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md) |
+| Name | Description |
+| --- | --- |
+| [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md) |  |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PopupButtonOptions](arkts-arkui-arkui-advanced-popup-popupbuttonoptions-i.md) |
-| [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md) |
-| [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) |
-| [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [PopupButtonOptions](arkts-arkui-arkui-advanced-popup-popupbuttonoptions-i.md) | Defines the button attributes and events. |
+| [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md) | Defines the icon options. |
+| [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | Defines the style parameters of the popup. |
+| [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md) | Provides text style settings. |

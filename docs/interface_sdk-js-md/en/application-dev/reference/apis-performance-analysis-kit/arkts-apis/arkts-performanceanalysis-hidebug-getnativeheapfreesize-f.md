@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getNativeHeapFreeSize
@@ -20,6 +19,15 @@ Obtains the total number of bytes occupied by the total free space (**fordblks**
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| bigint |
+| Type | Description |
+| --- | --- |
+| bigint | Size of the memory occupied by the total free space held by the process, in bytes. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let nativeHeapFreeSize: bigint = hidebug.getNativeHeapFreeSize();
+console.info(`nativeHeapFreeSize = ${nativeHeapFreeSize}`);
+```

@@ -11,7 +11,7 @@ The module defines plugin information, which is obtained through the
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PluginBundleInfo](arkts-ability-pluginbundleinfo-i.md) |
-| [PluginModuleInfo](arkts-ability-pluginbundleinfo-pluginmoduleinfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [PluginBundleInfo](arkts-ability-pluginbundleinfo-i.md) | Defines the plugin information. |
+| [PluginModuleInfo](arkts-ability-pluginbundleinfo-pluginmoduleinfo-i.md) | Defines the module information of a plugin. |

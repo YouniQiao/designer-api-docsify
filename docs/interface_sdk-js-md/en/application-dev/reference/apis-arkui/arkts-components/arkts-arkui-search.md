@@ -1,7 +1,7 @@
 # Search
 
 The **Search** component provides an area for users to enter search queries.
-> **NOTE**>> This component supports plain text only. For rich text, use the RichEditor component.
+> **NOTE** > > This component supports plain text only. For rich text, use the RichEditor component.
 
 ## Child Components
 
@@ -23,23 +23,1280 @@ Defines the constructor of Search.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SearchOptions](arkts-arkui-searchoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SearchOptions](arkts-arkui-searchoptions-i.md) | No | Initialization options of the **Search** component. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
+
+## Examples
+
+This example demonstrates how to set and obtain the caret position using [controller](arkts-arkui-searchcontroller-c.md), available since API version 8.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  @State changeValue: string = '';
+  @State submitValue: string = '';
+  @State positionInfo: CaretOffset = { index: 0, x: 0, y: 0 };
+  controller: SearchController = new SearchController();
+
+  build() {
+    Column({space: 10}) {
+      Text('onSubmit:' + this.submitValue).fontSize(18).margin(15)
+      Text('onChange:' + this.changeValue).fontSize(18).margin(15)
+      Search({ value: this.changeValue, placeholder: 'Type to search...', controller: this.controller })
+        .searchButton('SEARCH')
+        .width('95%')
+        .height(40)
+        .backgroundColor('#F5F5F5')
+        .placeholderColor(Color.Grey)
+        .placeholderFont({ size: 14, weight: 400 })
+        .textFont({ size: 14, weight: 400 })
+        .onSubmit((value: string) => {
+          this.submitValue = value;
+        })
+        .onChange((value: string) => {
+          this.changeValue = value;
+        })
+        .margin(20)
+      Button('Set caretPosition 1')
+        .onClick(() => {
+          // Move the caret to after the first entered character.
+          this.controller.caretPosition(1);
+        })
+      Button('Get CaretOffset')
+        .onClick(() => {
+          this.positionInfo = this.controller.getCaretOffset();
+        })
+    }.width('100%')
+  }
+}
+```
+
+This example demonstrates the effect of setting the search and delete icons using the [searchButton](#searchbutton) (available since API version 8), [searchIcon](#searchicon10) (available since API version 10), and [cancelButton](#cancelbutton10) (available since API version 10) attributes.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  @State changeValue: string = '';
+  @State submitValue: string = '';
+
+  build() {
+    Column() {
+      Text('onSubmit:' + this.submitValue).fontSize(18).margin(15)
+      Search({ value: this.changeValue, placeholder: 'Type to search...' })
+        .searchButton('SEARCH')
+        .searchIcon({
+          src: $r('sys.media.ohos_ic_public_search_filled')
+        })
+        .cancelButton({
+          style: CancelButtonStyle.CONSTANT,
+          icon: {
+            src: $r('sys.media.ohos_ic_public_cancel_filled')
+          }
+        })
+        .width('90%')
+        .height(40)
+        .maxLength(20)
+        .backgroundColor('#F5F5F5')
+        .placeholderColor(Color.Grey)
+        .placeholderFont({ size: 14, weight: 400 })
+        .textFont({ size: 14, weight: 400 })
+        .onSubmit((value: string) => {
+          this.submitValue = value;
+        })
+        .onChange((value: string) => {
+          this.changeValue = value;
+        })
+        .margin(20)
+    }.width('100%')
+  }
+}
+```
+
+Since API version 22, ComponentContent is added to the input parameter type of [customKeyboard](#customkeyboard10).
+
+```TypeScript
+// xxx.ets
+import { ComponentContent } from '@kit.ArkUI';
+class BuilderParams {
+  inputValue: string;
+  controller: SearchController;
+
+  constructor(inputValue: string, controller: SearchController) {
+    this.inputValue = inputValue;
+    this.controller = controller;
+  }
+}
+@Builder
+function CustomKeyboardBuilder(builderParams: BuilderParams) {
+  Column() {
+    Row() {
+      Button('x').onClick(() => {
+        // Disable the custom keyboard.
+        builderParams.controller.stopEditing();
+      }).margin(10)
+    }
+
+    Grid() {
+      ForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, '*', 0, '#'], (item: number | string) => {
+        GridItem() {
+          Button(item + "")
+            .width(110).onClick(() => {
+            builderParams.inputValue += item;
+          })
+        }
+      })
+    }.maxCount(3).columnsGap(10).rowsGap(10).padding(5)
+  }.backgroundColor(Color.Gray)
+}
+@Entry
+@Component
+struct SearchExample {
+  controller: SearchController = new SearchController();
+  @State inputValue: string = "";
+  @State componentContent ?: ComponentContent<BuilderParams> = undefined;
+  @State builderParam: BuilderParams = new BuilderParams(this.inputValue, this.controller);
+  @State supportAvoidance: boolean = true;
+
+  aboutToAppear(): void {
+    // Create a ComponentContent instance.
+    this.componentContent = new ComponentContent(this.getUIContext(), wrapBuilder(CustomKeyboardBuilder), this.builderParam);
+  }
+  build(){
+    Column() {
+      Text('Builder').margin(10).border({ width: 1 })
+      Search({ controller: this.builderParam.controller, value: this.builderParam.inputValue })
+        .customKeyboard(this.componentContent, { supportAvoidance: this.supportAvoidance })
+        .margin(10).border({ width: 1 }).height('48vp')
+
+      Text('ComponentContent').margin(10).border({ width: 1 })
+      Search({ controller: this.builderParam.controller, value: this.builderParam.inputValue })
+        .customKeyboard(CustomKeyboardBuilder(this.builderParam), { supportAvoidance: this.supportAvoidance })
+        .margin(10).border({ width: 1 }).height('48vp')
+    }
+  }
+}
+```
+
+This example demonstrates how to dynamically switch the enter key type using the [enterKeyType](#enterkeytype12) attribute, available since API version 12.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  @State text: string = '';
+  @State enterTypes: Array<EnterKeyType> = [EnterKeyType.Go, EnterKeyType.Search, EnterKeyType.Send, EnterKeyType.Done, EnterKeyType.Next, EnterKeyType.PREVIOUS, EnterKeyType.NEW_LINE];
+  @State index: number = 0;
+  build() {
+    Column({ space: 20 }) {
+      Search({ placeholder: 'Enter text', value: this.text })
+        .width(380)
+        .enterKeyType(this.enterTypes[this.index])
+        .onChange((value: string) => {
+          this.text = value;
+        })
+        .onSubmit((value: string) => {
+          console.info("trigger search onsubmit" + value);
+        })
+
+      Button('Change EnterKeyType').onClick(() => {
+        this.index = (this.index + 1) % this.enterTypes.length;
+      })
+    }.width('100%')
+  }
+}
+```
+
+This example showcases various text styles by using the [lineHeight](#lineheight12), [letterSpacing](#letterspacing12), and [decoration](#decoration12) attributes, available since API version 12.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  build() {
+    Row() {
+      Column() {
+        Text('lineHeight').fontSize(9).fontColor(0xCCCCCC)
+        Search({value: 'lineHeight unset'})
+          .border({ width: 1 }).padding(10)
+        Search({value: 'lineHeight 15'})
+          .border({ width: 1 }).padding(10).lineHeight(15)
+        Search({value: 'lineHeight 30'})
+          .border({ width: 1 }).padding(10).lineHeight(30)
+
+        Text('letterSpacing').fontSize(9).fontColor(0xCCCCCC)
+        Search({value: 'letterSpacing 0'})
+          .border({ width: 1 }).padding(5).letterSpacing(0)
+        Search({value: 'letterSpacing 3'})
+          .border({ width: 1 }).padding(5).letterSpacing(3)
+        Search({value: 'letterSpacing -1'})
+          .border({ width: 1 }).padding(5).letterSpacing(-1)
+
+        Text('decoration').fontSize(9).fontColor(0xCCCCCC)
+        Search({value: 'LineThrough, Red'})
+          .border({ width: 1 }).padding(5)
+          .decoration({type: TextDecorationType.LineThrough, color: Color.Red})
+        Search({value: 'Overline, Red, DOTTED'})
+          .border({ width: 1 }).padding(5)
+          .decoration({type: TextDecorationType.Overline, color: Color.Red, style: TextDecorationStyle.DOTTED})
+        Search({value: 'Underline, Red, WAVY'})
+          .border({ width: 1 }).padding(5)
+          .decoration({type: TextDecorationType.Underline, color: Color.Red, style: TextDecorationStyle.WAVY})
+      }.height('90%')
+    }
+    .width('90%')
+    .margin(10)
+  }
+}
+```
+
+This example demonstrates how to display text with different font features using the [fontFeature](#fontfeature12) attribute, available since API version 12.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  @State text1: string = 'This is ss01 on : 0123456789';
+  @State text2: string = 'This is ss01 off: 0123456789';
+
+  build() {
+    Column(){
+      Search({value: this.text1})
+        .margin({top:200})
+        .fontFeature("\"ss01\" on")
+      Search({value: this.text2})
+        .margin({top:10})
+        .fontFeature("\"ss01\" off")
+    }
+    .width("90%")
+    .margin("5%")
+  }
+}
+```
+
+This example implements the custom keyboard avoidance effect by configuring the [KeyboardOptions](ts-basic-components-richeditor.md#keyboardoptions12) API (available since API version 12) through the [customKeyboard](#customkeyboard10) attribute (available since API version 10).
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  controller: SearchController = new SearchController();
+  @State inputValue: string = "";
+  @State height1: string | number = '80%';
+  @State supportAvoidance: boolean = true;
+
+  // Create a custom keyboard component.
+  @Builder
+  CustomKeyboardBuilder() {
+    Column() {
+      Row() {
+        Button('x').onClick(() => {
+          // Disable the custom keyboard.
+          this.controller.stopEditing();
+        }).margin(10)
+      }
+
+      Grid() {
+        ForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, '*', 0, '#'], (item: number | string) => {
+          GridItem() {
+            Button(item + "")
+              .width(110).onClick(() => {
+              this.inputValue += item;
+            })
+          }
+        })
+      }.maxCount(3).columnsGap(10).rowsGap(10).padding(5)
+    }
+    .backgroundColor(Color.Gray)
+  }
+
+  build() {
+    Column() {
+      Row() {
+        Button("20%")
+          .fontSize(24)
+          .onClick(() => {
+            this.height1 = "20%";
+          })
+        Button("80%")
+          .fontSize(24)
+          .margin({ left: 20 })
+          .onClick(() => {
+            this.height1 = "80%";
+          })
+      }
+      .justifyContent(FlexAlign.Center)
+      .alignItems(VerticalAlign.Bottom)
+      .height(this.height1)
+      .width("100%")
+      .padding({ bottom: 50 })
+
+      Search({ controller: this.controller, value: this.inputValue })// Bind a custom keyboard.
+        .customKeyboard(this.CustomKeyboardBuilder(), { supportAvoidance: this.supportAvoidance })
+        .margin(10)
+        .border({ width: 1 })
+        .onChange((value: string) => {
+          this.inputValue = value;
+        })
+    }
+  }
+}
+```
+
+This example implements the text auto-adaptation effect by using the [minFontSize](#minfontsize12) and [maxFontSize](#maxfontsize12) attributes, both available since API version 12.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  build() {
+    Row() {
+      Column() {
+        Text('adaptive font').fontSize(9).fontColor(0xCCCCCC)
+
+        Search({value: 'This is the text without the adaptive font'})
+          .width('80%').height(90).borderWidth(1)
+        Search({value: 'This is the text without the adaptive font'})
+          .width('80%').height(90).borderWidth(1)
+          .minFontSize(4)
+          .maxFontSize(40)
+      }.height('90%')
+    }
+    .width('90%')
+    .margin(10)
+  }
+}
+```
+
+This example implements the text insertion and deletion effects using the [onWillInsert](#onwillinsert12), [onDidInsert](#ondidinsert12), [onWillDelete](#onwilldelete12), and [onDidDelete](#ondiddelete12) APIs, available since API version 12. The [onWillChange](#onwillchange15) API, available since API version 15, is used to display detailed information about the text content to be changed.
+
+```TypeScript
+// xxx.ets
+class ChangeState {
+  changeContent: string = "";
+  changePreviewOffset: number | undefined = 0;
+  changePreviewValue: string | undefined = "";
+  changeTextChangeRangeBeforeX: number | undefined = 0;
+  changeTextChangeRangeBeforeY: number | undefined = 0;
+  changeTextChangeRangeAfterX: number | undefined = 0;
+  changeTextChangeRangeAfterY: number | undefined = 0;
+  changeTextChangeOldContent: string | undefined = "";
+  changeTextChangechangePreviewOffset: number | undefined = 0;
+  changeTextChangechangePreviewValue: string | undefined = "";
+
+  SetInfo(info: EditableTextChangeValue) {
+    this.changeContent = info.content;
+    this.changePreviewOffset = info.previewText?.offset;
+    this.changePreviewValue = info.previewText?.value;
+    this.changeTextChangeRangeBeforeX = info.options?.rangeBefore.start;
+    this.changeTextChangeRangeBeforeY = info.options?.rangeBefore.end;
+    this.changeTextChangeRangeAfterX = info.options?.rangeAfter.start;
+    this.changeTextChangeRangeAfterY = info.options?.rangeAfter.end;
+    this.changeTextChangeOldContent = info.options?.oldContent;
+    this.changeTextChangechangePreviewOffset = info.options?.oldPreviewText.offset;
+    this.changeTextChangechangePreviewValue = info.options?.oldPreviewText.value;
+  }
+}
+
+@Entry
+@Component
+struct SearchExample {
+  @State insertValue: string = "";
+  @State deleteValue: string = "";
+  @State insertOffset: number = 0;
+  @State deleteOffset: number = 0;
+  @State deleteDirection: number = 0;
+  @State changeState1: ChangeState = new ChangeState();
+  @State changeState2: ChangeState = new ChangeState();
+
+  build() {
+    Row() {
+      Column() {
+        Search({ value: "Insert callbacks are supported" })
+          .height(60)
+          .onWillInsert((info: InsertValue) => {
+            this.insertValue = info.insertValue;
+            return true;
+          })
+          .onWillChange((info: EditableTextChangeValue) => {
+            this.changeState1.SetInfo(info);
+            return true;
+          })
+          .onDidInsert((info: InsertValue) => {
+            this.insertOffset = info.insertOffset;
+          })
+
+        Text("insertValue:" + this.insertValue + "  insertOffset:" + this.insertOffset).height(20)
+
+        Blank(30)
+
+        Text("context:" + this.changeState1.changeContent).height(20)
+        Text("previewText-offset:" + this.changeState1.changePreviewOffset).height(20)
+        Text("previewText-value:" + this.changeState1.changePreviewValue).height(20)
+        Text("options-rangeBefore-start:" + this.changeState1.changeTextChangeRangeBeforeX).height(20)
+        Text("options-rangeBefore-end:" + this.changeState1.changeTextChangeRangeBeforeY).height(20)
+        Text("options-rangeAfter-start:" + this.changeState1.changeTextChangeRangeAfterX).height(20)
+        Text("options-rangeAfter-end:" + this.changeState1.changeTextChangeRangeAfterY).height(20)
+        Text("options-oldContent:" + this.changeState1.changeTextChangeOldContent).height(20)
+        Text("options-oldPreviewText-offset:" + this.changeState1.changeTextChangechangePreviewOffset).height(20)
+        Text("options-oldPreviewText-value:" + this.changeState1.changeTextChangechangePreviewValue).height(20)
+
+        Search({ value: "Delete callbacks are supported" })
+          .height(60)
+          .onWillDelete((info: DeleteValue) => {
+            this.deleteValue = info.deleteValue;
+            this.deleteDirection = info.direction;
+            return true;
+          })
+          .onWillChange((info: EditableTextChangeValue) => {
+            this.changeState2.SetInfo(info);
+            return true;
+          })
+          .onDidDelete((info: DeleteValue) => {
+            this.deleteOffset = info.deleteOffset;
+            this.deleteDirection = info.direction;
+          })
+
+        Text("deleteValue:" + this.deleteValue + "  deleteOffset:" + this.deleteOffset).height(20)
+        Text("deleteDirection:" + (this.deleteDirection == 0 ? "BACKWARD" : "FORWARD")).height(20)
+
+        Blank(30)
+
+        Text("context:" + this.changeState2.changeContent).height(20)
+        Text("previewText-offset:" + this.changeState2.changePreviewOffset).height(20)
+        Text("previewText-value:" + this.changeState2.changePreviewValue).height(20)
+        Text("options-rangeBefore-start:" + this.changeState2.changeTextChangeRangeBeforeX).height(20)
+        Text("options-rangeBefore-end:" + this.changeState2.changeTextChangeRangeBeforeY).height(20)
+        Text("options-rangeAfter-start:" + this.changeState2.changeTextChangeRangeAfterX).height(20)
+        Text("options-rangeAfter-end:" + this.changeState2.changeTextChangeRangeAfterY).height(20)
+        Text("options-oldContent:" + this.changeState2.changeTextChangeOldContent).height(20)
+        Text("options-oldPreviewText-offset:" + this.changeState2.changeTextChangechangePreviewOffset).height(20)
+        Text("options-oldPreviewText-value:" + this.changeState2.changeTextChangechangePreviewValue).height(20)
+
+      }.width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+This example implements custom menu extension items for text using the [editMenuOptions](#editmenuoptions12) API (available since API version 12), allowing configuration of text content, icons, and callbacks. Menu data can also be configured through the [onPrepareMenu](ts-text-common.md#properties-1) callback (available since API version 20).
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  @State text: string = 'Search editMenuOptions';
+  @State endIndex: number = 0;
+  onCreateMenu = (menuItems: Array<TextMenuItem>) => {
+    // Replace $r('app.media.startIcon') with the image resource file you use.
+    let item1: TextMenuItem = {
+      content: 'create1',
+      icon: $r('app.media.startIcon'),
+      id: TextMenuItemId.of('create1'),
+    };
+    let item2: TextMenuItem = {
+      content: 'create2',
+      id: TextMenuItemId.of('create2'),
+      icon: $r('app.media.startIcon'),
+    };
+    menuItems.push(item1);
+    menuItems.unshift(item2);
+    let targetIndex = menuItems.findIndex(item => item.id.equals(TextMenuItemId.AI_WRITER));
+    if (targetIndex !== -1) {
+      menuItems.splice(targetIndex, 1); // Delete an element at the target index.
+    }
+    // TextMenuItemId.autoFill is supported since API version 23.
+    targetIndex = menuItems.findIndex(item => item.id.equals(TextMenuItemId.autoFill));
+    if (targetIndex !== -1) {
+      menuItems.splice(targetIndex, 1); // Delete an element at the target index.
+    }
+    return menuItems;
+  }
+  onMenuItemClick = (menuItem: TextMenuItem, textRange: TextRange) => {
+    if (menuItem.id.equals(TextMenuItemId.of("create2"))) {
+      console.info("Intercept id: create2 start:" + textRange.start + "; end:" + textRange.end);
+      return true;
+    }
+    if (menuItem.id.equals(TextMenuItemId.of("prepare1"))) {
+      console.info("Intercept id: prepare1 start:" + textRange.start + "; end:" + textRange.end);
+      return true;
+    }
+    if (menuItem.id.equals(TextMenuItemId.COPY)) {
+      console.info("Intercept COPY start:" + textRange.start + "; end:" + textRange.end);
+      return true;
+    }
+    if (menuItem.id.equals(TextMenuItemId.SELECT_ALL)) {
+      console.info("Do not intercept SELECT_ALL start:" + textRange.start + "; end:" + textRange.end);
+      return false;
+    }
+    return false;
+  }
+  // Replace $r('app.media.startIcon') with the image resource file you use.
+  onPrepareMenu = (menuItems: Array<TextMenuItem>) => {
+    let item1: TextMenuItem = {
+      content: 'prepare1_' + this.endIndex,
+      icon: $r('app.media.startIcon'),
+      id: TextMenuItemId.of('prepare1'),
+    };
+    menuItems.unshift(item1);
+    return menuItems;
+  }
+  @State editMenuOptions: EditMenuOptions = {
+    onCreateMenu: this.onCreateMenu,
+    onMenuItemClick: this.onMenuItemClick,
+    onPrepareMenu: this.onPrepareMenu
+  };
+
+  build() {
+    Column() {
+      Search({ value: this.text })
+        .width('95%')
+        .editMenuOptions(this.editMenuOptions)
+        .margin({ top: 100 })
+        .onTextSelectionChange((selectionStart: number, selectionEnd: number) => {
+          this.endIndex = selectionEnd;
+        })
+    }
+    .width("90%")
+    .margin("5%")
+  }
+}
+```
+
+This example demonstrates how to use the [searchIcon](#searchicon10) and [cancelButton](#cancelbutton10) attributes to customize the style of the symbol-type cancel button on the right side of the text box, available since API version 10.
+
+```TypeScript
+// xxx.ets
+import { SymbolGlyphModifier } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SearchExample {
+  controller: SearchController = new SearchController();
+  @State changeValue: string = '';
+  @State submitValue: string = '';
+
+  build() {
+    Column() {
+      Search({ value: this.changeValue, placeholder: 'Type to search...', controller: this.controller })
+        .searchIcon(new SymbolGlyphModifier($r('sys.symbol.magnifyingglass')).fontColor([Color.Red]))
+        .cancelButton({
+          style: CancelButtonStyle.CONSTANT,
+          icon: new SymbolGlyphModifier($r('sys.symbol.xmark')).fontColor([Color.Green])
+        })
+        .searchButton('SEARCH')
+        .width('95%')
+        .height(40)
+        .backgroundColor('#F5F5F5')
+        .placeholderColor(Color.Grey)
+        .placeholderFont({ size: 14, weight: 400 })
+        .textFont({ size: 14, weight: 400 })
+        .margin(10)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+This example demonstrates how to set whether text is copyable using the [copyOption](#copyoption9) attribute, available since API version 9.
+
+```TypeScript
+// xxx.ets
+
+@Entry
+@Component
+struct SearchExample {
+  controller: SearchController = new SearchController();
+  @State copyValue: string = '';
+  @State cutValue: string = '';
+
+  build() {
+    Column({ space: 3 }) {
+      Text("copy: " + this.copyValue)
+      Text("cut:" + this.cutValue)
+      Search({ value: 'Search CopyOption:None', controller: this.controller })
+        .width('95%')
+        .height(40)
+        .copyOption(CopyOptions.None)
+        .onCopy((value: string) => {
+          this.copyValue = value;
+        })
+        .onCut((value: string) => {
+          this.cutValue = value;
+        })
+      Search({ value: 'Search CopyOption:InApp', controller: this.controller })
+        .width('95%')
+        .height(40)
+        .copyOption(CopyOptions.InApp)
+        .onCopy((value: string) => {
+          this.copyValue = value;
+        })
+        .onCut((value: string) => {
+          this.cutValue = value;
+        })
+      Search({ value: 'Search CopyOption:LocalDevice', controller: this.controller })
+        .width('95%')
+        .height(40)
+        .copyOption(CopyOptions.LocalDevice)
+        .onCopy((value: string) => {
+          this.copyValue = value;
+        })
+        .onCut((value: string) => {
+          this.cutValue = value;
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+This example demonstrates how to set the horizontal alignment, caret style, and background color of the selected text using the [textAlign](#textalign9) (available since API version 9), [caretStyle](#caretstyle10) (available since API version 10), and [selectedBackgroundColor](#selectedbackgroundcolor12) (available since API version 12) attributes.
+
+```TypeScript
+// xxx.ets
+
+@Entry
+@Component
+struct SearchExample {
+  controller: SearchController = new SearchController();
+
+  build() {
+    Column({ space: 3 }) {
+      Search({ value: 'Search textAlign sample', controller: this.controller })
+        .width('95%')
+        .height(40)
+        .stopBackPress(true)
+        .textAlign(TextAlign.Center)
+        .caretStyle({ width: 3, color: Color.Green })
+        .selectedBackgroundColor(Color.Gray)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+This example demonstrates how to configure the text box to receive default focus and bring up the soft keyboard using the [defaultFocus](ts-universal-attributes-focus.md#defaultfocus9) (available since API version 9) and [enableKeyboardOnFocus](#enablekeyboardonfocus10) (available since API version 10) attributes.
+
+```TypeScript
+// xxx.ets
+
+@Entry
+@Component
+struct SearchExample {
+  controller: SearchController = new SearchController();
+  @State value: string = 'false';
+
+  build() {
+    Column({ space: 3 }) {
+      Text('editing: ' + this.value)
+      Search({ placeholder: 'please enter...', controller: this.controller })
+        .width('95%')
+        .height(40)
+        .defaultFocus(true)
+        .enableKeyboardOnFocus(true)
+        .enablePreviewText(true)
+        .enableHapticFeedback(true)
+        .onEditChange((data: boolean) => {
+          this.value = data ? 'true' : 'false';
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+This example demonstrates how to disable the system text selection menu by using the [selectionMenuHidden](#selectionmenuhidden10) attribute, available since API version 10.
+
+```TypeScript
+// xxx.ets
+
+@Entry
+@Component
+struct SearchExample {
+  controller: SearchController = new SearchController();
+
+  build() {
+    Column({ space: 3 }) {
+      Search({ value: '123456', controller: this.controller })
+        .width('95%')
+        .height(40)
+        .type(SearchType.NUMBER)
+        .selectionMenuHidden(true)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+This example demonstrates how to set input filtering using the [inputFilter](#inputfilter12) attribute, available since API version 12.
+
+```TypeScript
+// xxx.ets
+
+@Entry
+@Component
+struct SearchExample {
+  controller: SearchController = new SearchController();
+  @State filterValue: string = '';
+
+  build() {
+    Column({ space: 3 }) {
+      Text('Filter:' + this.filterValue)
+      Search({ placeholder: 'please enter...', controller: this.controller })
+        .width('95%')
+        .height(40)
+        .textIndent(5)
+        .halfLeading(true)
+        .inputFilter('[a-z]', (filterValue: string) => {
+          this.filterValue = filterValue;
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+This example demonstrates how to set text selection for a specified region and the display/hide strategy of the menu using the [setTextSelection](#settextselection12) API, available since API version 12.
+
+```TypeScript
+// xxx.ets
+
+@Entry
+@Component
+struct SearchExample {
+  controller: SearchController = new SearchController();
+  @State startIndex: number = 0;
+  @State endIndex: number = 0;
+
+  build() {
+    Column({ space: 3 }) {
+      Text('Selection start:' + this.startIndex + ' end:' + this.endIndex)
+      Search({ value: 'Hello World', controller: this.controller })
+        .width('95%')
+        .height(40)
+        .minFontScale(1)
+        .maxFontScale(1.5)
+        .defaultFocus(true)
+        .onTextSelectionChange((selectionStart: number, selectionEnd: number) => {
+          this.startIndex = selectionStart;
+          this.endIndex = selectionEnd;
+        })
+
+      Button('Selection [0,3]')
+        .onClick(() => {
+          this.controller.setTextSelection(0, 3, { menuPolicy: MenuPolicy.SHOW });
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+This example demonstrates how to set the callback for text scrolling events using the [onContentScroll](#oncontentscroll10) event, available since API version 10.
+
+```TypeScript
+// xxx.ets
+
+@Entry
+@Component
+struct SearchExample {
+  controller: SearchController = new SearchController();
+  @State offsetX: number = 0;
+  @State offsetY: number = 0;
+
+  build() {
+    Column({ space: 3 }) {
+      Text('offset x:' + this.offsetX + ' y:' + this.offsetY)
+      Search({ value: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', controller: this.controller })
+        .width(200)
+        .height(40)
+        .onContentScroll((totalOffsetX: number, totalOffsetY: number) => {
+          this.offsetX = totalOffsetX;
+          this.offsetY = totalOffsetY;
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+Since API version 18, [minFontScale](#minfontscale18) and [maxFontScale](#maxfontscale18) are used to set the minimum and maximum font scale factors. When the system font size is adjusted, the text font size remains within the range defined by [minFontScale](#minfontscale18) and [maxFontScale](#maxfontscale18). The following example demonstrates how the Search component scales its font size according to system font size changes, within different font size limits.
+
+```TypeScript
+// Enable application font scaling to follow system settings.
+// Create a new directory named profile in the following path: AppScope/resources/base.
+// Inside the newly created profile directory, create a file named configuration.json.
+// Add the following code to the configuration.json file:
+{
+  "configuration": {
+    "fontSizeScale": "followSystem",
+    "fontSizeMaxScale": "3.2"
+  }
+}
+```
+
+```TypeScript
+// Modify the app.json5 file in AppScope as follows:
+{
+  "app": {
+    "bundleName": "com.example.myapplication",
+    "vendor": "example",
+    "versionCode": 1000000,
+    "versionName": "1.0.0",
+    "icon": "$media:app_icon",
+    "label": "$string:app_name",
+    "configuration": "$profile:configuration"
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  @State minFontScale: number = 1.0;
+  @State maxFontScale: number = 1.0;
+  @State minFontScale2: number = 0.5;
+  @State maxFontScale2: number = 2.0;
+
+  build() {
+    Column() {
+      Column() {
+        Text("System font scales up and down: aaaaaaaAAAAAA")
+        Blank(30)
+        Text("minFontScale = " + this.minFontScale)
+        Text("maxFontScale = " + this.maxFontScale)
+        Search({
+          placeholder: 'The text area can hold an unlimited amount of text. input your word...',
+        })
+          .minFontScale(this.minFontScale) // Set the minimum font scale factor. If the parameter is set to undefined, the default scale factor is used.
+          .maxFontScale(this.maxFontScale) // Set the maximum font scale factor. If the parameter is set to undefined, the default scale factor is used.
+
+        Blank(30)
+
+        Text("minFontScale = " + this.minFontScale2)
+        Text("maxFontScale = " + this.maxFontScale2)
+        Search({
+          placeholder: 'The text area can hold an unlimited amount of text. input your word...',
+        })
+          .minFontScale(this.minFontScale2) // Set the minimum font scale factor. If the parameter is set to undefined, the default scale factor is used.
+          .maxFontScale(this.maxFontScale2) // Set the maximum font scale factor. If the parameter is set to undefined, the default scale factor is used.
+      }.width('100%')
+    }
+  }
+}
+```
+
+This example demonstrates how to set the stroke width and color for text using the [strokeWidth](#strokewidth20) and [strokeColor](#strokecolor20) attributes, available since API version 20.
+
+```TypeScript
+// xxx.ets
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SearchExample {
+  build() {
+    Row() {
+      Column() {
+        Text('stroke feature').fontSize(9).fontColor(0xCCCCCC)
+
+        Search({ value: 'Text without stroke' })
+          .width('100%')
+          .height(60)
+          .borderWidth(1)
+          .minFontSize(40)
+          .maxFontSize(40)
+        Search({ value: 'Text with stroke' })
+          .width('100%')
+          .height(60)
+          .borderWidth(1)
+          .minFontSize(40)
+          .maxFontSize(40)
+          .strokeWidth(LengthMetrics.px(-3.0))
+          .strokeColor(Color.Red)
+        Search({ value: 'Text with stroke' })
+          .width('100%')
+          .height(60)
+          .borderWidth(1)
+          .minFontSize(40)
+          .maxFontSize(40)
+          .strokeWidth(LengthMetrics.px(3.0))
+          .strokeColor(Color.Red)
+      }.height('90%')
+    }
+    .width('90%')
+    .margin(10)
+  }
+}
+```
+
+This example demonstrates how to configure automatic spacing between Chinese and Western characters using the [enableAutoSpacing](#enableautospacing20) attribute, available since API version 20.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  build() {
+    Row() {
+      Column() {
+        Text('Automatic spacing: Enabled').margin(5)
+        Search({value: '中文Text'})
+          .enableAutoSpacing(true)
+        Text('Automatic spacing: Disabled').margin(5)
+        Search({value: '中文Text'})
+          .enableAutoSpacing(false)
+      }.height('100%')
+    }
+    .width('60%')
+  }
+}
+```
+
+This example illustrates how to set the placeholder rich text style using the [setStyledPlaceholder](ts-universal-attributes-text-style.md#setstyledplaceholder22) API, available since API version 22.
+
+```TypeScript
+// xxx.ets
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SearchExample {
+  styledString: MutableStyledString =
+    new MutableStyledString("Text box rich text: Text",
+      [
+        {
+          start: 0,
+          length: 7,
+          styledKey: StyledStringKey.FONT,
+          styledValue: new TextStyle({
+            fontColor: Color.Orange,
+            fontSize: LengthMetrics.fp(24)
+          })
+        },
+        {
+          start: 7,
+          length: 4,
+          styledKey: StyledStringKey.FONT,
+          styledValue: new TextStyle({
+            fontColor: Color.Gray,
+            fontSize: LengthMetrics.fp(20),
+            strokeWidth: LengthMetrics.px(-5),
+            strokeColor: Color.Black,
+          })
+        },
+        {
+          start: 0,
+          length: 1,
+          styledKey: StyledStringKey.PARAGRAPH_STYLE,
+          styledValue: new ParagraphStyle({
+            textVerticalAlign: TextVerticalAlign.CENTER
+          })
+        }
+      ]);
+  controller: SearchController = new SearchController();
+
+  aboutToAppear() {
+    this.controller.setStyledPlaceholder(this.styledString)
+  }
+
+  build() {
+    Scroll() {
+      Column() {
+        Text("Search Placeholder Rich Text"")
+          .fontSize(8)
+        Search({
+          controller: this.controller
+        })
+          .textFont({ size: 24 })
+          .margin(10)
+      }
+      .width('100%')
+    }
+  }
+}
+```
+
+This example illustrates how to set input method extension information using the setExtraConfig method of [IMEClient](ts-text-common.md#imeclient20), available since API version 22.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  build() {
+    Column() {
+      Search({ value: 'Execute onWillAttachIME callback before launching the input method' })
+        .onWillAttachIME((client: IMEClient) => {
+          client.setExtraConfig({
+            customSettings: {
+              name: "Search", // Custom property
+              id: client.nodeId // Custom Property
+            }
+          })
+        })
+    }.height('100%')
+  }
+}
+```
+
+This example demonstrates how to set the color of the text box divider using the [dividerColor](#dividercolor23) API, supported since API version 23.
+
+```TypeScript
+// xxx.ets
+import { ColorMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SearchExample {
+  @State colorTypeRGB: ColorMetrics = ColorMetrics.numeric(0x00FF00);
+  @State colorTypeARGB: ColorMetrics = ColorMetrics.numeric(0x3300FF00);
+  @State colorTypeColorWithSpace: ColorMetrics = ColorMetrics.colorWithSpace(ColorSpace.DISPLAY_P3, 0, 1.0, 0, 1.0);
+  @State colorTypeRGBA: ColorMetrics = ColorMetrics.rgba(255, 0, 0, 1.0);
+  // Replace the file with the image resource file you use.
+  @State colorTypeRes: ColorMetrics = ColorMetrics.resourceColor($r('app.color.color'));
+  @State colorType: ColorMetrics[] =
+    [this.colorTypeRGB, this.colorTypeARGB, this.colorTypeColorWithSpace, this.colorTypeRGBA, this.colorTypeRes];
+  @State colorTypeName: string[] =
+    ["colorTypeRGB", "colorTypeARGB", "colorTypeColorWithSpace", "colorTypeRGBA", "colorTypeRes"];
+  @State count: number = 0;
+
+  build() {
+    Column() {
+      Blank(30)
+      Search({ value: "Input search text" })
+        .searchButton("SEARCH", { fontSize: '14vp' })
+        .dividerColor(this.colorType[this.count])
+      Button("Change ColorType: " + this.colorTypeName[this.count]).onClick(() => {
+        this.count = (this.count + 1) % (this.colorType.length)
+      })
+        .fontSize('14vp')
+        .width('100%')
+    }
+  }
+}
+```
+
+The compressLeadingPunctuation API is supported since API version 23.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  build() {
+    Column(){
+      Search({ value: "\u300CLeading punctuation compression enabled" })
+        .compressLeadingPunctuation(true)
+        .margin(5)
+        .textFont({size:30})
+        .width("90%")
+      Search({ value: "\u300CLeading punctuation compression disabled" })
+        .compressLeadingPunctuation(false)
+        .textFont({size:30})
+        .width("90%")
+    }
+  }
+}
+```
+
+The [includeFontPadding](#includefontpadding23) and [fallbackLineSpacing](#fallbacklinespacing23) APIs are supported since API version 23.
+
+```TypeScript
+// xxx.ets
+
+const UYGHUR_TEXT: string = 'ياخشىمۇسەنياخشىمۇسەنياخشىمۇسەنياخشىمۇسەنياخشىمۇسەنياخشىمۇسەنياخشىمۇسەن';
+@Entry
+@Component
+struct Index {
+  @State include: boolean | null | undefined = false;
+  @State fallback: boolean | null | undefined = false;
+  @State displayText: string = UYGHUR_TEXT;
+
+  build() {
+    Column() {
+      Search({
+        value: this.displayText,
+        placeholder: 'Enter'
+      })
+        .includeFontPadding(this.include)
+        .fallbackLineSpacing(this.fallback)
+        .lineHeight(5)
+        .width('100%')
+        .height(100)
+        .backgroundColor('#eee')
+        .borderWidth(1)
+        .borderColor('#dddddd')
+
+      Scroll() {
+        Column() {
+          // --- Buttons related to IncludeFontPadding ---
+          Button('Set includePadding: ' + this.include)
+            .onClick(() => {
+              this.include = this.include === false ? true : false;
+            })
+            .margin({ bottom: 10 })
+
+          // --- Button related to FallbackLineSpacing ---
+          Button('Set fallbackLineSpacing: ' + this.fallback)
+            .onClick(() => {
+              this.fallback = this.fallback === false ? true : false;
+            })
+            .margin({ bottom: 10 })
+
+        }
+        .width('100%')
+        .padding(5)
+      }
+      .height(250)
+      .backgroundColor('transparent')
+      .scrollBarWidth(2)
+      .scrollBarColor('#888')
+
+    }
+    .width('100%')
+    .height('100%')
+    .padding(20)
+  }
+}
+```
+
+The selectedDragPreviewStyle API is supported since API version 23.
+
+```TypeScript
+@Entry
+@Component
+struct SearchTest {
+  build() {
+    Column() {
+      Search({ value: 'HelloWorld', placeholder: 'please input words' })
+        .copyOption(CopyOptions.InApp)
+        .width(200)
+        .height(50)
+        .margin(150)
+        .draggable(true)
+        .selectedDragPreviewStyle({color: 'rgba(227, 248, 249, 1)'})
+    }
+    .height('100%')
+  }
+}
+```
+
+The [deleteBackward](ts-universal-attributes-text-style.md#deletebackward23) API is supported since API version 23.
+
+```TypeScript
+@Entry
+@Component
+struct Page {
+  controller: SearchController = new SearchController();
+
+  build() {
+    Column() {
+      Search({ placeholder: 'Enter', controller: this.controller })
+      Button('Delete backward')
+        .onClick(() => {
+          this.controller.deleteBackward();
+        })
+    }
+  }
+}
+```
+
+The textDirection API is supported since API version 23.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  @State text: string = 'Search text direction example';
+
+  build() {
+    Column({ space: 3 }) {
+      Text('Search text direction: RTL, component layout direction: default')
+        .fontSize(12).width('90%').margin(5)
+      Search({ value: this.text })
+        .width('95%')
+        .height(40)
+        .textDirection(TextDirection.RTL)
+      Text('Search text direction: RTL, component layout direction: default, horizontal alignment: LEFT')
+        .fontSize(12).width('90%').margin(5)
+      Search({ value: this.text })
+        .width('95%')
+        .height(40)
+        .textDirection(TextDirection.RTL)
+        .textAlign(TextAlign.LEFT)
+      Text('Search text direction: LTR, component layout direction: RTL')
+        .fontSize(12).width('90%').margin(5)
+      Search({ value: this.text })
+        .width('95%')
+        .height(40)
+        .textDirection(TextDirection.LTR)
+        .direction(Direction.Rtl)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+The scrollToVisible API is supported since API version 23.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SearchExample {
+  @State text: string = '1234567891234567891234😁😁😁6789123456789123456789012121214521';
+  controller: SearchController = new SearchController();
+
+  build() {
+    Column() {
+      Search({ value: this.text, controller: this.controller })
+        .width(336)
+        .height(56)
+      Button("Scroll Text to Visible Area").onClick(()=> {
+        this.controller.scrollToVisible({ start: 22, end: 30})
+      })
+    }.width('100%').height('100%').backgroundColor('#F1F3F5')
+  }
+}
+```

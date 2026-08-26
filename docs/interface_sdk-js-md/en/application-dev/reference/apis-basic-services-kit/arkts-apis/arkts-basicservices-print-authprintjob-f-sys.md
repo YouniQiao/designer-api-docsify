@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import print from '@kit.BasicServicesKit';
 ```
 
 ## authPrintJob
@@ -26,22 +26,22 @@ Authenticate a print job.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| jobId | string | Yes |
-| userName | string | Yes |
-| password | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| jobId | string | Yes | Indicates the print job ID. Job ID to be printed. |
+| userName | string | Yes | Indicates the user name. Indicates the user name. |
+| password | string | Yes | Indicates the user password. Indicates the user password. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | the promise returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [13100006](../errorcode-print.md#13100006-invalid-print-job) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [13100006](../errorcode-print.md#13100006-invalid-print-job) | Can not find the print job. |

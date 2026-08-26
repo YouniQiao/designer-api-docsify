@@ -9,7 +9,7 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 ## 导入模块
 
 ```TypeScript
-import { FormExtensionAbility } from 'kits/@kit.FormKit';
+import FormExtensionAbility from '@kit.FormKit';
 ```
 
 ## onAcquireFormData
@@ -30,16 +30,33 @@ Called when the system acquire the form data.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | Indicates the ID of the form. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| object |
-| Record & lt;string, Object & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| object | Returns the wantParams object.<br>**适用版本：** 10 |
+| Record & lt;string, Object & gt; | Returns the wantParams object.<br>**适用版本：** 11+ |
+
+**示例**
+
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onAcquireFormData(formId: string) {
+    console.info(`FormExtensionAbility onAcquireFormData, formId: ${formId}`);
+    let wantParams: Record<string, Object> = {
+      'temperature': '20',
+      'time': '2022-8-8 09:59',
+    };
+    return wantParams;
+  }
+}
+```
 
 ## onShareForm
 
@@ -59,13 +76,30 @@ Called when the system shares the form.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | Indicates the ID of the form. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| object |
-| Record & lt;string, Object & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| object | Returns the wantParams object.<br>**适用版本：** 9 - 10 |
+| Record & lt;string, Object & gt; | Returns the wantParams object.<br>**适用版本：** 11+ |
+
+**示例**
+
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onShareForm(formId: string) {
+    console.info(`FormExtensionAbility onShareForm, formId: ${formId}`);
+    let wantParams: Record<string, Object> = {
+      'temperature': '20',
+      'time': '2022-8-8 09:59',
+    };
+    return wantParams;
+  }
+}
+```

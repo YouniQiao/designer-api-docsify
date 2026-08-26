@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from 'kits/@kit.AbilityKit';
+import dialogSession from '@kit.AbilityKit';
 ```
 
 ## getDialogSessionInfo
@@ -24,22 +24,41 @@ Obtains the session information based on the session ID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dialogSessionId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dialogSessionId | string | Yes | Session ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DialogSessionInfo](arkts-ability-dialogsession-dialogsessioninfo-i-sys.md) |
+| Type | Description |
+| --- | --- |
+| [DialogSessionInfo](arkts-ability-dialogsession-dialogsessioninfo-i-sys.md) | Session information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { dialogSession, Want, UIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
+
+const TAG: string = '[testTag] UIExtAbility';
+
+export default class UIExtAbility extends UIExtensionAbility {
+  onSessionCreate(want: Want, session: UIExtensionContentSession) {
+    // want is specified by the system. dialogSessionId is a built-in parameter.
+    let dialogSessionId = want?.parameters?.dialogSessionId.toString();
+
+    // Obtain DialogSessionInfo.
+    let dialogSessionInfo: dialogSession.DialogSessionInfo = dialogSession.getDialogSessionInfo(dialogSessionId);
+    console.info(TAG, `onSessionCreate, want: ${JSON.stringify(want)}`);
+  }
+}
+```

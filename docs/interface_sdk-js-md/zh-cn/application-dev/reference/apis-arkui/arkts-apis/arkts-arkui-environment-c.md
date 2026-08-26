@@ -38,16 +38,22 @@ static EnvProp<S>(key: string, value: S): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
-| value | S | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 环境变量名称，支持的范围详见[内置环境变量说明](#内置环境变量说明)。 |
+| value | S | 是 | 查询不到环境变量key时，则使用value作为默认值存入AppStorage中。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果key对应的属性在AppStorage中存在，则返回false。不存在则在AppStorage中用value作为默认值创建key对应的属性，返回true。 |
+
+**示例**
+
+```TypeScript
+Environment.EnvProp('accessibilityEnabled', 'default');
+```
 
 ## envProp
 
@@ -65,16 +71,20 @@ static envProp<S>(key: string, value: S): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
-| value | S | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 环境变量名称，支持的范围详见[内置环境变量说明](#内置环境变量说明)。 |
+| value | S | 是 | 查询不到环境变量key时，则使用value作为默认值存入AppStorage中。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果key对应的属性在AppStorage中存在，则返回false。不存在则在AppStorage中用value作为默认值创建key对应的属性，返回true。 |
+
+**示例**
+
+envProp具体使用，详见[从UI中访问Environment参数](../../../ui/state-management/arkts-environment.md#从ui中访问environment参数)。
 
 ## EnvProps
 
@@ -99,9 +109,18 @@ static EnvProps(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| props | {       key: string;       defaultValue: any;     }[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| props | {       key: string;       defaultValue: any;     }[] | 是 |  |
+
+**示例**
+
+```TypeScript
+Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+```
 
 ## envProps
 
@@ -119,9 +138,18 @@ static envProps(props: EnvPropsOptions[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| props | [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md)[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| props | [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md)[] | 是 | 系统环境变量和默认值的键值对的数组。 |
+
+**示例**
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+```
 
 ## Keys
 
@@ -141,9 +169,24 @@ static Keys(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 返回环境变量的属性key的数组。 |
+
+**示例**
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.Keys();
+```
+
+```TypeScript
+Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.Keys(); // keys 包含 accessibilityEnabled、languageCode、prop
+```
 
 ## keys
 
@@ -161,6 +204,21 @@ static keys(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 返回环境变量的属性key的数组。 |
+
+**示例**
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.keys();
+```
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.keys(); // keys 包含 accessibilityEnabled、languageCode、prop
+```

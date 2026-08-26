@@ -3,7 +3,22 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import appControl from '@kit.AbilityKit.appControl';
+import bundleManager from '@kit.AbilityKit.bundleManager';
+import bundleMonitor from '@kit.AbilityKit.bundleMonitor';
+import bundleResourceManager from '@kit.AbilityKit.bundleResourceManager';
+import bundle from '@kit.AbilityKit';
+import defaultAppManager from '@kit.AbilityKit.defaultAppManager';
+import distributedBundleManager from '@kit.AbilityKit.distributedBundleManager';
+import freeInstall from '@kit.AbilityKit.freeInstall';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit.innerBundleManager';
+import installer from '@kit.AbilityKit.installer';
+import launcherBundleManager from '@kit.AbilityKit.launcherBundleManager';
+import overlay from '@kit.AbilityKit.overlay';
+import shortcutManager from '@kit.AbilityKit.shortcutManager';
+import skillManager from '@kit.AbilityKit.skillManager';
+import appDomainVerify from '@kit.AbilityKit.appDomainVerify';
+import pluginBundleManager from '@kit.AbilityKit.pluginBundleManager';
 ```
 
 ## isAbilityEnabled
@@ -22,10 +37,45 @@ Checks whether the ability that matches a given AbilityInfo object is enabled. T
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes | Ability information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if enabled, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
+  bundle.isAbilityEnabled(abilityInfo).then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+})
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
+  bundle.isAbilityEnabled(abilityInfo, (err, data) => {
+    if (err) {
+      console.error('Operation failed. Cause: ' + JSON.stringify(err));
+      return;
+    }
+    console.info('Operation successful. Data:' + JSON.stringify(data));
+  })
+})
+```
 
 
 ## isAbilityEnabled
@@ -44,12 +94,16 @@ Checks whether the ability that matches a given AbilityInfo object is enabled. T
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes | Ability information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. **true** if enabled, **false** otherwise. |
+
+**Examples**
+
+See [isAbilityEnabled](#isabilityenabled)

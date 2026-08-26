@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from 'kits/@kit.ArkUI';
+import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUI';
 ```
 
 ## childIndex

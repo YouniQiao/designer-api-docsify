@@ -16,6 +16,6 @@ Callback to be invoked when the large image is zoomed in or out after the large 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scale | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scale | number | Yes | Scale of the image compared with the original image. |

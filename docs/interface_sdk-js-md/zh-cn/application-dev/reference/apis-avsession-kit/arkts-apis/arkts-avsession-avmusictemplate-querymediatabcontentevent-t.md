@@ -14,12 +14,12 @@ type QueryMediaTabContentEvent = (tabId: string) => Promise<MediaTabContent>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| tabId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tabId | string | 是 | 标签页的ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md)&gt; | Promise对象，返回媒体标签页内容。 |

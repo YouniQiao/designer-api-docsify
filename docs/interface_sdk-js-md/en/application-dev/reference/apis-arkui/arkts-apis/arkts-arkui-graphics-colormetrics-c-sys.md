@@ -24,19 +24,19 @@ Create ColorMetrics class using HDR color with default exposure. Create an HDR c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes |
-| red | number | Yes |
-| green | number | Yes |
-| blue | number | Yes |
-| alpha | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
+| red | number | Yes | Red component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
+| green | number | Yes | Green component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
+| blue | number | Yes | Blue component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
+| alpha | number | No | Alpha (opacity) component value. Valid range: [0, 1]. The default value is 1.0 (fully opaque). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
+| Type | Description |
+| --- | --- |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
 
 ## createHDRColorWithLinearExposure
 
@@ -57,20 +57,20 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| linearExposure | number | Yes |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes |
-| red | number | Yes |
-| green | number | Yes |
-| blue | number | Yes |
-| alpha | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| linearExposure | number | Yes | Linear exposure value in exposure value. Valid range: [1, +∞). A value of 1.0 represents standard exposure. Values greater than 1.0 increase brightness linearly. |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
+| red | number | Yes | Red component value. Valid range: [0, 1]. |
+| green | number | Yes | Green component value. Valid range: [0, 1]. |
+| blue | number | Yes | Blue component value. Valid range: [0, 1]. |
+| alpha | number | No | Alpha (opacity) component value. Valid range: [0, 1]. The default value is 1.0 (fully opaque). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
+| Type | Description |
+| --- | --- |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
 
 ## createHDRColorWithLogExposure
 
@@ -91,20 +91,20 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [exposure](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md) | number | Yes |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes |
-| red | number | Yes |
-| green | number | Yes |
-| blue | number | Yes |
-| alpha | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| exposure | number | Yes | Logarithmic exposure value in stops. Valid range: [0, +∞). A value of 0.0 represents standard exposure. Each increment of 1.0 doubles the brightness (one stop). |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
+| red | number | Yes | Red component value. Valid range: [0, 1]. |
+| green | number | Yes | Green component value. Valid range: [0, 1]. |
+| blue | number | Yes | Blue component value. Valid range: [0, 1]. |
+| alpha | number | No | Alpha (opacity) component value. Valid range: [0, 1]. The default value is 1.0 (fully opaque). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
+| Type | Description |
+| --- | --- |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
 
 ## getBlueValue
 
@@ -124,9 +124,9 @@ Get blue value. Returns blue channel value as a floating-point number. For SDR c
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The blue value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values & gt; 1.0 indicate HDR brightness. |
 
 ## getColorSpace
 
@@ -146,9 +146,9 @@ Get color space of the ColorMetrics. Returns the color space used when creating 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ColorSpace](arkts-arkui-window-colorspace-e.md) |
+| Type | Description |
+| --- | --- |
+| [ColorSpace](arkts-arkui-window-colorspace-e.md) | The color space of the ColorMetrics. Possible value: ColorSpace.SRGB, ColorSpace.DISPLAY_P3, ColorSpace.BT2020. |
 
 ## getGreenValue
 
@@ -168,9 +168,9 @@ Get green value. Returns green channel value as a floating-point number. For SDR
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The green value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values & gt; 1.0 indicate HDR brightness. |
 
 ## getRedValue
 
@@ -190,9 +190,9 @@ Get red value. Returns red channel value as a floating-point number. For SDR col
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The red value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values & gt; 1.0 indicate HDR brightness. |
 
 ## isHDR
 
@@ -212,6 +212,6 @@ Check if ColorMetrics represents an HDR color. Returns true if color was created
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether ColorMetrics is an HDR color. Returns true if: |

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## queryTraceRoute
@@ -14,7 +13,8 @@ function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promi
 
 Queries the network route tracing information. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > To call this API, the application needs to apply for the precise location permission. <!--RP1-->According to
 > [Applying for Location Permissions (ArkTS)](../../../device/location/location-permission-guidelines.md)<!--RP1
 > End-->, the caller needs to apply for both **ohos.permission.APPROXIMATELY_LOCATION** and
@@ -30,21 +30,40 @@ Queries the network route tracing information. This API uses a promise to return
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [destination](arkts-network-connection-routeinfo-i.md) | string | Yes |
-| option | [TraceRouteOptions](arkts-network-connection-tracerouteoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| destination | string | Yes | Target domain name or IP address, for example, www.example.com or 8.8.8.8. |
+| option | [TraceRouteOptions](arkts-network-connection-tracerouteoptions-i.md) | No | Options for route tracing. If this parameter is not specified, the default configuration is used. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[TraceRouteInfo](arkts-network-connection-tracerouteinfo-i.md)[]&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[TraceRouteInfo](arkts-network-connection-tracerouteinfo-i.md)[]&gt; | Promise used to return the array of route tracing information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dest: string = "www.example.com";
+let options: connection.TraceRouteOptions = {
+    maxJumpNumber: 30,
+    packetsType: connection.PacketsType.NETCONN_PACKETS_ICMP
+};
+
+connection.queryTraceRoute(dest, options).then((data: connection.TraceRouteInfo[]) => {
+    console.info(JSON.stringify(data));
+}).catch((err: BusinessError) => {
+    console.error(JSON.stringify(err));
+});
+```

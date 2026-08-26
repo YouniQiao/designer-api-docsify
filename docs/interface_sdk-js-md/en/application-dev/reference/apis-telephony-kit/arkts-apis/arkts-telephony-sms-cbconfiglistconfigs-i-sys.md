@@ -11,7 +11,6 @@ Defines the cell broadcast configuration list configs.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## messageIds

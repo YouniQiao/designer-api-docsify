@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## chdir
@@ -22,6 +22,6 @@ Change current directory
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dir | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dir | string | Yes | The path you want to change. |

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## createGlobalAudioLoopback
@@ -24,21 +25,21 @@ Creates a global audio loopback instance, which provides low-latency in-ear moni
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | Yes |
-| isController | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | Yes | Audio loopback mode to create. |
+| isController | boolean | Yes | Create an object that own the audio loopback or only a controller. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null & gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null & gt; | Promise used to return the audio loopback instance, or null when an error happens. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Loopback mode is unsupported. |

@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+import userStatus from '@kit.MultimodalAwarenessKit';
 ```
 
 ## blowDirection

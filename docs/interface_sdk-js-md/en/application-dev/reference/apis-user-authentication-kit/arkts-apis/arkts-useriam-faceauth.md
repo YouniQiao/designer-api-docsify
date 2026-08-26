@@ -12,7 +12,7 @@ The **faceAuth** module is an important part of the OpenHarmony user identity an
 ## Modules to Import
 
 ```TypeScript
-import { faceAuth } from 'kits/@kit.UserAuthenticationKit';
+import faceAuth from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary
@@ -20,7 +20,7 @@ import { faceAuth } from 'kits/@kit.UserAuthenticationKit';
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FaceAuthManager(Facial Authentication)](arkts-userauthentication-faceauth-faceauthmanager-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [FaceAuthManager(Facial Authentication)](arkts-userauthentication-faceauth-faceauthmanager-c-sys.md) | Provides APIs for facial authentication management. It provides management features during face enrollment, including setting the **SurfaceId** of the face preview page. |
 <!--DelEnd-->

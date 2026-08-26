@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## CUSTOM_LABEL
@@ -411,3 +411,23 @@ phoneNumber: string
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
+
+**示例**
+
+使用JSON格式创建数据。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let phoneNumber: contact.PhoneNumber = {
+    phoneNumber: '138xxxxxxxx',
+    labelId: contact.PhoneNumber.NUM_HOME
+};
+```
+
+或使用new一个PhoneNumber对象的方式创建数据。
+
+```TypeScript
+let phoneNumber = new contact.PhoneNumber();
+phoneNumber.phoneNumber = '138xxxxxxxx';
+```

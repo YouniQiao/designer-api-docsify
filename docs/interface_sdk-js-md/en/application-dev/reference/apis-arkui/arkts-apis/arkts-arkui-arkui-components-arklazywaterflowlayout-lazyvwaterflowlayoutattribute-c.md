@@ -11,7 +11,7 @@ Defines the lazy vertical waterflow layout attribute.@extends LazyWaterFlowLayou
 ## Modules to Import
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
+import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## columnsTemplate
@@ -32,12 +32,12 @@ This parameter specifies the number of columns in the current waterflow layout.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) \| undefined | Yes | Number of columns in the layout. Default value: '1fr'When the value is a string, it sets the number of columns or the minimum column width of the current & lt;em & gt;LazyVWaterFlowLayout & lt;/em & gt;. For example, & lt;em & gt;columnsTemplate('1fr 1fr 2fr') & lt;/em & gt; divides the & lt;em & gt;LazyVWaterFlowLayout & lt;/em & gt; into 3 columns, splitting the width into 4 equal parts: column 1 takes 1 part, column 2 takes 1 part, and column 3 takes 2 parts. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md) |
+| Type | Description |
+| --- | --- |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md) |  |

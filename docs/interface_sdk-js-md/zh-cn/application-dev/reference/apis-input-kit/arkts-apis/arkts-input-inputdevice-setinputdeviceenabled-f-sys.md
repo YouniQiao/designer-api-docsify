@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
+import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## setInputDeviceEnabled
@@ -24,22 +24,51 @@ function setInputDeviceEnabled(deviceId: number, enabled: boolean): Promise<void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| deviceId | number | 是 |
-| enabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceId | number | 是 | 输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。 |
+| enabled | boolean | 是 | 输入设备的开关状态，取值为true表示开启输入设备，取值为false表示关闭输入设备。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [3900001](../errorcode-inputdevice.md#3900001-指定的设备不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [3900001](../errorcode-inputdevice.md#3900001-指定的设备不存在) | The specified device does not exist. |
+
+**示例**
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 设置设备ID为0
+            inputDevice.setInputDeviceEnabled(0, true).then(() => {
+              console.info(`Succeeded in setting input device enabled.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set device enabled, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set device enabled, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```

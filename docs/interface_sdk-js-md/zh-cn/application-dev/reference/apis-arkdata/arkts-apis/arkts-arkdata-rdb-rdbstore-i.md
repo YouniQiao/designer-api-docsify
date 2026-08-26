@@ -33,11 +33,61 @@ batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| table | string | 是 |
-| values | Array & lt;ValuesBucket & gt; | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| table | string | 是 | 指定的目标表名，不能为空字符串。 |
+| values | Array & lt;ValuesBucket & gt; | 是 | 表示要插入到表中的一组数据。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为插入的数据个数；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "CODES";
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+let value5 = "Jack";
+let value6 = 19;
+let value7 = 101.5;
+let value8 = new Uint8Array([6, 7, 8, 9, 10]);
+let value9 = "Tom";
+let value10 = 20;
+let value11 = 102.5;
+let value12 = new Uint8Array([11, 12, 13, 14, 15]);
+const valueBucket1: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+const valueBucket2: ValuesBucket = {
+  key1: value5,
+  key2: value6,
+  key3: value7,
+  key4: value8,
+};
+const valueBucket3: ValuesBucket = {
+  key1: value9,
+  key2: value10,
+  key3: value11,
+  key4: value12,
+};
+
+let valueBuckets = new Array(valueBucket1, valueBucket2, valueBucket3);
+rdbStore.batchInsert("EMPLOYEE", valueBuckets, (status: number, insertNum: number) => {
+  if (status) {
+    console.error("batchInsert failed, status = " + status);
+    return;
+  }
+  console.info("batchInsert is successful, the number of values that were inserted = " + insertNum);
+})
+```
 
 ## batchInsert
 
@@ -57,16 +107,65 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| table | string | 是 |
-| values | Array & lt;ValuesBucket & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| table | string | 是 | 指定的目标表名，不能为空字符串。 |
+| values | Array & lt;ValuesBucket & gt; | 是 | 表示要插入到表中的一组数据。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。如果操作成功，返回插入的数据个数，否则返回-1。 |
+
+**示例**
+
+```TypeScript
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "CODES";
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+let value5 = "Jack";
+let value6 = 19;
+let value7 = 101.5;
+let value8 = new Uint8Array([6, 7, 8, 9, 10]);
+let value9 = "Tom";
+let value10 = 20;
+let value11 = 102.5;
+let value12 = new Uint8Array([11, 12, 13, 14, 15]);
+const valueBucket1: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+const valueBucket2: ValuesBucket = {
+  key1: value5,
+  key2: value6,
+  key3: value7,
+  key4: value8,
+};
+const valueBucket3: ValuesBucket = {
+  key1: value9,
+  key2: value10,
+  key3: value11,
+  key4: value12,
+};
+
+let valueBuckets = new Array(valueBucket1, valueBucket2, valueBucket3);
+let promise: void = rdbStore.batchInsert("EMPLOYEE", valueBuckets);
+promise.then((insertNum: number) => {
+  console.info("batchInsert is successful, the number of values that were inserted = " + insertNum);
+}).catch((status: number) => {
+  console.error("batchInsert failed, status = " + status);
+})
+```
 
 ## beginTransaction
 
@@ -84,6 +183,35 @@ beginTransaction(): void
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+**示例**
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "blobType";
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3]);
+
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+
+data_rdb.getRdbStore(this.context, "RdbTest.db", 1, async (err: BusinessError, rdbStore) => {
+  rdbStore.beginTransaction()
+  await rdbStore.insert("test", valueBucket)
+  rdbStore.commit()
+})
+```
+
 ## commit
 
 ```TypeScript
@@ -99,6 +227,35 @@ commit(): void
 **替代接口：** [commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**示例**
+
+```TypeScript
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "blobType";
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3]);
+
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+
+data_rdb.getRdbStore(this.context, "RdbTest.db", 1, async (err: BusinessError, rdbStore) => {
+  rdbStore.beginTransaction()
+  await rdbStore.insert("test", valueBucket)
+  rdbStore.commit()
+})
+```
 
 ## delete
 
@@ -118,10 +275,24 @@ delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的删除条件。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为受影响的行数；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Lisa")
+rdbStore.delete(predicates, (err: BusinessError, rows: number) => {
+  if (err) {
+    console.error("Delete failed, err: " + err)
+    return
+  }
+  console.info("Delete rows: " + rows)
+})
+```
 
 ## delete
 
@@ -141,15 +312,28 @@ delete(predicates: RdbPredicates): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的删除条件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。返回受影响的行数。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Lisa")
+let promise: void = rdbStore.delete(predicates)
+promise.then((rows: number) => {
+  console.info("Delete rows: " + rows)
+}).catch((err: BusinessError) => {
+  console.error("Delete failed, err: " + err)
+})
+```
 
 ## executeSql
 
@@ -169,11 +353,24 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sql | string | 是 |
-| bindArgs | Array & lt;ValueType & gt; | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sql | string | 是 | 指定要执行的SQL语句，不能为空字符串。 |
+| bindArgs | Array & lt;ValueType & gt; | 是 | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数需为空数组。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当操作成功，err为undefined；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+const SQL_DELETE_TABLE = "DELETE FROM test WHERE name = ?"
+rdbStore.executeSql(SQL_DELETE_TABLE, ['zhangsan'], (err: BusinessError) => {
+  if (err) {
+    console.error("ExecuteSql failed, err: " + err)
+    return
+  }
+  console.info('Delete table done.')
+})
+```
 
 ## executeSql
 
@@ -193,16 +390,28 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sql | string | 是 |
-| bindArgs | Array & lt;ValueType & gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sql | string | 是 | 指定要执行的SQL语句，不能为空字符串。 |
+| bindArgs | Array & lt;ValueType & gt; | 否 | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+const SQL_DELETE_TABLE = "DELETE FROM test WHERE name = 'zhangsan'"
+let promise = rdbStore.executeSql(SQL_DELETE_TABLE)
+promise.then(() => {
+  console.info('Delete table done.')
+}).catch((err: BusinessError) => {
+  console.error("ExecuteSql failed, err: " + err)
+})
+```
 
 ## insert
 
@@ -222,11 +431,40 @@ insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| table | string | 是 |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| table | string | 是 | 指定的目标表名，不能为空字符串。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 表示要插入到表中的数据行。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为行ID；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "CODES";
+let value1 = "Lisi";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+
+rdbStore.insert("EMPLOYEE", valueBucket, (status: number, rowId: number) => {
+  if (status) {
+    console.error("Insert failed");
+    return;
+  }
+  console.info("Insert is successful, rowId = " + rowId);
+})
+```
 
 ## insert
 
@@ -246,16 +484,44 @@ insert(table: string, values: ValuesBucket): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| table | string | 是 |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| table | string | 是 | 指定的目标表名，不能为空字符串。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 表示要插入到表中的数据行。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。如果操作成功，返回行ID；否则返回-1。 |
+
+**示例**
+
+```TypeScript
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "CODES";
+let value1 = "Lisi";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+
+let promise: void = rdbStore.insert("EMPLOYEE", valueBucket)
+promise.then((rowId: BusinessError) => {
+  console.info("Insert is successful, rowId = " + rowId);
+}).catch((status: number) => {
+  console.error("Insert failed");
+})
+```
 
 ## obtainDistributedTableName
 
@@ -265,8 +531,10 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 
 根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用callback异步回调。
 
-> **说明：**&gt;
-> 其中device通过调用<!--RP1-->
+> **说明：**
+> 
+> 其中device通过调用<!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 
@@ -282,11 +550,37 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| device | string | 是 |
-| table | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| device | string | 是 | 远程设备ID 。 |
+| table | string | 是 | 远程设备的本地表名。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当操作成功，err为undefined，data为远程设备的分布式表名；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+
+let dmInstance: Array<string>;
+
+deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
+  if (err) {
+    console.error("create device manager failed, err=" + err);
+    return;
+  }
+  dmInstance = manager;
+  let devices: Array<string> = dmInstance.getTrustedDeviceListSync();
+  let deviceId: Array<string> = devices[0].deviceId;
+})
+
+rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE", (err: BusinessError, tableName: String) {
+  if (err) {
+    console.error('ObtainDistributedTableName failed, err: ' + err)
+    return
+  }
+  console.info('ObtainDistributedTableName successfully, tableName=.' + tableName)
+})
+```
 
 ## obtainDistributedTableName
 
@@ -296,8 +590,10 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用Promise异步回调。
 
-> **说明：**&gt;
-> 其中device通过调用<!--RP1-->
+> **说明：**
+> 
+> 其中device通过调用<!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 
@@ -313,16 +609,41 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| device | string | 是 |
-| table | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| device | string | 是 | 远程设备ID。 |
+| table | string | 是 | 远程设备的本地表名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象。如果操作成功，返回远程设备的分布式表名。 |
+
+**示例**
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+
+let dmInstance: Array<string>;
+
+deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
+  if (err) {
+    console.error("create device manager failed, err=" + err);
+    return;
+  }
+  dmInstance = manager;
+  let devices: Array<string> = dmInstance.getTrustedDeviceListSync();
+  let deviceId: Array<string> = devices[0].deviceId;
+})
+
+let promise: void = rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE")
+promise.then((tableName: String) => {
+  console.info('ObtainDistributedTableName successfully, tableName= ' + tableName)
+}).catch((err: BusinessError) => {
+  console.error('ObtainDistributedTableName failed, err: ' + err)
+})
+```
 
 ## off
 
@@ -342,11 +663,27 @@ off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | 'dataChange' | 是 |
-| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | 是 |
-| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | 'dataChange' | 是 | 取值为'dataChange'，表示数据更改。 |
+| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | 是 | 订阅类型。 |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 指已注册的数据更改观察者。Array & lt;string & gt;为数据库中的数据发生改变的对端设备ID。 |
+
+**示例**
+
+```TypeScript
+let devices: Array<string>;
+
+try {
+  rdbStore.off('dataChange', data_rdb.SubscribeType.SUBSCRIBE_TYPE_REMOTE, (storeObserver: Array<string>) => {
+    for (let i = 0; i < devices.length; i++) {
+      console.info('device=' + devices[i] + ' data changed')
+    }
+  })
+} catch (err) {
+  console.error('Unregister observer failed')
+}
+```
 
 ## on
 
@@ -366,11 +703,27 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | 'dataChange' | 是 |
-| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | 是 |
-| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | 'dataChange' | 是 | 取值为'dataChange'，表示数据更改。 |
+| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | 是 | 订阅类型。 |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 指分布式数据库中数据更改事件的观察者。Array & lt;string & gt;为数据库中的数据发生改变的对端设备ID。 |
+
+**示例**
+
+```TypeScript
+let devices: Array<string>;
+
+try {
+  rdbStore.on('dataChange', data_rdb.SubscribeType.SUBSCRIBE_TYPE_REMOTE, (storeObserver: Array<string>) => {
+    for (let i = 0; i < devices.length; i++) {
+      console.info('device=' + devices[i] + ' data changed')
+    }
+  })
+} catch (err) {
+  console.error('Register observer failed')
+}
+```
 
 ## query
 
@@ -390,11 +743,26 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
-| columns | Array & lt;string & gt; | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的查询条件。 |
+| columns | Array & lt;string & gt; | 是 | 表示要查询的列。如果值为空，则查询应用于所有列。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。当操作成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Rose")
+rdbStore.query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"], (err: BusinessError, resultSet: void) => {
+  if (err) {
+    console.error("Query failed, err: " + err)
+    return
+  }
+  console.info("ResultSet column names: " + resultSet.columnNames)
+  console.info("ResultSet column count: " + resultSet.columnCount)
+})
+```
 
 ## query
 
@@ -414,16 +782,30 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
-| columns | Array & lt;string & gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的查询条件。 |
+| columns | Array & lt;string & gt; | 否 | 表示要查询的列。如果值为空，则查询应用于所有列。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;ResultSet & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;ResultSet & gt; | Promise对象。如果操作成功，则返回ResultSet对象。 |
+
+**示例**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Rose")
+let promise: void = rdbStore.query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"])
+promise.then((resultSet: void) => {
+  console.info("ResultSet column names: " + resultSet.columnNames)
+  console.info("ResultSet column count: " + resultSet.columnCount)
+}).catch((err: BusinessError) => {
+  console.error("Query failed, err: " + err)
+})
+```
 
 ## querySql
 
@@ -443,11 +825,24 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sql | string | 是 |
-| bindArgs | Array & lt;ValueType & gt; | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sql | string | 是 | 指定要执行的SQL语句，不能为空字符串。 |
+| bindArgs | Array & lt;ValueType & gt; | 是 | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数需为空数组。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。当操作成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = ?", ['sanguo'], (err: BusinessError, resultSet: void) => {
+  if (err) {
+    console.error("Query failed, err: " + err)
+    return
+  }
+  console.info("ResultSet column names: " + resultSet.columnNames)
+  console.info("ResultSet column count: " + resultSet.columnCount)
+})
+```
 
 ## querySql
 
@@ -467,16 +862,28 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sql | string | 是 |
-| bindArgs | Array & lt;ValueType & gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sql | string | 是 | 指定要执行的SQL语句，不能为空字符串。 |
+| bindArgs | Array & lt;ValueType & gt; | 否 | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;ResultSet & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;ResultSet & gt; | Promise对象。如果操作成功，则返回ResultSet对象。 |
+
+**示例**
+
+```TypeScript
+let promise: void = rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'")
+promise.then((resultSet: void) => {
+  console.info("ResultSet column names: " + resultSet.columnNames)
+  console.info("ResultSet column count: " + resultSet.columnCount)
+}).catch((err: BusinessError) => {
+  console.error("Query failed, err: " + err)
+})
+```
 
 ## rollBack
 
@@ -493,6 +900,40 @@ rollBack(): void
 **替代接口：** [rollBack](arkts-arkdata-relationalstore-rdbstore-i.md#rollback)
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**示例**
+
+```TypeScript
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "blobType";
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3]);
+
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+
+const STORE_CONFIG = { name: "RdbTest.db"}
+data_rdb.getRdbStore(this,context, "RdbTest.db", 1, async (err: BusinessError, rdbStore) => {
+  try {
+    rdbStore.beginTransaction()
+    await rdbStore.insert("test", valueBucket)
+    rdbStore.commit()
+  } catch (e) {
+    rdbStore.rollBack()
+  }
+})
+```
 
 ## setDistributedTables
 
@@ -514,10 +955,22 @@ setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [tables](arkts-arkdata-cloudextension-database-i-sys.md) | Array & lt;string & gt; | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tables | Array & lt;string & gt; | 是 | 要设置的分布式列表表名。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当操作成功，err为undefined；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+rdbStore.setDistributedTables(["EMPLOYEE"], (err: BusinessError) => {
+  if (err) {
+    console.error('SetDistributedTables failed, err: ' + err)
+    return
+  }
+  console.info('SetDistributedTables successfully.')
+})
+```
 
 ## setDistributedTables
 
@@ -539,15 +992,26 @@ setDistributedTables(tables: Array<string>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [tables](arkts-arkdata-cloudextension-database-i-sys.md) | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tables | Array & lt;string & gt; | 是 | 要设置的分布式列表表名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+let promise: void = rdbStore.setDistributedTables(["EMPLOYEE"])
+promise.then(() => {
+  console.info("SetDistributedTables successfully.")
+}).catch((err: BusinessError) => {
+  console.error("SetDistributedTables failed, err: " + err)
+})
+```
 
 ## sync
 
@@ -569,11 +1033,44 @@ sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[s
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 指同步模式。该值可以是推、拉。 |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | 约束同步数据和设备。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 是 | 回调函数。当操作成功，err为undefined，data为同步结果，其中string为设备ID， number为每个设备同步状态，0表示成功，其他值表示失败；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+
+let dmInstance: Array<string>;
+
+deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
+  if (err) {
+    console.error("create device manager failed, err=" + err);
+    return;
+  }
+  dmInstance = manager;
+  let devices: Array<string> = dmInstance.getTrustedDeviceListSync();
+  for (let i = 0; i < devices.length; i++) {
+    let deviceIds: Array<string> = devices[i].deviceId;
+  }
+})
+
+let predicates = new data_rdb.RdbPredicates('EMPLOYEE')
+predicates.inDevices(deviceIds)
+rdbStore.sync(data_rdb.SyncMode.SYNC_MODE_PUSH, predicates, (err: BusinessError, result: void) {
+  if (err) {
+    console.error('Sync failed, err: ' + err)
+    return
+  }
+  console.info('Sync done.')
+  for (let i = 0; i < result.length; i++) {
+    console.info('device=' + result[i][0] + ' status=' + result[i][1])
+  }
+})
+```
 
 ## sync
 
@@ -595,16 +1092,48 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 指同步模式。该值可以是推、拉。 |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | 约束同步数据和设备。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;[string, number] & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;[string, number] & gt; & gt; | Promise对象，用于向调用者发送同步结果。string：设备ID；number：每个设备同步状态，0表示成功，其他值表示失败。 |
+
+**示例**
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+
+let dmInstance: Array<string>;
+
+deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
+  if (err) {
+    console.error("create device manager failed, err=" + err);
+    return;
+  }
+  dmInstance = manager;
+  let devices: Array<string> = dmInstance.getTrustedDeviceListSync();
+  for (let i = 0; i < devices.length; i++) {
+    let deviceIds: Array<string> = devices[i].deviceId;
+  }
+})
+
+let predicates = new data_rdb.RdbPredicates('EMPLOYEE')
+predicates.inDevices(deviceIds)
+let promise: void = rdbStore.sync(data_rdb.SyncMode.SYNC_MODE_PUSH, predicates)
+promise.then((result: void) =>{
+  console.info('Sync done.')
+  for (let i = 0; i < result.length; i++) {
+    console.info('device=' + result[i][0] + ' status=' + result[i][1])
+  }
+}).catch((err: BusinessError) => {
+  console.error('Sync failed')
+})
+```
 
 ## update
 
@@ -624,11 +1153,42 @@ update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的更新条件。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为受影响的行数；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "CODES";
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Lisa")
+rdbStore.update(valueBucket, predicates, (err: BusinessError, rows: number) => {
+  if (err) {
+    console.error("Update failed, err: " + err)
+    return
+  }
+  console.info("Updated row count: " + rows)
+})
+```
 
 ## update
 
@@ -648,13 +1208,43 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的更新条件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | 指定的Promise回调方法。返回受影响的行数。 |
+
+**示例**
+
+```TypeScript
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "CODES";
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Lisa")
+let promise: void = rdbStore.update(valueBucket, predicates)
+promise.then(async (rows: number) => {
+  console.info("Updated row count: " + rows)
+}).catch((err: BusinessError) => {
+  console.error("Update failed, err: " + err)
+})
+```

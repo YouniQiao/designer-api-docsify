@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dataSharePredicates } from 'kits/@kit.ArkData';
+import dataSharePredicates from '@kit.ArkData';
 ```
 
 ## and
@@ -30,9 +30,18 @@ and(): DataSharePredicates
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有和条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.equalTo("NAME", "lisi")
+    .and()
+    .equalTo("SALARY", 200.5);
+```
 
 ## beginWrap
 
@@ -50,9 +59,21 @@ beginWrap(): DataSharePredicates
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有左括号的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap();
+```
 
 ## between
 
@@ -70,17 +91,24 @@ between(field: string, low: ValueType, high: ValueType): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
-| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值 型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
+| low | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。low为number时，按数值排序指定匹配范围。low为string时，按字典序排序指定匹配范围。low为 boolean时，按数值排序指定匹配范围。 |
+| high | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。high为number时，按数值排序指定匹配范围。high为string时，按字典序排序指定匹配范围。high为 boolean时，按数值排序指定匹配范围。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.between("AGE", 10, 50);
+```
 
 ## endWrap
 
@@ -98,9 +126,21 @@ endWrap(): DataSharePredicates
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有右括号的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap();
+```
 
 ## equalTo
 
@@ -120,16 +160,23 @@ equalTo(field: string, value: ValueType): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。field为undefined或者null时，此次调用接口配置的谓词无效。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或者null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.equalTo("NAME", "Rose");
+```
 
 ## greaterThan
 
@@ -147,16 +194,23 @@ greaterThan(field: string, value: ValueType): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值 型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.greaterThan("AGE", 10);
+```
 
 ## greaterThanOrEqualTo
 
@@ -174,16 +228,23 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，此次 调用接口配置的谓词匹配结果非预期或抛出异常。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.greaterThanOrEqualTo("AGE", 10);
+```
 
 ## in
 
@@ -203,16 +264,23 @@ in(field: string, value: Array<ValueType>): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | Array&lt;[ValueType](arkts-arkdata-valuetype-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。field为undefined或者null时，此次调用接口配置的谓词无效。 |
+| value | Array&lt;[ValueType](arkts-arkdata-valuetype-t.md)&gt; | 是 | 以ValueType型数组形式指定的要匹配的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.in("AGE", [18, 20]);
+```
 
 ## lessThan
 
@@ -230,16 +298,23 @@ lessThan(field: string, value: ValueType): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。当field为null或undefined时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键 值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.lessThan("AGE", 50);
+```
 
 ## lessThanOrEqualTo
 
@@ -257,16 +332,23 @@ lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值 型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.lessThanOrEqualTo("AGE", 50);
+```
 
 ## like
 
@@ -284,16 +366,23 @@ like(field: string, value: string): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值 型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
+| value | string | 是 | 指示要与谓词匹配的通配符表达式。 表达式中'%'代表零个、一个或多个数字或字符，'_'代表一个单一的数字或字符，不区分大小写。value为undefined 或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.like("NAME", "%os%");
+```
 
 ## limit
 
@@ -313,16 +402,23 @@ limit(total: number, offset: number): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| total | number | 是 |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| total | number | 是 | 最大数据记录数。当使用键值型数据库且total为undefined或null时，会限制最大记录数为0。当使用关系型数据库且total为undefined或 null时，不会限制最大记录数。当使用键值型数据库时，取值范围参考 [键值型数据库limit接口](arkts-arkdata-distributedkvstore-query-c.md#limit)中的total参数说明。当使用关系型数据库 时，取值范围参考[关系型数据库limitAs接口](arkts-arkdata-relationalstore-rdbpredicates-c.md#limitas)中的value参数说明。 |
+| offset | number | 是 | 指定查询结果的起始位置。当offset为undefined或null时，起始位置为结果集的最前端。当使用键值型数据库时，取值范围参考 [键值型数据库limit接口](arkts-arkdata-distributedkvstore-query-c.md#limit)中的offset参数说明。当使用关系型数据 库时，取值范围参考[关系型数据库offsetAs接口](arkts-arkdata-relationalstore-rdbpredicates-c.md#offsetas)中的 rowOffset参数说明。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.equalTo("NAME", "Rose").limit(10, 3);
+```
 
 ## notBetween
 
@@ -340,17 +436,24 @@ notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
-| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值 型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
+| low | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。low为number时，按数值排序指定匹配范围。low为string时，按字典序排序指定匹配范围。low为 boolean时，按数值排序指定匹配范围。 |
+| high | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。high为number时，按数值排序指定匹配范围。high为string时，按字典序排序指定匹配范围。high为 boolean时，按数值排序指定匹配范围。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.notBetween("AGE", 10, 50);
+```
 
 ## notEqualTo
 
@@ -368,16 +471,23 @@ notEqualTo(field: string, value: ValueType): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。当field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键 值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.notEqualTo("NAME", "Rose");
+```
 
 ## notIn
 
@@ -395,16 +505,23 @@ notIn(field: string, value: Array<ValueType>): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | Array&lt;[ValueType](arkts-arkdata-valuetype-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值 型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
+| value | Array&lt;[ValueType](arkts-arkdata-valuetype-t.md)&gt; | 是 | 以ValueType型数组形式指定的要匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.notIn("NAME", ["Lisa", "Rose"]);
+```
 
 ## or
 
@@ -422,9 +539,18 @@ or(): DataSharePredicates
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有或条件的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.equalTo("NAME", "lisi")
+    .or()
+    .equalTo("NAME", "Rose");
+```
 
 ## orderByAsc
 
@@ -444,15 +570,22 @@ orderByAsc(field: string): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。 field为undefined或者null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.orderByAsc("AGE");
+```
 
 ## orderByDesc
 
@@ -472,12 +605,19 @@ orderByDesc(field: string): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。field为undefined或者null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.orderByDesc("AGE");
+```

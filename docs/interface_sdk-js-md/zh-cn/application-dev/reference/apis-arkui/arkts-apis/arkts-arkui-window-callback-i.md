@@ -9,7 +9,9 @@ Defines the window callback.
 ## 导入模块
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import floatingBall from '@kit.ArkUI.floatingBall';
+import floatView from '@kit.ArkUI.floatView';
+import window from '@kit.ArkUI';
 ```
 
 ## [[Call]]
@@ -28,12 +30,12 @@ Defines the callback info.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | T | 是 | the data will be used in the callback. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V |
+| 类型 | 说明 |
+| --- | --- |
+| V | Returns result of the callback. |

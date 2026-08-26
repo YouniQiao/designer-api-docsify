@@ -22,14 +22,14 @@ Defines a 2D transformation, using a matrix of six values..
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [scaleX](#scalex) | number | Yes |
-| [skewX](arkts-arkui-viewmodel-transformobject-i.md) | number | Yes |
-| [skewY](arkts-arkui-viewmodel-transformobject-i.md) | number | Yes |
-| [scaleY](#scaley) | number | Yes |
-| [translateX](#translatex) | number | Yes |
-| [translateY](#translatey) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scaleX | number | Yes | the scale value for x-axis |
+| skewX | number | Yes | the skew value for y-axis |
+| skewY | number | Yes | the skew value for x-axis |
+| scaleY | number | Yes | the scale value for y-axis |
+| translateX | number | Yes | the translate value for x-axis |
+| translateY | number | Yes | the translate value for y-axis |
 
 ## matrix3d
 
@@ -64,24 +64,24 @@ Defines a 3D transformation using a 4x4 matrix of 16 values.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n00 | number | Yes |
-| n01 | number | Yes |
-| n02 | number | Yes |
-| n03 | number | Yes |
-| n10 | number | Yes |
-| n11 | number | Yes |
-| n12 | number | Yes |
-| n13 | number | Yes |
-| n20 | number | Yes |
-| n21 | number | Yes |
-| n22 | number | Yes |
-| n23 | number | Yes |
-| n30 | number | Yes |
-| n31 | number | Yes |
-| n32 | number | Yes |
-| n33 | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n00 | number | Yes | the value of the 0 row and 0 column of the 4x4 matrix |
+| n01 | number | Yes | the value of the 0 row and 1 column of the 4x4 matrix |
+| n02 | number | Yes | the value of the 0 row and 2 column of the 4x4 matrix |
+| n03 | number | Yes | the value of the 0 row and 3 column of the 4x4 matrix |
+| n10 | number | Yes | the value of the 1 row and 0 column of the 4x4 matrix |
+| n11 | number | Yes | the value of the 1 row and 1 column of the 4x4 matrix |
+| n12 | number | Yes | the value of the 1 row and 2 column of the 4x4 matrix |
+| n13 | number | Yes | the value of the 1 row and 3 column of the 4x4 matrix |
+| n20 | number | Yes | the value of the 2 row and 0 column of the 4x4 matrix |
+| n21 | number | Yes | the value of the 2 row and 1 column of the 4x4 matrix |
+| n22 | number | Yes | the value of the 2 row and 2 column of the 4x4 matrix |
+| n23 | number | Yes | the value of the 2 row and 3 column of the 4x4 matrix |
+| n30 | number | Yes | the value of the 3 row and 0 column of the 4x4 matrix |
+| n31 | number | Yes | the value of the 3 row and 1 column of the 4x4 matrix |
+| n32 | number | Yes | the value of the 3 row and 2 column of the 4x4 matrix |
+| n33 | number | Yes | the value of the 3 row and 3 column of the 4x4 matrix |
 
 ## perspective
 
@@ -99,9 +99,9 @@ Defines a perspective view for the 3D transformation element.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| verticalDistance | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| verticalDistance | number | Yes | the vertical distance from the observation point to the component plane. |
 
 ## rotate
 
@@ -119,9 +119,9 @@ Define the 2D rotation and specify the angle in the parameters.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| angle | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| angle | number | Yes | the rotate value for z-axis |
 
 ## rotate3d
 
@@ -139,12 +139,12 @@ Defines a 3D transformation for rotating the X / Y / Z axes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| z | number | Yes |
-| angle | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | the vector value of the x-axis |
+| y | number | Yes | the vector value of the y-axis |
+| z | number | Yes | the vector value of the z-axis |
+| angle | number | Yes | the rotate value for x & y & z vector. |
 
 ## rotateX
 
@@ -162,9 +162,9 @@ Defines 3D transformations for rotating of the X axes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| angle | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| angle | number | Yes | the scale value for x-axis |
 
 ## rotateY
 
@@ -182,9 +182,9 @@ Defines 3D transformations for rotating of the Y axes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| angle | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| angle | number | Yes | the scale value for y-axis |
 
 ## rotateZ
 
@@ -202,9 +202,9 @@ Defines 3D transformations for rotating of the Z axes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| angle | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| angle | number | Yes | the scale value for z-axis |
 
 ## scale
 
@@ -222,10 +222,10 @@ Defines 2D transformations for scaling of the X and Y axes
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | the scale value for x-axis |
+| y | number | Yes | the scale value for y-axis |
 
 ## scale3d
 
@@ -243,11 +243,11 @@ Defines 3D transformations for scaling of the X / Y / Z axes
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| z | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | the scale value for x-axis |
+| y | number | Yes | the scale value for y-axis |
+| z | number | Yes | the scale value for z-axis |
 
 ## scaleX
 
@@ -265,9 +265,9 @@ Defines 2D transformations for scaling of the X axes
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | the scale value for x-axis |
 
 ## scaleY
 
@@ -285,9 +285,9 @@ Defines 2D transformations for scaling of the Y axes
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| y | number | Yes | the scale value for y-axis |
 
 ## scaleZ
 
@@ -305,9 +305,9 @@ Defines 3D transformations for scaling of the Z axes
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| z | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| z | number | Yes | the scale value for z-axis |
 
 ## skew
 
@@ -325,10 +325,10 @@ Defines the 2D skew transition along the X and Y axes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| xAngle | number | Yes |
-| yAngle | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| xAngle | number | Yes | the angle of inclination along the x axis. |
+| yAngle | number | Yes | the angle of inclination along the y axis. |
 
 ## skewX
 
@@ -346,9 +346,9 @@ Defines the 2D skew transition along the X axes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| angle | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| angle | number | Yes | the angle of inclination along the x axis. |
 
 ## skewY
 
@@ -366,9 +366,9 @@ Defines the 2D skew transition along the Y axes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| angle | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| angle | number | Yes | the angle of inclination along the y axis. |
 
 ## translate
 
@@ -386,10 +386,10 @@ Defines 2D transformations for translation of the X and Y axes
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | the translate value for x-axis |
+| y | number | Yes | the translate value for y-axis |
 
 ## translate3d
 
@@ -407,11 +407,11 @@ Defines 3D transformations for translation of the X / Y / Z axes
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| z | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | the translate value for x-axis |
+| y | number | Yes | the translate value for y-axis |
+| z | number | Yes | the translate value for z-axis |
 
 ## translateX
 
@@ -429,9 +429,9 @@ Defines 2D transformations for translation of the X axes
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | the translate value for x-axis |
 
 ## translateY
 
@@ -449,9 +449,9 @@ Defines 2D transformations for translation of the Y axes
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| y | number | Yes | the translate value for y-axis |
 
 ## translateZ
 
@@ -469,6 +469,6 @@ Defines 3D transformations for translation of the Z axes
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| z | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| z | number | Yes | the translate value for z-axis |

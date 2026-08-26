@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## getShortcutInfos
@@ -14,7 +14,8 @@ function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<Shor
 
 Obtains an array of the shortcut information based on a given bundle name. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md)
 > instead.
@@ -33,10 +34,10 @@ Obtains an array of the shortcut information based on a given bundle name. This 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return an array of the shortcut information. |
 
 
 ## getShortcutInfos
@@ -47,7 +48,8 @@ function getShortcutInfos(bundleName: string): Promise<Array<ShortcutInfo>>
 
 Obtains an array of the shortcut information based on a given bundle name. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md)
 > instead.
@@ -66,12 +68,12 @@ Obtains an array of the shortcut information based on a given bundle name. This 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md)&gt;&gt; | Promise used to return an array of the shortcut information. |

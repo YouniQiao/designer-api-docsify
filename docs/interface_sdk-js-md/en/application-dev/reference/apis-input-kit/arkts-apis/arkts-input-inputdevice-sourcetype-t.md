@@ -10,11 +10,11 @@ Input sources supported by the input device, including the keyboard, mouse, touc
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'keyboard' |
-| 'mouse' |
-| 'touchpad' |
-| 'touchscreen' |
-| 'joystick' |
-| 'trackball' |
+| Type | Description |
+| --- | --- |
+| 'keyboard' | The input device is a keyboard. |
+| 'mouse' | The input device is a mouse. |
+| 'touchpad' | The input device is a touchpad. |
+| 'touchscreen' | The input device is a touchscreen. |
+| 'joystick' | The input device is a joystick. |
+| 'trackball' | The input device is a trackball. |

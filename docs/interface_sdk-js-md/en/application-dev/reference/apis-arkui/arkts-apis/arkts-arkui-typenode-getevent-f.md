@@ -18,16 +18,20 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Scroll' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node. |
+| nodeType | 'Scroll' | Yes | Scroll** node type for scroll event configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) \| undefined | UIScrollEvent** object for the **Scroll** node, or **undefined** if it fails to be obtained. |
+
+**Examples**
+
+See Scroll Event Example.
 
 
 ## getEvent
@@ -48,16 +52,20 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'List' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node. |
+| nodeType | 'List' | Yes | List** node type for scroll event configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) \| undefined | UIListEvent** object for the **List** node, or **undefined** if it fails to be obtained. |
+
+**Examples**
+
+See Scroll Event Example.
 
 
 ## getEvent
@@ -78,16 +86,20 @@ Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-ar
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'WaterFlow' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node. |
+| nodeType | 'WaterFlow' | Yes | WaterFlow** node type for scroll event configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) \| undefined | UIWaterFlowEvent** object for the **WaterFlow** node, or **undefined** if it fails to be obtained. |
+
+**Examples**
+
+See Scroll Event Example.
 
 
 ## getEvent
@@ -108,13 +120,17 @@ Obtains the **UIGridEvent** object associated with the **Grid** node for configu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Grid' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node. |
+| nodeType | 'Grid' | Yes | Grid** node type for scroll event configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) \| undefined | UIGridEvent** object for the **Grid** node, or **undefined** if it fails to be obtained. |
+
+**Examples**
+
+See Scroll Event Example.

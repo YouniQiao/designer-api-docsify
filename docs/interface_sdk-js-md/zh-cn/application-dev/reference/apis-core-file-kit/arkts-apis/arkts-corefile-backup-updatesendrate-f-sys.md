@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backup } from 'kits/@kit.CoreFileKit';
+import backup from '@kit.CoreFileKit';
 ```
 
 ## updateSendRate
@@ -24,21 +24,44 @@ function updateSendRate(bundleName: string, sendRate: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| sendRate | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 需要控制文件描述符发送速率的应用名称。 |
+| sendRate | number | 是 | 文件描述符发送速率，单位为个/秒，取值范围为0至800。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 设置结果，true表示成功，false表示失败。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { backup } from '@kit.CoreFileKit';
+
+function updateSendRate() {
+  try {
+    let bundleName = 'com.example.myApp';
+    let sendRate = 300;
+    let result = backup.updateSendRate(bundleName, sendRate);
+    if (result) {
+      console.info('updateSendRate success');
+    } else {
+      console.info('updateSendRate fail');
+    }
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`updateSendRate failed. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```

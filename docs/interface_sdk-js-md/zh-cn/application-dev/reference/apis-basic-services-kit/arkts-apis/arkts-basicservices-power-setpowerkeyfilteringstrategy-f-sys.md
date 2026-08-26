@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import power from '@kit.BasicServicesKit';
 ```
 
 ## setPowerKeyFilteringStrategy
@@ -24,14 +24,24 @@ function setPowerKeyFilteringStrategy(strategy: PowerKeyFilteringStrategy): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| strategy | [PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| strategy | [PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md) | 是 | 电源键过滤策略，用于配置电源键事件的处理方式。各策略含义请参见PowerKeyFilteringStrategy。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [4900101](../errorcode-power.md#4900101-连接服务失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [4900101](../errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
+
+**示例**
+
+```TypeScript
+try {
+    power.setPowerKeyFilteringStrategy(power.PowerKeyFilteringStrategy.LONG_PRESS_FILTERING_ONCE);
+} catch (err) {
+    console.error(`Failed to set power key filtering strategy. Code: ${err.code}, message: ${err.message}`);
+}
+```

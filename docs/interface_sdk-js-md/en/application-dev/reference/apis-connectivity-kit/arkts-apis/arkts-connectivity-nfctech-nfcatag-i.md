@@ -25,9 +25,19 @@ Obtains the ATQA value of this NFC-A tag.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | ATQA value obtained. Each number of the ATQA is a hexadecimal number ranging from **0x00** to **0xFF**. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcA tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let atqa : number[] = nfcA.getAtqa();
+console.info("nfcA atqa: " + atqa);
+```
 
 ## getSak
 
@@ -45,6 +55,16 @@ Obtains the SAK value of this NFC-A tag.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | SAK value obtained. The SAK is a hexadecimal number ranging from **0x00** to **0xFF**. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcA tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let sak : number = nfcA.getSak();
+console.info("nfcA sak: " + sak);
+```

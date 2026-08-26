@@ -11,7 +11,7 @@ CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和�
 ## 导入模块
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from 'kits/@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
 
 ## onBlurDecrease

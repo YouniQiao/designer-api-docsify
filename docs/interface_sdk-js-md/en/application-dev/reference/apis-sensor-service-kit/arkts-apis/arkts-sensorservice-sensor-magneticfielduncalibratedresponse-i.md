@@ -11,7 +11,6 @@ Describes the uncalibrated magnetic field sensor data. It extends from [Response
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## biasX

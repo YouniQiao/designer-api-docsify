@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
+import carAwareness from '@kit.MultimodalAwarenessKit';
 ```
 
 ## awarenessEvent

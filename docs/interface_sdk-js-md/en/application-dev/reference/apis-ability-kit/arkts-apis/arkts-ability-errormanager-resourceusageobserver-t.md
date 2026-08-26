@@ -16,8 +16,8 @@ The observer will be called by the system when resource usage exceed threshold.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [resourceType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sceneresource-i.md) | [ResourceType](arkts-ability-errormanager-resourcetype-e.md) | Yes |
-| resourceSize | number | Yes |
-| detailInfo | Record & lt;string, number & gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resourceType | [ResourceType](arkts-ability-errormanager-resourcetype-e.md) | Yes | The type of resource. |
+| resourceSize | number | Yes | The amount of resources occupied. The value must be greater than **0**.  Unit: KB. |
+| detailInfo | Record & lt;string, number & gt; | No | Key-value pair of the resource type and its size.  This parameter is available only when resourceType is set to PSS_MEMORY. If resourceType is set to other types or default values, this parameter is left blank. The key is the lowercase memory type, and the value is the resource size of the corresponding subdivision item. The keys of subdivision items include arkts, native, ion, gpu, ashmem, and other. The second value must be greater than * * 0 * *, in KB. |

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { volumeManager } from 'kits/@kit.CoreFileKit';
+import volumeManager from '@kit.CoreFileKit';
 ```
 
 ## description

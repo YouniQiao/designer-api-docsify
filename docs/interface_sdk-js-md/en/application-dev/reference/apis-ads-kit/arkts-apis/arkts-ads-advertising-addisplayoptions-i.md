@@ -9,7 +9,10 @@ Defines the ad display parameters.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { AdComponent } from '@kit.AdsKit.AdComponent';
+import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
+import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
+import advertising from '@kit.AdsKit';
 ```
 
 ## [key: string]

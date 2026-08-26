@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKit';
 ```
 
 ## getInputMethodEngine
@@ -24,6 +24,12 @@ Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.m
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) |
+| Type | Description |
+| --- | --- |
+| [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) | InputMethodAbility** instance. |
+
+**Examples**
+
+```TypeScript
+let InputMethodEngine: inputMethodEngine.InputMethodEngine = inputMethodEngine.getInputMethodEngine();
+```

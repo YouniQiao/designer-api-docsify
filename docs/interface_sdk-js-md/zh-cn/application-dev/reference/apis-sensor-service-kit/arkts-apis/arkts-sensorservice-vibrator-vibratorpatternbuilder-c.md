@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## addContinuousEvent
@@ -26,23 +25,59 @@ addContinuousEvent(time: number, duration: number, options?: ContinuousParam): V
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| time | number | 是 |
-| duration | number | 是 |
-| options | [ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| time | number | 是 | 长振事件的起始时间。单位：ms（毫秒）。取值范围：[0,1800000]区间内所有整数。使用场景：用于指定长振事件在振动序列中的起始时间点，多个事件间time值不能重叠。 |
+| duration | number | 是 | 长振事件的持续时间。单位：ms（毫秒）。取值范围：(0,5000]区间内所有整数。 |
+| options | [ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md) | 否 | 可选参数，用于指定长振事件的振动强度、频率、振动调节曲线和通道编号。不填时使用各参数的默认值（intensity默认100，frequency默认50，index 默认0）。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | 返回已添加连续振动事件的VibratorPatternBuilder对象。可用于继续链式调用addContinuousEvent或addTransientEvent添加 更多振动事件，最终通过[build]{ |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let builder = new vibrator.VibratorPatternBuilder();
+// 使用try catch对可能出现的异常进行捕获
+try {
+  let pointsMe: vibrator.VibratorCurvePoint[] = [
+    { time: 0, intensity: 0, frequency: -7 },
+    { time: 42, intensity: 1, frequency: -6 },
+    { time: 128, intensity: 0.94, frequency: -4 },
+    { time: 217, intensity: 0.63, frequency: -14 },
+    { time: 763, intensity: 0.48, frequency: -14 },
+    { time: 1125, intensity: 0.53, frequency: -10 },
+    { time: 1503, intensity: 0.42, frequency: -14 },
+    { time: 1858, intensity: 0.39, frequency: -14 },
+    { time: 2295, intensity: 0.34, frequency: -17 },
+    { time: 2448, intensity: 0.21, frequency: -14 },
+    { time: 2468, intensity: 0, frequency: -21 }
+  ] // VibratorCurvePoint参数最少设置4个，最大设置16个
+  let param: vibrator.ContinuousParam = {
+    intensity: 97,
+    frequency: 34,
+    points:pointsMe,
+    index: 0
+  }
+  builder.addContinuousEvent(0, 2468, param);
+  console.info(`addContinuousEvent builder is ${builder.build()}`);
+} catch(error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to add continuous event. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 ## addTransientEvent
 
@@ -58,22 +93,44 @@ addTransientEvent(time: number, options?: TransientParam): VibratorPatternBuilde
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| time | number | 是 |
-| options | [TransientParam](arkts-sensorservice-vibrator-transientparam-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| time | number | 是 | 短振事件的起始时间。单位：ms（毫秒）。取值范围：[0,1800000]区间内所有整数。使用场景：用于指定短振事件在振动序列中的起始时间点，多个事件间time值不能重叠。 |
+| options | [TransientParam](arkts-sensorservice-vibrator-transientparam-i.md) | 否 | 可选参数，用于指定短振事件的振动强度、频率和通道编号。不填时使用各参数的默认值（intensity默认100，frequency默认50，index默认0）。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | 返回已添加短振事件的VibratorPatternBuilder对象。可用于继续链式调用addContinuousEvent或addTransientEvent添加更多 振动事件，最终通过[build]{ |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let builder = new vibrator.VibratorPatternBuilder();
+// 使用try catch对可能出现的异常进行捕获
+try {
+  let param: vibrator.TransientParam = {
+    intensity: 80,
+    frequency: 70,
+    index: 0
+  }
+  builder.addTransientEvent(0, param);
+  console.info(`addTransientEvent builder is ${builder.build()}`);
+} catch(error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 ## build
 
@@ -89,6 +146,45 @@ build(): VibratorPattern
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) | 振动序列对象。包含振动序列的起始时间和振动事件数组，可作为[VibrateFromPattern]{ |
+
+**示例**
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let builder = new vibrator.VibratorPatternBuilder();
+try {
+  let param: vibrator.TransientParam = {
+    intensity: 80,
+    frequency: 70,
+    index: 0
+  }
+  builder.addTransientEvent(0, param);
+  console.info(`addTransientEvent builder is ${builder.build()}`);
+} catch(error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+try {
+  vibrator.startVibration({
+    type: 'pattern',
+    pattern: builder.build()
+  }, {
+  usage: 'alarm', // 根据实际选择类型归属不同的开关管控
+  }, (error) => {
+  if (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error(`Vibrate fail. Code: ${e.code}, message: ${e.message}`);
+  } else {
+    console.info(`vibrate success`);
+  }
+  });
+} catch(error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```

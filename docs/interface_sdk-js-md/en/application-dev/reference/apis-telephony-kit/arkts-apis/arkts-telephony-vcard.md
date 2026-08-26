@@ -9,30 +9,30 @@ VCard is a file format standard for electronic business cards. It contains infor
 ## Modules to Import
 
 ```TypeScript
-import { vcard } from 'kits/@kit.TelephonyKit';
+import vcard from '@kit.TelephonyKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [exportVCard(VCard)](arkts-telephony-vcard-exportvcard-f.md) |
-| [exportVCard(VCard)](arkts-telephony-vcard-exportvcard-f.md) |
-| [exportVCard(VCard)](arkts-telephony-vcard-exportvcard-f.md) |
-| [importVCard(VCard)](arkts-telephony-vcard-importvcard-f.md) |
-| [importVCard(VCard)](arkts-telephony-vcard-importvcard-f.md) |
-| [importVCard(VCard)](arkts-telephony-vcard-importvcard-f.md) |
+| Name | Description |
+| --- | --- |
+| [exportVCard(VCard)](arkts-telephony-vcard-exportvcard-f.md) | Exports contacts as a vcard file (VCF). This API uses an asynchronous callback to return the result. |
+| [exportVCard(VCard)](arkts-telephony-vcard-exportvcard-f.md) | Exports contacts as a vcard file (VCF). This API uses a promise to return the result. |
+| [exportVCard(VCard)](arkts-telephony-vcard-exportvcard-f.md) | Exports contacts as a vcard file (VCF). This API uses an asynchronous callback to return the result. |
+| [importVCard(VCard)](arkts-telephony-vcard-importvcard-f.md) | Imports a VCard file (that is, **.vcf** file) to the contact database. This API uses an asynchronous callback to return the result. |
+| [importVCard(VCard)](arkts-telephony-vcard-importvcard-f.md) | Imports a VCard file (that is, **.vcf** file) to the contact database. This API uses a promise to return the result. |
+| [importVCard(VCard)](arkts-telephony-vcard-importvcard-f.md) | Imports a VCard file (that is, **.vcf** file) to the contact database. This API uses an asynchronous callback to return the result. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [VCardBuilderOptions(VCard)](arkts-telephony-vcard-vcardbuilderoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [VCardBuilderOptions(VCard)](arkts-telephony-vcard-vcardbuilderoptions-i.md) | Defines the VCard information. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [VCardType(VCard)](arkts-telephony-vcard-vcardtype-e.md) |
+| Name | Description |
+| --- | --- |
+| [VCardType(VCard)](arkts-telephony-vcard-vcardtype-e.md) | Enumerates VCard versions. |

@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import usb from '@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKitManager';
+import serialManager from '@kit.BasicServicesKitManager.serial';
 ```
 
 ## connectDevice
@@ -24,12 +26,19 @@ Connects to a USB device.Before you do this, call [usb.getDevices](arkts-basicse
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | Yes | USB device information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Readonly & lt;USBDevicePipe & gt; |
+| Type | Description |
+| --- | --- |
+| Readonly & lt;USBDevicePipe & gt; | USB device pipe for data transfer. |
+
+**Examples**
+
+```TypeScript
+let devicepipe= usb.connectDevice(device);
+console.info(`devicepipe = ${devicepipe}`);
+```

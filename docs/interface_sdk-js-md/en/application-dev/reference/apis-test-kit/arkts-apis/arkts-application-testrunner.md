@@ -11,19 +11,18 @@ The **TestRunner** module provides a test framework. You can use the APIs of thi
 ## Modules to Import
 
 ```TypeScript
-import { TestRunner } from 'kits/@kit.TestKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TestRunner](arkts-test-application-testrunner-testrunner-i.md) |
+| Name | Description |
+| --- | --- |
+| [TestRunner](arkts-test-application-testrunner-testrunner-i.md) | Base class for the test framework. If you want to implement your own unit test framework, you must inherit this class and overrides all its methods. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnStopFn](arkts-test-onstopfn-t.md) |
+| Name | Description |
+| --- | --- |
+| [OnStopFn](arkts-test-onstopfn-t.md) | Stop all test cases. |

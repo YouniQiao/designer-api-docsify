@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
+import serial from '@kit.BasicServicesKit';
 ```
 
 ## getSerialPortList
@@ -22,13 +22,13 @@ Obtains the serial port list. This API returns the result asynchronously through
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;SerialPort[] & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;SerialPort[] & gt; | Promise used to return the list of serial port devices. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |

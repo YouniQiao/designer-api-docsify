@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import geolocation from '@kit.LocationKit';
 ```
 
 ## getLastLocation
@@ -26,9 +26,23 @@ Obtain last known location
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+
+**Examples**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.getLastLocation((err, data) => {
+    if (err) {
+        console.info('getLastLocation: err=' + JSON.stringify(err));
+    }
+    if (data) {
+        console.info('getLastLocation: data=' + JSON.stringify(data));
+    }
+});
+```
 
 
 ## getLastLocation
@@ -51,6 +65,15 @@ Obtain last known location
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Location & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Location & gt; | The promise returned by the function. |
+
+**Examples**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.getLastLocation().then((result) => {
+    console.info('getLastLocation: result: ' + JSON.stringify(result));
+});
+```

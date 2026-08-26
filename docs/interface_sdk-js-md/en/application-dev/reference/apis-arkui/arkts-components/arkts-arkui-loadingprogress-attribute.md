@@ -31,9 +31,9 @@ Sets the foreground color for the **LoadingProgress** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Foreground color of the **LoadingProgress** component.Default value:API version 10 or earlier: **'#99666666'**API version 11 or later: **'#ff666666' |
 
 ## contentModifier
 
@@ -53,9 +53,9 @@ Creates a content modifier.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[LoadingProgressConfiguration](arkts-arkui-loadingprogressconfiguration-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[LoadingProgressConfiguration](arkts-arkui-loadingprogressconfiguration-i.md)&gt; | Yes | Content modifier to apply to the current component.   **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## enableLoading
 
@@ -75,6 +75,6 @@ Sets whether to display the LoadingProgress animation. The component still takes
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to show the loading animation.Default value: **true**. **true**: Show the loading animation. **false**: Do not show the loading animation. |

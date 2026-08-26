@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from 'kits/@kit.CoreFileKit';
+import fileShare from '@kit.CoreFileKit';
 ```
 
 ## getSharedDirectoryInfo
@@ -26,16 +26,37 @@ Gets the shared sandbox directories of applications
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[SharedDirectoryInfo](arkts-corefile-fileshare-shareddirectoryinfo-i-sys.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[SharedDirectoryInfo](arkts-corefile-fileshare-shareddirectoryinfo-i-sys.md)&gt;&gt; | Returns the shared sandbox directories on paths. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 13900001 |
-| 13900011 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 13900001 | Operation not permitted. |
+| 13900011 | Out of memory. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+async function getSharedDirectoryInfo() {
+  try {
+    fileShare.getSharedDirectoryInfo().then((infos: Array<fileShare.SharedDirectoryInfo>) => {
+      infos.forEach((info: fileShare.SharedDirectoryInfo) => {
+        console.info(`bundleName=${info.bundleName} path=${info.path} mode=${info.permissionMode}`);
+      });
+    }).catch((err: BusinessError) => {
+      console.error(`getSharedDirectoryInfo err: ${JSON.stringify(err)}`);
+    });
+  } catch (error) {
+    console.error(`getSharedDirectoryInfo error, Code: ${error.code}, message: ${error.message}`);
+  }
+}
+```

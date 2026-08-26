@@ -2,7 +2,8 @@
 
 XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容长度时，推荐使用该类。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 使用该类构造的对象无需自行创建ArrayBuffer，程序动态扩容，可以不断添加XML元素，最终序列化结果字符串长度上限为100000。
 
 **起始版本：** 20
@@ -12,7 +13,6 @@ XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容
 ## 导入模块
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## addEmptyElement
@@ -23,7 +23,8 @@ addEmptyElement(name: string): void
 
 写入一个空元素。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
 
 **起始版本：** 20
@@ -34,16 +35,40 @@ addEmptyElement(name: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 该空元素的元素名，所组成的XML长度不能超过100000。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.addEmptyElement("d");
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <d/>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.addEmptyElement("d");
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <d/>
+```
 
 ## constructor
 
@@ -61,15 +86,21 @@ constructor(encoding?: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| encoding | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| encoding | string | 否 | 编码格式，默认'utf-8'（目前仅支持'utf-8'）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200066](../errorcode-utils.md#10200066-编码格式错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200066](../errorcode-utils.md#10200066-编码格式错误) | 编码格式错误，目前仅支持utf-8。 |
+
+**示例**
+
+```TypeScript
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+```
 
 ## endElement
 
@@ -79,7 +110,8 @@ endElement(): void
 
 写入元素结束标记。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 调用该接口前必须先调用[startElement](arkts-arkts-xml-xmlserializer-c.md#startelement)接口写入元素开始标记。
 
 **起始版本：** 20
@@ -90,10 +122,39 @@ endElement(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200065](../errorcode-utils.md#10200065-元素开始标记与元素结束标记未匹配使用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200065](../errorcode-utils.md#10200065-元素开始标记与元素结束标记未匹配使用) | startElement和endElement不匹配。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.startElement("note");
+thatSer.setText("Happy");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result);
+// <note>Happy</note>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.startElement("note");
+serializer.setText("Happy");
+serializer.endElement();
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note>Happy</note>
+```
 
 ## getOutput
 
@@ -111,9 +172,24 @@ getOutput(): ArrayBuffer
 
 **返回值：**
 
-| 类型 |
-| --- |
-| ArrayBuffer |
+| 类型 | 说明 |
+| --- | --- |
+| ArrayBuffer | 用于接收写入XML信息的ArrayBuffer内存。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.startElement("note");
+serializer.setText("Happy");
+serializer.endElement();
+let arr = serializer.getOutput();
+let uint8 = new Uint8Array(arr);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note>Happy</note>
+```
 
 ## setAttributes
 
@@ -123,7 +199,8 @@ setAttributes(name: string, value: string): void
 
 写入元素的属性和属性值。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的属性名称以及添加多个同名的属性名称。
 
 **起始版本：** 20
@@ -134,18 +211,46 @@ setAttributes(name: string, value: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 属性名。所组成的XML长度不能超过100000，不可为空字符。 |
+| value | string | 是 | 属性值。所组成的XML长度不能超过100000字符。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) | xml位置非法。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.startElement("note");
+thatSer.setAttributes("importance", "high");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note importance="high"/>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.startElement("note");
+serializer.setAttributes("importance", "high");
+serializer.endElement();
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note importance="high"/>
+```
 
 ## setCdata
 
@@ -155,7 +260,8 @@ setCdata(text: string): void
 
 提供在CDATA标签中添加数据的能力，所生成的CDATA标签结构为：`&lt;![CDATA[` + 所添加的数据 + `]]&gt;`。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许在CDATA标签中添加包含"\]\]\&gt;"字符串的数据。
 
 **起始版本：** 20
@@ -166,16 +272,29 @@ setCdata(text: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | CDATA标签中的数据内容。所组成的XML长度不能超过100000。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.setCdata('root SYSTEM')
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <![CDATA[root SYSTEM]]>
+```
 
 ## setComment
 
@@ -193,16 +312,40 @@ setComment(text: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 当前元素的注释内容。所组成的XML长度不能超过100000，不可为空字符。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.setComment("Hello, World!");
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <!--Hello, World!-->
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.setComment("Hello, World!");
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <!--Hello, World!-->
+```
 
 ## setDeclaration
 
@@ -220,10 +363,35 @@ setDeclaration(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) | xml位置非法。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.setDeclaration();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result);
+// <?xml version="1.0" encoding="utf-8"?>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.setDeclaration();
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <?xml version="1.0" encoding="utf-8"?>
+```
 
 ## setDocType
 
@@ -241,16 +409,40 @@ setDocType(text: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 文档类型声明的内容。所组成的XML长度不能超过100000。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.setDocType('root SYSTEM "http://www.test.org/test.dtd"');
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <!DOCTYPE root SYSTEM "http://www.test.org/test.dtd">
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.setDocType('root SYSTEM "http://www.test.org/test.dtd"');
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <!DOCTYPE root SYSTEM "http://www.test.org/test.dtd">
+```
 
 ## setNamespace
 
@@ -260,9 +452,11 @@ setNamespace(prefix: string, namespace: string): void
 
 写入当前元素标记的命名空间。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该接口应在[startElement](#startelement)之前调用，为即将开启的元素设置命名空间前缀。调用顺序：
-> 先调用setNamespace设置命名空间，再调用startElement开启元素。&gt;
+> 先调用setNamespace设置命名空间，再调用startElement开启元素。
+> 
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的前缀以及对同一个元素设置多个命名空间。
 
 **起始版本：** 20
@@ -273,17 +467,46 @@ setNamespace(prefix: string, namespace: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| prefix | string | 是 |
-| namespace | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| prefix | string | 是 | 当前元素及其子元素的前缀。所组成的XML长度不能超过100000，不可为空字符串。 |
+| namespace | string | 是 | 当前元素及其子元素的命名空间。所组成的XML长度不能超过100000，不可为空字符串。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.setNamespace("h", "http://www.w3.org/TR/html4/");
+thatSer.startElement("note");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result);
+// <h:note xmlns:h="http://www.w3.org/TR/html4/"/>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.setNamespace("h", "http://www.w3.org/TR/html4/");
+serializer.startElement("note");
+serializer.endElement();
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <h:note xmlns:h="http://www.w3.org/TR/html4/"/>
+```
 
 ## setText
 
@@ -293,7 +516,8 @@ setText(text: string): void
 
 写入标签值。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该接口必须在[startElement](#startelement)之后、
 > [endElement](#endelement)之前调用，用于设置当前元素的文本内容。
 
@@ -305,16 +529,46 @@ setText(text: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 标签值。所组成的XML长度不能超过100000，不可为空字符。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.startElement("note");
+thatSer.setAttributes("importance", "high");
+thatSer.setText("Happy");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note importance="high">Happy</note>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.startElement("note");
+serializer.setAttributes("importance", "high");
+serializer.setText("Happy");
+serializer.endElement();
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note importance="high">Happy</note>
+```
 
 ## startElement
 
@@ -324,8 +578,10 @@ startElement(name: string): void
 
 写入元素开始标记。
 
-> **说明：**&gt;
-> - 调用该接口后须调用[endElement](arkts-arkts-xml-xmlserializer-c.md#endelement)写入元素结束标记，以确保节点正确闭合。&gt;
+> **说明：**
+> 
+> - 调用该接口后须调用[endElement](arkts-arkts-xml-xmlserializer-c.md#endelement)写入元素结束标记，以确保节点正确闭合。
+> 
 > - 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
 
 **起始版本：** 20
@@ -336,13 +592,42 @@ startElement(name: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 当前元素的元素名。所组成的XML长度不能超过100000，不可为空字符。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.startElement("note");
+thatSer.setText("Happy");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result);
+// <note>Happy</note>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.startElement("note");
+serializer.setText("Happy");
+serializer.endElement();
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note>Happy</note>
+```

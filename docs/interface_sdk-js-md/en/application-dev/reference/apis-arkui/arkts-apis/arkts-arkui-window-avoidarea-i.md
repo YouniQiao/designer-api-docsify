@@ -2,8 +2,10 @@
 
 Describes the area to avoid for window content.When adapting window content for an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout), you should adjust the content based on the corresponding **AvoidArea** specified by [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md).In the avoid area, the application window content is obscured and does not respond to user click events.
 
-> **NOTE：**&gt;
-> The figure below shows the meanings of **leftRect**, **topRect**, **rightRect**, and **bottomRect**.&gt;
+> **NOTE：**
+> 
+> The figure below shows the meanings of **leftRect**, **topRect**, **rightRect**, and **bottomRect**.
+> 
 > 
 
 **Since:** 7
@@ -13,7 +15,9 @@ Describes the area to avoid for window content.When adapting window content for 
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import floatingBall from '@kit.ArkUI.floatingBall';
+import floatView from '@kit.ArkUI.floatView';
+import window from '@kit.ArkUI';
 ```
 
 ## bottomRect

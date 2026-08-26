@@ -14,6 +14,6 @@ declare type ArcSliderChangeHandler = (progress: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| progress | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| progress | number | 是 | Slider当前的进度值。 |

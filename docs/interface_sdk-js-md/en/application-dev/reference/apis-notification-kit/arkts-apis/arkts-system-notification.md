@@ -3,20 +3,20 @@
 ## Modules to Import
 
 ```TypeScript
-import { Notification, ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit';
+import Notification, { ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Notification](arkts-notification-system-notification-notification-c.md) |
+| Name | Description |
+| --- | --- |
+| [Notification](arkts-notification-system-notification-notification-c.md) | Manages notifications. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ActionResult](arkts-notification-system-notification-actionresult-i.md) |
-| [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [ActionResult](arkts-notification-system-notification-actionresult-i.md) |  |
+| [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md) |  |

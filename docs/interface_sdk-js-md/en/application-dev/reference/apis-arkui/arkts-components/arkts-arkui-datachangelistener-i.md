@@ -2,7 +2,8 @@
 
 Listener for data changes.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > In APIs of **DataChangeListener** other than **onDatasetChange**, if the value of **index** is negative, the value
 > is treated as **0** by default. In **onDatasetChange**, if the specified index in a **DataOperation** is outside
 > the data source index range, the corresponding **DataOperation** does not take effect. (In **DataAddOperation**,
@@ -33,9 +34,9 @@ Invoked when data is added to the position indicated by the specified index.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the position where data is added. The value range is [0, data source length - 1]. If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataAdded
 
@@ -45,7 +46,8 @@ onDataAdded(index: number): void
 
 Invoked when data is added to the position indicated by the specified index.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 7 and deprecated since API version 8. Use
 > [onDataAdd](#ondataadd) instead.
 
@@ -59,9 +61,9 @@ Invoked when data is added to the position indicated by the specified index.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the position where data is added. The value range is [0, data source length - 1]. If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataChange
 
@@ -79,9 +81,9 @@ Invoked when data in the position indicated by the specified index is changed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the position where data is changed. The value range is [0, data source length - 1]. If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataChanged
 
@@ -91,7 +93,8 @@ onDataChanged(index: number): void
 
 Invoked when data in the position indicated by the specified index is changed.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 7 and deprecated since API version 8. Use
 > [onDataChange](#ondatachange) instead.
 
@@ -105,9 +108,9 @@ Invoked when data in the position indicated by the specified index is changed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Listener for data changes. The value range is [0, data source length - 1]. If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataDelete
 
@@ -117,7 +120,8 @@ onDataDelete(index: number): void
 
 Invoked when data is deleted from the position indicated by the specified index. LazyForEach will update the displayed content accordingly.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Before **onDataDelete** is called, ensure that the corresponding data in **dataSource** has been deleted.
 > Otherwise, undefined behavior will occur during page rendering.
 
@@ -129,9 +133,9 @@ Invoked when data is deleted from the position indicated by the specified index.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the position where data is deleted. The value range is [0, data source length - 1]. If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataDeleted
 
@@ -141,7 +145,8 @@ onDataDeleted(index: number): void
 
 Invoked when data is deleted from the position indicated by the specified index. LazyForEach will update the displayed content accordingly.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 7 and deprecated since API version 8. Use
 > [onDataDelete](#ondatadelete) instead.
 
@@ -155,9 +160,9 @@ Invoked when data is deleted from the position indicated by the specified index.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the position where data is deleted. The value range is [0, data source length - 1]. If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataMove
 
@@ -167,7 +172,8 @@ onDataMove(from: number, to: number): void
 
 Invoked when data is moved, that is, when data is swapped between the **from** and **to** positions.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding data
 > must be called.
 
@@ -179,10 +185,10 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| from | number | Yes |
-| to | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | number | Yes | Original position of data. The value range is [0, data source length - 1]. If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| to | number | Yes | Target position of data. The value range is [0, data source length - 1]. If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataMoved
 
@@ -192,9 +198,11 @@ onDataMoved(from: number, to: number): void
 
 Invoked when data is moved, that is, when data is swapped between the **from** and **to** positions.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This API is supported since API version 7 and deprecated since API version 8. Use
-> [onDataMove](#ondatamove) instead.&gt;
+> [onDataMove](#ondatamove) instead.
+> 
 > - The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding
 > data must be called.
 
@@ -208,10 +216,10 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| from | number | Yes |
-| to | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | number | Yes | Original position of data. The value range is [0, data source length - 1]. If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| to | number | Yes | Target position of data. The value range is [0, data source length - 1]. If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataReloaded
 
@@ -245,9 +253,9 @@ Invoked when all data is reloaded. When \@Reuseable or \@ReuseableV2 is used and
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [reuseImmediately](arkts-arkui-datareloadoperation-i.md) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| reuseImmediately | boolean | Yes | Whether to enable the feature that reuse old child components when \@Reuseable or \@ReuseableV2 is used and recycle pool is empty.     **true**: Enable the feature.    **false**: Disable the feature. |
 
 ## onDatasetChange
 
@@ -257,7 +265,8 @@ onDatasetChange(dataOperations: DataOperation[]): void
 
 Invoked when data is processed in batches to notify the component of refreshing.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API cannot be used together with other data operation APIs of **DataChangeListener**. For example, in the
 > same **LazyForEach**, if you have called **onDataAdd**, do not call **onDatasetChange**; if you have called
 > **onDatasetChange**, do not call **onDataAdd** or other data operation APIs. Different **LazyForEach** instances
@@ -275,6 +284,6 @@ Invoked when data is processed in batches to notify the component of refreshing.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataOperations | [DataOperation](arkts-arkui-dataoperation-t.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataOperations | [DataOperation](arkts-arkui-dataoperation-t.md)[] | Yes | Array of data operations performed. |

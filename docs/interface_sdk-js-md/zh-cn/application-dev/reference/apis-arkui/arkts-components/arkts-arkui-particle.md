@@ -28,24 +28,24 @@ create a particle array.Anonymous Object Rectification.
 
 **参数:**
 
-| 参数名 | [类型](#类型) | 必填 |
-| --- | --- | --- |
-| [particles](arkts-arkui-particles-i.md) | [Particles](arkts-arkui-particles-i.md)&lt;PARTICLE, COLOR_UPDATER, OPACITY_UPDATER, SCALE_UPDATER, ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER, SPIN_UPDATER&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| particles | [Particles](arkts-arkui-particles-i.md)&lt;PARTICLE, COLOR_UPDATER, OPACITY_UPDATER, SCALE_UPDATER, ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER, SPIN_UPDATER&gt; | 是 | Array of particles. |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [PositionT](arkts-arkui-positiont-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [PositionT](arkts-arkui-positiont-t.md) | Defines the PositionT type. |
 
 ### 枚举
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |

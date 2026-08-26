@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## generateRandomBinaryUUID
@@ -22,12 +23,20 @@ Uses a secure random number generator to generate a random universally unique id
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| entropyCache | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| entropyCache | boolean | No | Whether to use a cached UUID. The value **true** means to use a cached UUID, and **false** means the opposite. The default value is **true**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Uint8Array |
+| Type | Description |
+| --- | --- |
+| Uint8Array | A Uint8Array value representing the UUID generated. |
+
+**Examples**
+
+```TypeScript
+let uuid = util.generateRandomBinaryUUID(true);
+console.info(JSON.stringify(uuid));
+// Output a random UUID.
+```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import print from '@kit.BasicServicesKit';
 ```
 
 ## connectPrinterByIpAndPpd
@@ -26,22 +26,22 @@ function connectPrinterByIpAndPpd(printerIp: string, protocol: string, ppdName: 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| printerIp | string | 是 |
-| protocol | string | 是 |
-| [ppdName](arkts-basicservices-print-ppdinfo-i.md) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| printerIp | string | 是 | 打印机IP。 |
+| protocol | string | 是 | 协议类型。 |
+| ppdName | string | 是 | ppd名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | the promise returned by the function. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [13100005](../errorcode-print.md#13100005-无效的打印机) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [13100005](../errorcode-print.md#13100005-无效的打印机) | Invalid printer IP. |

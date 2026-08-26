@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { screenLockFileManager } from 'kits/@kit.AbilityKit';
+import screenLockFileManager from '@kit.AbilityKit';
 ```
 
 ## releaseAccess
@@ -20,15 +20,35 @@ function releaseAccess(): ReleaseStatus
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ReleaseStatus](arkts-ability-screenlockfilemanager-releasestatus-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ReleaseStatus](arkts-ability-screenlockfilemanager-releasestatus-e.md) | 锁屏下敏感数据访问权限的释放状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [29300002](../errorcode-screenLockFileManager.md#29300002-系统服务工作异常) |
-| [29300003](../errorcode-screenLockFileManager.md#29300003-应用未开启锁屏敏感数据保护功能) |
-| [29300005](../errorcode-screenLockFileManager.md#29300005-未申请锁屏敏感数据访问权限) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | The specified SystemCapability name was not found. |
+| [29300002](../errorcode-screenLockFileManager.md#29300002-系统服务工作异常) | The system ability works abnormally. |
+| [29300003](../errorcode-screenLockFileManager.md#29300003-应用未开启锁屏敏感数据保护功能) | The application is not enabled the data protection under lock screen. |
+| [29300005](../errorcode-screenLockFileManager.md#29300005-未申请锁屏敏感数据访问权限) | File access was not acquired. |
+
+**示例**
+
+```TypeScript
+// 释放锁屏下应用敏感数据访问权限
+import { screenLockFileManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+    // 释放访问权限
+    let releaseStatus = screenLockFileManager.releaseAccess();
+    if (releaseStatus === screenLockFileManager.ReleaseStatus.RELEASE_GRANTED) {
+        hilog.info(0x0000, 'testTag', 'releaseAccess successfully.');
+    }
+} catch (err) {
+    let message = (err as BusinessError).message;
+    hilog.error(0x0000, 'testTag', 'releaseAccess failed: %{public}s', message);
+}
+```

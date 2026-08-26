@@ -24,9 +24,19 @@ getAtqa(): number[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number[] |
+| 类型 | 说明 |
+| --- | --- |
+| number[] | NfcA 标签的Atqa值，每个number十六进制表示，范围是0x00~0xFF。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 nfcA
+let atqa : number[] = nfcA.getAtqa();
+console.info("nfcA atqa: " + atqa);
+```
 
 ## getSak
 
@@ -44,6 +54,16 @@ getSak(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | NfcA 标签的SAK值，十六进制表示，范围是0x00~0xFF。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 nfcA
+let sak : number = nfcA.getSak();
+console.info("nfcA sak: " + sak);
+```

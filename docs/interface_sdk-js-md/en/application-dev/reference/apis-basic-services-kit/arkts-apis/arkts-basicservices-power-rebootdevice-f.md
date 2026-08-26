@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import power from '@kit.BasicServicesKit';
 ```
 
 ## rebootDevice
@@ -26,6 +26,12 @@ Restarts the system.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| reason | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| reason | string | Yes | Indicates the restart reason. For example, "updater" indicates entering the updater mode after the restart. If the parameter is not specified, the system enters the normal mode after the restart. |
+
+**Examples**
+
+```TypeScript
+power.rebootDevice('reboot_test');
+```

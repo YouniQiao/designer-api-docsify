@@ -23,12 +23,20 @@ declare function opendirSync(path: string): Dir
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 待打开文件目录的应用沙箱路径。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Dir](arkts-corefile-fileio-dir-depr-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Dir](arkts-corefile-fileio-dir-depr-i.md) | 返回Dir对象。 |
+
+**示例**
+
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+// example code in Dir struct
+// use read/readSync/close
+```

@@ -3,7 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import usb from '@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKitManager';
+import serialManager from '@kit.BasicServicesKitManager.serial';
 ```
 
 ## usbFunctionsFromString
@@ -26,12 +28,19 @@ function usbFunctionsFromString(funcs: string): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| funcs | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| funcs | string | 是 | 字符串形式的功能列表。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 转化后的功能列表对应的数字掩码。 |
+
+**示例**
+
+```TypeScript
+let funcs = "acm";
+let ret = usb.usbFunctionsFromString(funcs);
+```

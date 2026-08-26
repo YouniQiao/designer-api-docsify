@@ -14,6 +14,6 @@ type OnSslErrorEventCallback = (sslErrorEvent: SslErrorEvent) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sslErrorEvent | [SslErrorEvent](arkts-arkweb-sslerrorevent-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sslErrorEvent | [SslErrorEvent](arkts-arkweb-sslerrorevent-i.md) | 是 | 用户加载资源时发生SSL错误时传递的详细信息。 |

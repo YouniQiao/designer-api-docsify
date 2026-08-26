@@ -9,7 +9,7 @@ ImageSource类，用于获取图片相关信息。在调用ImageSource的方法�
 ## 导入模块
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import sendableImage from '@kit.ImageKit';
 ```
 
 ## createPixelMap
@@ -30,15 +30,32 @@ createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | image.DecodingOptions | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | image.DecodingOptions | 否 | 解码参数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;PixelMap & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;PixelMap & gt; | Promise实例，用于异步返回创建结果。 |
+
+**示例**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function CreatePixelMap(context : Context) {
+  const path: string = context.cacheDir + "/test.jpg";
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
+  sendableImageSourceObj.createPixelMap().then((pixelMap: sendableImage.PixelMap) => {
+    console.info('Succeeded in creating pixelMap object through image decoding parameters.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create pixelMap object through image decoding parameters. code ${error.code}, message is ${error.message}`);
+  })
+}
+```
 
 ## release
 
@@ -54,6 +71,74 @@ release(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise实例，异步返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function release(pixelMap: sendableImage.PixelMap) {
+  pixelMap.release().then(() => {
+    console.info('Succeeded in releasing the PixelMap object.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(context : Context) {
+  const path: string = context.cacheDir + "/test.jpg";
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
+  sendableImageSourceObj.release().then(() => {
+    console.info('Succeeded in releasing the image source instance.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function Release() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  let img = await receiver.readNextImage();
+  img.release().then(() => {
+    console.info('Succeeded in releasing an image.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release an image. Code: ${error.code}, message: ${error.message}.`);
+  })
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function Release() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  receiver.release().then(() => {
+    console.info('Succeeded in releasing an image receiver.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release an image receiver. Code: ${error.code}, message: ${error.message}.`);
+  })
+}
+```

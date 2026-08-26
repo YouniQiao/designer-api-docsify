@@ -9,7 +9,9 @@ Defines the return result of intent execution. The [generic type](../../../quick
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from 'kits/@kit.AbilityKit';
+import insightIntent from '@kit.AbilityKit';
+import insightIntentDriver from '@kit.AbilityKitDriver';
+import insightIntentProvider from '@kit.AbilityKitProvider';
 ```
 
 ## code

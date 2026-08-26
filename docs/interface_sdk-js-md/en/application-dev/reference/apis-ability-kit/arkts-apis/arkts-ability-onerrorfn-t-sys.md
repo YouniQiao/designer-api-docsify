@@ -16,8 +16,21 @@ Defines a OnError function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| code | number | Yes |
-| name | string | Yes |
-| message | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| code | number | Yes | The code returned if the UIAbility or UIExtensionAbility failed to start. |
+| name | string | Yes | The name returned if the UIAbility or UIExtensionAbility failed to start. |
+| message | string | Yes | The message returned if the UIAbility or UIExtensionAbility failed to start. |
+
+**Examples**
+
+```TypeScript
+let callback: verticalPanelManager.PanelStartCallback = {
+  onError: (code: number, name: string, message: string): void => {
+    console.info(`startVerticalPanel onError code ${code} name: ${name} message: ${message}`);
+  },
+  onResult: (result: common.AbilityResult):void => {
+    console.info(`startVerticalPanel onResult result ${JSON.stringify(result)}`);
+  },
+}
+```

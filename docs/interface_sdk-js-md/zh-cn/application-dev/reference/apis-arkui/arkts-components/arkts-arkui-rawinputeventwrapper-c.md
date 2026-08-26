@@ -2,7 +2,8 @@
 
 原始输入事件包装器类。提供统一的接口来访问不同类型的输入事件，确保类型安全和向后兼容性。此类封装了原始的MouseEvent、TouchEvent或KeyEvent对象，并通过类型安全的方法访问。此类为抽象类，开发者无法自行创建实例。系统会在触发输入事件监听器时自动创建实例并传递回调函数。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 由于监听器在事件派发给具体组件之前执行，事件中的一些字段将无法提供有效值：如触发对象[target](arkts-arkui-eventtarget-i.md)、相对于组件的坐标
 > [x](arkts-arkui-mouseevent-i.md#x)和[y](arkts-arkui-mouseevent-i.md#y)、[getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getcurrentlocalposition)和
 > [stopPropagation](arkts-arkui-touchevent-i.md#stoppropagation)方法、TouchEvent的[preventDefault](arkts-arkui-touchevent-i.md#preventdefault)和
@@ -36,9 +37,9 @@ asKeyEvent(): KeyEvent | null
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [KeyEvent](arkts-arkui-keyevent-i.md) \| null |
+| 类型 | 说明 |
+| --- | --- |
+| [KeyEvent](arkts-arkui-keyevent-i.md) \| null | 获取按键事件，如果是触摸事件则返回事件对象，否则返回null。 |
 
 ## asMouseEvent
 
@@ -58,9 +59,9 @@ asMouseEvent(): MouseEvent | null
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MouseEvent](arkts-arkui-mouseevent-i.md) \| null |
+| 类型 | 说明 |
+| --- | --- |
+| [MouseEvent](arkts-arkui-mouseevent-i.md) \| null | 获取鼠标事件，如果是鼠标事件则返回事件对象，否则返回null。 |
 
 ## asTouchEvent
 
@@ -80,9 +81,9 @@ asTouchEvent(): TouchEvent | null
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TouchEvent](arkts-arkui-touchevent-i.md) \| null |
+| 类型 | 说明 |
+| --- | --- |
+| [TouchEvent](arkts-arkui-touchevent-i.md) \| null | 获取触摸事件，如果是触摸事件则返回事件对象，否则返回null。 |
 
 ## isKeyEvent
 
@@ -102,9 +103,9 @@ isKeyEvent(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 判断是否为按键事件，如果是按键事件则返回true，否则返回false。 |
 
 ## isMouseEvent
 
@@ -124,9 +125,9 @@ isMouseEvent(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 判断是否为鼠标事件，如果是鼠标事件则返回true，否则返回false。 |
 
 ## isTouchEvent
 
@@ -146,6 +147,6 @@ isTouchEvent(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 判断是否为触摸事件，如果是触摸事件则返回true，否则返回false。 |

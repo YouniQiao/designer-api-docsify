@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## grantPublicCertificate
@@ -26,23 +25,44 @@ function grantPublicCertificate(keyUri: string, clientAppUid: number) : Promise<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| keyUri | string | 是 |
-| clientAppUid | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keyUri | string | 是 | 表示用户公共凭据的唯一标识符。 |
+| clientAppUid | number | 是 | 表示应用UID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise对象，返回授予应用使用用户公共凭据权限的结果，返回值为 [CMResult]{ |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17500001](../errorcode-certManager.md#17500001-内部错误) |
-| [17500002](../errorcode-certManager.md#17500002-证书不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. Possible causes: the URI is null or the URI format is wrong. |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;  2. Memory operation error; 3. File operation error. Please try again. |
+| [17500002](../errorcode-certManager.md#17500002-证书不存在) | Indicates that the certificate does not exist. |
+
+**示例**
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let keyUri: string = 'test'; /* 用户公共凭据的唯一标识符 */
+let clientAppUid: number = 1001; /* 应用UID */
+try {
+  certificateManager.grantPublicCertificate(keyUri, clientAppUid).then((cmResult: certificateManager.CMResult) => {
+    let uri: string = (cmResult?.uri == undefined) ? '' : cmResult.uri;
+    console.info('Succeeded in granting public certificate.');
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to grant public certificate. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (error) {
+  console.error(`Failed to grant public certificate. Code: ${error.code}, message: ${error.message}`);
+}
+```

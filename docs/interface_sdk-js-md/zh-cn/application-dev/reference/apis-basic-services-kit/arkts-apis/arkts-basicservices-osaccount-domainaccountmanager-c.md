@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## updateAccountInfo
@@ -28,24 +28,45 @@ static updateAccountInfo(oldAccountInfo: DomainAccountInfo, newAccountInfo: Doma
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| oldAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
-| newAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| oldAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 表示旧域账号信息。 |
+| newAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 表示新域账号信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300004](../errorcode-account.md#12300004-账号已存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | The new account info is invalid. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | The old account not found. |
+| [12300004](../errorcode-account.md#12300004-账号已存在) | The new account already exists. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let oldDomainInfo: osAccount.DomainAccountInfo =
+  {domain: 'testDomain', accountName: 'oldtestAccountName'};
+let newDomainInfo: osAccount.DomainAccountInfo =
+  {domain: 'testDomain', accountName: 'newtestAccountName'};
+try {
+  osAccount.DomainAccountManager.updateAccountInfo(oldDomainInfo, newDomainInfo).then(() => {
+    console.info('updateAccountInfo, success');
+  }).catch((err: BusinessError) => {
+    console.error('updateAccountInfo err: ' + err);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`updateAccountInfo exception: code is ${err.code}, message is ${err.message}`);
+}
+```

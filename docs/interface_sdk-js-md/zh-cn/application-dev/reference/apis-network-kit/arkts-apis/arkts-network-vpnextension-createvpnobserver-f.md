@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpnExtension } from 'kits/@kit.NetworkKit';
+import vpnExtension from '@kit.NetworkKit';
 ```
 
 ## createVpnObserver
@@ -22,6 +22,14 @@ function createVpnObserver(): VpnObserver
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) | 返回一个VPN观察者对象。 |
+
+**示例**
+
+```TypeScript
+import { vpnExtension } from '@kit.NetworkKit';
+
+let vpnObserver: vpnExtension.VpnObserver = vpnExtension.createVpnObserver();
+```

@@ -31,9 +31,9 @@ closeEffect(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 关闭数据占比图表旋转动效和投影效果。 默认值：false，表示开启动效和投影；true表示关闭动效和投影。 |
 
 ## contentModifier
 
@@ -53,9 +53,9 @@ contentModifier(modifier: ContentModifier<DataPanelConfiguration>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[DataPanelConfiguration](arkts-arkui-datapanelconfiguration-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[DataPanelConfiguration](arkts-arkui-datapanelconfiguration-i.md)&gt; | 是 | 在DataPanel组件上，定制内容区的方法，设置后将使用开发者自定义的内容替换DataPanel原有显示 内容。 modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## strokeWidth
 
@@ -75,9 +75,9 @@ strokeWidth(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 圆环粗细。 默认值：24 单位：vp 设置字符串类型参数时，如果不指定单位，默认单位为px，例如'10'，等同于'10px'。    **说明：** 数据面板的类型为DataPanelType.Line时该属性不生效。 设置小于0的值时，按默认值显示。 当value大于圆环半径时，圆环粗细会自动设置为圆环半径的12%。如果value过大，圆环可能会消失。 |
 
 ## trackBackgroundColor
 
@@ -97,9 +97,9 @@ trackBackgroundColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 底板颜色。 默认值：'#08182431'，格式为十六进制ARGB值，前两位代表透明度。 |
 
 ## trackShadow
 
@@ -119,9 +119,9 @@ trackShadow(value: DataPanelShadowOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [DataPanelShadowOptions](arkts-arkui-datapanelshadowoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [DataPanelShadowOptions](arkts-arkui-datapanelshadowoptions-i.md) | 是 | 投影样式。    **说明：** 设置为null时，不开启投影。 |
 
 ## valueColors
 
@@ -141,6 +141,6 @@ valueColors(value: Array<ResourceColor | LinearGradient>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md)&gt; | 是 | 各数据段颜色，ResourceColor为纯色，LinearGradient为渐变色。默认值为渐变色，九段数据的默认 颜色为：[{ color: '#F7CE00', offset: 0 }, { color: '#F99B11', offset: 1 }]、 [{ color: '#F76223', offset: 0 }, { color: '#F2400A', offset: 1 }]、 [{ color: '#F772AC', offset: 0 }, { color: '#E65392', offset: 1 }]、 [{ color: '#A575EB', offset: 0 }, { color: '#A12DF7', offset: 1 }]、 [{ color: '#7B79F7', offset: 0 }, { color: '#4B48F7', offset: 1 }]、 [{ color: '#4B8AF3', offset: 0 }, { color: '#007DFF', offset: 1 }]、 [{ color: '#73C1E6', offset: 0 }, { color: '#4FB4E3', offset: 1 }]、 [{ color: '#A5D61D', offset: 0 }, { color: '#69D14F', offset: 1 }]、 [{ color: '#A2A2B0', offset: 0 }, { color: '#8E8E93', offset: 1 }]。    **说明：** 若设置的颜色个数少于数据段个数，剩余数据段会自动匹配默认颜色列表里对应顺序的颜色；若设置的颜色个数多于数据段个数，则显示的颜色个数与数据段个数一致，多余颜色将被忽略。 |

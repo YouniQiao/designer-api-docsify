@@ -29,15 +29,15 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 否 | 被监听的状态变量路径名。未指定时默认使用变化路径数组dirty中的第一个路径。从API版本26.0.0开始，默认使用dirty中第一个非通配符路径。 当指定路径为通配符路径时，返回undefined。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; \| undefined |  |
 
 ## dirty
 

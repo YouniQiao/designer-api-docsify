@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hash } from 'kits/@kit.CoreFileKit';
+import hash from '@kit.CoreFileKit';
 ```
 
 ## createHash
@@ -20,20 +20,44 @@ Creates a **HashStream** instance, which can be used to generate a message diges
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| algorithm | string | Yes | Algorithm used to calculate the hash value. The value can be **md5**, **sha1**, or **sha256**. **sha256** is recommended for security purposes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [HashStream](arkts-corefile-hash-hashstream-c.md) |
+| Type | Description |
+| --- | --- |
+| [HashStream](arkts-corefile-hash-hashstream-c.md) | HashStream** instance created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 13900020 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
+| 13900020 | Invalid argument |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+// pages/xxx.ets
+import { fileIo } from '@kit.CoreFileKit';
+
+function hashFileWithStream() {
+  const filePath = pathDir + "/test.txt";
+  // Create a readable stream.
+  const rs = fileIo.createReadStream(filePath);
+  // Create a hash stream.
+  const hs = hash.createHash('sha256');
+  rs.on('data', (emitData) => {
+    const data = emitData?.data;
+    hs.update(new Uint8Array(data?.split('').map((x: string) => x.charCodeAt(0))).buffer);
+  });
+  rs.on('close', async () => {
+    const hashResult = hs.digest();
+    const fileHash = await hash.hash(filePath, 'sha256');
+    console.info(`hashResult: ${hashResult}, fileHash: ${fileHash}`);
+  });
+}
+```

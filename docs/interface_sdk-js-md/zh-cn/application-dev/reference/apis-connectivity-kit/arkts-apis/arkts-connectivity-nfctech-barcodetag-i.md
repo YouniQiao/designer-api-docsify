@@ -26,14 +26,14 @@ getBarcode(): Promise<ArrayBuffer>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;ArrayBuffer & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;ArrayBuffer & gt; | Promise对象。返回BarCode类型的 tag。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed. |

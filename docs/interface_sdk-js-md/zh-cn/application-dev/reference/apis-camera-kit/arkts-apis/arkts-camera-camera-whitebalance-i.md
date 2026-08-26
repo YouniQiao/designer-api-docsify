@@ -11,7 +11,6 @@ WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getColorTint
@@ -32,15 +31,32 @@ getColorTint(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回当前白平衡色调调节值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getColorTint(session: camera.PhotoSession | camera.VideoSession): number {
+  let colorTint: number = 0;
+  try {
+    colorTint = session.getColorTint();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getColorTint call failed. error code: ${err.code}`);
+  }
+  return colorTint;
+}
+```
 
 ## getWhiteBalance
 
@@ -58,16 +74,33 @@ getWhiteBalance(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回当前白平衡值，单位为K（Kelvin，温度单位）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getWhiteBalance(session: camera.PhotoSession | camera.VideoSession): number {
+  let whiteBalance: number = 0;
+  try {
+    whiteBalance = session.getWhiteBalance();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getWhiteBalance call failed. error code: ${err.code}`);
+  }
+  return whiteBalance;
+}
+```
 
 ## getWhiteBalanceMode
 
@@ -85,16 +118,33 @@ getWhiteBalanceMode(): WhiteBalanceMode
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | 获取当前白平衡模式。若接口调用失败，返回undefined。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getWhiteBalanceMode(session: camera.PhotoSession | camera.VideoSession): camera.WhiteBalanceMode | undefined {
+  let whiteBalanceMode: camera.WhiteBalanceMode | undefined = undefined;
+  try {
+    whiteBalanceMode = session.getWhiteBalanceMode();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getWhiteBalanceMode call failed. error code: ${err.code}`);
+  }
+  return whiteBalanceMode;
+}
+```
 
 ## setColorTint
 
@@ -114,15 +164,31 @@ setColorTint(colorTint: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| colorTint | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| colorTint | number | 是 | 设置手动白平衡色调调节值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setColorTint(session: camera.PhotoSession | camera.VideoSession): void {
+  let colorTint: number = 0;
+  try {
+    session.setColorTint(colorTint);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setColorTint call failed. error code: ${err.code}`);
+  }
+}
+```
 
 ## setWhiteBalance
 
@@ -140,17 +206,33 @@ setWhiteBalance(whiteBalance: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [whiteBalance](../../apis-image-kit/arkts-apis/arkts-image-image-exifmetadata-c.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| whiteBalance | number | 是 | 设置手动白平衡值，单位为K（Kelvin，温度单位）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setWhiteBalance(session: camera.PhotoSession | camera.VideoSession): void {
+  try {
+    let whiteBalance: number = 1000;
+    session.setWhiteBalance(whiteBalance);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setWhiteBalance call failed. error code: ${err.code}`);
+  }
+}
+```
 
 ## setWhiteBalanceMode
 
@@ -168,14 +250,29 @@ setWhiteBalanceMode(mode: WhiteBalanceMode): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | 是 | 白平衡模式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setWhiteBalanceMode(session: camera.PhotoSession | camera.VideoSession): void {
+  try {
+    session.setWhiteBalanceMode(camera.WhiteBalanceMode.DAYLIGHT);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setWhiteBalanceMode call failed. error code: ${err.code}`);
+  }
+}
+```

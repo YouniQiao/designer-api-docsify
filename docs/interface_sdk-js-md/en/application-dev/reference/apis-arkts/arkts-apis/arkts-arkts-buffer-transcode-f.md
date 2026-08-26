@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## transcode
@@ -22,14 +21,24 @@ Transcodes a **Buffer** or **Uint8Array** object from one encoding format to ano
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| source | Buffer \| Uint8Array | Yes |
-| fromEnc | string | Yes |
-| toEnc | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| source | Buffer \| Uint8Array | Yes | Instance object. |
+| fromEnc | string | Yes | Current encoding format. For details about the supported formats, see [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md). |
+| toEnc | string | Yes | Target encoding format. For details about the supported formats, see [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md). |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Buffer |
+| Type | Description |
+| --- | --- |
+| Buffer | New **Buffer** object in the target encoding format. |
+
+**Examples**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let newBuf = buffer.transcode(buffer.from('€'), 'utf-8', 'ascii');
+console.info("newBuf = " + newBuf.toString('ascii'));
+// Output: newBuf = ,
+```

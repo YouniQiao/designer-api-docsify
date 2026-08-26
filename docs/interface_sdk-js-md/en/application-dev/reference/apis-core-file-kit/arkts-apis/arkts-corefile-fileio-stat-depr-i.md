@@ -33,9 +33,21 @@ Checks whether this file is a block special file. A block special file supports 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if it is a block special file; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isBLockDevice = fileio.statSync(filePath).isBlockDevice();
+```
+
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isBLockDevice = dir.readSync().isBlockDevice();
+```
 
 ## isCharacterDevice
 
@@ -55,9 +67,21 @@ Checks whether this file is a character special file. A character special file s
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if it is a character special file; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isCharacterDevice = fileio.statSync(filePath).isCharacterDevice();
+```
+
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isCharacterDevice = dir.readSync().isCharacterDevice();
+```
 
 ## isDirectory
 
@@ -77,9 +101,21 @@ Checks whether this file is a directory.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if it is a directory; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let dirPath = pathDir + "/test";
+let isDirectory = fileio.statSync(dirPath).isDirectory();
+```
+
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isDirectory = dir.readSync().isDirectory();
+```
 
 ## isFIFO
 
@@ -99,9 +135,21 @@ Checks whether this file is a named pipe (or FIFO). Named pipes are used for int
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if it is a named pipe; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isFIFO = fileio.statSync(filePath).isFIFO();
+```
+
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isFIFO = dir.readSync().isFIFO();
+```
 
 ## isFile
 
@@ -121,9 +169,21 @@ Checks whether this file is a regular file.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if it is a regular file; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isFile = fileio.statSync(filePath).isFile();
+```
+
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isFile = dir.readSync().isFile();
+```
 
 ## isSocket
 
@@ -143,9 +203,21 @@ Checks whether this file is a socket.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if it is a socket; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isSocket = fileio.statSync(filePath).isSocket();
+```
+
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isSocket = dir.readSync().isSocket();
+```
 
 ## isSymbolicLink
 
@@ -165,9 +237,21 @@ Checks whether this file is a symbolic link.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if it is a symbolic link; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test";
+let isSymbolicLink = fileio.statSync(filePath).isSymbolicLink();
+```
+
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isSymbolicLink = dir.readSync().isSymbolicLink();
+```
 
 ## atime
 

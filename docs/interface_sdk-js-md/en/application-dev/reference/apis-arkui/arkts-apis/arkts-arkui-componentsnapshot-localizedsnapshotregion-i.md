@@ -2,7 +2,8 @@
 
 Defines the rectangular region for capturing the component snapshot, with coordinates adjusted based on the layout direction (LTR or RTL).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Directly using **componentSnapshot** can lead to the issue of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain a
 > **UIContext** instance using **getUIContext()**, and then obtain the associated **componentSnapshot** object
@@ -16,7 +17,7 @@ Defines the rectangular region for capturing the component snapshot, with coordi
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import componentSnapshot from '@kit.ArkUI';
 ```
 
 ## bottom
@@ -90,3 +91,64 @@ For LTR layouts: Y-coordinate of the upper left corner of the rectangular region
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+
+@Entry
+@Component
+struct SnapshotExample {
+  @State pixmap: image.PixelMap | undefined = undefined
+
+  build() {
+    Column() {
+      Row() {
+        Column() {
+          TextClock()
+          Button('Button ABCDE').type(ButtonType.Normal)
+          Row() {
+            Checkbox()
+            Text('√')
+            Text(' | ')
+            Checkbox()
+            Text('×')
+          }.align(Alignment.Start)
+
+          TextInput()
+        }
+        .align(Alignment.Start)
+        .id('component1')
+        .width('600px')
+        .height('600px')
+        .borderRadius(6)
+        .borderWidth(2)
+        .borderColor(Color.Green)
+
+      }
+
+      Button('get capture')
+        .onClick(() => {
+          try {
+            let pixelmap = this.getUIContext().getComponentSnapshot().getSync('component1',
+              {
+                scale: 2,
+                waitUntilRenderFinished: true,
+                region: {
+                  start: 20,
+                  top: 20,
+                  end: 200,
+                  bottom: 240
+                }
+              })
+            this.pixmap = pixelmap;
+          } catch (error) {
+            console.error(`getSync error message:${error.message}`);
+          }
+        }).margin(10)
+      Image(this.pixmap).border({ color: Color.Black, width: 2 }).width('600px')
+    }.width('100%').align(Alignment.Center)
+  }
+}
+```

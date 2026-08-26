@@ -19,39 +19,39 @@ The **Sensor** module provides APIs for querying the sensor list, subscribing to
 ## Modules to Import
 
 ```TypeScript
-import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from 'kits/@kit.SensorServiceKit';
+import Sensor, { AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Sensor](arkts-sensorservice-system-sensor-sensor-c.md) |
+| Name | Description |
+| --- | --- |
+| [Sensor](arkts-sensorservice-system-sensor-sensor-c.md) |  |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AccelerometerResponse](arkts-sensorservice-system-sensor-accelerometerresponse-i.md) |
-| [BarometerResponse](arkts-sensorservice-system-sensor-barometerresponse-i.md) |
-| [CompassResponse](arkts-sensorservice-system-sensor-compassresponse-i.md) |
-| [DeviceOrientationResponse](arkts-sensorservice-system-sensor-deviceorientationresponse-i.md) |
-| [GetOnBodyStateOptions](arkts-sensorservice-system-sensor-getonbodystateoptions-i.md) |
-| [GyroscopeResponse](arkts-sensorservice-system-sensor-gyroscoperesponse-i.md) |
-| [HeartRateResponse](arkts-sensorservice-system-sensor-heartrateresponse-i.md) |
-| [LightResponse](arkts-sensorservice-system-sensor-lightresponse-i.md) |
-| [OnBodyStateResponse](arkts-sensorservice-system-sensor-onbodystateresponse-i.md) |
-| [ProximityResponse](arkts-sensorservice-system-sensor-proximityresponse-i.md) |
-| [StepCounterResponse](arkts-sensorservice-system-sensor-stepcounterresponse-i.md) |
-| [subscribeAccelerometerOptions](arkts-sensorservice-system-sensor-subscribeaccelerometeroptions-i.md) |
-| [SubscribeBarometerOptions](arkts-sensorservice-system-sensor-subscribebarometeroptions-i.md) |
-| [SubscribeCompassOptions](arkts-sensorservice-system-sensor-subscribecompassoptions-i.md) |
-| [SubscribeDeviceOrientationOptions](arkts-sensorservice-system-sensor-subscribedeviceorientationoptions-i.md) |
-| [SubscribeGyroscopeOptions](arkts-sensorservice-system-sensor-subscribegyroscopeoptions-i.md) |
-| [SubscribeHeartRateOptions](arkts-sensorservice-system-sensor-subscribeheartrateoptions-i.md) |
-| [SubscribeLightOptions](arkts-sensorservice-system-sensor-subscribelightoptions-i.md) |
-| [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md) |
-| [SubscribeProximityOptions](arkts-sensorservice-system-sensor-subscribeproximityoptions-i.md) |
-| [SubscribeStepCounterOptions](arkts-sensorservice-system-sensor-subscribestepcounteroptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [AccelerometerResponse](arkts-sensorservice-system-sensor-accelerometerresponse-i.md) | Defines the callback invoked when the acceleration sensor data changes. |
+| [BarometerResponse](arkts-sensorservice-system-sensor-barometerresponse-i.md) | Defines a **BarometerResponse** object. |
+| [CompassResponse](arkts-sensorservice-system-sensor-compassresponse-i.md) | Defines a **CompassResponse** object. |
+| [DeviceOrientationResponse](arkts-sensorservice-system-sensor-deviceorientationresponse-i.md) | Defines a **DeviceOrientationResponse** object. |
+| [GetOnBodyStateOptions](arkts-sensorservice-system-sensor-getonbodystateoptions-i.md) | Defines the callback invoked upon change in the wearing state of the device that houses the sensor. |
+| [GyroscopeResponse](arkts-sensorservice-system-sensor-gyroscoperesponse-i.md) | Defines a **GyroscopeResponse** object. |
+| [HeartRateResponse](arkts-sensorservice-system-sensor-heartrateresponse-i.md) | Defines a **HeartRateResponse** object. |
+| [LightResponse](arkts-sensorservice-system-sensor-lightresponse-i.md) | Defines a **LightResponse** object. |
+| [OnBodyStateResponse](arkts-sensorservice-system-sensor-onbodystateresponse-i.md) | Specifies whether the device that houses the sensor is worn. |
+| [ProximityResponse](arkts-sensorservice-system-sensor-proximityresponse-i.md) | Callback invoked when the proximity sensor data changes. |
+| [StepCounterResponse](arkts-sensorservice-system-sensor-stepcounterresponse-i.md) | Callback invoked when the step counter sensor data changes. |
+| [subscribeAccelerometerOptions](arkts-sensorservice-system-sensor-subscribeaccelerometeroptions-i.md) | Defines the type of data to return for a subscription to data changes of the acceleration sensor. |
+| [SubscribeBarometerOptions](arkts-sensorservice-system-sensor-subscribebarometeroptions-i.md) | Defines the type of data to return for a subscription to data changes of the barometer sensor. |
+| [SubscribeCompassOptions](arkts-sensorservice-system-sensor-subscribecompassoptions-i.md) | Defines the type of data to return for a subscription to data changes of the compass sensor. |
+| [SubscribeDeviceOrientationOptions](arkts-sensorservice-system-sensor-subscribedeviceorientationoptions-i.md) | Defines the type of data to return for a subscription to data changes of the device orientation sensor. |
+| [SubscribeGyroscopeOptions](arkts-sensorservice-system-sensor-subscribegyroscopeoptions-i.md) | Defines the type of data to return for a subscription to data changes of the gyroscope sensor. |
+| [SubscribeHeartRateOptions](arkts-sensorservice-system-sensor-subscribeheartrateoptions-i.md) | Defines the type of data to return for a subscription to data changes of the heart rate sensor. |
+| [SubscribeLightOptions](arkts-sensorservice-system-sensor-subscribelightoptions-i.md) | Defines the type of data to return for a subscription to data changes of the ambient light sensor. |
+| [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md) | Defines the callback invoked upon change in the wearing state of the device that houses the sensor. |
+| [SubscribeProximityOptions](arkts-sensorservice-system-sensor-subscribeproximityoptions-i.md) | Defines the type of data to return for a subscription to data changes of the proximity sensor. |
+| [SubscribeStepCounterOptions](arkts-sensorservice-system-sensor-subscribestepcounteroptions-i.md) | Defines the type of data to return for a subscription to data changes of the step counter sensor. |

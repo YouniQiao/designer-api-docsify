@@ -1,7 +1,7 @@
 # Hyperlink
 
 The **Hyperlink** component implements a link from a location in the component to another location.
-> **NOTE**>> - This component must be used with the system browser.
+> **NOTE** > > - This component must be used with the system browser.
 
 ## Required Permissions
 
@@ -27,9 +27,38 @@ Defines the constructor of Hyperlink.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| address | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
-| content | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| address | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Web page to which the hyperlink is redirected. |
+| content | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | No | Text displayed in the hyperlink. Default value: **''**. If this parameter is not passed and the component does not have child components, the value of the **address** parameter is displayed by default. **NOTE** If this component has child components, the hyperlink text is not displayed. |
 
 ## Summary
+
+## Examples
+
+This example shows how to create hyperlinks with both images and text that can be clicked to navigate to a specified URL.
+
+```TypeScript
+@Entry
+@Component
+struct HyperlinkExample {
+  build() {
+    Column() {
+      Column() {
+        Hyperlink('https://example.com/') {
+          // Replace $r('app.media.bg') with the image resource file you use.
+          Image($r('app.media.bg'))
+            .width(200)
+            .height(100)
+        }
+      }
+
+      Column() {
+        Hyperlink('https://example.com/', 'Go to the developer website') {
+        }
+        .color(Color.Blue)
+      }
+    }.width('100%').height('100%').justifyContent(FlexAlign.Center)
+  }
+}
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+import abilityConnectionManager from '@kit.DistributedServiceKit';
 ```
 
 ## getPeerInfoById
@@ -22,18 +22,29 @@ Obtains information about the peer application in the specified session.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sessionId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sessionId | number | Yes | ID of the collaboration session. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| PeerInfo \| undefined |
+| Type | Description |
+| --- | --- |
+| PeerInfo \| undefined | Information about the peer application if the corresponding **peerInfo** exists; **undefined** if the session ID is not found. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+hilog.info(0x0000, 'testTag', 'getPeerInfoById called');
+let sessionId = 100;
+const peerInfo = abilityConnectionManager.getPeerInfoById(sessionId);
+```

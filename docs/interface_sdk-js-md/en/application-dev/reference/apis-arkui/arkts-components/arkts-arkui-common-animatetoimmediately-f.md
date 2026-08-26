@@ -23,7 +23,7 @@ Delivers an explicit animation immediately.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [AnimateParam](arkts-arkui-animateparam-i.md) | Yes |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [AnimateParam](arkts-arkui-animateparam-i.md) | Yes | Animation settings. |
+| event | () = & gt; void | Yes | Closure function that displays the animation. The system automatically inserts a transition animation for state changes caused by the closure function. |

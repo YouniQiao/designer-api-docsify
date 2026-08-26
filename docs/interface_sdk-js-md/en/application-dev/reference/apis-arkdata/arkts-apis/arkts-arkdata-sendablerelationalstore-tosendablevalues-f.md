@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from 'kits/@kit.ArkData';
+import sendableRelationalStore from '@kit.ArkData';
 ```
 
 ## toSendableValues
@@ -20,18 +20,29 @@ Converts the array data that cannot be passed across threads into the data that 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| values | [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| values | [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | Yes | Array data that cannot be passed across threads. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| collections.Array & lt;ValueType & gt; |
+| Type | Description |
+| --- | --- |
+| collections.Array & lt;ValueType & gt; | Array data that can be passed across threads. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { relationalStore, sendableRelationalStore } from '@kit.ArkData';
+const array: relationalStore.ValueType[] = [];
+array.push(1);
+array.push(2);
+array.push("aaaaaa")
+const values = sendableRelationalStore.toSendableValues(array);
+```

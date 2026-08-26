@@ -9,6 +9,9 @@ WebResourceError is a class that provides error information when resource loadin
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -39,9 +42,9 @@ Gets the custom error code of the Web resource.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Return the custom error code of the Web resource. |
 
 ## getErrorCode
 
@@ -59,9 +62,9 @@ Obtains the error code of the resource loading. It is used to determine the spec
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Error code for loading the resource. For details about the error codes, see [WebNetErrorList]{ |
 
 ## getErrorInfo
 
@@ -79,6 +82,6 @@ Obtains the error information of the resource loading. It is used to describe th
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Error information about resource loading. |

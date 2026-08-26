@@ -9,7 +9,6 @@ beacon设备制造商数据。
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## manufactureData

@@ -23,12 +23,20 @@ Obtains the ID attached to the end of a given URI.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | Target URI object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | ID obtained. |
+
+**Examples**
+
+```TypeScript
+import dataUriUtils from '@ohos.ability.dataUriUtils';
+
+let id = dataUriUtils.getId('com.example.dataUriUtils/1221');
+```

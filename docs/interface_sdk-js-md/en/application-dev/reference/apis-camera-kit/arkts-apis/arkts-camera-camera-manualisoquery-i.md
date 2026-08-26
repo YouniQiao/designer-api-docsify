@@ -9,7 +9,6 @@ Provides APIs to check whether a camera device supports manual ISO setting and o
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getSupportedIsoRange
@@ -28,13 +27,13 @@ Get a array of supported standard ISO sensitivity values, as defined in ISO 1223
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | The array of ISO sensitivity values. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |

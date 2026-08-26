@@ -3,6 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## isSupportTemplate
@@ -23,10 +26,27 @@ Checks whether a specified template is supported before using [NotificationTempl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| templateName | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let templateName: string = 'process';
+function isSupportTemplateCallback(err: Base.BusinessError, data: boolean) {
+  if (err) {
+    console.error("isSupportTemplate failed " + JSON.stringify(err));
+  } else {
+    console.info("isSupportTemplate success");
+  }
+}
+
+Notification.isSupportTemplate(templateName, isSupportTemplateCallback);
+```
 
 
 ## isSupportTemplate
@@ -47,12 +67,25 @@ Checks whether a specified template is supported before using [NotificationTempl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| templateName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let templateName: string = 'process';
+Notification.isSupportTemplate(templateName).then((data: boolean) => {
+  console.info("isSupportTemplate success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isSupportTemplate failed, code is ${err}`);
+});
+```

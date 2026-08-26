@@ -36,9 +36,24 @@ onLazyLoading?(index: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 需要加载的数据项对应的索引。 取值范围：自然数。 |
+
+**示例**
+
+```TypeScript
+// 假设数据项总数为100，首屏渲染需3项数据
+// 初始数组提供前3项数据（arr = ['No.0', 'No.1', 'No.2']），并开启数据懒加载功能
+List() {
+  Repeat<string>(this.arr)
+    .each((repeatItem: RepeatItem<string>) => { ListItem() { Text(repeatItem.item) }})
+    .virtualScroll({ 
+      onTotalCount: () => { return 100; },
+      onLazyLoading: (index: number) => { this.arr[index] = `No.${index}`; }
+    })
+}
+```
 
 ## onTotalCount
 
@@ -64,9 +79,9 @@ onTotalCount?(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 期望加载的数据项总数。 |
 
 ## memoryOptimizationStrategy
 

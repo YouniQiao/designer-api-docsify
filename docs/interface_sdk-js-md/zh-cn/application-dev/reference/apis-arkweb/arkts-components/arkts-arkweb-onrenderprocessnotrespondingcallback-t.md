@@ -12,6 +12,6 @@ type OnRenderProcessNotRespondingCallback = (data : RenderProcessNotRespondingDa
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | [RenderProcessNotRespondingData](arkts-arkweb-renderprocessnotrespondingdata-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | [RenderProcessNotRespondingData](arkts-arkweb-renderprocessnotrespondingdata-i.md) | 是 | 渲染进程无响应的详细信息。 |

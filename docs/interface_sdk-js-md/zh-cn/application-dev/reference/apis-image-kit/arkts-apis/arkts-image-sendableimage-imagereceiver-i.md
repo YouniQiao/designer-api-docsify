@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import sendableImage from '@kit.ImageKit';
 ```
 
 ## getReceivingSurfaceId
@@ -26,9 +26,30 @@ getReceivingSurfaceId(): Promise<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | 异步返回Surface ID。 |
+
+**示例**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function GetReceivingSurfaceId() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  receiver.getReceivingSurfaceId().then((id: string) => {
+    console.info('Succeeded in getting the ReceivingSurfaceId.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get the ReceivingSurfaceId.code ${error.code}, message is ${error.message}`);
+  })
+}
+```
 
 ## on('imageArrival')
 
@@ -44,10 +65,28 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'imageArrival' | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'imageArrival' | 是 | 注册事件的类型，固定为'imageArrival'，接收图片时触发。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 注册的事件回调。 |
+
+**示例**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
+
+async function On() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  receiver.on('imageArrival', () => {
+    // 接收到图片，实现回调函数逻辑。
+  })
+}
+```
 
 ## readLatestImage
 
@@ -57,7 +96,8 @@ readLatestImage(): Promise<Image>
 
 从ImageReceiver读取最新的图片。使用promise异步回调。
 
-> **注意**：&gt;
+> **注意**：
+> 
 > 此接口需要在[on](#onimagearrival)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-sendableimage-image-i.md)对象使
 > 用完毕后需要调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
@@ -67,9 +107,30 @@ readLatestImage(): Promise<Image>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Image & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Image & gt; | 异步返回最新图片。 |
+
+**示例**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function ReadLatestImage() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  receiver.readLatestImage().then((img: sendableImage.Image) => {
+    console.info('Succeeded in reading the latest image.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to read the latest image. Code: ${error.code}, message: ${error.message}.`);
+  })
+}
+```
 
 ## readNextImage
 
@@ -79,7 +140,8 @@ readNextImage(): Promise<Image>
 
 从ImageReceiver读取下一张图片。使用promise异步回调。
 
-> **注意**：&gt;
+> **注意**：
+> 
 > 此接口需要在[on](#onimagearrival)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-sendableimage-image-i.md)对象使
 > 用完毕后需要调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
@@ -89,9 +151,30 @@ readNextImage(): Promise<Image>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Image & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Image & gt; | 异步返回下一张图片。 |
+
+**示例**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function ReadNextImage() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  receiver.readNextImage().then((img: sendableImage.Image) => {
+    console.info('Succeeded in reading the next image.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to read the next image. Code: ${error.code}, message: ${error.message}.`);
+  })
+}
+```
 
 ## release
 
@@ -107,9 +190,77 @@ release(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 异步返回操作结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function release(pixelMap: sendableImage.PixelMap) {
+  pixelMap.release().then(() => {
+    console.info('Succeeded in releasing the PixelMap object.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(context : Context) {
+  const path: string = context.cacheDir + "/test.jpg";
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
+  sendableImageSourceObj.release().then(() => {
+    console.info('Succeeded in releasing the image source instance.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function Release() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  let img = await receiver.readNextImage();
+  img.release().then(() => {
+    console.info('Succeeded in releasing an image.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release an image. Code: ${error.code}, message: ${error.message}.`);
+  })
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function Release() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  receiver.release().then(() => {
+    console.info('Succeeded in releasing an image receiver.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release an image receiver. Code: ${error.code}, message: ${error.message}.`);
+  })
+}
+```
 
 ## capacity
 

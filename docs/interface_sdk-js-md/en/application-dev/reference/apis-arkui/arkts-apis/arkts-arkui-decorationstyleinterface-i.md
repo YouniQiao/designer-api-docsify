@@ -2,9 +2,11 @@
 
 Describes the API object for text decoration line styles.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When the bottom contour of a character intersects with the decoration, underline avoidance is triggered, commonly
-> affecting characters like "g", "j", "y", "q", and "p."&gt;
+> affecting characters like "g", "j", "y", "q", and "p."
+> 
 > If the decoration color is set to **Color.Transparent**, it inherits the text color of the first character in each
 > line. If the decoration color is set to **"#00FFFFFF"**, the line becomes fully transparent.
 

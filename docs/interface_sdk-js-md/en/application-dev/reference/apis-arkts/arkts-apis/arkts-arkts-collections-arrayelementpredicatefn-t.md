@@ -16,12 +16,12 @@ Defines the ArkTS Array predicate function, which is used by the 'retainAll'API 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | ElementType | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ElementType | Yes | Element that is being processed. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | True if the value meets the predicate, otherwise false. |

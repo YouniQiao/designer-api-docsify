@@ -15,14 +15,14 @@ type Transformer = (this: ISendable, key: string,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| this | [ISendable](arkts-arkts-ason-isendable-t.md) | 是 |
-| key | string | 是 |
-| value | ISendable \| undefined \| null | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| this | [ISendable](arkts-arkts-ason-isendable-t.md) | 是 | 所解析的键值对所属的对象。 |
+| key | string | 是 | 属性名。 |
+| value | ISendable \| undefined \| null | 是 | 所解析的键值对的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| ISendable \| undefined \| null |
+| 类型 | 说明 |
+| --- | --- |
+| ISendable \| undefined \| null | 返回转换结果后的ISendable对象或undefined或null。 |

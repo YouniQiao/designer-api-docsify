@@ -9,7 +9,7 @@ Defines the option of ShowActionMenu.@interface ShowActionMenuOptions
 ## Modules to Import
 
 ```TypeScript
-import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from 'kits/@kit.ArkUI';
+import Prompt, { Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
 ```
 
 ## complete
@@ -42,9 +42,9 @@ Called when the operation is cancelled.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| errMsg | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| errMsg | string | Yes |  |
 
 ## success
 
@@ -62,10 +62,10 @@ Called when the dialog box is displayed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tapIndex | number | Yes |
-| errMsg | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tapIndex | number | Yes |  |
+| errMsg | string | Yes |  |
 
 ## buttons
 

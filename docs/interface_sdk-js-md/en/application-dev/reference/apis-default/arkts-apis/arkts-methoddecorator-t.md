@@ -6,14 +6,14 @@ declare type MethodDecorator = <T>(target: Object, propertyKey: string | symbol,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | Object | Yes |
-| propertyKey | string \| symbol | Yes |
-| descriptor | [TypedPropertyDescriptor](arkts-lib-es5-typedpropertydescriptor-i.md)&lt;T&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | Object | Yes |  |
+| propertyKey | string \| symbol | Yes |  |
+| descriptor | [TypedPropertyDescriptor](arkts-lib-es5-typedpropertydescriptor-i.md)&lt;T&gt; | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TypedPropertyDescriptor](arkts-lib-es5-typedpropertydescriptor-i.md)&lt;T&gt; \| void |
+| Type | Description |
+| --- | --- |
+| [TypedPropertyDescriptor](arkts-lib-es5-typedpropertydescriptor-i.md)&lt;T&gt; \| void | - |

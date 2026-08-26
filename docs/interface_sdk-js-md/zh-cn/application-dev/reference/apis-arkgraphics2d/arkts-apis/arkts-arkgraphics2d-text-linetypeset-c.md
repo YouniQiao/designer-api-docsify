@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import text from '@kit.ArkGraphics2D';
 ```
 
 ## createLine
@@ -28,22 +28,31 @@ createLine(startIndex: number, count: number): TextLine
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| startIndex | number | 是 |
-| count | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| startIndex | number | 是 | 开始计算排版的起始位置，整数，取值范围为[0, 文本字符总数)。 |
+| count | number | 是 | 从指定起始位置开始进行排版的字符个数，取值为 [0,文本字符总数)的整数，startIndex和count之和不能大于文本字符总数。当count为0时，表示排版区间为[startIndex, 文本的最后一个字符位置]。 可以先使用[getLineBreak](#getlinebreak)获取合理的排版字符总数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TextLine](arkts-arkgraphics2d-text-textline-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TextLine](arkts-arkgraphics2d-text-textline-c.md) | 根据文本区间字符生成的TextLine对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+let startIndex = 0;
+let width = 100.0;
+let count = lineTypeset.getLineBreak(startIndex, width);
+let line : text.TextLine = lineTypeset.createLine(startIndex, count);
+```
 
 ## getLineBreak
 
@@ -61,19 +70,27 @@ getLineBreak(startIndex: number, width: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| startIndex | number | 是 |
-| width | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| startIndex | number | 是 | 开始计算排版的起始位置（包括起始位置）。取值范围需要为[0,文本字符总数）的整数，当参数超出范围时抛出异常。 |
+| width | number | 是 | 可用于排版的宽度，大于0的浮点数，单位为物理像素px。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回在限定排版宽度下，从指定位置开始可排版的字符总数，取值为整数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+let startIndex = 0;
+let width = 100.0;
+let count = lineTypeset.getLineBreak(startIndex, width);
+```

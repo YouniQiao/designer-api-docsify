@@ -22,6 +22,19 @@ Obtains all NDEF records.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| tag.NdefRecord[] |
+| Type | Description |
+| --- | --- |
+| tag.NdefRecord[] | List of NDEF records obtained. For details, see *NFCForum-TS-NDEF_1.0*. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain ndefMessage from tag.ndef.createNdefMessage or ndefTag.getNdefMessage.
+// let ndefMessage : tag.NdefMessage = tag.ndef.createNdefMessage(...);
+// let ndefMessage : tag.NdefMessage = ndefTag.getNdefMessage();
+
+let ndefRecords : tag.NdefRecord[] = ndefMessage.getNdefRecords();
+console.info("ndef ndefRecords number: " + ndefRecords.length);
+```

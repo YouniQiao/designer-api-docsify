@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## startTrace
@@ -22,7 +21,13 @@ function startTrace(name: string, taskId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-| taskId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 要跟踪的任务名称。 由于单条trace记录的总长度限制为512Byte，超过的部分将会被截断，建议该参数的长度不要超过420Byte。 |
+| taskId | number | 是 | 任务id。 用来区分具有相同名称的多个不同的任务，需确保并发执行的同名任务之间的任务id具有唯一性。 |
+
+**示例**
+
+```TypeScript
+hiTraceMeter.startTrace("myTestFunc", 1);  // 开始异步跟踪任务
+```

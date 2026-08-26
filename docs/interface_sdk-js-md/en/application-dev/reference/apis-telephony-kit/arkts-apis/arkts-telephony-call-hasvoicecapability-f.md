@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## hasVoiceCapability
@@ -20,6 +19,6 @@ Checks whether a device supports voice calls.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Result indicating whether the device supports voice calls. The value **true** indicates yes, and the value **false** indicates no. |

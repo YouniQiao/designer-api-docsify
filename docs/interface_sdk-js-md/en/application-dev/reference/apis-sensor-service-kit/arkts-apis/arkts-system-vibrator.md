@@ -19,19 +19,19 @@ The **Vibrator** module provides APIs for controlling LED lights and vibrators. 
 ## Modules to Import
 
 ```TypeScript
-import { Vibrator, VibrateOptions } from 'kits/@kit.SensorServiceKit';
+import Vibrator, { VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Vibrator](arkts-sensorservice-system-vibrator-vibrator-c.md) |
+| Name | Description |
+| --- | --- |
+| [Vibrator](arkts-sensorservice-system-vibrator-vibrator-c.md) |  |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [VibrateOptions](arkts-sensorservice-system-vibrator-vibrateoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [VibrateOptions](arkts-sensorservice-system-vibrator-vibrateoptions-i.md) | Defines the vibration options. |

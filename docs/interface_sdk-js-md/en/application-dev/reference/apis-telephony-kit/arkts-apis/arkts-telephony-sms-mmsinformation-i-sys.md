@@ -11,7 +11,6 @@ Defines the MMS message information.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## attachment

@@ -9,7 +9,7 @@ For details about how to use AppStorageV2, see [AppStorageV2: Storing Applicatio
 ## Modules to Import
 
 ```TypeScript
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from 'kits/@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## connect
@@ -34,17 +34,37 @@ Stores key-value pair data in the application memory. If the given key already e
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes |
-| keyOrDefaultCreator | string \| [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | No |
-| defaultCreator | [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes | Type. If no key is specified, the name of the type is used as the key. |
+| keyOrDefaultCreator | string \| [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | No | Key, or constructor for obtaining the default value. The default value is **undefined**. |
+| defaultCreator | [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | No | Constructor for obtaining the default value. The default value is **undefined**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T \| undefined |
+| Type | Description |
+| --- | --- |
+| T \| undefined | Returns data if the creation or data acquisition from AppStorageV2 is successful; returns **undefined** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { AppStorageV2 } from '@kit.ArkUI';
+
+@ObservedV2
+class SampleClass {
+  @Trace value: number = 0;
+}
+
+// Store the key-value pair with the key SampleClass and the value as a new object of SampleClass() in memory, and assign it to sampleData1.
+const sampleData1: SampleClass | undefined = AppStorageV2.connect(SampleClass, () => new SampleClass());
+
+// Store the key-value pair with the key key_as2 and the value as a new object of SampleClass() in memory, and assign it to sampleData2.
+const sampleData2: SampleClass = AppStorageV2.connect(SampleClass, 'key_as2', () => new SampleClass())!;
+
+// As the key SampleClass already exists in AppStorageV2, the value of the key SampleClass is returned to sampleData3.
+const sampleData3: SampleClass = AppStorageV2.connect(SampleClass) as SampleClass;
+```
 
 ## keys
 
@@ -64,9 +84,16 @@ Obtains all keys in [AppStorageV2](../../../ui/state-management/arkts-new-appsto
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | All keys stored in AppStorageV2. |
+
+**Examples**
+
+```TypeScript
+// Assuming there are two keys (key_as1 and key_as2) in AppStorageV2, the following will return an array containing these keys and assign it to keys.
+const keys: Array<string> = AppStorageV2.keys();
+```
 
 ## remove
 
@@ -86,6 +113,19 @@ Removes the specified key-value pair from [AppStorageV2](../../../ui/state-manag
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes | Key to be removed. If a type is specified, the key to be removed is the name of that type. |
+
+**Examples**
+
+```TypeScript
+// Assuming that there is a key named key_as2 in AppStorageV2, the following will remove the corresponding key-value pair from AppStorageV2.
+AppStorageV2.remove('key_as2');
+
+// Assuming that there is a key named SampleClass in AppStorageV2, the following will remove the corresponding key-value pair from AppStorageV2.
+AppStorageV2.remove(SampleClass);
+
+// Assuming there is no key named key_as1 in AppStorageV2, the following will result in a warning.
+AppStorageV2.remove('key_as1');
+```

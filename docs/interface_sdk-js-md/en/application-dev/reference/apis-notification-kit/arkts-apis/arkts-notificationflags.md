@@ -8,20 +8,20 @@ The **NotificationFlags** module describes the notification flags. An applicatio
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotificationFlags(Some states and flags for notifications)](arkts-notification-notificationflags-notificationflags-i.md) |
+| Name | Description |
+| --- | --- |
+| [NotificationFlags(Some states and flags for notifications)](arkts-notification-notificationflags-notificationflags-i.md) | Defines the notification flags. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotificationFlags(Some states and flags for notifications)](arkts-notification-notificationflags-notificationflags-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [NotificationFlags(Some states and flags for notifications)](arkts-notification-notificationflags-notificationflags-i-sys.md) | Defines the notification flags. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotificationFlagStatus(Some states and flags for notifications)](arkts-notification-notificationflags-notificationflagstatus-e.md) |
+| Name | Description |
+| --- | --- |
+| [NotificationFlagStatus(Some states and flags for notifications)](arkts-notification-notificationflags-notificationflagstatus-e.md) | Enumerates the notification flag states. |

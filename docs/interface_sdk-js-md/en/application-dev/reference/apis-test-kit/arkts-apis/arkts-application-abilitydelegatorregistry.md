@@ -19,13 +19,13 @@ The **AbilityDelegatorRegistry** module provides APIs for storing global registe
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-depr-f.md#getabilitydelegator) |
-| [getArguments](arkts-test-abilitydelegatorregistry-getarguments-depr-f.md#getarguments) |
+| Name | Description |
+| --- | --- |
+| [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-depr-f.md#getabilitydelegator) | Obtains the **AbilityDelegator** object of the application. |
+| [getArguments](arkts-test-abilitydelegatorregistry-getarguments-depr-f.md#getarguments) | Obtains the **AbilityDelegatorArgs** object of the application. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md) |
+| Name | Description |
+| --- | --- |
+| [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md) | Enumerates the ability lifecycle states. |

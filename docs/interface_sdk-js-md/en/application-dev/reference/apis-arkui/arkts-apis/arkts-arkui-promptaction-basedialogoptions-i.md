@@ -9,7 +9,7 @@ Defines the options of the dialog box.
 ## Modules to Import
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## onDidAppear
@@ -20,7 +20,7 @@ onDidAppear?: () => void
 
 Event callback after the dialog box appears.   
 **NOTE：**
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange)&gt; onWillDisappear &gt; onDidDisappear. 
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. 
 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 
 3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. 
 4. If the dialog box is dismissed before its appearance animation is finished, this callback is not invoked.
@@ -40,7 +40,7 @@ onDidDisappear?: () => void
 ```
 
 Event callback after the dialog box disappears.   
-**NOTE：**The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange)&gt; onWillDisappear &gt; onDidDisappear. This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
+**NOTE：**The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
 
 **Since:** 12
 
@@ -58,7 +58,7 @@ onWillAppear?: () => void
 
 Event callback when the dialog box is about to appear.   
 **NOTE：**
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange)&gt; onWillDisappear &gt; onDidDisappear. 
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. 
 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
 **Since:** 12
@@ -77,7 +77,7 @@ onWillDisappear?: () => void
 
 Event callback when the dialog box is about to disappear.   
 **NOTE：**
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange)&gt; onWillDisappear &gt; onDidDisappear. 
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. 
 2. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
 
 **Since:** 12

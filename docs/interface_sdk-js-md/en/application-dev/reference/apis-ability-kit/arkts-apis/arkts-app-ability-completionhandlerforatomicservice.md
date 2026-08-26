@@ -8,19 +8,19 @@
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandlerForAtomicService, FailureCode } from 'kits/@kit.AbilityKit';
+import CompletionHandlerForAtomicService, { FailureCode } from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md) |
+| Name | Description |
+| --- | --- |
+| [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md) | CompletionHandlerForAtomicService provides two callback functions, [onAtomicServiceRequestSuccess](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestsuccess) and [onAtomicServiceRequestFailure](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestfailure), to handle the results of successful and failed atomic service launch requests, respectively. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) |
+| Name | Description |
+| --- | --- |
+| [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | Enumerates the errors codes available for failures in launching an atomic service. |

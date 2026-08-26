@@ -32,10 +32,10 @@ Invoked when a drop-down menu option is selected.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [index](#index) | number | Yes |
-| [value](#value) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | index of the selected option. |
+| value | string | Yes | text of the selected option. |
 
 ## icon
 

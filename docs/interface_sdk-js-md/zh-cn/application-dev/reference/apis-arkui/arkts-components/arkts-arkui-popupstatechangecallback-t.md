@@ -16,6 +16,6 @@ declare type PopupStateChangeCallback = (event: PopupStateChangeParam) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [PopupStateChangeParam](arkts-arkui-popupstatechangeparam-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [PopupStateChangeParam](arkts-arkui-popupstatechangeparam-i.md) | 是 | 气泡当前的显示状态。 |

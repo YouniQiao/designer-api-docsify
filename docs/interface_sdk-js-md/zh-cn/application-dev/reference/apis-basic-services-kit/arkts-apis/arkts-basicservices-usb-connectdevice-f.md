@@ -3,7 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import usb from '@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKitManager';
+import serialManager from '@kit.BasicServicesKitManager.serial';
 ```
 
 ## connectDevice
@@ -24,12 +26,19 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | 是 | USB设备信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Readonly & lt;USBDevicePipe & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Readonly & lt;USBDevicePipe & gt; | 指定的传输通道对象。 |
+
+**示例**
+
+```TypeScript
+let devicepipe= usb.connectDevice(device);
+console.info(`devicepipe = ${devicepipe}`);
+```

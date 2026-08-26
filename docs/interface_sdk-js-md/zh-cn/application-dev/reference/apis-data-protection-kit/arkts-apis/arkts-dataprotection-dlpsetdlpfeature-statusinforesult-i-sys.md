@@ -11,7 +11,7 @@ DLP特性开关状态设置的结果信息。
 ## 导入模块
 
 ```TypeScript
-import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
+import dlpSetDlpFeature from '@kit.DataProtectionKit';
 ```
 
 ## isSuccess

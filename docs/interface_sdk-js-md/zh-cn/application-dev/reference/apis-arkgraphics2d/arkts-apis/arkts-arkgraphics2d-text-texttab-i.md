@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import text from '@kit.ArkGraphics2D';
 ```
 
 ## alignment
@@ -43,3 +43,7 @@ location: number
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+**示例**
+
+alignment为CENTER，location为200，文本为"12/t345"：

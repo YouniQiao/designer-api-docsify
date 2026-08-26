@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## createKeyboardController
@@ -24,14 +23,40 @@ Creates a keyboard controller for simulating key operations. This API uses a pro
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;KeyboardController & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;KeyboardController & gt; | Promise used to return the keyboard controller instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+
+**Examples**
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputEventClient.createKeyboardController()
+            .then(keyboardController => {
+              console.info('Succeeded in creating keyboard controller');
+            })
+            .catch((error: BusinessError) => {
+              console.error(`Failed to create keyboard controller. Code: ${error.code}, message: ${error.message}.`);
+            });
+        })
+    }
+  }
+}
+```

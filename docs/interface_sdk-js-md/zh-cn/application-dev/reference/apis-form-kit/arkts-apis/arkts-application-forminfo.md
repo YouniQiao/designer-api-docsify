@@ -2,7 +2,8 @@
 
 formInfo模块提供了卡片信息和状态等相关类型和枚举。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 9 开始废弃，
 
 **起始版本：** 8
@@ -22,24 +23,24 @@ formInfo模块提供了卡片信息和状态等相关类型和枚举。
 
 ### 接口
 
-| 名称 |
-| --- |
-| [FormInfo(formInfo)](arkts-form-forminfo-forminfo-depr-i.md) |
-| [FormStateInfo(formInfo)](arkts-form-forminfo-formstateinfo-depr-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [FormInfo(formInfo)](arkts-form-forminfo-forminfo-depr-i.md) | 卡片信息。 |
+| [FormStateInfo(formInfo)](arkts-form-forminfo-formstateinfo-depr-i.md) | 卡片状态信息。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [ColorMode(formInfo)](arkts-form-forminfo-colormode-depr-e.md) |
-| [FormParam(formInfo)](arkts-form-forminfo-formparam-depr-e.md) |
-| [FormState(formInfo)](arkts-form-forminfo-formstate-depr-e.md) |
-| [FormType(formInfo)](arkts-form-forminfo-formtype-depr-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [ColorMode(formInfo)](arkts-form-forminfo-colormode-depr-e.md) | 卡片支持的颜色模式枚举。 |
+| [FormParam(formInfo)](arkts-form-forminfo-formparam-depr-e.md) | 卡片参数枚举。 |
+| [FormState(formInfo)](arkts-form-forminfo-formstate-depr-e.md) | 卡片状态枚举。 |
+| [FormType(formInfo)](arkts-form-forminfo-formtype-depr-e.md) | 支持的卡片类型枚举。 |
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 |
-| --- |
-| [FormParam(formInfo)](arkts-form-forminfo-formparam-depr-e-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [FormParam(formInfo)](arkts-form-forminfo-formparam-depr-e-sys.md) | 卡片参数枚举。 |
 <!--DelEnd-->

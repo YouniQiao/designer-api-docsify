@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKit';
 ```
 
 ## createKeyboardDelegate
@@ -29,6 +29,12 @@ function createKeyboardDelegate(): KeyboardDelegate
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | 客户端编辑事件监听代理。 |
+
+**示例**
+
+```TypeScript
+let keyboardDelegate: inputMethodEngine.KeyboardDelegate = inputMethodEngine.createKeyboardDelegate();
+```

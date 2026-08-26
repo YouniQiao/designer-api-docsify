@@ -8,7 +8,7 @@ A DataAbilityHelper object is obtained through
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md) |
-| [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) |
+| Name | Description |
+| --- | --- |
+| [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | A DataAbilityHelper object is obtained through [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md). |
+| [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Defines the PacMap type used for data storage. |

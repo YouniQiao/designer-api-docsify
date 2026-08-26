@@ -5,7 +5,7 @@
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-c-sys.md) | The module defines the listener used to listen for application startup and exit state changes. It can be used as an input parameter of [appManager.on('appForegroundState')](arkts-ability-appmanager-on-f-sys.md#onappforegroundstate) to listen for the state changes of all applications. |
 <!--DelEnd-->

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## activateOsAccount
@@ -30,24 +30,47 @@ activateOsAccount(localId: number, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当账号激活成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
-| [12300009](../errorcode-account.md#12300009-账号已激活) |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
-| [12300016](../errorcode-account.md#12300016-账号登录数已达上限) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300009](../errorcode-account.md#12300009-账号已激活) | Account has been activated.<br>**适用版本：** 7 - 11 |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated.<br>**适用版本：** 12+ |
+| [12300016](../errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit.<br>**适用版本：** 12+ |
+
+**示例**
+
+激活ID为100的系统账号。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.activateOsAccount(localId, (err: BusinessError)=>{
+    if (err) {
+      console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('activateOsAccount successfully');
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## activateOsAccount
 
@@ -67,29 +90,50 @@ activateOsAccount(localId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
-| [12300009](../errorcode-account.md#12300009-账号已激活) |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
-| [12300016](../errorcode-account.md#12300016-账号登录数已达上限) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300009](../errorcode-account.md#12300009-账号已激活) | Account has been activated.<br>**适用版本：** 7 - 11 |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated.<br>**适用版本：** 12+ |
+| [12300016](../errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit.<br>**适用版本：** 12+ |
+
+**示例**
+
+激活ID为100的系统账号。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.activateOsAccount(localId).then(() => {
+    console.info('activateOsAccount successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`activateOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## activateOsAccount
 
@@ -109,31 +153,53 @@ activateOsAccount(localId: number, displayId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| displayId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| displayId | number | 是 | 逻辑屏ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
-| [12300016](../errorcode-account.md#12300016-账号登录数已达上限) |
-| [12300018](../errorcode-account.md#12300018-逻辑屏未找到) |
-| [12300019](../errorcode-account.md#12300019-不支持跨逻辑屏激活) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
+| [12300016](../errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit. |
+| [12300018](../errorcode-account.md#12300018-逻辑屏未找到) | Display not found. |
+| [12300019](../errorcode-account.md#12300019-不支持跨逻辑屏激活) | Cross-display activation not supported. |
+
+**示例**
+
+在ID为0的逻辑屏上激活ID为100的系统账号。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let displayId: number = 0;
+try {
+  accountManager.activateOsAccount(localId, displayId).then(() => {
+    console.info('activateOsAccount with displayId successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`activateOsAccount with displayId failed, err: ${err.code} ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`activateOsAccount with displayId exception: ${err.code} ${err.message}`);
+}
+```
 
 ## bindDomainAccount
 
@@ -153,31 +219,52 @@ bindDomainAccount(localId: number, domainAccountInfo: DomainAccountInfo): Promis
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| [domainAccountInfo](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 域账号信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
-| [12300021](../errorcode-account.md#12300021-系统账号已绑定域账号) |
-| [12300022](../errorcode-account.md#12300022-域账号已被绑定) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid domain account information. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | The OS account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. Possible causes: The OS account cannot be bound. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target OS account or domain account is being operated. |
+| [12300021](../errorcode-account.md#12300021-系统账号已绑定域账号) | The OS account is already bound. |
+| [12300022](../errorcode-account.md#12300022-域账号已被绑定) | The domain account is already bound. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  let localId: number = 100;
+  let domainInfo: osAccount.DomainAccountInfo =
+    { domain: 'testDomain', accountName: 'testAccountName' };
+  accountManager.bindDomainAccount(localId, domainInfo).then(() => {
+    console.info('bindDomainAccount success.');
+  }).catch((error: BusinessError) => {
+    console.error(`bindDomainAccount failed, errCode=${error.code}, errMsg=${error.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`bindDomainAccount error, errCode=${err.code}, errMsg=${err.message}`);
+}
+```
 
 ## createOsAccount
 
@@ -197,26 +284,47 @@ createOsAccount(localName: string, type: OsAccountType, callback: AsyncCallback<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localName | string | 是 |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localName | string | 是 | 创建的系统账号的名称。 |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300004](../errorcode-account.md#12300004-账号已存在) |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) |
-| [12300007](../errorcode-account.md#12300007-账号数量已达上限) |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localName or type. |
+| [12300004](../errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12+ |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
+| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.createOsAccount('testName', osAccount.OsAccountType.NORMAL,
+    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
+    if (err) {
+      console.error(`createOsAccount exception:code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('createOsAccount osAccountInfo:' + JSON.stringify(osAccountInfo));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## createOsAccount
 
@@ -236,33 +344,57 @@ createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccoun
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localName | string | 是 |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 |
-| options | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localName | string | 是 | 创建的系统账号的名称。 |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
+| options | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | 否 | 创建系统账号的选项，默认为空。<br>**起始版本：** 12 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise对象，返回新创建的系统账号的信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300004](../errorcode-account.md#12300004-账号已存在) |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) |
-| [12300007](../errorcode-account.md#12300007-账号数量已达上限) |
-| [12300015](../errorcode-account.md#12300015-短名称已存在) |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localName, type or options. |
+| [12300004](../errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12+ |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
+| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
+| [12300015](../errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12+ |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let options: osAccount.CreateOsAccountOptions = {
+  shortName: 'myShortName',
+  disallowedPreinstalledBundles: [],
+  allowedPreinstalledBundles: [],
+}
+try {
+  accountManager.createOsAccount('testAccountName', osAccount.OsAccountType.NORMAL, options).then(
+    (accountInfo: osAccount.OsAccountInfo) => {
+    console.info('createOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`createOsAccount err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## createOsAccountForDomain
 
@@ -286,27 +418,50 @@ createOsAccountForDomain(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 |
-| [domainInfo](arkts-basicservices-osaccount-osaccountinfo-i.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
+| domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 域账号信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300004](../errorcode-account.md#12300004-账号已存在) |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) |
-| [12300007](../errorcode-account.md#12300007-账号数量已达上限) |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or domainInfo. |
+| [12300004](../errorcode-account.md#12300004-账号已存在) | Account already exists. |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
+| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let domainInfo: osAccount.DomainAccountInfo =
+  {domain: 'testDomain', accountName: 'testAccountName'};
+try {
+  accountManager.createOsAccountForDomain(osAccount.OsAccountType.NORMAL, domainInfo,
+    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
+    if (err) {
+      console.error(`createOsAccountForDomain exception:code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('createOsAccountForDomain osAccountInfo:' + JSON.stringify(osAccountInfo));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## createOsAccountForDomain
 
@@ -326,34 +481,58 @@ createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, opt
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 |
-| [domainInfo](arkts-basicservices-osaccount-osaccountinfo-i.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
-| options | [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
+| domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 域账号信息。 |
+| options | [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md) | 否 | 创建账号的可选参数，默认为空。<br>**起始版本：** 12 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise对象，返回新创建的系统账号的信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300004](../errorcode-account.md#12300004-账号已存在) |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) |
-| [12300007](../errorcode-account.md#12300007-账号数量已达上限) |
-| [12300015](../errorcode-account.md#12300015-短名称已存在) |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type, domainInfo or options. |
+| [12300004](../errorcode-account.md#12300004-账号已存在) | Account already exists. |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
+| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
+| [12300015](../errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12+ |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let domainInfo: osAccount.DomainAccountInfo =
+  {domain: 'testDomain', accountName: 'testAccountName'};
+let options: osAccount.CreateOsAccountForDomainOptions = {
+  shortName: 'myShortName'
+}
+try {
+  accountManager.createOsAccountForDomain(osAccount.OsAccountType.NORMAL, domainInfo, options).then(
+    (accountInfo: osAccount.OsAccountInfo) => {
+    console.info('createOsAccountForDomain, account info: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`createOsAccountForDomain err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## deactivateOsAccount
 
@@ -373,27 +552,48 @@ deactivateOsAccount(localId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
+
+**示例**
+
+注销ID为100的系统账号。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.deactivateOsAccount(localId).then(() => {
+    console.info('deactivateOsAccount successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`deactivateOsAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`deactivateOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getBundleIdForUid
 
@@ -411,19 +611,41 @@ getBundleIdForUid(uid: number, callback: AsyncCallback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uid | number | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uid | number | 是 | 进程uid。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。如果查询成功，err为null，data为与uid对应的bundleId；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+// uid为进程uid，请通过应用信息获取
+let testUid: number = 1000000;
+try {
+  accountManager.getBundleIdForUid(testUid, (err: BusinessError, bundleId: number) => {
+    if (err) {
+      console.error(`getBundleIdForUid errInfo:code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getBundleIdForUid bundleId:' + JSON.stringify(bundleId));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getBundleIdForUid
 
@@ -441,24 +663,43 @@ getBundleIdForUid(uid: number): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uid | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uid | number | 是 | 进程uid。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回与uid对应的bundleId。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let testUid: number = 1000000;
+try {
+  accountManager.getBundleIdForUid(testUid).then((result: number) => {
+    console.info('getBundleIdForUid bundleId:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`getBundleIdForUid errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getBundleIdForUidSync
 
@@ -476,23 +717,39 @@ getBundleIdForUidSync(uid: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uid | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uid | number | 是 | 进程uid。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 表示与进程uid对应的bundleId。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let testUid: number = 1000000;
+try {
+  let bundleId : number = accountManager.getBundleIdForUidSync(testUid);
+  console.info('getBundleIdForUidSync bundleId:' + bundleId);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getBundleIdForUidSync exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getEnabledOsAccountConstraints
 
@@ -512,25 +769,46 @@ getEnabledOsAccountConstraints(localId: number): Promise<Array<string>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;string & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;string & gt; & gt; | Promise对象，返回指定系统账号已使能的全部 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+
+**示例**
+
+获取ID为100的系统账号的全部约束。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.getEnabledOsAccountConstraints(localId).then((constraints: string[]) => {
+    console.info('getEnabledOsAccountConstraints, constraints: ' + constraints);
+  }).catch((err: BusinessError) => {
+    console.error(`getEnabledOsAccountConstraints err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getEnabledOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getForegroundOsAccountDisplayId
 
@@ -550,24 +828,43 @@ getForegroundOsAccountDisplayId(localId: number): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回逻辑屏ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300017](../errorcode-account.md#12300017-前台系统账号未找到) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300017](../errorcode-account.md#12300017-前台系统账号未找到) | The foreground OS account is not found. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.getForegroundOsAccountDisplayId(localId).then((displayId: number) => {
+    console.info('account ' + localId + ' foreground displayId: ' + displayId);
+  }).catch((err: BusinessError) => {
+    console.error(`getForegroundOsAccountDisplayId failed: ${err.code} ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getForegroundOsAccountDisplayId exception: ${err.code} ${err.message}`);
+}
+```
 
 ## getForegroundOsAccountLocalId
 
@@ -587,24 +884,43 @@ getForegroundOsAccountLocalId(displayId: number): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| displayId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| displayId | number | 是 | 逻辑屏ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回系统账号ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300017](../errorcode-account.md#12300017-前台系统账号未找到) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300017](../errorcode-account.md#12300017-前台系统账号未找到) | The foreground OS account is not found. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let displayId: number = 0;
+try {
+  accountManager.getForegroundOsAccountLocalId(displayId).then((localId: number) => {
+    console.info('foreground account on display ' + displayId + ' is ' + localId);
+  }).catch((err: BusinessError) => {
+    console.error(`getForegroundOsAccountLocalId failed: ${err.code} ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getForegroundOsAccountLocalId exception: ${err.code} ${err.message}`);
+}
+```
 
 ## getOsAccountConstraintSourceTypes
 
@@ -624,22 +940,43 @@ getOsAccountConstraintSourceTypes(localId: number, constraint: string, callback:
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| constraint | string | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 要查询的系统账号ID。 |
+| constraint | string | 是 | 要查询的 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)名称。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | 是 | 回调函数。如果成功，err为null，data为指定系统账号的指定 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)来源信息；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or constraint. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountConstraintSourceTypes(100, 'constraint.wifi',
+    (err: BusinessError,sourceTypeInfos: osAccount.ConstraintSourceTypeInfo[])=>{
+    if (err) {
+      console.error(`getOsAccountConstraintSourceTypes errInfo:code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(sourceTypeInfos));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getOsAccountConstraintSourceTypes
 
@@ -659,27 +996,46 @@ getOsAccountConstraintSourceTypes(localId: number, constraint: string): Promise<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| constraint | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 要查询的系统账号ID。 |
+| constraint | string | 是 | 要查询的 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | Promise对象，返回指定系统账号的指定 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)来源信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or constraint. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountConstraintSourceTypes(100, 'constraint.wifi').then(
+    (result: osAccount.ConstraintSourceTypeInfo[]) => {
+    console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountConstraintSourceTypes errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getOsAccountProfilePhoto
 
@@ -699,21 +1055,44 @@ getOsAccountProfilePhoto(localId: number, callback: AsyncCallback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。如果获取成功，err为null，data为指定系统账号的头像信息；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+
+**示例**
+
+获取ID为100的系统账号的头像。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.getOsAccountProfilePhoto(localId, (err: BusinessError, photo: string)=>{
+    if (err) {
+      console.error(`getOsAccountProfilePhoto exception:code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('get photo:' + photo + ' by localId: ' + localId);
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getOsAccountProfilePhoto
 
@@ -733,26 +1112,47 @@ getOsAccountProfilePhoto(localId: number): Promise<string>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回指定系统账号的头像信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+
+**示例**
+
+获取ID为100的系统账号的头像。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.getOsAccountProfilePhoto(localId).then((photo: string) => {
+    console.info('getOsAccountProfilePhoto: ' + photo);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountProfilePhoto err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getOsAccountType
 
@@ -772,25 +1172,44 @@ getOsAccountType(localId: number): Promise<OsAccountType>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 要查询的系统账号ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | Promise对象，返回指定系统账号的类型。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  let localId: number = 100;
+  accountManager.getOsAccountType(localId).then((type: osAccount.OsAccountType) => {
+    console.info('getOsAccountType Type:' + type);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountType errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## isMainOsAccount
 
@@ -810,18 +1229,38 @@ isMainOsAccount(callback: AsyncCallback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号为主账号；返回false表示当前账号非主账号。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.isMainOsAccount((err: BusinessError,result: boolean)=>{
+    if (err) {
+      console.error(`isMainOsAccount errInfo:code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('isMainOsAccount result:' + JSON.stringify(result));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isMainOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## isMainOsAccount
 
@@ -841,17 +1280,35 @@ isMainOsAccount(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示当前账号为主账号；返回false表示当前账号非主账号。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.isMainOsAccount().then((result: boolean) => {
+    console.info('isMainOsAccount result:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`isMainOsAccount errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isMainOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## isOsAccountActivated
 
@@ -871,25 +1328,46 @@ isOsAccountActivated(localId: number): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示账号已激活；返回false表示账号未激活。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+
+**示例**
+
+判断ID为100的系统账号是否处于激活状态。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.isOsAccountActivated(localId).then((isActivated: boolean) => {
+    console.info('isOsAccountActivated successfully, isActivated: ' + isActivated);
+  }).catch((err: BusinessError) => {
+    console.error(`isOsAccountActivated failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountActivated exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## isOsAccountConstraintEnabled
 
@@ -909,26 +1387,48 @@ isOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boole
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| constraint | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| constraint | string | 是 | 指定的[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) 名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+
+**示例**
+
+判断ID为100的系统账号是否有禁止使用Wi-Fi的约束。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let constraint: string = 'constraint.wifi';
+try {
+  accountManager.isOsAccountConstraintEnabled(localId, constraint).then((isEnabled: boolean) => {
+    console.info('isOsAccountConstraintEnabled successfully, isEnabled: ' + isEnabled);
+  }).catch((err: BusinessError) => {
+    console.error(`isOsAccountConstraintEnabled failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountConstraintEnabled exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## isOsAccountUnlocked
 
@@ -948,25 +1448,44 @@ isOsAccountUnlocked(localId: number): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。用于指定要检查是否已解锁的系统账号。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示当前账号已解锁；返回false表示当前账号未解锁。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.isOsAccountUnlocked(localId).then((isVerified: boolean) => {
+    console.info('isOsAccountUnlocked successfully, isVerified: ' + isVerified);
+  }).catch((err: BusinessError) => {
+    console.error(`isOsAccountUnlocked failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountUnlocked exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## off('activate' | 'activating')
 
@@ -986,21 +1505,40 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<number>):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'activate' \| 'activating' | 是 |
-| name | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'activate' \| 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
+| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function offCallback(){
+  console.info('off enter')
+}
+
+try {
+  accountManager.off('activating', 'osAccountOnOffNameA', offCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## off('activate' | 'activating')
 
@@ -1020,21 +1558,25 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<number>):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'activate' \| 'activating' | 是 |
-| name | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'activate' \| 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
+| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
+
+**示例**
+
+参见 off
 
 ## off('switching')
 
@@ -1056,19 +1598,33 @@ off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'switching' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'switching' | 是 | 取消订阅类型，switching表示取消订阅的是系统账号的前后台正在切换事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.off('switching');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## off('switched')
 
@@ -1090,19 +1646,33 @@ off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'switched' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'switched' | 是 | 取消订阅类型，switched表示取消订阅的是系统账号的前后台切换结束事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.off('switched');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## offConstraintChanged
 
@@ -1120,16 +1690,42 @@ offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 否 | 表示用于接收约束变更事件的回调函数。 默认为undefined，表示清除所有订阅记录。 非undefined时，表示清除与该回调函数关联的订阅记录。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let constraint: string = 'constraint.wifi';
+const callback:Callback<osAccount.ConstraintChangeInfo> = (data: osAccount.ConstraintChangeInfo): void => {
+  console.info(`ConstraintChangeInfo received, constraint: ${data.constraint} isEnabled: ${data.isEnabled}`);
+};
+
+try {
+  accountManager.onConstraintChanged([constraint], callback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`onConstraintChanged exception: code is ${err.code}, message is ${err.message}`);
+}
+
+try {
+  accountManager.offConstraintChanged(callback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`offConstraintChanged exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## on('activate' | 'activating')
 
@@ -1149,21 +1745,40 @@ on(type: 'activate' | 'activating', name: string, callback: Callback<number>): v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'activate' \| 'activating' | 是 |
-| name | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'activate' \| 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
+| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onCallback(receiveLocalId: number){
+  console.info('receive localId:' + receiveLocalId);
+}
+
+try {
+  accountManager.on('activating', 'osAccountOnOffNameA', onCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`receive localId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## on('activate' | 'activating')
 
@@ -1183,21 +1798,25 @@ on(type: 'activate' | 'activating', name: string, callback: Callback<number>): v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'activate' \| 'activating' | 是 |
-| name | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'activate' \| 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
+| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
+
+**示例**
+
+参见 on
 
 ## on('switching')
 
@@ -1219,19 +1838,38 @@ on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'switching' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'switching' | 是 | 订阅类型，switching表示订阅的是系统账号的前后台正在切换事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。   **说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onSwitchingCallback(eventData: osAccount.OsAccountSwitchEventData){
+  console.info('receive eventData:' + JSON.stringify(eventData));
+}
+
+try {
+  accountManager.on('switching', onSwitchingCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## on('switched')
 
@@ -1253,19 +1891,38 @@ on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'switched' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'switched' | 是 | 订阅类型，switched表示订阅的是系统账号的前后台切换结束事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。   **说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onSwitchedCallback(eventData: osAccount.OsAccountSwitchEventData){
+  console.info('receive eventData:' + JSON.stringify(eventData));
+}
+
+try {
+  accountManager.on('switched', onSwitchedCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## onConstraintChanged
 
@@ -1283,18 +1940,37 @@ onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeIn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md) | string[] | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| constraints | string[] | 是 | 表示待订阅的 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)列表。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 是 | 表示用于接收约束变更事件的回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | One or more constraints are invalid. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let constraint: string = 'constraint.wifi';
+const callback:Callback<osAccount.ConstraintChangeInfo> = (data: osAccount.ConstraintChangeInfo): void => {
+  console.info(`ConstraintChangeInfo received, constraint: ${data.constraint} isEnabled: ${data.isEnabled}`);
+};
+
+try {
+  accountManager.onConstraintChanged([constraint], callback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`onConstraintChanged exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryAllCreatedOsAccounts
 
@@ -1314,18 +1990,38 @@ queryAllCreatedOsAccounts(callback: AsyncCallback<Array<OsAccountInfo>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。如果查询成功，err为null，data为已创建的所有系统账号的信息列表；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryAllCreatedOsAccounts((err: BusinessError, accountArr: osAccount.OsAccountInfo[])=>{
+    if (err) {
+      console.error(`queryAllCreatedOsAccounts exception:code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('queryAllCreatedOsAccounts accountArr:' + JSON.stringify(accountArr));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryAllCreatedOsAccounts exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryAllCreatedOsAccounts
 
@@ -1345,17 +2041,35 @@ queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | Promise对象，返回已创建的所有系统账号的信息列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryAllCreatedOsAccounts().then((accountArr: osAccount.OsAccountInfo[]) => {
+    console.info('queryAllCreatedOsAccounts, accountArr: ' + JSON.stringify(accountArr));
+  }).catch((err: BusinessError) => {
+    console.error(`queryAllCreatedOsAccounts err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryAllCreatedOsAccounts exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryMaxLoggedInOsAccountNumber
 
@@ -1373,16 +2087,34 @@ queryMaxLoggedInOsAccountNumber(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回允许登录的系统账号的最大数量。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryMaxLoggedInOsAccountNumber().then((maxNum: number) => {
+    console.info('queryMaxLoggedInOsAccountNumber successfully, maxNum: ' + maxNum);
+  }).catch((err: BusinessError) => {
+    console.error(`queryMaxLoggedInOsAccountNumber failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryMaxLoggedInOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryMaxOsAccountNumber
 
@@ -1400,17 +2132,37 @@ queryMaxOsAccountNumber(callback: AsyncCallback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，如果查询成功，err为null，data为允许创建的系统账号的最大数量；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryMaxOsAccountNumber((err: BusinessError, maxCnt: number) => {
+    if (err) {
+      console.error(`queryMaxOsAccountNumber failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('queryMaxOsAccountNumber successfully, maxCnt:' + maxCnt);
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryMaxOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryMaxOsAccountNumber
 
@@ -1428,16 +2180,34 @@ queryMaxOsAccountNumber(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回允许创建的系统账号的最大数量。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryMaxOsAccountNumber().then((maxCnt: number) => {
+    console.info('queryMaxOsAccountNumber successfully, maxCnt: ' + maxCnt);
+  }).catch((err: BusinessError) => {
+    console.error(`queryMaxOsAccountNumber failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryMaxOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryOsAccount
 
@@ -1457,17 +2227,35 @@ queryOsAccount(): Promise<OsAccountInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise对象，返回当前进程所属的系统账号信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryOsAccount().then((accountInfo: osAccount.OsAccountInfo) => {
+    console.info('queryOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`queryOsAccount err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryOsAccountById
 
@@ -1487,21 +2275,44 @@ queryOsAccountById(localId: number, callback: AsyncCallback<OsAccountInfo>): voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 要查询的系统账号的ID。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为查到的系统账号的信息；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+
+**示例**
+
+查询ID为100的系统账号信息。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.queryOsAccountById(localId, (err: BusinessError, accountInfo: osAccount.OsAccountInfo)=>{
+    if (err) {
+      console.error(`queryOsAccountById exception:code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('queryOsAccountById accountInfo:' + JSON.stringify(accountInfo));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryOsAccountById
 
@@ -1521,26 +2332,47 @@ queryOsAccountById(localId: number): Promise<OsAccountInfo>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 要查询的系统账号的ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise对象，返回查到的系统账号的信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+
+**示例**
+
+查询ID为100的系统账号信息。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.queryOsAccountById(localId).then((accountInfo: osAccount.OsAccountInfo) => {
+    console.info('queryOsAccountById, accountInfo: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`queryOsAccountById err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## removeOsAccount
 
@@ -1560,23 +2392,47 @@ removeOsAccount(localId: number, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果删除账号成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated on. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let accountName: string = 'testAccountName';
+try {
+  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
+    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo) => {
+      accountManager.removeOsAccount(osAccountInfo.localId, (err: BusinessError)=>{
+        if (err) {
+          console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
+        } else {
+          console.info('removeOsAccount successfully');
+        }
+    });
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## removeOsAccount
 
@@ -1596,28 +2452,50 @@ removeOsAccount(localId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let accountName: string = 'testAccountName';
+try {
+  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
+    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
+      accountManager.removeOsAccount(osAccountInfo.localId).then(() => {
+        console.info('removeOsAccount successfully');
+      }).catch((err: BusinessError) => {
+        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
+      });
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## removeOsAccount
 
@@ -1637,29 +2515,55 @@ removeOsAccount(localId: number, options: RemoveOsAccountOptions): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| options | [RemoveOsAccountOptions](arkts-basicservices-osaccount-removeosaccountoptions-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| options | [RemoveOsAccountOptions](arkts-basicservices-osaccount-removeosaccountoptions-i-sys.md) | 是 | 删除系统账号的选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or options. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated on. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let accountName: string = 'testAccountName';
+let token: Uint8Array = new Uint8Array([0]);
+let options: osAccount.RemoveOsAccountOptions = {
+  token: token,
+}
+try {
+  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
+    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
+      accountManager.removeOsAccount(osAccountInfo.localId, options).then(() => {
+        console.info('removeOsAccount successfully');
+      }).catch((err: BusinessError) => {
+        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
+      });
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setOsAccountConstraints
 
@@ -1679,24 +2583,48 @@ setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md) | Array & lt;string & gt; | 是 |
-| enable | boolean | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| constraints | Array & lt;string & gt; | 是 | 待设置/删除的 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)列表。 |
+| enable | boolean | 是 | 设置(true)/删除(false)。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or constraints. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+
+**示例**
+
+给ID为100的系统账号设置禁止使用Wi-Fi的约束。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let constraint: string = 'constraint.wifi';
+try {
+  accountManager.setOsAccountConstraints(localId, [constraint], true, (err: BusinessError) => {
+    if (err) {
+      console.error(`setOsAccountConstraints failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('setOsAccountConstraints successfully');
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setOsAccountConstraints
 
@@ -1716,29 +2644,50 @@ setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md) | Array & lt;string & gt; | 是 |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| constraints | Array & lt;string & gt; | 是 | 待设置/删除的 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)列表。 |
+| enable | boolean | 是 | 设置(true)/删除(false)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or constraints. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+
+**示例**
+
+删除ID为100的系统账号的禁止使用Wi-Fi的约束。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.setOsAccountConstraints(localId, ['constraint.location.set'], false).then(() => {
+    console.info('setOsAccountConstraints successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountConstraints failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setOsAccountName
 
@@ -1758,23 +2707,47 @@ setOsAccountName(localId: number, localName: string, callback: AsyncCallback<voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| localName | string | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| localName | string | 是 | 账号名，最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or localName. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+
+**示例**
+
+将ID为100的系统账号的账号名设置成demoName。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let name: string = 'demoName';
+try {
+  accountManager.setOsAccountName(localId, name, (err: BusinessError) => {
+    if (err) {
+      console.error(`setOsAccountName failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('setOsAccountName successfully');
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setOsAccountName
 
@@ -1794,28 +2767,50 @@ setOsAccountName(localId: number, localName: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| localName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| localName | string | 是 | 账号名，最大长度为1024个字符。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or localName. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+
+**示例**
+
+将ID为100的系统账号的账号名设置成demoName。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let name: string = 'testName';
+try {
+  accountManager.setOsAccountName(localId, name).then(() => {
+    console.info('setOsAccountName successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountName failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setOsAccountProfilePhoto
 
@@ -1835,23 +2830,50 @@ setOsAccountProfilePhoto(localId: number, photo: string, callback: AsyncCallback
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| photo | string | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| photo | string | 是 | 头像信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or photo. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+
+**示例**
+
+给ID为100的系统账号设置头像。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let photo: string = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPCAYAAAA/I0V3AAAAAXNSR0IArs4c6QAAAARnQU1BAA'+
+'Cxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVDhPvZLBDYMwDEV/ugsXRjAT0EHCOuFIBwkbdIRewi6unbiAyoGgSn1SFH85+Y'+
+'q/4ljARW62X+LHS8uIzjm4dXUYF+utzBikB52Jo5e5iEPKqpACk7R9NM2RvWm5tIkD2czLCUFNKLD6IjdMHFHDzws285MgGrT0xCtp3WOKHo'+
+'+7q0mP0DZW9pNmoEFUzrQjp5cCnaen2kSJXLFD8ghbXyZCMQf/8e8Ns1XVAG/XAgqKzVnJFAAAAABJRU5ErkJggg=='
+try {
+  accountManager.setOsAccountProfilePhoto(localId, photo, (err: BusinessError)=>{
+    if (err) {
+      console.error(`setOsAccountProfilePhoto exception:code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('setOsAccountProfilePhoto successful.');
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setOsAccountProfilePhoto
 
@@ -1871,28 +2893,53 @@ setOsAccountProfilePhoto(localId: number, photo: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| photo | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| photo | string | 是 | 头像信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or photo. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+
+**示例**
+
+给ID为100的系统账号设置头像。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let photo: string = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPCAYAAAA/I0V3AAAAAXNSR0IArs4c6QAAAARnQU1BAA'+
+'Cxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVDhPvZLBDYMwDEV/ugsXRjAT0EHCOuFIBwkbdIRewi6unbiAyoGgSn1SFH85+Y'+
+'q/4ljARW62X+LHS8uIzjm4dXUYF+utzBikB52Jo5e5iEPKqpACk7R9NM2RvWm5tIkD2czLCUFNKLD6IjdMHFHDzws285MgGrT0xCtp3WOKHo'+
+'+7q0mP0DZW9pNmoEFUzrQjp5cCnaen2kSJXLFD8ghbXyZCMQf/8e8Ns1XVAG/XAgqKzVnJFAAAAABJRU5ErkJggg=='
+try {
+  accountManager.setOsAccountProfilePhoto(localId, photo).then(() => {
+    console.info('setOsAccountProfilePhoto success');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountProfilePhoto err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setOsAccountType
 
@@ -1912,28 +2959,51 @@ setOsAccountType(localId: number, type: OsAccountType, options?: SetOsAccountTyp
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| localId | number | 是 |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 |
-| options | [SetOsAccountTypeOptions](arkts-basicservices-osaccount-setosaccounttypeoptions-i-sys.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | number | 是 | 系统账号ID。 |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 系统账号类型。 |
+| options | [SetOsAccountTypeOptions](arkts-basicservices-osaccount-setosaccounttypeoptions-i-sys.md) | 否 | 设置系统账号类型的选项。默认为空。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300003](../errorcode-account.md#12300003-账号不存在) |
-| [12300008](../errorcode-account.md#12300008-受限的账号) |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or options. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let type: osAccount.OsAccountType = osAccount.OsAccountType.ADMIN;
+let options: osAccount.SetOsAccountTypeOptions = {
+  token: new Uint8Array([0, 1, 2, 3])
+};
+try {
+  accountManager.setOsAccountType(localId, type, options).then(() => {
+    console.info('setOsAccountType successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountType failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```

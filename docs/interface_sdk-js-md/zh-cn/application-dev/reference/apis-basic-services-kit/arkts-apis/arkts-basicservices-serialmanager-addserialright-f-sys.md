@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { serialManager } from 'kits/@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit';
 ```
 
 ## addSerialRight
@@ -29,18 +29,55 @@ ohos.permission.MANAGE_USB_CONFIG）来识别是否允许静默授权，跳过�
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| tokenId | number | 是 |
-| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tokenId | number | 是 | 应用访问令牌ID，标识需要访问串口设备权限的应用。可通过 [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md) 获取。 |
+| portId | number | 是 | 串口设备的端口号，用于唯一标识串口设备，可通过 [serialManager.getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取有效的端口号。需确保端口号存在否则会返回31400003错误 。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [14400005](../errorcode-usb.md#14400005-数据库操作异常) |
-| [31400001](../errorcode-usb.md#31400001-串口服务异常) |
-| [31400003](../errorcode-usb.md#31400003-端口号不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |  |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |  |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+| [14400005](../errorcode-usb.md#14400005-数据库操作异常) |  |
+| [31400001](../errorcode-usb.md#31400001-串口服务异常) |  |
+| [31400003](../errorcode-usb.md#31400003-端口号不存在) |  |
+
+**示例**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
+
+
+function addSerialRight() {
+  // 获取串口列表
+  let portList: serialManager.SerialPort[] = serialManager.getPortList();
+  console.info('portList: ', JSON.stringify(portList));
+  if (portList === undefined || portList.length === 0) {
+    console.info('portList is empty');
+    return;
+  }
+
+  let portId: number = portList[0].portId;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION;
+
+  bundleManager.getBundleInfoForSelf(bundleFlags).then((bundleInfo) => {
+    console.info('getBundleInfoForSelf successfully. Data: %{public}s', JSON.stringify(bundleInfo));
+    let tokenId = bundleInfo.appInfo.accessTokenId;
+    try {
+      // 串口增加权限
+      serialManager.addSerialRight(tokenId, portId);
+      console.info('addSerialRight success, portId: ' + portId);
+    } catch (error) {
+      const err: BusinessError = error as BusinessError;
+      console.error(`Failed to add serial right. Code: ${err.code}, message: ${err.message}`);
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get bundle info for self. Code: ${error.code}, message: ${error.message}`);
+  });
+}
+```

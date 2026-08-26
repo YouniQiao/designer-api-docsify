@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## getSignalLevel
@@ -26,13 +29,28 @@ Calculates the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rssi | number | Yes |
-| band | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rssi | number | Yes | Indicates the Wi-Fi RSSI. |
+| band | number | Yes | Indicates the Wi-Fi frequency band. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns Wi-Fi signal level ranging from 0 to 4. |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+  let rssi = 0;
+  let band = 0;
+  let level = wifi.getSignalLevel(rssi,band);
+  console.info("level:" + JSON.stringify(level));
+}catch(error){
+  console.error("failed:" + JSON.stringify(error));
+}
+```

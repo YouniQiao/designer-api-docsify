@@ -9,7 +9,7 @@ NotificationSubscriberExtensionAbility is the base class for notification subscr
 ## Modules to Import
 
 ```TypeScript
-import { NotificationSubscriberExtensionAbility } from 'kits/@kit.NotificationKit';
+import NotificationSubscriberExtensionAbility from '@kit.NotificationKit';
 ```
 
 ## onCancelMessages
@@ -28,9 +28,21 @@ Called when notifications are canceled.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| hashCodes | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| hashCodes | Array & lt;string & gt; | Yes | List of hash codes of the notifications to cancel, obtained through [onReceiveMessage](#onreceivemessage). |
+
+**Examples**
+
+```TypeScript
+const TAG = 'NotificationSubscriberExtAbility';
+
+export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
+  onCancelMessages(hashCodes: Array<string>): void {
+    console.info(`${TAG} onCancelMessages. hashCodes: ${JSON.stringify(hashCodes)}`);
+  }
+}
+```
 
 ## onDestroy
 
@@ -45,6 +57,18 @@ Called when the notification subscription extension is destroyed.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
+
+**Examples**
+
+```TypeScript
+const TAG = 'NotificationSubscriberExtAbility';
+
+export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
+  onDestroy(): void {
+    console.info(`${TAG} onDestroy`);
+  }
+}
+```
 
 ## onReceiveMessage
 
@@ -62,9 +86,21 @@ Called when a notification is received.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | Yes | Callback information about the notification received in the notification subscription extension capability. |
+
+**Examples**
+
+```TypeScript
+const TAG = 'NotificationSubscriberExtAbility';
+
+export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
+  onReceiveMessage(notificationInfo: notificationExtensionSubscription.NotificationInfo): void {
+    console.info(`${TAG} onReceiveMessage. notificationInfo: ${JSON.stringify(notificationInfo)}`);
+  }
+}
+```
 
 ## context
 

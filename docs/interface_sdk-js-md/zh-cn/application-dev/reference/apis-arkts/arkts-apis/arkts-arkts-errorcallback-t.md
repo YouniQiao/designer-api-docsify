@@ -14,6 +14,6 @@ type ErrorCallback = (err: ErrorEvent) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | 是 | 错误事件类， 表示Worker执行过程中出现的异常信息。 |

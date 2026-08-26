@@ -70,3 +70,15 @@ Determines whether to use the LocalStorage instance object returned by the Local
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+@Entry({ routeName: 'myPage' })
+@Component
+struct Index {
+  build() {
+    Text('Index')
+  }
+}
+```

@@ -9,19 +9,19 @@ Provides fileUri APIS@namespace fileUri
 ## Modules to Import
 
 ```TypeScript
-import { fileUri } from 'kits/@kit.CoreFileKit';
+import fileUri from '@kit.CoreFileKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md) |
+| Name | Description |
+| --- | --- |
+| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md) | Get the uri from the path of file in app sandbox |
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FileUri](arkts-corefile-fileuri-fileuri-c.md) |
+| Name | Description |
+| --- | --- |
+| [FileUri](arkts-corefile-fileuri-fileuri-c.md) | FileUri represents the uri of the file.@extends uri.URI |

@@ -9,7 +9,6 @@ Describes the parameters of a response send by the server to a specified read or
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deviceId

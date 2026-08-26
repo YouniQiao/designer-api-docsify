@@ -2,9 +2,11 @@
 
 The LauncherAbilityInfo module provides information about the launcher ability, which is obtained through [innerBundleManager.getLauncherAbilityInfos](../../../reference/apis-ability-kit/js-apis-Bundle-InnerBundleManager-sys.md#innerbundlemanagergetlauncherabilityinfosdeprecated).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-LauncherAbilityInfo](#launcherabilityinfo-system-api) instead.&gt;
+> [bundleManager-LauncherAbilityInfo](#launcherabilityinfo-system-api) instead.
+> 
 > The APIs provided by this module are system APIs.
 
 **Since:** 8

@@ -29,9 +29,9 @@ onOffsetChange?: (offset: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 |  |
 
 ## edgeEffect
 

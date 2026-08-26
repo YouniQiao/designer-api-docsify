@@ -12,21 +12,21 @@
 ## 导入模块
 
 ```TypeScript
-import { hash } from 'kits/@kit.CoreFileKit';
+import hash from '@kit.CoreFileKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [createHash(@ohos.file.hash (文件哈希处理))](arkts-corefile-hash-createhash-f.md) |
-| [hash(@ohos.file.hash (文件哈希处理))](arkts-corefile-hash-f.md) |
-| [hash(@ohos.file.hash (文件哈希处理))](arkts-corefile-hash-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [createHash(@ohos.file.hash (文件哈希处理))](arkts-corefile-hash-createhash-f.md) | 创建并返回HashStream对象，用于生成哈希摘要。可以指定哈希计算采用的算法。HashStream采用流式处理机制，支持分批次更新数据，适用于大文件或数据流的哈希计算，避免一次性加载大文件到内存。 |
+| [hash(@ohos.file.hash (文件哈希处理))](arkts-corefile-hash-f.md) | 计算文件的哈希值，基于指定算法对文件完整内容进行哈希摘要计算。使用Promise异步回调。 |
+| [hash(@ohos.file.hash (文件哈希处理))](arkts-corefile-hash-f.md) | 计算文件的哈希值，基于指定算法对文件完整内容进行哈希摘要计算。使用callback异步回调。 |
 
 ### 类
 
-| 名称 |
-| --- |
-| [HashStream(@ohos.file.hash (文件哈希处理))](arkts-corefile-hash-hashstream-c.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [HashStream(@ohos.file.hash (文件哈希处理))](arkts-corefile-hash-hashstream-c.md) | HashStream类是用于创建数据的哈希摘要的实用工具。由 [createHash](arkts-corefile-hash-createhash-f.md) 接口获得。该类采用增量式哈希计算设计，通过update方法多次添加数据块， 最后通过digest方法计算最终哈希值，适用于处理大文件或持续产生的数据流。 |

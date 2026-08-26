@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from 'kits/@kit.CoreFileKit';
+import volumeManager from '@kit.CoreFileKit';
 ```
 
 ## deletePartition
@@ -26,25 +26,25 @@ Deletes a partition on a disk. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| diskId | string | Yes |
-| partitionNum | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| diskId | string | Yes | Disk ID. |
+| partitionNum | number | Yes | Partition number. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| 13600001 |
-| 13600005 |
-| 13600008 |
-| 13600010 |
-| 13600023 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| 13600001 | IPC error. |
+| 13600005 | Incorrect volume state. |
+| 13600008 | No such object. |
+| 13600010 | The input parameter is invalid. |
+| 13600023 | Delete partition failed. |

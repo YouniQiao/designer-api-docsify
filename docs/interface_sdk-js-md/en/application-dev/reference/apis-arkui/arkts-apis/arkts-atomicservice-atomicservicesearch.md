@@ -3,33 +3,33 @@
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from 'kits/@kit.ArkUI';
+import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AtomicServiceSearch(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-atomicservicesearch-s.md) |
+| Name | Description |
+| --- | --- |
+| [AtomicServiceSearch(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-atomicservicesearch-s.md) | **AtomicServiceSearch** allows you to customize the default search area, customizable selection area, and function area (a maximum of two). |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [InputFilterParams(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-inputfilterparams-i.md) |
-| [MenuAlignParams(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) |
-| [OperationParams(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-operationparams-i.md) |
-| [SearchButtonParams(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-searchbuttonparams-i.md) |
-| [SearchParams(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md) |
-| [SelectParams(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-selectparams-i.md) |
+| Name | Description |
+| --- | --- |
+| [InputFilterParams(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-inputfilterparams-i.md) | Sets regular expression for input filtering. |
+| [MenuAlignParams(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | Sets the alignment between the drop-down list button and the drop-down list box. |
+| [OperationParams(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-operationparams-i.md) | Sets initialization parameters of the function area. |
+| [SearchButtonParams(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-searchbuttonparams-i.md) | Sets the search button located next to the search text box. |
+| [SearchParams(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md) | Provides optional attributes for the search area. |
+| [SelectParams(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-atomicservice-atomicservicesearch-selectparams-i.md) | Provides optional attributes for the selection area. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnContentScrollCallback(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-oncontentscrollcallback-t.md) |
-| [OnPasteCallback(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-onpastecallback-t.md) |
-| [OnSelectCallback(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-onselectcallback-t.md) |
-| [OnTextSelectionChangeCallback(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-ontextselectionchangecallback-t.md) |
+| Name | Description |
+| --- | --- |
+| [OnContentScrollCallback(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-oncontentscrollcallback-t.md) | Called when the text content is scrolled. |
+| [OnPasteCallback(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-onpastecallback-t.md) | Called when a paste operation is performed. |
+| [OnSelectCallback(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-onselectcallback-t.md) | Called when an item in the drop-down list box is selected. |
+| [OnTextSelectionChangeCallback(This section describes the interfaces used by AtomicServiceSearch)](arkts-arkui-ontextselectionchangecallback-t.md) | Called when the position of the text selection changes or when the cursor position changes during the editing state. |

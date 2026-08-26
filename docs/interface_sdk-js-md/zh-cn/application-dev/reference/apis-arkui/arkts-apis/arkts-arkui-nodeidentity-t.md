@@ -14,7 +14,7 @@ export declare type NodeIdentity = string | number
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| string |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| string |  |
+| number |  |

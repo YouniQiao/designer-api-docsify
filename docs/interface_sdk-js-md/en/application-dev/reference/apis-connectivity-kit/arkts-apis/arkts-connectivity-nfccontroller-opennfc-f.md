@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import nfcController from '@kit.ConnectivityKit';
 ```
 
 ## openNfc
@@ -14,7 +14,8 @@ function openNfc(): boolean
 
 Opens NFC.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md) instead.
 
@@ -30,6 +31,6 @@ Opens NFC.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |

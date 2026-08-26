@@ -13,14 +13,14 @@
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| arrayLength | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arrayLength | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Call]]
 
 ```TypeScript
@@ -29,14 +29,14 @@
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| arrayLength | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arrayLength | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Call]]
 
 ```TypeScript
@@ -45,14 +45,14 @@
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| items | T[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| items | T[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -61,14 +61,14 @@ new(arrayLength?: number): any[]
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| arrayLength | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arrayLength | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -77,14 +77,14 @@ new <T>(arrayLength: number): T[]
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| arrayLength | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arrayLength | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -93,14 +93,14 @@ new <T>(...items: T[]): T[]
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| items | T[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| items | T[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## isArray
 
 ```TypeScript
@@ -109,14 +109,14 @@ isArray(arg: any): arg is any[]
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| arg | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arg | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## prototype
 
 ```TypeScript

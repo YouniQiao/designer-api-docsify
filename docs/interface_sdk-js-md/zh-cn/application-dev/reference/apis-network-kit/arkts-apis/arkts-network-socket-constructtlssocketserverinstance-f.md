@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## constructTLSSocketServerInstance
@@ -20,6 +20,15 @@ function constructTLSSocketServerInstance(): TLSSocketServer
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TLSSocketServer](arkts-network-socket-tlssocketserver-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TLSSocketServer](arkts-network-socket-tlssocketserver-i.md) | 返回一个TLSSocketServer对象。 |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+```

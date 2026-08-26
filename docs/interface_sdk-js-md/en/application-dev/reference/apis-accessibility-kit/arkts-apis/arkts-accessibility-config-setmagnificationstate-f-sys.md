@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from 'kits/@kit.AccessibilityKit';
+import config from '@kit.AccessibilityKit';
 ```
 
 ## setMagnificationState
@@ -24,15 +24,29 @@ Sets the enabled state of the magnification effect. The magnification effect dep
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| state | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| state | boolean | Yes | Indicates the enabled state of the magnification effect.    - **true**: indicates that the magnification effect is enabled.    - **false**: indicates that the magnification effect is disabled. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [9300007](../errorcode-accessibility.md#9300007-magnification-trigger-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [9300007](../errorcode-accessibility.md#9300007-magnification-trigger-failed) | Trigger magnification failed. |
+
+**Examples**
+
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  config.setMagnificationState(true);
+} catch (err) {
+  let e = err as BusinessError;
+  console.error(`Failed to set magnification. Code: ${e.code}, message: ${e.message}`);
+}
+```

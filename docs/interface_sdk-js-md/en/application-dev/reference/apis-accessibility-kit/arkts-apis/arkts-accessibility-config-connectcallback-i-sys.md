@@ -11,7 +11,7 @@ Callback provided when enabling an accessibility extension app through the [conf
 ## Modules to Import
 
 ```TypeScript
-import { config } from 'kits/@kit.AccessibilityKit';
+import config from '@kit.AccessibilityKit';
 ```
 
 ## onDisconnect

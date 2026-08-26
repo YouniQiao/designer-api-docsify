@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## isIsolatedProcess
@@ -22,6 +22,12 @@ Checks whether this process is isolated.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the process is isolated; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let result = process.isIsolatedProcess();
+```

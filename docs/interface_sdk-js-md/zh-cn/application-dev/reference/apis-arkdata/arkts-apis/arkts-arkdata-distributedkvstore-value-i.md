@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import distributedKVStore from '@kit.ArkData';
 ```
 
 ## type

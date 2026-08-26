@@ -11,7 +11,6 @@ ControlCenter继承自[ControlCenterQuery](arkts-camera-camera-controlcenterquer
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableControlCenter
@@ -30,12 +29,23 @@ enableControlCenter(enabled: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | boolean | 是 | 开启或关闭相机控制器。true表示开启，false表示关闭。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+function enableControlCenter(videoSession: camera.VideoSession, enable: boolean): void {
+    let isSupported: boolean = videoSession.isControlCenterSupported();
+    if (isSupported) {
+        videoSession.enableControlCenter(enable);
+    }
+}
+```

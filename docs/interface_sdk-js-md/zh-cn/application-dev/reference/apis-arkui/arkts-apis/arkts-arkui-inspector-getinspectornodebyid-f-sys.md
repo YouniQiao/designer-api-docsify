@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## getInspectorNodeById
@@ -25,12 +26,12 @@ declare function getInspectorNodeById(id: number): object
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | number | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| object |
+| 类型 | 说明 |
+| --- | --- |
+| object |  |

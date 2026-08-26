@@ -22,7 +22,7 @@ Adds a color stop for the CanvasGradient object based on the specified offset an
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| offset | number | Yes |
-| color | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | number | Yes | Proportion of the distance between the color stop and the start point to the total length. The value ranges from 0 to 1. |
+| color | string | Yes | Sets the gradient color. |

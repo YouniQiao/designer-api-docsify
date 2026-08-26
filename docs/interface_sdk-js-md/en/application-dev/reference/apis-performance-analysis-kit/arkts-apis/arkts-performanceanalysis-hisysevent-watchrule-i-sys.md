@@ -11,7 +11,6 @@ Defines event subscription rules.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## domain

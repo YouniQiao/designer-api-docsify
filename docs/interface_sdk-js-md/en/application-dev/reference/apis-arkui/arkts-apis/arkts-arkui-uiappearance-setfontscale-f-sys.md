@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiAppearance } from 'kits/@kit.ArkUI';
+import uiAppearance from '@kit.ArkUI';
 ```
 
 ## setFontScale
@@ -25,21 +25,41 @@ Sets the system font scale.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fontScale | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fontScale | number | Yes | indicates the font-scale to set |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | the promise returned by the function |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [500001](../errorcode-uiappearance.md#500001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fontScale = 1.5;
+
+try {
+  uiAppearance.setFontScale(fontScale).then(() => {
+    console.info('Set fontScale successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Set fontScale failed. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  let err = error as BusinessError;
+  console.error(`Set fontScale failed. Code: ${err.code}, message: ${err.message}`);
+}
+```

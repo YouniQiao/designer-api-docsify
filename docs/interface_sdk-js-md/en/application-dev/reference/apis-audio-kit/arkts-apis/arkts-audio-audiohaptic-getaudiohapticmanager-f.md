@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from 'kits/@kit.AudioKit';
+import audioHaptic from '@kit.AudioKit';
 ```
 
 ## getAudioHapticManager
@@ -20,6 +20,12 @@ Obtains an [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md)
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) |
+| Type | Description |
+| --- | --- |
+| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | AudioHapticManager instance. |
+
+**Examples**
+
+```TypeScript
+let audioHapticManagerInstance: audioHaptic.AudioHapticManager = audioHaptic.getAudioHapticManager();
+```

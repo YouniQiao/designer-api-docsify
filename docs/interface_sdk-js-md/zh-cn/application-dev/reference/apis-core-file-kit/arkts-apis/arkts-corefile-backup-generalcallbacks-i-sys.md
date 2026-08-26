@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backup } from 'kits/@kit.CoreFileKit';
+import backup from '@kit.CoreFileKit';
 ```
 
 ## onBackupSizeReport
@@ -46,14 +46,14 @@ onFileReadyBatch?: OnFileReadyBatch
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13600001 |
-| 13900005 |
-| 13900011 |
-| 13900020 |
-| 13900025 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
 
 ## onProcess
 
@@ -73,25 +73,36 @@ onProcess(bundleName: string, process: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| process | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 触发回调的应用名称。 |
+| process | string | 是 | 应用备份或恢复的进度信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 13500006 |
-| 13500008 |
-| 13600001 |
-| 13900001 |
-| 13900005 |
-| 13900011 |
-| 13900020 |
-| 13900025 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 13500006 | Tar error |
+| 13500008 | Untar error |
+| 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+
+**示例**
+
+```TypeScript
+import { backup } from '@kit.CoreFileKit';
+
+onProcess: (bundleName: string, process: string) => {
+  console.info('onProcess bundleName : ' + bundleName);
+  console.info('onProcess processInfo : ' + process);
+}
+```
 
 ## onResultReport
 
@@ -111,22 +122,33 @@ onResultReport(bundleName: string, result: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| result | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 触发回调的应用名称。 |
+| result | string | 是 | 应用备份或恢复的结果信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 13600001 |
-| 13900005 |
-| 13900011 |
-| 13900025 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 13600001 | IPC error |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+import { backup } from '@kit.CoreFileKit';
+
+onResultReport: (bundleName: string, result: string) => {
+  console.info('onResultReport bundleName : ' + bundleName);
+  console.info('onResultReport result : ' + result);
+}
+```
 
 ## onAllBundlesEnd
 

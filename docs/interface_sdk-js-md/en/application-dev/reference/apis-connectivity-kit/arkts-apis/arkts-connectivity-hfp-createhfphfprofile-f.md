@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hfp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createHfpHfProfile
@@ -22,12 +21,12 @@ create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile).
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [HandsFreeHfProfile](arkts-connectivity-hfp-handsfreehfprofile-i-sys.md) |
+| Type | Description |
+| --- | --- |
+| [HandsFreeHfProfile](arkts-connectivity-hfp-handsfreehfprofile-i-sys.md) | Returns the instance of profile. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |

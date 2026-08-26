@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## transformCoordinateSystem
@@ -15,7 +14,8 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 
 旋转提供的旋转矩阵，使其可以以不同的方式表示坐标系。使用callback异步回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.transformRotationMatrix]
 > [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md)
@@ -31,11 +31,30 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| inRotationVector | Array & lt;number & gt; | 是 |
-| [coordinates](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontvariationinstance-i.md) | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| inRotationVector | Array & lt;number & gt; | 是 | 表示旋转矩阵。 |
+| coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | 是 | 表示坐标系方向。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回转换后的旋转矩阵。 |
+
+**示例**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sensor.transformCoordinateSystem([1, 0, 0, 0, 1, 0, 0, 0, 1], { x: 2, y: 3 }, 
+                                 (err: BusinessError, data: Array<number>) => {
+  if (err) {
+    console.error(`Failed to operate. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info("Succeeded in starting Operation. Data obtained: " + data);
+  for (let i = 0; i < data.length; i++) {
+    console.info("Succeeded in getting transformCoordinateSystem data[ " + i + "] = " + data[i]);
+  }
+})
+```
 
 
 ## transformCoordinateSystem
@@ -46,7 +65,8 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 
 旋转提供的旋转矩阵，使其可以以不同的方式表示坐标系。使用Promise异步回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md)
 > 替代。
@@ -61,13 +81,30 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| inRotationVector | Array & lt;number & gt; | 是 |
-| [coordinates](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontvariationinstance-i.md) | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| inRotationVector | Array & lt;number & gt; | 是 | 表示旋转矩阵。 |
+| coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | 是 | 表示坐标系方向。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;number & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;number & gt; & gt; | 使用异步方式返回转换后的旋转矩阵。 |
+
+**示例**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.transformCoordinateSystem([1, 0, 0, 0, 1, 0, 0, 0, 1], { x: 2, y: 3 });
+promise.then((data: Array<number>) => {
+  console.info("Succeeded in starting Operation");
+  for (let i = 0; i < data.length; i++) {
+    console.info("Succeeded in getting transformCoordinateSystem data[ " + i + "] = " + data[i]);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to operate.`);
+})
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { preferences } from 'kits/@kit.ArkData';
+import preferences from '@kit.ArkData';
 ```
 
 ## isStorageTypeSupported
@@ -22,18 +22,29 @@ Checks whether the specified storage type is supported. This API returns the res
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [StorageType](arkts-arkdata-preferences-storagetype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [StorageType](arkts-arkdata-preferences-storagetype-e.md) | Yes | Storage type to check. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the storage type is supported; returns **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types |
+
+**Examples**
+
+```TypeScript
+let xmlType = preferences.StorageType.XML;
+let gskvType = preferences.StorageType.GSKV;
+let isXmlSupported = preferences.isStorageTypeSupported(xmlType);
+let isGskvSupported = preferences.isStorageTypeSupported(gskvType);
+console.info("Is xml supported in current platform: " + isXmlSupported);
+console.info("Is gskv supported in current platform: " + isGskvSupported);
+```

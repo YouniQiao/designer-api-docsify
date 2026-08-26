@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getSystemRegion
@@ -24,6 +24,20 @@ Obtains the system region.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | System region ID. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemRegion: string = i18n.System.getSystemRegion(); // If the system region is China, then systemRegion is CN.
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let region: string = i18n.getSystemRegion();
+```

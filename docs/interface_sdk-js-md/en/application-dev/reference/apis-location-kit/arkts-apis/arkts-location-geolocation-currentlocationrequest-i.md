@@ -15,7 +15,7 @@ Configuring parameters in current location requests@interface CurrentLocationReq
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import geolocation from '@kit.LocationKit';
 ```
 
 ## maxAccuracy

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import dragController from '@kit.ArkUI';
 ```
 
 ## getDragPreview
@@ -14,7 +14,8 @@ function getDragPreview(): DragPreview
 
 Obtains the **DragPreview** object, which represents the preview displayed during a drag operation.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object
 > associated with the current UI context.
@@ -33,6 +34,6 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) |
+| Type | Description |
+| --- | --- |
+| [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) | DragPreview** object. It provides the API for setting the preview style. It does not work in the **OnDrop** and **OnDragEnd** callbacks. |

@@ -11,7 +11,7 @@ Implements a navigation stack of the **MultiNavigation** component. Currently, t
 ## Modules to Import
 
 ```TypeScript
-import { SplitPolicy, MultiNavigation, MultiNavPathStack } from 'kits/@kit.ArkUI';
+import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
 ```
 
 ## clear
@@ -37,9 +37,9 @@ Clears the navigation stack.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
 
 ## constructor
 
@@ -75,9 +75,9 @@ Disables or enables the transition animation in the **MultiNavigation** componen
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| disable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| disable | boolean | Yes | Whether to disable the transition animation.Default value: **false**.   **true**: The transition animation is disabled.   **false**: The transition animation is not disabled. |
 
 ## getAllPathName
 
@@ -97,9 +97,9 @@ Obtains the names of all navigation destination pages in the navigation stack.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Names of all navigation destination pages in the navigation stack. |
 
 ## getIndexByName
 
@@ -119,15 +119,15 @@ Obtains the indexes of all the navigation destination pages that match **name**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;number & gt; | Indexes of all the matching navigation destination pages. |
 
 ## getParamByIndex
 
@@ -147,15 +147,15 @@ Obtains the parameter information of the navigation destination page specified b
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the navigation destination page.Value range: [0, +∞). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| unknown \| undefined |
+| Type | Description |
+| --- | --- |
+| unknown \| undefined | Object**: parameter information of the matching navigation destination page. |
 
 ## getParamByName
 
@@ -175,15 +175,15 @@ Obtains the parameter information of all the navigation destination pages that m
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;Object & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;Object & gt; | Parameter information of all the matching navigation destination pages. |
 
 ## keepBottomPage
 
@@ -211,9 +211,9 @@ Sets whether to retain the bottom page when the **pop** or **clear** APIs is cal
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| keepBottom | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keepBottom | boolean | Yes | Whether to retain the bottom page.Default value: **false**.   **true**: The bottom page is retained.   **false**: The bottom page is not retained. |
 
 ## moveIndexToTop
 
@@ -237,10 +237,10 @@ Moves the navigation destination page specified by **index** to the top of the n
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the navigation destination page.Value range: [0, +∞). |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
 
 ## moveToTop
 
@@ -264,16 +264,16 @@ Moves the first navigation destination page that matches **name** from the botto
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found. |
 
 ## pop
 
@@ -298,15 +298,15 @@ Pops the top element out of the navigation stack.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| undefined | Information about the navigation destination page at the top of the stack. |
 
 ## pop
 
@@ -331,16 +331,16 @@ Pops the top element out of the navigation stack and invokes the **onPop** callb
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | Object | No |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | Object | No | Custom processing result on the page. |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| undefined | Information about the navigation destination page at the top of the stack. |
 
 ## popToIndex
 
@@ -360,10 +360,10 @@ Returns the navigation stack to the page specified by **index**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the navigation destination page.Value range: [0, +∞). |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
 
 ## popToIndex
 
@@ -383,11 +383,11 @@ Returns the navigation stack to the page specified by **index** and invokes the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| result | Object | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the navigation destination page.Value range: [0, +∞). |
+| result | Object | Yes | Custom processing result on the page. |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
 
 ## popToName
 
@@ -407,16 +407,16 @@ Pops pages until the first navigation destination page that matches **name** fro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found. |
 
 ## popToName
 
@@ -436,17 +436,17 @@ Pops pages until the first navigation destination page that matches **name** fro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| result | Object | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| result | Object | Yes | Custom processing result on the page. |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found. |
 
 ## pushPath
 
@@ -466,11 +466,11 @@ Pushes the specified navigation destination page to the navigation stack.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
-| animated | boolean | No |
-| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
 ## pushPath
 
@@ -490,11 +490,11 @@ Pushes the specified navigation destination page to the navigation stack, with s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No |
-| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Stack operation settings. Only the **animated** field is supported. |
+| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
 ## pushPathByName
 
@@ -514,12 +514,12 @@ Pushes the navigation destination page specified by **name** to the navigation s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| param | Object | Yes |
-| animated | boolean | No |
-| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| param | Object | Yes | Detailed parameters of the navigation destination page. |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
 ## pushPathByName
 
@@ -540,13 +540,13 @@ Pushes the navigation destination page specified by **name** to the navigation s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| param | Object | Yes |
-| [onPop](../arkts-components/arkts-arkui-navpathinfo-c.md) | base.Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | No |
-| animated | boolean | No |
-| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| param | Object | Yes | Detailed parameters of the navigation destination page. |
+| onPop | base.Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | No | Callback used to handle the return result. |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
 ## removeByIndexes
 
@@ -566,15 +566,15 @@ Removes the navigation destination pages specified by **indexes** from the navig
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| indexes | Array & lt;number & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| indexes | Array & lt;number & gt; | Yes | Array of indexes of the navigation destination pages to remove.Value range of the number type: [0, +∞). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of the navigation destination pages removed. |
 
 ## removeByName
 
@@ -594,15 +594,15 @@ Removes the navigation destination page specified by **name** from the navigatio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page to be removed. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of the navigation destination pages removed. |
 
 ## replacePath
 
@@ -622,10 +622,10 @@ Replaces the current top page on the stack with the specified navigation destina
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
 
 ## replacePath
 
@@ -645,10 +645,10 @@ Replaces the current top page on the stack with the specified navigation destina
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Stack operation settings. Only the **animated** field is supported. |
 
 ## replacePathByName
 
@@ -668,11 +668,11 @@ Replaces the current top page on the stack with the navigation destination page 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| param | Object | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the navigation destination page. |
+| param | Object | Yes | Detailed parameters of the navigation destination page. |
+| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
 
 ## setHomeWidthRange
 
@@ -692,10 +692,10 @@ Sets the draggable range for the home page width. If not set, the width defaults
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| minPercent | number | Yes |
-| maxPercent | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| minPercent | number | Yes | Minimum width percentage of the home page.Value range: [0, 100] |
+| maxPercent | number | Yes | Maximum width percentage of the home page.Value range: [0, 100] |
 
 ## setPlaceholderPage
 
@@ -729,9 +729,9 @@ Sets a placeholder page.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the placeholder page. |
 
 ## size
 
@@ -751,9 +751,9 @@ Obtains the stack size.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Stack size. |
 
 ## switchFullScreenState
 
@@ -773,12 +773,12 @@ Switches the display mode of the current top detail page in the stack.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [isFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isFullScreen | boolean | No | Whether to enable full-screen mode. The default value is **false**. The value **true** means to enable full-screen mode, and **false** means to enable split-screen mode. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the switching is successful. |

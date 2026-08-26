@@ -10,6 +10,7 @@ Defines the resizable image options.
 ## Modules to Import
 
 ```TypeScript
+import @kit.ArkUIGeneration from '@ohos.arkui.intelligence.@kit.ArkUIGeneration';
 ```
 
 ## lattice

@@ -11,7 +11,8 @@ Describes spatial device state.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## address
@@ -46,6 +47,21 @@ Whether the spatial device supports head tracking.
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let isHeadTrackingSupported: boolean = audioSpatializationManager.isHeadTrackingSupported();
+  console.info(`AudioSpatializationManager isHeadTrackingSupported: ${isHeadTrackingSupported}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
 ## isSpatializationSupported
 
 ```TypeScript
@@ -62,6 +78,20 @@ Whether the spatial device supports spatial rendering.
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  let isSpatializationSupported: boolean = audioSpatializationManager.isSpatializationSupported();
+  console.info(`AudioSpatializationManager isSpatializationSupported: ${isSpatializationSupported}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
 ## spatialDeviceType
 
 ```TypeScript
@@ -77,3 +107,16 @@ Spatial device type.
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let spatialDeviceState: audio.AudioSpatialDeviceState = {
+  address: "123",
+  isSpatializationSupported: true,
+  isHeadTrackingSupported: true,
+  spatialDeviceType: audio.AudioSpatialDeviceType.SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE
+};
+```

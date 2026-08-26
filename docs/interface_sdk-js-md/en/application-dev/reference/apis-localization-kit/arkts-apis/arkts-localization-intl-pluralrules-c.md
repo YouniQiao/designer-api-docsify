@@ -13,7 +13,7 @@ Provides the capability for obtaining the plural rule type.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import intl from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -33,6 +33,52 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
+
+**Examples**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// The current locale ID is used by the default constructor.
+let locale = new intl.Locale();
+// Return the current system locale ID.
+let localeID = locale.toString();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a DateTimeFormat object using the current system locale ID.
+let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a NumberFormat object using the current system locale ID.
+let formatter: intl.NumberFormat = new intl.NumberFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a Collator object using the current system locale ID.
+let collator = new intl.Collator();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a PluralRules object using the current system locale ID.
+let pluralRules = new intl.PluralRules();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a RelativeTimeFormat object using the current system locale ID.
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
+```
 
 ## constructor
 
@@ -54,10 +100,19 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locale | string \| Array & lt;string & gt; | Yes |
-| options | [PluralRulesOptions](arkts-localization-intl-pluralrulesoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locale | string \| Array & lt;string & gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
+| options | [PluralRulesOptions](arkts-localization-intl-pluralrulesoptions-i.md) | No | Options for creating a **PluralRules** object. |
+
+**Examples**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a PluralRules object with the locale ID being zh-CN, localeMatcher being lookup, and type being cardinal.
+let pluralRules: intl.PluralRules = new intl.PluralRules('zh-CN', { localeMatcher: 'lookup', type: 'cardinal' });
+```
 
 ## select
 
@@ -79,12 +134,28 @@ Obtains the singular-plural type of the specified number.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| n | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| n | number | Yes | Number for which the singular-plural type is to be obtained. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Singular-plural type. The value can be any of the following: **zero**, **one**, **two**, **few**, **many**, **others**. For details about the meanings of different values, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+
+**Examples**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a PluralRules object with the locale ID being zh-Hans.
+let zhPluralRules = new intl.PluralRules('zh-Hans');
+// Determine the singular-plural type corresponding to number 1 in locale zh-Hans.
+let plural = zhPluralRules.select(1); // plural = 'other'
+
+// Create a PluralRules object with the locale ID being en-US.
+let enPluralRules = new intl.PluralRules('en-US');
+// Determine the singular-plural type corresponding to number 1 in locale en-US.
+plural = enPluralRules.select(1); // plural = 'one'
+```

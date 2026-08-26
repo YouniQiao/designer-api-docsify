@@ -590,3 +590,19 @@ Size of the asset attachment, in bytes.
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
+
+## MUSIC_MASTER_MODE
+
+```TypeScript
+MUSIC_MASTER_MODE = 'music_master_mode'
+```
+
+The mode of the music master.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.

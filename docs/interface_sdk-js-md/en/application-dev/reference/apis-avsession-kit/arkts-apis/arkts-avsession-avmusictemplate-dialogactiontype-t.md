@@ -12,8 +12,8 @@ Dialog action type open & close, refresh.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'open' |
-| 'close' |
-| 'refresh' |
+| Type | Description |
+| --- | --- |
+| 'open' |  |
+| 'close' |  |
+| 'refresh' |  |

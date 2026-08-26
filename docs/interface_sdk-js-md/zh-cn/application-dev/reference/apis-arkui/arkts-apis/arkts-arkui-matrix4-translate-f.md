@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import matrix4 from '@kit.ArkUI';
 ```
 
 ## translate
@@ -26,12 +26,34 @@ Matrix的平移函数，可以为当前矩阵增加x轴/y轴/z轴平移效果。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | 是 | 设置平移参数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 平移后的矩阵对象。 |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+import { matrix4 } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Test {
+  private matrix1 = matrix4.identity().translate({ x: 100, y: 200, z: 30 });
+
+  build() {
+    Column() {
+      // $r("app.media.bg1")需要替换为开发者所需的图像资源文件。
+      Image($r("app.media.bg1")).transform(this.matrix1)
+        .width('40%')
+        .height(100)
+    }
+  }
+}
+```

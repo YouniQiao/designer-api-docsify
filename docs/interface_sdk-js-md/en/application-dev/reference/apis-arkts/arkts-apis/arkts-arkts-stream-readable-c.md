@@ -9,7 +9,6 @@ Stream from which data can be read. A readable stream is used to read data from 
 ## Modules to Import
 
 ```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -25,6 +24,24 @@ A constructor used to create a **Readable** object.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+```TypeScript
+let writableStream = new stream.Writable();
+```
+
+```TypeScript
+let readableStream = new stream.Readable();
+```
+
+```TypeScript
+let duplex = new stream.Duplex();
+```
+
+```TypeScript
+let transform = new stream.Transform();
+```
 
 ## constructor
 
@@ -42,9 +59,18 @@ A constructor used to create a **Readable** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | Yes | Options in the **Readable** constructor. |
+
+**Examples**
+
+```TypeScript
+let option : stream.ReadableOptions = {
+  encoding : 'utf-8'
+};
+let readableStream = new stream.Readable(option);
+```
 
 ## doInitialize
 
@@ -62,9 +88,42 @@ You need to implement this API. It is called when the readable stream calls on f
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Function | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Function | Yes | Callback function. |
+
+**Examples**
+
+```TypeScript
+class MyWritable extends stream.Writable {
+  doInitialize(callback: Function) {
+    super.doInitialize(callback);
+    console.info("Writable doInitialize"); // Writable doInitialize
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    super.doWrite(chunk, encoding, callback);
+  }
+}
+
+new MyWritable();
+```
+
+```TypeScript
+class MyReadable extends stream.Readable {
+  doInitialize(callback: Function) {
+    super.doInitialize(callback);
+    console.info("Readable doInitialize"); // Readable doInitialize
+}
+
+  doRead(size: number) {
+  }
+}
+
+let myReadable = new MyReadable();
+myReadable.on('data', () => {
+});
+```
 
 ## doRead
 
@@ -82,9 +141,27 @@ A data read API that needs to be implemented in child classes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes | Number of bytes to read. Value range: 0 & lt;= size & lt;= Number.MAX_VALUE |
+
+**Examples**
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+    console.info("doRead called"); // doRead called
+  }
+}
+
+let readable = new TestReadable();
+readable.on('data', () => {
+});
+```
 
 ## isPaused
 
@@ -102,9 +179,27 @@ Checks whether the readable stream is paused. The stream is paused after [pause(
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the stream is paused; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let readableStream = new TestReadable();
+console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaused false
+readableStream.pause();
+console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaused true
+```
 
 ## off
 
@@ -122,10 +217,60 @@ Unregisters an event processing callback used to listen for different events on 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | string | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | string | Yes | Type of the event. The following events are supported: |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | Callback function. |
+
+**Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+ }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+let testListenerCalled = false;
+let testListener = () => {
+  testListenerCalled = true;
+};
+writableStream.on('finish', testListener);
+writableStream.off('finish');
+writableStream.write('test');
+writableStream.end();
+setTimeout(() => {
+  console.info("Writable off test", testListenerCalled.toString()); // Writable off test false
+}, 0);
+```
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let readable = new TestReadable();
+
+function read() {
+  console.info("read() called");
+}
+
+readable.setEncoding('utf8');
+readable.on('readable', read);
+readable.off('readable');
+readable.push('test');
+// After off is used to unregister the listening of the readable stream events, the read function is not called and "read() called" is not printed.
+```
 
 ## on
 
@@ -143,10 +288,50 @@ Registers an event processing callback to listen for different events on the rea
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | string | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | string | Yes | Type of the event. The following events are supported: |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
+
+**Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback(new Error());
+  }
+}
+
+let callbackCalled = false;
+let writable = new TestWritable();
+writable.on('error', () => {
+  console.info("Writable event test", callbackCalled.toString()); // Writable event test false
+});
+writable.write('hello', 'utf8', () => {
+});
+```
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+    throw new Error('Simulated error');
+  }
+}
+
+let readable = new TestReadable();
+readable.push('test');
+readable.on('error', () => {
+  console.info("error event called"); // error event called
+});
+```
 
 ## pause
 
@@ -164,9 +349,26 @@ Pauses the readable stream in flowing mode. You can use **isPaused** to check wh
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Readable](arkts-arkts-stream-readable-c.md) |
+| Type | Description |
+| --- | --- |
+| [Readable](arkts-arkts-stream-readable-c.md) | Current **Readable** object. |
+
+**Examples**
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let readableStream = new TestReadable();
+readableStream.pause();
+console.info("Readable test pause", readableStream.isPaused()); // Readable test pause true
+```
 
 ## pipe
 
@@ -184,16 +386,46 @@ Attaches a writable stream to the readable stream to implement automatic data tr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [destination](../../apis-network-kit/arkts-apis/arkts-network-connection-routeinfo-i.md) | [Writable](arkts-arkts-stream-writable-c.md) | Yes |
-| options | Object | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| destination | [Writable](arkts-arkts-stream-writable-c.md) | Yes | Writable stream that receives data. |
+| options | Object | No | Reserved. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Writable](arkts-arkts-stream-writable-c.md) |
+| Type | Description |
+| --- | --- |
+| [Writable](arkts-arkts-stream-writable-c.md) | Current **Writable** object. |
+
+**Examples**
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+    this.push('test');
+    this.push(null);
+  }
+}
+
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Readable test pipe", chunk); // Readable test pipe test
+    callback();
+  }
+}
+
+let readable = new TestReadable();
+let writable = new TestWritable();
+readable.pipe(writable);
+```
 
 ## push
 
@@ -211,16 +443,34 @@ Pushes data into the buffer of the readable stream.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| chunk | Uint8Array \| string \| undefined \| null | Yes | Data to read.There has been a compatibility change since API version 22. In API version 21 and earlier versions, the type is `Uint8Array \| string \|
-| encoding | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| chunk | Uint8Array \| string \| undefined \| null | Yes | Data to read.There has been a compatibility change since API version 22. In API version 21 and earlier versions, the type is `Uint8Array \| string \| null`.<br>**Since:** 23 |
+| encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether there is space in the buffer of the readable stream. The value **true** means that there is still space in the buffer, and **false** means that the buffer is full. If **null** is passed, **false** is always returned, indicating that no data chunk is available for pushing. |
+
+**Examples**
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let readable = new TestReadable();
+let testData = 'Hello world';
+readable.push(testData);
+console.info("Readable push test", readable.readableLength); // Readable push test 11
+```
 
 ## read
 
@@ -238,21 +488,40 @@ Reads data from the buffer of the readable stream and returns the read data. If 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | No | Number of bytes to read. The default value is **undefined**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string \| null |
+| Type | Description |
+| --- | --- |
+| string \| null | Data read from the readable stream. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
+
+**Examples**
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let readableStream = new TestReadable();
+readableStream.push('test');
+readableStream.pause();
+let dataChunk = readableStream.read();
+console.info('Readable data is', dataChunk); // Readable data is test
+```
 
 ## resume
 
@@ -270,9 +539,26 @@ Resumes an explicitly paused readable stream. You can use **isPaused** to check 
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Readable](arkts-arkts-stream-readable-c.md) |
+| Type | Description |
+| --- | --- |
+| [Readable](arkts-arkts-stream-readable-c.md) | Current **Readable** object. |
+
+**Examples**
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let readableStream = new TestReadable();
+readableStream.resume();
+console.info("Readable test resume", !readableStream.isPaused()); // After a successful switching, the log "Readable test resume true" is displayed.
+```
 
 ## setEncoding
 
@@ -290,15 +576,32 @@ Sets an encoding format for the readable stream. If the buffer contains data, se
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| encoding | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Operation result. The value **true** is returned if the setting is successful; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let readableStream = new TestReadable();
+let result = readableStream.setEncoding('utf8');
+console.info("Readable result", result); // Readable result true
+```
 
 ## unpipe
 
@@ -316,15 +619,49 @@ Detaches a writable stream previously attached to the readable stream.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [destination](../../apis-network-kit/arkts-apis/arkts-network-connection-routeinfo-i.md) | [Writable](arkts-arkts-stream-writable-c.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| destination | [Writable](arkts-arkts-stream-writable-c.md) | No | Writable stream to detach. The default value is **undefined**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Readable](arkts-arkts-stream-readable-c.md) |
+| Type | Description |
+| --- | --- |
+| [Readable](arkts-arkts-stream-readable-c.md) | Current **Readable** object. |
+
+**Examples**
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+    this.push('test');
+    this.push(null);
+  }
+}
+
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let readable = new TestReadable();
+let writable = new TestWritable();
+readable.pipe(writable);
+readable.unpipe(writable);
+readable.on('data', () => {
+  console.info("Readable test unpipe data event triggered");
+});
+// After successful detaching, the data event is not triggered and "Readable test unpipe data event triggered" is not printed.
+```
 
 ## readable
 

@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { InputEvent } from 'kits/@kit.InputKit';
 ```
 
 ## actionTime

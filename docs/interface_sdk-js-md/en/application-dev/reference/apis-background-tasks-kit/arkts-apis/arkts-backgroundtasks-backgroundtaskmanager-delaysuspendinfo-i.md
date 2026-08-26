@@ -9,7 +9,7 @@ Defines the information about the transient task.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+import backgroundTaskManager from '@kit.BackgroundTasksKit';
 ```
 
 ## actualDelayTime

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import reminderAgent from '@kit.BackgroundTasksKit';
+import reminderAgentManager from '@kit.BackgroundTasksKitManager';
 ```
 
 ## cancelAllReminders
@@ -24,9 +25,20 @@ Cancels all reminders set by the current application. This API uses an asynchron
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+import reminderAgent from '@ohos.reminderAgent';
+
+reminderAgent.cancelAllReminders((err: BusinessError, data: void) =>{
+  console.info("cancelAllReminders callback")
+})
+```
 
 
 ## cancelAllReminders
@@ -47,6 +59,16 @@ Cancels all reminders set by the current application. This API uses a promise to
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+import reminderAgent from '@ohos.reminderAgent';
+
+reminderAgent.cancelAllReminders().then(() => {
+    console.info("cancelAllReminders promise")
+})
+```

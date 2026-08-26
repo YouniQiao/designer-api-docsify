@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import zlib from '@kit.BasicServicesKit';
 ```
 
 ## comment

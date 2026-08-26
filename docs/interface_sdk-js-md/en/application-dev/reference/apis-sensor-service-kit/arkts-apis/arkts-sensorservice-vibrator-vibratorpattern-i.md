@@ -9,7 +9,6 @@ Defines the vibration sequence.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## events

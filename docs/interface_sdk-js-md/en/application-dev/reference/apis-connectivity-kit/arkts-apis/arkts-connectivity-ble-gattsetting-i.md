@@ -9,7 +9,6 @@ Describes the setting for Gatt Connection.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## autoConnect

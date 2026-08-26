@@ -29,15 +29,15 @@ Sets the page exit animation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | Yes | pageTransition options |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |  |
 
 ## onExit
 
@@ -55,12 +55,24 @@ Invoked on a per-frame basis until the exit animation is complete, with the **pr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | Yes | Callback invoked on a per-frame basis until the exit animation is complete, with the **progress** parameter changing from 0 to 1.<br>**Since:** 18 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |  |
+
+**Examples**
+
+```TypeScript
+pageTransition() {
+    PageTransitionExit({ duration: 1200, curve: Curve.Linear })
+      // During the transition animation, the exit animation has a type that represents the route type, and a progress that increases from 0 to 1.
+      .onExit((type: RouteType, progress: number) => {
+        // Service logic
+      })
+  }
+```

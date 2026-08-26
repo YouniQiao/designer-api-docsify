@@ -16,13 +16,13 @@ declare type OnTabsContentWillChangeCallback = (currentIndex: number, comingInde
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| currentIndex | number | 是 |
-| [comingIndex](arkts-arkui-swipercontentwillscrollresult-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| currentIndex | number | 是 | 当前显示页面的index索引，索引从0开始计算。 |
+| comingIndex | number | 是 | 将要显示的新页面的index索引。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 当回调函数handler的返回值为true时，Tabs可以切换到新页面。 |

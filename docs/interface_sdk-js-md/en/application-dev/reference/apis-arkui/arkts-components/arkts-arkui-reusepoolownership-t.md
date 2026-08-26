@@ -14,7 +14,7 @@ Defining the reuse type of a custom component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'shared' |
-| 'perInstance' |
+| Type | Description |
+| --- | --- |
+| 'shared' |  |
+| 'perInstance' |  |

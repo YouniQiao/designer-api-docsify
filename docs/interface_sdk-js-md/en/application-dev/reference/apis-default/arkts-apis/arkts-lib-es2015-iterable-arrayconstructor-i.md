@@ -15,14 +15,14 @@ Creates an array from an iterable object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| iterable | Iterable & lt;T & gt; \ | ArrayLike & lt;T & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| iterable | Iterable & lt;T & gt; \ | ArrayLike & lt;T & gt; | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## from
 
 ```TypeScript
@@ -33,13 +33,13 @@ Creates an array from an iterable object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| iterable | Iterable & lt;T & gt; \ | ArrayLike & lt;T & gt; | Yes |
-| mapfn | (v: T, k: number) = & gt; U | Yes |
-| thisArg | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| iterable | Iterable & lt;T & gt; \ | ArrayLike & lt;T & gt; | Yes |  |
+| mapfn | (v: T, k: number) = & gt; U | Yes |  |
+| thisArg | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

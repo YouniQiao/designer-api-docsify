@@ -14,6 +14,6 @@ Defines an exception observer that can be used as an input parameter for [errorM
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| reason | [GlobalError](arkts-ability-errormanager-globalerror-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| reason | [GlobalError](arkts-ability-errormanager-globalerror-i.md) | Yes | Object related to the exception event name, message, error stack information, exception thread name, and exception thread type. |

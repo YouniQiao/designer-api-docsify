@@ -10,7 +10,7 @@ Enumerates the focus types.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'accessibility' |
-| 'normal' |
+| Type | Description |
+| --- | --- |
+| 'accessibility' | Accessibility focus. |
+| 'normal' | Normal focus. |

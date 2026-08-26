@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cardEmulation } from 'kits/@kit.ConnectivityKit';
+import cardEmulation from '@kit.ConnectivityKit';
 ```
 
 ## isSupported
@@ -26,12 +26,34 @@ function isSupported(feature: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [feature](../../apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| feature | number | 是 | 卡模拟类型值，详细请见[FeatureType](arkts-connectivity-cardemulation-featuretype-e.md)枚举值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true: 支持该类型卡模拟， false: 不支持该类型卡模拟。 |
+
+**示例**
+
+```TypeScript
+// 适用于除轻量级智能穿戴产品之外其他设备
+import { cardEmulation } from '@kit.ConnectivityKit';
+
+let isHceSupported: boolean = cardEmulation.isSupported(cardEmulation.FeatureType.HCE);
+if (!isHceSupported) {
+    console.info('this device is not supported for HCE, ignore it.');
+}
+```
+
+```TypeScript
+// 适用于轻量级智能穿戴设备
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+let isHceSupported = cardEmulation.isSupported(cardEmulation.FeatureType.HCE);
+if (!isHceSupported) {
+    console.error('this device is not supported for HCE, ignore it.');
+}
+```

@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@ohos.@kit.ArkUI';
 ```
 
 ## constructor
@@ -33,8 +34,8 @@ constructor(mass: number, stiffness: number, damping: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mass | number | 是 |
-| [stiffness](arkts-arkui-chainanimationoptions-i-sys.md) | number | 是 |
-| [damping](arkts-arkui-chainanimationoptions-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mass | number | 是 |  |
+| stiffness | number | 是 |  |
+| damping | number | 是 |  |

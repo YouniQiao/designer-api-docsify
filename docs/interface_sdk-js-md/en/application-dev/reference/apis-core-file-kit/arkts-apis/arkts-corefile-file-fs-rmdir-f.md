@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## rmdir
@@ -16,7 +14,8 @@ declare function rmdir(path: string): Promise<void>
 
 Removes a directory and all its subdirectories and files. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
 
 **Since:** 9
@@ -27,32 +26,45 @@ Removes a directory and all its subdirectories and files. This API uses a promis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the directory. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900001 |
-| 13900002 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900014 |
-| 13900018 |
-| 13900020 |
-| 13900027 |
-| 13900030 |
-| 13900032 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
+| 13900027 | Read-only file system |
+| 13900030 | File name too number |
+| 13900032 | Directory not empty |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir";
+fileIo.rmdir(dirPath).then(() => {
+  console.info(`Succeeded in removing directory.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove directory. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 
 ## rmdir
@@ -63,7 +75,8 @@ declare function rmdir(path: string, callback: AsyncCallback<void>): void
 
 Removes a directory and all its subdirectories and files. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
 
 **Since:** 9
@@ -74,24 +87,39 @@ Removes a directory and all its subdirectories and files. This API uses an async
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the directory. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900001 |
-| 13900002 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900014 |
-| 13900018 |
-| 13900020 |
-| 13900027 |
-| 13900030 |
-| 13900032 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
+| 13900027 | Read-only file system |
+| 13900030 | File name too number |
+| 13900032 | Directory not empty |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir";
+fileIo.rmdir(dirPath, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to remove directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in removing directory.`);
+  }
+});
+```

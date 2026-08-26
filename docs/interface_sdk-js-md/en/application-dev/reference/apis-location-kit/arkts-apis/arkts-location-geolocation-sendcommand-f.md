@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import geolocation from '@kit.LocationKit';
 ```
 
 ## sendCommand
@@ -26,10 +26,25 @@ Send extended commands to location subsystem.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | Yes | Indicates the extended Command Message Body. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
+
+**Examples**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
+geolocation.sendCommand(requestInfo, (err, result) => {
+    if (err) {
+        console.info('sendCommand: err=' + JSON.stringify(err));
+    }
+    if (result) {
+        console.info('sendCommand: result=' + JSON.stringify(result));
+    }
+});
+```
 
 
 ## sendCommand
@@ -52,12 +67,22 @@ Send extended commands to location subsystem.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | Yes | Indicates the extended Command Message Body. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | The promise returned by the function. |
+
+**Examples**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
+geolocation.sendCommand(requestInfo).then((result) => {
+    console.info('promise, sendCommand: ' + JSON.stringify(result));
+});
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## getThreadPriority
@@ -24,12 +24,25 @@ Obtains the thread priority based on the specified TID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| v | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| v | number | Yes | TID. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Priority of the thread. The priority depends on the operating system. |
+
+**Examples**
+
+```TypeScript
+let tid = process.tid;
+let pres = process.getThreadPriority(tid);
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+let tid = process.tid;
+let pres = pro.getThreadPriority(tid);
+```

@@ -9,7 +9,8 @@ A picker view to show available streaming device list.
 ## Modules to Import
 
 ```TypeScript
-import { AVCastPicker } from 'kits/@kit.AVSessionKit';
+import AVCastPicker from '@kit.AVSessionKit';
+import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKitParam';
 ```
 
 ## onStateChange
@@ -28,9 +29,9 @@ Picker state change callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| state | [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| state | [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md) | Yes |  |
 
 ## activeColor
 

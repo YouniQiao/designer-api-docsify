@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import zlib from '@kit.BasicServicesKit';
 ```
 
 ## createChecksumSync
@@ -22,6 +22,14 @@ Creates this checksum object. A checksum instance is returned upon a success.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Checksum](arkts-basicservices-zlib-checksum-i.md) |
+| Type | Description |
+| --- | --- |
+| [Checksum](arkts-basicservices-zlib-checksum-i.md) | Checksum object instance. |
+
+**Examples**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+
+let checksum = zlib.createChecksumSync()
+```

@@ -17,14 +17,14 @@ Attaches a callback for only the rejection of the Promise.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| onrejected | ((reason: any) = & gt; TResult \ | PromiseLike & lt;TResult & gt;) \ | undefined \| null | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| onrejected | ((reason: any) = & gt; TResult \ | PromiseLike & lt;TResult & gt;) \ | undefined \| null | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## then
 
 ```TypeScript
@@ -35,12 +35,12 @@ Attaches callbacks for the resolution and/or rejection of the Promise.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| onfulfilled | ((value: T) = & gt; TResult1 \ | PromiseLike & lt;TResult1 & gt;) \ | undefined \| null | No |
-| onrejected | ((reason: any) = & gt; TResult2 \ | PromiseLike & lt;TResult2 & gt;) \ | undefined \| null | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| onfulfilled | ((value: T) = & gt; TResult1 \ | PromiseLike & lt;TResult1 & gt;) \ | undefined \| null | No |  |
+| onrejected | ((reason: any) = & gt; TResult2 \ | PromiseLike & lt;TResult2 & gt;) \ | undefined \| null | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

@@ -16,6 +16,6 @@ The callback is called when only an ability is monitored.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ability | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ability | any | Yes | Indicates the ability to register for listening. |

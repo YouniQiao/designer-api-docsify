@@ -11,27 +11,27 @@ Provides the VideoProcessor type, including AIHDR related functions.
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessing } from 'kits/@kit.MediaKit';
+import videoProcessing from '@kit.MediaKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createVideoProcessor(Provides the capability of video quality processing.)](arkts-media-videoprocessing-createvideoprocessor-f.md) |
+| Name | Description |
+| --- | --- |
+| [createVideoProcessor(Provides the capability of video quality processing.)](arkts-media-videoprocessing-createvideoprocessor-f.md) | Create a video processing instance. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [VideoProcessor(Provides the capability of video quality processing.)](arkts-media-videoprocessing-videoprocessor-i.md) |
-| [VideoProcessorAiHdrStatus(Provides the capability of video quality processing.)](arkts-media-videoprocessing-videoprocessoraihdrstatus-i.md) |
-| [VideoProcessorStatus(Provides the capability of video quality processing.)](arkts-media-videoprocessing-videoprocessorstatus-i.md) |
+| Name | Description |
+| --- | --- |
+| [VideoProcessor(Provides the capability of video quality processing.)](arkts-media-videoprocessing-videoprocessor-i.md) | Provides the VideoProcessor type, including AIHDR related functions. |
+| [VideoProcessorAiHdrStatus(Provides the capability of video quality processing.)](arkts-media-videoprocessing-videoprocessoraihdrstatus-i.md) | Provides the AIHDR feature status. |
+| [VideoProcessorStatus(Provides the capability of video quality processing.)](arkts-media-videoprocessing-videoprocessorstatus-i.md) | Provides the unified video processor status. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [VideoProcessorStatusCallback(Provides the capability of video quality processing.)](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md) |
+| Name | Description |
+| --- | --- |
+| [VideoProcessorStatusCallback(Provides the capability of video quality processing.)](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md) | Status change callback type for video processor notifications. |

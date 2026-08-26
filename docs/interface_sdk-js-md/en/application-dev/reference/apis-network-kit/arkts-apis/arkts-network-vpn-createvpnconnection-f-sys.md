@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from 'kits/@kit.NetworkKit';
+import vpn from '@kit.NetworkKit';
+import vpnExtension from '@kit.NetworkKitExtension';
 ```
 
 ## createVpnConnection
@@ -22,19 +23,40 @@ Creates a VPN connection.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [AbilityContext](arkts-network-vpn-abilitycontext-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [AbilityContext](arkts-network-vpn-abilitycontext-t.md) | Yes | Specified context. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) |
+| Type | Description |
+| --- | --- |
+| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) | VPN connection object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+
+**Examples**
+
+Stage model:
+
+```TypeScript
+import { vpn } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
+  functiontest()
+  {
+    console.info("vpn createVpnConnection: " + JSON.stringify(this.VpnConnection));
+  }
+  build() {  }
+}
+```

@@ -9,7 +9,7 @@ Defines the properties of the data records in the unified data object, including
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## getDelayData
@@ -117,3 +117,41 @@ Defines URI authorization policies for drag intention.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Examples**
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+
+let properties = new unifiedDataChannel.UnifiedDataProperties();
+properties.extras = {
+  key: {
+    title: 'MyTitle',
+    content: 'MyContent'
+  }
+};
+properties.tag = "This is a tag of properties";
+properties.shareOptions = unifiedDataChannel.ShareOptions.CROSS_APP;
+// Since API version 26.0.0, the URI authorization policy is supported.
+properties.uriAuthorizationPolicies = [
+  unifiedDataChannel.UriPermission.WRITE
+];
+properties.getDelayData = ((type: string) => {
+  if (type == uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) {
+    let plainTextDetails: Record<string, string> = {
+      'attr1': 'value1',
+      'attr2': 'value2'
+    };
+    let plainText: uniformDataStruct.PlainText = {
+      uniformDataType: 'general.plain-text',
+      textContent: 'This is a plain text example',
+      abstract: 'This is abstract',
+      details: plainTextDetails
+    };
+    let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+    let textData = new unifiedDataChannel.UnifiedData(text);
+    return textData;
+  }
+  return new unifiedDataChannel.UnifiedData();
+});
+```

@@ -2,7 +2,8 @@
 
 The **brightness** module provides an API for setting the screen brightness.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The APIs provided by this module are system APIs.
 
 **Since:** 7
@@ -14,7 +15,7 @@ The **brightness** module provides an API for setting the screen brightness.
 ## Modules to Import
 
 ```TypeScript
-import { brightness } from 'kits/@kit.BasicServicesKit';
+import brightness from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -22,8 +23,8 @@ import { brightness } from 'kits/@kit.BasicServicesKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md) |
-| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md) | Sets the screen brightness. |
+| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md) | Sets the screen brightness. This API is used for continuous brightness adjustment. To achieve a better performance, set **continuous** to **true** when you start, and set it to **false** after you finish. |
 <!--DelEnd-->

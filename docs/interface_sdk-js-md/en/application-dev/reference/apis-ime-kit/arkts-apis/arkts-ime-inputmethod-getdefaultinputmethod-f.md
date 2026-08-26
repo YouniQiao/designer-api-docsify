@@ -3,7 +3,12 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import inputMethod from '@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKitEngine';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
+import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
+import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 ```
 
 ## getDefaultInputMethod
@@ -20,12 +25,18 @@ Obtains the default input method.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) |
+| Type | Description |
+| --- | --- |
+| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Default input method. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+
+**Examples**
+
+```TypeScript
+let defaultIme: inputMethod.InputMethodProperty = inputMethod.getDefaultInputMethod();
+```

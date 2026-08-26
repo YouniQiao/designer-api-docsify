@@ -18,8 +18,7 @@ APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isbefore) and [By
 ## Modules to Import
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## clickable
@@ -40,15 +39,24 @@ Specifies the clickable attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Clickable status of the component. The value **true** indicates that the component is clickable, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [By](arkts-test-uitest-by-c.md) |
+| Type | Description |
+| --- | --- |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the clickable attribute of the target component. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.clickable(true); // Use the static constructor BY to create a By object and specify the clickable attribute of the target component.
+```
 
 ## enabled
 
@@ -68,15 +76,24 @@ Specifies the enabled attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Enabled status of the component. The value **true** indicates that the component is enabled, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [By](arkts-test-uitest-by-c.md) |
+| Type | Description |
+| --- | --- |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the enabled attribute of the target component. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.enabled(true); // Use the static constructor BY to create a By object and specify the enabled attribute of the target component.
+```
 
 ## focused
 
@@ -96,15 +113,24 @@ Specifies the focused attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Focused status of the component. The value **true** indicates that the component is focused, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [By](arkts-test-uitest-by-c.md) |
+| Type | Description |
+| --- | --- |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the focused attribute of the target component. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.focused(true); // Use the static constructor BY to create a By object and specify the focused attribute of the target component.
+```
 
 ## id
 
@@ -124,15 +150,24 @@ Specifies the ID attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [id](#id) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | number | Yes | Component ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [By](arkts-test-uitest-by-c.md) |
+| Type | Description |
+| --- | --- |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the ID attribute of the target component. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.id(123); // Use the static constructor BY to create a By object and specify the id attribute of the target component.
+```
 
 ## isAfter
 
@@ -152,15 +187,25 @@ Specifies that the target component is located after the given attribute compone
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | Information about the attribute component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [By](arkts-test-uitest-by-c.md) |
+| Type | Description |
+| --- | --- |
+| [By](arkts-test-uitest-by-c.md) | By** object. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+// Use the static constructor BY to create a by object and specify that the target component is located before the given attribute component.
+let by: By = BY.type('Text').isAfter(BY.text('123')); // Search for the first Text component located after the component whose text is 123.
+```
 
 ## isBefore
 
@@ -180,15 +225,25 @@ Specifies that the target component is located before the given attribute compon
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | Information about the attribute component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [By](arkts-test-uitest-by-c.md) |
+| Type | Description |
+| --- | --- |
+| [By](arkts-test-uitest-by-c.md) | By** object. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+// Use the static constructor BY to create a by object and specify that the target component is located before the given attribute component.
+let by: By = BY.type('Button').isBefore(BY.text('123')); // Search for the first Button component located before the component whose text is 123.
+```
 
 ## key
 
@@ -208,15 +263,24 @@ Specifies the key attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [key](#key) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Component key. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [By](arkts-test-uitest-by-c.md) |
+| Type | Description |
+| --- | --- |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the key attribute of the target component. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.key('123'); // Use the static constructor BY to create a By object and specify the key attribute of the target component.
+```
 
 ## scrollable
 
@@ -236,15 +300,24 @@ Specifies the scrollable attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Whether the specified component is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [By](arkts-test-uitest-by-c.md) |
+| Type | Description |
+| --- | --- |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the scrollable attribute of the target component. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.scrollable(true); // Use the static constructor BY to create a By object and specify the scrollable attribute of the target component.
+```
 
 ## selected
 
@@ -264,15 +337,24 @@ Specifies the selected status of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| b | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| b | boolean | No | Selected status of the component. The value **true** indicates that the component is selected, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [By](arkts-test-uitest-by-c.md) |
+| Type | Description |
+| --- | --- |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the selected attribute of the target component. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.selected(true); // Use the static constructor BY to create a By object and specify the selected attribute of the target component.
+```
 
 ## text
 
@@ -292,16 +374,25 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| txt | string | Yes |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| txt | string | Yes | Component text, used to match the target component. |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md). Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [By](arkts-test-uitest-by-c.md) |
+| Type | Description |
+| --- | --- |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the text attribute of the target component. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { BY, By } from '@kit.TestKit';
+
+let by: By = BY.text('123'); // Use the static constructor BY to create a By object and specify the text attribute of the target component.
+```
 
 ## type
 
@@ -321,12 +412,21 @@ Specifies the type attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tp | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tp | string | Yes | Component type. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [By](arkts-test-uitest-by-c.md) |
+| Type | Description |
+| --- | --- |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the type attribute of the target component. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.type('Button'); // Use the static constructor BY to create a By object and specify the type attribute of the target component.
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
+import PiPWindow from '@kit.ArkUI';
 ```
 
 ## isPiPEnabled
@@ -22,6 +22,13 @@ Checks whether the current device supports the PiP feature.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result for whether the PiP feature is supported. **true** if supported, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let enable: boolean = PiPWindow.isPiPEnabled(); // Check whether the PiP window is supported.
+console.info('isPiPEnabled:' + enable);
+```

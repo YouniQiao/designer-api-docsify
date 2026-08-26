@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { configPolicy } from 'kits/@kit.BasicServicesKit';
+import configPolicy from '@kit.BasicServicesKit';
 ```
 
 ## getOneCfgFile
@@ -22,16 +22,31 @@ Obtains the path of the configuration file with the highest priority. This API u
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| relPath | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| relPath | string | Yes | Name of the configuration file. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the configuration file path is successfully obtained, **err** is **undefined**, and **data** is the path of the configuration file with the highest priority. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+let relpath: string = 'etc/config.xml';
+configPolicy.getOneCfgFile(relpath, (err: BusinessError, data: string) => {
+  if (err == null) {
+    console.info('data is ' + data);
+  } else {
+    console.error('err: ' + err.code + ', ' + err.message);
+  }
+});
+```
 
 
 ## getOneCfgFile
@@ -50,21 +65,41 @@ Obtains the path of the configuration file with the highest priority. This API u
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| relPath | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| relPath | string | Yes | Name of the configuration file. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return the path of the configuration file with the highest priority. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+async function fetchConfigFile() {
+  try {
+    let relpath: string = 'etc/config.xml';
+    let value: string = await configPolicy.getOneCfgFile(relpath);
+    console.info('value is ' + value);
+  } catch (error) {
+    let code = (error as BusinessError).code;
+    let message = (error as BusinessError).message;
+    console.error('error:' + code + ', ' + message);
+  }
+}
+
+fetchConfigFile();
+```
 
 
 ## getOneCfgFile
@@ -83,17 +118,33 @@ Obtains the path of the configuration file with the highest priority based on th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| relPath | string | Yes |
-| followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| relPath | string | Yes | Name of the configuration file. |
+| followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes | Follow mode. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the configuration file path is successfully obtained, **err** is **undefined**, and **data** is the path of the configuration file with the highest priority. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+let relpath: string = 'etc/config.xml';
+configPolicy.getOneCfgFile(relpath, configPolicy.FollowXMode.SIM_DEFAULT,
+  (err: BusinessError, data: string) => {
+    if (err == null) {
+      console.info('data is ' + data);
+    } else {
+      console.error('err: ' + err.code + ', ' + err.message);
+    }
+  });
+```
 
 
 ## getOneCfgFile
@@ -112,18 +163,35 @@ Obtains the path of the configuration file with the highest priority based on th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| relPath | string | Yes |
-| followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes |
-| extra | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| relPath | string | Yes | Name of the configuration file. |
+| followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes | Follow mode. |
+| extra | string | Yes | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#user_defined). |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the configuration file path is successfully obtained, **err** is **undefined**, and **data** is the path of the configuration file with the highest priority. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+let relpath: string = 'etc/config.xml';
+let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
+configPolicy.getOneCfgFile(relpath, configPolicy.FollowXMode.USER_DEFINED, extra,
+  (err: BusinessError, data: string) => {
+    if (err == null) {
+      console.info('data is ' + data);
+    } else {
+      console.error('err: ' + err.code + ', ' + err.message);
+    }
+  });
+```
 
 
 ## getOneCfgFile
@@ -142,20 +210,41 @@ Obtains the path of the configuration file with the highest priority based on th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| relPath | string | Yes |
-| followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes |
-| extra | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| relPath | string | Yes | Name of the configuration file. |
+| followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes | Follow mode. |
+| extra | string | No | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#user_defined). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return the path of the configuration file with the highest priority. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+async function fetchOneCfgFile() {
+  try {
+    let relpath: string = 'etc/config.xml';
+    let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
+    let value: string = await configPolicy.getOneCfgFile(relpath, configPolicy.FollowXMode.SIM_DEFAULT, extra);
+    console.info('value is ' + value);
+  } catch (error) {
+    let code = (error as BusinessError).code;
+    let message = (error as BusinessError).message;
+    console.error('error:' + code + ', ' + message);
+  }
+}
+
+fetchOneCfgFile();
+```

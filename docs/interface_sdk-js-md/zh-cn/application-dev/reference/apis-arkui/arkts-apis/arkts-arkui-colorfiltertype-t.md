@@ -14,7 +14,7 @@ declare type ColorFilterType = ColorFilter | DrawingColorFilter
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [ColorFilter](arkts-arkui-colorfilter-c.md) |
-| [DrawingColorFilter](../arkts-components/arkts-arkui-drawingcolorfilter-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ColorFilter](arkts-arkui-colorfilter-c.md) | ColorFilter类型图片颜色滤镜设置项。 |
+| [DrawingColorFilter](../arkts-components/arkts-arkui-drawingcolorfilter-t.md) | DrawingColorFilter类型图片颜色滤镜设置项。 |

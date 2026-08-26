@@ -11,7 +11,7 @@ Details the space usage of the **\/data** directory on the user device.
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
+import storageStatistics from '@kit.CoreFileKit';
 ```
 
 ## path

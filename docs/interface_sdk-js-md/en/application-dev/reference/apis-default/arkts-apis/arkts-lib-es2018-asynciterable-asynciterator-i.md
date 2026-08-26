@@ -13,14 +13,14 @@ next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [] \| [TNext] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| args | [] \| [TNext] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## return
 
 ```TypeScript
@@ -29,14 +29,14 @@ return?(value?: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TRetu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | TReturn \| PromiseLike & lt;TReturn & gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | TReturn \| PromiseLike & lt;TReturn & gt; | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## throw
 
 ```TypeScript
@@ -45,11 +45,11 @@ throw?(e?: any): Promise<IteratorResult<T, TReturn>>
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| e | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

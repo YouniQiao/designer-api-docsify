@@ -13,14 +13,14 @@
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | RegExp \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pattern | RegExp \| string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Call]]
 
 ```TypeScript
@@ -29,15 +29,15 @@
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
-| flags | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pattern | string | Yes |  |
+| flags | string | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -46,14 +46,14 @@ new(pattern: RegExp | string): RegExp
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | RegExp \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pattern | RegExp \| string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -62,15 +62,15 @@ new(pattern: string, flags?: string): RegExp
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
-| flags | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pattern | string | Yes |  |
+| flags | string | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## "$&"
 
 ```TypeScript
@@ -79,7 +79,7 @@ new(pattern: string, flags?: string): RegExp
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## "$'"
 
@@ -89,7 +89,7 @@ new(pattern: string, flags?: string): RegExp
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## "$+"
 
@@ -99,7 +99,7 @@ new(pattern: string, flags?: string): RegExp
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## "$`"
 
@@ -109,7 +109,7 @@ new(pattern: string, flags?: string): RegExp
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## $1
 
@@ -119,7 +119,7 @@ $1: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## $2
 
@@ -129,7 +129,7 @@ $2: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## $3
 
@@ -139,7 +139,7 @@ $3: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## $4
 
@@ -149,7 +149,7 @@ $4: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## $5
 
@@ -159,7 +159,7 @@ $5: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## $6
 
@@ -169,7 +169,7 @@ $6: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## $7
 
@@ -179,7 +179,7 @@ $7: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## $8
 
@@ -189,7 +189,7 @@ $8: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## $9
 
@@ -199,7 +199,7 @@ $9: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## $_
 
@@ -209,7 +209,7 @@ $_: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## input
 
@@ -219,7 +219,7 @@ input: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## lastMatch
 
@@ -229,7 +229,7 @@ lastMatch: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## lastParen
 
@@ -239,7 +239,7 @@ lastParen: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## leftContext
 
@@ -249,7 +249,7 @@ leftContext: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 ## prototype
 
@@ -267,4 +267,4 @@ rightContext: string
 
 **Type:** string
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility

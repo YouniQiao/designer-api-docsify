@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## getCurrentGroup
@@ -22,17 +23,35 @@ Obtain information about the current p2p group.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;WifiP2pGroupInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;WifiP2pGroupInfo & gt; | Returns p2p group information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+  // The current group information can be obtained only after the P2P group is created or the connection is successful.
+  wifiManager.getCurrentGroup((err, data:wifiManager.WifiP2pGroupInfo) => {
+    if (err) {
+        console.error("get current P2P group error");
+        return;
+    }
+    console.info("get current P2P group: " + JSON.stringify(data));
+  });
+
+  wifiManager.getCurrentGroup().then(data => {
+    console.info("get current P2P group: " + JSON.stringify(data));
+  });
+```
 
 
 ## getCurrentGroup
@@ -51,14 +70,18 @@ Obtain information about the current p2p group.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | Yes | Indicates callback of function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
+
+**Examples**
+
+See [getCurrentGroup](#getcurrentgroup)

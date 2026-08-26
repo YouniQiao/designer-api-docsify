@@ -9,7 +9,7 @@ Class to execute an asynchronous operation under lock.
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import ArkTSUtils from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -42,21 +42,21 @@ Perform an operation with the acquired lock exclusively. The method acquires the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes | function to call when the lock gets acquired. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;T & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;T & gt; | Promise that will be resolved after the callback gets executed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
 
 ## lockAsync
 
@@ -74,22 +74,22 @@ Perform an operation with the acquired lock. The method acquires the lock first,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes |
-| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes | function to call when the lock gets acquired. |
+| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Yes | mode of the lock operation. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;T & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;T & gt; | Promise that will be resolved after the callback gets executed or rejected. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
 
 ## lockAsync
 
@@ -108,24 +108,24 @@ Perform an operation with the acquired lock. The method acquires the lock first,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes |
-| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Yes |
-| options | [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md)&lt;U&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes | function to call when the lock gets acquired. |
+| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Yes | mode of the lock operation. |
+| options | [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md)&lt;U&gt; | Yes | lock operation options. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;T \ | U & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;T \ | U & gt; | Promise that will be resolved after the callback gets executed or rejected in case timeout exceeded. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) |
-| [10200031](../errorcode-utils.md#10200031-calling-lockasync-timed-out) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
+| [10200031](../errorcode-utils.md#10200031-calling-lockasync-timed-out) | Timeout exceeded. |
 
 ## query
 
@@ -143,21 +143,21 @@ Query information about the specified lock.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [name](#name) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | name of the lock. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) |
+| Type | Description |
+| --- | --- |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) | Returns an instance of AsyncLockState. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
 
 ## queryAll
 
@@ -175,9 +175,9 @@ Query information about all locks.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md)[] |
+| Type | Description |
+| --- | --- |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md)[] | Returns an array of AsyncLockState. |
 
 ## request
 
@@ -195,15 +195,15 @@ Find or create an instance of AsyncLock using the specified name.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [name](#name) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | name of the lock to find or create. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [AsyncLock](arkts-arkts-locks-asynclock-c.md) |
+| Type | Description |
+| --- | --- |
+| [AsyncLock](arkts-arkts-locks-asynclock-c.md) | Returns an instance of AsyncLock. |
 
 ## name
 

@@ -9,7 +9,8 @@ Represents the USB configuration. One [USBDevice](arkts-basicservices-usbmanager
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## attributes

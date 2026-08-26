@@ -6,14 +6,18 @@ The **Badge** component is a container that can be attached to another component
 
 This component supports only one child component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Allowed child component types: built-in and custom components, including rendering control types (
 > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), ForEach, and
-> LazyForEach).&gt;
+> LazyForEach).
+> 
 > - A custom component defaults to a width and height of 0. You must explicitly set its width and height; otherwise,
-> the **Badge** component will not be displayed.&gt;
+> the **Badge** component will not be displayed.
+> 
 > - When there are multiple child components, only the last child component is displayed on the UI. However, the
-> status update of other child components will still cause the badge and its child components to be re-rendered.&gt;
+> status update of other child components will still cause the badge and its child components to be re-rendered.
+> 
 > - Child component layout is independent and does not automatically adjust to avoid overlapping with the badge.
 
 ## Badge
@@ -34,9 +38,9 @@ Creates a badge with the given numerical value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | Yes | Options of the numeric badge. |
 
 ## Badge
 
@@ -56,18 +60,255 @@ Creates a badge with the given string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [BadgeParamWithString](arkts-arkui-badgeparamwithstring-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BadgeParamWithString](arkts-arkui-badgeparamwithstring-i.md) | Yes | Options of the string-type badge. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
+
+## Examples
+
+This example uses the count parameter of [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) and the value parameter of [BadgeParamWithString](arkts-arkui-badgeparamwithstring-i.md) to demonstrate how the badge component displays different effects when empty values, characters, and numbers are passed in.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct BadgeExample {
+  @Builder
+  tabBuilder(index: number) {
+    Column() {
+      if (index === 2) {
+        Badge({
+          value: '',
+          style: { badgeSize: 6, badgeColor: '#FA2A2D' }
+        }) {
+          Image('/common/public_icon_off.svg')
+            .width(24)
+            .height(24)
+        }
+        .width(24)
+        .height(24)
+        .margin({ bottom: 4 })
+      } else {
+        Image('/common/public_icon_off.svg')
+          .width(24)
+          .height(24)
+          .margin({ bottom: 4 })
+      }
+      Text('Tab')
+        .fontColor('#182431')
+        .fontSize(10)
+        .fontWeight(500)
+        .lineHeight(14)
+    }.width('100%').height('100%').justifyContent(FlexAlign.Center)
+  }
+
+  @Builder
+  itemBuilder(value: string) {
+    Row() {
+      Image('common/public_icon.svg').width(32).height(32).opacity(0.6)
+      Text(value)
+        .width(177)
+        .height(21)
+        .margin({ left: 15, right: 76 })
+        .textAlign(TextAlign.Start)
+        .fontColor('#182431')
+        .fontWeight(500)
+        .fontSize(16)
+        .opacity(0.9)
+      Image('common/public_icon_arrow_right.svg').width(12).height(24).opacity(0.6)
+    }.width('100%').padding({ left: 12, right: 12 }).height(56)
+  }
+
+  build() {
+    Column() {
+      // Badge of the red dot type
+      Text('dotsBadge').fontSize(18).fontColor('#182431').fontWeight(500).margin(24)
+      Tabs() {
+        TabContent()
+          .tabBar(this.tabBuilder(0))
+        TabContent()
+          .tabBar(this.tabBuilder(1))
+        TabContent()
+          .tabBar(this.tabBuilder(2))
+        TabContent()
+          .tabBar(this.tabBuilder(3))
+      }
+      .width(360)
+      .height(56)
+      .backgroundColor('#F1F3F5')
+
+      // Create a badge with the given string.
+      Column() {
+        Text('stringBadge').fontSize(18).fontColor('#182431').fontWeight(500).margin(24)
+        List({ space: 12 }) {
+          ListItem() {
+            Text('list1').fontSize(14).fontColor('#182431').margin({ left: 12 })
+          }
+          .width('100%')
+          .height(56)
+          .backgroundColor('#FFFFFF')
+          .borderRadius(24)
+          .align(Alignment.Start)
+
+          ListItem() {
+            Badge({
+              value: 'New',
+              position: BadgePosition.Right,
+              style: { badgeSize: 16, badgeColor: '#FA2A2D' }
+            }) {
+              Text('list2').width(27).height(19).fontSize(14).fontColor('#182431')
+            }.width(49.5).height(19)
+            .margin({ left: 12 })
+          }
+          .width('100%')
+          .height(56)
+          .backgroundColor('#FFFFFF')
+          .borderRadius(24)
+          .align(Alignment.Start)
+        }.width(336)
+
+        // Create a badge with the given numerical value.
+        Text('numberBadge').fontSize(18).fontColor('#182431').fontWeight(500).margin(24)
+        List() {
+          ListItem() {
+            this.itemBuilder('list1')
+          }
+
+          ListItem() {
+            Row() {
+              Image('common/public_icon.svg').width(32).height(32).opacity(0.6)
+              Badge({
+                count: 1,
+                position: BadgePosition.Right,
+                style: { badgeSize: 16, badgeColor: '#FA2A2D' }
+              }) {
+                Text('list2')
+                  .width(177)
+                  .height(21)
+                  .textAlign(TextAlign.Start)
+                  .fontColor('#182431')
+                  .fontWeight(500)
+                  .fontSize(16)
+                  .opacity(0.9)
+              }.width(240).height(21).margin({ left: 15, right: 11 })
+
+              Image('common/public_icon_arrow_right.svg').width(12).height(24).opacity(0.6)
+            }.width('100%').padding({ left: 12, right: 12 }).height(56)
+          }
+
+          ListItem() {
+            this.itemBuilder('list3')
+          }
+
+          ListItem() {
+            this.itemBuilder('list4')
+          }
+        }
+        .width(336)
+        .height(232)
+        .backgroundColor('#FFFFFF')
+        .borderRadius(24)
+        .padding({ top: 4, bottom: 4 })
+        .divider({
+          strokeWidth: 0.5,
+          color: 'rgba(0,0,0,0.1)',
+          startMargin: 60,
+          endMargin: 12
+        })
+      }.width('100%').backgroundColor('#F1F3F5').padding({ bottom: 12 })
+    }.width('100%')
+  }
+}
+```
+
+This example shows how to use the count property to toggle the visibility of the Badge component. Specifically, when the count property is set to 0, the badge is hidden; when it is set to 1, the badge becomes visible.
+
+```TypeScript
+// This example implements scaling when the badge visibility changes.
+@Entry
+@Component
+struct Index {
+  @State badgeCount: number = 1;
+
+  build() {
+    Column({ space: 40 }) {
+      Badge({
+        count: this.badgeCount,
+        style: {},
+        position: BadgePosition.RightTop,
+      }) {
+        Image($r('app.media.startIcon'))
+          .width(50)
+          .height(50)
+      }
+      .width(55)
+
+      Button('count 0').onClick(() => {
+        this.badgeCount = 0;
+      })
+      Button('count 1').onClick(() => {
+        this.badgeCount = 1;
+      })
+    }
+    .margin({ top: 20 })
+  }
+}
+```
+
+Since API version 22, this example uses the outerBorderColor and outerBorderWidth attributes to set the outer border, and uses the enableAutoAvoidance attribute to set whether to avoid the badge text extension.
+
+```TypeScript
+// This example implements the custom outer border and text extension direction of the Badge component.
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @State badgeValue: string = '1234';
+  @State textAvoid:boolean[] = [false, true];
+  @State textAvoidIndex: number = 0;
+  @State textAvoidString: string [] = ["false", "true"];
+  build() {
+    Column() {
+      Badge({
+        value: this.badgeValue,
+        style: {
+          badgeSize : 30,
+          fontSize:20,
+          outerBorderColor : Color.Pink,
+          outerBorderWidth : LengthMetrics.vp(5),
+          enableAutoAvoidance : this.textAvoid[this.textAvoidIndex]
+        },
+        position:BadgePosition.RightTop
+      }) {
+        // Replace $r('app.media.startIcon') with the image resource file you use.
+        Image($r("app.media.startIcon"))
+          .width(80)
+          .height(80)
+      }
+      .direction(Direction.Ltr)
+      .margin({ top: 20, bottom: 20 })
+      Button("enableAutoAvoidance : " + this.textAvoidString[this.textAvoidIndex])
+        .onClick(() => {
+          this.textAvoidIndex = (this.textAvoidIndex + 1) % this.textAvoidString.length;
+        })
+    }
+    .width('100%')
+    .height('80%')
+    .alignItems(HorizontalAlign.Center)
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```

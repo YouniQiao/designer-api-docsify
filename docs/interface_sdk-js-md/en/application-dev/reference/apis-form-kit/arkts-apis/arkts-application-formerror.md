@@ -9,21 +9,21 @@ interface of formError.@namespace formError
 ## Modules to Import
 
 ```TypeScript
-import { formError } from 'kits/@kit.FormKit';
+import formError from '@kit.FormKit';
 ```
 
 ## Summary
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FormError](arkts-form-formerror-formerror-e.md) |
+| Name | Description |
+| --- | --- |
+| [FormError](arkts-form-formerror-formerror-e.md) | Error of form.@enum { number } |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FormError](arkts-form-formerror-formerror-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [FormError](arkts-form-formerror-formerror-e-sys.md) | Error of form.@enum { number } |
 <!--DelEnd-->

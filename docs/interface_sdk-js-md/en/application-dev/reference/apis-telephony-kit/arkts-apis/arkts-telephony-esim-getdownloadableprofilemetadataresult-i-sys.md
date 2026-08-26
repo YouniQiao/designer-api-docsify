@@ -11,7 +11,6 @@ Obtains the metadata of the downloadable profile.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## downloadableProfile

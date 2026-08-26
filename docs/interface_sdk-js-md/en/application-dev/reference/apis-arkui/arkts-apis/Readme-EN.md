@@ -569,6 +569,8 @@
   <!--Del-->
   - [showGeneratorDialog(system api)](arkts-arkui-imagegeneration-showgeneratordialog-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [startSmartCanvasService(system api)](arkts-arkui-imagegeneration-startsmartcanvasservice-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [CustomImportIcon(system api)](arkts-arkui-imagegeneration-customimporticon-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CustomImportResult(system api)](arkts-arkui-imagegeneration-customimportresult-i-sys.md)<!--DelEnd-->

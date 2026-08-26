@@ -13,5 +13,5 @@ EmbeddedUIExtensionAbility为开发者提供了跨进程界面嵌入的能力，
 ## 导入模块
 
 ```TypeScript
-import { EmbeddedUIExtensionAbility } from 'kits/@kit.AbilityKit';
+import EmbeddedUIExtensionAbility from '@kit.AbilityKit';
 ```

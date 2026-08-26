@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## init
@@ -22,6 +21,6 @@ Init the HiRetrieval functionality.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 36000002 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 36000002 | Multi-instance applications not supported error. Possibly caused by invoking this function in a multi-instance application. |

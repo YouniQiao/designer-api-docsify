@@ -17,6 +17,6 @@ Enumerates gesture competition results.
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) |
+| Name | Description |
+| --- | --- |
+| [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) | Enumerates gesture recognizer types. |

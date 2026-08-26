@@ -9,7 +9,7 @@ Defines the parameters for sending data over a UDP socket connection.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## address

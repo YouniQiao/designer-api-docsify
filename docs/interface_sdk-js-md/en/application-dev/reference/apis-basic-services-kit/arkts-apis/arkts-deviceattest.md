@@ -9,7 +9,7 @@ xts_device_attest authResult information@namespace deviceAttest
 ## Modules to Import
 
 ```TypeScript
-import { deviceAttest } from 'kits/@kit.BasicServicesKit';
+import deviceAttest from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -17,17 +17,17 @@ import { deviceAttest } from 'kits/@kit.BasicServicesKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md) |
-| [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md) |
-| [getAttestStatusSync](arkts-basicservices-deviceattest-getatteststatussync-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md) | Obtains the AttestResultInfo object. |
+| [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md) | Obtains the AttestResultInfo object. |
+| [getAttestStatusSync](arkts-basicservices-deviceattest-getatteststatussync-f-sys.md) | Obtains the AttestResultInfo object. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md) | Device attest result information.@interface AttestResultInfo |
 <!--DelEnd-->

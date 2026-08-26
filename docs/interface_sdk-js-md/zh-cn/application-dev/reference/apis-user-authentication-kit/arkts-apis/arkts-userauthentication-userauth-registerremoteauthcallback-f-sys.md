@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## registerRemoteAuthCallback
@@ -26,14 +27,43 @@ function registerRemoteAuthCallback(callback: IRemoteAuthCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [IRemoteAuthCallback](arkts-userauthentication-userauth-iremoteauthcallback-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [IRemoteAuthCallback](arkts-userauthentication-userauth-iremoteauthcallback-i-sys.md) | 是 | 远程认证回调接口。包含获取认证页面参数和返回认证结果的回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let remoteAuthCallback: userAuth.IRemoteAuthCallback = {
+  onGetRemoteAuthWidgetParam(challenge: Uint8Array): userAuth.WidgetParam {
+    console.info('Received challenge for remote auth, length: ' + challenge.length);
+    return {
+      title: 'Remote Authentication',
+      navigationButtonText: 'Cancel'
+    } as userAuth.WidgetParam;
+  },
+  onRemoteAuthResult(challenge: Uint8Array, result: userAuth.UserAuthResult): void {
+    console.info('remote auth result, result: ' + result.result + ', authType: ' + result.authType);
+  }
+};
+
+try {
+  userAuth.unregisterRemoteAuthCallback();
+  userAuth.registerRemoteAuthCallback(remoteAuthCallback);
+  console.info('Remote auth callback registered successfully');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to register remote auth callback. Code: ${err?.code}, message: ${err?.message}`);
+}
+```

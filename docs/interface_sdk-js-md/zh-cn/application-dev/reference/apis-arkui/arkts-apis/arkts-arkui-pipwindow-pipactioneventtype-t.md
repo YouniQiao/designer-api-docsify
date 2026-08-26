@@ -12,9 +12,9 @@ type PiPActionEventType = PiPVideoActionEvent | PiPCallActionEvent | PiPMeetingA
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-| 类型 |
-| --- |
-| [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) |
-| [PiPCallActionEvent](arkts-arkui-pipwindow-pipcallactionevent-t.md) |
-| [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) |
-| [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) | 视频播放控制面板控件事件类型。 |
+| [PiPCallActionEvent](arkts-arkui-pipwindow-pipcallactionevent-t.md) | 视频通话控制面板控件事件类型。 |
+| [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) | 视频会议控制面板控件事件类型。 |
+| [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) | 直播控制面板控件事件类型。 |

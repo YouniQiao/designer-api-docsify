@@ -3,6 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## isNotificationEnabled
@@ -27,10 +30,28 @@ Checks whether notification is enabled for a specified application. This API use
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | Bundle information of the application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let isNotificationEnabledCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("isNotificationEnabled failed " + JSON.stringify(err));
+  } else {
+    console.info("isNotificationEnabled success");
+  }
+}
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.isNotificationEnabled(bundle, isNotificationEnabledCallback);
+```
 
 
 ## isNotificationEnabled
@@ -55,15 +76,30 @@ Checks whether notification is enabled for a specified application. This API use
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | Bundle information of the application. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.isNotificationEnabled(bundle).then((data) => {
+  console.info("isNotificationEnabled success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isNotificationEnabled failed, code is ${err}`);
+});
+```
 
 
 ## isNotificationEnabled
@@ -88,9 +124,25 @@ Checks whether notification is enabled for this application. This API uses an as
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let isNotificationEnabledCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("isNotificationEnabled failed " + JSON.stringify(err));
+  } else {
+    console.info("isNotificationEnabled success");
+  }
+}
+
+Notification.isNotificationEnabled(isNotificationEnabledCallback);
+```
 
 
 ## isNotificationEnabled
@@ -115,9 +167,21 @@ Checks whether notification is enabled for this application. This API uses a pro
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.isNotificationEnabled().then((data: boolean) => {
+  console.info("isNotificationEnabled success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isNotificationEnabled failed, code is ${err}`);
+});
+```
 
 
 ## isNotificationEnabled
@@ -142,10 +206,65 @@ Checks whether notification is enabled for a specified user. This API uses an as
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| userId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| userId | number | Yes | User ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let isNotificationEnabledCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("isNotificationEnabled failed " + JSON.stringify(err));
+  } else {
+    console.info("isNotificationEnabled success");
+  }
+}
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.isNotificationEnabled(bundle, isNotificationEnabledCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.isNotificationEnabled(bundle).then((data) => {
+  console.info("isNotificationEnabled success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isNotificationEnabled failed, code is ${err}`);
+});
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let isNotificationEnabledCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("isNotificationEnabled failed " + JSON.stringify(err));
+  } else {
+    console.info("isNotificationEnabled success");
+  }
+}
+
+Notification.isNotificationEnabled(isNotificationEnabledCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.isNotificationEnabled().then((data: boolean) => {
+  console.info("isNotificationEnabled success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isNotificationEnabled failed, code is ${err}`);
+});
+```
 
 
 ## isNotificationEnabled
@@ -170,12 +289,16 @@ Checks whether notification is enabled for a specified user. This API uses a pro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| userId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| userId | number | Yes | User ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
+
+**Examples**
+
+See [isNotificationEnabled](#isnotificationenabled)

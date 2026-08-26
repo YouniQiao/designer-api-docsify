@@ -2,10 +2,13 @@
 
 时间选择器组件的参数说明。在TimePicker组件滑动过程中修改TimePickerOptions中的属性，会导致这些属性无法生效。
 
-> Date对象用于处理日期和时间，使用方式如下。&gt;
+> Date对象用于处理日期和时间，使用方式如下。
+> 
 > - 方式1：new Date()
-> 获取系统当前日期和时间。&gt;
-> - 方式2：new Date(value: number | string)&gt;
+> 获取系统当前日期和时间。
+> 
+> - 方式2：new Date(value: number | string)
+> 
 > - 方式3：new Date(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number,
 > seconds?: number, ms?: number)
 
@@ -34,7 +37,8 @@ end?: Date
 
 指定时间选择组件的结束时间。默认值：结束时间为23:59:59（小时=23，分钟=59）
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 1. 仅设置的小时和分钟生效。
 > 2. 设置了start或end且为非默认值的场景下，loop不生效。
 
@@ -92,7 +96,8 @@ start?: Date
 
 指定时间选择组件的起始时间。默认值：起始时间为00:00:00（小时=0，分钟=0）
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 1. 仅设置的小时和分钟生效。
 > 2. 设置了start或end且为非默认值的场景下，loop不生效。
 

@@ -13,7 +13,7 @@ Defines the options for the domain plug-in to obtain the domain account informat
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## callerUid

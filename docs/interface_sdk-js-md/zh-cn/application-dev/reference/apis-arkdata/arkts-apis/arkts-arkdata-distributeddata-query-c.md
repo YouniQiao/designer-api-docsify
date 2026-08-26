@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## and
@@ -33,9 +34,24 @@ and(): Query
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notEqualTo("field", "value1");
+    query.and();
+    query.notEqualTo("field", "value2");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## beginGroup
 
@@ -55,9 +71,24 @@ beginGroup(): Query
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.beginGroup();
+    query.isNotNull("field");
+    query.endGroup();
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## constructor
 
@@ -83,8 +114,10 @@ deviceId(deviceId: string): Query
 
 添加设备ID作为key的前缀。
 
-> **说明：**&gt;
-> 其中deviceId通过调用<!--RP1-->
+> **说明：**
+> 
+> 其中deviceId通过调用<!--RP1--
+> 
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 > 
@@ -100,15 +133,27 @@ deviceId(deviceId: string): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [deviceId](#deviceid) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceId | string | 是 | 指示查询的设备ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.deviceId("deviceId");
+    console.log("query is " + query.getSqlLike());
+} catch (e) {
+    console.log("should be ok on Method Chaining : " + e);
+}
+```
 
 ## endGroup
 
@@ -128,9 +173,24 @@ endGroup(): Query
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.beginGroup();
+    query.isNotNull("field");
+    query.endGroup();
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## equalTo
 
@@ -150,16 +210,29 @@ equalTo(field: string, value: number | string | boolean): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | number \| string \| boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| value | number \| string \| boolean | 是 | 表示指定的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.equalTo("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## getSqlLike
 
@@ -179,9 +252,21 @@ getSqlLike(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回一个字段列中包含对应子串的结果。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    let sql1 = query.getSqlLike();
+    console.log("GetSqlLike sql=" + sql1);
+} catch (e) {
+    console.log("duplicated calls should be ok : " + e);
+}
+```
 
 ## greaterThan
 
@@ -201,16 +286,29 @@ greaterThan(field: string, value: number | string | boolean): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | number \| string \| boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| value | number \| string \| boolean | 是 | 表示指定的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.greaterThan("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## greaterThanOrEqualTo
 
@@ -230,16 +328,29 @@ greaterThanOrEqualTo(field: string, value: number | string): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| value | number \| string | 是 | 表示指定的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.greaterThanOrEqualTo("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## inNumber
 
@@ -259,16 +370,29 @@ inNumber(field: string, valueList: number[]): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| valueList | number[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| valueList | number[] | 是 | 表示指定的值列表。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.inNumber("field", [0, 1]);
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## inString
 
@@ -288,16 +412,29 @@ inString(field: string, valueList: string[]): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| valueList | string[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| valueList | string[] | 是 | 表示指定的字符串值列表。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.inString("field", ['test1', 'test2']);
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## isNotNull
 
@@ -317,15 +454,28 @@ isNotNull(field: string): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.isNotNull("field");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## isNull
 
@@ -345,15 +495,28 @@ isNull(field: string): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.isNull("field");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## lessThan
 
@@ -373,16 +536,29 @@ lessThan(field: string, value: number | string): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| value | number \| string | 是 | 表示指定的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.lessThan("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## lessThanOrEqualTo
 
@@ -402,16 +578,29 @@ lessThanOrEqualTo(field: string, value: number | string): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| value | number \| string | 是 | 表示指定的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.lessThanOrEqualTo("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## like
 
@@ -431,16 +620,29 @@ like(field: string, value: string): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| value | string | 是 | 表示指定的字符串值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.like("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## limit
 
@@ -460,16 +662,32 @@ limit(total: number, offset: number): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| total | number | 是 |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| total | number | 是 | 表示指定的结果数。 |
+| offset | number | 是 | 表示起始位置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+let total = 10;
+let offset = 1;
+try {
+    let query = new distributedData.Query();
+    query.notEqualTo("field", "value");
+    query.limit(total, offset);
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## notEqualTo
 
@@ -489,16 +707,29 @@ notEqualTo(field: string, value: number | string | boolean): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | number \| string \| boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| value | number \| string \| boolean | 是 | 表示指定的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notEqualTo("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## notInNumber
 
@@ -518,16 +749,29 @@ notInNumber(field: string, valueList: number[]): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| valueList | number[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| valueList | number[] | 是 | 表示指定的值列表。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notInNumber("field", [0, 1]);
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## notInString
 
@@ -547,16 +791,29 @@ notInString(field: string, valueList: string[]): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| valueList | string[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| valueList | string[] | 是 | 表示指定的字符串值列表。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notInString("field", ['test1', 'test2']);
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## or
 
@@ -576,9 +833,24 @@ or(): Query
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notEqualTo("field", "value1");
+    query.or();
+    query.notEqualTo("field", "value2");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## orderByAsc
 
@@ -598,15 +870,29 @@ orderByAsc(field: string): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notEqualTo("field", "value");
+    query.orderByAsc("field");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## orderByDesc
 
@@ -626,15 +912,29 @@ orderByDesc(field: string): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.notEqualTo("field", "value");
+    query.orderByDesc("field");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## prefixKey
 
@@ -654,15 +954,29 @@ prefixKey(prefix: string): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| prefix | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| prefix | string | 是 | 表示指定的键前缀。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.prefixKey("$.name");
+    query.prefixKey("0");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## reset
 
@@ -682,9 +996,24 @@ reset(): Query
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回重置的Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.equalTo("key", "value");
+    console.log("query is " + query.getSqlLike());
+    query.reset();
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("simply calls should be ok :" + e);
+}
+```
 
 ## setSuggestIndex
 
@@ -704,15 +1033,29 @@ setSuggestIndex(index: string): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | string | 是 | 指示要设置的索引。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.setSuggestIndex("$.name");
+    query.setSuggestIndex("0");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+   console.log("duplicated calls should be ok :" + e);
+}
+```
 
 ## unlike
 
@@ -732,13 +1075,26 @@ unlike(field: string, value: string): Query
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| value | string | 是 | 表示指定的字符串值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+
+**示例**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.unlike("field", "value");
+    console.log("query is " + query.getSqlLike());
+    query = null;
+} catch (e) {
+    console.log("duplicated calls should be ok :" + e);
+}
+```

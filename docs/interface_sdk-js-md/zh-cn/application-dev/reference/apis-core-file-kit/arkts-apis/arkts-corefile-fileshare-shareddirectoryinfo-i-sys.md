@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileShare } from 'kits/@kit.CoreFileKit';
+import fileShare from '@kit.CoreFileKit';
 ```
 
 ## bundleName

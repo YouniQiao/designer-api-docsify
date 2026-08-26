@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import display from '@kit.ArkUI';
 ```
 
 ## isFoldable
@@ -22,12 +22,19 @@ function isFoldable(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | boolean对象，返回当前设备是否可折叠的结果。false表示不可折叠，true表示可折叠。对于外屏只有简单辅助显示作用的小折叠设备，应用无法自定义外屏界面，故其返回值为false。其他 可折叠设备的返回值均为true。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+**示例**
+
+```TypeScript
+let ret: boolean = false;
+ret = display.isFoldable();
+```

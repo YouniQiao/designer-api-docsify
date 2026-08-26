@@ -29,6 +29,6 @@ Defining applyContent function.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;[T]&gt; |
+| Type | Description |
+| --- | --- |
+| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;[T]&gt; | Component attribute class, which is used to distinguish different information required by different components after content areas are customized, for example, ButtonConfiguration for the Button component and CheckBoxConfiguration of the Checkbox component. |

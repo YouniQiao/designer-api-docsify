@@ -27,12 +27,43 @@ function registerApplicationStateObserver(observer: ApplicationStateObserver): n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 | 表示程序状态观测器，用于观测应用的生命周期变化。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 已注册观测器的数字代码。 |
+
+**示例**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+
+const observerCode = appManager.registerApplicationStateObserver({
+  onForegroundApplicationChanged(appStateData) {
+    console.info(`onForegroundApplicationChanged, appStateData: ${appStateData}.`);
+  },
+  onAbilityStateChanged(abilityStateData) {
+    console.info(`onAbilityStateChanged, abilityStateData: ${abilityStateData}.`);
+  },
+  onProcessCreated(processData) {
+    console.info(`onProcessCreated, processData: ${processData}.`);
+  },
+  onProcessDied(processData) {
+    console.info(`onProcessDied, processData: ${processData}.`);
+  },
+  onProcessStateChanged(processData) {
+    console.info(`onProcessStateChanged, processData: ${processData}.`);
+  },
+  onAppStarted(appStateData) {
+    console.info(`onAppStarted, appStateData: ${JSON.stringify(appStateData)}`);
+  },
+  onAppStopped(appStateData) {
+    console.info(`onAppStopped, appStateData: ${JSON.stringify(appStateData)}`);
+  }
+});
+console.info(`observerCode: ${observerCode}.`);
+```

@@ -9,9 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { BackupExtensionAbility, BundleVersion } from 'kits/@kit.CoreFileKit';
-import { BackupExtensionAbility } from 'kits/@kit.CoreFileKit';
-import { BundleVersion } from 'kits/@kit.CoreFileKit';
+import BackupExtensionAbility, { BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## code

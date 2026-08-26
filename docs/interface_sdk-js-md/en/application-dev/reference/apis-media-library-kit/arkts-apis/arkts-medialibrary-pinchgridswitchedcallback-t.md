@@ -16,6 +16,6 @@ Callback to be invoked when a user pinches a grid component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [gridLevel](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md) | photoAccessHelper.GridLevel | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| gridLevel | photoAccessHelper.GridLevel | Yes | Number of columns in the grid. |

@@ -2,7 +2,8 @@
 
 Represents the message authentication code (MAC) parameters. You need to construct a child class object and use it as a parameter when computing an HMAC or a CMAC.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **algName** specifies the MAC algorithm to use. It is mandatory.
 
 **Since:** 18
@@ -12,7 +13,7 @@ Represents the message authentication code (MAC) parameters. You need to constru
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## algName

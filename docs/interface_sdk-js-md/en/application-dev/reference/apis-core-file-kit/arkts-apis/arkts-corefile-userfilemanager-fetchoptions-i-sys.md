@@ -15,7 +15,7 @@ Defines the options for fetching file attributes.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'kits/@kit.CoreFileKit';
+import userFileManager from '@kit.CoreFileKit';
 ```
 
 ## fetchColumns

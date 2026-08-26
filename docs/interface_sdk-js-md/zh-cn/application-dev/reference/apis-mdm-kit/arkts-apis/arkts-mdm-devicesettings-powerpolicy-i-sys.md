@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceSettings } from 'kits/@kit.MDMKit';
+import deviceSettings from '@kit.MDMKit';
 ```
 
 ## delayTime

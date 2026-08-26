@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { performanceMonitor } from 'kits/@kit.ArkUI';
+import performanceMonitor from '@kit.ArkUI';
 ```
 
 ## recordInputEventTime
@@ -24,14 +24,26 @@ Records the trigger event type and time before the start of the animation scene.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | Yes |
-| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes |
-| time | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | Yes | Trigger mode of the user scene. |
+| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | Trigger source of the user scene. |
+| time | number | Yes | Scenario trigger timestamp (in ms), for example, **1751508570794**. Values equal to or less than 0 will be automatically converted to the current system time, while positive values will be used as- is. Incorrect parameters may cause abnormal response latency metrics. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+
+**Examples**
+
+```TypeScript
+import { systemDateTime, BusinessError } from '@kit.BasicServicesKit';
+import { performanceMonitor } from '@kit.ArkUI';
+
+// Obtain the current system time.
+let time = systemDateTime.getTime(false);
+// Update the user trigger event type and time.
+performanceMonitor.recordInputEventTime(performanceMonitor.ActionType.LAST_UP, performanceMonitor.SourceType.PERF_MOUSE_EVENT, time);
+```

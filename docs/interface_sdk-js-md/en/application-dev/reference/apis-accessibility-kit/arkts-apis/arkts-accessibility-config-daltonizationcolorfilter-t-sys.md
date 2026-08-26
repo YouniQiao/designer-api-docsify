@@ -12,9 +12,9 @@ Color correction filters for different types of color vision deficiency.The conf
 
 **System API:** This is a system API.
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'Normal' |
-| 'Protanomaly' |
-| 'Deuteranomaly' |
-| 'Tritanomaly' |
+| Type | Description |
+| --- | --- |
+| 'Normal' | Standard color vision. |
+| 'Protanomaly' | Red-weak color vision deficiency. |
+| 'Deuteranomaly' | Green-weak color vision deficiency. |
+| 'Tritanomaly' | Blue-weak color vision deficiency. |

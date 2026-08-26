@@ -9,47 +9,46 @@ Provides methods to accessing bluetooth audio related capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createA2dpSrcProfile](arkts-connectivity-a2dp-createa2dpsrcprofile-f.md) |
+| Name | Description |
+| --- | --- |
+| [createA2dpSrcProfile](arkts-connectivity-a2dp-createa2dpsrcprofile-f.md) | create the instance of a2dp profile. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i.md) |
-| [CodecInfo](arkts-connectivity-a2dp-codecinfo-i.md) |
-| [CodecInfoList](arkts-connectivity-a2dp-codecinfolist-i.md) |
+| Name | Description |
+| --- | --- |
+| [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i.md) | Manager a2dp source profile. |
+| [CodecInfo](arkts-connectivity-a2dp-codecinfo-i.md) | Describes the codec information. |
+| [CodecInfoList](arkts-connectivity-a2dp-codecinfolist-i.md) | Describes the codec information. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i-sys.md) | Manager a2dp source profile. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CodecBitRate](arkts-connectivity-a2dp-codecbitrate-e.md) |
-| [CodecBitsPerSample](arkts-connectivity-a2dp-codecbitspersample-e.md) |
-| [CodecChannelMode](arkts-connectivity-a2dp-codecchannelmode-e.md) |
-| [CodecFrameLength](arkts-connectivity-a2dp-codecframelength-e.md) |
-| [CodecSampleRate](arkts-connectivity-a2dp-codecsamplerate-e.md) |
-| [CodecType](arkts-connectivity-a2dp-codectype-e.md) |
-| [PlayingState](arkts-connectivity-a2dp-playingstate-e.md) |
+| Name | Description |
+| --- | --- |
+| [CodecBitRate](arkts-connectivity-a2dp-codecbitrate-e.md) | Describes the codec bit rate. |
+| [CodecBitsPerSample](arkts-connectivity-a2dp-codecbitspersample-e.md) | Describes the codec bits per sample. |
+| [CodecChannelMode](arkts-connectivity-a2dp-codecchannelmode-e.md) | Describes the codec channel mode. |
+| [CodecFrameLength](arkts-connectivity-a2dp-codecframelength-e.md) | Describes the codec frame length. |
+| [CodecSampleRate](arkts-connectivity-a2dp-codecsamplerate-e.md) | Describes the codec sample rate. |
+| [CodecType](arkts-connectivity-a2dp-codectype-e.md) | Describes the codec type. |
+| [PlayingState](arkts-connectivity-a2dp-playingstate-e.md) | The enum of a2dp playing state. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md) |
+| Name | Description |
+| --- | --- |
+| [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md) | Base interface of profile. |

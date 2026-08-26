@@ -11,7 +11,7 @@ Implements the media query listener, including the first query result when the l
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from 'kits/@kit.ArkUI';
+import mediaquery from '@kit.ArkUI';
 ```
 
 ## off('change')
@@ -32,10 +32,27 @@ Deregisters a media query listener, so that no callback is triggered when the me
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'change' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'change' | Yes | Listener type. The value is fixed at **'change'**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks under this handle are unregistered. |
+
+**Examples**
+
+```TypeScript
+import { mediaquery } from '@kit.ArkUI';
+
+let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // Listen for landscape events.
+function onPortrait(mediaQueryResult:mediaquery.MediaQueryResult) {
+  if (mediaQueryResult.matches) {
+    // do something here
+  } else {
+    // do something here
+  }
+}
+listener.on('change', onPortrait) // Register the media query listener.
+listener.off('change', onPortrait) // Unregister the callback.
+```
 
 ## on('change')
 
@@ -45,7 +62,8 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 
 Registers a media query listener. The callback is triggered when the media attributes change.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The **on** or **off** function cannot be called in the registered callback.
 
 **Since:** 7
@@ -58,7 +76,11 @@ Registers a media query listener. The callback is triggered when the media attri
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'change' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'change' | Yes | Listener type. The value is fixed at **'change'**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | Yes | Callback registered with media query. |
+
+**Examples**
+
+For details, see [off('change')](#offchange).

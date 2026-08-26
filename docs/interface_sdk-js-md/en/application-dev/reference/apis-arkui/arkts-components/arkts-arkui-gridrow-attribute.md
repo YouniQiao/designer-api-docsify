@@ -33,9 +33,9 @@ Sets the alignment mode of the **GridCol** components along the vertical main ax
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | Yes | Alignment mode of the **GridCol** components along the vertical main axis of the **GridRow** component.Default value: **ItemAlign.Start**Invalid values are treated as the default value.  **NOTE：** **ItemAlign** supports the following enums: **ItemAlign.Start**, **ItemAlign.Center**, **ItemAlign.End**, and **ItemAlign.Stretch**. |
 
 ## onBreakpointChange
 
@@ -46,7 +46,8 @@ onBreakpointChange(callback: (breakpoints: string) => void)
 Triggered when the breakpoint changes.
 
 > **NOTE：**
-> &gt;
+> 
+> 
 > When [breakpointsreference](arkts-arkui-breakpointsreference-e.md) is set to **BreakpointsReference.ComponentSize**, you are not
 > advised to dynamically change the padding or margin
 > attribute value of the **GridRow** component in the **onBreakpointChange** callback.
@@ -61,6 +62,6 @@ Triggered when the breakpoint changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (breakpoints: string) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (breakpoints: string) = & gt; void | Yes | Breakpoint change. The value can be **"xs"**, **"sm"**, **"md"**, **"lg"**, **"xl"**, or **"xxl"**. |

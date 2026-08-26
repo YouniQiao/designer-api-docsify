@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## lseek
@@ -22,24 +20,34 @@ Adjusts the position of the file offset pointer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
-| offset | number | Yes |
-| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | File descriptor. |
+| offset | number | Yes | Relative offset, in bytes. |
+| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | No | Where to start the offset. If this parameter is not specified, the file start position is used by default. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Position of the current offset as measured from the beginning of the file, in bytes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900008 |
-| 13900020 |
-| 13900026 |
-| 13900038 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900008 | Bad file descriptor |
+| 13900020 | Invalid argument |
+| 13900026 | Illegal seek |
+| 13900038 | Value too large for defined data type |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let offset = fileIo.lseek(file.fd, 5, fileIo.WhenceType.SEEK_SET);
+console.info(`Succeeded in seeking, the current offset is at ${offset}`);
+fileIo.closeSync(file);
+```

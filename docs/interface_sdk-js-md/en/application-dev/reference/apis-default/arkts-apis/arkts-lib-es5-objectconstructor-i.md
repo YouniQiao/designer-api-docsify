@@ -13,8 +13,8 @@
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Call]]
 
 ```TypeScript
@@ -23,14 +23,14 @@
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -39,14 +39,14 @@ new(value?: any): Object
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## create
 
 ```TypeScript
@@ -57,14 +57,14 @@ Creates an object that has the specified prototype or that has null prototype.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | object \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | object \| null | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## create
 
 ```TypeScript
@@ -75,15 +75,15 @@ Creates an object that has the specified prototype, and that optionally contains
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | object \| null | Yes |
-| properties | PropertyDescriptorMap & ThisType & lt;any & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | object \| null | Yes |  |
+| properties | PropertyDescriptorMap & ThisType & lt;any & gt; | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## defineProperties
 
 ```TypeScript
@@ -94,15 +94,15 @@ Adds one or more properties to an object, and/or modifies attributes of existing
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | T | Yes |
-| properties | PropertyDescriptorMap & ThisType & lt;any & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | T | Yes |  |
+| properties | PropertyDescriptorMap & ThisType & lt;any & gt; | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## defineProperty
 
 ```TypeScript
@@ -113,16 +113,16 @@ Adds a property to an object, or modifies attributes of an existing property.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | T | Yes |
-| p | [PropertyKey](arkts-propertykey-t.md) | Yes |
-| attributes | PropertyDescriptor & ThisType & lt;any & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | T | Yes |  |
+| p | [PropertyKey](arkts-propertykey-t.md) | Yes |  |
+| attributes | PropertyDescriptor & ThisType & lt;any & gt; | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## freeze
 
 ```TypeScript
@@ -133,14 +133,14 @@ Prevents the modification of existing property attributes and values, and preven
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| f | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| f | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## freeze
 
 ```TypeScript
@@ -151,14 +151,14 @@ Prevents the modification of existing property attributes and values, and preven
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## freeze
 
 ```TypeScript
@@ -169,14 +169,14 @@ Prevents the modification of existing property attributes and values, and preven
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getOwnPropertyDescriptor
 
 ```TypeScript
@@ -187,15 +187,15 @@ Gets the own property descriptor of the specified object. An own property descri
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | any | Yes |
-| p | [PropertyKey](arkts-propertykey-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | any | Yes |  |
+| p | [PropertyKey](arkts-propertykey-t.md) | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getOwnPropertyNames
 
 ```TypeScript
@@ -206,14 +206,14 @@ Returns the names of the own properties of an object. The own properties of an o
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getPrototypeOf
 
 ```TypeScript
@@ -224,14 +224,14 @@ Returns the prototype of an object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## isExtensible
 
 ```TypeScript
@@ -242,14 +242,14 @@ Returns a value that indicates whether new properties can be added to an object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## isFrozen
 
 ```TypeScript
@@ -260,14 +260,14 @@ Returns true if existing property attributes and values cannot be modified in an
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## isSealed
 
 ```TypeScript
@@ -278,14 +278,14 @@ Returns true if existing property attributes cannot be modified in an object and
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## keys
 
 ```TypeScript
@@ -296,14 +296,14 @@ Returns the names of the enumerable string properties and methods of an object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | object | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## preventExtensions
 
 ```TypeScript
@@ -314,14 +314,14 @@ Prevents the addition of new properties to an object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## seal
 
 ```TypeScript
@@ -332,14 +332,14 @@ Prevents the modification of attributes of existing properties, and prevents the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| o | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| o | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## prototype
 
 ```TypeScript

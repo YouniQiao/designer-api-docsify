@@ -2,8 +2,10 @@
 
 Defines segmented button item options.
 
-> **Description**&gt;
-> 1. If both **symbol** and **icon** are configured, **symbol** takes precedence.&gt;
+> **Description**
+> 
+> 1. If both **symbol** and **icon** are configured, **symbol** takes precedence.
+> 
 > 2. If both **symbol** and **symbolModifier** are configured with HM Symbol resources, the resources specified by
 > **symbolModifier** take precedence.
 
@@ -14,7 +16,7 @@ Defines segmented button item options.
 ## Modules to Import
 
 ```TypeScript
-import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from 'kits/@kit.ArkUI';
+import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription

@@ -13,6 +13,7 @@ Defines the content of data change notifications, including inserted data, updat
 ## Modules to Import
 
 ```TypeScript
+import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## deleteEntries
@@ -50,6 +51,18 @@ UUID of the device.
 **Substitutes:** deviceId
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+**Examples**
+
+```TypeScript
+try {
+    let query = new distributedData.Query();
+    query.deviceId("deviceId");
+    console.log("query is " + query.getSqlLike());
+} catch (e) {
+    console.log("should be ok on Method Chaining : " + e);
+}
+```
 
 ## insertEntries
 

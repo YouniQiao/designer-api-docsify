@@ -2,7 +2,8 @@
 
 支持单击、双击和多次点击事件的识别。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 当组件同时绑定双击和单击手势且双击手势先绑定时，单击手势会有300ms的延时。
 
 **继承/实现关系：** TapGestureInterface extends GestureInterface<TapGestureInterface>
@@ -32,15 +33,15 @@
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | 否 | 点击手势的相关参数。<br>**起始版本：** 12 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |  |
 
 ## onAction
 
@@ -58,12 +59,12 @@ onAction(event: (event: GestureEvent) => void): TapGestureInterface
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |  |

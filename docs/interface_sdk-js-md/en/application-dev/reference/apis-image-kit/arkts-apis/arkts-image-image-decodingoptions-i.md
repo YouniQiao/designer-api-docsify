@@ -9,7 +9,7 @@ Describes the image decoding options.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## cropAndScaleStrategy
@@ -179,6 +179,36 @@ Rotation angle. The default value is **0**.
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function rotate(pixelMap: image.PixelMap) {
+  const angle: number = 90.0;
+  pixelMap.rotate(angle, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to rotate the PixelMap. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info("Succeeded in rotating the PixelMap.");
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function rotate(pixelMap: image.PixelMap) {
+  const angle: number = 90.0;
+  pixelMap.rotate(angle).then(() => {
+    console.info('Succeeded in rotating the PixelMap.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to rotate the PixelMap. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
 
 ## sampleSize
 

@@ -12,8 +12,8 @@ Indicates the event type of bundle change
 
 **System API:** This is a system API.
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'add' |
-| 'update' |
-| 'remove' |
+| Type | Description |
+| --- | --- |
+| 'add' |  |
+| 'update' |  |
+| 'remove' |  |

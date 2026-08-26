@@ -2,7 +2,8 @@
 
 The **dragInteraction** module provides the APIs to enable and disable listening for dragging status changes.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The APIs provided by this module are system APIs.
 
 **Since:** 10
@@ -14,7 +15,7 @@ The **dragInteraction** module provides the APIs to enable and disable listening
 ## Modules to Import
 
 ```TypeScript
-import { dragInteraction } from 'kits/@kit.ArkUI';
+import dragInteraction from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -22,25 +23,25 @@ import { dragInteraction } from 'kits/@kit.ArkUI';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) |
-| [off](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) |
-| [on](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) |
+| Name | Description |
+| --- | --- |
+| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) | Obtains the data summary of all dragged objects. |
+| [off](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) | Disables listening for dragging status changes. |
+| [on](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) | Enables listening for dragging status changes. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Summary](arkts-arkui-draginteraction-summary-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [Summary](arkts-arkui-draginteraction-summary-i-sys.md) | Defines the data summary of the dragged object. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DragState](arkts-arkui-draginteraction-dragstate-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [DragState](arkts-arkui-draginteraction-dragstate-e-sys.md) | Enumerates dragging states. |
 <!--DelEnd-->

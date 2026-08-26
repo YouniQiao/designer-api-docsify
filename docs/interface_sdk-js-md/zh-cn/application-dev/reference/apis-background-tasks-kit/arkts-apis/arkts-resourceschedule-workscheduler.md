@@ -11,64 +11,64 @@
 ## 导入模块
 
 ```TypeScript
-import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
+import workScheduler from '@kit.BackgroundTasksKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md) |
-| [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md) |
-| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md) |
-| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md) |
-| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md) |
-| [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md) |
-| [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md) |
-| [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md) |
-| [startWork](arkts-backgroundtasks-workscheduler-startwork-f.md) |
-| [stopAndClearWorks](arkts-backgroundtasks-workscheduler-stopandclearworks-f.md) |
-| [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md) | 通过workId获取延迟任务，使用Callback异步回调。 |
+| [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md) | 通过workId获取延迟任务，使用Promise异步回调。 |
+| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md) | 检查延迟任务的最后一次执行是否超时，使用Callback异步回调。 |
+| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md) | 检查延迟任务的最后一次执行是否超时，使用Callback异步回调。 |
+| [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md) | 检查延迟任务的最后一次执行是否超时，使用Promise异步回调。 |
+| [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md) | 获取当前应用所有的延迟任务，使用Callback异步回调。 |
+| [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md) | 获取当前应用所有的延迟任务，使用Callback异步回调。 |
+| [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md) | 获取当前应用所有的延迟任务，使用Promise异步回调。 |
+| [startWork](arkts-backgroundtasks-workscheduler-startwork-f.md) | 申请延迟任务，成功后会把任务添加到执行队列，满足触发条件后由系统调度执行。 |
+| [stopAndClearWorks](arkts-backgroundtasks-workscheduler-stopandclearworks-f.md) | 停止和取消当前应用所有的延迟任务。 |
+| [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md) | 取消延迟任务。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [resetExecFrequency](arkts-backgroundtasks-workscheduler-resetexecfrequency-f-sys.md) |
-| [setExecFrequency](arkts-backgroundtasks-workscheduler-setexecfrequency-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [resetExecFrequency](arkts-backgroundtasks-workscheduler-resetexecfrequency-f-sys.md) | 重置执行频率信息。 |
+| [setExecFrequency](arkts-backgroundtasks-workscheduler-setexecfrequency-f-sys.md) | 设置执行频率信息. |
 <!--DelEnd-->
 
 ### 接口
 
-| 名称 |
-| --- |
-| [WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | 延迟任务的具体信息, 用于设置延迟任务的触发条件等。 |
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 |
-| --- |
-| [FrequencyInfo](arkts-backgroundtasks-workscheduler-frequencyinfo-i-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [FrequencyInfo](arkts-backgroundtasks-workscheduler-frequencyinfo-i-sys.md) | 执行频率信息. |
 <!--DelEnd-->
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [BatteryStatus](arkts-backgroundtasks-workscheduler-batterystatus-e.md) |
-| [ChargingType](arkts-backgroundtasks-workscheduler-chargingtype-e.md) |
-| [NetworkType](arkts-backgroundtasks-workscheduler-networktype-e.md) |
-| [StorageRequest](arkts-backgroundtasks-workscheduler-storagerequest-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [BatteryStatus](arkts-backgroundtasks-workscheduler-batterystatus-e.md) | 触发延迟任务回调的电池状态。 |
+| [ChargingType](arkts-backgroundtasks-workscheduler-chargingtype-e.md) | 触发延迟任务回调的充电类型。 |
+| [NetworkType](arkts-backgroundtasks-workscheduler-networktype-e.md) | 触发延迟任务回调的网络类型。 |
+| [StorageRequest](arkts-backgroundtasks-workscheduler-storagerequest-e.md) | 触发延迟任务回调的存储状态。 |
 
 <!--Del-->
 ### 常量（系统接口）
 
-| 名称 |
-| --- |
-| [EXECUTE_IMMEDIATE](arkts-backgroundtasks-workscheduler-con-sys.md#execute_immediate) |
-| [WORK_SCHEDULER_CONDITION](arkts-backgroundtasks-workscheduler-con-sys.md#work_scheduler_condition) |
+| 名称 | 说明 |
+| --- | --- |
+| [EXECUTE_IMMEDIATE](arkts-backgroundtasks-workscheduler-con-sys.md#execute_immediate) | 请求的任务是否立即执行。 |
+| [WORK_SCHEDULER_CONDITION](arkts-backgroundtasks-workscheduler-con-sys.md#work_scheduler_condition) | 当前任务触发时满足的最后一个条件。 |
 <!--DelEnd-->

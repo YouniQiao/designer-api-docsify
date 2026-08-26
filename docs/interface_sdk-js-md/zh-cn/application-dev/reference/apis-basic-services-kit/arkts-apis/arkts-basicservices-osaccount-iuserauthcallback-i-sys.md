@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## onAcquireInfo
@@ -30,11 +30,27 @@ onAcquireInfo?: (module: number, acquire: number, extraInfo: Uint8Array) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| module | number | 是 |
-| acquire | number | 是 |
-| extraInfo | Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| module | number | 是 |  |
+| acquire | number | 是 |  |
+| extraInfo | Uint8Array | 是 |  |
+
+**示例**
+
+```TypeScript
+let authCallback: osAccount.IUserAuthCallback = {
+  onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+    console.info('auth result = ' + result)
+    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+  },
+  onAcquireInfo: (module: number, acquire: number, extraInfo: Uint8Array) => {
+    console.info('auth module = ' + module);
+    console.info('auth acquire = ' + acquire);
+    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+  }
+};
+```
 
 ## onResult
 
@@ -52,7 +68,18 @@ onResult: (result: number, extraInfo: AuthResult) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| result | number | 是 |
-| extraInfo | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| result | number | 是 |  |
+| extraInfo | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | 是 |  |
+
+**示例**
+
+```TypeScript
+let authCallback: osAccount.IUserAuthCallback = {
+  onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+    console.info('auth result = ' + result);
+    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+  }
+};
+```

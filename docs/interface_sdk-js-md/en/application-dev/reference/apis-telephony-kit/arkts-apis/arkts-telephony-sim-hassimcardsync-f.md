@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## hasSimCardSync
@@ -20,12 +19,21 @@ Checks whether the SIM card in the specified slot is installed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the SIM card in the specified slot is installed. |
+
+**Examples**
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+
+let hasSimCard: boolean = sim.hasSimCardSync(0);
+console.info(`has sim card: ` + hasSimCard);
+```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityLabel } from 'kits/@kit.CoreFileKit';
+import securityLabel from '@kit.CoreFileKit';
 ```
 
 ## getSecurityLabelSync
@@ -20,25 +20,33 @@ function getSecurityLabelSync(path: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 文件或目录的应用沙箱路径。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回数据安全等级。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900001 |
-| 13900007 |
-| 13900015 |
-| 13900020 |
-| 13900025 |
-| 13900037 |
-| 13900041 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900007 | Arg list too number |
+| 13900015 | File exists |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900037 | No data available |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + '/test.txt';
+let type = securityLabel.getSecurityLabelSync(filePath);
+console.info("Succeeded in getting security label, Label: " + type);
+```

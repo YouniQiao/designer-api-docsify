@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import featureAbility from '@kit.AbilityKit';
 ```
 
 ## getWindow
@@ -22,9 +22,26 @@ function getWindow(callback: AsyncCallback<window.Window>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;window.Window&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;window.Window&gt; | 是 | 回调函数，返回当前Ability对应的窗口。 |
+
+**示例**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取当前Ability对应的窗口
+featureAbility.getWindow((error: BusinessError, data: window.Window) => {
+  if (error && error.code !== 0) {
+    console.error(`getWindow fail, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`getWindow success, data: ${typeof(data)}`);
+  }
+});
+```
 
 
 ## getWindow
@@ -43,6 +60,21 @@ function getWindow(): Promise<window.Window>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;window.Window & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;window.Window & gt; | Promise对象，返回当前Ability对应的窗口。 |
+
+**示例**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取当前Ability对应的窗口
+featureAbility.getWindow().then((data: window.Window) => {
+  console.info(`getWindow success, data: ${typeof(data)}`);
+}).catch((error: BusinessError)=>{
+  console.error(`getWindow fail, error: ${JSON.stringify(error)}`);
+});
+```

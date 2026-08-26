@@ -10,10 +10,10 @@ Defines the types of the PhotoAsset members.The member types are the union of th
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| int |
-| long |
-| double |
-| string |
-| boolean |
+| Type | Description |
+| --- | --- |
+| int | The member value is an integer. |
+| long | The member value is a long integer. |
+| double | The member value is a decimal number. |
+| string | The member value is any string. |
+| boolean | The member value is true or false. |

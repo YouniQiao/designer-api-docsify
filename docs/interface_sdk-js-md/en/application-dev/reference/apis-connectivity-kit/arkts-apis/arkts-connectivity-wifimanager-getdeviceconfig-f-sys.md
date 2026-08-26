@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## getDeviceConfig
@@ -26,21 +27,35 @@ Obtain the single Wi-Fi configuration with Network ID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| networkId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| networkId | number | Yes | The network ID of the Wi-Fi configuration to retrieve. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) |
+| Type | Description |
+| --- | --- |
+| [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Returns the Wi-Fi configuration corresponding to the network ID. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+  try {
+    let networkId = 0;
+    let config = wifiManager.getDeviceConfig(networkId);
+    console.info(`config: ${JSON.stringify(config)}`);    
+  }catch(error){
+    console.error(`failed: ${JSON.stringify(error)}`);
+  }
+```

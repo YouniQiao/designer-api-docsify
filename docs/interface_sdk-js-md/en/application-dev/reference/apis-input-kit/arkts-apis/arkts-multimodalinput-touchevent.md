@@ -7,39 +7,38 @@ The **touchEvent** module provides touch events reported by a device. It is inhe
 ## Modules to Import
 
 ```TypeScript
-import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from 'kits/@kit.InputKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Touch(Touch Event)](arkts-input-multimodalinput-touchevent-touch-i.md) |
-| [TouchEvent(Touch Event)](arkts-input-multimodalinput-touchevent-touchevent-i.md) |
+| Name | Description |
+| --- | --- |
+| [Touch(Touch Event)](arkts-input-multimodalinput-touchevent-touch-i.md) | Defines the touch point information. |
+| [TouchEvent(Touch Event)](arkts-input-multimodalinput-touchevent-touchevent-i.md) | Defines a touch event. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Touch(Touch Event)](arkts-input-multimodalinput-touchevent-touch-i-sys.md) |
-| [TouchEvent(Touch Event)](arkts-input-multimodalinput-touchevent-touchevent-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [Touch(Touch Event)](arkts-input-multimodalinput-touchevent-touch-i-sys.md) | Defines the touch point information. |
+| [TouchEvent(Touch Event)](arkts-input-multimodalinput-touchevent-touchevent-i-sys.md) | Defines a touch event. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Action(Touch Event)](arkts-input-multimodalinput-touchevent-action-e.md) |
-| [SourceType(Touch Event)](arkts-input-multimodalinput-touchevent-sourcetype-e.md) |
-| [ToolType(Touch Event)](arkts-input-multimodalinput-touchevent-tooltype-e.md) |
+| Name | Description |
+| --- | --- |
+| [Action(Touch Event)](arkts-input-multimodalinput-touchevent-action-e.md) | Enumerates the touch event types. |
+| [SourceType(Touch Event)](arkts-input-multimodalinput-touchevent-sourcetype-e.md) | Enumerates touch sources. Currently, only the touchscreen and touchpad are supported. |
+| [ToolType(Touch Event)](arkts-input-multimodalinput-touchevent-tooltype-e.md) | Enumerates touch tool types. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FixedMode(Touch Event)](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [FixedMode(Touch Event)](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md) | Enumerates coordinate correction modes. |
 <!--DelEnd-->

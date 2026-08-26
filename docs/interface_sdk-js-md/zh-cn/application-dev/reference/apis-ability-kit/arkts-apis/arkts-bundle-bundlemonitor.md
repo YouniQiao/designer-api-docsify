@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleMonitor } from 'kits/@kit.AbilityKit';
+import bundleMonitor from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -19,24 +19,24 @@ import { bundleMonitor } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [off](arkts-ability-bundlemonitor-off-f-sys.md) |
-| [on](arkts-ability-bundlemonitor-on-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [off](arkts-ability-bundlemonitor-off-f-sys.md) | 注销监听应用的安装，卸载，更新。使用callback异步回调。 |
+| [on](arkts-ability-bundlemonitor-on-f-sys.md) | 注册监听应用的安装、卸载、更新。使用callback异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 |
-| --- |
-| [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md) | 应用变更信息。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 类型（系统接口）
 
-| 名称 |
-| --- |
-| [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | 监听的事件类型。 |
 <!--DelEnd-->

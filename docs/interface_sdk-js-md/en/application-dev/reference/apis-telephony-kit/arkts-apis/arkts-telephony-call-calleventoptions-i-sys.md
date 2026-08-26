@@ -11,7 +11,6 @@ Defines the call event options.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## eventId

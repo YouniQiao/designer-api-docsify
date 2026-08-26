@@ -14,7 +14,7 @@ Defines the string which can use resource.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
-| [Resource](arkts-arkui-resource-t.md) |
+| Type | Description |
+| --- | --- |
+| string |  |
+| [Resource](arkts-arkui-resource-t.md) |  |

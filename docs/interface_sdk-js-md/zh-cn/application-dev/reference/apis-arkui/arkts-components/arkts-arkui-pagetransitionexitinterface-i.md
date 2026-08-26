@@ -29,15 +29,15 @@
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | 是 | 配置退场动效的参数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |  |
 
 ## onExit
 
@@ -55,12 +55,24 @@ onExit(event: PageTransitionCallback): PageTransitionExitInterface
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | 是 | 出场动画的逐帧回调直到出场动画结束，progress从0变化到1。<br>**起始版本：** 18 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |  |
+
+**示例**
+
+```TypeScript
+pageTransition() {
+    PageTransitionExit({ duration: 1200, curve: Curve.Linear })
+      // 转场动画时退场动画 type 为路由类型 ，progress为从0到1逐渐变大
+      .onExit((type: RouteType, progress: number) => {
+        // 业务逻辑代码
+      })
+  }
+```

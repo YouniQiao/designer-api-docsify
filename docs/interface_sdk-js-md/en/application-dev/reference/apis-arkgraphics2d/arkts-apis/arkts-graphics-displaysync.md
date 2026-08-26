@@ -9,20 +9,20 @@ The displaySync module allows your application to draw its custom UI content at 
 ## Modules to Import
 
 ```TypeScript
-import { displaySync } from 'kits/@kit.ArkGraphics2D';
+import displaySync from '@kit.ArkGraphics2D';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [create](arkts-arkgraphics2d-displaysync-create-f.md) |
+| Name | Description |
+| --- | --- |
+| [create](arkts-arkgraphics2d-displaysync-create-f.md) | Creates a **DisplaySync** object, through which you can set the frame rate of the custom UI content. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) |
-| [IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | An object that implements the setting of the frame rate and callback. It provides APIs for you to set the frame rate, register a callback, and start/stop the callback. Before calling any of the following APIs, you must use [displaySync.create()](arkts-arkgraphics2d-displaysync-create-f.md) to create a **DisplaySync** instance. |
+| [IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md) | You can obtain the timestamp information from the event callback, including the timestamp when the current frame arrives and the timestamp when the next frame is expected to arrive. |

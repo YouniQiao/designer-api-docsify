@@ -18,16 +18,20 @@ function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefine
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Scroll' | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取事件时所需的目标节点。 |
+| nodeType | 'Scroll' | 是 | 获取Scroll节点类型的滚动事件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) \| undefined | Scroll节点类型的滚动事件，若获取失败，则返回undefined。 |
+
+**示例**
+
+完整示例请参考滚动事件示例。
 
 
 ## getEvent
@@ -48,16 +52,20 @@ function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'List' | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取事件时所需的目标节点。 |
+| nodeType | 'List' | 是 | 获取List节点类型的滚动事件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) \| undefined | List节点类型的滚动事件，若获取失败，则返回undefined。 |
+
+**示例**
+
+完整示例请参考滚动事件示例。
 
 
 ## getEvent
@@ -78,16 +86,20 @@ function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | un
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'WaterFlow' | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取事件时所需的目标节点。 |
+| nodeType | 'WaterFlow' | 是 | 获取WaterFlow节点类型的滚动事件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) \| undefined | WaterFlow节点类型的滚动事件，若获取失败，则返回undefined。 |
+
+**示例**
+
+完整示例请参考滚动事件示例。
 
 
 ## getEvent
@@ -108,13 +120,17 @@ function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Grid' | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取事件时所需的目标节点。 |
+| nodeType | 'Grid' | 是 | 获取Grid节点类型的滚动事件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) \| undefined | Grid节点类型的滚动事件，若获取失败，则返回undefined。 |
+
+**示例**
+
+完整示例请参考滚动事件示例。

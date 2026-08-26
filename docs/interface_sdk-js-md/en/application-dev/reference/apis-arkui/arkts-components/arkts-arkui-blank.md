@@ -1,6 +1,6 @@
 # Blank
 
-The **Blank** component is a spacer in the layout, automatically filling the remaining space along the main axis of its parent container. It works only when the parent component is Row, Column, or Flex.> **Child Components**>> No child component can be set.
+The **Blank** component is a spacer in the layout, automatically filling the remaining space along the main axis of its parent container. It works only when the parent component is Row, Column, or Flex. > **Child Components** > > No child component can be set.
 
 ## Blank
 
@@ -25,8 +25,57 @@ axis. If it does not have a cross axis size specified, it will fill up the paren
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| min | number \| string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| min | number \| string | No | Minimum size of the **Blank** component in the container along the main axis.  Default value: **0** If the type is number, the default unit is vp. If the type is string, the pixel unit can be explicitly specified, for example, '**10px**'. If the unit is not specified, the default unit vp is used, in which case **'10'** is equivalent to **10vp**. Invalid values are treated as the default value. **NOTE** This parameter cannot be set in percentage. If the value is negative, the default value is used. If the minimum size is larger than the available space of the container, it is used as the component size, and the component extends beyond the container. |
 
 ## Summary
+
+## Examples
+
+This example shows how the Blank component fills the remaining space in landscape and portrait modes.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct BlankExample {
+  build() {
+    Column() {
+      Row() {
+        Text('Bluetooth').fontSize(18)
+        Blank()
+        Toggle({ type: ToggleType.Switch }).margin({ top: 14, bottom: 14, left: 6, right: 6 })
+      }.width('100%').backgroundColor(0xFFFFFF).borderRadius(15).padding({ left: 12 })
+    }.backgroundColor(0xEFEFEF).padding(20)
+  }
+}
+```
+
+This example shows the effect of using the min parameter of the Blank component when its parent component does not have a width set.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct BlankExample {
+  build() {
+    Column({ space: 20 }) {
+      // If the width of the parent container is not set, the Blank component becomes invalid. In this case, you can set min to specify the minimum width.
+      Row() {
+        Text('Bluetooth').fontSize(18)
+        Blank().color(Color.Yellow)
+        Toggle({ type: ToggleType.Switch }).margin({ top: 14, bottom: 14, left: 6, right: 6 })
+      }.backgroundColor(0xFFFFFF).borderRadius(15).padding({ left: 12 })
+
+      Row() {
+        Text('Bluetooth').fontSize(18)
+        // Set the minimum width to 160.
+        Blank('160').color(Color.Yellow)
+        Toggle({ type: ToggleType.Switch }).margin({ top: 14, bottom: 14, left: 6, right: 6 })
+      }.backgroundColor(0xFFFFFF).borderRadius(15).padding({ left: 12 })
+
+    }.backgroundColor(0xEFEFEF).padding(20).width('100%')
+  }
+}
+```

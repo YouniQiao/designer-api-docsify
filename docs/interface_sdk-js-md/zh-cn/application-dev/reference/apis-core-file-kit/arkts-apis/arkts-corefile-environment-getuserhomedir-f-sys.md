@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Environment } from 'kits/@kit.CoreFileKit';
+import Environment from '@kit.CoreFileKit';
 ```
 
 ## getUserHomeDir
@@ -24,15 +24,28 @@ function getUserHomeDir(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回当前用户下应用沙箱路径的内卡目录。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 13900042 | Unknown error. |
+
+**示例**
+
+```TypeScript
+function getUserHomeDirExample() {
+  try {
+    let path = Environment.getUserHomeDir();
+    console.info(`Succeeded in getUserHomeDir, path is ${path}`);
+  } catch (err) {
+    console.error(`Failed to getUserHomeDir. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```

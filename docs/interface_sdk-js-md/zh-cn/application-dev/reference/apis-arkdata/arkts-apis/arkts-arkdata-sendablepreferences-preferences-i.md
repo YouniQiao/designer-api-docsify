@@ -11,7 +11,7 @@ Preferences继承自[ISendable](../../../arkts-utils/arkts-sendable.md#isendable
 ## 导入模块
 
 ```TypeScript
-import { sendablePreferences } from 'kits/@kit.ArkData';
+import sendablePreferences from '@kit.ArkData';
 ```
 
 ## clear
@@ -30,15 +30,28 @@ clear(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = preferences.clear();
+promise.then(() => {
+  console.info("Succeeded in clearing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to clear. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## clearSync
 
@@ -56,9 +69,15 @@ clearSync(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+preferences.clearSync();
+```
 
 ## delete
 
@@ -76,22 +95,35 @@ delete(key: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 要删除的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = preferences.delete('startup');
+promise.then(() => {
+  console.info("Succeeded in deleting the key 'startup'.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to delete the key 'startup'. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## deleteSync
 
@@ -109,16 +141,22 @@ deleteSync(key: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 要删除的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+preferences.deleteSync('startup');
+```
 
 ## flush
 
@@ -128,7 +166,8 @@ flush(): Promise<void>
 
 将缓存的Preferences实例中的数据异步存储到共享用户首选项的持久化文件中，使用Promise异步回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
 
 **起始版本：** 12
@@ -139,15 +178,28 @@ flush(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = preferences.flush();
+promise.then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## flushSync
 
@@ -157,7 +209,8 @@ flushSync(): void
 
 将缓存的Preferences实例中的数据存储到共享用户首选项的持久化文件中。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
 
 **起始版本：** 14
@@ -168,9 +221,15 @@ flushSync(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+preferences.flushSync();
+```
 
 ## get
 
@@ -188,23 +247,38 @@ get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
-| defValue | lang.ISendable | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 要获取的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
+| defValue | lang.ISendable | 是 | 默认返回值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;lang.ISendable & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;lang.ISendable & gt; | Promise对象，返回键对应的值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { lang } from '@kit.ArkTS';
+
+let promise = preferences.get('startup', 'default');
+promise.then((data: lang.ISendable) => {
+  let dataStr = data as string;
+  console.info(`Succeeded in getting value of 'startup'. Data: ${dataStr}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get value of 'startup'. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getAll
 
@@ -222,15 +296,31 @@ getAll(): Promise<lang.ISendable>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;lang.ISendable & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;lang.ISendable & gt; | Promise对象，返回所有包含的键值数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { lang } from '@kit.ArkTS';
+
+let promise = preferences.getAll();
+promise.then((keyValues: lang.ISendable) => {
+  for (let value of Object.keys(keyValues)) {
+    console.info("getAll " + JSON.stringify(value));
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get all key-values. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getAllSync
 
@@ -248,15 +338,26 @@ getAllSync(): lang.ISendable
 
 **返回值：**
 
-| 类型 |
-| --- |
-| lang.ISendable |
+| 类型 | 说明 |
+| --- | --- |
+| lang.ISendable | 返回所有包含的键值数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { lang } from '@kit.ArkTS';
+
+let keyValues: lang.ISendable = preferences.getAllSync();
+for (let value of Object.keys(keyValues)) {
+  console.info("getAll " + JSON.stringify(value));
+}
+```
 
 ## getSync
 
@@ -274,23 +375,31 @@ getSync(key: string, defValue: lang.ISendable): lang.ISendable
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
-| defValue | lang.ISendable | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 要获取的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
+| defValue | lang.ISendable | 是 | 默认返回值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| lang.ISendable |
+| 类型 | 说明 |
+| --- | --- |
+| lang.ISendable | 返回键对应的值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { lang } from '@kit.ArkTS';
+
+let value: lang.ISendable = preferences.getSync('startup', 'default');
+```
 
 ## has
 
@@ -308,22 +417,39 @@ has(key: string): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 要检查的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回Preferences实例是否包含给定Key的存储键值对，true表示存在，false表示不存在。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = preferences.has('startup');
+promise.then((val: boolean) => {
+  if (val) {
+    console.info("The key 'startup' is contained.");
+  } else {
+    console.info("The key 'startup' does not contain.");
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check the key 'startup'. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## hasSync
 
@@ -341,22 +467,33 @@ hasSync(key: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 要检查的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回Preferences实例是否包含给定Key的存储键值对，true表示存在，false表示不存在。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+let isExist: boolean = preferences.hasSync('startup');
+if (isExist) {
+  console.info("The key 'startup' is contained.");
+} else {
+  console.info("The key 'startup' does not contain.");
+}
+```
 
 ## off('change')
 
@@ -374,17 +511,35 @@ off(type: 'change', callback?: Callback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'change' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'change' | 是 | 事件类型，固定值'change'，表示数据变更。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('change', observer);
+preferences.putSync('startup', 'auto');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+  preferences.off('change', observer);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## off('multiProcessChange')
 
@@ -402,17 +557,35 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'multiProcessChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'multiProcessChange' | 是 | 事件类型，固定值'multiProcessChange'，表示多进程间的数据变更。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('multiProcessChange', observer);
+preferences.putSync('startup', 'auto');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+  preferences.off('multiProcessChange', observer);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## off('dataChange')
 
@@ -430,18 +603,39 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'dataChange' | 是 |
-| keys | Array & lt;string & gt; | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'dataChange' | 是 | 事件类型，固定值'dataChange'，表示精确的数据变更。 |
+| keys | Array & lt;string & gt; | 是 | 需要取消订阅的Key集合，当Keys为空数组时，表示取消订阅全部Key；当Keys为非空数组时，表示只取消订阅Key集合中的Key。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { lang } from '@kit.ArkTS';
+
+let observer = (data: lang.ISendable) => {
+  console.info(`observer : ${data}`);
+};
+let keys = ['name', 'age'];
+preferences.on('dataChange', keys, observer);
+preferences.putSync('name', 'xiaohong');
+preferences.putSync('weight', 125);
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+  preferences.off('dataChange', keys, observer);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## on('change')
 
@@ -451,12 +645,16 @@ on(type: 'change', callback: Callback<string>): void
 
 订阅数据变更，订阅的Key的值发生变更后，在执行flush方法后，触发callback回调。
 
-> **不同订阅方法的对比：**&gt;
-> - on('change')：订阅所有Key变化，适合全局数据变化感知需求。&gt;
-> - on('dataChange')：精确订阅指定Key的变化，适合关注特定数据场景，可回调返回具体值。&gt;
+> **不同订阅方法的对比：**
+> 
+> - on('change')：订阅所有Key变化，适合全局数据变化感知需求。
+> 
+> - on('dataChange')：精确订阅指定Key的变化，适合关注特定数据场景，可回调返回具体值。
+> 
 > **选取建议：** 需要监听所有数据变更时使用on('change')；需要精确知道特定Key变化并获取新值时使用on('dataChange')。
 > 
-> **说明：**&gt;
+> **说明：**
+> 
 > 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md)或者
 > [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新
 > [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)后需要重新订阅数据变更。
@@ -469,17 +667,34 @@ on(type: 'change', callback: Callback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'change' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'change' | 是 | 事件类型，固定值'change'，表示数据变更。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数。返回发生变更的Key。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('change', observer);
+preferences.putSync('startup', 'manual');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## on('multiProcessChange')
 
@@ -489,8 +704,10 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 
 订阅进程间数据变更，多个进程持有同一个首选项文件时，在任意一个进程（包括本进程）执行[flush](#flush)方法，持久化文件发生变更后，触发 callback回调。本接口提供给申请了[dataGroupId](arkts-arkdata-sendablepreferences-options-i.md)的应用进行使用，未申请的应用不推荐使用，多进程操作可能会损坏持久化文件，导致数据丢失。
 
-> **说明：**&gt;
-> 同一持久化文件在当前进程订阅进程间数据变更的最大数量为50次，超过最大限制后会订阅失败。建议在触发callback回调后及时取消订阅。&gt;
+> **说明：**
+> 
+> 同一持久化文件在当前进程订阅进程间数据变更的最大数量为50次，超过最大限制后会订阅失败。建议在触发callback回调后及时取消订阅。
+> 
 > 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md)或者
 > [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新
 > [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)后需要重新订阅数据变更。
@@ -503,18 +720,35 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'multiProcessChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'multiProcessChange' | 是 | 事件类型，固定值'multiProcessChange'，表示多进程间的数据变更。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数。返回发生变更的Key。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
-| [15500019](../errorcode-preferences.md#15500019-获取订阅服务失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [15500019](../errorcode-preferences.md#15500019-获取订阅服务失败) | Failed to obtain the subscription service. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('multiProcessChange', observer);
+preferences.putSync('startup', 'manual');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## on('dataChange')
 
@@ -524,7 +758,8 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>):
 
 精确订阅数据变更，只有被订阅的Key值发生变更后，在执行[flush](#flush)方法后，触发callback回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md)或者
 > [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新
 > [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)后需要重新订阅数据变更。
@@ -537,18 +772,38 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'dataChange' | 是 |
-| keys | Array & lt;string & gt; | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'dataChange' | 是 | 事件类型，固定值'dataChange'，表示精确的数据变更。 |
+| keys | Array & lt;string & gt; | 是 | 需要订阅的Key集合。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | 是 | 回调函数。回调支持返回多个键值对，其中键为发生变更的订阅Key，值为变更后的数据：支持number、string、boolean、 bigint以及可序列化的object。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { lang } from '@kit.ArkTS';
+
+let observer = (data: lang.ISendable) => {
+  console.info(`observer : ${data}`);
+};
+let keys = ['name', 'age'];
+preferences.on('dataChange', keys, observer);
+preferences.putSync('name', 'xiaohong');
+preferences.putSync('weight', 125);
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## put
 
@@ -558,8 +813,10 @@ put(key: string, value: lang.ISendable): Promise<void>
 
 将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，使用Promise异步回调。
 
-> **说明：**&gt;
-> 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。&gt;
+> **说明：**
+> 
+> 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。
+> 
 > 当对应的键已经存在时，put()方法会覆盖其值。可以使用hasSync()方法检查是否存在对应键值对。
 
 **起始版本：** 12
@@ -570,23 +827,36 @@ put(key: string, value: lang.ISendable): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
-| value | lang.ISendable | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 要修改的存储的Key，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
+| value | lang.ISendable | 是 | 存储的新值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = preferences.put('startup', 'auto');
+promise.then(() => {
+  console.info("Succeeded in putting value of 'startup'.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to put value of 'startup'. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## putSync
 
@@ -596,8 +866,10 @@ putSync(key: string, value: lang.ISendable): void
 
 将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，此为同步接口。
 
-> **说明：**&gt;
-> 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。&gt;
+> **说明：**
+> 
+> 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。
+> 
 > 当对应的键已经存在时，putSync()方法会覆盖其值。可以使用hasSync()方法检查是否存在对应键值对。
 
 **起始版本：** 12
@@ -608,14 +880,20 @@ putSync(key: string, value: lang.ISendable): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | string | 是 |
-| value | lang.ISendable | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 要修改的存储的Key，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
+| value | lang.ISendable | 是 | 存储的新值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+preferences.putSync('startup', 'auto');
+```

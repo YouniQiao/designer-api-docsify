@@ -9,7 +9,6 @@ Describes the class of a bluetooth device.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## cause

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from 'kits/@kit.ConnectivityKit';
+import connectedTag from '@kit.ConnectivityKit';
 ```
 
 ## uninit
@@ -14,7 +14,8 @@ function uninit(): boolean
 
 Uninitializes the active tag resources.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
 
@@ -30,6 +31,6 @@ Uninitializes the active tag resources.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true**: The uninstallation is successful. |

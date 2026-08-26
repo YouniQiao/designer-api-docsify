@@ -2,7 +2,7 @@
 
 The **EffectComponent** component defines combined special effects for child components to optimize the special effect drawing performance.
 > **NOTE**
-> - The APIs provided by this component are system APIs.>> - Currently, this component provides only combined background blur effects for child components.>> - To use this component for combined background blur effects, first replace the **backgroundBlurStyle(BlurStyle)**> attribute of the target child components with **useEffect(true)**.
+> - The APIs provided by this component are system APIs. > > - Currently, this component provides only combined background blur effects for child components. > > - To use this component for combined background blur effects, first replace the **backgroundBlurStyle(BlurStyle)** > attribute of the target child components with **useEffect(true)**.
 
 ## EffectComponent
 
@@ -38,18 +38,18 @@ Creates an effect drawing and combination component. If no parameter is passed o
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [EffectComponentOptions](arkts-arkui-effectcomponentoptions-i-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [EffectComponentOptions](arkts-arkui-effectcomponentoptions-i-sys.md) | No | EffectComponent constructor parameter. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |

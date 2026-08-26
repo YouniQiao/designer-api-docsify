@@ -9,7 +9,6 @@ Describes the settings for BLE advertising.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## connectable

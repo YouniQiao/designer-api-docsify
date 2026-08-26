@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileAccess } from 'kits/@kit.CoreFileKit';
+import fileAccess from '@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -40,54 +40,116 @@ listFile(filter?: Filter): FileIterator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | 否 | Indicates the filter of file. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [FileIterator](arkts-corefile-fileaccess-fileiterator-i-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [FileIterator](arkts-corefile-fileaccess-fileiterator-i-sys.md) | Returns the FileIterator Object. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900001 |
-| 13900002 |
-| 13900004 |
-| 13900006 |
-| 13900008 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900014 |
-| 13900015 |
-| 13900017 |
-| 13900018 |
-| 13900019 |
-| 13900020 |
-| 13900022 |
-| 13900023 |
-| 13900024 |
-| 13900025 |
-| 13900027 |
-| 13900029 |
-| 13900030 |
-| 13900033 |
-| 13900034 |
-| 13900038 |
-| 13900041 |
-| 13900042 |
-| 14000001 |
-| 14000002 |
-| 14000003 |
-| 14000004 |
-| 14300001 |
-| 14300002 |
-| 14300003 |
-| 14300004 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too number |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
+| 14300001 | IPC error |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
+| 14300004 | Get wrong result |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// fileInfoDir 表示某个目录信息
+// let filter = { suffix : [".txt", ".jpg", ".xlsx"] };
+let fileInfoDir :Array<fileAccess.FileInfo> = [];
+let subfileInfos: Array<fileAccess.FileInfo> = [];
+let isDone: boolean = false;
+try {
+  for (let i = 0; i < fileInfoDir.length; ++i) {
+    let fileIterator = fileInfoDir[i].listFile();
+    // 含过滤器实现的listFile
+    // let fileIterator = fileInfoDir.listFile(filter);
+    if (!fileIterator) {
+      console.error("listFile interface returns an undefined object");
+    }
+    while (!isDone) {
+      let result = fileIterator.next();
+      console.info("next result = " + JSON.stringify(result));
+      isDone = result.done;
+      if (!isDone) {
+        subfileInfos.push(result.value);
+      }
+    }
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("listFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// rootInfo 从getRoots()获取
+// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
+let rootInfo: Array<fileAccess.FileInfo> = [];
+let fileInfos: Array<fileAccess.FileInfo> = [];
+let isDone: boolean = false;
+try {
+  for (let i = 0; i < rootInfo.length; ++i) {
+    let fileIterator = rootInfo[i].listFile();
+    // 含过滤器实现的listFile
+    // let fileIterator = rootInfo.listFile(filter);
+    if (!fileIterator) {
+      console.error("listFile interface returns an undefined object");
+    }
+    while (!isDone) {
+      let result = fileIterator.next();
+      console.info("next result = " + JSON.stringify(result));
+      isDone = result.done;
+      if (!isDone) {
+        fileInfos.push(result.value);
+      }
+    }
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("listFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
 
 ## scanFile
 
@@ -111,54 +173,116 @@ scanFile(filter?: Filter): FileIterator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | 否 | Indicates the filter of file. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [FileIterator](arkts-corefile-fileaccess-fileiterator-i-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [FileIterator](arkts-corefile-fileaccess-fileiterator-i-sys.md) | Returns the RootIterator Object. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900001 |
-| 13900002 |
-| 13900004 |
-| 13900006 |
-| 13900008 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900014 |
-| 13900015 |
-| 13900017 |
-| 13900018 |
-| 13900019 |
-| 13900020 |
-| 13900022 |
-| 13900023 |
-| 13900024 |
-| 13900025 |
-| 13900027 |
-| 13900029 |
-| 13900030 |
-| 13900033 |
-| 13900034 |
-| 13900038 |
-| 13900041 |
-| 13900042 |
-| 14000001 |
-| 14000002 |
-| 14000003 |
-| 14000004 |
-| 14300001 |
-| 14300002 |
-| 14300003 |
-| 14300004 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too number |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 14000001 | Invalid display name |
+| 14000002 | Invalid uri |
+| 14000003 | Invalid file extension |
+| 14000004 | File has been put into trash bin |
+| 14300001 | IPC error |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
+| 14300004 | Get wrong result |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// fileInfoDir 表示某个目录信息
+// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
+let fileInfoDir: Array<fileAccess.FileInfo> = [];
+let subfileInfos: Array<fileAccess.FileInfo> = [];
+let isDone: boolean = false;
+try {
+  for (let i = 0; i < fileInfoDir.length; ++i) {
+    let fileIterator = fileInfoDir[i].scanFile();
+    // 含过滤器实现的scanFile
+    // let fileIterator = fileInfoDir.scanFile(filter);
+    if (!fileIterator) {
+      console.error("scanFile interface returns an undefined object");
+    }
+    while (!isDone) {
+      let result = fileIterator.next();
+      console.info("next result = " + JSON.stringify(result));
+      isDone = result.done;
+      if (!isDone) {
+        subfileInfos.push(result.value);
+      }
+    }
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("scanFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// rootInfo 从 getRoots()获取
+// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
+let rootInfo: Array<fileAccess.FileInfo> = [];
+let fileInfos: Array<fileAccess.FileInfo> = [];
+let isDone: boolean = false;
+try {
+  for (let i = 0; i < rootInfo.length; ++i) {
+    let fileIterator = rootInfo[i].scanFile();
+    // 含过滤器实现的scanFile
+    // let fileIterator = rootInfo.scanFile(filter);
+    if (!fileIterator) {
+      console.error("scanFile interface returns undefined object");
+    }
+    while (!isDone) {
+      let result = fileIterator.next();
+      console.info("next result = " + JSON.stringify(result));
+      isDone = result.done;
+      if (!isDone) {
+        fileInfos.push(result.value);
+      }
+    }
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("scanFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
 
 ## deviceFlags
 

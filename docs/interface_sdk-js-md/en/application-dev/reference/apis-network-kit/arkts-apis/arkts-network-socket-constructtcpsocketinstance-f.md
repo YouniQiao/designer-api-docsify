@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## constructTCPSocketInstance
@@ -20,6 +20,13 @@ Creates a **TCPSocket** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TCPSocket](arkts-network-socket-tcpsocket-i.md) |
+| Type | Description |
+| --- | --- |
+| [TCPSocket](arkts-network-socket-tcpsocket-i.md) | TCPSocket** object. |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+```

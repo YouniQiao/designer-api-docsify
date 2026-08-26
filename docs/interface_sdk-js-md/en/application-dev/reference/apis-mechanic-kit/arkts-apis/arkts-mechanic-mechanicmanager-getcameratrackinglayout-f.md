@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## getCameraTrackingLayout
@@ -20,13 +19,22 @@ Obtains the camera tracking layout of this mechanical device.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) |
+| Type | Description |
+| --- | --- |
+| [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | Camera tracking layout obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+
+**Examples**
+
+```TypeScript
+console.info('Query layout');
+// Call getCameraTrackingLayout to obtain the current camera tracking layout.
+let layout = mechanicManager.getCameraTrackingLayout();
+console.info(`'Succeeded in querying layout, current layout:' ${layout}`);
+```

@@ -23,6 +23,17 @@ function getArguments(): AbilityDelegatorArgs
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) | [AbilityDelegatorArgs]{ |
+
+**示例**
+
+```TypeScript
+import AbilityDelegatorRegistry from '@ohos.application.abilityDelegatorRegistry';
+
+let args = AbilityDelegatorRegistry.getArguments();
+console.info(`getArguments bundleName: ${args.bundleName}`);
+console.info(`getArguments testCaseNames: ${args.testCaseNames}`);
+console.info(`getArguments testRunnerClassName: ${args.testRunnerClassName}`);
+```

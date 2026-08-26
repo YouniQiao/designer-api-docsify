@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import tag from '@kit.ConnectivityKit';
 ```
 
 ## supportedProfiles

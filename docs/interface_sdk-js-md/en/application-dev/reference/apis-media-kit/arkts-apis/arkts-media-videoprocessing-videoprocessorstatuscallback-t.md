@@ -14,6 +14,6 @@ Status change callback type for video processor notifications.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| status | [VideoProcessorStatus](arkts-media-videoprocessing-videoprocessorstatus-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| status | [VideoProcessorStatus](arkts-media-videoprocessing-videoprocessorstatus-i.md) | Yes | The type of video processor status. |

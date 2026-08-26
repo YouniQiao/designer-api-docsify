@@ -9,19 +9,19 @@ The convertxml module provides APIs for converting XML text into JavaScript obje
 ## Modules to Import
 
 ```TypeScript
-import { convertxml } from 'kits/@kit.ArkTS';
+import convertxml from '@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ConvertXML](arkts-arkts-xml-convertxml-c.md) |
+| Name | Description |
+| --- | --- |
+| [ConvertXML](arkts-arkts-xml-convertxml-c.md) | ConvertXML representation refers to extensible markup language. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | Options for conversion. |

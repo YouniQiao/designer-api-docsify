@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
+import serial from '@kit.BasicServicesKit';
 ```
 
 ## manufacturer

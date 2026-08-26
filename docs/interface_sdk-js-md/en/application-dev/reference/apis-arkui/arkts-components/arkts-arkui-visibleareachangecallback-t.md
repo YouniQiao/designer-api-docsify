@@ -16,7 +16,7 @@ Represents a callback for visible area changes of the component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isExpanding | boolean | Yes |
-| currentRatio | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isExpanding | boolean | Yes | Whether the component's visible area has increased or decreased relative to its total area since the last callback. The value **true** indicates that the visible area has increased, and **false** indicates that the visible area has decreased. |
+| currentRatio | number | Yes | Ratio of the component's visible area to its own area at the moment the callback is triggered. |

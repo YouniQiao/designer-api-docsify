@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## getCurrentGroup
@@ -26,9 +29,27 @@ Obtains information about the current group.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;WifiP2pGroupInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;WifiP2pGroupInfo & gt; | Returns the current group information. |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getCurrentGroup((err, data:wifi.WifiP2pGroupInfo) => {
+   if (err) {
+       console.error("get current P2P group error");
+       return;
+   }
+  console.info("get current P2P group: " + JSON.stringify(data));
+});
+
+wifi.getCurrentGroup().then(data => {
+  console.info("get current P2P group: " + JSON.stringify(data));
+});
+```
 
 
 ## getCurrentGroup
@@ -51,6 +72,10 @@ Obtains information about the current group.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | Yes |  |
+
+**Examples**
+
+See [getCurrentGroup](#getcurrentgroup)

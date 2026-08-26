@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import text from '@kit.ArkGraphics2D';
 ```
 
 ## getFontUnicodeSet
@@ -22,13 +22,39 @@ function getFontUnicodeSet(path: string | Resource, index: number) : Promise<Arr
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要查询的字体文件的路径，应为 "file:// + 字体文件绝对路径" 或 \\$rawfile('工程中resources/rawfile目录下的文件名称')。 |
+| index | number | 是 | 字体文件格式为ttc/otc时，指定加载的字体索引，取值范围为[0, count-1]，其中count为字体文件包含的字体数量。非ttc/otc格式文件索引值只能指定为0。 如果该参数为负数或超出字体文件实际索引范围，将返回空数组。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;number & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;number & gt; & gt; | Promise对象，返回字体文件对应的unicode码数组。 |
+
+**示例**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct GetFontUnicodeSetTest {
+  build() {
+    Column({ space: 10 }) {
+      Button("get fontUnicode")
+        .onClick(() => {
+          let promise = text.getFontUnicodeSet("file:///system/fonts/HMSymbolVF.ttf", 0)
+          promise.then((unicodeSet) => {
+            for (let index = 0; index < unicodeSet.length; index++) {
+              console.info(unicodeSet[index].toString())
+            }
+          })
+        })
+    }.width("100%")
+    .height("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```

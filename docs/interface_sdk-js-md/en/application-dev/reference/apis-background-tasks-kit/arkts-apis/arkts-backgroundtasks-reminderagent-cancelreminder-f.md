@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import reminderAgent from '@kit.BackgroundTasksKit';
+import reminderAgentManager from '@kit.BackgroundTasksKitManager';
 ```
 
 ## cancelReminder
@@ -24,10 +25,21 @@ Cancels the reminder with the specified ID. This API uses an asynchronous callba
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| reminderId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| reminderId | number | Yes | ID of the reminder. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+import reminderAgent from '@ohos.reminderAgent';
+
+reminderAgent.cancelReminder(1, (err: BusinessError, data: void) => {
+  console.info("cancelReminder callback");
+});
+```
 
 
 ## cancelReminder
@@ -48,12 +60,22 @@ Cancels the reminder with the specified ID. This API uses a promise to return th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| reminderId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| reminderId | number | Yes | ID of the reminder. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+import reminderAgent from '@ohos.reminderAgent';
+
+reminderAgent.cancelReminder(1).then(() => {
+    console.info("cancelReminder promise");
+});
+```

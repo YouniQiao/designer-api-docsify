@@ -14,7 +14,7 @@ SubHeaderV2IconType
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [ResourceStr](arkts-arkui-resourcestr-t.md) |
-| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ResourceStr](arkts-arkui-resourcestr-t.md) |  |
+| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md) |  |

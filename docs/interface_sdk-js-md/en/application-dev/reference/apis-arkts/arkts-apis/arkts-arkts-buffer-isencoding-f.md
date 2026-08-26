@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## isEncoding
@@ -22,12 +21,27 @@ Checks whether the encoding format is supported.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| encoding | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encoding | string | Yes | Encoding format. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the encoding format is supported; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+console.info(buffer.isEncoding('utf-8').toString());
+// Output: true
+console.info(buffer.isEncoding('hex').toString());
+// Output: true
+console.info(buffer.isEncoding('utf/8').toString());
+// Output: false
+console.info(buffer.isEncoding('').toString());
+// Output: false
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { thermal } from 'kits/@kit.BasicServicesKit';
+import thermal from '@kit.BasicServicesKit';
 ```
 
 ## unregisterThermalLevelCallback
@@ -20,12 +20,25 @@ Unregisters from the thermal level changes. This API uses an asynchronous callba
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | (Optional) Callback that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; |
+
+**Examples**
+
+```TypeScript
+try {
+    thermal.unregisterThermalLevelCallback(() => {
+        console.info('unsubscribe thermal level success.');
+    });
+    console.info('unregister thermal level callback success.');
+} catch(err) {
+    console.error('unregister thermal level callback failed, err: ' + err);
+}
+```

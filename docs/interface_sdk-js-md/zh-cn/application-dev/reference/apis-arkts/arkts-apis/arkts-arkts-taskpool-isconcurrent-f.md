@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import taskpool from '@kit.ArkTS';
 ```
 
 ## isConcurrent
@@ -22,12 +22,22 @@ function isConcurrent(func: Function): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| func | Function | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| func | Function | 是 | 需要检查的函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果被检查函数标注了 [ |
+
+**示例**
+
+```TypeScript
+@Concurrent
+function emptyFunc(): void {}
+
+let result: boolean = taskpool.isConcurrent(emptyFunc);
+console.info("result is: " + result);
+```

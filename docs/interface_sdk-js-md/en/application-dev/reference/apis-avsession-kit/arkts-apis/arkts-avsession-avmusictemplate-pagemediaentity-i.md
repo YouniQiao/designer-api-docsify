@@ -11,7 +11,7 @@ The definition of pagination object.@extends OperResult @interface PageMediaEnti
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import avMusicTemplate from '@kit.AVSessionKit';
 ```
 
 ## elements

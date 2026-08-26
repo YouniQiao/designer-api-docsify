@@ -9,9 +9,7 @@ Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**,
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## next
@@ -28,14 +26,33 @@ Obtains the **ReaderIterator** result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) |
+| Type | Description |
+| --- | --- |
+| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | ReaderIteratorResult** object obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900005 |
-| 13900037 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900037 | No data available |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Options } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let options: Options = {
+  encoding: 'utf-8'
+};
+fileIo.readLines(filePath, options).then((readerIterator: fileIo.ReaderIterator) => {
+  for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
+    console.info(`Succeeded in reading lines, content: ${it.value}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
+});
+```

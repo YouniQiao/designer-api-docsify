@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+import systemDateTime from '@kit.BasicServicesKit';
 ```
 
 ## getUptime
@@ -20,19 +20,32 @@ Obtains the time elapsed since system startup. This API returns the result synch
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| timeType | [TimeType](arkts-basicservices-systemdatetime-timetype-e.md) | Yes |
-| isNanoseconds | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| timeType | [TimeType](arkts-basicservices-systemdatetime-timetype-e.md) | Yes | Type of the time to be obtained. The value can only be `STARTUP` or `ACTIVE`. |
+| isNanoseconds | boolean | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Time elapsed since system startup. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameter types.   3. Parameter verification failed. This error code was added due to missing issues.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let time: number = systemDateTime.getUptime(systemDateTime.TimeType.ACTIVE, false);
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get uptime. message: ${error.message}, code: ${error.code}`);
+}
+```

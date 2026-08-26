@@ -31,6 +31,6 @@ Sets a string of path commands that comply with the [SVG path syntax](../../../r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Path for drawing a line.The default value is an empty string.Default unit: px The **undefined** and **null** values are invalid and treated as the default value.<br>**Since:** 20 |

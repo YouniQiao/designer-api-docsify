@@ -14,7 +14,7 @@ Describes the callback invoked for the track change event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| isSelected | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the track that has changed. |
+| isSelected | boolean | Yes | Whether the track at the current index is selected. **true** if selected, **false** otherwise. |

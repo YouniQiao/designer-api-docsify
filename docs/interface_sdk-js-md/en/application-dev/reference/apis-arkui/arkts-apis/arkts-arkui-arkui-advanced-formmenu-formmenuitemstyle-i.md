@@ -9,7 +9,7 @@ Defines the form menu item style.
 ## Modules to Import
 
 ```TypeScript
-import { AddFormMenuItem, FormMenuItemStyle, AddFormOptions } from 'kits/@kit.ArkUI';
+import { AddFormMenuItem, FormMenuItemStyle, AddFormOptions } from '@kit.ArkUI';
 ```
 
 ## options

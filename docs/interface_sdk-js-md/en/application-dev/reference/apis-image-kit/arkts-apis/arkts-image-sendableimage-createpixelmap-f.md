@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import sendableImage from '@kit.ImageKit';
 ```
 
 ## createPixelMap
@@ -20,13 +20,31 @@ Create PixelMap by data buffer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| colors | ArrayBuffer | Yes |
-| options | image.InitializationOptions | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| colors | ArrayBuffer | Yes | The image color buffer. |
+| options | image.InitializationOptions | Yes | Initialization options for PixelMap. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;PixelMap & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;PixelMap & gt; | A Promise instance used to return the PixelMap object. |
+
+**Examples**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function CreatePixelMap() {
+    const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
+    let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 4, width: 6 } }
+    sendableImage.createPixelMap(color, opts).then((pixelMap: sendableImage.PixelMap) => {
+        console.info('Succeeded in creating pixelmap.');
+    }).catch((error: BusinessError) => {
+        console.error(`Failed to create pixelmap. code is ${error.code}, message is ${error.message}`);
+    })
+}
+```

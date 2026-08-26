@@ -21,13 +21,40 @@ Called when content is added to a placeholder component
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| content | [Content](arkts-arkui-content-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| content | [Content](arkts-arkui-content-t.md) | Yes | Manager of the **ContentSlot** component. Through the APIs provided by the native side, it can register and trigger the attach and detach event callbacks for **ContentSlot**, as well as manage the child components of **ContentSlot**. |
 
 ## Summary
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
+
+## Examples
+
+The following example shows the basic usage of ContentSlot.
+
+```TypeScript
+import { nativeNode } from 'libNativeNode.so'; // Developer-implemented .so file.
+import { NodeContent, Content } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Parent {
+  private nodeContent: Content = new NodeContent();
+
+  aboutToAppear() {
+    // Create a node through the C API and add it to the nodeContent manager.
+    nativeNode.createNativeNode(this.nodeContent);
+  }
+
+  build() {
+    Column() {
+      // Display the native components stored in the nodeContent manager.
+      ContentSlot(this.nodeContent)
+    }
+  }
+}
+```

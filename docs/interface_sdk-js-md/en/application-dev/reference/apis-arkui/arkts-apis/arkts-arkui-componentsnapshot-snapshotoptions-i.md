@@ -9,7 +9,7 @@ Defines the extra options for snapshot taking.
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import componentSnapshot from '@kit.ArkUI';
 ```
 
 ## colorMode

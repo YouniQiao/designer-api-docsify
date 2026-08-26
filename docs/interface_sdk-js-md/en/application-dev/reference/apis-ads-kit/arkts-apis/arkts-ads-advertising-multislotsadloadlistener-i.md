@@ -9,7 +9,10 @@ Enumerates the callbacks used for the request for loading multiple ads.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { AdComponent } from '@kit.AdsKit.AdComponent';
+import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
+import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
+import advertising from '@kit.AdsKit';
 ```
 
 ## onAdLoadFailure
@@ -28,10 +31,40 @@ Called when an ad request fails.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| errorCode | number | Yes |
-| errorMsg | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| errorCode | number | Yes | Error code for the ad request failure. |
+| errorMsg | string | Yes | Error message for the ad request failure. |
+
+**Examples**
+
+```TypeScript
+import { advertising } from '@kit.AdsKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const adLoaderListener: advertising.AdLoadListener = {
+  onAdLoadFailure: (errorCode: number, errorMsg: string) => {
+    hilog.error(0x0000, 'testTag', `Failed to load ad. Code is ${errorCode}, message is ${errorMsg}`);
+  },
+  onAdLoadSuccess: (ads: Array<advertising.Advertisement>) => {
+    hilog.info(0x0000, 'testTag', 'Succeeded in loading ad');
+  }
+}
+```
+
+```TypeScript
+import { advertising } from '@kit.AdsKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const multiSlotsAdLoadListener: advertising.MultiSlotsAdLoadListener = {
+  onAdLoadFailure: (errorCode: number, errorMsg: string) => {
+    hilog.error(0x0000, 'testTag', `Failed to load ad. Code is ${errorCode}, message is ${errorMsg}`);
+  },
+  onAdLoadSuccess: (adsMap: Map<string, Array<advertising.Advertisement>>) => {
+    hilog.info(0x0000, 'testTag', 'Succeeded in loading ad');
+  }
+}
+```
 
 ## onAdLoadSuccess
 
@@ -49,6 +82,22 @@ Called when a request for loading multiple ads is successful.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| adsMap | Map & lt;string, Array & lt;Advertisement & gt; & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| adsMap | Map & lt;string, Array & lt;Advertisement & gt; & gt; | Yes | Ad data, which is a mapping set that uses ad slot IDs as keys to store the requested ad content. |
+
+**Examples**
+
+```TypeScript
+import { advertising } from '@kit.AdsKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const multiSlotsAdLoadListener: advertising.MultiSlotsAdLoadListener = {
+  onAdLoadFailure: (errorCode: number, errorMsg: string) => {
+    hilog.error(0x0000, 'testTag', `Failed to load ad. Code is ${errorCode}, message is ${errorMsg}`);
+  },
+  onAdLoadSuccess: (adsMap: Map<string, Array<advertising.Advertisement>>) => {
+    hilog.info(0x0000, 'testTag', 'Succeeded in loading ad');
+  }
+}
+```

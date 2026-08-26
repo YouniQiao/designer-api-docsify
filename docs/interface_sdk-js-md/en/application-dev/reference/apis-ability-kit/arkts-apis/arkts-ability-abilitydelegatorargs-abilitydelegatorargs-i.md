@@ -2,7 +2,8 @@
 
 The **AbilityDelegatorArgs** module provides APIs to obtain an **AbilityDelegatorArgs** object during the execution of test cases.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
 
 **Since:** 8
@@ -72,3 +73,13 @@ Names of the test case executors.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+// Import the test registration module.
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+// Obtain the AbilityDelegatorArgs object through AbilityDelegatorRegistry.
+let args: abilityDelegatorRegistry.AbilityDelegatorArgs = abilityDelegatorRegistry.getArguments();
+```

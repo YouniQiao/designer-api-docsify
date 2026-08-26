@@ -29,9 +29,9 @@ autoHide(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 侧边栏拖拽到小于最小宽度后，是否自动隐藏。true：会自动隐藏false：不会自动隐藏默认值：true |
 
 ## controlButton
 
@@ -49,9 +49,9 @@ controlButton(value: ButtonStyle)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ButtonStyle](arkts-arkui-buttonstyle-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ButtonStyle](arkts-arkui-buttonstyle-i.md) | 是 | 侧边栏控制按钮的样式，用于配置控制按钮的位置、大小和图标。 |
 
 ## divider
 
@@ -71,9 +71,9 @@ divider(value: DividerStyle | null)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [DividerStyle](arkts-arkui-dividerstyle-i.md) \| null | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [DividerStyle](arkts-arkui-dividerstyle-i.md) \| null | 是 | 分割线的样式。默认为DividerStyle：显示分割线。   - null或undefined：行为不做处理，分割线样式保持默认值，不做任何改 变。   **说明：** API version 11及以下版本，null效果为不显示分割线。 |
 
 ## maxSideBarWidth
 
@@ -91,9 +91,9 @@ maxSideBarWidth(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 侧边栏最大宽度。默认值：280vp单位：vp取值范围： [0, +∞)异常值时取默认值。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。 |
 
 ## maxSideBarWidth
 
@@ -111,9 +111,9 @@ maxSideBarWidth(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 侧边栏最大宽度。默认值：280vp单位：vp取值范围： [0, +∞)异常值时取默认值。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。 |
 
 ## minContentWidth
 
@@ -137,9 +137,9 @@ minContentWidth优先于侧边栏的[maxSideBarWidth](#maxsidebarwidth)与 sideB
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 | SideBarContainer组件内容区可显示的最小宽度。默认值：360vp取值范围：[0, +∞)设置为小于0时按默认值处理。 |
 
 ## minSideBarWidth
 
@@ -157,9 +157,9 @@ minSideBarWidth(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 侧边栏最小宽度。。 单位为：vp。取值范围：[0, +∞)。默认值：API version 9及以下版本默认值为200vp，API version 10及以上版本的默认值为240vp。 |
 
 ## minSideBarWidth
 
@@ -177,9 +177,9 @@ minSideBarWidth(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 侧边栏最小宽度。默认值：API version 9及以下版本默认值为200vp， API version 10的默认值为240vp。单位：vp取值范围：[0, +∞)异常值时取默认值。 |
 
 ## onChange
 
@@ -200,9 +200,9 @@ onChange(callback: (value: boolean) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | (value: boolean) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (value: boolean) = & gt; void | 是 | true表示显示，false表示隐藏。 |
 
 ## showControlButton
 
@@ -220,9 +220,9 @@ showControlButton(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 是否显示控制按钮。true：显示控制按钮false：不显示控制按钮默认值：true |
 
 ## showSideBar
 
@@ -240,9 +240,9 @@ showSideBar(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 是否显示侧边栏。true：显示侧边栏false：不显示侧边栏默认值：true |
 
 ## showSideBarWithGesture
 
@@ -254,12 +254,14 @@ showSideBarWithGesture(value: boolean)
 
 > **说明：**
 
-> - 手势滑动生效范围为侧边栏+内容区（不含分割线），滑动距离达到100vp时改变侧边栏显示或隐藏状态，最大可滑动距离等于侧边栏宽度。&gt;
+> - 手势滑动生效范围为侧边栏+内容区（不含分割线），滑动距离达到100vp时改变侧边栏显示或隐藏状态，最大可滑动距离等于侧边栏宽度。
+> 
 > - 当侧边栏位于容器左侧时：
 > 
 > - 侧边栏隐藏时可向右滑动展开侧边栏。
 > 
-> - 侧边栏显示时可向左滑动关闭侧边栏。&gt;
+> - 侧边栏显示时可向左滑动关闭侧边栏。
+> 
 > - 当侧边栏位于容器右侧时：
 > 
 > - 侧边栏隐藏时可向左滑动展开侧边栏。
@@ -276,9 +278,9 @@ showSideBarWithGesture(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 设置是否支持通过手势滑动显示或隐藏侧边栏。true：支持手势滑动控制。false：不支持手势滑动控制。默认值：false |
 
 ## sideBarPosition
 
@@ -296,9 +298,9 @@ sideBarPosition(value: SideBarPosition)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [SideBarPosition](arkts-arkui-sidebarposition-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [SideBarPosition](arkts-arkui-sidebarposition-e.md) | 是 | 侧边栏显示位置。默认值：SideBarPosition.Start |
 
 ## sideBarWidth
 
@@ -316,9 +318,9 @@ sideBarWidth(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 侧边栏的宽度。默认值：240vp单位：vp取值范围： [0, +∞)异常值时取默认值。   **说明：** API version 10以下版本的默认值为200vp，API version 10及以上版本的默认值为240vp。 |
 
 ## sideBarWidth
 
@@ -336,6 +338,6 @@ sideBarWidth(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 侧边栏的宽度。默认值：240vp单位：vp取值范围： [0, +∞)异常值时取默认值。   **说明：** API version 9的默认值为200vp，API version 10及以上版本的默认值为240vp。 |

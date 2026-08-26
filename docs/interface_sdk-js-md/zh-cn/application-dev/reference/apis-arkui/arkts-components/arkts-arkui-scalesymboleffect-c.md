@@ -33,10 +33,10 @@ ScaleSymbolEffect的构造函数，缩放动效。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [scope](#scope) | [EffectScope](arkts-arkui-effectscope-e.md) | 否 |
-| [direction](#direction) | [EffectDirection](arkts-arkui-effectdirection-e.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | 否 | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。 默认值：EffectScope.LAYER |
+| direction | [EffectDirection](arkts-arkui-effectdirection-e.md) | 否 | 动效方向。具体枚举值及说明请参考EffectDirection枚举说明。 默认值：EffectDirection.DOWN |
 
 ## direction
 

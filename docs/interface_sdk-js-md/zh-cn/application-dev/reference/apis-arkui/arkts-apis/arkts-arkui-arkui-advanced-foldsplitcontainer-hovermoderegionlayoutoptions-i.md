@@ -2,8 +2,10 @@
 
 悬停态布局信息。
 
-> **说明：**&gt;
-> 1. 在悬停状态下，设备存在避让区域（折痕附近的区域，该区域内容可能不可见或受限），布局计算时需考虑该区域的影响。&gt;
+> **说明：**
+> 
+> 1. 在悬停状态下，设备存在避让区域（折痕附近的区域，该区域内容可能不可见或受限），布局计算时需考虑该区域的影响。
+> 
 > 2. 在悬停模式下，屏幕上半部分为显示区域，下半部分为操作区域。
 
 **起始版本：** 12
@@ -13,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from 'kits/@kit.ArkUI';
+import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from '@kit.ArkUI';
 ```
 
 ## extraRegionPosition

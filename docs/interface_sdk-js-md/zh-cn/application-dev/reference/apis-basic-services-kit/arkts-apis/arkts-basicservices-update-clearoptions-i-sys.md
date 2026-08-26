@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import update from '@kit.BasicServicesKit';
 ```
 
 ## status

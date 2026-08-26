@@ -9,7 +9,7 @@ Defines the progress of scanning pictures.
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
+import scan from '@kit.BasicServicesKit';
 ```
 
 ## isFinal

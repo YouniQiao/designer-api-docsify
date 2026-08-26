@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
+import carAwareness from '@kit.MultimodalAwarenessKit';
 ```
 
 ## getAllCapabilityList
@@ -22,13 +22,13 @@ Returns the list of all capabilities.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Capability[] & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Capability[] & gt; | Promise used to return the list of all capabilities. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [34000001](../errorcode-onScreen.md#34000001-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Car awareness not supported. Function can not work correctly due to limited device capabilities. |
+| [34000001](../errorcode-onScreen.md#34000001-service-exception) | Service exception. |

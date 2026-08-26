@@ -9,7 +9,7 @@ SSAP客户端类，提供了和服务端进行连接和数据传输等操作方�
 ## 导入模块
 
 ```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
+import ssap from '@kit.ConnectivityKit';
 ```
 
 ## close
@@ -30,11 +30,11 @@ close(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## connect
 
@@ -54,17 +54,17 @@ connect(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## disconnect
 
@@ -84,17 +84,17 @@ disconnect(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## getServices
 
@@ -114,17 +114,17 @@ getServices(): Promise<Service[]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Service](arkts-connectivity-ssap-service-i.md)[]&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Service](arkts-connectivity-ssap-service-i.md)[]&gt; | Promise对象，返回服务端支持的服务列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## offConnectionStateChange
 
@@ -142,9 +142,9 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 否 | 回调函数，返回连接状态上报参数。 填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 ## offMtuChange
 
@@ -162,9 +162,9 @@ offMtuChange(callback?: Callback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 回调函数，返回协商后的MTU大小。 填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 ## offPropertyChange
 
@@ -182,9 +182,9 @@ offPropertyChange(callback?: Callback<Property>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 否 | 回调函数，返回服务的Property。 填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 ## onConnectionStateChange
 
@@ -202,9 +202,9 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 是 | 回调函数，返回连接状态上报参数。 |
 
 ## onMtuChange
 
@@ -222,9 +222,9 @@ onMtuChange(callback: Callback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数，返回协商后的MTU大小。 |
 
 ## onPropertyChange
 
@@ -242,9 +242,9 @@ onPropertyChange(callback: Callback<Property>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 是 | 回调函数，返回服务的Property。 |
 
 ## readProperty
 
@@ -264,25 +264,25 @@ readProperty(property: Property): Promise<Property>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 | 服务端属性。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | Promise对象，返回服务端属性。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID in property. |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## requestMtuSize
 
@@ -302,23 +302,23 @@ requestMtuSize(mtu: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mtu | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mtu | number | 是 | MTU参数，取值范围[22, 1024]，单位：字节。默认值251。 单位为：字节。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## setPropertyNotification
 
@@ -338,26 +338,26 @@ setPropertyNotification(property: Property, enable: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 | 服务端属性。该属性需支持NOTIFY操作（即operation包含NOTIFY，详见[Operation](arkts-connectivity-ssap-operation-e.md)）。 |
+| enable | boolean | 是 | 是否打开通知功能。true: 打开通知功能。false: 关闭通知功能。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID in property. |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## writeProperty
 
@@ -377,23 +377,23 @@ writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 |
-| [writeType](arkts-connectivity-ssap-propertywriterequest-i.md) | [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 | 服务端属性。 |
+| writeType | [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | 是 | 写类型，支持服务端回复响应和不回复响应两种方式。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID in property. |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |

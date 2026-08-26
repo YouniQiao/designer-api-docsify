@@ -9,7 +9,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## constructor
@@ -25,6 +26,35 @@ constructor()
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**示例**
+
+```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// 输出结果：retStr = utf-8
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let base64 = new  util.Base64();
+```
 
 ## constructor
 
@@ -42,9 +72,19 @@ constructor(encoding?: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [encoding](#encoding) | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。 |
+
+**示例**
+
+```TypeScript
+let textEncoder = new util.TextEncoder("utf-8");
+```
+
+```TypeScript
+let decoder = new util.StringDecoder();
+```
 
 ## create
 
@@ -62,15 +102,21 @@ static create(encoding?: string): TextEncoder
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [encoding](#encoding) | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TextEncoder](arkts-arkts-util-textencoder-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TextEncoder](arkts-arkts-util-textencoder-c.md) | TextEncoder** 对象。 |
+
+**示例**
+
+```TypeScript
+let textEncoder = util.TextEncoder.create("utf-8");
+```
 
 ## encode
 
@@ -90,15 +136,24 @@ encode(input?: string): Uint8Array
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| input | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| input | string | 否 | 要编码的字符串。默认值为空字符串。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Uint8Array |
+| 类型 | 说明 |
+| --- | --- |
+| Uint8Array | 获取到的 Uint8Array 对象。 |
+
+**示例**
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let result = textEncoder.encode("\uD800¥¥");
+console.info("result = " + result);
+// 输出结果: result = 237,160,128,194,165,194,165
+```
 
 ## encodeInto
 
@@ -116,15 +171,24 @@ encodeInto(input?: string): Uint8Array
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| input | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| input | string | 否 | 要编码的字符串。默认值为空字符串。如果输入参数为空字符串，则返回值为 undefined。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Uint8Array |
+| 类型 | 说明 |
+| --- | --- |
+| Uint8Array | 获取到的 Uint8Array 对象。 |
+
+**示例**
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let result = textEncoder.encodeInto("\uD800¥¥");
+console.info("result = " + result);
+// 输出结果: result = 237,160,128,194,165,194,165
+```
 
 ## encodeInto
 
@@ -144,16 +208,27 @@ encodeInto(input: string, dest: Uint8Array): { read: number; written: number }
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| input | string | 是 |
-| dest | Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| input | string | 是 | 要编码的字符串。 |
+| dest | Uint8Array | 是 | 用于存储 UTF-8 编码文本的 Uint8Array 对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| object |
+| 类型 | 说明 |
+| --- | --- |
+| object | 获取到的对象。**read** 表示已编码的字符数，**written** 表示已编码字符所占用的字节数。 |
+
+**示例**
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let buffer = new ArrayBuffer(4);
+let uint8 = new Uint8Array(buffer);
+let result = textEncoder.encodeInto('abcd', uint8);
+console.info("uint8 = " + uint8);
+// 输出结果: uint8 = 97,98,99,100
+```
 
 ## encodeIntoUint8Array
 
@@ -171,17 +246,32 @@ encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| input | string | 是 |
-| dest | Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| input | string | 是 | 要编码的字符串。 |
+| dest | Uint8Array | 是 | 用于存储 UTF-8 编码文本的 Uint8Array 对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| object |
-| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| object | 返回该对象，其中 read 表示已编码的字符数，written 表示已编码字符所占用的字节数。<br>**适用版本：** 9 - 10 |
+| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | 获取到的对象。**read** 表示已编码的字符数，**written** 表示已编码字符所占用的 字节数。<br>**适用版本：** 11+ |
+
+**示例**
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let buffer = new ArrayBuffer(4);
+let uint8 = new Uint8Array(buffer);
+let result = textEncoder.encodeIntoUint8Array('abcd', uint8);
+console.info("uint8 = " + uint8);
+// 输出结果: uint8 = 97,98,99,100
+console.info("result.read = " + result.read);
+// 输出结果: result.read = 4
+console.info("result.written = " + result.written);
+// 输出结果: result.written = 4
+```
 
 ## encoding
 

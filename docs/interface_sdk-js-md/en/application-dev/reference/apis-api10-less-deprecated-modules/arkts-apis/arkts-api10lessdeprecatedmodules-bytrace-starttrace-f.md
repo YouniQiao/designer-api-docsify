@@ -13,7 +13,8 @@ function startTrace(name: string, taskId: number, expectedTime?: number): void
 
 Marks the start of a timeslice trace task.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If multiple trace tasks with the same name need to be performed at the same time or a trace task needs to be
 > performed multiple times concurrently, different task IDs must be specified in **startTrace**. If the trace tasks
 > with the same name are not performed at the same time, the same task ID can be used. For details, see the
@@ -29,8 +30,15 @@ Marks the start of a timeslice trace task.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| taskId | number | Yes |
-| expectedTime | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of a timeslice trace task. |
+| taskId | number | Yes | ID of a timeslice trace task. |
+| expectedTime | number | No | Expected duration of the trace, in ms. This parameter is optional and is left blank by default. |
+
+**Examples**
+
+```TypeScript
+bytrace.startTrace("myTestFunc", 1);
+bytrace.startTrace("myTestFunc", 1, 5); // The expected duration of the trace is 5 ms.
+```

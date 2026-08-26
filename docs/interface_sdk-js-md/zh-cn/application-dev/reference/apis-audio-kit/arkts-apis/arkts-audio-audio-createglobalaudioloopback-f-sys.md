@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## createGlobalAudioLoopback
@@ -24,21 +25,21 @@ function createGlobalAudioLoopback(mode: AudioLoopbackMode, isController: boolea
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | 是 |
-| isController | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | 是 | 音频返听模式。 |
+| isController | boolean | 是 | 创建一个拥有音频返听或仅包含控制器的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null & gt; | Promise 用于返回音频返听实例，或在发生错误时返回 null。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Loopback mode is unsupported. |

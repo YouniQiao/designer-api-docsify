@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import curves from '@kit.ArkUI';
 ```
 
 ## springMotion
@@ -22,14 +22,24 @@ Creates a spring animation curve. If multiple spring animations are applied to t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| response | number | No |
-| dampingFraction | number | No |
-| overlapDuration | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| response | number | No | Duration of one complete oscillation.Default value: **0.55**Unit: second Value range: (0, +∞)   **NOTE：**If this parameter is set to a value less than or equal to 0, the default value **0.55** is used. |
+| dampingFraction | number | No | Damping coefficient.   **0**: undamped. In this case, the spring oscillates forever.  > 0 and &lt; 1: underdamped. In this case, the spring overshoots the equilibrium position. **1**: critically damped.  &gt; 1: overdamped. In this case, the spring approaches equilibrium gradually. Default value: **0.825**Unit: second Value range: 0, +∞)   **NOTE：**A value less than 0 evaluates to the default value **0.825**. |
+| overlapDuration | number | No | Duration for animations to overlap, in seconds. When animations overlap, the **response** values of these animations will transit smoothly over this duration if they are different.Default value: **0**Unit: second Value range: [0, +∞)   **NOTE：**A value less than 0 evaluates to the default value **0**.The spring animation curve is physics-based. Its duration depends on the **springMotion** parameters and the previous velocity, rather than the **duration** parameter in [animation, animateTo, or pageTransition. The time cannot be normalized. Therefore, the interpolation cannot be obtained using the **interpolate** function of the curve. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |
+| Type | Description |
+| --- | --- |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | Curve. |
+
+**Examples**
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+curves.springMotion(); // Create a spring animation curve with default settings.
+curves.springMotion(0.5); // Create a spring animation curve with the specified response value.
+curves.springMotion(0.5, 0.6); // Create a spring animation curve with the specified response and dampingFraction values.
+curves.springMotion(0.5, 0.6, 0); // Create a spring animation curve with the specified parameter values.
+```

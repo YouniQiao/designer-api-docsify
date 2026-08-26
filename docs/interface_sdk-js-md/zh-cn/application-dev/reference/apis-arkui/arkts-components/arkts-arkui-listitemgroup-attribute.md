@@ -21,7 +21,8 @@ childrenMainSize(value: ChildrenMainSize)
 
 设置ListItemGroup组件的子组件在主轴方向的大小信息。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 当List组件的子组件包含ListItemGroup时，必须同时给List组件和每个ListItemGroup组件设置childrenMainSize属性。ListItemGroup通过该属性提供其子组件在主轴方向的大小信
 > 息，用于配合List组件的childrenMainSize属性正常生效。
 
@@ -35,9 +36,9 @@ childrenMainSize(value: ChildrenMainSize)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ChildrenMainSize](arkts-arkui-childrenmainsize-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ChildrenMainSize](arkts-arkui-childrenmainsize-c.md) | 是 | 该对象用来维护子组件在主轴方向的大小信息。 |
 
 ## divider
 
@@ -57,6 +58,6 @@ divider(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) \| null | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) \| null | 是 | ListItem分割线样式。 |

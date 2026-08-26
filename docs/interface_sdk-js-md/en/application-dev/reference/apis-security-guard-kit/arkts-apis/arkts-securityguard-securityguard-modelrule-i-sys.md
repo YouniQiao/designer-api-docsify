@@ -11,7 +11,7 @@ Provides the ModelRule type.
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+import securityGuard from '@kit.SecurityGuardKit';
 ```
 
 ## modelName

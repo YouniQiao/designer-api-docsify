@@ -12,10 +12,10 @@ Ignore repeated clicks at different time intervals.The configuration takes effec
 
 **System API:** This is a system API.
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'Shortest' |
-| 'Short' |
-| 'Medium' |
-| 'Long' |
-| 'Longest' |
+| Type | Description |
+| --- | --- |
+| 'Shortest' | Shortest. |
+| 'Short' | Short. |
+| 'Medium' | Medium. |
+| 'Long' | Long. |
+| 'Longest' | Longest. |

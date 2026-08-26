@@ -34,11 +34,38 @@ Install an application in a HAP.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleFilePaths | Array & lt;string & gt; | Yes |
-| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleFilePaths | Array & lt;string & gt; | Yes | Sandbox path where the HAP files of the bundle are stored. |
+| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes | Parameters required for bundle installation. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the result. If install is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import bundleInstall from '@ohos.bundle.installer';
+import { BusinessError } from '@ohos.base';
+
+let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/files/'];
+let installParam: bundleInstall.InstallParam = {
+  userId: 100,
+  isKeepData: false,
+  installFlag: 1,
+};
+
+bundleInstall.getBundleInstaller().then(installer => {
+  installer.install(hapFilePaths, installParam, err => {
+    if (err) {
+      console.error('install failed:' + JSON.stringify(err));
+    } else {
+      console.info('install successfully.');
+    }
+  });
+}).catch((error: BusinessError)=> {
+  let message = (error as BusinessError).message;
+  console.error('getBundleInstaller failed. Cause: ' + message);
+});
+```
 
 ## recover
 
@@ -62,11 +89,38 @@ recover an application.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
+| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes | Parameters required for bundle recovery. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the result. If recover is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import bundleInstall from '@ohos.bundle.installer';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = 'com.example.myapplication';
+let installParam: bundleInstall.InstallParam = {
+  userId: 100,
+  isKeepData: false,
+  installFlag: 1,
+};
+
+bundleInstall.getBundleInstaller().then(installer => {
+  installer.recover(bundleName, installParam, err => {
+    if (err) {
+      console.error('recover failed:' + JSON.stringify(err));
+    } else {
+      console.info('recover successfully.');
+    }
+  });
+}).catch((error: BusinessError) => {
+  let message = (error as BusinessError).message;
+  console.error('getBundleInstaller failed. Cause: ' + message);
+});
+```
 
 ## uninstall
 
@@ -90,8 +144,35 @@ Uninstall an application.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
+| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes | Parameters required for bundle uninstall. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the result. If uninstall is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import bundleInstall from '@ohos.bundle.installer';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = 'com.example.myapplication';
+let installParam: bundleInstall.InstallParam = {
+  userId: 100,
+  isKeepData: false,
+  installFlag: 1,
+};
+
+bundleInstall.getBundleInstaller().then(installer => {
+  installer.uninstall(bundleName, installParam, err => {
+    if (err) {
+      console.error('uninstall failed:' + JSON.stringify(err));
+    } else {
+      console.info('uninstall successfully.');
+    }
+  });
+}).catch((error: BusinessError) => {
+  let message = (error as BusinessError).message;
+  console.error('getBundleInstaller failed. Cause: ' + message);
+});
+```

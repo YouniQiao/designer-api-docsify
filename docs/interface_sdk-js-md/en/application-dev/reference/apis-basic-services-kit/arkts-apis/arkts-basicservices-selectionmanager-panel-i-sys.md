@@ -9,7 +9,7 @@ Describes a **Panel** object, which is created using [createPanel](arkts-basicse
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
+import selectionManager from '@kit.BasicServicesKit';
 ```
 
 ## moveTo
@@ -32,20 +32,37 @@ Moves the word selection panel to the specified coordinates in the global coordi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X-coordinate of the target position in the global coordinate system of the screen, in px. The upper left corner of the main screen is the origin of the global coordinate system, and the positive direction of the X axis is rightward. The x-coordinate of an extended screen may be negative, depending on the screen layout. |
+| y | number | Yes | Y-coordinate of the target position in the global coordinate system of the screen, in px. The upper left corner of the main screen is the origin of the global coordinate system, and the positive direction of the Y axis is downward. The y-coordinate of an extended screen may be negative, depending on the screen layout. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) |
-| [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
+| [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Move the word selection panel to the specified coordinates on the screen. selectionPanel is a Panel instance created by createPanel.
+  selectionPanel.moveTo(200, 200).then(() => {
+    console.info('Succeeded in moving the panel.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to move panel. Error code: ${err.code}, error message: ${err.message}`);
+  });
+} catch (err) {
+  console.error(`Failed to move panel. Error code: ${err.code}, error message: ${err.message}`);
+}
+```

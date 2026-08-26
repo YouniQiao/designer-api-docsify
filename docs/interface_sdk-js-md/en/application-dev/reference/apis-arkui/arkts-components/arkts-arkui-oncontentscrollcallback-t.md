@@ -16,7 +16,7 @@ Defines the callback for text content scrolling.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| totalOffsetX | number | Yes |
-| totalOffsetY | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| totalOffsetX | number | Yes | Offset in the X coordinate of the text in the content area, in px. |
+| totalOffsetY | number | Yes | Offset in the Y coordinate of the text in the content area, in px. |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## createImagePacker
@@ -22,6 +22,14 @@ function createImagePacker(): ImagePacker
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ImagePacker](arkts-image-image-imagepacker-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ImagePacker](arkts-image-image-imagepacker-i.md) | 返回ImagePacker实例。 |
+
+**示例**
+
+```TypeScript
+async function CreateImagePacker() {
+  const imagePackerObj: image.ImagePacker = image.createImagePacker();
+}
+```

@@ -2,10 +2,12 @@
 
 Enumerates the node rendering types.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Currently, the **RENDER_TYPE_TEXTURE** type takes effect only for the
 > [XComponentNode](arkts-arkui-xcomponentnode-c.md) and the [BuilderNode](arkts-arkui-buildernode-c.md) holding a
-> component tree whose root node is a custom component.&gt;
+> component tree whose root node is a custom component.
+> 
 > - The following custom components currently support texture export as root nodes in
 > [BuilderNode](arkts-arkui-buildernode-c.md) scenarios: Badge,
 > Blank, Button,
@@ -39,7 +41,8 @@ Enumerates the node rendering types.
 > TextInput, TextTimer,
 > Text, Toggle,
 > Video (excluding full-screen playback),
-> Web, XComponent.&gt;
+> Web, XComponent.
+> 
 > - Since API version 12, the following components also support texture export:
 > DatePicker, ForEach,
 > Grid,
@@ -50,7 +53,8 @@ Enumerates the node rendering types.
 > [@Component](../../../ui/state-management/arkts-create-custom-components.md#component),
 > NodeContainer, and FrameNode and
 > [RenderNode](arkts-arkui-rendernode-c.md) mounted to
-> NodeContainer.&gt;
+> NodeContainer.
+> 
 > - For details, see
 > [Rendering and Drawing Video and Button Components at the Same Layer](../../../web/web-same-layer.md).
 

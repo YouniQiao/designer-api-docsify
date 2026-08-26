@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import zlib from '@kit.BasicServicesKit';
 ```
 
 ## getOriginalSize
@@ -22,20 +22,41 @@ function getOriginalSize(compressedFile: string): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| compressedFile | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| compressedFile | string | 是 | 指定的压缩文件的文件路径，只支持zip格式压缩文件。文件路径必须为沙箱路径，沙箱路径可以通过context获取，可参考 FA模型，Stage模型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回压缩文件的原始大小，单位字节。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-传入的源文件错误) |
-| [900003](../../apis-ability-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-传入的源文件错误) | The input source file is invalid. |
+| [900003](../../apis-ability-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) | The input source file is not in ZIP format or is damaged. |
+
+**示例**
+
+```TypeScript
+// 代码中使用的路径需为应用的沙箱路径，如/data/storage/el2/base/temp，也可以通过context获取。
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let compressedFile = '/data/storage/el2/base/temp/test.zip';
+
+try {
+  zlib.getOriginalSize(compressedFile).then((data: number) => {
+    console.info(`getOriginalSize success. getOriginalSize: ${data}`);
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`errData is errCode:${code}  message:${message}`);
+}
+```

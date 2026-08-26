@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { conversation } from 'kits/@kit.DistributedServiceKit';
+import conversation from '@kit.DistributedServiceKit';
 ```
 
 ## unregisterConversationListener
@@ -26,17 +26,35 @@ function unregisterConversationListener(bundleName: string, abilityName: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| abilityName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 要取消监听的Bundle名，Bundle名长度范围为1-127字节，需与注册监听时使用的Bundle名一致。 传入无效或空值时返回错误码401。 |
+| abilityName | string | 是 | 要取消监听的Ability名，Ability名长度范围为1-127字节，需与注册监听时使用的Ability名一致。 传入无效或空值时返回错误码401。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [2000001](../errorcode-conversation.md#2000001-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. The application does not have the required permission to access distributed data. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameter. The bundleName or abilityName is invalid or empty. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [2000001](../errorcode-conversation.md#2000001-内部错误) | Internal error. |
+
+**示例**
+
+```TypeScript
+import { conversation } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName: string = 'com.example.demo';
+  let abilityName: string = 'EntryAbility';
+
+  conversation.unregisterConversationListener(bundleName, abilityName);
+  console.info(`unregisterConversationListener success`);
+} catch (err) {
+  const e: BusinessError = err as BusinessError;
+  console.error(`unregisterConversationListener errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```

@@ -9,7 +9,7 @@ Defines the DownloadFileButton style option.@interface DownloadStyleOptions
 ## Modules to Import
 
 ```TypeScript
-import { DownloadFileButton, DownloadLayoutDirection, DownloadIconStyle, DownloadDescription, DownloadContentOptions, DownloadStyleOptions } from 'kits/@kit.ArkUI';
+import { DownloadFileButton, DownloadLayoutDirection, DownloadIconStyle, DownloadDescription, DownloadContentOptions, DownloadStyleOptions } from '@kit.ArkUI';
 ```
 
 ## fontColor

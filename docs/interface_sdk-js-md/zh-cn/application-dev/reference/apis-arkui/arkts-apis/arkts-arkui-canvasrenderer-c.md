@@ -2,11 +2,14 @@
 
 CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。
 
-> **说明：**&gt;
-> * 建议使用时将CanvasRenderingContext2D对象与Canvas组件封装到同一个自定义组件中，保证两者一一对应且生命周期保持一致。&gt;
+> **说明：**
+> 
+> * 建议使用时将CanvasRenderingContext2D对象与Canvas组件封装到同一个自定义组件中，保证两者一一对应且生命周期保持一致。
+> 
 > * 本文绘制接口在调用时会存入被关联的Canvas组件的指令队列中。仅当当前帧进入渲染阶段且关联的Canvas组件处于可见状态时，
 > 这些指令才会从队列中被提取并执行。因此，在Canvas组件不可见的情况下，应尽量避免频繁调用绘制接口，
-> 以防止指令在队列中堆积，从而避免内存占用过大的问题。&gt;
+> 以防止指令在队列中堆积，从而避免内存占用过大的问题。
+> 
 > * Canvas组件的宽或高超过8000px时使用CPU渲染，会导致性能明显下降。
 
 **继承/实现关系：** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md)
@@ -54,12 +57,12 @@ clearRect(x: number, y: number, w: number, h: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
-| w | number | 是 |
-| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 指定矩形上的左上角x坐标。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| y | number | 是 | 指定矩形上的左上角y坐标。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| w | number | 是 | 指定矩形的宽度。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| h | number | 是 | 指定矩形的高度。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
 
 ## clip
 
@@ -79,9 +82,9 @@ clip(fillRule?: CanvasFillRule): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 | 指定要剪切对象的规则。可选参数为："nonzero"，"evenodd"。异常值undefined或null按默认值处理。默认值："nonzero" |
 
 ## clip
 
@@ -99,10 +102,10 @@ clip(path: Path2D, fillRule?: CanvasFillRule): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | [Path2D](arkts-arkui-path2d-c.md) | 是 | Path2D剪切路径。异常值undefined或null按无效值处理。 |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 | 指定要剪切对象的规则。可选参数为："nonzero"，"evenodd"。异常值undefined或null按默认值处理。默认值："nonzero" |
 
 ## createConicGradient
 
@@ -126,17 +129,17 @@ createConicGradient(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| startAngle | number | 是 |
-| x | number | 是 |
-| y | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| startAngle | number | 是 | 渐变起始角度。角度测量从中心右侧水平方向开始，顺时针移动。异常值undefined或null按0处理。NaN和Infinity按无效值处理。单位：弧度 |
+| x | number | 是 | 锥形渐变圆心的x轴坐标。异常值undefined或null按0处理。NaN和Infinity按无效值处理。默认单位：vp |
+| y | number | 是 | 锥形渐变圆心的y轴坐标。异常值undefined或null按0处理。NaN和Infinity按无效值处理。默认单位：vp |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CanvasGradient](arkts-arkui-canvasgradient-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CanvasGradient](arkts-arkui-canvasgradient-c.md) | 新的CanvasGradient对象，用于在画布上创建渐变。 |
 
 ## createImageData
 
@@ -156,16 +159,16 @@ createImageData(sw: number, sh: number): ImageData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sw | number | 是 |
-| sh | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sw | number | 是 | ImageData对象的宽度。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| sh | number | 是 | ImageData对象的高度。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ImageData](arkts-arkui-imagedata-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ImageData](arkts-arkui-imagedata-c.md) | 新的ImageData对象。 |
 
 ## createImageData
 
@@ -185,15 +188,15 @@ createImageData(imageData: ImageData): ImageData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 | 已有的ImageData对象。异常值undefined和null按宽高为0的ImageData处理。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ImageData](arkts-arkui-imagedata-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ImageData](arkts-arkui-imagedata-c.md) | 新的ImageData对象。 |
 
 ## createLinearGradient
 
@@ -213,18 +216,18 @@ createLinearGradient(x0: number, y0: number, x1: number, y1: number): CanvasGrad
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x0 | number | 是 |
-| y0 | number | 是 |
-| x1 | number | 是 |
-| y1 | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x0 | number | 是 | 起点的x轴坐标。异常值undefined或null时接口返回undefined。NaN和Infinity按无效值处理。默认单位：vp |
+| y0 | number | 是 | 起点的y轴坐标。异常值undefined或null时接口返回undefined。NaN和Infinity按无效值处理。默认单位：vp |
+| x1 | number | 是 | 终点的x轴坐标。异常值undefined或null时接口返回undefined。NaN和Infinity按无效值处理。默认单位：vp |
+| y1 | number | 是 | 终点的y轴坐标。异常值undefined或null时接口返回undefined。NaN和Infinity按无效值处理。默认单位：vp |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CanvasGradient](arkts-arkui-canvasgradient-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CanvasGradient](arkts-arkui-canvasgradient-c.md) | 新的CanvasGradient对象，用于在画布上创建渐变。 |
 
 ## createPattern
 
@@ -244,16 +247,16 @@ createPattern(image: ImageBitmap, repetition: string | null): CanvasPattern | nu
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | 是 |
-| repetition | string \| null | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | 是 | 图源对象，具体参考ImageBitmap对象。异常值undefined或null按无效值处理。 |
+| repetition | string \| null | 是 | 设置图像重复的方式：'repeat'：沿x轴和y轴重复绘制图像；'repeat-x'：沿x轴重复绘制图像；'repeat-y'：沿y轴重复绘制图像；'no-repeat'：不重复绘制图像；'clamp'：在原始边界外绘制时，超出部分使用边缘的颜色绘制；'mirror'：沿x轴和y轴重复翻转绘制图像。异常值undefined或null按无效值处理。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CanvasPattern](arkts-arkui-canvaspattern-i.md) \| null |
+| 类型 | 说明 |
+| --- | --- |
+| [CanvasPattern](arkts-arkui-canvaspattern-i.md) \| null | 通过指定图像和重复方式创建图片填充的模板对象。 |
 
 ## createRadialGradient
 
@@ -273,20 +276,20 @@ createRadialGradient(x0: number, y0: number, r0: number, x1: number, y1: number,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x0 | number | 是 |
-| y0 | number | 是 |
-| r0 | number | 是 |
-| x1 | number | 是 |
-| y1 | number | 是 |
-| r1 | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x0 | number | 是 | 起始圆的圆心x轴坐标。异常值undefined或null时接口返回undefined。NaN和Infinity按无效值处理。默认单位：vp |
+| y0 | number | 是 | 起始圆的圆心y轴坐标。异常值undefined或null时接口返回undefined。NaN和Infinity按无效值处理。默认单位：vp |
+| r0 | number | 是 | 起始圆的半径，必须是非负有限数。异常值undefined或null时接口返回undefined。NaN和Infinity按无效值处理。默认单位：vp |
+| x1 | number | 是 | 终止圆的圆心x轴坐标。异常值undefined或null时接口返回undefined。NaN和Infinity按无效值处理。默认单位：vp |
+| y1 | number | 是 | 终止圆的圆心y轴坐标。异常值undefined或null时接口返回undefined。NaN和Infinity按无效值处理。默认单位：vp |
+| r1 | number | 是 | 终止圆的半径，必须是非负有限数。异常值undefined或null时接口返回undefined。NaN和Infinity按无效值处理。默认单位：vp |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CanvasGradient](arkts-arkui-canvasgradient-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CanvasGradient](arkts-arkui-canvasgradient-c.md) | 新的CanvasGradient对象，用于在画布上创建渐变。 |
 
 ## drawImage
 
@@ -306,11 +309,11 @@ drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 |
-| [dx](arkts-arkui-actionsheetoffset-i.md) | number | 是 |
-| [dy](arkts-arkui-actionsheetoffset-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图片资源，请参考ImageBitmap或PixelMap。异常值undefined或null按无效值处理，不进行绘制。 |
+| dx | number | 是 | 绘制区域左上角在x轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理， 不进行绘制。默认单位：vp |
+| dy | number | 是 | 绘制区域左上角在y轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理， 不进行绘制。默认单位：vp |
 
 ## drawImage
 
@@ -330,13 +333,13 @@ drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number, dw: number, dh:
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 |
-| [dx](arkts-arkui-actionsheetoffset-i.md) | number | 是 |
-| [dy](arkts-arkui-actionsheetoffset-i.md) | number | 是 |
-| dw | number | 是 |
-| dh | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图片资源，请参考ImageBitmap或PixelMap。异常值undefined或null按无效值处理，不进行绘制。 |
+| dx | number | 是 | 绘制区域左上角在x轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理， 不进行绘制。默认单位：vp |
+| dy | number | 是 | 绘制区域左上角在y轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理， 不进行绘制。默认单位：vp |
+| dw | number | 是 | 绘制区域的宽度。当绘制区域的宽度和裁剪图像的宽度不一致时，将图像宽度拉伸或压缩为绘制区域 的宽度。负数、异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
+| dh | number | 是 | 绘制区域的高度。当绘制区域的高度和裁剪图像的高度不一致时，将图像高度拉伸或压缩为绘制区域 的高度。负数、异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
 
 ## drawImage
 
@@ -366,17 +369,17 @@ drawImage(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 |
-| sx | number | 是 |
-| sy | number | 是 |
-| sw | number | 是 |
-| sh | number | 是 |
-| [dx](arkts-arkui-actionsheetoffset-i.md) | number | 是 |
-| [dy](arkts-arkui-actionsheetoffset-i.md) | number | 是 |
-| dw | number | 是 |
-| dh | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图片资源，请参考ImageBitmap或PixelMap。异常值undefined或null按无效值处理，不进行绘制。 |
+| sx | number | 是 | 裁剪源图像时矩形左上角的x轴坐标。异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
+| sy | number | 是 | 裁剪源图像时矩形左上角的y轴坐标。异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
+| sw | number | 是 | 裁剪源图像的目标宽度。负数、异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
+| sh | number | 是 | 裁剪源图像的目标高度。负数、异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
+| dx | number | 是 | 绘制区域左上角在x轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
+| dy | number | 是 | 绘制区域左上角在y轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
+| dw | number | 是 | 绘制区域的宽度。当绘制区域的宽度和裁剪图像的宽度不一致时，将图像宽度拉伸或压缩为绘制区域的宽度。负数、异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
+| dh | number | 是 | 绘制区域的高度。当绘制区域的高度和裁剪图像的高度不一致时，将图像高度拉伸或压缩为绘制区域的高度。负数、异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
 
 ## fill
 
@@ -396,9 +399,9 @@ fill(fillRule?: CanvasFillRule): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 | 指定要填充对象的规则。可选参数为："nonzero"，"evenodd"。异常值undefined或null按默认值处理。默认值："nonzero" |
 
 ## fill
 
@@ -418,10 +421,10 @@ fill(path: Path2D, fillRule?: CanvasFillRule): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | [Path2D](arkts-arkui-path2d-c.md) | 是 | Path2D填充路径。异常值undefined或null按无效值处理。 |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 | 指定要填充对象的规则。可选参数为："nonzero"，"evenodd"。异常值undefined或null按默认值处理。默认值："nonzero" |
 
 ## fillRect
 
@@ -441,12 +444,12 @@ fillRect(x: number, y: number, w: number, h: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
-| w | number | 是 |
-| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 指定矩形左上角点的x坐标。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| y | number | 是 | 指定矩形左上角点的y坐标。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| w | number | 是 | 指定矩形的宽度。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| h | number | 是 | 指定矩形的高度。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
 
 ## fillText
 
@@ -466,12 +469,12 @@ fillText(text: string, x: number, y: number, maxWidth?: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
-| x | number | 是 |
-| y | number | 是 |
-| maxWidth | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 需要绘制的文本内容。异常值undefined或null按无效值处理，不进行绘制。 |
+| x | number | 是 | 文本绘制起点的x轴坐标。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| y | number | 是 | 文本绘制起点的y轴坐标。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| maxWidth | number | 否 | 指定文本允许的最大宽度。异常值null按无效值处理，不进行绘制，undefined、NaN或Infinity按默认值处理。默认值：不限制宽度。默认单位：vp |
 
 ## getImageData
 
@@ -491,18 +494,18 @@ getImageData(sx: number, sy: number, sw: number, sh: number): ImageData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sx | number | 是 |
-| sy | number | 是 |
-| sw | number | 是 |
-| sh | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sx | number | 是 | 输出区域左上角的x轴坐标。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| sy | number | 是 | 输出区域左上角的y轴坐标。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| sw | number | 是 | 输出区域的宽度。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| sh | number | 是 | 输出区域的高度。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ImageData](arkts-arkui-imagedata-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ImageData](arkts-arkui-imagedata-c.md) | 新的ImageData对象。 |
 
 ## getLineDash
 
@@ -522,9 +525,9 @@ getLineDash(): number[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number[] |
+| 类型 | 说明 |
+| --- | --- |
+| number[] |  |
 
 ## getPixelMap
 
@@ -542,18 +545,18 @@ getPixelMap(sx: number, sy: number, sw: number, sh: number): PixelMap
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sx | number | 是 |
-| sy | number | 是 |
-| sw | number | 是 |
-| sh | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sx | number | 是 | 输出区域左上角的x轴坐标。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| sy | number | 是 | 输出区域左上角的y轴坐标。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| sw | number | 是 | 输出区域的宽度。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| sh | number | 是 | 输出区域的高度。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap对象。 |
 
 ## getTransform
 
@@ -573,9 +576,9 @@ getTransform(): Matrix2D
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 当前被应用到上下文的转换矩阵。 |
 
 ## measureText
 
@@ -595,15 +598,15 @@ measureText(text: string): TextMetrics
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 需要进行测量的文本。传入异常值undefined或null时按"undefined"或"null"计算。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TextMetrics](arkts-arkui-textmetrics-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TextMetrics](arkts-arkui-textmetrics-i.md) | 文本的尺寸信息。 |
 
 ## putImageData
 
@@ -623,11 +626,11 @@ putImageData(imageData: ImageData, dx: number | string, dy: number | string): vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 |
-| [dx](arkts-arkui-actionsheetoffset-i.md) | number \| string | 是 |
-| [dy](arkts-arkui-actionsheetoffset-i.md) | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 | 含有像素数据的ImageData对象，用于放到画布上。异常值undefined和null按无效值处理，不进行绘制。 |
+| dx | number \| string | 是 | 画布上矩形区域的x轴偏移量。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| dy | number \| string | 是 | 画布上矩形区域的y轴偏移量。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
 
 ## putImageData
 
@@ -655,15 +658,15 @@ putImageData(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 |
-| [dx](arkts-arkui-actionsheetoffset-i.md) | number \| string | 是 |
-| [dy](arkts-arkui-actionsheetoffset-i.md) | number \| string | 是 |
-| dirtyX | number \| string | 是 |
-| dirtyY | number \| string | 是 |
-| dirtyWidth | number \| string | 是 |
-| dirtyHeight | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 | 含有像素数据的ImageData对象，用于放到画布上。异常值undefined和null按无效值处理，不进行绘制。 |
+| dx | number \| string | 是 | 画布上矩形区域的x轴偏移量。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| dy | number \| string | 是 | 画布上矩形区域的y轴偏移量。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| dirtyX | number \| string | 是 | 源图像矩形区域左上角相对于源图像左上角的x轴偏移量。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| dirtyY | number \| string | 是 | 源图像矩形区域左上角相对于源图像左上角的y轴偏移量。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| dirtyWidth | number \| string | 是 | 源图像裁剪矩形的宽度。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
+| dirtyHeight | number \| string | 是 | 源图像裁剪矩形的高度。异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
 
 ## reset
 
@@ -747,9 +750,79 @@ rotate(angle: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| angle | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| angle | number | 是 | 设置顺时针旋转的弧度值，可以通过 degree * Math.PI / 180 将角度转换为弧度值。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时， 当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效， 其他传入有效参数的绘制方法正常绘制。单位：弧度 |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Rotate {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private matrix: Matrix2D = new Matrix2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('240vp')
+        .height('180vp')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.context.fillRect(50, 110, 50, 50)
+          this.matrix.scaleX = 1
+          this.matrix.scaleY = 1
+          this.matrix.rotateX = -0.5
+          this.matrix.rotateY = 0.5
+          this.matrix.translateX = 10
+          this.matrix.translateY = 10
+          this.matrix.rotate(5, 5)
+          this.context.setTransform(this.matrix)
+          this.context.fillRect(50, 110, 50, 50)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Rotate {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private matrix: Matrix2D = new Matrix2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('240vp')
+        .height('180vp')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.context.fillRect(60, 80, 50, 50)
+          this.matrix.scaleX = 1
+          this.matrix.scaleY = 1
+          this.matrix.rotateX = -0.5
+          this.matrix.rotateY = 0.5
+          this.matrix.translateX = 10
+          this.matrix.translateY = 10
+          this.matrix.rotate(-60 * Math.PI / 180, 5, 5)
+          this.context.setTransform(this.matrix)
+          this.context.fillRect(60, 80, 50, 50)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## save
 
@@ -801,10 +874,46 @@ scale(x: number, y: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 设置水平方向的缩放值。API version 18之前，设置NaN或Infinity时， 在该方法后执行的绘制方法无法绘制；不支持设置0和负数，设置0、负数、null或undefined时， 当前接口不生效。API version 18及以后，设置NaN、Infinity、0、负数、null或undefined时当前接口不生效， 其他传入有效参数的绘制方法正常绘制。 |
+| y | number | 是 | 设置垂直方向的缩放值，不支持设置负数。API version 18之前， 设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；不支持设置0和负数， 设置0、负数、null或undefined时，当前接口不生效。API version 18及以后， 设置NaN、Infinity、0、负数、null或undefined时当前接口不生效， 其他传入有效参数的绘制方法正常绘制。 |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Scale {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private matrix: Matrix2D = new Matrix2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('240vp')
+        .height('180vp')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.context.fillRect(120, 70, 50, 50)
+          this.matrix.scaleX = 1
+          this.matrix.scaleY = 1
+          this.matrix.rotateX = -0.5
+          this.matrix.rotateY = 0.5
+          this.matrix.translateX = 10
+          this.matrix.translateY = 10
+          this.matrix.scale(0.5, 0.5)
+          this.context.setTransform(this.matrix)
+          this.context.fillRect(120, 70, 50, 50)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## setLineDash
 
@@ -824,9 +933,9 @@ setLineDash(segments: number[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| segments | number[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| segments | number[] | 是 | 一个数字数组，指定交替绘制线和间距的距离。异常值undefined和null按无效值处理。默认单位：vp |
 
 ## setPixelMap
 
@@ -844,9 +953,9 @@ setPixelMap(value?: PixelMap): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 否 | 含有像素值的PixelMap对象。异常值undefined和null按无效值处理，不进行绘制。默认值：null |
 
 ## setTransform
 
@@ -856,10 +965,14 @@ setTransform(a: number, b: number, c: number, d: number, e: number, f: number): 
 
 setTransform方法使用的参数和transform()方法相同，但setTransform()方法会重置现有的变换矩阵并创建新的变换矩阵。
 
-> **说明：**&gt;
-> 图形中各个点变换后的坐标可通过下方坐标计算公式计算。&gt;
-> 变换后的坐标计算方式（x和y为变换前坐标，x'和y'为变换后坐标）：&gt;
-> - x' = a * x + c * y + e&gt;
+> **说明：**
+> 
+> 图形中各个点变换后的坐标可通过下方坐标计算公式计算。
+> 
+> 变换后的坐标计算方式（x和y为变换前坐标，x'和y'为变换后坐标）：
+> 
+> - x' = a * x + c * y + e
+> 
 > - y' = b * x + d * y + f
 
 **起始版本：** 8
@@ -872,14 +985,14 @@ setTransform方法使用的参数和transform()方法相同，但setTransform()�
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| a | number | 是 |
-| b | number | 是 |
-| c | number | 是 |
-| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
-| [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
-| f | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| a | number | 是 | scaleX：指定水平缩放值，支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。 |
+| b | number | 是 | skewY：指定垂直倾斜值，支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。 |
+| c | number | 是 | skewX：指定水平倾斜值，支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。 |
+| d | number | 是 | scaleY：指定垂直缩放值，支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。 |
+| e | number | 是 | translateX：指定水平移动值，支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。默认单位：vp |
+| f | number | 是 | translateY：指定垂直移动值，支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。默认单位：vp |
 
 ## setTransform
 
@@ -899,9 +1012,9 @@ setTransform(transform?: Matrix2D): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [transform](#transform) | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| transform | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 | 变换矩阵。异常值undefined或null按无效值处理。默认值：null |
 
 ## stroke
 
@@ -937,9 +1050,9 @@ stroke(path: Path2D): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 需要绘制的Path2D。异常值undefined或null按无效值处理，不进行绘制。 |
 
 ## strokeRect
 
@@ -959,12 +1072,12 @@ strokeRect(x: number, y: number, w: number, h: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
-| w | number | 是 |
-| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 指定矩形的左上角x坐标。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| y | number | 是 | 指定矩形的左上角y坐标。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| w | number | 是 | 指定矩形的宽度。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| h | number | 是 | 指定矩形的高度。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
 
 ## strokeText
 
@@ -984,12 +1097,12 @@ strokeText(text: string, x: number, y: number, maxWidth?: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
-| x | number | 是 |
-| y | number | 是 |
-| maxWidth | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 需要绘制的文本内容。异常值undefined或null按无效值处理，不进行绘制。 |
+| x | number | 是 | 文本绘制起点的x轴坐标。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| y | number | 是 | 文本绘制起点的y轴坐标。异常值undefined、null、NaN或Infinity按无效值处理，不进行绘制。默认单位：vp |
+| maxWidth | number | 否 | 需要绘制的文本的最大宽度。异常值null按无效值处理，不进行绘制，undefined、NaN或Infinity按默认值处理。默认单位：vp默认值：不限制宽度。 |
 
 ## transferFromImageBitmap
 
@@ -1009,9 +1122,9 @@ transferFromImageBitmap(bitmap: ImageBitmap): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bitmap | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bitmap | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | 是 | 需要显示的ImageBitmap对象。 |
 
 ## transform
 
@@ -1021,10 +1134,14 @@ transform(a: number, b: number, c: number, d: number, e: number, f: number): voi
 
 transform方法对应一个变换矩阵，想对一个图形进行变化的时候，只要设置此变换矩阵相应的参数， 对图形的各个定点的坐标分别乘以这个矩阵，就能得到新的定点的坐标。矩阵变换效果可叠加。
 
-> **说明：**&gt;
-> 图形中各个点变换后的坐标可通过下方坐标计算公式计算。&gt;
-> 变换后的坐标计算方式（x和y为变换前坐标，x'和y'为变换后坐标）：&gt;
-> - x' = a * x + c * y + e&gt;
+> **说明：**
+> 
+> 图形中各个点变换后的坐标可通过下方坐标计算公式计算。
+> 
+> 变换后的坐标计算方式（x和y为变换前坐标，x'和y'为变换后坐标）：
+> 
+> - x' = a * x + c * y + e
+> 
 > - y' = b * x + d * y + f
 
 **起始版本：** 8
@@ -1037,14 +1154,14 @@ transform方法对应一个变换矩阵，想对一个图形进行变化的时�
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| a | number | 是 |
-| b | number | 是 |
-| c | number | 是 |
-| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
-| [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
-| f | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| a | number | 是 | 变换矩阵中第一行第一列的单元格。scaleX：指定水平缩放值，支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。 |
+| b | number | 是 | 变换矩阵第二行第一列的单元格。skewY：指定垂直倾斜值，支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。 |
+| c | number | 是 | 变换矩阵第一行第二列的单元格。skewX：指定水平倾斜值，支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。 |
+| d | number | 是 | 变换矩阵第二行第二列的单元格。scaleY：指定垂直缩放值，支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。 |
+| e | number | 是 | 变换矩阵第一行第三列的单元格。translateX：指定水平移动值，支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。默认单位：vp |
+| f | number | 是 | 变换矩阵第二行第三列的单元格。translateY：指定垂直移动值，支持设置负数。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。默认单位：vp |
 
 ## translate
 
@@ -1064,10 +1181,46 @@ translate(x: number, y: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 设置水平平移量。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。默认单位：vp |
+| y | number | 是 | 设置竖直平移量。API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。默认单位：vp |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Translate {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private matrix: Matrix2D = new Matrix2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('240vp')
+        .height('180vp')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.context.fillRect(40, 20, 50, 50)
+          this.matrix.scaleX = 1
+          this.matrix.scaleY = 1
+          this.matrix.rotateX = 0
+          this.matrix.rotateY = 0
+          this.matrix.translateX = 0
+          this.matrix.translateY = 0
+          this.matrix.translate(100, 100)
+          this.context.setTransform(this.matrix)
+          this.context.fillRect(40, 20, 50, 50)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## antialias
 
@@ -1279,7 +1432,8 @@ letterSpacing: LengthMetrics | string
 
 用于指定绘制文本时字母之间的间距，此属性为只写属性，可通过赋值语句设置其值， 但无法通过读取操作获取其当前值，若尝试读取将返回undefined。当使用LengthMetrics时：字间距按照指定的单位设置；不支持FP、PERCENT和LPX（按无效值处理）；支持负数和小数，设为小数时字间距不四舍五入。当使用string时：不支持设置百分比（按无效值处理）；支持负数和小数，设为小数时字间距不四舍五入；若letterSpacing的赋值未指定单位（例如：**letterSpacing='10'**）， 且未指定LengthMetricsUnit时，默认单位设置为vp；指定LengthMetricsUnit为px时，默认单位设置为px；当letterSpacing的赋值指定单位时（例如：**letterSpacing='10vp'**）， 字间距按照指定的单位设置。默认值：**0**（输入无效值时，字间距设为默认值）
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 推荐使用LengthMetrics，性能更好。
 
 **类型：** LengthMetrics \| string

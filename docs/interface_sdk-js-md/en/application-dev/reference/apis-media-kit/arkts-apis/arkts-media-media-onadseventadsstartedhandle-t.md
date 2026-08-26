@@ -14,7 +14,7 @@ Describes the callback function of the ad content playback start event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| adsId | string | Yes |
-| duration | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| adsId | string | Yes | ID of the ad resource that is being played. |
+| duration | number | Yes | Playing duration of the advertisement, in milliseconds.  The value should be an integer. |

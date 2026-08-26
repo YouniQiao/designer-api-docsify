@@ -26,9 +26,9 @@ Defines the function for updating attributes in normal state.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | T | Yes | Component attribute class, which identifies the type of component to which attributes will be applied, for example, **ButtonAttribute** for the **Button** component and **TextAttribute** for the **Text** component. |
 
 ## initializeModifier
 
@@ -48,9 +48,62 @@ Initializes the component's attributes to the default values defined in this **A
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | T | Yes | Component attribute class, which identifies the type of component to which attributes will be applied, for example, **ButtonAttribute** for the **Button** component and **TextAttribute** for the **Text** component. |
+
+**Examples**
+
+This example shows how to use initializeModifier to initialize attribute values.
+
+```TypeScript
+// xxx.ets
+import { AttributeUpdater } from '@kit.ArkUI';
+
+class MyButtonModifier extends AttributeUpdater<ButtonAttribute> {
+  // Triggered when the AttributeUpdater object is used for the first time.
+  initializeModifier(instance: ButtonAttribute): void {
+    instance.backgroundColor('#ffd5d5d5')
+      .labelStyle({ maxLines: 3 })
+      .width('80%');
+  }
+
+  // Triggered when the AttributeUpdater object is applied or updated.
+  applyNormalAttribute(instance: ButtonAttribute): void {
+    instance.borderWidth(1);
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  modifier: MyButtonModifier = new MyButtonModifier();
+  @State flushTheButton: string = 'Button';
+
+  build() {
+    Row() {
+      Column() {
+        Button(this.flushTheButton)
+          .attributeModifier(this.modifier)
+          .onClick(() => {
+            // Update component attributes via AttributeUpdater's attribute property.
+            // Note: The component must be bound to the AttributeUpdater via its attributeModifier attribute method.
+            this.modifier.attribute?.backgroundColor('#ff2787d9').labelStyle({ maxLines: 5 });
+          })
+          .margin('10%')
+        Button('Trigger Button Update')
+          .width('80%')
+          .labelStyle({ maxLines: 2 })
+          .onClick(() => {
+            this.flushTheButton = this.flushTheButton + ' Updated';
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## onComponentChanged
 
@@ -70,9 +123,58 @@ Invoked to notify the application that the component bound to the same custom **
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| component | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| component | T | Yes | Component attribute class, which identifies the type of component to which attributes will be applied, for example, **ButtonAttribute** for the **Button** component and **TextAttribute** for the **Text** component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { AttributeUpdater } from '@kit.ArkUI';
+
+class MyButtonModifier extends AttributeUpdater<ButtonAttribute> {
+  initializeModifier(instance: ButtonAttribute): void {
+    instance.backgroundColor('#ff2787d9')
+      .width('50%')
+      .height(30);
+  }
+
+  onComponentChanged(component: ButtonAttribute): void {
+    component.backgroundColor('#ff519db4')
+      .width('50%')
+      .height(30);
+  }
+}
+
+@Entry
+@Component
+struct UpdaterDemo4 {
+  @State btnState: boolean = false;
+  modifier: MyButtonModifier = new MyButtonModifier();
+
+  build() {
+    Row() {
+      Column() {
+        Button('Test')
+          .onClick(() => {
+            this.btnState = !this.btnState;
+          }).margin({ bottom: 20 })
+
+        if (this.btnState) {
+          Button('Button')
+            .attributeModifier(this.modifier)
+        } else {
+          Button('Button')
+            .attributeModifier(this.modifier)
+        }
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## attribute
 
@@ -91,6 +193,43 @@ Obtains the attribute class instance corresponding to the component in **Attribu
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+This example shows how to directly update attributes through AttributeUpdater.
+
+```TypeScript
+// xxx.ets
+import { AttributeUpdater } from '@kit.ArkUI';
+
+class MyButtonModifier extends AttributeUpdater<ButtonAttribute> {
+  initializeModifier(instance: ButtonAttribute): void {
+    instance.backgroundColor('#ffd5d5d5')
+      .width('50%')
+      .height(30);
+  }
+}
+
+@Entry
+@Component
+struct UpdaterDemo2 {
+  modifier: MyButtonModifier = new MyButtonModifier();
+
+  build() {
+    Row() {
+      Column() {
+        Button('Button')
+          .attributeModifier(this.modifier)
+          .onClick(() => {
+            this.modifier.attribute?.backgroundColor('#ff2787d9').width('30%');
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## updateConstructorParams
 

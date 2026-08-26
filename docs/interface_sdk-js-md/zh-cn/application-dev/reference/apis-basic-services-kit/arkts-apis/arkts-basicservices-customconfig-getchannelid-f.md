@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { customConfig } from 'kits/@kit.BasicServicesKit';
+import customConfig from '@kit.BasicServicesKit';
 ```
 
 ## getChannelId
@@ -22,6 +22,15 @@ function getChannelId(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 渠道号 |
+
+**示例**
+
+```TypeScript
+import { customConfig } from '@kit.BasicServicesKit';
+
+let channelId: string = customConfig.getChannelId();
+console.info('app channelId is ' + channelId);
+```

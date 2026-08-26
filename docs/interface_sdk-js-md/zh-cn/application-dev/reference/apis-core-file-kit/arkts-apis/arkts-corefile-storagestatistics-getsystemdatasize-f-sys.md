@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
+import storageStatistics from '@kit.CoreFileKit';
 ```
 
 ## getSystemDataSize
@@ -26,15 +26,28 @@ function getSystemDataSize(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回系统数据的总空间大小，单位：Byte。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13600001 |
-| 13600018 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13600001 | IPC error. |
+| 13600018 | Failed to query the system data size. |
+
+**示例**
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+storageStatistics.getSystemDataSize().then((systemDataSize: number) => {
+  console.info("getSystemDataSize successfully: " + systemDataSize);
+}).catch((err: BusinessError) => {
+  console.error(`getSystemDataSize failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```

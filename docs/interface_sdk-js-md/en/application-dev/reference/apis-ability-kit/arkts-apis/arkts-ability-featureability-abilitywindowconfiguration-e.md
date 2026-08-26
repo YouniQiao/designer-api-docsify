@@ -75,3 +75,11 @@ The PageAbility is displayed in floating window mode.
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
+
+**Examples**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+featureAbility.AbilityWindowConfiguration.WINDOW_MODE_UNDEFINED
+```

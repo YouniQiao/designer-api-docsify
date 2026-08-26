@@ -11,7 +11,7 @@ Provides the conditions of querySecurityEvent.@interface SecurityEventRule
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+import securityGuard from '@kit.SecurityGuardKit';
 ```
 
 ## beginTime

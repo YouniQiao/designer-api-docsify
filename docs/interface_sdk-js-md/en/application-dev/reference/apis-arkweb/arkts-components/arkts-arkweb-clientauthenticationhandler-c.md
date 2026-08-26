@@ -9,6 +9,9 @@ ClientAuthenticationHandler is a class in the **Web** component that handles SSL
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## cancel
@@ -24,6 +27,29 @@ Cancel this certificate request.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onDataResubmitted((event) => {
+          console.info('onDataResubmitted');
+          event.handler.cancel();
+        })
+    }
+  }
+}
+```
 
 ## confirm
 
@@ -41,10 +67,10 @@ Uses the specified private key and client certificate chain.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| priKeyFile | string | Yes |
-| certChainFile | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| priKeyFile | string | Yes | Full path for storing the private key file. |
+| certChainFile | string | Yes | Full path for storing the certificate chain file. |
 
 ## confirm
 
@@ -62,9 +88,9 @@ Instructs the **Web** component to use the specified credentials (obtained from 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| authUri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| authUri | string | Yes | Key value of the credentials. |
 
 ## confirm
 
@@ -80,16 +106,16 @@ Instructs the **Web** component to use the specified credential and credential t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| identity | string | Yes |
-| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-credentialtype-e.md) \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| identity | string | Yes | Unique ID of a credential. |
+| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-credentialtype-e.md) \| string | Yes | Credential type when the type is CredentialType, or certificate chain file path when the type is string. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## constructor
 

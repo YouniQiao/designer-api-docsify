@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## getPastCpuTime
@@ -22,6 +22,12 @@ Obtains the CPU time (in milliseconds) from the time the process starts to the c
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | CPU time obtained, in milliseconds. |
+
+**Examples**
+
+```TypeScript
+let result = process.getPastCpuTime();
+```

@@ -9,7 +9,7 @@ Represents a font collection, which manages the font resources required for text
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import text from '@kit.ArkGraphics2D';
 ```
 
 ## clearCaches
@@ -28,6 +28,24 @@ Clears the font typesetting cache. The font typesetting cache has a memory limit
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+**Examples**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button().onClick(() => {
+        text.FontCollection.getGlobalInstance().clearCaches();
+      })
+    }
+  }
+}
+```
+
 ## getGlobalInstance
 
 ```TypeScript
@@ -44,9 +62,32 @@ Obtains a global **FontCollection** instance.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) |
+| Type | Description |
+| --- | --- |
+| [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | Global FontCollection instance object of the app, which can be used to manage font loading, unloading, typesetting, and other operations. |
+
+**Examples**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+function textFunc() {
+  let fontCollection = text.FontCollection.getGlobalInstance();
+}
+
+@Entry
+@Component
+struct Index {
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
 
 ## getLocalInstance
 
@@ -66,9 +107,16 @@ Obtains the local **FontCollection** instance. This API is recommended for widge
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) |
+| Type | Description |
+| --- | --- |
+| [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | Local FontCollection instance object, recommended for widget scenarios. It can be used to manage font loading, unloading, and typesetting operations. |
+
+**Examples**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+let fontCollection = text.FontCollection.getLocalInstance();
+```
 
 ## loadFont
 
@@ -88,22 +136,49 @@ Loads the custom font. This API uses a promise to return the result. In this API
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the font. Any string is acceptable. |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to be loaded. The path must be in the format of "**file://** + Absolute path of the font file" or **\\$rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+let fontCollection: text.FontCollection = new text.FontCollection();
+
+@Entry
+@Component
+struct RenderTest {
+  async loadFontPromise() {
+    fontCollection.loadFont('testName', 'file:///system/fonts/a.ttf').then((data) => {
+      console.info(`Succeeded in doing loadFont ${JSON.stringify(data)} `);
+    }).catch((error: Error) => {
+      console.error(`Failed to do loadFont, error: ${JSON.stringify(error)} message: ${error.message}`);
+    });
+  }
+
+  aboutToAppear() {
+    this.loadFontPromise();
+  }
+
+  build() {
+  }
+}
+```
 
 ## loadFontSync
 
@@ -123,10 +198,46 @@ Loads a custom font. This API returns the result synchronously. In this API, **n
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the font to be called after the font is loaded. |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to be imported. The path must be in the format of "**file://** + Absolute path of the font file" or **\\$rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
+
+**Examples**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+let fontCollection: text.FontCollection = new text.FontCollection();
+
+@Entry
+@Component
+struct RenderTest {
+  LoadFontSyncTest() {
+    fontCollection.loadFontSync('Clock_01', 'file:///system/fonts/HarmonyClock_01.ttf')
+    let fontFamilies: Array<string> = ["Clock_01"]
+    let myTextStyle: text.TextStyle = {
+      fontFamilies: fontFamilies
+    };
+    let myParagraphStyle: text.ParagraphStyle = {
+      textStyle: myTextStyle,
+    }
+    let paragraphBuilder: text.ParagraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+
+    let textData = "Test loadFontSync to load the font file HarmonyClock_01.ttf.";
+    paragraphBuilder.addText(textData);
+    let paragraph: text.Paragraph = paragraphBuilder.build();
+    paragraph.layoutSync(600);
+  }
+
+  aboutToAppear() {
+    this.LoadFontSyncTest();
+  }
+
+  build() {
+  }
+}
+```
 
 ## loadFontSyncWithCheck
 
@@ -146,24 +257,62 @@ Loads a custom font. This API returns the result synchronously. In this API, **n
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
-| index | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the font. Any string is acceptable. |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to load. Two formats are supported: "file:// + absolute path of the font file" or \\$rawfile('font file path'). |
+| index | number | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded. The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
-| [25900002](../errorcode-drawing.md#25900002-file-not-found) |
-| [25900003](../errorcode-drawing.md#25900003-failed-to-open-the-file) |
-| [25900004](../errorcode-drawing.md#25900004-failed-to-locate-the-file) |
-| [25900005](../errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) |
-| [25900006](../errorcode-drawing.md#25900006-failed-to-read-the-file) |
-| [25900007](../errorcode-drawing.md#25900007-empty-file) |
-| [25900008](../errorcode-drawing.md#25900008-file-damaged) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. |
+| [25900002](../errorcode-drawing.md#25900002-file-not-found) | File not found. |
+| [25900003](../errorcode-drawing.md#25900003-failed-to-open-the-file) | Failed to open the file. |
+| [25900004](../errorcode-drawing.md#25900004-failed-to-locate-the-file) | File seek failed. |
+| [25900005](../errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) | Failed to get the file size. |
+| [25900006](../errorcode-drawing.md#25900006-failed-to-read-the-file) | Failed to read the file. |
+| [25900007](../errorcode-drawing.md#25900007-empty-file) | Empty file. |
+| [25900008](../errorcode-drawing.md#25900008-file-damaged) | Corrupted file. |
+
+**Examples**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+let fc: text.FontCollection = text.FontCollection.getGlobalInstance();
+
+@Entry
+@Component
+struct Index {
+  message: string = 'Hello World';
+  fontFamily: string = 'family';
+
+  build() {
+    RelativeContainer() {
+      Text(this.message)
+        .fontFamily(this.fontFamily)
+        .fontSize(50)
+        .fontWeight(FontWeight.Bold)
+        .alignRules({
+          center: { anchor: '__container__', align: VerticalAlign.Center },
+          middle: { anchor: '__container__', align: HorizontalAlign.Center }
+        })
+        .onClick(() => {
+          fc.loadFontSyncWithCheck(this.fontFamily, 'file:///system/fonts/NotoSansCJK-Regular.ttc', 1);
+          try {
+            fc.loadFontSyncWithCheck(this.fontFamily, '/system/fonts/NotoSansCJK-Regular.ttc', 1);
+          } catch (e) {
+            console.error(`Failed to do loadFontWithCheck, error: ${JSON.stringify(e)} message: ${e.message}`);
+          }
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
 
 ## loadFontWithCheck
 
@@ -183,30 +332,72 @@ Loads a custom font. This API uses a promise to return the result. In this API, 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
-| index | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the font. Any string is acceptable. |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to load. Two formats are supported: "file:// + absolute path of the font file" or \\$rawfile('font file path'). |
+| index | number | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded. The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
-| [25900002](../errorcode-drawing.md#25900002-file-not-found) |
-| [25900003](../errorcode-drawing.md#25900003-failed-to-open-the-file) |
-| [25900004](../errorcode-drawing.md#25900004-failed-to-locate-the-file) |
-| [25900005](../errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) |
-| [25900006](../errorcode-drawing.md#25900006-failed-to-read-the-file) |
-| [25900007](../errorcode-drawing.md#25900007-empty-file) |
-| [25900008](../errorcode-drawing.md#25900008-file-damaged) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. |
+| [25900002](../errorcode-drawing.md#25900002-file-not-found) | File not found. |
+| [25900003](../errorcode-drawing.md#25900003-failed-to-open-the-file) | Failed to open the file. |
+| [25900004](../errorcode-drawing.md#25900004-failed-to-locate-the-file) | File seek failed. |
+| [25900005](../errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) | Failed to get the file size. |
+| [25900006](../errorcode-drawing.md#25900006-failed-to-read-the-file) | Failed to read the file. |
+| [25900007](../errorcode-drawing.md#25900007-empty-file) | Empty file. |
+| [25900008](../errorcode-drawing.md#25900008-file-damaged) | Corrupted file. |
+
+**Examples**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+let fc: text.FontCollection = text.FontCollection.getGlobalInstance();
+
+@Entry
+@Component
+struct Index {
+  message: string = 'Hello World';
+  fontFamily: string = 'family';
+
+  build() {
+    RelativeContainer() {
+      Text(this.message)
+        .fontFamily(this.fontFamily)
+        .fontSize(50)
+        .fontWeight(FontWeight.Bold)
+        .alignRules({
+          center: { anchor: '__container__', align: VerticalAlign.Center },
+          middle: { anchor: '__container__', align: HorizontalAlign.Center }
+        })
+        .onClick(() => {
+          fc.loadFontWithCheck(this.fontFamily, 'file:///system/fonts/NotoSansCJK-Regular.ttc', 1).then((data) => {
+            console.info(`Succeeded in doing loadFontWithCheck ${JSON.stringify(data)} `);
+          }).catch((error: Error) => {
+            console.error(`Failed to do loadFontWithCheck, error: ${JSON.stringify(error)} message: ${error.message}`);
+          });
+          fc.loadFontWithCheck(this.fontFamily, '/system/fonts/NotoSansCJK-Regular.ttc', 1).then((data) => {
+            console.info(`Succeeded in doing loadFontWithCheck ${JSON.stringify(data)} `);
+          }).catch((error: Error) => {
+            console.error(`Failed to do loadFontWithCheck, error: ${JSON.stringify(error)} message: ${error.message}`);
+          });
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
 
 ## setParagraphCachesEnabled
 
@@ -226,9 +417,30 @@ Sets whether to enable the typesetting paragraph caching. Typesetting paragraph 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to enable the typesetting paragraph caching. **true** to enable; **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('Enable Paragraph Caching').onClick(() => {
+        text.FontCollection.getGlobalInstance().setParagraphCachesEnabled(true);
+      })
+      Button('Disable Paragraph Caching').onClick(() => {
+        text.FontCollection.getGlobalInstance().setParagraphCachesEnabled(false);
+      })
+    }
+  }
+}
+```
 
 ## unloadFont
 
@@ -252,15 +464,47 @@ missing glyphs).
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Alias of the font to be uninstalled, which is the same as the alias used when the font is loaded. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct UnloadFontTest {
+  private fc: text.FontCollection = text.FontCollection.getGlobalInstance();
+  @State content: string = "Default font"
+
+  build() {
+    Column({ space: 10 }) {
+      Text(this.content)
+        .fontFamily("custom")
+      Button("load font")
+        .onClick(async () => {
+          await this.fc.loadFont("custom", "file:///system/fonts/NotoSansCJK-Regular.ttc")
+          this.content = "Custom font"
+        })
+      Button("unload font")
+        .onClick(async () => {
+          await this.fc.unloadFont("custom")
+          this.content = "Default font"
+        })
+    }.width("100%")
+    .height("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
 
 ## unloadFontSync
 
@@ -284,6 +528,38 @@ missing glyphs).
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Font alias to be unregistered, which is the same as the alias used for loading the font. |
+
+**Examples**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct UnloadFontSyncTest {
+  private fc: text.FontCollection = text.FontCollection.getGlobalInstance();
+  @State content: string = "Default font"
+
+  build() {
+    Column({ space: 10 }) {
+      Text(this.content)
+        .fontFamily("custom")
+      Button("load font")
+        .onClick(() => {
+          this.fc.loadFontSync("custom", "file:///system/fonts/NotoSansCJK-Regular.ttc")
+          this.content = "Custom font"
+        })
+      Button("unload font")
+        .onClick(() => {
+          this.fc.unloadFontSync("custom")
+          this.content = "Default font"
+        })
+    }.width("100%")
+    .height("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```

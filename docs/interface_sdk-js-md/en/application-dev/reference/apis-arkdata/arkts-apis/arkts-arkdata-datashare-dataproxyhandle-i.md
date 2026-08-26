@@ -9,7 +9,8 @@ Defines the data proxy handle, which can be used to access or manage shared conf
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import dataShare from '@kit.ArkData';
+import dataSharePredicates from '@kit.ArkDataPredicates';
 ```
 
 ## delete
@@ -28,23 +29,40 @@ Deletes the specified shared configuration items based on URIs. This API uses a 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uris | string[] | Yes |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uris | string[] | Yes | URI array of the shared configuration items to be deleted, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; | Promise used to return the result array of the batch operations. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+
+**Examples**
+
+```TypeScript
+const urisToDelete: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+dataProxyHandle.delete(urisToDelete, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to delete config. code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## deleteMyPublishedData
 
@@ -62,22 +80,37 @@ Deletes all the data published by the publisher. Only the data publisher can del
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Configuration of the data proxy operation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+
+**Examples**
+
+```TypeScript
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+dataProxyHandle.deleteMyPublishedData(config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to delete all configs. Code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## get
 
@@ -95,23 +128,40 @@ Obtains a specified shared configuration item based on the URI. This API uses a 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uris | string[] | Yes |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uris | string[] | Yes | URI array of the shared configuration items to be obtained, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md)[]&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md)[]&gt; | Promise used to return the result array of the batch operations. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+
+**Examples**
+
+```TypeScript
+const urisToGet: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+dataProxyHandle.get(urisToGet, config).then((results: dataShare.DataProxyGetResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}, AllowList: ${result.allowList}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get config. code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## getValues
 
@@ -129,25 +179,56 @@ Obtains all multi-value data under a specified URI. Only the publisher and the a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | Indicates the URI of the data to operate. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Configuration of the data proxy operation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ValueType](arkts-arkdata-valuetype-t.md)[]&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ValueType](arkts-arkdata-valuetype-t.md)[]&gt; | Promise used to return an array of all values under the URI. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| 15700015 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| 15700015 | No permission to access the data specified by the URI. |
+
+**Examples**
+
+```TypeScript
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+let testUri: string = 'datashareproxy://com.test.dataproxyhandle/test/pv/001';
+let newConfigData: dataShare.ProxyData[] = [{
+  uri: testUri,
+  values: { 0: 'init' },
+  isMultiValues: true,
+  allowList: [],
+  trustProviders: []
+}];
+
+await dataProxyHandle!.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
+});
+
+try {
+  let result: ValueType[] = await dataProxyHandle?.getValues(testUri, config);
+  console.info(`getValues success. Values: ` + JSON.stringify(result));
+} catch (error) {
+  console.error(`getValues failed: code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## off
 
@@ -170,25 +251,48 @@ Unsubscribes from the change event of the proxy data corresponding to a specifie
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'dataChange' | Yes |
-| uris | string[] | Yes |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'dataChange' | Yes | Event or callback type. The value is **dataChange**, which indicates the data change. |
+| uris | string[] | Yes | Array of URIs to be unsubscribed, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | Callback function. If the value is empty, undefined, or null, all notifications of the URIs are unsubscribed. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] |
+| Type | Description |
+| --- | --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | Batch operation result array. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+
+**Examples**
+
+```TypeScript
+const urisToUnWatch: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeInfo[]): void => {
+  if (err) {
+    console.error(`Failed to receive data change notification. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    changes.forEach((change) => {
+      console.info(`Change Type: ${change.type}, URI: ${change.uri}, Value: ${change.value}`);
+    });
+  }
+};
+const results: dataShare.DataProxyResult[] = dataProxyHandle.off('dataChange', urisToUnWatch, config, callback);
+results.forEach((result) => {
+  console.info(`URI: ${result.uri}, Result: ${result.result}`);
+});
+```
 
 ## on
 
@@ -211,25 +315,48 @@ Subscribes to the change event of the shared configuration corresponding to a sp
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | 'dataChange' | Yes |
-| uris | string[] | Yes |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'dataChange' | Yes | Event or callback type. The value is **dataChange**, which indicates the data change. This event is triggered when the publisher modifies the configuration. |
+| uris | string[] | Yes | Array of URIs to be subscribed, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | Callback triggered when the publisher modifies the configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] |
+| Type | Description |
+| --- | --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | Batch operation result array. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+
+**Examples**
+
+```TypeScript
+const urisToWatch: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeInfo[]): void => {
+  if (err) {
+    console.error(`Failed to receive data change notification. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    changes.forEach((change) => {
+      console.info(`Change Type: ${change.type}, URI: ${change.uri}, Value: ${change.value}`);
+    });
+  }
+};
+const results: dataShare.DataProxyResult[] = dataProxyHandle.on('dataChange', urisToWatch, config, callback);
+results.forEach((result) => {
+  console.info(`URI: ${result.uri}, Result: ${result.result}`);
+});
+```
 
 ## publish
 
@@ -247,23 +374,47 @@ Publishes shared configuration items. This API uses a promise to return the resu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [ProxyData[]](arkts-arkdata-datashare-proxydata-i.md) | Yes |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | [ProxyData[]](arkts-arkdata-datashare-proxydata-i.md) | Yes | Array of shared configuration items to be created or updated, with a maximum of 32 items. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; | Promise used to return the result array of the batch operations. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+
+**Examples**
+
+```TypeScript
+const newConfigData: dataShare.ProxyData[] = [{
+  uri: 'datashareproxy://com.example.app1/config1',
+  value: 'Value1',
+  allowList: ['appIdentifier2', 'appIdentifier3'], // The string here is only an example. Replace it with the actual appIdentifier of the application during use.
+}, {
+  uri: 'datashareproxy://com.example.app1/config2',
+  value: 'Value2',
+  allowList: ['appIdentifier3', 'appIdentifier4'], // The string here is only an example. Replace it with the actual appIdentifier of the application during use.
+}];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+dataProxyHandle.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## putValue
 
@@ -281,27 +432,58 @@ Puts a value into the published data. This operation can be performed only on mu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
-| key | number | Yes |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | Indicates the URI of the data to operate. |
+| key | number | Yes | The key corresponding to the added value. It is unique for the same application. The value range is all integers. |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | The value to be put. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Configuration of the data proxy operation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| 15700015 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| 15700015 | No permission to access the data specified by the URI. |
+
+**Examples**
+
+```TypeScript
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+let testUri: string = 'datashareproxy://com.test.dataproxyhandle/test/pv/001';
+let newConfigData: dataShare.ProxyData[] = [{
+  uri: testUri,
+  values: { 0: 'init' },
+  isMultiValues: true,
+  allowList: [],
+  trustProviders: []
+}];
+
+await dataProxyHandle?.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
+});
+
+try {
+  await dataProxyHandle?.putValue(testUri, 1, 'hello', config);
+  console.info(`putValue success`);
+} catch (error) {
+  console.error(`putValue failed: code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## removeValue
 
@@ -319,23 +501,54 @@ Removes the value corresponding to the key. This operation can be performed only
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
-| key | number | Yes |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | Indicates the URI of the data to operate. |
+| key | number | Yes | The key corresponding to the added value. The value range is all integers. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Configuration of the data proxy operation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| 15700015 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| 15700015 | No permission to access the data specified by the URI. |
+
+**Examples**
+
+```TypeScript
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+let testUri: string = 'datashareproxy://com.test.dataproxyhandle/test/pv/001';
+let newConfigData: dataShare.ProxyData[] = [{
+  uri: testUri,
+  values: { 0: 'init' },
+  isMultiValues: true,
+  allowList: [],
+  trustProviders: []
+}];
+
+await dataProxyHandle?.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
+});
+
+try {
+  await dataProxyHandle?.removeValue(testUri, 0, config);
+  console.info(`removeValue success`);
+} catch (error) {
+  console.error(`removeValue failed: code: ${error.code}, message: ${error.message}`);
+}
+```

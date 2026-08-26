@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AsyncCallback, BusinessError, Callback, ErrorCallback } from 'kits/@kit.BasicServicesKit';
-import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from 'kits/@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
 ```
 
 ## [[Call]]
@@ -29,7 +28,7 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| err | [BusinessError](arkts-basicservices-base-businesserror-i.md)&lt;E&gt; | 是 |
-| data | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| err | [BusinessError](arkts-basicservices-base-businesserror-i.md)&lt;E&gt; | 是 | 接口调用失败的公共错误信息，包含错误码和可选附加信息。 当不指定E类型参数时，默认为void，此时BusinessError不包含附加信息，只包含错误码。接口调用成功时，此参数返回null。 |
+| data | T | 是 | 接口调用成功时的异步返回数据，类型由开发者自定义。接口调用失败时，此参数不可用。 |

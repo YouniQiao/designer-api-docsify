@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import sendableImage from '@kit.ImageKit';
 ```
 
 ## createImageReceiver
@@ -20,20 +20,35 @@ function createImageReceiver(size: image.Size, format: image.ImageFormat, capaci
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| size | image.Size | 是 |
-| format | image.ImageFormat | 是 |
-| capacity | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| size | image.Size | 是 | 图像的默认大小。 |
+| format | image.ImageFormat | 是 | 图像格式，取值为image.ImageFormat常量，目前仅支持 ImageFormat:JPEG。 |
+| capacity | number | 是 | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | 如果操作成功，则返回ImageReceiver实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. |
+
+**示例**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
+
+async function CreateImageReceiver() {
+    let size: image.Size = {
+        height: 8192,
+        width: 8
+    } 
+    let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+}
+```

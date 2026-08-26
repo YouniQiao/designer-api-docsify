@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
+import FaultLogger from '@kit.PerformanceAnalysisKit';
 ```
 
 ## query
@@ -24,18 +24,50 @@ Obtains the fault information about the current application. This API uses an as
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Yes | Fault type. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | Yes | Callback used to return the fault information array.    **value** is the fault information array obtained. If **value** is **undefined**, an exception occurs during the information retrieval. In this case, an error string will be returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [10600001](../errorcode-faultlogger.md#10600001-service-faulty-or-not-started) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed, Parameter type error |
+| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found |
+| [10600001](../errorcode-faultlogger.md#10600001-service-faulty-or-not-started) | The service is not started or is faulty |
+
+**Examples**
+
+```TypeScript
+import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function queryFaultLogCallback(error: BusinessError, value: Array<FaultLogger.FaultLogInfo>) {
+    if (error) {
+        console.error(`error code:${error.code}, error msg:${error.message}`);
+    } else {
+        console.info("value length is " + value.length);
+        let len: number = value.length;
+        for (let i = 0; i < len; i++) {
+            console.info(`log: ${i}`);
+            console.info(`Log pid: ${value[i].pid}`);
+            console.info(`Log uid: ${value[i].uid}`);
+            console.info(`Log type: ${value[i].type}`);
+            console.info(`Log timestamp: ${value[i].timestamp}`);
+            console.info(`Log reason: ${value[i].reason}`);
+            console.info(`Log module: ${value[i].module}`);
+            console.info(`Log summary: ${value[i].summary}`);
+            console.info(`Log text: ${value[i].fullLog}`);
+        }
+    }
+}
+try {
+    FaultLogger.query(FaultLogger.FaultType.JS_CRASH, queryFaultLogCallback);
+} catch (err) {
+    console.error(`code: ${(err as BusinessError).code}, message: ${(err as BusinessError).message}`);
+}
+```
 
 
 ## query
@@ -56,20 +88,50 @@ Obtains the fault information about the current application. This API uses a pro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Yes | Fault type. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | Promise used to return the fault information array. You can obtain the fault information instance in its **then()** method or use **await**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [10600001](../errorcode-faultlogger.md#10600001-service-faulty-or-not-started) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed, Parameter type error |
+| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found |
+| [10600001](../errorcode-faultlogger.md#10600001-service-faulty-or-not-started) | The service is not started or is faulty |
+
+**Examples**
+
+```TypeScript
+import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function getLog() {
+  try {
+    let value: Array<FaultLogger.FaultLogInfo> = await FaultLogger.query(FaultLogger.FaultType.JS_CRASH);
+    if (value) {
+      console.info(`value length: ${value.length}`);
+      let len: number = value.length;
+      for (let i = 0; i < len; i++) {
+        console.info(`log: ${i}`);
+        console.info(`Log pid: ${value[i].pid}`);
+        console.info(`Log uid: ${value[i].uid}`);
+        console.info(`Log type: ${value[i].type}`);
+        console.info(`Log timestamp: ${value[i].timestamp}`);
+        console.info(`Log reason: ${value[i].reason}`);
+        console.info(`Log module: ${value[i].module}`);
+        console.info(`Log summary: ${value[i].summary}`);
+        console.info(`Log text: ${value[i].fullLog}`);
+      }
+    }
+  } catch (err) {
+    console.error(`code: ${(err as BusinessError).code}, message: ${(err as BusinessError).message}`);
+  }
+}
+```

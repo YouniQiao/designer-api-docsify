@@ -12,12 +12,12 @@ type AVDownloadTaskState = 'init' | 'queued' | 'running' | 'completed' | 'paused
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-| 类型 |
-| --- |
-| 'init' |
-| 'queued' |
-| 'running' |
-| 'completed' |
-| 'paused' |
-| 'removing' |
-| 'error' |
+| 类型 | 说明 |
+| --- | --- |
+| 'init' |  |
+| 'queued' |  |
+| 'running' |  |
+| 'completed' |  |
+| 'paused' |  |
+| 'removing' |  |
+| 'error' |  |

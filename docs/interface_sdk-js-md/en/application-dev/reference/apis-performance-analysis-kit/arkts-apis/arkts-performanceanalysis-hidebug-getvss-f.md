@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getVss
@@ -20,6 +19,15 @@ Obtains the virtual set size used by the application process. This API is implem
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| bigint |
+| Type | Description |
+| --- | --- |
+| bigint | Virtual set size used by the application process, in KB. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let vss: bigint = hidebug.getVss();
+console.info(`vss = ${vss}`);
+```

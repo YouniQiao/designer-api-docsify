@@ -15,13 +15,13 @@ globalConnect的入参泛型，用于定义globalConnect支持的持久化集合
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| Array & lt;S & gt; |
-| Map & lt;string |
-| number, S & gt; |
-| Set & lt;S & gt; |
-| collections.Array & lt;S & gt; |
-| collections.Map & lt;string |
-| number, S & gt; |
-| collections.Set & lt;S & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;S & gt; | 表示值类型为Array类型。 |
+| Map & lt;string |  |
+| number, S & gt; |  |
+| Set & lt;S & gt; | 表示值类型为Set类型。 |
+| collections.Array & lt;S & gt; | 表示值类型为collections.Array类型。 |
+| collections.Map & lt;string |  |
+| number, S & gt; |  |
+| collections.Set & lt;S & gt; | 表示值类型为collections.Set类型。 |

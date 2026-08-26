@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileExtensionInfo } from 'kits/@kit.CoreFileKit';
+import fileExtensionInfo from '@kit.CoreFileKit';
 ```
 
 ## 汇总
@@ -23,8 +23,8 @@ import { fileExtensionInfo } from 'kits/@kit.CoreFileKit';
 <!--Del-->
 ### 常量（系统接口）
 
-| 名称 |
-| --- |
-| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supports_read) |
-| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supports_write) |
+| 名称 | 说明 |
+| --- | --- |
+| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supports_read) | 此设备支持读。 |
+| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supports_write) | 此设备支持写。 |
 <!--DelEnd-->

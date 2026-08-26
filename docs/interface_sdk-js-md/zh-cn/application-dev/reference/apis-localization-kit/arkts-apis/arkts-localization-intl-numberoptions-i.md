@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import intl from '@kit.LocalizationKit';
 ```
 
 ## compactDisplay

@@ -14,7 +14,7 @@ declare type DialogOptionsBorderWidth = Dimension | EdgeWidths
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [Dimension](arkts-arkui-dimension-t.md) |
-| EdgeWidths |
+| 类型 | 说明 |
+| --- | --- |
+| [Dimension](arkts-arkui-dimension-t.md) |  |
+| EdgeWidths |  |

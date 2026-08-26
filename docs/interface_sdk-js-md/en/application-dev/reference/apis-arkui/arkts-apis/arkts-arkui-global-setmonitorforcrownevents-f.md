@@ -16,6 +16,6 @@ Sets a digital crown events listener for current page, only be supported on the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | Function | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | Function | Yes | Indicates the function to be called when the crown event trigger. |

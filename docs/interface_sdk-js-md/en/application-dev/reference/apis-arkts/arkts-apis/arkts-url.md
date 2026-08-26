@@ -9,15 +9,14 @@ The url module provides APIs for parsing URL strings and constructing URL instan
 ## Modules to Import
 
 ```TypeScript
-import { url } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [URL](arkts-arkts-url-url-c.md) |
-| [URLParams](arkts-arkts-url-urlparams-c.md) |
-| [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md) |
+| Name | Description |
+| --- | --- |
+| [URL](arkts-arkts-url-url-c.md) | The interface of URL is used to parse, construct, normalize, and encode URLs. |
+| [URLParams](arkts-arkts-url-urlparams-c.md) | The URLParams interface defines some practical methods to process URL query strings. |
+| [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md) | The URLSearchParams interface defines some practical methods to process URL query strings. |

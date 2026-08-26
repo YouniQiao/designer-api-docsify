@@ -17,13 +17,13 @@ NavDestination自定义转场动画的代理函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | 是 |
-| isEnter | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | 是 | 当前页面转场的操作类型。 |
+| isEnter | boolean | 是 | 当前页面是否为入场页面。 true：当前页面是入场页面；false：当前页面不是入场页面。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[NavDestinationTransition](arkts-arkui-navdestinationtransition-i.md)&gt; \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[NavDestinationTransition](arkts-arkui-navdestinationtransition-i.md)&gt; \| undefined | Array of custom animations for the **NavDestination** page. If **undefined** is returned, the default system animation is used. |

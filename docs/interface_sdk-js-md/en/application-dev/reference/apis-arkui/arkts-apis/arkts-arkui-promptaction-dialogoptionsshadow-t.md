@@ -14,7 +14,7 @@ Defines the allowed data types for specifying the background shadow of a dialog 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) |
-| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md) |
+| Type | Description |
+| --- | --- |
+| [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) |  |
+| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md) |  |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataUriUtils } from 'kits/@kit.AbilityKit';
+import dataUriUtils from '@kit.AbilityKit';
 ```
 
 ## getId
@@ -20,18 +20,31 @@ Obtains the ID attached to the end of a given URI.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | Target URI object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | ID obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { dataUriUtils } from '@kit.AbilityKit';
+
+try {
+  let id = dataUriUtils.getId('com.example.dataUriUtils/1221');
+  console.info(`get id: ${id}`);
+} catch(err) {
+  console.error(`get id err ,check the uri ${err}`);
+}
+```

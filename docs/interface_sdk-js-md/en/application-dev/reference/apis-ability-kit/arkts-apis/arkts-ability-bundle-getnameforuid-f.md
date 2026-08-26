@@ -3,7 +3,22 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import appControl from '@kit.AbilityKit.appControl';
+import bundleManager from '@kit.AbilityKit.bundleManager';
+import bundleMonitor from '@kit.AbilityKit.bundleMonitor';
+import bundleResourceManager from '@kit.AbilityKit.bundleResourceManager';
+import bundle from '@kit.AbilityKit';
+import defaultAppManager from '@kit.AbilityKit.defaultAppManager';
+import distributedBundleManager from '@kit.AbilityKit.distributedBundleManager';
+import freeInstall from '@kit.AbilityKit.freeInstall';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit.innerBundleManager';
+import installer from '@kit.AbilityKit.installer';
+import launcherBundleManager from '@kit.AbilityKit.launcherBundleManager';
+import overlay from '@kit.AbilityKit.overlay';
+import shortcutManager from '@kit.AbilityKit.shortcutManager';
+import skillManager from '@kit.AbilityKit.skillManager';
+import appDomainVerify from '@kit.AbilityKit.appDomainVerify';
+import pluginBundleManager from '@kit.AbilityKit.pluginBundleManager';
 ```
 
 ## getNameForUid
@@ -24,10 +39,26 @@ Obtains bundle name by the given uid.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uid | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uid | number | Yes | Indicates the UID of an application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let uid: number = 20010005;
+
+bundle.getNameForUid(uid)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
 
 
 ## getNameForUid
@@ -48,12 +79,16 @@ Obtains the bundle name based on a UID. This API uses a promise to return the re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uid | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uid | number | Yes | UID based on which the bundle name is to obtain. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Returns the bundle name. |
+
+**Examples**
+
+See [getNameForUid](#getnameforuid)

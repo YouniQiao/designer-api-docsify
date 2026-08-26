@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## getPointerStyleSync
@@ -20,18 +19,43 @@ Queries the mouse pointer style type of a specified window, such as east arrow, 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| windowId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| windowId | number | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. If the mouse pointer style is set for a non-existent window through [setPointerStyleSync](arkts-input-pointer-setpointerstylesync-f.md), this API can obtain the mouse pointer style properly. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) |
+| Type | Description |
+| --- | --- |
+| [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | Mouse pointer style. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          let windowId = -1;
+          try {
+            let style: pointer.PointerStyle = pointer.getPointerStyleSync(windowId);
+            console.info(`Succeeded in getting pointer style, style: ${JSON.stringify(style)}.`);
+          } catch (error) {
+            console.error(`Failed to get pointer style, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```

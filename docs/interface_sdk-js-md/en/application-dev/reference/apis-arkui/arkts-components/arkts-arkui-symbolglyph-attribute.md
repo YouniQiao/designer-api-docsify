@@ -21,7 +21,8 @@ effectStrategy(value: SymbolEffectStrategy)
 
 Sets the effect strategy of the **SymbolGlyph** component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -36,9 +37,9 @@ Sets the effect strategy of the **SymbolGlyph** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | Yes | Effect strategy of the **SymbolGlyph** component.Default value: **SymbolEffectStrategy.NONE |
 
 ## fontColor
 
@@ -48,7 +49,8 @@ fontColor(value: Array<ResourceColor>)
 
 Sets the color of the **SymbolGlyph** component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -63,9 +65,9 @@ Sets the color of the **SymbolGlyph** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Color of the **SymbolGlyph** component.Default value: depending on the rendering strategy |
 
 ## fontColor
 
@@ -87,9 +89,9 @@ Called when the SymbolGlyph color is set.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorMetrics & gt; \ | undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorMetrics & gt; \ | undefined | Yes |  |
 
 ## fontSize
 
@@ -99,7 +101,8 @@ fontSize(value: number | string | Resource)
 
 Sets the size of the **SymbolGlyph** component. When using the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.The display size of the symbol glyph is controlled by the **fontSize** setting. Once **width** or **height** is specified, other universal attributes will only affect the size of the component's placeholder, not the symbol glyph itself.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -114,9 +117,9 @@ Sets the size of the **SymbolGlyph** component. When using the string type, nume
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Size of the **SymbolGlyph** component.Default value: **16fp**Unit: fpPercentage strings are not supported. |
 
 ## fontWeight
 
@@ -126,7 +129,8 @@ fontWeight(value: number | FontWeight | string)
 
 Sets the font weight of the **SymbolGlyph** component. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -141,9 +145,9 @@ Sets the font weight of the **SymbolGlyph** component. For the number type, the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| FontWeight \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| FontWeight \| string | Yes | Font weight of the **SymbolGlyph** component.Default value: **FontWeight.Normal |
 
 ## fontWeight
 
@@ -165,10 +169,10 @@ Used to set the font weight of symbolGlyph.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
-| [fontWeightConfigs](../arkts-apis/arkts-arkui-fontconfigs-i.md) | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the symbolGlyph font weight. For the number type, the value range is [100, 900]. When enableVariableFontWeight in fontWeightConfigs is **false**, the value must be a multiple of 100; when **true**, any integer within [100, 900] is supported. The default value is **FontWeight.Normal**. |
+| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | No | the configuration of font weight. If not specified, the default values of FontWeightConfigs are used: enableVariableFontWeight defaults to **false**, and enableDeviceFontWeightCategory defaults to **true**. |
 
 ## maxFontScale
 
@@ -188,9 +192,9 @@ Sets the maximum font scale factor for the **SymbolGlyph** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes | Maximum font scale factor for the **SymbolGlyph** component.Value range: [1, +∞)   **NOTE：**A value less than 1 is handled as **1**. Abnormal values are ineffective by default. |
 
 ## minFontScale
 
@@ -210,9 +214,9 @@ Sets the minimum font scale factor for the **SymbolGlyph** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes | Minimum font scale factor for the **SymbolGlyph** component.Value range: [0, 1]The value **0** results in the minimum scaling.   **NOTE：**A value less than 0 is handled as 0. A value greater than 1 is handled as 1. Abnormal values are ineffective by default. |
 
 ## renderingStrategy
 
@@ -222,7 +226,8 @@ renderingStrategy(value: SymbolRenderingStrategy)
 
 Sets the rendering strategy of the **SymbolGlyph** component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -237,9 +242,9 @@ Sets the rendering strategy of the **SymbolGlyph** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | Yes | Rendering strategy of the **SymbolGlyph** component.Default value: **SymbolRenderingStrategy.SINGLE |
 
 ## shaderStyle
 
@@ -259,9 +264,9 @@ Applies a gradient or solid color shader effect to the **SymbolGlyph** component
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shader | Array&lt;[ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) \| undefined & gt; \ | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shader | Array&lt;[ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) \| undefined & gt; \ | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | Yes | Shader effect.Input types and behavior:Single **ShaderStyle** object: applies the specified effect to all layers. Array of **ShaderStyle** objects: applies the specified effect to the corresponding layer. Array of **undefined**: applies the default **SymbolGlyph** color to the corresponding layer. Layers unset retain their default color.Based on the input, the system applies a radial gradient ([RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)), linear gradient ([LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md)), or solid color ([ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md)) to the **SymbolGlyph** component.   **NOTE：**Unit: vpSpecify the center point and radius using percentages. If a non-percentage value (e.g., **10px**) is provided, it will be interpreted as 100 0%.You are advised to specify the radius using percentages.Percentages are relative to the icon's size. The recommended value range is [0, 1). |
 
 ## symbolEffect
 
@@ -283,10 +288,10 @@ Sets the symbol effect and effect state for the **SymbolGlyph** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [symbolEffect](#symboleffect) | [SymbolEffect](arkts-arkui-symboleffect-c.md) | Yes |
-| isActive | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| symbolEffect | [SymbolEffect](arkts-arkui-symboleffect-c.md) | Yes | Symbol effect of the **SymbolGlyph** component.Default value: [SymbolEffect](#symboleffect) |
+| isActive | boolean | No | Whether the effect is active.   **true**: playing. **false**: not playing.Default value: **false**. |
 
 ## symbolEffect
 
@@ -308,10 +313,10 @@ Sets the symbol effect and effect trigger for the **SymbolGlyph** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [symbolEffect](#symboleffect) | [SymbolEffect](arkts-arkui-symboleffect-c.md) | Yes |
-| triggerValue | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| symbolEffect | [SymbolEffect](arkts-arkui-symboleffect-c.md) | Yes | Symbol effect of the **SymbolGlyph** component.Default value: [SymbolEffect](#symboleffect) |
+| triggerValue | number | No | Value that, when changed, initiates the animation of the **SymbolGlyph** component.To prevent the motion effect from triggering initially, set it to **-1**. |
 
 ## symbolShadow
 
@@ -333,6 +338,6 @@ Sets the shadow effect of the **SymbolGlyph** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shadow | [Optional](arkts-arkui-optional-t.md)&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shadow | [Optional](arkts-arkui-optional-t.md)&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | Yes | Shadow effect of the **SymbolGlyph** component.Unit: vpDefault value: {radius: 0,color: Color.Black offsetX: 0,offsetY: 0} The **fill** and **type** attributes, as well as the enumerated values of **ColoringStrategy** within the **color **attribute, are not supported. |

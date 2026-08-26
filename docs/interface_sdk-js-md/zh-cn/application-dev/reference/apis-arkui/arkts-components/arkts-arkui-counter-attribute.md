@@ -31,9 +31,9 @@ enableDec(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | “减少”按钮禁用或使能。 默认值：true，true表示使能“减少”按钮，false表示禁用“减少”按钮。 |
 
 ## enableInc
 
@@ -53,9 +53,9 @@ enableInc(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | “增加”按钮禁用或使能。 默认值：true，true表示使能“增加”按钮，false表示禁用“增加”按钮。 |
 
 ## onDec
 
@@ -75,9 +75,9 @@ onDec(event: VoidCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | Counter数值减少的回调函数。<br>**起始版本：** 18 |
 
 ## onInc
 
@@ -97,6 +97,6 @@ onInc(event: VoidCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | Counter数值增加的回调函数。<br>**起始版本：** 18 |

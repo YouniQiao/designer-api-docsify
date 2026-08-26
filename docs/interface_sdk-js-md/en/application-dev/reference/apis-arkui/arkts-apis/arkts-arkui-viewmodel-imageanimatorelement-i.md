@@ -22,9 +22,9 @@ Obtains the playback state. Available values are as follows: Playing Paused Stop
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| "Playing" \| "Paused" \| "Stopped" |
+| Type | Description |
+| --- | --- |
+| "Playing" \| "Paused" \| "Stopped" |  |
 
 ## pause
 

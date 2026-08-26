@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
 ```
 
 ## getArguments
@@ -22,6 +21,20 @@ function getArguments(): AbilityDelegatorArgs
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) | [AbilityDelegatorArgs]{ |
+
+**示例**
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+// 获取单元测试参数AbilityDelegatorArgs对象
+let args = abilityDelegatorRegistry.getArguments();
+// 打印测试参数信息
+console.info(`getArguments bundleName: ${args.bundleName}`);
+console.info(`getArguments parameters: ${JSON.stringify(args.parameters)}`);
+console.info(`getArguments testCaseNames: ${args.testCaseNames}`);
+console.info(`getArguments testRunnerClassName: ${args.testRunnerClassName}`);
+```

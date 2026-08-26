@@ -20,9 +20,9 @@ Called when the ability state changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | Yes | Ability state data. |
 
 ## onAppStarted
 
@@ -38,9 +38,9 @@ Called when the first process of the application is created.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | Application state data. |
 
 ## onAppStopped
 
@@ -56,9 +56,9 @@ Called when the last process of the application is destroyed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | Application state data. |
 
 ## onForegroundApplicationChanged
 
@@ -74,9 +74,9 @@ Called when the foreground or background state of an application changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | Application state data. |
 
 ## onProcessCreated
 
@@ -92,9 +92,9 @@ Called when a process is created.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes | Process data. |
 
 ## onProcessDied
 
@@ -110,9 +110,9 @@ Called when a process is destroyed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes | Process data. |
 
 ## onProcessStateChanged
 
@@ -128,6 +128,6 @@ Called when the process state is changed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes | Process data. |

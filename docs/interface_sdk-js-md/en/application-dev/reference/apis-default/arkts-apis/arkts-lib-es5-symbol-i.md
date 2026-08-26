@@ -15,8 +15,8 @@ Returns a string representation of an object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## valueOf
 
 ```TypeScript
@@ -27,5 +27,5 @@ Returns the primitive value of the specified object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

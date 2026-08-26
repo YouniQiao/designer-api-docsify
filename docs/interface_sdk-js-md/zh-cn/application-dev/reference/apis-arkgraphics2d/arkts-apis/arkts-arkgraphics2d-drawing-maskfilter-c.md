@@ -2,9 +2,12 @@
 
 蒙版滤镜对象，用于对绘制内容施加模糊效果。
 
-> **说明：**&gt;
-> - 本Class首批接口从API version 12开始支持。&gt;
-> - 本模块使用屏幕物理像素单位px。&gt;
+> **说明：**
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 12
@@ -14,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import drawing from '@kit.ArkGraphics2D';
 ```
 
 ## createBlurMaskFilter
@@ -31,19 +34,32 @@ static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| blurType | [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | 是 |
-| sigma | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| blurType | [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | 是 | 模糊类型，用于指定蒙版滤镜的模糊操作方式。 |
+| sigma | number | 是 | 高斯模糊的标准偏差，必须为大于0的浮点数。单位为物理像素px。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | 返回创建的蒙版滤镜对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10);
+  }
+}
+```

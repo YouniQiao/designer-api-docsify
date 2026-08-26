@@ -31,9 +31,9 @@ Sets the coordinates (relative coordinates) of the end point of the line. This a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Array & lt;any & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Array & lt;any & gt; | Yes | Coordinates (relative coordinates) of the end point of the line, in vp.Default value: **[0, 0]**The **undefined** and **null** values are treated as the default value. |
 
 ## startPoint
 
@@ -53,6 +53,6 @@ Sets the coordinates (relative coordinates) of the start point of the line. This
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Array & lt;any & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Array & lt;any & gt; | Yes | Coordinates (relative coordinates) of the start point of the line, in vp.Default value: **[0, 0]**The **undefined** and **null** values are treated as the default value. |

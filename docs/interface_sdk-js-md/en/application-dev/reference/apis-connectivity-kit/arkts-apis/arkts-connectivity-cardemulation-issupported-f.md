@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cardEmulation } from 'kits/@kit.ConnectivityKit';
+import cardEmulation from '@kit.ConnectivityKit';
 ```
 
 ## isSupported
@@ -14,7 +14,8 @@ function isSupported(feature: number): boolean
 
 Checks whether a certain type of card emulation is supported.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 6 and deprecated since API version 9. Use
 > [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md) instead.
 
@@ -30,12 +31,34 @@ Checks whether a certain type of card emulation is supported.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [feature](../../apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| feature | number | Yes | Card emulation type to check. For details, see [FeatureType](arkts-connectivity-cardemulation-featuretype-e.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the card emulation type is supported; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+// Applicable to devices other than lite wearables
+import { cardEmulation } from '@kit.ConnectivityKit';
+
+let isHceSupported: boolean = cardEmulation.isSupported(cardEmulation.FeatureType.HCE);
+if (!isHceSupported) {
+    console.info('this device is not supported for HCE, ignore it.');
+}
+```
+
+```TypeScript
+// Applicable to lite wearables
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+let isHceSupported = cardEmulation.isSupported(cardEmulation.FeatureType.HCE);
+if (!isHceSupported) {
+    console.error('this device is not supported for HCE, ignore it.');
+}
+```

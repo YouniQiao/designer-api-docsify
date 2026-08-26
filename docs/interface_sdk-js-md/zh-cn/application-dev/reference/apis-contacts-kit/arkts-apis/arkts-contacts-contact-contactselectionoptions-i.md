@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## filter

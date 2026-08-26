@@ -29,9 +29,9 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
+| Type | Description |
+| --- | --- |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## displayX
 

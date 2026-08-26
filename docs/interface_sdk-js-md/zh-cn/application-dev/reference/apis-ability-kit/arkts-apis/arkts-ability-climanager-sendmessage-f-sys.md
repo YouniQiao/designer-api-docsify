@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cliManager } from 'kits/@kit.AbilityKit';
+import cliManager from '@kit.AbilityKit';
 ```
 
 ## sendMessage
@@ -14,7 +14,8 @@ function sendMessage(sessionId: string, message: string): Promise<void>
 
 向指定CLI工具会话对应的进程发送消息。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 会话仅限创建进程管理：只有调用`execTool`创建该会话的进程可以调用本接口。其他进程即使获取到`sessionId`，调用本接口也会抛出错误码201（Permission denied）。
 
 **起始版本：** 26.0.0
@@ -29,23 +30,23 @@ function sendMessage(sessionId: string, message: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sessionId | string | 是 |
-| message | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sessionId | string | 是 | 目标CLI工具进程的会话ID。 |
+| message | string | 是 | 要发送的消息，最大长度为10240字符。超过最大长度时抛出错误码401。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [35600032](../errorcode-ability.md#35600032-指定的session不存在) |
-| [35600033](../errorcode-ability.md#35600033-向工具进程写入消息失败) |
-| [35600050](../errorcode-ability.md#35600050-偶发性报错) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission"ohos.permission.EXEC_CLI_TOOL". |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. Interface caller is not a system app. |
+| [35600032](../errorcode-ability.md#35600032-指定的session不存在) | The session does not exist. |
+| [35600033](../errorcode-ability.md#35600033-向工具进程写入消息失败) | failed to write message to tool. |
+| [35600050](../errorcode-ability.md#35600050-偶发性报错) | System Error. 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |

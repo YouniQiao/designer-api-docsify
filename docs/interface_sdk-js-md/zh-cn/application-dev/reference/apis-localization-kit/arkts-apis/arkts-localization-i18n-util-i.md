@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## unitConvert
@@ -32,16 +32,27 @@ unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: number, locale: string,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 |
-| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 |
-| value | number | 是 |
-| locale | string | 是 |
-| style | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 要被转换的单位。 |
+| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 要转换为的单位。 |
+| value | number | 是 | 要被转换的单位的数量值。 |
+| locale | string | 是 | 格式化时使用的区域ID，如：zh-Hans-CN。 |
+| style | string | 否 | 格式化使用的风格，取值包括：'number', 'short', 'narrow'。默认值：short。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 按照toUnit的单位格式化后，得到的字符串。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let fromUnit: i18n.UnitInfo = { unit: 'cup', measureSystem: 'US' };
+let toUnit: i18n.UnitInfo = { unit: 'liter', measureSystem: 'SI' };
+let convertResult: string =
+  i18n.I18NUtil.unitConvert(fromUnit, toUnit, 1000, 'en-US', 'long'); // convertResult = '236.588 liters'
+```

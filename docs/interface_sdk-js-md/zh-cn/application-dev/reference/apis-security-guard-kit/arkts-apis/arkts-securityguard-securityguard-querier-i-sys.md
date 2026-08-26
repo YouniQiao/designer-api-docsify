@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+import securityGuard from '@kit.SecurityGuardKit';
 ```
 
 ## onComplete
@@ -44,9 +44,9 @@ onError: (message: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | string | 是 |  |
 
 ## onQuery
 
@@ -64,6 +64,6 @@ onQuery: (events: Array<SecurityEvent>) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| events | Array&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| events | Array&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt; | 是 |  |

@@ -9,7 +9,7 @@ Provides text transliteration capabilities, such as obtaining the supported lang
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getAvailableIDs
@@ -28,9 +28,19 @@ Obtains a list of IDs supported by the **Transliterator** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string[] |
+| Type | Description |
+| --- | --- |
+| string[] | List of IDs supported by the **Transliterator** object. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// A total number of 742 IDs are supported. Each ID is in *source*-*destination* format. For example, in **ids = ['Han-Latin','Latin-ASCII', 'Amharic-Latin/BGN','Accents-Any', ...]**, **Han-Latin** indicates conversion from Chinese to Latin, and **Amharic-Latin** indicates conversion from Amharic to Latin.
+// For more information, see ISO-15924.
+let ids: string[] = i18n.Transliterator.getAvailableIDs();
+```
 
 ## getInstance
 
@@ -48,15 +58,23 @@ Creates a **Transliterator** object based on the specified ID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | ID supported by the **Transliterator** object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Transliterator](arkts-localization-i18n-transliterator-c.md) |
+| Type | Description |
+| --- | --- |
+| [Transliterator](arkts-localization-i18n-transliterator-c.md) | Transliterator** object. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let transliterator: i18n.Transliterator = i18n.Transliterator.getInstance('Any-Latn');
+```
 
 ## transform
 
@@ -74,12 +92,34 @@ Converts the input text from the source format to the target format.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| text | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Input text. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Text after conversion. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let transliterator: i18n.Transliterator = i18n.Transliterator.getInstance('Any-Latn');
+let wordArray: string[] = ['China', 'Germany', 'US', 'France"]
+for (let i = 0; i < wordArray.length; i++) {
+  let transliterateLatn: string =
+    transliterator.transform(wordArray[i]); // transliterateLatn: 'zhōng guó', 'dé guó', 'měi guó', 'fǎ guó'
+}
+
+// Chinese transliteration and tone removal
+transliterator = i18n.Transliterator.getInstance('Any-Latn;Latin-Ascii');
+let transliterateAscii: string = transliterator.transform ('China'); // transliterateAscii = 'zhong guo'
+
+// Chinese surname pronunciation
+transliterator = i18n.Transliterator.getInstance('Han-Latin/Names');
+let transliterateNames: string = transliterator.transform('Teacher Shan'); // transliterateNames = 'shàn lǎo shī'
+transliterateNames = transliterator.transform('Long Sun No Taboo'); // transliterateNames = 'zhǎng sūn wú jì'
+```

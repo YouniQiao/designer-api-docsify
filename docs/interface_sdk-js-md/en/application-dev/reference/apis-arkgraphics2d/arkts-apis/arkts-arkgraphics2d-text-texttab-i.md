@@ -9,7 +9,7 @@ Implements a paragraph-style text tab, which stores the alignment mode and posit
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import text from '@kit.ArkGraphics2D';
 ```
 
 ## alignment
@@ -43,3 +43,7 @@ Alignment position of the text following the tab character. The value is a float
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+**Examples**
+
+alignment is CENTER, location is 200, and the text is "12/t345".

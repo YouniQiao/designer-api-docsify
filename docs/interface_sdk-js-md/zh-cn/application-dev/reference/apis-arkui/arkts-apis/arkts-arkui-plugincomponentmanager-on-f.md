@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## on
@@ -22,7 +22,32 @@ function on(eventType: string, callback: OnPushEventCallback | OnRequestEventCal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| eventType | string | 是 |
-| callback | [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventType | string | 是 | 监听的事件类型，可选值为："push"、"request"。"push"：指组件提供方向使用方主动推送数据。"request"：指组件使用方向提供方主动请求数据。 |
+| callback | [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | 是 | 对应监听回调， push事件对应回调类型为OnPushEventCallback，request事件对应回调类型为OnRequestEventCallback。 |
+
+**示例**
+
+```TypeScript
+import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
+import { Want } from '@kit.AbilityKit';
+
+const onPushListener = (source:Want, template:PluginComponentTemplate, data:pluginComponentManager.KVObject, extraData:pluginComponentManager.KVObject) => {
+  console.info("onPushListener template.source=" + template.source);
+  console.info("onPushListener source=" + JSON.stringify(source));
+  console.info("onPushListener template=" + JSON.stringify(template));
+  console.info("onPushListener data=" + JSON.stringify(data));
+  console.info("onPushListener extraData=" + JSON.stringify(extraData));
+}
+const onRequestListener = (source:Want, name:string, data:pluginComponentManager.KVObject) => {
+  console.info("onRequestListener");
+  console.info("onRequestListener source=" + JSON.stringify(source));
+  console.info("onRequestListener name=" + name);
+  console.info("onRequestListener data=" + JSON.stringify(data));
+  let returnData: Record<string, string | pluginComponentManager.KVObject> = { "template": "ets/pages/plugin.js", "data": data };
+  return returnData;
+}
+pluginComponentManager.on("push", onPushListener);
+pluginComponentManager.on("request", onRequestListener);
+```

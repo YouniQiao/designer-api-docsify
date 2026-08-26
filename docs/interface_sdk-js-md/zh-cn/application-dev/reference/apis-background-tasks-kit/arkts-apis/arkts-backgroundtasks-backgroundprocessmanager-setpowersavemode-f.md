@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
+import backgroundProcessManager from '@kit.BackgroundTasksKit';
 ```
 
 ## setPowerSaveMode
@@ -25,23 +25,41 @@ function setPowerSaveMode(pid: number, powerSaveMode: PowerSaveMode): Promise<vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| pid | number | 是 |
-| powerSaveMode | [PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pid | number | 是 | 进程号。 |
+| powerSaveMode | [PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md) | 是 | 能效模式。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [31800002](../errorcode-backgroundProcessManager.md#31800002-参数错误) |
-| [31800003](../errorcode-backgroundProcessManager.md#31800003-已经被任务管理器设置) |
-| [31800004](../errorcode-backgroundProcessManager.md#31800004-系统调度原因导致设置失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [31800002](../errorcode-backgroundProcessManager.md#31800002-参数错误) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. PowerSaveMode status is out of range. |
+| [31800003](../errorcode-backgroundProcessManager.md#31800003-已经被任务管理器设置) | Setup error, This setting is overridden by settings in Task Manager |
+| [31800004](../errorcode-backgroundProcessManager.md#31800004-系统调度原因导致设置失败) | The setting failed due to system scheduling reasons. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
+
+let pid = 33333;  // 请开发者替换为实际的进程号
+try {
+  backgroundProcessManager.setPowerSaveMode(pid, backgroundProcessManager.PowerSaveMode.EFFICIENCY_MODE).then(() => {
+    console.info('setPowerSaveMode promise');
+  }).catch((err: BusinessError) => {
+    console.error(`setPowerSaveMode failed, promise errCode: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  console.error(`setPowerSaveMode failed, errCode: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```

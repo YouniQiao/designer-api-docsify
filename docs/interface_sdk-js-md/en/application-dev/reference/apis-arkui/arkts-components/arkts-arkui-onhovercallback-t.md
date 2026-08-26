@@ -16,7 +16,7 @@ Represents the callback invoked on mouse hover.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| status | boolean | Yes |
-| event | [HoverEvent](arkts-arkui-hoverevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| status | boolean | Yes | Whether the mouse pointer is hovering over the component. The value **true** means that the mouse pointer enters the component, and **false** means that the mouse pointer leaves the component. |
+| event | [HoverEvent](arkts-arkui-hoverevent-i.md) | Yes | Hover event. |

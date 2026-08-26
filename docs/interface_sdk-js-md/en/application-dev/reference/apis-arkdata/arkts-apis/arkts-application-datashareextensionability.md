@@ -6,7 +6,7 @@ The **DataShareExtensionAbility** module provides data share services based on t
 ## Modules to Import
 
 ```TypeScript
-import { DataShareExtensionAbility } from 'kits/@kit.ArkData';
+import DataShareExtensionAbility from '@kit.ArkData';
 ```
 
 ## Summary
@@ -14,15 +14,15 @@ import { DataShareExtensionAbility } from 'kits/@kit.ArkData';
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DataShareExtensionAbility](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [DataShareExtensionAbility](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md) | This module provides data sharing and expansion capabilities. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [UpdateOperation](arkts-arkdata-updateoperation-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [UpdateOperation](arkts-arkdata-updateoperation-t-sys.md) | Represents the batch update operation information. |
 <!--DelEnd-->

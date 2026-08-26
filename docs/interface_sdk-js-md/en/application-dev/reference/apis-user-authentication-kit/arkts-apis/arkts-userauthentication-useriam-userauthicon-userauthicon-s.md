@@ -12,7 +12,7 @@ The **userAuthIcon** module is a UI component module of the OpenHarmony user ide
 ## Modules to Import
 
 ```TypeScript
-import { UserAuthIcon } from 'kits/@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKit';
 ```
 
 ## onAuthResult
@@ -31,9 +31,9 @@ Result callback. This callback is triggered after a user completes authenticatio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | userAuth.UserAuthResult | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | userAuth.UserAuthResult | Yes | Authentication result information. |
 
 ## onIconClick
 

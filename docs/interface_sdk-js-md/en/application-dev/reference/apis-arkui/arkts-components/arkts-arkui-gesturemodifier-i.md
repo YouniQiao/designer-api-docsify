@@ -29,6 +29,6 @@ Applies a gesture.You can customize this API as required. Dynamic configuration 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [UIGestureEvent](arkts-arkui-uigestureevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [UIGestureEvent](arkts-arkui-uigestureevent-i.md) | Yes | UIGestureEvent** object, which is used to set the gesture to be bound to the component. |

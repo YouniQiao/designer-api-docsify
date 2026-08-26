@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.MDMKit';
+import bluetoothManager from '@kit.MDMKit';
 ```
 
 ## connectionState

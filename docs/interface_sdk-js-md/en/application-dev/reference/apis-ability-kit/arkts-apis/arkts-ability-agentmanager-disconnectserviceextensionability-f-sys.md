@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from 'kits/@kit.AbilityKit';
+import agentManager from '@kit.AbilityKit';
 ```
 
 ## disconnectServiceExtensionAbility
@@ -24,21 +24,21 @@ Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md) | Yes |
-| connectId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md) | Yes | The context of the current agent extension ability. |
+| connectId | number | Yes | The connection id returned by connectServiceExtensionAbility. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | The promise returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1.Connect to system service failed. 2.System service failed to communicate with dependency module. |

@@ -22,11 +22,11 @@ onError(code: number, name: string, message: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| code | number | 是 |
-| name | string | 是 |
-| message | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| code | number | 是 | 拉起UIExtensionAbility执行失败时返回的结果码。 |
+| name | string | 是 | 拉起UIExtensionAbility执行失败时返回的名称。 |
+| message | string | 是 | 拉起UIExtensionAbility执行失败时返回的错误信息。 |
 
 ## onResult
 
@@ -46,9 +46,9 @@ onResult?(parameter: AbilityResult): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 | 当调用 [terminateSelfWithResult](arkts-ability-uiextensioncontext-c.md#terminateselfwithresult) 方法终止UIExtensionAbility时返回的结果。 |
 
 ## completionHandler
 

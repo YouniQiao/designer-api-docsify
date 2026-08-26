@@ -1,7 +1,8 @@
 # CheckPackageHasInstalledResponse
 
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API has been supported since API version 3 and deprecated since API version 9.
 Checks whether a bundle has been installed.
 
@@ -14,7 +15,7 @@ Checks whether a bundle has been installed.
 ## Modules to Import
 
 ```TypeScript
-import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from 'kits/@kit.AbilityKit';
+import Package, { CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
 ```
 
 ## result

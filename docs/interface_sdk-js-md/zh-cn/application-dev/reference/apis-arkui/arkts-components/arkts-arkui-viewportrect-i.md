@@ -2,7 +2,8 @@
 
 用于描述Viewport的绘制属性。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **起始版本：** 18
@@ -12,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## height

@@ -9,6 +9,9 @@ ConsoleMessage是Web组件中封装JavaScript控制台输出信息的对象。�
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -29,12 +32,12 @@ ConsoleMessage的构造函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | string | 是 |
-| sourceId | string | 是 |
-| [lineNumber](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-linemetrics-i.md) | number | 是 |
-| messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | string | 是 | ConsoleMessage的日志输出信息。 |
+| sourceId | string | 是 | 网页源文件的路径和文件名。 |
+| lineNumber | number | 是 | ConsoleMessage的行号。 |
+| messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | 是 | ConsoleMessage的日志级别。 |
 
 ## constructor
 
@@ -66,9 +69,9 @@ getLineNumber(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回控制台输出在网页源文件中的行号。 |
 
 ## getMessage
 
@@ -86,9 +89,9 @@ getMessage(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回控制台输出的日志信息。 |
 
 ## getMessageLevel
 
@@ -106,9 +109,9 @@ getMessageLevel(): MessageLevel
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MessageLevel](arkts-arkweb-messagelevel-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [MessageLevel](arkts-arkweb-messagelevel-e.md) | 返回ConsoleMessage的信息级别。 |
 
 ## getSource
 
@@ -124,9 +127,9 @@ getSource() : ConsoleMessageSource
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) | 返回ConsoleMessage的日志来源。 |
 
 ## getSourceId
 
@@ -144,6 +147,6 @@ getSourceId(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回网页源文件路径和文件名。 |

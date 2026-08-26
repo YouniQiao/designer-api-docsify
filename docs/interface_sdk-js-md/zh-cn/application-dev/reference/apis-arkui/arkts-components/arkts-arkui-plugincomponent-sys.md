@@ -22,18 +22,18 @@ PluginComponent(options: PluginComponentOptions)
 
 **参数:**
 
-| 参数名 | [类型](#类型) | 必填 |
-| --- | --- | --- |
-| options | [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | 是 | 插件组件选项 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 类型
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |

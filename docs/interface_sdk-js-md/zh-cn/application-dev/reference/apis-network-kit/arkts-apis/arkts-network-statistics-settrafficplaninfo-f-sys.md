@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## setTrafficPlanInfo
@@ -26,24 +25,24 @@ function setTrafficPlanInfo(simId: number, planParam: TrafficPlanParam, value: n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| simId | number | 是 |
-| planParam | [TrafficPlanParam](arkts-network-statistics-trafficplanparam-e-sys.md) | 是 |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| simId | number | 是 | The ID of the specified sim card. |
+| planParam | [TrafficPlanParam](arkts-network-statistics-trafficplanparam-e-sys.md) | 是 | The param of the specified traffic plan. |
+| value | number | 是 | The value of parameter. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | the promise returned by the function. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Nonsystem applications use system APIs. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value, such as simId error. |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |

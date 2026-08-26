@@ -11,7 +11,7 @@ Describes the device power consumption information.
 ## Modules to Import
 
 ```TypeScript
-import { batteryStats } from 'kits/@kit.BasicServicesKit';
+import batteryStats from '@kit.BasicServicesKit';
 ```
 
 ## power

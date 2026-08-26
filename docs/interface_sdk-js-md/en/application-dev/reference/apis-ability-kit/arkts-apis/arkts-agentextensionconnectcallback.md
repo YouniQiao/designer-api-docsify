@@ -5,7 +5,7 @@
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AgentExtensionConnectCallback](arkts-ability-agentextensionconnectcallback-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AgentExtensionConnectCallback](arkts-ability-agentextensionconnectcallback-i-sys.md) | Agent extension connect callback.@interface AgentExtensionConnectCallback |
 <!--DelEnd-->

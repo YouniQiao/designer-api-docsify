@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## reportAVScreenCaptureUserChoice
@@ -22,20 +22,49 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sessionId | number | 是 |
-| choice | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sessionId | number | 是 | Session ID of the AVScreenCapture service, which is sent to the application when the AVScreenCapture server starts the privacy dialog box. |
+| choice | string | 是 | User choice, including whether screen capture is agreed, selected display ID, and window ID. For details, see JsonData in the example below. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+class JsonData {
+  public choice: string = 'true';
+  public displayId: number | null = -1;
+  public missionId: number | null = -1;
+  public checkBoxSelected: string = 'true';
+  public isInnerAudioBoxSelected: string = 'true';
+}
+let sessionId: number = 0; // 替换成拉起此进程的sessionId。
+
+try {
+  const jsonData: JsonData = {
+    choice: 'true',  // 替换成用户的选择内容。
+    displayId: -1,   // 替换成用户选择的屏幕Id。
+    missionId: -1,   // 替换成用户选择的窗口Id。
+    checkBoxSelected: 'true',   // 替换成用户是否开启屏幕保护。
+    isInnerAudioBoxSelected: 'true',   // 替换成用户是否开启内部音频录制。
+  }
+  await media.reportAVScreenCaptureUserChoice(sessionId, JSON.stringify(jsonData));
+} catch (error: BusinessError) {
+  console.error(`reportAVScreenCaptureUserChoice error, error message: ${error.message}`);
+}
+```

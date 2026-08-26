@@ -14,14 +14,14 @@ ParseOptions中attributeWithTagCallbackFunction的回调方法，三个字符串
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| tagName | string | 是 |
-| key | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tagName | string | 是 | 标签名称。 |
+| key | string | 是 | 属性名称。 |
+| value | string | 是 | 属性的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否继续解析标签名称、属性名称及属性的值。true表示继续解析，false表示停止解析。 |

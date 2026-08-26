@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { manager } from 'kits/@kit.ConnectivityKit';
+import manager from '@kit.ConnectivityKit';
 ```
 
 ## enable
@@ -26,10 +26,10 @@ Enables NearLink.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | EDM denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
+| 36100099 | Operation failed. |

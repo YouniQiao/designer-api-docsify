@@ -29,15 +29,15 @@ Defines the equality check rule for the data type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | Another data object to compare for equality with the current object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the objects are equal. Returns **true** if they are equal; returns **false** otherwise. |
 
 ## multiply
 
@@ -57,15 +57,15 @@ Defines the multiplication rule for the data type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scale | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scale | number | Yes | Coefficient for the multiplication operation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Result of the multiplication operation. |
 
 ## plus
 
@@ -85,15 +85,15 @@ Defines the addition rule for the data type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | Object for the addition operation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Result of the addition operation. |
 
 ## subtract
 
@@ -113,12 +113,12 @@ Defines the subtraction rule for the data type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | Object for the subtraction operation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Result of the subtraction operation. |

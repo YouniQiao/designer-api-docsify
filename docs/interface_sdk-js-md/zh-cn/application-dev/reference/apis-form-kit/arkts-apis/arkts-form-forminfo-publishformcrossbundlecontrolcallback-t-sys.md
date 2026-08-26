@@ -16,12 +16,24 @@ type PublishFormCrossBundleControlCallback = (info: PublishFormCrossBundleInfo) 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| info | [PublishFormCrossBundleInfo](arkts-form-forminfo-publishformcrossbundleinfo-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| info | [PublishFormCrossBundleInfo](arkts-form-forminfo-publishformcrossbundleinfo-i-sys.md) | 是 | 跨应用加卡管控信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 跨应用加卡管控结果。 |
+
+**示例**
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+let publishFormCrossBundleControlCallback: formInfo.PublishFormCrossBundleControlCallback =
+  (info: formInfo.PublishFormCrossBundleInfo): boolean => {
+    console.info('publish form cross bundle info callback success.');
+    return true;
+  };
+```

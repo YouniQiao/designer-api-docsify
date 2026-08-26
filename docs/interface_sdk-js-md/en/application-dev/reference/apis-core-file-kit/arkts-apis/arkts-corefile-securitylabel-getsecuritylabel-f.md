@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityLabel } from 'kits/@kit.CoreFileKit';
+import securityLabel from '@kit.CoreFileKit';
 ```
 
 ## getSecurityLabel
@@ -20,28 +20,40 @@ Obtains the data security level of a file or directory. If no data security leve
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | File path. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return the data security level. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900001 |
-| 13900007 |
-| 13900015 |
-| 13900020 |
-| 13900025 |
-| 13900037 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900007 | Arg list too number |
+| 13900015 | File exists |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900037 | No data available |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + '/test.txt';
+securityLabel.getSecurityLabel(filePath).then((type: string) => {
+  console.info("getSecurityLabel successfully, Label: " + type);
+}).catch((err: BusinessError) => {
+  console.error("getSecurityLabel failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 
 ## getSecurityLabel
@@ -58,20 +70,34 @@ Obtains the data security level of a file or directory. If no data security leve
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | File path. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback after the data security level is obtained asynchronously. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900001 |
-| 13900007 |
-| 13900015 |
-| 13900020 |
-| 13900025 |
-| 13900037 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900007 | Arg list too number |
+| 13900015 | File exists |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900037 | No data available |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + '/test.txt';
+securityLabel.getSecurityLabel(filePath, (err: BusinessError, type: string) => {
+  if (err) {
+    console.error("getSecurityLabel failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("getSecurityLabel successfully, Label: " + type);
+  }
+});
+```

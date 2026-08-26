@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import curves from '@kit.ArkUI';
 ```
 
 ## trailOptimizedResponsiveSpringMotion
@@ -24,15 +24,15 @@ Creates a responsive spring animation curve. It is a special case of [springMoti
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| response | number | No |
-| dampingFraction | number | No |
-| overlapDuration | number | No |
-| trail | [TrailOptimization](arkts-arkui-curves-trailoptimization-i-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| response | number | No | See **response** in **springMotion**.Default value: **0.15**Unit: second Value range: (0, +∞)   **NOTE：**If this parameter is set to a value less than or equal to 0, the default value **0.15** is used. |
+| dampingFraction | number | No | See **dampingFraction** in **springMotion**.Default value: **0.86**Unit: second Value range: 0, +∞)   **NOTE：**A value less than 0 evaluates to the default value **0.86**. |
+| overlapDuration | number | No | See **overlapDuration** in **springMotion**.Default value: **0.25**Unit: second Value range: [0, +∞)   **NOTE：**A value less than 0 evaluates to the default value **0.25**. **ResponsiveSpringMotion** is a special case of **springMotion**, with the only difference in the default values. To apply custom settings for a spring animation, you are advised to use **springMotion**. When using **responsiveSpringMotion**, you are advised to retain the default settings.The duration of the responsive spring animation depends on the **responsiveSpringMotion** parameters and the previous velocity, rather than the duration parameter in [animation, animateTo, or pageTransition. In addition, the interpolation cannot be obtained using the **interpolate** function of the curve. |
+| trail | [TrailOptimization](arkts-arkui-curves-trailoptimization-i-sys.md) | No | Trail optimization configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |
+| Type | Description |
+| --- | --- |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | Curve. |

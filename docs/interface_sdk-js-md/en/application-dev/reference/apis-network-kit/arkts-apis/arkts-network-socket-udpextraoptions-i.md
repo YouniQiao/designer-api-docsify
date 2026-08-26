@@ -11,7 +11,7 @@ Defines other properties of the **UDPSocket** object. This object is inherited f
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## broadcast

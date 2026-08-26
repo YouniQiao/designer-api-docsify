@@ -9,7 +9,6 @@ ControlCenterQuery is used to check whether the camera controller is supported.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getSupportedEffectTypes
@@ -28,9 +27,19 @@ Obtains the effect types supported by the camera controller.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[ControlCenterEffectType](arkts-camera-camera-controlcentereffecttype-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[ControlCenterEffectType](arkts-camera-camera-controlcentereffecttype-e.md)&gt; | Array of effect types supported. |
+
+**Examples**
+
+```TypeScript
+function getSupportedEffectTypes(videoSession: camera.VideoSession): Array<camera.ControlCenterEffectType> {
+    let effectTypes: Array<camera.ControlCenterEffectType> = [];
+    effectTypes = videoSession.getSupportedEffectTypes();
+    return effectTypes;
+}
+```
 
 ## isControlCenterSupported
 
@@ -48,6 +57,15 @@ Checks whether the camera controller is supported.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result for the support of the camera controller. **true** if supported, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+function isControlCenterSupported(videoSession: camera.VideoSession): boolean {
+    let isSupported: boolean = videoSession.isControlCenterSupported();
+    return isSupported;
+}
+```

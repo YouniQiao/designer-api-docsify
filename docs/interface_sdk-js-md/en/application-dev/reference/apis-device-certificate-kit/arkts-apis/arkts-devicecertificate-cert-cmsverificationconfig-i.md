@@ -9,7 +9,6 @@ Represents CMS verification configuration.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## contentData
@@ -70,7 +69,8 @@ trustCerts: Array<X509Cert>
 
 Trusted certificates.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You need to configure the trust certificates of all signers.
 
 **Type:** Array&lt;X509Cert&gt;

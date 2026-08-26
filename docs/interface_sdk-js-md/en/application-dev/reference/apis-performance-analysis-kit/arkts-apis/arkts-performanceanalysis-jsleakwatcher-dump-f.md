@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## dump
@@ -20,12 +19,19 @@ Dumps the list of leaked objects and VM memory snapshot.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filePath | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filePath | string | Yes | Path for storing exported information files.    **Note：**: Since API version 24, only the latest snapshot information is retained within the process lifecycle. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Export result. The file name extension is **.jsleaklist** for the list of leaked objects and **.heapsnapshot** for the VM memory snapshot. |
+
+**Examples**
+
+```TypeScript
+let context = this.getUIContext().getHostContext();
+let files: Array<string> = jsLeakWatcher.dump(context?.filesDir);
+```

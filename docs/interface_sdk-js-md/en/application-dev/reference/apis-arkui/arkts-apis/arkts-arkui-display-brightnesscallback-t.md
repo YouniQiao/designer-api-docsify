@@ -12,7 +12,7 @@ Defines the callback function used to listen for screen brightness information.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data1 | T1 | Yes |
-| data2 | T2 | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data1 | T1 | Yes | Display ID. The value is of the number type. |
+| data2 | T2 | Yes | Brightness information. The value is of the [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) type. |

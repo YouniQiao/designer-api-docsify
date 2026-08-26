@@ -6,7 +6,8 @@ This module provides APIs for word selection extension, which can implement exte
 - **context**: You can use **context** to call  
 [startAbility](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md#startability) to start the target ability in the same app, or use **context** as an input parameter of [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) to create a word selection panel.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This module is supported only on PCs/2-in-1 devices. You can use
 > **canIUse('SystemCapability.SelectionInput.Selection')** to check whether the current device supports the
 > capability.
@@ -18,7 +19,7 @@ This module provides APIs for word selection extension, which can implement exte
 ## Modules to Import
 
 ```TypeScript
-import { SelectionExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import SelectionExtensionAbility from '@kit.BasicServicesKit';
 ```
 
 ## onConnect
@@ -37,15 +38,50 @@ Defines a callback triggered when the client connects to the **SelectionExtensio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want** object passed by the system when the **SelectionExtensionAbility** is connected. The object contains the description information such as the ability name and bundle name. It is used to obtain the ability connection configuration in the **onConnect** callback so that the corresponding initialization logic can be executed. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| rpc.RemoteObject |
+| Type | Description |
+| --- | --- |
+| rpc.RemoteObject | RemoteObject** communication stub object. You need to implement the remote message processing method (for example, **onRemoteMessageRequest**) of this object. The system passes this object to the client for IPC. |
+
+**Examples**
+
+```TypeScript
+import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
+import { rpc } from '@kit.IPCKit';
+import { Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG: string = '[SelectionExtensionAbility]';
+
+// Define the RPC stub class for IPC between the client and server.
+class StubTest extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(
+    code: number,
+    data: rpc.MessageSequence,
+    reply: rpc.MessageSequence,
+    options: rpc.MessageOption
+  ): boolean | Promise<boolean> {
+    return true;
+  }
+}
+
+class ServiceExtAbility extends SelectionExtensionAbility {
+  // Implement the onConnect lifecycle callback to return the RPC object when the client connects to the SelectionExtensionAbility.
+  onConnect(want: Want): rpc.RemoteObject {
+    hilog.info(0x0000, TAG, `onConnect, want: ${want.abilityName}`);
+    // Return the RPC stub object for establishing IPC between the client and server.
+    return new StubTest('test');
+  }
+}
+```
 
 ## onDisconnect
 
@@ -60,6 +96,22 @@ Defines a callback triggered when the client disconnects from the **SelectionExt
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.SelectionInput.Selection
+
+**Examples**
+
+```TypeScript
+import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG: string = '[SelectionExtensionAbility]';
+
+class ServiceExtAbility extends SelectionExtensionAbility {
+  // Implement the onDisconnect lifecycle callback to perform cleanup operations when the client disconnects from the SelectionExtensionAbility.
+  onDisconnect(): void {
+    hilog.info(0x0000, TAG, `onDisconnect`);
+  }
+}
+```
 
 ## context
 

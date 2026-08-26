@@ -9,7 +9,8 @@
 ## 导入模块
 
 ```TypeScript
-import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from 'kits/@kit.ArkUI';
+import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
+import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUIV2';
 ```
 
 ## addNode
@@ -30,15 +31,15 @@ addNode(nodeParam?: NodeParam): TreeController
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| nodeParam | [NodeParam](arkts-arkui-arkui-advanced-treeview-nodeparam-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| nodeParam | [NodeParam](arkts-arkui-arkui-advanced-treeview-nodeparam-i.md) | 否 | 节点信息，用于指定新增节点的属性。如果不传该参数，在当前选中的节点下添加一个标题为“新建文件夹”节点。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TreeController](arkts-arkui-arkui-advanced-treeview-treecontroller-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TreeController](arkts-arkui-arkui-advanced-treeview-treecontroller-c.md) | 返回树视图组件的控制器实例，支持链式调用。 |
 
 ## buildDone
 
@@ -90,11 +91,11 @@ refreshNode(parentId: number, parentSubTitle: ResourceStr, currentSubtitle: Reso
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| parentId | number | 是 |
-| parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 |
-| currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| parentId | number | 是 | 父节点Id。取值范围：大于等于-1。根节点id值为-1。若设置数值小于-1，做不生效处理。 |
+| parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 父节点副标题。设置后将更新父节点的副标题显示内容。 |
+| currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 当前节点副标题。设置后将更新当前节点的副标题显示内容。 |
 
 ## removeNode
 

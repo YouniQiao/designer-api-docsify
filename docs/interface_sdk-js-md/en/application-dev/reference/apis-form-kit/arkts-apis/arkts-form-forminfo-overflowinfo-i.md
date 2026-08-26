@@ -9,7 +9,7 @@ Provides OverflowInfo about funInteraction or sceneAnimation form
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from 'kits/@kit.FormKit';
+import formInfo from '@kit.FormKit';
 ```
 
 ## area

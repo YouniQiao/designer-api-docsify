@@ -4,14 +4,14 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PageNodeInfo](arkts-ability-pagenodeinfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [PageNodeInfo](arkts-ability-pagenodeinfo-i.md) | PageNodeInfo defines the page node information used for auto-fill. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PageNodeInfo](arkts-ability-pagenodeinfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [PageNodeInfo](arkts-ability-pagenodeinfo-i-sys.md) | PageNodeInfo defines the page node information used for auto-fill. |
 <!--DelEnd-->

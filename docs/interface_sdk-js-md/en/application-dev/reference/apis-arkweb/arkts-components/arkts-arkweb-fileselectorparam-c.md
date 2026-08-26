@@ -9,6 +9,9 @@ FileSelectorParam is a file selector parameter class in the ArkWeb component, us
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -39,9 +42,9 @@ Obtains the file type information. Corresponds to `types` in the HTML [option](.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)&gt;&gt; | File type information, which is a two-dimensional array structure containing detailed information about multiple groups of optional file types. Corresponds to the types attribute of the HTML option. |
 
 ## getAcceptType
 
@@ -59,9 +62,9 @@ Obtains the file filtering type.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Array of file filter types, containing type information used to limit the selectable file range in the file selector. The elements are extensions (such as '.png'), corresponding to the HTML accept attribute. |
 
 ## getDefaultPath
 
@@ -77,9 +80,9 @@ Obtains the default path of the file selector, which corresponds to **startIn** 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Default starting path. |
 
 ## getDescriptions
 
@@ -95,9 +98,9 @@ Obtains the optional description of each group of allowed file types. Correspond
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Array of description strings for file types, containing optional description text for each group of file types. |
 
 ## getMimeTypes
 
@@ -113,9 +116,9 @@ Obtains the MIME type of a file.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Value of the accept attribute of the HTML input element, containing the MIME types and file extensions allowed for selection. |
 
 ## getMode
 
@@ -133,9 +136,9 @@ Obtains the mode of the file selector.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [FileSelectorMode](arkts-arkweb-fileselectormode-e.md) |
+| Type | Description |
+| --- | --- |
+| [FileSelectorMode](arkts-arkweb-fileselectormode-e.md) | Mode of the file selector. |
 
 ## getSuggestedName
 
@@ -151,9 +154,9 @@ Obtains the suggested file name. Corresponds to `suggestedName` in the HTML [opt
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String that suggests the default file name for the file selector. |
 
 ## getTitle
 
@@ -171,9 +174,9 @@ Obtains the title of this file selector.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Title string of the file selector, which indicates the title text displayed on the UI for the current file selector. |
 
 ## isAcceptAllOptionExcluded
 
@@ -189,9 +192,9 @@ Obtains whether the file selector excludes the option (*\/*), that is, all files
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether to exclude the "All file types" option. |
 
 ## isCapture
 
@@ -209,6 +212,6 @@ Checks whether multimedia capabilities are invoked.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether to invoke multimedia capabilities. |

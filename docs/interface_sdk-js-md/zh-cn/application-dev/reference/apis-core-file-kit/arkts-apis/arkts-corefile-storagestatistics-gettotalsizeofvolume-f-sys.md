@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
+import storageStatistics from '@kit.CoreFileKit';
 ```
 
 ## getTotalSizeOfVolume
@@ -24,21 +24,46 @@ function getTotalSizeOfVolume(volumeUuid: string, callback: AsyncCallback<number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| volumeUuid | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| volumeUuid | string | 是 | 卷设备uuid。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 获取指定卷设备总空间之后的回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 13600001 |
-| 13600008 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| 13600001 | IPC error. |
+| 13600008 | No such object. |
+| 13900042 | Unknown error. |
+
+**示例**
+
+```TypeScript
+import { volumeManager } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
+  if (volumes == null || volumes.length <= 0) {
+    console.error("volumes is null or length is invalid");
+    return;
+  }
+  let uuid: string = volumes[0].uuid;
+  storageStatistics.getTotalSizeOfVolume(uuid, (error: BusinessError, number: number) => {
+    if (error) {
+      console.error(`getTotalSizeOfVolume failed with err, code is: ${error.code}, message is: ${error.message}`);
+    } else {
+      // do something
+      console.info("getTotalSizeOfVolume successfully:" + number);
+    }
+  });
+}).catch((err: BusinessError) => {
+  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```
 
 
 ## getTotalSizeOfVolume
@@ -59,23 +84,45 @@ function getTotalSizeOfVolume(volumeUuid: string): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| volumeUuid | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| volumeUuid | string | 是 | 卷设备uuid。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回指定卷的可用空间大小（单位为Byte）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 13600001 |
-| 13600008 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| 13600001 | IPC error. |
+| 13600008 | No such object. |
+| 13900042 | Unknown error. |
+
+**示例**
+
+```TypeScript
+import { volumeManager } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
+  if (volumes == null || volumes.length <= 0) {
+    console.error("volumes is null or length is invalid");
+    return;
+  }
+  let uuid: string = volumes[0].uuid;
+  storageStatistics.getTotalSizeOfVolume(uuid).then((number: number) => {
+    console.info("getTotalSizeOfVolume successfully:" + number);
+  }).catch((err: BusinessError) => {
+    console.error(`getTotalSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```

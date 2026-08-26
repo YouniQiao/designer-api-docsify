@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总
@@ -19,20 +18,20 @@ import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md) |
-| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md) |
-| [list](arkts-performanceanalysis-loglibrary-list-f-sys.md) |
-| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md) |
-| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md) |
-| [remove](arkts-performanceanalysis-loglibrary-remove-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md) | 拷贝指定日志类型的指定文件到目标应用目录下。使用Promise回调。 |
+| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md) | 拷贝指定日志类型的指定文件到目标应用目录下。使用callback回调。 |
+| [list](arkts-performanceanalysis-loglibrary-list-f-sys.md) | 以同步方法查询指定类型的日志文件列表，接收string类型的对象作为参数，返回指定类型日志的文件列表信息。 |
+| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md) | 移动指定日志类型的指定文件到目标应用目录下。使用Promise回调。 |
+| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md) | 移动指定日志类型的指定文件到目标应用目录下。使用callback回调。 |
+| [remove](arkts-performanceanalysis-loglibrary-remove-f-sys.md) | 以同步方法删除指定日志类型的指定文件。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 |
-| --- |
-| [LogEntry](arkts-performanceanalysis-loglibrary-logentry-i-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [LogEntry](arkts-performanceanalysis-loglibrary-logentry-i-sys.md) | 日志文件对象接口。 |
 <!--DelEnd-->

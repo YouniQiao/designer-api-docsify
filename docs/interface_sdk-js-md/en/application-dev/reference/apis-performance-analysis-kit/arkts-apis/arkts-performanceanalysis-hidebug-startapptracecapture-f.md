@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## startAppTraceCapture
@@ -21,23 +20,45 @@ Starts automatic trace collection in a specified scope. This API is a supplement
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tags | number[] | Yes |
-| flag | [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | Yes |
-| limitSize | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tags | number[] | Yes | Scope for trace collection. For details, see [tags](arkts-performanceanalysis-hidebug-tags-n.md). |
+| flag | [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | Yes | For details, see [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md). |
+| limitSize | number | Yes | Limit on the trace file size, in bytes. The maximum size of a single file is 500 MB. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Trace file path. (The API returns the actual physical path. If the path needs to be accessed in the application, convert the path by referring to Mappings Between Application Sandbox Paths and Physical Paths.) |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [11400102](../errorcode-hiviewdfx-hidebug-trace.md#11400102-repeated-trace-capture) |
-| [11400103](../errorcode-hiviewdfx-hidebug-trace.md#11400103-permission-verification-failed) |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid argument, Possible causes: 1.The limit parameter is too small 2.The parameter is not within the enumeration type 3.The parameter type error or parameter order error |
+| [11400102](../errorcode-hiviewdfx-hidebug-trace.md#11400102-repeated-trace-capture) | Capture trace already enabled. |
+| [11400103](../errorcode-hiviewdfx-hidebug-trace.md#11400103-permission-verification-failed) | No write permission on the file. |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Abnormal trace status. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tags: number[] = [hidebug.tags.ABILITY_MANAGER, hidebug.tags.ARKUI];
+let flag: hidebug.TraceFlag = hidebug.TraceFlag.MAIN_THREAD;
+let limitSize: number = 1024 * 1024;
+
+try {
+  let fileName: string = hidebug.startAppTraceCapture(tags, flag, limitSize);
+  console.info(`fileName = ${fileName}`);
+  // code block
+  // ...
+  // code block
+  hidebug.stopAppTraceCapture();
+} catch (error) {
+  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
+}
+```

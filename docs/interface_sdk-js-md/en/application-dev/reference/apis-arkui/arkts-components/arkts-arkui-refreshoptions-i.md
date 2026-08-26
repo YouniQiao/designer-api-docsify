@@ -2,20 +2,23 @@
 
 Defines the options of the **Refresh** component.
 
-> **Supplementary Notes**&gt;
+> **Supplementary Notes**
+> 
 > - If neither **builder** nor **refreshingContent** is set, the pull-down displacement effect is implemented by
 > adjusting the translate attribute of the child component.
 > During the pull-down process, the
 > onAreaChange event of the child
 > component is not triggered, and any changes made to the
 > translate attribute of the child component do not take
-> effect.&gt;
+> effect.
+> 
 > - When **builder** or **refreshingContent** is set, the pull-down displacement effect is implemented by adjusting
 > the position of the child component relative to the **Refresh** component. During the pull-down process, the
 > onAreaChange event of the child
 > component can be triggered. However, if the position attribute is set for the child
 > component, the position of the child component relative to the **Refresh** component is fixed, preventing the child
-> component from moving down with the pull gesture.&gt;
+> component from moving down with the pull gesture.
+> 
 > - If the width and height of a custom component set by **builder** are not specified, its dimensions will adapt to
 > the child components. If the width is specified but the height is not, the height of the component is automatically
 > adjusted according to the pull-down distance. If a custom component set by **refreshingContent** does not have a

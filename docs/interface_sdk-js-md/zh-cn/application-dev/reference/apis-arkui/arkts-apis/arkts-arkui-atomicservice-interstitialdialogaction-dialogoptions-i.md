@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { InterstitialDialogAction, IconStyle, TitlePosition, BottomOffset } from 'kits/@kit.ArkUI';
+import { InterstitialDialogAction, IconStyle, TitlePosition, BottomOffset } from '@kit.ArkUI';
 ```
 
 ## backgroundImage

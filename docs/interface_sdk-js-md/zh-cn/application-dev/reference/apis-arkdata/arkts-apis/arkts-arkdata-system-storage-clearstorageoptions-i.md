@@ -45,10 +45,10 @@ fail?: (data: string, code: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | string | 是 |
-| code | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | string | 是 |  |
+| code | number | 是 |  |
 
 ## success
 

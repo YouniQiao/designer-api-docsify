@@ -22,11 +22,11 @@ Sets buffer data
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| size | [GLsizeiptr](arkts-arkgraphics2d-glsizeiptr-t.md) | Yes |
-| usage | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
+| size | [GLsizeiptr](arkts-arkgraphics2d-glsizeiptr-t.md) | Yes | Buffer size |
+| usage | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer usage |
 
 ## bufferData
 
@@ -44,11 +44,11 @@ Sets buffer data from BufferSource
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| data | BufferSource \| null | Yes |
-| usage | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
+| data | BufferSource \| null | Yes | Buffer data |
+| usage | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer usage |
 
 ## bufferSubData
 
@@ -66,11 +66,11 @@ Sets buffer sub data
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes |
-| data | BufferSource | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
+| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| data | BufferSource | Yes | Data to set |
 
 ## compressedTexImage2D
 
@@ -96,15 +96,15 @@ Compressed texture image 2D
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| data | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| data | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Compressed image data |
 
 ## compressedTexSubImage2D
 
@@ -131,16 +131,16 @@ Compressed texture sub image 2D
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| data | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
+| data | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Compressed image data |
 
 ## readPixels
 
@@ -166,15 +166,15 @@ Reads pixels from the framebuffer
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Pixel buffer |
 
 ## texImage2D
 
@@ -202,17 +202,17 @@ Sets texture image 2D from pixels
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| internalformat | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Pixel data |
 
 ## texImage2D
 
@@ -237,14 +237,14 @@ Sets texture image 2D from TexImageSource
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| internalformat | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| source | [TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| source | [TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
 
 ## texSubImage2D
 
@@ -272,17 +272,17 @@ Sets texture sub image 2D from pixels
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Pixel data |
 
 ## texSubImage2D
 
@@ -308,15 +308,15 @@ Sets texture sub image 2D from TexImageSource
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| source | [TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| source | [TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
 
 ## uniform1fv
 
@@ -334,10 +334,10 @@ Sets uniform1fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
 
 ## uniform1iv
 
@@ -355,10 +355,10 @@ Sets uniform1iv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
 
 ## uniform2fv
 
@@ -376,10 +376,10 @@ Sets uniform2fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
 
 ## uniform2iv
 
@@ -397,10 +397,10 @@ Sets uniform2iv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
 
 ## uniform3fv
 
@@ -418,10 +418,10 @@ Sets uniform3fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
 
 ## uniform3iv
 
@@ -439,10 +439,10 @@ Sets uniform3iv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
 
 ## uniform4fv
 
@@ -460,10 +460,10 @@ Sets uniform4fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
 
 ## uniform4iv
 
@@ -481,10 +481,10 @@ Sets uniform4iv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
 
 ## uniformMatrix2fv
 
@@ -502,11 +502,11 @@ Sets uniformMatrix2fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
-| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to transpose |
+| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Matrix value |
 
 ## uniformMatrix3fv
 
@@ -524,11 +524,11 @@ Sets uniformMatrix3fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
-| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to transpose |
+| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Matrix value |
 
 ## uniformMatrix4fv
 
@@ -546,8 +546,8 @@ Sets uniformMatrix4fv value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
-| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
-| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to transpose |
+| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Matrix value |

@@ -31,9 +31,9 @@ Sets the radius of the rounded corner. The value must be greater than or equal t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array & lt;any & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array & lt;any & gt; | Yes | Radius of the rounded corner. You can set separate radii for the four rounded corners.Default value: **0**Default unit: vp Invalid values **undefined** and **null** are treated as **[[0, 0], [0, 0], [0, 0], [0, 0]]**.<br>**Since:** 20 |
 
 ## radiusHeight
 
@@ -53,9 +53,9 @@ Sets the height of the rounded corner. The width and height are the same when on
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the rounded corner. The value must be greater than or equal to 0.Default value: **0**Default unit: vp The **undefined** value is invalid and treated as the default value.<br>**Since:** 20 |
 
 ## radiusWidth
 
@@ -75,6 +75,6 @@ Sets the width of the rounded corner. The width and height are the same when onl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the rounded corner. The value must be greater than or equal to 0.Default value: **0**Default unit: vp The **undefined** value is invalid and treated as the default value.<br>**Since:** 20 |

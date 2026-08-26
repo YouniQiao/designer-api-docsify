@@ -9,8 +9,7 @@ UiTest框架在API9中，Component类代表了UI界面上的一个控件，提�
 ## 导入模块
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## clearText
@@ -29,16 +28,29 @@ clearText(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.text('hello world'));
+  await text.clearText();
+}
+```
 
 ## click
 
@@ -56,16 +68,43 @@ click(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, ON, Component } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 查找Button类型的控件。
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  // 点击该控件。
+  await button.click();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.click();
+}
+```
 
 ## doubleClick
 
@@ -83,16 +122,40 @@ doubleClick(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  await button.doubleClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.doubleClick();
+}
+```
 
 ## dragTo
 
@@ -110,23 +173,41 @@ dragTo(target: Component): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| target | [Component](arkts-test-uitest-component-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| target | [Component](arkts-test-uitest-component-c.md) | 是 | 目标控件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 查找Button类型的目标控件。
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  // 查找text为'hello world'的控件作为拖拽目标。
+  let text: Component = await driver.findComponent(ON.text('hello world'));
+  // 将Button控件拖拽至text控件处。
+  await button.dragTo(text);
+}
+```
 
 ## getBounds
 
@@ -144,16 +225,43 @@ getBounds(): Promise<Rect>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Rect](arkts-test-uitest-rect-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Rect](arkts-test-uitest-rect-i.md)&gt; | Promise对象，返回控件对象的边框信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  let rect = await button.getBounds();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 查找当前活跃窗口。
+  let window: UiWindow = await driver.findWindow({ active: true });
+  // 获取窗口的边框信息。
+  let rect = await window.getBounds();
+}
+```
 
 ## getBoundsCenter
 
@@ -171,16 +279,29 @@ getBoundsCenter(): Promise<Point>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise对象，返回控件对象所占区域的中心点信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  let point = await button.getBoundsCenter();
+}
+```
 
 ## getDescription
 
@@ -198,16 +319,29 @@ getDescription(): Promise<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回控件的描述信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  let description = await button.getDescription();
+}
+```
 
 ## getDisplayId
 
@@ -225,16 +359,40 @@ getDisplayId(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回控件所属的屏幕ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('TextInput'));
+  let displayId = await button.getDisplayId();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiWindow, Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let id = await window.getDisplayId();
+}
+```
 
 ## getHint
 
@@ -252,16 +410,29 @@ getHint(): Promise<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回控件的提示文本。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('TextInput'));
+  let hints = await button.getHint();
+}
+```
 
 ## getId
 
@@ -279,16 +450,29 @@ getId(): Promise<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回控件的id值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  let id = await button.getId();
+}
+```
 
 ## getOriginalText
 
@@ -306,16 +490,29 @@ getOriginalText(): Promise<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回控件的文本信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  let text = await button.getOriginalText();
+}
+```
 
 ## getText
 
@@ -325,7 +522,8 @@ getText(): Promise<string>
 
 获取控件对象的文本信息。使用Promise异步回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 如果控件的无障碍属性
 > accessibilityLevel
 > 设置为'no'或'no-hide-descendants'，无法使用本接口获取控件的文本信息，可以使用[Component.getOriginalText()](#getoriginaltext)
@@ -339,16 +537,40 @@ getText(): Promise<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回控件的文本信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  let text = await button.getText();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  let text = await button.getText();
+}
+```
 
 ## getType
 
@@ -366,16 +588,40 @@ getType(): Promise<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回控件的类型。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  let type = await button.getType();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  let type = await button.getType();
+}
+```
 
 ## inputText
 
@@ -393,23 +639,50 @@ inputText(text: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 查找text为'hello world'的控件。
+  let text: Component = await driver.findComponent(ON.text('hello world'));
+  // 清空原有文本并输入'123'。
+  await text.inputText('123');
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let text: UiComponent = await driver.findComponent(BY.text('hello world'));
+  await text.inputText('123');
+}
+```
 
 ## inputText
 
@@ -427,25 +700,38 @@ inputText(text: string, mode: InputTextMode): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | 是 | 输入文本的方式，取值请参考[InputTextMode](arkts-test-uitest-inputtextmode-i.md)。   **说明：** InputTextMode.addition取值为true时，在控件已有文本末尾后追加指定文本。取值为false时，指定文本将覆盖控件已有文本。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited device capabilities. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function mode_demo() {
+  let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.text('hello world'));
+  await text.inputText('123', { paste: true, addition: false });
+}
+```
 
 ## isCheckable
 
@@ -463,16 +749,33 @@ isCheckable(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回控件对象能否可被勾选属性。true：可被勾选。false：不可被勾选。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let checkBox: Component = await driver.findComponent(ON.type('Checkbox'));
+  if (await checkBox.isCheckable()) {
+    console.info('This checkBox is checkable');
+  } else {
+    console.info('This checkBox is not checkable');
+  }
+}
+```
 
 ## isChecked
 
@@ -490,16 +793,33 @@ isChecked(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回控件对象被勾选状态。true：被勾选。false：未被勾选。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let checkBox: Component = await driver.findComponent(ON.type('Checkbox'));
+  if (await checkBox.isChecked()) {
+    console.info('This checkBox is checked');
+  } else {
+    console.info('This checkBox is not checked');
+  }
+}
+```
 
 ## isClickable
 
@@ -517,16 +837,48 @@ isClickable(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回控件对象是否可点击。true：可点击。false：不可点击。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  if (await button.isClickable()) {
+    console.info('This button can be clicked');
+  } else {
+    console.info('This button cannot be clicked');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  if (await button.isClickable()) {
+    console.info('This button can be Clicked');
+  } else {
+    console.info('This button cannot be Clicked');
+  }
+}
+```
 
 ## isEnabled
 
@@ -544,16 +896,48 @@ isEnabled(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回控件使能状态。true：使能。false：未使能。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  if (await button.isEnabled()) {
+    console.info('This button can be operated');
+  } else {
+    console.info('This button cannot be operated');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  if (await button.isEnabled()) {
+    console.info('This button can be operated');
+  } else {
+    console.info('This button cannot be operated');
+  }
+}
+```
 
 ## isFocused
 
@@ -571,16 +955,59 @@ isFocused(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回控件对象获焦状态。true：获焦。false：未获焦。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  if (await button.isFocused()) {
+    console.info('This button is focused');
+  } else {
+    console.info('This button is not focused');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let focused = await window.isFocused();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  if (await button.isFocused()) {
+    console.info('This button is focused');
+  } else {
+    console.info('This button is not focused');
+  }
+}
+```
 
 ## isLongClickable
 
@@ -598,16 +1025,33 @@ isLongClickable(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回控件对象是否可点击。true：可点击。false：不可点击。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  if (await button.isLongClickable()) {
+    console.info('This button supports long click');
+  } else {
+    console.info('This button can not support long click');
+  }
+}
+```
 
 ## isScrollable
 
@@ -625,16 +1069,48 @@ isScrollable(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回控件对象是否可滑动。true：可滑动。false：不可滑动。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let scrollBar: Component = await driver.findComponent(ON.scrollable(true));
+  if (await scrollBar.isScrollable()) {
+    console.info('This scrollBar can be operated');
+  } else {
+    console.info('This scrollBar cannot be operated');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let scrollBar: UiComponent = await driver.findComponent(BY.scrollable(true));
+  if (await scrollBar.isScrollable()) {
+    console.info('This scrollBar can be operated');
+  } else {
+    console.info('This scrollBar cannot be operated');
+  }
+}
+```
 
 ## isSelected
 
@@ -652,16 +1128,48 @@ isSelected(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回控件对象被选中状态。true：被选中。false：未被选中。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  if (await button.isSelected()) {
+    console.info('This button is selected');
+  } else {
+    console.info('This button is not selected');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  if (await button.isSelected()) {
+    console.info('This button is selected');
+  } else {
+    console.info('This button is not selected');
+  }
+}
+```
 
 ## longClick
 
@@ -679,16 +1187,40 @@ longClick(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  await button.longClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.longClick();
+}
+```
 
 ## pinchIn
 
@@ -706,23 +1238,36 @@ pinchIn(scale: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scale | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scale | number | 是 | 指定缩小的比例。取值范围为0~1。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let image: Component = await driver.findComponent(ON.type('Image'));
+  await image.pinchIn(0.5);
+}
+```
 
 ## pinchOut
 
@@ -740,23 +1285,36 @@ pinchOut(scale: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scale | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scale | number | 是 | 指定放大的比例。取值范围大于1。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let image: Component = await driver.findComponent(ON.type('Image'));
+  await image.pinchOut(1.5);
+}
+```
 
 ## scrollSearch
 
@@ -774,23 +1332,39 @@ scrollSearch(on: On): Promise<Component>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; | Promise对象，返回目标控件对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 获取可滑动的Scroll控件。
+  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
+  // 在Scroll控件上滑动查找text为'next page'的控件。
+  let button = await scrollBar.scrollSearch(ON.text('next page'));
+}
+```
 
 ## scrollSearch
 
@@ -808,25 +1382,38 @@ scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 |
-| vertical | boolean | 否 |
-| offset | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
+| vertical | boolean | 否 | 默认为true，表示查找方向是纵向。false表示查找方向为横向。 |
+| offset | number | 否 | 滑动起点/终点到组件边框的偏移，默认80，单位：px，取值范围：大于等于0的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; | Promise对象，返回目标控件对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
+  let button = await scrollBar.scrollSearch(ON.text('next page'));
+}
+```
 
 ## scrollToBottom
 
@@ -844,23 +1431,36 @@ scrollToBottom(speed?: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
+  await scrollBar.scrollToBottom();
+}
+```
 
 ## scrollToTop
 
@@ -878,20 +1478,33 @@ scrollToTop(speed?: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| speed | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
+  await scrollBar.scrollToTop();
+}
+```

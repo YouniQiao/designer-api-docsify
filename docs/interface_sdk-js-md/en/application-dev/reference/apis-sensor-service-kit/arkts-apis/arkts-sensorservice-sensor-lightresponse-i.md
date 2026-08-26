@@ -11,7 +11,6 @@ Describes the ambient light sensor data. It extends from [Response](arkts-sensor
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## colorTemperature

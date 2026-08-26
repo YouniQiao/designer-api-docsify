@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## createAudioRecorder
@@ -24,6 +24,12 @@ Creates an AudioRecorder instance to control audio recording. Only one AudioReco
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AudioRecorder](arkts-media-media-audiorecorder-i.md) |
+| Type | Description |
+| --- | --- |
+| [AudioRecorder](arkts-media-media-audiorecorder-i.md) | If the operation is successful, an AudioRecorder instance is returned; otherwise, **null** is returned. The instance can be used to record audio. |
+
+**Examples**
+
+```TypeScript
+let audioRecorder: media.AudioRecorder = media.createAudioRecorder();
+```

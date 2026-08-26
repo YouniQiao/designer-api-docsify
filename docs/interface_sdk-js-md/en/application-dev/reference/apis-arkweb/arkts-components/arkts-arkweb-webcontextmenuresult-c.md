@@ -9,6 +9,9 @@ WebContextMenuResult is a class in the ArkWeb component used to handle context m
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## closeContextMenu
@@ -47,7 +50,8 @@ copy(): void
 
 Performs the copy text operation.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
 > to close the menu. Failure to do so may result in menu resources not being properly released.
 
@@ -65,7 +69,8 @@ copyImage(): void
 
 When **WebContextMenuParam** contains image content, this method is used to copy the image to the clipboard. Starting from API version 24, copying canvas images is supported. If you need to save the image to a local file, use the saveImage() method.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
 > to close the menu. Failure to do so may result in menu resources not being properly released.
 
@@ -83,7 +88,8 @@ cut(): void
 
 Performs the cut operation.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
 > to close the menu. Failure to do so may result in menu resources not being properly released.
 
@@ -101,9 +107,11 @@ paste(): void
 
 Performs the paste operation, preserving the original format. If you need to paste plain text and match the target format, use the pasteAndMatchStyle() method.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
-> to close the menu. Failure to do so may result in menu resources not being properly released.&gt;
+> to close the menu. Failure to do so may result in menu resources not being properly released.
+> 
 > The permission
 > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)
 > must be declared.
@@ -122,9 +130,11 @@ pasteAndMatchStyle(): void
 
 Performs the paste operation related to this context menu. The pasted content matches the target format and is presented as plain text.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
-> to close the menu. Failure to do so may result in menu resources not being properly released.&gt;
+> to close the menu. Failure to do so may result in menu resources not being properly released.
+> 
 > The permission
 > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)
 > must be declared.
@@ -141,7 +151,8 @@ redo(): void
 
 Performs the redo operation, which re-executes the revoked operation.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
 > to close the menu. Failure to do so may result in menu resources not being properly released.
 
@@ -157,7 +168,8 @@ requestPasswordAutoFill(): void
 
 Requests the username or password data in the password vault to be automatically filled in the current focused text box.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
 > to close the menu. Failure to do so may result in menu resources not being properly released.
 
@@ -173,7 +185,8 @@ saveImage(): void
 
 Saves the image related to this context menu. Calling this method triggers the download process.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
 > to close the menu. Failure to do so may result in menu resources not being properly released.
 
@@ -191,7 +204,8 @@ selectAll(): void
 
 Performs the select all operation.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
 > to close the menu. Failure to do so may result in menu resources not being properly released.
 
@@ -209,7 +223,8 @@ undo(): void
 
 Performs the undo operation, which undoes the last editing operation.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called
 > to close the menu. Failure to do so may result in menu resources not being properly released.
 

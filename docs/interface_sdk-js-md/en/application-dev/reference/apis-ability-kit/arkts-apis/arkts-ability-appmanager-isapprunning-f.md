@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
+import appManager from '@kit.AbilityKit';
 ```
 
 ## isAppRunning
@@ -14,7 +14,8 @@ function isAppRunning(bundleName: string, appCloneIndex?: number): Promise<boole
 
 Checks whether the application with the specified bundle name and application clone index is running across all users. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If the application is not installed for the current user, error code 16000073 is returned. If the application is
 > installed for the current user, the system checks whether the application is running across all users.
 
@@ -26,22 +27,41 @@ Checks whether the application with the specified bundle name and application cl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| appCloneIndex | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
+| appCloneIndex | number | No | Index of an application clone. The value ranges from 0 to 1000. The value **0** means the main application, and a value greater than 0 means a specific application clone. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. **true** is returned if at least one user is running the specified application. **false** is returned if none of the users are running the application. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
+
+**Examples**
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName = "ohos.samples.etsclock";
+  appManager.isAppRunning(bundleName).then((data: boolean) => {
+      hilog.info(0x0000, 'testTag', `data: ${JSON.stringify(data)}`);
+    }).catch((err: BusinessError) => {
+      hilog.error(0x0000, 'testTag', `isAppRunning error, code: ${err.code}, msg:${err.message}`);
+    })
+} catch (err) {
+  hilog.error(0x0000, 'testTag', `isAppRunning error, code: ${err.code}, msg:${err.message}`);
+}
+```

@@ -9,29 +9,28 @@
 ## 导入模块
 
 ```TypeScript
-import { networkSecurity } from 'kits/@kit.NetworkKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [certVerification(网络安全校验)](arkts-network-networksecurity-certverification-f.md) |
-| [certVerificationSync(网络安全校验)](arkts-network-networksecurity-certverificationsync-f.md) |
-| [isCleartextPermitted(网络安全校验)](arkts-network-networksecurity-iscleartextpermitted-f.md) |
-| [isCleartextPermittedByHostName(网络安全校验)](arkts-network-networksecurity-iscleartextpermittedbyhostname-f.md) |
-| [verifyCertChain(网络安全校验)](arkts-network-networksecurity-verifycertchain-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [certVerification(网络安全校验)](arkts-network-networksecurity-certverification-f.md) | 系统将使用证书管理中的预置CA证书和用户安装的CA证书来校验应用传入的证书。使用Promise异步回调。 |
+| [certVerificationSync(网络安全校验)](arkts-network-networksecurity-certverificationsync-f.md) | 系统将使用证书管理中的预置CA证书和用户安装的CA证书来校验应用传入的证书，使用同步方式返回。 |
+| [isCleartextPermitted(网络安全校验)](arkts-network-networksecurity-iscleartextpermitted-f.md) | 从应用预置network_config.json文件中获取整体明文HTTP是否允许信息，默认允许明文HTTP访问。 |
+| [isCleartextPermittedByHostName(网络安全校验)](arkts-network-networksecurity-iscleartextpermittedbyhostname-f.md) | 从应用预置network_config.json文件中获取按域名明文HTTP是否允许信息，默认允许明文HTTP访问。 |
+| [verifyCertChain(网络安全校验)](arkts-network-networksecurity-verifycertchain-f.md) | 验证服务器证书链并返回排序后的证书链。 |
 
 ### 接口
 
-| 名称 |
-| --- |
-| [CertBlob(网络安全校验)](arkts-network-networksecurity-certblob-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [CertBlob(网络安全校验)](arkts-network-networksecurity-certblob-i.md) | 证书数据。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [CertType(网络安全校验)](arkts-network-networksecurity-certtype-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [CertType(网络安全校验)](arkts-network-networksecurity-certtype-e.md) | 证书编码类型。 |

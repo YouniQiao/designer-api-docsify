@@ -11,7 +11,6 @@ ColorManagement继承自[ColorManagementQuery](arkts-camera-camera-colormanageme
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getActiveColorSpace
@@ -30,15 +29,33 @@ getActiveColorSpace(): colorSpaceManager.ColorSpace
 
 **返回值：**
 
-| 类型 |
-| --- |
-| colorSpaceManager.ColorSpace |
+| 类型 | 说明 |
+| --- | --- |
+| colorSpaceManager.ColorSpace | 当前设置的色彩空间。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+
+function getActiveColorSpace(session: camera.PhotoSession): colorSpaceManager.ColorSpace | undefined {
+  let colorSpace: colorSpaceManager.ColorSpace | undefined = undefined;
+  try {
+    colorSpace = session.getActiveColorSpace();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getActiveColorSpace call failed. error code: ${err.code}`);
+  }
+  return colorSpace;
+}
+```
 
 ## setColorSpace
 
@@ -52,7 +69,7 @@ CAMERA_FORMAT_YCBCR_P010时，色彩空间默认为BT2020_HLG。
 - 若应用主动设置色彩空间，在拍照模式下，预览输出格式与色彩空间必须按照下列表格中的对应关系配置，若不满足则会在  
 [setColorSpace](#setcolorspace)或[commitConfig](arkts-camera-camera-session-i.md#commitconfig)时返 回错误码。拍照模式：  
 | SDR/HDR拍摄 | 预览输出格式 | 色彩空间 | |--------------------|------------| ------------| | SDR(Default) | CAMERA_FORMAT_YUV_420_SP | SRGB | | HDR P3 | CAMERA_FORMAT_YUV_420_SP | DISPLAY_P3 | | HDR BT.2020 | CAMERA_FORMAT_YCRCB_P010,CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG |在录像模式下，使能SDR或HDR_VIVID拍摄效果时，CameraFormat与ColorSpace必须按照下列表格中的对应关系配置，若不满足表格中CameraFormat与ColorSpace配置，会导致预览异常等问题。录像模式：  
-| SDR/HDR拍摄 | [CameraFormat](arkts-camera-camera-cameraformat-e.md) | [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) | |--------------------|--------------------------|------------------| | SDR(Default) | [CAMERA_FORMAT_YUV_420_SP](arkts-camera-camera-cameraformat-e.md) | [BT709_LIMIT](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | | HDR_VIVID | [CAMERA_FORMAT_YCRCB_P010](arkts-camera-camera-cameraformat-e.md) |
+| SDR/HDR拍摄 | CameraFormat | ColorSpace | |--------------------|--------------------------|------------------| | SDR(Default) | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT | | HDR_VIVID | CAMERA_FORMAT_YCRCB_P010 | BT2020_HLG_LIMIT,BT2020_HLG |
 
 **起始版本：** 12
 
@@ -62,15 +79,34 @@ CAMERA_FORMAT_YCBCR_P010时，色彩空间默认为BT2020_HLG。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| colorSpace | colorSpaceManager.ColorSpace | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| colorSpace | colorSpaceManager.ColorSpace | 是 | The type of color space. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | The colorSpace does not match the format. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+
+function setColorSpace(session: camera.PhotoSession, colorSpaces: Array<colorSpaceManager.ColorSpace>): void {
+  if (colorSpaces === undefined || colorSpaces.length <= 0) {
+    return;
+  }
+  try {
+    session.setColorSpace(colorSpaces[0]);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setColorSpace call failed, error code: ${err.code}`);
+  }
+}
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getTimeZone
@@ -22,12 +22,20 @@ Obtains the **TimeZone** object corresponding to the specified time zone ID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| zoneID | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| zoneID | string | No | Time zone ID. The default value is the system time zone. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) |
+| Type | Description |
+| --- | --- |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | TimeZone** object corresponding to the time zone ID. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
+```

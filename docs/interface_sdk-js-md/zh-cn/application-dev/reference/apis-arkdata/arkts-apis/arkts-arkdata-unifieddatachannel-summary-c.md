@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## overview
@@ -65,3 +65,27 @@ set totalSize(value: number)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**示例**
+
+```TypeScript
+function parseSummary(summary: unifiedDataChannel.Summary) {
+  let summaryRecord = summary.summary as Record<string, number>;
+  if (summaryRecord) {
+    for (let item of Object.entries(summaryRecord)) {
+      if (item && item.length <= 1) {
+        continue;
+      }
+      let summaryStr: string = String(item[1]);
+      let info: string[] = summaryStr.split(",");
+      if (info.length <= 1) {
+        continue;
+      }
+      let key: string = info[0];
+      let value: string = info[1];
+    }
+  }
+  let overviewRecord = summary.overview as Record<string, number>;
+  let totalSize = summary.totalSize;
+}
+```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { motion } from 'kits/@kit.MultimodalAwarenessKit';
+import motion from '@kit.MultimodalAwarenessKit';
 ```
 
 ## offHoverHandChange
@@ -24,14 +24,14 @@ function offHoverHandChange(callback?: Callback<HoverHandAction>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md)&gt; | 否 | 要注销的回调函数。若不填，则取消该悬停手势事件的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [31500001](../errorcode-motion.md#31500001-服务异常) |
-| [31500003](../errorcode-motion.md#31500003-取消订阅失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [31500001](../errorcode-motion.md#31500001-服务异常) | Service exception. Possible causes: 1. A system error, such as null pointer, container-related exception; 2. N-API invocation exception, invalid N-API status. |
+| [31500003](../errorcode-motion.md#31500003-取消订阅失败) | Unsubscription failed. Possible causes: 1. Callback failure;   2. N-API invocation exception, invalid N-API status; 3. IPC request exception. |

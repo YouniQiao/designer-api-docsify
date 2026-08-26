@@ -9,24 +9,24 @@ The **thermal** module provides thermal level-related callback and query APIs to
 ## Modules to Import
 
 ```TypeScript
-import { thermal } from 'kits/@kit.BasicServicesKit';
+import thermal from '@kit.BasicServicesKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getLevel](arkts-basicservices-thermal-getlevel-f.md) |
-| [getThermalLevel](arkts-basicservices-thermal-getthermallevel-f.md) |
-| [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md) |
-| [subscribeThermalLevel](arkts-basicservices-thermal-subscribethermallevel-f.md) |
-| [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md) |
-| [unsubscribeThermalLevel](arkts-basicservices-thermal-unsubscribethermallevel-f.md) |
+| Name | Description |
+| --- | --- |
+| [getLevel](arkts-basicservices-thermal-getlevel-f.md) | Obtains the current thermal level. |
+| [getThermalLevel](arkts-basicservices-thermal-getthermallevel-f.md) | Obtains the current thermal level. |
+| [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md) | Registers a callback to be invoked when the thermal level changes. This API uses an asynchronous callback to return the result. |
+| [subscribeThermalLevel](arkts-basicservices-thermal-subscribethermallevel-f.md) | Subscribes to the thermal level changes. This API uses an asynchronous callback to return the result. |
+| [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md) | Unregisters from the thermal level changes. This API uses an asynchronous callback to return the result. |
+| [unsubscribeThermalLevel](arkts-basicservices-thermal-unsubscribethermallevel-f.md) | Unsubscribes from the thermal level changes. This API uses an asynchronous callback to return the result. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) |
+| Name | Description |
+| --- | --- |
+| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) | Enumerates thermal levels. |

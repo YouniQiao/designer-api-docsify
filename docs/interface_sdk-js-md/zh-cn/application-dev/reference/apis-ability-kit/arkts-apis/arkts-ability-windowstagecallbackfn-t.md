@@ -14,7 +14,7 @@ type WindowStageCallbackFn = (ability: any, windowStage: window.WindowStage) => 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | any | 是 |
-| [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | any | 是 | 表示注册监听的Ability。 |
+| windowStage | window.WindowStage | 是 | 表示注册监听的WindowStage。 |

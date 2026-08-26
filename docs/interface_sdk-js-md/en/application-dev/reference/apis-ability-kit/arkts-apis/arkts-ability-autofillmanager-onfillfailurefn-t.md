@@ -16,6 +16,6 @@ Called when auto fill request is failed to be handled.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md) | Yes | Indicates the ui context where the filling operation will be performed. |

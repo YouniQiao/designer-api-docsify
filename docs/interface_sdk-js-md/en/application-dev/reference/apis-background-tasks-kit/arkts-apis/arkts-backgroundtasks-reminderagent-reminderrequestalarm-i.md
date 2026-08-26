@@ -15,7 +15,8 @@ Defines a reminder for an alarm.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import reminderAgent from '@kit.BackgroundTasksKit';
+import reminderAgentManager from '@kit.BackgroundTasksKitManager';
 ```
 
 ## daysOfWeek

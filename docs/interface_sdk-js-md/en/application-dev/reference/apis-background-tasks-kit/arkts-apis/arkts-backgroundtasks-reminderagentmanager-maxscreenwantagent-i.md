@@ -9,7 +9,7 @@ Describes the information about the ability that is started automatically and di
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import reminderAgentManager from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hid } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createHidDeviceProfile
@@ -22,12 +21,23 @@ Creates the instance of HID device profile.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [HidDeviceProfile](arkts-connectivity-hid-hiddeviceprofile-i.md) |
+| Type | Description |
+| --- | --- |
+| [HidDeviceProfile](arkts-connectivity-hid-hiddeviceprofile-i.md) | Returns the instance of HID device profile. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+try {
+    let hidDeviceProfile = hid.createHidDeviceProfile();
+    console.info('hidDevice success');
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```

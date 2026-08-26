@@ -14,8 +14,8 @@ AI session execution operation callback function type. Used to implement custom 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string | Yes |
-| params | string | Yes |
-| result | [OnAISessionCallback](arkts-arkweb-onaisessioncallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | The session task ID. |
+| params | string | Yes | Contextual data passed during execution (in JSON string format). |
+| result | [OnAISessionCallback](arkts-arkweb-onaisessioncallback-t.md) | Yes | Callback function to notify the system of the execution result. |

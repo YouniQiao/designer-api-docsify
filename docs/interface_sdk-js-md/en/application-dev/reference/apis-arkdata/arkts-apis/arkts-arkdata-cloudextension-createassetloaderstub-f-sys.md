@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import cloudExtension from '@kit.ArkData';
 ```
 
 ## createAssetLoaderStub
@@ -22,12 +22,31 @@ Creates a RemoteObject instance based on an AssetLoader instance. The system use
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | [AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | [AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md) | Yes | AssetLoader instance. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;rpc.RemoteObject & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;rpc.RemoteObject & gt; | Promise used to return the rpc.RemoteObject instance of AssetLoader. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class MyAssetLoader implements cloudExtension.AssetLoader {
+  // ...
+}
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  // ...   
+  async connectAssetLoader(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
+    console.info(`connect asset loader, bundle: ${bundleName}`);
+    return cloudExtension.createAssetLoaderStub(new MyAssetLoader());
+  }
+}
+```

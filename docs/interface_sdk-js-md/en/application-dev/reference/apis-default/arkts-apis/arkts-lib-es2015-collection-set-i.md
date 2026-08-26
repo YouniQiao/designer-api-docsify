@@ -15,14 +15,14 @@ Appends a new element with a specified value to the end of the Set.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## clear
 
 ```TypeScript
@@ -39,14 +39,14 @@ Removes a specified value from the Set.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## forEach
 
 ```TypeScript
@@ -57,10 +57,10 @@ Executes a provided function once per each value in the Set object, in insertion
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackfn | (value: T, value2: T, set: Set & lt;T & gt;) = & gt; void | Yes |
-| thisArg | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackfn | (value: T, value2: T, set: Set & lt;T & gt;) = & gt; void | Yes |  |
+| thisArg | any | No |  |
 
 ## has
 
@@ -70,14 +70,14 @@ has(value: T): boolean
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## size
 
 ```TypeScript

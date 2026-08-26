@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { manager } from 'kits/@kit.ConnectivityKit';
+import manager from '@kit.ConnectivityKit';
 ```
 
 ## isNearLinkSupported
@@ -22,6 +22,6 @@ Checks whether the current device supports NearLink.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the current device supports NearLink. The value **true** indicates that the device supports NearLink, and **false** indicates the opposite. |

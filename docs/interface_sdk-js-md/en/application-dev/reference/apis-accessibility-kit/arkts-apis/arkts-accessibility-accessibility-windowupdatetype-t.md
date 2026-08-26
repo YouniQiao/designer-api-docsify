@@ -14,10 +14,10 @@ Window update type.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'add' |
-| 'remove' |
-| 'bounds' |
-| 'active' |
-| 'focus' |
+| Type | Description |
+| --- | --- |
+| 'add' | Window adding. |
+| 'remove' | Window deletion. |
+| 'bounds' | Window boundary change. |
+| 'active' | Window activity change. |
+| 'focus' | Window focus change. |

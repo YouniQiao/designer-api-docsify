@@ -9,6 +9,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) |
+| Name | Description |
+| --- | --- |
+| [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) | The module defines environment change information. Configuration is an interface definition and is used only for field declaration. |

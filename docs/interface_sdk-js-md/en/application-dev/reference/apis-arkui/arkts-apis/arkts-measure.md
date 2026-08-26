@@ -24,19 +24,19 @@ The **measure** module provides APIs for measuring text metrics, such as text he
 ## Modules to Import
 
 ```TypeScript
-import { MeasureText, MeasureOptions } from 'kits/@kit.ArkUI';
+import MeasureText, { MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MeasureText(Text Measurement)](arkts-arkui-measure-measuretext-c.md) |
+| Name | Description |
+| --- | --- |
+| [MeasureText(Text Measurement)](arkts-arkui-measure-measuretext-c.md) | Defines the Measure interface. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MeasureOptions(Text Measurement)](arkts-arkui-measure-measureoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [MeasureOptions(Text Measurement)](arkts-arkui-measure-measureoptions-i.md) | Provides attributes of the measured text. |

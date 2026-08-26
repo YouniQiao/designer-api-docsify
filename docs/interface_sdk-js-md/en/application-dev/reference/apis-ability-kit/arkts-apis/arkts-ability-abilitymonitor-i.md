@@ -22,9 +22,9 @@ Callback invoked when the UIAbility object transitions to the background.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |  |
 
 ## onAbilityCreate
 
@@ -42,9 +42,9 @@ Callback invoked when the UIAbility object is created.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |  |
 
 ## onAbilityDestroy
 
@@ -62,9 +62,9 @@ Callback invoked when the UIAbility object is destroyed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |  |
 
 ## onAbilityForeground
 
@@ -82,9 +82,9 @@ Callback invoked when the UIAbility object transitions to the foreground.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |  |
 
 ## onWindowStageCreate
 
@@ -102,9 +102,9 @@ Callback invoked when a WindowStage instance is created.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |  |
 
 ## onWindowStageDestroy
 
@@ -122,9 +122,9 @@ Callback invoked when the WindowStage instance is destroyed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |  |
 
 ## onWindowStageRestore
 
@@ -142,9 +142,9 @@ Callback invoked when the page stack is restored for the target UIAbility during
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |  |
 
 ## abilityName
 
@@ -177,3 +177,28 @@ Module name of the UIAbility object.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function onAbilityCreateCallback(data: UIAbility) {
+  console.info(`onAbilityCreateCallback, data: ${JSON.stringify(data)}`);
+}
+
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityname',
+  moduleName: "moduleName",
+  onAbilityCreate: onAbilityCreateCallback
+}
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.addAbilityMonitor(monitor, (error: BusinessError) => {
+  if (error) {
+    console.error(`addAbilityMonitor fail, error: ${JSON.stringify(error)}`);
+  }
+});
+```

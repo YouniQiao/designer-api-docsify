@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## watch
@@ -20,7 +19,14 @@ Registers the object to be checked.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| obj | object | Yes |
-| msg | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| obj | object | Yes | Name of the object to be checked. Note: You can pass objects of any type. |
+| msg | string | Yes | Custom object information. |
+
+**Examples**
+
+```TypeScript
+let obj:Object = new Object();
+jsLeakWatcher.watch(obj, "Trace Object");
+```

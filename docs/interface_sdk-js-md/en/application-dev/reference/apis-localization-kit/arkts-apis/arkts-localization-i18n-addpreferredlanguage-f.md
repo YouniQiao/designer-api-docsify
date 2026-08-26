@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## addPreferredLanguage
@@ -24,13 +24,24 @@ Adds a preferred language to the specified position on the preferred language li
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| language | string | Yes |
-| index | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| language | string | Yes | Preferred language to add. |
+| index | number | No | Position to which the preferred language is added. The default value is the length of the preferred language list. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the operation is successful, and **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// Add zh-CN to the preferred language list.
+let language: string = 'zh-CN';
+let index: number = 0;
+let success: boolean = i18n.addPreferredLanguage(language, index);
+```

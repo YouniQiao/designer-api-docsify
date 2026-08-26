@@ -20,6 +20,19 @@ getNdefRecords(): tag.NdefRecord[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| tag.NdefRecord[] |
+| 类型 | 说明 |
+| --- | --- |
+| tag.NdefRecord[] | NDEF标签的Record列表，详见NDEF技术规范《NFCForum-TS-NDEF_1.0》。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 从 tag.ndef.createNdefMessage 或 ndefTag.getNdefMessage 获取 ndefMessage。
+// let ndefMessage : tag.NdefMessage = tag.ndef.createNdefMessage(...);
+// let ndefMessage : tag.NdefMessage = ndefTag.getNdefMessage();
+
+let ndefRecords : tag.NdefRecord[] = ndefMessage.getNdefRecords();
+console.info("ndef ndefRecords number: " + ndefRecords.length);
+```

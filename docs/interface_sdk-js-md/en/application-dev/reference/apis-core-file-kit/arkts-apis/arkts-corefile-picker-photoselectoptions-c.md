@@ -13,7 +13,7 @@ Defines the options for selecting images or videos.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
+import picker from '@kit.CoreFileKit';
 ```
 
 ## maxSelectNumber

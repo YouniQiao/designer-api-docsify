@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continueManager } from 'kits/@kit.AbilityKit';
+import continueManager from '@kit.AbilityKit';
 ```
 
 ## off('prepareContinue')
@@ -22,14 +22,51 @@ Unregisters the callback used to obtain the quick start result when an applicati
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'prepareContinue' | Yes |
-| context | [Context](arkts-ability-context-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'prepareContinue' | Yes | The value is fixed at **prepareContinue**. |
+| context | [Context](arkts-ability-context-c.md) | Yes | Context of the ability. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | No | Callback used to return the result. If the callback is unregistered, **err** is undefined, and **ContinueResultInfo** is the callback unregistration result. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want, continueManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG: string = '[MigrationAbility]';
+const DOMAIN_NUMBER: number = 0xFF00;
+
+export default class MigrationAbility extends UIAbility {
+    storage : LocalStorage = new LocalStorage();
+
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        hilog.info(DOMAIN_NUMBER, TAG, '%{public}s', 'Ability onCreate');
+
+        // 1. Quick start is configured. Trigger the lifecycle callback when the application is launched immediately.
+        if (launchParam.launchReason === AbilityConstant.LaunchReason.PREPARE_CONTINUATION) {
+            // Unregister the callback used to obtain the quick start result.
+            try {
+              continueManager.off("prepareContinue", this.context, (err, continueResultInfo) => {
+                if (err.code != 0) {
+                  console.error('unregister failed, cause: ' + JSON.stringify(err));
+                  return;
+                }
+                console.info('unregister finished, ' + JSON.stringify(continueResultInfo));
+              });
+            } catch (e) {
+              console.error('unregister failed, cause: ' + JSON.stringify(e));
+            }
+            // If the application data to migrate is large, add a loading screen here (for example, displaying "loading" on the screen).
+            // Handle issues related to custom redirection and timing.
+            // ...
+        }
+    }
+}
+```

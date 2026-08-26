@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## removeAll
@@ -27,10 +30,28 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 指定应用的包信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定应用的所有通知回调函数。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let removeAllCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("removeAll failed " + JSON.stringify(err));
+  } else {
+    console.info("removeAll success");
+  }
+}
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.removeAll(bundle, removeAllCallback);
+```
 
 
 ## removeAll
@@ -55,9 +76,25 @@ function removeAll(callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除所有通知回调函数。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let removeAllCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("removeAll failed " + JSON.stringify(err));
+  } else {
+    console.info("removeAll success");
+  }
+}
+
+Notification.removeAll(removeAllCallback);
+```
 
 
 ## removeAll
@@ -82,10 +119,27 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| userId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| userId | number | 是 | 用户ID。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定用户所有通知回调函数。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+function removeAllCallback(err: Base.BusinessError) {
+  if (err) {
+    console.error("removeAll failed " + JSON.stringify(err));
+  } else {
+    console.info("removeAll success");
+  }
+}
+
+let userId: number = 1;
+Notification.removeAll(userId, removeAllCallback);
+```
 
 
 ## removeAll
@@ -110,15 +164,28 @@ function removeAll(userId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| userId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| userId | number | 是 | 用户ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let userId: number = 1;
+Notification.removeAll(userId).then(() => {
+  console.info("removeAll success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`removeAll failed, code is ${err}`);
+});
+```
 
 
 ## removeAll
@@ -143,12 +210,25 @@ function removeAll(bundle?: BundleOption): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 否 | 指定应用的包信息。默认为空，表示删除所有通知。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+// 不指定应用时，删除所有通知
+Notification.removeAll().then(() => {
+  console.info("removeAll success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`removeAll failed, code is ${err}`);
+});
+```

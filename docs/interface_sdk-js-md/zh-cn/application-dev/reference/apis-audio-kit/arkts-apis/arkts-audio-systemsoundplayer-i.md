@@ -22,23 +22,35 @@ load(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| soundType | systemSoundManager.SystemSoundType | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| soundType | systemSoundManager.SystemSoundType | 是 | 系统音效类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
-| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemSoundPlayer?.load(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then(() => {
+  console.info('Succeeded in loading the system sound.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to load the system sound. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## play
 
@@ -56,23 +68,35 @@ play(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| soundType | systemSoundManager.SystemSoundType | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| soundType | systemSoundManager.SystemSoundType | 是 | 系统音效类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
-| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemSoundPlayer?.play(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then(() => {
+  console.info('Succeeded in playing the system sound.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to play the system sound. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## release
 
@@ -90,15 +114,27 @@ release(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemSoundPlayer?.release().then(() => {
+  console.info('Succeeded in releasing the system sound player.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to release the system sound player. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## unload
 
@@ -116,19 +152,31 @@ unload(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| soundType | systemSoundManager.SystemSoundType | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| soundType | systemSoundManager.SystemSoundType | 是 | 系统音效类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
-| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemSoundPlayer?.unload(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then(() => {
+  console.info('Succeeded in unloading the system sound.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to unload the system sound. Code: ${err.code}, message: ${err.message}`);
+});
+```

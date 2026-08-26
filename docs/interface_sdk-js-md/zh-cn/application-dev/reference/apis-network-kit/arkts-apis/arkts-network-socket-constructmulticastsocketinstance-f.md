@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## constructMulticastSocketInstance
@@ -20,6 +20,13 @@ function constructMulticastSocketInstance(): MulticastSocket
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) | 返回一个MulticastSocket对象。 |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+```

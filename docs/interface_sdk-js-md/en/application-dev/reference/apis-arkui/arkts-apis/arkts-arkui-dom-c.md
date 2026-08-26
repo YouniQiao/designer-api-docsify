@@ -24,12 +24,12 @@ create a dynamic dom by tag, return element
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tag | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tag | string | Yes | dom tag |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Element](arkts-arkui-viewmodel-element-i.md) |
+| Type | Description |
+| --- | --- |
+| [Element](arkts-arkui-viewmodel-element-i.md) |  |

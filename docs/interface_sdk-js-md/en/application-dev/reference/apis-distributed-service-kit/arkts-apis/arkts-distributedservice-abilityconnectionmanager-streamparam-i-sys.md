@@ -11,7 +11,7 @@ Streaming configuration parameters.@interface StreamParam
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+import abilityConnectionManager from '@kit.DistributedServiceKit';
 ```
 
 ## bitrate

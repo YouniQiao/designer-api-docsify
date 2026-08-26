@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getOutputDir
@@ -22,6 +21,20 @@ Returns the directory path of hilog logs in the sandbox. If the output type of h
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | the directory path of hilog logs in the sandbox. |
+
+**Examples**
+
+```TypeScript
+hilog.setOutputType(hilog.OutputType.SHARE_SANDBOX_WITH_CONSOLE);
+let dir = hilog.getOutputDir();
+hilog.info(0x0001, "testTag", 'sandbox output dir:%{public}s', dir);
+```
+
+Console output.
+
+```TypeScript
+05-15 16:57:04.238  40518-40518  A00001/testTag  com.example.hilogDemo  I  sandbox output dir:/data/storage/el2/log/hiapplog/
+```

@@ -14,6 +14,6 @@ Describes the callback invoked for the event indicating that the playback rate s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rate | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rate | number | Yes | Playback rate. |

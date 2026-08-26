@@ -2,7 +2,8 @@
 
 该模块提供文件系统相关存储信息的功能，向应用程序提供获取文件系统总字节数、空闲字节数的ArkTS接口。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 本模块首批接口从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > - 本模块从API version 9开始废弃，建议使用[@ohos.file.statvfs](arkts-file-statvfs.md)替代。
 
@@ -23,9 +24,9 @@
 
 ### 函数
 
-| 名称 |
-| --- |
-| [getFreeBytes(@ohos.statfs (statfs))](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes) |
-| [getFreeBytes(@ohos.statfs (statfs))](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes) |
-| [getTotalBytes(@ohos.statfs (statfs))](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes) |
-| [getTotalBytes(@ohos.statfs (statfs))](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes) |
+| 名称 | 说明 |
+| --- | --- |
+| [getFreeBytes(@ohos.statfs (statfs))](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes) | 异步方法获取指定文件系统空闲字节数，使用callback形式返回结果。 |
+| [getFreeBytes(@ohos.statfs (statfs))](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes) | 异步方法获取指定文件系统空闲字节数，以Promise形式返回结果。 |
+| [getTotalBytes(@ohos.statfs (statfs))](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes) | 异步方法获取指定文件系统总字节数，使用callback形式返回结果。 |
+| [getTotalBytes(@ohos.statfs (statfs))](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes) | 异步方法获取指定文件系统总字节数，以Promise形式返回结果。 |

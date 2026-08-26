@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getGeomagneticDip
@@ -24,10 +23,25 @@ Obtains the magnetic dip based on the inclination matrix. This API uses an async
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| inclinationMatrix | Array & lt;number & gt; | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| inclinationMatrix | Array & lt;number & gt; | Yes | Inclination matrix. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the magnetic dip, in radians. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data: number) => {
+  if (err) {
+    console.error(`Failed to register data. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info("Succeeded in getting getGeomagneticDip interface get data: " + data);
+})
+```
 
 
 ## getGeomagneticDip
@@ -48,12 +62,26 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| inclinationMatrix | Array & lt;number & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| inclinationMatrix | Array & lt;number & gt; | Yes | Inclination matrix. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the magnetic dip, in radians. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1]);
+promise.then((data: number) => {
+  console.info('Succeeded in get GeomagneticDip_promise', data);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to operate.`);
+})
+```

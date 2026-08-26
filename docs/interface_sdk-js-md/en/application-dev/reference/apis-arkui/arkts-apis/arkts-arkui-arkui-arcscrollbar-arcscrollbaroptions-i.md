@@ -2,7 +2,8 @@
 
 Represents the parameters used to construct an **ArcScrollBar** component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **ArcScrollBar** must be bound to a scrollable component through **scroller** to achieve synchronization. Only a
 > one-to-one binding is allowed between **ArcScrollBar** and a scrollable component.
 
@@ -13,7 +14,7 @@ Represents the parameters used to construct an **ArcScrollBar** component.
 ## Modules to Import
 
 ```TypeScript
-import { ArcScrollBar, ArcScrollBarAttribute } from 'kits/@kit.ArkUI';
+import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 ```
 
 ## scroller

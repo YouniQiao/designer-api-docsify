@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## setTouchpadRightClickType
@@ -22,17 +21,48 @@ Sets the touchpad right-click menu type. This API uses an asynchronous callback 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [RightClickType](arkts-input-pointer-rightclicktype-e.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [RightClickType](arkts-input-pointer-rightclicktype-e.md) | Yes | Touchpad right-click menu type.    - TOUCHPAD_RIGHT_BUTTON: Tapping the right-button area of the touchpad.    - TOUCHPAD_LEFT_BUTTON: Tapping the left-button area of the touchpad.    - TOUCHPAD_TWO_FINGER_TAP: Tapping or pressing the touchpad with two fingers.    - TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON & lt;sup & gt;20+ & lt;/sup & gt;: Tapping or pressing the touchpad with two fingers, or tapping the right-button area of the touchpad.    - TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON & lt;sup & gt;20+ & lt;/sup & gt;: Tapping or pressing the touchpad with two fingers, or tapping the left-button area of the touchpad.    The default value is **TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Set the touchpad right-click menu type.
+            pointer.setTouchpadRightClickType(pointer.RightClickType.TOUCHPAD_RIGHT_BUTTON , (error: BusinessError) => {
+              if (error) {
+                console.error(`Failed to set touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                return;
+              }
+              console.info(`Succeeded in setting touchpad right click type.`);
+            });
+          } catch (error) {
+            console.error(`Failed to set touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
 
 
 ## setTouchpadRightClickType
@@ -51,19 +81,48 @@ Sets the touchpad right-click menu type. This API uses a promise to return the r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [RightClickType](arkts-input-pointer-rightclicktype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [RightClickType](arkts-input-pointer-rightclicktype-e.md) | Yes | Touchpad right-click menu type.    - TOUCHPAD_RIGHT_BUTTON: Tapping the right-button area of the touchpad.    - TOUCHPAD_LEFT_BUTTON: Tapping the left-button area of the touchpad.    - TOUCHPAD_TWO_FINGER_TAP: Tapping or pressing the touchpad with two fingers.    - TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON & lt;sup & gt;20+ & lt;/sup & gt;: Tapping or pressing the touchpad with two fingers, or tapping the right-button area of the touchpad.    - TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON & lt;sup & gt;20+ & lt;/sup & gt;: Tapping or pressing the touchpad with two fingers, or tapping the left-button area of the touchpad.    The default value is **TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Set the touchpad right-click menu type.
+            pointer.setTouchpadRightClickType(pointer.RightClickType.TOUCHPAD_RIGHT_BUTTON).then(() => {
+              console.info(`Succeeded in setting touchpad right click type.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```

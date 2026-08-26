@@ -11,7 +11,7 @@ HTML类型数据，是[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子�
 ## 导入模块
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## htmlContent
@@ -67,3 +67,15 @@ set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**示例**
+
+```TypeScript
+let html = new unifiedDataChannel.HTML();
+html.htmlContent = '<div><p>标题</p></div>';
+html.plainContent = 'This is plainContent';
+// 从API 26.0.0版本开始，支持uri授权策略
+html.uriAuthorizationPolicies = [
+  unifiedDataChannel.UriPermission.WRITE
+];
+```

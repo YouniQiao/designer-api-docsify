@@ -11,7 +11,6 @@ Defines options for the call rejection message.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## messageContent

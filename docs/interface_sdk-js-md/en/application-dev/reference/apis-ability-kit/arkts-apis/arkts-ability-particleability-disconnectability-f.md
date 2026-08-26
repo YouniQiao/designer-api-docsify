@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from 'kits/@kit.AbilityKit';
+import particleAbility from '@kit.AbilityKit';
 ```
 
 ## disconnectAbility
@@ -22,10 +22,39 @@ Disconnects this ability from a specific ServiceAbility. This API uses an asynch
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| connection | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| connection | number | Yes | ID of the ServiceAbility to disconnect. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the disconnection is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+let connId = particleAbility.connectAbility(
+  {
+    bundleName: 'com.ix.ServiceAbility',
+    abilityName: 'ServiceAbilityA',
+  },
+  {
+    onConnect: (element, remote) => {
+      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
+    },
+    onDisconnect: (element) => {
+      console.info(`ConnectAbility onDisconnect element.deviceId: ${element.deviceId}`);
+    },
+    onFailed: (code) => {
+      console.error(`particleAbilityTest ConnectAbility onFailed errCode: ${code}`);
+    },
+  },
+);
+
+particleAbility.disconnectAbility(connId, (err) => {
+  console.error(`particleAbilityTest disconnectAbility err: ${JSON.stringify(err)}`);
+});
+```
 
 
 ## disconnectAbility
@@ -44,12 +73,44 @@ Disconnects this ability from a specific ServiceAbility. This API uses a promise
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| connection | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| connection | number | Yes | ID of the ServiceAbility to disconnect. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let connId = particleAbility.connectAbility(
+  {
+    bundleName: 'com.ix.ServiceAbility',
+    abilityName: 'ServiceAbilityA',
+  },
+  {
+    onConnect: (element, remote) => {
+      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
+    },
+    onDisconnect: (element) => {
+      console.info(`ConnectAbility onDisconnect element.deviceId: ${element.deviceId}`);
+    },
+    onFailed: (code) => {
+      console.error(`particleAbilityTest ConnectAbility onFailed errCode: ${code}`);
+    },
+  },
+);
+
+particleAbility.disconnectAbility(connId).then(() => {
+  console.info('disconnectAbility success');
+}).catch((error: BusinessError) => {
+  console.error(`particleAbilityTest result errCode : ${error.code}`);
+});
+```

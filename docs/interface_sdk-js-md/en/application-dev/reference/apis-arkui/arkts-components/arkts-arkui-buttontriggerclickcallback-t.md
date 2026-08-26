@@ -16,7 +16,7 @@ Defines the callback type used in **ButtonConfiguration**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| xPos | number | Yes |
-| yPos | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| xPos | number | Yes | X-coordinate of the click point. Unit: vp |
+| yPos | number | Yes | Y-coordinate of the click point. Unit: vp |

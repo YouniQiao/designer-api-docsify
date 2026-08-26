@@ -5,7 +5,7 @@
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [RemoteAbilityInfo](arkts-ability-remoteabilityinfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [RemoteAbilityInfo](arkts-ability-remoteabilityinfo-i-sys.md) | The module provides information about a remote ability, which can be obtained through [distributedBundle.getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md). |
 <!--DelEnd-->

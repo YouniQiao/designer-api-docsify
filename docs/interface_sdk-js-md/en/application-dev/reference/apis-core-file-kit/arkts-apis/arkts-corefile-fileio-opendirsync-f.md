@@ -23,12 +23,20 @@ Opens a directory. This API returns the result synchronously.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the directory to open. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Dir](arkts-corefile-fileio-dir-depr-i.md) |
+| Type | Description |
+| --- | --- |
+| [Dir](arkts-corefile-fileio-dir-depr-i.md) | Dir** object opened. |
+
+**Examples**
+
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+// Example code in Dir struct
+// Use read/readSync/close.
+```

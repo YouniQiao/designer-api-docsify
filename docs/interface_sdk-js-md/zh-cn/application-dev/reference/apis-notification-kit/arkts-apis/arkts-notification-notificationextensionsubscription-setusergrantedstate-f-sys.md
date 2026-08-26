@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+import notificationExtensionSubscription from '@kit.NotificationKit';
 ```
 
 ## setUserGrantedState
@@ -24,23 +24,38 @@ function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Prom
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| targetBundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
-| enabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| targetBundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 需要设置的目标应用信息。应用需要具有ohos.permission.SUBSCRIBE_NOTIFICATION权限， 并且实现[NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)， 否则返回1600022错误码。 |
+| enabled | boolean | 是 | 表示应用的“允许获取本机通知”的开关状态，true表示启用，false表示未启用。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-| [1600022](../errorcode-notification.md#1600022-无效的包信息) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600022](../errorcode-notification.md#1600022-无效的包信息) | The specified bundle is invalid. |
+
+**示例**
+
+```TypeScript
+let targetBundle: notificationExtensionSubscription.BundleOption =
+{
+  // 应改为开发者需要查询的目标应用信息
+  bundle: 'com.example.testnotification',
+};
+notificationExtensionSubscription.setUserGrantedState(targetBundle, true).then(() => {
+  console.info(`setUserGrantedState successfully.`);
+}).catch((err: BusinessError) => {
+  console.error(`setUserGrantedState fail, code is ${err.code}, message is ${err.message}`);
+});
+```

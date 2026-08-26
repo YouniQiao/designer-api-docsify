@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from 'kits/@kit.AbilityKit';
+import continuationManager from '@kit.AbilityKit';
 ```
 
 ## unregister
@@ -26,10 +26,25 @@ function unregister(token: number, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| token | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| token | number | 是 | 注册后的token。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当解注册成功，err为undefined，否则返回错误对象。 |
+
+**示例**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = 1;
+continuationManager.unregister(token, (err) => {
+  if (err.code != 0) {
+    console.error('unregister failed, cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('unregister finished. ');
+});
+```
 
 
 ## unregister
@@ -52,12 +67,27 @@ function unregister(token: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| token | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| token | number | 是 | 注册后的token。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise形式返回接口调用结果。 |
+
+**示例**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = 1;
+continuationManager.unregister(token)
+  .then(() => {
+    console.info('unregister finished. ');
+  }).catch((err: BusinessError) => {
+    console.error('unregister failed, cause: ' + JSON.stringify(err));
+});
+```

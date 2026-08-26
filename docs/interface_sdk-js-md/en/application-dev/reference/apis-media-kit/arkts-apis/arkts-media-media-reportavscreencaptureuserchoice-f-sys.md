@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## reportAVScreenCaptureUserChoice
@@ -22,20 +22,49 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sessionId | number | Yes |
-| choice | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sessionId | number | Yes | Session ID of the AVScreenCapture service, which is sent to the application when the AVScreenCapture server starts the privacy dialog box. |
+| choice | string | Yes | User choice, including whether screen capture is agreed, selected display ID, and window ID. For details, see JsonData in the example below. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+class JsonData {
+  public choice: string = 'true';
+  public displayId: number | null = -1;
+  public missionId: number | null = -1;
+  public checkBoxSelected: string = 'true';
+  public isInnerAudioBoxSelected: string = 'true';
+}
+let sessionId: number = 0; // Use the ID of the session that starts the process.
+
+try {
+  const jsonData: JsonData = {
+    choice: 'true',  // Replace it with the user choice.
+    displayId: -1, // Replace it with the ID of the display selected by the user.
+    missionId: -1,   // Replace it with the ID of the window selected by the user.
+    checkBoxSelected: 'true',   // Replace it with whether the user has enabled screen protection.
+    isInnerAudioBoxSelected: 'true',   // Replace it with whether the user has enabled internal audio recording.
+  }
+  await media.reportAVScreenCaptureUserChoice(sessionId, JSON.stringify(jsonData));
+} catch (error: BusinessError) {
+  console.error(`reportAVScreenCaptureUserChoice error, error message: ${error.message}`);
+}
+```

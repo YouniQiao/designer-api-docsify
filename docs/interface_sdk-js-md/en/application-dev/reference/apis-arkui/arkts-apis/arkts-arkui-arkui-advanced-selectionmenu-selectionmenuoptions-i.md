@@ -9,7 +9,7 @@ Defines the configuration options of the **SelectionMenu** component.
 ## Modules to Import
 
 ```TypeScript
-import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from 'kits/@kit.ArkUI';
+import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from '@kit.ArkUI';
 ```
 
 ## onCopy
@@ -32,9 +32,9 @@ Event callback to take the place of the preset copy menu option.It is effective 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No |  |
 
 ## onCut
 
@@ -56,9 +56,9 @@ Event callback to take the place of the preset cut menu option.It is effective o
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No |  |
 
 ## onPaste
 
@@ -80,9 +80,9 @@ Event callback to take the place of the preset paste menu option.It is effective
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No |  |
 
 ## onSelectAll
 
@@ -104,9 +104,9 @@ Event callback to take the place of the preset select-all menu option.It is effe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No |  |
 
 ## backgroundSystemMaterial
 

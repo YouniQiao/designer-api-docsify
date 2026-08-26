@@ -13,8 +13,8 @@
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## next
 
 ```TypeScript
@@ -23,14 +23,14 @@ next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [] \| [TNext] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| args | [] \| [TNext] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## return
 
 ```TypeScript
@@ -39,14 +39,14 @@ return(value: TReturn): IteratorResult<T, TReturn>
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | TReturn | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | TReturn | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## throw
 
 ```TypeScript
@@ -55,11 +55,11 @@ throw(e: any): IteratorResult<T, TReturn>
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| e | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

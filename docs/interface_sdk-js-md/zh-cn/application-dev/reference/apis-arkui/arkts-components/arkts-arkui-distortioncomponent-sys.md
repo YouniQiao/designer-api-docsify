@@ -20,18 +20,18 @@ Creates a DistortionComponent with content.
 
 **参数:**
 
-| 参数名 | [类型](#类型) | 必填 |
-| --- | --- | --- |
-| options | [DistortionComponentOptions](arkts-arkui-distortioncomponentoptions-i-sys.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [DistortionComponentOptions](arkts-arkui-distortioncomponentoptions-i-sys.md) | 否 | DistortionComponent Options. |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 类型
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |

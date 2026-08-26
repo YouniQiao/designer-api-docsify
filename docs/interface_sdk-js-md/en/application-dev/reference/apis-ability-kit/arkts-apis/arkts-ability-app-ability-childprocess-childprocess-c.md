@@ -9,7 +9,9 @@ ChildProcess is the base class for you to customize child processes. When starti
 ## Modules to Import
 
 ```TypeScript
-import { ChildProcess } from 'kits/@kit.AbilityKit';
+import ChildProcess from '@kit.AbilityKit';
+import { ChildProcessArgs } from '@kit.AbilityKitArgs';
+import { ChildProcessOptions } from '@kit.AbilityKitOptions';
 ```
 
 ## onStart
@@ -28,6 +30,21 @@ Entrypoint method of the child process. This callback is triggered when the chil
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | No | Parameters transferred to the child process. |
+
+**Examples**
+
+```TypeScript
+import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
+
+export default class DemoProcess extends ChildProcess {
+
+  onStart(args?: ChildProcessArgs) {
+    let entryParams = args?.entryParams;
+    let fd = args?.fds?.key1;
+    // ..
+  }
+}
+```

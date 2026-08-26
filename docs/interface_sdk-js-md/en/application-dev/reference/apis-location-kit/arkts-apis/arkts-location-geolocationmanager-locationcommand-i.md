@@ -9,7 +9,6 @@ Location subsystem command structure.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## command

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import taskpool from '@kit.ArkTS';
 ```
 
 ## execute
@@ -22,25 +22,39 @@ Places a function to be executed in the internal queue of the task pool. The fun
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| func | Function | Yes |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| func | Function | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| args | Object[] | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;unknown & gt; |
-| Promise & lt;Object & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;unknown & gt; | <br>**Applicable version:** 9 - 11 |
+| Promise & lt;Object & gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 9 - 11 |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
+
+**Examples**
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+    console.info("printArgs: " + args);
+    return args;
+}
+
+taskpool.execute(printArgs, 100).then((value: Object) => { // 100: test number
+  console.info("taskpool result: " + value);
+});
+```
 
 
 ## execute
@@ -59,23 +73,55 @@ Verifies the passed-in parameter types and return value type of a concurrent fun
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| func | (...args: A) = & gt; R \ | Promise & lt;R & gt; | Yes |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| func | (...args: A) = & gt; R \ | Promise & lt;R & gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| args | A | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;R & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;R & gt; | Promise used to return an object that carries the function execution result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
+
+**Examples**
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+@Concurrent
+function testWithThreeParams(a: number, b: string, c: number): string {
+  return b;
+}
+
+@Concurrent
+function testWithArray(args: [number, string]): string {
+  return "success";
+}
+
+taskpool.execute<[number], number>(printArgs, 100).then((value: number) => { // 100: test number
+  console.info("taskpool result: " + value); // "taskpool result: 100"
+});
+
+taskpool.execute<[number, string, number], string>(testWithThreeParams, 100, "test", 100).then((value: string) => {
+  console.info("taskpool result: " + value); // "taskpool result: test"
+});
+
+taskpool.execute<[[number, string]], string>(testWithArray, [100, "test"]).then((value: string) => {
+  console.info("taskpool result: " + value); // "taskpool result: success"
+});
+```
 
 
 ## execute
@@ -94,27 +140,84 @@ Places a task in the internal queue of the task pool. The task will not be execu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be executed. |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;unknown & gt; |
-| Promise & lt;Object & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;unknown & gt; | <br>**Applicable version:** 9 - 17 |
+| Promise & lt;Object & gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 9 - 17 |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+
+**Examples**
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+    console.info("printArgs: " + args);
+    return args;
+}
+
+let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
+let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
+let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
+taskpool.execute(task1, taskpool.Priority.LOW).then((value: Object) => {
+  console.info("taskpool result1: " + value);
+});
+taskpool.execute(task2, taskpool.Priority.MEDIUM).then((value: Object) => {
+  console.info("taskpool result2: " + value);
+});
+taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
+  console.info("taskpool result3: " + value);
+});
+```
+
+```TypeScript
+import { taskpool } from '@kit.ArkTS';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Concurrent
+function additionDelay(delay: number): void {
+  let start: number = new Date().getTime();
+  while (new Date().getTime() - start < delay) {
+    continue;
+  }
+}
+async function asyRunner() {
+  let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
+  for (let i = 0; i < 30; i++) {
+    let task:taskpool.Task = new taskpool.Task(additionDelay, 1000);
+    runner.execute(task).then(() => {
+      console.info("asyncRunner: task" + i + " done.");
+    }).catch((e: BusinessError) => {
+      console.error("asyncRunner: task" + i + " error." + e.code + "-" + e.message);
+    });
+  }
+}
+
+async function asyRunner2() {
+  let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
+  for (let i = 0; i < 20; i++) {
+    let task:taskpool.Task = new taskpool.Task(additionDelay, 1000);
+    runner.execute(task).then(() => {
+      console.info("asyncRunner: task" + i + " done.");
+    });
+  }
+}
+```
 
 
 ## execute
@@ -133,25 +236,48 @@ Places the generic task in the internal queue of the task pool. The parameter ty
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes | Generic task to be executed. |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;R & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;R & gt; | Promise used to return an object that carries the function execution result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+
+**Examples**
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+    console.info("printArgs: " + args);
+    return args;
+}
+
+let task1: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 100); // 100: test number
+let task2: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 200); // 200: test number
+let task3: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 300); // 300: test number
+taskpool.execute<[number], number>(task1, taskpool.Priority.LOW).then((value: number) => {
+  console.info("taskpool result1: " + value);
+});
+taskpool.execute<[number], number>(task2, taskpool.Priority.MEDIUM).then((value: number) => {
+  console.info("taskpool result2: " + value);
+});
+taskpool.execute<[number], number>(task3, taskpool.Priority.HIGH).then((value: number) => {
+  console.info("taskpool result3: " + value);
+});
+```
 
 
 ## execute
@@ -170,23 +296,52 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes | Task group to be executed. |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task group. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Object[] & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Object[] & gt; | Promise used to return an object array that carries the function execution result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| 10200059 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| 10200059 | TaskGroup cannot be re-executed.<br>**Applicable version:** 24 and later |
+
+**Examples**
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+    console.info("printArgs: " + args);
+    return args;
+}
+
+let taskGroup1: taskpool.TaskGroup = new taskpool.TaskGroup();
+taskGroup1.addTask(printArgs, 10); // 10: test number
+taskGroup1.addTask(printArgs, 20); // 20: test number
+taskGroup1.addTask(printArgs, 30); // 30: test number
+
+let taskGroup2: taskpool.TaskGroup = new taskpool.TaskGroup();
+let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
+let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
+let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
+taskGroup2.addTask(task1);
+taskGroup2.addTask(task2);
+taskGroup2.addTask(task3);
+taskpool.execute(taskGroup1).then((res: Array<Object>) => {
+  console.info("taskpool execute res is:" + res);
+});
+taskpool.execute(taskGroup2).then((res: Array<Object>) => {
+  console.info("taskpool execute res is:" + res);
+});
+```
 
 
 ## execute
@@ -205,26 +360,210 @@ Execute a concurrent task with Configs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes |
-| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be executed. |
+| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes | Configs of the task. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Object & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Object & gt; |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| 10200058 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs. |
+| 10200058 | Task timed out. |
+
+**Examples**
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+    console.info("printArgs: " + args);
+    return args;
+}
+
+taskpool.execute(printArgs, 100).then((value: Object) => { // 100: test number
+  console.info("taskpool result: " + value);
+});
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+@Concurrent
+function testWithThreeParams(a: number, b: string, c: number): string {
+  return b;
+}
+
+@Concurrent
+function testWithArray(args: [number, string]): string {
+  return "success";
+}
+
+taskpool.execute<[number], number>(printArgs, 100).then((value: number) => { // 100: test number
+  console.info("taskpool result: " + value); // "taskpool result: 100"
+});
+
+taskpool.execute<[number, string, number], string>(testWithThreeParams, 100, "test", 100).then((value: string) => {
+  console.info("taskpool result: " + value); // "taskpool result: test"
+});
+
+taskpool.execute<[[number, string]], string>(testWithArray, [100, "test"]).then((value: string) => {
+  console.info("taskpool result: " + value); // "taskpool result: success"
+});
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+    console.info("printArgs: " + args);
+    return args;
+}
+
+let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
+let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
+let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
+taskpool.execute(task1, taskpool.Priority.LOW).then((value: Object) => {
+  console.info("taskpool result1: " + value);
+});
+taskpool.execute(task2, taskpool.Priority.MEDIUM).then((value: Object) => {
+  console.info("taskpool result2: " + value);
+});
+taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
+  console.info("taskpool result3: " + value);
+});
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+    console.info("printArgs: " + args);
+    return args;
+}
+
+let task1: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 100); // 100: test number
+let task2: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 200); // 200: test number
+let task3: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 300); // 300: test number
+taskpool.execute<[number], number>(task1, taskpool.Priority.LOW).then((value: number) => {
+  console.info("taskpool result1: " + value);
+});
+taskpool.execute<[number], number>(task2, taskpool.Priority.MEDIUM).then((value: number) => {
+  console.info("taskpool result2: " + value);
+});
+taskpool.execute<[number], number>(task3, taskpool.Priority.HIGH).then((value: number) => {
+  console.info("taskpool result3: " + value);
+});
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+    console.info("printArgs: " + args);
+    return args;
+}
+
+let taskGroup1: taskpool.TaskGroup = new taskpool.TaskGroup();
+taskGroup1.addTask(printArgs, 10); // 10: test number
+taskGroup1.addTask(printArgs, 20); // 20: test number
+taskGroup1.addTask(printArgs, 30); // 30: test number
+
+let taskGroup2: taskpool.TaskGroup = new taskpool.TaskGroup();
+let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
+let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
+let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
+taskGroup2.addTask(task1);
+taskGroup2.addTask(task2);
+taskGroup2.addTask(task3);
+taskpool.execute(taskGroup1).then((res: Array<Object>) => {
+  console.info("taskpool execute res is:" + res);
+});
+taskpool.execute(taskGroup2).then((res: Array<Object>) => {
+  console.info("taskpool execute res is:" + res);
+});
+```
+
+```TypeScript
+@Concurrent
+function additionDelay(delay: number): void {
+  let start: number = new Date().getTime();
+  while (new Date().getTime() - start < delay) {
+    continue;
+  }
+}
+@Concurrent
+function waitForRunner(finalString: string): string {
+  return finalString;
+}
+async function seqRunner() {
+  let finalString:string = "";
+  let task1:taskpool.Task = new taskpool.Task(additionDelay, 3000);
+  let task2:taskpool.Task = new taskpool.Task(additionDelay, 2000);
+  let task3:taskpool.Task = new taskpool.Task(additionDelay, 1000);
+  let task4:taskpool.Task = new taskpool.Task(waitForRunner, finalString);
+
+  let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner();
+  runner.execute(task1).then(() => {
+    finalString += 'a';
+    console.info("seqrunner: task1 done.");
+  });
+  runner.execute(task2).then(() => {
+    finalString += 'b';
+    console.info("seqrunner: task2 done");
+  });
+  runner.execute(task3).then(() => {
+    finalString += 'c';
+    console.info("seqrunner: task3 done");
+  });
+  await runner.execute(task4);
+  console.info("seqrunner: task4 done, finalString is " + finalString);
+}
+```
+
+```TypeScript
+import { taskpool } from '@kit.ArkTS';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Concurrent
+function additionDelay(delay: number): void {
+  let start: number = new Date().getTime();
+  while (new Date().getTime() - start < delay) {
+    continue;
+  }
+}
+async function asyRunner() {
+  let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
+  for (let i = 0; i < 30; i++) {
+    let task:taskpool.Task = new taskpool.Task(additionDelay, 1000);
+    runner.execute(task).then(() => {
+      console.info("asyncRunner: task" + i + " done.");
+    }).catch((e: BusinessError) => {
+      console.error("asyncRunner: task" + i + " error." + e.code + "-" + e.message);
+    });
+  }
+}
+
+async function asyRunner2() {
+  let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
+  for (let i = 0; i < 20; i++) {
+    let task:taskpool.Task = new taskpool.Task(additionDelay, 1000);
+    runner.execute(task).then(() => {
+      console.info("asyncRunner: task" + i + " done.");
+    });
+  }
+}
+```
 
 
 ## execute
@@ -243,26 +582,30 @@ Execute a concurrent generics task with Configs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes |
-| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes | Generic task to be executed. |
+| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes | Configs of the task. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;R & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;R & gt; |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| 10200058 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs. |
+| 10200058 | Task timed out. |
+
+**Examples**
+
+See [execute](#execute)
 
 
 ## execute
@@ -281,21 +624,25 @@ Execute a concurrent task group with Configs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes |
-| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes | Task group to be executed. |
+| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes | Configs of each task in the TaskGroup. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Object[] & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Object[] & gt; |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| 10200059 |
-| 10200070 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| 10200059 | TaskGroup cannot be re-executed. |
+| 10200070 | TaskGroup timed out. |
+
+**Examples**
+
+See [execute](#execute)

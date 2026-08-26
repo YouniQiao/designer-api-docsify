@@ -3,7 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## createGroup
@@ -26,12 +29,32 @@ function createGroup(config: WifiP2PConfig): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [WifiP2PConfig](arkts-connectivity-wifi-wifip2pconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [WifiP2PConfig](arkts-connectivity-wifi-wifip2pconfig-i.md) | 是 | 创建群组的配置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 操作成功时返回{ |
+
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+  let config:wifi.WifiP2PConfig = {
+    deviceAddress: "****",
+    netId: 0,
+    passphrase: "*****",
+    groupName: "****",
+    goBand: 0
+  }
+  wifi.createGroup(config);  
+  
+}catch(error){
+  console.error("failed:" + JSON.stringify(error));
+}
+```

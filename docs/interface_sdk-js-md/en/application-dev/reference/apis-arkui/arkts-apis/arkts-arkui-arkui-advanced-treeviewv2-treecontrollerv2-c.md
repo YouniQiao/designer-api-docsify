@@ -9,7 +9,7 @@ Declare TreeControllerV2
 ## Modules to Import
 
 ```TypeScript
-import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from 'kits/@kit.ArkUI';
+import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUI';
 ```
 
 ## addNode
@@ -30,15 +30,15 @@ Initialize the interface of the tree view. This interface is used to generate Li
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| nodeParam | [NodeParamV2](arkts-arkui-arkui-advanced-treeviewv2-nodeparamv2-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| nodeParam | [NodeParamV2](arkts-arkui-arkui-advanced-treeviewv2-nodeparamv2-i.md) | No | Configuration information of the newly added node. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md) |
+| Type | Description |
+| --- | --- |
+| [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md) | ListTreeNode Tree view component proxy class. |
 
 ## buildDone
 
@@ -90,11 +90,11 @@ This interface is called when a secondaryTitle needs to be updated
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| parentId | number | Yes |
-| parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes |
-| currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| parentId | number | Yes | ID of the parent node. Value range:The value must be greater than or equal to -1. |
+| parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | secondaryTitle of parent node. |
+| currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | secondaryTitle of current node. |
 
 ## removeNode
 

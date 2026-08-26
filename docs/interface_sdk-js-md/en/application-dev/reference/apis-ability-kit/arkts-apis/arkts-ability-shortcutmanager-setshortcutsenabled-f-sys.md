@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
+import shortcutManager from '@kit.AbilityKit';
 ```
 
 ## setShortcutsEnabled
@@ -24,23 +24,58 @@ Enables or disables the specified static shortcuts. This API uses a promise to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shortcutsInfo | Array & lt;ShortcutInfo & gt; | Yes |
-| isEnabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shortcutsInfo | Array & lt;ShortcutInfo & gt; | Yes | Array of static shortcuts.   **NOTE：**This API does not distinguish between the main application and the cloned application, and only takes effect for static shortcuts. Therefore, the **appIndex** and **sourceType** fields in **ShortcutInfo** do not take effect. |
+| isEnabled | boolean | Yes | Whether to enable the static shortcuts. **true** to enable, **false** otherwise. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-| [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
+| [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is illegal. |
+
+**Examples**
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use the actual shortcut ID and bundle name.
+const bundleName = "com.example.myapplication";
+const arrShortcutInfo: Array<shortcutManager.ShortcutInfo> = [
+  {
+    id: "1",
+    bundleName: bundleName,
+    appIndex: 0,
+    sourceType: 1
+  },
+  {
+    id: "2",
+    bundleName: bundleName,
+    appIndex: 0,
+    sourceType: 1
+  }
+]
+
+try {
+  shortcutManager.setShortcutsEnabled(arrShortcutInfo, false)
+    .then(() => {
+      console.info('setShortcutsEnabled success');
+    }).catch((err: Error) => {
+    console.error(`setShortcutsEnabled errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
+  });
+} catch (err) {
+  console.error(`setShortcutsEnabled errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
+}
+```

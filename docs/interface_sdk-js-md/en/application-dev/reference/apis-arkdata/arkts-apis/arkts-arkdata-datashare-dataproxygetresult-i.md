@@ -9,7 +9,8 @@ Defines a struct for obtaining the batch operation result of shared configuratio
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import dataShare from '@kit.ArkData';
+import dataSharePredicates from '@kit.ArkDataPredicates';
 ```
 
 ## allowList

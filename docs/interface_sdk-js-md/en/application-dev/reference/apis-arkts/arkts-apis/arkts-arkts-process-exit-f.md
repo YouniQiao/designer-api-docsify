@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## exit
@@ -24,6 +24,17 @@ Terminates this process.Exercise caution when using this API. After this API is 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| code | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| code | number | Yes | Exit code of the process. |
+
+**Examples**
+
+```TypeScript
+process.exit(0);
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+pro.exit(0);
+```

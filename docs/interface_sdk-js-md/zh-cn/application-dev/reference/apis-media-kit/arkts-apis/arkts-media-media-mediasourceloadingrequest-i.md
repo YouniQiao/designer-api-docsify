@@ -2,7 +2,8 @@
 
 用于定义加载请求的对象。应用程序通过该对象来获取请求的资源位置，通过该对象和播放器进行数据交互。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > - 本Interface首批接口从API version 18开始支持。
 
@@ -13,7 +14,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## finishLoading
@@ -32,10 +33,23 @@ finishLoading(uuid: number, state: LoadingRequestError): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uuid | number | 是 |
-| state | [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uuid | number | 是 | 资源句柄的标识。来源是[SourceOpenCallback](arkts-media-media-sourceopencallback-t.md)。 |
+| state | [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md) | 是 | 请求的状态。 |
+
+**示例**
+
+```TypeScript
+import { HashMap } from '@kit.ArkTS';
+
+let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
+let uuid = 1;
+
+let request = requests.get(uuid);
+let loadingError = media.LoadingRequestError.LOADING_ERROR_SUCCESS;
+request?.finishLoading(uuid, loadingError);
+```
 
 ## respondData
 
@@ -53,17 +67,30 @@ respondData(uuid: number, offset: number, buffer: ArrayBuffer): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uuid | number | 是 |
-| offset | number | 是 |
-| buffer | ArrayBuffer | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uuid | number | 是 | 资源句柄的标识。来源是[SourceOpenCallback](arkts-media-media-sourceopencallback-t.md)。 |
+| offset | number | 是 | 当前媒体数据相对于资源起始位置的偏移量。offset不能小于0。 |
+| buffer | ArrayBuffer | 是 | 响应播放器的媒体数据。   **注意：** 不要传输无关数据，会影响正常数据解析和播放。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前服务端接受的字节数。 |
+
+**示例**
+
+```TypeScript
+import { HashMap } from '@kit.ArkTS';
+let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
+let uuid = 1;
+
+let request = requests.get(uuid);
+let offset = 0; // 当前媒体数据相对于资源起始位置的偏移量
+let buf = new ArrayBuffer(0); // 由应用定义，推送给播放器的数据
+let num = request?.respondData(uuid, offset, buf);
+```
 
 ## respondHeader
 
@@ -81,11 +108,32 @@ respondHeader(uuid: number, header?: Record<string, string>, redirectUrl?: strin
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uuid | number | 是 |
-| [header](#header) | Record & lt;string, string & gt; | 否 |
-| redirectUrl | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uuid | number | 是 | 资源句柄的标识。来源是[SourceOpenCallback](arkts-media-media-sourceopencallback-t.md)。 |
+| header | Record & lt;string, string & gt; | 否 | HTTP响应中的头部信息。应用可将头部信息字段与底层支持解析字段取交集传递或直接传入对应的所有头部信息。    - 底层播放需要解析的 字段包括Transfer-Encoding、Location、Content-Type、Content-Range、Content-Encode、Accept-Ranges、content-length。 |
+| redirectUrl | string | 否 | 如果存在，为HTTP响应中的重定向URL。 |
+
+**示例**
+
+```TypeScript
+import { HashMap } from '@kit.ArkTS';
+let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
+let uuid = 1;
+
+// 应用根据情况填充。
+let header:Record<string, string> = {
+  'Transfer-Encoding':'xxx',
+  'Location' : 'xxx',
+  'Content-Type' : 'xxx',
+  'Content-Range' : 'xxx',
+  'Content-Encode' : 'xxx',
+  'Accept-Ranges' : 'xxx',
+  'content-length' : 'xxx'
+};
+let request = requests.get(uuid);
+request?.respondHeader(uuid, header);
+```
 
 ## header
 

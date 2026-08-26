@@ -2,9 +2,12 @@
 
 Implements a path effect.
 
-> **NOTE：**&gt;
-> - The initial APIs of this class are supported since API version 12.&gt;
-> - This module uses the physical pixel unit, px.&gt;
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 12.
+> 
+> - This module uses the physical pixel unit, px.
+> 
 > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
@@ -15,7 +18,7 @@ Implements a path effect.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import drawing from '@kit.ArkGraphics2D';
 ```
 
 ## createComposePathEffect
@@ -32,16 +35,32 @@ Creates a path effect by sequentially applying the inner effect and then the out
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| outer | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes |
-| inner | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| outer | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes | Path effect that is applied second, overlaying the first effect. |
+| inner | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes | Inner path effect that is applied first. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let pathEffect1 = drawing.PathEffect.createCornerPathEffect(100);
+    let pathEffect2 = drawing.PathEffect.createCornerPathEffect(10);
+    let effect = drawing.PathEffect.createComposePathEffect(pathEffect1, pathEffect2);
+  }
+}
+```
 
 ## createCornerPathEffect
 
@@ -57,21 +76,35 @@ Creates a path effect that transforms the sharp angle between line segments into
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| radius | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| radius | number | Yes | Radius of the rounded corner. The value must be greater than 0. The value is a floating point number. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let effect = drawing.PathEffect.createCornerPathEffect(30);
+  }
+}
+```
 
 ## createDashPathEffect
 
@@ -87,22 +120,37 @@ Creates a **PathEffect** object that converts a path into a dotted line.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| intervals | Array & lt;number & gt; | Yes |
-| phase | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| intervals | Array & lt;number & gt; | Yes | Array of the lengths of the ON (solid line) and OFF (blank) parts of the dashed path. The number of elements in the array must be an even number and greater than or equal to 2. The value of this parameter is a positive integer. |
+| phase | number | Yes | Offset used during drawing. The value is a floating point number. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let intervals = [10, 5];
+    let effect = drawing.PathEffect.createDashPathEffect(intervals, 5);
+  }
+}
+```
 
 ## createDiscretePathEffect
 
@@ -118,17 +166,31 @@ Creates an effect that segments the path and scatters the segments in an irregul
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| segLength | number | Yes |
-| [dev](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-stat-depr-i.md) | number | Yes |
-| seedAssist | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| segLength | number | Yes | Distance along the path at which each segment is fragmented. The value is a floating point number. If a negative number or the value **0** is passed in, no effect is created. |
+| dev | number | Yes | Maximum amount by which the end points of the segments can be randomly displaced during rendering. The value is a floating-point number. |
+| seedAssist | number | No | Optional parameter to assist in generating a pseudo-random seed for the effect. The default value is **0**, and the value is a 32-bit unsigned integer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let effect = drawing.PathEffect.createDiscretePathEffect(100, -50, 0);
+  }
+}
+```
 
 ## createPathDashEffect
 
@@ -144,24 +206,62 @@ Creates a dashed path effect based on the shape described by a path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
-| advance | number | Yes |
-| phase | number | Yes |
-| style | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path that defines the shape to be used for filling each dash in the pattern. |
+| advance | number | Yes | Distance between two consecutive dashes. The value is a floating point number greater than 0. Otherwise, an error code is thrown. |
+| phase | number | Yes | Starting offset of the dash pattern. The value is a floating point number. The actual offset used is the absolute value of this value modulo the value of **advance**. |
+| style | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | Yes | Style of the dashed path effect. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let pen = new drawing.Pen();
+    const penColor: common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 }
+    pen.setColor(penColor);
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    pen.setAntiAlias(true);
+
+    const path = new drawing.Path();
+    path.moveTo(100, 100);
+    path.lineTo(150, 50);
+    path.lineTo(200, 100);
+
+    const path1 = new drawing.Path();
+    path1.moveTo(0, 0);
+    path1.lineTo(10, 0);
+    path1.lineTo(20, 10);
+    path1.lineTo(0,10);
+
+    let pathEffect1: drawing.PathEffect = drawing.PathEffect.createPathDashEffect(path1, 50, -30,
+        drawing.PathDashStyle.MORPH);
+    pen.setPathEffect(pathEffect1);
+
+    canvas.attachPen(pen);
+    canvas.drawPath(path);
+    canvas.detachPen();
+  }
+}
+```
 
 ## createSumPathEffect
 
@@ -177,13 +277,30 @@ Creates an overlay path effect based on two distinct path effects. Different fro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| firstPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes |
-| secondPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| firstPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes | First path effect. |
+| secondPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes | Second path effect. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let intervals = [10, 5];
+    let pathEffectOne = drawing.PathEffect.createDashPathEffect(intervals, 5);
+    let pathEffectTwo = drawing.PathEffect.createDashPathEffect(intervals, 10);
+    let effect = drawing.PathEffect.createSumPathEffect(pathEffectOne, pathEffectTwo);
+  }
+}
+```

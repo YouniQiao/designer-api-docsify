@@ -9,7 +9,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## constructor
@@ -28,9 +29,19 @@ constructor(encoding?: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| encoding | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| encoding | string | 否 | 输入数据的编码类型。默认值为 **utf-8**。 |
+
+**示例**
+
+```TypeScript
+let textEncoder = new util.TextEncoder("utf-8");
+```
+
+```TypeScript
+let decoder = new util.StringDecoder();
+```
 
 ## end
 
@@ -48,15 +59,28 @@ end(chunk?: string | Uint8Array): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| chunk | string \| Uint8Array | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| chunk | string \| Uint8Array | 否 | 要解码的字符串。默认值为 **undefined**。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 解码后的字符串。 |
+
+**示例**
+
+```TypeScript
+let decoder = new util.StringDecoder('utf-8');
+let input = new Uint8Array([0xE4, 0xBD, 0xA0, 0xE5, 0xA5, 0xBD]);
+const writeString = decoder.write(input.slice(0, 5));
+const endString = decoder.end(input.slice(5));
+console.info("writeString:", writeString);
+// 输出结果：writeString: 你
+console.info("endString:", endString);
+// 输出结果：endString: 好
+```
 
 ## write
 
@@ -74,12 +98,22 @@ write(chunk: string | Uint8Array): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| chunk | string \| Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| chunk | string \| Uint8Array | 是 | 要解码的字符串。基于输入的编码类型进行解码。如果输入为 Uint8Array 类型， 则正常解码。如果输入为字符串类型，则直接返回该参数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 解码后的字符串。 |
+
+**示例**
+
+```TypeScript
+let decoder = new util.StringDecoder('utf-8');
+let input =  new Uint8Array([0xE4, 0xBD, 0xA0, 0xE5, 0xA5, 0xBD]);
+const decoded = decoder.write(input);
+console.info("decoded:", decoded);
+// 输出结果：decoded: 你好
+```

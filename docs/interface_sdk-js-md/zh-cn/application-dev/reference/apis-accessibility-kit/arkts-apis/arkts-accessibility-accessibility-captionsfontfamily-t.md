@@ -15,13 +15,13 @@ type CaptionsFontFamily = 'default' | 'monospacedSerif' | 'serif' |
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
-| 类型 |
-| --- |
-| 'default' |
-| 'monospacedSerif' |
-| 'serif' |
-| 'monospacedSansSerif' |
-| 'sansSerif' |
-| 'casual' |
-| 'cursive' |
-| 'smallCapitals' |
+| 类型 | 说明 |
+| --- | --- |
+| 'default' | 表示默认字体。 |
+| 'monospacedSerif' | 表示等宽Serif字体。 |
+| 'serif' | 表示Serif字体。 |
+| 'monospacedSansSerif' | 表示等宽Sans Serif字体。 |
+| 'sansSerif' | 表示Sans Serif字体。 |
+| 'casual' | 表示非正式字体。 |
+| 'cursive' | 表示手写字体。 |
+| 'smallCapitals' | 表示小型大写字母字体。 |

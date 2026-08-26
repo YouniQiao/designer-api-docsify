@@ -16,7 +16,7 @@ Function that returns array of file handle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| error | BusinessError & lt;void & gt; | Yes |
-| files | Array & lt;File & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| error | BusinessError & lt;void & gt; | Yes | the error that triggers the callback. |
+| files | Array & lt;File & gt; | Yes | file handle. |

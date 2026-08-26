@@ -2,8 +2,10 @@
 
 This module implements the delayed fault notification feature.When the crash and freeze events are subscribed by [HiAppEvent](arkts-performanceanalysis-hiappevent-n.md), the previous event can be received only after the application restarts. If the application fails to start or remains unresponsive for a number time, the fault may not be reported in time.
 
-> **NOTE：**&gt;
-> - The APIs of this module can be used only in the stage model.&gt;
+> **NOTE：**
+> 
+> - The APIs of this module can be used only in the stage model.
+> 
 > - Exceptions may occur if some APIs are called by this module. For details, see
 > [Appendix](../../../reference/apis-performance-analysis-kit/js-apis-hiviewdfx-FaultLogExtensionAbility.md#appendix)
 > .
@@ -15,7 +17,6 @@ This module implements the delayed fault notification feature.When the crash and
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogExtensionAbility } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## onConnect
@@ -32,6 +33,16 @@ Called to perform the initialization operation when the system service completes
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
+**Examples**
+
+```TypeScript
+export default class MyFaultLogExtension extends FaultLogExtensionAbility {
+    onConnect() {
+      console.info('onConnect');
+    }
+}
+```
+
 ## onDisconnect
 
 ```TypeScript
@@ -46,6 +57,16 @@ Called to release resources and clear the running status when the system service
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
+**Examples**
+
+```TypeScript
+export default class MyFaultLogExtension extends FaultLogExtensionAbility {
+    onDisconnect() {
+      console.info('onDisconnect');
+    }
+}
+```
+
 ## onFaultReportReady
 
 ```TypeScript
@@ -59,6 +80,29 @@ Called to subscribe to and process fault events when the system service notifies
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
+
+**Examples**
+
+```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+
+export default class MyFaultLogExtension extends FaultLogExtensionAbility {
+    onFaultReportReady() {
+        hiAppEvent.addWatcher({
+            name: "watcher",
+            appEventFilters: [
+                {
+                    domain: hiAppEvent.domain.OS,
+                    names: [hiAppEvent.event.APP_CRASH, hiAppEvent.event.APP_FREEZE]
+                }
+            ],
+            onReceive: (domain: string, appEventGroups: Array<hiAppEvent.AppEventGroup>) => {
+                // Process the fault event.
+            }
+        });
+    }
+}
+```
 
 ## context
 

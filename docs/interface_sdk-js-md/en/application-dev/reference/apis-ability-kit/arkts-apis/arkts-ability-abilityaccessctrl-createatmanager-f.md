@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from 'kits/@kit.AbilityKit';
+import abilityAccessCtrl, { Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 ```
 
 ## createAtManager
@@ -22,6 +22,13 @@ Creates a program access control management instance for scenarios such as permi
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) |
+| Type | Description |
+| --- | --- |
+| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) | AtManager** instance obtained. |
+
+**Examples**
+
+```TypeScript
+// Create a permission management instance
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+```

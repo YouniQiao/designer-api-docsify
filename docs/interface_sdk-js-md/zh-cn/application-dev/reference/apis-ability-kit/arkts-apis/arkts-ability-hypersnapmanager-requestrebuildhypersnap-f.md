@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hyperSnapManager } from 'kits/@kit.AbilityKit';
+import hyperSnapManager from '@kit.AbilityKit';
 ```
 
 ## requestRebuildHyperSnap
@@ -22,6 +22,6 @@ function requestRebuildHyperSnap(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [16000150](../errorcode-ability.md#16000150-发送请求失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [16000150](../errorcode-ability.md#16000150-发送请求失败) | Failed to send request to system service. |

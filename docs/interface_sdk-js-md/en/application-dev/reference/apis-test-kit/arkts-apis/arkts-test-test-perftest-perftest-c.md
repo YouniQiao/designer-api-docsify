@@ -9,7 +9,6 @@ Represents the general entry of the white-box performance test framework. It pro
 ## Modules to Import
 
 ```TypeScript
-import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from 'kits/@kit.TestKit';
 ```
 
 ## create
@@ -28,24 +27,53 @@ Creates a [PerfTest](#perftest) object and returns the object created. This API 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strategy | [PerfTestStrategy](arkts-test-test-perftest-perfteststrategy-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strategy | [PerfTestStrategy](arkts-test-test-perftest-perfteststrategy-i.md) | Yes | Performance test strategy. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PerfTest](arkts-test-test-perftest-perftest-c.md) |
+| Type | Description |
+| --- | --- |
+| [PerfTest](arkts-test-test-perftest-perftest-c.md) | { |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32400001](../errorcode-perftest.md#32400001-initialization-failed) |
-| [32400002](../errorcode-perftest.md#32400002-internal-error) |
-| [32400003](../errorcode-perftest.md#32400003-parameter-verification-failed) |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32400001](../errorcode-perftest.md#32400001-initialization-failed) | Initialization failed. |
+| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400003](../errorcode-perftest.md#32400003-parameter-verification-failed) | Parameter verification failed. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. @static |
+
+**Examples**
+
+```TypeScript
+import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
+
+async function demo() {
+  let metrics: Array<PerfMetric> = [PerfMetric.DURATION];
+  let num = 0;
+  let actionCode = async (finish: Callback<boolean>) => { // Define the test code segment. The input parameter type is Callback<boolean> and the name is finish.
+    for (let index = 0; index < 10000; index++) {
+      num++;
+    }
+    finish(true); // Call the finish callback to notify that the code segment is executed successfully and as expected.
+  };
+  let resetCode = async (finish: Callback<boolean>) => { // Define the code segment for resetting the environment after the test ends.
+    num = 0;
+    finish(true);
+  };
+  let perfTestStrategy: PerfTestStrategy = {
+    metrics: metrics,
+    actionCode: actionCode,
+    resetCode: resetCode,
+    timeout: 30000,
+    iterations: 10
+  };
+  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // Construct a PerfTest object and create a test task.
+}
+```
 
 ## destroy
 
@@ -63,10 +91,34 @@ Destroys the **PerfTest** object to release the resources occupied by the object
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32400002](../errorcode-perftest.md#32400002-internal-error) |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+
+**Examples**
+
+```TypeScript
+import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
+
+async function demo() {
+  let metrics: Array<PerfMetric> = [PerfMetric.DURATION];
+  let num = 0;
+  let actionCode = async (finish: Callback<boolean>) => {
+    for (let index = 0; index < 10000; index++) {
+      num++;
+    }
+    finish(true); // Call the finish callback to notify that the code segment is executed successfully and as expected.
+  };
+  let perfTestStrategy: PerfTestStrategy = {
+    metrics: metrics,
+    actionCode: actionCode
+  };
+  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // Construct a PerfTest object and create a test task.
+  await perfTest.run();
+  perfTest.destroy(); // Destroy the PerfTest object.
+}
+```
 
 ## getMeasureResult
 
@@ -84,24 +136,48 @@ Obtains the measurement data of a specified performance metric. This method must
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [metric](arkts-test-test-perftest-perfmeasureresult-i.md) | [PerfMetric](arkts-test-test-perftest-perfmetric-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| metric | [PerfMetric](arkts-test-test-perftest-perfmetric-e.md) | Yes | Performance metric to query. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PerfMeasureResult](arkts-test-test-perftest-perfmeasureresult-i.md) |
+| Type | Description |
+| --- | --- |
+| [PerfMeasureResult](arkts-test-test-perftest-perfmeasureresult-i.md) | Measurement result of the specified performance metric, including the measurement data value and statistical values (maximum value, minimum value, and average value) of each round. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32400002](../errorcode-perftest.md#32400002-internal-error) |
-| [32400003](../errorcode-perftest.md#32400003-parameter-verification-failed) |
-| [32400006](../errorcode-perftest.md#32400006-failed-to-obtain-performance-data) |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400003](../errorcode-perftest.md#32400003-parameter-verification-failed) | Parameter verification failed. |
+| [32400006](../errorcode-perftest.md#32400006-failed-to-obtain-performance-data) | Failed to obtain the measurement result. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+
+**Examples**
+
+```TypeScript
+import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
+
+async function demo() {
+  let metrics: Array<PerfMetric> = [PerfMetric.DURATION];
+  let num = 0;
+  let actionCode = async (finish: Callback<boolean>) => {
+    for (let index = 0; index < 10000; index++) {
+      num++;
+    }
+    finish(true); // Call the finish callback to notify that the code segment is executed successfully and as expected.
+  };
+  let perfTestStrategy: PerfTestStrategy = {
+    metrics: metrics,
+    actionCode: actionCode
+  };
+  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // Construct a PerfTest object and create a test task.
+  await perfTest.run();
+  let res = perfTest.getMeasureResult(PerfMetric.DURATION); // Obtain the measurement data of a specified performance metric.
+}
+```
 
 ## run
 
@@ -119,15 +195,38 @@ Runs a performance test, iteratively executes test code segments based on the co
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32400002](../errorcode-perftest.md#32400002-internal-error) |
-| [32400004](../errorcode-perftest.md#32400004-failed-to-execute-the-callback) |
-| [32400005](../errorcode-perftest.md#32400005-failed-to-collect-performance-data) |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400004](../errorcode-perftest.md#32400004-failed-to-execute-the-callback) | Failed to execute the callback. Possible causes: 1. An exception is thrown in the callback. 2. Callback execution timed out. |
+| [32400005](../errorcode-perftest.md#32400005-failed-to-collect-performance-data) | Failed to collect metric data. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+
+**Examples**
+
+```TypeScript
+import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
+
+async function demo() {
+  let metrics: Array<PerfMetric> = [PerfMetric.DURATION];
+  let num = 0;
+  let actionCode = async (finish: Callback<boolean>) => {
+    for (let index = 0; index < 10000; index++) {
+      num++;
+    }
+    finish(true); // Call the finish callback to notify that the code segment is executed successfully and as expected.
+  };
+  let perfTestStrategy: PerfTestStrategy = {
+    metrics: metrics,
+    actionCode: actionCode
+  };
+  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // Construct a PerfTest object and create a test task.
+  await perfTest.run(); // Run the performance test.
+}
+```

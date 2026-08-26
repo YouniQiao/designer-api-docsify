@@ -9,7 +9,7 @@ The definition of command to be sent to the session@interface AVControlCommand [
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import avSession from '@kit.AVSessionKit';
 ```
 
 ## command

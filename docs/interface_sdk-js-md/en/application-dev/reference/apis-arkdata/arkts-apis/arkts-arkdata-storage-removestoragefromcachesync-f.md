@@ -21,6 +21,21 @@ Removes the singleton **Storage** instance of a file from the cache. The removed
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Indicates the path of storage file. |
+
+**Examples**
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+let path;
+let context = featureAbility.getContext();
+context.getFilesDir().then((filePath) => {
+    path = filePath;
+    console.info("======================>getFilesDirPromise====================>");
+
+    data_storage.removeStorageFromCacheSync(path + '/mystore');
+});
+```

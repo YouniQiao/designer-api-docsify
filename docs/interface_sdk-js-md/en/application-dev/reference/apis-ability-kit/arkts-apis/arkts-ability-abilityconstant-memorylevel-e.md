@@ -2,7 +2,8 @@
 
 Enumerates the memory levels of the entire device. You can use it in [onMemoryLevel()](arkts-ability-app-ability-ability-ability-c.md#onmemorylevel) of the UIAbility to complete different operations.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of
 > memory:
 > - When the available memory of the entire device drops to 1700 MB to 1800 MB, the **onMemoryLevel** callback
@@ -127,3 +128,17 @@ The process is in the background and the available memory of the entire device i
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
+    if (level === AbilityConstant.MemoryLevel.MEMORY_LEVEL_CRITICAL) {
+      console.info('The memory of device is critical, please release some memory.');
+    }
+  }
+}
+```

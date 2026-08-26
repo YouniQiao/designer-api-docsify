@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendablePreferences } from 'kits/@kit.ArkData';
+import sendablePreferences from '@kit.ArkData';
 ```
 
 ## getPreferencesSync
@@ -22,23 +22,39 @@ function getPreferencesSync(context: Context, options: Options): Preferences
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文。 |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 | 与Preferences实例相关的配置选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Preferences](arkts-arkdata-preferences-preferences-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Preferences](arkts-arkdata-preferences-preferences-i.md) | 返回Preferences实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
-| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) |
-| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) | The operations is supported in stage mode only. |
+| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) | Invalid dataGroupId. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+let preferences: sendablePreferences.Preferences;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let options: sendablePreferences.Options = { name: 'myStore' };
+    preferences = sendablePreferences.getPreferencesSync(this.context, options);
+  }
+}
+```

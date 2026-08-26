@@ -9,7 +9,8 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import cloudSync from '@kit.CoreFileKit';
+import cloudSyncManager from '@kit.CoreFileKitManager';
 ```
 
 ## clearFileConflict
@@ -26,27 +27,52 @@ clearFileConflict(uri: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 待清除冲突标志的文件URI。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13600001 |
-| 13900002 |
-| 13900010 |
-| 13900012 |
-| 13900020 |
-| 14000002 |
-| 22400005 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**示例**
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+
+let isConflict = false;
+fileVersion.isFileConflict(uri).then((isConflictRet: boolean) => {
+  isConflict = isConflictRet;
+  console.info("current file is conflict: " + isConflictRet);
+}).catch((err: BusinessError) => {
+  console.error(`get current file conflict flag failed with error message: ${err.message}, error code: ${err.code}`);
+});
+fileVersion.clearFileConflict(uri).then(() => {
+  console.info("clean file conflict flag success");
+}).catch((err: BusinessError) => {
+  console.error("clean file conflict flag failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ## constructor
 
@@ -62,9 +88,31 @@ A constructor used to create a FileVersion object.
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 22400005 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**示例**
+
+```TypeScript
+let fileSync = new cloudSync.FileSync()
+```
+
+```TypeScript
+let fileCache = new cloudSync.CloudFileCache();
+```
+
+```TypeScript
+let fileVersion = new cloudSync.FileVersion();
+```
+
+```TypeScript
+let gallerySync = new cloudSync.GallerySync()
+```
+
+```TypeScript
+let download = new cloudSync.Download()
+```
 
 ## downloadHistoryVersion
 
@@ -80,30 +128,59 @@ downloadHistoryVersion(uri: string, versionId: string, callback: Callback<Versio
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| versionId | string | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 文件的URI。 |
+| versionId | string | 是 | 文件某一版本的版本号，格式以接口 [gethistoryversionlist](#gethistoryversionlist)返回为准。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | 是 | 回调函数，返回下载进度。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回历史版本临时存储文件的URI。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13600001 |
-| 13900002 |
-| 13900010 |
-| 13900012 |
-| 13900020 |
-| 14000002 |
-| 22400002 |
-| 22400005 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400002 | Network unavailable. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**示例**
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+let versionId = '123456'; // 以 getHistoryVersionList 方法返回的格式为准，此处仅作为 demo 示例。
+
+let callback = (data: cloudSync.VersionDownloadProgress) => {
+  if (data.state == cloudSync.State.RUNNING) {
+    console.info("download progress: " + data.progress);
+  } else if (data.state == cloudSync.State.FAILED) {
+    console.info("download failed errType: " + data.errType);
+  } else if (data.state == cloudSync.State.COMPLETED) {
+    console.info("download version file success");
+  }
+};
+
+fileVersion.downloadHistoryVersion(uri, versionId, callback).then((fileUri: string) => {
+  console.info("success to begin download, downloadFileUri: " + fileUri);
+}).catch((err: BusinessError) => {
+  console.error("download history version file failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ## getHistoryVersionList
 
@@ -119,29 +196,50 @@ getHistoryVersionList(uri: string, versionNumLimit: number): Promise<Array<Histo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| versionNumLimit | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 文件的URI。 |
+| versionNumLimit | number | 是 | 历史版本列表长度限制，取值范围[0, 100000]（单位：个）。当输入值大于100000时，按照最大值返回列表。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[HistoryVersion](arkts-corefile-cloudsync-historyversion-i.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[HistoryVersion](arkts-corefile-cloudsync-historyversion-i.md)&gt;&gt; | Promise对象，返回历史版本列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13600001 |
-| 13900002 |
-| 13900010 |
-| 13900012 |
-| 13900020 |
-| 14000002 |
-| 22400002 |
-| 22400005 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400002 | Network unavailable. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**示例**
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+let limit = 10;
+
+fileVersion.getHistoryVersionList(uri, limit).then((versionList: Array<cloudSync.HistoryVersion>) => {
+  for(let i = 0, len = versionList.length; i < len; i++) {
+    console.info("get history versionId: " + versionList[i].versionId);
+  }
+}).catch((err: BusinessError) => {
+  console.error("get history version failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ## isFileConflict
 
@@ -157,27 +255,45 @@ isFileConflict(uri: string): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 文件的URI。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回本地文件和云端文件的冲突标志，true表示冲突，false表示不冲突。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13600001 |
-| 13900002 |
-| 13900010 |
-| 13900012 |
-| 13900020 |
-| 14000002 |
-| 22400005 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**示例**
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+
+fileVersion.isFileConflict(uri).then((isConflict: boolean) => {
+  console.info("current file is conflict: " + isConflict);
+}).catch((err: BusinessError) => {
+  console.error("get current file conflict flag failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ## replaceFileWithHistoryVersion
 
@@ -193,28 +309,64 @@ replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| originalUri | string | 是 |
-| versionUri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| originalUri | string | 是 | 本地文件的URI。 |
+| versionUri | string | 是 | 历史版本文件的URI。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13600001 |
-| 13900002 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900012 |
-| 13900020 |
-| 14000002 |
-| 22400005 |
-| 22400007 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900002 | No such file or directory. |
+| 13900005 | I/O error. |
+| 13900008 | Bad file descriptor. |
+| 13900010 | Try again. |
+| 13900012 | Permission denied by the file system. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 14000002 | Invalid URI. Possible causes: 1.originalUri invalid; 2.versionUri invalid. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400007 | The version file specified to replace the original file does not exist. |
+
+**示例**
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+let versionId = '123456'; // 以 getHistoryVersionList 方法返回的格式为准，此处仅作为 demo 示例。
+
+let callback = (data: cloudSync.VersionDownloadProgress) => {
+  if (data.state == cloudSync.State.RUNNING) {
+    console.info("download progress: " + data.progress);
+  } else if (data.state == cloudSync.State.FAILED) {
+    console.info("download failed errType: " + data.errType);
+  } else if (data.state == cloudSync.State.COMPLETED) {
+    console.info("download version file success");
+  }
+};
+
+let versionUri = "";
+fileVersion.downloadHistoryVersion(uri, versionId, callback).then((fileUri: string) => {
+  versionUri = fileUri;
+  console.info("success to begin download, downloadFileUri: " + fileUri);
+}).catch((err: BusinessError) => {
+  console.error(`download history version file failed with error message: ${err.message}, error code: ${err.code}`);
+});
+fileVersion.replaceFileWithHistoryVersion(uri, versionUri).then(() => {
+  console.info("replace file with history version success.");
+}).catch((err: BusinessError) => {
+  console.error("replace file with history version failed with error message: " + err.message + ", error code: " + err.code);
+});
+```

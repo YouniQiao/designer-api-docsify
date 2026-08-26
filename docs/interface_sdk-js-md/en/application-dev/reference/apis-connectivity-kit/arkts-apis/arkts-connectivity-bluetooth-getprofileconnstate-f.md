@@ -3,7 +3,16 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import bas from '@kit.ConnectivityKit.bas';
+import common from '@kit.ConnectivityKit.common';
+import bluetooth from '@kit.ConnectivityKit';
+import map from '@kit.ConnectivityKit.map';
+import pan from '@kit.ConnectivityKit.pan';
+import pbap from '@kit.ConnectivityKit.pbap';
+import opp from '@kit.ConnectivityKit.opp';
+import socket from '@kit.ConnectivityKit.socket';
+import wearDetection from '@kit.ConnectivityKit.wearDetection';
+import bluetoothManager from '@kit.ConnectivityKitManager';
 ```
 
 ## getProfileConnState
@@ -26,12 +35,18 @@ Obtains the connection state of profile.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| profileId | [ProfileId](arkts-connectivity-constant-profileid-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| profileId | [ProfileId](arkts-connectivity-constant-profileid-e.md) | Yes | The profile id. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) |
+| Type | Description |
+| --- | --- |
+| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | Returns the connection state. |
+
+**Examples**
+
+```TypeScript
+let result : bluetooth.ProfileConnectionState = bluetooth.getProfileConnState(bluetooth.ProfileId.PROFILE_A2DP_SOURCE);
+```

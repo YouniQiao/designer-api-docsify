@@ -5,7 +5,7 @@
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AgentProxy](arkts-ability-agentproxy-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AgentProxy](arkts-ability-agentproxy-i-sys.md) | The proxy object of the AgentExtensionAbility, used to send messages to the AgentExtensionAbility, etc.@interface AgentProxy |
 <!--DelEnd-->

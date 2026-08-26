@@ -14,14 +14,14 @@ AI会话创建回调函数类型。允许自定义模型初始化和结果处理
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | string | 是 |
-| params | string | 是 |
-| result | [OnAISessionCallback](arkts-arkweb-onaisessioncallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | string | 是 | The session task ID. |
+| params | string | 是 | Contextual data passed during creation. |
+| result | [OnAISessionCallback](arkts-arkweb-onaisessioncallback-t.md) | 是 | Callback function to notify the system of the creation result. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | `true`表示使用自定义逻辑，跳过系统默认行为；`false`表示继续执行系统默认逻辑。 |

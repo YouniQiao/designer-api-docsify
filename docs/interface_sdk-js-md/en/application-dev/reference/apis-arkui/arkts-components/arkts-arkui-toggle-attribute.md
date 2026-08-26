@@ -31,9 +31,9 @@ Creates a content modifier.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)&gt; | Yes | Content modifier to apply to the current component.    **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## onChange
 
@@ -53,9 +53,9 @@ Triggered when the toggle status changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (isOn: boolean) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (isOn: boolean) = & gt; void | Yes |  |
 
 ## selectedColor
 
@@ -75,9 +75,9 @@ Sets the background color of the component when it is turned on.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the component when it is turned on.Default value:When **ToggleType** is set to **Switch**, the default value is **\\$r('sys.color.ohos_id_color_emphasize')**.When **ToggleType** is set to **Checkbox**, the default value is **\\$r('sys.color.ohos_id_color_emphasize')**.When **ToggleType** is set to **Button**, the default value is **\\$r('sys.color.ohos_id_color_emphasize')** with the opacity of **\\$r('sys.float.ohos_id_alpha_highlight_bg')**. |
 
 ## switchPointColor
 
@@ -97,9 +97,9 @@ Sets the color of the circular slider when the component is of the **Switch** ty
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the circular slider when the component is of the **Switch** type.Default value: **\\$r('sys.color.ohos_id_color_foreground_contrary') |
 
 ## switchStyle
 
@@ -119,6 +119,6 @@ Sets the style for the component of the **Switch** type. This attribute is valid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [SwitchStyle](arkts-arkui-switchstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [SwitchStyle](arkts-arkui-switchstyle-i.md) | Yes | Style of the component of the **Switch** type. |

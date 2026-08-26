@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
+import componentUtils from '@kit.ArkUI';
 ```
 
 ## getItemsInShapePath
@@ -24,12 +24,12 @@ function getItemsInShapePath(value: GetItemsInShapePathParams): Array<ImageItem>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [GetItemsInShapePathParams](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [GetItemsInShapePathParams](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | 是 | 获取形状路径中图像的选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md)&gt; | 返回位于选定区域内的图像对象。 |

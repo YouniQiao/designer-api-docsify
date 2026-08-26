@@ -11,7 +11,6 @@ MMI码结果。
 ## 导入模块
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## message

@@ -22,8 +22,8 @@ Construct the ability component. Called when the ability component is used.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | { want: import('../api/@ohos.app.ability.Want').default } | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | { want: import('../api/@ohos.app.ability.Want').default } | Yes |  |
 
 ## Summary

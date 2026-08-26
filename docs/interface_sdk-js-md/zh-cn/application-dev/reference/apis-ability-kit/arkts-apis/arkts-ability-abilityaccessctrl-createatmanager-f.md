@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from 'kits/@kit.AbilityKit';
+import abilityAccessCtrl, { Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 ```
 
 ## createAtManager
@@ -22,6 +22,13 @@ function createAtManager(): AtManager
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) | 获取程序访问控制模块的实例。 |
+
+**示例**
+
+```TypeScript
+// 创建权限管理实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+```

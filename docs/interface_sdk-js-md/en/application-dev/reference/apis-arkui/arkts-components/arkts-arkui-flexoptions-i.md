@@ -107,8 +107,9 @@ Spacing between child components along the main axis or cross axis of the **Flex
 wrap?: FlexWrap
 ```
 
-Whether the **Flex** component has a single line or multiple lines. If an invalid value is passed, the default value will be used.  
-> **NOTE：**&gt;
+Whether the **Flex** component has a single line or multiple lines. If an invalid value is passed, the default value will be used.   
+> **NOTE：**
+> 
 > When wrapped onto multiple lines, the child elements on the new line are stacked in the direction based on the
 > cross axis direction. Default value: **FlexWrap.NoWrap**.
 

@@ -3,19 +3,19 @@
 ## Modules to Import
 
 ```TypeScript
-import { DriverExtensionAbility, DriverExtensionContext } from 'kits/@kit.DriverDevelopmentKit';
+import DriverExtensionAbility, { DriverExtensionContext } from '@kit.DriverDevelopmentKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DriverExtensionAbility](arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md) |
+| Name | Description |
+| --- | --- |
+| [DriverExtensionAbility](arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md) | The **DriverExtensionAbility** module provides the ExtensionAbility related to drivers. It provides lifecycle callbacks to be invoked when a driver is created, destroyed, connected, or disconnected. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md) |
+| Name | Description |
+| --- | --- |
+| [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md) | Define a DriverExtensionContext for store context. |

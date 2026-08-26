@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bas } from 'kits/@kit.ConnectivityKit';
+import bas from '@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceBatteryInfo
@@ -26,25 +26,25 @@ Get remote device battery information.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| deviceId | [BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceId | [BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md) | Yes | Indicates address of peer device. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;BatteryInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;BatteryInfo & gt; | Returns the battery info. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 2900001 |
-| 2900003 |
-| 2900004 |
-| 2900099 |
-| 2901003 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Only can be called on phone, tablet, and 2in1 devices. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| 2900001 | Service stopped. |
+| 2900003 | Bluetooth disabled. |
+| 2900004 | Remote device profile not supported. |
+| 2900099 | Operation failed. |
+| 2901003 | Connection not established. |

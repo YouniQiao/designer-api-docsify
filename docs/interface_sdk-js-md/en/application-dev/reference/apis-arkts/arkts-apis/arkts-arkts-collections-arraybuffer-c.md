@@ -2,7 +2,8 @@
 
 Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-arkts-collections-int8array-c.md), [Uint8Array](arkts-arkts-collections-uint8array-c.md), [Int16Array](arkts-arkts-collections-int16array-c.md), [Uint16Array](arkts-arkts-collections-uint16array-c.md), [Int32Array](arkts-arkts-collections-int32array-c.md), [Uint32Array](arkts-arkts-collections-uint32array-c.md), [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md), and [Float32Array](arkts-arkts-collections-float32array-c.md)).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > **Decorator**: \@Sendable
 
@@ -13,7 +14,6 @@ Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-arkts-colle
 ## Modules to Import
 
 ```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -32,15 +32,15 @@ A constructor used to create an ArkTS ArrayBuffer of a given length.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteLength](#bytelength) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteLength | number | Yes | Number of bytes occupied by the buffer. The maximum value is **2147483647**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArrayBuffer's constructor cannot be directly invoked. |
 
 ## slice
 
@@ -58,23 +58,23 @@ Selects a range of elements in this ArkTS ArrayBuffer to create an ArkTS ArrayBu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| begin | number | Yes |
-| end | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| begin | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of `begin + arrayBuffer.byteLength`. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + arrayBuffer.byteLength`. The default value is the length of the original ArkTS ArrayBuffer. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| ArrayBuffer |
+| Type | Description |
+| --- | --- |
+| ArrayBuffer | New ArrayBuffer generated. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## byteLength
 

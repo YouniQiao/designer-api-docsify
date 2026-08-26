@@ -17,7 +17,7 @@
 
 ### 函数
 
-| 名称 |
-| --- |
-| [setCursor](arkts-arkui-cursorcontrol-setcursor-f.md) |
-| [restoreDefault](arkts-arkui-cursorcontrol-restoredefault-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [setCursor](arkts-arkui-cursorcontrol-setcursor-f.md) | 方法语句中可使用的全局接口，调用该接口可更改当前的鼠标光标样式。 |
+| [restoreDefault](arkts-arkui-cursorcontrol-restoredefault-f.md) | 方法语句中可使用的全局接口，调用此接口可将鼠标光标恢复成默认箭头样式。 |

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## traceByValue
@@ -22,10 +21,20 @@ Traces the value changes of an integer variable.Since API version 19, you are ad
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| count | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the integer variable to trace. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
+| count | number | Yes | Value of an integer variable. |
+
+**Examples**
+
+```TypeScript
+let traceCount = 3;
+hiTraceMeter.traceByValue("myTestCount", traceCount);  // Use trace to record the value of myTestCount.
+traceCount = 4;
+hiTraceMeter.traceByValue("myTestCount", traceCount);  // When myTestCount changes, the new value is recorded.
+// Service flow...
+```
 
 
 ## traceByValue
@@ -44,8 +53,19 @@ Traces an integer with the trace output level specified. It is used to mark the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes |
-| name | string | Yes |
-| count | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | Trace output level. |
+| name | string | Yes | Name of the integer variable to trace. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
+| count | number | Yes | Value of an integer variable. |
+
+**Examples**
+
+```TypeScript
+const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
+let traceCount = 3;
+hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
+traceCount = 4;
+hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
+// Service flow...
+```

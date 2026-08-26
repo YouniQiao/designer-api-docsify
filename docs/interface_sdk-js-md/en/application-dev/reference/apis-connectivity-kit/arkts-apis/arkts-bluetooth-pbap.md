@@ -9,43 +9,43 @@ Provides methods to accessing bluetooth PBAP(Phone Book Access Profile)-related 
 ## Modules to Import
 
 ```TypeScript
-import { pbap } from 'kits/@kit.ConnectivityKit';
+import pbap from '@kit.ConnectivityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md) |
+| Name | Description |
+| --- | --- |
+| [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md) | create the instance of PBAP server profile. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PbapServerProfile](arkts-connectivity-pbap-pbapserverprofile-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [PbapServerProfile](arkts-connectivity-pbap-pbapserverprofile-i-sys.md) | Manager PBAP server profile. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ShareType](arkts-connectivity-pbap-sharetype-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ShareType](arkts-connectivity-pbap-sharetype-e-sys.md) | Enum for the share type. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md) |
+| Name | Description |
+| --- | --- |
+| [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md) | Base interface of profile. |
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md) | Indicate the phone book access authorization. |
 <!--DelEnd-->

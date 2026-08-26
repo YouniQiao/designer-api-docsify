@@ -18,14 +18,12 @@ HashSet is implemented based on [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)
 ## Modules to Import
 
 ```TypeScript
-import { HashSet } from 'kits/@kit.ArkTS';
-import { HashSetCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [HashSet](arkts-arkts-util-hashset-hashset-c.md) |
+| Name | Description |
+| --- | --- |
+| [HashSet](arkts-arkts-util-hashset-hashset-c.md) | HashSet is implemented based on HashMap. In HashSet, only the value object is processed. |

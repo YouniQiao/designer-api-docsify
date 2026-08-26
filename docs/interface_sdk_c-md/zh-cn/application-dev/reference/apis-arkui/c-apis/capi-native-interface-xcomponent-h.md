@@ -875,7 +875,7 @@ int32_t OH_NativeXComponent_GetKeyEventAction(OH_NativeXComponent_KeyEvent* keyE
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_NativeXComponent_KeyEvent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-keyevent.md)* keyEvent | 表示指向[OH_NativeXComponent_KeyEvent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-keyevent.md)实例的指针。 |
-| OH_NativeXComponent_KeyAction* action | 表示指向按键事件动作的指针。 |
+| [OH_NativeXComponent_KeyAction](capi-native-xcomponent-key-event-h.md#oh_nativexcomponent_keyaction)* action | 表示指向按键事件动作的指针。 |
 
 **返回：**
 
@@ -900,7 +900,7 @@ int32_t OH_NativeXComponent_GetKeyEventCode(OH_NativeXComponent_KeyEvent* keyEve
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_NativeXComponent_KeyEvent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-keyevent.md)* keyEvent | 表示指向[OH_NativeXComponent_KeyEvent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-keyevent.md)实例的指针。 |
-| OH_NativeXComponent_KeyCode* code | 表示指向按键事件按键码的指针。 |
+| [OH_NativeXComponent_KeyCode](capi-native-xcomponent-key-event-h.md#oh_nativexcomponent_keycode)* code | 表示指向按键事件按键码的指针。 |
 
 **返回：**
 
@@ -1233,7 +1233,7 @@ int32_t OH_NativeXComponent_RegisterUIInputEventCallback(OH_NativeXComponent *co
 | -- | -- |
 | H_NativeXComponent \*component | 表示指向[OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)实例的指针。 |
 | void (\*callback)(OH_NativeXComponent \*component | 表示指向UI输入事件回调的指针。- event: 表示指向UI输入事件的指针。 |
-| ArkUI_UIInputEvent_Type type) | 表示当前UI输入事件的类型。 |
+| [ArkUI_UIInputEvent_Type](capi-ui-input-event-h.md#arkui_uiinputevent_type) type) | 表示当前UI输入事件的类型。 |
 
 **返回：**
 

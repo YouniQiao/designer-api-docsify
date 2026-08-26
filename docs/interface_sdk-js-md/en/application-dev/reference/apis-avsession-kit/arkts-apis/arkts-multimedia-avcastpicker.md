@@ -3,13 +3,14 @@
 ## Modules to Import
 
 ```TypeScript
-import { AVCastPicker } from 'kits/@kit.AVSessionKit';
+import AVCastPicker from '@kit.AVSessionKit';
+import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKitParam';
 ```
 
 ## Summary
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AVCastPicker](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md) |
+| Name | Description |
+| --- | --- |
+| [AVCastPicker](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md) | A picker view to show available streaming device list. |

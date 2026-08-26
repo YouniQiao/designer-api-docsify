@@ -9,26 +9,25 @@ The module provides APIs for an application to use the system camera to take pho
 ## Modules to Import
 
 ```TypeScript
-import { cameraPicker } from 'kits/@kit.CameraKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [pick(Camera Picker)](arkts-camera-camerapicker-pick-f.md) |
+| Name | Description |
+| --- | --- |
+| [pick(Camera Picker)](arkts-camera-camerapicker-pick-f.md) | Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result. |
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PickerProfile(Camera Picker)](arkts-camera-camerapicker-pickerprofile-c.md) |
-| [PickerResult(Camera Picker)](arkts-camera-camerapicker-pickerresult-c.md) |
+| Name | Description |
+| --- | --- |
+| [PickerProfile(Camera Picker)](arkts-camera-camerapicker-pickerprofile-c.md) | Defines the configuration information about the camera picker. |
+| [PickerResult(Camera Picker)](arkts-camera-camerapicker-pickerresult-c.md) | Defines the processing result of the camera picker. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PickerMediaType(Camera Picker)](arkts-camera-camerapicker-pickermediatype-e.md) |
+| Name | Description |
+| --- | --- |
+| [PickerMediaType(Camera Picker)](arkts-camera-camerapicker-pickermediatype-e.md) | Enumerates the media types displayed in the camera picker. |

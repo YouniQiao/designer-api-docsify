@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## uptime
@@ -22,6 +22,12 @@ Obtains the running time of the current system, in seconds.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Running time of the system, in seconds. |
+
+**Examples**
+
+```TypeScript
+let time = process.uptime();
+```

@@ -2,7 +2,8 @@
 
 AbilityDelegatorArgs模块提供在应用程序执行测试用例期间，获取测试用例参数AbilityDelegatorArgs对象的能力。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 本模块接口仅可在[单元测试框架](../../../application-test/unittest-guidelines.md)中使用。
 
 **起始版本：** 8
@@ -72,3 +73,13 @@ testRunnerClassName: string
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+// 导入测试注册模块
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+// 通过AbilityDelegatorRegistry获取AbilityDelegatorArgs对象
+let args: abilityDelegatorRegistry.AbilityDelegatorArgs = abilityDelegatorRegistry.getArguments();
+```

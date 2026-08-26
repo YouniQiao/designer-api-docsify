@@ -2,9 +2,12 @@
 
 Implements the shader effect. After a shader effect is set for a pen or brush, the shader effect instead of the color attribute is used for drawing. In this case, the alpha value set for the pen or brush still takes effect.
 
-> **NOTE：**&gt;
-> - The initial APIs of this class are supported since API version 12.&gt;
-> - This module uses the physical pixel unit, px.&gt;
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 12.
+> 
+> - This module uses the physical pixel unit, px.
+> 
 > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
@@ -15,7 +18,7 @@ Implements the shader effect. After a shader effect is set for a pen or brush, t
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import drawing from '@kit.ArkGraphics2D';
 ```
 
 ## createColorShader
@@ -32,21 +35,29 @@ Creates a **ShaderEffect** object with a single color.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | number | Yes | Color in the ARGB format. The value is a 32-bit unsigned integer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | ShaderEffect** object with a single color. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let shaderEffect = drawing.ShaderEffect.createColorShader(0xFFFF0000);
+```
 
 ## createComposeShader
 
@@ -63,23 +74,33 @@ Creates a shader by blending two existing shaders in a certain way.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dstShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes |
-| srcShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes |
-| [blendMode](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dstShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes | Shader that serves as the destination color in blend mode. |
+| srcShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes | Shader that serves as the source color in blend mode. |
+| blendMode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | Yes | Blend mode. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | ShaderEffect** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let dstShader = drawing.ShaderEffect.createColorShader(0xFF0000FF);
+let srcShader = drawing.ShaderEffect.createColorShader(0xFFFF0000);
+let shader = drawing.ShaderEffect.createComposeShader(dstShader, srcShader, drawing.BlendMode.SRC);
+```
 
 ## createConicalGradient
 
@@ -97,28 +118,38 @@ Creates a **ShaderEffect** object that generates a conical gradient between two 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| startPt | common2D.Point | Yes |
-| startRadius | number | Yes |
-| endPt | common2D.Point | Yes |
-| endRadius | number | Yes |
-| colors | Array & lt;number & gt; | Yes |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
-| pos | Array & lt;number & gt; \ | null | No |
-| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| startPt | common2D.Point | Yes | Center of the start circle of the gradient. |
+| startRadius | number | Yes | Radius of the start circle of the gradient. A negative number is invalid. The value is a floating point number. |
+| endPt | common2D.Point | Yes | Center of the end circle of the gradient. |
+| endRadius | number | Yes | Radius of the end circle of the gradient. A negative value is invalid. The value is a floating point number. |
+| colors | Array & lt;number & gt; | Yes | Array of colors to distribute between the start circle and end circle. The values in the array are 32-bit (ARGB) unsigned integers. |
+| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode of the shader effect. |
+| pos | Array & lt;number & gt; \ | null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two circles. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | ShaderEffect** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { common2D,drawing } from '@kit.ArkGraphics2D';
+
+let startPt: common2D.Point = { x: 100, y: 100 };
+let endPt: common2D.Point = {x: 200, y: 200};
+let shaderEffect = drawing.ShaderEffect.createConicalGradient(startPt, 100, endPt, 50, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
+```
 
 ## createImageShader
 
@@ -135,25 +166,65 @@ Creates a shader based on an image. You are advised not to use the function for 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pixelmap | image.PixelMap | Yes |
-| tileX | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
-| tileY | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
-| samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | Yes |
-| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelmap | image.PixelMap | Yes | Image object to be sampled. |
+| tileX | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode in the horizontal direction. |
+| tileY | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode in the vertical direction. |
+| samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | Yes | Image sampling options. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | (Optional) Matrix transformation applied to an image. If this parameter is left empty, no transformation is applied. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | ShaderEffect** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { image } from '@kit.ImageKit';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const width = 1000;
+    const height = 1000;
+    const bufferSize = width * height * 4;
+    const color: ArrayBuffer = new ArrayBuffer(bufferSize);
+
+    const colorData = new Uint8Array(color);
+    for (let i = 0; i < colorData.length; i += 4) {
+      colorData[i] = 255;
+      colorData[i+1] = 156;
+      colorData[i+2] = 0;
+      colorData[i+3] = 255;
+    }
+
+    let opts: image.InitializationOptions = {
+      editable: true,
+      pixelFormat: 3,
+      size: { height, width }
+    }
+
+    let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
+    let matrix = new drawing.Matrix();
+    let options = new drawing.SamplingOptions(drawing.FilterMode.FILTER_MODE_NEAREST);
+    if (pixelMap != null) {
+      let imageShader =
+        drawing.ShaderEffect.createImageShader(pixelMap, drawing.TileMode.REPEAT, drawing.TileMode.MIRROR, options,
+          matrix);
+    }
+  }
+}
+```
 
 ## createLinearGradient
 
@@ -170,26 +241,36 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| startPt | common2D.Point | Yes |
-| endPt | common2D.Point | Yes |
-| colors | Array & lt;number & gt; | Yes |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
-| pos | Array & lt;number & gt; \ | null | No |
-| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| startPt | common2D.Point | Yes | Start point. |
+| endPt | common2D.Point | Yes | End point. |
+| colors | Array & lt;number & gt; | Yes | Array of colors to distribute between the two points. The values in the array are 32-bit (ARGB) unsigned integers. |
+| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode of the shader effect. |
+| pos | Array & lt;number & gt; \ | null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two points. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | ShaderEffect** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { common2D,drawing } from '@kit.ArkGraphics2D';
+
+let startPt: common2D.Point = { x: 100, y: 100 };
+let endPt: common2D.Point = { x: 300, y: 300 };
+let shaderEffect = drawing.ShaderEffect.createLinearGradient(startPt, endPt, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
+```
 
 ## createRadialGradient
 
@@ -206,26 +287,35 @@ Creates a **ShaderEffect** object that generates a radial gradient based on the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| centerPt | common2D.Point | Yes |
-| radius | number | Yes |
-| colors | Array & lt;number & gt; | Yes |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
-| pos | Array & lt;number & gt; \ | null | No |
-| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| centerPt | common2D.Point | Yes | Center of the circle. |
+| radius | number | Yes | Radius of the gradient. A negative number is invalid. The value is a floating point number. |
+| colors | Array & lt;number & gt; | Yes | Array of colors to distribute between the center and ending shape of the circle. The values in the array are 32-bit (ARGB) unsigned integers. |
+| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode of the shader effect. |
+| pos | Array & lt;number & gt; \ | null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the center and ending shape of the circle. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | ShaderEffect** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { common2D,drawing } from '@kit.ArkGraphics2D';
+
+let centerPt: common2D.Point = { x: 100, y: 100 };
+let shaderEffect = drawing.ShaderEffect.createRadialGradient(centerPt, 100, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
+```
 
 ## createSweepGradient
 
@@ -243,24 +333,33 @@ Creates a **ShaderEffect** object that generates a color sweep gradient around a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| centerPt | common2D.Point | Yes |
-| colors | Array & lt;number & gt; | Yes |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
-| startAngle | number | Yes |
-| endAngle | number | Yes |
-| pos | Array & lt;number & gt; \ | null | No |
-| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| centerPt | common2D.Point | Yes | Center of the circle. |
+| colors | Array & lt;number & gt; | Yes | Array of colors to distribute between the start angle and end angle. The values in the array are 32-bit (ARGB) unsigned integers. |
+| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode of the shader effect. |
+| startAngle | number | Yes | Start angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. The value is a floating point number. |
+| endAngle | number | Yes | End angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. A value less than the start angle is invalid. The value is a floating point number. |
+| pos | Array & lt;number & gt; \ | null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that the colors are evenly distributed between the start angle and end angle. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) |
+| Type | Description |
+| --- | --- |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | ShaderEffect** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { common2D,drawing } from '@kit.ArkGraphics2D';
+
+let centerPt: common2D.Point = { x: 100, y: 100 };
+let shaderEffect = drawing.ShaderEffect.createSweepGradient(centerPt, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT, 100, 200);
+```

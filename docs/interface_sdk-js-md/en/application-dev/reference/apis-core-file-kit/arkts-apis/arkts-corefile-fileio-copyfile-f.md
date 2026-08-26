@@ -23,17 +23,30 @@ Copies a file. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | string \| number | Yes |
-| dest | string \| number | Yes |
-| mode | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | string \| number | Yes | Path or file descriptor of the source file to copy. |
+| dest | string \| number | Yes | Path or file descriptor of the destination file. |
+| mode | number | No | Option for overwriting the destination file. The default value is **0**, which is the only value supported.   **0**: Overwrite the file with the same name completely and truncate the part that is not overwritten. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let srcPath = pathDir + "srcDir/test.txt";
+let dstPath = pathDir + "dstDir/test.txt";
+fileio.copyFile(srcPath, dstPath).then(() => {
+  console.info("copyFile succeed");
+}).catch((err: BusinessError) => {
+  console.error("copyFile failed with error:" + err);
+});
+```
 
 
 ## copyFile
@@ -54,11 +67,33 @@ Copies a file. This API uses an asynchronous callback to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | string \| number | Yes |
-| dest | string \| number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | string \| number | Yes | Path or file descriptor of the source file to copy. |
+| dest | string \| number | Yes | Path or file descriptor of the destination file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is copied asynchronously. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let srcPath = pathDir + "srcDir/test.txt";
+let dstPath = pathDir + "dstDir/test.txt";
+fileio.copyFile(srcPath, dstPath).then(() => {
+  console.info("copyFile succeed");
+}).catch((err: BusinessError) => {
+  console.error("copyFile failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let srcPath = pathDir + "srcDir/test.txt";
+let dstPath = pathDir + "dstDir/test.txt";
+fileio.copyFile(srcPath, dstPath, (err: BusinessError) => {
+  // Do something.
+});
+```
 
 
 ## copyFile
@@ -84,9 +119,20 @@ Copies a file. This API uses an asynchronous callback to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | string \| number | Yes |
-| dest | string \| number | Yes |
-| mode | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | string \| number | Yes | Path or file descriptor of the source file to copy. |
+| dest | string \| number | Yes | Path or file descriptor of the destination file. |
+| mode | number | Yes | Option for overwriting the destination file. The default value is **0**, which is the only value supported.   **0**: Overwrite the file with the same name completely and truncate the part that is not overwritten. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is copied asynchronously. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let srcPath = pathDir + "srcDir/test.txt";
+let dstPath = pathDir + "dstDir/test.txt";
+fileio.copyFile(srcPath, dstPath, (err: BusinessError) => {
+  // Do something.
+});
+```

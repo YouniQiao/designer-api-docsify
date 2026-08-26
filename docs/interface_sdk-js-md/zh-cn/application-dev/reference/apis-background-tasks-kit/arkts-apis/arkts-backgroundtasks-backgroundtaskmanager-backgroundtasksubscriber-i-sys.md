@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+import backgroundTaskManager from '@kit.BackgroundTasksKit';
 ```
 
 ## onContinuousTaskStart
@@ -32,9 +32,27 @@ onContinuousTaskStart(info: ContinuousTaskInfo): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 是 | 长时任务回调信息，长时任务ID、长时任务类型等。 |
+
+**示例**
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+
+let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
+    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
+    }
+}
+```
 
 ## onContinuousTaskStop
 
@@ -54,9 +72,27 @@ onContinuousTaskStop(info: ContinuousTaskInfo): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 是 | 长时任务回调信息，长时任务ID、长时任务类型等。 |
+
+**示例**
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+
+let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
+    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
+    }
+}
+```
 
 ## onContinuousTaskUpdate
 
@@ -76,6 +112,24 @@ onContinuousTaskUpdate(info: ContinuousTaskInfo): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 是 | 长时任务回调信息，长时任务ID、长时任务类型等。 |
+
+**示例**
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+
+let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
+    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
+    }
+}
+```

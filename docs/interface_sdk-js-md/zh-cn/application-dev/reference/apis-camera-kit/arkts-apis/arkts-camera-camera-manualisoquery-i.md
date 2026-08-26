@@ -9,7 +9,6 @@ Provides APIs to check whether a camera device supports manual ISO setting and o
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getSupportedIsoRange
@@ -28,13 +27,13 @@ Get a array of supported standard ISO sensitivity values, as defined in ISO 1223
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number[] |
+| 类型 | 说明 |
+| --- | --- |
+| number[] | The array of ISO sensitivity values. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |

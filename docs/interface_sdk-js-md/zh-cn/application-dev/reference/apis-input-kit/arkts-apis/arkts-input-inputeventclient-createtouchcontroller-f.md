@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## createTouchController
@@ -24,14 +23,40 @@ function createTouchController(): Promise<TouchController>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[TouchController](arkts-input-inputeventclient-touchcontroller-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[TouchController](arkts-input-inputeventclient-touchcontroller-i.md)&gt; | Promise对象，返回触控控制器实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+
+**示例**
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputEventClient.createTouchController()
+            .then(touchController => {
+              console.info('Succeeded in creating touch controller');
+            })
+            .catch((error: BusinessError) => {
+              console.error(`Failed to create touch controller. Code: ${error.code}, message: ${error.message}.`);
+            });
+        })
+    }
+  }
+}
+```

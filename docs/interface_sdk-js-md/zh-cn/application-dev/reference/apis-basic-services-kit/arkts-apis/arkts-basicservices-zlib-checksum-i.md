@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import zlib from '@kit.BasicServicesKit';
 ```
 
 ## adler32
@@ -28,22 +28,42 @@ adler32(adler: number, buf: ArrayBuffer): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [adler](arkts-basicservices-zlib-zstream-i.md) | number | 是 |
-| buf | ArrayBuffer | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| adler | number | 是 | Adler-32校验和的初始值。 |
+| buf | ArrayBuffer | 是 | 计算校验和数据缓冲区。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。返回计算后的Adler-32校验和。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+
+let str = 'hello world!';
+let arrayBufferIn = new ArrayBuffer(12);
+let data = new Uint8Array(arrayBufferIn);
+
+for (let i = 0, j = str.length; i < j; i++) {
+  data[i] = str.charCodeAt(i);
+}
+
+let checksum = zlib.createChecksumSync()
+
+checksum.adler32(0, arrayBufferIn).then(data => {
+  console.info('adler32 success', data);
+})
+```
 
 ## adler32Combine
 
@@ -61,23 +81,54 @@ adler32Combine(adler1: number, adler2: number, len2: number): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| adler1 | number | 是 |
-| adler2 | number | 是 |
-| len2 | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| adler1 | number | 是 | 第一个要合并的Adler-32校验和。 |
+| adler2 | number | 是 | 第二个要合并的Adler-32校验和。 |
+| len2 | number | 是 | 第二个Adler-32校验和的数据块的长度。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。返回合并后的Adler-32校验和。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(12);
+  let data = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    data[i] = str.charCodeAt(i);
+  }
+  let checksum = zlib.createChecksumSync()
+  let adler1 = 0;
+  let adler2 = 1;
+  await checksum.adler32(0, arrayBufferIn).then(data => {
+    console.info('adler32 success', data);
+    adler1 = data;
+  })
+  await checksum.adler32(1, arrayBufferIn).then(data => {
+    console.info('adler32 success', data);
+    adler2 = data;
+  })
+  await checksum.adler32Combine(adler1, adler2, 12).then((data) => {
+    console.info('adler32Combine success', data);
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## crc32
 
@@ -95,22 +146,44 @@ crc32(crc: number, buf: ArrayBuffer): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| crc | number | 是 |
-| buf | ArrayBuffer | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| crc | number | 是 | CRC-32校验的初始值。 |
+| buf | ArrayBuffer | 是 | 计算校验数据缓冲区。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。返回更新后的CRC-32校验。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let str = 'hello world!';
+let arrayBufferIn = new ArrayBuffer(12);
+let data = new Uint8Array(arrayBufferIn);
+
+for (let i = 0, j = str.length; i < j; i++) {
+  data[i] = str.charCodeAt(i);
+}
+
+let checksum = zlib.createChecksumSync()
+
+checksum.crc32(0, arrayBufferIn).then((data) => {
+  console.info('crc32 success', data);
+}).catch((errData: BusinessError) => {
+  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+})
+```
 
 ## crc32Combine
 
@@ -128,23 +201,54 @@ crc32Combine(crc1: number, crc2: number, len2: number): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| crc1 | number | 是 |
-| crc2 | number | 是 |
-| len2 | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| crc1 | number | 是 | 第一个要合并的CRC-32校验。 |
+| crc2 | number | 是 | 第二个要合并的CRC-32校验。 |
+| len2 | number | 是 | 第二个CRC-32校验的数据块的长度。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。返回合并后的CRC-32校验。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(12);
+  let data = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    data[i] = str.charCodeAt(i);
+  }
+  let checksum = zlib.createChecksumSync()
+  let crc1 = 0;
+  let crc2 = 1;
+  await checksum.crc32(0, arrayBufferIn).then(data => {
+    console.info('crc32 success', data);
+    crc1 = data;
+  })
+  await checksum.crc32(1, arrayBufferIn).then(data => {
+    console.info('crc32 success', data);
+    crc2 = data;
+  })
+  await checksum.crc32Combine(crc1, crc2, 12).then((data) => {
+    console.info('crc32Combine success', data);
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## crc64
 
@@ -162,22 +266,44 @@ crc64(crc: number, buf: ArrayBuffer): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| crc | number | 是 |
-| buf | ArrayBuffer | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| crc | number | 是 | CRC-64校验的初始值。 |
+| buf | ArrayBuffer | 是 | 计算校验数据缓冲区。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。返回更新后的CRC-64校验。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let str = 'hello world!';
+let arrayBufferIn = new ArrayBuffer(12);
+let data = new Uint8Array(arrayBufferIn);
+
+for (let i = 0, j = str.length; i < j; i++) {
+  data[i] = str.charCodeAt(i);
+}
+
+let checksum = zlib.createChecksumSync()
+
+checksum.crc64(0, arrayBufferIn).then((data) => {
+  console.info('crc64 success', data);
+}).catch((errData: BusinessError) => {
+  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+})
+```
 
 ## getCrc64Table
 
@@ -195,9 +321,23 @@ getCrc64Table(): Promise<Array<number>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;number & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;number & gt; & gt; | Promise对象。返回CRC-64校验表。 |
+
+**示例**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let checksum = zlib.createChecksumSync()
+
+checksum.getCrc64Table().then((data) => {
+  console.info('getCrc64Table success');
+}).catch((errData: BusinessError) => {
+  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+})
+```
 
 ## getCrcTable
 
@@ -215,6 +355,20 @@ getCrcTable(): Promise<Array<number>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;number & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;number & gt; & gt; | Promise对象。返回CRC-32校验表。 |
+
+**示例**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let checksum = zlib.createChecksumSync()
+
+checksum.getCrcTable().then((data) => {
+  console.info('getCrcTable success');
+}).catch((errData: BusinessError) => {
+  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+})
+```

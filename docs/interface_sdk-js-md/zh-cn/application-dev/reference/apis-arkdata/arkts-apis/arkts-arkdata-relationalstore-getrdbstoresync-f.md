@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import relationalStore from '@kit.ArkData';
 ```
 
 ## getRdbStoreSync
@@ -23,30 +23,56 @@ function getRdbStoreSync(context: Context, config: StoreConfig): RdbStore
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
-| config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用的上下文。 FA模型的应用Context定义见Context。 Stage模型的应用Context定义见Context。 |
+| config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | 是 | 与此RDB存储相关的数据库配置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md) | 返回RdbStore对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800010](../errorcode-data-rdb.md#14800010-数据库路径不合法) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14801001](../errorcode-data-rdb.md#14801001-上下文环境非stage模型) |
-| [14801002](../errorcode-data-rdb.md#14801002-storeconfig中传入的datagroupid参数非法) |
-| [14800017](../errorcode-data-rdb.md#14800017-关键配置已被更改) |
-| [14800020](../errorcode-data-rdb.md#14800020-密钥损坏或丢失) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid args. |
+| [14800010](../errorcode-data-rdb.md#14800010-数据库路径不合法) | Invalid database path. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14801001](../errorcode-data-rdb.md#14801001-上下文环境非stage模型) | The operation is supported in the stage model only. |
+| [14801002](../errorcode-data-rdb.md#14801002-storeconfig中传入的datagroupid参数非法) | Invalid data group ID. |
+| [14800017](../errorcode-data-rdb.md#14800017-关键配置已被更改) | Config changed. |
+| [14800020](../errorcode-data-rdb.md#14800020-密钥损坏或丢失) | The secret key is corrupted or lost. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let store: relationalStore.RdbStore | undefined = undefined;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    const STORE_CONFIG: relationalStore.StoreConfig = {
+      name: "RdbTest.db",
+      securityLevel: relationalStore.SecurityLevel.S1
+    };
+
+    try {
+      store = relationalStore.getRdbStoreSync(this.context, STORE_CONFIG);
+      console.info('Get RdbStore successfully.');
+    } catch (err) {
+      console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
+    };
+  }
+}
+```

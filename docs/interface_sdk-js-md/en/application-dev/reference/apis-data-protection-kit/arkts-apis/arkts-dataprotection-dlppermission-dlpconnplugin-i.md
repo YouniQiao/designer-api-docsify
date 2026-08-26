@@ -2,7 +2,8 @@
 
 Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin) requires identical parameters to this API.
 > [connectServer](#connectserver) is called by the SA and the parameters are
 > returned through the callback.
@@ -14,7 +15,7 @@ Registers the callback capability with the system ability (SA). This API is used
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import dlpPermission from '@kit.DataProtectionKit';
 ```
 
 ## connectServer
@@ -25,7 +26,8 @@ connectServer(requestId: string, requestData: string, callback: Callback<string>
 
 This API is called by the SA. After the request of connecting to the cloud server is processed, the result is returned the SA using a callback.This API can be used in enterprise account authentication and cloud permission verification to enable communication between the SA and the cloud server.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **connectServer** indicates a call from the system capability side to the frontend.
 
 **Since:** 21
@@ -38,16 +40,37 @@ This API is called by the SA. After the request of connecting to the cloud serve
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| requestId | string | Yes |
-| requestData | string | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| requestId | string | Yes | ID of the request transferred by the SA. No value range restriction is specified. |
+| requestData | string | Yes | Data transferred by the SA. No value range restriction is specified. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | API transferred by the SA, which is used for callback. No value range restriction is specified. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { Callback } from '@kit.BasicServicesKit';
+
+export default class DataCapsulePlugin implements dlpPermission.DlpConnPlugin {
+  constructor() {
+  }
+
+  connectServer(requestId: string, requestData: string, callback: Callback<string>): void {
+    let callbackJson = JSON.stringify({
+      'requestId': requestId,
+    }); // Construct callback JSON data.
+    callback(callbackJson);  // Use a callback to return the result.
+  }
+}
+
+let plugin: dlpPermission.DlpConnPlugin = new DataCapsulePlugin();
+```

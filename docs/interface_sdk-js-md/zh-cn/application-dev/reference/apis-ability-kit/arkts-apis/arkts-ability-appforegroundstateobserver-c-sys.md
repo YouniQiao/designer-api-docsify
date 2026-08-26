@@ -24,6 +24,19 @@ onAppStateChanged(appStateData: AppStateData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | 是 | 应用状态信息。 |
+
+**示例**
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+
+let observer: appManager.AppForegroundStateObserver = {
+  onAppStateChanged(appStateData: appManager.AppStateData) {
+    console.info(`onAppStateChanged appStateData: ${JSON.stringify(appStateData)}`);
+  },
+};
+appManager.on('appForegroundState', observer);
+```

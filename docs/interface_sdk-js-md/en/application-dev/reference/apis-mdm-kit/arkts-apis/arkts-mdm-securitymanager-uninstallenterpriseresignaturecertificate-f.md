@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from 'kits/@kit.MDMKit';
+import securityManager from '@kit.MDMKit';
 ```
 
 ## uninstallEnterpriseReSignatureCertificate
@@ -18,7 +18,8 @@ Uninstalls the enterprise application re-signing certificate. After the enterpri
 2. Restoring a mistakenly deleted certificate: After a mistakenly deleted certificate is re-installed via the  
 [installEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-installenterpriseresignaturecertificate-f.md) API, re-signed applications can run normally without being affected.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Certificate deletion is typically performed in scenarios such as certificate expiration or certificate leakage.
 > You are advised to implement this feature with a strong prompt to administrators, advising them to delete
 > certificates with caution. Before deleting a certificate, ensure that a new re-signing certificate has been
@@ -35,18 +36,43 @@ Uninstalls the enterprise application re-signing certificate. After the enterpri
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-| certificateAlias | string | Yes |
-| accountId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| certificateAlias | string | Yes | Certificate alias, which must end with **.cer**. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [9201008](../errorcode-enterpriseDeviceManager.md#9201008-enterprise-re-signing-certificate-not-exist) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [9201008](../errorcode-enterpriseDeviceManager.md#9201008-enterprise-re-signing-certificate-not-exist) | The certificate does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+
+**Examples**
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let certificateAlias: string = 'test.cer';
+// Replace with actual values.
+let accountId: number = 100;
+try {
+  securityManager.uninstallEnterpriseReSignatureCertificate(
+    wantTemp, certificateAlias, accountId);
+  console.info('Success to uninstall enterprise re signature certificate.');
+} catch (err) {
+  console.error(`Failed to uninstall enterprise re signature certificate.
+    Code: ${err.code}, message: ${err.message}`);
+};
+```

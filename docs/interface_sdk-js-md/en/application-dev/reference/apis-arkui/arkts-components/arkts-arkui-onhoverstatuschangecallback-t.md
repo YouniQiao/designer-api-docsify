@@ -16,6 +16,6 @@ Defines the current callback invoked when the hover state of the device changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | [HoverEventParam](arkts-arkui-hovereventparam-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [HoverEventParam](arkts-arkui-hovereventparam-i.md) | Yes | Parameters related to the hover state of the device, including the fold state, hover state, application orientation, and window mode enumeration of the device. |

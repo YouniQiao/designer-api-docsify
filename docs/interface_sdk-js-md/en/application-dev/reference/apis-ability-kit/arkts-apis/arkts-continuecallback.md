@@ -10,15 +10,15 @@ The ContinueCallback module defines the callback function that indicates the res
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ContinueCallback](arkts-ability-continuecallback-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ContinueCallback](arkts-ability-continuecallback-i-sys.md) | ContinueCallback registered for notify continue result.@interface ContinueCallback |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnContinueDoneCallback](arkts-ability-oncontinuedonecallback-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [OnContinueDoneCallback](arkts-ability-oncontinuedonecallback-t-sys.md) | Callback function on continue mission done. |
 <!--DelEnd-->

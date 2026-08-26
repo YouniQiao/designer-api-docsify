@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
+import errorManager from '@kit.AbilityKit';
 ```
 
 ## setDefaultFreezeObserver
@@ -24,18 +24,18 @@ Set the default freeze observer, This function will be executed right after the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| defaultObserver | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| defaultObserver | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No | The default freeze observer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) |
+| Type | Description |
+| --- | --- |
+| [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | Returns the original default freeze observer. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |

@@ -13,7 +13,6 @@ Control center session object.@extends Beauty, Aperture [since 20 - 24] @extends
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableAutoFraming
@@ -32,17 +31,17 @@ Enable auto-framing effect.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | enable auto-framing effect if TRUE. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getAutoFramingStatus
 
@@ -60,15 +59,15 @@ Gets the status of auto-framing effect.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Is auto-framing active. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## getControlCenterHeight
 
@@ -88,15 +87,15 @@ Gets the control center height.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | the control center height, in units of vp. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## getCurrentDevice
 
@@ -116,16 +115,16 @@ Gets the current camera device.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CameraDevice](arkts-camera-camera-cameradevice-i.md) |
+| Type | Description |
+| --- | --- |
+| [CameraDevice](arkts-camera-camera-cameradevice-i.md) | the current camera device. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 
 ## isAutoFramingSupported
 
@@ -143,15 +142,15 @@ Checks whether auto-framing is supported.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Is auto-framing supported. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## release
 
@@ -169,15 +168,87 @@ Release control center session object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Examples**
+
+```TypeScript
+async function releaseDepthData(depthData: camera.DepthData): Promise<void> {
+  await depthData.release();
+}
+```
+
+```TypeScript
+async function releaseDeferredPhotoProxy(proxyObj: camera.DeferredPhotoProxy): Promise<void> {
+  await proxyObj.release();
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function releasePreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.release().then(() => {
+    console.info('Promise returned to indicate that the preview output instance is released successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to preview output release, error code: ${error.code}`);
+  });
+}
+
+function releaseVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.release().then(() => {
+    console.info('Promise returned to indicate that the video output instance is released successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to video output release, error code: ${error.code}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function releaseCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.release().then(() => {
+    console.info('Promise returned to indicate that the CaptureSession instance is released successfully.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release the CaptureSession instance, error code: ${err.code}.`);
+  });
+}
+```
+
+```TypeScript
+async function releasePhoto(photo: camera.Photo): Promise<void> {
+  await photo.release();
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function releaseCaptureSession(session: camera.Session): void {
+  session.release().then(() => {
+    console.info('Promise returned to indicate that the session instance is released successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the session instance, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { camera } from '@kit.CameraKit';
+
+async function releaseCapturePhoto(capturePhoto: camera.CapturePhoto): Promise<void> {
+  await capturePhoto.release();
+}
+```
 
 ## usedAsPosition
 
@@ -197,14 +268,14 @@ Sets the camera to be used as a camera at the specified position.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | Yes | The positon used for the camera. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |

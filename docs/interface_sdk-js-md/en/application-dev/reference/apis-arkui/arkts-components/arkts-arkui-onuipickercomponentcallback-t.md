@@ -16,6 +16,6 @@ Defines the callback types for the [onChange](arkts-arkui-uipickercomponent-attr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectedIndex | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectedIndex | number | Yes | Index of the selected item. |

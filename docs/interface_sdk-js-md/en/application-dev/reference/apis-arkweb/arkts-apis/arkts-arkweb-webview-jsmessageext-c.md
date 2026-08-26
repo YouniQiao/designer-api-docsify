@@ -9,7 +9,6 @@ JsMessageExt is a data class in the ArkWeb framework used to encapsulate the res
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getArray
@@ -28,15 +27,15 @@ Obtains array-type data of the data object. For details about the sample code, s
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string \ | number \| boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string \ | number \| boolean & gt; | Array data obtained after the script of the runJavaScriptExt API is executed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getArrayBuffer
 
@@ -54,15 +53,15 @@ Obtains raw binary data of the data object. For details about the sample code, s
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| ArrayBuffer |
+| Type | Description |
+| --- | --- |
+| ArrayBuffer | Raw binary data obtained after the execution of the runJavaScriptExt interface script. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getBoolean
 
@@ -80,15 +79,15 @@ Obtains Boolean-type data of the data object. For details about the sample code,
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Boolean data obtained after the script of the runJavaScriptExt API is executed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getErrorDescription
 
@@ -104,9 +103,9 @@ Obtains the error information about the JavaScript execution. For details about 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string \| null | If an exception occurs during JavaScript script execution, or the return value is of the object type, the system formats the exception information or object into the string "Not support type: & lt;{exception \ |
+| Type | Description |
+| --- | --- |
+| string \| null | If an exception occurs during JavaScript script execution, or the return value is of the object type, the system formats the exception information or object into the string "Not support type: & lt;{exception \ | object} & gt;". The string length does not exceed 2048 characters, and the excess part will be truncated. If the object contains members of the callback type, they will be automatically ignored during serialization. In all other cases, the interface returns null. |
 
 ## getNumber
 
@@ -124,15 +123,15 @@ Obtains number-type data of the data object. For details about the sample code, 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Numeric data obtained after the script of the runJavaScriptExt API is executed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getString
 
@@ -150,15 +149,15 @@ Obtains string-type data of the data object. For details about the sample code, 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String-type data obtained after the script of the runJavaScriptExt API is executed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getType
 
@@ -176,6 +175,6 @@ Obtains the type of the data object. For details about the sample code, see [run
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) |
+| Type | Description |
+| --- | --- |
+| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) | Data type of the result returned after the [runJavaScriptExt]{ |

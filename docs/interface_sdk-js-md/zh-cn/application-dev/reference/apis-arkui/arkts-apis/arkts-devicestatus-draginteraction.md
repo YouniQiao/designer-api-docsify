@@ -2,7 +2,8 @@
 
 拖拽功能模块，提供注册和取消拖拽状态监听的能力。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 本模块接口均为系统接口。
 
 **起始版本：** 10
@@ -14,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dragInteraction } from 'kits/@kit.ArkUI';
+import dragInteraction from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -22,27 +23,27 @@ import { dragInteraction } from 'kits/@kit.ArkUI';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) |
-| [off](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) |
-| [on](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) |
-| [setAppDragSwitchState](arkts-arkui-draginteraction-setappdragswitchstate-f-sys.md) |
-| [setDragSwitchState](arkts-arkui-draginteraction-setdragswitchstate-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) | 获取所有拖拽对象的摘要。 |
+| [off](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) | 取消监听拖拽状态。 |
+| [on](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) | 注册监听拖拽状态。 |
+| [setAppDragSwitchState](arkts-arkui-draginteraction-setappdragswitchstate-f-sys.md) | 控制统一拖拽适配应用开关。 |
+| [setDragSwitchState](arkts-arkui-draginteraction-setdragswitchstate-f-sys.md) | 控制统一拖拽功能总开关。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 |
-| --- |
-| [Summary](arkts-arkui-draginteraction-summary-i-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [Summary](arkts-arkui-draginteraction-summary-i-sys.md) | 拖拽对象的数据摘要。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 |
-| --- |
-| [DragState](arkts-arkui-draginteraction-dragstate-e-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [DragState](arkts-arkui-draginteraction-dragstate-e-sys.md) | 拖拽状态。 |
 <!--DelEnd-->

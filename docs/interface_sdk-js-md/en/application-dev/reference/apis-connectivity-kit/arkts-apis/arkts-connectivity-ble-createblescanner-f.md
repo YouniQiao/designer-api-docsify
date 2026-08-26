@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createBleScanner
@@ -24,6 +23,15 @@ Create a ble scanner instance. Each ble scanner instance can be independently st
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BleScanner](arkts-connectivity-ble-blescanner-i.md) |
+| Type | Description |
+| --- | --- |
+| [BleScanner](arkts-connectivity-ble-blescanner-i.md) | Returns the promise object. |
+
+**Examples**
+
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+import { ble } from '@kit.ConnectivityKit';
+let bleScanner: ble.BleScanner = ble.createBleScanner();
+console.info('create bleScanner success');
+```

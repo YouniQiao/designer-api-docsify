@@ -26,9 +26,9 @@ onAuth(handshakeData: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handshakeData | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handshakeData | string | 是 | 接收到的来自AgentExtensionAbility服务端的安全认证数据。 |
 
 ## onData
 
@@ -48,9 +48,9 @@ onData(data: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | string | 是 | 接收到的来自AgentExtensionAbility服务端的数据。 |
 
 ## onDisconnect
 

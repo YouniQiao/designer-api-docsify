@@ -23,13 +23,25 @@ Updates the ID in a given URI.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
-| id | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | Target URI object. |
+| id | number | Yes | New ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | URI object with the new ID. |
+
+**Examples**
+
+```TypeScript
+import dataUriUtils from '@ohos.ability.dataUriUtils';
+
+let id = 1122;
+let uri = dataUriUtils.updateId(
+    'com.example.dataUriUtils/1221',
+	id
+);
+```

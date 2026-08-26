@@ -37,3 +37,23 @@ Source path of the AbilityStage object.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let monitor: abilityDelegatorRegistry.AbilityStageMonitor = {
+  moduleName: 'feature_as1',
+  srcEntrance: './ets/Application/MyAbilityStage.ts',
+}
+
+let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.waitAbilityStageMonitor(monitor, (error, data) => {
+  if (error) {
+    console.error(`waitAbilityStageMonitor fail, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`waitAbilityStageMonitor success, data: ${JSON.stringify(data)}`);
+  }
+});
+```

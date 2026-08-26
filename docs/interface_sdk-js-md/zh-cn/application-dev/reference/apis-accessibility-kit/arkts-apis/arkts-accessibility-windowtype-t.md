@@ -10,7 +10,7 @@ export type WindowType = 'application' | 'system'
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-| 类型 |
-| --- |
-| 'application' |
-| 'system' |
+| 类型 | 说明 |
+| --- | --- |
+| 'application' | 表示应用窗口类型。 |
+| 'system' | 表示系统窗口类型。 |

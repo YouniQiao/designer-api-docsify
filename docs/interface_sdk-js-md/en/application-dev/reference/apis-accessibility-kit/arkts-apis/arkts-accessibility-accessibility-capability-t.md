@@ -14,10 +14,10 @@ Enumerates the capabilities of an accessibility application.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'retrieve' |
-| 'touchGuide' |
-| 'keyEventObserver' |
-| 'zoom' |
-| 'gesture' |
+| Type | Description |
+| --- | --- |
+| 'retrieve' | Capability to retrieve the window content. |
+| 'touchGuide' | Capability of the touch guide mode. |
+| 'keyEventObserver' | Capability to filter key events. |
+| 'zoom' | Capability to control the display zoom level. Not supported currently. |
+| 'gesture' | Capability to perform gesture actions. |

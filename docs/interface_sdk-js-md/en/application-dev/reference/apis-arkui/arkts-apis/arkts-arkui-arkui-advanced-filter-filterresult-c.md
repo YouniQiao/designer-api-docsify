@@ -9,7 +9,7 @@ This parameter specifies the selection result of a filtering dimension. The inde
 ## Modules to Import
 
 ```TypeScript
-import { Filter, FilterParams, FilterResult, FilterType } from 'kits/@kit.ArkUI';
+import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 ```
 
 ## index

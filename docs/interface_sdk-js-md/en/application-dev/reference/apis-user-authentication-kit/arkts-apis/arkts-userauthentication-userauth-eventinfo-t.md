@@ -14,7 +14,7 @@ Enumerates the authentication event information types.It consists of the fields 
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AuthResultInfo](arkts-userauthentication-userauth-authresultinfo-i.md) |
-| [TipInfo](arkts-userauthentication-userauth-tipinfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [AuthResultInfo](arkts-userauthentication-userauth-authresultinfo-i.md) | Authentication result. |
+| [TipInfo](arkts-userauthentication-userauth-tipinfo-i.md) | Authentication tip information. |

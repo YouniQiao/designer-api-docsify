@@ -9,7 +9,7 @@ Information about the contact synchronization progress.Contains the sync ID, cur
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## currentBatch

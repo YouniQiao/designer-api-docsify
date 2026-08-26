@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## getUserAuthInstance
@@ -28,22 +29,60 @@ Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [authParam](arkts-userauthentication-useriam-userauthicon-userauthicon-s.md) | [AuthParam](arkts-userauthentication-userauth-authparam-i.md) | Yes |
-| [widgetParam](arkts-userauthentication-useriam-userauthicon-userauthicon-s.md) | [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| authParam | [AuthParam](arkts-userauthentication-userauth-authparam-i.md) | Yes | User authentication parameters, including the challenge value, authentication type list, authentication trust level, and authentication result reuse configuration. It is recommended that the challenge value be a random number generated using the crypto framework. Multiple authentication types can be specified for the user to choose from, and the authentication trust level should be selected based on the security requirements of the service scenario. |
+| widgetParam | [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) | Yes | User authentication widget configuration parameters, including the widget title, navigation button text, window mode, and application modal dialog context. It is recommended that the title be set to the authentication purpose, and the navigation button text can be used to customize the authentication navigation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) |
+| Type | Description |
+| --- | --- |
+| [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) | UserAuthInstance** instance that supports UI. After obtaining the instance, call [on('result')]{ |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
-| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
+| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: 'Enter password',
+  };
+  let userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+}
+```

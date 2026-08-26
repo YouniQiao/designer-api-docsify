@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## dialCall
@@ -24,25 +23,45 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| phoneNumber | string | Yes |
-| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| phoneNumber | string | Yes | Phone number. |
+| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | Yes | Call options, which carry other configuration information of the call. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| 8300005 |
-| 8300006 |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| 8300005 | Airplane mode is on. |
+| 8300006 | Network not in service. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dialCallOptions: call.DialCallOptions = {
+    accountId: 0,
+    videoState: 0,
+    dialScene: 0,
+    dialType: 0
+}
+call.dialCall("138xxxxxxxx", dialCallOptions, (err: BusinessError) => {
+    if (err) {
+        console.error(`dialCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`dialCall success.`);
+    }
+});
+```
 
 
 ## dialCall
@@ -63,30 +82,48 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| phoneNumber | string | Yes |
-| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| phoneNumber | string | Yes | Phone number. |
+| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | No | Call options, which carry other configuration information of the call. If this field is not set, the following configuration is used by default. For details, see [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md).    - **accountId**: 0 (card slot 1)    - **videoState**: voice call    - **dialScene**: common call    - **dialType**: carrier call |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| 8300005 |
-| 8300006 |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| 8300005 | Airplane mode is on. |
+| 8300006 | Network not in service. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dialCallOptions: call.DialCallOptions = {
+    accountId: 0,
+    videoState: 0,
+    dialScene: 0,
+    dialType: 0
+}
+call.dialCall("138xxxxxxxx", dialCallOptions).then(() => {
+    console.info(`dialCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`dialCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```
 
 
 ## dialCall
@@ -107,21 +144,35 @@ Initiates a call. This API uses an asynchronous callback to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| phoneNumber | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| phoneNumber | string | Yes | Phone number. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| 8300005 |
-| 8300006 |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| 8300005 | Airplane mode is on. |
+| 8300006 | Network not in service. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.dialCall("138xxxxxxxx", (err: BusinessError) => {
+    if (err) {
+        console.error(`dialCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`dialCall success.`);
+    }
+});
+```

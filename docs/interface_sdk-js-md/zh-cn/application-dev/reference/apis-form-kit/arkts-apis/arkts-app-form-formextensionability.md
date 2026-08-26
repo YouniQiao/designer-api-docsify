@@ -16,21 +16,21 @@ The **FormExtensionAbility** module provides lifecycle callbacks invoked when a 
 ## 导入模块
 
 ```TypeScript
-import { FormExtensionAbility } from 'kits/@kit.FormKit';
+import FormExtensionAbility from '@kit.FormKit';
 ```
 
 ## 汇总
 
 ### 类
 
-| 名称 |
-| --- |
-| [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md) | Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed. |
 
 <!--Del-->
 ### 类（系统接口）
 
-| 名称 |
-| --- |
-| [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c-sys.md) | Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed. |
 <!--DelEnd-->

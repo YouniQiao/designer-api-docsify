@@ -9,7 +9,6 @@ WebMessageExt是[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)接口
 ## 导入模块
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getArray
@@ -28,15 +27,15 @@ getArray(): Array<string | number | boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string \ | number \| boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string \ | number \| boolean & gt; | 返回数组类型的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## getArrayBuffer
 
@@ -54,15 +53,15 @@ getArrayBuffer(): ArrayBuffer
 
 **返回值：**
 
-| 类型 |
-| --- |
-| ArrayBuffer |
+| 类型 | 说明 |
+| --- | --- |
+| ArrayBuffer | 返回原始二进制数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## getBoolean
 
@@ -80,15 +79,15 @@ getBoolean(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回布尔类型的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## getError
 
@@ -106,15 +105,15 @@ getError(): Error
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Error |
+| 类型 | 说明 |
+| --- | --- |
+| Error | 返回错误对象类型的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## getNumber
 
@@ -132,15 +131,15 @@ getNumber(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回数值类型的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## getString
 
@@ -158,15 +157,15 @@ getString(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回字符串类型的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## getType
 
@@ -184,9 +183,9 @@ getType(): WebMessageType
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | [WebMessagePort]{ |
 
 ## setArray
 
@@ -204,16 +203,16 @@ setArray(message: Array<string | number | boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | Array & lt;string \ | number \| boolean & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | Array & lt;string \ | number \| boolean & gt; | 是 | 数组类型数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## setArrayBuffer
 
@@ -231,16 +230,16 @@ setArrayBuffer(message: ArrayBuffer): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | ArrayBuffer | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | ArrayBuffer | 是 | 原始二进制类型数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## setBoolean
 
@@ -258,16 +257,16 @@ setBoolean(message: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | boolean | 是 | 布尔类型数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## setError
 
@@ -285,16 +284,16 @@ setError(message: Error): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | Error | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | Error | 是 | 错误对象类型数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## setNumber
 
@@ -312,16 +311,16 @@ setNumber(message: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | number | 是 | 数值类型数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## setString
 
@@ -339,16 +338,16 @@ setString(message: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | string | 是 | 字符串类型数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## setType
 
@@ -366,13 +365,13 @@ setType(type: WebMessageType): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | 是 | [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)接口所支持的数据类型。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |

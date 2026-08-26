@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { StartupTask } from 'kits/@kit.AbilityKit';
+import StartupTask from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md) |
+| Name | Description |
+| --- | --- |
+| [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md) | The module provides capabilities related to startup tasks in [AppStartup](../../../application-models/app-startup.md). |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityLabel } from 'kits/@kit.CoreFileKit';
+import securityLabel from '@kit.CoreFileKit';
 ```
 
 ## getSecurityLabelSync
@@ -20,25 +20,33 @@ Obtains the data security level of a file or directory in synchronous mode. If n
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | File path. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Promise used to return the data security level. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900001 |
-| 13900007 |
-| 13900015 |
-| 13900020 |
-| 13900025 |
-| 13900037 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900007 | Arg list too number |
+| 13900015 | File exists |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900037 | No data available |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + '/test.txt';
+let type = securityLabel.getSecurityLabelSync(filePath);
+console.info("getSecurityLabel successfully, Label: " + type);
+```

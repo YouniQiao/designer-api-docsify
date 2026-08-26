@@ -9,7 +9,7 @@ Manages configurations of the embedding model.@interface ModelConfig
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from 'kits/@kit.ArkData';
+import intelligence from '@kit.ArkData';
 ```
 
 ## cachePath

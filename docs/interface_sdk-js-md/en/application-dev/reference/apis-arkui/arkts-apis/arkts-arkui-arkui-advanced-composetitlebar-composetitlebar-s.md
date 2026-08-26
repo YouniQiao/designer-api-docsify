@@ -2,8 +2,10 @@
 
 **ComposeTitleBar** represents a common title bar that contains a title, subtitle (optional), and profile picture (optional). It can come with a Back button for switching between pages of different levels.
 
-> **NOTE：**&gt;
-> - This component can be used only in the stage model.&gt;
+> **NOTE：**
+> 
+> - This component can be used only in the stage model.
+> 
 > - If the **ComposeTitleBar** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -18,7 +20,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { ComposeTitleBar, ComposeTitleBarMenuItem } from 'kits/@kit.ArkUI';
+import { ComposeTitleBar, ComposeTitleBarMenuItem } from '@kit.ArkUI';
+import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItemParams } from '@kit.ArkUIV2';
 ```
 
 ## item

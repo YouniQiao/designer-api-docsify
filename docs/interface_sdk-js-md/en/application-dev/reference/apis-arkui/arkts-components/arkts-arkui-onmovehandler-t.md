@@ -16,7 +16,7 @@ Defines the onMove callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| from | number | Yes |
-| to | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | number | Yes | Index number for moving elements. |
+| to | number | Yes | Target index number for moving elements. |

@@ -12,12 +12,12 @@ Enumerates the states of the download task.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'init' |
-| 'queued' |
-| 'running' |
-| 'completed' |
-| 'paused' |
-| 'removing' |
-| 'error' |
+| Type | Description |
+| --- | --- |
+| 'init' |  |
+| 'queued' |  |
+| 'running' |  |
+| 'completed' |  |
+| 'paused' |  |
+| 'removing' |  |
+| 'error' |  |

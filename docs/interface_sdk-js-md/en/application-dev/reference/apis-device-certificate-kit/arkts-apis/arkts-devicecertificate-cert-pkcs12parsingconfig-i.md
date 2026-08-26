@@ -9,7 +9,6 @@ Represents the configuration for parsing P12.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## needsCert
@@ -91,7 +90,8 @@ privateKeyFormat?: EncodingBaseFormat
 
 Format of the private key to be obtained. Currently, the PEM and DER formats are supported. If this parameter is not specified, the PEM format is used by default.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This parameter is valid only when **needsPrivateKey** is set to **true**.
 
 **Type:** [EncodingBaseFormat](arkts-devicecertificate-cert-encodingbaseformat-e.md)

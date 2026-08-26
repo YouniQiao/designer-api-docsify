@@ -13,12 +13,12 @@ type AVMediaCenterControlType = 'playNext' | 'playPrevious' | 'fastForward' | 'r
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
-| 类型 |
-| --- |
-| 'playNext' |
-| 'playPrevious' |
-| 'fastForward' |
-| 'rewind' |
-| 'setSpeed' |
-| 'setLoopMode' |
-| 'toggleFavorite' |
+| 类型 | 说明 |
+| --- | --- |
+| 'playNext' |  |
+| 'playPrevious' |  |
+| 'fastForward' |  |
+| 'rewind' |  |
+| 'setSpeed' |  |
+| 'setLoopMode' |  |
+| 'toggleFavorite' |  |

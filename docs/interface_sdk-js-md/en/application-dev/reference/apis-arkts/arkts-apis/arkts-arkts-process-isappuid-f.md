@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## isAppUid
@@ -24,12 +24,26 @@ Checks whether a UID belongs to this application.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| v | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| v | number | Yes | UID. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the UID belongs to the application; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let result = process.isAppUid(688);
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+// Use process.uid to obtain the UID.
+let pres = process.uid;
+let result = pro.isAppUid(pres);
+console.info("result: " + result); // result: true
+```

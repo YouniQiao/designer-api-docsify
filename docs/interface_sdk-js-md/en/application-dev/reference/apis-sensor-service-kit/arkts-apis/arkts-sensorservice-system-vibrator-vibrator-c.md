@@ -13,7 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Vibrator, VibrateOptions } from 'kits/@kit.SensorServiceKit';
+import Vibrator, { VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## vibrate
@@ -24,7 +24,8 @@ static vibrate(options?: VibrateOptions): void
 
 Triggers device vibration.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Except for lite wearables. You are advised to use
 > [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md) since API version 8.
 
@@ -42,6 +43,6 @@ Triggers device vibration.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [VibrateOptions](arkts-sensorservice-system-vibrator-vibrateoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [VibrateOptions](arkts-sensorservice-system-vibrator-vibrateoptions-i.md) | No | Vibration options. |

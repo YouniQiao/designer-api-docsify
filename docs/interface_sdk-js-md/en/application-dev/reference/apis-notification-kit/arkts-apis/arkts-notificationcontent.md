@@ -10,46 +10,46 @@ The **NotificationContent** defines the content structure of a notification and 
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotificationBasicContent(Some notification types and content)](arkts-notification-notificationcontent-notificationbasiccontent-i.md) |
-| [NotificationButton(Some notification types and content)](arkts-notification-notificationcontent-notificationbutton-i.md) |
-| [NotificationCapsule(Some notification types and content)](arkts-notification-notificationcontent-notificationcapsule-i.md) |
-| [NotificationContent(Some notification types and content)](arkts-notification-notificationcontent-notificationcontent-i.md) |
-| [NotificationLongTextContent(Some notification types and content)](arkts-notification-notificationcontent-notificationlongtextcontent-i.md) |
-| [NotificationMultiLineContent(Some notification types and content)](arkts-notification-notificationcontent-notificationmultilinecontent-i.md) |
-| [NotificationPictureContent(Some notification types and content)](arkts-notification-notificationcontent-notificationpicturecontent-i.md) |
-| [NotificationProgress(Some notification types and content)](arkts-notification-notificationcontent-notificationprogress-i.md) |
-| [NotificationSystemLiveViewContent(Some notification types and content)](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i.md) |
-| [NotificationTime(Some notification types and content)](arkts-notification-notificationcontent-notificationtime-i.md) |
+| Name | Description |
+| --- | --- |
+| [NotificationBasicContent(Some notification types and content)](arkts-notification-notificationcontent-notificationbasiccontent-i.md) | Describes the basic text notification, which is used to display the title and body content. It serves as the basic content structure for other notification types. Other notification types (such as number text, multi-line text, picture, and live view) inherit this API and extend their own specific fields on this basis. |
+| [NotificationButton(Some notification types and content)](arkts-notification-notificationcontent-notificationbutton-i.md) | Describes the notification button, which is used to display an interactive button in the live view. |
+| [NotificationCapsule(Some notification types and content)](arkts-notification-notificationcontent-notificationcapsule-i.md) | Describes the notification capsule, which is used to display the capsule form in the live view. |
+| [NotificationContent(Some notification types and content)](arkts-notification-notificationcontent-notificationcontent-i.md) | Describes the notification contents. |
+| [NotificationLongTextContent(Some notification types and content)](arkts-notification-notificationcontent-notificationlongtextcontent-i.md) | Describes the number text notification. This API is inherited from NotificationBasicContent. |
+| [NotificationMultiLineContent(Some notification types and content)](arkts-notification-notificationcontent-notificationmultilinecontent-i.md) | Describes the multi-line text notification. This API is inherited from NotificationBasicContent. |
+| [NotificationPictureContent(Some notification types and content)](arkts-notification-notificationcontent-notificationpicturecontent-i.md) | Describes the picture-attached notification. This API is inherited from NotificationBasicContent. |
+| [NotificationProgress(Some notification types and content)](arkts-notification-notificationcontent-notificationprogress-i.md) | Describes the notification progress, which is used to display progress bar information in the live view. |
+| [NotificationSystemLiveViewContent(Some notification types and content)](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i.md) | Describes the system live view notification content, which is used to display real-time status information in the live view. Third-party applications are not supported to directly create this notification type. After the system proxy creates a system live view notification, a third-party application can publish a notification with the same ID to update the specified content. This API is inherited from NotificationBasicContent. |
+| [NotificationTime(Some notification types and content)](arkts-notification-notificationcontent-notificationtime-i.md) | Describes the notification timing information. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotificationBasicContent(Some notification types and content)](arkts-notification-notificationcontent-notificationbasiccontent-i-sys.md) |
-| [NotificationCapsule(Some notification types and content)](arkts-notification-notificationcontent-notificationcapsule-i-sys.md) |
-| [NotificationContent(Some notification types and content)](arkts-notification-notificationcontent-notificationcontent-i-sys.md) |
-| [NotificationIconButton(Some notification types and content)](arkts-notification-notificationcontent-notificationiconbutton-i-sys.md) |
-| [NotificationLiveViewContent(Some notification types and content)](arkts-notification-notificationcontent-notificationliveviewcontent-i-sys.md) |
-| [NotificationMultiLineContent(Some notification types and content)](arkts-notification-notificationcontent-notificationmultilinecontent-i-sys.md) |
-| [NotificationSystemLiveViewContent(Some notification types and content)](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [NotificationBasicContent(Some notification types and content)](arkts-notification-notificationcontent-notificationbasiccontent-i-sys.md) | Describes the basic text notification, which is used to display the title and body content. It serves as the basic content structure for other notification types. Other notification types (such as number text, multi-line text, picture, and live view) inherit this API and extend their own specific fields on this basis. |
+| [NotificationCapsule(Some notification types and content)](arkts-notification-notificationcontent-notificationcapsule-i-sys.md) | Describes the notification capsule, which is used to display the capsule form in the live view. |
+| [NotificationContent(Some notification types and content)](arkts-notification-notificationcontent-notificationcontent-i-sys.md) | Describes the notification contents. |
+| [NotificationIconButton(Some notification types and content)](arkts-notification-notificationcontent-notificationiconbutton-i-sys.md) | Describes the system notification button. |
+| [NotificationLiveViewContent(Some notification types and content)](arkts-notification-notificationcontent-notificationliveviewcontent-i-sys.md) | Describes the normal live notification content. This API inherits from NotificationBasicContent. |
+| [NotificationMultiLineContent(Some notification types and content)](arkts-notification-notificationcontent-notificationmultilinecontent-i-sys.md) | Describes the multi-line text notification. This API is inherited from NotificationBasicContent. |
+| [NotificationSystemLiveViewContent(Some notification types and content)](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i-sys.md) | Describes the system live view notification content, which is used to display real-time status information in the live view. Third-party applications are not supported to directly create this notification type. After the system proxy creates a system live view notification, a third-party application can publish a notification with the same ID to update the specified content. This API is inherited from NotificationBasicContent. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LiveViewStatus(Some notification types and content)](arkts-notification-notificationcontent-liveviewstatus-e-sys.md) |
-| [LiveViewTypes(Some notification types and content)](arkts-notification-notificationcontent-liveviewtypes-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [LiveViewStatus(Some notification types and content)](arkts-notification-notificationcontent-liveviewstatus-e-sys.md) | Enumerates the statuses of the common live view. |
+| [LiveViewTypes(Some notification types and content)](arkts-notification-notificationcontent-liveviewtypes-e-sys.md) | Enumerates live view types. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [IconType(Some notification types and content)](arkts-notification-icontype-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [IconType(Some notification types and content)](arkts-notification-icontype-t-sys.md) | Describes the icon types. |
 <!--DelEnd-->

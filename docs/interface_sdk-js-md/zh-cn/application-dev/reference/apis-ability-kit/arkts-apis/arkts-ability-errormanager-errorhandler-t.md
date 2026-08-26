@@ -14,6 +14,6 @@ export type ErrorHandler = (errObject: Error) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| errObject | Error | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| errObject | Error | 是 | 有关异常事件名字、消息、错误堆栈信息的对象。 |

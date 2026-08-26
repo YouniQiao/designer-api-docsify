@@ -16,6 +16,6 @@ type ResultListener = (result: ResultInfo) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| result | [ResultInfo](arkts-medialibrary-photoaccesshelper-resultinfo-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| result | [ResultInfo](arkts-medialibrary-photoaccesshelper-resultinfo-i-sys.md) | 是 | 结果回调信息。 |

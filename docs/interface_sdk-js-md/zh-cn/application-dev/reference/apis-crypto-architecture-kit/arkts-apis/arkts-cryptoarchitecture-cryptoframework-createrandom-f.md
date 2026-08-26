@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## createRandom
@@ -28,12 +28,26 @@ function createRandom(): Random
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) | 返回Random实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+
+**示例**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let rand = cryptoFramework.createRandom();
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```

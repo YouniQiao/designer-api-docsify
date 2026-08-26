@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## startProfiling
@@ -24,6 +23,18 @@ Starts the VM profiling method. **startProfiling(filename: string)** and **stopP
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filename | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filename | string | Yes | Custom file name of the sampling data. The .json file is generated in the **files** directory of the application based on the specified file name. The maximum length of a string is 128. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+hidebug.startProfiling("cpuprofiler-20220216");
+// code block
+// ...
+// code block
+hidebug.stopProfiling();
+```

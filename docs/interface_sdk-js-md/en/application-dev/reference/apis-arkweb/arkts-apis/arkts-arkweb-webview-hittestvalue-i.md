@@ -9,7 +9,6 @@ Provides the element information of the area being clicked. For the sample code,
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## extra

@@ -16,6 +16,6 @@ export type PreloadedUIExtensionAbilityLoadedFn = (preloadId: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| preloadId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| preloadId | number | 是 | The preload UIExtensionAbility ID. |

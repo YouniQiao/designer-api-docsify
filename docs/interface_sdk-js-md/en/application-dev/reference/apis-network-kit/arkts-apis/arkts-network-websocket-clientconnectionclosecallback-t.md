@@ -12,7 +12,7 @@ Callback invoked when the WebSocketServer connection is closed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [clientConnection](arkts-network-websocket-websocketmessage-i.md) | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | Yes |
-| closeReason | [CloseResult](arkts-network-websocket-closeresult-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| clientConnection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | Yes | the connection which is closed. |
+| closeReason | [CloseResult](arkts-network-websocket-closeresult-i.md) | Yes | the error code and reason why the connection is closed. |

@@ -31,9 +31,9 @@ barrier(value: Array<BarrierStyle>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Array&lt;[BarrierStyle](arkts-arkui-barrierstyle-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Array&lt;[BarrierStyle](arkts-arkui-barrierstyle-i.md)&gt; | 是 | RelativeContainer容器内的屏障，用于定义屏障的id、方向和依赖组件，子组件可以以屏障为锚点进行对齐定位。 |
 
 ## barrier
 
@@ -53,9 +53,9 @@ barrier(barrierStyle: Array<LocalizedBarrierStyle>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| barrierStyle | Array&lt;[LocalizedBarrierStyle](arkts-arkui-localizedbarrierstyle-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| barrierStyle | Array&lt;[LocalizedBarrierStyle](arkts-arkui-localizedbarrierstyle-i.md)&gt; | 是 | RelativeContainer容器内的屏障，支持定义镜像模式的屏障线。 |
 
 ## guideLine
 
@@ -75,6 +75,6 @@ guideLine(value: Array<GuideLineStyle>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Array&lt;[GuideLineStyle](arkts-arkui-guidelinestyle-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Array&lt;[GuideLineStyle](arkts-arkui-guidelinestyle-i.md)&gt; | 是 | RelativeContainer容器内的辅助线，定义guideLine的id、方向和位置，用于辅助定位子组件。 |

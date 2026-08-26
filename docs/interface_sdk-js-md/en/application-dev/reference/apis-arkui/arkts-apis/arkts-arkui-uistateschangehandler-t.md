@@ -16,7 +16,7 @@ Defines the callback triggered when the UI state changes. Defines the callback t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| currentUIStates | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Node triggering the UI state change. |
+| currentUIStates | number | Yes | Current UI states when the callback is triggered.  You can use the bitwise AND operation to check the [UI states](arkts-arkui-framenode-uistate-e.md) that are currently included.  Example: **if (currentState & UIState.PRESSED == UIState.PRESSED)**.  Direct comparison: **if (currentState == UIState.PRESSED)**. |

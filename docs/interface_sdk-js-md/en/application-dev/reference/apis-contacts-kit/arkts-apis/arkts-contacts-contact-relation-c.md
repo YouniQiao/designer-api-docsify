@@ -9,7 +9,7 @@ Defines a contact's relationship.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## CUSTOM_LABEL
@@ -315,3 +315,26 @@ Relationship name.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
+
+**Examples**
+
+Create data in JSON format.
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let relation: contact.Relation = {
+    relationName: 'relationName',
+    labelId: contact.Relation.RELATION_ASSISTANT
+};
+```
+
+Alternatively, create data by instantiating a Relation object using new.
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let relation = new contact.Relation();
+relation.relationName = 'relationName';
+relation.labelId = contact.Relation.RELATION_ASSISTANT;
+```

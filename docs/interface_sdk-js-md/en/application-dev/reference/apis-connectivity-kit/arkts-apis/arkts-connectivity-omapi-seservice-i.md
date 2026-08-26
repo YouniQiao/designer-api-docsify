@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from 'kits/@kit.ConnectivityKit';
+import omapi from '@kit.ConnectivityKit';
 ```
 
 ## getReaders
@@ -26,15 +26,41 @@ Obtains available SE readers, which include all the SEs on the device.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Reader](arkts-connectivity-omapi-reader-i.md)[] |
+| Type | Description |
+| --- | --- |
+| [Reader](arkts-connectivity-omapi-reader-i.md)[] | Available readers obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+import { omapi } from '@kit.ConnectivityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let seService : omapi.SEService;
+let seReaders : omapi.Reader[];
+
+// Initialize seService before using it.
+function secureElementDemo() {
+    // Obtain readers.
+    try {
+        seReaders = seService.getReaders();
+    } catch (error) {
+        hilog.error(0x0000, 'testTag', 'getReaders error %{public}s', JSON.stringify(error));
+    }
+    if (seReaders == undefined || seReaders.length == 0) {
+        hilog.error(0x0000, 'testTag', 'no valid reader found.');
+        // Release the SE service resources.
+        seService.shutdown();
+        return;
+    }
+}
+```
 
 ## getVersion
 
@@ -50,15 +76,34 @@ Obtains the version of the Open Mobile API (OMAPI) specification used.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | OMAPI version obtained. For example, **3.3** indicates Open Mobile API Specification v3.3. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+import { omapi } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let seService : omapi.SEService;
+
+// Initialize seService before using it.
+
+try {
+    let version = seService.getVersion();
+    hilog.error(0x0000, 'testTag', 'version %{public}s', JSON.stringify(version));
+} catch (error) {
+    hilog.error(0x0000, 'testTag', 'getVersion error %{public}s', JSON.stringify(error));
+}
+```
 
 ## isConnected
 
@@ -74,15 +119,38 @@ Checks whether this SE service is connected.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the SE service is connected; **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+import { omapi } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let seService : omapi.SEService;
+
+function secureElementDemo() {
+    omapi.createService().then((data) => {
+        seService = data;
+        if (seService == undefined || !seService.isConnected()) {
+            hilog.error(0x0000, 'testTag', 'seservice state disconnected');
+            return;
+        }
+        hilog.info(0x0000, 'testTag', 'seservice state connected');
+    }).catch((error : BusinessError)=> {
+        hilog.error(0x0000, 'testTag', 'createService error %{public}s', JSON.stringify(error));
+    });
+}
+```
 
 ## shutdown
 
@@ -98,6 +166,24 @@ Releases all SE resources allocated to this SE service. After that, [isConnected
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+import { omapi } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let seService : omapi.SEService;
+
+// Initialize seService before using it.
+
+try {
+    seService.shutdown();
+} catch (error) {
+    hilog.error(0x0000, 'testTag', 'shutdown error %{public}s', JSON.stringify(error));
+}
+```

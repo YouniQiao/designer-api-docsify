@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formProvider } from 'kits/@kit.FormKit';
+import formProvider from '@kit.FormKit';
 ```
 
 ## getPublishedRunningFormInfoById
@@ -22,22 +22,41 @@ function getPublishedRunningFormInfoById(formId: string): Promise<formInfo.Runni
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | 卡片标识。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;formInfo.RunningFormInfo & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;formInfo.RunningFormInfo & gt; | Promise对象。返回符合条件的卡片信息，包括卡片名称、尺寸等。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
-| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) |
-| [16501001](../errorcode-form.md#16501001-卡片id不存在) |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
+
+**示例**
+
+```TypeScript
+import { formInfo, formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const formId: string = '388344236';
+
+try {
+  formProvider.getPublishedRunningFormInfoById(formId).then((data: formInfo.RunningFormInfo) => {
+    console.info(`formProvider getPublishedRunningFormInfoById, data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```

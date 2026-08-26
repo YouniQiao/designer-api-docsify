@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## createCipher
@@ -16,7 +16,8 @@ Creates a **Cipher** instance.
 
 For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding
 > length and block size remaining consistent. In 3DES, padding is applied in 8-byte blocks; in AES, padding
 > is applied in 16-byte blocks. **NoPadding** means no padding is applied.
@@ -39,20 +40,36 @@ For details about the supported specifications, seeEncryption and Decryption Alg
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| transformation | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| transformation | string | Yes | Combination of the algorithm name (including the key length), encryption mode, and padding algorithm of the **Cipher** instance to create.For details about the supported specifications, see Symmetric Key Encryption and Decryption Algorithm Specifications and Asymmetric Key Encryption and Decryption Algorithm Specifications. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) |
+| Type | Description |
+| --- | --- |
+| [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) | Returns the **Cipher** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+
+**Examples**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let cipherAlgName = '3DES192|ECB|PKCS7';
+try {
+  let cipher = cryptoFramework.createCipher(cipherAlgName);
+  console.info('cipher algName: ' + cipher.algName);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```

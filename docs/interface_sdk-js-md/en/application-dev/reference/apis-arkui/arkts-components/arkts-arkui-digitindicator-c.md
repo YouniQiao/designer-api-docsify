@@ -2,11 +2,14 @@
 
 A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count
-> placeholder nodes.&gt;
+> placeholder nodes.
+> 
 > The maximum value of maxFontScale for the digit-style navigation indicator is
-> **2**.&gt;
+> **2**.
+> 
 > The mirror display of the page number depends on the RTL status of the system.
 
 **Inheritance/Implementation:** DigitIndicator extends Indicator<DigitIndicator>
@@ -28,11 +31,13 @@ constructor()
 
 A constructor used to create a **DotIndicator** object.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain
 > distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.
 > The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and
-> **selectedItemHeight**.&gt;
+> **selectedItemHeight**.
+> 
 > - If there are too many pages and dot-style indicators exceed the page, you are advised to use the
 > **maxDisplayCount** parameter to set the number of dots to be displayed.
 
@@ -66,15 +71,15 @@ Sets the font style of the digit-style navigation indicator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font style of the digit-style navigation indicator.Only the **size** and **weight** parameters in **Font** are adjustable. Setting **family** and **style** has no effect.Default value:{size:?14,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DigitIndicator](arkts-arkui-digitindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 
 ## fontColor
 
@@ -96,15 +101,15 @@ Sets the font color of the digit-style navigation indicator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the digit-style navigation indicator.Default value: **'#ff182431' |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DigitIndicator](arkts-arkui-digitindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 
 ## selectedDigitFont
 
@@ -126,15 +131,15 @@ Sets the font style of the selected digit-style navigation indicator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font style of the selected digit-style navigation indicator.Default value:{?size:?1 4,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DigitIndicator](arkts-arkui-digitindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 
 ## selectedFontColor
 
@@ -156,12 +161,12 @@ Sets the font color of the selected digit-style navigation indicator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the selected digit-style navigation indicator.Default value: **'#ff182431' |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DigitIndicator](arkts-arkui-digitindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |

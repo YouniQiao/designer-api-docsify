@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## isWlanSupported
@@ -22,12 +23,12 @@ Query whether Wi-Fi is available
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [2401000](../errorcode-wifi.md#2401000-sta-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [2401000](../errorcode-wifi.md#2401000-sta-internal-error) | Operation failed. |

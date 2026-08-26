@@ -14,7 +14,7 @@ Describes the callback invoked for the buffering update event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| infoType | [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md) | Yes |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| infoType | [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md) | Yes | Buffering information type. |
+| value | number | Yes | Value of the buffering information type. |

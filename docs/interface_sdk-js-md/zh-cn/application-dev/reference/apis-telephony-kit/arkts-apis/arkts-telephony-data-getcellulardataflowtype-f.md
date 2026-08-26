@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCellularDataFlowType
@@ -23,15 +22,30 @@ function getCellularDataFlowType(callback: AsyncCallback<DataFlowType>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataFlowType&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataFlowType&gt; | 是 | 以callback形式异步返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 22+ |
+
+**示例**
+
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.getCellularDataFlowType((err: BusinessError, contextData: data.DataFlowType) => {
+    if(err) {
+        console.error(`getCellularDataFlowType fail. code: ${err.code}, message: ${err.message}, contextData: ${contextData}`);
+    } else {
+        console.info(`getCellularDataFlowType success`);
+    }
+});
+```
 
 
 ## getCellularDataFlowType
@@ -51,12 +65,25 @@ function getCellularDataFlowType(): Promise<DataFlowType>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;DataFlowType & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;DataFlowType & gt; | 以Promise形式返回蜂窝网络的数据流类型（对应信号栏旁边的上下行箭头）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 22+ |
+
+**示例**
+
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.getCellularDataFlowType().then((contextData: data.DataFlowType) => {
+    console.info(`getCellularDataFlowType success, contextData: ${contextData}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCellularDataFlowType fail. code: ${err.code}, message: ${err.message}`);
+});
+```

@@ -11,33 +11,33 @@ Provides methods to accessing bluetooth PAN(Personal Area Networking Profile)-re
 ## Modules to Import
 
 ```TypeScript
-import { pan } from 'kits/@kit.ConnectivityKit';
+import pan from '@kit.ConnectivityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createPanProfile](arkts-connectivity-pan-createpanprofile-f.md) |
+| Name | Description |
+| --- | --- |
+| [createPanProfile](arkts-connectivity-pan-createpanprofile-f.md) | create the instance of pan profile. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PanProfile](arkts-connectivity-pan-panprofile-i.md) |
+| Name | Description |
+| --- | --- |
+| [PanProfile](arkts-connectivity-pan-panprofile-i.md) | Manager pan host profile. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PanProfile](arkts-connectivity-pan-panprofile-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [PanProfile](arkts-connectivity-pan-panprofile-i-sys.md) | Manager pan host profile. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BaseProfile](arkts-connectivity-pan-baseprofile-t.md) |
+| Name | Description |
+| --- | --- |
+| [BaseProfile](arkts-connectivity-pan-baseprofile-t.md) | Base interface of profile. |

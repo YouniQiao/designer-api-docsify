@@ -30,10 +30,10 @@ A constructor used to create a text line spacing style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [lineSpacing](#linespacing) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
-| [options](#options) | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| lineSpacing | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line spacing.Default value: **0.0**Value range: [0, +∞)    **NOTE：**If **value** of **LengthMetrics** is less than 0, the default value **0.0** is used. |
+| options | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | No | Line spacing options.Default value: **{ onlyBetweenLines: false } |
 
 ## lineSpacing
 

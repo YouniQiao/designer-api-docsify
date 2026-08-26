@@ -1,7 +1,7 @@
 # ToolBarItem(定义toolbar属性。)
 
 可以使用**ToolBarItem**组件，通过[toolbar](arkts-arkui-commonmethod-c.md#toolbar)通用属性向标题栏中添加toolbar item。
-> **说明**>> 该组件通常与[toolbar](arkts-arkui-commonmethod-c.md#toolbar)通用属性一起使用。
+> **说明** > > 该组件通常与[toolbar](arkts-arkui-commonmethod-c.md#toolbar)通用属性一起使用。
 
 ## 子组件
 
@@ -23,18 +23,18 @@ ToolBarItem(options?: ToolBarItemOptions)
 
 **参数:**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | 否 | ToolBarItem**的可选参数，包括[ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)类型的**placement**参数。 默认值：**placement: ToolBarItemPlacement.TOP_BAR_LEADING |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 枚举
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |

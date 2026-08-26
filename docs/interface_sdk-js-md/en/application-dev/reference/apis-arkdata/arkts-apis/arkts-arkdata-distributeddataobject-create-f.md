@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from 'kits/@kit.ArkData';
+import distributedDataObject from '@kit.ArkData';
 ```
 
 ## create
@@ -20,19 +20,74 @@ Creates a distributed data object. The object properties support basic types (nu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
-| source | object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. For details about the application context of the FA model, see Context.For details about the application context of the stage model, see Context. |
+| source | object | Yes | Properties of the distributed data object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataObject](arkts-arkdata-distributeddataobject-dataobject-i.md) |
+| Type | Description |
+| --- | --- |
+| [DataObject](arkts-arkdata-distributeddataobject-dataobject-i.md) | Distributed data object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+
+**Examples**
+
+FA model:
+
+```TypeScript
+// Import the module.
+import { featureAbility } from '@kit.AbilityKit';
+// Obtain the context.
+let context = featureAbility.getContext();
+class SourceObject {
+  name: string
+  age: number
+  isVis: boolean
+
+  constructor(name: string, age: number, isVis: boolean) {
+    this.name = name;
+    this.age = age;
+    this.isVis = isVis;
+  }
+}
+
+let source: SourceObject = new SourceObject('jack', 18, false);
+let g_object: distributedDataObject.DataObject = distributedDataObject.create(context, source);
+```
+
+Stage model:
+
+```TypeScript
+// Import the module.
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let g_object: distributedDataObject.DataObject|null = null;
+
+class SourceObject {
+  name: string
+  age: number
+  isVis: boolean
+
+  constructor(name: string, age: number, isVis: boolean) {
+    this.name = name;
+    this.age = age;
+    this.isVis = isVis;
+  }
+}
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let source: SourceObject = new SourceObject('jack', 18, false);
+    g_object = distributedDataObject.create(this.context, source);
+  }
+}
+```

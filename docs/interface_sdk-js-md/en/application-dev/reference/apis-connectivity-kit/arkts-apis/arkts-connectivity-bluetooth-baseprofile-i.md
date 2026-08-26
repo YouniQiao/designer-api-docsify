@@ -13,7 +13,16 @@ Base interface of profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import bas from '@kit.ConnectivityKit.bas';
+import common from '@kit.ConnectivityKit.common';
+import bluetooth from '@kit.ConnectivityKit';
+import map from '@kit.ConnectivityKit.map';
+import pan from '@kit.ConnectivityKit.pan';
+import pbap from '@kit.ConnectivityKit.pbap';
+import opp from '@kit.ConnectivityKit.opp';
+import socket from '@kit.ConnectivityKit.socket';
+import wearDetection from '@kit.ConnectivityKit.wearDetection';
+import bluetoothManager from '@kit.ConnectivityKitManager';
 ```
 
 ## getConnectionDevices
@@ -36,9 +45,16 @@ Obtains the connected devices list of profile.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | Returns the address of connected devices list. |
+
+**Examples**
+
+```TypeScript
+let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
+let retArray : Array<string> = a2dpSrc.getConnectionDevices();
+```
 
 ## getDeviceState
 
@@ -60,12 +76,19 @@ Obtains the profile state of device.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| device | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| device | string | Yes | The address of bluetooth device. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) |
+| Type | Description |
+| --- | --- |
+| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | Returns { |
+
+**Examples**
+
+```TypeScript
+let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
+let ret : bluetooth.ProfileConnectionState = a2dpSrc.getDeviceState('XX:XX:XX:XX:XX:XX');
+```

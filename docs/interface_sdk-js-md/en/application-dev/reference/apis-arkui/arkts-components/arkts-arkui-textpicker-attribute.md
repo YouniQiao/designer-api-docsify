@@ -31,9 +31,9 @@ Sets whether to enable loop scrolling.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable loop scrolling.   - **true**: Enable loop scrolling.   - **false**: Disable loop scrolling.   Default value: **true |
 
 ## canLoop
 
@@ -53,9 +53,9 @@ Sets whether to enable loop scrolling. Compared with [canLoop&lt;sup&gt;10+&lt;/
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable loop scrolling.   - **true**: Enable loop scrolling.   - **false**: Disable loop scrolling.   Default value: **true**If the value of **isLoop** is **undefined**, the default value is used. |
 
 ## defaultPickerItemHeight
 
@@ -73,9 +73,9 @@ Sets the height of the picker items.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string | Yes | Height of the picker items.Value range:Number type: [0, +∞), in vp.String type: numeric string only, for example, **"56"**.Default value: selected item 56 vp, unselected item 36 vp.   **NOTE：**The set value applies to both selected and unselected items. |
 
 ## defaultPickerItemHeight
 
@@ -95,9 +95,9 @@ Sets the height of the picker items. Compared with [defaultPickerItemHeight](#de
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| height | [Optional](arkts-arkui-optional-t.md)&lt;number \| string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;number \| string & gt; | Yes | Height of the picker items.Value range:Number type: [0, +∞), in vp.String type: numeric string only, for example, **"56"**.Default value: selected item 56 vp, unselected item 36 vp.   **NOTE：** 1. The set value applies to both selected and unselected items.  2. If **height** is set to **undefined**, the previous value is retained. |
 
 ## defaultTextStyle
 
@@ -117,9 +117,9 @@ Sets the text style of the items when the text style change animation during the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md) | Yes | Text style of the items when the text style change animation during the scrolling process is disabled.Default value: same as the default value of the Text component |
 
 ## digitalCrownSensitivity
 
@@ -139,9 +139,9 @@ Sets the sensitivity to the digital crown rotation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes | Sensitivity to the digital crown rotation.Default value: **CrownSensitivity.MEDIUM |
 
 ## disableTextStyleAnimation
 
@@ -161,9 +161,9 @@ Sets whether to disable the animation effect of text style changes during scroll
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [disabled](arkts-arkui-statestyles-i.md) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| disabled | boolean | Yes | Whether to disable the animation effect of text style changes during scrolling.   - **true**: Disable the animation effect of text style changes.   - **false**: Do not disable the animation effect of text style changes.   Default value: **false**   **NOTE：**When this API is used with **true**, there are no text style changes, including the font size, weight, and color, during scrolling, and all text is displayed in the style set by [defaultTextStyle](#defaulttextstyle). If [defaultTextStyle](#defaulttextstyle) is not set, the default style of the Text component is used. |
 
 ## disappearTextStyle
 
@@ -183,9 +183,9 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for edge items.Default value:{color: '#ff182431',font: {size: '14fp', weight: FontWeight.Regular}} |
 
 ## disappearTextStyle
 
@@ -205,9 +205,9 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight for edge items.Default value:{color: '#ff182431',font: {size: '14fp', weight: FontWeight.Regular}}If the value of **style** is **undefined**, the default value is used. |
 
 ## disappearTextStyle
 
@@ -227,9 +227,9 @@ Sets the text style of edge items (the second item above or below the selected i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md) \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md) \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | Yes | Text style of edge items, covering the following: text color, font size, font weight, maximum font size, minimum font size, text overflow mode.Default value:{color: '#ff182431',font: {size: '14fp', weight: FontWeight.Regular},minFontSize: 0,maxFontSize: 0,overflow: TextOverflow.Clip}If the value of **style** is **undefined**, the default value is used. |
 
 ## divider
 
@@ -249,9 +249,9 @@ Sets the divider style. If not explicitly set, the divider uses the default styl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [DividerOptions](arkts-arkui-divideroptions-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [DividerOptions](arkts-arkui-divideroptions-i.md) \| null | Yes |  |
 
 ## divider
 
@@ -271,9 +271,9 @@ Sets the divider style. If not explicitly set, the divider uses the default styl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| textDivider | [Optional](arkts-arkui-optional-t.md)&lt;[DividerOptions](arkts-arkui-divideroptions-i.md) \| null & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| textDivider | [Optional](arkts-arkui-optional-t.md)&lt;[DividerOptions](arkts-arkui-divideroptions-i.md) \| null & gt; | Yes | Default value:{strokeWidth: '2px', startMargin: 0, endMargin: 0, color: '#33000000'} 1. If the value of **textDivider** is **undefined**, the default value is used. 2. If **textDivider** is a valid [DividerOptions](arkts-arkui-divideroptions-i.md) object, the divider is rendered using the specified style. 3. If **textDivider** is **null**, the divider is hidden. |
 
 ## enableHapticFeedback
 
@@ -293,9 +293,9 @@ Sets whether to enable haptic feedback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable haptic feedback.   - **true**: Enable haptic feedback.  - **false**: Disable haptic feedback.   Default value: **true**Whether this parameter takes effect after being set to **true** depends on hardware support. |
 
 ## gradientHeight
 
@@ -315,9 +315,9 @@ Sets the height of the fade effect applied to the top and bottom edges of the co
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Height of the fade effect.Default value: **36vp**Value range: [0, +∞). Percentages are supported.   **NOTE：** 1. If the value is set to a percentage, **100%** equals half the height of the text picker. 2. A value of **0** disables the fade effect. 3. Values exceeding half the height of the text picker revert to the default value. 4. If the value is **undefined** or negative, the default value is used. |
 
 ## gradientHeight
 
@@ -337,9 +337,9 @@ Sets the height of the fade effect applied to the top and bottom edges of the co
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| height | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt; | Yes | Height of the fade effect.Default value: **36vp**Value range: 0, +∞). Percentages are supported.   **NOTE：** 1. If the value is set to a percentage, **100%** equals half the height of the text picker. 2. A value of **0** disables the fade effect. 3. Values exceeding half the height of the text picker revert to the default value. 4. If the value is **undefined** or negative, the default value is used. |
 
 ## onAccept
 
@@ -357,9 +357,9 @@ Triggered when the OK button in the dialog box is clicked. This event can be tri
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (value: string, index: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (value: string, index: number) = & gt; void | Yes |  |
 
 ## onCancel
 
@@ -377,9 +377,9 @@ Triggered when the cancel button in the dialog box is clicked. This event can be
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | () = & gt; void | Yes |  |
 
 ## onChange
 
@@ -397,9 +397,9 @@ Triggered when the text picker snaps to the selected item. This event cannot be 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (value: string \| string[], index: number \| number[]) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (value: string \| string[], index: number \| number[]) = & gt; void | Yes |  |
 
 ## onChange
 
@@ -419,9 +419,9 @@ Triggered when the text picker snaps to the selected item. This event cannot be 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnTextPickerChangeCallback](arkts-arkui-ontextpickerchangecallback-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnTextPickerChangeCallback](arkts-arkui-ontextpickerchangecallback-t.md)&gt; | Yes | Callback invoked when an item in the picker is selected. If **callback** is set to **undefined**, the callback function is not used. |
 
 ## onEnterSelectedArea
 
@@ -431,14 +431,17 @@ onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback)
 
 Triggered when an option enters the selection zone during text picker scrolling (when the scroll distance exceeds half the selected item's height).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This event is triggered earlier than the [onChange]
 > onChange
-> event.&gt;
+> event.
+> 
 > - In scenarios where the picker contains linked columns, the use of this callback is not recommended. The reason
 > is that it identifies nodes where items enter the divider area during scrolling. However, items that change in
 > response to the scrolling do not themselves scroll. As a result, the callback's return values will only reflect
-> changes for the currently scrolling column, while other non-scrolling columns will remain unchanged.&gt;
+> changes for the currently scrolling column, while other non-scrolling columns will remain unchanged.
+> 
 > - This API cannot be called within attributeModifier.
 
 **Since:** 18
@@ -451,9 +454,9 @@ Triggered when an option enters the selection zone during text picker scrolling 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [TextPickerEnterSelectedAreaCallback](arkts-arkui-textpickerenterselectedareacallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [TextPickerEnterSelectedAreaCallback](arkts-arkui-textpickerenterselectedareacallback-t.md) | Yes | Callback invoked when an option enters the selection zone during text picker scrolling. |
 
 ## onScrollStop
 
@@ -463,7 +466,8 @@ onScrollStop(callback: TextPickerScrollStopCallback)
 
 Triggered when the scrolling in the text picker stops.If the scrolling is initiated by a gesture, this event is triggered when the finger is lifted from the screen and the scrolling stops.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 14
@@ -476,9 +480,9 @@ Triggered when the scrolling in the text picker stops.If the scrolling is initia
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md) | Yes | Event triggered when the scrolling in the text picker stops. |
 
 ## onScrollStop
 
@@ -488,7 +492,8 @@ onScrollStop(callback: Optional<TextPickerScrollStopCallback>)
 
 Triggered when the scrolling in the text picker stops. Compared with [onScrollStop&lt;sup&gt;14+&lt;/sup&gt;](#onscrollstop), this API supports the **undefined** type for the **callback** parameter.If the scrolling is initiated by a gesture, this event is triggered when the finger is lifted from the screen and the scrolling stops.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 18
@@ -501,9 +506,9 @@ Triggered when the scrolling in the text picker stops. Compared with [onScrollSt
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md)&gt; | Yes | Event triggered when the scrolling in the text picker stops.If **callback** is set to **undefined**, the callback function is not used. |
 
 ## selectedBackgroundStyle
 
@@ -523,9 +528,9 @@ Sets the background style of selected items.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | Yes | Background color and corner radius for selected items. Applies to all columns in multi-column mode.Default value:{ color: \\$r('sys.color.comp_background_tertiary'),borderRadius: \\$r('sys.float.corner_radius_level12')} |
 
 ## selectedIndex
 
@@ -545,9 +550,9 @@ Sets the index of the selected item or items in the data list. This setting take
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| number[] | Yes | Index of the selected item or items in the data list. The index is zero-based. Default value: **0**If the value is negative or exceeds the maximum index, the default value is used. |
 
 ## selectedIndex
 
@@ -567,9 +572,9 @@ Sets the index of the selected item or items in the data list. This setting take
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | [Optional](arkts-arkui-optional-t.md)&lt;number \| number[] & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | [Optional](arkts-arkui-optional-t.md)&lt;number \| number[] & gt; | Yes | Index of the selected item or items in the data list. The index is zero-based.Default value: **0**If **index** is **undefined**, the **selected** value of [TextPickerOptions](arkts-arkui-textpickeroptions-i.md) is used.If it is negative or exceeds the maximum index, the default value is used. |
 
 ## selectedTextStyle
 
@@ -589,9 +594,9 @@ Sets the text color, font size, and font weight of the selected item.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Text color, font size, and font weight of the selected item.Default value:{color: '#ff007dff',font: {size: '20fp', weight: FontWeight.Medium}} |
 
 ## selectedTextStyle
 
@@ -611,9 +616,9 @@ Sets the text color, font size, and font weight of the selected item. Compared w
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight of the selected item.Default value:{color: '#ff007dff',font: {size: '20fp', weight: FontWeight.Medium}}If the value of **style** is **undefined**, the default value is used. |
 
 ## selectedTextStyle
 
@@ -633,9 +638,9 @@ Sets the text style of the selected item, covering the following: text color, fo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md) \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md) \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | Yes | Text style of the selected item, covering the following: text color, font size, font weight, maximum font size, minimum font size, text overflow mode.Default value:{color: '#ff007dff',font: {size: '20fp', weight: FontWeight.Medium},minFontSize: 0,maxFontSize: 0,overflow: TextOverflow.Clip}If the value of **style** is **undefined**, the default value is used. |
 
 ## textStyle
 
@@ -655,9 +660,9 @@ Sets the text color, font size, and font weight of candidate items (the first it
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for candidate items.Default value:{color: '#ff182431',font: {size: '16fp', weight: FontWeight.Regular}} |
 
 ## textStyle
 
@@ -677,9 +682,9 @@ Sets the text color, font size, and font weight of candidate items (the first it
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight for candidate items.Default value:{color: '#ff182431',font: {size: '16fp', weight: FontWeight.Regular}}If the value of **style** is **undefined**, the default value is used. |
 
 ## textStyle
 
@@ -699,6 +704,6 @@ Sets the text style of candidate items (the first item immediately above or belo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md) \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md) \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | Yes | Style of candidate items, covering the following: text color, font size, font weight, maximum font size, minimum font size, text overflow mode.Default value:{color: '#ff182431',font: {size: '16fp', weight: FontWeight.Regular},minFontSize: 0,maxFontSize: 0,overflow: TextOverflow.Clip}If the value of **style** is **undefined**, the default value is used. |

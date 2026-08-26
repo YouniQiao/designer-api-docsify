@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import ArkTSUtils from '@kit.ArkTS';
 ```
 
 ## stringify
@@ -22,12 +22,12 @@ function stringify(value: Object | null | undefined): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object \| null \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object \| null \| undefined | 是 | ArkTS对象数据。<br>**起始版本：** 18 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 转换后的JSON字符串。 |

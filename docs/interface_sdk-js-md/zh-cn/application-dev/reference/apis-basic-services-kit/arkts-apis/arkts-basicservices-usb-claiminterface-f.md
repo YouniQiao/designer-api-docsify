@@ -3,7 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import usb from '@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKitManager';
+import serialManager from '@kit.BasicServicesKitManager.serial';
 ```
 
 ## claimInterface
@@ -24,14 +26,21 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 |
-| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | 是 |
-| [force](../../apis-arkui/arkts-components/arkts-arkui-historicalpoint-i.md) | boolean | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 | 用于确定总线号和设备地址。 |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | 是 | 用于确定需要获取接口的索引。 |
+| force | boolean | 否 | 可选参数，是否强制获取。默认值为false?，表示不强制获取。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 注册通信接口成功返回0；注册通信接口失败返回其他错误码。 |
+
+**示例**
+
+```TypeScript
+let ret = usb.claimInterface(devicepipe, interfaces);
+console.info(`claimInterface = ${ret}`);
+```

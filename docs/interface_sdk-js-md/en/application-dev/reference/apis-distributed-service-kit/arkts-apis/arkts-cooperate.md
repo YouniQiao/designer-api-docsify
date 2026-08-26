@@ -11,7 +11,7 @@ The **cooperate** module implements screen hopping for two or more networked dev
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from 'kits/@kit.DistributedServiceKit';
+import cooperate from '@kit.DistributedServiceKit';
 ```
 
 ## Summary
@@ -19,52 +19,52 @@ import { cooperate } from 'kits/@kit.DistributedServiceKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [activate](arkts-distributedservice-cooperate-activate-f-sys.md) |
-| [activate](arkts-distributedservice-cooperate-activate-f-sys.md) |
-| [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md) |
-| [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md) |
-| [activateCooperateWithOptions](arkts-distributedservice-cooperate-activatecooperatewithoptions-f-sys.md) |
-| [deactivate](arkts-distributedservice-cooperate-deactivate-f-sys.md) |
-| [deactivate](arkts-distributedservice-cooperate-deactivate-f-sys.md) |
-| [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md) |
-| [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md) |
-| [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md) |
-| [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md) |
-| [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md) |
-| [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md) |
-| off |
-| [off](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md) |
-| off |
-| on |
-| [on](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md) |
-| on |
-| [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md) |
-| [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md) |
-| [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md) |
-| [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md) |
-| [unprepare](arkts-distributedservice-cooperate-unprepare-f-sys.md) |
-| [unprepare](arkts-distributedservice-cooperate-unprepare-f-sys.md) |
-| [unprepareCooperate](arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md) |
-| [unprepareCooperate](arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [activate](arkts-distributedservice-cooperate-activate-f-sys.md) | Starts screen hopping. This API uses an asynchronous callback to return the result. |
+| [activate](arkts-distributedservice-cooperate-activate-f-sys.md) | Starts screen hopping. This API uses a promise to return the result. |
+| [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md) | Starts screen hopping. This API uses an asynchronous callback to return the result. |
+| [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md) | Starts screen hopping. This API uses a promise to return the result. |
+| [activateCooperateWithOptions](arkts-distributedservice-cooperate-activatecooperatewithoptions-f-sys.md) | Starts screen hopping based on the specified options. This API uses a promise to return the result. |
+| [deactivate](arkts-distributedservice-cooperate-deactivate-f-sys.md) | Stops screen hopping. This API uses an asynchronous callback to return the result. |
+| [deactivate](arkts-distributedservice-cooperate-deactivate-f-sys.md) | Stops screen hopping. This API uses a promise to return the result. |
+| [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md) | Stops screen hopping. This API uses an asynchronous callback to return the result. |
+| [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md) | Stops screen hopping. This API uses a promise to return the result. |
+| [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md) | Obtains the screen hopping status of the target device. This API uses an asynchronous callback to return the result. |
+| [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md) | Obtains the screen hopping status of the target device. This API uses a promise to return the result. |
+| [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md) | Obtains the screen hopping status of the target device. This API uses an asynchronous callback to return the result. |
+| [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md) | Obtains the screen hopping status of the target device. This API uses a promise to return the result. |
+| off | Disables listening for screen hopping status change events. |
+| [off](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md) | Disables listening for screen hopping status change events. |
+| off | Unregisters the listener for the mouse cursor position of a device. |
+| on | Enables listening for screen hopping status change events. |
+| [on](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md) | Enables listening for screen hopping status change events. |
+| on | Registers a listener for the mouse cursor position of a device. |
+| [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md) | Prepares for screen hopping. This API uses an asynchronous callback to return the result. |
+| [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md) | Prepares for screen hopping. This API uses a promise to return the result. |
+| [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md) | Prepares for screen hopping. This API uses an asynchronous callback to return the result. |
+| [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md) | Prepares for screen hopping. This API uses a promise to return the result. |
+| [unprepare](arkts-distributedservice-cooperate-unprepare-f-sys.md) | Cancels the preparation for screen hopping. This API uses an asynchronous callback to return the result. |
+| [unprepare](arkts-distributedservice-cooperate-unprepare-f-sys.md) | Cancels the preparation for screen hopping. This API uses a promise to return the result. |
+| [unprepareCooperate](arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md) | Cancels the preparation for screen hopping. This API uses an asynchronous callback to return the result. |
+| [unprepareCooperate](arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md) | Cancels the preparation for screen hopping. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CooperateMessage](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md) |
-| [CooperateOptions](arkts-distributedservice-cooperate-cooperateoptions-i-sys.md) |
-| [MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [CooperateMessage](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md) | Defines a screen hopping status change event. |
+| [CooperateOptions](arkts-distributedservice-cooperate-cooperateoptions-i-sys.md) | Screen hopping options, such as the exit position. |
+| [MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md) | Defines the mouse pointer position for screen hopping. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CooperateMsg](arkts-distributedservice-cooperate-cooperatemsg-e-sys.md) |
-| [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [CooperateMsg](arkts-distributedservice-cooperate-cooperatemsg-e-sys.md) | Represents a screen hopping message notification. |
+| [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md) | Enumerates the screen hopping states. |
 <!--DelEnd-->

@@ -9,7 +9,6 @@ Loading parameters of the White-Screen-Free Loading frame interpolation scheme.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## callback

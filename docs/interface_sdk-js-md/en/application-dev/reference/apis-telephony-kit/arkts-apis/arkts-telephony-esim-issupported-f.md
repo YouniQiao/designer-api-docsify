@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isSupported
@@ -20,20 +19,29 @@ Checks whether the specified card slot supports the eSIM function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the specified card slot supports the eSIM function. If yes, **true** is returned. If no, **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [3120001](../errorcode-telephony.md#3120001-service-connection-error) |
-| [3120002](../errorcode-telephony.md#3120002-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
+| [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { eSIM } from '@kit.TelephonyKit';
+
+let isSupported: boolean = eSIM.isSupported(1);
+console.info(`the esim is Supported:` + isSupported);
+```

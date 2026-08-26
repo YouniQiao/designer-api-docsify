@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formProvider } from 'kits/@kit.FormKit';
+import formProvider from '@kit.FormKit';
 ```
 
 ## getFormRect
@@ -22,24 +22,43 @@ function getFormRect(formId: string): Promise<formInfo.Rect>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | 卡片标识。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;formInfo.Rect & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;formInfo.Rect & gt; | Promise对象，返回卡片相对屏幕左上角的位置信息和卡片尺寸信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) |
-| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) |
-| [16501001](../errorcode-form.md#16501001-卡片id不存在) |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function getFormRect cannot work correctly due to limited device capabilities. |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
+| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
+
+**示例**
+
+```TypeScript
+import { formInfo, formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
+
+try {
+  formProvider.getFormRect(formId).then((data: formInfo.Rect) => {
+    console.info(`getFormRect succeed, data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```

@@ -27,15 +27,31 @@ Clear up application data by bundle name
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | bundle name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | The promise returned by the function. |
+
+**Examples**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+let bundleName = 'bundleName';
+appManager.clearUpApplicationData(bundleName)
+  .then((data) => {
+    console.info(`ClearUpApplicationData success, data: ${JSON.stringify(data)}.`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`ClearUpApplicationData failed, error code: ${err.code}, error msg: ${err.message}.`);
+  });
+```
 
 
 ## clearUpApplicationData
@@ -60,7 +76,26 @@ Clear up application data by bundle name
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | bundle name. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
+
+**Examples**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+let bundleName = 'bundleName';
+
+function clearUpApplicationDataCallback(err: BusinessError, data: void) {
+  if (err) {
+    console.error(`ClearUpApplicationDataCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
+  } else {
+    console.info(`ClearUpApplicationDataCallback success, data: ${JSON.stringify(data)}.`);
+  }
+}
+
+appManager.clearUpApplicationData(bundleName, clearUpApplicationDataCallback);
+```

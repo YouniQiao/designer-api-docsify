@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## setGlobalTimeoutOptions
@@ -22,6 +22,21 @@ Sets timeout configuration for all tasks. Used when task-specific timeout config
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [TimeoutOptions](arkts-basicservices-cachedownload-timeoutoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [TimeoutOptions](arkts-basicservices-cachedownload-timeoutoptions-i.md) | No | Task timeout configuration. Default value: Refer to the default value of TimeoutOptions. |
+
+**Examples**
+
+```TypeScript
+try {
+  // Set the global timeout options of a task.
+  cacheDownload.setGlobalTimeoutOptions({
+    networkCheckTimeout: 20,
+    httpTotalTimeout: 60,
+  })
+  cacheDownload.download("https://www.example.com", {});
+} catch (err) {
+  console.error(`Failed to download the resource. err code: ${err?.code}, err message: ${err?.message}`);
+}
+```

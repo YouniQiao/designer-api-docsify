@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## configure
@@ -22,13 +21,29 @@ Configures the application event logging function, such as setting the logging s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | Yes | Configuration items for application event logging. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [11103001](../errorcode-hiappevent.md#11103001-invalid-maximum-storage-quota) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [11103001](../errorcode-hiappevent.md#11103001-invalid-maximum-storage-quota) | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
+
+**Examples**
+
+```TypeScript
+// Disable the event logging function.
+let config1: hiAppEvent.ConfigOption = {
+  disable: true,
+};
+hiAppEvent.configure(config1);
+
+// Set the maximum size of the file storage directory to 100 MB.
+let config2: hiAppEvent.ConfigOption = {
+  maxStorage: '100M',
+};
+hiAppEvent.configure(config2);
+```

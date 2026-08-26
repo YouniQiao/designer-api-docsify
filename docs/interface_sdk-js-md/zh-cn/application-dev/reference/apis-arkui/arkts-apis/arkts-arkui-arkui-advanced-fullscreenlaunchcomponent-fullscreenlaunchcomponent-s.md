@@ -2,8 +2,10 @@
 
 全屏启动原子化服务组件，当提供方授权使用方嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。
 
-> **说明：**&gt;
-> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。&gt;
+> **说明：**
+> 
+> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> 
 > 当需要在该组件中实现可嵌入式运行的原子化服务，必须继承自[EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)。
 > 否则，系统无法保证原子化服务功能正常。
 
@@ -14,7 +16,7 @@
 ## 导入模块
 
 ```TypeScript
-import { FullScreenLaunchComponent } from 'kits/@kit.ArkUI';
+import { FullScreenLaunchComponent } from '@kit.ArkUI';
 ```
 
 ## appId

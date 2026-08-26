@@ -20,6 +20,24 @@ finish(): void
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
+**示例**
+
+```TypeScript
+import { Animation, Scene } from '@kit.ArkGraphics3D';
+
+function finish(): void {
+  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result && result.animations && result.animations[0]) {
+      let anim: Animation = result.animations[0];
+      // 直接跳转到动画的最后，并将动画的进度设置为1。
+      anim.finish();
+    }
+  });
+}
+```
+
 ## onFinished
 
 ```TypeScript
@@ -34,9 +52,29 @@ onFinished(callback: Callback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，返回值为空。 |
+
+**示例**
+
+```TypeScript
+import { Animation, Scene } from '@kit.ArkGraphics3D';
+
+function onFinished(): void {
+  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result && result.animations && result.animations[0]) {
+      let anim: Animation = result.animations[0];
+      // 注册回调函数
+      anim.onFinished(()=>{
+        console.info("onFinished");  
+      });
+    }
+  });
+}
+```
 
 ## onStarted
 
@@ -52,9 +90,29 @@ onStarted(callback: Callback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，返回值为空。 |
+
+**示例**
+
+```TypeScript
+import { Animation, Scene } from '@kit.ArkGraphics3D';
+
+function onStarted(): void {
+  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result && result.animations && result.animations[0]) {
+      let anim: Animation = result.animations[0];
+      // 注册回调函数
+      anim.onStarted(()=>{
+        console.info("onStarted");  
+      });
+    }
+  });
+}
+```
 
 ## pause
 
@@ -68,6 +126,24 @@ pause(): void
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
+**示例**
+
+```TypeScript
+import { Animation, Scene } from '@kit.ArkGraphics3D';
+
+function pause(): void {
+  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result && result.animations && result.animations[0]) {
+      let anim: Animation = result.animations[0];
+      // 暂停动画
+      anim.pause();
+    }
+  });
+}
+```
+
 ## restart
 
 ```TypeScript
@@ -79,6 +155,24 @@ restart(): void
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
+
+**示例**
+
+```TypeScript
+import { Animation, Scene } from '@kit.ArkGraphics3D';
+
+function restart(): void {
+  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result && result.animations && result.animations[0]) {
+      let anim: Animation = result.animations[0];
+      // 重启动画
+      anim.restart();
+    }
+  });
+}
+```
 
 ## seek
 
@@ -94,9 +188,27 @@ seek(position: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| position | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| position | number | 是 | 要重新播放动画的起始位置，取值区间为[0, 1]。 |
+
+**示例**
+
+```TypeScript
+import { Animation, Scene } from '@kit.ArkGraphics3D';
+
+function seek(): void {
+  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result && result.animations && result.animations[0]) {
+      let anim: Animation = result.animations[0];
+      // 指定动画的播放进度到10%
+      anim.seek(0.1);
+    }
+  });
+}
+```
 
 ## start
 
@@ -110,6 +222,24 @@ start(): void
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
+**示例**
+
+```TypeScript
+import { Animation, Scene } from '@kit.ArkGraphics3D';
+
+function start(): void {
+  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result && result.animations && result.animations[0]) {
+      let anim: Animation = result.animations[0];
+      // 开始动画
+      anim.start();
+    }
+  });
+}
+```
+
 ## stop
 
 ```TypeScript
@@ -121,6 +251,24 @@ stop(): void
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
+
+**示例**
+
+```TypeScript
+import { Animation, Scene } from '@kit.ArkGraphics3D';
+
+function stop(): void {
+  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result && result.animations && result.animations[0]) {
+      let anim: Animation = result.animations[0];
+      // 停止播放动画，并将动画的进度设置为0
+      anim.stop();
+    }
+  });
+}
+```
 
 ## duration
 

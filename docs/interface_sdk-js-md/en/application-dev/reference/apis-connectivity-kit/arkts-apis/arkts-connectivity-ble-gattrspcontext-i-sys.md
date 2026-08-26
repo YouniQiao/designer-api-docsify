@@ -11,7 +11,6 @@ Describe the context of GATT responses.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## timestamp

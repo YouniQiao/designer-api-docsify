@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
+import appManager from '@kit.AbilityKit';
 ```
 
 ## abilityStateTypes

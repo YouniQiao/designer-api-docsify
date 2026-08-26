@@ -26,7 +26,7 @@
 ## 导入模块
 
 ```TypeScript
-import { InputMethodSubtype } from 'kits/@kit.IMEKit';
+import InputMethodSubtype from '@kit.IMEKit';
 ```
 
 ## extra

@@ -11,22 +11,22 @@
 ## 导入模块
 
 ```TypeScript
-import { pluginBundleManager } from 'kits/@kit.AbilityKit';
+import pluginBundleManager from '@kit.AbilityKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md) |
-| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md) |
-| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md) | 查询当前应用中所有自分发插件的信息。使用Promise异步回调。 |
+| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md) | 为当前应用安装自分发插件（即应用通过自有渠道分发、自主管理的插件）。使用Promise异步回调。 |
+| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md) | 卸载当前应用已通过自分发方式安装的指定插件。使用Promise异步回调。 |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [PluginBundleInfo](arkts-ability-pluginbundlemanager-pluginbundleinfo-t.md) |
-| [PluginModuleInfo](arkts-ability-pluginbundlemanager-pluginmoduleinfo-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [PluginBundleInfo](arkts-ability-pluginbundlemanager-pluginbundleinfo-t.md) | 插件信息。 |
+| [PluginModuleInfo](arkts-ability-pluginbundlemanager-pluginmoduleinfo-t.md) | 插件的模块信息。 |

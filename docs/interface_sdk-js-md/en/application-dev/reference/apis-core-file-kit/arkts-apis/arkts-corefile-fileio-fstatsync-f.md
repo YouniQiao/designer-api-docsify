@@ -23,12 +23,20 @@ Obtains file status based on the file descriptor. This API returns the result sy
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | File descriptor of the file whose status is to be obtained. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Stat](arkts-corefile-fileio-stat-depr-i.md) |
+| Type | Description |
+| --- | --- |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) | Detailed file status obtained. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+let stat = fileio.fstatSync(fd);
+```

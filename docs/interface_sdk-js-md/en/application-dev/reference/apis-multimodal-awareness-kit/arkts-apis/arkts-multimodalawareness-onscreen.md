@@ -11,7 +11,7 @@ This module provides the onscreen awareness capability.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+import onScreen from '@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary
@@ -19,43 +19,43 @@ import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [apperceive](arkts-multimodalawareness-onscreen-apperceive-f-sys.md) |
-| [capture](arkts-multimodalawareness-onscreen-capture-f-sys.md) |
-| [getPageContent](arkts-multimodalawareness-onscreen-getpagecontent-f-sys.md) |
-| [interact](arkts-multimodalawareness-onscreen-interact-f-sys.md) |
-| [offReadingScreenPermissionListener](arkts-multimodalawareness-onscreen-offreadingscreenpermissionlistener-f-sys.md) |
-| [onReadingScreenPermissionListener](arkts-multimodalawareness-onscreen-onreadingscreenpermissionlistener-f-sys.md) |
-| [sendControlEvent](arkts-multimodalawareness-onscreen-sendcontrolevent-f-sys.md) |
-| [subscribe](arkts-multimodalawareness-onscreen-subscribe-f-sys.md) |
-| [trigger](arkts-multimodalawareness-onscreen-trigger-f-sys.md) |
-| [unsubscribe](arkts-multimodalawareness-onscreen-unsubscribe-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [apperceive](arkts-multimodalawareness-onscreen-apperceive-f-sys.md) | Proactively triggers screen content awareness to obtain the screen content for snapshot analysis. |
+| [capture](arkts-multimodalawareness-onscreen-capture-f-sys.md) | Proactively triggers screen content awareness to obtain page information. |
+| [getPageContent](arkts-multimodalawareness-onscreen-getpagecontent-f-sys.md) | Obtains the onscreen content when a window is displayed on the screen. |
+| [interact](arkts-multimodalawareness-onscreen-interact-f-sys.md) | Proactively triggers screen behavior interaction to identify screen behaviors and return behavior receipts. For example, after a link is clicked, the system accurately jumps to the specified paragraph and highlights the text based on the receipt information. |
+| [offReadingScreenPermissionListener](arkts-multimodalawareness-onscreen-offreadingscreenpermissionlistener-f-sys.md) | Disables the screen content access permission monitoring. |
+| [onReadingScreenPermissionListener](arkts-multimodalawareness-onscreen-onreadingscreenpermissionlistener-f-sys.md) | Enables the screen content access permission monitoring and returns the permission status in real time. |
+| [sendControlEvent](arkts-multimodalawareness-onscreen-sendcontrolevent-f-sys.md) | If the target window is displayed on the screen, you can use this API to send screen control events based on the paragraph information obtained via [onScreen.getPageContent](arkts-multimodalawareness-onscreen-getpagecontent-f-sys.md). |
+| [subscribe](arkts-multimodalawareness-onscreen-subscribe-f-sys.md) | Enables proactive awareness on screen content and subscribes to a screen awareness result. |
+| [trigger](arkts-multimodalawareness-onscreen-trigger-f-sys.md) | Proactively triggers screen content awareness and obtains the current screen awareness result. |
+| [unsubscribe](arkts-multimodalawareness-onscreen-unsubscribe-f-sys.md) | Disables proactive awareness on screen content and unsubscribes from a screen awareness result. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AwarenessItem](arkts-multimodalawareness-onscreen-awarenessitem-i-sys.md) |
-| [ContentOptions](arkts-multimodalawareness-onscreen-contentoptions-i-sys.md) |
-| [ControlEvent](arkts-multimodalawareness-onscreen-controlevent-i-sys.md) |
-| [EntityInfo](arkts-multimodalawareness-onscreen-entityinfo-i-sys.md) |
-| [OnscreenAwarenessCap](arkts-multimodalawareness-onscreen-onscreenawarenesscap-i-sys.md) |
-| [OnscreenAwarenessInfo](arkts-multimodalawareness-onscreen-onscreenawarenessinfo-i-sys.md) |
-| [OnscreenAwarenessOptions](arkts-multimodalawareness-onscreen-onscreenawarenessoptions-i-sys.md) |
-| [PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) |
-| [Paragraph](arkts-multimodalawareness-onscreen-paragraph-i-sys.md) |
-| [ReadingScreenPermissionStatus](arkts-multimodalawareness-onscreen-readingscreenpermissionstatus-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AwarenessItem](arkts-multimodalawareness-onscreen-awarenessitem-i-sys.md) | Provides page information, which includes:  * Basic page information, such as page content, links, and screenshots.  * Page entity information, such as the title and body of a page article.  * Page interaction information, such as clicks and scrolling. |
+| [ContentOptions](arkts-multimodalawareness-onscreen-contentoptions-i-sys.md) | Defines the options for obtaining the onscreen content. |
+| [ControlEvent](arkts-multimodalawareness-onscreen-controlevent-i-sys.md) | Defines a control event. |
+| [EntityInfo](arkts-multimodalawareness-onscreen-entityinfo-i-sys.md) | Provides entity information perceived, including content, links, images, and other types of entities. |
+| [OnscreenAwarenessCap](arkts-multimodalawareness-onscreen-onscreenawarenesscap-i-sys.md) | Defines onscreen awareness capabilities (including but not limited to awareness in a reading scenario and OCR). |
+| [OnscreenAwarenessInfo](arkts-multimodalawareness-onscreen-onscreenawarenessinfo-i-sys.md) | Returns the list of onscreen awareness information. |
+| [OnscreenAwarenessOptions](arkts-multimodalawareness-onscreen-onscreenawarenessoptions-i-sys.md) | Defines the list of onscreen awareness parameters, which is used to obtain onscreen information in specific scenarios. For example, a window ID is provided to collect application UI content and links. |
+| [PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) | Defines the onscreen content. |
+| [Paragraph](arkts-multimodalawareness-onscreen-paragraph-i-sys.md) | Defines the paragraph information. |
+| [ReadingScreenPermissionStatus](arkts-multimodalawareness-onscreen-readingscreenpermissionstatus-i-sys.md) | Returns the status of the permission for reading screen information. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md) |
-| [EventType](arkts-multimodalawareness-onscreen-eventtype-e-sys.md) |
-| [Scenario](arkts-multimodalawareness-onscreen-scenario-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md) | Defines a page information collection policy. |
+| [EventType](arkts-multimodalawareness-onscreen-eventtype-e-sys.md) | Enumerates the control event types. |
+| [Scenario](arkts-multimodalawareness-onscreen-scenario-e-sys.md) | Enumerates the scenarios of the onscreen content. |
 <!--DelEnd-->

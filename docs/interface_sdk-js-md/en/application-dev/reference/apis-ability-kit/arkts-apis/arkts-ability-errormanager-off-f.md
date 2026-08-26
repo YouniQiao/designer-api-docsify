@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
+import errorManager from '@kit.AbilityKit';
 ```
 
 ## off('error')
@@ -22,18 +22,41 @@ Unregisters an error observer. This API uses an asynchronous callback to return 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'error' | Yes |
-| observerId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Event type. It is fixed at **'error'**. |
+| observerId | number | Yes | Index of the observer returned by **on()**. There is no specific unit. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
+
+**Examples**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observerId = 100;
+
+function unregisterErrorObserverCallback(err: BusinessError) {
+  if (err) {
+    console.error('------------ unregisterErrorObserverCallback ------------', err);
+  }
+}
+
+try {
+  errorManager.off('error', observerId, unregisterErrorObserverCallback);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error: ${code}, ${message}`);
+}
+```
 
 
 ## off('error')
@@ -52,23 +75,46 @@ Unregisters an error observer. This API uses a promise to return the result.This
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'error' | Yes |
-| observerId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Event type. It is fixed at **'error'**. |
+| observerId | number | Yes | Index of the observer returned by **on()**. There is no specific unit. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
+
+**Examples**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observerId = 100;
+
+try {
+  errorManager.off('error', observerId)
+    .then((data) => {
+      console.info('----------- unregisterErrorObserver success ----------', data);
+    })
+    .catch((err: BusinessError) => {
+      console.error('----------- unregisterErrorObserver fail ----------', err);
+    });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error: ${code}, ${message}`);
+}
+```
 
 
 ## off('loopObserver')
@@ -87,16 +133,24 @@ Unregisters an observer for the message processing duration of the main thread.T
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'loopObserver' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'loopObserver' | Yes | Event type. It is fixed at **'loopObserver'**, indicating an observer for the message processing duration of the main thread. |
+| observer | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | No | Observer to unregister. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
+
+**Examples**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+
+errorManager.off("loopObserver");
+```
 
 
 ## off('unhandledRejection')
@@ -115,18 +169,68 @@ Unregisters an observer for the promise rejection.This API can only be used in t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'unhandledRejection' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'unhandledRejection' | Yes | Event type. It is fixed at **'unhandledRejection'**, indicating an observer for the promise rejection. |
+| observer | [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | No | Observer to unregister. You are advised to use this parameter. If omitted, all observers registered with the same environment through **on** are unregistered by default. Otherwise, the specified observer is unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16200001](../errorcode-ability.md#16200001-caller-released) |
-| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) | If the observer does not exist |
+
+**Examples**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+
+let observer: errorManager.UnhandledRejectionObserver = (reason: Error, promise: Promise<void>) => {
+  if (promise === promise1) {
+    console.info("promise1 is rejected");
+  }
+  console.info("reason.name: ", reason.name);
+  console.info("reason.message: ", reason.message);
+  if (reason.stack) {
+    console.info("reason.stack: ", reason.stack);
+  }
+};
+
+errorManager.on("unhandledRejection", observer);
+
+let promise1 = new Promise<void>(() => {}).then(() => {
+  throw new Error("uncaught error")
+})
+
+errorManager.off("unhandledRejection");
+```
+
+Or:
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+
+let observer: errorManager.UnhandledRejectionObserver = (reason: Error, promise: Promise<void>) => {
+  if (promise === promise1) {
+    console.info("promise1 is rejected");
+  }
+  console.info("reason.name: ", reason.name);
+  console.info("reason.message: ", reason.message);
+  if (reason.stack) {
+    console.info("reason.stack: ", reason.stack);
+  }
+};
+
+errorManager.on("unhandledRejection", observer);
+
+let promise1 = new Promise<void>(() => {}).then(() => {
+  throw new Error("uncaught error")
+})
+
+errorManager.off("unhandledRejection", observer);
+```
 
 
 ## off('globalUnhandledRejectionDetected')
@@ -145,18 +249,44 @@ Unregisters a rejected promise observer. After the deregistration, promise excep
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'globalUnhandledRejectionDetected' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'globalUnhandledRejectionDetected' | Yes | Event type. It is fixed at **'globalUnhandledRejectionDetected'**, indicating an observer for the promise rejection. |
+| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | No | Observer registered by the **on** API. You are advised to use this parameter. If omitted, all observers registered with the same environment through **on** are unregistered by default. Otherwise, the specified observer is unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16200001](../errorcode-ability.md#16200001-caller-released) |
-| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) | If the observer does not exist |
+
+**Examples**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+
+function promiseFunc(observer: errorManager.GlobalError) {
+  console.info("result name :" + observer.name);
+  console.info("result message :" + observer.message);
+  console.info("result stack :" + observer.stack);
+  console.info("result instanceName :" + observer.instanceName);
+  console.info("result instanceType :" + observer.instanceType);
+}
+
+errorManager.on("globalUnhandledRejectionDetected", promiseFunc);
+
+async function throwError() {
+  throw new Error("uncaught error");
+}
+
+let promise1 = new Promise<void>(() => {}).then(() => {
+  throwError();
+});
+
+errorManager.off("globalUnhandledRejectionDetected", promiseFunc);
+```
 
 
 ## off('freeze')
@@ -175,17 +305,29 @@ Unregisters an observer for the main thread freeze event of the application.This
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'freeze' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'freeze' | Yes | Event type. It is fixed at **'freeze'**, indicating an observer for the freeze event of the main thread. |
+| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No | Observer to unregister. You are advised to use this parameter. If omitted, all observers registered with the same environment through **on** are unregistered by default. Otherwise, the specified observer is unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) | If the observer does not exist |
+
+**Examples**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+
+function freezeCallback() {
+    console.info("freezecallback");
+}
+errorManager.on("freeze", freezeCallback);
+errorManager.off("freeze", freezeCallback);
+```
 
 
 ## off('globalErrorOccurred')
@@ -204,15 +346,38 @@ Unregisters a global error observer. Once unregistered, global listening cannot 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'globalErrorOccurred' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'globalErrorOccurred' | Yes | Event type. It is fixed at **'globalErrorOccurred'**. |
+| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | No | Observer registered by the **on** API. You are advised to use this parameter. If omitted, all observers registered with the same environment through **on** are unregistered by default. Otherwise, the specified observer is unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16200001](../errorcode-ability.md#16200001-caller-released) |
-| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) | If the observer does not exist |
+
+**Examples**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function errorFunc(observer: errorManager.GlobalError) {
+    console.info("result name :" + observer.name);
+    console.info("result message :" + observer.message);
+    console.info("result stack :" + observer.stack);
+    console.info("result instanceName :" + observer.instanceName);
+    console.info("result instanceType :" + observer.instanceType);
+}
+
+try {
+  errorManager.off('globalErrorOccurred', errorFunc)
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error: ${code}, ${message}`);
+}
+```

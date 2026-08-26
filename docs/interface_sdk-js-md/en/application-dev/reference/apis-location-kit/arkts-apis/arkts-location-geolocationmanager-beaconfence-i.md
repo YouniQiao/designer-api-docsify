@@ -9,7 +9,6 @@ Beacon fence details.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## beaconFenceInfoType

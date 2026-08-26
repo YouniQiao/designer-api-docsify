@@ -14,7 +14,7 @@ Called when the text content is scrolled.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| totalOffsetX | number | Yes |
-| totalOffsetY | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| totalOffsetX | number | Yes | Offset of the horizontal coordinate of the upper left corner of the text relative to the horizontal coordinate of the upper left corner of the entire content input area. |
+| totalOffsetY | number | Yes | Offset of the vertical coordinate of the upper left corner of the text relative to the vertical coordinate of the upper left corner of the entire content input area. |

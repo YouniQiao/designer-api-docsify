@@ -13,5 +13,5 @@ Corresponds to an incremental application, including its last incremental time a
 ## Modules to Import
 
 ```TypeScript
-import { backup } from 'kits/@kit.CoreFileKit';
+import backup from '@kit.CoreFileKit';
 ```

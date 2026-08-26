@@ -18,12 +18,12 @@ Defines the callback type used in accessibility action intercept. The value of a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| action | [AccessibilityAction](arkts-arkui-accessibilityaction-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| action | [AccessibilityAction](arkts-arkui-accessibilityaction-e.md) | Yes | the enum of accessibility action type. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AccessibilityActionInterceptResult](arkts-arkui-accessibilityactioninterceptresult-e.md) |
+| Type | Description |
+| --- | --- |
+| [AccessibilityActionInterceptResult](arkts-arkui-accessibilityactioninterceptresult-e.md) | the result of continuing to execute the action or interrupting it or bubbling up |

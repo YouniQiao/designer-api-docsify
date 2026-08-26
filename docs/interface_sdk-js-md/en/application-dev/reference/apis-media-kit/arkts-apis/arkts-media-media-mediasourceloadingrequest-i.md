@@ -9,7 +9,7 @@ The MediaSourceLoadingRequest class defines a loading request object. Applicatio
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## finishLoading
@@ -28,10 +28,23 @@ Notifies the player of the current request status. After pushing all the data fo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uuid | number | Yes |
-| state | [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uuid | number | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
+| state | [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md) | Yes | Request status. |
+
+**Examples**
+
+```TypeScript
+import { HashMap } from '@kit.ArkTS';
+
+let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
+let uuid = 1;
+
+let request = requests.get(uuid);
+let loadingError = media.LoadingRequestError.LOADING_ERROR_SUCCESS;
+request?.finishLoading(uuid, loadingError);
+```
 
 ## respondData
 
@@ -49,17 +62,30 @@ Sends data to the player.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uuid | number | Yes |
-| offset | number | Yes |
-| buffer | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uuid | number | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
+| offset | number | Yes | Offset of the current media data relative to the start of the resource. The value cannot be less than 0. |
+| buffer | ArrayBuffer | Yes | Media data sent to the player.   **Note：**: Do not transmit irrelevant data, as it can affect normal data parsing and playback. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of bytes received by the server. |
+
+**Examples**
+
+```TypeScript
+import { HashMap } from '@kit.ArkTS';
+let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
+let uuid = 1;
+
+let request = requests.get(uuid);
+let offset = 0; // Offset of the current media data relative to the start of the resource.
+let buf = new ArrayBuffer(0); // Data defined by the application and pushed to the player.
+let num = request?.respondData(uuid, offset, buf);
+```
 
 ## respondHeader
 
@@ -77,11 +103,32 @@ Sends response header information to the player. This API must be called before 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uuid | number | Yes |
-| [header](#header) | Record & lt;string, string & gt; | No |
-| redirectUrl | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uuid | number | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
+| header | Record & lt;string, string & gt; | No | Header information in the HTTP response. The application can intersect the header fields with the fields supported by the underlying layer for parsing or directly pass in all corresponding header information.    - The following fields need to be parsed by the underlying player: Transfer-Encoding, Location, Content-Type, Content-Range, Content-Encode, Accept-Ranges, and content-length. |
+| redirectUrl | string | No | Redirect URL in the HTTP response. |
+
+**Examples**
+
+```TypeScript
+import { HashMap } from '@kit.ArkTS';
+let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
+let uuid = 1;
+
+// The application fills this in as needed.
+let header:Record<string, string> = {
+  'Transfer-Encoding':'xxx',
+  'Location' : 'xxx',
+  'Content-Type' : 'xxx',
+  'Content-Range' : 'xxx',
+  'Content-Encode' : 'xxx',
+  'Accept-Ranges' : 'xxx',
+  'content-length' : 'xxx'
+};
+let request = requests.get(uuid);
+request?.respondHeader(uuid, header);
+```
 
 ## header
 

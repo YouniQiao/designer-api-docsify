@@ -15,14 +15,14 @@ Returns true if passed value is finite. Unlike the global isFinite, Number.isFin
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| number | unknown | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| number | unknown | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## isInteger
 
 ```TypeScript
@@ -33,14 +33,14 @@ Returns true if the value passed is an integer, false otherwise.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| number | unknown | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| number | unknown | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## isNaN
 
 ```TypeScript
@@ -51,14 +51,14 @@ Returns a Boolean value that indicates whether a value is the reserved value NaN
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| number | unknown | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| number | unknown | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## isSafeInteger
 
 ```TypeScript
@@ -69,14 +69,14 @@ Returns true if the value passed is a safe integer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| number | unknown | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| number | unknown | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## parseFloat
 
 ```TypeScript
@@ -87,14 +87,14 @@ Converts a string to a floating-point number.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| string | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| string | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## parseInt
 
 ```TypeScript
@@ -105,15 +105,15 @@ Converts A string to an integer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| string | string | Yes |
-| radix | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| string | string | Yes |  |
+| radix | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## EPSILON
 
 ```TypeScript

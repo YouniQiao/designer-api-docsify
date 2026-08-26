@@ -11,7 +11,8 @@ Describes audio renderer filter.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## rendererId
@@ -61,3 +62,18 @@ Application uid.
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let outputAudioRendererFilter: audio.AudioRendererFilter = {
+  uid : 20010041,
+  rendererInfo : {
+    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
+    rendererFlags : 0
+  },
+  rendererId : 0
+};
+```

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## getInspectorNodes
@@ -25,6 +26,6 @@ declare function getInspectorNodes(): object
 
 **返回值：**
 
-| 类型 |
-| --- |
-| object |
+| 类型 | 说明 |
+| --- | --- |
+| object |  |

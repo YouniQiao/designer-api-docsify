@@ -173,3 +173,13 @@ spanId?: string
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+选中文本输入框中index从0到7的字符时，executeAction(AccessibilityAction.SET_SELECTION, parameter)方法设置的参数如下：
+
+```TypeScript
+import { Parameter } from '@kit.AccessibilityKit';
+
+let parameter : Parameter = { selectTextBegin: '0', selectTextEnd: '8', selectTextInForWard: true };
+```

@@ -21,12 +21,12 @@ Send touch event.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [TouchObject](../arkts-components/arkts-arkui-touchobject-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [TouchObject](../arkts-components/arkts-arkui-touchobject-i.md) | 是 | TouchObject to be sent. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean |  |

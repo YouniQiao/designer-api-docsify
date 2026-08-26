@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## finishSyncTrace
@@ -22,6 +21,29 @@ function finishSyncTrace(level: HiTraceOutputLevel): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | 是 | 跟踪输出级别。 |
+
+**示例**
+
+```TypeScript
+const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
+hiTraceMeter.finishSyncTrace(COMMERCIAL);
+```
+
+```TypeScript
+const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
+// 可嵌套使用，相邻的startSyncTrace与finishSyncTrace匹配
+// 第一个跟踪的任务开始
+hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc1", "key=value");
+// 业务流程......
+// 第二个跟踪的任务开始
+hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc2", "key=value");
+// 业务流程......
+// 第二个跟踪的任务结束
+hiTraceMeter.finishSyncTrace(COMMERCIAL);
+// 业务流程......
+// 第一个跟踪的任务结束
+hiTraceMeter.finishSyncTrace(COMMERCIAL);
+```

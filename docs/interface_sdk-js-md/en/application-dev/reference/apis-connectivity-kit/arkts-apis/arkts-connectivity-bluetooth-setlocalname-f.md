@@ -3,7 +3,16 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import bas from '@kit.ConnectivityKit.bas';
+import common from '@kit.ConnectivityKit.common';
+import bluetooth from '@kit.ConnectivityKit';
+import map from '@kit.ConnectivityKit.map';
+import pan from '@kit.ConnectivityKit.pan';
+import pbap from '@kit.ConnectivityKit.pbap';
+import opp from '@kit.ConnectivityKit.opp';
+import socket from '@kit.ConnectivityKit.socket';
+import wearDetection from '@kit.ConnectivityKit.wearDetection';
+import bluetoothManager from '@kit.ConnectivityKitManager';
 ```
 
 ## setLocalName
@@ -26,12 +35,18 @@ Sets the Bluetooth friendly name of a device.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Indicates a valid Bluetooth name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
+
+**Examples**
+
+```TypeScript
+let ret : boolean = bluetooth.setLocalName('device_name');
+```

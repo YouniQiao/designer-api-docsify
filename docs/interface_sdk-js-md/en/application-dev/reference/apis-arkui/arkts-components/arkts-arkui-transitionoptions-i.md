@@ -2,10 +2,12 @@
 
 Defines the transition effect by setting parameters in the struct.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 1. When set to a value of the **TransitionOptions** type, the **transition** attribute must work with
 > [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto). The animation duration,
-> curve, and delay follow the settings in **animateTo**.&gt;
+> curve, and delay follow the settings in **animateTo**.
+> 
 > 2. If the value of the **TransitionOptions** type has only **type** specified, the transition effect will take on
 > the default opacity. For example, **{type: TransitionType.Insert}** produces the same effect as
 > **{type: TransitionType.Insert, opacity: 0}**. If a specific style is specified, the transition effect will not

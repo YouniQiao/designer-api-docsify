@@ -2,10 +2,14 @@
 
 意图信息（[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)）的标识，用于 [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md)、 [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md)和 [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md)接口查询意图信息。
 
-> **说明：**&gt;
-> - 对于使用配置文件开发的意图，通过上述接口查询的全量信息和简要信息完全一致。&gt;
-> - 对于使用装饰器开发的意图，通过上述接口查询的全量信息和简要信息存在差别，详见下表。&gt;
-> 表1 全量意图信息与简要意图信息差别&gt;
+> **说明：**
+> 
+> - 对于使用配置文件开发的意图，通过上述接口查询的全量信息和简要信息完全一致。
+> 
+> - 对于使用装饰器开发的意图，通过上述接口查询的全量信息和简要信息存在差别，详见下表。
+> 
+> 表1 全量意图信息与简要意图信息差别
+> 
 > | 属性 | 全量意图信息是否包含 | 简要意图信息是否包含 |
 > | -------- | -------- | -------- |
 > | bundleName | 是 | 是 |

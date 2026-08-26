@@ -9,7 +9,7 @@ NotificationSubscriberExtensionAbility是通知订阅者扩展能力的基类，
 ## 导入模块
 
 ```TypeScript
-import { NotificationSubscriberExtensionAbility } from 'kits/@kit.NotificationKit';
+import NotificationSubscriberExtensionAbility from '@kit.NotificationKit';
 ```
 
 ## onCancelMessages
@@ -28,9 +28,21 @@ onCancelMessages(hashCodes: Array<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| hashCodes | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| hashCodes | Array & lt;string & gt; | 是 | 要取消的通知的哈希码列表。通过onReceiveMessage获取。 |
+
+**示例**
+
+```TypeScript
+const TAG = 'NotificationSubscriberExtAbility';
+
+export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
+  onCancelMessages(hashCodes: Array<string>): void {
+    console.info(`${TAG} onCancelMessages. hashCodes: ${JSON.stringify(hashCodes)}`);
+  }
+}
+```
 
 ## onDestroy
 
@@ -45,6 +57,18 @@ onDestroy(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
+
+**示例**
+
+```TypeScript
+const TAG = 'NotificationSubscriberExtAbility';
+
+export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
+  onDestroy(): void {
+    console.info(`${TAG} onDestroy`);
+  }
+}
+```
 
 ## onReceiveMessage
 
@@ -62,9 +86,21 @@ onReceiveMessage(notificationInfo: NotificationInfo): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | 是 | 通知订阅扩展能力中收到通知的回调信息。 |
+
+**示例**
+
+```TypeScript
+const TAG = 'NotificationSubscriberExtAbility';
+
+export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
+  onReceiveMessage(notificationInfo: notificationExtensionSubscription.NotificationInfo): void {
+    console.info(`${TAG} onReceiveMessage. notificationInfo: ${JSON.stringify(notificationInfo)}`);
+  }
+}
+```
 
 ## context
 

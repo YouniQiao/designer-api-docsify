@@ -3,7 +3,16 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import bas from '@kit.ConnectivityKit.bas';
+import common from '@kit.ConnectivityKit.common';
+import bluetooth from '@kit.ConnectivityKit';
+import map from '@kit.ConnectivityKit.map';
+import pan from '@kit.ConnectivityKit.pan';
+import pbap from '@kit.ConnectivityKit.pbap';
+import opp from '@kit.ConnectivityKit.opp';
+import socket from '@kit.ConnectivityKit.socket';
+import wearDetection from '@kit.ConnectivityKit.wearDetection';
+import bluetoothManager from '@kit.ConnectivityKitManager';
 ```
 
 ## sppCloseClientSocket
@@ -24,6 +33,22 @@ Disables an spp client socket and releases related resources.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| socket | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| socket | number | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-bluetooth-sppaccept-f.md) or [sppConnect](arkts-connectivity-bluetooth-sppconnect-f.md). |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let clientNumber = -1;
+function clientSocket(code : BusinessError, number : number) {
+  if (code == null || code.code != 0) {
+    return;
+  }
+  console.info(`bluetooth serverSocket Number: ${number}`);
+  // The obtained clientNumber is used as the socket ID for subsequent read/write operations on the client.
+  clientNumber = number;
+}
+bluetooth.sppCloseClientSocket(clientNumber);
+```

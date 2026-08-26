@@ -15,14 +15,14 @@ Creates a new Promise.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| executor | (resolve: (value: T \| PromiseLike & lt;T & gt;) = & gt; void, reject: (reason?: any) = & gt; void) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| executor | (resolve: (value: T \| PromiseLike & lt;T & gt;) = & gt; void, reject: (reason?: any) = & gt; void) = & gt; void | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## all
 
 ```TypeScript
@@ -33,14 +33,14 @@ Creates a Promise that is resolved with an array of results when all of the prov
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| values | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| values | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## race
 
 ```TypeScript
@@ -51,14 +51,14 @@ Creates a Promise that is resolved or rejected when any of the provided Promises
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| values | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| values | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## reject
 
 ```TypeScript
@@ -69,14 +69,14 @@ Creates a new rejected promise for the provided reason.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| reason | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| reason | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## resolve
 
 ```TypeScript
@@ -87,8 +87,8 @@ Creates a new resolved promise.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## resolve
 
 ```TypeScript
@@ -99,14 +99,14 @@ Creates a new resolved promise for the provided value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | T | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## resolve
 
 ```TypeScript
@@ -117,14 +117,14 @@ Creates a new resolved promise for the provided value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | T \| PromiseLike & lt;T & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | T \| PromiseLike & lt;T & gt; | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## prototype
 
 ```TypeScript

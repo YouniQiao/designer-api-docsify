@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiAppearance } from 'kits/@kit.ArkUI';
+import uiAppearance from '@kit.ArkUI';
 ```
 
 ## getFontWeightScale
@@ -30,14 +30,29 @@ Obtains the current font weight scale factor.<!--Del-->
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | current font-weight-scale. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [500001](../errorcode-uiappearance.md#500001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 - 19 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 - 19 |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let fontWeightScale = uiAppearance.getFontWeightScale();
+  console.info('Get fontWeightScale ' + fontWeightScale);
+} catch (error) {
+  let err = error as BusinessError;
+  console.error(`Get fontWeightScale failed. Code: ${err.code}, message: ${err.message}`);
+}
+```

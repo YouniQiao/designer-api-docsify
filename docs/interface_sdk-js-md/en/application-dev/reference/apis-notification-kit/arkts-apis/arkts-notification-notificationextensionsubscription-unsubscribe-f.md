@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+import notificationExtensionSubscription from '@kit.NotificationKit';
 ```
 
 ## unsubscribe
@@ -26,14 +26,24 @@ subscribe subscribes to the
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [1600001](../errorcode-notification.md#1600001-internal-error) |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied or current device not supported. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+
+**Examples**
+
+```TypeScript
+notificationExtensionSubscription.unsubscribe().then(() => {
+  console.info(`unsubscribe success`);
+}).catch((err: BusinessError) => {
+  console.error(`unsubscribe fail, code is ${err.code}, message is ${err.message}`);
+});
+```

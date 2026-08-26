@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## constructTLSSocketInstance
@@ -20,9 +20,17 @@ Creates a **TLSSocket** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TLSSocket](arkts-network-socket-tlssocket-i.md) |
+| Type | Description |
+| --- | --- |
+| [TLSSocket](arkts-network-socket-tlssocket-i.md) | TLSSocket** object. |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+```
 
 
 ## constructTLSSocketInstance
@@ -33,7 +41,8 @@ function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 
 Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Before calling **constructTLSSocketInstance**, ensure that a **TCPSocket** connection has been established and no
 > data is transmitted. After a successful upgrade, you do not need to call the **close** API for the **TCPSocket**
 > object.
@@ -44,21 +53,49 @@ Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tcpSocket | [TCPSocket](arkts-network-socket-tcpsocket-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tcpSocket | [TCPSocket](arkts-network-socket-tcpsocket-i.md) | Yes | TCPSocket** connection to be upgraded. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TLSSocket](arkts-network-socket-tlssocket-i.md) |
+| Type | Description |
+| --- | --- |
+| [TLSSocket](arkts-network-socket-tlssocket-i.md) | TLSSocket** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
-| 2303601 |
-| 2303602 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| 2303601 | Invalid socket FD. |
+| 2303602 | Socket is not connected. |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+
+tcp.connect(tcpconnectoptions, (err: BusinessError) => {
+  if (err) {
+    console.error('connect fail');
+    return;
+  }
+  console.info('connect success');
+
+  // Ensure that a TCPSocket connection has been established before upgrading it to a TLSSocket connection.
+  let tls: socket.TLSSocket = socket.constructTLSSocketInstance(tcp);
+})
+```

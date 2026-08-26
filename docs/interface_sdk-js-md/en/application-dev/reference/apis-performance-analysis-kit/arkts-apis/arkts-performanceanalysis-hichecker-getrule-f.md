@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getRule
@@ -20,6 +19,16 @@ Obtains a collection of thread, process, and alarm rules that have been added.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| bigint |
+| Type | Description |
+| --- | --- |
+| bigint | Collection of added rules. |
+
+**Examples**
+
+```TypeScript
+// Add a rule.
+hichecker.addCheckRule(hichecker.RULE_CAUTION_PRINT_LOG);
+
+// Obtain the collection of added rules.
+hichecker.getRule(); // return 1n;
+```

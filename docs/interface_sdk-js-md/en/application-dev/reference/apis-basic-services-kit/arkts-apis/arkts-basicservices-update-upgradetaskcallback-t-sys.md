@@ -14,6 +14,6 @@ Represents an event callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| eventInfo | [EventInfo](arkts-basicservices-update-eventinfo-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventInfo | [EventInfo](arkts-basicservices-update-eventinfo-i-sys.md) | Yes | Event information, including the eventId(eventID) and taskBody(task data) fields. |

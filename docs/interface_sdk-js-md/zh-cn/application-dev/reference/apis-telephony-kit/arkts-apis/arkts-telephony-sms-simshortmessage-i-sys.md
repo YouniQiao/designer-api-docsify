@@ -11,7 +11,6 @@ SIM卡短消息。
 ## 导入模块
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## indexOnSim

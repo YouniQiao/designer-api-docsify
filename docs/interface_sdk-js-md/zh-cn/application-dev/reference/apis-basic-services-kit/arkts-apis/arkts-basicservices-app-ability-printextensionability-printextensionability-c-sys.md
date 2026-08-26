@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { PrintExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import PrintExtensionAbility from '@kit.BasicServicesKit';
 ```
 
 ## onRequestPreview
@@ -30,18 +30,33 @@ onRequestPreview(jobInfo: print.PrintJob): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| jobInfo | print.PrintJob | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| jobInfo | print.PrintJob | 是 | 表示打印任务信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回的预览结果 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
+
+**示例**
+
+```TypeScript
+import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onRequestPreview(jobInfo: print.PrintJob): string {
+        console.info('onRequestPreview enter');
+        // ...
+        let previewResult: string = '';
+        return previewResult;
+    }
+}
+```

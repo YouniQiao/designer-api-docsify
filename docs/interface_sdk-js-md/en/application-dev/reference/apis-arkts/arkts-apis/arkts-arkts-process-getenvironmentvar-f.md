@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## getEnvironmentVar
@@ -24,12 +24,23 @@ Obtains the value of an environment variable.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Environment variable name. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Value of the environment variable. |
+
+**Examples**
+
+```TypeScript
+let pres = process.getEnvironmentVar("PATH");
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+let pres = pro.getEnvironmentVar("PATH");
+```

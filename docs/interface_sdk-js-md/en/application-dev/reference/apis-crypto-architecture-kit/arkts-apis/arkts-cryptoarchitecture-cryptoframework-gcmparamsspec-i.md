@@ -4,7 +4,8 @@ Encapsulates the parameters for encryption or decryption using the GCM AEAD mode
 
 Applies to the GCM mode.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 1. Before passing a value to
 > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify
 > **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
@@ -22,7 +23,7 @@ Applies to the GCM mode.
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## aad

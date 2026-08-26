@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## isBeaconFenceSupported
@@ -22,6 +21,18 @@ function isBeaconFenceSupported(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true：支持beacon围栏。false：不支持beacon围栏。 |
+
+**示例**
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+
+try {
+  let isBeaconFenceSupported = geoLocationManager.isBeaconFenceSupported();
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```

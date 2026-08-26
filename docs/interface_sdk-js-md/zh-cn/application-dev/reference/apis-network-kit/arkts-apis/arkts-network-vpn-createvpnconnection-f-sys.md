@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { vpn } from 'kits/@kit.NetworkKit';
+import vpn from '@kit.NetworkKit';
+import vpnExtension from '@kit.NetworkKitExtension';
 ```
 
 ## createVpnConnection
@@ -22,19 +23,40 @@ function createVpnConnection(context: AbilityContext): VpnConnection
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [AbilityContext](arkts-network-vpn-abilitycontext-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [AbilityContext](arkts-network-vpn-abilitycontext-t.md) | 是 | 指定 context。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) | 返回一个 VPN 连接对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+
+**示例**
+
+Stage 模型示例：
+
+```TypeScript
+import { vpn } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
+  functiontest()
+  {
+    console.info("vpn createVpnConnection: " + JSON.stringify(this.VpnConnection));
+  }
+  build() {  }
+}
+```

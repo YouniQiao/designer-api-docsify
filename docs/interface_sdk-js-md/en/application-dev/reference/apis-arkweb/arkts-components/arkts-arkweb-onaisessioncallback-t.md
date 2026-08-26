@@ -14,7 +14,7 @@ AI session operation result callback function type. Used to report the result of
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| state | [AISessionResultType](arkts-arkweb-aisessionresulttype-e.md) | Yes |
-| content | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| state | [AISessionResultType](arkts-arkweb-aisessionresulttype-e.md) | Yes | The current result state. |
+| content | string | Yes | The detailed result or response content. |

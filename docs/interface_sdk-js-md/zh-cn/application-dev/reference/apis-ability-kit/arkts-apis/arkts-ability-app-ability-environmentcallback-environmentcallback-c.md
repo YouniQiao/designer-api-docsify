@@ -9,7 +9,7 @@ EnvironmentCallback模块提供对系统环境变化监听回调的能力。
 ## 导入模块
 
 ```TypeScript
-import { EnvironmentCallback } from 'kits/@kit.AbilityKit';
+import EnvironmentCallback from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdated
@@ -30,9 +30,13 @@ onConfigurationUpdated(config: Configuration): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 是 | 变化后的Configuration对象。 |
+
+**示例**
+
+参见EnvironmentCallback使用。
 
 ## onMemoryLevel
 
@@ -52,6 +56,10 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md)。 |
+
+**示例**
+
+参见EnvironmentCallback使用。

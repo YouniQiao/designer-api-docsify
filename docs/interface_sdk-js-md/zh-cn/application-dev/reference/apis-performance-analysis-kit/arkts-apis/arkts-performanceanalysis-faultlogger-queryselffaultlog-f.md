@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
+import FaultLogger from '@kit.PerformanceAnalysisKit';
 ```
 
 ## querySelfFaultLog
@@ -24,10 +24,38 @@ function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<F
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 是 | 输入要查询的故障类型。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | 是 | 回调函数，在回调函数中获取故障信息数组。 value拿到故障信息数组；value为undefined表示获取过程中出现异常，error返回错误提示字符串。 |
+
+**示例**
+
+```TypeScript
+import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function queryFaultLogCallback(error: BusinessError, value: Array<FaultLogger.FaultLogInfo>) {
+  if (error) {
+    console.error(`error code:${error.code}, error msg:${error.message}`);
+  } else {
+    console.info(`value length: ${value.length}`);
+    let len: number = value.length;
+    for (let i = 0; i < len; i++) {
+      console.info(`log: ${i}`);
+      console.info(`Log pid: ${value[i].pid}`);
+      console.info(`Log uid: ${value[i].uid}`);
+      console.info(`Log type: ${value[i].type}`);
+      console.info(`Log timestamp: ${value[i].timestamp}`);
+      console.info(`Log reason: ${value[i].reason}`);
+      console.info(`Log module: ${value[i].module}`);
+      console.info(`Log summary: ${value[i].summary}`);
+      console.info(`Log text: ${value[i].fullLog}`);
+    }
+  }
+}
+FaultLogger.querySelfFaultLog(FaultLogger.FaultType.JS_CRASH, queryFaultLogCallback);
+```
 
 
 ## querySelfFaultLog
@@ -48,12 +76,37 @@ function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 是 | 输入要查询的故障类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | Promise实例，可以在其then()方法中获取故障信息实例，也可以使用await。 |
+
+**示例**
+
+```TypeScript
+import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+
+async function getLog() {
+  let value: Array<FaultLogger.FaultLogInfo> = await FaultLogger.querySelfFaultLog(FaultLogger.FaultType.JS_CRASH);
+  if (value) {
+    console.info(`value length: ${value.length}`);
+    let len: number = value.length;
+    for (let i = 0; i < len; i++) {
+      console.info(`log: ${i}`);
+      console.info(`Log pid: ${value[i].pid}`);
+      console.info(`Log uid: ${value[i].uid}`);
+      console.info(`Log type: ${value[i].type}`);
+      console.info(`Log timestamp: ${value[i].timestamp}`);
+      console.info(`Log reason: ${value[i].reason}`);
+      console.info(`Log module: ${value[i].module}`);
+      console.info(`Log summary: ${value[i].summary}`);
+      console.info(`Log text: ${value[i].fullLog}`);
+    }
+  }
+}
+```

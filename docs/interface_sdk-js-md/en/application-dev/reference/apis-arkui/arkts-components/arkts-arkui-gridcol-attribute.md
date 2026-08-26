@@ -31,9 +31,9 @@ Sets the number of offset columns relative to the original position of the compo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes | Number of offset columns relative to the previous child component of the grid The value must be a non-negative integer. Default value: **0**.Invalid values are treated as the default value. |
 
 ## order
 
@@ -53,9 +53,9 @@ Sets the display order of the grid child component. Grid child components are so
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes | Sequence number of the component. Child components of the grid are sorted in ascending order based on their sequence numbers.The value must be a non-negative integer. Default value: **0**.Invalid values are treated as the default value. |
 
 ## span
 
@@ -75,6 +75,6 @@ Sets the number of columns occupied by the component. If it is set to **0**, the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes | Number of occupied columns.The value must be a non-negative integer. Default value: **1**.Invalid values are treated as the default value. |

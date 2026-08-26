@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from 'kits/@kit.ArkUI';
+import Prompt, { Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
 ```
 
 ## complete
@@ -42,9 +42,9 @@ fail?: (errMsg: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| errMsg | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| errMsg | string | 是 |  |
 
 ## success
 
@@ -62,10 +62,10 @@ success?: (tapIndex: number, errMsg: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| tapIndex | number | 是 |
-| errMsg | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tapIndex | number | 是 |  |
+| errMsg | string | 是 |  |
 
 ## buttons
 

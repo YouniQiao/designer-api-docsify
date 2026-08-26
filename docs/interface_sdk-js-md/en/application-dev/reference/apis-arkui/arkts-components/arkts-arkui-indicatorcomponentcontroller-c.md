@@ -31,10 +31,10 @@ Controlling IndicatorComponent to change to the specified subcomponent.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| useAnimation | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | The index of item to be redirected. |
+| useAnimation | boolean | No | If true, swipe to index item with animation. If false, swipe to index item without animation. The default value is false. |
 
 ## constructor
 

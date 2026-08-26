@@ -27,9 +27,23 @@ getForegroundApplications.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Yes | Return all application information currently in the foreground in the form of callback. |
+
+**Examples**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+
+appManager.getForegroundApplications((err, data) => {
+  if (err) {
+    console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
+  } else {
+    console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
+  }
+});
+```
 
 
 ## getForegroundApplications
@@ -54,6 +68,21 @@ getForegroundApplications.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Returns the list of AppStateData. |
+
+**Examples**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+appManager.getForegroundApplications()
+  .then((data) => {
+    console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
+  });
+```

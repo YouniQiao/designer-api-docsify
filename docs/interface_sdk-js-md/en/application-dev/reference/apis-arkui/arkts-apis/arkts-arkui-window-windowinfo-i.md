@@ -9,7 +9,9 @@ Describes the window information.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import floatingBall from '@kit.ArkUI.floatingBall';
+import floatView from '@kit.ArkUI.floatView';
+import window from '@kit.ArkUI';
 ```
 
 ## abilityName
@@ -99,6 +101,17 @@ Whether the window gains focus. **true** if the window gains focus, **false** ot
 **Since:** 18
 
 **System capability:** SystemCapability.Window.SessionManager
+
+**Examples**
+
+```TypeScript
+try {
+  let focus = windowClass.isFocused();
+  console.info(`Succeeded in checking whether the window is focused. Data: ${focus}`);
+} catch (exception) {
+  console.error(`Failed to check whether the window is focused. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
 
 ## rect
 

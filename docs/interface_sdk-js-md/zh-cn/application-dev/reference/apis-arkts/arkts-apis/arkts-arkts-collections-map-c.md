@@ -2,7 +2,8 @@
 
 一种基于键值对存储的非线性数据结构，能够高效地通过唯一键来存取对应的值。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
 > 本节使用以下标识符来表示泛型的使用：
 - K：Key，键。
@@ -16,7 +17,6 @@ K和V类型都需为 [Sendable支持的数据类型](../../../arkts-utils/arkts-
 ## 导入模块
 
 ```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -35,15 +35,15 @@ import { collections } from 'kits/@kit.ArkTS';
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;[K, V] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;[K, V] & gt; | 返回一个迭代器对象，该对象包含键值对。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## clear
 
@@ -61,10 +61,10 @@ clear(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## constructor
 
@@ -82,15 +82,15 @@ constructor(entries?: readonly (readonly [K, V])[] | null)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [entries](#entries) | readonly (readonly [K, V])[] \| null | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| entries | readonly (readonly [K, V])[] \| null | 否 | 键值对数组或其它可迭代对象。 默认值为**null**，创建一个空Map对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Map's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -108,15 +108,15 @@ constructor(iterable: Iterable<readonly [K, V]>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| iterable | Iterable & lt;readonly [K, V] & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| iterable | Iterable & lt;readonly [K, V] & gt; | 是 | 用于构造ArkTS Map的可迭代对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Map's constructor cannot be directly invoked. |
 
 ## containsValue
 
@@ -136,22 +136,22 @@ containsValue(value: V): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | V | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | V | 是 | 指定值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果存在指定值，则返回**true**；否则返回 **false**。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The containsValue method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
 
 ## delete
 
@@ -169,22 +169,22 @@ delete(key: K): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 待删除元素的键。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 操作结果。如果元素存在并已被删除，则返回**true**； 否则该元素不存在，返回**false**。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The delete method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## entries
 
@@ -202,16 +202,16 @@ entries(): IterableIterator<[K, V]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;[K, V] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;[K, V] & gt; | Map迭代器对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## forEach
 
@@ -229,16 +229,16 @@ forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackFn | (value: V, key: K, map: Map & lt;K, V & gt;) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callbackFn | (value: V, key: K, map: Map & lt;K, V & gt;) = & gt; void | 是 | 对每个键值对运行的回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## get
 
@@ -256,22 +256,22 @@ get(key: K): V | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 要获取值的键。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| V \| undefined | 与指定键相关联的元素，如果键在Map对象中找不到，则返回**undefined**。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The get method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## has
 
@@ -289,22 +289,22 @@ has(key: K): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 待查找元素的键。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 判断结果。如果存在指定元素，则返回**true**，否则返回 **false**。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## keys
 
@@ -322,16 +322,16 @@ keys(): IterableIterator<K>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;K & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;K & gt; | Map迭代器对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## put
 
@@ -341,7 +341,8 @@ put(key: K, value: V): V | undefined
 
 向该Map添加或更新一个指定的键值对，并返回该键之前关联的值。
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - 返回**undefined**时无法直接区分是键不存在还是键存在但值为**undefined**，可在使用本接口前先使用
 > **has**接口判断键是否存在，进而区分返回的**undefined**所属情况。
 
@@ -355,23 +356,23 @@ put(key: K, value: V): V | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
-| value | V | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 添加或更新指定元素的键。 |
+| value | V | 是 | 添加或更新指定元素的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| V \| undefined | 该键之前关联的值。如果键在Map对象中找不到，则返回**undefined**。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The put method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
 
 ## putAll
 
@@ -391,16 +392,16 @@ putAll(from: Map<K, V>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| from | Map & lt;K, V & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | Map & lt;K, V & gt; | 是 | 提供键值对的ArkTS Map。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The putAll method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
 
 ## putAll
 
@@ -420,16 +421,16 @@ putAll(from: BuiltinMap<K, V>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| from | [BuiltinMap](arkts-arkts-builtinmap-t.md)&lt;K, V&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | [BuiltinMap](arkts-arkts-builtinmap-t.md)&lt;K, V&gt; | 是 | 提供键值对的内建Map。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The putAll method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
 
 ## remove
 
@@ -439,7 +440,8 @@ remove(key: K): V | undefined
 
 删除该Map中的指定键及其对应值。
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - 返回**undefined**时无法直接区分是键不存在还是键存在但值为**undefined**，可在使用本接口前先使用
 > **has**接口判断键是否存在，进而区分返回的**undefined**所属情况。
 
@@ -453,22 +455,22 @@ remove(key: K): V | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 指定键。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| V \| undefined | 被删除的值。如果键在Map对象中找不到，则返回**undefined**。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
 
 ## set
 
@@ -486,23 +488,23 @@ set(key: K, value: V): Map<K, V>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
-| value | V | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 要添加或更新的键。 |
+| value | V | 是 | 要添加或更新的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Map & lt;K, V & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Map & lt;K, V & gt; | 添加或更新键值对操作后的Map对象本身。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## values
 
@@ -520,16 +522,16 @@ values(): IterableIterator<V>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;V & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;V & gt; | Map迭代器对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## size
 

@@ -4,12 +4,12 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [InteropAbilityMonitor](arkts-ability-interopabilitymonitor-i.md) |
+| Name | Description |
+| --- | --- |
+| [InteropAbilityMonitor](arkts-ability-interopabilitymonitor-i.md) | Provide methods for matching monitored Ability objects that meet specified conditions. The most recently matched Ability objects will be saved in the InteropAbilityMonitor object. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md) |
+| Name | Description |
+| --- | --- |
+| [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md) | The callback is called when only an ability is monitored. |

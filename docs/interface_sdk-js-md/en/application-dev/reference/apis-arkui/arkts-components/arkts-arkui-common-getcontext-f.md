@@ -27,12 +27,12 @@ Obtains the Context object associated with a component on the page.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| component | Object | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| component | Object | No | indicate the component on the page. If no component is passed in or the passed-in parameter type is invalid, the default context is returned. The default context is the context obtained by tracing the call chain of the API. If this API is used in an asynchronous callback or not initially called on the current page, the context of the instance may fail to be traced. In this case, undefined is returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Context](arkts-arkui-context-t.md) |
+| Type | Description |
+| --- | --- |
+| [Context](arkts-arkui-context-t.md) | The context type depends on the ability type. For example, if this API is called on a page of the UIAbility, the return value type is UIAbilityContext; if this API is called on a page of the ExtensionAbility, the return value type is ExtensionContext. |

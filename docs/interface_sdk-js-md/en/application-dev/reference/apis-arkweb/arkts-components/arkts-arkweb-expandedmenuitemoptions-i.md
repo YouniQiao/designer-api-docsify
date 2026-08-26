@@ -2,7 +2,8 @@
 
 Custom menu extension item.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported from API version 12 and deprecated from API version 20. You are advised to use
 > [editMenuOptions](arkts-arkweb-web-attribute.md#editmenuoptions) instead.
 
@@ -17,6 +18,9 @@ Custom menu extension item.
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## action
@@ -39,9 +43,9 @@ Callback invoked when the user selects a menu extension item. The callback param
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectedText | {plainText: string} | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectedText | {plainText: string} | Yes |  |
 
 ## content
 

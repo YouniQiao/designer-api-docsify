@@ -11,7 +11,7 @@ FormAgent模块提供了卡片代理相关接口的能力，目前仅包括请�
 ## 导入模块
 
 ```TypeScript
-import { formAgent } from 'kits/@kit.FormKit';
+import formAgent from '@kit.FormKit';
 ```
 
 ## 汇总
@@ -19,9 +19,9 @@ import { formAgent } from 'kits/@kit.FormKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [requestPublishForm(FormAgent)](arkts-form-formagent-requestpublishform-f-sys.md) |
-| [requestPublishForm(FormAgent)](arkts-form-formagent-requestpublishform-f-sys.md) |
-| [updateFormCrossBundle(FormAgent)](arkts-form-formagent-updateformcrossbundle-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [requestPublishForm(FormAgent)](arkts-form-formagent-requestpublishform-f-sys.md) | 请求发布一张卡片到使用方，使用callback异步回调。使用方通常为桌面。适用于系统应用需要主动将卡片添加到桌面的场景。 |
+| [requestPublishForm(FormAgent)](arkts-form-formagent-requestpublishform-f-sys.md) | 请求发布一张卡片到使用方，使用Promise异步回调。使用方通常为桌面。适用于系统应用需要主动将卡片添加到桌面的场景。 |
+| [updateFormCrossBundle(FormAgent)](arkts-form-formagent-updateformcrossbundle-f-sys.md) | 跨应用更新卡片，使用Promise异步回调。 |
 <!--DelEnd-->

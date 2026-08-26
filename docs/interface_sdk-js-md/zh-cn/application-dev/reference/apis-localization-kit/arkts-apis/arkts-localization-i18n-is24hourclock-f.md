@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## is24HourClock
@@ -24,6 +24,20 @@ export function is24HourClock(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示系统24小时开关开启，false表示系统24小时开关关闭。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let is24HourClock: boolean = i18n.System.is24HourClock(); // 如果系统时制是24小时制，is24HourClock = true
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let is24HourClock: boolean = i18n.is24HourClock();
+```

@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## colorTemperature

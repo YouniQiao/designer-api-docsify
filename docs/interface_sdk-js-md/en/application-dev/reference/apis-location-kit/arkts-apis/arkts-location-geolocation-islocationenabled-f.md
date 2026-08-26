@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import geolocation from '@kit.LocationKit';
 ```
 
 ## isLocationEnabled
@@ -26,9 +26,23 @@ Obtain current location switch status
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location switch result. |
+
+**Examples**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.isLocationEnabled((err, data) => {
+    if (err) {
+        console.info('isLocationEnabled: err=' + JSON.stringify(err));
+    }
+    if (data) {
+        console.info('isLocationEnabled: data=' + JSON.stringify(data));
+    }
+});
+```
 
 
 ## isLocationEnabled
@@ -51,6 +65,15 @@ Obtain current location switch status
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | The promise returned by the function. |
+
+**Examples**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.isLocationEnabled().then((result) => {
+    console.info('promise, isLocationEnabled: ' + JSON.stringify(result));
+});
+```

@@ -39,9 +39,9 @@ Sets the text label of the button on the right. The default value is **Start** f
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Text label of the button on the right. When the string is too number, it is scaled down, wrapped in two lines, and then clipped. |
 
 ## prevLabel
 
@@ -65,9 +65,9 @@ Sets the text label of the button on the left, which is not displayed on the fir
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Text label of the button on the left. When the string is too number, it is scaled down, wrapped in two lines, and then clipped. |
 
 ## status
 
@@ -91,6 +91,6 @@ Sets the display status of **nextLabel** in the stepper.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ItemState](arkts-arkui-itemstate-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ItemState](arkts-arkui-itemstate-e.md) | No | Display status of **nextLabel** in the stepper.Default value: **ItemState.Normal |

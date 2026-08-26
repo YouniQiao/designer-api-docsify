@@ -13,7 +13,7 @@ Provides APIs for reading and writing data in specific format. During RPC, the s
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import rpc from '@kit.IPCKit';
 ```
 
 ## closeFileDescriptor
@@ -34,9 +34,42 @@ Closes a file descriptor. This API is a static method.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | File descriptor to close. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let filePath = "path/to/file"; 
+  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+  rpc.MessageSequence.closeFileDescriptor(file.fd);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let filePath = "path/to/file";
+  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+  rpc.MessageParcel.closeFileDescriptor(file.fd);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## containFileDescriptors
 
@@ -56,9 +89,48 @@ Checks whether this **MessageParcel** object contains file descriptors.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the **MessageParcel** object contains file descriptors; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let sequence = rpc.MessageSequence.create();
+  let filePath = "path/to/file";
+  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+  let containFD = sequence.containFileDescriptors();
+  hilog.info(0x0000, 'testTag', 'sequence after write fd containFd result is ' + containFD);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let parcel = new rpc.MessageParcel();
+  let filePath = "path/to/file";
+  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+  let writeResult = parcel.writeFileDescriptor(file.fd);
+  hilog.info(0x0000, 'testTag', 'parcel writeFd result is ' + writeResult);
+  let containFD = parcel.containFileDescriptors();
+  hilog.info(0x0000, 'testTag', 'parcel after write fd containFd result is ' + containFD);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## create
 
@@ -78,9 +150,26 @@ Creates a **MessageParcel** object. This method is a static method.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) |
+| Type | Description |
+| --- | --- |
+| [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | MessageParcel** object created. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  hilog.info(0x0000, 'testTag', 'data is ' + data);
+
+  // When the MessageParcel object is no longer used, the service calls the reclaim method to release resources.
+  data.reclaim();
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## dupFileDescriptor
 
@@ -100,15 +189,48 @@ Duplicates a file descriptor. This API is a static method.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | File descriptor to duplicate. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | New file descriptor. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let filePath = "path/to/file"; 
+  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+  rpc.MessageSequence.dupFileDescriptor(file.fd);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let filePath = "path/to/file";
+  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+  rpc.MessageParcel.dupFileDescriptor(file.fd);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## getCapacity
 
@@ -128,9 +250,40 @@ Obtains the capacity of this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | MessageParcel** capacity obtained, in bytes. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  let result = data.getCapacity();
+  hilog.info(0x0000, 'testTag', 'capacity is ' + result);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.getCapacity();
+  hilog.info(0x0000, 'testTag', 'capacity is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## getRawDataCapacity
 
@@ -150,9 +303,40 @@ Obtains the maximum amount of raw data that can be held by this **MessageParcel*
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Maximum amount of raw data that **MessageParcel** can hold, that is, 128 MB. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let sequence = rpc.MessageSequence.create();
+  let result = sequence.getRawDataCapacity();
+  hilog.info(0x0000, 'testTag', 'sequence get RawDataCapacity result is ' + result);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let parcel = new rpc.MessageParcel();
+  let result = parcel.getRawDataCapacity();
+  hilog.info(0x0000, 'testTag', 'parcel get RawDataCapacity result is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## getReadableBytes
 
@@ -172,9 +356,42 @@ Obtains the readable capacity of this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | MessageParcel** object readable capacity, in bytes. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeString("hello world");
+  let result = data.getReadableBytes();
+  hilog.info(0x0000, 'testTag', 'RpcServer: getReadableBytes is ' + result);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  data.writeInt(1);
+  let result = data.getReadableBytes();
+  hilog.info(0x0000, 'testTag', 'RpcServer: getReadableBytes is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## getReadPosition
 
@@ -194,9 +411,41 @@ Obtains the read position of this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Current read position of the **MessageParcel** object. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeString("hello world");
+  let readPos = data.getReadPosition();
+  hilog.info(0x0000, 'testTag', 'readPos is ' + readPos);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let readPos = data.getReadPosition();
+  hilog.info(0x0000, 'testTag', 'readPos is ' + readPos);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## getSize
 
@@ -216,9 +465,41 @@ Obtains the data size of this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Size of the **MessageParcel** object obtained, in bytes. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  let size = data.getSize();
+  hilog.info(0x0000, 'testTag', 'size is ' + size);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  data.writeInt(1);
+  let size = data.getSize();
+  hilog.info(0x0000, 'testTag', 'size is ' + size);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## getWritableBytes
 
@@ -238,9 +519,42 @@ Obtains the writable capacity of this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | MessageParcel** writable capacity obtained, in bytes. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.setCapacity(100);
+  let getWritableBytes = data.getWritableBytes();
+  hilog.info(0x0000, 'testTag', 'RpcServer: getWritableBytes is ' + getWritableBytes);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  data.writeInt(1);
+  let getWritableBytes = data.getWritableBytes();
+  hilog.info(0x0000, 'testTag', 'RpcServer: getWritableBytes is ' + getWritableBytes);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## getWritePosition
 
@@ -260,9 +574,42 @@ Obtains the write position of this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Current write position of the **MessageParcel** object. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeInt(10);
+  let bwPos = data.getWritePosition();
+  hilog.info(0x0000, 'testTag', 'bwPos is ' + bwPos);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  data.writeInt(10);
+  let bwPos = data.getWritePosition();
+  hilog.info(0x0000, 'testTag', 'bwPos is ' + bwPos);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readAshmem
 
@@ -282,9 +629,65 @@ Reads the anonymous shared object from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) |
+| Type | Description |
+| --- | --- |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Anonymous share object obtained. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let sequence = rpc.MessageSequence.create();
+  let ashmem = rpc.Ashmem.create("ashmem", 1024);
+  // Write data to ashmem.
+  let buffer = new ArrayBuffer(1024);
+  let int32View = new Int32Array(buffer);
+  for (let i = 0; i < int32View.length; i++) {
+    int32View[i] = i * 2 + 1;
+  }
+  let size = buffer.byteLength;
+  ashmem.mapReadWriteAshmem();
+  ashmem.writeDataToAshmem(buffer, size, 0);
+  // Write the size of the transferred data to this MessageSequence object.
+  sequence.writeInt(size);
+  // Write the ashmem object to the messageSequence object.
+  sequence.writeAshmem(ashmem);
+
+  // Read the size of the transferred data.
+  let dataSize = sequence.readInt();
+  // Read the ashmem object from this MessageSequence object.
+  let ashmem1 = sequence.readAshmem();
+  // Read data from the ashmem object.
+  ashmem1.mapReadWriteAshmem();
+  let readResult = ashmem1.readDataFromAshmem(dataSize, 0);
+  let readInt32View = new Int32Array(readResult);
+  hilog.info(0x0000, 'testTag', 'read from Ashmem result is ' + readInt32View);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let parcel = new rpc.MessageParcel();
+  let ashmem = rpc.Ashmem.createAshmem("ashmem", 1024);
+  let isWriteSuccess = parcel.writeAshmem(ashmem);
+  hilog.info(0x0000, 'testTag', 'write ashmem to result is ' + isWriteSuccess);
+  let readAshmem = parcel.readAshmem();
+  hilog.info(0x0000, 'testTag', 'read ashmem to result is ' + readAshmem);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readBoolean
 
@@ -304,9 +707,43 @@ Reads the Boolean value from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Boolean value read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeBoolean(false);
+  let ret = data.readBoolean();
+  hilog.info(0x0000, 'testTag', 'readBoolean is ' + ret);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeBoolean(false);
+  hilog.info(0x0000, 'testTag', 'writeBoolean is ' + result);
+  let ret = data.readBoolean();
+  hilog.info(0x0000, 'testTag', 'readBoolean is ' + ret);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readBooleanArray
 
@@ -326,9 +763,45 @@ Reads the Boolean array from this **MessageParcel** object and writes it to the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataIn | boolean[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataIn | boolean[] | Yes | Boolean array to read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeBooleanArray([false, true, false]);
+  let array: Array<boolean> = new Array(3);
+  data.readBooleanArray(array);
+  hilog.info(0x0000, 'testTag', 'readBooleanArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeBooleanArray([false, true, false]);
+  hilog.info(0x0000, 'testTag', 'writeBooleanArray is ' + result);
+  let array: Array<boolean> = new Array(3);
+  data.readBooleanArray(array);
+  hilog.info(0x0000, 'testTag', 'readBooleanArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readBooleanArray
 
@@ -348,9 +821,43 @@ Reads the Boolean array from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean[] |
+| Type | Description |
+| --- | --- |
+| boolean[] | Boolean array read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeBooleanArray([false, true, false]);
+  let array = data.readBooleanArray();
+  hilog.info(0x0000, 'testTag', 'readBooleanArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeBooleanArray([false, true, false]);
+  hilog.info(0x0000, 'testTag', 'writeBooleanArray is ' + result);
+  let array = data.readBooleanArray();
+  hilog.info(0x0000, 'testTag', 'readBooleanArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readByte
 
@@ -370,9 +877,43 @@ Reads the byte value from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Byte value read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeByte(2);
+  let ret = data.readByte();
+  hilog.info(0x0000, 'testTag', 'readByte is: ' +  ret);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeByte(2);
+  hilog.info(0x0000, 'testTag', 'writeByte is ' + result);
+  let ret = data.readByte();
+  hilog.info(0x0000, 'testTag', 'readByte is ' + ret);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readByteArray
 
@@ -392,9 +933,47 @@ Reads the byte array from this **MessageParcel** object and writes it to the cre
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataIn | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataIn | number[] | Yes | Byte array to read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  let ByteArrayVar = [1, 2, 3, 4, 5];
+  // Write the byte array to the MessageSequence Object
+  data.writeByteArray(ByteArrayVar);
+  let array: Array<number> = new Array(5);
+  data.readByteArray(array);
+  hilog.info(0x0000, 'testTag', 'readByteArray is  ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let ByteArrayVar = [1, 2, 3, 4, 5];
+  let result = data.writeByteArray(ByteArrayVar);
+  let array: Array<number> = new Array(5);
+  data.readByteArray(array);
+  hilog.info(0x0000, 'testTag', 'readByteArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readByteArray
 
@@ -414,9 +993,46 @@ Reads the byte array from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Byte array read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  let ByteArrayVar = [1, 2, 3, 4, 5];
+  // Write the byte array to the MessageSequence Object
+  data.writeByteArray(ByteArrayVar);
+  let array = data.readByteArray();
+  hilog.info(0x0000, 'testTag', 'readByteArray is  ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let ByteArrayVar = [1, 2, 3, 4, 5];
+  let result = data.writeByteArray(ByteArrayVar);
+  hilog.info(0x0000, 'testTag', 'writeByteArray is ' + result);
+  let array = data.readByteArray();
+  hilog.info(0x0000, 'testTag', 'readByteArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readChar
 
@@ -436,9 +1052,43 @@ Reads the single character value from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Char** value read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeChar(97);
+  let ret = data.readChar();
+  hilog.info(0x0000, 'testTag', 'readChar is ' + ret);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeChar(97);
+  hilog.info(0x0000, 'testTag', 'writeChar is ' + result);
+  let ret = data.readChar();
+  hilog.info(0x0000, 'testTag', 'readChar is ' + ret);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readCharArray
 
@@ -458,9 +1108,45 @@ Reads the character array from this **MessageParcel** object and writes it to th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataIn | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataIn | number[] | Yes | Character array to read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeCharArray([97, 98, 88]);
+  let array: Array<number> = new Array(3);
+  data.readCharArray(array);
+  hilog.info(0x0000, 'testTag', 'readCharArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeCharArray([97, 98, 99]);
+  hilog.info(0x0000, 'testTag', 'writeCharArray is ' + result);
+  let array: Array<number> = new Array(3);
+  data.readCharArray(array);
+  hilog.info(0x0000, 'testTag', 'writeCharArray is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readCharArray
 
@@ -480,9 +1166,43 @@ Reads the single character array from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Character array read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeCharArray([97, 98, 88]);
+  let array = data.readCharArray();
+  hilog.info(0x0000, 'testTag', 'readCharArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeCharArray([97, 98, 99]);
+  hilog.info(0x0000, 'testTag', 'writeCharArray is ' + result);
+  let array = data.readCharArray();
+  hilog.info(0x0000, 'testTag', 'readCharArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readDouble
 
@@ -502,9 +1222,43 @@ Reads the number value from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Double value read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeDouble(10.2);
+  let ret = data.readDouble();
+  hilog.info(0x0000, 'testTag', 'readDouble is ' +  ret);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeDouble(10.2);
+  hilog.info(0x0000, 'testTag', 'writeDouble is ' + result);
+  let ret = data.readDouble();
+  hilog.info(0x0000, 'testTag', 'readDouble is ' + ret);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readDoubleArray
 
@@ -524,9 +1278,45 @@ Reads the number array from this **MessageParcel** object and writes it to the c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataIn | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataIn | number[] | Yes | Double array to read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeDoubleArray([11.1, 12.2, 13.3]);
+  let array: Array<number> = new Array(3);
+  data.readDoubleArray(array);
+  hilog.info(0x0000, 'testTag', 'readDoubleArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeDoubleArray([11.1, 12.2, 13.3]);
+  hilog.info(0x0000, 'testTag', 'writeDoubleArray is ' + result);
+  let array: Array<number> = new Array(3);
+  data.readDoubleArray(array);
+  hilog.info(0x0000, 'testTag', 'readDoubleArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readDoubleArray
 
@@ -546,9 +1336,43 @@ Reads the number array from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Double array read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeDoubleArray([11.1, 12.2, 13.3]);
+  let array = data.readDoubleArray();
+  hilog.info(0x0000, 'testTag', 'readDoubleArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeDoubleArray([11.1, 12.2, 13.3]);
+  hilog.info(0x0000, 'testTag', 'writeDoubleArray is ' + result);
+  let array = data.readDoubleArray();
+  hilog.info(0x0000, 'testTag', 'readDoubleArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readException
 
@@ -565,6 +1389,158 @@ Reads the exception information from this **MessageParcel** object.
 **Substitutes:** [readException](arkts-ipc-rpc-messagesequence-c.md#readexception)()
 
 **System capability:** SystemCapability.Communication.IPC.Core
+
+**Examples**
+
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+// If the FA model is used, import featureAbility from @kit.AbilityKit.
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // Obtain the package name and ability name on the server.
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// Use this method to connect to the ability for the FA model.
+// FA.connectAbility(want,connect);
+
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, sendMessageRequest() of the proxy object is called to send a message.
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+  
+try {
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageSequence.create();
+  let reply = rpc.MessageSequence.create();
+  data.writeNoException();
+  data.writeInt(6);
+  if (proxy != undefined) {
+    proxy.sendMessageRequest(1, data, reply, option)
+      .then((result: rpc.RequestResult) => {
+        if (result.errCode === 0) {
+          hilog.info(0x0000, 'testTag', 'sendMessageRequest got result');
+          result.reply.readException();
+          let num = result.reply.readInt();
+          hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+        } else {
+          hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, errCode: ' + result.errCode);
+        }
+      }).catch((e: Error) => {
+        hilog.error(0x0000, 'testTag', 'sendMessageRequest got exception: ' + JSON.stringify(e));
+      }).finally(() => {
+        hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
+        data.reclaim();
+        reply.reclaim();
+      });
+  }
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+// If the FA model is used, import featureAbility from @kit.AbilityKit.
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // Obtain the package name and ability name on the server.
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// Use this method to connect to the ability for the FA model.
+// FA.connectAbility(want,connect);
+
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, sendRequest() of the proxy object is called to send a message.
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try { 
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeNoException();
+  data.writeString('hello');
+  if (proxy != undefined) {
+    let a = proxy.sendRequest(1, data, reply, option) as Object;
+    let b = a as Promise<rpc.SendRequestResult>;
+    b.then((result: rpc.SendRequestResult) => {
+      if (result.errCode === 0) {
+        hilog.info(0x0000, 'testTag', 'sendRequest got result');
+        result.reply.readException();
+        let msg = result.reply.readString();
+        hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+      } else {
+        hilog.error(0x0000, 'testTag', 'sendRequest failed, errCode: ' + result.errCode);
+      }
+    }).catch((e: Error) => {
+      hilog.error(0x0000, 'testTag', 'sendRequest got exception: ' + JSON.stringify(e));
+    }).finally (() => {
+      hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+      data.reclaim();
+      reply.reclaim();
+    });
+  }
+} catch (error) { 
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readFileDescriptor
 
@@ -584,9 +1560,48 @@ Reads the file descriptor from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | File descriptor read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let sequence = rpc.MessageSequence.create();
+  let filePath = "path/to/file";
+  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+  sequence.writeFileDescriptor(file.fd);
+  let readFD = sequence.readFileDescriptor();
+  hilog.info(0x0000, 'testTag', 'readFileDescriptor is ' + readFD);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let parcel = new rpc.MessageParcel();
+  let filePath = "path/to/file";
+  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+  parcel.writeFileDescriptor(file.fd);
+  let readFD = parcel.readFileDescriptor();
+  hilog.info(0x0000, 'testTag', 'parcel read fd is ' + readFD);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readFloat
 
@@ -606,9 +1621,43 @@ Reads the number value from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Double value read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeFloat(1.2);
+  let ret = data.readFloat();
+  hilog.info(0x0000, 'testTag', 'readFloat is ' + ret);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeFloat(1.2);
+  hilog.info(0x0000, 'testTag', 'writeFloat is ' + result);
+  let ret = data.readFloat();
+  hilog.info(0x0000, 'testTag', 'readFloat is ' + ret);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readFloatArray
 
@@ -628,9 +1677,45 @@ Reads the number array from this **MessageParcel** object and writes it to the c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataIn | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataIn | number[] | Yes | Double array to read. The system processes float data as that of the number type. Therefore, the total number of bytes occupied by a float array must be calculated as the number type. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeFloatArray([1.2, 1.3, 1.4]);
+  let array: Array<number> = new Array(3);
+  data.readFloatArray(array);
+  hilog.info(0x0000, 'testTag', 'readFloatArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeFloatArray([1.2, 1.3, 1.4]);
+  hilog.info(0x0000, 'testTag', 'writeFloatArray is ' + result);
+  let array: Array<number> = new Array(3);
+  data.readFloatArray(array);
+  hilog.info(0x0000, 'testTag', 'readFloatArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readFloatArray
 
@@ -650,9 +1735,43 @@ Reads the number array from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Double array read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeFloatArray([1.2, 1.3, 1.4]);
+  let array = data.readFloatArray();
+  hilog.info(0x0000, 'testTag', 'readFloatArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeFloatArray([1.2, 1.3, 1.4]);
+  hilog.info(0x0000, 'testTag', 'writeFloatArray is ' + result);
+  let array = data.readFloatArray();
+  hilog.info(0x0000, 'testTag', 'readFloatArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readInt
 
@@ -672,9 +1791,44 @@ Reads the integer from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Integer read. |
+
+**Examples**
+
+```TypeScript
+// In atomic services, this example is used only to describe how to use the readInt() API. However, rpc.MessageSequence.create() is currently not supported for use in atomic services.
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeInt(10);
+  let ret = data.readInt();
+  hilog.info(0x0000, 'testTag', 'readInt is ' + ret);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeInt(10);
+  hilog.info(0x0000, 'testTag', 'writeInt is ' + result);
+  let ret = data.readInt();
+  hilog.info(0x0000, 'testTag', 'readInt is ' + ret);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readIntArray
 
@@ -694,9 +1848,45 @@ Reads the integer array from this **MessageParcel** object and writes it to the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataIn | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataIn | number[] | Yes | Integer array to read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeIntArray([100, 111, 112]);
+  let array: Array<number> = new Array(3);
+  data.readIntArray(array);
+  hilog.info(0x0000, 'testTag', 'readIntArray is  ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeIntArray([100, 111, 112]);
+  hilog.info(0x0000, 'testTag', 'writeIntArray is ' + result);
+  let array: Array<number> = new Array(3);
+  data.readIntArray(array);
+  hilog.info(0x0000, 'testTag', 'readIntArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readIntArray
 
@@ -716,9 +1906,43 @@ Reads the integer array from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Integer array read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeIntArray([100, 111, 112]);
+  let array = data.readIntArray();
+  hilog.info(0x0000, 'testTag', 'readIntArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeIntArray([100, 111, 112]);
+  hilog.info(0x0000, 'testTag', 'writeIntArray is ' + result);
+  let array = data.readIntArray();
+  hilog.info(0x0000, 'testTag', 'readIntArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readInterfaceToken
 
@@ -738,9 +1962,42 @@ Reads the interface token from this **MessageParcel** object. The interface toke
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Interface token obtained. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeInterfaceToken("aaa");
+  let interfaceToken = data.readInterfaceToken();
+  hilog.info(0x0000, 'testTag', 'RpcServer: interfaceToken is ' + interfaceToken);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeInterfaceToken("aaa");
+  let interfaceToken = data.readInterfaceToken();
+  hilog.info(0x0000, 'testTag', 'RpcServer: interfaceToken is ' + interfaceToken);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readLong
 
@@ -760,9 +2017,43 @@ Reads the number number value from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Long integer read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeLong(10000);
+  let ret = data.readLong();
+  hilog.info(0x0000, 'testTag', 'readLong is ' + ret);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeLong(10000);
+  hilog.info(0x0000, 'testTag', 'writeLong is ' + result);
+  let ret = data.readLong();
+  hilog.info(0x0000, 'testTag', 'readLong is ' + ret);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readLongArray
 
@@ -782,9 +2073,45 @@ Reads the number array from this **MessageParcel** object and writes it to the c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataIn | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataIn | number[] | Yes | Long array to read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeLongArray([1111, 1112, 1113]);
+  let array: Array<number> = new Array(3);
+  data.readLongArray(array);
+  hilog.info(0x0000, 'testTag', 'readLongArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeLongArray([1111, 1112, 1113]);
+  hilog.info(0x0000, 'testTag', 'writeLongArray is ' + result);
+  let array: Array<number> = new Array(3);
+  data.readLongArray(array);
+  hilog.info(0x0000, 'testTag', 'readLongArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readLongArray
 
@@ -804,9 +2131,43 @@ Reads the number array from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Long array read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeLongArray([1111, 1112, 1113]);
+  let array = data.readLongArray();
+  hilog.info(0x0000, 'testTag', 'readLongArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeLongArray([1111, 1112, 1113]);
+  hilog.info(0x0000, 'testTag', 'writeLongArray is ' + result);
+  let array = data.readLongArray();
+  hilog.info(0x0000, 'testTag', 'readLongArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readRawData
 
@@ -826,15 +2187,52 @@ Reads raw data from this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes | Size of the raw data to read. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Raw data obtained, in bytes. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let sequence = rpc.MessageSequence.create();
+  let arr = [1, 2, 3, 4, 5];
+  sequence.writeRawData(arr, arr.length);
+  let size = arr.length;
+  let result = sequence.readRawData(size);
+  hilog.info(0x0000, 'testTag', 'sequence read raw data result is ' + result);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let parcel = new rpc.MessageParcel();
+  let arr = [1, 2, 3, 4, 5];
+  let isWriteSuccess = parcel.writeRawData(arr, arr.length);
+  hilog.info(0x0000, 'testTag', 'parcel write raw data result is ' + isWriteSuccess);
+  let result = parcel.readRawData(5);
+  hilog.info(0x0000, 'testTag', 'parcel read raw data result is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readRemoteObject
 
@@ -854,9 +2252,66 @@ Reads the remote object from this **MessageParcel** object. You can use this met
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) |
+| Type | Description |
+| --- | --- |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Remote object obtained. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+
+try {
+  let data = rpc.MessageSequence.create();
+  let testRemoteObject = new TestRemoteObject("testObject");
+  data.writeRemoteObject(testRemoteObject);
+  let proxy = data.readRemoteObject();
+  hilog.info(0x0000, 'testTag', 'readRemoteObject is ' + proxy);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
+    option: rpc.MessageOption): boolean {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+
+try {
+  let data = rpc.MessageParcel.create();
+  let testRemoteObject = new TestRemoteObject("testObject");
+  data.writeRemoteObject(testRemoteObject);
+  let proxy = data.readRemoteObject();
+  hilog.info(0x0000, 'testTag', 'readRemoteObject is ' + proxy);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readRemoteObjectArray
 
@@ -876,9 +2331,69 @@ Reads the **IRemoteObject** array from this **MessageParcel** object and writes 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | IRemoteObject** array to read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+
+try {
+  let a = [new TestRemoteObject("testObject1"), new TestRemoteObject("testObject2"), new TestRemoteObject("testObject3")];
+  let data = rpc.MessageSequence.create();
+  data.writeRemoteObjectArray(a);
+  let b: Array<rpc.IRemoteObject> = new Array(3);
+  data.readRemoteObjectArray(b);
+  hilog.info(0x0000, 'testTag', 'readRemoteObjectArray is ' + b);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
+    option: rpc.MessageOption): boolean {
+    // The specific processing is determined by the service.
+    return true;
+  }
+}
+
+try {
+  let a = [new TestRemoteObject("testObject1"), new TestRemoteObject("testObject2"),
+    new TestRemoteObject("testObject3")];
+  let data = rpc.MessageParcel.create();
+  data.writeRemoteObjectArray(a);
+  let b: Array<rpc.IRemoteObject> = new Array(3);
+  data.readRemoteObjectArray(b);
+  hilog.info(0x0000, 'testTag', 'readRemoteObjectArray is ' + b);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readRemoteObjectArray
 
@@ -898,9 +2413,67 @@ Reads the **IRemoteObject** array from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] |
+| Type | Description |
+| --- | --- |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | IRemoteObject** object array obtained. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+
+try {
+  let a = [new TestRemoteObject("testObject1"), new TestRemoteObject("testObject2"), new TestRemoteObject("testObject3")];
+  let data = rpc.MessageSequence.create();
+  let b = data.readRemoteObjectArray();
+  hilog.info(0x0000, 'testTag', 'readRemoteObjectArray is ' + b);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
+    option: rpc.MessageOption): boolean {
+    // The specific processing is determined by the service.
+    return true;
+  }
+}
+
+try {
+  let a = [new TestRemoteObject("testObject1"), new TestRemoteObject("testObject2"),
+    new TestRemoteObject("testObject3")];
+  let data = rpc.MessageParcel.create();
+  let result = data.writeRemoteObjectArray(a);
+  hilog.info(0x0000, 'testTag', 'readRemoteObjectArray is ' + result);
+  let b = data.readRemoteObjectArray();
+  hilog.info(0x0000, 'testTag', 'readRemoteObjectArray is ' + b);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readSequenceable
 
@@ -920,15 +2493,53 @@ Reads member variables from this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataIn | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataIn | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes | Object that reads member variables from the **MessageParcel** object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MySequenceable implements rpc.Sequenceable {
+  num: number = 0;
+  str: string = '';
+  constructor(num: number, str: string) {
+    this.num = num;
+    this.str = str;
+  }
+  marshalling(messageParcel: rpc.MessageParcel): boolean {
+    messageParcel.writeInt(this.num);
+    messageParcel.writeString(this.str);
+    return true;
+  }
+  unmarshalling(messageParcel: rpc.MessageParcel): boolean {
+    this.num = messageParcel.readInt();
+    this.str = messageParcel.readString();
+    return true;
+  }
+}
+
+try {
+  let sequenceable = new MySequenceable(1, "aaa");
+  let data = rpc.MessageParcel.create();
+  let result = data.writeSequenceable(sequenceable);
+  hilog.info(0x0000, 'testTag', 'writeSequenceable is ' + result);
+  let ret = new MySequenceable(0, "");
+  let result2 = data.readSequenceable(ret);
+  hilog.info(0x0000, 'testTag', 'readSequenceable is ' + result2);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readSequenceableArray
 
@@ -948,9 +2559,49 @@ Reads the **Sequenceable** array from this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | Sequenceable** array to read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MySequenceable implements rpc.Sequenceable {
+  num: number = 0;
+  str: string = '';
+  constructor(num: number, str: string) {
+    this.num = num;
+    this.str = str;
+  }
+  marshalling(messageParcel: rpc.MessageParcel): boolean {
+    messageParcel.writeInt(this.num);
+    messageParcel.writeString(this.str);
+    return true;
+  }
+  unmarshalling(messageParcel: rpc.MessageParcel): boolean {
+    this.num = messageParcel.readInt();
+    this.str = messageParcel.readString();
+    return true;
+  }
+}
+
+try {
+  let sequenceable = new MySequenceable(1, "aaa");
+  let sequenceable2 = new MySequenceable(2, "bbb");
+  let sequenceable3 = new MySequenceable(3, "ccc");
+  let a = [sequenceable, sequenceable2, sequenceable3];
+  let data = rpc.MessageParcel.create();
+  let result = data.writeSequenceableArray(a);
+  hilog.info(0x0000, 'testTag', 'writeSequenceableArray is ' + result);
+  let b = [new MySequenceable(0, ""), new MySequenceable(0, ""), new MySequenceable(0, "")];
+  data.readSequenceableArray(b);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readShort
 
@@ -970,9 +2621,43 @@ Reads the short integer from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Short integer read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeShort(8);
+  let ret = data.readShort();
+  hilog.info(0x0000, 'testTag', 'readShort is ' + ret);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeShort(8);
+  hilog.info(0x0000, 'testTag', 'writeShort is ' + result);
+  let ret = data.readShort();
+  hilog.info(0x0000, 'testTag', 'readShort is ' + ret);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readShortArray
 
@@ -992,9 +2677,45 @@ Reads the short array from this **MessageParcel** object and writes it to the cr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataIn | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataIn | number[] | Yes | Short array to read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeShortArray([11, 12, 13]);
+  let array: Array<number> = new Array(3);
+  data.readShortArray(array);
+  hilog.info(0x0000, 'testTag', 'readShortArray is  ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeShortArray([11, 12, 13]);
+  hilog.info(0x0000, 'testTag', 'writeShortArray is ' + result);
+  let array: Array<number> = new Array(3);
+  data.readShortArray(array);
+  hilog.info(0x0000, 'testTag', 'readShortArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readShortArray
 
@@ -1014,9 +2735,43 @@ Reads the short array from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Short array read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeShortArray([11, 12, 13]);
+  let array = data.readShortArray();
+  hilog.info(0x0000, 'testTag', 'readShortArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeShortArray([11, 12, 13]);
+  hilog.info(0x0000, 'testTag', 'writeShortArray is ' + result);
+  let array = data.readShortArray();
+  hilog.info(0x0000, 'testTag', 'readShortArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readString
 
@@ -1036,9 +2791,44 @@ Reads the string from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String read. |
+
+**Examples**
+
+```TypeScript
+// In atomic services, this example is used only to describe how to use the readString() API. However, rpc.MessageSequence.create() is currently not supported for use in atomic services.
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeString('abc');
+  let ret = data.readString();
+  hilog.info(0x0000, 'testTag', 'readString is ' + ret);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeString('abc');
+  hilog.info(0x0000, 'testTag', 'writeString is ' + result);
+  let ret = data.readString();
+  hilog.info(0x0000, 'testTag', 'readString is ' + ret);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readStringArray
 
@@ -1058,9 +2848,45 @@ Reads the string array from this **MessageParcel** object and writes it to the c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataIn | string[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataIn | string[] | Yes | String array to read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeStringArray(["abc", "def"]);
+  let array: Array<string> = new Array(2);
+  data.readStringArray(array);
+  hilog.info(0x0000, 'testTag', 'readStringArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeStringArray(["abc", "def"]);
+  hilog.info(0x0000, 'testTag', 'writeStringArray is ' + result);
+  let array: Array<string> = new Array(2);
+  data.readStringArray(array);
+  hilog.info(0x0000, 'testTag', 'readStringArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## readStringArray
 
@@ -1080,9 +2906,43 @@ Reads the string array from this **MessageParcel** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string[] |
+| Type | Description |
+| --- | --- |
+| string[] | String array read. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeStringArray(["abc", "def"]);
+  let array = data.readStringArray();
+  hilog.info(0x0000, 'testTag', 'readStringArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeStringArray(["abc", "def"]);
+  hilog.info(0x0000, 'testTag', 'writeStringArray is ' + result);
+  let array = data.readStringArray();
+  hilog.info(0x0000, 'testTag', 'readStringArray is ' + array);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## reclaim
 
@@ -1099,6 +2959,35 @@ Reclaims the **MessageParcel** object that is no longer used.
 **Substitutes:** [reclaim](arkts-ipc-rpc-messagesequence-c.md#reclaim)()
 
 **System capability:** SystemCapability.Communication.IPC.Core
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let reply = rpc.MessageSequence.create();
+  reply.reclaim();
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let reply = rpc.MessageParcel.create();
+  reply.reclaim();
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## rewindRead
 
@@ -1118,15 +3007,35 @@ Moves the read pointer to the specified position.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pos | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pos | number | Yes | Position from which data is to read. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the read position changes; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  data.writeInt(12);
+  data.writeString("parcel");
+  let number = data.readInt();
+  hilog.info(0x0000, 'testTag', 'number is ' + number);
+  data.rewindRead(0);
+  let number2 = data.readInt();
+  hilog.info(0x0000, 'testTag', 'rewindRead is ' + number2);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## rewindWrite
 
@@ -1146,15 +3055,33 @@ Moves the write pointer to the specified position.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pos | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pos | number | Yes | Position from which data is to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the write position changes; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  data.writeInt(4);
+  data.rewindWrite(0);
+  data.writeInt(5);
+  let number = data.readInt();
+  hilog.info(0x0000, 'testTag', 'rewindWrite is ' + number);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## setCapacity
 
@@ -1174,15 +3101,30 @@ Sets the storage capacity of this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes | Storage capacity to set, in bytes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.setCapacity(100);
+  hilog.info(0x0000, 'testTag', 'setCapacity is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## setSize
 
@@ -1202,15 +3144,30 @@ Sets the size of data contained in this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes | Data size to set, in bytes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let setSize = data.setSize(16);
+  hilog.info(0x0000, 'testTag', 'setSize is ' + setSize);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeAshmem
 
@@ -1230,15 +3187,31 @@ Writes an anonymous shared object to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | Anonymous shared object to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let parcel = new rpc.MessageParcel();
+  let ashmem = rpc.Ashmem.createAshmem("ashmem", 1024);
+  let isWriteSuccess = parcel.writeAshmem(ashmem);
+  hilog.info(0x0000, 'testTag', 'write ashmem to result is ' + isWriteSuccess);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeBoolean
 
@@ -1258,15 +3231,30 @@ Writes a Boolean value to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| val | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| val | boolean | Yes | Boolean value to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeBoolean(false);
+  hilog.info(0x0000, 'testTag', 'writeBoolean is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeBooleanArray
 
@@ -1286,15 +3274,30 @@ Writes a Boolean array to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| booleanArray | boolean[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| booleanArray | boolean[] | Yes | Boolean array to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeBooleanArray([false, true, false]);
+  hilog.info(0x0000, 'testTag', 'writeBooleanArray is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeByte
 
@@ -1314,15 +3317,30 @@ Writes a Byte value to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| val | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| val | number | Yes | Byte value to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeByte(2);
+  hilog.info(0x0000, 'testTag', 'writeByte is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeByteArray
 
@@ -1342,15 +3360,31 @@ Writes a byte array to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| byteArray | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteArray | number[] | Yes | Byte array to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let ByteArrayVar = [1, 2, 3, 4, 5];
+  let result = data.writeByteArray(ByteArrayVar);
+  hilog.info(0x0000, 'testTag', 'writeByteArray is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeChar
 
@@ -1370,15 +3404,30 @@ Writes a single character value to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| val | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| val | number | Yes | Char** value to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeChar(97);
+  hilog.info(0x0000, 'testTag', 'writeChar is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeCharArray
 
@@ -1398,15 +3447,30 @@ Writes a single character array to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| charArray | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| charArray | number[] | Yes | Character array to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeCharArray([97, 98, 88]);
+  hilog.info(0x0000, 'testTag', 'writeCharArray is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeDouble
 
@@ -1426,15 +3490,30 @@ Writes a number value to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| val | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| val | number | Yes | Double value to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeDouble(10.2);
+  hilog.info(0x0000, 'testTag', 'writeDouble is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeDoubleArray
 
@@ -1454,15 +3533,30 @@ Writes a number array to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| doubleArray | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| doubleArray | number[] | Yes | Double array to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeDoubleArray([11.1, 12.2, 13.3]);
+  hilog.info(0x0000, 'testTag', 'writeDoubleArray is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeFileDescriptor
 
@@ -1482,15 +3576,33 @@ Writes a file descriptor to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | File descriptor to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let parcel = new rpc.MessageParcel();
+  let filePath = "path/to/file";
+  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+  let writeResult = parcel.writeFileDescriptor(file.fd);
+  hilog.info(0x0000, 'testTag', 'parcel writeFd result is ' + writeResult);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeFloat
 
@@ -1510,15 +3622,30 @@ Writes a number value to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| val | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| val | number | Yes | Double value to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeFloat(1.2);
+  hilog.info(0x0000, 'testTag', 'writeFloat is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeFloatArray
 
@@ -1538,15 +3665,30 @@ Writes a number array to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| floatArray | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| floatArray | number[] | Yes | Double array to write. The system processes float data as that of the number type. Therefore, the total number of bytes occupied by a float array must be calculated as the number type. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeFloatArray([1.2, 1.3, 1.4]);
+  hilog.info(0x0000, 'testTag', 'writeFloatArray is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeInt
 
@@ -1566,15 +3708,30 @@ Writes an number value to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| val | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| val | number | Yes | Integer to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeInt(10);
+  hilog.info(0x0000, 'testTag', 'writeInt is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeIntArray
 
@@ -1594,15 +3751,30 @@ Writes an integer array to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| intArray | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| intArray | number[] | Yes | Integer array to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeIntArray([100, 111, 112]);
+  hilog.info(0x0000, 'testTag', 'writeIntArray is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeInterfaceToken
 
@@ -1622,15 +3794,30 @@ Writes an interface token to this **MessageParcel** object. The remote object ca
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| token | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| token | string | Yes | Interface token to write. The length of the string must be less than 40960. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeInterfaceToken("aaa");
+  hilog.info(0x0000, 'testTag', 'RpcServer: writeInterfaceToken is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeLong
 
@@ -1650,15 +3837,30 @@ Writes a number number value to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| val | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| val | number | Yes | Long number value to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeLong(10000);
+  hilog.info(0x0000, 'testTag', 'writeLong is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeLongArray
 
@@ -1678,15 +3880,30 @@ Writes a number array to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| longArray | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| longArray | number[] | Yes | Long array to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeLongArray([1111, 1112, 1113]);
+  hilog.info(0x0000, 'testTag', 'writeLongArray is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeNoException
 
@@ -1703,6 +3920,64 @@ Writes information to this **MessageParcel** object indicating that no exception
 **Substitutes:** [writeNoException](arkts-ipc-rpc-messagesequence-c.md#writenoexception)()
 
 **System capability:** SystemCapability.Communication.IPC.Core
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: onRemoteMessageRequest called');
+      try {
+        reply.writeNoException();
+      } catch (error) {
+        let e: BusinessError = error as BusinessError;
+        hilog.error(0x0000, 'testTag', 'rpc write no exception fail, errorCode ' + e.code);
+        hilog.error(0x0000, 'testTag', 'rpc write no exception fail, errorMessage ' + e.message);
+      }
+      return true;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyDeathRecipient implements rpc.DeathRecipient {
+  onRemoteDied() {
+    hilog.info(0x0000, 'testTag', 'server died');
+  }
+}
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: onRemoteRequest called');
+      reply.writeNoException();
+      return true;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+  }
+}
+```
 
 ## writeRawData
 
@@ -1722,16 +3997,32 @@ Writes raw data to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rawData | number[] | Yes |
-| size | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rawData | number[] | Yes | Raw data to write. The size cannot exceed 128 MB. |
+| size | number | Yes | Size of the raw data, in bytes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let parcel = new rpc.MessageParcel();
+  let arr = [1, 2, 3, 4, 5];
+  let isWriteSuccess = parcel.writeRawData(arr, arr.length);
+  hilog.info(0x0000, 'testTag', 'parcel write raw data result is ' + isWriteSuccess);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeRemoteObject
 
@@ -1751,15 +4042,40 @@ Serializes a remote object and writes it to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | Remote object to serialize and write to the **MessageParcel** object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+
+try {
+  let data = rpc.MessageParcel.create();
+  let testRemoteObject = new TestRemoteObject("testObject");
+  data.writeRemoteObject(testRemoteObject);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeRemoteObjectArray
 
@@ -1779,15 +4095,42 @@ Writes an **IRemoteObject** array to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | IRemoteObject** array to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
+    option: rpc.MessageOption): boolean {
+    // The specific processing is determined by the service.
+    return true;
+  }
+}
+
+try {
+  let a = [new TestRemoteObject("testObject1"), new TestRemoteObject("testObject2"), new TestRemoteObject("testObject3")];
+  let data = rpc.MessageParcel.create();
+  let result = data.writeRemoteObjectArray(a);
+  hilog.info(0x0000, 'testTag', 'writeRemoteObjectArray is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeSequenceable
 
@@ -1807,15 +4150,50 @@ Writes a **Sequenceable** object to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| val | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| val | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes | Sequenceable** object to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MySequenceable implements rpc.Sequenceable {
+  num: number = 0;
+  str: string = '';
+  constructor(num: number, str: string) {
+    this.num = num;
+    this.str = str;
+  }
+  marshalling(messageParcel: rpc.MessageParcel): boolean {
+    messageParcel.writeInt(this.num);
+    messageParcel.writeString(this.str);
+    return true;
+  }
+  unmarshalling(messageParcel: rpc.MessageParcel): boolean {
+    this.num = messageParcel.readInt();
+    this.str = messageParcel.readString();
+    return true;
+  }
+}
+
+try {
+  let sequenceable = new MySequenceable(1, "aaa");
+  let data = rpc.MessageParcel.create();
+  let result = data.writeSequenceable(sequenceable);
+  hilog.info(0x0000, 'testTag', 'writeSequenceable is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeSequenceableArray
 
@@ -1835,15 +4213,53 @@ Writes a **Sequenceable** array to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | Sequenceable** array to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MySequenceable implements rpc.Sequenceable {
+  num: number = 0;
+  str: string = '';
+  constructor(num: number, str: string) {
+    this.num = num;
+    this.str = str;
+  }
+  marshalling(messageParcel: rpc.MessageParcel): boolean {
+    messageParcel.writeInt(this.num);
+    messageParcel.writeString(this.str);
+    return true;
+  }
+  unmarshalling(messageParcel: rpc.MessageParcel): boolean {
+    this.num = messageParcel.readInt();
+    this.str = messageParcel.readString();
+    return true;
+  }
+}
+
+try {
+  let sequenceable = new MySequenceable(1, "aaa");
+  let sequenceable2 = new MySequenceable(2, "bbb");
+  let sequenceable3 = new MySequenceable(3, "ccc");
+  let a = [sequenceable, sequenceable2, sequenceable3];
+  let data = rpc.MessageParcel.create();
+  let result = data.writeSequenceableArray(a);
+  hilog.info(0x0000, 'testTag', 'writeSequenceableArray is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeShort
 
@@ -1863,15 +4279,30 @@ Writes a short number value to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| val | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| val | number | Yes | Short integer to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeShort(8);
+  hilog.info(0x0000, 'testTag', 'writeShort is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeShortArray
 
@@ -1891,15 +4322,30 @@ Writes a short array to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| shortArray | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shortArray | number[] | Yes | Short array to write. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeShortArray([11, 12, 13]);
+  hilog.info(0x0000, 'testTag', 'writeShortArray is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeString
 
@@ -1919,15 +4365,30 @@ Writes a string to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| val | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| val | string | Yes | String to write. The length of the string must be less than 40960. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeString('abc');
+  hilog.info(0x0000, 'testTag', 'writeString is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## writeStringArray
 
@@ -1947,12 +4408,27 @@ Writes a string array to this **MessageParcel** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| stringArray | string[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| stringArray | string[] | Yes | String array to write. The length of a single element in the array must be less than 40960. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  let result = data.writeStringArray(["abc", "def"]);
+  hilog.info(0x0000, 'testTag', 'writeStringArray is ' + result);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```

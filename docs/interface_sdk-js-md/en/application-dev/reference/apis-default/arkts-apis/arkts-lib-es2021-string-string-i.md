@@ -15,15 +15,15 @@ Replace all instances of a substring in a string, using a regular expression or 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| searchValue | string \| RegExp | Yes |
-| replaceValue | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchValue | string \| RegExp | Yes |  |
+| replaceValue | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## replaceAll
 
 ```TypeScript
@@ -34,12 +34,12 @@ Replace all instances of a substring in a string, using a regular expression or 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| searchValue | string \| RegExp | Yes |
-| replacer | (substring: string, ...args: any[]) = & gt; string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchValue | string \| RegExp | Yes |  |
+| replacer | (substring: string, ...args: any[]) = & gt; string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

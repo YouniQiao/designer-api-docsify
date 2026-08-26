@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { GesturePoint } from 'kits/@kit.AccessibilityKit';
+import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -28,10 +28,18 @@ constructor(positionX: number, positionY: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [positionX](#positionx) | number | 是 |
-| [positionY](#positiony) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| positionX | number | 是 | 触摸点X坐标，单位为像素（px）。 |
+| positionY | number | 是 | 触摸点Y坐标，单位为像素（px）。 |
+
+**示例**
+
+```TypeScript
+import { GesturePoint } from '@kit.AccessibilityKit';
+
+let gesturePoint = new GesturePoint(1, 2);
+```
 
 ## positionX
 

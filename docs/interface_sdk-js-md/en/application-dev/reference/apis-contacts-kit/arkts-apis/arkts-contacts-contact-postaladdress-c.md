@@ -9,7 +9,7 @@ Defines a contact's postal address.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## ADDR_HOME
@@ -251,3 +251,26 @@ Street where the contact resides.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
+
+**Examples**
+
+Create data using JSON format.
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let postalAddress: contact.PostalAddress = {
+    city: 'city',
+    postalAddress: 'postalAddress'
+};
+```
+
+Alternatively, create data by instantiating a PostalAddress object.
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let postalAddress = new contact.PostalAddress();
+postalAddress.city = 'city';
+postalAddress.postalAddress = 'postalAddress';
+```

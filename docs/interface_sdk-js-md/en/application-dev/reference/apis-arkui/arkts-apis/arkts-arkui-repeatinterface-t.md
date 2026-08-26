@@ -18,12 +18,12 @@ Indicates the type of Repeat.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| arr | [RepeatArray](arkts-arkui-repeatarray-t.md)&lt;T&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arr | [RepeatArray](arkts-arkui-repeatarray-t.md)&lt;T&gt; | Yes | The Data Source |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; | - |

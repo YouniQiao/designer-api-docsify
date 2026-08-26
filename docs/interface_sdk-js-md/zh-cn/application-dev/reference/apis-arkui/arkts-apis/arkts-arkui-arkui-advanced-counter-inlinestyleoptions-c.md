@@ -2,7 +2,8 @@
 
 InlineStyleOptions定义了数值内联型Counter的属性和事件。继承于[CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md)。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 1. min应小于等于max。若min大于max，则按max处理。
 
 **继承/实现关系：** InlineStyleOptions extends [CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md)
@@ -14,7 +15,8 @@ InlineStyleOptions定义了数值内联型Counter的属性和事件。继承于[
 ## 导入模块
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUIV2';
 ```
 
 ## onChange
@@ -35,9 +37,9 @@ onChange?: (value: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [value](#value) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 |  |
 
 ## max
 

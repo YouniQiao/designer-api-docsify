@@ -9,7 +9,6 @@ Defines HTTP request context data. The object instance is passed as a parameter 
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## body

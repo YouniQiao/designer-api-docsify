@@ -27,9 +27,9 @@ columnEnd(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 当前元素终点列号。需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的 [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)参数，详细可参考Grid的 示例1（固定行列Grid）和 示例3（可滚动Grid设置跨行跨列节点）。取值 范围：[0, 总列数-1] |
 
 ## columnStart
 
@@ -47,9 +47,9 @@ columnStart(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 当前元素起始列号。需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的 [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)参数，详细可参考Grid的 示例1（固定行列Grid）和 示例3（可滚动Grid设置跨行跨列节点）。取值 范围：[0, 总列数-1] |
 
 ## forceRebuild
 
@@ -59,7 +59,8 @@ forceRebuild(value: boolean)
 
 设置在触发组件build时是否重新创建此节点。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 7开始支持，从API version 9开始废弃。GridItem会根据自身属性和子组件变化自行决定是否需要重新创建，无需设置。
 
 **起始版本：** 7
@@ -70,9 +71,9 @@ forceRebuild(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 设置为true时，在触发组件build时重新创建此节点；设置为false时，不强制重新创建此节点。默认值：false |
 
 ## onSelect
 
@@ -90,9 +91,9 @@ GridItem元素被鼠标框选的状态改变时触发回调。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (isSelected: boolean) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (isSelected: boolean) = & gt; void | 是 | 回调函数。进入鼠标框选范围即被选中返回true，移出鼠标框选范围即未被选中返回false。 |
 
 ## rowEnd
 
@@ -110,9 +111,9 @@ rowEnd(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 当前元素终点行号。需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的 [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)参数，详细可参考Grid的 示例1（固定行列Grid）和 示例3（可滚动Grid设置跨行跨列节点）。取值 范围：[0, 总行数-1] |
 
 ## rowStart
 
@@ -130,9 +131,9 @@ rowStart(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 当前元素起始行号。需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的 [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)参数，详细可参考Grid的 示例1（固定行列Grid）和 示例3（可滚动Grid设置跨行跨列节点）。取值 范围：[0, 总行数-1] |
 
 ## selectable
 
@@ -150,9 +151,9 @@ selectable(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 当前GridItem元素是否可以被鼠标框选。设置为true时可以被鼠标框选，设置为false时无法被鼠标框选。默认值：true |
 
 ## selected
 
@@ -172,6 +173,6 @@ selected(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 当前GridItem选中状态。设置为true时为选中状态，设置为false时为非选中状态。默认值：false |

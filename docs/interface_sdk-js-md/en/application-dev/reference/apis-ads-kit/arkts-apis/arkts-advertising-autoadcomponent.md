@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { AutoAdComponent } from 'kits/@kit.AdsKit';
+import { AutoAdComponent } from '@kit.AdsKit';
 ```
 
 ## Summary
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AutoAdComponent(Carousel Ad Component)](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) |
+| Name | Description |
+| --- | --- |
+| [AutoAdComponent(Carousel Ad Component)](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | The AutoAdComponent module provides the capability of displaying carousel ads. |

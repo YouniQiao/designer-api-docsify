@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import appAccount from '@kit.BasicServicesKit';
 ```
 
 ## createAppAccountManager
@@ -20,6 +20,12 @@ Creates an **AppAccountManager** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) |
+| Type | Description |
+| --- | --- |
+| [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) | AppAccountManager** object created. |
+
+**Examples**
+
+```TypeScript
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+```

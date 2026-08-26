@@ -29,6 +29,6 @@ setTransform(transform?: Matrix2D): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| transform | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| transform | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 | 转换矩阵。 异常值undefined和null按无效值不做矩阵变换处理。 默认值：不做矩阵变换。 |

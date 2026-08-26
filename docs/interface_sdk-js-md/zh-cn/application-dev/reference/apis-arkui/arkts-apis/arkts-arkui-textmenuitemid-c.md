@@ -29,15 +29,15 @@ equals(id: TextMenuItemId): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | 是 | 需要比较的TextMenuItemId对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 两个TextMenuItemId是否相等。 |
 
 ## of
 
@@ -57,15 +57,15 @@ static of(id: ResourceStr): TextMenuItemId
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 菜单项标识，用于创建TextMenuItemId对象以识别菜单选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | 根据传入id创建的菜单项标识对象，用于识别菜单选项。 |
 
 ## address
 

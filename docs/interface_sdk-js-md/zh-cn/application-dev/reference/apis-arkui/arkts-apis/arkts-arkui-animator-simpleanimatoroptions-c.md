@@ -9,7 +9,7 @@ animator简易动画参数对象。与AnimatorOptions相比，部分动画参数
 ## 导入模块
 
 ```TypeScript
-import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from 'kits/@kit.ArkUI';
+import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -30,10 +30,33 @@ SimpleAnimatorOptions的构造函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| begin | number | 是 |
-| end | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| begin | number | 是 | 动画插值起点。 |
+| end | number | 是 | 动画插值终点。 |
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200); // 动画插值过程从100到200，其余动画参数使用默认值。
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## delay
 
@@ -53,15 +76,38 @@ delay(delay: number): SimpleAnimatorOptions
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [delay](#delay) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| delay | number | 是 | 设置animator动画播放时延，单位毫秒，设置为0时，表示不延时。设置为负数时动画提前播放，如果提前播放的时长大于动画总时长，动画直接过渡到终点。默认值：0 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).delay(500);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## direction
 
@@ -81,15 +127,38 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [direction](#direction) | [PlayMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-playmode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| direction | [PlayMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-playmode-e.md) | 是 | 设置animator动画播放方向。默认值：PlayMode.Normal |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).direction(PlayMode.Alternate);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## duration
 
@@ -109,15 +178,38 @@ duration(duration: number): SimpleAnimatorOptions
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [duration](#duration) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| duration | number | 是 | 设置动画时长，单位毫秒。默认值：1000 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duration(500);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## easing
 
@@ -137,15 +229,38 @@ easing(curve: string): SimpleAnimatorOptions
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| curve | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| curve | string | 是 | 设置animator动画插值曲线，具体说明参考[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md)。默认值：“ease” |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).easing("ease-in");
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## fill
 
@@ -165,15 +280,38 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fillMode | [FillMode](arkts-arkui-fillmode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fillMode | [FillMode](arkts-arkui-fillmode-e.md) | 是 | 设置animator动画填充方式，影响动画delay期间和结束时的表现。默认值：FillMode.Forwards |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).fill(FillMode.Forwards);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## iterations
 
@@ -193,12 +331,35 @@ iterations(iterations: number): SimpleAnimatorOptions
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [iterations](#iterations) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| iterations | number | 是 | 设置animator动画播放次数，设置为0时不播放，设置为-1时无限次播放。默认值：1 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).iterations(3);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```

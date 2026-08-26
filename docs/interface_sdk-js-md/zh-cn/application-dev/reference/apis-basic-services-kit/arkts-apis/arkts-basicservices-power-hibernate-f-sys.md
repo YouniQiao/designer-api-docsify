@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import power from '@kit.BasicServicesKit';
 ```
 
 ## hibernate
@@ -27,15 +27,25 @@ function hibernate(clearMemory: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| clearMemory | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| clearMemory | boolean | 是 | 是否在进入休眠之前清理内存。true表示清理内存，false表示不清理内存。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [4900101](../errorcode-power.md#4900101-连接服务失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [4900101](../errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 19+ |
+
+**示例**
+
+```TypeScript
+try {
+    power.hibernate(true);
+} catch (err) {
+    console.error(`Failed to hibernate device. Code: ${err.code}, message: ${err.message}`);
+}
+```

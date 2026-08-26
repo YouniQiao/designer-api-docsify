@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## end
@@ -20,6 +19,15 @@ Stops call chain trace. This API works in synchronous manner.If the given HiTrac
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance. |
+
+**Examples**
+
+```TypeScript
+// Start tracing. The tracing flag is DEFAULT.
+let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.DEFAULT);
+// End the call chain trace after the service logic is executed for several times.
+hiTraceChain.end(traceId);
+```

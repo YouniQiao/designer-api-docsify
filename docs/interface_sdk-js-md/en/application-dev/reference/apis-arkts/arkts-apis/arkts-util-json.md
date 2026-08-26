@@ -9,35 +9,35 @@ The JSON module provides a series of APIs for converting JSON text into JSON obj
 ## Modules to Import
 
 ```TypeScript
-import { JSON } from 'kits/@kit.ArkTS';
+import JSON from '@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [has](arkts-arkts-json-has-f.md) |
-| [parse](arkts-arkts-json-parse-f.md) |
-| [remove](arkts-arkts-json-remove-f.md) |
-| [stringify](arkts-arkts-json-stringify-f.md) |
-| [stringify](arkts-arkts-json-stringify-f.md) |
+| Name | Description |
+| --- | --- |
+| [has](arkts-arkts-json-has-f.md) | Checks whether an ArkTS object contains a key. This API can be used for related operations after [JSON.parse](arkts-arkts-json-parse-f.md) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets). |
+| [parse](arkts-arkts-json-parse-f.md) | Parses a JSON string into an ArkTS object or null. |
+| [remove](arkts-arkts-json-remove-f.md) | Removes a key from an ArkTS object. This API can be used for related operations after [JSON.parse](arkts-arkts-json-parse-f.md) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets). |
+| [stringify](arkts-arkts-json-stringify-f.md) | Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported, but non-linear containers are not. |
+| [stringify](arkts-arkts-json-stringify-f.md) | Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported, but non-linear containers are not. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ParseOptions](arkts-arkts-json-parseoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Describes the parsing options, which can define the mode for processing BigInt. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BigIntMode](arkts-arkts-json-bigintmode-e.md) |
+| Name | Description |
+| --- | --- |
+| [BigIntMode](arkts-arkts-json-bigintmode-e.md) | Enumerates the modes for processing BigInt. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Transformer](arkts-arkts-json-transformer-t.md) |
+| Name | Description |
+| --- | --- |
+| [Transformer](arkts-arkts-json-transformer-t.md) | Defines the type of the conversion result function.When used as a parameter of [JSON.parse](arkts-arkts-json-parse-f.md), the function is called by each member of the object, allowing for custom data processing or conversion during parsing.When used as a parameter of JSON.stringify, the function is used to transfer and handle each property during serialization. |

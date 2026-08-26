@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## hasSmsCapability
@@ -20,6 +19,6 @@ Checks whether the current device can send and receive SMS messages. This API wo
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true**: The device can send and receive SMS messages. |

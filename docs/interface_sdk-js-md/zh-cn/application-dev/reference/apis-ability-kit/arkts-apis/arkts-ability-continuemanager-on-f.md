@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { continueManager } from 'kits/@kit.AbilityKit';
+import continueManager from '@kit.AbilityKit';
 ```
 
 ## on('prepareContinue')
@@ -22,14 +22,50 @@ function on(type: 'prepareContinue', context: Context, callback: AsyncCallback<C
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'prepareContinue' | 是 |
-| context | [Context](arkts-ability-context-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'prepareContinue' | 是 | 固定值：prepareContinue。 |
+| context | [Context](arkts-ability-context-c.md) | 是 | Ability（应用组件）的Context。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | 是 | 回调函数。当快速拉起结果获取成功，err为undefined，ContinueResultInfo为获取到的快速启动结果。否则为 错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) | the system ability work abnormally. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want, continueManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG: string = '[MigrationAbility]';
+const DOMAIN_NUMBER: number = 0xFF00;
+
+export default class MigrationAbility extends UIAbility {
+    
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        hilog.info(DOMAIN_NUMBER, TAG, '%{public}s', 'Ability onCreate');
+
+        // 1.已配置快速拉起功能，应用立即启动时触发应用生命周期回调
+        if (launchParam.launchReason === AbilityConstant.LaunchReason.PREPARE_CONTINUATION) {
+            // 注册快速拉起结果通知的回调函数
+            try {
+              continueManager.on('prepareContinue', this.context, (err, continueResultInfo) => {
+                if (err.code != 0) {
+                  hilog.error(DOMAIN_NUMBER, TAG, 'register failed, cause: %{public}s', JSON.stringify(err));
+                  return;
+                }
+                hilog.info(DOMAIN_NUMBER, TAG, 'register finished, %{public}s', JSON.stringify(continueResultInfo));
+              });
+            } catch (e) {
+              hilog.error(DOMAIN_NUMBER, TAG, 'register failed, cause: %{public}s', JSON.stringify(e));
+            }
+            // 若应用迁移数据较大，可在此处添加加载页面(页面中显示loading等)
+            // 可处理应用自定义跳转、时序等问题
+            // ...
+        }
+    }
+}
+```

@@ -27,10 +27,28 @@ Unregister application state observer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| observerId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| observerId | number | Yes | Indicates the number code of the observer. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
+
+**Examples**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+let observerId = 100;
+
+function unregisterApplicationStateObserverCallback(err: BusinessError) {
+  if (err) {
+    console.error(`UnregisterApplicationStateObserverCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
+    return;
+  }
+}
+
+appManager.unregisterApplicationStateObserver(observerId, unregisterApplicationStateObserverCallback);
+```
 
 
 ## unregisterApplicationStateObserver
@@ -55,12 +73,29 @@ Unregister application state observer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| observerId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| observerId | number | Yes | Indicates the number code of the observer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | The promise returned by the function. |
+
+**Examples**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+let observerId = 100;
+
+appManager.unregisterApplicationStateObserver(observerId)
+.then((data) => {
+    console.info(`unregisterApplicationStateObserver success, data: ${data}.`);
+})
+.catch((err: BusinessError) => {
+    console.error(`unregisterApplicationStateObserver failed, err code: ${err.code}, err msg: ${err.message}.`);
+});
+```

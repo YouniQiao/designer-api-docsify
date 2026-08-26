@@ -31,6 +31,6 @@ Obtains the minimum angle change required for the rotation gesture to be recogni
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Minimum angle change required for the rotation gesture to be recognized, in degrees (deg). |

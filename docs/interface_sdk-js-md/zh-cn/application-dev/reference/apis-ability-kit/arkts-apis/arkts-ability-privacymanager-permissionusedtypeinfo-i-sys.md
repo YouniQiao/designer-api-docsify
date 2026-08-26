@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import privacyManager from '@kit.AbilityKit';
 ```
 
 ## permissionName

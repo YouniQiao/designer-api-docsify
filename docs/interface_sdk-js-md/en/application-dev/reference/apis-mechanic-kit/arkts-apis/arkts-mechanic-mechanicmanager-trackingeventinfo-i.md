@@ -9,7 +9,6 @@ Tracking event callback info.
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## event

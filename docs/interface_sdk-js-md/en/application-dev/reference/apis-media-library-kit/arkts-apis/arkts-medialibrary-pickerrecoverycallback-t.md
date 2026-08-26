@@ -16,6 +16,6 @@ The callback of onPickerRecovery event
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| recoveryResult | [RecoveryResult](arkts-medialibrary-file-photopickercomponent-recoveryresult-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| recoveryResult | [RecoveryResult](arkts-medialibrary-file-photopickercomponent-recoveryresult-c.md) | Yes |  |

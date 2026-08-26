@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCallStateSync
@@ -20,6 +19,13 @@ function getCallStateSync(): CallState
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CallState](arkts-telephony-call-callstate-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CallState](arkts-telephony-call-callstate-e.md) | 返回获取到的通话状态。 |
+
+**示例**
+
+```TypeScript
+let callState: call.CallState = call.getCallStateSync();
+console.info(`the call state is:` + callState);
+```

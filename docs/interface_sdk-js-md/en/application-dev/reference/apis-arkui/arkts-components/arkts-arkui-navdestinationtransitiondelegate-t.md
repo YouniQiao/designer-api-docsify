@@ -17,13 +17,13 @@ Defines the delegate function for custom transition animations of the **NavDesti
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes |
-| isEnter | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes | Type of navigation operation for the current page transition. |
+| isEnter | boolean | Yes | Whether the current page is an entry page. **true**: The current page is an entry page. **false**: The current page is not an entry page. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[NavDestinationTransition](arkts-arkui-navdestinationtransition-i.md)&gt; \| undefined |
+| Type | Description |
+| --- | --- |
+| Array&lt;[NavDestinationTransition](arkts-arkui-navdestinationtransition-i.md)&gt; \| undefined | Array of custom animations for the **NavDestination** page. If **undefined** is returned, the default system animation is used. |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import router from '@kit.ArkUI';
 ```
 
 ## getParams
@@ -14,11 +14,13 @@ function getParams(): Object
 
 Obtains the parameters passed from the page that initiates redirection to the current page.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated
-> with the current UI context.&gt;
+> with the current UI context.
+> 
 > **getParams** obtains only the parameters of the current page and does not clear the parameters associated with
 > the page.
 
@@ -34,6 +36,12 @@ Obtains the parameters passed from the page that initiates redirection to the cu
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Object |
+| Type | Description |
+| --- | --- |
+| Object | Parameters passed from the page that initiates redirection to the current page. |
+
+**Examples**
+
+```TypeScript
+this.getUIContext().getRouter().getParams();
+```

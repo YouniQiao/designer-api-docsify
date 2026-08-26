@@ -9,7 +9,7 @@ A **Channel** instance indicates a channel set up by a **Session** instance. The
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from 'kits/@kit.ConnectivityKit';
+import omapi from '@kit.ConnectivityKit';
 ```
 
 ## close
@@ -26,9 +26,40 @@ Closes this channel.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+
+// Initialize seSession before using it.
+
+try {
+    seSession.close();
+} catch (error) {
+    hilog.error(0x0000, 'testTag', 'close error %{public}s', JSON.stringify(error));
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seChannel : omapi.Channel;
+
+// Initialize seChannel before using it.
+try {
+    seChannel.close();
+} catch (exception) {
+    hilog.error(0x0000, 'testTag', 'close exception %{public}s', JSON.stringify(exception));
+}
+```
 
 ## getSelectResponse
 
@@ -44,15 +75,32 @@ Obtains the response data including the status word of **SELECT Applet**.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Response data including the status word obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seChannel : omapi.Channel;
+
+// Initialize seChannel before using it.
+try {
+    let response = seChannel.getSelectResponse();
+    hilog.info(0x0000, 'testTag', 'response = %{public}s', JSON.stringify(response));
+} catch (exception) {
+    hilog.error(0x0000, 'testTag', 'getSelectResponse exception %{public}s', JSON.stringify(exception));
+}
+```
 
 ## getSession
 
@@ -68,15 +116,33 @@ Obtains the session used to open this channel.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-camera-session-i.md) |
+| Type | Description |
+| --- | --- |
+| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-camera-session-i.md) | Session instance obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+let seChannel : omapi.Channel;
+
+// Initialize seChannel before using it.
+
+try {
+    seSession = seChannel.getSession();
+} catch (exception) {
+    hilog.error(0x0000, 'testTag', 'getSession exception %{public}s', JSON.stringify(exception));
+}
+```
 
 ## isBasicChannel
 
@@ -92,15 +158,32 @@ Checks whether this channel is a basic channel.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the channel is a basic channel; **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seChannel : omapi.Channel;
+
+// Initialize seChannel before using it.
+try {
+    let isBasic = seChannel.isBasicChannel();
+    hilog.info(0x0000, 'testTag', 'isBasic = %{public}s', JSON.stringify(isBasic));
+} catch (exception) {
+    hilog.error(0x0000, 'testTag', 'isBasicChannel exception %{public}s', JSON.stringify(exception));
+}
+```
 
 ## isClosed
 
@@ -116,15 +199,48 @@ Checks whether this channel is closed.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the channel is closed; **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+
+// Initialize seSession before using it.
+
+try {
+    let isClosed = seSession.isClosed();
+    hilog.info(0x0000, 'testTag', 'isClosed %{public}s', JSON.stringify(isClosed));
+} catch (error) {
+    hilog.error(0x0000, 'testTag', 'isClosed error %{public}s', JSON.stringify(error));
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seChannel : omapi.Channel;
+
+// Initialize seChannel before using it.
+try {
+    let isClosed = seChannel.isClosed();
+    hilog.info(0x0000, 'testTag', 'isClosed = %{public}s', JSON.stringify(isClosed));
+} catch (exception) {
+    hilog.error(0x0000, 'testTag', 'isClosed exception %{public}s', JSON.stringify(exception));
+}
+```
 
 ## transmit
 
@@ -140,25 +256,47 @@ Transmits APDU data (as per ISO/IEC 7816) to the SE. This API uses a promise to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| command | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| command | number[] | Yes | APDU data to send. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number[] & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number[] & gt; | Promise used to return the response received, in a number array. If the chip captures an exception, an all zero value is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session or channel that has been closed. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the command is filtered by the security policy. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+
+**Examples**
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seChannel : omapi.Channel;
+
+// Initialize seChannel before using it.
+let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
+try {
+    seChannel.transmit(cmdData).then((response) => {
+        // If the chip captures an exception, an all zero value is returned for response.
+        hilog.info(0x0000, 'testTag', 'transmit response = %{public}s.', JSON.stringify(response));
+    }).catch((error : BusinessError) => {
+        hilog.error(0x0000, 'testTag', 'transmit error = %{public}s.', JSON.stringify(error));
+    });
+} catch (exception) {
+    hilog.error(0x0000, 'testTag', 'transmit exception = %{public}s.', JSON.stringify(exception));
+}
+```
 
 ## transmit
 
@@ -174,17 +312,41 @@ Transmits APDU data (as per ISO/IEC 7816) to the SE. This API uses an asynchrono
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| command | number[] | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| command | number[] | Yes | APDU data to send. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes | Callback used to return the response received, in a number array. If the chip captures an exception, an all zero value is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session or channel that has been closed. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the command is filtered by the security policy. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+
+**Examples**
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seChannel : omapi.Channel;
+
+// Initialize seChannel before using it.
+let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
+try {
+    seChannel.transmit(cmdData, (error, response) => {
+    if (error) {
+        hilog.error(0x0000, 'testTag', 'transmit error %{public}s', JSON.stringify(error));
+    } else {
+        // If the chip captures an exception, an all zero value is returned for response.
+        hilog.info(0x0000, 'testTag', 'transmit response = %{public}s.', JSON.stringify(response));
+    }
+    });
+} catch (exception) {
+    hilog.error(0x0000, 'testTag', 'transmit exception %{public}s', JSON.stringify(exception));
+}
+```

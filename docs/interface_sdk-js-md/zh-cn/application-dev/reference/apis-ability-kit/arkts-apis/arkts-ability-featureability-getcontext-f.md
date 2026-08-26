@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import featureAbility from '@kit.AbilityKit';
 ```
 
 ## getContext
@@ -22,6 +22,22 @@ function getContext(): Context
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 返回应用程序上下文。 |
+
+**示例**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+// 获取应用上下文
+let context = featureAbility.getContext();
+context.getBundleName((error, data) => {
+  if (error && error.code !== 0) {
+    console.error(`getBundleName fail, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`getBundleName success, data: ${JSON.stringify(data)}`);
+  }
+});
+```

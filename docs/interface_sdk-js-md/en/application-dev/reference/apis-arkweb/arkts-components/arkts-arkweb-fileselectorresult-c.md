@@ -9,6 +9,9 @@ The FileSelectorResult class in the ArkWeb component is used to notify the Web c
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -41,6 +44,6 @@ Notifies the Web component of the user-selected files through the passed file li
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [fileList](../../apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filelistresponse-depr-i.md) | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fileList | Array & lt;string & gt; | Yes | Array of file URI strings, used to pass the file paths selected by the user to the Web component. |

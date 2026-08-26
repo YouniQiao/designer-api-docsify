@@ -9,7 +9,8 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import cloudSync from '@kit.CoreFileKit';
+import cloudSyncManager from '@kit.CoreFileKitManager';
 ```
 
 ## constructor
@@ -28,16 +29,26 @@ constructor(bundleName: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 应用包名。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+let fileSync = new cloudSync.FileSync("com.ohos.demo")
+```
+
+```TypeScript
+let fileCache = new cloudSync.CloudFileCache("com.ohos.demo");
+```
 
 ## getUploadList
 
@@ -59,24 +70,42 @@ getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uris | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uris | Array & lt;string & gt; | 是 | 待查询上传进度的文件URI数组，数组长度取值范围[1,100]。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[UploadProgress](arkts-corefile-cloudsync-uploadprogress-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[UploadProgress](arkts-corefile-cloudsync-uploadprogress-i-sys.md)&gt;&gt; | Promise对象，返回上传进度信息数组。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13900010 |
-| 13900020 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13900010 | Try again. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified. 2.The length of the input parameter exceeds the upper limit.  3.The input parameter contains an invalid uri. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync("com.ohos.demo");
+let uris: string[] = ["file:///data/storage/el2/cloud/1.txt", "file:///data/storage/el2/cloud/2.jpg"];
+
+fileSync.getUploadList(uris).then((progressList: cloudSync.UploadProgress[]) => {
+  console.info("get upload list successfully, count: " + progressList.length);
+  for (let i = 0; i < progressList.length; i++) {
+    console.info("file uri: " + progressList[i].uri + ", state: " + progressList[i].state);
+  }
+}).catch((error: BusinessError) => {
+  console.error("get upload list failed with error message: " + error.message + ", error code: " + error.code);
+});
+```
 
 ## pauseUpload
 
@@ -98,19 +127,38 @@ pauseUpload(uri: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 待暂停的文件URI。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13900002 |
-| 13900010 |
-| 14000002 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 14000002 | Invalid uri. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let fileSync = new cloudSync.FileSync("com.ohos.demo");
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+
+try {
+  fileSync.pauseUpload(uri);
+  console.info("pause upload successfully.");
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("pause upload failed with error message: " + error.message + ", error code: " + error.code);
+}
+```
 
 ## registerUploadProgress
 
@@ -132,18 +180,38 @@ registerUploadProgress(callback: Callback<UploadProgress>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UploadProgress](arkts-corefile-cloudsync-uploadprogress-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UploadProgress](arkts-corefile-cloudsync-uploadprogress-i-sys.md)&gt; | 是 | 回调函数，监听文件上传进度变化。当文件上传进度发生变化时触发回调，返回上传进度信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13900010 |
-| 13900020 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13900010 | Try again. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameter are left unspecified.  2.The number of instances registered at the same time exceeds the upper limit. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync("com.ohos.demo");
+
+try {
+  fileSync.registerUploadProgress((progress: cloudSync.UploadProgress) => {
+    console.info(`upload progress - uri: ${progress.uri}, state: ${progress.state}`);
+    console.info(`processed: ${progress.processed}, size: ${progress.size}`);
+    console.info(`error: ${progress.error}`);
+  });
+  console.info("register upload progress successfully");
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error(`register upload progress failed with error message: ${error.message}, error code: ${error.code}`);
+}
+```
 
 ## resumeUpload
 
@@ -165,19 +233,38 @@ resumeUpload(uri: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 待恢复上传的文件URI。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13900002 |
-| 13900010 |
-| 14000002 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 14000002 | Invalid uri. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let fileSync = new cloudSync.FileSync("com.ohos.demo");
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+
+try {
+  fileSync.resumeUpload(uri);
+  console.info("resume upload successfully.");
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("resume upload failed with error message: " + error.message + ", error code: " + error.code);
+}
+```
 
 ## unregisterUploadProgress
 
@@ -199,8 +286,24 @@ unregisterUploadProgress(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13900010 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13900010 | Try again. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync("com.ohos.demo");
+
+try {
+  fileSync.unregisterUploadProgress();
+  console.info("unregister upload progress successfully");
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("unregister upload progress failed with error message: " + error.message + ", error code: " + error.code);
+}
+```

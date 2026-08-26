@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## findProxyForUrl
@@ -14,7 +13,8 @@ function findProxyForUrl(url: string): string
 
 通过设置的PAC脚本，解析指定的URL代理地址，返回对应的PAC代理信息。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 1、可通过 [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) 或 [setPacUrl](arkts-network-connection-setpacurl-f.md) 设置PAC脚本。
 
 > 2、如果调用本接口前未设置PAC脚本，则返回空字符串。
@@ -28,12 +28,21 @@ function findProxyForUrl(url: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| url | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| url | string | 是 | 要查找代理信息的URL。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回代理信息。 |
+
+**示例**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+let proxyInfo = connection.findProxyForUrl("http://example.com");
+console.info(proxyInfo);
+```

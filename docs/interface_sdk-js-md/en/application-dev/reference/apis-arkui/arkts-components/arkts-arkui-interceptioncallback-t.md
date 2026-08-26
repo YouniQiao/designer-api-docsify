@@ -16,10 +16,10 @@ Defines the callback triggered before a navigation page is redirected.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| from | [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes |
-| to | [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes |
-| pathStack | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes |
-| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes |
-| isAnimated | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes | Information about the exit page. The value **navBar** indicates that the top page is the home page. |
+| to | [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes | Information about the enter page. The value **navBar** indicates that the top page is the home page. |
+| pathStack | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes | Page stack. |
+| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes | Current page redirection type. |
+| isAnimated | boolean | Yes | Whether to enable the transition animation.  **true**: Enable the transition animation. **false**: Disable the transition animation. |

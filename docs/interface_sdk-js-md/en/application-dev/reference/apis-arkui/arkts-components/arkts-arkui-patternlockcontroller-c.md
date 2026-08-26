@@ -63,6 +63,6 @@ Challenge result of the pattern password.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | [PatternLockChallengeResult](arkts-arkui-patternlockchallengeresult-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | [PatternLockChallengeResult](arkts-arkui-patternlockchallengeresult-e.md) | Yes | Authentication challenge result of the pattern password. The status can be correct or incorrect. |

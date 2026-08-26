@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { ErrorCode } from 'kits/@kit.AbilityKit';
+import { ErrorCode } from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ErrorCode](arkts-ability-ability-errorcode-errorcode-e.md) |
+| Name | Description |
+| --- | --- |
+| [ErrorCode](arkts-ability-ability-errorcode-errorcode-e.md) | Enumerates the error codes that may be returned when an ability is started. |

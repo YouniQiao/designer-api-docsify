@@ -14,13 +14,13 @@ The execute action event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| actionType | string | Yes |
-| params | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| actionType | string | Yes | action type |
+| params | string | Yes | params |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | (string) returned through promise |

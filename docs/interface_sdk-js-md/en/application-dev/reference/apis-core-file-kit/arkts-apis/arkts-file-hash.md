@@ -9,21 +9,21 @@ The **FileHash** module implements hash processing on files.
 ## Modules to Import
 
 ```TypeScript
-import { hash } from 'kits/@kit.CoreFileKit';
+import hash from '@kit.CoreFileKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createHash](arkts-corefile-hash-createhash-f.md) |
-| [hash](arkts-corefile-hash-f.md) |
-| [hash](arkts-corefile-hash-f.md) |
+| Name | Description |
+| --- | --- |
+| [createHash](arkts-corefile-hash-createhash-f.md) | Creates a **HashStream** instance, which can be used to generate a message digest (a hash value) using the given algorithm. |
+| [hash](arkts-corefile-hash-f.md) | Calculates a hash value for a file. This API uses a promise to return the result. |
+| [hash](arkts-corefile-hash-f.md) | Calculates a hash value for a file. This API uses an asynchronous callback to return the result. |
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [HashStream](arkts-corefile-hash-hashstream-c.md) |
+| Name | Description |
+| --- | --- |
+| [HashStream](arkts-corefile-hash-hashstream-c.md) | The **HashStream** class is a utility for creating a message digest of data. You can use [createHash](../../../reference/apis-core-file-kit/js-apis-file-hash.md#hashcreatehash12) to create a **HashStream** instance. |

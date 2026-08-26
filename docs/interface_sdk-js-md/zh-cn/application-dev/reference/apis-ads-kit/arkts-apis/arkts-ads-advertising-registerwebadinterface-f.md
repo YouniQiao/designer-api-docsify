@@ -3,7 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { AdComponent } from '@kit.AdsKit.AdComponent';
+import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
+import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
+import advertising from '@kit.AdsKit';
 ```
 
 ## registerWebAdInterface
@@ -22,17 +25,46 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| controller | web_webview.WebviewController | 是 |
-| context | common.UIAbilityContext | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| controller | web_webview.WebviewController | 是 | Web组件控制器。 |
+| context | common.UIAbilityContext | 是 | UIAbility的上下文环境。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { advertising } from '@kit.AdsKit';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private webViewController: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('registerWebAdInterface')
+        .onClick(() => {
+          advertising.registerWebAdInterface(this.webViewController, this.context);
+        })
+      // ...
+
+      Web({ src: 'https://www.example.com', controller: this.webViewController })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 
 ## registerWebAdInterface
@@ -52,15 +84,44 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| controller | web_webview.WebviewController | 是 |
-| context | common.UIAbilityContext | 是 |
-| needRefresh | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| controller | web_webview.WebviewController | 是 | Web组件控制器。 |
+| context | common.UIAbilityContext | 是 | UIAbility的上下文环境。 |
+| needRefresh | boolean | 是 | 是否需要刷新页面（true: 需要；false: 不需要）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { advertising } from '@kit.AdsKit';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private webViewController: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      // ...
+      Button('registerWebAdInterface')
+        .onClick(() => {
+          advertising.registerWebAdInterface(this.webViewController, this.context, true);
+        })
+
+      Web({ src: 'https://www.example.com', controller: this.webViewController })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```

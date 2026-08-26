@@ -16,6 +16,17 @@ type DeleteFormsCallback = (formIds: Array<string>) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formIds | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 | 被删除的卡片标识列表。 |
+
+**示例**
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+let deleteFormsCallback: formInfo.DeleteFormsCallback =
+  (formIds: Array<string>): void => {
+    console.info('delete forms callback, form count: ' + formIds.length);
+  };
+```

@@ -37,3 +37,18 @@ APP_RECOVERY = 1
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>) {
+    if (reason === AbilityConstant.StateType.CONTINUATION) {
+      console.info('Save the ability data when the ability is continuing.');
+    }
+    return AbilityConstant.OnSaveResult.ALL_AGREE;
+  }
+}
+```

@@ -3,7 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## isWifiActive
@@ -26,6 +29,19 @@ function isWifiActive(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | WLAN已使能时返回{ |
+
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+  let isWifiActive = wifi.isWifiActive();
+  console.info("isWifiActive:" + isWifiActive);
+} catch (error) {
+  console.error("failed:" + JSON.stringify(error));
+}
+```

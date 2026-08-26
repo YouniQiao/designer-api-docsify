@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from 'kits/@kit.ConnectivityKit';
+import ranging from '@kit.ConnectivityKit';
 ```
 
 ## isRangingSupported
@@ -22,6 +22,6 @@ Checks whether the current device supports the ranging feature.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true indicates that the device supports the ranging capability, and false indicates that the device does not support the ranging capability. |

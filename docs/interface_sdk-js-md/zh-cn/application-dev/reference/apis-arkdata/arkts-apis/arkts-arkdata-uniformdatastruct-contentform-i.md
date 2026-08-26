@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import uniformDataStruct from '@kit.ArkData';
 ```
 
 ## appIcon
@@ -123,3 +123,23 @@ readonly uniformDataType: 'general.content-form'
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**示例**
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+
+let thumbDataU8Array = new Uint8Array([1, 2, 3, 4, 5]);
+let appIconU8Array = new Uint8Array([6, 7, 8, 9, 10]);
+let contentForm: uniformDataStruct.ContentForm = {
+  uniformDataType: 'general.content-form',
+  title: 'MyTitle',
+  thumbData: thumbDataU8Array,
+  description: 'MyDescription',
+  appName: 'MyAppName',
+  linkUri: 'MyLinkUri',
+  appIcon: appIconU8Array
+};
+console.info('contentForm.uniformDataType: ' + contentForm.uniformDataType);
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.CONTENT_FORM, contentForm);
+```

@@ -16,7 +16,7 @@ Defines the **onChange** event callback signature.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectItem | string \| string[] | Yes |
-| index | number \| number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectItem | string \| string[] | Yes | Text of the selected item. Use the array type for multi-column pickers.  **NOTE** The return value is a text value for text or mixed content, and an empty string for image-only content. |
+| index | number \| number[] | Yes | Index of the selected item. The index is zero-based. Use the array type for multi-column pickers. |

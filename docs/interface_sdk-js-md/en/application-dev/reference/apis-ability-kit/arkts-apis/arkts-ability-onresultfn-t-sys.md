@@ -16,6 +16,19 @@ Defines a onResult function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | The Parameter returned if the UIExtensionAbility call terminateSelfWithResult. |
+
+**Examples**
+
+```TypeScript
+let callback: verticalPanelManager.PanelStartCallback = {
+  onError: (code: number, name: string, message: string): void => {
+    console.info(`startVerticalPanel onError code ${code} name: ${name} message: ${message}`);
+  },
+  onResult: (result: common.AbilityResult):void => {
+    console.info(`startVerticalPanel onResult result ${JSON.stringify(result)}`);
+  },
+}
+```

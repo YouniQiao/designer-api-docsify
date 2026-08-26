@@ -12,11 +12,11 @@ type ParamType = number | number | number | string | boolean | Array<string>
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
-| 类型 |
-| --- |
-| int |
-| long |
-| double |
-| string |
-| boolean |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| int | 表示值类型为整数值。 |
+| long | 表示值类型为长整数值。 |
+| double | 表示值类型为双浮点数。 |
+| string | 表示值类型为字符串。 |
+| boolean | 表示值类型为布尔值。 |
+| Array & lt;string & gt; | 表示值类型为字符串类型的数组。 |

@@ -31,9 +31,9 @@ Sets the playback duration. This attribute does not take effect when a separate 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Playback duration.If the value is **0**, no image is played.If the display duration allocated per image is shorter than a single frame interval, playback anomalies may occur.If it is set to a negative value, the default value is used.The value change takes effect only at the start of the next cycle.Unit: ms Default value: **1000 |
 
 ## fillMode
 
@@ -53,9 +53,9 @@ Sets the status before and after execution of the animation in the current playb
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [FillMode](../arkts-apis/arkts-arkui-fillmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [FillMode](../arkts-apis/arkts-arkui-fillmode-e.md) | Yes | Status before and after execution of the animation in the current playback direction.Default value: **FillMode.Forwards |
 
 ## fixedSize
 
@@ -75,9 +75,9 @@ Sets whether the image size is fixed at the component size.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the image size is fixed at the component size.    **true**: The image size is fixed at the component size. In this case, the width, height, top, and left attributes of the image are invalid.    **false**: The width, height, top, and left attributes of each image must be set separately. If the image size does not match the component size, the image will not be stretched.Default value: **true |
 
 ## images
 
@@ -97,9 +97,9 @@ Sets image frame information. Dynamic update is not supported.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Array&lt;[ImageFrameInfo](arkts-arkui-imageframeinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Array&lt;[ImageFrameInfo](arkts-arkui-imageframeinfo-i.md)&gt; | Yes | Image frame information. The information of each frame includes the path, size, position, and playback duration of an image. For details, see [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md).Default value: **[]**Note: If the input array is too large, memory usage may increase. Therefore, as the controller of memory usage, be sure to assess potential memory consumption before passing in the data to avoid issues such as insufficient memory. |
 
 ## iterations
 
@@ -117,9 +117,9 @@ Sets the number of times that the animation is played.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | By default, the animation is played once. The value **-1** indicates that the animation is played for an unlimited number of times. Values less than **-1** are treated as the default value. When the value is a floating-point number, it is rounded down.Default value: **1 |
 
 ## monitorInvisibleArea
 
@@ -139,9 +139,9 @@ Sets whether the component should automatically pause or resume based on its vis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [monitorInvisibleArea](#monitorinvisiblearea) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| monitorInvisibleArea | boolean | Yes | Whether the component should automatically pause or resume based on its visibility, using the system's [onVisibleAreaChange] [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) event.With the value **true**, when the component's [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) is **Running**, the component automatically pauses once it becomes invisible and resumes playback if it becomes visible again, based on the **onVisibleAreaChange** event.With the value **false**, the pause and playback of the component are not affected by **onVisibleAreaChange**.Default value: **false**   **NOTE：**When this parameter is dynamically changed from **true** to **false**, the component will resume from its last paused state based on the current [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md).Changes to this property do not affect the custom [state](#state) value. |
 
 ## onCancel
 
@@ -161,9 +161,9 @@ Triggered when the animation playback returns to the initial state.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback triggered when the animation playback returns to the initial state. |
 
 ## onFinish
 
@@ -183,9 +183,9 @@ Triggered when the animation playback completes or stops.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback triggered when the animation playback completes or stops. |
 
 ## onPause
 
@@ -205,9 +205,9 @@ Triggered when the animation playback is paused.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback triggered when the animation playback is paused. |
 
 ## onRepeat
 
@@ -225,9 +225,9 @@ Triggered when the animation playback is repeated.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback triggered when the animation playback is repeated. |
 
 ## onStart
 
@@ -247,9 +247,9 @@ Triggered when the animation starts to play.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback triggered when the animation starts to play. |
 
 ## preDecode
 
@@ -259,7 +259,8 @@ preDecode(value: number)
 
 Sets the number of images to be pre-decoded.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 7 and deprecated since API version 9. Currently, no substitute is
 > available.
 
@@ -271,9 +272,9 @@ Sets the number of images to be pre-decoded.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Number of images to be pre-decoded. For example, the value **2** indicates that two images following the currently playing one are pre-decoded.Default value: **0 |
 
 ## reverse
 
@@ -293,9 +294,9 @@ Sets the playback direction.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Playback direction.The value **false** indicates that images are played from the first one to the last one, and **true** indicates that images are played from the last one to the first one.Default value: **false |
 
 ## state
 
@@ -315,6 +316,6 @@ Sets the playback state of the animation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) | Yes | Playback state of the animation.Default value: **AnimationStatus.Initial |

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getDnsAscii
@@ -14,7 +13,8 @@ function getDnsAscii(host: string, flag?: ConversionProcess): string
 
 Converts the host name from Unicode to ASCII and controls the conversion behavior through the optional conversion process parameter (**conversionProcess**).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If **conversionProcess** is set to **NO_CONFIGURATION**, only the domain names corresponding to the Unicode
 > characters that have been officially allocated can be converted.
 
@@ -32,21 +32,32 @@ Converts the host name from Unicode to ASCII and controls the conversion behavio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| host | string | Yes |
-| flag | [ConversionProcess](arkts-network-connection-conversionprocess-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| host | string | Yes | Host name to be converted. The length of each label (separated by dots) cannot exceed 63 bytes. |
+| flag | [ConversionProcess](arkts-network-connection-conversionprocess-e.md) | No | Conversion flow parameter. The default value is **NO_CONFIGURATION**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Conversion result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+let result = connection.getDnsAscii("www.example.com," connection.ConversionProcess.NO_CONFIGURATION);
+console.info(result);  // Expected result: www.xn--fsq092h.com
+let result = connection.getDnsAscii("www.example.com", connection.ConversionProcess.NO_CONFIGURATION);
+console.info(result);  // Expected result: www.example.com
+```

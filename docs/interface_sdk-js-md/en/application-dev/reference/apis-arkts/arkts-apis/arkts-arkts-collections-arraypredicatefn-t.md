@@ -15,14 +15,14 @@ Defines the ArkTS Array reduction function, which is used by the 'some' and 'eve
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | ElementType | Yes |
-| index | number | Yes |
-| array | ArrayType | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ElementType | Yes | Element that is being processed. |
+| index | number | Yes | Index of the element in the ArkTS array. |
+| array | ArrayType | Yes | ArkTS array that is being traversed. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | True if the value meets the predicate, otherwise false. |

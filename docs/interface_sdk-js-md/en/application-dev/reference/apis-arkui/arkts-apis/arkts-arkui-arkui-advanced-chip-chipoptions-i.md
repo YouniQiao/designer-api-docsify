@@ -2,19 +2,24 @@
 
 Defines the type and style parameters of the chip.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 1. When **suffixSymbol** is provided with an argument, **suffixIcon** and **allowClose** will not take effect. If
 > **suffixSymbol** is not provided, but **suffixIcon** is, **allowClose** still will not take effect. When neither
 > **suffixSymbol** nor **suffixIcon** is provided with arguments, **allowClose** determines whether the deletion icon
-> is displayed.&gt;
+> is displayed.
+> 
 > 2. If **undefined** is assigned to **backgroundColor** or **activatedBackgroundColor**, the default background
-> color is used. If an invalid value is specified, the background color is transparent.&gt;
+> color is used. If an invalid value is specified, the background color is transparent.
+> 
 > 3. Default font colors for **prefixSymbol** and **suffixSymbol**: **normalFontColor**:
 > **[\$r('sys.color.ohos_id_color_primary')]**; **activatedFontColor**:
-> **[\$r('sys.color.ohos_id_color_text_primary_contrary')]**. The default value of **fontColor** is **16**.&gt;
+> **[\$r('sys.color.ohos_id_color_text_primary_contrary')]**. The default value of **fontColor** is **16**.
+> 
 > 4. The default value of **fillColor** is **\$r('sys.color.ohos_id_color_secondary')** for **prefixIcon** and
 > **\$r('sys.color.ohos_id_color_primary')** for **suffixIcon**. The color parsing of **fillColor** is the same as
-> that of the **Image** component.&gt;
+> that of the **Image** component.
+> 
 > 5. The default value of **activatedFillColor** in **prefixIcon** and **suffixIcon** is
 > **\$r('sys.color.ohos_id_color_text_primary_contrary')**. The color parsing of **activatedFillColor** is the same as
 > that of the **Image** component.
@@ -26,7 +31,10 @@ Defines the type and style parameters of the chip.
 ## Modules to Import
 
 ```TypeScript
-import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from 'kits/@kit.ArkUI';
+import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
+import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2SuffixImageIconConfig, ChipV2SuffixImageIcon, ChipV2Icon, ChipV2PrefixImageIconConfig, ChipV2PrefixImageIcon, ChipV2AccessibilityConfig, ChipV2Accessibility, ChipV2CloseConfig, ChipV2CloseIcon, ChipV2SymbolIconConfig, ChipV2SymbolIcon, ChipV2PrefixSymbolIconConfig, ChipV2PrefixSymbolIcon, ChipV2SuffixSymbolIconConfig, ChipV2SuffixSymbolIcon, ChipV2LabelMarginConfig, ChipV2LocalizedLabelMarginConfig, ChipV2LabelConfig, ChipV2Label, IChipV2OptionsConfig, ChipV2Options, ChipV2 } from '@kit.ArkUIV2';
+import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUIGroup';
+import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUIGroupV2';
 ```
 
 ## onClose

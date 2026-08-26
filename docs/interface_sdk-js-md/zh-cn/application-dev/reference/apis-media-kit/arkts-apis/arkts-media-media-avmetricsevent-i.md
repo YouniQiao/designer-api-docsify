@@ -1,6 +1,6 @@
 # AVMetricsEvent
 
-Describes the information of an Metrics Event.
+描述一个指标事件的信息。
 
 **起始版本：** 23
 
@@ -9,7 +9,7 @@ Describes the information of an Metrics Event.
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## details
@@ -18,7 +18,7 @@ import { media } from 'kits/@kit.MediaKit';
 details: Record<string, Object>
 ```
 
-The detailed information of the event.
+事件的详细信息。
 
 **类型：** Record&lt;string, Object&gt;
 
@@ -34,7 +34,7 @@ The detailed information of the event.
 event: AVMetricsEventType
 ```
 
-Type of the metrics event.
+指标事件的类型。
 
 **类型：** [AVMetricsEventType](arkts-media-media-avmetricseventtype-e.md)
 
@@ -50,7 +50,7 @@ Type of the metrics event.
 playbackPosition: number
 ```
 
-The playback progress position when the event occurs.
+事件发生时的播放进度位置。
 
 **类型：** number
 
@@ -64,7 +64,7 @@ The playback progress position when the event occurs.
 timeStamp: number
 ```
 
-Absolute timestamp when the event occurred.
+事件发生的绝对时间戳。
 
 **类型：** number
 

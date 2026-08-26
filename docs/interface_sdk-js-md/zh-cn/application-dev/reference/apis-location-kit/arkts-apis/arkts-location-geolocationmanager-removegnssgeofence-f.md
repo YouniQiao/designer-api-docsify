@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## removeGnssGeofence
@@ -23,22 +22,42 @@ function removeGnssGeofence(geofenceId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [geofenceId](arkts-location-geolocationmanager-geofencetransition-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| geofenceId | number | 是 | GNSS地理围栏的ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
-| [3301602](../errorcode-geoLocationManager.md#3301602-地理围栏id错误导致删除围栏失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12 - 24 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \\${geoLocationManager.removeGnssGeofence} due to limited device capabilities. |
+| [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
+| [3301602](../errorcode-geoLocationManager.md#3301602-地理围栏id错误导致删除围栏失败) | Failed to delete a geofence due to an incorrect ID. |
+
+**示例**
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+// fenceId是在geoLocationManager.addGnssGeofence执行成功后获取的
+let fenceId = 1;
+try {
+  if (geoLocationManager.isGnssFenceServiceSupported()) {
+    geoLocationManager.removeGnssGeofence(fenceId).then(() => {
+      console.info("removeGnssGeofence success fenceId:" + fenceId);
+    }).catch((error: BusinessError) => {
+      console.error("removeGnssGeofence: error=" + JSON.stringify(error));
+    });
+  }
+} catch (error) {
+  console.error("removeGnssGeofence: error=" + JSON.stringify(error));
+}
+```

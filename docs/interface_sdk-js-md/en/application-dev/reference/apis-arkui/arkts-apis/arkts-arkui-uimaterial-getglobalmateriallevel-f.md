@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import uiMaterial from '@kit.ArkUI';
 ```
 
 ## getGlobalMaterialLevel
@@ -24,6 +24,6 @@ Obtains the global material level, which is related to the device computing powe
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MaterialLevel](arkts-arkui-uimaterial-materiallevel-e.md) |
+| Type | Description |
+| --- | --- |
+| [MaterialLevel](arkts-arkui-uimaterial-materiallevel-e.md) | Material level of the device. |

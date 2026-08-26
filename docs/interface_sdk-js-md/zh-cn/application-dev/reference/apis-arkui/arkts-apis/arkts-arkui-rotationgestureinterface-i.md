@@ -29,15 +29,15 @@
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | { fingers?: number; angle?: number } | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | { fingers?: number; angle?: number } | 否 | 设置旋转手势事件参数。     - fingers：触发旋转手势所需的最少手指数， & nbsp;最小为2指，最大为5指。   默认值：2 取值范围：[2, 5]。当设置的值小于2或大于5时，会被转化 为默认值。触发手势时手指数量可以多于fingers参数值，但仅最先落下的两指参与手势计算。     - angle：触发旋转手势所需的最小角度变化，单位为deg。   默认值：1    **说明：** 当改变度数的值小于等于0或大于360时，会被转化为默认值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
 ## [[Call]]
 
@@ -57,15 +57,15 @@
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [RotationGestureHandlerOptions](arkts-arkui-rotationgesturehandleroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [RotationGestureHandlerOptions](arkts-arkui-rotationgesturehandleroptions-i.md) | 否 | 旋转手势处理器配置参数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -83,15 +83,15 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。该回
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -111,15 +111,15 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。与onA
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
 ## onActionEnd
 
@@ -137,15 +137,15 @@ Rotation手势识别成功，当抬起最后一根满足手势触发条件的手
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
 ## onActionStart
 
@@ -163,15 +163,15 @@ Rotation手势识别成功后触发的回调。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
 ## onActionUpdate
 
@@ -189,12 +189,12 @@ Rotation手势移动过程中触发的回调。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |

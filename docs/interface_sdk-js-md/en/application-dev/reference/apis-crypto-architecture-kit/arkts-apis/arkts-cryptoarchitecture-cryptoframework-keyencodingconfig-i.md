@@ -2,8 +2,10 @@
 
 Represents the RSA private key encoding parameters. You can use it to generate an encoded private key string with the specified algorithm and password.
 
-> **NOTE：**&gt;
-> - **password** specifies the password used for encoding the private key. It is mandatory.&gt;
+> **NOTE：**
+> 
+> - **password** specifies the password used for encoding the private key. It is mandatory.
+> 
 > - **cipherName** specifies the algorithm used for encoding. It is mandatory. Currently, only **AES-128-CBC**,
 > **AES-192-CBC**, **AES-256-CBC**, and **DES-EDE3-CBC** are supported.
 
@@ -14,7 +16,7 @@ Represents the RSA private key encoding parameters. You can use it to generate a
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## cipherName

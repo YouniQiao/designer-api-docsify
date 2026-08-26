@@ -6,13 +6,14 @@ The **request** module provides applications with basic upload, download, and ba
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import request from '@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
 ```
 
 ## Summary
 
 ### Namespaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [request(Upload and Download)](arkts-basicservices-request-n.md) |
+| Name | Description |
+| --- | --- |
+| [request(Upload and Download)](arkts-basicservices-request-n.md) | The **request** module provides applications with basic upload, download, and background transmission agent capabilities.  - Currently, the **request** module cannot be called in extensions. |

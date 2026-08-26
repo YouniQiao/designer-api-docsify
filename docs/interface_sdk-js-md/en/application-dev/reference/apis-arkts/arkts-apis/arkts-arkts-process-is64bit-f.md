@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## is64Bit
@@ -22,6 +22,12 @@ Checks whether this process is running in a 64-bit environment.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the process is running in a 64-bit environment; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let result = process.is64Bit();
+```

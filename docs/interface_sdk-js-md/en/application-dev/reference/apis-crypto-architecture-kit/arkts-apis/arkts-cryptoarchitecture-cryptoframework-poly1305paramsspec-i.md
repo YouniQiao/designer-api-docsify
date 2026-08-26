@@ -4,10 +4,12 @@ Encapsulates the parameters for encryption or decryption using the ChaCha20-Poly
 
 Applicable to ChaCha20-Poly1305.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Before passing a value to
 > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify
-> **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).&gt;
+> **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
+> 
 > When the Poly1305 mode is used for encryption, you need to extract the last 16 bytes from the
 > [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) returned by
 > [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) or
@@ -25,7 +27,7 @@ Applicable to ChaCha20-Poly1305.
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## aad

@@ -29,15 +29,15 @@ Sets the parameters for the swipe gesture. Inherits from [GestureInterface&lt;T&
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | { fingers?: number; direction?: SwipeDirection; speed?: number } | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | { fingers?: number; direction?: SwipeDirection; speed?: number } | No | Parameters for the swipe gesture.     - **fingers**: minimum number of fingers to trigger the swipe gesture.   Default value: **1** Value range: [1, 10].     - **direction**: direction in which the swipe gesture can be recognized.    Default value: **SwipeDirection.All**     - **speed**: minimum speed of the swipe gesture.   Default value: 100 vp/s Value range: (0, +∞).    **NOTE：**If the value is less than or equal to 0, it will be converted to the default value. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |  |
 
 ## [[Call]]
 
@@ -57,15 +57,15 @@ Sets the parameters for the swipe gesture. Compared with SwipeGesture)}, this AP
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SwipeGestureHandlerOptions](arkts-arkui-swipegesturehandleroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SwipeGestureHandlerOptions](arkts-arkui-swipegesturehandleroptions-i.md) | No | Parameters of the swipe gesture handler. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |  |
 
 ## onAction
 
@@ -83,12 +83,12 @@ Triggered when the swipe gesture is recognized.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | Yes | Callback for the gesture event. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |  |

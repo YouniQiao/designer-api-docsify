@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from 'kits/@kit.LocationKit';
+import Geolocation, { GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from '@kit.LocationKit';
 ```
 
 ## getLocation
@@ -36,9 +36,9 @@ static getLocation(options?: GetLocationOption): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [GetLocationOption](arkts-location-system-geolocation-getlocationoption-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [GetLocationOption](arkts-location-system-geolocation-getlocationoption-i.md) | 否 |  |
 
 ## getLocationType
 
@@ -58,9 +58,9 @@ static getLocationType(options?: GetLocationTypeOption): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [GetLocationTypeOption](arkts-location-system-geolocation-getlocationtypeoption-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [GetLocationTypeOption](arkts-location-system-geolocation-getlocationtypeoption-i.md) | 否 |  |
 
 ## getSupportedCoordTypes
 
@@ -80,8 +80,8 @@ static getSupportedCoordTypes(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
+| 类型 | 说明 |
+| --- | --- |
 ## subscribe
 
 ```TypeScript
@@ -104,9 +104,9 @@ static subscribe(options: SubscribeLocationOption): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [SubscribeLocationOption](arkts-location-system-geolocation-subscribelocationoption-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [SubscribeLocationOption](arkts-location-system-geolocation-subscribelocationoption-i.md) | 是 |  |
 
 ## unsubscribe
 

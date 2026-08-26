@@ -11,7 +11,7 @@ Represents a listener object used to listen for background task state changes.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+import backgroundTaskManager from '@kit.BackgroundTasksKit';
 ```
 
 ## onContinuousTaskStart
@@ -32,9 +32,27 @@ Called when a continuous task starts.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | Yes | Continuous task callback information, including the task ID and type. |
+
+**Examples**
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+
+let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
+    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
+    }
+}
+```
 
 ## onContinuousTaskStop
 
@@ -54,9 +72,27 @@ Called when a continuous task stops.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | Yes | Continuous task callback information, including the task ID and type. |
+
+**Examples**
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+
+let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
+    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
+    }
+}
+```
 
 ## onContinuousTaskUpdate
 
@@ -76,6 +112,24 @@ Called when a continuous task is updated.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | Yes | Continuous task callback information, including the task ID and type. |
+
+**Examples**
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+
+let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
+    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
+    }
+}
+```

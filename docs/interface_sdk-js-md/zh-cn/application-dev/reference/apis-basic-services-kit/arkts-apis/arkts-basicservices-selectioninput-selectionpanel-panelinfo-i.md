@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { PanelInfo, PanelType } from 'kits/@kit.BasicServicesKit';
+import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
 ```
 
 ## height

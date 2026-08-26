@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import zlib from '@kit.BasicServicesKit';
 ```
 
 ## createZipSync
@@ -22,6 +22,14 @@ function createZipSync(): Zip
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Zip](arkts-basicservices-zlib-zip-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Zip](arkts-basicservices-zlib-zip-i.md) | 返回压缩解压缩对象实例。 |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+
+let zip = zlib.createZipSync();
+```

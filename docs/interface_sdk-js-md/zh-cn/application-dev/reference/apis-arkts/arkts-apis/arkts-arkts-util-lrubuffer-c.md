@@ -13,7 +13,8 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## [Symbol.iterator]
@@ -34,9 +35,30 @@ import { util } from 'kits/@kit.ArkTS';
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;[K, V] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;[K, V] & gt; | 返回以键值对形式的二维数组。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.put(3, 15);
+
+for (let value of pro) {
+  console.info(value[0]+ ', '+ value[1]);
+}
+// 输出结果：
+// 2, 10
+// 3, 15
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro[Symbol.iterator]();
+```
 
 ## afterRemoval
 
@@ -56,12 +78,37 @@ afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isEvict | boolean | 是 |
-| key | K | 是 |
-| value | V | 是 |
-| newValue | V | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isEvict | boolean | 是 | 容量是否不足。如果值为 **true**，则由于容量不足而调用此 API。 |
+| key | K | 是 | 被移除的 key。 |
+| value | V | 是 | 被移除的值。 |
+| newValue | V | 是 | 如果调用了 **put()** 方法并且要添加的 key 已存在时该 key 的新值。其他情况下此参数为空。 |
+
+**示例**
+
+```TypeScript
+class ChildLruBuffer<K, V> extends util.LruBuffer<K, V> {
+  constructor(capacity?: number) {
+    super(capacity);
+  }
+
+  afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void {
+    if (isEvict === true) {
+      console.info('key: ' + key);
+      // 输出结果：key: 11
+      console.info('value: ' + value);
+      // 输出结果：value: 1
+      console.info('newValue: ' + newValue);
+      // 输出结果：newValue: null
+    }
+  }
+}
+let lru: ChildLruBuffer<number, number> = new ChildLruBuffer(2);
+lru.put(11, 1);
+lru.put(22, 2);
+lru.put(33, 3);
+```
 
 ## clear
 
@@ -78,6 +125,27 @@ clear(): void
 **替代接口：** [clear](arkts-arkts-util-lrucache-c.md#clear)
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+let result = pro.length;
+pro.clear();
+let res = pro.length;
+console.info('result = ' + result);
+console.info('res = ' + res);
+// 输出结果：result = 1
+// 输出结果：res = 0
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.length;
+pro.clear();
+```
 
 ## constructor
 
@@ -97,9 +165,19 @@ constructor(capacity?: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| capacity | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| capacity | number | 否 | 要创建的缓存的容量。默认值为 **64**。 |
+
+**示例**
+
+```TypeScript
+let lruCache = new util.LRUCache<number, number>();
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+```
 
 ## contains
 
@@ -119,15 +197,33 @@ contains(key: K): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 要检查的 key。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果缓存包含指定的 key，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+let result = pro.contains(2);
+console.info('result = ' + result);
+// 输出结果：result = true
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.contains(20);
+console.info('result = ' + result);
+// 输出结果：result = false
+```
 
 ## createDefault
 
@@ -147,15 +243,29 @@ createDefault(key: K): V
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 缺少值的 key。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V |
+| 类型 | 说明 |
+| --- | --- |
+| V | key 对应的值。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+let result = pro.createDefault(50);
+console.info('result = ' + result);
+// 输出结果：result = undefined
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+let result = pro.createDefault(50);
+```
 
 ## entries
 
@@ -175,9 +285,30 @@ entries(): IterableIterator<[K, V]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;[K, V] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;[K, V] & gt; | 可迭代的数组。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.put(3, 15);
+let pair = pro.entries();
+for (let value of pair) {
+  console.info(value[0]+ ', '+ value[1]);
+}
+// 输出结果：
+// 2, 10
+// 3, 15
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.entries();
+```
 
 ## get
 
@@ -197,15 +328,33 @@ get(key: K): V | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 要查询值的 key。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| V \| undefined | key 对应的值。如果未找到匹配项，则返回 **undefined**。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+let result  = pro.get(2);
+console.info('result = ' + result);
+// 输出结果：result = 10
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result  = pro.get(2);
+console.info("result = " + result);
+// 输出结果：result = 10
+```
 
 ## getCapacity
 
@@ -225,9 +374,25 @@ getCapacity(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 缓存的容量。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+let result = pro.getCapacity();
+console.info('result = ' + result);
+// 输出结果：result = 64
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+let result = pro.getCapacity();
+console.info("result = " + result);
+// 输出结果：result = 64
+```
 
 ## getCreateCount
 
@@ -247,9 +412,39 @@ getCreateCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | createDefault()** 的返回值数量。 |
+
+**示例**
+
+```TypeScript
+// 创建新类ChildLRUCache继承LRUCache，重写createDefault方法，返回一个非undefined的值。
+class ChildLRUCache extends util.LRUCache<number, number> {
+  constructor() {
+    super();
+  }
+
+  createDefault(key: number): number {
+    return key;
+  }
+}
+let lru = new ChildLRUCache();
+lru.put(2, 10);
+lru.get(3);
+lru.get(5);
+let res = lru.getCreateCount();
+console.info('res = ' + res);
+// 输出结果：res = 2
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(1,8);
+let result = pro.getCreateCount();
+console.info("result = " + result);
+// 输出结果：result = 0
+```
 
 ## getMatchCount
 
@@ -269,9 +464,29 @@ getMatchCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 查询值匹配的次数。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.get(2);
+let result = pro.getMatchCount();
+console.info('result = ' + result);
+// 输出结果：result = 1
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.get(2);
+let result = pro.getMatchCount();
+console.info("result = " + result);
+// 输出结果：result = 1
+```
 
 ## getMissCount
 
@@ -291,9 +506,29 @@ getMissCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 查询值未匹配的次数。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.get(2);
+let result = pro.getMissCount();
+console.info('result = ' + result);
+// 输出结果：result = 0
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.get(2);
+let result = pro.getMissCount();
+console.info("result = " + result);
+// 输出结果：result = 0
+```
 
 ## getPutCount
 
@@ -313,9 +548,27 @@ getPutCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 向缓存添加的次数。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+let result = pro.getPutCount();
+console.info('result = ' + result);
+// 输出结果：result = 1
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.getPutCount();
+console.info("result = " + result);
+// 输出结果：result = 1
+```
 
 ## getRemovalCount
 
@@ -335,9 +588,31 @@ getRemovalCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 从缓存中移除的次数。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.updateCapacity(2);
+pro.put(50, 22);
+let result = pro.getRemovalCount();
+console.info('result = ' + result);
+// 输出结果：result = 0
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.updateCapacity(2);
+pro.put(50,22);
+let result = pro.getRemovalCount();
+console.info("result = " + result);
+// 输出结果：result = 0
+```
 
 ## isEmpty
 
@@ -357,9 +632,27 @@ isEmpty(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果缓存不包含任何值，则返回 **true**。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+let result = pro.isEmpty();
+console.info('result = ' + result);
+// 输出结果：result = false
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.isEmpty();
+console.info("result = " + result);
+// 输出结果：result = false
+```
 
 ## keys
 
@@ -379,9 +672,37 @@ keys(): K[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| K[] |
+| 类型 | 说明 |
+| --- | --- |
+| K[] | 此缓存中的所有 key，按从最近最多访问到最近最少访问的顺序排列。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, string>();
+pro.put(1, 'A');
+pro.put(2, "B");
+pro.put(3, 'C');
+pro.put(4, 'D')
+pro.put(5, 'E')
+pro.put(6, 'F')
+let result = pro.keys();
+console.info('result = ' + result);
+// 输出结果：result = 1,2,3,4,5,6
+pro.get(5);
+pro.get(3);
+result = pro.keys();
+console.info('result = ' + result);
+// 输出结果：result = 1,2,4,6,5,3
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.keys();
+console.info("result = " + result);
+// 输出结果：result = 2
+```
 
 ## put
 
@@ -401,16 +722,32 @@ put(key: K, value: V): V
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
-| value | V | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 要添加的键值对的 key。 |
+| value | V | 是 | 要添加的键值对的 value。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V |
+| 类型 | 说明 |
+| --- | --- |
+| V | 添加的值。如果 key 已存在，则返回已存在的值；如果 **key** 或 **value** 传入 **null**，则抛出错误。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+let result = pro.put(2, 10);
+console.info('result = ' + result);
+// 输出结果：result = 10
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+let result = pro.put(2,10);
+console.info("result = " + result);
+// 输出结果：result = 10
+```
 
 ## remove
 
@@ -430,15 +767,33 @@ remove(key: K): V | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 要移除的 key。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| V \| undefined | 包含被移除键值对的 **Optional** 对象。如果 key 不存在，则返回空的 **Optional** 对象；如果 **key** 传入 **null**，则抛出错误。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+let result = pro.remove(20);
+console.info('result = ' + result);
+// 输出结果：result = undefined
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.remove(20);
+console.info("result = " + result);
+// 输出结果：result = undefined
+```
 
 ## toString
 
@@ -458,9 +813,105 @@ toString(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 此缓存的字符串表示形式。 |
+
+**示例**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// 输出结果：result = 1/2
+```
+
+API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// 输出结果：result = 1/2
+```
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.get(2);
+pro.get(3);
+console.info(pro.toString());
+// 输出结果：LRUCache[ maxSize = 64, hits = 1, misses = 1, hitRate = 50% ]
+// maxSize: 缓存区最大值 hits: 查询值匹配成功的次数 misses: 查询值匹配失败的次数 hitRate: 查询值匹配率
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// 输出结果：result = [30, 40]
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.get(2);
+pro.remove(20);
+let result = pro.toString();
+console.info("result = " + result);
+// 输出结果：result = Lrubuffer[ maxSize = 64, hits = 1, misses = 0, hitRate = 100% ]
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.Scope(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// 输出结果：result = [30, 40]
+```
 
 ## updateCapacity
 
@@ -480,9 +931,21 @@ updateCapacity(newCapacity: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| newCapacity | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| newCapacity | number | 是 | 缓存的新容量。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.updateCapacity(100);
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.updateCapacity(100);
+```
 
 ## values
 
@@ -502,9 +965,39 @@ values(): V[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V[] |
+| 类型 | 说明 |
+| --- | --- |
+| V[] | 此缓存中的所有值，按从最近最多访问到最近最少访问的顺序排列。 |
+
+**示例**
+
+```TypeScript
+let pro = new util.LRUCache<number, string>();
+pro.put(1, 'A');
+pro.put(2, "B");
+pro.put(3, 'C');
+pro.put(4, 'D')
+pro.put(5, 'E')
+pro.put(6, 'F')
+let result = pro.values();
+console.info('result = ' + result);
+// 输出结果：result = A,B,C,D,E,F
+pro.get(1);
+pro.get(2);
+result = pro.values();
+console.info('result = ' + result);
+// 输出结果：result = C,D,E,F,A,B
+```
+
+```TypeScript
+let pro : util.LruBuffer<number|string,number|string> = new util.LruBuffer();
+pro.put(2,10);
+pro.put(2,"anhu");
+pro.put("afaf","grfb");
+let result = pro.values();
+console.info("result = " + result);
+// 输出结果：result = anhu,grfb
+```
 
 ## length
 

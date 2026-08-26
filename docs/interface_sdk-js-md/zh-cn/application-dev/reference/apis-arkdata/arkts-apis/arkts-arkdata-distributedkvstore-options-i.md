@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import distributedKVStore from '@kit.ArkData';
 ```
 
 ## autoSync
@@ -45,6 +45,42 @@ backup?: boolean
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let backupFile = 'BK001';
+try {
+  kvStore.backup(backupFile, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to backup. Code: ${err.code}, message: ${err.message} `);
+    } else {
+      console.info(`Succeeded in backupping data`);
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let backupFile = 'BK001';
+try {
+  kvStore.backup(backupFile).then(() => {
+    console.info(`Succeeded in backupping data`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## createIfMissing
 

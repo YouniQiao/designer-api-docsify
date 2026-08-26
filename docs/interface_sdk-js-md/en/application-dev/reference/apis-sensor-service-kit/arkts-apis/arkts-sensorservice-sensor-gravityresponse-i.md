@@ -11,7 +11,6 @@ Describes the gravity sensor data. It extends from [Response](arkts-sensorservic
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## x

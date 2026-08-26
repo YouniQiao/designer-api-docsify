@@ -10,7 +10,7 @@ Represents a domain name filtering rule.In API version 21 and earlier versions, 
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from 'kits/@kit.MDMKit';
+import networkManager from '@kit.MDMKit';
 ```
 
 ## action

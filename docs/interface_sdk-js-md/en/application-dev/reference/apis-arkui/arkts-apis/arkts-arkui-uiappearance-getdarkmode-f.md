@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiAppearance } from 'kits/@kit.ArkUI';
+import uiAppearance from '@kit.ArkUI';
 ```
 
 ## getDarkMode
@@ -30,13 +30,28 @@ Obtains the current system dark mode configuration.<!--Del-->
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DarkMode](arkts-arkui-uiappearance-darkmode-e.md) |
+| Type | Description |
+| --- | --- |
+| [DarkMode](arkts-arkui-uiappearance-darkmode-e.md) | current dark-mode. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [500001](../errorcode-uiappearance.md#500001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 - 19 |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let darkMode = uiAppearance.getDarkMode();
+  console.info('Get dark-mode ' + darkMode);
+} catch (error) {
+  let err = error as BusinessError;
+  console.error(`Get dark-mode failed. Code: ${err.code}, message: ${err.message}`);
+}
+```

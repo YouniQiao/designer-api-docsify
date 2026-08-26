@@ -31,9 +31,9 @@ constructor(options?: NumericTextTransitionOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | 否 | 设置数字翻牌动效。 默认值继承 [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md)。 |
 
 ## enableBlur
 

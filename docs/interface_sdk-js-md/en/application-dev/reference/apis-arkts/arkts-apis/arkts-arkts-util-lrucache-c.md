@@ -9,7 +9,8 @@ Provides APIs to discard the least recently used data to make rooms for new elem
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## [Symbol.iterator]
@@ -28,9 +29,30 @@ Specifies the default iterator for an object.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; | Returns a two - dimensional array in the form of key - value pairs. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.put(3, 15);
+
+for (let value of pro) {
+  console.info(value[0]+ ', '+ value[1]);
+}
+// Output:
+// 2, 10
+// 3, 15
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro[Symbol.iterator]();
+```
 
 ## afterRemoval
 
@@ -40,7 +62,8 @@ afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 
 Performs subsequent operations after a value is removed. The subsequent operations must be implemented by developers. This API is called during deletion operations, such as [get&lt;sup&gt;9+&lt;/sup&gt;](#get), [put&lt;sup&gt;9+&lt;/sup&gt;](#put), [remove&lt;sup&gt;9+&lt;/sup&gt;](#remove), [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear), and [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If the callback method is executed after [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) and
 > [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity) are called and the input **key** and
 > **value** parameters are of the MapIterator type, perform subsequent operations by referring to example 2.
@@ -53,12 +76,37 @@ Performs subsequent operations after a value is removed. The subsequent operatio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isEvict | boolean | Yes |
-| key | K | Yes |
-| value | V | Yes |
-| newValue | V | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isEvict | boolean | Yes | Whether the capacity is insufficient. If the value is **true**, this API is called due to insufficient capacity. |
+| key | K | Yes | Key removed. |
+| value | V | Yes | Value removed. |
+| newValue | V | Yes | New value for the key if the **put()** method is called and the key to be added already exists. In other cases, this parameter is left blank. |
+
+**Examples**
+
+```TypeScript
+class ChildLruBuffer<K, V> extends util.LruBuffer<K, V> {
+  constructor(capacity?: number) {
+    super(capacity);
+  }
+
+  afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void {
+    if (isEvict === true) {
+      console.info('key: ' + key);
+      // Output: key: 11
+      console.info('value: ' + value);
+      // Output: value: 1
+      console.info('newValue: ' + newValue);
+      // Output: newValue: null
+    }
+  }
+}
+let lru: ChildLruBuffer<number, number> = new ChildLruBuffer(2);
+lru.put(11, 1);
+lru.put(22, 2);
+lru.put(33, 3);
+```
 
 ## clear
 
@@ -73,6 +121,27 @@ Clears key-value pairs from this cache.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+let result = pro.length;
+pro.clear();
+let res = pro.length;
+console.info('result = ' + result);
+console.info('res = ' + res);
+// Output: result = 1
+// Output: res = 0
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.length;
+pro.clear();
+```
 
 ## constructor
 
@@ -90,9 +159,19 @@ A constructor used to create a **LRUCache** instance. The default capacity of th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| capacity | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| capacity | number | No | Capacity of the cache to create. The default value is **64**, and the maximum value is **2147483647**.<br>**Since:** 12 |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+```
 
 ## contains
 
@@ -110,15 +189,33 @@ Checks whether this cache contains the specified key.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | Key to check. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the cache contains the specified key; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+let result = pro.contains(2);
+console.info('result = ' + result);
+// Output: result = true
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.contains(20);
+console.info('result = ' + result);
+// Output: result = false
+```
 
 ## createDefault
 
@@ -136,15 +233,29 @@ Performs subsequent operations if no key is matched in the cache and returns the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | Key. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V |
+| Type | Description |
+| --- | --- |
+| V | Value of the key. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+let result = pro.createDefault(50);
+console.info('result = ' + result);
+// Output: result = undefined
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+let result = pro.createDefault(50);
+```
 
 ## entries
 
@@ -162,9 +273,30 @@ Returns an iterator object that traverses all key-value pairs ([key, value]) in 
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; | Iterable array. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.put(3, 15);
+let pair = pro.entries();
+for (let value of pair) {
+  console.info(value[0]+ ', '+ value[1]);
+}
+// Output:
+// 2, 10
+// 3, 15
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.entries();
+```
 
 ## get
 
@@ -182,15 +314,33 @@ Obtains the value of a key. If the key is not in the cache, [createDefault&lt;su
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | Key based on which the value is queried. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V \| undefined |
+| Type | Description |
+| --- | --- |
+| V \| undefined | Value of the key. If no match is found, the value specified in **createDefault** is returned. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+let result  = pro.get(2);
+console.info('result = ' + result);
+// Output: result = 10
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result  = pro.get(2);
+console.info("result = " + result);
+// Output: result = 10
+```
 
 ## getCapacity
 
@@ -208,9 +358,25 @@ Obtains the capacity of this cache.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Capacity of the cache. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+let result = pro.getCapacity();
+console.info('result = ' + result);
+// Output: result = 64
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+let result = pro.getCapacity();
+console.info("result = " + result);
+// Output: result = 64
+```
 
 ## getCreateCount
 
@@ -228,9 +394,39 @@ Obtains the number of times that an object is created.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of times that objects are created. |
+
+**Examples**
+
+```TypeScript
+// Create the ChildLRUCache class that inherits LRUCache, and override createDefault() to return a non-undefined value.
+class ChildLRUCache extends util.LRUCache<number, number> {
+  constructor() {
+    super();
+  }
+
+  createDefault(key: number): number {
+    return key;
+  }
+}
+let lru = new ChildLRUCache();
+lru.put(2, 10);
+lru.get(3);
+lru.get(5);
+let res = lru.getCreateCount();
+console.info('res = ' + res);
+// Output: res = 2
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(1,8);
+let result = pro.getCreateCount();
+console.info("result = " + result);
+// Output: result = 0
+```
 
 ## getMatchCount
 
@@ -248,9 +444,29 @@ Obtains the number of times that the queried values are matched.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of times that the queried values are matched. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.get(2);
+let result = pro.getMatchCount();
+console.info('result = ' + result);
+// Output: result = 1
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.get(2);
+let result = pro.getMatchCount();
+console.info("result = " + result);
+// Output: result = 1
+```
 
 ## getMissCount
 
@@ -268,9 +484,29 @@ Obtains the number of times that the queried values are mismatched.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of times that the queried values are mismatched. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.get(2);
+let result = pro.getMissCount();
+console.info('result = ' + result);
+// Output: result = 0
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.get(2);
+let result = pro.getMissCount();
+console.info("result = " + result);
+// Output: result = 0
+```
 
 ## getPutCount
 
@@ -288,9 +524,27 @@ Obtains the number of additions to this cache.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of additions to the cache. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+let result = pro.getPutCount();
+console.info('result = ' + result);
+// Output: result = 1
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.getPutCount();
+console.info("result = " + result);
+// Output: result = 1
+```
 
 ## getRemovalCount
 
@@ -308,9 +562,31 @@ Obtains the number of times that key-value pairs in the cache are recycled.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of times that key-value pairs in the cache are recycled. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.updateCapacity(2);
+pro.put(50, 22);
+let result = pro.getRemovalCount();
+console.info('result = ' + result);
+// Output: result = 0
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.updateCapacity(2);
+pro.put(50,22);
+let result = pro.getRemovalCount();
+console.info("result = " + result);
+// Output: result = 0
+```
 
 ## isEmpty
 
@@ -328,9 +604,27 @@ Checks whether this cache is empty.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the cache does not contain any value. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+let result = pro.isEmpty();
+console.info('result = ' + result);
+// Output: result = false
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.isEmpty();
+console.info("result = " + result);
+// Output: result = false
+```
 
 ## keys
 
@@ -348,9 +642,37 @@ Obtains all keys in this cache, listed from the least to the most recently acces
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| K[] |
+| Type | Description |
+| --- | --- |
+| K[] | The list of all keys in this cache, listed from the least to the most recently accessed. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, string>();
+pro.put(1, 'A');
+pro.put(2, "B");
+pro.put(3, 'C');
+pro.put(4, 'D')
+pro.put(5, 'E')
+pro.put(6, 'F')
+let result = pro.keys();
+console.info('result = ' + result);
+// Output: result = 1,2,3,4,5,6
+pro.get(5);
+pro.get(3);
+result = pro.keys();
+console.info('result = ' + result);
+// Output: result = 1,2,4,6,5,3
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.keys();
+console.info("result = " + result);
+// Output: result = 2
+```
 
 ## put
 
@@ -368,16 +690,32 @@ Adds a key-value pair to this cache and returns the value associated with the ke
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
-| value | V | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | Key of the key-value pair to add. |
+| value | V | Yes | Value of the key-value pair to add. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V |
+| Type | Description |
+| --- | --- |
+| V | Value of the key-value pair added. If the key or value is empty, an exception is thrown. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+let result = pro.put(2, 10);
+console.info('result = ' + result);
+// Output: result = 10
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+let result = pro.put(2,10);
+console.info("result = " + result);
+// Output: result = 10
+```
 
 ## remove
 
@@ -395,15 +733,33 @@ Removes a key and its associated value from this cache and returns the value ass
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | Key to remove. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V \| undefined |
+| Type | Description |
+| --- | --- |
+| V \| undefined | Returns an **Optional** object containing the removed key-value pair if the key exists in the cache; returns **undefined** if the key does not exist; throws an error if **null** is passed in for **key**. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+let result = pro.remove(20);
+console.info('result = ' + result);
+// Output: result = undefined
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.remove(20);
+console.info("result = " + result);
+// Output: result = undefined
+```
 
 ## toString
 
@@ -421,9 +777,105 @@ Obtains the string representation of this cache.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String representation of this cache. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// Output: result = 1/2
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// Output: result = 1/2
+```
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.get(2);
+pro.get(3);
+console.info(pro.toString());
+// Output: LRUCache[ maxSize = 64, hits = 1, misses = 1, hitRate = 50% ]
+// maxSize: maximum size of the cache. hits: number of matched queries. misses: number of mismatched queries. hitRate: matching rate.
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// Output: result = [30, 40]
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.get(2);
+pro.remove(20);
+let result = pro.toString();
+console.info("result = " + result);
+// Output: result = Lrubuffer[ maxSize = 64, hits = 1, misses = 0, hitRate = 100% ]
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.Scope(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// Output: result = [30, 40]
+```
 
 ## updateCapacity
 
@@ -441,9 +893,21 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| newCapacity | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| newCapacity | number | Yes | New capacity of the cache. The maximum value is **2147483647**. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.updateCapacity(100);
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.updateCapacity(100);
+```
 
 ## values
 
@@ -461,9 +925,39 @@ Obtains all values in this cache, listed from the least to the most recently acc
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V[] |
+| Type | Description |
+| --- | --- |
+| V[] | The list of all values in this cache, listed from the least to the most recently accessed. |
+
+**Examples**
+
+```TypeScript
+let pro = new util.LRUCache<number, string>();
+pro.put(1, 'A');
+pro.put(2, "B");
+pro.put(3, 'C');
+pro.put(4, 'D')
+pro.put(5, 'E')
+pro.put(6, 'F')
+let result = pro.values();
+console.info('result = ' + result);
+// Output: result = A,B,C,D,E,F
+pro.get(1);
+pro.get(2);
+result = pro.values();
+console.info('result = ' + result);
+// Output: result = C,D,E,F,A,B
+```
+
+```TypeScript
+let pro : util.LruBuffer<number|string,number|string> = new util.LruBuffer();
+pro.put(2,10);
+pro.put(2,"anhu");
+pro.put("afaf","grfb");
+let result = pro.values();
+console.info("result = " + result);
+// Output: result = anhu,grfb
+```
 
 ## length
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
+import scan from '@kit.BasicServicesKit';
 ```
 
 ## getScannerCurrentSetting
@@ -22,19 +22,34 @@ function getScannerCurrentSetting(scannerId: string, optionIndex: number): Promi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scannerId | string | 是 |
-| [optionIndex](arkts-basicservices-scan-scannerparameter-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scannerId | string | 是 | 扫描仪的ID。 |
+| optionIndex | number | 是 | 要获取的选项的索引。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md)&gt; | Promise对象，返回扫描仪选项值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+**示例**
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let scannerId: string = 'scanner_001';
+let optionIndex: number = 1;
+scan.getScannerCurrentSetting(scannerId, optionIndex).then((value: scan.ScannerOptionValue) => {
+    console.info('get scanner current setting success: ' + JSON.stringify(value));
+}).catch((error: BusinessError) => {
+    console.error(`Failed to get scanner current setting. Code: ${error.code}, message: ${error.message}`);
+});
+```

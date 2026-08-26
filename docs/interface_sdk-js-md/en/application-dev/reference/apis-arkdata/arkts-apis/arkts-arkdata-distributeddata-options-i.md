@@ -13,6 +13,7 @@ Provides KV store configuration.
 ## Modules to Import
 
 ```TypeScript
+import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## autoSync

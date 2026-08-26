@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## isAppUid
@@ -24,12 +24,30 @@ function isAppUid(v: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| v | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| v | number | 是 | 应用程序的 uid。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回判断结果。如果是应用程序的 uid 则返回 true； 否则返回 false。 |
+
+**示例**
+
+```TypeScript
+// uid通过process.uid获取
+let pres = process.uid;
+let result = process.isAppUid(pres);
+```
+
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// uid通过process.uid获取
+let pres = process.uid;
+// 判断uid是否属于当前应用程序
+let result = processManager.isAppUid(pres);
+console.info("result:", result); // result: true
+```

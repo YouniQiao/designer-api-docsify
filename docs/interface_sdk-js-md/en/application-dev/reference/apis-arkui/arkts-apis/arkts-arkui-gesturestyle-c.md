@@ -29,6 +29,6 @@ A constructor used to create a gesture style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [GestureStyleInterface](arkts-arkui-gesturestyleinterface-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [GestureStyleInterface](arkts-arkui-gesturestyleinterface-i.md) | No | Event options. |

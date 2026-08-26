@@ -14,6 +14,6 @@ type CallbackFunctionWithError = (e: Error) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [e](arkts-arkts-math-decimal-decimal-c.md) | Error | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| e | Error | 是 | 错误信息对象。 |

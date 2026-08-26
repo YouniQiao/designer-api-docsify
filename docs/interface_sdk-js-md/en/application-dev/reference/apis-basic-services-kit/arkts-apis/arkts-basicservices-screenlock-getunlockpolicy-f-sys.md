@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from 'kits/@kit.BasicServicesKit';
+import screenLock from '@kit.BasicServicesKit';
 ```
 
 ## getUnlockPolicy
@@ -26,21 +26,21 @@ Obtains the authentication policy used to unlock the screen.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| userId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| userId | number | Yes | Local user ID of the OS account. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [UnlockPolicy](arkts-basicservices-screenlock-unlockpolicy-e-sys.md) |
+| Type | Description |
+| --- | --- |
+| [UnlockPolicy](arkts-basicservices-screenlock-unlockpolicy-e-sys.md) | The unlock policy. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [13200002](../errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) |
-| 13200004 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed: applications that are not system applications cannot use system API. |
+| [13200002](../errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | The screen lock management service is abnormal. |
+| 13200004 | The userId is not the same as the caller, and the caller is not authorized. |

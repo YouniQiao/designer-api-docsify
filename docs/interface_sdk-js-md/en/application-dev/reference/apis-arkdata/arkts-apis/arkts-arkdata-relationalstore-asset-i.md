@@ -9,7 +9,7 @@ Represents the asset (such as a document, image, or video).
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import relationalStore from '@kit.ArkData';
 ```
 
 ## createTime

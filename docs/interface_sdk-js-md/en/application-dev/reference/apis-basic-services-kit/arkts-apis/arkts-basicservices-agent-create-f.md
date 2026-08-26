@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import request from '@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
 ```
 
 ## create
@@ -14,7 +15,8 @@ function create(context: BaseContext, config: Config, callback: AsyncCallback<Ta
 
 Creates an upload or download task and adds it to the queue. This API uses an asynchronous callback to return the result. HTTP/HTTPS is supported.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -29,22 +31,22 @@ Creates an upload or download task and adds it to the queue. This API uses an as
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
-| config | [Config](arkts-basicservices-agent-config-i.md) | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Task&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Application-based context. |
+| config | [Config](arkts-basicservices-agent-config-i.md) | Yes | Task configuration. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Task&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Task** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [13400001](../errorcode-request.md#13400001-file-operation-error) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900004](../errorcode-request.md#21900004-application-task-queue-full) |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [13400001](../errorcode-request.md#13400001-file-operation-error) | Invalid file or file system error. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900004](../errorcode-request.md#21900004-application-task-queue-full) | The application task queue is full. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode. |
 
 
 ## create
@@ -55,7 +57,8 @@ function create(context: BaseContext, config: Config): Promise<Task>
 
 Creates an upload or download task and adds it to the queue. This API uses a promise to return the result. HTTP/ HTTPS is supported.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
 > .
@@ -70,24 +73,24 @@ Creates an upload or download task and adds it to the queue. This API uses a pro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
-| config | [Config](arkts-basicservices-agent-config-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Application-based context. |
+| config | [Config](arkts-basicservices-agent-config-i.md) | Yes | Task configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Task & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Task & gt; | Promise used to return the created task. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [13400001](../errorcode-request.md#13400001-file-operation-error) |
-| [13400003](../errorcode-request.md#13400003-service-error) |
-| [21900004](../errorcode-request.md#21900004-application-task-queue-full) |
-| [21900005](../errorcode-request.md#21900005-task-mode-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [13400001](../errorcode-request.md#13400001-file-operation-error) | Invalid file or file system error. |
+| [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [21900004](../errorcode-request.md#21900004-application-task-queue-full) | The application task queue is full. |
+| [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode. |

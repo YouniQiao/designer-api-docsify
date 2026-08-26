@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getSupportedVirtualApertures
@@ -28,13 +27,22 @@ getSupportedVirtualApertures(): Array<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;number & gt; | 支持的虚拟光圈列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+
+**示例**
+
+```TypeScript
+function getSupportedVirtualApertures(session: camera.PortraitPhotoSession): Array<number> {
+  let virtualApertures: Array<number> = session.getSupportedVirtualApertures();
+  return virtualApertures;
+}
+```

@@ -4,7 +4,8 @@ Encapsulates the parameters for encryption or decryption using a block cipher mo
 
 This is applicable to block cipher modes that require an IV, such as CBC, CTR, OFB, and CFB.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Before passing a value to
 > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify
 > **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
@@ -20,7 +21,7 @@ This is applicable to block cipher modes that require an IV, such as CBC, CTR, O
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## iv

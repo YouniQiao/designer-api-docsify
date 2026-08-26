@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isNRSupported
@@ -20,9 +19,16 @@ Checks whether the current device supports NR.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true**: supported |
+
+**Examples**
+
+```TypeScript
+let result: boolean = radio.isNRSupported();
+console.info("Result: "+ result);
+```
 
 
 ## isNRSupported
@@ -39,12 +45,20 @@ Checks whether the SIM card in the specified slot supports NR.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true**: supported |
+
+**Examples**
+
+```TypeScript
+let slotId: number = 0;
+let result: boolean = radio.isNRSupported(slotId);
+console.info("Result: "+ result);
+```

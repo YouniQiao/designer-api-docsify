@@ -3,7 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { AdComponent } from '@kit.AdsKit.AdComponent';
+import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
+import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
+import advertising from '@kit.AdsKit';
 ```
 
 ## showAd
@@ -14,8 +17,10 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 
 展示全屏广告。
 
-> **说明：**&gt;
-> 1. 为了保证广告能正确展示，该接口必须和请求广告接口配套使用。&gt;
+> **说明：**
+> 
+> 1. 为了保证广告能正确展示，该接口必须和请求广告接口配套使用。
+> 
 > 2. 该接口仅支持展示激励广告和插屏广告。
 
 **起始版本：** 11
@@ -26,16 +31,32 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | 是 |
-| options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | 是 |
-| context | common.UIAbilityContext | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | 是 | 广告对象。 |
+| options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | 是 | 广告展示参数。 |
+| context | common.UIAbilityContext | 否 | UIAbility的上下文环境，不设置从api: [@ohos.app.ability.common](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ js-apis-app-ability-common)中获取。<br>**起始版本：** 12 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
-| [21800004](../errorcode-ads.md#21800004-广告展示失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
+| [21800004](../errorcode-ads.md#21800004-广告展示失败) | Failed to display the ad. |
+
+**示例**
+
+其中context的获取方式参见[各类Context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { advertising } from '@kit.AdsKit';
+
+function showAd(ad: advertising.Advertisement, context?: common.UIAbilityContext): void {
+  // 广告展示参数，开发者可根据项目实际情况设置
+  const adDisplayOptions: advertising.AdDisplayOptions = {};
+  // 调用全屏广告展示接口
+  advertising.showAd(ad, adDisplayOptions, context);
+}
+```

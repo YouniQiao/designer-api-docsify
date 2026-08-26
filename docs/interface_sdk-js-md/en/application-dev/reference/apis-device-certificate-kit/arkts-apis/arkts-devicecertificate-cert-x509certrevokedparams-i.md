@@ -9,7 +9,6 @@ Parameters for checking certificate revocation status.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## allowDownloadCrl
@@ -20,7 +19,8 @@ allowDownloadCrl?: boolean
 
 Indicates whether to allow CRL download. The default value is false. true: The CDP extension of the certificate is used to download the CRL. false: Do not attempt to download the CRL.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Skip download if matching CRL exists in crls.
 
 **Type:** boolean
@@ -46,7 +46,8 @@ Indicates whether to allow online OCSP check. The default value is false.
 certificate and send a request to obtain a response;  
 - **false**: does not perform online OCSP check.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Skip online OCSP check if a matching OCSP response is found in ocspResponses.
 
 **Type:** boolean

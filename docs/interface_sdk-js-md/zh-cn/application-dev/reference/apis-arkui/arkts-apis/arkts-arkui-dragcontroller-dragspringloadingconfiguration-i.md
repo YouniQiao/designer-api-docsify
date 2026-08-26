@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import dragController from '@kit.ArkUI';
 ```
 
 ## stillTimeLimit

@@ -9,34 +9,34 @@
 ## 导入模块
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import ArkTSUtils from '@kit.ArkTS';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [parse(Defines the utils for ArkTS)](arkts-arkts-ason-parse-f.md) |
-| [stringify(Defines the utils for ArkTS)](arkts-arkts-ason-stringify-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [parse(Defines the utils for ArkTS)](arkts-arkts-ason-parse-f.md) | 用于解析JSON字符串生成ISendable数据或null。 |
+| [stringify(Defines the utils for ArkTS)](arkts-arkts-ason-stringify-f.md) | 该方法将ArkTS对象数据转换为JSON字符串，额外支持Map和Set相关类型。从API 18开始参数修改为Object类型，API 18之前参数只支持ISendable类型 （除Int8Array、Uint8Array、Int16Array、Uint16Array、Int32Array、Uint32Array、Uint8ClampedArray、Float32Array外）。 |
 
 ### 接口
 
-| 名称 |
-| --- |
-| [ParseOptions(Defines the utils for ArkTS)](arkts-arkts-ason-parseoptions-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [ParseOptions(Defines the utils for ArkTS)](arkts-arkts-ason-parseoptions-i.md) | 解析的选项，可定义处理BigInt的模式和解析结果的返回类型。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [BigIntMode(Defines the utils for ArkTS)](arkts-arkts-ason-bigintmode-e.md) |
-| [ParseReturnType(Defines the utils for ArkTS)](arkts-arkts-ason-parsereturntype-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [BigIntMode(Defines the utils for ArkTS)](arkts-arkts-ason-bigintmode-e.md) | 定义处理BigInt的模式。 |
+| [ParseReturnType(Defines the utils for ArkTS)](arkts-arkts-ason-parsereturntype-e.md) | 定义解析结果的返回类型。 |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [ISendable(Defines the utils for ArkTS)](arkts-arkts-ason-isendable-t.md) |
-| [Transformer(Defines the utils for ArkTS)](arkts-arkts-ason-transformer-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [ISendable(Defines the utils for ArkTS)](arkts-arkts-ason-isendable-t.md) | ISendable是所有Sendable类型（除null和undefined）的父类型。自身没有任何必要的方法和属性。 |
+| [Transformer(Defines the utils for ArkTS)](arkts-arkts-ason-transformer-t.md) | 用于转换结果函数的类型。 |

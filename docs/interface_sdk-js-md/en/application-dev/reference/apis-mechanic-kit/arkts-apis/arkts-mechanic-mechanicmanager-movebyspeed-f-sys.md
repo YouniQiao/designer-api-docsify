@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## moveBySpeed
@@ -22,23 +21,23 @@ Move a mechanical device at the specified speed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mechId | number | Yes |
-| params | [SpeedParams](arkts-mechanic-mechanicmanager-speedparams-i-sys.md) | Yes |
-| duration | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mechId | number | Yes | ID of the mechanical device. The value should be an integer. |
+| params | [SpeedParams](arkts-mechanic-mechanicmanager-speedparams-i-sys.md) | Yes | Parameters to use when moving. |
+| duration | number | Yes | Duration of movement, in ms. The value should be an integer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Result & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Result & gt; | Promise that returns the execution result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
-| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+import backgroundTaskManager from '@kit.BackgroundTasksKit';
 ```
 
 ## getAllEfficiencyResources
@@ -22,15 +22,32 @@ function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[EfficiencyResourcesInfo](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcesinfo-i-sys.md)[]&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[EfficiencyResourcesInfo](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcesinfo-i-sys.md)[]&gt; | Promise对象，返回所有能效资源信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [18700001](../errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) |
-| [18700002](../errorcode-backgroundTaskMgr.md#18700002-parcel读写操作失败) |
-| [18700004](../errorcode-backgroundTaskMgr.md#18700004-系统服务失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [18700001](../errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) | Caller information verification failed for an energy resource request. |
+| [18700002](../errorcode-backgroundTaskMgr.md#18700002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters;   2. Failed to apply for memory. |
+| [18700004](../errorcode-backgroundTaskMgr.md#18700004-系统服务失败) | System service operation failed. |
+
+**示例**
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    backgroundTaskManager.getAllEfficiencyResources().then((res: backgroundTaskManager.EfficiencyResourcesInfo[]) => {
+        console.info(`Operation getAllEfficiencyResources succeeded. data: ` + JSON.stringify(res));
+    }).catch((error : BusinessError) => {
+        console.error(`Operation getAllEfficiencyResources failed. code is ${error.code} message is ${error.message}`);
+    });
+} catch (error) {
+    console.error(`Operation getAllEfficiencyResources failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
+}
+```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getLineInstance
@@ -22,12 +22,20 @@ export function getLineInstance(locale: string): BreakIterator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。 生成的[BreakIterator](arkts-localization-i18n-breakiterator-c.md)将按照指定区域的规则计算可换行点的位置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [BreakIterator](arkts-localization-i18n-breakiterator-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [BreakIterator](arkts-localization-i18n-breakiterator-c.md) | 可换行点处理器。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
+```

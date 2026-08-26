@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## isGnssServiceSupported
@@ -24,12 +23,23 @@ function isGnssServiceSupported(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true：支持GNSS功能。false：不支持GNSS功能。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
+
+**示例**
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+try {
+    let gnssServiceSupported = geoLocationManager.isGnssServiceSupported();
+} catch (err) {
+    console.error("errCode:" + err.code + ", message:"  + err.message);
+}
+```

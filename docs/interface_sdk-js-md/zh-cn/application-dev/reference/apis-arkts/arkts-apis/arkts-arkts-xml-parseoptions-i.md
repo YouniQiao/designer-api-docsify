@@ -9,7 +9,6 @@ XML解析选项，用于配置XmlPullParser的解析行为。开发者可通过s
 ## 导入模块
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## attributeValueCallbackFunction
@@ -28,10 +27,10 @@ attributeValueCallbackFunction?: (name: string, value: string) => boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 |  |
+| value | string | 是 |  |
 
 ## attributeWithTagCallbackFunction
 
@@ -63,10 +62,10 @@ tagValueCallbackFunction?: (name: string, value: string) => boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 |  |
+| value | string | 是 |  |
 
 ## tokenValueCallbackFunction
 
@@ -84,10 +83,10 @@ tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| eventType | [EventType](arkts-arkts-xml-eventtype-e.md) | 是 |
-| value | [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventType | [EventType](arkts-arkts-xml-eventtype-e.md) | 是 |  |
+| value | [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | 是 |  |
 
 ## ignoreNameSpace
 

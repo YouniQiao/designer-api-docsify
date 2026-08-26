@@ -12,8 +12,8 @@ Represents the value of each attribute in [AssetMap](arkts-assetstore-asset-asse
 
 **System capability:** SystemCapability.Security.Asset
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
-| number |
-| Uint8Array |
+| Type | Description |
+| --- | --- |
+| boolean | The value is a boolean value, with a range of true or false. |
+| number | The value is a number, and the value range is the enumerated value or number corresponding to the tag. |
+| Uint8Array | The value is a byte array, and the content is defined by the service. |

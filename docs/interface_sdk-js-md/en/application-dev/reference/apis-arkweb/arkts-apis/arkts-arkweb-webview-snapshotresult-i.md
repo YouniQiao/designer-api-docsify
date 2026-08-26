@@ -9,7 +9,6 @@ Represents a full drawing result.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## id

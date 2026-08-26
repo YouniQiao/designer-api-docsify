@@ -9,7 +9,7 @@ Describes the audio and video recording parameters.The **audioSourceType** and *
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## audioSourceType

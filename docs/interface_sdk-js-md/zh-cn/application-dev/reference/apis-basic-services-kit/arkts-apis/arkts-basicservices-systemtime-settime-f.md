@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
+import systemTime from '@kit.BasicServicesKit';
+import systemTimer from '@kit.BasicServicesKitr';
 ```
 
 ## setTime
@@ -26,16 +27,37 @@ function setTime(time: number, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| time | number | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| time | number | 是 | 目标时间戳（ms）。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| -1 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| -1 | Parameter check failed, permission denied, or system error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// time对应的时间为2021-01-20 02:36:25
+let time = 1611081385000;
+try {
+  systemTime.setTime(time, (error: BusinessError) => {
+    if (error) {
+      console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
+      return;
+    }
+    console.info(`Succeeded in setting time`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
+}
+```
 
 
 ## setTime
@@ -58,18 +80,37 @@ function setTime(time: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| time | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| time | number | 是 | 目标时间戳（ms）。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| -1 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| -1 | Parameter check failed, permission denied, or system error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// time对应的时间为2021-01-20 02:36:25
+let time = 1611081385000;
+try {
+  systemTime.setTime(time).then(() => {
+    console.info(`Succeeded in setting time.`);
+  }).catch((error: BusinessError) => {
+    console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
+}
+```

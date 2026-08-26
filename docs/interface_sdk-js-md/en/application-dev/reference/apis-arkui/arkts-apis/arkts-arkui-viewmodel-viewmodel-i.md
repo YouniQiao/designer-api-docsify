@@ -22,16 +22,16 @@ Displays content based on the current system language and a path of the language
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| param | object \| Array & lt;any & gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Path of the language resource key |
+| param | object \| Array & lt;any & gt; | No | Content used to replace placeholders during runtime. There are two types of placeholders available: 1. Named placeholder, for example, {name}. The actual content must be of the object type, for example, \\$t('strings.object', {name: 'Hello world'}). 2. Digit placeholder, for example, {0}. The actual content must be of the array type, for example, \\$t('strings.array', ['Hello world']). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | content to display |
 
 ## $refs
 

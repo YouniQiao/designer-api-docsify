@@ -2,11 +2,13 @@
 
 使用OffscreenCanvasRenderingContext2D在Canvas上进行离屏绘制，绘制对象可以是形状、文本、图片等。 离屏绘制是指将需要绘制的内容先绘制在缓存区，然后将其转换成图片，一次性绘制到Canvas上。 离屏绘制使用CPU进行绘制，绘制速度较慢，对绘制速度有要求的场景应避免使用离屏绘制。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > OffscreenCanvasRenderingContext2D无法在ServiceExtensionAbility中使用，
 > ServiceExtensionAbility中建议使用
 > [Drawing模块](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-drawing.md)
-> 进行离屏绘制。&gt;
+> 进行离屏绘制。
+> 
 > beginPath、moveTo、lineTo、closePath、bezierCurveTo、quadraticCurveTo、arc、arcTo、ellipse、rect和
 > roundRect接口只能对OffscreenCanvasRenderingContext2D中的路径生效，无法对
 > [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)
@@ -32,16 +34,16 @@
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| width | number | 是 |
-| height | number | 是 |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | number | 是 |  |
+| height | number | 是 |  |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
+| 类型 | 说明 |
+| --- | --- |
 ## [[Call]]
 
 ```TypeScript
@@ -52,14 +54,14 @@
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| width | number | 是 |
-| height | number | 是 |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | number | 是 |  |
+| height | number | 是 |  |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |  |
+| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 否 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
+| 类型 | 说明 |
+| --- | --- |

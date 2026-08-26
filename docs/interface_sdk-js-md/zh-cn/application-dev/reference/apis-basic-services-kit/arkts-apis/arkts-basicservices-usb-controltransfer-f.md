@@ -3,7 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import usb from '@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKitManager';
+import serialManager from '@kit.BasicServicesKitManager.serial';
 ```
 
 ## controlTransfer
@@ -24,14 +26,30 @@ function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, ti
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 |
-| controlparam | [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md) | 是 |
-| timeout | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 | 用于确定设备。 |
+| controlparam | [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md) | 是 | 控制传输参数。 |
+| timeout | number | 否 | 超时时间（单位：ms），可选参数，默认为0不超时。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，获取传输或接收到的数据块大小。失败返回-1。 |
+
+**示例**
+
+```TypeScript
+let param = {
+  request: 0,
+  reqType: 0,
+  target:0,
+  value: 0,
+  index: 0,
+  data: null
+};
+usb.controlTransfer(devicepipe, param).then((ret) => {
+ console.info(`controlTransfer = ${ret}`);
+})
+```

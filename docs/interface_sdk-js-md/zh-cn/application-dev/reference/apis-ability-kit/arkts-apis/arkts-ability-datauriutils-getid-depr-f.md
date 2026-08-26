@@ -23,12 +23,20 @@ function getId(uri: string): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 表示uri对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回uri路径末尾的ID。 |
+
+**示例**
+
+```TypeScript
+import dataUriUtils from '@ohos.ability.dataUriUtils';
+
+let id = dataUriUtils.getId('com.example.dataUriUtils/1221');
+```

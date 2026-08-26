@@ -9,7 +9,8 @@ Provides APIs for setting the height (**height**), background color (**backgroun
 ## Modules to Import
 
 ```TypeScript
-import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from 'kits/@kit.ArkUI';
+import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
+import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUIV2';
 ```
 
 ## backgroundColor
@@ -30,15 +31,15 @@ Sets the background color of the toolbar. By overriding this API, you can implem
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [backgroundColor](#backgroundcolor) | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| backgroundColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Toolbar background color Default value: **\\$r('sys.color.ohos_id_color_toolbar_bg') |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) |
+| Type | Description |
+| --- | --- |
+| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | ToolBarModifier** object after the background color is set. |
 
 ## height
 
@@ -58,15 +59,15 @@ Sets the height of the toolbar. By overriding this API, you can implement custom
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [height](#height) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| height | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Height of the toolbar. The default height of the toolbar is 56 vp, which does not include the divider. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) |
+| Type | Description |
+| --- | --- |
+| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | ToolBarModifier** object after the height is set. |
 
 ## padding
 
@@ -86,15 +87,15 @@ Sets the left and right padding of the toolbar. By overriding this API, you can 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [padding](#padding) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| padding | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Left and right padding of the toolbar, which is effective only when there are fewer than five items. By default, the padding is 24 vp when there are fewer than five items and 0 when there are five or more items. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) |
+| Type | Description |
+| --- | --- |
+| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | ToolBarModifier** object after the padding is set. |
 
 ## stateEffect
 
@@ -114,12 +115,12 @@ Sets whether to display the pressed state effect.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [stateEffect](#stateeffect) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| stateEffect | boolean | Yes | Whether to display the pressed state effect on the toolbar. The value **true** means to display the pressed state effect on the toolbar, and **false** means the opposite. Default value: **true |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) |
+| Type | Description |
+| --- | --- |
+| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | ToolBarModifier** object after the pressed state effect is set. |

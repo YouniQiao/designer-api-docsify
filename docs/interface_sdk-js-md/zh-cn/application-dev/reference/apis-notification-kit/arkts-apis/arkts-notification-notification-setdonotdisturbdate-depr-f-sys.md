@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## setDoNotDisturbDate
@@ -27,10 +30,32 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 | 免打扰时间选项。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let setDoNotDisturbDateCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("setDoNotDisturbDate failed " + JSON.stringify(err));
+  } else {
+    console.info("setDoNotDisturbDate success");
+  }
+}
+
+let doNotDisturbDate: Notification.DoNotDisturbDate = {
+  type: Notification.DoNotDisturbType.TYPE_ONCE,
+  begin: new Date(),
+  end: new Date(2021, 11, 15, 18, 0)
+};
+
+Notification.setDoNotDisturbDate(doNotDisturbDate, setDoNotDisturbDateCallback);
+```
 
 
 ## setDoNotDisturbDate
@@ -55,15 +80,32 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 | 免打扰时间选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let doNotDisturbDate: Notification.DoNotDisturbDate = {
+    type: Notification.DoNotDisturbType.TYPE_ONCE,
+    begin: new Date(),
+    end: new Date(2021, 11, 15, 18, 0)
+};
+Notification.setDoNotDisturbDate(doNotDisturbDate).then(() => {
+  console.info("setDoNotDisturbDate success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`setDoNotDisturbDate failed, code is ${err}`);
+});
+```
 
 
 ## setDoNotDisturbDate
@@ -88,11 +130,34 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 |
-| userId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 | 免打扰时间选项。 |
+| userId | number | 是 | 设置免打扰时间的用户ID。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let setDoNotDisturbDateCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("setDoNotDisturbDate failed " + JSON.stringify(err));
+  } else {
+    console.info("setDoNotDisturbDate success");
+  }
+}
+
+let doNotDisturbDate: Notification.DoNotDisturbDate = {
+  type: Notification.DoNotDisturbType.TYPE_ONCE,
+  begin: new Date(),
+  end: new Date(2021, 11, 15, 18, 0)
+};
+
+let userId: number = 1;
+Notification.setDoNotDisturbDate(doNotDisturbDate, userId, setDoNotDisturbDateCallback);
+```
 
 
 ## setDoNotDisturbDate
@@ -117,13 +182,33 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 |
-| userId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 | 免打扰时间选项。 |
+| userId | number | 是 | 设置免打扰时间的用户ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let doNotDisturbDate: Notification.DoNotDisturbDate = {
+  type: Notification.DoNotDisturbType.TYPE_ONCE,
+  begin: new Date(),
+  end: new Date(2021, 11, 15, 18, 0)
+};
+
+let userId: number = 1;
+
+Notification.setDoNotDisturbDate(doNotDisturbDate, userId).then(() => {
+  console.info("setDoNotDisturbDate success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`setDoNotDisturbDate failed, code is ${err}`);
+});
+```

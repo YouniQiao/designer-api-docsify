@@ -11,7 +11,6 @@ OIS (Optical Image Stabilization) interface.
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## setOISMode
@@ -32,16 +31,16 @@ Sets the OIS mode.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [OISMode](arkts-camera-camera-oismode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [OISMode](arkts-camera-camera-oismode-e.md) | 是 | The OIS mode to set. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setOISModeCustom
 
@@ -61,14 +60,14 @@ Sets custom OIS bias values for each axis.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| pitch | number | 是 |
-| yaw | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pitch | number | 是 | Bias value for pitch axis. |
+| yaw | number | 是 | Bias value for yaw axis. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |

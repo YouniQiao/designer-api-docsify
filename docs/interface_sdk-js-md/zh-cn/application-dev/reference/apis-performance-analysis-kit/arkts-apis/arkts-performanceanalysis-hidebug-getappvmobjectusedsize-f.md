@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getAppVMObjectUsedSize
@@ -20,6 +19,14 @@ function getAppVMObjectUsedSize(): bigint
 
 **返回值：**
 
-| 类型 |
-| --- |
-| bigint |
+| 类型 | 说明 |
+| --- | --- |
+| bigint | 当前虚拟机中ArkTS对象所占用的内存大小，单位为KB。 |
+
+**示例**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+console.info(`getAppVMObjectUsedSize = ${hidebug.getAppVMObjectUsedSize()}`);
+```

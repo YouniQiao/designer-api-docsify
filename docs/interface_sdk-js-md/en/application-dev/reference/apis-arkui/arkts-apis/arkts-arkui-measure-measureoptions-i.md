@@ -9,7 +9,7 @@ Provides attributes of the measured text.
 ## Modules to Import
 
 ```TypeScript
-import { MeasureText, MeasureOptions } from 'kits/@kit.ArkUI';
+import MeasureText, { MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## baselineOffset

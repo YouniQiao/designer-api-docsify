@@ -9,7 +9,7 @@ Represents the extension information of an input method.
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodExtraConfig } from 'kits/@kit.IMEKit';
+import { InputMethodExtraConfig } from '@kit.IMEKit';
 ```
 
 ## customSettings

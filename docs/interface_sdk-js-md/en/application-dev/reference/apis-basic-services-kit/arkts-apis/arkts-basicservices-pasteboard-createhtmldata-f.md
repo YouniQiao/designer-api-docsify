@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import pasteboard from '@kit.BasicServicesKit';
 ```
 
 ## createHtmlData
@@ -24,12 +24,19 @@ Creates a **PasteData** object of the HTML type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [htmlText](arkts-basicservices-pasteboard-pastedatarecord-i.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| htmlText | string | Yes | HTML content. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) |
+| Type | Description |
+| --- | --- |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
+
+**Examples**
+
+```TypeScript
+let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
+let pasteData: pasteboard.PasteData = pasteboard.createHtmlData(html);
+```

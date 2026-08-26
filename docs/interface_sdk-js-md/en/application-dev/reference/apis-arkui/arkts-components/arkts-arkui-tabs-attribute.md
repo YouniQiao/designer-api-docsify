@@ -31,9 +31,9 @@ Sets the tab switching animation curve for the **Tabs** component. For details a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| curve | Curve \| [ICurve](arkts-arkui-icurve-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| curve | Curve \| [ICurve](arkts-arkui-icurve-i.md) | Yes | Tab switching animation curve.Default value:When pages are turned by swiping in **TabContent**, the default value is **interpolatingSpring(-1, 1, 228, 30)**.When pages are turned by tapping tabs or calling the **changeIndex** API of **TabsController**, the default value is **cubicBezierCurve(0.2, 0.0, 0.1, 1.0)**.When a custom animation curve is set, it applies to all tab switching animations��whether triggered by swiping, tapping a tab, or calling the **changeIndex** API. |
 
 ## animationDuration
 
@@ -51,9 +51,9 @@ Sets the duration of the tab switching animation for the **Tabs** component.If *
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Duration of the tab switching animation.Default value:API version 10 and earlier versions: If this parameter is set to **null** or is not set, the default value **0**, which means no animation for tab switching. If this parameter is set to **undefined** or a value less than 0, the default value is **300**.API version 11 and later versions: If this parameter is set to an invalid value or is not set, the default value is **0** when the tab bar is set to **BottomTabBarStyle** and **300** when the tab bar is set to any other style.Unit: ms Value range: 0, +∞). |
 
 ## animationMode
 
@@ -63,7 +63,8 @@ animationMode(mode: Optional<AnimationMode>)
 
 Sets the animation mode for tab switching initiated by clicking a specific tab or by calling the **changeIndex** API of **TabsController**.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This attribute cannot be called within [attributeModifier.
 
 **Since:** 12
@@ -76,9 +77,9 @@ Sets the animation mode for tab switching initiated by clicking a specific tab o
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;[AnimationMode](arkts-arkui-animationmode-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[AnimationMode](arkts-arkui-animationmode-e.md)&gt; | Yes | Animation mode for tab switching initiated by clicking a specific tab or by calling the **changeIndex** API of **TabsController**.Default value: **AnimationMode.CONTENT_FIRST**, which means the target page content is loaded first, followed by the animation. |
 
 ## barBackgroundBlurStyle
 
@@ -88,7 +89,8 @@ barBackgroundBlurStyle(value: BlurStyle)
 
 Sets the background blur style of the tab bar.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -101,9 +103,9 @@ Sets the background blur style of the tab bar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Background blur style of the tab bar.Default value: **BlurStyle.NONE |
 
 ## barBackgroundBlurStyle
 
@@ -123,10 +125,10 @@ Defines the blur style to apply between the background and content of a tab bar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes |
-| options | [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Settings of the background blur style, including the blur radius, mask color, mask opacity, saturation, and brightness. |
+| options | [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md) | Yes | Background blur options. |
 
 ## barBackgroundColor
 
@@ -146,9 +148,9 @@ Sets the background color of the tab bar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the tab bar.Default value: **Color.Transparent |
 
 ## barBackgroundEffect
 
@@ -168,9 +170,9 @@ Sets the background effect of the tab bar, including the blur radius, brightness
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md) | Yes | Background effect options, including the blur radius, brightness, saturation, and color. |
 
 ## barDisplayModeBreakpoint
 
@@ -190,9 +192,9 @@ Sets the display mode of the tab bar for different Tabs container sizes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[TabsBreakpointType](arkts-arkui-tabsbreakpointtype-i.md)&lt;[TabBarDisplayMode](arkts-arkui-tabbardisplaymode-e.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[TabsBreakpointType](arkts-arkui-tabsbreakpointtype-i.md)&lt;[TabBarDisplayMode](arkts-arkui-tabbardisplaymode-e.md)&gt;&gt; | Yes | Display mode of the tab bar for different Tabs container sizes. |
 
 ## barFloatingStyle
 
@@ -212,9 +214,9 @@ Enable floating style for bar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[FloatingTabBarStyle](arkts-arkui-floatingtabbarstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[FloatingTabBarStyle](arkts-arkui-floatingtabbarstyle-i.md)&gt; | Yes | floating style for bar. |
 
 ## barGridAlign
 
@@ -234,9 +236,9 @@ Sets the visible area of the tab bar in grid mode. For details, see **BarGridCol
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [BarGridColumnOptions](arkts-arkui-bargridcolumnoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BarGridColumnOptions](arkts-arkui-bargridcolumnoptions-i.md) | Yes | Visible area of the tab bar in grid mode. |
 
 ## barHeight
 
@@ -254,9 +256,9 @@ Sets the height of the tab bar. For horizontal **Tabs** components, you can set 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the tab bar.Default value:If no style is set or **CustomBuilder** is used to set a custom style for the **TabBar**, and **vertical** is set to **false**, the default value is 56 vp.If no style is set or **CustomBuilder** is used to set a custom style for the **TabBar**, and **vertical** is set to **true**, the default value is the height of the **Tabs** component.If [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) is set, and the **vertical** attribute is **false**, the default value is 56 vp.If **SubTabBarStyle** is set, and the **vertical** attribute is **true**, the default value is the height of the **Tabs** component.If [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) is set, and the **vertical** attribute is **true**, the default value is the height of the **Tabs** component.If **BottomTabBarStyle** is set, and the **vertical** attribute is **false**, the default value is 56 vp in versions earlier than API version 12 and 48 vp since API version 12.<br>**Since:** 8 |
 
 ## barHeight
 
@@ -276,10 +278,10 @@ Sets the height of the tab bar. For horizontal **Tabs** components, you can set 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| height | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
-| noMinHeightLimit | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| height | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the tab bar.Default value:If no style is set or **CustomBuilder** is used to set a custom style for the **TabBar**, and **vertical** is set to **false**, the default value is 56 vp.If no style is set or **CustomBuilder** is used to set a custom style for the **TabBar**, and **vertical** is set to **true**, the default value is the height of the **Tabs** component.If [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) is set, and the **vertical** attribute is **false**, the default value is 56 vp.If **SubTabBarStyle** is set, and the **vertical** attribute is **true**, the default value is the height of the **Tabs** component.If [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) is set, and the **vertical** attribute is **true**, the default value is the height of the **Tabs** component.If **BottomTabBarStyle** is set, and the **vertical** attribute is **false**, the default value is 48 vp. |
+| noMinHeightLimit | boolean | Yes | Whether to remove the minimum height limit of the tab bar when **height** is set to **'auto'**. The default value is **false**.   **NOTE：** **true**: removes the minimum height limit, allowing the height to be less than the default value.   **false**: enforces the minimum height limit, meaning the height cannot be less than the default value. |
 
 ## barMode
 
@@ -299,9 +301,9 @@ Sets the tab bar layout mode to **BarMode.Fixed**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [BarMode.Fixed](arkts-arkui-barmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BarMode.Fixed](arkts-arkui-barmode-e.md) | Yes | The width of each tab is determined by equally dividing the number of tabs by the bar width (or bar height in the vertical layout). |
 
 ## barMode
 
@@ -321,10 +323,10 @@ Sets the tab bar layout mode to **BarMode.Scrollable**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [BarMode.Scrollable](arkts-arkui-barmode-e.md) | Yes |
-| options | [ScrollableBarModeOptions](arkts-arkui-scrollablebarmodeoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BarMode.Scrollable](arkts-arkui-barmode-e.md) | Yes | The width of each tab is determined by the actual layout. The tabs are scrollable in the following case: In horizontal layout, the total width exceeds the tab bar width; in vertical layout, the total height exceeds the tab bar height. |
+| options | [ScrollableBarModeOptions](arkts-arkui-scrollablebarmodeoptions-i.md) | Yes | Layout style of the tab bar in scrollable mode.   **NOTE：**This parameter is effective only when the tab bar is in scrollable mode. |
 
 ## barMode
 
@@ -342,10 +344,10 @@ Sets the tab bar layout mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [BarMode](arkts-arkui-barmode-e.md) | Yes |
-| options | [ScrollableBarModeOptions](arkts-arkui-scrollablebarmodeoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BarMode](arkts-arkui-barmode-e.md) | Yes | Layout mode.Default value: **BarMode.Fixed |
+| options | [ScrollableBarModeOptions](arkts-arkui-scrollablebarmodeoptions-i.md) | No | Layout style of the tab bar in scrollable mode.   **NOTE：**This parameter is effective only when the tab bar is in horizontal scrollable mode.<br>**Since:** 10 |
 
 ## barOverlap
 
@@ -365,9 +367,9 @@ Sets whether the tab bar overlaps the **TabContent** component with a blurred ba
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the tab bar overlaps the **TabContent** component with a blurred background effect. **true**: The tab bar overlaps the **TabContent** component with a blurred background effect, and the default blur style of the tab bar is set to **'BlurStyle.COMPONENT_THICK'**.    **false**: There is no blur or overlap effect.Default value: **false**. |
 
 ## barPosition
 
@@ -385,9 +387,9 @@ Sets the position of the **Tabs** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [BarPosition](arkts-arkui-barposition-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BarPosition](arkts-arkui-barposition-e.md) | Yes | Position of the **Tabs** component.Default value: **BarPosition.Start |
 
 ## barStyle
 
@@ -407,9 +409,9 @@ Sets the display style of the tab bar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[TabBarStyle](arkts-arkui-tabbarstyle-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[TabBarStyle](arkts-arkui-tabbarstyle-e.md)&gt; | Yes | Display style of the tab bar. Default value: **TabBarStyle.BOTTOM**. |
 
 ## barWidth
 
@@ -427,9 +429,9 @@ Sets the width of the tab bar. If the set value is less than 0 or greater than t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the tab bar.Default value:If the tab bar has the **vertical** attribute set to **false** and does not have [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) or [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) specified, the default value is the width of the **Tabs** component.If neither **SubTabBarStyle** nor **BottomTabBarStyle** is set, and the **vertical** attribute is **true**, the default value is 56 vp.If **SubTabBarStyle** is set, and the **vertical** attribute is **false**, the default value is the width of the **Tabs** component.If **SubTabBarStyle** is set, and the **vertical** attribute is **true**, the default value is 56 vp.If **BottomTabBarStyle** is set, and the **vertical** attribute is **true**, the default value is 96 vp.If **BottomTabBarStyle** is set, and the **vertical** attribute is **false**, the default value is the width of the **Tabs** component.<br>**Since:** 8 |
 
 ## cachedMaxCount
 
@@ -449,10 +451,10 @@ Sets the maximum number of child components to cache and the caching mode. If th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| count | number | Yes |
-| mode | [TabsCacheMode](arkts-arkui-tabscachemode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| count | number | Yes | Maximum number of child components to cache. If the value is out of the range, the unnecessary child components are automatically released.Value range: [0, +∞) |
+| mode | [TabsCacheMode](arkts-arkui-tabscachemode-e.md) | Yes | Caching mode for child components.Default value: **TabsCacheMode.CACHE_BOTH_SIDE |
 
 ## customContentTransition
 
@@ -475,7 +477,8 @@ If the second custom animation is triggered during the execution of the first cu
 If the **zIndex** attribute is not set for related pages, the **zIndex** values of all pages are the same. In this case, the pages are rendered in the order in which they are added to the component tree (that is, the sequence of page indexes). In light of this, to control the rendering levels of pages, set the **zIndex** attribute of the pages.
 8. This attribute cannot be called within attributeModifier.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called in attributeModifier since API version 20.
 
 **Since:** 11
@@ -488,9 +491,9 @@ If the **zIndex** attribute is not set for related pages, the **zIndex** values 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| delegate | [TabsCustomContentTransitionCallback](arkts-arkui-tabscustomcontenttransitioncallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| delegate | [TabsCustomContentTransitionCallback](arkts-arkui-tabscustomcontenttransitioncallback-t.md) | Yes | Callback invoked when the custom tab transition animation starts.<br>**Since:** 18 |
 
 ## divider
 
@@ -510,9 +513,9 @@ Sets the divider between the **TabBar** and **TabContent** components.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [DividerStyle](arkts-arkui-dividerstyle-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [DividerStyle](arkts-arkui-dividerstyle-i.md) \| null | Yes | Divider style. By default, the divider is not displayed.    **DividerStyle**: divider style.   **null**: No divider is displayed. |
 
 ## edgeEffect
 
@@ -522,7 +525,8 @@ edgeEffect(edgeEffect: Optional<EdgeEffect>)
 
 Sets the edge effect used when the boundary of the scrolling area is reached.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 17.
 
 **Since:** 12
@@ -535,9 +539,9 @@ Sets the edge effect used when the boundary of the scrolling area is reached.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [edgeEffect](#edgeeffect) | [Optional](arkts-arkui-optional-t.md)&lt;[EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| edgeEffect | [Optional](arkts-arkui-optional-t.md)&lt;[EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md)&gt; | Yes | Effect used when the boundary of the scrolling area is reached.Default value: **EdgeEffect.Spring |
 
 ## fadingEdge
 
@@ -557,9 +561,9 @@ Sets whether the tabs fade out when they exceed the container width. It is recom
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the tabs fade out when they exceed the container width.   **true** (default): The tab fades out when they exceed the container width.    **false**: The tabs are clipped without any fade effect when they exceed the container width. |
 
 ## nestedScroll
 
@@ -580,9 +584,9 @@ Sets the nested scrolling mode of the **Tabs** component and its parent componen
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [TabsNestedScrollMode](arkts-arkui-tabsnestedscrollmode-e.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [TabsNestedScrollMode](arkts-arkui-tabsnestedscrollmode-e.md) \| undefined | Yes | Nested scrolling mode of the **Tabs** component and its parent container.When this parameter is set to **undefined**, the scrolling is contained within the **Tabs** component, and no scroll chaining occurs, that is, the parent component does not scroll when the component scrolling reaches the boundary. |
 
 ## onAnimationEnd
 
@@ -602,9 +606,9 @@ Triggered when the tab switching animation is completed, including cases where t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | [OnTabsAnimationEndCallback](arkts-arkui-ontabsanimationendcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | [OnTabsAnimationEndCallback](arkts-arkui-ontabsanimationendcallback-t.md) | Yes | Callback triggered upon animation completion or interruption.<br>**Since:** 18 |
 
 ## onAnimationStart
 
@@ -624,9 +628,9 @@ Triggered when the transition animation starts. If [animationDuration](#animatio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | [OnTabsAnimationStartCallback](arkts-arkui-ontabsanimationstartcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | [OnTabsAnimationStartCallback](arkts-arkui-ontabsanimationstartcallback-t.md) | Yes | Callback triggered when the transition animation starts.<br>**Since:** 18 |
 
 ## onChange
 
@@ -640,7 +644,8 @@ Triggered after the active tab changes.This event is triggered when any of the f
 3. After the active tab changes by updating the index through the bound [state variable](../../../ui/state-management/arkts-state.md).
 4. After the active tab changes by tapping a tab in the tab bar.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When a custom tab is used, relying solely on the **onChange** event for synchronization between tabs and swipe
 > gestures may result in delayed visual updates, since it is triggered after the swipe-triggered tab switching
 > animation is completed. For smooth animations, listen for the active tab index in
@@ -656,9 +661,9 @@ Triggered after the active tab changes.This event is triggered when any of the f
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback & lt;number & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback & lt;number & gt; | Yes | Index of the active tab. The index starts from 0.<br>**Since:** 18 |
 
 ## onContentDidScroll
 
@@ -678,9 +683,9 @@ Triggered when content in the **Tabs** component scrolls.During page scrolling, 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | [OnTabsContentDidScrollCallback](arkts-arkui-ontabscontentdidscrollcallback-t.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | [OnTabsContentDidScrollCallback](arkts-arkui-ontabscontentdidscrollcallback-t.md) \| undefined | Yes | Callback triggered when a tab page is swiped. Passing **undefined** will unbind the previously registered callback. |
 
 ## onContentWillChange
 
@@ -696,7 +701,8 @@ Triggered when a new page is about to be displayed.This event is triggered when 
 5. When the user presses the left or
 right arrow key on the keyboard to switch to a new page while the tab bar has focus.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called in attributeModifier since API version 20.
 
 **Since:** 12
@@ -709,9 +715,9 @@ right arrow key on the keyboard to switch to a new page while the tab bar has fo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | [OnTabsContentWillChangeCallback](arkts-arkui-ontabscontentwillchangecallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | [OnTabsContentWillChangeCallback](arkts-arkui-ontabscontentwillchangecallback-t.md) | Yes | Callback triggered when a new page is about to be displayed.<br>**Since:** 18 |
 
 ## onGestureSwipe
 
@@ -731,9 +737,9 @@ Triggered on a frame-by-frame basis during swipe gestures for tab switching.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | [OnTabsGestureSwipeCallback](arkts-arkui-ontabsgestureswipecallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | [OnTabsGestureSwipeCallback](arkts-arkui-ontabsgestureswipecallback-t.md) | Yes | Triggered on a frame-by-frame basis during swipe gestures for tab switching.<br>**Since:** 18 |
 
 ## onSelected
 
@@ -749,7 +755,8 @@ is called, triggering the switching animation.
 [state variable](../../../ui/state-management/arkts-state.md).
 4. When a tab is tapped.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > In the **onSelected** callback, the index of the current displayed page cannot be set using **index** of
 > [TabsOptions](arkts-arkui-tabsoptions-i.md), and **TabsController.changeIndex()** cannot be called.
 
@@ -763,9 +770,9 @@ is called, triggering the switching animation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback & lt;number & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback & lt;number & gt; | Yes | Index of the currently selected element. |
 
 ## onTabBarClick
 
@@ -785,9 +792,9 @@ Triggered when a tab is clicked.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback & lt;number & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback & lt;number & gt; | Yes | Index of the clicked tab. The index starts from 0.<br>**Since:** 18 |
 
 ## onUnselected
 
@@ -811,9 +818,9 @@ Triggered when the selected element changes. The index of the element that is ab
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback & lt;number & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback & lt;number & gt; | Yes | Index of the element that is about to be hidden. |
 
 ## pageFlipMode
 
@@ -833,9 +840,9 @@ Sets the mode for flipping pages using the mouse wheel.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;[PageFlipMode](../arkts-apis/arkts-arkui-pageflipmode-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[PageFlipMode](../arkts-apis/arkts-arkui-pageflipmode-e.md)&gt; | Yes | Mode for flipping pages using the mouse wheel.Default value: **PageFlipMode.CONTINUOUS |
 
 ## scrollable
 
@@ -853,9 +860,9 @@ Sets whether the tabs are scrollable.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the tabs are scrollable.   **true** (default): The tabs are scrollable.    **false**: The tabs are not scrollable. |
 
 ## sidebarHeader
 
@@ -875,9 +882,9 @@ Sets the header content of the sidebar tab bar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| header | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| header | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes | Header content of the sidebar tab bar. |
 
 ## sidebarPosition
 
@@ -897,9 +904,9 @@ Sets the position of the sidebar tab bar. The sidebar tab bar position is not af
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| position | [Optional](arkts-arkui-optional-t.md)&lt;[BarPosition](arkts-arkui-barposition-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| position | [Optional](arkts-arkui-optional-t.md)&lt;[BarPosition](arkts-arkui-barposition-e.md)&gt; | Yes | Position of the sidebar tab bar. Default value: **BarPosition.Start**. |
 
 ## sidebarSearchable
 
@@ -919,9 +926,9 @@ Sets the search options for the sidebar tab bar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| searchOptions | [TabsSidebarSearchableOptions](arkts-arkui-tabssidebarsearchableoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchOptions | [TabsSidebarSearchableOptions](arkts-arkui-tabssidebarsearchableoptions-i.md) | No | Search options for the sidebar tab bar. |
 
 ## vertical
 
@@ -939,6 +946,6 @@ Sets whether to use vertical tabs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to use vertical tabs.The value **true** means to use vertical tabs, and **false** means to use horizontal tabs.Default value: **false**If set to have a height of **auto**, horizontal tabs auto-adapt the height to child components, which is calculated as follows: Tab bar height + Divider width + Tab content height + Top and bottom paddings + Top and bottom border widths.If set to have a width of **auto**, vertical tabs auto-adapt the width to child components, which is calculated as follows: Tab bar width + Divider width + Tab content width + Left and right paddings + Left and right border widths.To avoid animation jitter when switching between tabs, maintain a consistent size for child components on each tab. |

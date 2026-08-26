@@ -31,9 +31,9 @@ checked(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 单选框的选中状态。默认值：false值为true时，单选框被选中。值为false时，单选框不被选中。 |
 
 ## checked
 
@@ -55,9 +55,9 @@ checked(isChecked: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isChecked | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isChecked | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 单选框的选中状态。当isChecked的值为undefined时取默认值false。值为true时，单选框被选中。值为false 时，单选框不被选中。 |
 
 ## contentModifier
 
@@ -77,9 +77,9 @@ contentModifier(modifier: ContentModifier<RadioConfiguration>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | 是 | 在Radio组件上，定制内容区的方法。modifier：内容修改器，开发者需要自定义class实现 ContentModifier接口。 |
 
 ## contentModifier
 
@@ -87,7 +87,7 @@ contentModifier(modifier: ContentModifier<RadioConfiguration>)
 contentModifier(modifier: Optional<ContentModifier<RadioConfiguration>>)
 ```
 
-定制Radio内容区的方法。与 [contentModifier](#contentmodifier)&lt;sup&gt;12+&lt;/sup&gt;相比，modifier参数新增了对undefined类型的支持。
+定制Radio内容区的方法。与 [contentModifier](#contentmodifier)&lt;sup&gt;12+&lt;/sup &gt;相比，modifier参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -99,9 +99,9 @@ contentModifier(modifier: Optional<ContentModifier<RadioConfiguration>>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt;&gt; | 是 | 在Radio组件上，定制内容区的方法。modifier：内容修改器，开发者需要自定义 class实现ContentModifier接口。当modifier的值为undefined时，不使用内容修改器。 |
 
 ## onChange
 
@@ -121,9 +121,9 @@ onChange(callback: (isChecked: boolean) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | (isChecked: boolean) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (isChecked: boolean) = & gt; void | 是 | 单选框选中状态改变时触发该回调。值为true时，表示从未选中变为选中。值为false时，表示从选中变为未选中。 |
 
 ## onChange
 
@@ -145,9 +145,9 @@ onChange(callback: Optional<OnRadioChangeCallback>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)&gt; | 是 | 单选框选中状态改变时触发该回调。当callback的值为undefined时，不使用回调函数。 |
 
 ## radioStyle
 
@@ -167,6 +167,6 @@ radioStyle(value?: RadioStyle)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [RadioStyle](arkts-arkui-radiostyle-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [RadioStyle](arkts-arkui-radiostyle-i.md) | 否 | 单选框选中状态和非选中状态的样式。 未设置时，则按照RadioStyle中各参数的默认值配置。 |

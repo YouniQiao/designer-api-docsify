@@ -9,7 +9,7 @@ Defines the policy change event.This API is used as a callback input parameter o
 ## Modules to Import
 
 ```TypeScript
-import { common } from 'kits/@kit.MDMKit';
+import common from '@kit.MDMKit';
 ```
 
 ## bundleName

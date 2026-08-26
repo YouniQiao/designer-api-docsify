@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import reminderAgent from '@kit.BackgroundTasksKit';
+import reminderAgentManager from '@kit.BackgroundTasksKitManager';
 ```
 
 ## cancelReminder
@@ -24,10 +25,21 @@ function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| reminderId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| reminderId | number | 是 | 目标reminder的id号。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步回调。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+import reminderAgent from '@ohos.reminderAgent';
+
+reminderAgent.cancelReminder(1, (err: BusinessError, data: void) => {
+  console.info("cancelReminder callback");
+});
+```
 
 
 ## cancelReminder
@@ -48,12 +60,22 @@ function cancelReminder(reminderId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| reminderId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| reminderId | number | 是 | 目标reminder的id号。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise类型异步回调。 |
+
+**示例**
+
+```TypeScript
+import reminderAgent from '@ohos.reminderAgent';
+
+reminderAgent.cancelReminder(1).then(() => {
+    console.info("cancelReminder promise");
+});
+```

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { drm } from 'kits/@kit.DrmKit';
+import drm from '@kit.DrmKit';
 ```
 
 ## extraInfo

@@ -13,6 +13,7 @@ Provides APIs to obtain the KV store result sets, and query and move the data re
 ## Modules to Import
 
 ```TypeScript
+import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## getCount
@@ -33,9 +34,28 @@ Obtains the total number of rows in the result set.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Total number of rows obtained. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const count = resultSet.getCount();
+    console.log("getCount succeed:" + count);
+} catch (e) {
+    console.log("getCount failed: " + e);
+}
+```
 
 ## getEntry
 
@@ -55,9 +75,28 @@ Obtains the KV pair from the current position.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Entry](arkts-arkdata-distributeddata-entry-i.md) |
+| Type | Description |
+| --- | --- |
+| [Entry](arkts-arkdata-distributeddata-entry-i.md) | KV pair obtained. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const entry  = resultSet.getEntry();
+    console.log("getEntry succeed:" + JSON.stringify(entry));
+} catch (e) {
+    console.log("getEntry failed: " + e);
+}
+```
 
 ## getPosition
 
@@ -77,9 +116,28 @@ Obtains the current data read position (position from which data is read) in the
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Current data read position obtained. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeeded.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const position = resultSet.getPosition();
+    console.log("getPosition succeed:" + position);
+} catch (e) {
+    console.log("getPosition failed: " + e);
+}
+```
 
 ## isAfterLast
 
@@ -99,9 +157,28 @@ Checks whether the data read position is after the last row.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data read position is after the last row; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const isafterlast = resultSet.isAfterLast();
+    console.log("Check isAfterLast succeed:" + isafterlast);
+} catch (e) {
+    console.log("Check isAfterLast failed: " + e);
+}
+```
 
 ## isBeforeFirst
 
@@ -121,9 +198,28 @@ Checks whether the data read position is before the first row.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the data read position is before the first row; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const isbeforefirst = resultSet.isBeforeFirst();
+    console.log("Check isBeforeFirst succeed: " + isbeforefirst);
+} catch (e) {
+    console.log("Check isBeforeFirst failed: " + e);
+}
+```
 
 ## isFirst
 
@@ -143,9 +239,28 @@ Checks whether the data read position is the first row.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the first row is being read; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const isfirst = resultSet.isFirst();
+    console.log("Check isFirst succeed:" + isfirst);
+} catch (e) {
+    console.log("Check isFirst failed: " + e);
+}
+```
 
 ## isLast
 
@@ -165,9 +280,28 @@ Checks whether the data read position is the last row.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the last row is being read; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const islast = resultSet.isLast();
+    console.log("Check isLast succeed: " + islast);
+} catch (e) {
+    console.log("Check isLast failed: " + e);
+}
+```
 
 ## move
 
@@ -187,15 +321,34 @@ Moves the data read position with the specified offset from the current position
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| offset | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | number | Yes | Offset to move the data read position. A negative value means to move backward, and a positive value means to move forward. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const moved5 = resultSet.move(1);
+    console.log("move succeed:" + moved5);
+} catch (e) {
+    console.log("move failed: " + e);
+}
+```
 
 ## moveToFirst
 
@@ -215,9 +368,28 @@ Moves the data read position to the first row. If the result set is empty, **fal
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const moved1 = resultSet.moveToFirst();
+    console.log("moveToFirst succeed: " + moved1);
+} catch (e) {
+    console.log("moveToFirst failed " + e);
+}
+```
 
 ## moveToLast
 
@@ -237,9 +409,28 @@ Moves the data read position to the last row. If the result set is empty, **fals
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const moved2 = resultSet.moveToLast();
+    console.log("moveToLast succeed:" + moved2);
+} catch (e) {
+    console.log("moveToLast failed: " + e);
+}
+```
 
 ## moveToNext
 
@@ -259,9 +450,28 @@ Moves the data read position to the next row. If the result set is empty, **fals
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const moved3 = resultSet.moveToNext();
+    console.log("moveToNext succeed: " + moved3);
+} catch (e) {
+    console.log("moveToNext failed: " + e);
+}
+```
 
 ## moveToPosition
 
@@ -281,15 +491,34 @@ Moves the data read position from 0 to an absolute position.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| position | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| position | number | Yes | Absolute position to move to. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const moved6 = resultSet.moveToPosition(1);
+    console.log("moveToPosition succeed: " + moved6);
+} catch (e) {
+    console.log("moveToPosition failed: " + e);
+}
+```
 
 ## moveToPrevious
 
@@ -309,6 +538,25 @@ Moves the data read position to the previous row. If the result set is empty, **
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const moved4 = resultSet.moveToPrevious();
+    console.log("moveToPrevious succeed:" + moved4);
+} catch (e) {
+    console.log("moveToPrevious failed: " + e);
+}
+```

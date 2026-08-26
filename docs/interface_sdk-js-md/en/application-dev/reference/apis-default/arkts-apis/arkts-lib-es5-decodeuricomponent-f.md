@@ -15,11 +15,11 @@ Gets the unencoded version of an encoded component of a Uniform Resource Identif
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| encodedURIComponent | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encodedURIComponent | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

@@ -3,20 +3,20 @@
 ## Modules to Import
 
 ```TypeScript
-import { InteropAbilityLifecycleCallback } from 'kits/@kit.AbilityKit';
+import InteropAbilityLifecycleCallback from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) |
+| Name | Description |
+| --- | --- |
+| [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | The interop ability lifecycle callback. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md) |
-| [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md) |
+| Name | Description |
+| --- | --- |
+| [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md) | The callback was called when only an ability is registered for listening. |
+| [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md) | The callback was called when both ability and window stage are registered for listening. |

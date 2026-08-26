@@ -11,20 +11,20 @@ The **inputMethod.Panel** module provides APIs for managing the attributes of th
 ## Modules to Import
 
 ```TypeScript
-import { PanelInfo, PanelType, PanelFlag } from 'kits/@kit.IMEKit';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PanelInfo(Input Method Panel)](arkts-ime-inputmethod-panel-panelinfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [PanelInfo(Input Method Panel)](arkts-ime-inputmethod-panel-panelinfo-i.md) | Defines the attributes of the input method panel. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PanelFlag(Input Method Panel)](arkts-ime-inputmethod-panel-panelflag-e.md) |
-| [PanelType(Input Method Panel)](arkts-ime-inputmethod-panel-paneltype-e.md) |
+| Name | Description |
+| --- | --- |
+| [PanelFlag(Input Method Panel)](arkts-ime-inputmethod-panel-panelflag-e.md) | Enumerates the state types of the input method panel.  > **NOTE：**   >    > Currently, only the **SOFT_KEYBOARD** panel is supported. |
+| [PanelType(Input Method Panel)](arkts-ime-inputmethod-panel-paneltype-e.md) | Enumerates the types of the input method panel. |

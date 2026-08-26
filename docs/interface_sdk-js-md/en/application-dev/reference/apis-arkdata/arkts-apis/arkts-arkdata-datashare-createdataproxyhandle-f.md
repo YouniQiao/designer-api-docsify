@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import dataShare from '@kit.ArkData';
+import dataSharePredicates from '@kit.ArkDataPredicates';
 ```
 
 ## createDataProxyHandle
@@ -22,12 +23,29 @@ Creates a **DataProxyHandle** instance. This API uses a promise to return the re
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    dataShare.createDataProxyHandle().then((dataProxyHandle) => {
+      console.info("createDataProxyHandle succeed");
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to create DataProxyHandle. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+}
+```

@@ -12,6 +12,10 @@ Callback for onTextSelectionChange. Triggered when the text selection content ch
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectionText | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectionText | string | Yes | Selected text. |
+
+**Examples**
+
+For details about the complete sample code, see [onTextSelectionChange](./arkts-basic-components-web-events.md#ontextselectionchange23).

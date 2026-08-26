@@ -11,7 +11,6 @@ Describes the illumination information.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## lumination

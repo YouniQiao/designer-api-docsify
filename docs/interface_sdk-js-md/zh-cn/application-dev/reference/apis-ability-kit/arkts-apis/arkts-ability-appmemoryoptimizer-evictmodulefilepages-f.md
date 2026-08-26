@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appMemoryOptimizer } from 'kits/@kit.AbilityKit';
+import appMemoryOptimizer from '@kit.AbilityKit';
 ```
 
 ## evictModuleFilePages
@@ -22,19 +22,19 @@ function evictModuleFilePages(moduleNames: Array<string>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| moduleNames | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| moduleNames | Array & lt;string & gt; | 是 | 需要释放文件页缓存的模块名数组。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [16000163](../errorcode-ability.md#16000163-文件类型错误) |
-| [16000164](../errorcode-ability.md#16000164-解析配置文件失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [16000163](../errorcode-ability.md#16000163-文件类型错误) | 文件类型错误。配置文件中evictFilePages数组中的文件名未以.so、.hap或.hsp 结尾。 |
+| [16000164](../errorcode-ability.md#16000164-解析配置文件失败) | 解析配置文件失败。 |

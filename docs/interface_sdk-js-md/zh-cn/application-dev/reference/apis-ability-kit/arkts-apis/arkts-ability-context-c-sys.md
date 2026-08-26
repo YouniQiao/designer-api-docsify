@@ -16,7 +16,8 @@ createBundleContext(bundleName: string): Context
 
 根据Bundle名称创建安装包的上下文。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - stage模型多module的情况下可能发生资源id冲突的情况，建议使用
 > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md)替代。
 
@@ -36,23 +37,42 @@ createBundleContext(bundleName: string): Context
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | Bundle名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Context](arkts-ability-context-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Context](arkts-ability-context-c.md) | 安装包的上下文。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let bundleContext: common.Context;
+    try {
+      bundleContext = this.context.createBundleContext('com.example.test');
+    } catch (error) {
+      console.error(`createBundleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## createModuleContext
 
@@ -76,22 +96,41 @@ createModuleContext(bundleName: string, moduleName: string): Context
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| moduleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | Bundle名称。 |
+| moduleName | string | 是 | 模块名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Context](arkts-ability-context-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Context](arkts-ability-context-c.md) | 模块的上下文。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let moduleContext: common.Context;
+    try {
+      moduleContext = this.context.createModuleContext('com.example.test', 'entry');
+    } catch (error) {
+      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## createModuleResourceManager
 
@@ -113,24 +152,44 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| moduleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | Bundle名称。 |
+| moduleName | string | 是 | 模块名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| resmgr.ResourceManager |
+| 类型 | 说明 |
+| --- | --- |
+| resmgr.ResourceManager | 资源管理对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let ModuleResourceManager: resourceManager.ResourceManager;
+    try {
+      ModuleResourceManager = this.context.createModuleResourceManager('com.example.test', 'entry');
+    } catch (error) {
+      console.error(`createModuleResourceManager failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## createSystemHspModuleResourceManager
 
@@ -150,20 +209,33 @@ createSystemHspModuleResourceManager(bundleName: string, moduleName: string): re
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| moduleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | Bundle名称。 |
+| moduleName | string | 是 | 模块名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| resmgr.ResourceManager |
+| 类型 | 说明 |
+| --- | --- |
+| resmgr.ResourceManager | 系统HSP模块资源管理对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [16400001](../errorcode-ability.md#16400001-目标应用类型不是系统级hsp) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16400001](../errorcode-ability.md#16400001-目标应用类型不是系统级hsp) | The input bundleName is not a system HSP. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    this.context.createSystemHspModuleResourceManager("com.example.myapplication", "library");
+  }
+}
+```

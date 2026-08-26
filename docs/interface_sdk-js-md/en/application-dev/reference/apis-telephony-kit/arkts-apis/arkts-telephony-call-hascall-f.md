@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## hasCall
@@ -20,9 +19,23 @@ Checks whether a call is in progress. This API uses an asynchronous callback to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that a call is in progress, and the value **false** indicates the opposite. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.hasCall((err: BusinessError, data: boolean) => {
+    if (err) {
+        console.error(`hasCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`hasCall success, data->${JSON.stringify(data)}`);
+    }
+});
+```
 
 
 ## hasCall
@@ -39,6 +52,18 @@ Checks whether a call is in progress. This API uses a promise to return the resu
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that a call is in progress, and the value **false** indicates the opposite. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.hasCall().then(() => {
+    console.info(`hasCall success`);
+}).catch((err: BusinessError) => {
+    console.error(`hasCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```

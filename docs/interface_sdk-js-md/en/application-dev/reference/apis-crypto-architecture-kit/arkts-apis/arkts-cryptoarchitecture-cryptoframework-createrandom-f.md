@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## createRandom
@@ -28,12 +28,26 @@ Creates a **Random** instance.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) |
+| Type | Description |
+| --- | --- |
+| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) | Returns the **Random** instance created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+
+**Examples**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let rand = cryptoFramework.createRandom();
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```

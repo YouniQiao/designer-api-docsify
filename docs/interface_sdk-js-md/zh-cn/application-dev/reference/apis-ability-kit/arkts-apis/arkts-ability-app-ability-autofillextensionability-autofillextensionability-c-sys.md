@@ -13,7 +13,7 @@ AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类�
 ## 导入模块
 
 ```TypeScript
-import { AutoFillExtensionAbility } from 'kits/@kit.AbilityKit';
+import AutoFillExtensionAbility from '@kit.AbilityKit';
 ```
 
 ## onBackground
@@ -32,6 +32,19 @@ onBackground(): void
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+```TypeScript
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onBackground() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onBackground');
+  }
+}
+```
+
 ## onCreate
 
 ```TypeScript
@@ -48,6 +61,19 @@ AutoFillExtensionAbility创建时触发回调函数。在此方法中可进行�
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+```TypeScript
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onCreate');
+  }
+}
+```
+
 ## onDestroy
 
 ```TypeScript
@@ -63,6 +89,19 @@ onDestroy(): void | Promise<void>
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+```TypeScript
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onDestroy() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onDestroy');
+  }
+}
+```
 
 ## onFillRequest
 
@@ -82,11 +121,49 @@ onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 |
-| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | 是 |
-| callback | [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
+| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | 是 | 自动填充数据。 |
+| callback | [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | 是 | 自动填充请求回调。 |
+
+**示例**
+
+```TypeScript
+import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onFillRequest(session: UIExtensionContentSession,
+                request: autoFillManager.FillRequest,
+                callback: autoFillManager.FillRequestCallback) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'autofill onFillRequest');
+    hilog.info(0x0000, 'testTag', 'fill requestCallback: %{public}s', JSON.stringify(callback));
+    hilog.info(0x0000, 'testTag', 'get request viewData: %{public}s', JSON.stringify(request.viewData));
+    try {
+      // 定义本地存储数据
+      let localStorageData: Record<string, UIExtensionContentSession | string | autoFillManager.FillRequestCallback |
+      autoFillManager.ViewData | common.AutoFillExtensionContext> = {
+        'session': session,
+        'message': 'AutoFill Page',
+        'saveCallback': callback,
+        'viewData': request.viewData,
+        'context': this.context
+      };
+      // 创建本地存储实例，用于在页面间传递数据
+      let storage_fill = new LocalStorage(localStorageData);
+      if (session) {
+        // 加载自动保存页面
+        session.loadContent('pages/SelectorList', storage_fill);
+      } else {
+        hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');
+      }
+    } catch (err) {
+      hilog.error(0x0000, 'testTag', '%{public}s', 'failed to load content');
+    }
+  }
+}
+```
 
 ## onForeground
 
@@ -103,6 +180,19 @@ onForeground(): void
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+```TypeScript
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onForeground() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onForeground');
+  }
+}
+```
 
 ## onSaveRequest
 
@@ -122,11 +212,47 @@ onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 |
-| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i-sys.md) | 是 |
-| callback | [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
+| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i-sys.md) | 是 | 保存请求数据。 |
+| callback | [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) | 是 | 保存请求回调。 |
+
+**示例**
+
+```TypeScript
+import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onSaveRequest(session : UIExtensionContentSession,
+                request : autoFillManager.SaveRequest,
+                callback : autoFillManager.SaveRequestCallback) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onSaveRequest');
+    try {
+      // 定义本地存储数据
+      let localStorageData: Record<string, UIExtensionContentSession | string | autoFillManager.SaveRequestCallback |
+      autoFillManager.ViewData | common.AutoFillExtensionContext> = {
+        'session': session,
+        'message': 'AutoFill Page',
+        'fillCallback': callback,
+        'viewData': request.viewData,
+        'context': this.context,
+      };
+      // 创建本地存储实例，用于在页面间传递数据
+      let storage_save = new LocalStorage(localStorageData);
+      if (session) {
+        // 加载自动保存页面
+        session.loadContent('pages/SavePage', storage_save);
+      } else {
+        hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');
+      }
+    } catch (err) {
+      hilog.error(0x0000, 'testTag', '%{public}s', 'failed to load content');
+    }
+  }
+}
+```
 
 ## onSessionDestroy
 
@@ -146,9 +272,22 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
+
+**示例**
+
+```TypeScript
+import { AutoFillExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onSessionDestroy(session : UIExtensionContentSession) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onSessionDestroy');
+  }
+}
+```
 
 ## onUpdateRequest
 
@@ -168,9 +307,23 @@ onUpdateRequest(request: UpdateRequest): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| request | [UpdateRequest](arkts-ability-autofillrequest-updaterequest-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| request | [UpdateRequest](arkts-ability-autofillrequest-updaterequest-i-sys.md) | 是 | 更新请求。 |
+
+**示例**
+
+```TypeScript
+import { AutoFillExtensionAbility, autoFillManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onUpdateRequest(request: autoFillManager.UpdateRequest) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'on update request, view data is: %{public}s',
+      JSON.stringify(request.viewData));
+  }
+}
+```
 
 ## context
 

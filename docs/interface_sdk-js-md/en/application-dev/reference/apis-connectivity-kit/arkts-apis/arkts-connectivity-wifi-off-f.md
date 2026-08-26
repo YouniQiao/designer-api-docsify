@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## off('wifiStateChange')
@@ -26,10 +29,26 @@ Unsubscribe Wi-Fi status change events.<p>All callback functions will be deregis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'wifiStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'wifiStateChange' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+let recvPowerNotifyFunc = (result:number) => {
+    console.info("Receive power state change event: " + result);
+}
+
+// Register an event.
+wifi.on("wifiStateChange", recvPowerNotifyFunc);
+
+// Unregister an event.
+wifi.off("wifiStateChange", recvPowerNotifyFunc);
+```
 
 
 ## off('wifiConnectionChange')
@@ -52,10 +71,26 @@ Unsubscribe Wi-Fi connection change events.<p>All callback functions will be der
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'wifiConnectionChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'wifiConnectionChange' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: disconnected, 1: connected |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+let recvWifiConnectionChangeFunc = (result:number) => {
+    console.info("Receive wifi connection change event: " + result);
+}
+
+// Register an event.
+wifi.on("wifiConnectionChange", recvWifiConnectionChangeFunc);
+
+// Unregister an event.
+wifi.off("wifiConnectionChange", recvWifiConnectionChangeFunc);
+```
 
 
 ## off('wifiScanStateChange')
@@ -78,10 +113,26 @@ Unsubscribe Wi-Fi scan status change events.<p>All callback functions will be de
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'wifiScanStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'wifiScanStateChange' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: scan fail, 1: scan success |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+let recvWifiScanStateChangeFunc = (result:number) => {
+    console.info("Receive Wifi scan state change event: " + result);
+}
+
+// Register an event.
+wifi.on("wifiScanStateChange", recvWifiScanStateChangeFunc);
+
+// Unregister an event.
+wifi.off("wifiScanStateChange", recvWifiScanStateChangeFunc);
+```
 
 
 ## off('wifiRssiChange')
@@ -104,10 +155,26 @@ Unsubscribe Wi-Fi rssi change events.<p>All callback functions will be deregiste
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'wifiRssiChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'wifiRssiChange' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+let recvWifiRssiChangeFunc = (result:number) => {
+    console.info("Receive wifi rssi change event: " + result);
+}
+
+// Register an event.
+wifi.on("wifiRssiChange", recvWifiRssiChangeFunc);
+
+// Unregister an event.
+wifi.off("wifiRssiChange", recvWifiRssiChangeFunc);
+```
 
 
 ## off('hotspotStateChange')
@@ -130,10 +197,10 @@ Unsubscribe Wi-Fi hotspot state change events.<p>All callback functions will be 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'hotspotStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'hotspotStateChange' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
 
 
 ## off('p2pStateChange')
@@ -156,10 +223,26 @@ Unsubscribe P2P status change events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'p2pStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'p2pStateChange' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 1: idle, 2: starting, 3:started, 4: closing, 5: closed |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+let recvP2pStateChangeFunc = (result:number) => {
+    console.info("Receive p2p state change event: " + result);
+}
+
+// Register an event.
+wifi.on("p2pStateChange", recvP2pStateChangeFunc);
+
+// Unregister an event.
+wifi.off("p2pStateChange", recvP2pStateChangeFunc);
+```
 
 
 ## off('p2pConnectionChange')
@@ -182,10 +265,26 @@ Unsubscribe P2P connection change events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'p2pConnectionChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'p2pConnectionChange' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | No | the callback of on |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+let recvP2pConnectionChangeFunc = (result:wifi.WifiP2pLinkedInfo) => {
+    console.info("Receive p2p connection change event: " + result);
+}
+
+// Register an event.
+wifi.on("p2pConnectionChange", recvP2pConnectionChangeFunc);
+
+// Unregister an event.
+wifi.off("p2pConnectionChange", recvP2pConnectionChangeFunc);
+```
 
 
 ## off('p2pDeviceChange')
@@ -208,10 +307,26 @@ Unsubscribe P2P local device change events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'p2pDeviceChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'p2pDeviceChange' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | No | the callback of on |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+let recvP2pDeviceChangeFunc = (result:wifi.WifiP2pDevice) => {
+    console.info("Receive p2p device change event: " + result);
+}
+
+// Register an event.
+wifi.on("p2pDeviceChange", recvP2pDeviceChangeFunc);
+
+// Unregister an event.
+wifi.off("p2pDeviceChange", recvP2pDeviceChangeFunc);
+```
 
 
 ## off('p2pPeerDeviceChange')
@@ -234,10 +349,26 @@ Unsubscribe P2P peer device change events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'p2pPeerDeviceChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice[]&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'p2pPeerDeviceChange' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice[]&gt; | No | the callback of on |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+let recvP2pPeerDeviceChangeFunc = (result:wifi.WifiP2pDevice[]) => {
+    console.info("Receive p2p peer device change event: " + result);
+}
+
+// Register an event.
+wifi.on("p2pPeerDeviceChange", recvP2pPeerDeviceChangeFunc);
+
+// Unregister an event.
+wifi.off("p2pPeerDeviceChange", recvP2pPeerDeviceChangeFunc);
+```
 
 
 ## off('p2pPersistentGroupChange')
@@ -260,10 +391,26 @@ Unsubscribe P2P persistent group change events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'p2pPersistentGroupChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'p2pPersistentGroupChange' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback of on |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+let recvP2pPersistentGroupChangeFunc = (result:void) => {
+    console.info("Receive p2p persistent group change event: " + result);
+}
+
+// Register an event.
+wifi.on("p2pPersistentGroupChange", recvP2pPersistentGroupChangeFunc);
+
+// Unregister an event.
+wifi.off("p2pPersistentGroupChange", recvP2pPersistentGroupChangeFunc);
+```
 
 
 ## off('p2pDiscoveryChange')
@@ -286,7 +433,23 @@ Unsubscribe P2P discovery events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'p2pDiscoveryChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'p2pDiscoveryChange' | Yes | event name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+let recvP2pDiscoveryChangeFunc = (result:number) => {
+    console.info("Receive p2p discovery change event: " + result);
+}
+
+// Register an event.
+wifi.on("p2pDiscoveryChange", recvP2pDiscoveryChangeFunc);
+
+// Unregister an event.
+wifi.off("p2pDiscoveryChange", recvP2pDiscoveryChangeFunc);
+```

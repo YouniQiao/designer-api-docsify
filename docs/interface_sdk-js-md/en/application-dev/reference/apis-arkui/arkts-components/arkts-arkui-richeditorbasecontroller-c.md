@@ -63,9 +63,9 @@ Obtains the current caret position.If the caret position cannot be obtained (for
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Position of the caret. |
 
 ## getCaretRect
 
@@ -85,9 +85,9 @@ Obtains the relative position of the caret in the **RichEditor** component. If t
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RectResult](arkts-arkui-rectresult-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [RectResult](arkts-arkui-rectresult-i.md) \| undefined | Relative position of the caret in the **RichEditor** component. |
 
 ## getLayoutManager
 
@@ -107,9 +107,9 @@ Obtains a **LayoutManager** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) |
+| Type | Description |
+| --- | --- |
+| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | LayoutManager** object. |
 
 ## getPreviewText
 
@@ -129,9 +129,9 @@ Obtains the preview text.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) |
+| Type | Description |
+| --- | --- |
+| [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) | Preview text. |
 
 ## getTypingStyle
 
@@ -151,9 +151,9 @@ Obtains the preset text style of a user.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) |
+| Type | Description |
+| --- | --- |
+| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Preset typing style. |
 
 ## isEditing
 
@@ -173,9 +173,9 @@ Obtains the editing state of this **RichEditor** component.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Editing state. The value **true** indicates the editing state, and **false** indicates the non -editing state. |
 
 ## scrollToVisible
 
@@ -193,9 +193,9 @@ Scroll the input field component to make the specified content visible.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | The visible range. If the parameter is invalid, this method will have no effect. |
 
 ## setCaretOffset
 
@@ -215,15 +215,15 @@ Sets the cursor offset.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| offset | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | number | Yes | Offset of the caret. If it exceeds the range of all content, the setting will fail. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the caret offset is set successfully. |
 
 ## setSelection
 
@@ -248,11 +248,11 @@ and the menu position will remain unchanged.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectionStart | number | Yes |
-| selectionEnd | number | Yes |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectionStart | number | Yes | Start position of the selection. |
+| selectionEnd | number | Yes | End position of the selection. |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration of options.<br>**Since:** 12 |
 
 ## setStyledPlaceholder
 
@@ -272,9 +272,9 @@ Set the styledString placeholder.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | The styledString for placeholder. If the parameter is invalid, this method will have no effect. |
 
 ## setTypingParagraphStyle
 
@@ -294,9 +294,9 @@ Sets the preset paragraph style. The input text takes effect only when the compo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md) | Yes | Preset paragraph style. |
 
 ## setTypingStyle
 
@@ -316,9 +316,9 @@ Sets the preset typing style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Yes | Preset typing style. |
 
 ## stopEditing
 

@@ -2,7 +2,7 @@
 
 **EmbeddedComponent**组件用于支持在当前页面嵌入本应用内或满足跨应用权限条件的其他[EmbeddedUIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md)提供的UI。EmbeddedUIExtensionAbility运行在独立进程中，完成页面布局和渲染。
 通常用于需要进程隔离的模块化开发场景。
-> **说明：**>> EmbeddedComponent组件宽高默认值和最小值均为10vp。> 不支持如下与宽高相关的属性：“constraintSize”、“aspectRatio”、“layoutWeight”、“flexBasis”、“flexGrow”和“flexShrink”。
+> **说明：** > > EmbeddedComponent组件宽高默认值和最小值均为10vp。 > 不支持如下与宽高相关的属性：“constraintSize”、“aspectRatio”、“layoutWeight”、“flexBasis”、“flexGrow”和“flexShrink”。
 
 ## 约束
 
@@ -36,10 +36,10 @@ EmbeddedComponent(
 
 **参数:**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| loader | import('../api/@ohos.app.ability.Want').default | 是 |
-| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| loader | import('../api/@ohos.app.ability.Want').default | 是 | 表示要加载的EmbeddedUIExtensionAbility。 |
+| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | 是 | 提供方的类型。 |
 
 ## EmbeddedComponent
 
@@ -63,20 +63,20 @@ EmbeddedComponent(
 
 **参数:**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| loader | import('../api/@ohos.app.ability.Want').default | 是 |
-| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | 是 |
-| options | [EmbeddedOptions](arkts-arkui-embeddedoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| loader | import('../api/@ohos.app.ability.Want').default | 是 | 要加载的EmbeddedUIExtensionAbility。 |
+| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | 是 | 提供方的类型。 |
+| options | [EmbeddedOptions](arkts-arkui-embeddedoptions-i.md) | 否 | 嵌入式组件的可选配置项，用于设置占位符、DPI跟随策略、窗口模式跟随策略等。 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 枚举
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |

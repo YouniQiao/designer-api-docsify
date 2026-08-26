@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import notificationManager from '@kit.NotificationKit';
 ```
 
 ## getActiveNotificationByFilter
@@ -24,18 +24,46 @@ Obtains information about the common live view that matches the specified filter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filter | [NotificationFilter](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filter | [NotificationFilter](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | Yes | Filter criteria for querying the common live view. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
+
+let bundleOption: notificationManager.BundleOption = {
+  bundle: "bundleName1",
+};
+let notificationKey: notificationSubscribe.NotificationKey = {
+    id: 11,
+    label: ""
+};
+let filter: notificationManager.NotificationFilter = {
+    bundle: bundleOption,
+    notificationKey: notificationKey,
+    extraInfoKeys: ['event']
+}
+let getActiveNotificationByFilterCallback = (err: BusinessError, data: notificationManager.NotificationRequest): void => {
+    if (err) {
+        console.error(`getActiveNotificationByFilter failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info("getActiveNotificationByFilter success");
+    }
+}
+notificationManager.getActiveNotificationByFilter(filter, getActiveNotificationByFilterCallback);
+```
 
 
 ## getActiveNotificationByFilter
@@ -56,20 +84,45 @@ Obtains information about the common live view that matches the specified filter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filter | [NotificationFilter](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filter | [NotificationFilter](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | Yes | Filter criteria for querying the common live view. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;NotificationRequest & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;NotificationRequest & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
+
+let bundleOption: notificationManager.BundleOption = {
+  bundle: "bundleName1",
+};
+let notificationKey: notificationSubscribe.NotificationKey = {
+    id: 11,
+    label: ""
+};
+let filter: notificationManager.NotificationFilter = {
+    bundle: bundleOption,
+    notificationKey: notificationKey,
+    extraInfoKeys: ['event']
+}
+notificationManager.getActiveNotificationByFilter(filter).then((data: notificationManager.NotificationRequest) => {
+    console.info(`getActiveNotificationByFilter success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getActiveNotificationByFilter failed, code is ${err.code}, message is ${err.message}`);
+});
+```

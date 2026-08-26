@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import sendableImage from '@kit.ImageKit';
 ```
 
 ## createPixelMapFromSurface
@@ -20,21 +20,37 @@ Creates a PixelMap object from surface id.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| surfaceId | string | 是 |
-| region | image.Region | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| surfaceId | string | 是 | surface id. |
+| region | image.Region | 是 | The region to surface. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;PixelMap & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;PixelMap & gt; | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980105](../errorcode-image.md#62980105-图片获取数据错误) |
-| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | If the image parameter invalid. |
+| [62980105](../errorcode-image.md#62980105-图片获取数据错误) | Failed to get the data. |
+| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) | Failed to create the PixelMap. |
+
+**示例**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPixelMapFromSurface(surfaceId: string) {
+  let region: image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
+  sendableImage.createPixelMapFromSurface(surfaceId, region).then((pixelMap: sendableImage.PixelMap) => {
+    console.info('Succeeded in creating the PixelMap from Surface.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```

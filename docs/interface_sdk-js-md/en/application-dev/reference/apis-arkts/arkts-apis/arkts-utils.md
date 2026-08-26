@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import ArkTSUtils from '@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Namespaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [utils(Defines the utils for ArkTS)](arkts-arkts-utils-n.md) |
+| Name | Description |
+| --- | --- |
+| [utils(Defines the utils for ArkTS)](arkts-arkts-utils-n.md) |  |

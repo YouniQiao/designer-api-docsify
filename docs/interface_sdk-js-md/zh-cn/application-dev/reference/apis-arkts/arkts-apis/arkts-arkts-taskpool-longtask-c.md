@@ -13,5 +13,17 @@
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import taskpool from '@kit.ArkTS';
+```
+
+**示例**
+
+```TypeScript
+@Concurrent
+function printArgs(args: string): string {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let task: taskpool.LongTask = new taskpool.LongTask(printArgs, "this is my first LongTask");
 ```

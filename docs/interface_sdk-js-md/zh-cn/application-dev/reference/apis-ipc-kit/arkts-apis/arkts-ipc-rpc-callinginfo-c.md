@@ -9,7 +9,7 @@ IPC上下文信息，包括PID和UID、本端和对端设备ID、检查接口调
 ## 导入模块
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import rpc from '@kit.IPCKit';
 ```
 
 ## callerPid
@@ -75,6 +75,26 @@ readonly isLocalCalling: boolean
 **起始版本：** 23
 
 **系统能力：** SystemCapability.Communication.IPC.Core
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class Stub extends rpc.RemoteObject {
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    try {
+      let isLocalCalling = rpc.IPCSkeleton.isLocalCalling();
+      hilog.info(0x0000, 'testTag', 'RpcServer: isLocalCalling is ' + isLocalCalling);
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', 'error ' + error);
+    }
+    return true;
+  }
+}
+```
 
 ## localDeviceId
 

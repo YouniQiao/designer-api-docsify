@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import request from '@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
 ```
 
 ## download
@@ -28,16 +29,31 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | 是 | 下载的配置信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | 是 | 回调函数。当下载任务成功，err为undefined，data为获取到的DownloadTask对象；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+
+**示例**
+
+```TypeScript
+let downloadTask: request.DownloadTask;
+// 需要手动将url替换为真实服务器的HTTP协议地址
+request.download({ url: 'https://xxxx/xxxxx.hap', 
+filePath: 'xxx/xxxxx.hap'}, (err: BusinessError, data: request.DownloadTask) => {
+  if (err) {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  downloadTask = data;
+});
+```
 
 
 ## download
@@ -62,18 +78,30 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | 是 | 下载的配置信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | 使用Promise方式，异步返回下载任务DownloadTask的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+
+**示例**
+
+```TypeScript
+let downloadTask: request.DownloadTask;
+// 需要手动将url替换为真实服务器的HTTP协议地址
+request.download({ url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+  downloadTask = data;
+}).catch((err: BusinessError) => {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+})
+```

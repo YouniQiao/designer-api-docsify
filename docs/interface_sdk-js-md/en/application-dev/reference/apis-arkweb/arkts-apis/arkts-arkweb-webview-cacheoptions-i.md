@@ -9,7 +9,6 @@ Represents a configuration object for precompiling JavaScript in the **Web** com
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## responseHeaders

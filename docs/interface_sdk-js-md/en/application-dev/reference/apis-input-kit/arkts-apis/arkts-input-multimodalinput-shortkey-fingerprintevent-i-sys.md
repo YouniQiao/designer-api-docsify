@@ -11,8 +11,6 @@ Provides fingerprint gesture event types and the offset of the fingerprint senso
 ## Modules to Import
 
 ```TypeScript
-import { shortKey } from 'kits/@kit.InputKit';
-import { FingerprintEvent } from 'kits/@kit.InputKit';
 ```
 
 ## action

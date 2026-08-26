@@ -29,9 +29,9 @@ Adds a subscriber to the list of owned properties.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| subscriber | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| subscriber | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | Yes | Subscriber. |
 
 ## constructor
 
@@ -46,6 +46,13 @@ Constructor.
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+```
 
 ## notifyPropertyHasChanged
 
@@ -63,10 +70,10 @@ Notify subscribers that a property value has changed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
-| newValue | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name. |
+| newValue | any | Yes | New value after the change. |
 
 ## removeOwningProperty
 
@@ -84,9 +91,9 @@ Removes a subscriber from the list of owned properties.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | Yes | Subscriber to remove. |
 
 ## removeOwningPropertyById
 
@@ -104,9 +111,9 @@ Removes a subscriber from the list of owned properties by ID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| subscriberId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| subscriberId | number | Yes | ID of the subscriber to remove. |
 
 ## owningProperties_
 

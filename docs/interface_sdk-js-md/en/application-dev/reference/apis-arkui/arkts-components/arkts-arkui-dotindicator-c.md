@@ -33,15 +33,15 @@ Sets the color of the dot-style navigation indicator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the dot-style navigation indicator.Default value: **'#1A182431'** (light gray) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## constructor
 
@@ -51,11 +51,13 @@ constructor()
 
 A constructor used to create a **DotIndicator** object.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain
 > distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.
 > The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and
-> **selectedItemHeight**.&gt;
+> **selectedItemHeight**.
+> 
 > - If there are too many pages and dot-style indicators exceed the page, you are advised to use the
 > **maxDisplayCount** parameter to set the number of dots to be displayed.
 
@@ -89,15 +91,15 @@ Set indicator icon.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| iconList | Array&lt;[IndicatorIconInfo](arkts-arkui-indicatoriconinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| iconList | Array&lt;[IndicatorIconInfo](arkts-arkui-indicatoriconinfo-i.md)&gt; | Yes | Indicator items whose icons need to be set. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | return the DotIndicator. |
 
 ## itemHeight
 
@@ -119,15 +121,15 @@ Sets the height of a dot-style navigation indicator of the **Swiper** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the dot-style indicator. This parameter cannot be set in percentage.Default value: **6**Unit: vp Value range: (0, +∞) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## itemWidth
 
@@ -149,15 +151,15 @@ Sets the width of a dot-style navigation indicator of the **Swiper** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the dot-style indicator. This parameter cannot be set in percentage.Default value: **6**Unit: vp Value range: (0, +∞) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## mask
 
@@ -179,15 +181,15 @@ Sets whether to enable the mask for the dot-style navigation indicator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable the mask for the dot-style navigation indicator. The value **true** means to enable the mask for the dot-style navigation indicator, and **false** means the opposite.Default value: **false**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## maxDisplayCount
 
@@ -207,15 +209,15 @@ Sets the maximum number of navigation dots in the dot-style navigation indicator
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [maxDisplayCount](arkts-arkui-dotindicator-c.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| maxDisplayCount | number | Yes | Maximum number of navigation dots in the dot-style navigation point indicator. If the actual number of navigation dots exceeds this limit, the overflow effect is activated, as shown in [Example 5](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-5-configuring-overflow-for-the-dot-style-indicator). This parameter has no default value. If an invalid value is set, no overflow effect is applied.Value range: [6, 9].   **NOTE：**In scenarios involving overflow display: 1. Interactive features, such as gestures and mouse operations, are not supported. 2. The position of the selected navigation dot corresponding to the middle page is not strictly fixed; it depends on the sequence of previous page-turning operations. 3. Currently, only scenarios with **displayCount** set to **1** are supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## selectedColor
 
@@ -237,15 +239,15 @@ Sets the color of the selected dot-style navigation indicator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the selected dot-style navigation indicator.Default value: **'#007DFF'** (blue) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## selectedItemHeight
 
@@ -267,15 +269,15 @@ Sets the height of the selected dot-style navigation indicator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the selected dot-style indicator. This parameter cannot be set in percentage.Default value: **6**Unit: vp Value range: (0, +∞) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## selectedItemWidth
 
@@ -297,15 +299,15 @@ Sets the width of the selected dot-style navigation indicator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the selected dot-style navigation indicator. This parameter cannot be set in percentage.Default value: **6**Unit: vp Value range: (0, +∞) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## space
 
@@ -327,12 +329,12 @@ Sets the spacing between dot-style navigation indicators of the **Swiper** compo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [space](#space) | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| space | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.Default value: **10** for PCs and 2-in-1 devices and **8** for other devices Unit: vp Value range: [0, +∞) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) |
+| Type | Description |
+| --- | --- |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |

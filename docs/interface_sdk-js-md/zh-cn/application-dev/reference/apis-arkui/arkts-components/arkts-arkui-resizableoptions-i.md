@@ -10,6 +10,7 @@
 ## 导入模块
 
 ```TypeScript
+import @kit.ArkUIGeneration from '@ohos.arkui.intelligence.@kit.ArkUIGeneration';
 ```
 
 ## lattice

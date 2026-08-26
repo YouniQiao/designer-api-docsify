@@ -3,7 +3,12 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import inputMethod from '@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKitEngine';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
+import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
+import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 ```
 
 ## getInputMethodController
@@ -24,6 +29,12 @@ Obtains an [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) |
+| Type | Description |
+| --- | --- |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | Current **InputMethodController** instance. |
+
+**Examples**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getInputMethodController();
+```

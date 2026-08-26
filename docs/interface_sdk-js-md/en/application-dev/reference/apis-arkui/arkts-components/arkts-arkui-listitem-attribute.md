@@ -29,9 +29,9 @@ Sets whether to enable edit mode, where the list item can be deleted or moved.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean \| [EditMode](arkts-arkui-editmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean \| [EditMode](arkts-arkui-editmode-e.md) | Yes |  |
 
 ## onSelect
 
@@ -51,9 +51,9 @@ Triggered when the selected state of the list item for multiselect changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (isSelected: boolean) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (isSelected: boolean) = & gt; void | Yes |  |
 
 ## selectable
 
@@ -73,9 +73,9 @@ Sets whether the list item is selectable for multiselect. This attribute takes e
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes |  |
 
 ## selected
 
@@ -97,9 +97,9 @@ Sets whether the list item is selected. This attribute supports two-way binding 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the list item is selected. |
 
 ## sticky
 
@@ -119,9 +119,9 @@ Sets the sticky effect of the list item.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Sticky](arkts-arkui-sticky-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Sticky](arkts-arkui-sticky-e.md) | Yes |  |
 
 ## swipeAction
 
@@ -139,6 +139,6 @@ Sets the swipe action item displayed when the list item is swiped out from the s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md) | Yes | Swipe action item displayed when the list item is swiped out from the screen edge. |

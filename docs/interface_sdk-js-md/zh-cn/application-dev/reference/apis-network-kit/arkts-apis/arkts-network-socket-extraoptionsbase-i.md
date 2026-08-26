@@ -9,7 +9,7 @@ Socket套接字的基础属性。
 ## 导入模块
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## receiveBufferSize

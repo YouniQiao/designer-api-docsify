@@ -9,6 +9,9 @@ WebResourceRequest is a class in the Web component that represents a network res
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -41,9 +44,9 @@ Obtains the information about the resource request header.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Array containing the key-value pair information of the request headers. Each **Header** object contains the name and corresponding value of a request header, such as User-Agent and Content-Type. |
 
 ## getRequestMethod
 
@@ -61,9 +64,9 @@ Obtains the request method.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | HTTP request method string. Common values include GET, POST, PUT, DELETE, etc., indicating the HTTP method type used for the resource request. |
 
 ## getRequestUrl
 
@@ -81,9 +84,9 @@ Obtains the URL of the resource request.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Returns the complete resource request URL string, including the protocol, domain name, path, and query parameters. |
 
 ## isMainFrame
 
@@ -101,9 +104,9 @@ Checks whether the resource request is for the main frame. Used to differentiate
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the resource request is a main frame request. |
 
 ## isRedirect
 
@@ -121,9 +124,9 @@ Checks whether the resource request is redirected by the server. Used to inspect
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the resource request is redirected by the server. |
 
 ## isRequestGesture
 
@@ -141,6 +144,6 @@ Checks whether the resource request is associated with a gesture (such as a tap)
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the resource request is associated with a gesture (for example, a tap). |

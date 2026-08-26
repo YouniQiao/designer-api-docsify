@@ -2,8 +2,10 @@
 
 Parameters of the shared element transition animation.
 
-> **NOTE：**&gt;
-> **motionPath** is effective only when **type** is set to **SharedTransitionEffectType.Exchange**.&gt;
+> **NOTE：**
+> 
+> **motionPath** is effective only when **type** is set to **SharedTransitionEffectType.Exchange**.
+> 
 > When **type** is set to **SharedTransitionEffectType.Exchange**, the effect focuses on smooth transition of the
 > position and size of matching shared elements, which can be visually observed through the component's border. The
 > transition, however, does not involve content properties, which will abruptly change to the target page's values at

@@ -13,7 +13,7 @@ This module provides app domain verification info.@namespace appDomainVerify
 ## Modules to Import
 
 ```TypeScript
-import { appDomainVerify } from 'kits/@kit.AbilityKit';
+import appDomainVerify from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -21,8 +21,8 @@ import { appDomainVerify } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [queryAssociatedBundleNames(Define capabilities to access app domain verification info.)](arkts-ability-appdomainverify-queryassociatedbundlenames-f-sys.md) |
-| [queryAssociatedDomains(Define capabilities to access app domain verification info.)](arkts-ability-appdomainverify-queryassociateddomains-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [queryAssociatedBundleNames(Define capabilities to access app domain verification info.)](arkts-ability-appdomainverify-queryassociatedbundlenames-f-sys.md) | query bundleNames associated with domain. |
+| [queryAssociatedDomains(Define capabilities to access app domain verification info.)](arkts-ability-appdomainverify-queryassociateddomains-f-sys.md) | query domains verify associated with bundleName. |
 <!--DelEnd-->

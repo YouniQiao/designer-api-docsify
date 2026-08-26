@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## dumpJsHeapData
@@ -14,7 +13,8 @@ function dumpJsHeapData(filename : string) : void
 
 Dumps VM heap data.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Exporting the VM heap is time-consuming, and this API is a synchronous API. Therefore, you are advised not to
 > call this API in the release version. Otherwise, the application screen may freeze, affecting user experience.
 
@@ -24,15 +24,28 @@ Dumps VM heap data.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filename | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filename | string | Yes | User-defined name of the VM heap data output file. The .heapsnapshot file is generated in the **files** directory of the application based on the specified file name. The maximum length of a string is 128 bytes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | the parameter check failed, Parameter type error |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  hidebug.dumpJsHeapData("heapData");
+} catch (error) {
+  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
+}
+```
 
 
 ## dumpJsHeapData
@@ -43,7 +56,8 @@ function dumpJsHeapData(filename : string, needClean : boolean) : void
 
 Dumps VM heap data and clears the nodeId cache.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Exporting the VM heap is time-consuming, and this API is a synchronous API. Therefore, you are advised not to
 > call this API in the release version. Otherwise, the application screen may freeze, affecting user experience.
 
@@ -57,7 +71,20 @@ Dumps VM heap data and clears the nodeId cache.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filename | string | Yes |
-| needClean | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filename | string | Yes | Custom name of the heap dump file. A **fileName.heapsnapshot** file will be generated in the **files** directory of the application. The maximum length of a string is 128 bytes. |
+| needClean | boolean | Yes | Whether to clear the node ID cache before dumping heap snapshots. **true**: yes; **false**: no. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  hidebug.dumpJsHeapData("heapData", true);
+} catch (error) {
+  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
+}
+```

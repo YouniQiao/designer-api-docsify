@@ -9,8 +9,6 @@ HashMap底层采用数组、链表和红黑树实现，支持高效查询、插�
 ## 导入模块
 
 ```TypeScript
-import { HashMap } from 'kits/@kit.ArkTS';
-import { HashMapCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -19,8 +17,9 @@ import { HashMapCbFn } from 'kits/@kit.ArkTS';
 [Symbol.iterator](): IterableIterator<[K, V]>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个包含键和值的数组[K, V]。  
-> **说明：**&gt;
+返回一个迭代器，迭代器的每一项都是一个包含键和值的数组[K, V]。   
+> **说明：**
+> 
 > 不建议在Symbol.iterator迭代过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，如需在遍历中插入或删除元素，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 8
@@ -31,15 +30,58 @@ import { HashMapCbFn } from 'kits/@kit.ArkTS';
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;[K, V] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;[K, V] & gt; | 返回包含此HashMap中所有键值对的迭代器。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+
+// 使用方法一：
+for (let item of hashMap) {
+  console.info("key:", item[0]);
+  console.info("value:", item[1]);
+}
+// key: squirrel
+// value: 123
+// key: sparrow
+// value: 356
+
+// 使用方法二：
+let iter = hashMap[Symbol.iterator]();
+let temp: IteratorResult<Object[]> = iter.next();
+while (!temp.done) {
+  console.info("key:", temp.value[0]);
+  console.info("value:", temp.value[1]);
+  temp = iter.next();
+}
+// key: squirrel
+// value: 123
+// key: sparrow
+// value: 356
+```
+
+```TypeScript
+// 不建议在Symbol.iterator中使用set、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
+let hashMap = new HashMap<string, number>();
+for (let i = 0; i < 10; i++) {
+  hashMap.set("sparrow" + i, 123);
+}
+
+for (let i = 0; i < 10; i++) {
+  hashMap.remove("sparrow" + i);
+}
+```
 
 ## clear
 
@@ -57,9 +99,20 @@ clear(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+hashMap.clear();
+let result = hashMap.isEmpty();
+console.info("result:", result);  // result: true
+```
 
 ## constructor
 
@@ -77,9 +130,15 @@ constructor()
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The HashMap's constructor cannot be directly invoked. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+```
 
 ## entries
 
@@ -87,8 +146,9 @@ constructor()
 entries(): IterableIterator<[K, V]>
 ```
 
-返回此HashMap中包含的键值对的新迭代器对象。  
-> **说明：**&gt;
+返回此HashMap中包含的键值对的新迭代器对象。   
+> **说明：**
+> 
 > 不建议在entries迭代过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，如需在遍历中插入或删除元素，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 8
@@ -99,15 +159,42 @@ entries(): IterableIterator<[K, V]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;[K, V] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;[K, V] & gt; | 返回包含此HashMap中所有键值对的迭代器。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+let iter = hashMap.entries();
+let temp: IteratorResult<Object[]> = iter.next();
+while (!temp.done) {
+  console.info("key:" + temp.value[0]);
+  console.info("value:" + temp.value[1]);
+  temp = iter.next();
+}
+```
+
+```TypeScript
+// 不建议在entries中使用set、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
+let hashMap = new HashMap<string, number>();
+for (let i = 0; i < 10; i++) {
+  hashMap.set("sparrow" + i, 123);
+}
+
+for (let i = 0; i < 10; i++) {
+  hashMap.remove("sparrow" + i);
+}
+```
 
 ## forEach
 
@@ -115,8 +202,9 @@ entries(): IterableIterator<[K, V]>
 forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?: Object): void
 ```
 
-在遍历过程中对每个元素调用一次回调函数。  
-> **说明：**&gt;
+在遍历过程中对每个元素调用一次回调函数。   
+> **说明：**
+> 
 > 不建议在forEach遍历过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，如需在遍历中插入或删除元素，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 8
@@ -127,16 +215,41 @@ forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?:
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackFn | (value?: V, key?: K, map?: HashMap & lt;K, V & gt;) = & gt; void | 是 |
-| thisArg | Object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callbackFn | (value?: V, key?: K, map?: HashMap & lt;K, V & gt;) = & gt; void | 是 | 回调函数，在遍历每个元素时被调用，用于对元素执行自定义操作。 |
+| thisArg | Object | 否 | callbackFn被调用时用作this值。当需要在回调函数中访问其他对象的属性或方法时，可传入自定义thisArg。不传入时默认值为当前实例对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("sparrow", 123);
+hashMap.set("gull", 357);
+hashMap.forEach((value: number, key: string) => {
+  console.info("value: " + value, "key: " + key);
+});
+// value: 123 key: sparrow
+// value: 357 key: gull
+```
+
+```TypeScript
+// 不建议在forEach中使用set、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
+let hashMap = new HashMap<string, number>();
+for (let i = 0; i < 10; i++) {
+  hashMap.set("sparrow" + i, 123);
+}
+
+for (let i = 0; i < 10; i++) {
+  hashMap.remove("sparrow" + i);
+}
+```
 
 ## get
 
@@ -154,21 +267,31 @@ get(key: K): V
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 指定要获取其对应value的键。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V |
+| 类型 | 说明 |
+| --- | --- |
+| V | 返回key映射的value值；key不存在时返回undefined。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The get method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+let result = hashMap.get("sparrow");
+console.info("result:", result);  // result: 356
+```
 
 ## hasKey
 
@@ -186,21 +309,30 @@ hasKey(key: K): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 指定要查询的键，用于判断HashMap中是否包含该键。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 包含指定key返回true，不包含指定key返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasKey method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+let result = hashMap.hasKey("squirrel");
+console.info("result:", result);  // result: true
+```
 
 ## hasValue
 
@@ -218,21 +350,30 @@ hasValue(value: V): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | V | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | V | 是 | 指定要查询的值，用于判断HashMap中是否包含该值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 包含指定的value返回true，不包含指定的value返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasValue method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+let result = hashMap.hasValue(123);
+console.info("result:", result);  // result: true
+```
 
 ## isEmpty
 
@@ -250,15 +391,23 @@ isEmpty(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 为空返回true，不为空返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+let result = hashMap.isEmpty();
+console.info("result:", result);  // result: true
+```
 
 ## keys
 
@@ -266,8 +415,9 @@ isEmpty(): boolean
 keys(): IterableIterator<K>
 ```
 
-返回新迭代器对象，包含此HashMap中所有的键。  
-> **说明：**&gt;
+返回新迭代器对象，包含此HashMap中所有的键。   
+> **说明：**
+> 
 > 不建议在keys迭代过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 8
@@ -278,15 +428,29 @@ keys(): IterableIterator<K>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;K & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;K & gt; | 返回包含此HashMap中所有key的迭代器。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+let keys = hashMap.keys();
+for (let key of keys) {
+  console.info("key:" + key);
+}
+// key:squirrel
+// key:sparrow
+```
 
 ## remove
 
@@ -304,21 +468,31 @@ remove(key: K): V
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 指定要删除元素的键，用于定位并移除HashMap中该键对应的键值对。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V |
+| 类型 | 说明 |
+| --- | --- |
+| V | 返回删除元素的值；key不存在时返回undefined。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+let result = hashMap.remove("sparrow");
+console.info("result:", result);  // result: 356
+```
 
 ## replace
 
@@ -336,22 +510,31 @@ replace(key: K, newValue: V): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
-| newValue | V | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 依据key指定替换的元素，仅当key已存在时替换生效。 |
+| newValue | V | 是 | 替换指定key对应value的新值。仅当指定key已存在时，newValue才会替换原有value；若key不存在，该值不会被设置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否成功对已有数据进行替换，成功返回true，失败返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The replace method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("sparrow", 123);
+let result = hashMap.replace("sparrow", 357);
+console.info("result:", result);  // result: true
+```
 
 ## set
 
@@ -369,22 +552,30 @@ set(key: K, value: V): Object
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
-| value | V | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 添加或更新的键名。若key已存在，将替换对应的value。 |
+| value | V | 是 | 添加或更新的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Object |
+| 类型 | 说明 |
+| --- | --- |
+| Object | 返回包含添加或更新后元素的当前HashMap实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+console.info("result:", hashMap.get("squirrel"));  // result: 123
+```
 
 ## setAll
 
@@ -402,15 +593,28 @@ setAll(map: HashMap<K, V>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | 是 | 需要将其全部元素添加到当前HashMap的源HashMap对象。若map与当前HashMap存在重复key，map中的value将替换当前HashMap中对应key的value。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The setAll method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+let newHashMap = new HashMap<string, number>();
+newHashMap.set("newMap", 99);
+hashMap.setAll(newHashMap);
+let result = hashMap.hasKey("newMap");
+console.info("result:", result);  // result: true
+```
 
 ## values
 
@@ -418,8 +622,9 @@ setAll(map: HashMap<K, V>): void
 values(): IterableIterator<V>
 ```
 
-返回新迭代器对象，包含此HashMap中所有键对应的值。  
-> **说明：**&gt;
+返回新迭代器对象，包含此HashMap中所有键对应的值。   
+> **说明：**
+> 
 > 不建议在values迭代过程中使用set、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 
 **起始版本：** 8
@@ -430,15 +635,29 @@ values(): IterableIterator<V>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;V & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;V & gt; | 返回包含此HashMap中所有value的迭代器。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+let values = hashMap.values();
+for (let value of values) {
+  console.info("value:", value);
+}
+// value: 123
+// value: 356
+```
 
 ## length
 

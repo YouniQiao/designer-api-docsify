@@ -9,7 +9,7 @@ In the following API examples, you must first use [getInputMethodAbility](arkts-
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKit';
 ```
 
 ## createPanel
@@ -33,18 +33,47 @@ Creates an input method panel. This API can be called only by the input method a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [ctx](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
-| info | [PanelInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current context of the input method. |
+| info | [PanelInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | Yes | Callback used to return the result. If the operation is successful, the created input method panel is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMethodEngine, InputMethodExtensionAbility } from '@kit.IMEKit';
+import { Want } from '@kit.AbilityKit';
+
+let panelInfo: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+
+class InputMethodExt extends InputMethodExtensionAbility {
+    onCreate(want: Want): void {
+        console.info(`onCreate, want: ${want.abilityName}`);
+        if (!this.context) {
+            inputMethodEngine.getInputMethodAbility()
+            .createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
+                if (err) {
+                console.error(`Failed to createPanel. Code is ${err.code}, message is ${err.message}`);
+                return;
+              }
+                console.info('Succeed in creating panel.');
+            })
+        }
+    }
+}
+```
 
 ## createPanel
 
@@ -69,23 +98,50 @@ Creates an input method panel. This API can be called only by the input method a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [ctx](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
-| info | [PanelInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current context of the input method. |
+| info | [PanelInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Panel & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Panel & gt; | the promise returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMethodEngine, InputMethodExtensionAbility } from '@kit.IMEKit';
+import { Want } from '@kit.AbilityKit';
+
+let panelInfo: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+
+class InputMethodExt extends InputMethodExtensionAbility {
+    onCreate(want: Want): void {
+        console.info(`onCreate, want: ${want.abilityName}`);
+        if (this.context) {
+            inputMethodEngine.getInputMethodAbility().createPanel(this.context, panelInfo)
+                .then((panel: inputMethodEngine.Panel) => {
+                console.info('Succeed in creating panel.');
+            }).catch((err: BusinessError) => {
+                console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+            })
+        }
+    }
+}
+```
 
 ## destroyPanel
 
@@ -101,16 +157,50 @@ Destroys the specified input method panel. This API uses an asynchronous callbac
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| panel | [Panel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| panel | [Panel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | Yes | Input method panel to destroy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let panelInfo: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+
+let inputPanel: inputMethodEngine.Panel | undefined = undefined;
+if (this.context) {
+  inputMethodEngine.getInputMethodAbility()
+    .createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
+      if (err) {
+        console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+        return;
+      }
+      inputPanel = panel;
+      console.info('Succeed in creating panel.');
+    })
+}
+
+if (inputPanel) {
+  inputMethodEngine.getInputMethodAbility().destroyPanel(inputPanel, (err: BusinessError) => {
+    if (err !== undefined) {
+      console.error(`Failed to destroy panel. Code is ${err.code}, message is ${err.message}`);
+      return;
+    }
+    console.info('Succeed in destroying panel.');
+  })
+}
+```
 
 ## destroyPanel
 
@@ -126,21 +216,53 @@ Destroys the specified input method panel. This API uses a promise to return the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| panel | [Panel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| panel | [Panel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | Yes | Input method panel to destroy. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | the promise returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let panelInfo: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+
+let inputPanel: inputMethodEngine.Panel | undefined = undefined;
+if (this.context) {
+  inputMethodEngine.getInputMethodAbility()
+    .createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
+      if (err) {
+        console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+        return;
+      }
+      inputPanel = panel;
+      console.info('Succeed in creating panel.');
+    })
+}
+
+if (inputPanel) {
+  inputMethodEngine.getInputMethodAbility().destroyPanel(inputPanel).then(() => {
+    console.info('Succeed in destroying panel.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to destroy panel. Code is ${err.code}, message is ${err.message}`);
+  });
+}
+```
 
 ## getSecurityMode
 
@@ -156,15 +278,22 @@ Obtains the current security mode of the input method.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md) |
+| Type | Description |
+| --- | --- |
+| [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md) | Security mode. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
+
+**Examples**
+
+```TypeScript
+let security: inputMethodEngine.SecurityMode = inputMethodEngine.getInputMethodAbility().getSecurityMode();
+console.error(`getSecurityMode, securityMode is : ${security}`);
+```
 
 ## off('inputStart')
 
@@ -180,10 +309,16 @@ Disables listening for the input method binding event. This API uses an asynchro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'inputStart' | Yes |
-| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
+| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('inputStart');
+```
 
 ## off('inputStop')
 
@@ -199,10 +334,18 @@ Disables listening for the input method stop event. This API uses an asynchronou
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'inputStop' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
+| callback | () = & gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('inputStop', () => {
+  console.info('inputMethodAbility delete inputStop notification.');
+});
+```
 
 ## off('setCallingWindow')
 
@@ -218,10 +361,18 @@ Disables listening for the window invocation setting event. This API uses an asy
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'setCallingWindow' | Yes |
-| callback | (wid: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
+| callback | (wid: number) = & gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('setCallingWindow', (wid: number) => {
+  console.info('inputMethodAbility delete setCallingWindow notification.');
+});
+```
 
 ## off('keyboardShow' | 'keyboardHide')
 
@@ -237,10 +388,21 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes |
-| callback | () = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| callback | () = & gt; void | No | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('keyboardShow', () => {
+  console.info('InputMethodAbility delete keyboardShow notification.');
+});
+inputMethodEngine.getInputMethodAbility().off('keyboardHide', () => {
+  console.info('InputMethodAbility delete keyboardHide notification.');
+});
+```
 
 ## off('keyboardShow' | 'keyboardHide')
 
@@ -256,10 +418,14 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes |
-| callback | () = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| callback | () = & gt; void | No | Callback used to return the result. |
+
+**Examples**
+
+See off
 
 ## off('setSubtype')
 
@@ -275,10 +441,18 @@ Disables listening for the input method subtype setting event. This API uses an 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'setSubtype' | Yes |
-| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'setSubtype' | Yes | Event type, which is **'setSubtype'**. |
+| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('setSubtype', () => {
+  console.info('InputMethodAbility delete setSubtype notification.');
+});
+```
 
 ## off('securityModeChange')
 
@@ -294,10 +468,22 @@ Disables listening for the security mode changes of the input method. This API u
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'securityModeChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+
+**Examples**
+
+```TypeScript
+let securityChangeCallback: (securityMode: inputMethodEngine.SecurityMode) => void =
+  (securityMode: inputMethodEngine.SecurityMode) => {
+    console.info(`InputMethodAbility securityModeChange, security is ${securityMode}`);
+  };
+let inputMethodAbility: inputMethodEngine.InputMethodAbility = inputMethodEngine.getInputMethodAbility();
+inputMethodAbility.on('securityModeChange', securityChangeCallback);
+inputMethodAbility.off('securityModeChange', securityChangeCallback);
+```
 
 ## off('privateCommand')
 
@@ -313,16 +499,29 @@ Disables listening for the private data event of the input method. This API uses
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'privateCommand' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+
+**Examples**
+
+```TypeScript
+let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
+  (record: Record<string, inputMethodEngine.CommandDataType>) => {
+    for (let i: number = 0; i < record.length; i++) {
+      console.info(`private command key: ${i}, value: ${record[i]}`);
+    }
+  }
+
+inputMethodEngine.getInputMethodAbility().off('privateCommand', privateCommandCallback);
+```
 
 ## off('callingDisplayDidChange')
 
@@ -338,10 +537,18 @@ Disables listening for changes of the screen ID of the window associated with th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'callingDisplayDidChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('callingDisplayDidChange', (num: number) => {
+  console.info('InputMethodAbility delete calling display  notification.');
+});
+```
 
 ## off('discardTypingText')
 
@@ -357,10 +564,18 @@ Unsubscribes from the event of discarding candidate words and sends the event to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'discardTypingText' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**.     - **'discardTypingText'**: indicates unsubscribing from the event of discarding candidate words and sending the event to the input method. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('discardTypingText', () => {
+  console.info('InputMethodAbility discard the typing text.');
+});
+```
 
 ## on('inputStart')
 
@@ -376,10 +591,21 @@ Enables listening for the input method binding event. This API uses an asynchron
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'inputStart' | Yes |
-| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
+| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | Yes | Callback used to return instances related to input method operations. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility()
+  .on('inputStart',
+    (kbController: inputMethodEngine.KeyboardController, client: inputMethodEngine.InputClient) => {
+      let keyboardController: inputMethodEngine.KeyboardController = kbController;
+      let inputClient: inputMethodEngine.InputClient = client;
+    });
+```
 
 ## on('inputStop')
 
@@ -395,10 +621,18 @@ Enables listening for the input method unbinding event. This API uses an asynchr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'inputStop' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
+| callback | () = & gt; void | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().on('inputStop', () => {
+  console.info('inputMethodAbility inputStop');
+});
+```
 
 ## on('setCallingWindow')
 
@@ -414,10 +648,18 @@ Enables listening for the window invocation setting event. This API uses an asyn
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'setCallingWindow' | Yes |
-| callback | (wid: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
+| callback | (wid: number) = & gt; void | Yes | Callback used to return the window ID of the caller. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().on('setCallingWindow', (wid: number) => {
+  console.info('inputMethodAbility setCallingWindow');
+});
+```
 
 ## on('keyboardShow' | 'keyboardHide')
 
@@ -433,10 +675,21 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| callback | () = & gt; void | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().on('keyboardShow', () => {
+  console.info('InputMethodAbility keyboardShow.');
+});
+inputMethodEngine.getInputMethodAbility().on('keyboardHide', () => {
+  console.info('InputMethodAbility keyboardHide.');
+});
+```
 
 ## on('keyboardShow' | 'keyboardHide')
 
@@ -452,10 +705,14 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| callback | () = & gt; void | Yes | Callback used to return the result. |
+
+**Examples**
+
+See on
 
 ## on('setSubtype')
 
@@ -471,10 +728,20 @@ Enables listening for the input method subtype setting event. This API uses an a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'setSubtype' | Yes |
-| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'setSubtype' | Yes | Event type, which is **'setSubtype'**. |
+| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | Yes | Callback used to return the input method subtype. |
+
+**Examples**
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+
+inputMethodEngine.getInputMethodAbility().on('setSubtype', (inputMethodSubtype: InputMethodSubtype) => {
+  console.info('InputMethodAbility setSubtype.');
+});
+```
 
 ## on('securityModeChange')
 
@@ -490,10 +757,19 @@ Enables listening for the security mode changes of the input method. This API us
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'securityModeChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | Callback used to return the current security mode. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility()
+  .on('securityModeChange', (securityMode: inputMethodEngine.SecurityMode) => {
+    console.info(`InputMethodAbility securityModeChange, security is ${securityMode}`);
+  });
+```
 
 ## on('privateCommand')
 
@@ -509,16 +785,28 @@ Enables listening for the private data event of the input method. This API uses 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'privateCommand' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback used to return the private data sent to the input method application. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+
+**Examples**
+
+```TypeScript
+let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
+  (record: Record<string, inputMethodEngine.CommandDataType>) => {
+    for (let i :number = 0; i < record.length; i++) {
+      console.info(`private command key: ${i}, value: ${record[i]}`);
+    }
+  }
+inputMethodEngine.getInputMethodAbility().on('privateCommand', privateCommandCallback);
+```
 
 ## on('callingDisplayDidChange')
 
@@ -534,16 +822,25 @@ Enables listening for changes of the screen ID of the window associated with the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'callingDisplayDidChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the screen ID of the window corresponding to the edit box. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+
+**Examples**
+
+```TypeScript
+let callingDisplayDidChangeCallback: (num: number) => void = (num: number) => {
+  console.info(`display id: ${num}`);
+}
+inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', callingDisplayDidChangeCallback);
+```
 
 ## on('discardTypingText')
 
@@ -559,7 +856,15 @@ Subscribes to the event of discarding candidate words and sends the event to the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'discardTypingText' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**.     - **'discardTypingText'**: indicates subscribing to the event of discarding candidate words and sending the event to the input method. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().on('discardTypingText', () => {
+  console.info('InputMethodAbility discard the typing text.');
+});
+```

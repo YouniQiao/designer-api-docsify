@@ -11,7 +11,7 @@ Represents the options for adding a permission usage record.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import privacyManager from '@kit.AbilityKit';
 ```
 
 ## enhancedIdentity

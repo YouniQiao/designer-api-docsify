@@ -19,14 +19,14 @@ Defines the axis type of an input device.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'touchmajor' |
-| 'touchminor' |
-| 'orientation' |
-| 'x' |
-| 'y' |
-| 'pressure' |
-| 'toolminor' |
-| 'toolmajor' |
-| 'null' |
+| Type | Description |
+| --- | --- |
+| 'touchmajor' | Major axis of the elliptical touching area. |
+| 'touchminor' | Minor axis of the elliptical touching area. |
+| 'orientation' | Orientation axis. |
+| 'x' | Horizontal axis. |
+| 'y' | Vertical axis. |
+| 'pressure' | Pressure axis. |
+| 'toolminor' | Minor axis of the tool area. |
+| 'toolmajor' | Major axis of the tool area. |
+| 'null' | None. |

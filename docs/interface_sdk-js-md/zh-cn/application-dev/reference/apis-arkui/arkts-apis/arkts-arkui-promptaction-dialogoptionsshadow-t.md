@@ -14,7 +14,7 @@ declare type DialogOptionsShadow = ShadowOptions | ShadowStyle
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) |
-| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) |  |
+| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md) |  |

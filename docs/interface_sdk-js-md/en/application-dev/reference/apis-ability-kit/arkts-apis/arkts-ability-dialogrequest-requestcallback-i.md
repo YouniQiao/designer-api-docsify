@@ -9,7 +9,7 @@ Provides a callback for setting the modal dialog box request result.
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from 'kits/@kit.AbilityKit';
+import dialogRequest from '@kit.AbilityKit';
 ```
 
 ## setRequestResult
@@ -28,12 +28,32 @@ Sets the result of the request for the modal dialog box.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | [RequestResult](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-requestresult-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | [RequestResult](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-requestresult-i-sys.md) | Yes | Request result to set. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let requestCallback = dialogRequest.getRequestCallback(want);
+      let myResult: dialogRequest.RequestResult = {
+        result : dialogRequest.ResultCode.RESULT_CANCEL,
+      };
+      requestCallback.setRequestResult(myResult);
+    } catch(err) {
+      console.error(`getRequestInfo err= ${JSON.stringify(err)}`);
+    }
+  }
+}
+```

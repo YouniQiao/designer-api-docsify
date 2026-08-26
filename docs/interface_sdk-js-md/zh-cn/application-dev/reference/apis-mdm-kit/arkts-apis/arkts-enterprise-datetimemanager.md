@@ -2,9 +2,11 @@
 
 本模块提供系统时间管理能力。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 本模块接口仅对[MDM应用](../../../mdm/mdm-kit-term.md#mdm应用)开放，需通过
-> [enableAdmin](arkts-mdm-adminmanager-enableadmin-f-sys.md)接口将设备管理应用激活后调用。&gt;
+> [enableAdmin](arkts-mdm-adminmanager-enableadmin-f-sys.md)接口将设备管理应用激活后调用。
+> 
 > 本模块接口均为系统接口。
 
 **起始版本：** 9
@@ -16,7 +18,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dateTimeManager } from 'kits/@kit.MDMKit';
+import dateTimeManager from '@kit.MDMKit';
 ```
 
 ## 汇总
@@ -24,12 +26,12 @@ import { dateTimeManager } from 'kits/@kit.MDMKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [disallowModifyDateTime(系统时间管理)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) |
-| [disallowModifyDateTime(系统时间管理)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) |
-| [isModifyDateTimeDisallowed(系统时间管理)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) |
-| [isModifyDateTimeDisallowed(系统时间管理)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) |
-| [setDateTime(系统时间管理)](arkts-mdm-datetimemanager-setdatetime-f-sys.md) |
-| [setDateTime(系统时间管理)](arkts-mdm-datetimemanager-setdatetime-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [disallowModifyDateTime(系统时间管理)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) | 禁止设备修改系统时间。使用callback异步回调。 |
+| [disallowModifyDateTime(系统时间管理)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) | 禁止设备修改系统时间。使用Promise异步回调。 |
+| [isModifyDateTimeDisallowed(系统时间管理)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) | 查询设备是否允许修改系统时间。使用callback异步回调。 |
+| [isModifyDateTimeDisallowed(系统时间管理)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) | 查询设备是否允许修改系统时间。使用Promise异步回调。 |
+| [setDateTime(系统时间管理)](arkts-mdm-datetimemanager-setdatetime-f-sys.md) | 设置系统时间。使用callback异步回调。 |
+| [setDateTime(系统时间管理)](arkts-mdm-datetimemanager-setdatetime-f-sys.md) | 设置系统时间。使用Promise异步回调。 |
 <!--DelEnd-->

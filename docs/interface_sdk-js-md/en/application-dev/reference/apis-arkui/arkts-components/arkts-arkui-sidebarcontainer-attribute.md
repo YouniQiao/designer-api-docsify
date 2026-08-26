@@ -29,9 +29,9 @@ Specifies whether to automatically hide the sidebar when it is dragged to be sma
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to automatically hide the sidebar when it is dragged to be smaller than the minimum width.   **true**: The sidebar is automatically hidden.   **false**: The sidebar is not automatically hidden.Default value: **true |
 
 ## controlButton
 
@@ -49,9 +49,9 @@ Sets the attributes of the sidebar control button.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ButtonStyle](arkts-arkui-buttonstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ButtonStyle](arkts-arkui-buttonstyle-i.md) | Yes | Attributes of the sidebar control button. |
 
 ## divider
 
@@ -71,9 +71,9 @@ Sets the divider style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [DividerStyle](arkts-arkui-dividerstyle-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [DividerStyle](arkts-arkui-dividerstyle-i.md) \| null | Yes | Divider style.   - **DividerStyle** (default): The divider is displayed.   - **null** or **undefined**: No action is taken, and the divider style remains consistent with the default.   **NOTE：**In API version 11 and earlier versions, **null** results in the divider not being displayed. |
 
 ## maxSideBarWidth
 
@@ -92,9 +92,9 @@ Sets the maximum width of the sidebar. If a value less than 0 is set, the defaul
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Maximum width of the sidebar.Default value: **280vp**Unit: vp Value range: [0, +∞). |
 
 ## maxSideBarWidth
 
@@ -113,9 +113,9 @@ Sets the maximum width of the sidebar. If a value less than 0 is set, the defaul
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Maximum width of the sidebar.Default value: **280vp**Unit: vp Value range: [0, +∞). |
 
 ## minContentWidth
 
@@ -140,9 +140,9 @@ width reaches the value defined by **minContentWidth**, the content area has its
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Minimum content area width of the sidebar container.Default value: **360vp**Unit: vp |
 
 ## minSideBarWidth
 
@@ -161,9 +161,9 @@ Sets the minimum width of the sidebar. If a value less than 0 is set, the defaul
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Minimum width of the sidebar. Unit: vp. Value range: [0, +∞). Default value: In API version 9 and earlier versions, the default value is **200vp**. |
 
 ## minSideBarWidth
 
@@ -182,9 +182,9 @@ Sets the minimum width of the sidebar. If a value less than 0 is set, the defaul
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Minimum width of the sidebar.Default value: In API version 9 and earlier versions, the default value is **200vp**. In API version 10, the default value is **240vp**.Value range: [0, +∞). |
 
 ## onChange
 
@@ -205,9 +205,9 @@ Triggered when the status of the sidebar switches between shown and hidden.This 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (value: boolean) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (value: boolean) = & gt; void | Yes | true**: The sidebar is shown. **false**: The sidebar is hidden. |
 
 ## showControlButton
 
@@ -225,9 +225,9 @@ Specifies whether to display the sidebar control button.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to display the sidebar control button.   **true**: The sidebar control button is displayed.   **false**: The sidebar control button is not displayed.Default value: **true |
 
 ## showSideBar
 
@@ -245,9 +245,9 @@ Specifies whether to display the sidebar.Since API version 10, this attribute su
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to display the sidebar.   **true**: The sidebar is displayed.   **false**: The sidebar is not displayed.Default value: **true |
 
 ## showSideBarWithGesture
 
@@ -267,9 +267,9 @@ Specifies whether sideBar can be presented or dismissed by gesture.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Indicates whether the sidebar can be presented or dismissed by gesture. Default value: **false**. **true**: Sidebar can be presented or dismissed by gesture. **false**: Sidebar cannot be presented or dismissed by gesture. |
 
 ## sideBarPosition
 
@@ -287,9 +287,9 @@ Sets the position of the sidebar.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [SideBarPosition](arkts-arkui-sidebarposition-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [SideBarPosition](arkts-arkui-sidebarposition-e.md) | Yes | Position of the sidebar.Default value: **SideBarPosition.Start |
 
 ## sideBarWidth
 
@@ -307,9 +307,9 @@ Sets the width of the sidebar. If a value less than 0 is set, the default value 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Width of the sidebar.Default value: **240vp**Unit: vp Value range: [0, +∞).   **NOTE：**In API version 9 and earlier versions, the default value is **200vp**. In API version 10, the default value is **240vp**. |
 
 ## sideBarWidth
 
@@ -327,6 +327,6 @@ Sets the width of the sidebar. If a value less than 0 is set, the default value 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the sidebar.Default value: **240vp**Unit: vp Value range: [0, +∞).   **NOTE：**The default value is **200vp** in API version 9 and **240vp** in API version 10. |

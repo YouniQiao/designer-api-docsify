@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import tag from '@kit.ConnectivityKit';
 ```
 
 ## getNfcBTag
@@ -14,7 +14,8 @@ function getNfcBTag(tagInfo: TagInfo): NfcBTag
 
 Obtains an **NfcBTag** object, which allows access to the tags that use the NFC-B technology.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [tag.getNfcB](arkts-connectivity-tag-getnfcb-f.md) instead.
 
@@ -28,12 +29,12 @@ Obtains an **NfcBTag** object, which allows access to the tags that use the NFC-
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes | Tag information, including the tag technology type and related parameters, obtained from [tag.getTagInfo(want: Want)](arkts-connectivity-tag-gettaginfo-f.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md) |
+| Type | Description |
+| --- | --- |
+| [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md) | NfcBTag** object obtained. |

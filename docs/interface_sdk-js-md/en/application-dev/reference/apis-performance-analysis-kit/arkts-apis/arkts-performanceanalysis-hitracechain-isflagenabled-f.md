@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## isFlagEnabled
@@ -20,13 +19,27 @@ Checks whether the trace flag is enabled for **HiTraceId**. This API returns the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes |
-| flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance to be checked. |
+| flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | Yes | Specified trace flag. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | The value **true** indicates that the flag for **HiTraceId** is enabled, and **false** indicates the opposite. |
+
+**Examples**
+
+```TypeScript
+// Start tracing. The tracing flag is INCLUDE_ASYNC.
+let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.INCLUDE_ASYNC);
+// Set the value of enabledIncludeAsyncFlag to true.
+let enabledIncludeAsyncFlag = hiTraceChain.isFlagEnabled(traceId, hiTraceChain.HiTraceFlag.INCLUDE_ASYNC);
+if (enabledIncludeAsyncFlag) {
+// Processing logic for the scenario where the INCLUDE_ASYNC trace flag has been set.
+}
+// Stop tracing after the service is complete.
+hiTraceChain.end(traceId);
+```

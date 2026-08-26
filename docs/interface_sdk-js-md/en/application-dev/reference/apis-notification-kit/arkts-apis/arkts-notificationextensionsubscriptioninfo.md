@@ -4,6 +4,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotificationExtensionSubscriptionInfo(Describes a notification extension subscription info)](arkts-notification-notificationextensionsubscriptioninfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [NotificationExtensionSubscriptionInfo(Describes a notification extension subscription info)](arkts-notification-notificationextensionsubscriptioninfo-i.md) | The **NotificationExtensionSubscriptionInfo** module describes the information about notification extension subscription. |

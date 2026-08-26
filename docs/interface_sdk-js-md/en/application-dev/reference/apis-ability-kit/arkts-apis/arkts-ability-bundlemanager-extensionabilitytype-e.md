@@ -50,7 +50,7 @@ INPUT_METHOD = 2
 SERVICE = 3
 ```
 
-[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md): provides extended capabilities related to background services.
+ServiceExtensionAbility: provides extended capabilities related to background services.
 
 **Since:** 9
 
@@ -74,7 +74,7 @@ AccessibilityExtensionAbility: provides extended capabilities related to accessi
 DATA_SHARE = 5
 ```
 
-[DataShareExtensionAbility](../../apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md): provides extended capabilities related to data sharing, providing data reading and writing services.
+DataShareExtensionAbility: provides extended capabilities related to data sharing, providing data reading and writing services.
 
 **Since:** 9
 
@@ -98,7 +98,7 @@ FileShareExtensionAbility: provides extended capabilities related to file sharin
 STATIC_SUBSCRIBER = 7
 ```
 
-[StaticSubscriberExtensionAbility](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md): provides extended capabilities related to static broadcast, used to handle static events such as startup events.
+StaticSubscriberExtensionAbility: provides extended capabilities related to static broadcast, used to handle static events such as startup events.
 
 **Since:** 9
 
@@ -134,7 +134,7 @@ BACKUP = 9
 WINDOW = 10
 ```
 
-[WindowExtensionAbility](../../apis-arkui/arkts-apis/arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md): provides extended capabilities that allow system applications to pull up and embed UIs of other applications.
+WindowExtensionAbility: provides extended capabilities that allow system applications to pull up and embed UIs of other applications.
 
 **Since:** 9
 

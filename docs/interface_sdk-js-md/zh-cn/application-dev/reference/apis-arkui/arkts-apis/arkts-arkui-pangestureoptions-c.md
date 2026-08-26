@@ -27,9 +27,9 @@ constructor(value?: { fingers?: number; direction?: PanDirection; distance?: num
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } | 否 | 滑动手势配置参数对象。fingers用于指定触发滑动的最少手指数，最小为1指， 最大取值为10指。默认值：1 direction用于指定触发滑动的手 势方向，此枚举值支持逻辑与( & )和逻辑或（\ |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } | 否 | 滑动手势配置参数对象。fingers用于指定触发滑动的最少手指数，最小为1指， 最大取值为10指。默认值：1 direction用于指定触发滑动的手 势方向，此枚举值支持逻辑与( & )和逻辑或（\ |）运算。默认值：PanDirection.All distance用于指定触发滑动手势事件的最小滑动距离，单位为vp。手写笔默认值：8，其余输入源默认 值：5   **说明：** [Tabs](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs)组件滑动与该滑动手势事件同时存在时，可将distance值设为1，使滑动更灵敏，避免造成事件错乱。当设定的值小于0时，按默认值处理。 建议设置合理的滑动距离，滑动距离设置过大时会导致滑动不跟手（响应时延慢）的问题。当组件应用了scale缩放 变换时，distance的实际识别距离会按照scale比例进行缩放。 |
 
 ## getDirection
 
@@ -49,9 +49,9 @@ getDirection(): PanDirection
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanDirection](arkts-arkui-pandirection-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanDirection](arkts-arkui-pandirection-e.md) | 滑动方向。 |
 
 ## getDistance
 
@@ -71,9 +71,9 @@ getDistance(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 滑动手势事件的最小滑动距离。 |
 
 ## setDirection
 
@@ -91,9 +91,9 @@ setDirection(value: PanDirection)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [PanDirection](arkts-arkui-pandirection-e.md) | 是 | 用于指定触发滑动的手势方向，此枚举值支持逻辑与( & )和逻辑或（\ |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [PanDirection](arkts-arkui-pandirection-e.md) | 是 | 用于指定触发滑动的手势方向，此枚举值支持逻辑与( & )和逻辑或（\ |）运算。默认值：PanDirection.All |
 
 ## setDistance
 
@@ -111,9 +111,9 @@ setDistance(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 触发滑动手势事件的最小滑动距离，单位为vp。手写笔默认值：8，其余输入源默认值：5   **说明：** [Tabs组件](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs)滑动与该滑动 手势事件同时存在时，可将distance值设为1，使滑动更灵敏，避免造成事件错乱。当设定的值小于0时，按默认值处理。建议设置合理的滑动距离，滑动距离设置过大时会导致滑动不跟手（响应时延慢）的问题。当组件应用了scale缩放变换时，distance的实际识别距离会按照scale比例进行缩放。 |
 
 ## setFingers
 
@@ -131,6 +131,6 @@ setFingers(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 触发滑动的最少手指数，最小为1指， 最大取值为10指。默认值：1 |

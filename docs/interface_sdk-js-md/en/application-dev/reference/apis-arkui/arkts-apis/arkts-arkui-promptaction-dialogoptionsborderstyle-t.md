@@ -14,7 +14,7 @@ Defines the allowed data types for specifying the background border style of a d
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BorderStyle](arkts-arkui-borderstyle-e.md) |
-| EdgeStyles |
+| Type | Description |
+| --- | --- |
+| [BorderStyle](arkts-arkui-borderstyle-e.md) |  |
+| EdgeStyles |  |

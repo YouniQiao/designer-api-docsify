@@ -9,7 +9,6 @@ Certificate information, which includes the paths of the WebSocketServer certifi
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## certPath

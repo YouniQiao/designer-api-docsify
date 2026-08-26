@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## selectContacts
@@ -22,15 +22,31 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+// 打开选择联系人UI界面
+contact.selectContacts((err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+});
+```
 
 
 ## selectContacts
@@ -49,9 +65,21 @@ function selectContacts(): Promise<Array<Contact>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Promise对象。返回选择的联系人数组对象。 |
+
+**示例**
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// 打开选择联系人UI界面
+let promise = contact.selectContacts();
+promise.then((data) => {
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+});
+```
 
 
 ## selectContacts
@@ -70,16 +98,34 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [ContactSelectionOptions](arkts-contacts-contact-contactselectionoptions-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [ContactSelectionOptions](arkts-contacts-contact-contactselectionoptions-i.md) | 是 | 选择联系人时的筛选条件，表示单选或多选。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+// 打开选择联系人UI界面，支持选择一个联系人
+contact.selectContacts({
+  isMultiSelect:false
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+});
+```
 
 
 ## selectContacts
@@ -98,18 +144,30 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [ContactSelectionOptions](arkts-contacts-contact-contactselectionoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [ContactSelectionOptions](arkts-contacts-contact-contactselectionoptions-i.md) | 是 | 选择联系人时的筛选条件，用于指定是单选还是多选。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Promise对象。返回选择的联系人数组对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+
+**示例**
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// 打开选择联系人UI界面，支持选择一个联系人
+let promise = contact.selectContacts({isMultiSelect:false});
+promise.then((data) => {
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+});
+```

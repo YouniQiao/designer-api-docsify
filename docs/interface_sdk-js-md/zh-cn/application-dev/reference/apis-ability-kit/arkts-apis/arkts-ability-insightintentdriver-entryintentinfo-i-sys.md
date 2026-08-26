@@ -11,7 +11,7 @@ FormIntentInfo用于描述 [@InsightIntentForm](../../../reference/apis-ability-
 ## 导入模块
 
 ```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+import insightIntentDriver from '@kit.AbilityKit';
 ```
 
 ## abilityName

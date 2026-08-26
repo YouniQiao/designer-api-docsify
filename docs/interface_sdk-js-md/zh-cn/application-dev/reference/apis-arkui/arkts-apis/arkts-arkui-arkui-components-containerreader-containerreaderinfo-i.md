@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from 'kits/@kit.ArkUI';
+import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@kit.ArkUI';
 ```
 
 ## heightBreakpoint

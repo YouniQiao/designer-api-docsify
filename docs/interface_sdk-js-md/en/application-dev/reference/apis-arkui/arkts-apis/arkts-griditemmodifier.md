@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [GridItemModifier](arkts-arkui-griditemmodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [GridItemModifier](arkts-arkui-griditemmodifier-c.md) | Defines GridItem Modifier@extends GridItemAttribute @implements AttributeModifier & lt;GridItemAttribute & gt; |

@@ -27,9 +27,9 @@ changeIndex(value: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 页签在Tabs里的索引值，索引值从0开始。取值范围：[0, 页签总数-1]。设置范围外的值时按0处理。 |
 
 ## constructor
 
@@ -55,8 +55,10 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 > **说明：**
 
-> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的onAppear生命周期中去控制。&gt;
-> - 如果TabsController对象未绑定任何Tabs组件，直接调用该接口，会抛出JS异常。因此使用该接口时，建议通过try-catch捕获异常。&gt;
+> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的onAppear生命周期中去控制。
+> 
+> - 如果TabsController对象未绑定任何Tabs组件，直接调用该接口，会抛出JS异常。因此使用该接口时，建议通过try-catch捕获异常。
+> 
 > - 使用preloadItems预加载标签页时，若需自定义TabBar上的显示内容，推荐使用ComponentContent实现，使用示例请参考
 > [示例9](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#示例9通过componentcontent设置tabbar)。
 
@@ -70,21 +72,21 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [indices](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| indices | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 | 需预加载的子节点的下标数组。默认值：空数组。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter invalid. Possible causes:   1. The parameter type is not Array & lt;number & gt;.   2. The parameter is an empty array.   3. The parameter contains an invalid index. |
 
 ## setTabBarOpacity
 
@@ -112,9 +114,9 @@ setTabBarOpacity(opacity: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| opacity | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| opacity | number | 是 | 设置TabBar的不透明度，值为1.0表示完全不透明，值为0.0表示完全透明。取值范围为[0.0, 1.0]，设置的值小于0.0时，按0.0处理，设置的值大于1.0时，按1.0处理。默认值：1.0。 |
 
 ## setTabBarTranslate
 
@@ -142,6 +144,6 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | 是 | 设置TabBar的平移距离。 |

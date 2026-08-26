@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Device, DeviceResponse, GetDeviceOptions } from 'kits/@kit.BasicServicesKit';
+import Device, { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -44,10 +44,10 @@ fail?: (data: any, code: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | any | 是 |
-| code | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | any | 是 |  |
+| code | number | 是 |  |
 
 ## success
 
@@ -65,6 +65,6 @@ success?: (data: DeviceResponse) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md) | 是 |  |

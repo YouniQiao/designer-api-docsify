@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getOsuStatus
@@ -24,23 +23,36 @@ function getOsuStatus(slotId: number): Promise<OsuStatus>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| slotId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[OsuStatus](arkts-telephony-esim-osustatus-e-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[OsuStatus](arkts-telephony-esim-osustatus-e-sys.md)&gt; | Promise对象，返回操作系统升级的状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [3120001](../errorcode-telephony.md#3120001-服务连接失败) |
-| [3120002](../errorcode-telephony.md#3120002-系统内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [3120001](../errorcode-telephony.md#3120001-服务连接失败) | Service connection failed. |
+| [3120002](../errorcode-telephony.md#3120002-系统内部错误) | System internal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { eSIM } from '@kit.TelephonyKit';
+
+eSIM.getOsuStatus(1).then(() => {
+    console.info(`getOsuStatus invoking succeeded.`);
+}).catch((err: BusinessError<void>) => {
+    console.error(`getOsuStatus, promise: err->${JSON.stringify(err)}`);
+});
+```

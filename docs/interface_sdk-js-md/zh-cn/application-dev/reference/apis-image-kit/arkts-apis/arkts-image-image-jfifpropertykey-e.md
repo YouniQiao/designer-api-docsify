@@ -2,7 +2,8 @@
 
 表示JFIF图片信息的枚举。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 返回字段类型具体参考[JfifMetadata](arkts-image-image-jfifmetadata-c.md)。
 > | 名称 | 值 | 说明 |
 > | ---- | -- | ---- |

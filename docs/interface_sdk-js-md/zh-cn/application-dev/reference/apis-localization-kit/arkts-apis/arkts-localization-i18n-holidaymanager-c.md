@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -28,16 +28,31 @@ constructor(icsPath: String)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| icsPath | String | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| icsPath | String | 是 | 在设备上有应用读取权限的iCalendar格式的ics文件路径。iCalendar格式是一种标准的互联网日历格式，用于存储日历数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // 需要将'/system/lib/US.ics'替换为实际ics文件路径
+  let holidayManager = new i18n.HolidayManager('/system/lib/US.ics');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.HolidayManager failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getHolidayInfoItemArray
 
@@ -55,22 +70,38 @@ getHolidayInfoItemArray(year?: number): Array<HolidayInfoItem>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| year | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| year | number | 否 | 年，例如2023。 默认值：当前年份。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[HolidayInfoItem](arkts-localization-i18n-holidayinfoitem-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[HolidayInfoItem](arkts-localization-i18n-holidayinfoitem-i.md)&gt; | 返回节假日信息列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // 需要将'/system/lib/US.ics'替换为实际ics文件路径
+  let holidayManager: i18n.HolidayManager = new i18n.HolidayManager('/system/lib/US.ics');
+  let holidayInfoItemArray: Array<i18n.HolidayInfoItem> = holidayManager.getHolidayInfoItemArray(2023);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call holidayManager.getHolidayInfoItemArray failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## isHoliday
 
@@ -88,18 +119,35 @@ isHoliday(date?: Date): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| date | Date | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| date | Date | 否 | 时间日期。    **说明：** 月份从0开始计数，0表示一月。 默认值：当前日期。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示指定的日期是节假日，false表示指定的日期不是节假日。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // 需要将'/system/lib/US.ics'替换为实际ics文件路径
+  let holidayManager: i18n.HolidayManager = new i18n.HolidayManager('/system/lib/US.ics');
+  let isHoliday: boolean = holidayManager.isHoliday();
+  isHoliday = holidayManager.isHoliday(new Date(2023, 5, 25)); // 时间日期为2023.06.25
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call holidayManager.isHoliday failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```

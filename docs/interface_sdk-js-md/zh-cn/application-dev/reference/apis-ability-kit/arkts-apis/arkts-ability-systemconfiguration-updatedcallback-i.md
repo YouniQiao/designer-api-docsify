@@ -9,7 +9,7 @@ UpdatedCallback是监听系统环境变化的回调函数，开发者可通过 [
 ## 导入模块
 
 ```TypeScript
-import { systemConfiguration } from 'kits/@kit.AbilityKit';
+import systemConfiguration from '@kit.AbilityKit';
 ```
 
 ## onColorModeUpdated
@@ -155,3 +155,53 @@ onMNCUpdated?: OnMNCUpdatedFn
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { UIAbility, systemConfiguration, ConfigurationConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let callback: systemConfiguration.UpdatedCallback = {
+      onColorModeUpdated: (colorMode: ConfigurationConstant.ColorMode) => {
+        console.info(`system configuration updated colormode:` + colorMode);
+      },
+      onFontSizeScaleUpdated: (fontSizeScale: number) => {
+        console.info(`system configuration updated fontSizeScale:` + fontSizeScale);
+      },
+      onFontWeightScaleUpdated: (fontWeightScale: number) => {
+        console.info(`system configuration updated fontWeightScale:` + fontWeightScale);
+      },
+      onLanguageUpdated: (language: string) => {
+        console.info(`system configuration updated language:` + language);
+      },
+      onFontIdUpdated: (fontId: string) => {
+        console.info(`system configuration updated fontId:` + fontId);
+      },
+      onMCCUpdated: (mcc: string) => {
+        console.info(`system configuration updated mcc:` + mcc);
+      },
+      onMNCUpdated: (mnc: string) => {
+        console.info(`system configuration updated mnc:` + mnc);
+      },
+      onHasPointerDeviceUpdated: (hasPointerDevice: boolean) => {
+        console.info(`system configuration updated hasPointerDevice:` + hasPointerDevice);
+      },
+      onLocaleUpdated: (locale: string) => {
+        console.info(`system configuration updated locale:` + locale);
+      }
+    }
+    // 1.通过context属性获取applicationContext
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2.通过applicationContext注册监听
+      applicationContext.onSystemConfigurationUpdated(callback);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+    console.info(`onSystemConfigurationUpdated finish`);
+  }
+}
+```

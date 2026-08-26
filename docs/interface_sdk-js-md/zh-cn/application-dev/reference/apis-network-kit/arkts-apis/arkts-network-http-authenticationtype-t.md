@@ -12,8 +12,8 @@ export type AuthenticationType = 'basic' | 'ntlm' | 'digest'
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-| 类型 |
-| --- |
-| 'basic' |
-| 'ntlm' |
-| 'digest' |
+| 类型 | 说明 |
+| --- | --- |
+| 'basic' | 表示使用基本认证方式，值固定为'basic'字符串。 |
+| 'ntlm' | 表示使用ntlm认证方式，值固定为'ntlm'字符串。 |
+| 'digest' | 表示使用摘要认证方式，值固定为'digest'字符串。 |

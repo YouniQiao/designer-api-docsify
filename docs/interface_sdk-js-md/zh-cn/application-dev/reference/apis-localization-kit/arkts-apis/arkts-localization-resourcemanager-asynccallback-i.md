@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import resourceManager from '@kit.LocalizationKit';
 ```
 
 ## [[Call]]
@@ -34,7 +34,7 @@ import { resourceManager } from 'kits/@kit.LocalizationKit';
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| err | Error | 是 |
-| data | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| err | Error | 是 | 接口调用失败的错误信息。 |
+| data | T | 是 | 接口调用时的回调信息。 |

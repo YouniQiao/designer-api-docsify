@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getAppThreadCpuUsage
@@ -14,7 +13,8 @@ function getAppThreadCpuUsage(): ThreadCpuUsage[]
 
 Obtains the CPU usage of application threads.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API involves cross-process communication and takes a number time. To avoid performance problems, you are
 > advised not to call this API in the main thread.
 
@@ -24,6 +24,17 @@ Obtains the CPU usage of application threads.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md)[] |
+| Type | Description |
+| --- | --- |
+| [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md)[] | CPU usage of all threads of the current application process. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let appThreadCpuUsage: hidebug.ThreadCpuUsage[] = hidebug.getAppThreadCpuUsage();
+for (let i = 0; i < appThreadCpuUsage.length; i++) {
+  console.info(`threadId=${appThreadCpuUsage[i].threadId}, cpuUsage=${appThreadCpuUsage[i].cpuUsage}`);
+}
+```

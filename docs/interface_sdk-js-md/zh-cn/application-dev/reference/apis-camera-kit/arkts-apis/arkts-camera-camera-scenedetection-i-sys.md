@@ -13,7 +13,6 @@ Provides the scene detection capability. It inherits from [SceneDetectionQuery](
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableSceneFeature
@@ -32,14 +31,45 @@ Enables or disables a scene feature. This API must be called after [SceneFeature
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | 是 |
-| enabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | 是 | Scene feature. |
+| enabled | boolean | 是 | Whether to enable the scene feature. **true** to enable, **false** otherwise. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableSceneFeature(photoSession: camera.PhotoSessionForSys, cameraInput: camera.CameraInput, previewOutput: camera.PreviewOutput): void {
+  photoSession.beginConfig();
+  photoSession.addInput(cameraInput);
+  photoSession.addOutput(previewOutput);
+  photoSession.commitConfig();
+
+  photoSession.on('featureDetection', camera.SceneFeatureType.MOON_CAPTURE_BOOST,
+    (err: BusinessError, statusObject: camera.SceneFeatureDetectionResult) => {
+      if (err !== undefined && err.code !== 0) {
+        console.error(`Callback Error, errorCode: ${err.code}`);
+        return;
+      }
+      console.info(
+        `on featureDetectionStatus featureType:${statusObject.featureType} detected:${statusObject.detected}`);
+      if (statusObject.featureType === camera.SceneFeatureType.MOON_CAPTURE_BOOST) {
+        try {
+          photoSession.enableSceneFeature(statusObject.featureType, statusObject.detected);
+        } catch (error) {
+          let err = error as BusinessError;
+          console.error(`The enableSceneFeature call failed. error code: ${err.code}`);
+        }
+      }
+    });
+}
+```

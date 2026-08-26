@@ -15,11 +15,11 @@ Returns a Boolean value that indicates whether a value is the reserved value NaN
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| number | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| number | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

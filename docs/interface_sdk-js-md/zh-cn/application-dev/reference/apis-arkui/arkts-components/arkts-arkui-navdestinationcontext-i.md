@@ -29,9 +29,9 @@ getConfigInRouteMap(): RouteMapConfig | undefined
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RouteMapConfig](arkts-arkui-routemapconfig-i.md) \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| [RouteMapConfig](arkts-arkui-routemapconfig-i.md) \| undefined | Routing configuration of the current page. |
 
 ## mode
 

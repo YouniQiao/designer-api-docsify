@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import remoteDevice from '@kit.ConnectivityKit';
 ```
 
 ## offPairingRequest
@@ -24,13 +24,13 @@ function offPairingRequest(callback?: Callback<PairingRequestParam>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PairingRequestParam](arkts-connectivity-remotedevice-pairingrequestparam-i.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PairingRequestParam](arkts-connectivity-remotedevice-pairingrequestparam-i.md)&gt; | 否 | 用于监听配对请求事件的回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## getAttachedMechDevices
@@ -20,12 +19,21 @@ function getAttachedMechDevices(): MechInfo[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md)[] |
+| 类型 | 说明 |
+| --- | --- |
+| [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md)[] | 返回已连接的机械设备列表 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+
+**示例**
+
+```TypeScript
+console.info('Query device list');
+// 调用getAttachedMechDevices方法获取已连接的机械体设备列表
+let mechanicInfos = mechanicManager.getAttachedMechDevices();
+console.info(`'device list:' ${mechanicInfos}`);
+```

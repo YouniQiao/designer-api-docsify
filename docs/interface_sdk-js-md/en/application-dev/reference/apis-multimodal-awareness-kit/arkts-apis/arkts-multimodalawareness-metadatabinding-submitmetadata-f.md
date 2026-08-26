@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
+import metadataBinding from '@kit.MultimodalAwarenessKit';
 ```
 
 ## submitMetadata
@@ -22,12 +22,25 @@ Transfers the metadata to be encoded to the MSDP. The MSDP determines whether to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| metadata | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| metadata | string | Yes | Metadata to be encoded. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
+
+**Examples**
+
+```TypeScript
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+
+let metadata: string = "";
+try {
+  metadataBinding.submitMetadata(metadata);
+} catch (error) {
+  console.error("submit metadata error" + error);
+}
+```

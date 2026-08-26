@@ -11,7 +11,7 @@ Mask effect class, used as input for Filter and VisualEffect. Different types of
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import uiEffect from '@kit.ArkGraphics2D';
 ```
 
 ## createPixelMapMask
@@ -31,24 +31,65 @@ Creates a Mask instance with scaling effect by inputting a pixelMap, the area of
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pixelMap | image.PixelMap | Yes |
-| srcRect | common2D.Rect | Yes |
-| dstRect | common2D.Rect | Yes |
-| fillColor | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelMap | image.PixelMap | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
+| srcRect | common2D.Rect | Yes | The area of the pixelMap to be drawn. The leftmost and topmost positions correspond to 0, and the rightmost and bottommost positions correspond to 1. right must be greater than left, and bottom must be greater than top; otherwise the effect will not take effect. |
+| dstRect | common2D.Rect | Yes | The drawing area of the pixelMap on the node where the mask is mounted. The leftmost and topmost positions of the node correspond to 0, and the rightmost and bottommost positions correspond to 1. right must be greater than left, and bottom must be greater than top; otherwise the effect will not take effect. |
+| fillColor | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | No | The color to fill the area outside the pixelMap drawing area on the node. Each component range is [0, 1], default is transparent color. Values less than 0 are treated as 0, and values greater than 1 are treated as 1. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) |
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a Mask instance created based on the pixelMap. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { uiEffect, common2D } from '@kit.ArkGraphics2D';
+import { BusinessError } from '@kit.BasicServicesKit'
+
+const colorBuffer = new ArrayBuffer(96);
+let opts : image.InitializationOptions = {
+  editable: true,
+  pixelFormat: 3,
+  size: {
+    height: 4,
+    width: 6
+  }
+}
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  let srcRect : common2D.Rect = {
+    left: 0,
+    top: 0,
+    right: 1,
+    bottom: 1
+  }
+  let dstRect : common2D.Rect = {
+    left: 0,
+    top: 0,
+    right: 1,
+    bottom: 1
+  }
+  let fillColor : uiEffect.Color = {
+    red: 0,
+    green: 0,
+    blue: 0,
+    alpha: 1
+  }
+  let mask = uiEffect.Mask.createPixelMapMask(pixelMap, srcRect, dstRect, fillColor);
+}).catch((error: BusinessError)=>{
+  console.error(`Failed to create pixelmap. code is ${error.code}, message is ${error.message}`);
+})
+```
 
 ## createPixelMapMask
 
@@ -66,21 +107,112 @@ Creates a Mask instance by inputting a pixelMap. This interface does not perform
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pixelMap | image.PixelMap | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelMap | image.PixelMap | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) |
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a Mask with the pixelMap. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+import { image } from '@kit.ImageKit';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  @State distortProgress: number = 0.;
+  @State rippleProgress: number = 0.;
+  @State distortFactor: number = 0.;
+  @State materialFactor: number = 1.;
+  @State refractionFactor: number = 1.;
+  @State reflectionFactor: number = 1.;
+  @State tintColorR: number = 1.;
+  @State tintColorG: number = 1.;
+  @State tintColorB: number = 1.;
+  @State tintColorA: number = 1.;
+  @State pixelMapDistort: image.PixelMap | undefined = undefined;
+
+  aboutToAppear(): void {
+    this.pixelMapDistort = this.getPixelMap();
+  }
+
+  private getPixelMap(): image.PixelMap | undefined {
+    try {
+      let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+      // this path should be created in local
+      const path: string = context.resourceDir + "/perlin_worley_noise_3d_64.bmp";
+      const imageSource: image.ImageSource = image.createImageSource(path);
+      if (!imageSource) {
+        return undefined;
+      }
+      const pixelMap: image.PixelMap | null = imageSource.createPixelMapSync();
+      if (!pixelMap) {
+        imageSource.release();
+        return undefined;
+      }
+      imageSource.release();
+      return pixelMap;
+    } catch (err) {
+      return undefined;
+    }
+  }
+
+  private getMaterialVisualEffect(): uiEffect.VisualEffect {
+    let effect: uiEffect.VisualEffect = uiEffect.createEffect();
+    let distortMask: uiEffect.Mask | undefined = undefined;
+    if (this.pixelMapDistort) {
+      distortMask = uiEffect.Mask.createPixelMapMask(this.pixelMapDistort);
+    }
+    effect.liquidMaterial({
+      enable: true,
+      distortProgress : this.distortProgress,
+      rippleProgress: this.rippleProgress,
+      distortFactor: this.distortFactor,
+      materialFactor : this.materialFactor,
+      refractionFactor : this.refractionFactor,
+      reflectionFactor: this.reflectionFactor,
+      tintColor : [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
+      ripplePosition: undefined,
+    },
+      uiEffect.Mask.createUseEffectMask(true),
+      distortMask
+      );
+    return effect;
+  }
+
+  build() {
+    Stack() {
+      EffectComponent() {
+        Column()
+          .position({ x: 200 + 'px', y: 200 + 'px' })
+          .height(553 + 'px')
+          .width(553 + 'px')
+          .borderRadius(12)
+          .visualEffect(this.getMaterialVisualEffect())
+      }
+      .backgroundEffect({
+        radius: 15,
+      }, { disableSystemAdaptation: true })
+      .width("100%").height("100%").align(Alignment.Center)
+    }
+    .backgroundImage($r('app.media.bg6'), ImageRepeat.NoRepeat) // the image should be created in local
+    .width("100%").height("100%").align(Alignment.Center)
+  }
+}
+```
 
 ## createRadialGradientMask
 
@@ -99,24 +231,46 @@ Creates an elliptical mask Mask instance by inputting the center position of the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| center | common2D.Point | Yes |
-| radiusX | number | Yes |
-| radiusY | number | Yes |
-| gradients | Array & lt;[number, number] & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| center | common2D.Point | Yes | Sets the center point of the ellipse. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| radiusX | number | Yes | Sets the semi-major axis of the ellipse. When the radius is 1, it equals the component height. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| radiusY | number | Yes | Sets the semi-minor axis of the ellipse. When the radius is 1, it equals the component height. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| gradients | Array & lt;[number, number] & gt; | Yes | The binary arrays in the array represent gradients: [RGBA color, position]. The RGBA color uses the same value for all four channels, which can be regarded as a grayscale value; position represents the distribution position of the RGBA color along the radial direction outward. Both RGBA color and position have a value range of [0, 1], floating-point values are supported, values less than 0 are treated as 0, and values greater than 1 are treated as 1. The position parameter values must be strictly increasing, the number of binary arrays in the Array must be greater than or equal to 2, and the elements in the binary arrays must not be empty; otherwise the elliptical distribution effect will not take effect. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) |
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a grayscale Mask with the elliptical radial distribution effect. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D'
+// values: [[1.0, 0.5], [1.0, 1.0]] => color0: 1.0; color1: 1.0; position0: 0.5; position1: 1.0
+let mask = uiEffect.Mask.createRadialGradientMask({x: 0.0, y: 0.0}, 0.5, 0.5, [[1.0, 0.5], [1.0, 1.0]]);
+@Entry
+@Component
+struct RadialGradientMaskExample {
+  build() {
+    Stack() {
+      Image($rawfile('test.jpg'))
+      Column()
+        .width('100%')
+        .height('100%')
+        // Use the mask as the input parameter of the filter to implement the corresponding effect. The mask is a quarter circle ring in the upper left corner of the screen.
+        .backgroundFilter(uiEffect.createFilter().edgeLight(1.0, null, mask))
+    }
+  }
+}
+```
 
 ## createRippleMask
 
@@ -134,24 +288,30 @@ Creates a wave ring mask Mask instance by inputting the center position, radius,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| center | common2D.Point | Yes |
-| radius | number | Yes |
-| width | number | Yes |
-| offset | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| center | common2D.Point | Yes | Sets the position of the wave ring center on the component. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], and values outside the range will be clamped during implementation. |
+| radius | number | Yes | Sets the radius of the wave ring, using normalized values. When the radius is 1, the wave ring radius equals the component height. The value range is [0, 10], and values outside the range will be clamped during implementation. |
+| width | number | Yes | Sets the width of the wave ring, using normalized values. When the width is 1, the wave ring width equals the component height. The value range is [0, 10], and values outside the range will be clamped during implementation. |
+| offset | number | No | Sets the offset of the wave peak position. The default value is 0, meaning the wave peak is at the exact center of the wave ring; -1.0 means the wave peak is at the innermost edge of the wave ring; 1.0 means the wave peak is at the outermost edge of the wave ring. The value range is [-1, 1], and values outside the range will be clamped during implementation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) |
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a Mask with the wave ring mask effect. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+let mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 1.0}, 0.5, 0.3, 0.0);
+```
 
 ## createUseEffectMask
 
@@ -169,21 +329,79 @@ Creates and sets a Mask instance indicating whether to use blur caching. This Ma
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [useEffect](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| useEffect | boolean | Yes | Flag indicating whether to use blur caching. A value of true means use, and the blur effect will be displayed normally; a value of false means not use, and the blur effect will not be displayed. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) |
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a Mask instance that indicates whether to use blur caching. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+
+@Entry
+@Component
+struct Index {
+  @State distortProgress: number = 0.;
+  @State rippleProgress: number = 0.;
+  @State distortFactor: number = 0.;
+  @State materialFactor: number = 1.;
+  @State refractionFactor: number = 1.;
+  @State reflectionFactor: number = 1.;
+  @State tintColorR: number = 1.;
+  @State tintColorG: number = 1.;
+  @State tintColorB: number = 1.;
+  @State tintColorA: number = 1.;
+
+  private getMaterialVisualEffect(): uiEffect.VisualEffect {
+    let effect: uiEffect.VisualEffect = uiEffect.createEffect();
+    effect.liquidMaterial({
+        enable: true,
+        distortProgress : this.distortProgress,
+        rippleProgress: this.rippleProgress,
+        distortFactor: this.distortFactor,
+        materialFactor : this.materialFactor,
+        refractionFactor : this.refractionFactor,
+        reflectionFactor: this.reflectionFactor,
+        tintColor : [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
+        ripplePosition: undefined,
+      },
+      uiEffect.Mask.createUseEffectMask(true), // Example of using useEffectMask.
+    );
+    return effect;
+  }
+
+  build() {
+    Stack() {
+      EffectComponent() {
+        Column()
+          .position({ x: 200 + 'px', y: 200 + 'px' })
+          .height(553 + 'px')
+          .width(553 + 'px')
+          .borderRadius(12)
+          .visualEffect(this.getMaterialVisualEffect())
+      }
+      .backgroundEffect({
+        radius: 15,
+      }, { disableSystemAdaptation: true })
+      .width("100%").height("100%").align(Alignment.Center)
+    }
+    .backgroundImage($r('app.media.bg6'), ImageRepeat.NoRepeat)
+    .width("100%").height("100%").align(Alignment.Center)
+  }
+}
+```
 
 ## createWaveGradientMask
 
@@ -202,22 +420,44 @@ Creates a single-wave mask Mask instance by inputting the wave source center pos
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| center | common2D.Point | Yes |
-| width | number | Yes |
-| propagationRadius | number | Yes |
-| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | Yes |
-| turbulenceStrength | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| center | common2D.Point | Yes | Sets the center point of the single-wave source. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| width | number | Yes | Sets the width of the single-wave ring. The value range is [0, 5], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| propagationRadius | number | Yes | Sets the outer diffusion radius of the single-wave ring. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| blurRadius | number | Yes | Sets the blur outer radius of the single-wave ring. A blur radius of 0 results in a solid-edge ring; otherwise, it is a soft-edge ring. The value range is [0, 5], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| turbulenceStrength | number | No | Sets the turbulence intensity of the single-wave ring. The default value is 0; an intensity of 0 results in a regular ring, otherwise the ring edges will be turbulently distorted. The value range is [-1, 1], floating-point values are supported, and values outside the range will be clamped during implementation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) |
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a grayscale Mask with a single wave shape. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { uiEffect } from "@kit.ArkGraphics2D";
+// center: [0.5, 0.5]; width: 0.01; propagationRadius: 0.5; blurRadius: 0.1; turbulenceStrength: 0.1
+let mask = uiEffect.Mask.createWaveGradientMask({x: 0.5, y: 0.5}, 0.01, 0.5, 0.1, 0.1);
+@Entry
+@Component
+struct WaveGradientMaskExample {
+  build() {
+    Stack() {
+      Image($rawfile('test.jpg'))
+      Column()
+        .width('100%')
+        .height('100%')
+        // Use the mask as the filter parameter to implement the ripple effect that spreads from the center of the screen.
+        .backgroundFilter(uiEffect.createFilter().edgeLight(1.0, null, mask))
+    }
+  }
+}
+```

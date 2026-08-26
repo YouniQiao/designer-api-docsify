@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## createAVDownloaderManager
@@ -22,6 +22,20 @@ function createAVDownloaderManager(): Promise<AVDownloaderManager>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[AVDownloaderManager](arkts-media-media-avdownloadermanager-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AVDownloaderManager](arkts-media-media-avdownloadermanager-i.md)&gt; | Promise对象。返回离线下载任务管理器实例。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function test() {
+  media.createAVDownloaderManager().then((downloaderManager: media.AVDownloaderManager) => {
+    console.info('Succeeded in creating AVDownloaderManager');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create AVDownloaderManager, error: ${error}`);
+  });
+}
+```

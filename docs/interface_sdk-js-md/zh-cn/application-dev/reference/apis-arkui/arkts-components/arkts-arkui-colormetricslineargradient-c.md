@@ -29,6 +29,6 @@ ColorMetricsLinearGradient的构造函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| colorStops | [ColorMetricsStop](arkts-arkui-colormetricsstop-i.md)[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| colorStops | [ColorMetricsStop](arkts-arkui-colormetricsstop-i.md)[] | 是 | 线性渐变颜色断点数组，每个元素描述一个颜色及其在渐变中的断点值。 |

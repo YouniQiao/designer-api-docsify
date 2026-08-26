@@ -9,7 +9,7 @@ MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'kits/@kit.DrmKit';
+import drm from '@kit.DrmKit';
 ```
 
 ## clearOfflineMediaKeys
@@ -28,17 +28,28 @@ Clears offline media keys with the specified IDs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mediaKeyId | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mediaKeyId | Uint8Array | Yes | Array of offline media key IDs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed.Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+// mediaKeyId is the return value of processMediaKeyResponse or getOfflineMediaKeyIds. Pass in the actual value as required.
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySystem.clearOfflineMediaKeys(mediaKeyId);
+```
 
 ## createMediaKeySession
 
@@ -56,24 +67,33 @@ Creates a MediaKeySession instance with the specified content protection level.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Yes | Content protection level. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) |
+| Type | Description |
+| --- | --- |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) | MediaKeySession instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession(drm.ContentProtectionLevel.CONTENT_PROTECTION_LEVEL_SW_CRYPTO);
+```
 
 ## createMediaKeySession
 
@@ -91,17 +111,26 @@ Creates a MediaKeySession instance with the default content protection level.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) |
+| Type | Description |
+| --- | --- |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) | MediaKeySession instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+```
 
 ## destroy
 
@@ -119,10 +148,27 @@ Destroys this MediaKeySystem instance.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+mediaKeySession.destroy();
+```
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+mediaKeySystem.destroy();
+```
 
 ## generateKeySystemRequest
 
@@ -140,16 +186,29 @@ Generates a request to obtain a device certificate for the MediaKeySystem. This 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ProvisionRequest](arkts-drm-drm-provisionrequest-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ProvisionRequest](arkts-drm-drm-provisionrequest-i.md)&gt; | Promise used to return the request for a device certificate. If a device certificate already exists on the device, this operation fails. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+// Do not call this API if a device certificate already exists on the device.
+mediaKeySystem.generateKeySystemRequest().then((provisionRequest: drm.ProvisionRequest) => {
+  // provisionRequest is the device certificate request object returned by the API, including the request data and default URL.
+  console.info("generateKeySystemRequest, defaultURL: " + provisionRequest.defaultURL);
+});
+```
 
 ## getCertificateStatus
 
@@ -167,16 +226,25 @@ Obtains the status of the device certificate.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CertificateStatus](arkts-drm-drm-certificatestatus-e.md) |
+| Type | Description |
+| --- | --- |
+| [CertificateStatus](arkts-drm-drm-certificatestatus-e.md) | Certificate status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let certificateStatus: drm.CertificateStatus = mediaKeySystem.getCertificateStatus();
+```
 
 ## getConfigurationByteArray
 
@@ -194,23 +262,32 @@ Obtains the value of a configuration item in the form of a byte array.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [configName](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Uint8Array |
+| Type | Description |
+| --- | --- |
+| Uint8Array | Value of the configuration item in the form of an array. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let configValue: Uint8Array = mediaKeySystem.getConfigurationByteArray('deviceUniqueId'); // Ensure that the deviceUniqueId property exists.
+```
 
 ## getConfigurationString
 
@@ -228,23 +305,32 @@ Obtains the value of a configuration item in the form of a string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [configName](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Value of the configuration item in the form of a string. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param's length is zero or too big(exceeds 4096 Bytes). |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let configValue: string = mediaKeySystem.getConfigurationString('vendor');
+```
 
 ## getMaxContentProtectionLevel
 
@@ -262,16 +348,25 @@ Obtains the maximum content protection level supported by the current DRM soluti
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) |
+| Type | Description |
+| --- | --- |
+| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Maximum content protection level. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let maxLevel: drm.ContentProtectionLevel = mediaKeySystem.getMaxContentProtectionLevel();
+```
 
 ## getOfflineMediaKeyIds
 
@@ -289,16 +384,25 @@ Obtains the IDs of offline media keys.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Uint8Array[] |
+| Type | Description |
+| --- | --- |
+| Uint8Array[] | Array of offline media key IDs. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let offlineMediaKeyIds: Uint8Array[] = mediaKeySystem.getOfflineMediaKeyIds();
+```
 
 ## getOfflineMediaKeyStatus
 
@@ -316,23 +420,34 @@ Obtains the status of offline media keys with the specified IDs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mediaKeyId | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mediaKeyId | Uint8Array | Yes | Array of offline media key IDs. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [OfflineMediaKeyStatus](arkts-drm-drm-offlinemediakeystatus-e.md) |
+| Type | Description |
+| --- | --- |
+| [OfflineMediaKeyStatus](arkts-drm-drm-offlinemediakeystatus-e.md) | Status of the offline media keys. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+// mediaKeyId is the return value of processMediaKeyResponse or getOfflineMediaKeyIds. Pass in the actual value as required.
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+let configValue: drm.OfflineMediaKeyStatus = mediaKeySystem.getOfflineMediaKeyStatus(mediaKeyId);
+```
 
 ## getStatistics
 
@@ -350,16 +465,25 @@ Obtains the DRM metrics, including the number of active sessions, plugin version
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [StatisticKeyValue](arkts-drm-drm-statistickeyvalue-i.md)[] |
+| Type | Description |
+| --- | --- |
+| [StatisticKeyValue](arkts-drm-drm-statistickeyvalue-i.md)[] | Metrics. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let statisticKeyValue: drm.StatisticKeyValue[] = mediaKeySystem.getStatistics();
+```
 
 ## off('keySystemRequired')
 
@@ -377,17 +501,17 @@ Unsubscribes from events indicating that the application requests a device certi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keySystemRequired' | Yes |
-| callback | (eventInfo: EventInfo) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md). |
+| callback | (eventInfo: EventInfo) = & gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## on('keySystemRequired')
 
@@ -405,17 +529,17 @@ Subscribes to events indicating that the application requests a device certifica
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keySystemRequired' | Yes |
-| callback | (eventInfo: EventInfo) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md). It is triggered when a device certificate is required. |
+| callback | (eventInfo: EventInfo) = & gt; void | Yes | Callback used to return the event information. The occurrence of this event signals the need to request a device certificate. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## processKeySystemResponse
 
@@ -433,23 +557,36 @@ Processes the response to a previously generated device certificate request. Thi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| response | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| response | Uint8Array | Yes | Response to a previously generated device certificate request. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+// keySystemResponse is the device certificate response obtained from the DRM service. Pass in the actual value as required.
+let keySystemResponse = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySystem.processKeySystemResponse(keySystemResponse).then(() => {
+  console.info("processKeySystemResponse");
+});
+```
 
 ## setConfigurationByteArray
 
@@ -467,18 +604,30 @@ Sets a configuration item in the form of a byte array.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [configName](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | Yes |
-| value | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md). |
+| value | Uint8Array | Yes | Value of the configuration item in the form of an array. The specific value is determined by the DRM solution on the device. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+// Set configValue based on project requirements.
+let configValue: Uint8Array = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+// Ensure that byteArrayConfigName of the current DRM solution is configurable.
+mediaKeySystem.setConfigurationByteArray('byteArrayConfigName', configValue);
+```
 
 ## setConfigurationString
 
@@ -496,15 +645,24 @@ Sets a configuration item in the form of a string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [configName](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md). |
+| value | string | Yes | Value of the configuration item. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+mediaKeySystem.setConfigurationString('stringConfigName', 'stringConfigValue'); // Ensure that stringConfigName is configurable.
+```

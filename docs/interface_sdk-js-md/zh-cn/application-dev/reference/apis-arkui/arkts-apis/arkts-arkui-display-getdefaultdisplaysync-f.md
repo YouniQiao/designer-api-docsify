@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import display from '@kit.ArkUI';
 ```
 
 ## getDefaultDisplaySync
@@ -22,12 +22,23 @@ function getDefaultDisplaySync(): Display
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Display](arkts-arkui-display-display-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Display](arkts-arkui-display-display-i.md) | 返回默认的Display对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: Display is not created or destroyed. |
+
+**示例**
+
+```TypeScript
+let displayClass: display.Display | null = null;
+try {
+  displayClass = display.getDefaultDisplaySync();
+} catch (exception) {
+  console.error(`Failed to get default display. Code: ${exception.code}, message: ${exception.message}`);
+}
+```

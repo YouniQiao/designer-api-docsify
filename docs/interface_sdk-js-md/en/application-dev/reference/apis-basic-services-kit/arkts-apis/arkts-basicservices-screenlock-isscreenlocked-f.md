@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from 'kits/@kit.BasicServicesKit';
+import screenLock from '@kit.BasicServicesKit';
 ```
 
 ## isScreenLocked
@@ -22,9 +22,23 @@ Checks whether the screen is currently locked.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isScreenLocked. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+screenLock.isScreenLocked((err: BusinessError, data: Boolean)=>{      
+  if (err) {
+    console.error(`Failed to obtain whether the screen is locked, Code: ${err.code}, message: ${err.message}`);
+    return;    
+  }
+  console.info(`Succeeded in Obtaining whether the screen is locked. result: ${data}`);
+});
+```
 
 
 ## isScreenLocked
@@ -43,6 +57,18 @@ Checks whether the screen is currently locked.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | the promise returned by the function. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+screenLock.isScreenLocked().then((data: Boolean) => {
+  console.info(`Succeeded in Obtaining whether the screen is locked. result: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain whether the screen is locked, Code: ${err.code}, message: ${err.message}`);
+});
+```

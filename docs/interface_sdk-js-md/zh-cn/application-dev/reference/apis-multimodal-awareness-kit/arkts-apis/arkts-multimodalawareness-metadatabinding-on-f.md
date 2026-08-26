@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
+import metadataBinding from '@kit.MultimodalAwarenessKit';
 ```
 
 ## on('operationSubmitMetadata')
@@ -22,15 +22,34 @@ function on(type: 'operationSubmitMetadata', bundleName: string, callback: Callb
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'operationSubmitMetadata' | 是 |
-| bundleName | string | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'operationSubmitMetadata' | 是 | 事件类型，固定传入'operationSubmitMetadata'，表示系统应用获取编码内容。 |
+| bundleName | string | 是 | 应用包名，用于标识注册订阅事件的第三方应用。在事件发生时，系统将通过此包名识别并通知对应的注册应用。需确保传入的包名为有效的应用包名。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数，用于返回事件码。当事件值为1时表示截图事件，目前仅支持截图事件，取值范围：1（截图事件）。注意：回调函数应快速执行， 避免阻塞UI线程。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) |
-| [32100004](../errorcode-metadataBinding.md#32100004-订阅失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
+| [32100004](../errorcode-metadataBinding.md#32100004-订阅失败) | Subscribe Failed. Possible causes:  1. Abnormal system capability.  2. IPC communication abnormality.  3. Algorithm loading exception. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+
+let bundleName: string = 'com.example.app';
+try {
+  metadataBinding.on('operationSubmitMetadata', bundleName, (event: number) => {
+    if (event == 1) {
+      console.info('The screenshot request is received and the app link is obtained');
+    }
+  });
+} catch (error) {
+  const err = error as BusinessError;
+  console.error(`Failed to register operationSubmitMetadata event. Code: ${err.code}, message: ${err.message}`);
+}
+```

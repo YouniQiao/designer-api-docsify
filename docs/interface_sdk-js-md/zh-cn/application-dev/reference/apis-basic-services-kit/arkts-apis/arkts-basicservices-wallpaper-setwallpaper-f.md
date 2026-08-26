@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import wallpaper from '@kit.BasicServicesKit';
 ```
 
 ## setWallpaper
@@ -28,11 +28,48 @@ function setWallpaper(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| source | string \| image.PixelMap | 是 |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| source | string \| image.PixelMap | 是 |  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+// source类型为string
+let wallpaperPath = '/data/storage/el2/base/haps/entry/files/js.jpeg';
+wallpaper.setWallpaper(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to setWallpaper. Code: ${error.code}, message: ${error.message}`);
+        return;
+    }
+    console.info(`success to setWallpaper.`);
+});
+
+// source类型为image.PixelMap
+let imageSource = image.createImageSource('file://' + wallpaperPath);
+let opts: image.DecodingOptions = {
+    desiredSize: {
+        height: 3648,
+        width: 2736
+    }
+};
+imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
+    wallpaper.setWallpaper(pixelMap, wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError) => {
+        if (error) {
+            console.error(`Failed to setWallpaper. Code: ${error.code}, message: ${error.message}`);
+            return;
+        }
+        console.info(`success to setWallpaper.`);
+    });
+}).catch((error: BusinessError) => {
+    console.error(`Failed to createPixelMap. Code: ${error.code}, message: ${error.message}`);
+});
+```
 
 
 ## setWallpaper
@@ -53,13 +90,46 @@ function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperT
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| source | string \| image.PixelMap | 是 |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| source | string \| image.PixelMap | 是 |  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | the promise returned by the function. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+// source类型为string
+let wallpaperPath = '/data/storage/el2/base/haps/entry/files/js.jpeg';
+wallpaper.setWallpaper(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
+    console.info(`success to setWallpaper.`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to setWallpaper. Code: ${error.code}, message: ${error.message}`);
+});
+  
+// source类型为image.PixelMap
+let imageSource = image.createImageSource('file://' + wallpaperPath);
+let opts: image.DecodingOptions = {
+    desiredSize: {
+        height: 3648,
+        width: 2736
+    }
+};
+imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
+    wallpaper.setWallpaper(pixelMap, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
+        console.info(`success to setWallpaper.`);
+    }).catch((error: BusinessError) => {
+        console.error(`Failed to setWallpaper. Code: ${error.code}, message: ${error.message}`);
+    });
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to createPixelMap. Code: ${error.code}, message: ${error.message}`);
+});
+```

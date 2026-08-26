@@ -9,7 +9,7 @@ Provides system attribute configuration functions, including translating languag
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getAppPreferredLanguage
@@ -28,9 +28,17 @@ Obtains the preferred language of an application.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Preferred language of the application. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let appPreferredLanguage: string = i18n.System.getAppPreferredLanguage();
+```
 
 ## getDisplayCountry
 
@@ -48,24 +56,45 @@ Obtains the country/region display name in the specified language.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| country | string | Yes |
-| locale | string | Yes |
-| sentenceCase | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| country | string | Yes | Valid country/region code. For details, see [System Locale](../../../internationalization/i18n-locale-culture.md#how-it-works). |
+| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. |
+| sentenceCase | boolean | No | Whether to use sentence case to display the text. The value **true** means to display the text in title case format, and the value **false** means to display the text in the default case format of the locale. The default value is **true**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Country/region display name in the specified language. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let displayCountry: string = i18n.System.getDisplayCountry('CN', 'en-GB'); // displayCountry = 'China'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getDisplayCountry failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let countryName: string = i18n.getDisplayCountry('zh-CN', 'en-GB', true); // countryName = 'China'
+countryName = i18n.getDisplayCountry('zh-CN', 'en-GB'); // countryName = 'China'
+```
 
 ## getDisplayLanguage
 
@@ -83,24 +112,46 @@ Obtains the language display name in the specified language.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| language | string | Yes |
-| locale | string | Yes |
-| sentenceCase | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| language | string | Yes | Valid language ID. For details, see [System Locale](../../../internationalization/i18n-locale-culture.md#how-it-works). |
+| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. |
+| sentenceCase | boolean | No | Whether to use sentence case to display the text. The value **true** means to display the text in title case format, and the value **false** means to display the text in the default case format of the locale. The default value is **true**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Language display name in the specified language. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // Obtain the display name of Chinese in English.
+  let displayLanguage: string = i18n.System.getDisplayLanguage('zh', 'en-GB'); // displayLanguage = 'Chinese'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getDisplayLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let languageName: string = i18n.getDisplayLanguage('zh', 'en-GB', true); // languageName = 'Chinese'
+languageName = i18n.getDisplayLanguage('zh', 'en-GB'); // languageName = 'Chinese'
+```
 
 ## getFirstDayOfWeek
 
@@ -118,9 +169,17 @@ Obtains the first day of a week in the system settings.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WeekDay](arkts-localization-i18n-weekday-e.md) |
+| Type | Description |
+| --- | --- |
+| [WeekDay](arkts-localization-i18n-weekday-e.md) | Start day of a week. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let firstDayOfWeek: i18n.WeekDay = i18n.System.getFirstDayOfWeek();
+```
 
 ## getFirstPreferredLanguage
 
@@ -138,9 +197,23 @@ Obtains the first language in the preferred language list.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | First language in the preferred language list. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let firstPreferredLanguage: string = i18n.System.getFirstPreferredLanguage();
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let firstPreferredLanguage: string = i18n.getFirstPreferredLanguage();
+```
 
 ## getPreferredLanguageList
 
@@ -158,9 +231,23 @@ Obtains the list of preferred languages.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | List of preferred languages. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let preferredLanguageList: Array<string> = i18n.System.getPreferredLanguageList();
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let preferredLanguageList: Array<string> = i18n.getPreferredLanguageList();
+```
 
 ## getSimplifiedLanguage
 
@@ -178,22 +265,39 @@ Obtains the simplified representation of a language. For example, the simplified
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| language | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| language | string | No | [Valid language ID](../../../internationalization/i18n-locale-culture.md#how-it-works). The default value is the system language. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | If **language** is not passed, the application checks for dialects supported by the system based on the system language and locale. If such a dialect is found, the simplified representation of the dialect is returned. Otherwise, the simplified representation of the system language is returned. If **language** is passed, the simplified representation of the specified language is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // simplifiedLanguage = 'zh'
+  let simplifiedLanguage: string = i18n.System.getSimplifiedLanguage('zh-Hans-CN');
+  // Obtain the simplified representation of the current system language.
+  let simplifiedSystemLanguage: string = i18n.System.getSimplifiedLanguage();
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getSimplifiedLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getSystemCountries
 
@@ -211,22 +315,37 @@ Obtains the list of countries/regions supported for the specified language.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| language | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| language | string | Yes | [Valid language ID](../../../internationalization/i18n-locale-culture.md#how-it-works). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | List of countries/regions supported for the specified language. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // systemCountries = [ 'ZW', 'YT', 'YE', ..., 'ER', 'CN', 'DE' ]
+  let systemCountries: Array<string> = i18n.System.getSystemCountries('zh');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getSystemCountries failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getSystemLanguage
 
@@ -246,9 +365,23 @@ Obtains the current system language. To listen for system language changes, enab
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Language ID. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemLanguage: string = i18n.System.getSystemLanguage(); // If the system language is simplified Chinese, then systemLanguage is 'zh-Hans'.
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemLanguage: string = i18n.getSystemLanguage();
+```
 
 ## getSystemLanguages
 
@@ -266,9 +399,18 @@ Obtains the list of system languages. Since API version 11, this API is supporte
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | List of system languages. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// systemLanguages = [ 'ug', 'bo', 'zh-Hant', 'en-Latn-US', 'zh-Hans' ]
+let systemLanguages: Array<string> = i18n.System.getSystemLanguages();
+```
 
 ## getSystemLocale
 
@@ -290,9 +432,23 @@ Obtains the current system locale.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Locale ID. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemLocale: string = i18n.System.getSystemLocale(); // If the system language is simplified Chinese and the system region is China, then systemLocale is zh-Hans-CN.
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let locale: string = i18n.getSystemLocale();
+```
 
 ## getSystemLocaleInstance
 
@@ -310,9 +466,17 @@ Obtains the current system locale. To listen for system locale changes, enable l
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Intl.Locale |
+| Type | Description |
+| --- | --- |
+| Intl.Locale | the locale object currently used by the system. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemLocale: Intl.Locale = i18n.System.getSystemLocaleInstance();
+```
 
 ## getSystemRegion
 
@@ -330,9 +494,23 @@ Obtains the current system country/region. To listen for system region changes, 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Country/region ID. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemRegion: string = i18n.System.getSystemRegion(); // If the system region is China, then systemRegion is CN.
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let region: string = i18n.getSystemRegion();
+```
 
 ## getTemperatureName
 
@@ -350,21 +528,36 @@ Obtains the name of a temperature unit.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Name of the temperature unit, which can be **celsius**, **fahrenheit**, and **kelvin**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // temperatureName = 'celsius'
+  let temperatureName: string = i18n.System.getTemperatureName(i18n.TemperatureType.CELSIUS);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getTemperatureName failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getTemperatureType
 
@@ -382,9 +575,17 @@ Obtains the temperature unit of the system.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) |
+| Type | Description |
+| --- | --- |
+| [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Temperature unit. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let temperatureType: i18n.TemperatureType = i18n.System.getTemperatureType();
+```
 
 ## getUsingLocalDigit
 
@@ -402,9 +603,17 @@ Checks whether use of local digits is enabled.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether use of local digits is enabled. The value **true** indicates that use of local digits is enabled, and the value **false** indicates the opposite. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let usingLocalDigit: boolean = i18n.System.getUsingLocalDigit();
+```
 
 ## is24HourClock
 
@@ -424,9 +633,23 @@ Checks whether the 24-hour clock is used. To listen for system time format chang
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the 24-hour clock is used. The value **true** indicates that the 24-hour clock is used, the the value **false** means the opposite. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let is24HourClock: boolean = i18n.System.is24HourClock(); // If the 24-hour clock is used, then is24HourClock is true.
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let is24HourClock: boolean = i18n.is24HourClock();
+```
 
 ## isSuggested
 
@@ -444,23 +667,38 @@ Checks whether a language is a suggested language in the specified region. It ca
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| language | string | Yes |
-| region | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| language | string | Yes | [Valid language ID](../../../internationalization/i18n-locale-culture.md#how-it-works), for example, **zh**. |
+| region | string | No | [Valid country/region code](../../../internationalization/i18n-locale-culture.md#how-it-works), for example, **CN**. The default value is the country/region of the SIM card. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether a language is a suggested language. The value **true** indicates that the language is a suggested language of the region, the the value false indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let isSuggestedCountry: boolean = i18n.System.isSuggested('zh', 'CN'); // isSuggestedCountry = true
+  isSuggestedCountry = i18n.System.isSuggested('en'); // Check whether a language is a suggested language for the current system region.
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.isSuggested failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setAppPreferredLanguage
 
@@ -478,13 +716,27 @@ Sets the preferred language of the application. Resources are loaded in the pref
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| language | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| language | string | Yes | [Valid language ID](../../../internationalization/i18n-locale-culture.md#how-it-works) or **default**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setAppPreferredLanguage('zh');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setAppPreferredLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```

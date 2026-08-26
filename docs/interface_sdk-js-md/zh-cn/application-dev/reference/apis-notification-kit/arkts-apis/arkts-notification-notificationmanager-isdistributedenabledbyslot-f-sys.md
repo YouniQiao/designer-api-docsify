@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import notificationManager from '@kit.NotificationKit';
 ```
 
 ## isDistributedEnabledBySlot
@@ -24,21 +24,37 @@ function isDistributedEnabledBySlot(slot: SlotType, deviceType: string): Promise
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [slot](arkts-notification-notificationsorting-notificationsorting-i-sys.md) | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 |
-| deviceType | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| slot | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 | 通知渠道类型。 |
+| deviceType | string | 是 | 设备类型。从API version 18开始，支持的设备类型如下：   - headset（可穿戴式音频设备）。   - liteWearable（轻量级智 能穿戴设备）。   - wearable（智能穿戴设备）。   从API version 20开始，支持的设备类型如下：   - headset（可穿戴式音频设备）。   - liteWearable（轻量级智能穿 戴设备）。   - wearable（智能穿戴设备）。   - current（本设备）。   - 2in1（PC设备）。   - tablet（平板）。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回true表示指定渠道的通知支持通知跨设备协同至指定类型设备；返回false表示指定渠道的通知不支持通知跨设备协同至指定类型设备。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let slot: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
+let deviceType: string = 'wearable';
+
+notificationManager.isDistributedEnabledBySlot(slot, deviceType).then((data: boolean) => {
+    hilog.info(0x0000, 'testTag', '%{public}s', `isDistributedEnabledBySlot success.`);
+}).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', '%{public}s', `isDistributedEnabledBySlot failed, code is ${err.code}, message is ${err.message}`);
+});
+```

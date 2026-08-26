@@ -9,7 +9,7 @@ Navigation组件页面切换的信息。
 ## 导入模块
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import uiObserver from '@kit.ArkUI';
 ```
 
 ## context

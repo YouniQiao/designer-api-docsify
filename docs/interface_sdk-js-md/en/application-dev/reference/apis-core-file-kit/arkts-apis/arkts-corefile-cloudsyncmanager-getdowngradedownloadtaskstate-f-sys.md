@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+import cloudSyncManager from '@kit.CoreFileKit';
 ```
 
 ## getDowngradeDownloadTaskState
@@ -26,21 +26,21 @@ Supports querying the execution status of full data download tasks for integrate
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleNames | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleNames | Array & lt;string & gt; | Yes | array of bundleName. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;DownloadProgress & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;DownloadProgress & gt; & gt; | Return Promise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| 13900010 |
-| 13900020 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| 13900010 | Try again. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameter are left unspecified.  2.The length of the input parameter exceeds the upper limit. Maximum array length is 20.  3.The input parameter contains an invalid bundleName. |

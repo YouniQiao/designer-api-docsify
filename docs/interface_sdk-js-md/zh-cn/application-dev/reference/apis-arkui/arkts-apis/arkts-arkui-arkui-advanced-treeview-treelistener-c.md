@@ -9,7 +9,8 @@
 ## 导入模块
 
 ```TypeScript
-import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from 'kits/@kit.ArkUI';
+import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
+import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUIV2';
 ```
 
 ## off
@@ -30,10 +31,10 @@ off(type: TreeListenType, callback?: (callbackParam: CallbackParam) => void): vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | 是 |
-| callback | (callbackParam: CallbackParam) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | 是 | 监听事件类型，用于指定要取消的监听事件。 |
+| callback | (callbackParam: CallbackParam) = & gt; void | 否 | Node information. |
 
 ## on
 
@@ -53,10 +54,10 @@ on(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | 是 |
-| callback | (callbackParam: CallbackParam) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | 是 | 监听事件类型，用于指定要注册的监听事件。 |
+| callback | (callbackParam: CallbackParam) = & gt; void | 是 | 回调函数，在对应监听事件触发时调用。回调参数callbackParam包含currentNodeId、parentNodeId和childIndex等信息。 |
 
 ## once
 
@@ -76,7 +77,7 @@ once(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | 是 |
-| callback | (callbackParam: CallbackParam) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | 是 | 监听事件类型，用于指定要注册的监听事件。 |
+| callback | (callbackParam: CallbackParam) = & gt; void | 是 | 回调函数，在对应监听事件触发时调用。回调参数callbackParam包含currentNodeId、parentNodeId和childIndex等信息。 |

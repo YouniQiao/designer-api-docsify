@@ -11,7 +11,6 @@ Obtains the network search results.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isNetworkSearchSuccess

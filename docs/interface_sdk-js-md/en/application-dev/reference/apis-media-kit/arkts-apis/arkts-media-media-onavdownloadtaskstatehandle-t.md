@@ -14,7 +14,7 @@ Describes the callback invoked for the AVDownloader state change event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| taskId | string | Yes |
-| state | [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| taskId | string | Yes | ID of the task whose status changes. |
+| state | [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) | Yes |  |

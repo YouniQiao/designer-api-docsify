@@ -1,7 +1,8 @@
 # Package
 
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 3开始支持，从API version 9开始废弃。
 指示应用包是否已安装。
 
@@ -14,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from 'kits/@kit.AbilityKit';
+import Package, { CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
 ```
 
 ## hasInstalled
@@ -35,6 +36,30 @@ static hasInstalled(options: CheckPackageHasInstalledOptions): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | 是 | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) |
+
+**示例**
+
+```TypeScript
+import Package from '@system.package';
+
+@Entry
+@Component
+struct MainPage {
+  hasInstalled() {
+    Package.hasInstalled({
+      bundleName: 'com.example.bundlename',
+      success: (data) => {
+        console.info('package has installed: ' + data);
+      },
+      fail: (msg:string, code) => {
+        console.error('query package fail, code: ' + code + ', data: ' + msg);
+      },
+    });
+  }
+  build() {
+  }
+}
+```

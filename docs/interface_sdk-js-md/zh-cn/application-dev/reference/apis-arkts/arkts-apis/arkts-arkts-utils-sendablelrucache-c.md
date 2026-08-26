@@ -9,7 +9,7 @@ SendableLruCache在缓存空间不足时，会用新数据替换近期最少使�
 ## 导入模块
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import ArkTSUtils from '@kit.ArkTS';
 ```
 
 ## clear
@@ -42,9 +42,9 @@ constructor(capacity?: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| capacity | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| capacity | number | 否 | 指示缓存的自定义容量。不传时，默认值为64，最大值不能超过2147483647；小于等于0时会抛出异常。 建议根据实际业务数据量设置合适的容量值，以平衡缓存命中率与内存占用。 |
 
 ## contains
 
@@ -62,15 +62,15 @@ contains(key: K): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 表示要检查的键。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true：缓存包含指定的键；false：缓存不包含指定的键。 |
 
 ## entries
 
@@ -88,9 +88,9 @@ entries(): IterableIterator<[K, V]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;[K, V] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;[K, V] & gt; | 返回键值对的迭代器。 |
 
 ## get
 
@@ -108,15 +108,15 @@ get(key: K): V | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 要查询的键。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| V \| undefined | 如果指定的键存在于缓存中，则返回与键关联的值；否则调用createDefault方法创建值。 若createDefault返回非undefined值，则将该键值对添加到缓存中，并返回该值；若createDefault返回undefined，则最终返回undefined。 当因添加新条目导致缓存中值的数量超过容量时，将淘汰最少使用的键值对。 |
 
 ## getCapacity
 
@@ -134,9 +134,9 @@ getCapacity(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回当前缓存的容量。 |
 
 ## getCreateCount
 
@@ -154,9 +154,9 @@ getCreateCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回使用createDefault方法创建对象的次数。 |
 
 ## getMatchCount
 
@@ -174,9 +174,9 @@ getMatchCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回查询值匹配成功的次数。 |
 
 ## getMissCount
 
@@ -194,9 +194,9 @@ getMissCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回查询值不匹配的次数。 |
 
 ## getPutCount
 
@@ -214,9 +214,9 @@ getPutCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回向缓存中添加值的次数。 |
 
 ## getRemoveCount
 
@@ -234,9 +234,9 @@ getRemoveCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回缓存键值对淘汰的次数。 |
 
 ## isEmpty
 
@@ -254,9 +254,9 @@ isEmpty(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示当前缓存为空，不包含任何键值对；返回false表示当前缓存不为空。 |
 
 ## keys
 
@@ -274,9 +274,9 @@ keys(): K[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| K[] |
+| 类型 | 说明 |
+| --- | --- |
+| K[] | 返回当前缓存中所有键的列表，按从最近访问到最少访问的顺序排列。 |
 
 ## put
 
@@ -294,16 +294,16 @@ put(key: K, value: V): V
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
-| value | V | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 要添加的键。 |
+| value | V | 是 | 与要添加的键关联的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V |
+| 类型 | 说明 |
+| --- | --- |
+| V | 返回与添加的键关联的值。 |
 
 ## remove
 
@@ -321,15 +321,15 @@ remove(key: K): V | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 要删除的键。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| V \| undefined | 返回与key关联的值；若key不存在，则返回undefined。 |
 
 ## toString
 
@@ -347,9 +347,9 @@ toString(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回对象的字符串表示形式，包含缓存最大容量、查询匹配成功次数、查询匹配失败次数及匹配率等信息。 |
 
 ## updateCapacity
 
@@ -367,9 +367,9 @@ updateCapacity(newCapacity: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| newCapacity | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| newCapacity | number | 是 | 指示要为缓存自定义的容量，最大值不能超过2147483647；小于等于0时会抛出异常。建议根据实际业务数据量设置合适的容量值，以平衡缓存命中率与内存占用。 |
 
 ## values
 
@@ -387,9 +387,9 @@ values(): V[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| V[] |
+| 类型 | 说明 |
+| --- | --- |
+| V[] | 返回当前缓存中所有值的列表，按从最近访问到最少访问的顺序排列。 |
 
 ## length
 

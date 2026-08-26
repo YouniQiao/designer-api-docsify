@@ -209,6 +209,8 @@
   <!--Del-->
   - [WakeupIntelligentVoiceEventType(system api)](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceeventtype-e-sys.md)<!--DelEnd-->
 - [@ohos.annotation](arkts-annotation.md)
+  - [Available](arkts-basicservices-annotation-available-a.md)
+  - [SuppressWarnings](arkts-basicservices-annotation-suppresswarnings-a.md)
   - [SuppressWarningsType](arkts-basicservices-annotation-suppresswarningstype-e.md)
 - [@ohos.app.ability.PrintExtensionAbility](arkts-app-ability-printextensionability.md)
   - [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md)

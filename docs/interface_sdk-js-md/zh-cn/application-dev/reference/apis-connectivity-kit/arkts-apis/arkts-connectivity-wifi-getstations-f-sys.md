@@ -3,7 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## getStations
@@ -28,6 +31,19 @@ function getStations(): Array<StationInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;StationInfo & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;StationInfo & gt; | 连接的设备数组。 |
+
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    let stations = wifi.getStations();
+    console.info("result:" + JSON.stringify(stations));        
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```

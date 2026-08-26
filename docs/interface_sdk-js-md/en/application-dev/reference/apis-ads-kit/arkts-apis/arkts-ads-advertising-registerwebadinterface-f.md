@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { AdComponent } from '@kit.AdsKit.AdComponent';
+import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
+import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
+import advertising from '@kit.AdsKit';
 ```
 
 ## registerWebAdInterface
@@ -22,17 +25,46 @@ Injects an ad JavaScript object to the **Web** component (this API is only open 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| controller | web_webview.WebviewController | Yes |
-| context | common.UIAbilityContext | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| controller | web_webview.WebviewController | Yes | Web component controller. |
+| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { advertising } from '@kit.AdsKit';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private webViewController: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('registerWebAdInterface')
+        .onClick(() => {
+          advertising.registerWebAdInterface(this.webViewController, this.context);
+        })
+      // ...
+
+      Web({ src: 'https://www.example.com', controller: this.webViewController })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 
 ## registerWebAdInterface
@@ -52,15 +84,44 @@ Injects an ad JavaScript object to the **Web** component (this API is only open 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| controller | web_webview.WebviewController | Yes |
-| context | common.UIAbilityContext | Yes |
-| needRefresh | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| controller | web_webview.WebviewController | Yes | Web component controller. |
+| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
+| needRefresh | boolean | Yes | Whether to refresh the page (true: yes; false: no). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { advertising } from '@kit.AdsKit';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private webViewController: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      // ...
+      Button('registerWebAdInterface')
+        .onClick(() => {
+          advertising.registerWebAdInterface(this.webViewController, this.context, true);
+        })
+
+      Web({ src: 'https://www.example.com', controller: this.webViewController })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```

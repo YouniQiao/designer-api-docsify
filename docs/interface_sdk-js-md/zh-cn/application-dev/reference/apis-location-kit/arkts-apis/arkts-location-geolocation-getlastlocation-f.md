@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import geolocation from '@kit.LocationKit';
 ```
 
 ## getLastLocation
@@ -26,9 +26,23 @@ function getLastLocation(callback: AsyncCallback<Location>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | 是 | 回调函数，返回上次位置信息。 |
+
+**示例**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.getLastLocation((err, data) => {
+    if (err) {
+        console.info('getLastLocation: err=' + JSON.stringify(err));
+    }
+    if (data) {
+        console.info('getLastLocation: data=' + JSON.stringify(data));
+    }
+});
+```
 
 
 ## getLastLocation
@@ -51,6 +65,15 @@ function getLastLocation(): Promise<Location>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Location & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Location & gt; | Promise对象，返回上次位置信息。 |
+
+**示例**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.getLastLocation().then((result) => {
+    console.info('getLastLocation: result: ' + JSON.stringify(result));
+});
+```

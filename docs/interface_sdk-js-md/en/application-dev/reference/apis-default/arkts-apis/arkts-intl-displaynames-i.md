@@ -15,14 +15,14 @@ Receives a code and returns a string based on the locale and options provided wh
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| code | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| code | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## resolvedOptions
 
 ```TypeScript
@@ -34,5 +34,5 @@ Returns a new object with properties reflecting the locale and style formatting 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

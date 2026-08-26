@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## getHotspotBlockList
@@ -24,16 +25,29 @@ Get all the stations in the block list. If does't have the permission of ohos.pe
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;StationInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;StationInfo & gt; | stations in the block list. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+try {
+  let data = wifiManager.getHotspotBlockList();
+  console.info("result:" + JSON.stringify(data));
+} catch (error) {
+  console.error("failed:" + JSON.stringify(error));
+}
+```

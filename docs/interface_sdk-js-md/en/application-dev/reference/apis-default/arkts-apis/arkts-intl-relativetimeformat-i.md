@@ -15,16 +15,16 @@ Formats a value and a unit according to the locale and formatting options of the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
-| unit | [RelativeTimeFormatUnit](arkts-intl-relativetimeformatunit-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes |  |
+| unit | [RelativeTimeFormatUnit](arkts-intl-relativetimeformatunit-t.md) | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Internationalized relative time message as string |
 
 ## formatToParts
 
@@ -36,15 +36,15 @@ Returns an array of objects representing the relative time format in parts that 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
-| unit | [RelativeTimeFormatUnit](arkts-intl-relativetimeformatunit-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes |  |
+| unit | [RelativeTimeFormatUnit](arkts-intl-relativetimeformatunit-t.md) | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## resolvedOptions
 
 ```TypeScript
@@ -56,5 +56,5 @@ Provides access to the locale and options computed during initialization of this
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

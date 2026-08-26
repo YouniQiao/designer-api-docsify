@@ -9,28 +9,28 @@
 ## 导入模块
 
 ```TypeScript
-import { Environment } from 'kits/@kit.CoreFileKit';
+import Environment from '@kit.CoreFileKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [getUserDesktopDir](arkts-corefile-environment-getuserdesktopdir-f.md) |
-| [getUserDocumentDir](arkts-corefile-environment-getuserdocumentdir-f.md) |
-| [getUserDownloadDir](arkts-corefile-environment-getuserdownloaddir-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getUserDesktopDir](arkts-corefile-environment-getuserdesktopdir-f.md) | 获取当前用户预授权桌面目录的沙箱路径。 |
+| [getUserDocumentDir](arkts-corefile-environment-getuserdocumentdir-f.md) | 获取当前用户预授权文档目录的沙箱路径。 |
+| [getUserDownloadDir](arkts-corefile-environment-getuserdownloaddir-f.md) | 获取当前用户预授权下载目录的沙箱路径。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [getExternalStorageDir](arkts-corefile-environment-getexternalstoragedir-f-sys.md) |
-| [getStorageDataDir](arkts-corefile-environment-getstoragedatadir-f-sys.md) |
-| [getStorageDataDir](arkts-corefile-environment-getstoragedatadir-f-sys.md) |
-| [getUserDataDir](arkts-corefile-environment-getuserdatadir-f-sys.md) |
-| [getUserDataDir](arkts-corefile-environment-getuserdatadir-f-sys.md) |
-| [getUserHomeDir](arkts-corefile-environment-getuserhomedir-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getExternalStorageDir](arkts-corefile-environment-getexternalstoragedir-f-sys.md) | 获取外卡根目录的沙箱路径，该接口仅对具有该系统能力的设备开放。 |
+| [getStorageDataDir](arkts-corefile-environment-getstoragedatadir-f-sys.md) | 异步方法获取内存存储根目录，使用promise异步回调。 |
+| [getStorageDataDir](arkts-corefile-environment-getstoragedatadir-f-sys.md) | 异步方法获取内存存储根目录，使用callback异步回调。 |
+| [getUserDataDir](arkts-corefile-environment-getuserdatadir-f-sys.md) | 异步方法获取公共文件根目录，使用promise异步回调。 |
+| [getUserDataDir](arkts-corefile-environment-getuserdatadir-f-sys.md) | 异步方法获取公共文件根目录，使用callback异步回调。 |
+| [getUserHomeDir](arkts-corefile-environment-getuserhomedir-f-sys.md) | 获取当前用户下应用沙箱路径的内卡目录，该接口仅对具有该系统能力的设备开放。 |
 <!--DelEnd-->

@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## getAttributeCount
@@ -28,9 +27,29 @@ ArkTS-Sta: getAttributeCount(): int当前开始标记的属性数量，用于遍
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前开始标记的属性数量，用于遍历和处理XML属性。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml = '<?xml version="1.0" encoding="utf-8"?><note importance="high" logged="true"/>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer);
+let str = "";
+function func(key: xml.EventType, value: xml.ParseInfo) {
+  str += 'key:' + key + ' value:' + value.getAttributeCount() + ' ';
+  return true; // 决定是否继续解析，用于继续或终止解析。
+}
+let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:true, tokenValueCallbackFunction:func}
+that.parseXml(options);
+console.info(str);
+// key:0 value:0 key:2 value:2 key:3 value:2 key:1 value:0
+```
 
 ## getColumnNumber
 
@@ -48,9 +67,29 @@ ArkTS-Sta: getColumnNumber(): int获取当前列号，从1开始计数。
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前元素的列号（从1开始），用于定位XML解析位置。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml = '<?xml version="1.0" encoding="utf-8"?><note>Happy</note>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer);
+let str = "";
+function func(key: xml.EventType, value: xml.ParseInfo) {
+  str += 'key:' + key + ' value:' + value.getColumnNumber() + ' ';
+  return true; // 决定是否继续解析，用于继续或终止解析。
+}
+let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:true, tokenValueCallbackFunction:func}
+that.parseXml(options);
+console.info(str);
+// key:0 value:1 key:2 value:45 key:4 value:50 key:3 value:57 key:1 value:57
+```
 
 ## getDepth
 
@@ -60,7 +99,8 @@ getDepth(): number
 
 ArkTS-Sta: getDepth(): int获取元素的当前深度。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 标签内的空白事件深度与标签的深度保持一致。
 
 **起始版本：** 8
@@ -71,9 +111,33 @@ ArkTS-Sta: getDepth(): int获取元素的当前深度。
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 元素的嵌套深度（从0开始），用于判断XML层级结构。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml =
+  '<?xml version="1.0" encoding="utf-8"?>' +
+  '<note importance="high">' +
+    '<title>Happy</title>' +
+  '</note>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer);
+let str = "";
+function func(key: xml.EventType, value: xml.ParseInfo) {
+  str += 'key:' + key + ' value:' + value.getDepth() + ' ';
+  return true; // 决定是否继续解析，用于继续或终止解析。
+}
+let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:true, tokenValueCallbackFunction:func}
+that.parseXml(options);
+console.info(str);
+// key:0 value:0 key:2 value:1 key:2 value:2 key:4 value:2 key:3 value:2 key:3 value:1 key:1 value:0
+```
 
 ## getLineNumber
 
@@ -91,9 +155,29 @@ ArkTS-Sta: getLineNumber(): int获取当前行号，从1开始。
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前元素的行号（从1开始），用于定位XML解析位置。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml = '<?xml version="1.0" encoding="utf-8"?><note>Work</note>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer);
+let str = "";
+function func(key: xml.EventType, value: xml.ParseInfo) {
+  str += 'key:' + key + ' value:' + value.getLineNumber() + ' ';
+  return true; // 决定是否继续解析，用于继续或终止解析。
+}
+let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:true, tokenValueCallbackFunction:func}
+that.parseXml(options);
+console.info(str);
+// key:0 value:1 key:2 value:1 key:4 value:1 key:3 value:1 key:1 value:1
+```
 
 ## getName
 
@@ -111,9 +195,29 @@ getName(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 当前元素的名称（不包含命名空间前缀），用于标识XML元素。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml = '<?xml version="1.0" encoding="utf-8"?><note>Happy</note>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer);
+let str = "";
+function func(key: xml.EventType, value: xml.ParseInfo) {
+  str += 'key:' + key + ' value:' + value.getName() + ' ';
+  return true; // 决定是否继续解析，用于继续或终止解析。
+}
+let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:true, tokenValueCallbackFunction:func}
+that.parseXml(options);
+console.info(str);
+// key:0 value: key:2 value:note key:4 value: key:3 value:note key:1 value:
+```
 
 ## getNamespace
 
@@ -131,9 +235,33 @@ getNamespace(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回当前元素的命名空间。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml =
+  '<?xml version="1.0" encoding="utf-8"?>' +
+  '<note xmlns:h="http://www.w3.org">' +
+    '<h:title>Happy</h:title>' +
+  '</note>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer);
+let str = "";
+function func(key: xml.EventType, value: xml.ParseInfo) {
+  str += 'key:' + key + ' value:' + value.getNamespace() + ' ';
+  return true; // 决定是否继续解析，用于继续或终止解析。
+}
+let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:false, tokenValueCallbackFunction:func}
+that.parseXml(options);
+console.info(str);
+// key:0 value: key:2 value: key:2 value:http://www.w3.org key:4 value: key:3 value:http://www.w3.org key:3 value: key:1 value:
+```
 
 ## getPrefix
 
@@ -151,9 +279,33 @@ getPrefix(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回当前元素的命名空间前缀，如果元素没有命名空间前缀则返回空字符串。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml =
+  '<?xml version="1.0" encoding="utf-8"?>' +
+  '<note xmlns:h="http://www.w3.org/TR/html4">' +
+    '<h:title>Happy</h:title>' +
+  '</note>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer);
+let str = "";
+function func(key: xml.EventType, value: xml.ParseInfo) {
+  str += 'key:' + key + ' value:' + value.getPrefix() + ' ';
+  return true; // 决定是否继续解析，用于继续或终止解析。
+}
+let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:false, tokenValueCallbackFunction:func}
+that.parseXml(options);
+console.info(str);
+// key:0 value: key:2 value: key:2 value:h key:4 value: key:3 value:h key:3 value: key:1 value:
+```
 
 ## getText
 
@@ -171,9 +323,29 @@ getText(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 当前事件的文本内容（如标签值、注释等），用于获取解析的XML数据。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml = '<?xml version="1.0" encoding="utf-8"?><note>Happy</note>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer);
+let str = "";
+function func(key: xml.EventType, value: xml.ParseInfo) {
+  str += 'key:' + key + ' value:' + value.getText() + ' ';
+  return true; // 决定是否继续解析，用于继续或终止解析。
+}
+let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:true, tokenValueCallbackFunction:func}
+that.parseXml(options);
+console.info(str);
+// key:0 value: key:2 value: key:4 value:Happy key:3 value: key:1 value:
+```
 
 ## isEmptyElementTag
 
@@ -191,9 +363,33 @@ isEmptyElementTag(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true，表示当前元素为空元素。返回false，表示当前元素为非空元素。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml =
+  '<?xml version="1.0" encoding="utf-8"?>' +
+  '<note importance="high" logged="true">' +
+    '<title/>' +
+  '</note>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer);
+let str = "";
+function func(key: xml.EventType, value: xml.ParseInfo) {
+  str += 'key:' + key + ' value:' + value.isEmptyElementTag() + ' ';
+  return true; // 决定是否继续解析，用于继续或终止解析。
+}
+let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:true, tokenValueCallbackFunction:func}
+that.parseXml(options);
+console.info(str);
+// key:0 value:false key:2 value:false key:2 value:true key:3 value:false key:3 value:false key:1 value:false
+```
 
 ## isWhitespace
 
@@ -211,6 +407,30 @@ isWhitespace(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true，表示当前文本事件仅包含空格字符。返回false，表示当前文本事件包含非空格字符。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml =
+  '<?xml version="1.0" encoding="utf-8"?>' +
+  '<note importance="high" logged="true">' +
+    '<title> </title>' +
+  '</note>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer);
+let str = "";
+function func(key: xml.EventType, value: xml.ParseInfo) {
+  str += 'key:' + key + ' value:' + value.isWhitespace() + ' ';
+  return true; // 决定是否继续解析，用于继续或终止解析。
+}
+let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:true, tokenValueCallbackFunction:func}
+that.parseXml(options);
+console.info(str);
+// key:0 value:true key:2 value:false key:2 value:true key:10 value:true key:3 value:true key:3 value:true key:1 value:true
+```

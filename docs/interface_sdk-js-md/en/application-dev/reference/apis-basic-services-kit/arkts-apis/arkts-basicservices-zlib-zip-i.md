@@ -9,7 +9,7 @@ Defines the **Zip** instance. It provides APIs to zip or unzip data in Zlib, Def
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import zlib from '@kit.BasicServicesKit';
 ```
 
 ## compress
@@ -28,24 +28,45 @@ Compresses the source buffer into the destination buffer. This API uses a promis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dest | ArrayBuffer | Yes |
-| source | ArrayBuffer | Yes |
-| sourceLen | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dest | ArrayBuffer | Yes | Destination buffer. |
+| source | ArrayBuffer | Yes | Source buffer. |
+| sourceLen | number | No | Length of the source data. The default value is **0**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ZipOutputInfo](arkts-basicservices-zlib-zipoutputinfo-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ZipOutputInfo](arkts-basicservices-zlib-zipoutputinfo-i.md)&gt; | Promise used to return the result status and the total size of the destination buffer. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+
+**Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let str = 'hello world! Hello, world!';
+const enc = util.TextEncoder.create('utf-8');
+const u8 = enc.encodeInto(str);
+const arrayBufferIn = u8.buffer.slice(u8.byteOffset, u8.byteOffset + u8.byteLength);
+
+let arrayBufferOut = new ArrayBuffer(100);
+let zip = zlib.createZipSync();
+
+zip.compress(arrayBufferOut, arrayBufferIn, 20).then((data) => {
+  console.info('compress success:');
+}).catch((errData: BusinessError) => {
+  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+})
+```
 
 ## compress2
 
@@ -63,26 +84,47 @@ Compresses the source buffer into the destination buffer. This API uses a promis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dest | ArrayBuffer | Yes |
-| source | ArrayBuffer | Yes |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes |
-| sourceLen | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dest | ArrayBuffer | Yes | Destination buffer. |
+| source | ArrayBuffer | Yes | Source buffer. |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md). |
+| sourceLen | number | No | Length of the source data. The default value is **0**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ZipOutputInfo](arkts-basicservices-zlib-zipoutputinfo-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ZipOutputInfo](arkts-basicservices-zlib-zipoutputinfo-i.md)&gt; | Promise used to return the result status and the total size of the destination buffer. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
-| [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+
+**Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let str = 'hello world! Hello, world!';
+const enc = util.TextEncoder.create('utf-8');
+const u8 = enc.encodeInto(str);
+const arrayBufferIn = u8.buffer.slice(u8.byteOffset, u8.byteOffset + u8.byteLength);
+
+let arrayBufferOut = new ArrayBuffer(100);
+let zip = zlib.createZipSync();
+
+zip.compress2(arrayBufferOut, arrayBufferIn, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+  console.info('compress2 success');
+}).catch((errData: BusinessError) => {
+  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+})
+```
 
 ## compressBound
 
@@ -100,21 +142,43 @@ Calculates the maximum size of the compressed data to be returned. This API uses
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sourceLen | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceLen | number | Yes | Length of the source data. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the maximum size of the compressed data. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let str = 'hello world!';
+let arrayBufferIn = new ArrayBuffer(str.length);
+let byteArray = new Uint8Array(arrayBufferIn);
+
+for (let i = 0, j = str.length; i < j; i++) {
+  byteArray[i] = str.charCodeAt(i)
+}
+
+let zip = zlib.createZipSync();
+
+zip.compressBound(str.length).then((data) => {
+  console.info('compressBound success')
+}).catch((errData: BusinessError) => {
+  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+})
+```
 
 ## deflate
 
@@ -132,24 +196,57 @@ Deflates data. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | For details, see [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
-| [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+  await zip.deflate({ availableOut: 8 }, zlib.CompressFlushMode.FINISH).then((data) => {
+    console.info('deflate success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+}
+```
 
 ## deflateBound
 
@@ -167,22 +264,55 @@ Calculates the maximum size of the compressed data. This API uses a promise to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| [sourceLength](arkts-basicservices-zlib-decompressionoutputinfo-i.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| sourceLength | number | Yes | Length of the source data. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the maximum size of the compressed data. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflateBound({ nextOut: arrayBufferOut }, 12).then((data) => {
+    console.info('deflateBound success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## deflateCopy
 
@@ -200,22 +330,55 @@ Copies a compression stream. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | For details, see [Zip&lt;sup&gt;12+&lt;/sup&gt;](#zip). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflateCopy(zip).then((data) => {
+    console.info('deflateCopy success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## deflateEnd
 
@@ -233,22 +396,60 @@ Releases all dynamically allocated data structs of a decompression stream. This 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+  await zip.deflate({ availableOut: 8 }, zlib.CompressFlushMode.FINISH).then((data) => {
+    console.info('deflate success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+  await zip.deflateEnd({ nextOut: arrayBufferOut }).then(data => {
+    console.info('deflateEnd success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## deflateGetDictionary
 
@@ -266,23 +467,61 @@ Obtains the content and length of the decompression dictionary used in a compres
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| dictionary | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| dictionary | ArrayBuffer | Yes | Buffer that receives the actual contents of the decompression dictionary. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DictionaryOutputInfo](arkts-basicservices-zlib-dictionaryoutputinfo-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DictionaryOutputInfo](arkts-basicservices-zlib-dictionaryoutputinfo-i.md)&gt; | Promise used to return the result status and length of the dictionary. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflateSetDictionary({ nextOut: arrayBufferOut }, arrayBufferOut).then((data) => {
+    console.info('deflateSetDictionary success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflateGetDictionary({ nextOut: arrayBufferOut }, arrayBufferOut).then((data) => {
+    console.info('deflateGetDictionary success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## deflateInit
 
@@ -300,23 +539,51 @@ Initializes a compression stream with a specified compression level. This API us
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+}
+```
 
 ## deflateInit2
 
@@ -335,27 +602,56 @@ Initializes a compression stream with the specified compression level, compressi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes |
-| method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | Yes |
-| windowBits | number | Yes |
-| [memLevel](arkts-basicservices-zlib-options-i.md) | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | Yes |
-| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md). |
+| method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | Yes | For details, see [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md). |
+| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:Zlib: [1, 15]Gzip: (15, +∞)Raw Deflate: [-15, -1] |
+| memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | Yes | For details, see [MemLevel](arkts-basicservices-zlib-memlevel-e.md). |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | For details, see [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync()
+  await zip.deflateInit2(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED, zlib.CompressMethod.DEFLATED, 28,
+    zlib.MemLevel.MEM_LEVEL_DEFAULT, zlib.CompressStrategy.COMPRESS_STRATEGY_DEFAULT_STRATEGY).then((data) => {
+      console.info('deflateInit2 success');
+    }).catch((errData: BusinessError) => {
+      console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+    })
+}
+```
 
 ## deflateParams
 
@@ -373,24 +669,57 @@ Dynamically updates the compression level and compression strategy. This API use
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes |
-| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md). |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | For details, see [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync()
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflateParams(zStream, zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION, zlib.CompressStrategy.COMPRESS_STRATEGY_DEFAULT_STRATEGY).then((data) => {
+    console.info('deflateParams success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## deflatePending
 
@@ -408,22 +737,55 @@ Returns the number of bytes and bits of output that has been generated but not y
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DeflatePendingOutputInfo](arkts-basicservices-zlib-deflatependingoutputinfo-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DeflatePendingOutputInfo](arkts-basicservices-zlib-deflatependingoutputinfo-i.md)&gt; | Promise used to return the result status, and number of bits and bytes for output. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflatePending({ nextOut: arrayBufferOut }).then((data) => {
+    console.info('deflatePending success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## deflatePrime
 
@@ -441,24 +803,57 @@ Inserts bits and values into the compression stream. This API uses a promise to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| [bits](arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | number | Yes |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| bits | number | Yes | Number of bits to be inserted. The value ranges from 0 to 16. |
+| value | number | Yes | Bit value corresponding to the number of bits. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflatePrime({ nextOut: arrayBufferOut }, 5, 2).then((data) => {
+    console.info('deflatePrime success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## deflateReset
 
@@ -476,22 +871,55 @@ Equivalent to call the **deflateEnd** API and then the **deflateInit** API. Howe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflateReset({ nextOut: arrayBufferOut }).then((data) => {
+    console.info('deflateReset success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## deflateResetKeep
 
@@ -509,22 +937,55 @@ Resets the initialized compression stream, but retains the compression parameter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflateResetKeep({ nextOut: arrayBufferOut }).then((data) => {
+    console.info('deflateResetKeep success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## deflateSetDictionary
 
@@ -542,23 +1003,56 @@ Initializes the compression dictionary from a given sequence of bytes. This API 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| dictionary | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| dictionary | ArrayBuffer | Yes | Dictionary data. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflateSetDictionary({ nextOut: arrayBufferOut }, arrayBufferOut).then((data) => {
+    console.info('deflateSetDictionary success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## deflateSetHeader
 
@@ -576,23 +1070,57 @@ Provides the header information of a gzip file when **deflateInit2()** requests 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| head | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| head | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | Yes | Header information of a gzip file extracted from the compressed data stream. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync()
+  await zip.deflateInit2(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED, zlib.CompressMethod.DEFLATED, 28,
+    zlib.MemLevel.MEM_LEVEL_DEFAULT, zlib.CompressStrategy.COMPRESS_STRATEGY_DEFAULT_STRATEGY).then((data) => {
+      console.info('deflateInit2 success');
+    }).catch((errData: BusinessError) => {
+      console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+    })
+  await zip.deflateSetHeader({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }, { isText: true, os: 1, time: 1, xflags: 1, extra: arrayBufferIn, extraLen: 12, name: arrayBufferIn, comment: arrayBufferOut, hcrc: true, done: true }).then((data) => {
+    console.info('deflateSetHeader success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+}
+```
 
 ## deflateTune
 
@@ -610,26 +1138,59 @@ Fine-tunes the internal compression parameters of **deflate**. This API uses a p
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| goodLength | number | Yes |
-| maxLazy | number | Yes |
-| niceLength | number | Yes |
-| maxChain | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| goodLength | number | Yes | Matched length threshold. |
+| maxLazy | number | Yes | Delay matching strategy used when the compression algorithm builds a Huffman tree. The value is an integer ranging from 0 to 4. **1**–**4**: A larger value indicates a lazier algorithm, which performs a slower matching process but generates a better compression result. **0**: Lazy matching is disabled. The algorithm builds a Huffman tree as soon as possible. The compression speed is fast, but the compression ratio is low. |
+| niceLength | number | Yes | Appropriate delay length threshold. |
+| maxChain | number | Yes | Maximum chain length. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflateTune({ nextOut: arrayBufferOut }, 2, 2, 2, 2).then((data) => {
+    console.info('deflateTune success:')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## getZStream
 
@@ -647,9 +1208,21 @@ Obtains this stream. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ZStream](arkts-basicservices-zlib-zstream-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ZStream](arkts-basicservices-zlib-zstream-i.md)&gt; | Promise used to return the **ZStream** object. |
+
+**Examples**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+
+let zip = zlib.createZipSync();
+
+zip.getZStream().then(data => {
+  console.info('getZStream success');
+})
+```
 
 ## inflate
 
@@ -667,24 +1240,78 @@ Inflates data. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | For details, see [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
-| [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zStream: zlib.ZStream = {
+    nextIn: arrayBufferIn,
+    availableIn: 1,
+    nextOut: arrayBufferOut,
+    availableOut: 1
+  };
+  let zip = zlib.createZipSync();
+  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+  await zip.deflate({ availableOut: 8 }, zlib.CompressFlushMode.FINISH).then((data) => {
+    console.info('deflate success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+  await zip.deflateEnd({ nextOut: arrayBufferOut }).then(data => {
+    console.info('deflateEnd success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
+  ).then(data => {
+    console.info('inflateInit success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflate({ availableIn: 8, availableOut: 8 }, 0).then((data) => {
+    console.info('inflate success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateEnd({ nextOut: arrayBufferOut }).then((data) => {
+    console.info('inflateEnd success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflateBack
 
@@ -702,26 +1329,163 @@ Implements decompression and uses callbacks to process input and output data. Th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | Yes |
-| inDesc | object | Yes |
-| backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | Yes |
-| outDesc | object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | Yes | A function used to decompress data from the end of the array to read the original compressed data from the input source. |
+| inDesc | object | Yes | Common object. |
+| backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | Yes | Writes the decompressed data to the destination buffer. |
+| outDesc | object | Yes | Common object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let readIn: (inDesc: object) => ArrayBuffer = (inDesc: object): ArrayBuffer => {
+    console.info("inDesc = ", JSON.stringify(inDesc));
+    let buffer = new ArrayBuffer(26)
+    let array = new Uint8Array(buffer);
+    array.set([31, 139, 8, 0, 0, 0, 0, 0, 0, 10, 243, 72, 205, 201, 201, 231, 2, 0, 22, 53, 150, 49, 6, 0, 0, 0]);
+    return buffer;
+  }
+
+  let writeOut: (outDesc: object, buffer: ArrayBuffer, length: number) => number = (outDesc: object, buffer: ArrayBuffer, length: number): number => {
+    console.info("outDesc = ", outDesc);
+    console.info("buffer = ", buffer);
+    console.info("length = ", length);
+    let array = new Uint8Array(buffer);
+    let dataString = "";
+    for (let i = 0; i < length; i++) {
+      dataString += String.fromCharCode(array[i]);
+    }
+    console.info('writeOut ', dataString);
+    return 0;
+  }
+
+  let have = 0;
+  let first = 1;
+  let arrayBuffer = new ArrayBuffer(26);
+  let next = new Uint8Array(arrayBuffer);
+  let last = 0;
+  let index = 0;
+  let flags = 0;
+  let NEXT2: () => number = (): number => {
+    let o6: object = new Object()
+    if (!have) {
+      arrayBuffer = readIn(o6)
+      next = new Uint8Array(arrayBuffer);
+      console.info('readIn next = ', next.length)
+      have = next.length;
+    }
+    if (have) {
+      have--;
+      last = next[index];
+      index++;
+    }
+    else {
+      last = -1;
+    }
+    return last;
+  }
+
+  let inflateBackTest: () => void = (async () => {
+    try {
+      have = 0;
+      first = 1;
+      arrayBuffer = new ArrayBuffer(26);
+      next = new Uint8Array(arrayBuffer);
+      last = 0;
+      index = 0;
+      flags = 0;
+      let sr = zlib.createZipSync();
+      let buffer = new ArrayBuffer(1024)
+      await sr.inflateBackInit({}, 15, buffer).then((result) => {
+        console.info('inflateBackInit Call result res', result)
+      })
+      let ret = 0;
+      for (; ;) {
+        if (NEXT2() == -1) {
+          ret = 0;
+          console.info('inflateBackTest Call result NEXT2() == -1')
+          break;
+        }
+        console.info('have =  last = ', have, last)
+        if (last != 31 || NEXT2() != 139 ) {
+          ret = first ? -3 : -1;
+          console.info('inflateBackTest Call result last != 31 || (NEXT2() != 139 && last != 157)')
+          break;
+        }
+        first = 0;
+        ret = -5;
+        if (NEXT2() != 8) {
+          if (last < 0) {
+            console.info('inflateBackTest Call result 1 last == -1')
+            break;
+          }
+        }
+        flags = NEXT2();
+        NEXT2();
+        NEXT2();
+        NEXT2();
+        NEXT2();
+        NEXT2();
+        NEXT2();
+        if (last < 0) {
+          console.info('inflateBackTest Call result 2 last == -1')
+          break;
+        }
+        console.info('index =  have = ', next[index], have)
+        let newArrayBuffer = new ArrayBuffer(have);
+        let newNext = new Uint8Array(newArrayBuffer);
+        for (let i = 0; i < have; i++) {
+          newNext[i] = next[26 - have + i];
+        }
+        console.info('newArrayBuffer.length = ', newArrayBuffer.byteLength)
+        console.info('newNext.length = ', newNext.length)
+        let zStream: zlib.ZStream = {
+          nextIn: newArrayBuffer,
+          availableIn: have,
+        };
+        await sr.inflateBack(
+          zStream,
+          readIn,
+          { fileName: 'test.gz' },
+          writeOut,
+          { fileName: 'test.gz' }).then((result) => {
+            ret = result;
+            console.info('inflateBack Call result res', result)
+          })
+        if (ret == 1) {
+          console.info('inflateBackTest Call result success')
+          break;
+        }
+      }
+      await sr.inflateBackEnd({}).then((result) => {
+        console.info('inflateBackEnd Call result res', result)
+      })
+    }
+    catch (errData) {
+      console.error(`errData is message:${errData}`);
+    }
+  })
+  inflateBackTest();
+}
+```
 
 ## inflateBackEnd
 
@@ -739,22 +1503,26 @@ Releases all memory allocated by the **inflateBackInit()** function. This API us
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+For details about the sample code, see [inflateBack](#inflateback).
 
 ## inflateBackInit
 
@@ -772,24 +1540,28 @@ Initializes the internal stream state for decompression before using the **infla
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| windowBits | number | Yes |
-| [window](../../apis-arkui/arkts-components/arkts-arkui-window-t.md) | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:Zlib: [1, 15]Gzip: (15, +∞)Raw Deflate: [-15, -1] |
+| window | ArrayBuffer | Yes | Preset window buffer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+For details about the sample code, see [inflateBack](#inflateback).
 
 ## inflateCodesUsed
 
@@ -807,21 +1579,49 @@ Describes the number of Huffman trees used in a decompression stream. This API u
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the number of Huffman trees that have been used. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
+  ).then(data => {
+    console.info('inflateInit success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateCodesUsed({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 8 }).then(data => {
+    console.info('inflateCodesUsed success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflateCopy
 
@@ -839,22 +1639,51 @@ Copies a decompression stream. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | For details, see [Zip&lt;sup&gt;12+&lt;/sup&gt;](#zip). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
+  ).then(data => {
+    console.info('inflateInit success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  let destZip = zlib.createZipSync();
+  await destZip.inflateCopy(zip).then((data) => {
+    console.info('inflateCopy success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflateEnd
 
@@ -872,22 +1701,55 @@ Releases all dynamically allocated data structs of a decompression stream. This 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
+  ).then(data => {
+    console.info('inflateInit success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflate({ availableIn: 8, availableOut: 8 }, 0).then((data) => {
+    console.info('inflate success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateEnd({ nextOut: arrayBufferOut }).then((data) => {
+    console.info('inflateEnd success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflateGetDictionary
 
@@ -905,23 +1767,51 @@ Obtains the content and length of the decompression dictionary used in a decompr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| dictionary | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| dictionary | ArrayBuffer | Yes | Receives the actual contents of the decompression dictionary. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DictionaryOutputInfo](arkts-basicservices-zlib-dictionaryoutputinfo-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DictionaryOutputInfo](arkts-basicservices-zlib-dictionaryoutputinfo-i.md)&gt; | Promise used to return the result status and length of the dictionary. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.inflateInit2({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }, 28
+  ).then(data => {
+    console.info('inflateInit2 success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateGetDictionary({ nextOut: arrayBufferOut }, arrayBufferOut).then((data) => {
+    console.info('inflateGetDictionary success:')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflateGetHeader
 
@@ -939,23 +1829,51 @@ Obtains the header information of a gzip file before decompressing data. This AP
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| header | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| header | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | Yes | Header information of a gzip file extracted from the compressed data stream. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.inflateInit2({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }, 28
+  ).then(data => {
+    console.info('inflateInit2 success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateGetHeader({ availableIn: 1, availableOut: 1 }, { isText: true, os: 1, time: 1, xflags: 1, extra: arrayBufferIn, extraLen: 12, name: arrayBufferIn, comment: arrayBufferOut, hcrc: true, done: true }).then(data => {
+    console.info('inflateGetHeader success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflateInit
 
@@ -973,21 +1891,45 @@ Initializes a decompression stream. This API uses a promise to return the result
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let str = 'hello world!';
+let arrayBufferIn = new ArrayBuffer(str.length);
+let byteArray = new Uint8Array(arrayBufferIn);
+
+for (let i = 0, j = str.length; i < j; i++) {
+  byteArray[i] = str.charCodeAt(i)
+}
+
+let arrayBufferOut = new ArrayBuffer(100);
+let zip = zlib.createZipSync();
+
+zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
+).then(data => {
+  console.info('inflateInit success');
+}).catch((errData: BusinessError) => {
+  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+})
+```
 
 ## inflateInit2
 
@@ -1005,23 +1947,47 @@ Initializes a decompression stream with the specified **windowBits**. This API u
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| windowBits | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:Zlib: [1, 15]Gzip: (15, +∞)Raw Deflate: [-15, -1] |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let str = 'hello world!';
+let arrayBufferIn = new ArrayBuffer(str.length);
+let byteArray = new Uint8Array(arrayBufferIn);
+
+for (let i = 0, j = str.length; i < j; i++) {
+  byteArray[i] = str.charCodeAt(i)
+}
+
+let arrayBufferOut = new ArrayBuffer(100);
+let zip = zlib.createZipSync();
+
+zip.inflateInit2({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }, 28
+).then(data => {
+  console.info('inflateInit2 success');
+}).catch((errData: BusinessError) => {
+  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+})
+```
 
 ## inflateMark
 
@@ -1039,21 +2005,49 @@ Marks the location of the input data for random access. This API uses a promise 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the current location. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
+  ).then(data => {
+    console.info('inflateInit success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateMark({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }).then(data => {
+    console.info('inflateMark success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflatePrime
 
@@ -1071,24 +2065,52 @@ Sets the initial number of bits and bit value in the specified decompression str
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| [bits](arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | number | Yes |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| bits | number | Yes | Number of bits to be written to the bit buffer. |
+| value | number | Yes | Bit value used to fill the bit buffer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
+  ).then(data => {
+    console.info('inflateInit success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflatePrime({ nextOut: arrayBufferOut }, 5, 2).then(data => {
+    console.info('inflatePrime success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflateReset
 
@@ -1106,22 +2128,50 @@ Resets the status of the specified decompression stream to the initial state to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
+  ).then(data => {
+    console.info('inflateInit success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateReset({ availableIn: 1, availableOut: 8 }).then(data => {
+    console.info('inflateReset success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflateReset2
 
@@ -1139,23 +2189,51 @@ Resets the status of the specified decompression stream and updates the window s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| windowBits | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:Zlib: [1, 15]Gzip: (15, +∞)Raw Deflate: [-15, -1] |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
+  ).then(data => {
+    console.info('inflateInit success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateReset2({ availableOut: 8 }, 15).then(data => {
+    console.info('inflateReset2 success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflateResetKeep
 
@@ -1173,22 +2251,50 @@ Resets the state of the decompression stream to retain the allocated Huffman tre
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
+  ).then(data => {
+    console.info('inflateInit success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateResetKeep({ availableIn: 1 }).then(data => {
+    console.info('inflateResetKeep success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflateSetDictionary
 
@@ -1206,24 +2312,89 @@ Initializes the dictionary content of a decompression stream based on the given 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| dictionary | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| dictionary | ArrayBuffer | Yes | Dictionary data. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
-| [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello, hello!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  let dictionary = 'hello'
+  let dictionarybuf = new ArrayBuffer(dictionary.length);
+  let dictionarybufdata = new Uint8Array(dictionarybuf);
+  for (let i = 0, j = dictionary.length; i < j; i++) {
+    dictionarybufdata[i] = str.charCodeAt(i);
+  }
+  await zip.deflateInit({}, zlib.CompressLevel.COMPRESS_LEVEL_BEST_COMPRESSION).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+  await zip.deflateSetDictionary({}, dictionarybuf).then((data) => {
+    console.info('deflateSetDictionary success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+  await zip.deflate({ nextIn: arrayBufferIn, availableIn: 14, nextOut: arrayBufferOut, availableOut: 100 }, zlib.CompressFlushMode.FINISH).then((data) => {
+    console.info('deflate success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+  await zip.deflateEnd({}).then(data => {
+    console.info('deflateEnd success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+  try {
+    await zip.inflateInit({ nextIn: arrayBufferOut, availableIn: 100 }).then(data => {
+      console.info('inflateInit success')
+    })
+  } catch (errData) {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  }
+  await zip.inflate({ nextOut: arrayBufferIn, availableOut: 28 }, zlib.CompressFlushMode.NO_FLUSH).then((data) => {
+    console.info('inflate success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+  await zip.inflateSetDictionary({}, dictionarybuf).then((data) => {
+    console.info('inflateSetDictionary success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+  await zip.inflateEnd({ nextOut: arrayBufferOut }).then((data) => {
+    console.info('inflateEnd success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
+  })
+}
+```
 
 ## inflateSync
 
@@ -1241,24 +2412,83 @@ Skips invalid compressed data until a possible complete refresh point is found. 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
-| [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
-| [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello, hello!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.deflateInit({}, zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION).then((data) => {
+    console.info('deflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflate({ nextIn: arrayBufferIn, availableIn: 3, nextOut: arrayBufferOut, availableOut: 100 }, zlib.CompressFlushMode.FULL_FLUSH).then((data) => {
+    console.info('deflate success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflate({ availableIn: 11 }, zlib.CompressFlushMode.FINISH).then((data) => {
+    console.info('deflate success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.deflateEnd({}).then(data => {
+    console.info('deflateEnd success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  try {
+    await zip.inflateInit({ nextIn: arrayBufferOut, availableIn: 2 }).then(data => {
+      console.info('inflateInit2 success')
+    })
+  } catch (errData) {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  }
+  await zip.inflate({ nextOut: arrayBufferIn, availableOut: 28 }, zlib.CompressFlushMode.NO_FLUSH).then((data) => {
+    console.info('inflate success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateSync({ availableIn: 26 }).then(data => {
+    console.info('inflateSync success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateEnd({ nextOut: arrayBufferOut }).then((data) => {
+    console.info('inflateEnd success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflateSyncPoint
 
@@ -1276,22 +2506,50 @@ Finds the synchronization point of a decompression stream. This API uses a promi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
+  ).then(data => {
+    console.info('inflateInit success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateSyncPoint({ availableIn: 1 }).then(data => {
+    console.info('inflateSyncPoint success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## inflateValidate
 
@@ -1309,23 +2567,51 @@ Validates the checksum inside the compression stream. This API uses a promise to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
-| [check](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-jsleakwatcher-check-f.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| check | number | Yes | Expected checksum. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
+  ).then(data => {
+    console.info('inflateInit success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.inflateValidate({ availableIn: 1 }, 1).then(data => {
+    console.info('inflateValidate success')
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## uncompress
 
@@ -1343,25 +2629,52 @@ Decompresses the compressed data into the raw data. This API uses a promise to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dest | ArrayBuffer | Yes |
-| source | ArrayBuffer | Yes |
-| sourceLen | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dest | ArrayBuffer | Yes | Destination buffer. |
+| source | ArrayBuffer | Yes | Source buffer. |
+| sourceLen | number | No | Length of the source data. The default value is **0**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ZipOutputInfo](arkts-basicservices-zlib-zipoutputinfo-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ZipOutputInfo](arkts-basicservices-zlib-zipoutputinfo-i.md)&gt; | Promise used to return the result status and the total size of the destination buffer. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
-| [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.compress(arrayBufferOut, arrayBufferIn, 12).then((data) => {
+    console.info('compress success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.uncompress(arrayBufferIn, arrayBufferOut, 20).then((data) => {
+    console.info('uncompress success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## uncompress2
 
@@ -1379,25 +2692,52 @@ Decompresses the compressed data into the raw data. This API uses a promise to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dest | ArrayBuffer | Yes |
-| source | ArrayBuffer | Yes |
-| sourceLen | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dest | ArrayBuffer | Yes | Destination buffer. |
+| source | ArrayBuffer | Yes | Source buffer. |
+| sourceLen | number | No | Length of the source data. The default value is **0**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DecompressionOutputInfo](arkts-basicservices-zlib-decompressionoutputinfo-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DecompressionOutputInfo](arkts-basicservices-zlib-decompressionoutputinfo-i.md)&gt; | Promise used to return the result status, total size of the destination buffer, and the length of the source data. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
-| [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+async function demo() {
+  let str = 'hello world!';
+  let arrayBufferIn = new ArrayBuffer(str.length);
+  let byteArray = new Uint8Array(arrayBufferIn);
+  for (let i = 0, j = str.length; i < j; i++) {
+    byteArray[i] = str.charCodeAt(i)
+  }
+  let arrayBufferOut = new ArrayBuffer(100);
+  let zip = zlib.createZipSync();
+  await zip.compress2(arrayBufferOut, arrayBufferIn, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+    console.info('compress2 success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+  await zip.uncompress2(arrayBufferIn, arrayBufferOut, 20).then((data) => {
+    console.info('uncompress2 success');
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+}
+```
 
 ## zlibCompileFlags
 
@@ -1415,9 +2755,21 @@ Returns the flags indicating compile-time options. This API uses a promise to re
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the flags indicating compile-time options. |
+
+**Examples**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+
+let zip = zlib.createZipSync();
+
+zip.zlibCompileFlags().then((data) => {
+  console.info('zlibCompileFlags success')
+})
+```
 
 ## zlibVersion
 
@@ -1435,6 +2787,18 @@ Obtains the version information of this zlib library connected. This API uses a 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return the version of the current zlib library. |
+
+**Examples**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+
+let zip = zlib.createZipSync();
+
+zip.zlibVersion().then((data) => {
+  console.info('zlibVersion success')
+})
+```

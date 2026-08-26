@@ -3,7 +3,22 @@
 ## 导入模块
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import appControl from '@kit.AbilityKit.appControl';
+import bundleManager from '@kit.AbilityKit.bundleManager';
+import bundleMonitor from '@kit.AbilityKit.bundleMonitor';
+import bundleResourceManager from '@kit.AbilityKit.bundleResourceManager';
+import bundle from '@kit.AbilityKit';
+import defaultAppManager from '@kit.AbilityKit.defaultAppManager';
+import distributedBundleManager from '@kit.AbilityKit.distributedBundleManager';
+import freeInstall from '@kit.AbilityKit.freeInstall';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit.innerBundleManager';
+import installer from '@kit.AbilityKit.installer';
+import launcherBundleManager from '@kit.AbilityKit.launcherBundleManager';
+import overlay from '@kit.AbilityKit.overlay';
+import shortcutManager from '@kit.AbilityKit.shortcutManager';
+import skillManager from '@kit.AbilityKit.skillManager';
+import appDomainVerify from '@kit.AbilityKit.appDomainVerify';
+import pluginBundleManager from '@kit.AbilityKit.pluginBundleManager';
 ```
 
 ## setAbilityEnabled
@@ -28,11 +43,33 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean, callback: Async
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | 是 |
-| isEnable | boolean | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | 是 | Ability信息，指示需要设置启用状态的Ability。 |
+| isEnable | boolean | 是 | 指定是否启用应用程序。true表示启用，false禁用。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 为返回操作结果而调用的回调。 |
+
+**示例**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
+  console.info('getAbilityInfo successfully. Data: ' + JSON.stringify(abilityInfo));
+
+  bundle.setAbilityEnabled(abilityInfo, false).then(data => {
+    console.info('setAbilityEnabled successfully.');
+  }).catch((error: BusinessError) => {
+    console.error('setAbilityEnabled failed:' + JSON.stringify(error));
+  })
+}).catch((error: BusinessError) => {
+  console.error('getAbilityInfo failed. Cause: ' + JSON.stringify(error));
+});
+```
 
 
 ## setAbilityEnabled
@@ -57,13 +94,17 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | 是 |
-| isEnable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | 是 | Ability信息，指示需要设置启用状态的Ability。 |
+| isEnable | boolean | 是 | 指定是否启用应用程序。true表示启用，false禁用。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [setAbilityEnabled](#setabilityenabled)

@@ -24,6 +24,6 @@ Progress bar of the download button. The value ranges from 0 to 100. The progres
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | { progress: number } | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | { progress: number } | Yes |  |

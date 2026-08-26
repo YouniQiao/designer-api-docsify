@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from 'kits/@kit.BasicServicesKit';
+import systemParameter from '@kit.BasicServicesKit';
 ```
 
 ## get
@@ -26,10 +26,27 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key to be queried. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+try {
+    systemParameter.get("const.ohos.apiversion", (err: BusinessError, data: string) => {
+    if (err == undefined) {
+        console.info("get test.parameter.key value success:" + data)
+    } else {
+        console.error(" get test.parameter.key value err:" + err.code)
+    }});
+} catch(e) {
+    console.error("get unexpected error: " + e);
+}
+```
 
 
 ## get
@@ -52,11 +69,29 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| def | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key to be queried. |
+| def | string | Yes | Default value. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+try {
+    systemParameter.get("const.ohos.apiversion", "default", (err: BusinessError, data: string) => {
+        if (err == undefined) {
+            console.info("get test.parameter.key value success:" + data)
+        } else {
+            console.error(" get test.parameter.key value err:" + err.code)
+        }
+    });
+} catch(e) {
+    console.error("get unexpected error:" + e)
+}
+```
 
 
 ## get
@@ -79,13 +114,30 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| def | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key to be queried. |
+| def | string | No | Default value of the system parameter.It works only when the system parameter does not exist.The value can be **undefined** or any custom value. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return the execution result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+try {
+    let p: Promise<string> = systemParameter.get("const.ohos.apiversion");
+    p.then((value: string) => {
+        console.info("get test.parameter.key success: " + value);
+    }).catch((err: BusinessError) => {
+        console.error("get test.parameter.key error: " + err.code);
+    });
+} catch(e) {
+    console.error("get unexpected error: " + e);
+}
+```

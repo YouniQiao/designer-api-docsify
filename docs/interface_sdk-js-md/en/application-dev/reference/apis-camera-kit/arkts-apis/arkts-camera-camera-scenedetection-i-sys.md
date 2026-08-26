@@ -13,7 +13,6 @@ Provides the scene detection capability. It inherits from [SceneDetectionQuery](
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableSceneFeature
@@ -32,14 +31,45 @@ Enables or disables a scene feature. This API must be called after [SceneFeature
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | Yes |
-| enabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | Yes | Scene feature. |
+| enabled | boolean | Yes | Whether to enable the scene feature. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableSceneFeature(photoSession: camera.PhotoSessionForSys, cameraInput: camera.CameraInput, previewOutput: camera.PreviewOutput): void {
+  photoSession.beginConfig();
+  photoSession.addInput(cameraInput);
+  photoSession.addOutput(previewOutput);
+  photoSession.commitConfig();
+
+  photoSession.on('featureDetection', camera.SceneFeatureType.MOON_CAPTURE_BOOST,
+    (err: BusinessError, statusObject: camera.SceneFeatureDetectionResult) => {
+      if (err !== undefined && err.code !== 0) {
+        console.error(`Callback Error, errorCode: ${err.code}`);
+        return;
+      }
+      console.info(
+        `on featureDetectionStatus featureType:${statusObject.featureType} detected:${statusObject.detected}`);
+      if (statusObject.featureType === camera.SceneFeatureType.MOON_CAPTURE_BOOST) {
+        try {
+          photoSession.enableSceneFeature(statusObject.featureType, statusObject.detected);
+        } catch (error) {
+          let err = error as BusinessError;
+          console.error(`The enableSceneFeature call failed. error code: ${err.code}`);
+        }
+      }
+    });
+}
+```

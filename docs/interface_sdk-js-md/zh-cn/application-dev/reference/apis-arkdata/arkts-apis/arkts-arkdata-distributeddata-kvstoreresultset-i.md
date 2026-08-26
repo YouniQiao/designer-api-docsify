@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## getCount
@@ -33,9 +34,28 @@ getCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回数据的总行数。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const count = resultSet.getCount();
+    console.log("getCount succeed:" + count);
+} catch (e) {
+    console.log("getCount failed: " + e);
+}
+```
 
 ## getEntry
 
@@ -55,9 +75,28 @@ getEntry(): Entry
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Entry](arkts-arkdata-distributeddata-entry-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Entry](arkts-arkdata-distributeddata-entry-i.md) | 返回键值对。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const entry  = resultSet.getEntry();
+    console.log("getEntry succeed:" + JSON.stringify(entry));
+} catch (e) {
+    console.log("getEntry failed: " + e);
+}
+```
 
 ## getPosition
 
@@ -77,9 +116,28 @@ getPosition(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回当前读取位置。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeeded.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const position = resultSet.getPosition();
+    console.log("getPosition succeed:" + position);
+} catch (e) {
+    console.log("getPosition failed: " + e);
+}
+```
 
 ## isAfterLast
 
@@ -99,9 +157,28 @@ isAfterLast(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示读取位置在最后一行之后；返回false表示读取位置不在最后一行之后。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const isafterlast = resultSet.isAfterLast();
+    console.log("Check isAfterLast succeed:" + isafterlast);
+} catch (e) {
+    console.log("Check isAfterLast failed: " + e);
+}
+```
 
 ## isBeforeFirst
 
@@ -121,9 +198,28 @@ isBeforeFirst(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示读取位置在第一行之前；返回false表示读取位置不在第一行之前。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const isbeforefirst = resultSet.isBeforeFirst();
+    console.log("Check isBeforeFirst succeed: " + isbeforefirst);
+} catch (e) {
+    console.log("Check isBeforeFirst failed: " + e);
+}
+```
 
 ## isFirst
 
@@ -143,9 +239,28 @@ isFirst(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示读取位置为第一行；返回false表示读取位置不是第一行。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const isfirst = resultSet.isFirst();
+    console.log("Check isFirst succeed:" + isfirst);
+} catch (e) {
+    console.log("Check isFirst failed: " + e);
+}
+```
 
 ## isLast
 
@@ -165,9 +280,28 @@ isLast(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示读取位置为最后一行；返回false表示读取位置不是最后一行。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const islast = resultSet.isLast();
+    console.log("Check isLast succeed: " + islast);
+} catch (e) {
+    console.log("Check isLast failed: " + e);
+}
+```
 
 ## move
 
@@ -187,15 +321,34 @@ move(offset: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 表示与当前位置的相对偏移量，负偏移表示向后移动，正偏移表示向前移动。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const moved5 = resultSet.move(1);
+    console.log("move succeed:" + moved5);
+} catch (e) {
+    console.log("move failed: " + e);
+}
+```
 
 ## moveToFirst
 
@@ -215,9 +368,28 @@ moveToFirst(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const moved1 = resultSet.moveToFirst();
+    console.log("moveToFirst succeed: " + moved1);
+} catch (e) {
+    console.log("moveToFirst failed " + e);
+}
+```
 
 ## moveToLast
 
@@ -237,9 +409,28 @@ moveToLast(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const moved2 = resultSet.moveToLast();
+    console.log("moveToLast succeed:" + moved2);
+} catch (e) {
+    console.log("moveToLast failed: " + e);
+}
+```
 
 ## moveToNext
 
@@ -259,9 +450,28 @@ moveToNext(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const moved3 = resultSet.moveToNext();
+    console.log("moveToNext succeed: " + moved3);
+} catch (e) {
+    console.log("moveToNext failed: " + e);
+}
+```
 
 ## moveToPosition
 
@@ -281,15 +491,34 @@ moveToPosition(position: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| position | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| position | number | 是 | 表示绝对位置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const moved6 = resultSet.moveToPosition(1);
+    console.log("moveToPosition succeed: " + moved6);
+} catch (e) {
+    console.log("moveToPosition failed: " + e);
+}
+```
 
 ## moveToPrevious
 
@@ -309,6 +538,25 @@ moveToPrevious(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+
+**示例**
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('batch_test_string_key').then((result) => {
+        console.log('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.log('getResultSet failed: ' + err);
+    });
+    const moved4 = resultSet.moveToPrevious();
+    console.log("moveToPrevious succeed:" + moved4);
+} catch (e) {
+    console.log("moveToPrevious failed: " + e);
+}
+```

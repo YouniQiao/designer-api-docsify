@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedAccount } from 'kits/@kit.BasicServicesKit';
+import distributedAccount from '@kit.BasicServicesKit';
 ```
 
 ## avatar

@@ -9,7 +9,7 @@ Defines the Contact selection options, which specifies whether one contact or mu
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## filter

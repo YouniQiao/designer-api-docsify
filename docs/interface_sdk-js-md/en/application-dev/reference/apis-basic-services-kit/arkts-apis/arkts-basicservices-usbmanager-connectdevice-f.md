@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## connectDevice
@@ -22,22 +23,39 @@ Connects to the USB device based on the device information returned by **getDevi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | Yes | USB device. The **busNum** and **devAddress** parameters obtained by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) are used to determine a USB device. Other parameters are passed transparently. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Readonly & lt;USBDevicePipe & gt; |
+| Type | Description |
+| --- | --- |
+| Readonly & lt;USBDevicePipe & gt; | USB device pipe for data transfer. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [14400001](../errorcode-usb.md#14400001-usb-device-connection-denied) |
-| [14400004](../errorcode-usb.md#14400004-service-exception) |
-| [14400012](../errorcode-usb.md#14400012-io-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
+| [14400001](../errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| [14400004](../errorcode-usb.md#14400004-service-exception) |  |
+| [14400012](../errorcode-usb.md#14400012-io-error) |  |
+
+**Examples**
+
+```TypeScript
+function connectDevice() {
+  let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
+  if (!devicesList || devicesList.length == 0) {
+    console.info(`device list is empty`);
+    return;
+  }
+
+  let device: usbManager.USBDevice = devicesList?.[0];
+  usbManager.requestRight(device.name);
+  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
+  console.info(`devicepipe = ${devicepipe}`);
+}
+```

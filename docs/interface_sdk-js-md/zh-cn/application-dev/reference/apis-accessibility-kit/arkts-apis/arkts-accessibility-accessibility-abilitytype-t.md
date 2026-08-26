@@ -14,11 +14,11 @@ type AbilityType = 'audible' | 'generic' | 'haptic' | 'spoken' | 'visual' | 'all
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-| 类型 |
-| --- |
-| 'audible' |
-| 'generic' |
-| 'haptic' |
-| 'spoken' |
-| 'visual' |
-| 'all' |
+| 类型 | 说明 |
+| --- | --- |
+| 'audible' | 表示具有听觉反馈。 |
+| 'generic' | 表示具有通用反馈。 |
+| 'haptic' | 表示具有触觉反馈。 |
+| 'spoken' | 表示具有语音反馈。 |
+| 'visual' | 表示具有视觉反馈。 |
+| 'all' | 表示以上所有类别。 [since 9] |

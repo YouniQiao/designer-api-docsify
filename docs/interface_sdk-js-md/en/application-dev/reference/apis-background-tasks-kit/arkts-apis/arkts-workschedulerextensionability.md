@@ -8,19 +8,19 @@ The **WorkSchedulerExtensionAbility** module provides callbacks for deferred tas
 ## Modules to Import
 
 ```TypeScript
-import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from 'kits/@kit.BackgroundTasksKit';
+import WorkSchedulerExtensionAbility, { WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [WorkSchedulerExtensionAbility](arkts-backgroundtasks-workschedulerextensionability-c.md) |
+| Name | Description |
+| --- | --- |
+| [WorkSchedulerExtensionAbility](arkts-backgroundtasks-workschedulerextensionability-c.md) | Provides callbacks to be invoked when the scheduling conditions are met or the scheduling ends, for example, [onWorkStart()](arkts-backgroundtasks-workschedulerextensionability-c.md#onworkstart) or [onWorkStop()](arkts-backgroundtasks-workschedulerextensionability-c.md#onworkstop) in WorkSchedulerExtensionAbility. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md) |
+| Name | Description |
+| --- | --- |
+| [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md) | WorkSchedulerExtensionContext represents the context of WorkSchedulerExtensionAbility and is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). |

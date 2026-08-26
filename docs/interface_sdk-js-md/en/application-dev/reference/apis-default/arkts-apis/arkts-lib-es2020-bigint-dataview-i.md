@@ -15,15 +15,15 @@ Gets the BigInt64 value at the specified byte offset from the start of the view.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| byteOffset | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getBigUint64
 
 ```TypeScript
@@ -34,15 +34,15 @@ Gets the BigUint64 value at the specified byte offset from the start of the view
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| byteOffset | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setBigInt64
 
 ```TypeScript
@@ -53,11 +53,11 @@ Stores a BigInt64 value at the specified byte offset from the start of the view.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| byteOffset | number | Yes |
-| value | bigint | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| value | bigint | Yes |  |
+| littleEndian | boolean | No |  |
 
 ## setBigUint64
 
@@ -69,8 +69,8 @@ Stores a BigUint64 value at the specified byte offset from the start of the view
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| byteOffset | number | Yes |
-| value | bigint | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| value | bigint | Yes |  |
+| littleEndian | boolean | No |  |

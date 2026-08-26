@@ -11,21 +11,21 @@ This module provides constants for agent.
 ## Modules to Import
 
 ```TypeScript
-import { agentConstant } from 'kits/@kit.AbilityKit';
+import agentConstant from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md) |
+| Name | Description |
+| --- | --- |
+| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md) | The type of an AgentCard. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e-sys.md) | The type of an AgentCard. |
 <!--DelEnd-->

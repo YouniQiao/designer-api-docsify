@@ -17,14 +17,14 @@ Returns an `&lt;a&gt;` HTML anchor element and sets the name attribute to the te
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## big
 
 ```TypeScript
@@ -37,8 +37,8 @@ Returns a `&lt;big&gt;` HTML element
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## blink
 
 ```TypeScript
@@ -51,8 +51,8 @@ Returns a `&lt;blink&gt;` HTML element
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## bold
 
 ```TypeScript
@@ -65,8 +65,8 @@ Returns a `&lt;b&gt;` HTML element
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## codePointAt
 
 ```TypeScript
@@ -77,14 +77,14 @@ Returns a nonnegative integer Number less than 1114112 (0x110000) that is the co
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pos | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pos | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## endsWith
 
 ```TypeScript
@@ -95,15 +95,15 @@ Returns true if the sequence of elements of searchString converted to a String i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| searchString | string | Yes |
-| endPosition | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchString | string | Yes |  |
+| endPosition | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## fixed
 
 ```TypeScript
@@ -116,8 +116,8 @@ Returns a `&lt;tt&gt;` HTML element
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## fontcolor
 
 ```TypeScript
@@ -130,14 +130,14 @@ Returns a `&lt;font&gt;` HTML element and sets the color attribute value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## fontsize
 
 ```TypeScript
@@ -150,14 +150,14 @@ Returns a `&lt;font&gt;` HTML element and sets the size attribute value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## fontsize
 
 ```TypeScript
@@ -170,14 +170,14 @@ Returns a `&lt;font&gt;` HTML element and sets the size attribute value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## includes
 
 ```TypeScript
@@ -188,15 +188,15 @@ Returns true if searchString appears as a substring of the result of converting 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| searchString | string | Yes |
-| position | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchString | string | Yes |  |
+| position | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## italics
 
 ```TypeScript
@@ -209,8 +209,8 @@ Returns an `&lt;i&gt;` HTML element
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## link
 
 ```TypeScript
@@ -223,14 +223,14 @@ Returns an `&lt;a&gt;` HTML element and sets the href attribute value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| url | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| url | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## normalize
 
 ```TypeScript
@@ -241,14 +241,14 @@ Returns the String value result of normalizing the string into the normalization
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [form](../../apis-ability-kit/arkts-apis/arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | "NFC" \| "NFD" \| "NFKC" \| "NFKD" | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| form | "NFC" \| "NFD" \| "NFKC" \| "NFKD" | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## normalize
 
 ```TypeScript
@@ -259,14 +259,14 @@ Returns the String value result of normalizing the string into the normalization
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [form](../../apis-ability-kit/arkts-apis/arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| form | string | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## repeat
 
 ```TypeScript
@@ -277,14 +277,14 @@ Returns a String value that is made from count copies appended together. If coun
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| count | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| count | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## small
 
 ```TypeScript
@@ -297,8 +297,8 @@ Returns a `&lt;small&gt;` HTML element
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## startsWith
 
 ```TypeScript
@@ -309,15 +309,15 @@ Returns true if the sequence of elements of searchString converted to a String i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| searchString | string | Yes |
-| position | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchString | string | Yes |  |
+| position | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## strike
 
 ```TypeScript
@@ -330,8 +330,8 @@ Returns a `&lt;strike&gt;` HTML element
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## sub
 
 ```TypeScript
@@ -344,8 +344,8 @@ Returns a `&lt;sub&gt;` HTML element
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## sup
 
 ```TypeScript
@@ -358,5 +358,5 @@ Returns a `&lt;sup&gt;` HTML element
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

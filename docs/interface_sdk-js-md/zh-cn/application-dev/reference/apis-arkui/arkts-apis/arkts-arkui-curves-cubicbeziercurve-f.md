@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import curves from '@kit.ArkUI';
 ```
 
 ## cubicBezierCurve
@@ -22,15 +22,22 @@ function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurv
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x1 | number | 是 |
-| y1 | number | 是 |
-| x2 | number | 是 |
-| y2 | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x1 | number | 是 | 确定贝塞尔曲线第一点横坐标。取值范围：[0, 1]   **说明：** 设置的值小于0时，按0处理；设置的值大于1时，按1处理。 |
+| y1 | number | 是 | 确定贝塞尔曲线第一点纵坐标。取值范围：(-∞, +∞) |
+| x2 | number | 是 | 确定贝塞尔曲线第二点横坐标。取值范围：[0, 1]   **说明：** 设置的值小于0时，按0处理；设置的值大于1时，按1处理。 |
+| y2 | number | 是 | 确定贝塞尔曲线第二点纵坐标。取值范围：(-∞, +∞) |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | 曲线的插值对象。 |
+
+**示例**
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+curves.cubicBezierCurve(0.1, 0.0, 0.1, 1.0); // 创建一个三阶贝塞尔曲线
+```

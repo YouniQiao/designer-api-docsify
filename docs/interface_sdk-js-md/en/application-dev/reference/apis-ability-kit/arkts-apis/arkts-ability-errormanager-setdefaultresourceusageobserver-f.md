@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
+import errorManager from '@kit.AbilityKit';
 ```
 
 ## setDefaultResourceUsageObserver
@@ -24,18 +24,18 @@ Set the default resource usage observer. You can use it to implement chain calls
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| defaultObserver | [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| defaultObserver | [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) | No | The default resource usage observer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) |
+| Type | Description |
+| --- | --- |
+| [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) | Returns the original default resource usage observer. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |

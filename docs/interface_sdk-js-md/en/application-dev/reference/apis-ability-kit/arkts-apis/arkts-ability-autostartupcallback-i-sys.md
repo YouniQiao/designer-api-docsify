@@ -26,9 +26,33 @@ Called when the auto-startup setting of an application component is canceled.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | Yes | Information about the target application component. |
+
+**Examples**
+
+```TypeScript
+import { autoStartupManager, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let autoStartupCallback: common.AutoStartupCallback = {
+  onAutoStartupOn(data: common.AutoStartupInfo) {
+    console.info(`autostartupmanager onAutoStartupOn, data: ${JSON.stringify(data)}.`);
+  },
+  onAutoStartupOff(data: common.AutoStartupInfo) {
+    console.info(`autostartupmanager onAutoStartupOff, data: ${JSON.stringify(data)}.`);
+  }
+}
+
+try {
+  autoStartupManager.on('systemAutoStartup', autoStartupCallback);
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`autoStartupManager.on failed, err code: ${code}, err msg: ${msg}.`);
+}
+```
 
 ## onAutoStartupOn
 
@@ -48,6 +72,30 @@ Called when auto-startup is set for an application component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | Yes | Information about the target application component. |
+
+**Examples**
+
+```TypeScript
+import { autoStartupManager, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let autoStartupCallback: common.AutoStartupCallback = {
+  onAutoStartupOn(data: common.AutoStartupInfo) {
+    console.info(`autostartupmanager onAutoStartupOn, data: ${JSON.stringify(data)}.`);
+  },
+  onAutoStartupOff(data: common.AutoStartupInfo) {
+    console.info(`autostartupmanager onAutoStartupOff, data: ${JSON.stringify(data)}.`);
+  }
+}
+
+try {
+  autoStartupManager.on('systemAutoStartup', autoStartupCallback);
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`autoStartupManager.on failed, err code: ${code}, err msg: ${msg}.`);
+}
+```

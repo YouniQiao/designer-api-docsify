@@ -16,14 +16,12 @@ Stack is implemented based on the array data structure. It follows the principle
 ## Modules to Import
 
 ```TypeScript
-import { Stack } from 'kits/@kit.ArkTS';
-import { StackForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Stack](arkts-arkts-util-stack-stack-c.md) |
+| Name | Description |
+| --- | --- |
+| [Stack](arkts-arkts-util-stack-stack-c.md) | Stack is implemented based on the array data structure. It follows the principle Last In First Out (LIFO) and supports data insertion and removal at one end. |

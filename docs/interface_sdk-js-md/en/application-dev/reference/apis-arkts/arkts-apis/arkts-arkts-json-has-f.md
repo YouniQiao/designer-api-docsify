@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { JSON } from 'kits/@kit.ArkTS';
+import JSON from '@kit.ArkTS';
 ```
 
 ## has
@@ -22,13 +22,25 @@ Checks whether an ArkTS object contains a key. This API can be used for related 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| obj | object | Yes |
-| property | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| obj | object | Yes | ArkTS object. |
+| property | string | Yes | Key to check. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Return true if the key is in the object, otherwise return false. |
+
+**Examples**
+
+```TypeScript
+import { JSON } from '@kit.ArkTS';
+
+const jsonText = '{"name": "John", "age": 30, "city": "ChongQing"}';
+let inputObj = JSON.parse(jsonText);
+let result = JSON.has(inputObj, "name");
+console.info("result = " + result);
+// Output: result = true
+```

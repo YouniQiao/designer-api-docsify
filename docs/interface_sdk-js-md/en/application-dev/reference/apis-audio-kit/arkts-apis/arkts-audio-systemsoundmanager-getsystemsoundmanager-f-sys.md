@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
+import systemSoundManager from '@kit.AudioKit';
 ```
 
 ## getSystemSoundManager
@@ -22,6 +22,12 @@ Gets system sound manager for all type sound.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md) |
+| Type | Description |
+| --- | --- |
+| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md) | SystemSoundManager instance. |
+
+**Examples**
+
+```TypeScript
+let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
+```

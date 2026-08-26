@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## setCustomCursorSync
@@ -20,15 +19,61 @@ Sets a custom pointer style for a specified window synchronously. This API can s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| windowId | number | Yes |
-| pixelMap | image.PixelMap | Yes |
-| [focusX](arkts-input-pointer-customcursor-i.md) | number | No |
-| [focusY](arkts-input-pointer-customcursor-i.md) | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| windowId | number | Yes | Window ID. The value must be an integer greater than 0. |
+| pixelMap | image.PixelMap | Yes | Custom cursor resource. |
+| focusX | number | No | Custom pointer focus X, in px. The value must be greater than or equal to 0. The default value is **0**. |
+| focusY | number | No | Custom pointer focus Y, in px. The value must be greater than or equal to 0. The default value is **0**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          // app_icon is an example resource. Configure the resource file based on the actual requirements.
+          this.getUIContext()?.getHostContext()?.resourceManager.getMediaContent(
+            $r("app.media.app_icon").id, (error: BusinessError, svgFileData: Uint8Array) => {
+            const svgBuffer = svgFileData.buffer;
+            let svgImageSource: image.ImageSource = image.createImageSource(svgBuffer);
+            // Width and height of the pointer image
+            let svgDecodingOptions: image.DecodingOptions = { desiredSize: { width: 50, height: 50 } };
+            // Create a PixelMap
+            svgImageSource.createPixelMap(svgDecodingOptions).then((pixelMap) => {
+              // Get the most recent window in the application
+              window.getLastWindow(this.getUIContext().getHostContext(), (error: BusinessError, win: window.Window) => {
+                let windowId = win.getWindowProperties().id;
+                try {
+                  // Set a custom pointer synchronously
+                  pointer.setCustomCursorSync(windowId, pixelMap, 25, 25);
+                  console.info(`Succeeded in setting custom cursor sync.`);
+                } catch (error) {
+                  console.error(`Failed to set custom cursor sync, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                }
+              });
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to create pixel map promise, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            });
+          });
+        }
+      )
+    }
+  }
+}
+```

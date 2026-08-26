@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getSimOperatorNumericSync
@@ -20,12 +19,21 @@ Obtains the home PLMN ID of the SIM card in the specified slot. This API returns
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Home PLMN ID of the SIM card in the specified slot. |
+
+**Examples**
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+
+let numeric: string = sim.getSimOperatorNumericSync(0);
+console.info(`the sim operator numeric is:` + numeric);
+```

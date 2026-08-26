@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import power from '@kit.BasicServicesKit';
 ```
 
 ## getPowerMode
@@ -20,6 +20,13 @@ function getPowerMode(): DevicePowerMode
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | 当前设备的电源模式，取值包括标准模式、省电模式、性能模式、超级省电模式等。 |
+
+**示例**
+
+```TypeScript
+let mode = power.getPowerMode();
+console.info('power mode: ' + mode);
+```

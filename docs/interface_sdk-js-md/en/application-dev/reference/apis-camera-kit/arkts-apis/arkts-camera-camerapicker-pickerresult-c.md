@@ -9,7 +9,6 @@ Defines the processing result of the camera picker.
 ## Modules to Import
 
 ```TypeScript
-import { cameraPicker } from 'kits/@kit.CameraKit';
 ```
 
 ## mediaType

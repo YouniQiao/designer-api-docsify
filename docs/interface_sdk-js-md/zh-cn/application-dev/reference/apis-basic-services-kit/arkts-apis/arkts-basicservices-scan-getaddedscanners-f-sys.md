@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
+import scan from '@kit.BasicServicesKit';
 ```
 
 ## getAddedScanners
@@ -24,13 +24,26 @@ function getAddedScanners(): Promise<ScannerDevice[]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)[]&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)[]&gt; | Promise used to return the array of added scanners. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+
+**示例**
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+scan.getAddedScanners().then((scanners: scan.ScannerDevice[]) => {
+    console.info('get added scanners success: ' + JSON.stringify(scanners));
+}).catch((error: BusinessError) => {
+    console.error(`Failed to get added scanners. Code: ${error.code}, message: ${error.message}`);
+});
+```

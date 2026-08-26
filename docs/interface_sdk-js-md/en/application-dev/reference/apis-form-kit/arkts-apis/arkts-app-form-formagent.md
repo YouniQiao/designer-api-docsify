@@ -11,7 +11,7 @@ The **FormAgent** module provides APIs related to the widget agent. Currently, y
 ## Modules to Import
 
 ```TypeScript
-import { formAgent } from 'kits/@kit.FormKit';
+import formAgent from '@kit.FormKit';
 ```
 
 ## Summary
@@ -19,9 +19,9 @@ import { formAgent } from 'kits/@kit.FormKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md) |
-| [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md) |
-| [updateFormCrossBundle](arkts-form-formagent-updateformcrossbundle-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md) | Requests to publish a widget to the widget host. This API uses an asynchronous callback to return the result. The widget host is usually the home screen. |
+| [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md) | Requests to publish a widget to the widget host. This API uses a promise to return the result. The widget host is usually the home screen. |
+| [updateFormCrossBundle](arkts-form-formagent-updateformcrossbundle-f-sys.md) | Updates a widget by cross bundle. This API uses a promise to return the result. |
 <!--DelEnd-->

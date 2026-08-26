@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## arrayBuffer
@@ -28,9 +27,23 @@ arrayBuffer(): Promise<ArrayBuffer>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;ArrayBuffer & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;ArrayBuffer & gt; | Promise对象，resolve返回包含Blob数据的ArrayBuffer，reject返回错误信息。 |
+
+**示例**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let blob: buffer.Blob = new buffer.Blob(['a', 'b', 'c']);
+let pro = blob.arrayBuffer();
+pro.then((val: ArrayBuffer) => {
+  let uint8Array: Uint8Array = new Uint8Array(val);
+  console.info(uint8Array.toString());
+  // 输出结果：97,98,99
+});
+```
 
 ## constructor
 
@@ -48,10 +61,25 @@ constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sources | string[] \| ArrayBuffer[] \| TypedArray[] \| DataView[] \| [Blob](arkts-arkts-buffer-blob-c.md)[] | 是 |
-| options | Object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sources | string[] \| ArrayBuffer[] \| TypedArray[] \| DataView[] \| [Blob](arkts-arkts-buffer-blob-c.md)[] | 是 | Blob实例的数据源。 |
+| options | Object | 否 | options:   - endings：含义为结束符'\n'的字符串如何被输出，为'transparent'或'native'。native代表行结束符会跟随系 统。'transparent'代表会保持Blob中保存的结束符不变。此参数非必填，默认值为'transparent'。   - type：Blob内容类型。其目的是让类型传达数据的MIME媒体类型，但是不执行类型格 式的验证。此参数非必填，默认参数为''。 |
+
+**示例**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let blob: buffer.Blob  = new buffer.Blob(['a', 'b', 'c']);
+
+class option {
+  endings: string = "";
+  type: string = "";
+}
+let o1: option = {endings:'native', type: 'MIME'}
+let blob1: buffer.Blob = new buffer.Blob(['a', 'b', 'c'], o1);
+```
 
 ## slice
 
@@ -69,17 +97,28 @@ slice(start?: number, end?: number, type?: string): Blob
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| start | number | 否 |
-| end | number | 否 |
-| [type](#type) | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| start | number | 否 | 起始位置。默认值：0。 |
+| end | number | 否 | 结束位置。默认值：原Blob对象中的数据长度。 |
+| type | string | 否 | 内容类型。默认值：''。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Blob](arkts-arkts-buffer-blob-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Blob](arkts-arkts-buffer-blob-c.md) | 新的Blob实例对象。 |
+
+**示例**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let blob: buffer.Blob = new buffer.Blob(['a', 'b', 'c']);
+let blob2 = blob.slice(0, 2);
+let blob3 = blob.slice(0, 2, "MIME");
+console.info("type:", blob3.type); // type: MIME
+```
 
 ## text
 
@@ -97,9 +136,22 @@ text(): Promise<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，resolve返回以utf8解码后的字符串，reject返回错误信息。 |
+
+**示例**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let blob: buffer.Blob = new buffer.Blob(['a', 'b', 'c']);
+let pro = blob.text();
+pro.then((val: string) => {
+  console.info(val);
+  // 输出结果：abc
+});
+```
 
 ## size
 

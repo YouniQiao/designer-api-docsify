@@ -14,7 +14,7 @@ Defines the snapshot region rect type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md) |
-| [LocalizedSnapshotRegion](arkts-arkui-componentsnapshot-localizedsnapshotregion-i.md) |
+| Type | Description |
+| --- | --- |
+| [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md) |  |
+| [LocalizedSnapshotRegion](arkts-arkui-componentsnapshot-localizedsnapshotregion-i.md) |  |

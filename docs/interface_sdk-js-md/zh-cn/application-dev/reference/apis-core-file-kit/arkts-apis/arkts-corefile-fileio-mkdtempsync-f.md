@@ -23,12 +23,18 @@ declare function mkdtempSync(prefix: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| prefix | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| prefix | string | 是 | 用随机产生的字符串替换以“XXXXXX”结尾目录路径。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 产生的唯一目录路径。 |
+
+**示例**
+
+```TypeScript
+let res = fileio.mkdtempSync(pathDir + "/XXXXXX");
+```

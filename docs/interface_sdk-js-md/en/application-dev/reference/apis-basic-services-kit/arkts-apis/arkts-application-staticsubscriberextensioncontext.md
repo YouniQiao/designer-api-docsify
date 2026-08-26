@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { StaticSubscriberExtensionContext } from 'kits/@kit.BasicServicesKit';
+import StaticSubscriberExtensionContext from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -11,7 +11,7 @@ import { StaticSubscriberExtensionContext } from 'kits/@kit.BasicServicesKit';
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [StaticSubscriberExtensionContext(StaticSubscriberExtensionContext)](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [StaticSubscriberExtensionContext(StaticSubscriberExtensionContext)](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md) | The **StaticSubscriberExtensionContext** module, inherited from **ExtensionContext**, provides context for **StaticSubscriberExtensionAbility**.You can use the APIs of this module to start **StaticSubscriberExtensionAbility**. |
 <!--DelEnd-->

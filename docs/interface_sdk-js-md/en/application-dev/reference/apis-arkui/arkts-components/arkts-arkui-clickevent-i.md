@@ -31,9 +31,9 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
+| Type | Description |
+| --- | --- |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## preventDefault
 
@@ -53,9 +53,9 @@ Blocks the default event.Note: This API is only supported by the following compo
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100017](../errorcode-event.md#100017-component-does-not-support-default-event-prevention) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100017](../errorcode-event.md#100017-component-does-not-support-default-event-prevention) | Component does not support prevent function. |
 
 ## displayX
 

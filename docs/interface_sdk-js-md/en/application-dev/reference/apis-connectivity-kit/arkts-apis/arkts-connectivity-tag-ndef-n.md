@@ -9,20 +9,20 @@ Provides methods for accessing NDEF tag.
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import tag from '@kit.ConnectivityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [makeUriRecord(Standard NFC Tags)](arkts-connectivity-ndef-makeurirecord-f.md) |
-| [makeTextRecord(Standard NFC Tags)](arkts-connectivity-ndef-maketextrecord-f.md) |
-| [makeMimeRecord(Standard NFC Tags)](arkts-connectivity-ndef-makemimerecord-f.md) |
-| [makeExternalRecord(Standard NFC Tags)](arkts-connectivity-ndef-makeexternalrecord-f.md) |
-| [createNdefMessage(Standard NFC Tags)](arkts-connectivity-ndef-createndefmessage-f.md) |
-| [createNdefMessage(Standard NFC Tags)](arkts-connectivity-ndef-createndefmessage-f.md) |
-| [messageToBytes(Standard NFC Tags)](arkts-connectivity-ndef-messagetobytes-f.md) |
-| [makeApplicationRecord(Standard NFC Tags)](arkts-connectivity-ndef-makeapplicationrecord-f.md) |
+| Name | Description |
+| --- | --- |
+| [makeUriRecord(Standard NFC Tags)](arkts-connectivity-ndef-makeurirecord-f.md) | Creates an NDEF record based on the specified URI. |
+| [makeTextRecord(Standard NFC Tags)](arkts-connectivity-ndef-maketextrecord-f.md) | Creates an NDEF record based on the specified text data and language type. |
+| [makeMimeRecord(Standard NFC Tags)](arkts-connectivity-ndef-makemimerecord-f.md) | Creates an NDEF record based on the specified MIME data and type. |
+| [makeExternalRecord(Standard NFC Tags)](arkts-connectivity-ndef-makeexternalrecord-f.md) | Creates an NDEF record based on application-specific data. |
+| [createNdefMessage(Standard NFC Tags)](arkts-connectivity-ndef-createndefmessage-f.md) | Creates an NDEF message from raw byte data. The data must comply with the NDEF record format. Otherwise, the NDEF record list contained in the **NdefMessage** object will be empty. |
+| [createNdefMessage(Standard NFC Tags)](arkts-connectivity-ndef-createndefmessage-f.md) | Creates an NDEF message from the NDEF records list. |
+| [messageToBytes(Standard NFC Tags)](arkts-connectivity-ndef-messagetobytes-f.md) | Converts an NDEF message to bytes. |
+| [makeApplicationRecord(Standard NFC Tags)](arkts-connectivity-ndef-makeapplicationrecord-f.md) | Creates an NDEF record based on the specified application bundle name. |

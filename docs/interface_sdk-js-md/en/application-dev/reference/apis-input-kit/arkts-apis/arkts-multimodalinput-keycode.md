@@ -3,13 +3,12 @@
 ## Modules to Import
 
 ```TypeScript
-import { KeyCode } from 'kits/@kit.InputKit';
 ```
 
 ## Summary
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [KeyCode(Keycode)](arkts-input-multimodalinput-keycode-keycode-e.md) |
+| Name | Description |
+| --- | --- |
+| [KeyCode(Keycode)](arkts-input-multimodalinput-keycode-keycode-e.md) | The **keyCode** module provides key codes of key devices, including keyboards, CDs, and gamepads. |

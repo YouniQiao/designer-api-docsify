@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mediaquery } from 'kits/@kit.ArkUI';
+import mediaquery from '@kit.ArkUI';
 ```
 
 ## matchMediaSync
@@ -14,10 +14,12 @@ function matchMediaSync(condition: string): MediaQueryListener
 
 设置媒体查询的查询条件，并返回对应的监听句柄。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > -matchMediaSync需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery)方法获取
-> [MediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md)对象，然后通过该对象进行调用。&gt;
+> [MediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md)对象，然后通过该对象进行调用。
+> 
 > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery)方法获取当前UI上下文关联的
 > [MediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
@@ -36,12 +38,20 @@ function matchMediaSync(condition: string): MediaQueryListener
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| condition | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| condition | string | 是 | 媒体事件的匹配条件，具体可参考[媒体查询语法规则](../../../ui/arkts-layout-development-media-query.md#语法规则)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) | 媒体事件监听句柄，用于注册和注销监听回调。 |
+
+**示例**
+
+```TypeScript
+import { mediaquery } from '@kit.ArkUI';
+
+let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // 监听横屏事件
+```

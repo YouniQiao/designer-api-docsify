@@ -11,7 +11,7 @@ Defines cross-device collaborative operation information.
 ## Modules to Import
 
 ```TypeScript
-import { notificationSubscribe } from 'kits/@kit.NotificationKit';
+import notificationSubscribe from '@kit.NotificationKit';
 ```
 
 ## actionName

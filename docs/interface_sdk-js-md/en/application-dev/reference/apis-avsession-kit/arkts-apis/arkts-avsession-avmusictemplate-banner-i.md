@@ -11,7 +11,7 @@ The definition of Banner.@extends MediaEntity @interface Banner
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import avMusicTemplate from '@kit.AVSessionKit';
 ```
 
 ## isSupportOnePlay

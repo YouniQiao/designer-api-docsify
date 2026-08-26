@@ -11,7 +11,7 @@ Information for LiveView in AI image generation.@interface LiveViewInfo
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'kits/@kit.ArkUI';
+import imageGeneration from '@kit.ArkUI';
 ```
 
 ## getLongTermTaskId
@@ -32,9 +32,9 @@ Get the number-term task ID for LiveView.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns the number-term task ID. |
 
 ## getWant
 
@@ -54,9 +54,9 @@ Get the Want object for LiveView.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) |
+| Type | Description |
+| --- | --- |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Returns the Want object. |
 
 ## isLiveViewNeeded
 
@@ -76,6 +76,6 @@ Check whether LiveView is needed.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns true if LiveView is needed, false otherwise. |

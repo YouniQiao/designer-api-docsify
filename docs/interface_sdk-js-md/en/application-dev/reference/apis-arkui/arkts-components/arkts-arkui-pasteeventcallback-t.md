@@ -16,6 +16,6 @@ Represents the callback invoked when the paste is about to be completed.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [PasteEvent](arkts-arkui-pasteevent-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [PasteEvent](arkts-arkui-pasteevent-i.md) | No | User paste event. |

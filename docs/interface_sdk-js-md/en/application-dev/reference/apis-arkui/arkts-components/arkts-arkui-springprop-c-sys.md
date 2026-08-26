@@ -13,6 +13,7 @@ Customize spring properties.
 ## Modules to Import
 
 ```TypeScript
+import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@ohos.@kit.ArkUI';
 ```
 
 ## constructor
@@ -33,8 +34,8 @@ Constructor parameters
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mass | number | Yes |
-| [stiffness](arkts-arkui-chainanimationoptions-i-sys.md) | number | Yes |
-| [damping](arkts-arkui-chainanimationoptions-i-sys.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mass | number | Yes |  |
+| stiffness | number | Yes |  |
+| damping | number | Yes |  |

@@ -15,7 +15,7 @@
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [setCursor](arkts-arkui-cursorcontrol-setcursor-f.md) |
-| [restoreDefault](arkts-arkui-cursorcontrol-restoredefault-f.md) |
+| Name | Description |
+| --- | --- |
+| [setCursor](arkts-arkui-cursorcontrol-setcursor-f.md) | Sets the current mouse cursor style. This API can be used globally in method statements. |
+| [restoreDefault](arkts-arkui-cursorcontrol-restoredefault-f.md) | Restores the mouse cursor to the default arrow style. This API can be used globally in method statements. |

@@ -29,15 +29,15 @@ Triggered when the menu is being created. Menu data can be configured within thi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Yes | Menu items to be displayed.   **NOTE：**Modifications to the name, icon, or shortcut hint of default menu items do not take effect. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Menu items after the processing. |
 
 ## onMenuItemClick
 
@@ -57,16 +57,16 @@ Triggered when the specified menu item is clicked.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | Yes |
-| range | [TextRange](arkts-arkui-textrange-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | Yes | Menu item.   **NOTE：**Since API version 23, for level-1 menu items that support expandable level-2 menus (such as autofill), only the system default logic is executed and custom logic is not executed. |
+| range | [TextRange](arkts-arkui-textrange-i.md) | Yes | Selected text. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Execution logic of the menu item. |
 
 ## onPrepareMenu
 

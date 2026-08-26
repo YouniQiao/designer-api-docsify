@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from 'kits/@kit.NetworkKit';
+import vpnExtension from '@kit.NetworkKit';
 ```
 
 ## createVpnConnection
@@ -14,7 +14,8 @@ function createVpnConnection(context: VpnExtensionContext): VpnConnection
 
 Creates a **VpnConnection** object.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Before calling **createVpnConnection**, call **startVpnExtensionAbility** to enable the VPN function.
 
 **Since:** 11
@@ -25,18 +26,18 @@ Creates a **VpnConnection** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [VpnExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-vpnextensioncontext-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [VpnExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-vpnextensioncontext-t.md) | Yes | Specified context. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) |
+| Type | Description |
+| --- | --- |
+| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) | VPN connection object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |

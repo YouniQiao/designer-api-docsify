@@ -13,6 +13,7 @@ Friction animation model. You can build friction animation by friction force, in
 ## Modules to Import
 
 ```TypeScript
+import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@ohos.@kit.ArkUI';
 ```
 
 ## constructor
@@ -33,8 +34,8 @@ Constructor parameters
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| friction | number | Yes |
-| position | number | Yes |
-| velocity | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| friction | number | Yes |  |
+| position | number | Yes |  |
+| velocity | number | Yes |  |

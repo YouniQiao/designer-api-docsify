@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [VideoModifier](arkts-arkui-videomodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [VideoModifier](arkts-arkui-videomodifier-c.md) | Defines Video Modifier@extends VideoAttribute @implements AttributeModifier & lt;VideoAttribute & gt; |

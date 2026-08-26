@@ -11,7 +11,7 @@ Information about an exempted application.@interface ExemptedAppInfo
 ## Modules to Import
 
 ```TypeScript
-import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
+import deviceStandby from '@kit.BackgroundTasksKit';
 ```
 
 ## duration

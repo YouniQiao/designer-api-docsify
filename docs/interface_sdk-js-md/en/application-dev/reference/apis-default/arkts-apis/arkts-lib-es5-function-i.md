@@ -17,16 +17,16 @@ Calls the function, substituting the specified object for the this value of the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | Function | Yes |
-| thisArg | any | Yes |
-| argArray | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | Function | Yes |  |
+| thisArg | any | Yes |  |
+| argArray | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## bind
 
 ```TypeScript
@@ -37,16 +37,16 @@ For a given function, creates a bound function that has the same body as the ori
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | Function | Yes |
-| thisArg | any | Yes |
-| argArray | any[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | Function | Yes |  |
+| thisArg | any | Yes |  |
+| argArray | any[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## call
 
 ```TypeScript
@@ -57,16 +57,16 @@ Calls a method of an object, substituting another object for the current object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | Function | Yes |
-| thisArg | any | Yes |
-| argArray | any[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | Function | Yes |  |
+| thisArg | any | Yes |  |
+| argArray | any[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toString
 
 ```TypeScript
@@ -77,8 +77,8 @@ Returns a string representation of a function.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## arguments
 
 ```TypeScript

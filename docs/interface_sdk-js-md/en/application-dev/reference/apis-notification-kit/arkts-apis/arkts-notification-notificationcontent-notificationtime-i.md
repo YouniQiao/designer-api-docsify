@@ -2,7 +2,8 @@
 
 Describes the notification timing information.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Since:** 11
@@ -70,3 +71,15 @@ Whether the timer is paused. The default value is **false**.
 **Since:** 11
 
 **System capability:** SystemCapability.Notification.Notification
+
+**Examples**
+
+```TypeScript
+// The notification counts down from three seconds and the time is displayed in the title.
+time: {
+    initialTime: 3000,
+    isCountDown: true,
+    isPaused: false,
+    isInTitle: true,
+}
+```

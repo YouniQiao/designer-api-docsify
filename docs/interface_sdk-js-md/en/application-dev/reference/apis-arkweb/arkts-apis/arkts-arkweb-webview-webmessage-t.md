@@ -12,7 +12,7 @@ Defines the data types supported by [onMessageEventExt](arkts-arkweb-webview-web
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| ArrayBuffer |
-| string |
+| Type | Description |
+| --- | --- |
+| ArrayBuffer | String type. [since 11] |
+| string | Binary type. [since 11] |

@@ -31,9 +31,9 @@ Sets the alignment of child components in the container. When both this attribut
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | Yes | Alignment of child components in the container. Default value: **Alignment.Center**. Invalid values are treated as the default value. |
 
 ## autoHalfFold
 
@@ -53,9 +53,9 @@ Sets whether to enable auto rotation. This attribute is effective only when auto
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable auto rotation. Default value: **true**. **true**: Enable auto rotation when the **FolderStack** component is in [half-folded state](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#foldstatus11). **false**: Disable auto rotation. This setting applies uniformly across all device types. Invalid values are treated as the default value. |
 
 ## enableAnimation
 
@@ -75,9 +75,9 @@ Sets whether to enable the default animation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable the default animation. Default value: **true**. **true**: Enable the default animation. **false**: Disable the default animation. Invalid values are treated as the default value. |
 
 ## onFolderStateChange
 
@@ -97,9 +97,9 @@ Triggered when the fold state of the device changes. This API takes effect only 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md) | Yes | Callback invoked when the fold state of the device changes.<br>**Since:** 18 |
 
 ## onHoverStatusChange
 
@@ -119,6 +119,6 @@ Triggered when the hover state of the device changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | [OnHoverStatusChangeCallback](arkts-arkui-onhoverstatuschangecallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | [OnHoverStatusChangeCallback](arkts-arkui-onhoverstatuschangecallback-t.md) | Yes | Callback invoked when the hover state of the device changes.<br>**Since:** 18 |

@@ -19,6 +19,6 @@ The ConfigurationConstant module provides the enumerated values of the environme
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md) |
+| Name | Description |
+| --- | --- |
+| [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md) | Enumerates the color modes. |

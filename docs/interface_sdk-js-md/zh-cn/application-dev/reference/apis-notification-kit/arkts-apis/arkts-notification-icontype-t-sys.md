@@ -12,7 +12,7 @@ type IconType = Resource | image.PixelMap
 
 **系统接口：** 此接口为系统接口。
 
-| 类型 |
-| --- |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
-| image.PixelMap |
+| 类型 | 说明 |
+| --- | --- |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 表示值类型为图片资源。 |
+| image.PixelMap | 表示值类型为图片。 |

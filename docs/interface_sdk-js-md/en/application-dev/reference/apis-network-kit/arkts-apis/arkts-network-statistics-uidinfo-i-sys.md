@@ -11,7 +11,6 @@ Defines the parameters for querying historical traffic of an application.
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## ifaceInfo

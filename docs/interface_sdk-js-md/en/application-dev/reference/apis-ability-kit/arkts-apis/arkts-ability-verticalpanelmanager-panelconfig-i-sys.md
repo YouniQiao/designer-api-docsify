@@ -11,7 +11,7 @@ Indicates the panel config@interface PanelConfig
 ## Modules to Import
 
 ```TypeScript
-import { verticalPanelManager } from 'kits/@kit.AbilityKit';
+import verticalPanelManager from '@kit.AbilityKit';
 ```
 
 ## sourceAppInfo

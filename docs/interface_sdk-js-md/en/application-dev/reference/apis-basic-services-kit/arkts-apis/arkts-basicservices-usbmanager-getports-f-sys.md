@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## getPorts
@@ -26,6 +27,12 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;USBPort & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;USBPort & gt; | List of physical USB ports. |
+
+**Examples**
+
+```TypeScript
+let ret: Array<usbManager.USBPort> = usbManager.getPorts();
+```

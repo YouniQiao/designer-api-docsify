@@ -1,7 +1,7 @@
 # SliderInteraction
 
 Interaction mode between the user and the slider.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) |Description | | ------ | -- | ----------------------------- | | [SLIDE_AND_CLICK](arkts-arkui-sliderinteraction-e.md) | 0 | Users can drag the slider or touch the track to move the slider. The slider moves as soon as the mouse or finger is pressed.| | [SLIDE_ONLY](arkts-arkui-sliderinteraction-e.md) | 1 | Users are not allowed to move the slider by touching the slider.| | [SLIDE_AND_CLICK_UP](arkts-arkui-sliderinteraction-e.md) | 2 |
+| Name | Value|Description | | ------ | -- | ----------------------------- | | SLIDE_AND_CLICK | 0 | Users can drag the slider or touch the track to move the slider. The slider moves as soon as the mouse or finger is pressed.| | SLIDE_ONLY | 1 | Users are not allowed to move the slider by touching the slider.| | SLIDE_AND_CLICK_UP | 2 |Users can drag the slider or touch the track to move the slider. The slider moves when the mouse is released or finger is lifted, if the release/lift position coincides with the screen press position.|
 
 **Since:** 12
 

@@ -14,6 +14,6 @@ Event to store.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| evt | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| evt | Object | Yes | Event. |

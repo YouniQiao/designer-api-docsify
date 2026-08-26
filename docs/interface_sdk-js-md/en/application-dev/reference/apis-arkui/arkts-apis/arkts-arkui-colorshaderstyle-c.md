@@ -31,9 +31,9 @@ A constructor used to create a **ResourceColor** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [color](#color) | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Options for displaying a solid color. |
 
 ## color
 

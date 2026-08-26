@@ -11,14 +11,14 @@ appMemoryOptimizer provides application memory optimization capabilities, includ
 ## Modules to Import
 
 ```TypeScript
-import { appMemoryOptimizer } from 'kits/@kit.AbilityKit';
+import appMemoryOptimizer from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [evictFilePages](arkts-ability-appmemoryoptimizer-evictfilepages-f.md) |
-| [evictModuleFilePages](arkts-ability-appmemoryoptimizer-evictmodulefilepages-f.md) |
+| Name | Description |
+| --- | --- |
+| [evictFilePages](arkts-ability-appmemoryoptimizer-evictfilepages-f.md) | Sends a request to the system to release file page cache of specified files. The system determines whether to actually perform the release based on the current memory status, and success is not guaranteed. |
+| [evictModuleFilePages](arkts-ability-appmemoryoptimizer-evictmodulefilepages-f.md) | Sends a request to the system to release file page cache of specified modules. The system determines whether to actually perform the release based on the current memory status, and success is not guaranteed. The system reads the memory_optimizer.json configuration file of the corresponding module, obtains the evictFilePages array, and performs file page cache eviction on the files in the array.Configuration file path: {Module directory}/src/main/resources/rawfile/memory_optimizer.json File names in the evictFilePages array of the configuration file must end with .so, .hap, or .hsp. |

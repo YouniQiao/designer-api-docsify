@@ -1,6 +1,6 @@
 # Circle
 
-The **Circle** component is used to draw a circle.> **Child Components**>> None.
+The **Circle** component is used to draw a circle. > **Child Components** > > None.
 
 ## Circle
 
@@ -20,9 +20,9 @@ use new function to set the value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No |  |
 
 ## Circle
 
@@ -42,13 +42,13 @@ set the value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No | Options of the circle. The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |

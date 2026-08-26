@@ -11,7 +11,7 @@ The result of AI-generated images@interface GeneratorResult
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'kits/@kit.ArkUI';
+import imageGeneration from '@kit.ArkUI';
 ```
 
 ## image

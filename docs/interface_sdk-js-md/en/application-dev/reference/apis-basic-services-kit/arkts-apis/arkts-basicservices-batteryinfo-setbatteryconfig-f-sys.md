@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+import batteryInfo from '@kit.BasicServicesKit';
 ```
 
 ## setBatteryConfig
@@ -22,21 +22,33 @@ Sets the battery configuration based on the specified scenario.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [sceneName](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md) | string | Yes |
-| sceneValue | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sceneName | string | Yes | Scenario name. The value must be a string. |
+| sceneValue | string | Yes | Scenario value. The value must be a string. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Operation result. The value **0** indicates that the operation is successful, and a non-zero value indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [5100101](../errorcode-battery-info.md#5100101-service-connection-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| [5100101](../errorcode-battery-info.md#5100101-service-connection-failure) | Failed to connect to the service. |
+
+**Examples**
+
+```TypeScript
+import {batteryInfo} from '@kit.BasicServicesKit';
+
+let sceneName = 'xxx';
+let sceneValue = '0';
+let result = batteryInfo.setBatteryConfig(sceneName, sceneValue);
+
+console.info("The result is: " + result);
+```

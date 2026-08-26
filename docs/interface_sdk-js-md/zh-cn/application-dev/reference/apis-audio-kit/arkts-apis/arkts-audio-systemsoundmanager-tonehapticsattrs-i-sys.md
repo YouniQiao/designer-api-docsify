@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
+import systemSoundManager from '@kit.AudioKit';
 ```
 
 ## getFileName
@@ -30,15 +30,25 @@ getFileName(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 文件名。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+**示例**
+
+```TypeScript
+toneAttrs.getFileName();
+```
+
+```TypeScript
+toneHapticsAttrs.getFileName();
+```
 
 ## getGentleFileName
 
@@ -56,15 +66,21 @@ getGentleFileName(): string | null
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string \| null |
+| 类型 | 说明 |
+| --- | --- |
+| string \| null | 柔和振动文件名，振动文件为Json格式。如果不存在柔和振动，则振动文件名为空。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+**示例**
+
+```TypeScript
+toneHapticsAttrs.getGentleFileName();
+```
 
 ## getGentleTitle
 
@@ -82,15 +98,21 @@ getGentleTitle(): string | null
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string \| null |
+| 类型 | 说明 |
+| --- | --- |
+| string \| null | 柔和振动的标题。如果不存在柔和振动，则振动标题为空。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+**示例**
+
+```TypeScript
+toneHapticsAttrs.getGentleTitle();
+```
 
 ## getGentleUri
 
@@ -108,15 +130,21 @@ getGentleUri(): string | null
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string \| null |
+| 类型 | 说明 |
+| --- | --- |
+| string \| null | 柔和振动的uri（如：'/data/storage/el2/base/haptics/synchronized/alarms/test.json'）。 如果不存在柔和振动， 则uri为空。 柔和振动是指马达振动强度较标准较弱。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+**示例**
+
+```TypeScript
+toneHapticsAttrs.getGentleUri();
+```
 
 ## getTitle
 
@@ -134,15 +162,25 @@ getTitle(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 标题。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+**示例**
+
+```TypeScript
+toneAttrs.getTitle();
+```
+
+```TypeScript
+toneHapticsAttrs.getTitle();
+```
 
 ## getUri
 
@@ -160,12 +198,22 @@ getUri(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | uri（如：'/data/storage/el2/base/haptics/synchronized/alarms/test.json'）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+**示例**
+
+```TypeScript
+toneAttrs.getUri();
+```
+
+```TypeScript
+toneHapticsAttrs.getUri();
+```

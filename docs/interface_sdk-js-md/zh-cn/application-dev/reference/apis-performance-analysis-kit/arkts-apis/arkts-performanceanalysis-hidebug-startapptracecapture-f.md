@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## startAppTraceCapture
@@ -20,23 +19,45 @@ function startAppTraceCapture(tags: number[], flag: TraceFlag, limitSize: number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| tags | number[] | 是 |
-| flag | [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | 是 |
-| limitSize | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tags | number[] | 是 | trace范围，详情请见[tags](arkts-performanceanalysis-hidebug-tags-n.md)。 |
+| flag | [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | 是 | 详情请见[TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md)。 |
+| limitSize | number | 是 | 开启trace文件大小限制，单位为Byte，取值范围（0, 500MB]。超出范围时返回错误码401。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回trace文件名路径（接口返回真实物理路径，若应用内需要访问，请参考 应用沙箱路径和真实物理路径的对应关系进行路径转换）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [11400102](../errorcode-hiviewdfx-hidebug-trace.md#11400102-重复采集) |
-| [11400103](../errorcode-hiviewdfx-hidebug-trace.md#11400103-权限校验失败) |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid argument, Possible causes: 1.The limit parameter is too small 2.The parameter is not within the enumeration type 3.The parameter type error or parameter order error |
+| [11400102](../errorcode-hiviewdfx-hidebug-trace.md#11400102-重复采集) | Capture trace already enabled. |
+| [11400103](../errorcode-hiviewdfx-hidebug-trace.md#11400103-权限校验失败) | No write permission on the file. |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Abnormal trace status. |
+
+**示例**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tags: number[] = [hidebug.tags.ABILITY_MANAGER, hidebug.tags.ARKUI];
+let flag: hidebug.TraceFlag = hidebug.TraceFlag.MAIN_THREAD;
+let limitSize: number = 1024 * 1024;
+
+try {
+  let fileName: string = hidebug.startAppTraceCapture(tags, flag, limitSize);
+  console.info(`fileName = ${fileName}`);
+  // code block
+  // ...
+  // code block
+  hidebug.stopAppTraceCapture();
+} catch (error) {
+  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
+}
+```

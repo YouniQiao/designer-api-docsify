@@ -9,6 +9,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Promise](arkts-lib-es2018-promise-promise-i.md) |
+| Name | Description |
+| --- | --- |
+| [Promise](arkts-lib-es2018-promise-promise-i.md) | Represents the completion of an asynchronous operation |

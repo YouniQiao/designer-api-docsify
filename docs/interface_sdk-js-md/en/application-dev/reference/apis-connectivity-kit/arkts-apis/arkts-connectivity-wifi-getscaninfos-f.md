@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## getScanInfos
@@ -26,9 +29,31 @@ Obtains the hotspot information that scanned.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;WifiScanInfo & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;WifiScanInfo & gt; & gt; | Returns information about scanned Wi-Fi hotspot if any. |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getScanInfos().then(result => {
+    let len = result.length;
+    console.info("wifi received scan info: " + len);
+    for (let i = 0; i < len; ++i) {
+        console.info("ssid: " + result[i].ssid);
+        console.info("bssid: " + result[i].bssid);
+        console.info("capabilities: " + result[i].capabilities);
+        console.info("securityType: " + result[i].securityType);
+        console.info("rssi: " + result[i].rssi);
+        console.info("band: " + result[i].band);
+        console.info("frequency: " + result[i].frequency);
+        console.info("channelWidth: " + result[i].channelWidth);
+        console.info("timestamp: " + result[i].timestamp);
+    }
+});
+```
 
 
 ## getScanInfos
@@ -51,6 +76,10 @@ Obtains the hotspot information that scanned.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes |  |
+
+**Examples**
+
+See [getScanInfos](#getscaninfos)

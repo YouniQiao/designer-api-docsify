@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import update from '@kit.BasicServicesKit';
 ```
 
 ## getOnlineUpdater
@@ -26,18 +26,33 @@ downloading update packages.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| upgradeInfo | [UpgradeInfo](arkts-basicservices-update-upgradeinfo-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| upgradeInfo | [UpgradeInfo](arkts-basicservices-update-upgradeinfo-i-sys.md) | Yes | UpgradeInfo** is the upgrade object information, which is used to identify the caller and upgrade service type. **upgradeApp** is the package name of the caller. The value is a string of 1 to 255 characters in the format **com.***xxx.xxx.xxx*. The length of each segment ranges from 1 to 64 characters. Only letters, digits, and periods (.) are supported. Each segment must start with a letter and cannot contain consecutive periods (.) or start or end with a period (.). If the value is out of range or the format is incorrect, an exception is thrown. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Updater](arkts-basicservices-update-updater-i-sys.md) |
+| Type | Description |
+| --- | --- |
+| [Updater](arkts-basicservices-update-updater-i-sys.md) | Utility object used to perform online update operations. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+// Define an UpgradeInfo object.
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // App package name
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // Vendor type
+      subType: update.BusinessSubType.FIRMWARE // The update type is firmware.
+    }
+  };  
+  // Obtain an OnlineUpdater object.
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+```

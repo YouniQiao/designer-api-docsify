@@ -10,22 +10,22 @@ The module defines the bundle information. An application can obtain its own bun
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AlternateIconInfo](arkts-ability-bundleinfo-alternateiconinfo-i.md) |
-| [AppCloneIdentity](arkts-ability-bundleinfo-appcloneidentity-i.md) |
-| [BundleInfo](arkts-ability-bundleinfo-i.md) |
-| [ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md) |
-| [SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md) |
-| [UsedScene](arkts-ability-bundleinfo-usedscene-i.md) |
+| Name | Description |
+| --- | --- |
+| [AlternateIconInfo](arkts-ability-bundleinfo-alternateiconinfo-i.md) | Describes the app backup icon information. |
+| [AppCloneIdentity](arkts-ability-bundleinfo-appcloneidentity-i.md) | Describes the identity information of an application clone. |
+| [BundleInfo](arkts-ability-bundleinfo-i.md) | The module defines the bundle information. |
+| [ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md) | Provides the detailed information of the permissions to request from the system. |
+| [SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md) | Describes the signature information of the app package,which can identifythe app source, ensure app integrity, and be used for app security verification and identification. |
+| [UsedScene](arkts-ability-bundleinfo-usedscene-i.md) | Describes the use scenario and timing of the permission, helping developers request and use permissions properly. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AppClonePreference](arkts-ability-bundleinfo-appclonepreference-i-sys.md) |
-| [BundleInfo](arkts-ability-bundleinfo-i-sys.md) |
-| [BundleOptions](arkts-ability-bundleinfo-bundleoptions-i-sys.md) |
-| [DynamicIconInfo](arkts-ability-bundleinfo-dynamiciconinfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AppClonePreference](arkts-ability-bundleinfo-appclonepreference-i-sys.md) | Defines the application clone preference configuration. |
+| [BundleInfo](arkts-ability-bundleinfo-i-sys.md) | The module defines the bundle information. |
+| [BundleOptions](arkts-ability-bundleinfo-bundleoptions-i-sys.md) | The bundle options of bundle manager |
+| [DynamicIconInfo](arkts-ability-bundleinfo-dynamiciconinfo-i-sys.md) | Obtains dynamic icon information about a bundle |
 <!--DelEnd-->

@@ -5,22 +5,23 @@ Profiler tools for inspectors.@namespace Profiler
 ## Modules to Import
 
 ```TypeScript
+import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Namespaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Profiler](arkts-arkui-profiler-n.md) |
+| Name | Description |
+| --- | --- |
+| [Profiler](arkts-arkui-profiler-n.md) | Profiler tools for inspectors.@namespace Profiler |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getInspectorNodeById](arkts-arkui-inspector-getinspectornodebyid-f-sys.md) |
-| [getInspectorNodes](arkts-arkui-inspector-getinspectornodes-f-sys.md) |
-| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getInspectorNodeById](arkts-arkui-inspector-getinspectornodebyid-f-sys.md) | Get inspector node info by node id. |
+| [getInspectorNodes](arkts-arkui-inspector-getinspectornodes-f-sys.md) | Get inspector node infos. |
+| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md) | Set app background color. |
 <!--DelEnd-->

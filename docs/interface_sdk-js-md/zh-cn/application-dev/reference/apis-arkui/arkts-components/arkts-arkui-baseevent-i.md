@@ -19,7 +19,8 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 获取功能键按压状态。报错信息请参考以下错误码。支持功能键'Ctrl'\|'Alt'\|'Shift'。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 此接口不支持在手写笔场景下使用。
 
 **起始版本：** 12
@@ -32,21 +33,21 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| keys | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keys | Array & lt;string & gt; | 是 | 功能键列表。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回功能键按压状态。当功能键均处于按压状态时返回true，否则返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## axisHorizontal
 

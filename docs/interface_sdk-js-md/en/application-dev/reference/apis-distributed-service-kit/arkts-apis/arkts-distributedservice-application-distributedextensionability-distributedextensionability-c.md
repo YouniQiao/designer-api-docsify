@@ -9,7 +9,7 @@ The **DistributedExtensionAbility** module provides distributed extension capabi
 ## Modules to Import
 
 ```TypeScript
-import { DistributedExtensionAbility } from 'kits/@kit.DistributedServiceKit';
+import DistributedExtensionAbility from '@kit.DistributedServiceKit';
 ```
 
 ## onCollaborate
@@ -28,15 +28,35 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| wantParam | Record & lt;string, Object & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| wantParam | Record & lt;string, Object & gt; | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| AbilityConstant.CollaborateResult |
+| Type | Description |
+| --- | --- |
+| AbilityConstant.CollaborateResult | Collaboration result, that is, whether the target application accepts the collaboration request. |
+
+**Examples**
+
+```TypeScript
+import { abilityConnectionManager, DistributedExtensionAbility } from '@kit.DistributedServiceKit';
+import { AbilityConstant } from '@kit.AbilityKit';
+
+export default class DistributedExtension extends DistributedExtensionAbility {
+  onCollaborate(wantParam: Record<string, Object>) {
+    console.info(`DistributedExtension onCollabRequest Accept to the result of Ability collaborate`);
+    let sessionId = -1;
+    const collaborationValues = wantParam["CollaborationValues"] as abilityConnectionManager.CollaborationValues;
+    if (collaborationValues == undefined) {
+      return sessionId;
+    }
+    console.info(`onCollab, collaborationValues: ${JSON.stringify(collaborationValues)}`);
+    return AbilityConstant.CollaborateResult.ACCEPT;
+  }
+}
+```
 
 ## onCreate
 
@@ -54,9 +74,24 @@ Callback invoked to initialize the service logic when a **DistributedExtensionAb
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to the **DistributedExtensionAbility** instance, including the ability name and bundle name. |
+
+**Examples**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { DistributedExtensionAbility } from '@kit.DistributedServiceKit';
+
+export default class DistributedExtension extends DistributedExtensionAbility {
+  onCreate(want: Want) {
+    console.info(`DistributedExtension Create ok`);
+    console.info(`DistributedExtension on Create want: ${JSON.stringify(want)}`);
+    console.info(`DistributedExtension Create end`);
+  }
+}
+```
 
 ## onDestroy
 
@@ -71,6 +106,18 @@ Callback invoked to clear resources when a **ServiceExtensionAbility** instance 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+**Examples**
+
+```TypeScript
+import { DistributedExtensionAbility } from '@kit.DistributedServiceKit';
+
+export default class DistributedExtension extends DistributedExtensionAbility {
+  onDestroy() {
+    console.info('DistributedExtension onDestroy ok');
+  }
+}
+```
 
 ## context
 

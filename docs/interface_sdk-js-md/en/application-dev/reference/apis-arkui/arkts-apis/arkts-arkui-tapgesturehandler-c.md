@@ -31,9 +31,9 @@ Constructor used to create a tap gesture handler instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [TapGestureHandlerOptions](arkts-arkui-tapgesturehandleroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [TapGestureHandlerOptions](arkts-arkui-tapgesturehandleroptions-i.md) | No | Parameters of the tap gesture handler. |
 
 ## onAction
 
@@ -53,12 +53,12 @@ Sets the callback for successful tap gesture recognition.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful tap gesture recognition. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TapGestureHandler](arkts-arkui-tapgesturehandler-c.md) |
+| Type | Description |
+| --- | --- |
+| [TapGestureHandler](arkts-arkui-tapgesturehandler-c.md) | Tap gesture handler object. |

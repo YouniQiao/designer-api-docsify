@@ -23,14 +23,23 @@ Listens for file or directory changes. This API uses an asynchronous callback to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filename | string | Yes |
-| events | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filename | string | Yes | Application sandbox path of the file. |
+| events | number | Yes | 1**: The file or directory is renamed.   - **2**: The file or directory is modified.   - **3**: The file or directory is modified and renamed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Called each time a change is detected. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Watcher](arkts-corefile-fileio-watcher-depr-i.md) |
+| Type | Description |
+| --- | --- |
+| [Watcher](arkts-corefile-fileio-watcher-depr-i.md) | Promise that returns the file change. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
+  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
+});
+```

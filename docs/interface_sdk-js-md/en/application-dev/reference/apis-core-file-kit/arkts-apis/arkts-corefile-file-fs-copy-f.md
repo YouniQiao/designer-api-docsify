@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## copy
@@ -22,48 +20,77 @@ Copies a file or directory. This API uses a promise to return the result.File co
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| srcUri | string | Yes |
-| destUri | string | Yes |
-| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| srcUri | string | Yes | URI of the file or directory to copy. |
+| destUri | string | Yes | URI of the destination file or directory. |
+| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | No | Callback invoked to provide the copy progress. If this parameter is not set, the callback will not be invoked. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 13900001 |
-| 13900002 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900011 |
-| 13900012 |
-| 13900015 |
-| 13900018 |
-| 13900019 |
-| 13900020 |
-| 13900021 |
-| 13900022 |
-| 13900024 |
-| 13900025 |
-| 13900027 |
-| 13900028 |
-| 13900030 |
-| 13900031 |
-| 13900034 |
-| 13900038 |
-| 13900041 |
-| 13900042 |
-| 13900044 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied by the file system |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900021 | File table overflow |
+| 13900022 | Too many open files |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900030 | File name too number |
+| 13900031 | Function not implemented |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+
+let progressListener: fileIo.ProgressListener = (progress: fileIo.Progress) => {
+  console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
+};
+let copyOption: fileIo.CopyOptions = {
+  "progressListener" : progressListener
+}
+try {
+  fileIo.copy(srcDirUriLocal, dstDirUriLocal, copyOption).then(()=>{
+    console.info("Succeeded in copying.");
+  }).catch((err: BusinessError)=>{
+    console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch(err) {
+  console.error(`Failed to copy.Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 
 ## copy
@@ -80,41 +107,66 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| srcUri | string | Yes |
-| destUri | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| srcUri | string | Yes | URI of the file or directory to copy. |
+| destUri | string | Yes | URI of the destination file or directory. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 13900001 |
-| 13900002 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900011 |
-| 13900012 |
-| 13900015 |
-| 13900018 |
-| 13900019 |
-| 13900020 |
-| 13900021 |
-| 13900022 |
-| 13900024 |
-| 13900025 |
-| 13900027 |
-| 13900028 |
-| 13900030 |
-| 13900031 |
-| 13900034 |
-| 13900038 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied by the file system |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900021 | File table overflow |
+| 13900022 | Too many open files |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900030 | File name too number |
+| 13900031 | Function not implemented |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+
+try {
+  fileIo.copy(srcDirUriLocal, dstDirUriLocal, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info("Succeeded in copying.");
+  })
+} catch(err) {
+  console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 
 ## copy
@@ -131,39 +183,70 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| srcUri | string | Yes |
-| destUri | string | Yes |
-| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| srcUri | string | Yes | URI of the file or directory to copy. |
+| destUri | string | Yes | URI of the destination file or directory. |
+| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | Yes | Callback used to return the copy progress. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 13900001 |
-| 13900002 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900011 |
-| 13900012 |
-| 13900015 |
-| 13900018 |
-| 13900019 |
-| 13900020 |
-| 13900021 |
-| 13900022 |
-| 13900024 |
-| 13900025 |
-| 13900027 |
-| 13900028 |
-| 13900030 |
-| 13900031 |
-| 13900034 |
-| 13900038 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied by the file system |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900021 | File table overflow |
+| 13900022 | Too many open files |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900028 | Too many links |
+| 13900030 | File name too number |
+| 13900031 | Function not implemented |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+
+try {
+  let progressListener: fileIo.ProgressListener = (progress: fileIo.Progress) => {
+    console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
+  };
+  let copyOption: fileIo.CopyOptions = {
+    "progressListener" : progressListener
+  }
+  fileIo.copy(srcDirUriLocal, dstDirUriLocal, copyOption, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info("Succeeded in copying.");
+  })
+} catch(err) {
+  console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+}
+```

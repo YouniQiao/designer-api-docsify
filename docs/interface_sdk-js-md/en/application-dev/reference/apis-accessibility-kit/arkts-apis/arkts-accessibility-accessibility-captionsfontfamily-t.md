@@ -15,13 +15,13 @@ Enumerates the font families of captions.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'default' |
-| 'monospacedSerif' |
-| 'serif' |
-| 'monospacedSansSerif' |
-| 'sansSerif' |
-| 'casual' |
-| 'cursive' |
-| 'smallCapitals' |
+| Type | Description |
+| --- | --- |
+| 'default' | Default font family. |
+| 'monospacedSerif' | Represents a monospaced Serif font. |
+| 'serif' | Represents a Serif font. |
+| 'monospacedSansSerif' | Represents a monospaced Sans Serif font. |
+| 'sansSerif' | Represents a Sans Serif font. |
+| 'casual' | Casual fonts. |
+| 'cursive' | Cursive fonts. |
+| 'smallCapitals' | Small caps fonts. |

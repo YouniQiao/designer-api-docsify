@@ -31,9 +31,9 @@ Sets whether to display a leading zero for the hours, minutes, and seconds.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [DateTimeOptions](arkts-arkui-datetimeoptions-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [DateTimeOptions](arkts-arkui-datetimeoptions-t.md) | Yes | Whether to display a leading zero for the hours, minutes, and seconds.Default value:   **hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X". For the 12-hour format, the default value is **"numeric"**, meaning no leading zero.   **minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".   **second**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".If **hour**, **minute**, or **second** is set to **undefined**, the display follows the default rules. |
 
 ## dateTimeOptions
 
@@ -53,9 +53,9 @@ Sets whether to display a leading zero for the hours, minutes, and seconds. Comp
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| timeFormat | [Optional](arkts-arkui-optional-t.md)&lt;[DateTimeOptions](arkts-arkui-datetimeoptions-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| timeFormat | [Optional](arkts-arkui-optional-t.md)&lt;[DateTimeOptions](arkts-arkui-datetimeoptions-t.md)&gt; | Yes | Whether to display a leading zero for the hours, minutes, and seconds. Currently only the configuration of the **hour**, **minute**, and **second** parameters is supported. Default value:   **hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X". For the 12-hour format, the default value is **"numeric"**, meaning no leading zero.   **minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".   **second**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".If **hour**, **minute**, or **second** is set to **undefined**, the display follows the default rules. |
 
 ## digitalCrownSensitivity
 
@@ -75,9 +75,9 @@ Sets the sensitivity to the digital crown rotation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes | Sensitivity to the digital crown rotation.Default value: **CrownSensitivity.MEDIUM |
 
 ## disappearTextStyle
 
@@ -97,9 +97,9 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for edge items.Default value:{color: '#ff182431',font: {size: '14fp', weight: FontWeight.Regular}} |
 
 ## disappearTextStyle
 
@@ -119,9 +119,9 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight for edge items.Default value:{color: '#ff182431',font: {size: '14fp', weight: FontWeight.Regular}}If the value of **style** is **undefined**, the default value is used. |
 
 ## enableCascade
 
@@ -141,9 +141,9 @@ Sets whether the AM/PM indicator automatically switches based on the hour value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Sets whether the AM/PM indicator automatically switches based on the hour value. This setting only takes effect when **useMilitaryTime** is set to **false**.   - **true**: The AM/PM indicator automatically switches based on the hour value.   - **false**: The AM/PM indicator remains static regardless of hour changes.   Default value: **false**.When **enabled** is set to **true**, it only takes effect if the **loop** parameter is also **true**. |
 
 ## enableHapticFeedback
 
@@ -153,7 +153,8 @@ enableHapticFeedback(enable: boolean)
 
 Sets whether to enable haptic feedback.To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module** in **src/main/module.json5** of the project.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 18.
 
 **Since:** 12
@@ -166,9 +167,9 @@ Sets whether to enable haptic feedback.To enable haptic feedback, you must decla
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to enable haptic feedback.   - **true**: Enable haptic feedback.   - **false**: Disable haptic feedback.   Default value: **true**.Whether this parameter takes effect after being set to **true** depends on hardware support. |
 
 ## enableHapticFeedback
 
@@ -188,9 +189,9 @@ Sets whether to enable haptic feedback. Compared with [enableHapticFeedback&lt;s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable haptic feedback.   - **true**: Enable haptic feedback.   - **false**: Disable haptic feedback.   Default value: **true**.If the value of **enable** is   **undefined**, the default value is used.Whether this parameter takes effect after being set to **true** depends on hardware support. |
 
 ## loop
 
@@ -210,9 +211,9 @@ Sets whether to enable loop scrolling.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable loop scrolling.   - **true**: Enable loop scrolling.   - **false**: Disable loop scrolling.   Default value: **true**. |
 
 ## loop
 
@@ -232,9 +233,9 @@ Sets whether to enable loop scrolling. Compared with [loop&lt;sup&gt;11+&lt;/sup
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable loop scrolling.   - **true**: Enable loop scrolling.   - **false**: Disable loop scrolling.   Default value: **true**.If the value of **isLoop** is **undefined**, the default value is used. |
 
 ## onChange
 
@@ -252,9 +253,9 @@ Triggered when the time picker snaps to the selected item. This event cannot be 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (value: TimePickerResult) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (value: TimePickerResult) = & gt; void | Yes | Time in 24-hour format. |
 
 ## onChange
 
@@ -274,9 +275,9 @@ Triggered when the time picker snaps to the selected item. This event cannot be 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnTimePickerChangeCallback](arkts-arkui-ontimepickerchangecallback-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnTimePickerChangeCallback](arkts-arkui-ontimepickerchangecallback-t.md)&gt; | Yes | Callback invoked when a time option is selected.If **callback** is set to **undefined**, the callback function is not used. |
 
 ## onEnterSelectedArea
 
@@ -286,7 +287,8 @@ onEnterSelectedArea(callback: Callback<TimePickerResult>)
 
 Triggered during the scrolling of the time picker when an item enters the divider area.Compared with the [onChange](#onchange) event, this event is triggered earlier, specifically when the scroll distance of the current column exceeds half the height of the selected item, which indicates that the item has entered the divider area. When [enableCascade](#enablecascade) is set to **true**, using this callback is not recommended due to the interdependent relationship between the AM/PM and hour columns. This callback indicates the moment an option enters the divider area during scrolling, and only the value of the currently scrolled column will change. The values of other non-scrolled columns will remain unchanged.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API cannot be called within attributeModifier.
 
 **Since:** 18
@@ -299,9 +301,9 @@ Triggered during the scrolling of the time picker when an item enters the divide
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback&lt;[TimePickerResult](arkts-arkui-timepickerresult-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback&lt;[TimePickerResult](arkts-arkui-timepickerresult-i.md)&gt; | Yes | Callback triggered during the scrolling of the time picker when an item enters the divider area. |
 
 ## selectedTextStyle
 
@@ -321,9 +323,9 @@ Sets the text color, font size, and font weight of the selected item.Default val
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Font color, font size, and font weight of the selected item.Default value: { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } } |
 
 ## selectedTextStyle
 
@@ -343,9 +345,9 @@ Sets the text color, font size, and font weight of the selected item. Compared w
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes | Font color, font size, and font weight of the selected item. Default value: { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } } If the value of **style** is **undefined**, the default value is used. |
 
 ## textStyle
 
@@ -365,9 +367,9 @@ Sets the text color, font size, and font weight of candidate items (the item imm
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for candidate items.Default value: {color: '#ff182431',font: {size: '16fp', weight: FontWeight.Regular}} |
 
 ## textStyle
 
@@ -387,9 +389,9 @@ Sets the text color, font size, and font weight of candidate items (the item imm
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight for candidate items.Default value:{color: '#ff182431',font: {size: '16fp', weight: FontWeight.Regular}}If the value of **style** is **undefined**, the default value is used. |
 
 ## useMilitaryTime
 
@@ -407,9 +409,9 @@ Sets whether the time is displayed in 24-hour format. If this attribute is not s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to display the time in 24-hour format or 12-hour format.   - **true**: 24-hour format.   - **false**: 12-hour format. |
 
 ## useMilitaryTime
 
@@ -429,6 +431,6 @@ Sets whether the time is displayed in 24-hour format. If this attribute is not s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isMilitaryTime | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isMilitaryTime | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to display the time in 24-hour format or 12-hour format.   - **true**: 24-hour format.   - **false**: 12-hour format.   When the value is **undefined**, the system time format is used by default. |

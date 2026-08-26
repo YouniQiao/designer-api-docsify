@@ -9,7 +9,7 @@ Defines parameters related to drag-and-drop animation effects.
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import dragController from '@kit.ArkUI';
 ```
 
 ## curve

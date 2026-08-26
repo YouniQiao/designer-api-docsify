@@ -9,7 +9,7 @@ Provides the result returned after the **PluginManager.Request** API is called.
 ## Modules to Import
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## componentTemplate

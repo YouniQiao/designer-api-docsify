@@ -15,8 +15,8 @@ Gets the day-of-the-month, using local time.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getDay
 
 ```TypeScript
@@ -27,8 +27,8 @@ Gets the day of the week, using local time.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getFullYear
 
 ```TypeScript
@@ -39,8 +39,8 @@ Gets the year, using local time.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getHours
 
 ```TypeScript
@@ -51,8 +51,8 @@ Gets the hours in a date, using local time.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getMilliseconds
 
 ```TypeScript
@@ -63,8 +63,8 @@ Gets the milliseconds of a Date, using local time.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getMinutes
 
 ```TypeScript
@@ -75,8 +75,8 @@ Gets the minutes of a Date object, using local time.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getMonth
 
 ```TypeScript
@@ -87,8 +87,8 @@ Gets the month, using local time.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getSeconds
 
 ```TypeScript
@@ -99,8 +99,8 @@ Gets the seconds of a Date object, using local time.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getTime
 
 ```TypeScript
@@ -111,8 +111,8 @@ Gets the time value in milliseconds.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getTimezoneOffset
 
 ```TypeScript
@@ -123,8 +123,8 @@ Gets the difference in minutes between the time on the local computer and Univer
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getUTCDate
 
 ```TypeScript
@@ -135,8 +135,8 @@ Gets the day-of-the-month, using Universal Coordinated Time (UTC).
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getUTCDay
 
 ```TypeScript
@@ -147,8 +147,8 @@ Gets the day of the week using Universal Coordinated Time (UTC).
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getUTCFullYear
 
 ```TypeScript
@@ -159,8 +159,8 @@ Gets the year using Universal Coordinated Time (UTC).
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getUTCHours
 
 ```TypeScript
@@ -171,8 +171,8 @@ Gets the hours value in a Date object using Universal Coordinated Time (UTC).
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getUTCMilliseconds
 
 ```TypeScript
@@ -183,8 +183,8 @@ Gets the milliseconds of a Date object using Universal Coordinated Time (UTC).
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getUTCMinutes
 
 ```TypeScript
@@ -195,8 +195,8 @@ Gets the minutes of a Date object using Universal Coordinated Time (UTC).
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getUTCMonth
 
 ```TypeScript
@@ -207,8 +207,8 @@ Gets the month of a Date object using Universal Coordinated Time (UTC).
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getUTCSeconds
 
 ```TypeScript
@@ -219,8 +219,8 @@ Gets the seconds of a Date object using Universal Coordinated Time (UTC).
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setDate
 
 ```TypeScript
@@ -231,14 +231,14 @@ Sets the numeric day-of-the-month value of the Date object using local time.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| date | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| date | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setFullYear
 
 ```TypeScript
@@ -249,16 +249,16 @@ Sets the year of the Date object using local time.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| year | number | Yes |
-| month | number | No |
-| date | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| year | number | Yes |  |
+| month | number | No |  |
+| date | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setHours
 
 ```TypeScript
@@ -269,17 +269,17 @@ Sets the hour value in the Date object using local time.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| hours | number | Yes |
-| min | number | No |
-| sec | number | No |
-| ms | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| hours | number | Yes |  |
+| min | number | No |  |
+| sec | number | No |  |
+| ms | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setMilliseconds
 
 ```TypeScript
@@ -290,14 +290,14 @@ Sets the milliseconds value in the Date object using local time.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ms | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ms | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setMinutes
 
 ```TypeScript
@@ -308,16 +308,16 @@ Sets the minutes value in the Date object using local time.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| min | number | Yes |
-| sec | number | No |
-| ms | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| min | number | Yes |  |
+| sec | number | No |  |
+| ms | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setMonth
 
 ```TypeScript
@@ -328,15 +328,15 @@ Sets the month value in the Date object using local time.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| month | number | Yes |
-| date | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| month | number | Yes |  |
+| date | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setSeconds
 
 ```TypeScript
@@ -347,15 +347,15 @@ Sets the seconds value in the Date object using local time.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sec | number | Yes |
-| ms | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sec | number | Yes |  |
+| ms | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setTime
 
 ```TypeScript
@@ -366,14 +366,14 @@ Sets the date and time value in the Date object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| time | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| time | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setUTCDate
 
 ```TypeScript
@@ -384,14 +384,14 @@ Sets the numeric day of the month in the Date object using Universal Coordinated
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| date | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| date | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setUTCFullYear
 
 ```TypeScript
@@ -402,16 +402,16 @@ Sets the year value in the Date object using Universal Coordinated Time (UTC).
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| year | number | Yes |
-| month | number | No |
-| date | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| year | number | Yes |  |
+| month | number | No |  |
+| date | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setUTCHours
 
 ```TypeScript
@@ -422,17 +422,17 @@ Sets the hours value in the Date object using Universal Coordinated Time (UTC).
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| hours | number | Yes |
-| min | number | No |
-| sec | number | No |
-| ms | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| hours | number | Yes |  |
+| min | number | No |  |
+| sec | number | No |  |
+| ms | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setUTCMilliseconds
 
 ```TypeScript
@@ -443,14 +443,14 @@ Sets the milliseconds value in the Date object using Universal Coordinated Time 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ms | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ms | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setUTCMinutes
 
 ```TypeScript
@@ -461,16 +461,16 @@ Sets the minutes value in the Date object using Universal Coordinated Time (UTC)
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| min | number | Yes |
-| sec | number | No |
-| ms | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| min | number | Yes |  |
+| sec | number | No |  |
+| ms | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setUTCMonth
 
 ```TypeScript
@@ -481,15 +481,15 @@ Sets the month value in the Date object using Universal Coordinated Time (UTC).
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| month | number | Yes |
-| date | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| month | number | Yes |  |
+| date | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setUTCSeconds
 
 ```TypeScript
@@ -500,15 +500,15 @@ Sets the seconds value in the Date object using Universal Coordinated Time (UTC)
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sec | number | Yes |
-| ms | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sec | number | Yes |  |
+| ms | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toDateString
 
 ```TypeScript
@@ -519,8 +519,8 @@ Returns a date as a string value.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toISOString
 
 ```TypeScript
@@ -531,8 +531,8 @@ Returns a date as a string value in ISO format.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toJSON
 
 ```TypeScript
@@ -543,14 +543,14 @@ Used by the JSON.stringify method to enable the transformation of an object's da
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toLocaleDateString
 
 ```TypeScript
@@ -561,15 +561,15 @@ Converts a date to a string by using the current or specified locale.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locales | string \| string[] | No |
-| options | [Intl.DateTimeFormatOptions](arkts-intl-datetimeformatoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locales | string \| string[] | No |  |
+| options | [Intl.DateTimeFormatOptions](arkts-intl-datetimeformatoptions-i.md) | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toLocaleString
 
 ```TypeScript
@@ -580,15 +580,15 @@ Converts a date and time to a string by using the current or specified locale.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locales | string \| string[] | No |
-| options | [Intl.DateTimeFormatOptions](arkts-intl-datetimeformatoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locales | string \| string[] | No |  |
+| options | [Intl.DateTimeFormatOptions](arkts-intl-datetimeformatoptions-i.md) | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toLocaleTimeString
 
 ```TypeScript
@@ -599,15 +599,15 @@ Converts a time to a string by using the current or specified locale.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locales | string \| string[] | No |
-| options | [Intl.DateTimeFormatOptions](arkts-intl-datetimeformatoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locales | string \| string[] | No |  |
+| options | [Intl.DateTimeFormatOptions](arkts-intl-datetimeformatoptions-i.md) | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toString
 
 ```TypeScript
@@ -618,8 +618,8 @@ Returns a string representation of a date. The format of the string depends on t
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toTimeString
 
 ```TypeScript
@@ -630,8 +630,8 @@ Returns a time as a string value.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toUTCString
 
 ```TypeScript
@@ -642,8 +642,8 @@ Returns a date converted to a string using Universal Coordinated Time (UTC).
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## valueOf
 
 ```TypeScript
@@ -654,5 +654,5 @@ Returns the stored time value in milliseconds since midnight, January 1, 1970 UT
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

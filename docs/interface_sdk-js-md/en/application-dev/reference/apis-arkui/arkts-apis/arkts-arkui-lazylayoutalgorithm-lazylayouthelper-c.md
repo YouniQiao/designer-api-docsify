@@ -24,9 +24,9 @@ Get the lazy layout direction.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LazyLayoutDirection](arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md) |
+| Type | Description |
+| --- | --- |
+| [LazyLayoutDirection](arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md) | The lazy layout direction. |
 
 ## getViewEnd
 
@@ -46,9 +46,9 @@ Get the end position of the visible view.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The end position of the visible view. |
 
 ## getViewStart
 
@@ -68,9 +68,9 @@ Get the start position of the visible view.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The start position of the visible view. |
 
 ## setAdjustedOffset
 
@@ -90,9 +90,9 @@ Set the adjusted offset for the lazy layout.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| offset | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | number | Yes | The adjusted offset value to set. Unit: px. |
 
 ## setChildrenInactive
 
@@ -112,6 +112,6 @@ Set children inactive.If child components are generated via ForEach or Repeat wi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| children | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| children | number[] | Yes | The indices of child components to set inactive. |

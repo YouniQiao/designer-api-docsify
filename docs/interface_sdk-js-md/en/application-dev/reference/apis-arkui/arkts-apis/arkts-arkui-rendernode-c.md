@@ -2,11 +2,13 @@
 
 The **RenderNode** module provides APIs for creating a RenderNode in custom drawing settings with C APIs.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Avoid modifying RenderNodes in BuilderNode. The FrameNode associated
 > with BuilderNode is designed solely for mounting the BuilderNode as a child component. Modifying attributes or
 > operations on the FrameNode's child nodes or their corresponding RenderNodes may lead to undefined behavior,
-> including display, event handling, and stability issues.&gt;
+> including display, event handling, and stability issues.
+> 
 > - RenderNode objects do not support JSON serialization.
 
 **Since:** 11
@@ -31,15 +33,68 @@ Appends a child node to this RenderNode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | Child node to append. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: its corresponding FrameNode cannot be adopted."<br>**Applicable version:** 22 and later |
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 100,
+  height: 100
+};
+renderNode.backgroundColor = 0xffff0000;
+const child = new RenderNode();
+child.frame = {
+  x: 10,
+  y: 10,
+  width: 50,
+  height: 50
+};
+child.backgroundColor = 0xff00ff00;
+renderNode.appendChild(child);
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      // Append a child node to the RenderNode.
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## clearChildren
 
@@ -57,6 +112,57 @@ Clears all child nodes of this RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.size = { width: 200, height: 300 };
+for (let i = 0; i < 10; i++) {
+  let childNode = new RenderNode();
+  childNode.size = { width: i * 10, height: i * 10 };
+  childNode.position = { x: i * 10, y: i * 10 };
+  childNode.backgroundColor = 0xFF0000FF - 0X11 * i;
+  renderNode.appendChild(childNode);
+}
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column() {
+      NodeContainer(this.myNodeController)
+        .borderWidth(1)
+        .width(200)
+        .height(300)
+      Button('clearChildren')
+        .onClick(() => {
+          renderNode.clearChildren(); // Remove all child nodes from the renderNode.
+        })
+    }.width('100%')
+  }
+}
+```
+
 ## constructor
 
 ```TypeScript
@@ -72,6 +178,49 @@ Constructor used to create a RenderNode.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 100,
+  height: 100
+};
+renderNode.backgroundColor = 0xffff0000;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## dispose
 
@@ -89,6 +238,60 @@ Releases this RenderNode immediately.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = { x: 0, y: 100, width: 100, height: 100 };
+renderNode.backgroundColor = 0xffff0000;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode!.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.size = { width: 200, height: 200 };
+      rootRenderNode.backgroundColor = 0xff00ff00;
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+
+  disposeRenderNode() {
+    const rootRenderNode = this.rootNode!.getRenderNode();
+    // Remove the renderNode from the parent node rootRenderNode before releasing it.
+    if (rootRenderNode !== null) {
+      rootRenderNode.removeChild(renderNode);
+    }
+    renderNode.dispose();
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 4 }) {
+      NodeContainer(this.myNodeController)
+      Button('RenderNode dispose')
+        .onClick(() => {
+          this.myNodeController.disposeRenderNode();
+        })
+        .width('100%')
+    }
+  }
+}
+```
+
 ## draw
 
 ```TypeScript
@@ -97,7 +300,8 @@ draw(context: DrawContext): void
 
 Performs drawing. You need to implement this API. It is called when the RenderNode performs drawing.Note: The Canvas provided in the [DrawContext](arkts-arkui-graphics-drawcontext-c.md) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-renderNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > During RenderNode initialization, the **draw** method is invoked twice. The first call occurs when the FrameNode
 > is initially created, triggering the rendering process. The second call occurs when the modifier is initially
 > set, which triggers drawing. All subsequent drawing processes are triggered by the modifier.
@@ -112,9 +316,155 @@ Performs drawing. You need to implement this API. It is called when the RenderNo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | Graphics drawing context. |
+
+**Examples**
+
+Code in ArkTS:
+
+```TypeScript
+// Index.ets
+import bridge from 'libentry.so'; // The .so file is written and generated from your Node-API implementation.
+import { RenderNode, FrameNode, NodeController, DrawContext } from '@kit.ArkUI';
+
+// Extend RenderNode to implement custom drawing.
+class MyRenderNode extends RenderNode {
+  uiContext: UIContext;
+
+  constructor(uiContext: UIContext) {
+    super();
+    this.uiContext = uiContext;
+  }
+
+  // Invoked when the RenderNode undergoes drawing operations.
+  draw(context: DrawContext) {
+    // The width and height in the context need to be converted from vp to px.
+    bridge.nativeOnDraw(0, context, this.uiContext.vp2px(context.size.width), this.uiContext.vp2px(context.size.height));
+  }
+}
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      const renderNode = new MyRenderNode(uiContext);
+      renderNode.size = { width: 100, height: 100 };
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
+The C++ side can obtain the canvas through the Node-API and perform subsequent custom drawing operations.
+
+```TypeScript
+// native_bridge.cpp
+#include "napi/native_api.h"
+#include <native_drawing/drawing_canvas.h>
+#include <native_drawing/drawing_color.h>
+#include <native_drawing/drawing_path.h>
+#include <native_drawing/drawing_pen.h>
+
+static napi_value OnDraw(napi_env env, napi_callback_info info)
+{
+    size_t argc = 4;
+    napi_value args[4] = { nullptr };
+    napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
+
+    int32_t id;
+    napi_get_value_int32(env, args[0], &id);
+    
+    // Obtain the pointer to the canvas.
+    void* temp = nullptr;
+    napi_unwrap(env, args[1], &temp);
+    OH_Drawing_Canvas *canvas = reinterpret_cast<OH_Drawing_Canvas*>(temp);
+    
+    // Obtain the canvas width.
+    int32_t width;
+    napi_get_value_int32(env, args[2], &width);
+    
+    // Obtain the canvas height.
+    int32_t height;
+    napi_get_value_int32(env, args[3], &height);
+    
+    // Pass in information such as the canvas, height, and width to the drawing API for custom drawing.
+    auto path = OH_Drawing_PathCreate();
+    OH_Drawing_PathMoveTo(path, width / 4, height / 4);
+    OH_Drawing_PathLineTo(path, width * 3 / 4, height / 4);
+    OH_Drawing_PathLineTo(path, width * 3 / 4, height * 3 / 4);
+    OH_Drawing_PathLineTo(path, width / 4, height * 3 / 4);
+    OH_Drawing_PathLineTo(path, width / 4, height / 4);
+    OH_Drawing_PathClose(path);
+    
+    auto pen = OH_Drawing_PenCreate();
+    OH_Drawing_PenSetWidth(pen, 10);
+    OH_Drawing_PenSetColor(pen, OH_Drawing_ColorSetArgb(0xFF, 0xFF, 0x00, 0x00));
+    OH_Drawing_CanvasAttachPen(canvas, pen);
+    
+    OH_Drawing_CanvasDrawPath(canvas, path);
+    OH_Drawing_CanvasDetachPen(canvas);
+    OH_Drawing_PenDestroy(pen);
+    OH_Drawing_PathDestroy(path);
+
+    return nullptr;
+}
+
+EXTERN_C_START
+static napi_value Init(napi_env env, napi_value exports)
+{
+    napi_property_descriptor desc[] = {
+        { "nativeOnDraw", nullptr, OnDraw, nullptr, nullptr, nullptr, napi_default, nullptr }
+    };
+    napi_define_properties(env, exports, sizeof(desc) / sizeof(desc[0]), desc);
+    return exports;
+}
+EXTERN_C_END
+
+static napi_module demoModule = {
+    .nm_version = 1,
+    .nm_flags = 0,
+    .nm_filename = nullptr,
+    .nm_register_func = Init,
+    .nm_modname = "entry",
+    .nm_priv = ((void*)0),
+    .reserved = { 0 },
+};
+
+extern "C" __attribute__((constructor)) void RegisterEntryModule(void)
+{
+    napi_module_register(&demoModule);
+}
+```
+
+Add the following content to the src/main/cpp/CMakeLists.txt file of the project:
+
+In the  file of the project, add the definition of the custom drawing API on the ArkTS side, for example:
+
+```TypeScript
+import { DrawContext } from '@kit.ArkUI';
+
+export const nativeOnDraw: (id: number, context: DrawContext, width: number, height: number) => number;
+```
 
 ## getChild
 
@@ -134,15 +484,76 @@ Obtains the child node in the specified position of this RenderNode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the child node to obtain. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null |
+| Type | Description |
+| --- | --- |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null | Child node obtained. If the RenderNode does not contain the specified child node, null is returned. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.size = { width: 200, height: 300 };
+for (let i = 0; i < 10; i++) {
+  let childNode = new RenderNode();
+  childNode.size = { width: i * 10, height: i * 10 };
+  childNode.position = { x: i * 10, y: i * 10 };
+  childNode.backgroundColor = 0xFF0000FF - 0X11 * i;
+  renderNode.appendChild(childNode);
+}
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column() {
+      NodeContainer(this.myNodeController)
+        .borderWidth(1)
+        .width(200)
+        .height(300)
+      Button('getChild')
+        .onClick(() => {
+          for (let i = 0; i < 11; i++) {
+            let childNode: RenderNode | null = renderNode.getChild(i);
+            if (childNode === null) {
+              // Return null if the renderNode has no child node at index 10.
+              console.error(`the ${i} of renderNode's childNode is null`);
+            } else {
+              // Obtain the child node and log its attributes.
+              console.info(`the ${i} of renderNode's childNode has a size of {${childNode.size.width},${childNode.size.height}}`);
+            }
+          }
+
+        })
+    }.width('100%')
+  }
+}
+```
 
 ## getFirstChild
 
@@ -162,9 +573,75 @@ Obtains the first child node of this RenderNode.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null |
+| Type | Description |
+| --- | --- |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null | First child node. If the RenderNode does not contain any child node, null is returned. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 200,
+  height: 350
+};
+renderNode.backgroundColor = 0xffff0000;
+for (let i = 0; i < 5; i++) {
+  const node = new RenderNode();
+  node.frame = {
+    x: 10,
+    y: 10 + 60 * i,
+    width: 50,
+    height: 50
+  };
+  node.backgroundColor = 0xff00ff00;
+  renderNode.appendChild(node);
+}
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+        .width(200)
+        .height(350)
+      Button('getFirstChild')
+        .onClick(() => {
+          // Obtain the first child node of the renderNode.
+          const firstChild = renderNode.getFirstChild();
+          if (firstChild === null) {
+            console.error(`the first child is null`);
+          } else {
+            console.info(`the position of first child is x: ${firstChild.position.x}, y: ${firstChild.position.y}`);
+          }
+        })
+    }
+  }
+}
+```
 
 ## getNextSibling
 
@@ -184,9 +661,80 @@ Obtains the next sibling node of this RenderNode.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null |
+| Type | Description |
+| --- | --- |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null | Next sibling node of the current RenderNode. If the RenderNode does not have the next sibling node, null is returned. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 200,
+  height: 350
+};
+renderNode.backgroundColor = 0xffff0000;
+for (let i = 0; i < 5; i++) {
+  const node = new RenderNode();
+  node.frame = {
+    x: 10,
+    y: 10 + 60 * i,
+    width: 50,
+    height: 50
+  };
+  node.backgroundColor = 0xff00ff00;
+  renderNode.appendChild(node);
+}
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+        .width(200)
+        .height(350)
+      Button('getNextSibling')
+        .onClick(() => {
+          const child = renderNode.getChild(1);
+          if (child === null) {
+            console.error(`the child is null`);
+          } else {
+            // Obtain the child node with sequence number 1 of the renderNode, and then obtain its next sibling node.
+            const nextSibling = child.getNextSibling();
+            if (nextSibling === null) {
+              console.error(`the nextSibling is null`);
+            } else {
+              console.info(`the position of child is x: ${child.position.x}, y: ${child.position.y}, the position of nextSibling is x: ${nextSibling.position.x}, y: ${nextSibling.position.y}`);
+            }
+          }
+        })
+    }
+  }
+}
+```
 
 ## getPreviousSibling
 
@@ -206,9 +754,80 @@ Obtains the previous sibling node of this RenderNode.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null |
+| Type | Description |
+| --- | --- |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null | Previous sibling node of the current RenderNode. If the RenderNode does not have the previous sibling node, null is returned. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 200,
+  height: 350
+};
+renderNode.backgroundColor = 0xffff0000;
+for (let i = 0; i < 5; i++) {
+  const node = new RenderNode();
+  node.frame = {
+    x: 10,
+    y: 10 + 60 * i,
+    width: 50,
+    height: 50
+  };
+  node.backgroundColor = 0xff00ff00;
+  renderNode.appendChild(node);
+}
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+        .width(200)
+        .height(350)
+      Button('getPreviousSibling')
+        .onClick(() => {
+          const child = renderNode.getChild(1);
+          if (child === null) {
+            console.error(`the child is null`);
+          } else {
+            // Obtain the child node with sequence number 1 of the renderNode, and then obtain its previous sibling node.
+            const previousSibling = child.getPreviousSibling();
+            if (previousSibling === null) {
+              console.error(`the previousSibling is null`);
+            } else {
+              console.info(`the position of child is x: ${child.position.x}, y: ${child.position.y}, the position of previousSibling is x: ${previousSibling.position.x}, y: ${previousSibling.position.y}`);
+            }
+          }
+        })
+    }
+  }
+}
+```
 
 ## insertChildAfter
 
@@ -228,16 +847,82 @@ Inserts a child node after the specified child node of this RenderNode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [child](../arkts-components/arkts-arkui-nestedscrollinfo-i.md) | [RenderNode](arkts-arkui-rendernode-c.md) | Yes |
-| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| child | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | Child node to add. |
+| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | Yes | Node after which the new child node will be inserted. If this parameter is left empty, the new node is inserted before the first subnode. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: its corresponding FrameNode cannot be adopted."<br>**Applicable version:** 22 and later |
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 200,
+  height: 350
+};
+renderNode.backgroundColor = 0xffff0000;
+for (let i = 0; i < 5; i++) {
+  const node = new RenderNode();
+  node.frame = {
+    x: 10,
+    y: 10 + 60 * i,
+    width: 50,
+    height: 50
+  };
+  node.backgroundColor = 0xff00ff00;
+  renderNode.appendChild(node);
+}
+
+const child = new RenderNode();
+child.frame = {
+  x: 70,
+  y: 70,
+  width: 50,
+  height: 50
+};
+child.backgroundColor = 0xffffff00;
+const sibling = renderNode.getChild(1);
+// Insert a child node after the sibling node.
+renderNode.insertChildAfter(child, sibling);
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## invalidate
 
@@ -254,6 +939,69 @@ Triggers the re-rendering of this RenderNode.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import bridge from 'libentry.so'; // The .so file is written and generated by your Node-API implementation.
+import { RenderNode, FrameNode, NodeController, DrawContext } from '@kit.ArkUI';
+
+// Extend RenderNode to implement custom drawing.
+class MyRenderNode extends RenderNode {
+  uiContext: UIContext;
+
+  constructor(uiContext: UIContext) {
+    super();
+    this.uiContext = uiContext;
+  }
+
+  draw(context: DrawContext) {
+    // The width and height in the context need to be converted from vp to px.
+    bridge.nativeOnDraw(0, context, this.uiContext.vp2px(context.size.width), this.uiContext.vp2px(context.size.height));
+  }
+}
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  newNode: MyRenderNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+    const renderNode = this.rootNode.getRenderNode();
+    if (renderNode === null) {
+      return this.rootNode;
+    }
+    this.newNode = new MyRenderNode(uiContext);
+    this.newNode.size = { width: 100, height: 100 };
+    renderNode.appendChild(this.newNode);
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column() {
+      Column() {
+        NodeContainer(this.myNodeController)
+          .width('100%')
+        Button('Invalidate')
+          .onClick(() => {
+            // Trigger re-rendering of the RenderNode.
+            this.myNodeController.newNode?.invalidate();
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## isDisposed
 
@@ -273,9 +1021,87 @@ Checks whether this RenderNode object has released its reference to its backend 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the reference to the backend node is released. The value **true** means that the reference to backend node is released, and **false** means the opposite. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = { x: 100, y: 100, width: 100, height: 100 };
+renderNode.backgroundColor = 0xff2787d9;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode!.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.size = { width: 300, height: 300 };
+      rootRenderNode.backgroundColor = 0xffd5d5d5;
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+
+  disposeRenderNode() {
+    const rootRenderNode = this.rootNode!.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.removeChild(renderNode);
+    }
+    renderNode.dispose();
+  }
+
+  isDisposed() : string {
+    if (renderNode !== null) {
+      // Check whether the RenderNode's reference to the backend node is released.
+      if (renderNode.isDisposed()) {
+        return 'renderNode isDisposed is true';
+      } else {
+        return 'renderNode isDisposed is false';
+      }
+    }
+    return 'renderNode is null';
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State text: string = ''
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 4 }) {
+      NodeContainer(this.myNodeController)
+      Button('RenderNode dispose')
+        .onClick(() => {
+          this.myNodeController.disposeRenderNode();
+          this.text = '';
+        })
+        .width(200)
+        .height(50)
+      Button('RenderNode isDisposed')
+        .onClick(() => {
+          this.text = this.myNodeController.isDisposed();
+        })
+        .width(200)
+        .height(50)
+      Text(this.text)
+        .fontSize(25)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## removeChild
 
@@ -295,9 +1121,67 @@ Deletes the specified child node from this RenderNode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | Child node to delete. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 200,
+  height: 350
+};
+renderNode.backgroundColor = 0xffff0000;
+for (let i = 0; i < 5; i++) {
+  const node = new RenderNode();
+  node.frame = {
+    x: 10,
+    y: 10 + 60 * i,
+    width: 50,
+    height: 50
+  };
+  node.backgroundColor = 0xff00ff00;
+  renderNode.appendChild(node);
+}
+
+// Remove the child node at index 1 from the renderNode.
+const node = renderNode.getChild(1);
+renderNode.removeChild(node);
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## backgroundBlur
 
@@ -316,6 +1200,90 @@ Get the background blur effect.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+// Extend RenderNode to implement custom drawing.
+class MyRenderNode extends RenderNode {
+  uiContext: UIContext;
+
+  constructor(uiContext: UIContext) {
+    super();
+    this.uiContext = uiContext;
+    this.frame = {
+      x: 0,
+      y: 0,
+      width: 150,
+      height: 150
+    };
+  }
+
+  // Invoked when the RenderNode undergoes drawing operations.
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const brush = new drawing.Brush();
+    brush.setColor({
+      alpha: 255,
+      red: 0,
+      green: 74,
+      blue: 175
+    });
+    canvas.attachBrush(brush);
+    canvas.drawRect({
+      left: 100,
+      right: 300,
+      top: 100,
+      bottom: 300
+    });
+    canvas.detachBrush();
+  }
+}
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+    this.rootNode.commonAttribute
+      .width(200)
+      .height(200)
+      .backgroundImage($r('app.media.cubic')) // Replace it with the image resource file you use.
+      .backgroundImageSize({ width: 200, height: 200 });
+    let renderNode = this.rootNode.getRenderNode();
+    if (renderNode !== null) {
+      let myRenderNode = new MyRenderNode(uiContext);
+      // Set a background blur effect.
+      myRenderNode.backgroundBlur = {
+        radius: 20,
+        grayscale: [50, 50]
+      };
+      renderNode.appendChild(myRenderNode);
+      const backgroundBlurConfig = myRenderNode.backgroundBlur;
+      console.info(`background blur radius: ${backgroundBlurConfig.radius} grayscale: [${backgroundBlurConfig.grayscale}]`);
+    }
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 10 }) {
+      NodeContainer(this.myNodeController)
+    }
+    .width('100%')
+    .height('100%')
+    .padding(20)
+  }
+}
+```
 
 ## backgroundColor
 
@@ -337,6 +1305,46 @@ Get the background color of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = { x: 0, y: 0, width: 100, height: 100 };
+// Set the background color of the renderNode.
+renderNode.backgroundColor = 0XFF00FF00;
+// Obtain the background color of the renderNode.
+const backgroundColor = renderNode.backgroundColor;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## borderColor
 
 ```TypeScript
@@ -356,6 +1364,50 @@ Get border color of the RenderNode.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+renderNode.backgroundColor = 0XFF00FF00;
+renderNode.borderWidth = { left: 8, top: 8, right: 8, bottom: 8 };
+// Set the border color of the renderNode.
+renderNode.borderColor = { left: 0xFF0000FF, top: 0xFF0000FF, right: 0xFF0000FF, bottom: 0xFF0000FF };
+// Obtain the border color of the renderNode.
+const borderColor = renderNode.borderColor;
+
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## borderRadius
 
@@ -377,6 +1429,49 @@ Get border radius of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+renderNode.backgroundColor = 0XFF00FF00;
+// Set the border corner radius of the renderNode.
+renderNode.borderRadius = { topLeft: 32, topRight: 32, bottomLeft: 32, bottomRight: 32 };
+// Obtain the border corner radius of the renderNode.
+const borderRadius = renderNode.borderRadius;
+
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## borderStyle
 
 ```TypeScript
@@ -394,6 +1489,55 @@ Get border style of the RenderNode.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+renderNode.backgroundColor = 0XFF00FF00;
+renderNode.borderWidth = { left: 8, top: 8, right: 8, bottom: 8 };
+// Set the border style of the renderNode.
+renderNode.borderStyle = {
+  left: BorderStyle.Solid,
+  top: BorderStyle.Dotted,
+  right: BorderStyle.Dashed,
+  bottom: BorderStyle.Solid
+};
+// Obtain the border style of the renderNode.
+const borderStyle = renderNode.borderStyle;
+
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## borderWidth
 
@@ -415,6 +1559,49 @@ Get border width of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+renderNode.backgroundColor = 0XFF00FF00;
+// Set the border width of the renderNode.
+renderNode.borderWidth = { left: 8, top: 8, right: 8, bottom: 8 };
+// Obtain the border width of the renderNode.
+const borderWidth = renderNode.borderWidth;
+
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## clipToFrame
 
 ```TypeScript
@@ -435,6 +1622,53 @@ Get whether the RenderNode clip to frame.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = { x: 0, y: 0, width: 100, height: 100 };
+renderNode.backgroundColor = 0xffff0000;
+// Set whether the renderNode needs to be clipped.
+renderNode.clipToFrame = true;
+// Obtain whether the renderNode needs to be clipped.
+const clipToFrame = renderNode.clipToFrame;
+
+const childNode = new RenderNode();
+childNode.frame = { x: 10, y: 10, width: 150, height: 50 };
+childNode.backgroundColor = 0xffffff00;
+renderNode.appendChild(childNode);
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## contentBlur
 
 ```TypeScript
@@ -453,6 +1687,90 @@ Get the content blur effect.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+// Extend RenderNode to implement custom drawing.
+class MyRenderNode extends RenderNode {
+  uiContext: UIContext;
+
+  constructor(uiContext: UIContext) {
+    super();
+    this.uiContext = uiContext;
+    this.frame = {
+      x: 0,
+      y: 0,
+      width: 150,
+      height: 150
+    };
+  }
+
+  // Invoked when the RenderNode undergoes drawing operations.
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const brush = new drawing.Brush();
+    brush.setColor({
+      alpha: 255,
+      red: 0,
+      green: 74,
+      blue: 175
+    });
+    canvas.attachBrush(brush);
+    canvas.drawRect({
+      left: 100,
+      right: 300,
+      top: 100,
+      bottom: 300
+    });
+    canvas.detachBrush();
+  }
+}
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+    this.rootNode.commonAttribute
+      .width(200)
+      .height(200)
+      .backgroundImage($r('app.media.cubic')) // Replace it with the image resource file you use.
+      .backgroundImageSize({ width: 200, height: 200 });
+    let renderNode = this.rootNode.getRenderNode();
+    if (renderNode !== null) {
+      let myRenderNode = new MyRenderNode(uiContext);
+      // Set a content blur effect.
+      myRenderNode.contentBlur = {
+        radius: 20,
+        grayscale: [50, 50]
+      };
+      renderNode.appendChild(myRenderNode);
+      const contentBlurConfig = myRenderNode.contentBlur;
+      console.info(`content blur radius: ${contentBlurConfig.radius} grayscale: [${contentBlurConfig.grayscale}]`);
+    }
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 10 }) {
+      NodeContainer(this.myNodeController)
+    }
+    .width('100%')
+    .height('100%')
+    .padding(20)
+  }
+}
+```
+
 ## foregroundBlur
 
 ```TypeScript
@@ -470,6 +1788,89 @@ Get the foreground blur effect.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+// Extend RenderNode to implement custom drawing.
+class MyRenderNode extends RenderNode {
+  uiContext: UIContext;
+
+  constructor(uiContext: UIContext) {
+    super();
+    this.uiContext = uiContext;
+    this.frame = {
+      x: 0,
+      y: 0,
+      width: 150,
+      height: 150
+    };
+  }
+
+  // Invoked when the RenderNode undergoes drawing operations.
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const brush = new drawing.Brush();
+    brush.setColor({
+      alpha: 255,
+      red: 0,
+      green: 74,
+      blue: 175
+    });
+    canvas.attachBrush(brush);
+    canvas.drawRect({
+      left: 100,
+      right: 300,
+      top: 100,
+      bottom: 300
+    });
+    canvas.detachBrush();
+  }
+}
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+    this.rootNode.commonAttribute
+      .width(200)
+      .height(200)
+      .backgroundImage($r('app.media.cubic')) // Replace it with the image resource file you use.
+      .backgroundImageSize({ width: 200, height: 200 });
+    let renderNode = this.rootNode.getRenderNode();
+    if (renderNode !== null) {
+      let myRenderNode = new MyRenderNode(uiContext);
+      // Set a foreground blur effect.
+      myRenderNode.foregroundBlur = {
+        radius: 20
+      };
+      renderNode.appendChild(myRenderNode);
+      const foregroundBlurConfig = myRenderNode.foregroundBlur;
+      console.info(`foreground blur radius: ${foregroundBlurConfig.radius}`);
+    }
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 10 }) {
+      NodeContainer(this.myNodeController)
+    }
+    .width('100%')
+    .height('100%')
+    .padding(20)
+  }
+}
+```
 
 ## frame
 
@@ -491,6 +1892,47 @@ Get frame info of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xffff0000;
+// Set the size and position of the renderNode.
+renderNode.frame = { x: 10, y: 10, width: 100, height: 100 };
+// Obtain the size and position of the renderNode.
+const frame = renderNode.frame;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## label
 
 ```TypeScript
@@ -508,6 +1950,49 @@ Get label of the RenderNode.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, UIContext } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+    const renderNode: RenderNode | null = this.rootNode.getRenderNode();
+    if (renderNode !== null) {
+      const renderChildNode: RenderNode = new RenderNode();
+      renderChildNode.frame = { x: 0, y: 0, width: 100, height: 100 };
+      renderChildNode.backgroundColor = 0xffff0000;
+      // Set the label of renderNode.
+      renderChildNode.label = 'customRenderChildNode';
+      // Obtain the label of renderNode and print logs.
+      console.info('label:', renderChildNode.label);
+      renderNode.appendChild(renderChildNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column() {
+      NodeContainer(this.myNodeController)
+        .width(300)
+        .height(700)
+        .backgroundColor(Color.Gray)
+    }
+  }
+}
+```
 
 ## lengthMetricsUnit
 
@@ -529,6 +2014,65 @@ Get the length metrics unit of RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+import { LengthMetricsUnit } from '@kit.ArkUI';
+
+// Extend RenderNode to configure the metric unit for node attributes.
+class BaseRenderNode extends RenderNode {
+  constructor() {
+    super();
+    this.lengthMetricsUnit = LengthMetricsUnit.PX;
+  }
+}
+
+// Extend BaseRenderNode to implement custom drawing.
+class MyRenderNode extends BaseRenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const brush = new drawing.Brush();
+    brush.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    canvas.attachBrush(brush);
+    canvas.drawRect({ left: 0, right: 200, top: 0, bottom: 200 });
+    canvas.detachBrush();
+  }
+}
+
+const renderNode = new MyRenderNode();
+renderNode.frame = { x: 100, y: 100, width: 200, height: 200 };
+renderNode.backgroundColor = 0xff0000ff;
+renderNode.rotation = { x: 0, y: 0, z: 45 };
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## markNodeGroup
 
 ```TypeScript
@@ -548,6 +2092,67 @@ Get whether to preferentially draw the node and its children.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+// Extend RenderNode to implement custom drawing.
+class MyRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const brush = new drawing.Brush();
+    brush.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    canvas.attachBrush(brush);
+    canvas.drawRect({ left: 0, right: 200, top: 0, bottom: 200 });
+    canvas.detachBrush();
+
+    brush.setColor({ alpha: 255, red: 0, green: 255, blue: 0 });
+    canvas.attachBrush(brush);
+    canvas.drawRect({ left: 100, right: 300, top: 100, bottom: 300 });
+    canvas.detachBrush();
+  }
+}
+
+const renderNode = new MyRenderNode();
+renderNode.frame = { x: 100, y: 100, width: 200, height: 200 };
+renderNode.backgroundColor = 0xff0000ff;
+// Enable drawing priority for the node and its child nodes.
+renderNode.markNodeGroup = true;
+renderNode.opacity = 0.5;
+
+const isNodeGroup = renderNode.markNodeGroup;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## opacity
 
@@ -569,6 +2174,48 @@ Get opacity of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = { x: 0, y: 0, width: 100, height: 100 };
+renderNode.backgroundColor = 0xffff0000;
+// Set the opacity of the renderNode.
+renderNode.opacity = 0.5;
+// Obtain the opacity of the renderNode.
+const opacity = renderNode.opacity;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## pivot
 
 ```TypeScript
@@ -588,6 +2235,50 @@ Get pivot vector of the RenderNode.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xffff0000;
+renderNode.frame = { x: 10, y: 10, width: 100, height: 100 };
+// Set the pivot of the renderNode.
+renderNode.pivot = { x: 0.5, y: 0.6 };
+// Obtain the pivot of the renderNode.
+const pivot = renderNode.pivot;
+
+renderNode.rotation = { x: 15, y: 0, z: 0 };
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## position
 
@@ -609,6 +2300,48 @@ Get frame position of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xffff0000;
+renderNode.size = { width: 100, height: 100 };
+// Set the position of the renderNode.
+renderNode.position = { x: 10, y: 10 };
+// Obtain the position of the renderNode.
+const position = renderNode.position;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## rotation
 
 ```TypeScript
@@ -628,6 +2361,48 @@ Get rotation vector of the RenderNode.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xffff0000;
+renderNode.frame = { x: 10, y: 10, width: 100, height: 100 };
+// Set the rotation angle of renderNode.
+renderNode.rotation = { x: 45, y: 0, z: 0 };
+// Obtain the rotation angle of renderNode.
+const rotation = renderNode.rotation;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## scale
 
@@ -649,6 +2424,48 @@ Get scale vector of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xffff0000;
+renderNode.frame = { x: 10, y: 10, width: 100, height: 100 };
+// Set the scale factor of the RenderNode.
+renderNode.scale = { x: 0.5, y: 1 };
+// Obtain the scaling factor of the RenderNode.
+const scale = renderNode.scale;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## shadowAlpha
 
 ```TypeScript
@@ -668,6 +2485,51 @@ Get shadow alpha of the RenderNode.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xffff0000;
+renderNode.frame = { x: 10, y: 10, width: 100, height: 100 };
+renderNode.shadowElevation = 10;
+renderNode.shadowColor = 0XFF00FF00;
+renderNode.shadowOffset = { x: 10, y: 10 };
+// Set the shadow color alpha value of the renderNode.
+renderNode.shadowAlpha = 0.1;
+// Obtain the shadow color alpha value of the renderNode.
+const shadowAlpha = renderNode.shadowAlpha;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## shadowColor
 
@@ -689,6 +2551,49 @@ Get shadow color of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xffff0000;
+renderNode.frame = { x: 10, y: 10, width: 100, height: 100 };
+renderNode.shadowElevation = 10;
+// Set the shadow color of the renderNode.
+renderNode.shadowColor = 0XFF00FF00;
+// Obtain the shadow color of the renderNode.
+const shadowColor = renderNode.shadowColor;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## shadowElevation
 
 ```TypeScript
@@ -708,6 +2613,50 @@ Get shadow elevation of the RenderNode.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xffff0000;
+renderNode.frame = { x: 0, y: 0, width: 100, height: 100 };
+renderNode.shadowOffset = { x: 10, y: 10 };
+renderNode.shadowAlpha = 0.7;
+// Set the shadow elevation of the renderNode.
+renderNode.shadowElevation = 30;
+// Obtain the shadow elevation of the renderNode.
+const shadowElevation = renderNode.shadowElevation;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## shadowOffset
 
@@ -729,6 +2678,50 @@ Get shadow offset of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xffff0000;
+renderNode.frame = { x: 10, y: 10, width: 100, height: 100 };
+renderNode.shadowElevation = 10;
+renderNode.shadowColor = 0XFF00FF00;
+// Set the shadow offset of the renderNode.
+renderNode.shadowOffset = { x: 10, y: 10 };
+// Obtain the shadow offset of the renderNode.
+const shadowOffset = renderNode.shadowOffset;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## shadowRadius
 
 ```TypeScript
@@ -749,6 +2742,56 @@ Get shadow radius of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xff0000ff;
+renderNode.frame = {
+  x: 100,
+  y: 100,
+  width: 100,
+  height: 100
+};
+renderNode.shadowOffset = { x: 10, y: 10 };
+renderNode.shadowAlpha = 0.7;
+// Set the shadow blur radius of the renderNode.
+renderNode.shadowRadius = 30;
+// Obtain the shadow blur radius of the renderNode.
+const shadowRadius = renderNode.shadowRadius;
+console.info(`RenderNode shadowRadius: ${shadowRadius}`);
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## shapeClip
 
 ```TypeScript
@@ -767,6 +2810,106 @@ Get shape clip of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
+
+// Create a shape clip and set the path drawing commands.
+const clip = new ShapeClip();
+clip.setCommandPath({ commands: 'M100 0 L0 100 L50 200 L150 200 L200 100 Z' });
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 150,
+  height: 150
+};
+renderNode.backgroundColor = 0XFF00FF00;
+// Set the shape clip for renderNode.
+renderNode.shapeClip = clip;
+// Obtain the shape clip of renderNode.
+const shapeClip = renderNode.shapeClip;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column() {
+      NodeContainer(this.myNodeController)
+        .borderWidth(1)
+      Button('setRectShape')
+        .onClick(() => {
+          shapeClip.setRectShape({
+            left: 0,
+            right: 150,
+            top: 0,
+            bottom: 150
+          });
+          renderNode.shapeClip = shapeClip;
+        })
+      Button('setRoundRectShape')
+        .onClick(() => {
+          shapeClip.setRoundRectShape({
+            rect: {
+              left: 0,
+              top: 0,
+              right: this.getUIContext().vp2px(150),
+              bottom: this.getUIContext().vp2px(150)
+            },
+            corners: {
+              topLeft: { x: 32, y: 32 },
+              topRight: { x: 32, y: 32 },
+              bottomLeft: { x: 32, y: 32 },
+              bottomRight: { x: 32, y: 32 }
+            }
+          });
+          renderNode.shapeClip = shapeClip;
+        })
+      Button('setCircleShape')
+        .onClick(() => {
+          shapeClip.setCircleShape({ centerY: 75, centerX: 75, radius: 75 });
+          renderNode.shapeClip = shapeClip;
+        })
+      Button('setOvalShape')
+        .onClick(() => {
+          shapeClip.setOvalShape({
+            left: 0,
+            right: this.getUIContext().vp2px(150),
+            top: 0,
+            bottom: this.getUIContext().vp2px(100)
+          });
+          renderNode.shapeClip = shapeClip;
+        })
+      Button('setCommandPath')
+        .onClick(() => {
+          shapeClip.setCommandPath({ commands: 'M100 0 L0 100 L50 200 L150 200 L200 100 Z' });
+          renderNode.shapeClip = shapeClip;
+        })
+    }
+  }
+}
+```
+
 ## shapeMask
 
 ```TypeScript
@@ -784,6 +2927,56 @@ Get shape mask of the RenderNode.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+// Create a mask and set its fill color, border color, and border width.
+const mask = new ShapeMask();
+mask.setRectShape({ left: 0, right: 150, top: 0, bottom: 150 });
+mask.fillColor = 0X55FF0000;
+mask.strokeColor = 0XFFFF0000;
+mask.strokeWidth = 24;
+
+const renderNode = new RenderNode();
+renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+renderNode.backgroundColor = 0XFF00FF00;
+// Set the mask of the renderNode.
+renderNode.shapeMask = mask;
+// Obtain the mask of the renderNode.
+const shapeMask = renderNode.shapeMask;
+
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## size
 
@@ -805,6 +2998,47 @@ Get frame size of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xffff0000;
+// Set the size of the renderNode.
+renderNode.size = { width: 100, height: 100 };
+// Obtain the size of the renderNode.
+const size = renderNode.size;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## transform
 
 ```TypeScript
@@ -825,6 +3059,53 @@ Get transform info of the RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xffff0000;
+renderNode.frame = { x: 10, y: 10, width: 100, height: 100 };
+// Set the transformation matrix of the renderNode.
+renderNode.transform = [
+  1, 0, 0, 0,
+  0, 2, 0, 0,
+  0, 0, 1, 0,
+  0, 0, 0, 1
+];
+// Obtain the transformation matrix of the renderNode.
+const transform = renderNode.transform;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## translation
 
 ```TypeScript
@@ -844,3 +3125,45 @@ Get translation vector of the RenderNode.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.backgroundColor = 0xffff0000;
+renderNode.frame = { x: 10, y: 10, width: 100, height: 100 };
+// Set the translation amount of the renderNode.
+renderNode.translation = { x: 100, y: 0 };
+// Obtain the translation amount of the renderNode.
+const translation = renderNode.translation;
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getInstance
@@ -22,12 +22,20 @@ Creates an **IndexUtil** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locale | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locale | string | No | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. The default value is the current system locale. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [IndexUtil](arkts-localization-i18n-indexutil-c.md) |
+| Type | Description |
+| --- | --- |
+| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | IndexUtil** object created based on the specified locale ID. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
+```

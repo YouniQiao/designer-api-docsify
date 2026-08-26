@@ -2,7 +2,8 @@
 
 Enumerates the error codes.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is deprecated since API version 9. You are advised to use
 > [HuksExceptionErrCode&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksexceptionerrcode-e.md).
 

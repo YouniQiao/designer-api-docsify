@@ -2,7 +2,8 @@
 
 Implements a layout manager object.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After the text content is changed, you must wait for the layout to be completed before you can obtain the most up-
 > to-date layout information.
 
@@ -33,16 +34,16 @@ Obtains the position of the character nearest to the specified coordinate.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X coordinate relative to the component.Unit: px |
+| y | number | Yes | Y coordinate relative to the component.Unit: px |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) \| undefined | Character position. Returns **undefined** when [LayoutManager]{ |
 
 ## getCharacterPositionAtCoordinate
 
@@ -63,17 +64,17 @@ Obtains the position of the character nearest to the specified coordinate based 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X coordinate relative to the component.Unit: px |
+| y | number | Yes | Y coordinate relative to the component.Unit: px |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No | Encoding type used for the character position. The default value is **TextEncoding.TEXT_ENCODING_UTF8**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) \| undefined | Character position. Returns **undefined** when [LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -93,15 +94,15 @@ Obtains the character range and the actual glyph range based on the specified gl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| glyphRange | [TextRange](arkts-arkui-textrange-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| glyphRange | [TextRange](arkts-arkui-textrange-i.md) | Yes | Glyph range of the text. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined |
+| Type | Description |
+| --- | --- |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -121,16 +122,16 @@ Obtains the character range and the actual glyph range based on the specified gl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| glyphRange | [TextRange](arkts-arkui-textrange-i.md) | Yes |
-| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| glyphRange | [TextRange](arkts-arkui-textrange-i.md) | Yes | Glyph range of the text. |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No | Encoding type used for the character range. The default value is **TextEncoding.TEXT_ENCODING_UTF8**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined |
+| Type | Description |
+| --- | --- |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
 
 ## getGlyphPositionAtCoordinate
 
@@ -150,16 +151,16 @@ Obtains the position of a glyph close to a given coordinate.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X coordinate relative to the component.Unit: px |
+| y | number | Yes | Y coordinate relative to the component.Unit: px |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) |
+| Type | Description |
+| --- | --- |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | Glyph position. |
 
 ## getGlyphRangeForCharacterRange
 
@@ -179,15 +180,15 @@ Obtains the glyph range and the actual character range based on the specified ch
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| charRange | [TextRange](arkts-arkui-textrange-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| charRange | [TextRange](arkts-arkui-textrange-i.md) | Yes | Character range of the text. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined |
+| Type | Description |
+| --- | --- |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
 
 ## getGlyphRangeForCharacterRange
 
@@ -207,16 +208,16 @@ Obtains the glyph range and the actual character range based on the specified ch
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| charRange | [TextRange](arkts-arkui-textrange-i.md) | Yes |
-| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| charRange | [TextRange](arkts-arkui-textrange-i.md) | Yes | Character range of the text. |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No | Encoding type used for the character range. The default value is **TextEncoding.TEXT_ENCODING_UTF8**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined |
+| Type | Description |
+| --- | --- |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
 
 ## getLineCount
 
@@ -236,9 +237,9 @@ Obtains the total number of lines in the component.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Total number of lines in the component. |
 
 ## getLineMetrics
 
@@ -258,15 +259,15 @@ Obtains the information about the specified line, including line metrics, text s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [lineNumber](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-linemetrics-i.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| lineNumber | number | Yes | Line number, which is zero-based. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LineMetrics](arkts-arkui-linemetrics-t.md) |
+| Type | Description |
+| --- | --- |
+| [LineMetrics](arkts-arkui-linemetrics-t.md) | Information about the specified line, including line metrics, text style information, and font properties. |
 
 ## getRectsForRange
 
@@ -286,14 +287,14 @@ Obtains the drawing area information of the characters or placeholders within an
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| range | [TextRange](arkts-arkui-textrange-i.md) | Yes |
-| widthStyle | [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | Yes |
-| heightStyle | [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| range | [TextRange](arkts-arkui-textrange-i.md) | Yes | Text range for which the drawing area is to be obtained. |
+| widthStyle | [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | Yes | Width style of the rectangle. |
+| heightStyle | [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | Yes | Height style of the rectangle. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[TextBox](arkts-arkui-textbox-t.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[TextBox](arkts-arkui-textbox-t.md)&gt; | Array of drawing rectangles. |

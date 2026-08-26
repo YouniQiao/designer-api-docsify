@@ -6,15 +6,15 @@
 ## 导入模块
 
 ```TypeScript
-import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from 'kits/@kit.AVSessionKit';
+import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKit';
 ```
 
 ## 汇总
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md) |
-| [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md) |
-| [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md) | 投播组件显示模式参数选项。@enum { number } |
+| [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md) | 投播组件设备列表状态参数选项。 |
+| [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md) | 投播组件样式参数选项。@enum { number } |

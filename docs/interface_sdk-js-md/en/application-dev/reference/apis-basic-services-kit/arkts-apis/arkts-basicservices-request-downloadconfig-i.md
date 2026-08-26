@@ -9,7 +9,8 @@ Defines the download task configuration.
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import request from '@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
 ```
 
 ## background
@@ -48,7 +49,8 @@ enableMetered?: boolean
 
 Whether download is allowed on a metered connection. The value **true** means the download is allowed, and **false** means the opposite. The default value is **false**.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > In general cases, a mobile data connection is metered, while a Wi-Fi connection is not.
 
 **Type:** boolean

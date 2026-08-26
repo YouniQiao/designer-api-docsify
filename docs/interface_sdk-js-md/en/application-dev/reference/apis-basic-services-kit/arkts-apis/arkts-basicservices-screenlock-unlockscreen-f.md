@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from 'kits/@kit.BasicServicesKit';
+import screenLock from '@kit.BasicServicesKit';
 ```
 
 ## unlockScreen
@@ -22,9 +22,23 @@ Unlock the screen.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of unlockScreen. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+screenLock.unlockScreen((err: BusinessError) => {      
+  if (err) {
+    console.error(`Failed to unlock the screen, Code: ${err.code}, message: ${err.message}`);
+    return;    
+  }
+  console.info(`Succeeded unlocking the screen.`);
+});
+```
 
 
 ## unlockScreen
@@ -43,6 +57,18 @@ Unlock the screen.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | the promise returned by the function. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+screenLock.unlockScreen().then(() => {
+  console.info('Succeeded unlocking the screen.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to unlock the screen, Code: ${err.code}, message: ${err.message}`);
+});
+```

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedDataObject } from 'kits/@kit.ArkData';
+import distributedDataObject from '@kit.ArkData';
 ```
 
 ## deviceId

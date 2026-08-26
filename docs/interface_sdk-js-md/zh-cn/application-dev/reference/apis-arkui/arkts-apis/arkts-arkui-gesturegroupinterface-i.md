@@ -27,16 +27,16 @@
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [GestureMode](arkts-arkui-gesturemode-e.md) | 是 |
-| gesture | [GestureType](arkts-arkui-gesturetype-t.md)[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [GestureMode](arkts-arkui-gesturemode-e.md) | 是 |  |
+| gesture | [GestureType](arkts-arkui-gesturetype-t.md)[] | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |
 
 ## onCancel
 
@@ -54,12 +54,12 @@ onCancel(event: () => void): GestureGroupInterface
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |

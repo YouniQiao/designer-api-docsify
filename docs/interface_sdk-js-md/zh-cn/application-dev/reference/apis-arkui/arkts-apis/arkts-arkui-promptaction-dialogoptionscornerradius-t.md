@@ -14,7 +14,7 @@ declare type DialogOptionsCornerRadius = Dimension | BorderRadiuses
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [Dimension](arkts-arkui-dimension-t.md) |
-| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Dimension](arkts-arkui-dimension-t.md) |  |
+| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) |  |

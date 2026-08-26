@@ -9,10 +9,10 @@
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## dismiss
@@ -33,22 +33,22 @@ dismiss(target: number | ComponentContent<Object>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| target | number \| ComponentContent & lt;Object & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| target | number \| ComponentContent & lt;Object & gt; | 是 | 要取消的对话ID或组件内容。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 不会返回任何值的Promise。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | Dialog content not found. The ComponentContent cannot be found. |
 
 ## present
 
@@ -68,22 +68,22 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | dialog.DialogStyleOptions | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | dialog.DialogStyleOptions | 否 | 对话框选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; | 用于返回对话结果的Promise。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) |
-| [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) | The dialog cannot be opened due to node mount failure. |
+| [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) | The dialog cannot be opened due to subwindow create failure. |
 
 ## present
 
@@ -107,25 +107,25 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent & lt;Object & gt; | 是 |
-| options | dialog.DialogCustomOptions | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent & lt;Object & gt; | 是 | 自定义对话框内容。 |
+| options | dialog.DialogCustomOptions | 否 | 自定义对话框选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; | 用于返回对话结果的Promise。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
-| [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) |
-| [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
+| [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | Dialog content already exist. The ComponentContent has already been opened. |
+| [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) | The dialog cannot be opened due to node mount failure. |
+| [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) | The dialog cannot be opened due to subwindow create failure. |
 
 ## update
 
@@ -145,20 +145,20 @@ update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): P
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| content | ComponentContent & lt;Object & gt; | 是 |
-| options | dialog.DialogBaseOptions | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| content | ComponentContent & lt;Object & gt; | 是 | 用于标识对话框的内容。 |
+| options | dialog.DialogBaseOptions | 否 | 要更新的选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 不会返回任何值的Promise。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | Dialog content not found. The ComponentContent cannot be found. |

@@ -9,7 +9,6 @@ Obtains the network block status information.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## blocked

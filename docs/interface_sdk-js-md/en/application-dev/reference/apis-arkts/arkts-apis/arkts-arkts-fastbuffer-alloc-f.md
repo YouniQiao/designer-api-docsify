@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
+import fastbuffer from '@kit.ArkTS';
 ```
 
 ## alloc
@@ -22,14 +22,28 @@ Allocates a new FastBuffer for a fixed size bytes. If fill is undefined, the Fas
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | number | Yes |
-| fill | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| number | No |
-| encoding | BufferEncoding | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes | The desired size (in bytes) of the new FastBuffer |
+| fill | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| number | No | fill [fill=0] A value to pre-fill the new FastBuffer with |
+| encoding | BufferEncoding | No | encoding [encoding='utf8'] If `fill` is a string, this is its encoding |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
+| Type | Description |
+| --- | --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a new allocated FastBuffer |
+
+**Examples**
+
+```TypeScript
+import { fastbuffer } from '@kit.ArkTS';
+
+let buf1 = fastbuffer.alloc(5);
+let buf2 = fastbuffer.alloc(5, 'a');
+let buf3 = fastbuffer.alloc(11, 'aGVsbG8gd29ybGQ=', 'base64');
+console.info(buf2.toString());
+// Output: aaaaa
+console.info(buf3.toString());
+// Output: hello world
+```

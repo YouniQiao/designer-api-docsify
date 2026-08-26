@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## on('BundleStatusChange')
@@ -15,7 +15,8 @@ function on(type: 'BundleStatusChange',
 
 注册Callback。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > on
 > 替代。
@@ -34,11 +35,11 @@ function on(type: 'BundleStatusChange',
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'BundleStatusChange' | 是 |
-| bundleStatusCallback | [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'BundleStatusChange' | 是 | 指示应执行命令，只支持BundleStatusChange。 |
+| bundleStatusCallback | [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | 是 | 指示要注册的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 程序启动作为入参的回调函数，返回正确结果或错误信息。 |
 
 
 ## on('BundleStatusChange')
@@ -49,7 +50,8 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 
 注册Callback。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > on
 > 替代。
@@ -68,13 +70,13 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'BundleStatusChange' | 是 |
-| bundleStatusCallback | [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'BundleStatusChange' | 是 | 指示应执行命令，只支持BundleStatusChange。 |
+| bundleStatusCallback | [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | 是 | 指示要注册的回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise形式返回正确结果或错误信息。 |

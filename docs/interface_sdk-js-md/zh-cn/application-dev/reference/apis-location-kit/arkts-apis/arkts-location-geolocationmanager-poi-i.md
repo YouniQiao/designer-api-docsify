@@ -9,7 +9,6 @@ POI(Point of Interest, 兴趣点)信息。
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## additionalInfo

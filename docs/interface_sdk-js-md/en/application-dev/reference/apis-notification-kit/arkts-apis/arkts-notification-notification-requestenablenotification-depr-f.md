@@ -3,6 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## requestEnableNotification
@@ -23,9 +26,25 @@ Requests notification to be enabled for this application. This API uses an async
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let requestEnableNotificationCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("requestEnableNotification failed " + JSON.stringify(err));
+  } else {
+    console.info("requestEnableNotification success");
+  }
+};
+
+Notification.requestEnableNotification(requestEnableNotificationCallback);
+```
 
 
 ## requestEnableNotification
@@ -46,6 +65,18 @@ Requests notification to be enabled for this application. This API uses a promis
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.requestEnableNotification().then(() => {
+  console.info("requestEnableNotification success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`requestEnableNotification failed, code is ${err}`);
+});
+```

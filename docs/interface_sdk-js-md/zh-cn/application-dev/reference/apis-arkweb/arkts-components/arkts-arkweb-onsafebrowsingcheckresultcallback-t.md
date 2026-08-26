@@ -14,6 +14,6 @@ type OnSafeBrowsingCheckResultCallback = (threatType: ThreatType) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| threatType | [ThreatType](arkts-arkweb-threattype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| threatType | [ThreatType](arkts-arkweb-threattype-e.md) | 是 | 定义网站threat类型。 |

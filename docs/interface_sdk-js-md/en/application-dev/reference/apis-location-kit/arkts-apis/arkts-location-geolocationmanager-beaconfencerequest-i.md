@@ -9,7 +9,6 @@ Configuring parameters in BeaconFence request.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## beacon

@@ -9,6 +9,9 @@ EventResult是ArkWeb Kit中用于通知Web组件同层事件消费结果的类�
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -41,9 +44,13 @@ setGestureEventResult(result: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| result | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| result | boolean | 是 | 是否消费该手势事件。 true表示消费该手势事件，false表示不消费该手势事件。 传入null或undefined时为true。 |
+
+**示例**
+
+触摸事件示例代码参考[onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent)。
 
 ## setGestureEventResult
 
@@ -59,10 +66,14 @@ setGestureEventResult(result: boolean, stopPropagation: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| result | boolean | 是 |
-| stopPropagation | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| result | boolean | 是 | 是否消费该手势事件。 true表示消费该手势事件，false表示不消费该手势事件。 传入null或undefined时为true。 |
+| stopPropagation | boolean | 是 | 是否阻止冒泡，在result为true时生效。 true表示阻止冒泡，false表示不阻止冒泡。 传入null或undefined时为true。 |
+
+**示例**
+
+触摸事件示例代码参考[onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent)。
 
 ## setMouseEventResult
 
@@ -78,7 +89,11 @@ setMouseEventResult(result: boolean, stopPropagation?: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| result | boolean | 是 |
-| stopPropagation | boolean | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| result | boolean | 是 | 是否消费该鼠标事件。 true表示消费该鼠标事件，false表示不消费该鼠标事件。 传入null或undefined时为true。 |
+| stopPropagation | boolean | 否 | 是否阻止冒泡，在result为true时生效。 true表示阻止冒泡，false表示不阻止冒泡。 传入null或undefined时为true。 默认值：true。 |
+
+**示例**
+
+鼠标事件示例代码参考[onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent)。

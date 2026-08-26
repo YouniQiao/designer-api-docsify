@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
+import huksExternalCrypto from '@kit.UniversalKeystoreKit';
 ```
 
 ## getErrorInfo
@@ -22,6 +22,47 @@ function getErrorInfo(): HuksExternalErrorInfo
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [HuksExternalErrorInfo](arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [HuksExternalErrorInfo](arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) | 返回的详细错误信息。 |
+
+**示例**
+
+```TypeScript
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+
+function stringToUint8Array(str: string) {
+  let arr: number[] = [];
+  for (let i = 0, j = str.length; i < j; ++i) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+const resourceId = JSON.stringify({
+  providerName: "testProviderName",
+  bundleName: "com.example.cryptoapplication",
+  abilityName: "CryptoExtension",
+  index: {
+    key: "testKey"
+  } as ESObject
+});
+const pin = '123456'; // 此处为示例，实际业务中应替换为真实的用户PIN码
+const params: Array<huksExternalCrypto.HuksExternalCryptoParam> = [
+  {
+    tag: huksExternalCrypto.HuksExternalCryptoTag.HUKS_EXT_CRYPTO_TAG_UKEY_PIN,
+    value: stringToUint8Array(pin)
+  }
+];
+
+async function testFunction() : Promise<void>
+{
+  try {
+    await huksExternalCrypto.authUkeyPin(resourceId, params);
+  } catch (error) {
+    const errorInfo = huksExternalCrypto.getErrorInfo();
+    console.error(`errno: ${errorInfo.errno}`);
+    console.error(`errorDesc: ${errorInfo.errorDesc}`);
+  }
+}
+```

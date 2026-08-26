@@ -2,7 +2,8 @@
 
 描述音振文件描述符。
 
-> **注意：**&gt;
+> **注意：**
+> 
 > 开发者需要确保fd是可用的文件描述符，且offset和length的值都是正确的。
 
 **起始版本：** 20
@@ -12,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audioHaptic } from 'kits/@kit.AudioKit';
+import audioHaptic from '@kit.AudioKit';
 ```
 
 ## fd

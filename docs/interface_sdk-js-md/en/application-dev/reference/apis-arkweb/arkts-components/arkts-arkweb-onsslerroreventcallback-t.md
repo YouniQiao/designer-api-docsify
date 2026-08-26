@@ -14,6 +14,6 @@ Callback invoked when an SSL error occurs during resource loading. Returns detai
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sslErrorEvent | [SslErrorEvent](arkts-arkweb-sslerrorevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sslErrorEvent | [SslErrorEvent](arkts-arkweb-sslerrorevent-i.md) | Yes | Detailed information passed when an SSL error occurs during resource loading. |

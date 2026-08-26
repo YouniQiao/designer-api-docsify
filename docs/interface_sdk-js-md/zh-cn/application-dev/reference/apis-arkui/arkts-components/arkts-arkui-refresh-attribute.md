@@ -31,9 +31,9 @@ maxPullDownDistance(distance: Optional<number>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| distance | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| distance | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 最大下拉距离。取值范围： [0, +∞)，值小于0时按0处理。当该值小于刷新的下拉偏移量refreshOffset时，Refresh下拉离手不会触发刷新。undefined和null按没有设置此属性处理。默认值：undefined单位：vp |
 
 ## maxPullDownDistance
 
@@ -53,9 +53,9 @@ maxPullDownDistance(distance: number | Resource | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| distance | number \| Resource \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| distance | number \| Resource \| undefined | 是 | 最大下拉距离。默认值：undefined单位：vp取值范围： [0, +∞)，值小于0时按0处理。当该值小于刷新的下拉偏移量[refreshOffset](#refreshoffset)时，Refresh下拉离手不会触发刷新。undefined和null按没有设置此属性处理，即没有最大下拉距离限制。 |
 
 ## onOffsetChange
 
@@ -65,7 +65,8 @@ onOffsetChange(callback: Callback<number>)
 
 下拉距离发生变化时触发回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
@@ -78,9 +79,9 @@ onOffsetChange(callback: Callback<number>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback & lt;number & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback & lt;number & gt; | 是 | 回调函数，用于监听下拉距离的变化。当下拉距离发生变化时触发，回调参数为当前的下拉距离。单位：vp |
 
 ## onRefreshing
 
@@ -98,9 +99,9 @@ onRefreshing(callback: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | () = & gt; void | 是 | 进入刷新状态时触发的回调。 |
 
 ## onStateChange
 
@@ -118,9 +119,9 @@ onStateChange(callback: (state: RefreshStatus) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | (state: RefreshStatus) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (state: RefreshStatus) = & gt; void | 是 |  |
 
 ## pullDownRatio
 
@@ -140,9 +141,9 @@ pullDownRatio(ratio: Optional<number>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [ratio](../arkts-apis/arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ratio | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 下拉跟手系数。数值越大，跟随手势下拉的反应越灵敏。0表示不跟随手势下拉，1表示等比例跟随手势下拉。没有设置或设置为undefined时，默认使用动态 下拉跟手系数，下拉距离越大，跟手系数越小。取值范围：[0, 1]。小于0的值会被视为0，大于1的值会被视为1。 |
 
 ## pullToRefresh
 
@@ -162,9 +163,9 @@ pullToRefresh(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 当下拉距离超过[refreshOffset](#refreshoffset)时是否能触发刷新。true 表示能触发刷新，false表示不能触发刷新。默认值：true |
 
 ## pullUpToCancelRefresh
 
@@ -184,9 +185,9 @@ pullUpToCancelRefresh(enabled: boolean | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | boolean \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | boolean \| undefined | 是 | 设置上滑是否取消刷新。true表示取消刷新；false表示不取消刷新。默认值：true。值为undefined时，按默认值处理。 |
 
 ## refreshOffset
 
@@ -206,9 +207,9 @@ refreshOffset(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 下拉偏移量，单位vp。取值范围：(0, +∞)。默认值：未设置[promptText](arkts-arkui-refreshoptions-i.md)参数时为64vp，设置了 [promptText](arkts-arkui-refreshoptions-i.md)参数时为96vp。 如果取值为0或负数的时候此接口采用默认值。 |
 
 ## refreshOffset
 
@@ -228,6 +229,6 @@ refreshOffset(value: number | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 下拉偏移量。单位：vp取值范围：(0, +∞)。默认值：未设置 [promptText](arkts-arkui-refreshoptions-i.md)参数时为64vp，设置了[promptText](arkts-arkui-refreshoptions-i.md)参数时为96vp。值为0或负数时，按默认值处理。 |

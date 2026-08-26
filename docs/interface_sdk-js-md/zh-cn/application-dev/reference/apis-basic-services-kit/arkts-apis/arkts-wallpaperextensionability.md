@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { WallpaperExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import WallpaperExtensionAbility from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -11,7 +11,7 @@ import { WallpaperExtensionAbility } from 'kits/@kit.BasicServicesKit';
 <!--Del-->
 ### 类（系统接口）
 
-| 名称 |
-| --- |
-| [WallpaperExtensionAbility](arkts-basicservices-wallpaperextensionability-c-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [WallpaperExtensionAbility](arkts-basicservices-wallpaperextensionability-c-sys.md) | class of wallpaper extension ability. |
 <!--DelEnd-->

@@ -27,12 +27,43 @@ Register application state observer.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | The application state observer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns the number code of the observer. |
+
+**Examples**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+
+const observerCode = appManager.registerApplicationStateObserver({
+  onForegroundApplicationChanged(appStateData) {
+    console.info(`onForegroundApplicationChanged, appStateData: ${appStateData}.`);
+  },
+  onAbilityStateChanged(abilityStateData) {
+    console.info(`onAbilityStateChanged, abilityStateData: ${abilityStateData}.`);
+  },
+  onProcessCreated(processData) {
+    console.info(`onProcessCreated, processData: ${processData}.`);
+  },
+  onProcessDied(processData) {
+    console.info(`onProcessDied, processData: ${processData}.`);
+  },
+  onProcessStateChanged(processData) {
+    console.info(`onProcessStateChanged, processData: ${processData}.`);
+  },
+  onAppStarted(appStateData) {
+    console.info(`onAppStarted, appStateData: ${JSON.stringify(appStateData)}`);
+  },
+  onAppStopped(appStateData) {
+    console.info(`onAppStopped, appStateData: ${JSON.stringify(appStateData)}`);
+  }
+});
+console.info(`observerCode: ${observerCode}.`);
+```

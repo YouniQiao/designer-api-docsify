@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## tracepoint
@@ -20,9 +19,20 @@ function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [HiTraceCommunicationMode](arkts-performanceanalysis-hitracechain-hitracecommunicationmode-e.md) | 是 |
-| type | [HiTraceTracepointType](arkts-performanceanalysis-hitracechain-hitracetracepointtype-e.md) | 是 |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 |
-| msg | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [HiTraceCommunicationMode](arkts-performanceanalysis-hitracechain-hitracecommunicationmode-e.md) | 是 | Communication mode for the trace point. |
+| type | [HiTraceTracepointType](arkts-performanceanalysis-hitracechain-hitracetracepointtype-e.md) | 是 | 信息埋点需要指定的跟踪埋点类型。 |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 | 实施信息埋点操作的HiTraceId实例。 |
+| msg | string | 否 | HiTraceMeter打点操作传入的trace说明信息，用于在性能分析时标识打点位置。当需要在HiTraceMeter报告中区分不同 打点位置时传入有意义的描述信息（如函数名、操作步骤等），不传入时使用空字符串，不影响基本打点功能。该参数的长度不超过63Byte，超出部分将被截断。 |
+
+**示例**
+
+```TypeScript
+// 开始跟踪，跟踪标志是INCLUDE_ASYNC与DONOT_CREATE_SPAN的并集。
+let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.INCLUDE_ASYNC | hiTraceChain.HiTraceFlag.DONOT_CREATE_SPAN);
+// 若干业务逻辑完成后，触发信息埋点操作。
+hiTraceChain.tracepoint(hiTraceChain.HiTraceCommunicationMode.THREAD, hiTraceChain.HiTraceTracepointType.SS, traceId, "Just an example");
+// 业务结束，结束跟踪。
+hiTraceChain.end(traceId);
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import wallpaper from '@kit.BasicServicesKit';
 ```
 
 ## setAllWallpapers
@@ -24,21 +24,52 @@ Set wallpapers for all forms of devices.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| wallpaperInfos | Array&lt;[WallpaperInfo](arkts-basicservices-wallpaper-wallpaperinfo-i-sys.md)&gt; | Yes |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| wallpaperInfos | Array&lt;[WallpaperInfo](arkts-basicservices-wallpaper-wallpaperinfo-i-sys.md)&gt; | Yes | indicates the current device wallpaper type object. among them, NORMAL and PORTRAIT are mandatory. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | the promise returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.The first parameter type must be Array & lt;WallpaperInfo & gt;. The second type must be WallpaperType. 3.The first parameter type must be Array & lt;WallpaperInfo & gt;, must include wallpaper with FoldState NORMAL and RotateState PORTRAIT. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
+
+let wallpaperInfos: Array<wallpaper.WallpaperInfo>
+wallpaperInfos = [
+  {
+    foldState: wallpaper.FoldState.NORMAL,
+    rotateState: wallpaper.RotateState.PORTRAIT,
+    source: '/data/storage/el2/base/haps/entry/files/normal.jpeg'
+  },
+  {
+    foldState: wallpaper.FoldState.UNFOLD_ONCE_STATE,
+    rotateState: wallpaper.RotateState.LANDSCAPE,
+    source: '/data/storage/el2/base/haps/entry/files/unfold_once_state.jpeg'
+  },
+  {
+    foldState: wallpaper.FoldState.UNFOLD_TWICE_STATE,
+    rotateState: wallpaper.RotateState.PORTRAIT,
+    source: '/data/storage/el2/base/haps/entry/files/unfold_twice_state.jpeg'
+  }
+];
+wallpaper.setAllWallpapers(wallpaperInfos, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
+  console.info(`success to setAllWallpapers.`);
+}).catch((error: BusinessError) => {
+  console.error(`failed to setAllWallpapers. Code: ${error.code}, Message: ${error.message}`);
+});
+```

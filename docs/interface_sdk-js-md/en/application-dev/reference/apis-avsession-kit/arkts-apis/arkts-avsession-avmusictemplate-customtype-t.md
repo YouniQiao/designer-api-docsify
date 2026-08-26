@@ -12,9 +12,9 @@ Custom tab type USER_INFO & TAB, COMPILATION, SETTINGS.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'USER_INFO' |
-| 'TAB' |
-| 'COMPILATION' |
-| 'SETTINGS' |
+| Type | Description |
+| --- | --- |
+| 'USER_INFO' |  |
+| 'TAB' |  |
+| 'COMPILATION' |  |
+| 'SETTINGS' |  |

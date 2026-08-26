@@ -13,21 +13,21 @@ The module provides APIs for the Home Screen application.
 ## Modules to Import
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Namespaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [innerBundleManager](arkts-ability-innerbundlemanager-n.md) |
+| Name | Description |
+| --- | --- |
+| [innerBundleManager](arkts-ability-innerbundlemanager-n.md) | The module provides APIs for the Home Screen application. |
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | Contains basic Ability information, which uniquely identifies a launcher StatusCallback. |
 <!--DelEnd-->

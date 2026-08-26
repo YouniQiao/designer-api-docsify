@@ -4,14 +4,14 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Context](arkts-ability-context-c.md) |
+| Name | Description |
+| --- | --- |
+| [Context](arkts-ability-context-c.md) | Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations. ../../../ |
 
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Context](arkts-ability-context-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [Context](arkts-ability-context-c-sys.md) | Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations. ../../../ |
 <!--DelEnd-->

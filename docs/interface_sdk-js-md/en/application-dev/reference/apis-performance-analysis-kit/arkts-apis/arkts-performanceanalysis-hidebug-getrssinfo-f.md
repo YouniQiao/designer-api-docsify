@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getRssInfo
@@ -14,7 +13,8 @@ function getRssInfo(): RssInfo
 
 Obtains the physical memory usage of the application process. Reads data from the **\/proc/{pid}/status** node.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Reading the /proc/{pid}/status node takes a short time. The value obtained by this API is slightly different from
 > the **rss** value obtained by the [hidebug.getAppNativeMemInfo](arkts-performanceanalysis-hidebug-getappnativememinfo-f.md) API. However,
 > this API is more lightweight. To avoid frame loss or frame freezing, you are advised to use this API.
@@ -27,6 +27,15 @@ Obtains the physical memory usage of the application process. Reads data from th
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | Physical memory information about the application process. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let rssInfo: hidebug.RssInfo = hidebug.getRssInfo();
+console.info(`rss: ${rssInfo.rss}, swapRss: ${rssInfo.swapRss}`);
+```

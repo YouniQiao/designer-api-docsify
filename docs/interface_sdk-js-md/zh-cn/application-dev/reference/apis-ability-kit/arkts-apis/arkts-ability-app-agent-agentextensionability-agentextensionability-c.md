@@ -2,7 +2,8 @@
 
 AgentExtensionAbility继承自[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)，提供智能体扩展能力，包括智能体 服务的创建、销毁、连接、断开的生命周期回调接口，以及接收客户端所发送数据和安全认证的回调接口。本文将AgentExtensionAbility组件提供方称为服务端，将AgentExtensionAbility组件使用方称为客户端。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 本模块接口不支持在[har](../../../quick-start/har-package.md)包中使用。
 @extends ExtensionAbility
 
@@ -15,7 +16,7 @@ AgentExtensionAbility继承自[ExtensionAbility](arkts-ability-app-ability-exten
 ## 导入模块
 
 ```TypeScript
-import { AgentExtensionAbility } from 'kits/@kit.AbilityKit';
+import AgentExtensionAbility from '@kit.AbilityKit';
 ```
 
 ## onAuth
@@ -36,10 +37,10 @@ onAuth(proxy: AgentHostProxy, handshakeData: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 |
-| handshakeData | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 | [AgentHostProxy](arkts-ability-agenthostproxy-i.md)对象，用于向客户端发送安全认 证请求。 |
+| handshakeData | string | 是 | 表示接收到的安全认证数据。 |
 
 ## onConnect
 
@@ -59,10 +60,10 @@ onConnect(want: Want, proxy: AgentHostProxy): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 当前AgentExtensionAbility相关的[Want](arkts-ability-app-ability-want-want-c.md)类型信息，包括Ability名称、Bundle名称 等。 |
+| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 | [AgentHostProxy](arkts-ability-agenthostproxy-i.md)对象，用于与客户端进行通信。 |
 
 ## onCreate
 
@@ -82,9 +83,9 @@ onCreate(want: Want): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 当前AgentExtensionAbility相关的[Want](arkts-ability-app-ability-want-want-c.md)类型信息，包括Ability名称、Bundle名称 等。 |
 
 ## onData
 
@@ -104,10 +105,10 @@ onData(proxy: AgentHostProxy, data: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 |
-| data | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 | [AgentHostProxy](arkts-ability-agenthostproxy-i.md)对象，用于与客户端进行通信。 |
+| data | string | 是 | 表示接收到的数据。 |
 
 ## onDestroy
 
@@ -143,10 +144,10 @@ onDisconnect(want: Want, proxy: AgentHostProxy): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 当前AgentExtensionAbility相关的[Want](arkts-ability-app-ability-want-want-c.md)类型信息，包括Ability名称、Bundle名称 等。 |
+| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 | [AgentHostProxy](arkts-ability-agenthostproxy-i.md)对象，用于与客户端进行通信。 |
 
 ## context
 

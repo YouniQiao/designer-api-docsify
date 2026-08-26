@@ -9,16 +9,16 @@ The DataUriUtils module provides APIs to process URI objects. You can use the AP
 ## Modules to Import
 
 ```TypeScript
-import { dataUriUtils } from 'kits/@kit.AbilityKit';
+import dataUriUtils from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [attachId](arkts-ability-datauriutils-attachid-f.md) |
-| [deleteId](arkts-ability-datauriutils-deleteid-f.md) |
-| [getId](arkts-ability-datauriutils-getid-f.md) |
-| [updateId](arkts-ability-datauriutils-updateid-f.md) |
+| Name | Description |
+| --- | --- |
+| [attachId](arkts-ability-datauriutils-attachid-f.md) | Attaches an ID to the end of a given URI. |
+| [deleteId](arkts-ability-datauriutils-deleteid-f.md) | Deletes the ID from the end of a given URI. |
+| [getId](arkts-ability-datauriutils-getid-f.md) | Obtains the ID attached to the end of a given URI. |
+| [updateId](arkts-ability-datauriutils-updateid-f.md) | Updates the ID in a given URI. |

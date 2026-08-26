@@ -9,7 +9,7 @@ Defines the color space used for the snapshot.
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import componentSnapshot from '@kit.ArkUI';
 ```
 
 ## colorSpace
@@ -49,3 +49,50 @@ Whether the system automatically determines the color space to be used.The value
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+
+@Entry
+@Component
+struct SnapshotColorModeExample {
+  @State pixmap: image.PixelMap | undefined = undefined;
+
+  build() {
+    Column() {
+      Row() {
+        Image(this.pixmap).width(200).height(200).border({ color: Color.Black, width: 2 }).margin(5)
+        // Replace $r('app.media.img') with the image resource file you use.
+        Image($r('app.media.img'))
+          .autoResize(true)
+          .width(200)
+          .height(200)
+          .margin(5)
+          .id('root')
+      }
+
+      Button('click to generate UI snapshot')
+        .onClick(() => {
+          this.getUIContext().getComponentSnapshot().get('root', (error: Error, pixmap: image.PixelMap) => {
+            if (error) {
+              console.error(`error:${JSON.stringify(error)}`);
+              return;
+            }
+            this.pixmap = pixmap;
+          }, {
+            scale: 2,
+            waitUntilRenderFinished: true,
+            // Set the color space to DISPLAY_P3.
+            colorMode: { colorSpace: colorSpaceManager.ColorSpace.DISPLAY_P3, isAuto: false }
+          })
+        }).margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .alignItems(HorizontalAlign.Center)
+  }
+}
+```

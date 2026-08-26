@@ -24,9 +24,47 @@ Called when the system closes a mission.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mission | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mission | number | Yes | Mission ID. |
+
+**Examples**
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let listener: missionManager.MissionListener = {
+  onMissionCreated: (mission) => {
+    console.info(`onMissionCreated mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionDestroyed: (mission) => {
+    console.info(`onMissionDestroyed mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionSnapshotChanged: (mission) => {
+    console.info(`onMissionSnapshotChanged mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionMovedToFront: (mission) => {
+    console.info(`onMissionMovedToFront mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionLabelUpdated: (mission) => {
+    console.info(`onMissionLabelUpdated mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionIconUpdated: (mission, icon) => {
+    console.info(`onMissionIconUpdated mission: ${JSON.stringify(mission)}`);
+    console.info(`onMissionIconUpdated icon: ${JSON.stringify(icon)}`);
+  },
+  onMissionClosed: (mission) => {
+    console.info(`onMissionClosed mission: ${JSON.stringify(mission)}`);
+  }
+};
+
+try {
+  let listenerId = missionManager.on('mission', listener);
+} catch (paramError) {
+  console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+}
+```
 
 ## onMissionCreated
 
@@ -44,9 +82,13 @@ Called when the system creates a mission.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mission | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mission | number | Yes | Mission ID. |
+
+**Examples**
+
+For details, see [onMissionClosed](#onmissionclosed).
 
 ## onMissionDestroyed
 
@@ -64,9 +106,13 @@ Called when the system destroys a mission.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mission | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mission | number | Yes | Mission ID. |
+
+**Examples**
+
+For details, see [onMissionClosed](#onmissionclosed).
 
 ## onMissionIconUpdated
 
@@ -84,10 +130,14 @@ Called when the system updates the icon of a mission.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mission | number | Yes |
-| icon | image.PixelMap | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mission | number | Yes | Mission ID. |
+| icon | image.PixelMap | Yes | New mission icon. |
+
+**Examples**
+
+For details, see [onMissionClosed](#onmissionclosed).
 
 ## onMissionLabelUpdated
 
@@ -105,9 +155,13 @@ Called when the system updates the label of a mission.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mission | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mission | number | Yes | Mission ID. |
+
+**Examples**
+
+For details, see [onMissionClosed](#onmissionclosed).
 
 ## onMissionMovedToFront
 
@@ -125,9 +179,13 @@ Called when the system moves a mission to the foreground.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mission | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mission | number | Yes | Mission ID. |
+
+**Examples**
+
+For details, see [onMissionClosed](#onmissionclosed).
 
 ## onMissionSnapshotChanged
 
@@ -145,6 +203,10 @@ Called when the system updates the snapshot of a mission.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mission | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mission | number | Yes | Mission ID. |
+
+**Examples**
+
+For details, see [onMissionClosed](#onmissionclosed).

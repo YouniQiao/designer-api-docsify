@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Environment } from 'kits/@kit.CoreFileKit';
+import Environment from '@kit.CoreFileKit';
 ```
 
 ## getExternalStorageDir
@@ -24,15 +24,29 @@ Obtains the sandbox path of the root directory of an external storage card. This
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Sandbox path of the root directory obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 13900042 | Unknown error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+function getExternalStorageDirExample() {
+  try {
+    let path = Environment.getExternalStorageDir();
+    console.info(`Succeeded in getExternalStorageDir, path is ${path}`);
+  } catch (err) {
+    console.error(`Failed to getExternalStorageDir. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```

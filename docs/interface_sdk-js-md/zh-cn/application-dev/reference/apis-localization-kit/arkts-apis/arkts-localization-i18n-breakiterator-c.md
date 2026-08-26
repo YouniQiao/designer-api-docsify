@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## current
@@ -28,9 +28,19 @@ current(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 获取换行迭代器在当前处理的文本中的位置。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
+iterator.setLineBreakText('Apple is my favorite fruit.');
+let currentPos: number = iterator.current(); // currentPos = 0
+```
 
 ## first
 
@@ -48,9 +58,19 @@ first(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 被处理文本的第一个可换行点的偏移量。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
+iterator.setLineBreakText('Apple is my favorite fruit.');
+let firstPos: number = iterator.first(); // firstPos = 0
+```
 
 ## following
 
@@ -68,15 +88,27 @@ following(offset: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 将换行迭代器移动到文本指定位置的后面一个可换行点。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 换行迭代器移动后的位置。若offset所指定位置的下一个可换行点超出了文本的范围，则返回-1。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
+iterator.setLineBreakText('Apple is my favorite fruit.');
+let pos: number = iterator.following(0); // pos = 6
+pos = iterator.following(100); // pos = -1
+pos = iterator.current(); // pos = 27
+```
 
 ## getLineBreakText
 
@@ -94,9 +126,19 @@ getLineBreakText(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | BreakIterator对象正在处理的文本。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
+iterator.setLineBreakText('Apple is my favorite fruit.');
+let breakText: string = iterator.getLineBreakText(); // breakText = 'Apple is my favorite fruit.'
+```
 
 ## isBoundary
 
@@ -114,15 +156,26 @@ isBoundary(offset: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 文本指定位置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示offset指定的文本位置是一个可换行点，false表示offset指定的文本位置不是一个可换行点。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
+iterator.setLineBreakText('Apple is my favorite fruit.');
+let isBoundary: boolean = iterator.isBoundary(0); // isBoundary = true;
+isBoundary = iterator.isBoundary(5); // isBoundary = false;
+```
 
 ## last
 
@@ -140,9 +193,19 @@ last(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 被处理文本的最后一个可换行点的偏移量。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
+iterator.setLineBreakText('Apple is my favorite fruit.');
+let lastPos: number = iterator.last(); // lastPos = 27
+```
 
 ## next
 
@@ -160,15 +223,27 @@ next(index?: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 否 | 换行迭代器将要移动的可换行点数，取值为整数。 正数表示向后移动index个可换行点，负数表示向前移动index个可换行点。 默认值：1。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 移动index个可换行点后，当前换行迭代器在文本中的位置。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
+iterator.setLineBreakText('Apple is my favorite fruit.');
+let pos: number = iterator.first(); // pos = 0
+pos = iterator.next(); // pos = 6
+pos = iterator.next(10); // pos = -1
+```
 
 ## previous
 
@@ -186,9 +261,21 @@ previous(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 移动到前一个可换行点后，当前换行迭代器在文本中的位置。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
+iterator.setLineBreakText('Apple is my favorite fruit.');
+let pos: number = iterator.first(); // pos = 0
+pos = iterator.next(3); // pos = 12
+pos = iterator.previous(); // pos = 9
+```
 
 ## setLineBreakText
 
@@ -206,6 +293,15 @@ setLineBreakText(text: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 输入文本。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
+iterator.setLineBreakText('Apple is my favorite fruit.'); // 设置处理文本
+```

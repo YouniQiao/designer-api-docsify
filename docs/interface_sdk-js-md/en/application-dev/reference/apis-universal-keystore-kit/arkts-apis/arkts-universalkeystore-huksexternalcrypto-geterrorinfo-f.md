@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
+import huksExternalCrypto from '@kit.UniversalKeystoreKit';
 ```
 
 ## getErrorInfo
@@ -22,6 +22,34 @@ Get the detailed error information.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [HuksExternalErrorInfo](arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [HuksExternalErrorInfo](arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) | The returned error information. |
+
+**Examples**
+
+```TypeScript
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+
+const resourceId = JSON.stringify({
+  providerName: "testProviderName",
+  bundleName: "com.example.cryptoapplication",
+  abilityName: "CryptoExtension",
+  index: "testKey"
+});
+
+const params: Array<huksExternalCrypto.HuksExternalCryptoParam> = [
+  {
+    tag: huksExternalCrypto.HuksExternalCryptoTag.HUKS_EXT_CRYPTO_TAG_UKEY_PIN,
+    value: StringToUint8Array(pin)
+  }
+];
+
+try {
+  await huksExternalCrypto.authUkeyPin(resourceId, params);
+} catch (error) {
+  const errorInfo = huksExternalCrypto.getErrorInfo();
+  console.info(`errno: ${errorInfo.errno}`);
+  console.info(`errorDesc: ${errorInfo.errorDesc}`);
+}
+```

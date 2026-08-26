@@ -10,7 +10,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isAutoDeviceSwitchSupported
@@ -29,12 +28,24 @@ Checks whether the device supports automatic camera switch.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result for the support of automatic camera switch. **true** if supported, **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage.<br>**Applicable version:** 13 - 17 |
+
+**Examples**
+
+```TypeScript
+// Check whether the foldable device supports automatic camera switch.
+// If the sample code returns **true**, you can continue to use enableAutoDeviceSwitch to enable automatic camera switching.
+function isAutoDeviceSwitchSupported(session: camera.PhotoSession): boolean {
+  let isSupported = false;
+  isSupported = session.isAutoDeviceSwitchSupported();
+  return isSupported;
+}
+```

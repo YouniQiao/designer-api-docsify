@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from 'kits/@kit.ArkUI';
+import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -32,15 +32,15 @@ cancel?(index: number): Promise<void> | void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 取消预取数据项索引值，取值范围为[0, totalCount()-1]。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; \ | void |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; \ | void | 异步执行时返回Promise对象，同步执行时无返回值。Promise仅表示操作完成，无实际返回内容。 |
 
 ## prefetch
 
@@ -60,12 +60,12 @@ prefetch(index: number): Promise<void> | void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 预取数据项索引值，取值范围为[0, totalCount()-1]。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; \ | void |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; \ | void | 异步执行时返回Promise对象，同步执行时无返回值。Promise仅表示操作完成，无实际返回内容。 |

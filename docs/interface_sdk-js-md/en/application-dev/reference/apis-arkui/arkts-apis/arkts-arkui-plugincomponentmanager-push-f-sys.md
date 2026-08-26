@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## push
@@ -24,7 +24,43 @@ Plugin component push method used to send the information of the template it pro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | [PushParameterForStage](arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [PushParameterForStage](arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) | Yes | Plugin component push parameters for stage. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Plugin component push event callback. |
+
+**Examples**
+
+```TypeScript
+import { pluginComponentManager } from '@kit.ArkUI';
+
+pluginComponentManager.push(
+  {
+    owner: {
+      bundleName: "com.example.provider",
+      abilityName: "com.example.provider.MainAbility",
+    },
+    target: {
+      bundleName: "com.example.user",
+      abilityName: "com.example.user.MainAbility",
+    },
+    name: "ets/pages/plugin2.js",
+    data: {
+      "js": "ets/pages/plugin.js",
+      "key1": 1111,
+    },
+    extraData: {
+      "extraStr": "this is push event"
+    },
+    jsonPath: "",
+  },
+  (err, data) => {
+    if (err) {
+      console.error(`Failed to push. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info("push_callback:data: ", JSON.stringify(data));
+    console.info("push_callback: push ok!");
+  }
+);
+```

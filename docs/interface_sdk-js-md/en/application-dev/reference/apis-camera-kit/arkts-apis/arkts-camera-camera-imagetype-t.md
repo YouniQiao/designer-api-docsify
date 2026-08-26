@@ -12,7 +12,7 @@ Defines the image container type, which is used to obtain full-quality images or
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| image.Image |
-| image.Picture |
+| Type | Description |
+| --- | --- |
+| image.Image | Image container type that obtains full-quality images. |
+| image.Picture | Image container type that obtains uncompressed images (YUV). |

@@ -31,9 +31,9 @@ constructor(options?: GestureGroupGestureHandlerOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [GestureGroupGestureHandlerOptions](arkts-arkui-gesturegroupgesturehandleroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [GestureGroupGestureHandlerOptions](arkts-arkui-gesturegroupgesturehandleroptions-i.md) | 否 | 手势组处理器配置参数。 |
 
 ## onCancel
 
@@ -53,12 +53,12 @@ onCancel(event: Callback<void>): GestureGroupHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback & lt;void & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback & lt;void & gt; | 是 | 手势组处理器取消回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [GestureGroupHandler](arkts-arkui-gesturegrouphandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [GestureGroupHandler](arkts-arkui-gesturegrouphandler-c.md) | 返回当前手势组处理器对象。 |

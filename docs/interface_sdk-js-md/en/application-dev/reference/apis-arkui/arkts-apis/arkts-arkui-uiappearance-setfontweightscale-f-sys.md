@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiAppearance } from 'kits/@kit.ArkUI';
+import uiAppearance from '@kit.ArkUI';
 ```
 
 ## setFontWeightScale
@@ -25,20 +25,40 @@ Sets the system font weight scale.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [fontWeightScale](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fontWeightScale | number | Yes | indicates the font-weight-scale to set |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | the promise returned by the function |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [500001](../errorcode-uiappearance.md#500001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fontWeightScale = 1;
+
+try {
+  uiAppearance.setFontWeightScale(fontWeightScale).then(() => {
+    console.info('Set fontWeightScale successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Set fontWeightScale failed. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  let err = error as BusinessError;
+  console.error(`Set fontWeightScale failed. Code: ${err.code}, message: ${err.message}`);
+}
+```

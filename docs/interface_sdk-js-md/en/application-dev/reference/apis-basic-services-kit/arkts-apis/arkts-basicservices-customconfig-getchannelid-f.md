@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { customConfig } from 'kits/@kit.BasicServicesKit';
+import customConfig from '@kit.BasicServicesKit';
 ```
 
 ## getChannelId
@@ -22,6 +22,15 @@ Obtains a pre-installed channel ID of this application.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Channel ID obtained. |
+
+**Examples**
+
+```TypeScript
+import { customConfig } from '@kit.BasicServicesKit';
+
+let channelId: string = customConfig.getChannelId();
+console.info('app channelId is ' + channelId);
+```

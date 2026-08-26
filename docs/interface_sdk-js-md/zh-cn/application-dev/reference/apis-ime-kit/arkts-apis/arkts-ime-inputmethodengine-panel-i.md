@@ -21,7 +21,7 @@ Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺�
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKit';
 ```
 
 ## adjustPanelRect
@@ -55,17 +55,49 @@ adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 |
-| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。 超出范围时返回错误码401。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+
+**示例**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+// 定义横屏状态下面板的矩形区域
+let landscapeRect: window.Rect = {
+  left: 100,
+  top: 100,
+  width: 400,
+  height: 400
+};
+
+// 定义竖屏状态下面板的矩形区域
+let portraitRect: window.Rect = {
+  left: 200,
+  top: 200,
+  width: 300,
+  height: 300
+};
+
+// 设置面板状态为固定态
+let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
+// 配置面板的横竖屏矩形区域
+let panelRect: inputMethodEngine.PanelRect = {
+  landscapeRect: landscapeRect,
+  portraitRect: portraitRect
+};
+// 预设置输入法应用横竖屏大小
+panel.adjustPanelRect(panelFlag, panelRect);
+```
 
 ## adjustPanelRect
 
@@ -110,18 +142,51 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 |
-| rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. |
+
+**示例**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+let landscapeRect1: window.Rect = {
+  left: 300,
+  top: 650,
+  width: 2000,
+  height: 500
+};
+let landscapeInputRegion: Array<window.Rect> = [landscapeRect1];
+
+let portraitRect1: window.Rect = {
+  left: 0,
+  top: 1800,
+  width: 1200,
+  height: 800
+}
+let portraitInputRegion: Array<window.Rect> = [portraitRect1];
+// 目标面板状态类型。
+let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
+// 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。
+let panelRect: inputMethodEngine.EnhancedPanelRect = {
+  landscapeAvoidY: 650,
+  landscapeInputRegion: landscapeInputRegion,
+  portraitAvoidY: 1800,
+  portraitInputRegion: portraitInputRegion,
+  fullScreenMode: true
+};
+panel.adjustPanelRect(panelFlag, panelRect);
+```
 
 ## changeFlag
 
@@ -137,15 +202,22 @@ changeFlag(flag: PanelFlag): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
+panel.changeFlag(panelFlag);
+```
 
 ## getDisplayId
 
@@ -161,16 +233,28 @@ getDisplayId(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象。返回窗口的displayId。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.getDisplayId().then((result: number) => {
+  console.info('get displayId:' + result);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get displayId. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getImmersiveMode
 
@@ -186,9 +270,15 @@ getImmersiveMode(): ImmersiveMode
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-immersivemode-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-immersivemode-t.md) | 沉浸模式。 |
+
+**示例**
+
+```TypeScript
+let mode: inputMethodEngine.ImmersiveMode = panel.getImmersiveMode();
+```
 
 ## getSystemPanelCurrentInsets
 
@@ -204,23 +294,51 @@ getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| displayId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| displayId | number | 是 | 输入法键盘所在屏幕的displayId，可通过[getDisplayId](#getdisplayid)获取 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[SystemPanelInsets](arkts-ime-inputmethodengine-systempanelinsets-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[SystemPanelInsets](arkts-ime-inputmethodengine-systempanelinsets-i.md)&gt; | Promise对象。输入法键盘与系统面板的偏移区域。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) |
-| [12800022](../errorcode-inputmethod-framework.md#12800022-无效的displayid) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
+| [12800022](../errorcode-inputmethod-framework.md#12800022-无效的displayid) | invalid displayId. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMethodEngine } from '@kit.IMEKit';
+
+let inputMethodAbility: inputMethodEngine.InputMethodAbility = inputMethodEngine.getInputMethodAbility();
+let panelConfig: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+// 以下逻辑需要在输入法InputMethodExtensionAbility中执行，this.context是InputMethodExtensionAbility的上下文
+// 创建输入法面板
+inputMethodAbility.createPanel(this.context, panelConfig).then((panel: inputMethodEngine.Panel) => {
+  panel.getDisplayId().then((displayId: number) => {
+    panel.getSystemPanelCurrentInsets(displayId).then((insets: inputMethodEngine.SystemPanelInsets) => {
+      console.info(`getSystemPanelCurrentInsets success, insets is { left: ${insets.left}, right: ${insets.right}, bottom: ${insets.bottom} }`);
+    }).catch((error: BusinessError) => {
+      console.error(`getSystemPanelCurrentInsets failed, code: ${error.code}, message: ${error.message}`);
+    });
+  }).catch((error: BusinessError) => {
+    console.error(`getDisplayId failed, code: ${error.code}, message: ${error.message}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`createPanel failed, code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## hide
 
@@ -236,9 +354,35 @@ hide(callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板隐藏成功，err为undefined，否则err为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.hide((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in hiding the panel.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+keyboardController.hide((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
+    return;
+  }
+  console.info('Succeeded in hiding keyboard.');
+});
+```
 
 ## hide
 
@@ -254,9 +398,31 @@ hide(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.hide().then(() => {
+  console.info('Succeeded in hiding the panel.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+keyboardController.hide().then(() => {
+  console.info('Succeeded in hiding keyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
+});
+```
 
 ## moveTo
 
@@ -272,17 +438,32 @@ moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 横轴方向移动的值，单位为px。该参数应为整数。值大于0表示右移，小于0表示左移。超出屏幕范围时返回错误码401。 |
+| y | number | 是 | 纵轴方向移动的值，单位为px。该参数应为整数。值大于0表示下移，小于0表示上移。超出屏幕范围时返回错误码401。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板位置移动成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 移动输入法面板位置
+panel.moveTo(300, 300, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to move panel. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in moving the panel.');
+});
+```
 
 ## moveTo
 
@@ -298,22 +479,35 @@ moveTo(x: number, y: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 横轴方向移动的值，值大于0表示右移，单位为px。该参数应为整数。 |
+| y | number | 是 | 纵轴方向移动的值，值大于0表示下移，单位为px。该参数应为整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 移动输入法面板位置
+panel.moveTo(300, 300).then(() => {
+  console.info('Succeeded in moving the panel.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to move panel. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## off('show')
 
@@ -329,16 +523,22 @@ off(type: 'show', callback?: () => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'show' | 是 |
-| callback | () = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'show' | 是 | 取消监听当前面板的状态类型，固定取值为'show'。 |
+| callback | () = & gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+panel.off('show');
+```
 
 ## off('hide')
 
@@ -354,16 +554,22 @@ off(type: 'hide', callback?: () => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'hide' | 是 |
-| callback | () = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'hide' | 是 | 要取消监听的当前面板状态类型，固定取值为'hide'。 |
+| callback | () = & gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+panel.off('hide');
+```
 
 ## off('sizeChange')
 
@@ -398,10 +604,20 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'sizeChange' | 是 |
-| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'sizeChange' | 是 | 监听当前面板的大小是否产生变化，固定取值为'sizeChange'。 |
+| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | 否 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。参数不填写时，取消订阅type对应的所有回调事件。<br>**起始版本：** 15 |
+
+**示例**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+panel.off('sizeChange', (windowSize: window.Size) => {
+  console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
+});
+```
 
 ## on('show')
 
@@ -417,10 +633,18 @@ on(type: 'show', callback: () => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'show' | 是 |
-| callback | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'show' | 是 | 监听当前面板的状态类型，固定取值为'show'。 |
+| callback | () = & gt; void | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+panel.on('show', () => {
+  console.info('Panel is showing.');
+});
+```
 
 ## on('hide')
 
@@ -436,10 +660,18 @@ on(type: 'hide', callback: () => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'hide' | 是 |
-| callback | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'hide' | 是 | 监听当前面板的状态类型，固定取值为'hide'。 |
+| callback | () = & gt; void | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+panel.on('hide', () => {
+  console.info('Panel is hiding.');
+});
+```
 
 ## on('sizeChange')
 
@@ -474,10 +706,27 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'sizeChange' | 是 |
-| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'sizeChange' | 是 | 监听当前面板的大小是否产生变化，固定值为'sizeChange'。 |
+| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | 是 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。<br>**起始版本：** 15 |
+
+**示例**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+// 监听面板大小变化事件
+panel.on('sizeChange', (windowSize: window.Size) => {
+  console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
+});
+
+// 监听面板大小变化事件（带键盘区域参数）
+panel.on('sizeChange', (windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
+  console.info(`panel size changed, windowSize: ${windowSize.width}, ${windowSize.height}, ` +
+    `keyboardArea: ${keyboardArea.top}, ${keyboardArea.bottom}, ${keyboardArea.left}, ${keyboardArea.right}`);
+});
+```
 
 ## resize
 
@@ -502,17 +751,32 @@ resize(width: number, height: number, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| width | number | 是 |
-| height | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | number | 是 | 目标面板的宽度，单位为px。该参数应为大于或等于0的整数，不超出屏幕宽度。超出范围时返回错误码401。 |
+| height | number | 是 | 目标面板的高度，单位为px。该参数应为大于或等于0的整数，不高于屏幕高度的0.7倍。超出范围时返回错误码401。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板大小改变成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 改变输入法面板大小
+panel.resize(500, 1000, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to resize panel. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in changing the panel size.');
+});
+```
 
 ## resize
 
@@ -537,22 +801,35 @@ resize(width: number, height: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| width | number | 是 |
-| height | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | number | 是 | 目标面板的宽度，单位为px。该参数应为大于或等于0的整数，不超出屏幕宽度。超出范围时返回错误码401。 |
+| height | number | 是 | 目标面板的高度，单位为px。该参数应为大于或等于0的整数，不高于屏幕高度的0.7倍。超出范围时返回错误码401。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 改变输入法面板大小
+panel.resize(500, 1000).then(() => {
+  console.info('Succeeded in changing the panel size.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to resize panel. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setImmersiveEffect
 
@@ -576,19 +853,29 @@ setImmersiveEffect(effect: ImmersiveEffect): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| effect | [ImmersiveEffect](arkts-ime-inputmethodengine-immersiveeffect-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| effect | [ImmersiveEffect](arkts-ime-inputmethodengine-immersiveeffect-i.md) | 是 | 沉浸效果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
-| [12800020](../errorcode-inputmethod-framework.md#12800020-沉浸效果参数配置错误) |
-| [12800021](../errorcode-inputmethod-framework.md#12800021-调用顺序错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1. input method panel not created. 2. the input method application does not subscribe to related events. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+| [12800020](../errorcode-inputmethod-framework.md#12800020-沉浸效果参数配置错误) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
+| [12800021](../errorcode-inputmethod-framework.md#12800021-调用顺序错误) | this operation is allowed only after adjustPanelRect or resize is called. |
+
+**示例**
+
+```TypeScript
+let effect: inputMethodEngine.ImmersiveEffect = {
+  gradientHeight: 100,
+  gradientMode: inputMethodEngine.GradientMode.LINEAR_GRADIENT
+}
+panel.setImmersiveEffect(effect);
+```
 
 ## setImmersiveMode
 
@@ -604,17 +891,23 @@ setImmersiveMode(mode: ImmersiveMode): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-immersivemode-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-immersivemode-t.md) | 是 | 沉浸模式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+
+**示例**
+
+```TypeScript
+panel.setImmersiveMode(inputMethodEngine.ImmersiveMode.LIGHT_IMMERSIVE);
+```
 
 ## setKeepScreenOn
 
@@ -639,21 +932,33 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [isKeepScreenOn](../../apis-arkui/arkts-apis/arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isKeepScreenOn | boolean | 是 | 是否设置屏幕常亮。true表示打开屏幕常亮，false表示关闭屏幕常亮。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.setKeepScreenOn(true).then(() => {
+  console.info(`setKeepScreenOn success.`);
+}).catch((error: BusinessError) => {
+  console.error(`setKeepScreenOn failed, code: ${error.code}, message: ${error.message}`);
+})
+```
 
 ## setPrivacyMode
 
@@ -671,16 +976,23 @@ setPrivacyMode(isPrivacyMode: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [isPrivacyMode](../../apis-arkui/arkts-apis/arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isPrivacyMode | boolean | 是 | 是否设置隐私模式。   - 值为true，表示将设置为隐私模式。   - 值为false，表示将设置为非隐私模式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+let isPrivacyMode: boolean = true;
+panel.setPrivacyMode(isPrivacyMode);
+```
 
 ## setSystemPanelButtonColor
 
@@ -696,16 +1008,36 @@ setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fillColor | string \| undefined | 是 |
-| backgroundColor | string \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fillColor | string \| undefined | 是 | 功能键的颜色，取值范围为[#01000000, #FFFFFFFF] 或 [#000000, #FFFFFF]，不支持具有完全透明Alpha通 道（#00xxxxxx）的值。 |
+| backgroundColor | string \| undefined | 是 | 功能键的背景颜色，取值范围为[#01000000, #FFFFFFFF] 或 [#000000, #FFFFFF]，不支持具有完全 透明Alpha通道（#00xxxxxx）的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 确保有panel实例，可以使用inputMethodEngine.getInputMethodAbility().createPanel(...)创建panel实例
+try {
+  let fillColor = "#FFFF00";
+  let backgroundColor = "#0000FF";
+  panel.setSystemPanelButtonColor(fillColor, backgroundColor).then(() => {
+    console.info(`setSystemPanelButtonColor success.`);
+  }).catch((error: BusinessError) => {
+    console.error(`setSystemPanelButtonColor failed, code: ${error.code}, message: ${error.message}`);
+  })
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`setSystemPanelButtonColor failed, code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## setUiContent
 
@@ -721,16 +1053,32 @@ setUiContent(path: string, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 具体页面的路径。路径长度建议不超过1024字符。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 设置输入法面板内容
+// panel对象通过createPanel接口获取，详见createPanel示例
+panel.setUiContent('pages/page2/page2', (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the content.');
+});
+```
 
 ## setUiContent
 
@@ -746,21 +1094,33 @@ setUiContent(path: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 具体页面的路径。路径长度建议不超过1024字符。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.setUiContent('pages/page2/page2').then(() => {
+  console.info('Succeeded in setting the content.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setUiContent
 
@@ -776,17 +1136,34 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
-| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | LocalStorage相关联的具体页面的路径。路径长度建议不超过1024字符。 |
+| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | 是 | 存储单元，为应用程序范围内的可变状态属性和不可变状态属性提供存储。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建并初始化LocalStorage对象
+let storage: LocalStorage = new LocalStorage();
+storage.setOrCreate('storageSimpleProp', 121);
+panel.setUiContent('pages/page2/page2', storage, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the content.');
+});
+```
 
 ## setUiContent
 
@@ -802,22 +1179,37 @@ setUiContent(path: string, storage: LocalStorage): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
-| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 具体页面的路径。路径长度建议不超过1024字符。 |
+| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | 是 | 存储单元，为应用程序范围内的可变状态属性和非可变状态属性提供存储。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建并初始化LocalStorage对象
+let storage: LocalStorage = new LocalStorage();
+storage.setOrCreate('storageSimpleProp', 121);
+panel.setUiContent('pages/page2/page2', storage).then(() => {
+  console.info('Succeeded in setting the content.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## show
 
@@ -833,9 +1225,23 @@ show(callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板显示成功，err为undefined，否则err为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.show((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to show panel. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in showing the panel.');
+});
+```
 
 ## show
 
@@ -851,9 +1257,21 @@ show(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.show().then(() => {
+  console.info('Succeeded in showing the panel.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show panel. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## startMoving
 
@@ -869,12 +1287,18 @@ startMoving(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported.<br>**适用版本：** 18+ |
+
+**示例**
+
+```TypeScript
+panel.startMoving();
+```
 
 ## updatePanelRect
 
@@ -905,22 +1329,51 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 |
-| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。 超出范围时返回错误码401。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+
+**示例**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+let landscapeRect: window.Rect = {
+  left: 100,
+  top: 100,
+  width: 400,
+  height: 400
+};
+
+let portraitRect: window.Rect = {
+  left: 200,
+  top: 200,
+  width: 300,
+  height: 300
+};
+
+// 目标面板状态类型
+let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
+// 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度
+let panelRect: inputMethodEngine.PanelRect = {
+  landscapeRect: landscapeRect,
+  portraitRect: portraitRect
+};
+panel.updatePanelRect(panelFlag, panelRect);
+```
 
 ## updatePanelRect
 
@@ -961,23 +1414,56 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 |
-| rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. |
+
+**示例**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+let landscapeRect1: window.Rect = {
+  left: 300,
+  top: 650,
+  width: 2000,
+  height: 500
+};
+let landscapeInputRegion: Array<window.Rect> = [landscapeRect1];
+
+let portraitRect1: window.Rect = {
+  left: 0,
+  top: 1800,
+  width: 1200,
+  height: 800
+}
+let portraitInputRegion: Array<window.Rect> = [portraitRect1];
+// 目标面板状态类型。
+let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
+// 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。
+let panelRect: inputMethodEngine.EnhancedPanelRect = {
+  landscapeAvoidY: 650,
+  landscapeInputRegion: landscapeInputRegion,
+  portraitAvoidY: 1800,
+  portraitInputRegion: portraitInputRegion,
+  fullScreenMode: true
+};
+panel.updatePanelRect(panelFlag, panelRect);
+```
 
 ## updatePanelRectSync
 
@@ -1014,16 +1500,45 @@ updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 |
-| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。 超出范围时返回错误码401。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+
+**示例**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+let landscapeRect: window.Rect = {
+  left: 100,
+  top: 100,
+  width: 400,
+  height: 400
+};
+
+let portraitRect: window.Rect = {
+  left: 200,
+  top: 200,
+  width: 300,
+  height: 300
+};
+
+// 目标面板状态类型
+let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
+// 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度
+let panelRect: inputMethodEngine.PanelRect = {
+  landscapeRect: landscapeRect,
+  portraitRect: portraitRect
+};
+panel.updatePanelRectSync(panelFlag, panelRect);
+```
 
 ## updatePanelRectSync
 
@@ -1070,17 +1585,50 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 |
-| rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. |
+
+**示例**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+let landscapeRect1: window.Rect = {
+  left: 300,
+  top: 650,
+  width: 2000,
+  height: 500
+};
+let landscapeInputRegion: Array<window.Rect> = [landscapeRect1];
+
+let portraitRect1: window.Rect = {
+  left: 0,
+  top: 1800,
+  width: 1200,
+  height: 800
+}
+let portraitInputRegion: Array<window.Rect> = [portraitRect1];
+// 目标面板状态类型。
+let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
+// 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。
+let panelRect: inputMethodEngine.EnhancedPanelRect = {
+  landscapeAvoidY: 650,
+  landscapeInputRegion: landscapeInputRegion,
+  portraitAvoidY: 1800,
+  portraitInputRegion: portraitInputRegion,
+  fullScreenMode: true
+};
+panel.updatePanelRectSync(panelFlag, panelRect);
+```
 
 ## updateRegion
 
@@ -1109,14 +1657,29 @@ updateRegion(inputRegion: Array<window.Rect>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| inputRegion | Array & lt;window.Rect & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| inputRegion | Array & lt;window.Rect & gt; | 是 | 面板内接收输入事件的区域。   - 数组大小限制为[1, 4]。   - 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let inputRegion: Array<window.Rect> = [{
+  left: 300,
+  top: 650,
+  width: 2000,
+  height: 500
+}];
+panel.updateRegion(inputRegion);
+```

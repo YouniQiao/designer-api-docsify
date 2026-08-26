@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'kits/@kit.ConnectivityKit';
+import scan from '@kit.ConnectivityKit';
 ```
 
 ## startScan
@@ -24,25 +24,25 @@ Starts NearLink scanning. This API uses a promise to return the result. You need
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filters | [ScanFilters](arkts-connectivity-scan-scanfilters-i.md)[] \| null | Yes |
-| options | [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filters | [ScanFilters](arkts-connectivity-scan-scanfilters-i.md)[] \| null | Yes | Filter criteria for NearLink advertising. Devices that meet the filter criteria will be reported. If the filter is not enabled, **null** is passed. If this parameter is set to **null**, all discoverable NearLink devices nearby will be scanned. However, this method is not recommended as it may pick up unexpected devices and increase power consumption. |
+| options | [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md) | No | Scan options. The low power consumption mode is used by default. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| 36100003 |
-| 36100040 |
-| 36100041 |
-| 36100042 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the chip does not support it. |
+| 36100003 | NearLink disabled. |
+| 36100040 | Integer out of range. |
+| 36100041 | Invalid address. |
+| 36100042 | Empty array. |
+| 36100099 | Operation failed. |

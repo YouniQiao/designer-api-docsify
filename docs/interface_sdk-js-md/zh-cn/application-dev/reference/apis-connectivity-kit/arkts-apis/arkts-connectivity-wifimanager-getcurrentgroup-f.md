@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## getCurrentGroup
@@ -22,17 +23,35 @@ function getCurrentGroup(): Promise<WifiP2pGroupInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;WifiP2pGroupInfo & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;WifiP2pGroupInfo & gt; | 返回P2P群组信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [2801000](../errorcode-wifi.md#2801000-p2p模块异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [2801000](../errorcode-wifi.md#2801000-p2p模块异常) | Operation failed. |
+
+**示例**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+  // p2p已经建组或者连接成功，才能正常获取到当前组信息
+  wifiManager.getCurrentGroup((err, data:wifiManager.WifiP2pGroupInfo) => {
+    if (err) {
+        console.error("get current P2P group error");
+        return;
+    }
+    console.info("get current P2P group: " + JSON.stringify(data));
+  });
+
+  wifiManager.getCurrentGroup().then(data => {
+    console.info("get current P2P group: " + JSON.stringify(data));
+  });
+```
 
 
 ## getCurrentGroup
@@ -51,14 +70,18 @@ function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | 是 | 表示回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [2801000](../errorcode-wifi.md#2801000-p2p模块异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [2801000](../errorcode-wifi.md#2801000-p2p模块异常) | Operation failed. |
+
+**示例**
+
+参见 [getCurrentGroup](#getcurrentgroup)

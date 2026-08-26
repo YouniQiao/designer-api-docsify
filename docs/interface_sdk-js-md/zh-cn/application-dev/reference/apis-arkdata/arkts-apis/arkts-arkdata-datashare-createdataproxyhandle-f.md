@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import dataShare from '@kit.ArkData';
+import dataSharePredicates from '@kit.ArkDataPredicates';
 ```
 
 ## createDataProxyHandle
@@ -22,12 +23,29 @@ function createDataProxyHandle(): Promise<DataProxyHandle>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md)&gt; | Promise对象。返回DataProxyHandle实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    dataShare.createDataProxyHandle().then((dataProxyHandle) => {
+      console.info("createDataProxyHandle succeed");
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to create DataProxyHandle. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+}
+```

@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## iface

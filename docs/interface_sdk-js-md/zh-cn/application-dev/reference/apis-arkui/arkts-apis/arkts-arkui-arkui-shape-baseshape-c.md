@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## height
@@ -34,15 +34,15 @@ height(height: Length): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [height](#height) | [Length](arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| height | [Length](arkts-arkui-length-t.md) | 是 | 形状的高度。单位：vp取值为异常值时按照0vp处理。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前对象。 |
 
 ## size
 
@@ -64,15 +64,15 @@ size(size: SizeOptions): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [size](#size) | [SizeOptions](arkts-arkui-sizeoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| size | [SizeOptions](arkts-arkui-sizeoptions-i.md) | 是 | 形状的大小。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前对象。 |
 
 ## width
 
@@ -94,12 +94,12 @@ width(width: Length): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [width](#width) | [Length](arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | [Length](arkts-arkui-length-t.md) | 是 | 形状的宽度。单位：vp取值为异常值时按照0vp处理。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前对象。 |

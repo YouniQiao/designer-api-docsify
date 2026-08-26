@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from 'kits/@kit.AbilityKit';
+import particleAbility from '@kit.AbilityKit';
 ```
 
 ## acquireDataAbilityHelper
@@ -14,7 +14,8 @@ function acquireDataAbilityHelper(uri: string): DataAbilityHelper
 
 Obtains a dataAbilityHelper object.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about the startup rules for the components in the FA model, see
 > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 > To access a DataAbility of another application, the target application must be configured with associated
@@ -28,12 +29,21 @@ Obtains a dataAbilityHelper object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | URI of the file to open. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md) |
+| Type | Description |
+| --- | --- |
+| [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | A utility class used to help other abilities access a DataAbility. |
+
+**Examples**
+
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+
+let uri = '';
+particleAbility.acquireDataAbilityHelper(uri);
+```

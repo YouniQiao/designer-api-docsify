@@ -9,7 +9,7 @@ class of print extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { PrintExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import PrintExtensionAbility from '@kit.BasicServicesKit';
 ```
 
 ## onRequestPreview
@@ -30,18 +30,33 @@ Called once to request preview and send result to Print SA.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| jobInfo | print.PrintJob | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| jobInfo | print.PrintJob | Yes | Indicates the information of job. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | preview result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+
+**Examples**
+
+```TypeScript
+import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onRequestPreview(jobInfo: print.PrintJob): string {
+        console.info('onRequestPreview enter');
+        // ...
+        let tmp : string = '';
+        return tmp;
+    }
+}
+```

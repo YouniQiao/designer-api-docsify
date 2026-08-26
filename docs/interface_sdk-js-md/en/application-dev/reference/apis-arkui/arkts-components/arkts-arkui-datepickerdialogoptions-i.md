@@ -32,9 +32,9 @@ Callback invoked when the OK button in the dialog box is clicked.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [DatePickerResult](arkts-arkui-datepickerresult-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [DatePickerResult](arkts-arkui-datepickerresult-i.md) | Yes |  |
 
 ## onCancel
 
@@ -69,9 +69,9 @@ Callback invoked when the selected item in the picker changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [DatePickerResult](arkts-arkui-datepickerresult-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [DatePickerResult](arkts-arkui-datepickerresult-i.md) | Yes |  |
 
 ## onDidAppear
 

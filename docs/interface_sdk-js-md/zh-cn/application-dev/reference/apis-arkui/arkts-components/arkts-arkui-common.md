@@ -22,17 +22,17 @@ Common()
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [Context](arkts-arkui-context-t.md) |
-| [PointerStyle](arkts-arkui-pointerstyle-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [Context](arkts-arkui-context-t.md) | Get context. |
+| [PointerStyle](arkts-arkui-pointerstyle-t.md) | 光标样式。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |

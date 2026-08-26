@@ -14,8 +14,8 @@ declare type CanvasLineCap = "butt" | "round" | "square"
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| "butt" |
-| "round" |
-| "square" |
+| 类型 | 说明 |
+| --- | --- |
+| "butt" | 线条两端为平行线，不额外扩展。 |
+| "round" | 在线条两端延伸半个圆，直径等于线宽。 |
+| "square" | 在线条两端延伸一个矩形，宽度等于线宽的一半，高度等于线宽。 |

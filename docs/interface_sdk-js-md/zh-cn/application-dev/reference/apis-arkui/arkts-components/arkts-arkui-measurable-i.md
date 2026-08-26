@@ -29,9 +29,9 @@ getBorderWidth() : DirectionalEdgesT<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的borderWidth信息。 |
 
 ## getMargin
 
@@ -51,9 +51,9 @@ getMargin() : DirectionalEdgesT<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的margin信息。 |
 
 ## getPadding
 
@@ -73,9 +73,9 @@ getPadding() : DirectionalEdgesT<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的padding信息。 |
 
 ## measure
 
@@ -95,15 +95,15 @@ measure(constraint: ConstraintSizeOptions) : MeasureResult
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | 是 | 约束尺寸。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MeasureResult](arkts-arkui-measureresult-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [MeasureResult](arkts-arkui-measureresult-i.md) | Provides the measurement result of the component. |
 
 ## uniqueId
 

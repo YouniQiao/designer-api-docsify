@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
+import systemTime from '@kit.BasicServicesKit';
+import systemTimer from '@kit.BasicServicesKitr';
 ```
 
 ## setDate
@@ -26,16 +27,36 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| date | Date | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| date | Date | 是 | 目标日期。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| -1 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| -1 | Parameter check failed, permission denied, or system error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let date = new Date();
+try {
+  systemTime.setDate(date, (error: BusinessError) => {
+    if (error) {
+      console.info(`Failed to set date. message: ${error.message}, code: ${error.code}`);
+      return;
+    }
+    console.info(`Succeeded in setting date.`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.info(`Failed to set date. message: ${error.message}, code: ${error.code}`);
+}
+```
 
 
 ## setDate
@@ -58,18 +79,36 @@ function setDate(date: Date): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| date | Date | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| date | Date | 是 | 目标日期。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| -1 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| -1 | Parameter check failed, permission denied, or system error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let date = new Date(); 
+try {
+  systemTime.setDate(date).then(() => {
+    console.info(`Succeeded in setting date.`);
+  }).catch((error: BusinessError) => {
+    console.info(`Failed to set date. message: ${error.message}, code: ${error.code}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.info(`Failed to set date. message: ${error.message}, code: ${error.code}`);
+}
+```

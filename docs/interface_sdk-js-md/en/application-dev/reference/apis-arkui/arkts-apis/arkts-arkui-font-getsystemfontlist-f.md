@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import font from '@kit.ArkUI';
 ```
 
 ## getSystemFontList
@@ -14,7 +14,8 @@ function getSystemFontList(): Array<string>
 
 Obtains this system font list.This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices.You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md) API to obtain the latest system-supported font list data.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Since API version 10, you can use the
 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Font](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated with
@@ -34,6 +35,30 @@ Obtains this system font list.This API only takes effect on PCs/2-in-1 devices a
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | List of supported fonts. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { font } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct FontExample {
+  fontList: Array<string> = new Array<string>();
+
+  build() {
+    Column() {
+      Button("getSystemFontList")
+        .width('60%')
+        .height('6%')
+        .onClick(() => {
+          this.fontList = font.getSystemFontList(); // You are advised to use the this.getUIContext().getFont().getSystemFontList() API.
+        })
+    }.width('100%')
+  }
+}
+```

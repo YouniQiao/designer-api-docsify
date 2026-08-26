@@ -4,14 +4,14 @@
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AutoFillType](arkts-ability-autofilltype-e.md) |
+| Name | Description |
+| --- | --- |
+| [AutoFillType](arkts-ability-autofilltype-e.md) | AutoFillType enumerates the types of elements to be automatically filled in. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AutoFillType](arkts-ability-autofilltype-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AutoFillType](arkts-ability-autofilltype-e-sys.md) | AutoFillType enumerates the types of elements to be automatically filled in. |
 <!--DelEnd-->

@@ -18,11 +18,11 @@ type VideoPlayState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | '
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
-| 类型 |
-| --- |
-| 'idle' |
-| 'prepared' |
-| 'playing' |
-| 'paused' |
-| 'stopped' |
-| 'error' |
+| 类型 | 说明 |
+| --- | --- |
+| 'idle' | 视频播放空闲。 |
+| 'prepared' | 视频播放准备。 |
+| 'playing' | 视频正在播放。 |
+| 'paused' | 视频暂停播放。 |
+| 'stopped' | 视频播放停止。 |
+| 'error' | 错误状态。 |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
+import errorManager from '@kit.AbilityKit';
 ```
 
 ## setDefaultResourceUsageObserver
@@ -24,18 +24,39 @@ function setDefaultResourceUsageObserver(defaultObserver?: ResourceUsageObserver
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| defaultObserver | [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| defaultObserver | [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) | 否 | 新注册的资源观察者，默认值为空。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) | 返回上一次注册的资源观察者。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [16000205](../errorcode-ability.md#16000205-当前接口未在主线程中调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [16000205](../errorcode-ability.md#16000205-当前接口未在主线程中调用) | API未在主线程中调用。 |
+
+**示例**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { process } from '@kit.ArkTS';
+
+let oldObserver: errorManager.ResourceUsageObserver;
+const resourceUsageObserver: errorManager.ResourceUsageObserver = (resourceType, resourceSize, detailInfo) => {
+  // 自定义的resourceUsageObserver实现逻辑
+  console.info('[Observer] Resource usage observer.');
+  if (oldObserver) {
+    oldObserver(resourceType, resourceSize, detailInfo);
+  } else {
+    // 建议增加判空操作，如果为空采用同步退出方式
+    const processManager = new process.ProcessManager();
+    processManager.exit(0);
+  }
+};
+oldObserver = errorManager.setDefaultResourceUsageObserver(resourceUsageObserver);
+```

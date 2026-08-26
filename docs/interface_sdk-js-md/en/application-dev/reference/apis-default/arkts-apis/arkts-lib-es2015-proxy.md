@@ -9,13 +9,13 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ProxyConstructor](arkts-lib-es2015-proxy-proxyconstructor-i.md) |
-| [ProxyHandler](arkts-lib-es2015-proxy-proxyhandler-i.md) |
+| Name | Description |
+| --- | --- |
+| [ProxyConstructor](arkts-lib-es2015-proxy-proxyconstructor-i.md) |  |
+| [ProxyHandler](arkts-lib-es2015-proxy-proxyhandler-i.md) |  |
 
 ### Properties
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Proxy](arkts-libes2015proxy-p.md) |
+| Name | Description |
+| --- | --- |
+| [Proxy](arkts-libes2015proxy-p.md) |  |

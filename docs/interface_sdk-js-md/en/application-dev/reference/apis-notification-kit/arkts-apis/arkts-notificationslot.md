@@ -4,14 +4,14 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotificationSlot(Description of the notification channel)](arkts-notification-notificationslot-notificationslot-i.md) |
+| Name | Description |
+| --- | --- |
+| [NotificationSlot(Description of the notification channel)](arkts-notification-notificationslot-notificationslot-i.md) | The **NotificationSlot** module provides APIs for defining the notification slots. The notification reminder modes vary according to notification slots. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotificationSlot(Description of the notification channel)](arkts-notification-notificationslot-notificationslot-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [NotificationSlot(Description of the notification channel)](arkts-notification-notificationslot-notificationslot-i-sys.md) | The **NotificationSlot** module provides APIs for defining the notification slots. The notification reminder modes vary according to notification slots. |
 <!--DelEnd-->

@@ -23,6 +23,17 @@ Obtains the **AbilityDelegatorArgs** object of the application.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) |
+| Type | Description |
+| --- | --- |
+| [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) | [AbilityDelegatorArgs]{ |
+
+**Examples**
+
+```TypeScript
+import AbilityDelegatorRegistry from '@ohos.application.abilityDelegatorRegistry';
+
+let args = AbilityDelegatorRegistry.getArguments();
+console.info(`getArguments bundleName: ${args.bundleName}`);
+console.info(`getArguments testCaseNames: ${args.testCaseNames}`);
+console.info(`getArguments testRunnerClassName: ${args.testRunnerClassName}`);
+```

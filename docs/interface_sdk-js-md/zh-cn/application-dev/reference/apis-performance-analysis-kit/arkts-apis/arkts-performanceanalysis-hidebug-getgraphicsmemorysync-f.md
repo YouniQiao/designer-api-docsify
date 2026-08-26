@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getGraphicsMemorySync
@@ -14,7 +13,8 @@ function getGraphicsMemorySync(): number
 
 使用同步方式获取应用显存总大小（gl + graph）。
 
-> **注意**：&gt;
+> **注意**：
+> 
 > 由于该接口涉及多次跨进程通信，其耗时可能达到秒级。为了避免引入性能问题，建议不要在主线程调用该接口，推荐使用异步接口`getGraphicsMemory`。
 
 **起始版本：** 14
@@ -25,12 +25,25 @@ function getGraphicsMemorySync(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 应用显存总大小，单位为KB。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Failed to get the application memory due to a remote exception. |
+
+**示例**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  console.info(`graphicsMemory: ${hidebug.getGraphicsMemorySync()}`)
+} catch (error) {
+  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
+}
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { performanceMonitor } from 'kits/@kit.ArkUI';
+import performanceMonitor from '@kit.ArkUI';
 ```
 
 ## begin
@@ -24,8 +24,16 @@ Marks the start of a user scene. Call this API when the scene begins.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scene | string | Yes |
-| startInputType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | Yes |
-| [note](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-contact-c.md) | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scene | string | Yes | User scene ID. The string length is unlimited, but it is recommended that you keep it within 255 characters. The format is recommended to use uppercase letters connected by underscores, for example, **LAUNCHER_APP_LAUNCH_FROM_ICON**. |
+| startInputType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | Yes | Trigger mode of the user scene. |
+| note | string | No | Remarks for the user scene. The string length is unlimited, but it is recommended that you keep it within 255 characters. This field is optional. If provided, the performance metrics report will include the remark information; if not provided, there is no impact. |
+
+**Examples**
+
+Start point of the user scene where the user taps an icon to launch an application, triggered by a release event (LAST_UP).
+
+```TypeScript
+performanceMonitor.begin("LAUNCHER_APP_LAUNCH_FROM_ICON", performanceMonitor.ActionType.LAST_UP, "APP_START_BEGIN");
+```

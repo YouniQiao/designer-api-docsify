@@ -16,6 +16,10 @@ Defines the callback for successful ability launches.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the launched ability or system operation. The ability component name is in the format of '[bundleName]#[moduleName]#[abilityName]'. |
+
+**Examples**
+
+See [OnRequestFailureFn](arkts-ability-onrequestfailurefn-t.md).

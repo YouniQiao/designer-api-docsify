@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import sendableImage from '@kit.ImageKit';
 ```
 
 ## createImageSource
@@ -60,15 +60,26 @@ Creates an ImageSource instance based on a given URI.Images occupy a large amoun
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng SVG, and ico. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+| Type | Description |
+| --- | --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+
+**Examples**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+
+async function CreateImageSource(context : Context) {
+  const path: string = context.cacheDir + "/test.jpg";
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
+}
+```
 
 
 ## createImageSource
@@ -87,15 +98,28 @@ Creates an ImageSource instance based on a given file descriptor.Images occupy a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | File descriptor. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+| Type | Description |
+| --- | --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+
+**Examples**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+async function CreateImageSource(context : Context) {
+  const path: string = context.cacheDir + "/test.jpg";
+  let file = fileIo.openSync(path, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(file.fd);
+}
+```
 
 
 ## createImageSource
@@ -116,12 +140,23 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buf | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | Yes | Array of image buffers. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+| Type | Description |
+| --- | --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+
+**Examples**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+
+async function CreateImageSource() {
+  const buf: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(buf);
+}
+```

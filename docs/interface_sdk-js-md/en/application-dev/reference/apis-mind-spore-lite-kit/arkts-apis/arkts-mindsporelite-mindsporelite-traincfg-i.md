@@ -9,7 +9,7 @@ Provides the train configuration
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+import mindSporeLite from '@kit.MindSporeLiteKit';
 ```
 
 ## lossName
@@ -43,3 +43,11 @@ Train optimization level
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.AI.MindSporeLite
+
+**Examples**
+
+```TypeScript
+let cfg: mindSporeLite.TrainCfg = {};
+cfg.lossName = ["loss_fct", "_loss_fn", "SigmoidCrossEntropy"];
+cfg.optimizationLevel = mindSporeLite.OptimizationLevel.O0;
+```

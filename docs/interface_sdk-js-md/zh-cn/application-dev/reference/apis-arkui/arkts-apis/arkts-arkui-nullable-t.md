@@ -14,7 +14,7 @@ declare type Nullable<T> = T | undefined
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| T |
-| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
+| undefined |  |

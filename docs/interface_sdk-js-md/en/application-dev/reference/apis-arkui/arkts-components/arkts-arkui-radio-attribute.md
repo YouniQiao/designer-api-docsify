@@ -31,9 +31,9 @@ Sets whether the radio button is selected.Since API version 10, this attribute s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the radio button is selected.Default value: **false**   **true**: The radio button is selected. **false**: The radio button is not selected. |
 
 ## checked
 
@@ -55,9 +55,9 @@ Sets whether the radio button is selected. Compared with [checked](#checked), th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isChecked | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isChecked | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether the radio button is selected.If **isChecked** is set to **undefined**, the default value **false** is used.   **true**: The radio button is selected. **false**: The radio button is not selected. |
 
 ## contentModifier
 
@@ -77,9 +77,9 @@ Creates a content modifier.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | Yes | Content modifier to apply to the current component.    **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## contentModifier
 
@@ -87,7 +87,7 @@ Creates a content modifier.
 contentModifier(modifier: Optional<ContentModifier<RadioConfiguration>>)
 ```
 
-Creates a content modifier. Compared with [contentModifier](#contentmodifier)&lt;sup&gt;12+&lt;/sup&gt;, this API supports the **undefined** type for the **modifier** parameter.
+Creates a content modifier. Compared with [contentModifier](#contentmodifier)&lt;sup&gt;12+&lt;/sup &gt;, this API supports the **undefined** type for the **modifier** parameter.
 
 **Since:** 18
 
@@ -99,9 +99,9 @@ Creates a content modifier. Compared with [contentModifier](#contentmodifier)&lt
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt;&gt; | Yes | Content modifier to apply to the current component.   **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. If **modifier** is set to **undefined**, no content modifier is used. |
 
 ## onChange
 
@@ -121,9 +121,9 @@ Triggered when the selected state of the radio button changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (isChecked: boolean) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (isChecked: boolean) = & gt; void | Yes | Selected state of the radio button.The value **true** means that the radio button changes from unselected to selected, and **false** means that the radio button changes from selected to unselected. |
 
 ## onChange
 
@@ -145,9 +145,9 @@ Triggered when the selected state of the radio button changes. Compared with onC
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)&gt; | Yes | Callback for radio button selection state changes.If **callback** is set to **undefined**, the callback function is not used. |
 
 ## radioStyle
 
@@ -167,6 +167,6 @@ Sets the style of the radio button in selected or deselected state.Since API ver
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [RadioStyle](arkts-arkui-radiostyle-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [RadioStyle](arkts-arkui-radiostyle-i.md) | No | Style of the radio button in selected or deselected state. |

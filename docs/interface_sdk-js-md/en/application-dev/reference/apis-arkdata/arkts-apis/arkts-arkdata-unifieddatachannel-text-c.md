@@ -11,7 +11,7 @@ Represents the text data. It is a child class of [UnifiedRecord](arkts-arkdata-u
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## details
@@ -31,3 +31,14 @@ A dictionary type object, where both the key and value are of the string type an
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Examples**
+
+```TypeScript
+let text = new unifiedDataChannel.Text();
+text.details = {
+  title: 'MyTitle',
+  content: 'This is content'
+};
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
+```

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## list
@@ -24,20 +23,33 @@ Obtains the list of log files of the specified type in synchronous mode. This AP
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| logType | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| logType | string | Yes | Log type, for example, **HILOG**, **FAULTLOG**, **BETACLUB**, or **REMOTELOG**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LogEntry](arkts-performanceanalysis-loglibrary-logentry-i-sys.md)[] |
+| Type | Description |
+| --- | --- |
+| [LogEntry](arkts-performanceanalysis-loglibrary-logentry-i-sys.md)[] | Array of log file objects. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid argument. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let logObj = logLibrary.list('HILOG');
+  // do something here.
+} catch (error) {
+  console.error(`error code: ${error?.code}, error msg: ${error?.message}`);
+}
+```

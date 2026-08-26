@@ -1,7 +1,7 @@
 # ScrollBar
 
 滚动条组件ScrollBar，用于配合可滚动组件使用，如ArcList、List、Grid、 Scroll、WaterFlow。
-> **说明：**>> - 该组件从API version 8开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。>> - ScrollBar主轴方向不设置大小时，采用父组件[布局约束](../arkts-apis/arkts-arkui-framenode-layoutconstraint-i.md)中的maxSize作为主轴方向大小。如果ScrollBar的父组件存在可滚动组件，如> ArcList、List、Grid、Scroll、> WaterFlow，建议设置ScrollBar主轴方向大小，否则ScrollBar主轴方向大小可能为无穷大。
+> **说明：** > > - 该组件从API version 8开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。 > > - ScrollBar主轴方向不设置大小时，采用父组件[布局约束](../arkts-apis/arkts-arkui-framenode-layoutconstraint-i.md)中的maxSize作为主轴方向大小。如果ScrollBar的父组件存在可滚动组件，如 > ArcList、List、Grid、Scroll、 > WaterFlow，建议设置ScrollBar主轴方向大小，否则ScrollBar主轴方向大小可能为无穷大。
 
 ## 子组件
 
@@ -11,22 +11,26 @@
 
 滚动条组件参数。
 
-> **说明：**&gt;
-> - ScrollBar组件负责定义可滚动区域的行为样式，ScrollBar的子节点负责定义滚动条的行为样式。&gt;
-> - 滚动条组件与可滚动组件通过Scroller进行绑定，且只有当两者方向相同时，才能联动，ScrollBar与可滚动组件仅支持一对一绑定。&gt;
-> - 从API version 12开始，ScrollBar组件没有子节点时，支持显示默认样式的滚动条。&gt;
+> **说明：**
+> 
+> - ScrollBar组件负责定义可滚动区域的行为样式，ScrollBar的子节点负责定义滚动条的行为样式。
+> 
+> - 滚动条组件与可滚动组件通过Scroller进行绑定，且只有当两者方向相同时，才能联动，ScrollBar与可滚动组件仅支持一对一绑定。
+> 
+> - 从API version 12开始，ScrollBar组件没有子节点时，支持显示默认样式的滚动条。
+> 
 > - ScrollBar组件的显隐是通过BarState设置，组件内部会自动根据BarState设置调整opacity来控制显隐，因此ScrollBar组件设置
 > opacity属性不生效。
 **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。  
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full  
-| 名称 | 类型 | 只读 | 可选 | 说明 | | -------- | -------- | -------- | -- | -------- | | scroller | [Scroller](arkts-arkui-scroller-c.md) | 否 | 否 | 可滚动组件的控制器。用于与可滚动组件进行绑定。 | | direction | [ScrollBarDirection](../../../reference/apis-arkui/arkui-ts/ts-basic-components-scrollbar.md#scrollbardirection枚举说明) | 否 | 是 | 滚动条的方向，控制可滚动组件对应方向的滚动。默认值：ScrollBarDirection.Vertical | | state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 否 | 是 |
+| 名称 | 类型 | 只读 | 可选 | 说明 | | -------- | -------- | -------- | -- | -------- | | scroller | [Scroller](arkts-arkui-scroller-c.md) | 否 | 否 | 可滚动组件的控制器。用于与可滚动组件进行绑定。 | | direction | [ScrollBarDirection](../../../reference/apis-arkui/arkui-ts/ts-basic-components-scrollbar.md#scrollbardirection枚举说明) | 否 | 是 | 滚动条的方向，控制可滚动组件对应方向的滚动。默认值：ScrollBarDirection.Vertical | | state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 否 | 是 | 滚动条状态。默认值：BarState.Auto |
 
 ## ScrollBarDirection枚举说明
 
 滚动条方向枚举。  
 **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。  
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full  
-| 名称 | 值 | 说明 | | -------- | ---- | -------- | | Vertical | 0 | 纵向滚动条。 | | Horizontal | 1 |
+| 名称 | 值 | 说明 | | -------- | ---- | -------- | | Vertical | 0 | 纵向滚动条。 | | Horizontal | 1 | 横向滚动条。 |
 
 ## 示例1（设置子节点）
 
@@ -194,18 +198,18 @@ ScrollBar(value: ScrollBarOptions)
 
 **参数:**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ScrollBarOptions](arkts-arkui-scrollbaroptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ScrollBarOptions](arkts-arkui-scrollbaroptions-i.md) | 是 | 滚动条组件参数。 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 枚举
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |

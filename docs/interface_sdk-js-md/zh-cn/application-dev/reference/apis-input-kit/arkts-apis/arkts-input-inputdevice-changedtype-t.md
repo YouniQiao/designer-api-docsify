@@ -10,7 +10,7 @@ type ChangedType = 'add' | 'remove'
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
-| 类型 |
-| --- |
-| 'add' |
-| 'remove' |
+| 类型 | 说明 |
+| --- | --- |
+| 'add' | 插入输入设备。 |
+| 'remove' | 移除输入设备。 |

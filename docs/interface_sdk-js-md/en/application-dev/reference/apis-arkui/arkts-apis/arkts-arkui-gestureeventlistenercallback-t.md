@@ -16,7 +16,7 @@ Defines the callback type for gesture event listeners in **UIObserver**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [GestureEvent](arkts-arkui-gestureevent-i.md) | Yes |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [GestureEvent](arkts-arkui-gestureevent-i.md) | Yes | Information about the gesture event that triggers the callback. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | No | Component bound to the gesture event. |

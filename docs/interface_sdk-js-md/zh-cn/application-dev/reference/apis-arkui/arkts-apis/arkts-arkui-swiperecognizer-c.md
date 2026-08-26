@@ -31,9 +31,9 @@ getDirection(): SwipeDirection
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SwipeDirection](arkts-arkui-swipedirection-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SwipeDirection](arkts-arkui-swipedirection-e.md) | 预设快滑手势识别器触发快滑手势滑动方向。 |
 
 ## getVelocityThreshold
 
@@ -53,6 +53,6 @@ getVelocityThreshold(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 预设快滑手势识别器识别滑动最小速度阈值，单位为vp/s。 |

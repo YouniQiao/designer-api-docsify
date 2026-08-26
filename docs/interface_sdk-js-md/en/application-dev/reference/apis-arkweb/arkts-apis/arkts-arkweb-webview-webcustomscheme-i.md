@@ -9,7 +9,6 @@ Defines a custom URL scheme.@interface WebCustomScheme [since 9 - 11]
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## isCodeCacheSupported

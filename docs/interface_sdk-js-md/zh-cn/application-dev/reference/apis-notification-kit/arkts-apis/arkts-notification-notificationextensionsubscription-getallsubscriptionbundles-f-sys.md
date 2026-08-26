@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+import notificationExtensionSubscription from '@kit.NotificationKit';
 ```
 
 ## getAllSubscriptionBundles
@@ -24,15 +24,25 @@ function getAllSubscriptionBundles(): Promise<BundleOption[]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;BundleOption[] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;BundleOption[] & gt; | Promise对象，返回所有具有 ohos.permission.SUBSCRIBE_NOTIFICATION权限并且实现了 NotificationSubscriberExtensionAbility的应用列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+
+**示例**
+
+```TypeScript
+notificationExtensionSubscription.getAllSubscriptionBundles().then((data: notificationExtensionSubscription.BundleOption[]) => {
+  console.info(`getAllSubscriptionBundles successfully. Data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`getAllSubscriptionBundles fail, code is ${err.code}, message is ${err.message}`);
+});
+```

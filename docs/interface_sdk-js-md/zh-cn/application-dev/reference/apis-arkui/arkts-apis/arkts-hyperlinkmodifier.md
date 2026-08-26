@@ -4,6 +4,6 @@
 
 ### 类
 
-| 名称 |
-| --- |
-| [HyperlinkModifier](arkts-arkui-hyperlinkmodifier-c.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [HyperlinkModifier](arkts-arkui-hyperlinkmodifier-c.md) | Defines Hyperlink Modifier |

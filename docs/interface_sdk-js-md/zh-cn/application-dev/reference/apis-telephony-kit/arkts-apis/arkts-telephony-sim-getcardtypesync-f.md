@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCardTypeSync
@@ -20,12 +19,21 @@ function getCardTypeSync(slotId: number): CardType
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| slotId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CardType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-cardemulation-cardtype-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CardType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-cardemulation-cardtype-e.md) | 返回指定卡槽SIM卡的卡类型。 |
+
+**示例**
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+
+let cardType: sim.CardType = sim.getCardTypeSync(0);
+console.info(`the card type is:` + cardType);
+```

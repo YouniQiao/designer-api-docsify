@@ -27,16 +27,16 @@ static assert(value?: Object, ...arguments: Object[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 否 |
-| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 否 | 语句结果值。若value为假（false）或者省略，则输出以"Assertion failed"开头。 如果value为真值（true），则无打印。 |
+| arguments | Object[] | 是 | value为假（false）的后续错误消息打印。省略则不打印。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## count
 
@@ -54,15 +54,15 @@ static count(label?: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| label | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| label | string | 否 | 计数器标签名。默认值为'default'。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## countReset
 
@@ -80,15 +80,15 @@ static countReset(label?: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| label | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| label | string | 否 | 计数器标签名。默认值为'default'。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## debug
 
@@ -108,10 +108,10 @@ static debug(message: string, ...arguments: any[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | string | 是 |
-| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | string | 是 | 要打印的文本信息。 |
+| arguments | any[] | 是 | 其余要打印的信息或message的替换值。 |
 
 ## dir
 
@@ -129,9 +129,9 @@ static dir(dir?: Object): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [dir](#dir) | Object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| dir | Object | 否 | 需要打印内容的对象。省略则无任何打印。 |
 
 ## dirxml
 
@@ -149,9 +149,9 @@ static dirxml(...arguments: Object[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| arguments | Object[] | 是 | 要打印的信息。省略则无任何打印。 |
 
 ## error
 
@@ -171,10 +171,10 @@ static error(message: string, ...arguments: any[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | string | 是 |
-| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | string | 是 | 要打印的错误信息。 |
+| arguments | any[] | 是 | 其余要打印的信息或message的替换值。 |
 
 ## group
 
@@ -192,9 +192,9 @@ static group(...arguments: Object[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| arguments | Object[] | 是 | 要打印的信息。省略则仅打印两个空格。 |
 
 ## groupCollapsed
 
@@ -212,9 +212,9 @@ static groupCollapsed(...arguments: Object[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| arguments | Object[] | 是 | 要打印的信息。省略则仅打印两个空格。 |
 
 ## groupEnd
 
@@ -248,10 +248,10 @@ static info(message: string, ...arguments: any[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | string | 是 |
-| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | string | 是 | 要打印的文本信息。 |
+| arguments | any[] | 是 | 其余要打印的信息或message的替换值。 |
 
 ## log
 
@@ -271,10 +271,10 @@ static log(message: string, ...arguments: any[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | string | 是 |
-| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | string | 是 | 要打印的文本信息。 |
+| arguments | any[] | 是 | 其余要打印的信息或message的替换值。 |
 
 ## table
 
@@ -292,9 +292,9 @@ static table(tableData?: Object): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| tableData | Object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tableData | Object | 否 | 要打印为表格形式的对象。省略则无任何打印。 |
 
 ## time
 
@@ -312,15 +312,15 @@ static time(label?: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| label | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| label | string | 否 | 计时器标识。默认值为'default'。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## timeEnd
 
@@ -338,15 +338,15 @@ static timeEnd(label?: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| label | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| label | string | 否 | 计时器标识。默认值为'default'。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## timeLog
 
@@ -364,16 +364,16 @@ static timeLog(label?: string, ...arguments: Object[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| label | string | 否 |
-| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| label | string | 否 | 计时器标识。默认值为'default'。 |
+| arguments | Object[] | 是 | 需要打印的其他日志。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## trace
 
@@ -391,9 +391,9 @@ static trace(...arguments: Object[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| arguments | Object[] | 是 | 需要打印的其他日志。省略则仅打印堆栈信息。 |
 
 ## traceHybridStack
 
@@ -427,7 +427,7 @@ static warn(message: string, ...arguments: any[]): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| message | string | 是 |
-| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | string | 是 | 要打印的警告信息。 |
+| arguments | any[] | 是 | 其余要打印的信息或message的替换值。 |

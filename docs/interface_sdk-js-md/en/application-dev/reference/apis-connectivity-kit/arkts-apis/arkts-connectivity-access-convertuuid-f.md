@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## convertUuid
@@ -20,12 +19,26 @@ Convert 2-byte and 4-byte UUID strings to the 16-byte UUID string standard used 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uuid | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uuid | string | Yes | 2-byte, 4-byte, 16-byte UUID string data. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Return the converted 16-byte UUID string. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let inputUuid: string = '1801';
+    let convertedUuid: string = access.convertUuid(inputUuid);
+    console.info("convertedUuid: " + convertedUuid);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```

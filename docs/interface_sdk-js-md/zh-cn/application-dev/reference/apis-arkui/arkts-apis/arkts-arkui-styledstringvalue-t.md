@@ -16,19 +16,19 @@ UserDataSpan | BackgroundColorStyle | LineSpacingStyle
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [TextStyle](arkts-arkui-textstyle-c.md) |
-| [DecorationStyle](arkts-arkui-decorationstyle-c.md) |
-| [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md) |
-| [LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md) |
-| [TextShadowStyle](arkts-arkui-textshadowstyle-c.md) |
-| [GestureStyle](arkts-arkui-gesturestyle-c.md) |
-| [ImageAttachment](arkts-arkui-imageattachment-c.md) |
-| [ParagraphStyle](arkts-arkui-paragraphstyle-c.md) |
-| [LineHeightStyle](arkts-arkui-lineheightstyle-c.md) |
-| [UrlStyle](arkts-arkui-urlstyle-c.md) |
-| [CustomSpan](arkts-arkui-customspan-c.md) |
-| [UserDataSpan](arkts-arkui-userdataspan-c.md) |
-| [BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md) |
-| [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TextStyle](arkts-arkui-textstyle-c.md) | 文本字体样式。 |
+| [DecorationStyle](arkts-arkui-decorationstyle-c.md) | 文本装饰线样式。 |
+| [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md) | 文本基线偏移量样式。 |
+| [LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md) | 文本字符间距样式。 |
+| [TextShadowStyle](arkts-arkui-textshadowstyle-c.md) | 文本阴影样式。 |
+| [GestureStyle](arkts-arkui-gesturestyle-c.md) | 事件手势样式。 |
+| [ImageAttachment](arkts-arkui-imageattachment-c.md) | 图片样式。 |
+| [ParagraphStyle](arkts-arkui-paragraphstyle-c.md) | 文本段落样式。 |
+| [LineHeightStyle](arkts-arkui-lineheightstyle-c.md) | 文本行高样式。 |
+| [UrlStyle](arkts-arkui-urlstyle-c.md) | 超链接样式。 [since 14] |
+| [CustomSpan](arkts-arkui-customspan-c.md) | 自定义绘制Span样式。 |
+| [UserDataSpan](arkts-arkui-userdataspan-c.md) | UserDataSpan样式。 |
+| [BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md) | 文本背景颜色样式。 [since 14] |
+| [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) | 文本行间距样式。 [since 26.0.0] |

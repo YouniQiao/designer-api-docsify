@@ -2,7 +2,8 @@
 
 依赖当前原子化服务的UI上下文，创建AtomicServiceMenuBar对象，用于操控右上角菜单功能胶囊的显隐状态。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该组件从API version 23开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 23
@@ -14,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceMenuBar } from 'kits/@kit.ArkUI';
+import { AtomicServiceMenuBar } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -37,9 +38,9 @@ AtomicServiceMenuBar的构造函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 | 当前原子化服务的UI上下文信息。 |
 
 ## setVisible
 
@@ -61,6 +62,6 @@ public setVisible(visible: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| visible | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| visible | boolean | 是 | 菜单功能胶囊预期的状态。true表示显示菜单功能胶囊，false表示隐藏菜单功能胶囊。 |

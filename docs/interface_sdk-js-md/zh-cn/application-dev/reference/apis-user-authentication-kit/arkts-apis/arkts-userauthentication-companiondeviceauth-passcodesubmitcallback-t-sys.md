@@ -16,6 +16,6 @@ type PasscodeSubmitCallback = (passcode: Uint8Array) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| passcode | Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| passcode | Uint8Array | 是 | 用户输入的密码(例如USB的密码 安全密钥)。 |

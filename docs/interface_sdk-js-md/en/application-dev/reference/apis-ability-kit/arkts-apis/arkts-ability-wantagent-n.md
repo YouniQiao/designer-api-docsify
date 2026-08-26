@@ -9,74 +9,74 @@ The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c
 ## Modules to Import
 
 ```TypeScript
-import { wantAgent, WantAgent } from 'kits/@kit.AbilityKit';
+import wantAgent, { WantAgent } from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getBundleName](arkts-ability-wantagent-getbundlename-f.md) |
-| [getBundleName](arkts-ability-wantagent-getbundlename-f.md) |
-| [getUid](arkts-ability-wantagent-getuid-f.md) |
-| [getUid](arkts-ability-wantagent-getuid-f.md) |
-| [cancel](arkts-ability-wantagent-cancel-f.md) |
-| [cancel](arkts-ability-wantagent-cancel-f.md) |
-| [trigger](arkts-ability-wantagent-trigger-f.md) |
-| [equal](arkts-ability-wantagent-equal-f.md) |
-| [equal](arkts-ability-wantagent-equal-f.md) |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md) |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md) |
-| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md) |
-| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md) |
+| Name | Description |
+| --- | --- |
+| [getBundleName](arkts-ability-wantagent-getbundlename-f.md) | Obtains the bundle name of a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [getBundleName](arkts-ability-wantagent-getbundlename-f.md) | Obtains the bundle name of a WantAgent object. This API uses a promise to return the result. |
+| [getUid](arkts-ability-wantagent-getuid-f.md) | Obtains the user ID of a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [getUid](arkts-ability-wantagent-getuid-f.md) | Obtains the user ID of a WantAgent object. This API uses a promise to return the result. |
+| [cancel](arkts-ability-wantagent-cancel-f.md) | Cancels a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [cancel](arkts-ability-wantagent-cancel-f.md) | Cancels a WantAgent object. This API uses a promise to return the result. |
+| [trigger](arkts-ability-wantagent-trigger-f.md) | Proactively triggers a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [equal](arkts-ability-wantagent-equal-f.md) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses an asynchronous callback to return the result. |
+| [equal](arkts-ability-wantagent-equal-f.md) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses a promise to return the result. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md) | Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned. & lt;p & gt;**NOTE：**: Third-party applications can set only their own abilities. & lt;/p & gt; |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md) | Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned. & lt;p & gt;**NOTE：**: Third-party applications can set only their own abilities. & lt;/p & gt; |
+| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md) | Obtains the operation type of a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md) | Obtains the operation type of a WantAgent object. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getWant](arkts-ability-wantagent-getwant-f-sys.md) |
-| [getWant](arkts-ability-wantagent-getwant-f-sys.md) |
-| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md) |
-| [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md) |
-| [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md) |
-| [isLocalWantAgent](arkts-ability-wantagent-islocalwantagent-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getWant](arkts-ability-wantagent-getwant-f-sys.md) | Obtains the Want in a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [getWant](arkts-ability-wantagent-getwant-f-sys.md) | Obtains the Want in a WantAgent object. This API uses a promise to return the result. |
+| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md) | Asynchronously triggers a predefined operation encration encapsulated in a Wantagent with specified trigger information. If the specified wantAgent is local, you need to apply for permission: ohos.permission.TRIGGER_LOCAL_WANTAGENT permission. |
+| [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md) | Enables or disables the WantAgent multithreading feature. |
+| [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md) | Create a local WantAgent object. The WantAgent created by this interface stores data on the client side and is not managed by the WantAgent servcer. If this WantAgent object is passed across processes, its contained data will be serialized and transmitted to the target process. |
+| [isLocalWantAgent](arkts-ability-wantagent-islocalwantagent-f-sys.md) | Checks whether the specified WantAgent is local. |
 <!--DelEnd-->
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CompleteData](arkts-ability-wantagent-completedata-i.md) |
+| Name | Description |
+| --- | --- |
+| [CompleteData](arkts-ability-wantagent-completedata-i.md) | Describes the data returned by the operation of proactive triggering a WantAgent object. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md) |
-| [OperationType](arkts-ability-wantagent-operationtype-e.md) |
+| Name | Description |
+| --- | --- |
+| [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md) | Enumerates the flags used by the WantAgent objects. |
+| [OperationType](arkts-ability-wantagent-operationtype-e.md) | Enumerates the operation types of the WantAgent objects. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OperationType](arkts-ability-wantagent-operationtype-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [OperationType](arkts-ability-wantagent-operationtype-e-sys.md) | Enumerates the operation types of the WantAgent objects. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) |
-| [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) |
+| Name | Description |
+| --- | --- |
+| [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) | Defines the TriggerInfo object. |
+| [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Defines the WantAgentInfo object. |
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LocalWantAgentInfo](arkts-ability-wantagent-localwantagentinfo-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [LocalWantAgentInfo](arkts-ability-wantagent-localwantagentinfo-t-sys.md) | Provides the information required to create a local WantAgent. |
 <!--DelEnd-->

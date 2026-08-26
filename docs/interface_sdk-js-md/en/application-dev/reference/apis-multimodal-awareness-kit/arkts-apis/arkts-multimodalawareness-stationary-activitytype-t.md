@@ -10,7 +10,7 @@ Enumerates the device status types.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'still' |
-| 'relativeStill' |
+| Type | Description |
+| --- | --- |
+| 'still' | Absolutely still. |
+| 'relativeStill' | Relatively still. |

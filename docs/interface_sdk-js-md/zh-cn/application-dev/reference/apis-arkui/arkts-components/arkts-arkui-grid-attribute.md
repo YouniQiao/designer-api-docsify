@@ -31,9 +31,9 @@ alignItems(alignment: Optional<GridItemAlignment>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| alignment | [Optional](arkts-arkui-optional-t.md)&lt;[GridItemAlignment](arkts-arkui-griditemalignment-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| alignment | [Optional](arkts-arkui-optional-t.md)&lt;[GridItemAlignment](arkts-arkui-griditemalignment-e.md)&gt; | 是 | 设置Grid中GridItem的对齐方式。默认值：GridItemAlignment.DEFAULT |
 
 ## cachedCount
 
@@ -52,9 +52,9 @@ cachedCount(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 预加载的GridItem的数量。默认值：垂直滚动时为一个屏幕内可显示的行数，水平滚动时为一个屏幕内可显示的列数，最大值为16。取值范围： [0, +∞)，设置为小于0的值时，按1处理。通过状态变量单独更新value值时，Grid组件不会触发布局更新，缓存节点数量仅会在下次布局时更新。 |
 
 ## cachedCount
 
@@ -74,10 +74,10 @@ cachedCount(count: number, show: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| count | number | 是 |
-| show | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| count | number | 是 | 预加载的GridItem的数量。默认值：垂直滚动时为一个屏幕内可显示的行数，水平滚动时为一个屏幕内可显示的列数，最大值为16。取值范围： [0, +∞)，设置为小于0的值时，按1处理。通过状态变量单独更新count值时，Grid组件不会触发布局更新，缓存节点数量仅会在下次布局时更新。 |
+| show | boolean | 是 | 被预加载的GridItem是否需要显示。设置为true时显示预加载的GridItem，设置为false时不显示预加载的GridItem。 默认值：false |
 
 ## cellLength
 
@@ -87,7 +87,8 @@ cellLength(value: number)
 
 设置一行的高度或者一列的宽度。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 > 当layoutDirection是Row/RowReverse时，表示一行的高度。
 当layoutDirection是Column/ColumnReverse时，表示一列的宽度。
@@ -100,9 +101,9 @@ cellLength(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 一行的高度或者一列的宽度。默认值：当layoutDirection是Row/RowReverse时，为首个GridItem的高度；当layoutDirection是 Column/ColumnReverse时，为首个GridItem的宽度。单位：vp 取值范围：(0, +∞)，设置为小于等于0的值时，按默认值显示。 |
 
 ## columnsGap
 
@@ -120,9 +121,9 @@ columnsGap(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 列与列的间距。默认值：0 取值范围：[0, +∞)，设置为小于0的值时，按默认值0显示。 |
 
 ## columnsTemplate
 
@@ -140,9 +141,9 @@ columnsTemplate(value: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | string | 是 |  |
 
 ## columnsTemplate
 
@@ -162,9 +163,9 @@ columnsTemplate(value: string | ItemFillPolicy)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | string \| [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | string \| [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | 是 | 当前网格组件布局列的数量。value为string类型时，表示固定列数或repeat函数形式；value为ItemFillPolicy类型时，根 据断点自动确定列数。 |
 
 ## edgeEffect
 
@@ -184,10 +185,10 @@ edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | Grid组件的边缘滑动效果，支持弹簧效果和阴影效果。默认值：EdgeEffect.None |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时，是否开启滑动效果。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。默认值：{ alwaysEnabled: false }<br>**起始版本：** 11 |
 
 ## editMode
 
@@ -197,7 +198,8 @@ editMode(value: boolean)
 
 设置Grid是否进入编辑模式，进入编辑模式可以拖拽Grid组件内部GridItem。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 
 **起始版本：** 8
@@ -208,9 +210,9 @@ editMode(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | Grid是否进入编辑模式。设置为true时当前Grid组件处于可编辑模式，设置为false时当前Grid组件处于不可编辑模式。默认值：false |
 
 ## editModeOptions
 
@@ -230,9 +232,9 @@ editModeOptions(options?: EditModeOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | 否 | 编辑模式选项，用于配置Grid编辑模式下的多选聚拢动画、预览角标、多选样式、双指滑动多选等行为。需要调整上述行为时传入；不传入时，各选项使用 EditModeOptions中的默认值。 |
 
 ## enableEditMode
 
@@ -252,9 +254,9 @@ enableEditMode(enabled: boolean | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | boolean \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | boolean \| undefined | 是 | 是否启用编辑模式，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定 变量。设置为true时启用编辑模式，可以滑动多选，设置为false或undefined时关闭编辑模式，不可滑动多选。 |
 
 ## enableScrollInteraction
 
@@ -274,9 +276,9 @@ enableScrollInteraction(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroller-c.md)的滚动 接口。默认值：true |
 
 ## focusWrapMode
 
@@ -296,9 +298,9 @@ focusWrapMode(mode: Optional<FocusWrapMode>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | 是 | 交叉轴方向键走焦模式。默认值：FocusWrapMode.DEFAULT   **说明：** 异常值按默认值处理，即交叉轴 方向键不能换行。 |
 
 ## friction
 
@@ -318,9 +320,9 @@ friction(value: number | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 摩擦系数。默认值：非可穿戴设备为0.6，可穿戴设备为0.9。从API version 11开始，非可穿戴设备默认值为0.7。从 API version 12开始，非可穿戴设备默认值为0.75。取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
 
 ## layoutDirection
 
@@ -330,7 +332,8 @@ layoutDirection(value: GridDirection)
 
 设置布局的主轴方向。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 
 **起始版本：** 8
@@ -341,9 +344,9 @@ layoutDirection(value: GridDirection)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [GridDirection](arkts-arkui-griddirection-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [GridDirection](arkts-arkui-griddirection-e.md) | 是 | 布局的主轴方向。默认值：GridDirection.Row |
 
 ## maxCount
 
@@ -353,7 +356,8 @@ maxCount(value: number)
 
 设置可显示的最大行数或列数。设置为小于1的值时，按默认值显示。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 > 当layoutDirection是Row/RowReverse时，表示可显示的最大列数。
 当layoutDirection是Column/ColumnReverse时，表示可显示的最大行数。当maxCount小于minCount时，maxCount和minCount都按默认值处理。
@@ -366,9 +370,9 @@ maxCount(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 可显示的最大行数或列数。默认值：Infinity取值范围：1, +∞)，设置为小于1的值时，按默认值Infinity处理。 |
 
 ## minCount
 
@@ -378,7 +382,8 @@ minCount(value: number)
 
 设置可显示的最小行数或列数。设置为小于1的值时，按默认值显示。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 > 当layoutDirection是Row/RowReverse时，表示可显示的最小列数。
 当layoutDirection是Column/ColumnReverse时，表示可显示的最小行数。当minCount大于maxCount时，minCount和maxCount都按默认值处理。
@@ -391,9 +396,9 @@ minCount(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 可显示的最小行数或列数。默认值：1取值范围：[1, +∞)，设置为小于1的值时，按默认值1处理。 |
 
 ## multiSelectable
 
@@ -411,9 +416,9 @@ multiSelectable(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 是否开启鼠标框选。默认值：false false：关闭框选。true：开启框选。 |
 
 ## nestedScroll
 
@@ -433,9 +438,9 @@ nestedScroll(value: NestedScrollOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项，用于设置Grid组件与父组件的嵌套滚动联动行为。 |
 
 ## onEditModeChange
 
@@ -455,9 +460,9 @@ onEditModeChange(callback: Callback<boolean> | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Callback & lt;boolean & gt; \ | undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Callback & lt;boolean & gt; \ | undefined | 是 | 编辑模式状态变化时触发的回调。回调参数类型为boolean，true表示进入编辑模式，false表示退出编辑模式。 传入undefined时取消回调。 |
 
 ## onItemDragEnter
 
@@ -475,9 +480,9 @@ onItemDragEnter(event: (event: ItemDragInfo) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: ItemDragInfo) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: ItemDragInfo) = & gt; void | 是 | 拖拽点的信息。 |
 
 ## onItemDragLeave
 
@@ -495,9 +500,9 @@ onItemDragLeave(event: (event: ItemDragInfo, itemIndex: number) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: ItemDragInfo, itemIndex: number) = & gt; void | 是 |  |
 
 ## onItemDragMove
 
@@ -515,9 +520,9 @@ onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: numb
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number) = & gt; void | 是 |  |
 
 ## onItemDragStart
 
@@ -535,9 +540,9 @@ onItemDragStart(event: OnItemDragStartCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | 是 | GridItem拖拽开始时触发的回调。 API version 22及之前版本，该参数类型为(event: ItemDragInfo, itemIndex: number) = & gt; (() = & gt; any) \ |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | 是 | GridItem拖拽开始时触发的回调。 API version 22及之前版本，该参数类型为(event: ItemDragInfo, itemIndex: number) = & gt; (() = & gt; any) \ | void，其中event和itemIndex参 数含义参考[OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md)。<br>**起始版本：** 23 |
 
 ## onItemDrop
 
@@ -557,9 +562,9 @@ onItemDrop(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) = & gt; void | 是 |  |
 
 ## onReachEnd
 
@@ -579,9 +584,9 @@ onReachEnd(event: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 网格到达末尾位置时触发的回调。 |
 
 ## onReachStart
 
@@ -601,9 +606,9 @@ onReachStart(event: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 网格到达起始位置时触发的回调。 |
 
 ## onScroll
 
@@ -627,9 +632,9 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (scrollOffset: number, scrollState: ScrollState) = & gt; void | 是 | 网格滚动回调，scrollOffset为每帧滚动偏移量，ScrollState为当前滑动状态。 |
 
 ## onScrollBarUpdate
 
@@ -649,9 +654,9 @@ onScrollBarUpdate(event: (index: number, offset: number) => ComputedBarAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (index: number, offset: number) = & gt; ComputedBarAttribute | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (index: number, offset: number) = & gt; ComputedBarAttribute | 是 | 网格滚动回调，index为当前显示的网格起始位置的索引值，offset为当前显示的网格起始位置元素相对网格显示起始位置的偏移（单位vp），返回ComputedBarAttribute更新滚动条位置和高度。 |
 
 ## onScrollFrameBegin
 
@@ -678,9 +683,9 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | 是 | 每帧滚动开始回调函数。<br>**起始版本：** 20 |
 
 ## onScrollIndex
 
@@ -698,9 +703,9 @@ onScrollIndex(event: (first: number, last: number) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (first: number, last: number) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (first: number, last: number) = & gt; void | 是 | 网格滚动回调，first为当前显示的网格起始位置的索引值，last为当前显示的网格终止位置的索引值。 |
 
 ## onScrollStart
 
@@ -720,9 +725,9 @@ onScrollStart(event: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 网格滑动开始时触发的回调。 |
 
 ## onScrollStop
 
@@ -742,9 +747,9 @@ onScrollStop(event: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 网格滑动停止时触发的回调。 |
 
 ## rowsGap
 
@@ -762,9 +767,9 @@ rowsGap(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 行与行的间距。默认值：0 取值范围：[0, +∞)，设置为小于0的值时，按默认值0显示。 |
 
 ## rowsTemplate
 
@@ -782,9 +787,9 @@ rowsTemplate(value: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | string | 是 |  |
 
 ## scrollBar
 
@@ -802,9 +807,9 @@ scrollBar(value: BarState)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | 滚动条状态。默认值：BarState.Auto   **说明：** API version 9及以下版本默认值为BarState.Off，API version 10及以上版本的默认值为BarState.Auto。 |
 
 ## scrollBarColor
 
@@ -822,9 +827,9 @@ scrollBarColor(value: Color | number | string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Color \| number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Color \| number \| string | 是 | 滚动条的颜色。默认值：'#182431'（40%不透明度）number为HEX格式颜色，支持rgb或者argb，示例：0 xffffff。string为rgb或者argb格式颜色，示例：'#ffffff'。 |
 
 ## scrollBarColor
 
@@ -844,9 +849,9 @@ scrollBarColor(color: Color | number | string | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color | Color \| number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | Color \| number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 滚动条的颜色。默认值：'#182431'（40%不透明度）number为HEX格式颜色，支持rgb或者 argb，示例：0xffffff。string为rgb或者argb格式颜色，示例：'#ffffff'。 |
 
 ## scrollBarWidth
 
@@ -864,9 +869,9 @@ scrollBarWidth(value: number | string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string | 是 | 滚动条的宽度。默认值：4单位：vp取值范围：[0, +∞)，设置为小于0的值时，按默认值处理。设置为0时，不显示滚动条。 |
 
 ## scrollBarWidth
 
@@ -886,9 +891,9 @@ scrollBarWidth(value: number | string | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 滚动条的宽度。单位：vp取值范围：[0, +∞)。设置为小于0的值时，按4vp处理。设置为0时，不显示滚动条。 |
 
 ## supportAnimation
 
@@ -906,9 +911,9 @@ supportAnimation(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 是否支持动画。设置为true时支持GridItem拖拽动画，设置为false时不支持GridItem拖拽动画。默认值：false |
 
 ## supportEmptyBranchInLazyLoading
 
@@ -928,9 +933,9 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| supported | boolean \| undefined | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| supported | boolean \| undefined | 是 | 当前Grid组件是否支持在 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)或 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中使用 [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)渲染控制语法生成一个不含任何子节点的空分支节点。true表示支 持空分支节点；false表示不支持空分支节点。值为undefined时，按false处理。 |
 
 ## syncLoad
 
@@ -950,6 +955,6 @@ syncLoad(enable: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 是否同步加载Grid区域内所有子组件。true表示同步加载，false表示异步加载。默认值：true。   **说明：** 设置为false时，在 首次显示、不带动画scrollToIndex跳转场景，若当帧布局耗时超过50ms，会将Grid区域内尚未布局的子组件延后到下一帧进行布局。 |

@@ -3,21 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { PrintExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import PrintExtensionAbility from '@kit.BasicServicesKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md) |
+| Name | Description |
+| --- | --- |
+| [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md) | class of print extension ability. |
 
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c-sys.md) | class of print extension ability. |
 <!--DelEnd-->

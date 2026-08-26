@@ -10,29 +10,29 @@ The **Router** module provides APIs to access pages through URIs.
 ## Modules to Import
 
 ```TypeScript
-import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from 'kits/@kit.ArkUI';
+import SystemRouter, { BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Router(Page Routing)](arkts-arkui-system-router-router-c.md) |
+| Name | Description |
+| --- | --- |
+| [Router(Page Routing)](arkts-arkui-system-router-router-c.md) | The **Router** module provides APIs to access pages through URIs. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BackRouterOptions(Page Routing)](arkts-arkui-system-router-backrouteroptions-i.md) |
-| [DisableAlertBeforeBackPageOptions(Page Routing)](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) |
-| [EnableAlertBeforeBackPageOptions(Page Routing)](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) |
-| [RouterOptions(Page Routing)](arkts-arkui-system-router-routeroptions-i.md) |
-| [RouterState(Page Routing)](arkts-arkui-system-router-routerstate-i.md) |
+| Name | Description |
+| --- | --- |
+| [BackRouterOptions(Page Routing)](arkts-arkui-system-router-backrouteroptions-i.md) | Defines the parameters for routing back. |
+| [DisableAlertBeforeBackPageOptions(Page Routing)](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | Defines the **DisableAlertBeforeBackPage** parameter. |
+| [EnableAlertBeforeBackPageOptions(Page Routing)](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | Defines the **EnableAlertBeforeBackPage** parameter. |
+| [RouterOptions(Page Routing)](arkts-arkui-system-router-routeroptions-i.md) | Defines the page routing parameters. |
+| [RouterState(Page Routing)](arkts-arkui-system-router-routerstate-i.md) | Defines the routing state. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ParamsInterface(Page Routing)](arkts-arkui-paramsinterface-t.md) |
+| Name | Description |
+| --- | --- |
+| [ParamsInterface(Page Routing)](arkts-arkui-paramsinterface-t.md) | List of routing parameters. |

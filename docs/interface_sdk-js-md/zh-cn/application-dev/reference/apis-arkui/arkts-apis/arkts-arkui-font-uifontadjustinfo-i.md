@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import font from '@kit.ArkUI';
 ```
 
 ## to

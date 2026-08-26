@@ -24,13 +24,25 @@ static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
-| param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 待加载的模型文件资源路径。 |
+| param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | 是 | 场景加载参数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise对象，返回场景对象。 |
+
+**示例**
+
+```TypeScript
+import { Scene, SceneLoadParams } from '@kit.ArkGraphics3D';
+
+function loadModelWithParams(): Promise<Scene> {
+  let loadParams: SceneLoadParams = { offset: 0 };
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"), loadParams);
+  return scene;
+}
+```

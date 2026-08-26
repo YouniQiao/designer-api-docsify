@@ -31,9 +31,9 @@ contentModifier(modifier: ContentModifier<TextTimerConfiguration>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md)&gt; | 是 | 在TextTimer组件上，定制内容区的方法。 modifier： 内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## fontColor
 
@@ -53,9 +53,9 @@ fontColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 字体颜色。 Wearable设备上默认值为：'#c5ffffff'，显示白色。 其他设备上默认值：'#e6182431'，显示黑色。 |
 
 ## fontFamily
 
@@ -75,9 +75,9 @@ fontFamily(value: ResourceStr)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 字体列表。默认字体为'HarmonyOS Sans'。 应用当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md)。 卡片当前仅支持'HarmonyOS Sans'字体。 |
 
 ## fontSize
 
@@ -97,9 +97,9 @@ fontSize(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 字体大小。 默认值：16fp value为Length中的number类型时，单位为fp。value为Length中的string类型时，若设置值为非数字开头，则按0fp处理；若设置值为数字开头，当数字后内容包含除 像素单位外的字符（如字母、特殊符号等）时，取值字符串开头的数字部分，单位为fp。 例如：设置值为"abc"时取值为0fp，设置值为"10vp"时取值为10vp，设置值为"10vp11abc"时取值为10fp。不支持设置百分比字符串。 |
 
 ## fontStyle
 
@@ -119,9 +119,9 @@ fontStyle(value: FontStyle)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [FontStyle](#fontstyle) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [FontStyle](#fontstyle) | 是 | 字体样式，例如斜体的字体样式。 默认值：FontStyle.Normal |
 
 ## fontWeight
 
@@ -141,9 +141,9 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细，number类型取值范围为[100, 900]，取值间隔为100，取值越大，字体越粗。number类型取值范 围外的默认值为400。[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。 默认值：FontWeight.Normal 从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
 
 ## format
 
@@ -163,9 +163,9 @@ format(value: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | string | 是 | 自定义计时器显示的时间格式，需至少包含一个HH、mm、ss、SS中的关键字。 默认值：'HH:mm:ss.SS' |
 
 ## onTimer
 
@@ -185,9 +185,9 @@ onTimer(event: (utc: number, elapsedTime: number) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (utc: number, elapsedTime: number) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (utc: number, elapsedTime: number) = & gt; void | 是 | utc: Linux timestamp, which is the amount of time that has elapsed since January 1, 197 0, in the minimum unit of the format. elapsedTime: Elapsed time of the timer, in the minimum unit of the format. |
 
 ## textShadow
 
@@ -197,7 +197,8 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 设置文字阴影效果。该接口支持以数组形式入参，实现多重文字阴影。不支持fill字段和智能取色模式。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -210,6 +211,6 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | 是 | 文字阴影效果的参数，包括颜色、模糊半径、偏移量。 |

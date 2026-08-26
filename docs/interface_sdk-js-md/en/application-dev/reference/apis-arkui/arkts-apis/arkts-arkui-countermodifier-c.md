@@ -26,6 +26,6 @@ Defines the normal update attribute function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | [CounterAttribute](../arkts-components/arkts-arkui-counter-attribute.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | [CounterAttribute](../arkts-components/arkts-arkui-counter-attribute.md) | Yes |  |

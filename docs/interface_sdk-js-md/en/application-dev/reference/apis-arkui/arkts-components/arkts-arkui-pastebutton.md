@@ -51,23 +51,78 @@ Creates a paste button with the specified icon, text and button type. After crea
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md) | Yes | Configuration options for the paste button, used to set properties such as icon, text and button type.  You are advised to explicitly set at least one of **icon** or **text** to help users identify the button.  If neither **icon** nor **text** is specified, **options** does not take effect and the button is displayed in the default style. { icon: PasteIconStyle.LINES, text:PasteDescription.PASTE,  buttonType: ButtonType.Capsule  }. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
+
+## Examples
+
+```TypeScript
+// xxx.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  // Define the callback for processing the authorization result and error information when the paste button is clicked.
+  handlePasteButtonClick: PasteButtonCallback =
+    (event: ClickEvent, result: PasteButtonOnClickResult, error?: BusinessError<void>) => {
+      if (result === PasteButtonOnClickResult.SUCCESS) {
+        console.info('success');
+      } else {
+        console.error('errCode: ' + error?.code);
+        console.error('errMessage: ' + error?.message);
+      }
+    };
+
+  build() {
+    Row() {
+      Column({ space: 10 }) {
+        // Create a default SaveButton component with an icon, text, and background.
+        PasteButton().onClick(this.handlePasteButtonClick)
+        // Whether an element is contained depends on whether the parameter corresponding to the element is specified. If buttonType is not passed in, the button uses the ButtonType.Capsule settings.
+        PasteButton({ icon: PasteIconStyle.LINES })
+        // Create a button with only an icon and background. If the alpha value of the most significant eight bits of the background color is less than 0x1a, the system forcibly adjusts the alpha value to 0xff.
+        PasteButton({ icon: PasteIconStyle.LINES, buttonType: ButtonType.Capsule })
+          .backgroundColor(0x10007dff)
+        // Create a button with an icon, text, and background. If the alpha value of the most significant eight bits of the background color is less than 0x1a, the system forcibly adjusts the alpha value to 0xff.
+        PasteButton({ icon: PasteIconStyle.LINES, text: PasteDescription.PASTE, buttonType: ButtonType.Capsule })
+        // Create a button with an icon, text, and background. If the set width is less than the minimum allowed, the button's text will wrap to guarantee full text display.
+        PasteButton({ icon: PasteIconStyle.LINES, text: PasteDescription.PASTE, buttonType: ButtonType.Capsule })
+          .fontSize(16)
+          .width(30)
+        // Create a button with an icon, text, and background. If the set width is less than the minimum allowed, the button's text will wrap to guarantee full text display.
+        PasteButton({ icon: PasteIconStyle.LINES, text: PasteDescription.PASTE, buttonType: ButtonType.Capsule })
+          .fontSize(16)
+          .size({ width: 30, height: 30 })
+        // Create a button with an icon, text, and background. If the set width is less than the minimum allowed, the button's text will wrap to guarantee full text display.
+        PasteButton({ icon: PasteIconStyle.LINES, text: PasteDescription.PASTE, buttonType: ButtonType.Capsule })
+          .fontSize(16)
+          .constraintSize({
+            minWidth: 0,
+            maxWidth: 30,
+            minHeight: 0,
+            maxHeight: 30
+          })
+      }.width('100%')
+    }.height('100%')
+  }
+}
+```

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## supportsCACertDialog
@@ -22,12 +21,27 @@ Check whether the device supports the [openCertificateDetailDialog](arkts-device
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the CA certificate management dialog box can be opened. **true**: supported; **false**: not supported |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;  2. Memory operation error; 3. File operation error. Please try again. |
+
+**Examples**
+
+```TypeScript
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let isSupport: boolean = certificateManagerDialog.supportsCACertDialog();
+  console.info(`Succeeded in checking whether the device supports CA dialog.`)
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether the device supports CA dialog. Code: ${error.code}, message: ${error.message}`);
+}
+```

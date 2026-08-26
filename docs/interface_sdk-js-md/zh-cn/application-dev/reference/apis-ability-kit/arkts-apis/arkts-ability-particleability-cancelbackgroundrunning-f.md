@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { particleAbility } from 'kits/@kit.AbilityKit';
+import particleAbility from '@kit.AbilityKit';
 ```
 
 ## cancelBackgroundRunning
@@ -26,9 +26,26 @@ function cancelBackgroundRunning(callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当向系统申请取消长时任务成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(error: BusinessError, data: void) {
+  if (error && error.code !== 0) {
+    console.error(`Operation failed error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`Operation succeeded, data: ${data}`);
+  }
+}
+
+particleAbility.cancelBackgroundRunning(callback);
+```
 
 
 ## cancelBackgroundRunning
@@ -51,6 +68,19 @@ function cancelBackgroundRunning(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+particleAbility.cancelBackgroundRunning().then(() => {
+  console.info('Operation succeeded');
+}).catch((err: BusinessError) => {
+  console.error(`Operation failed cause: ${JSON.stringify(err)}`);
+});
+```

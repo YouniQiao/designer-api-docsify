@@ -9,7 +9,6 @@ Configures the timing for performance tracing, in ms.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## dnsTiming

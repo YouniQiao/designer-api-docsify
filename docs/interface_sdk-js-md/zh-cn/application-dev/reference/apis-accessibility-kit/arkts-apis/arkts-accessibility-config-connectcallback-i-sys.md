@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from 'kits/@kit.AccessibilityKit';
+import config from '@kit.AccessibilityKit';
 ```
 
 ## onDisconnect

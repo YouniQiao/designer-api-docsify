@@ -14,8 +14,8 @@ declare type ImageSmoothingQuality = "high" | "low" | "medium"
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| "high" |
-| "low" |
-| "medium" |
+| 类型 | 说明 |
+| --- | --- |
+| "high" | 高画质 |
+| "low" | 低画质 |
+| "medium" | 中画质 |

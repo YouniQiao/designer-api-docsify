@@ -5,9 +5,9 @@
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 |
-| --- |
-| [NotificationSubscribeInfo(Sets filter criteria of publishers for subscribing to desired notifications)](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) |
-| [PictureOptions(Sets filter criteria of publishers for subscribing to desired notifications)](arkts-notification-notificationsubscribeinfo-pictureoptions-i-sys.md) |
-| [VoiceContentOptions(Sets filter criteria of publishers for subscribing to desired notifications)](arkts-notification-notificationsubscribeinfo-voicecontentoptions-i-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [NotificationSubscribeInfo(Sets filter criteria of publishers for subscribing to desired notifications)](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | 通知发布者的信息。 |
+| [PictureOptions(Sets filter criteria of publishers for subscribing to desired notifications)](arkts-notification-notificationsubscribeinfo-pictureoptions-i-sys.md) | 实况通知图片配置项。 |
+| [VoiceContentOptions(Sets filter criteria of publishers for subscribing to desired notifications)](arkts-notification-notificationsubscribeinfo-voicecontentoptions-i-sys.md) | 通知语音播报配置项。 |
 <!--DelEnd-->

@@ -7,10 +7,10 @@ type LocalesArgument = UnicodeBCP47LocaleIdentifier | Locale | readonly (Unicode
 The locale(s) to use  
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [UnicodeBCP47LocaleIdentifier](arkts-intl-unicodebcp47localeidentifier-t.md) |
-| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) |
-| readonly (UnicodeBCP47LocaleIdentifier |
-| Locale)[] |
-| undefined |
+| Type | Description |
+| --- | --- |
+| [UnicodeBCP47LocaleIdentifier](arkts-intl-unicodebcp47localeidentifier-t.md) |  |
+| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) |  |
+| readonly (UnicodeBCP47LocaleIdentifier |  |
+| Locale)[] |  |
+| undefined |  |

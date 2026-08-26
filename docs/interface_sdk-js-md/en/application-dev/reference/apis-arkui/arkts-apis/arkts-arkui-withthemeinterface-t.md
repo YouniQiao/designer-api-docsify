@@ -16,12 +16,12 @@ Define the function of WithThemeInterface.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WithThemeAttribute](arkts-arkui-withthemeattribute-c.md) |
+| Type | Description |
+| --- | --- |
+| [WithThemeAttribute](arkts-arkui-withthemeattribute-c.md) | withThemeAttribute object |

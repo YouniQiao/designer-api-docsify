@@ -24,9 +24,19 @@ getDsfId(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | NfcV 标签的数据存储格式标识符，十六进制表示，范围是0x00~0xFF。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 nfcV
+let dsfId : number = nfcV.getDsfId();
+console.info("nfcV dsfId: " + dsfId);
+```
 
 ## getResponseFlags
 
@@ -44,6 +54,16 @@ getResponseFlags(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | NfcV 标签的响应标志，十六进制表示，范围是0x00~0xFF。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 nfcV
+let responseFlags : number = nfcV.getResponseFlags();
+console.info("nfcV responseFlags: " + responseFlags);
+```

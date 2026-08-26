@@ -9,7 +9,7 @@ Class to be override for external crypto extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from 'kits/@kit.UniversalKeystoreKit';
+import CryptoExtensionAbility, { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from '@kit.UniversalKeystoreKit';
 ```
 
 ## onAuthUkeyPin
@@ -27,16 +27,35 @@ Callback to be called to verify PIN of the provider handle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handle | string | Yes |
-| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handle | string | Yes | handle indicates the handle opened by onOpenResource. |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huksExternalCrypto, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam>): Promise<HuksCryptoExtensionResult> {
+    // Perform PIN authentication and maintain the PIN authentication state of the application.
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0,
+      authState: 1
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onClearUkeyPinAuthState
 
@@ -53,16 +72,33 @@ Callback to clear the PIN auth state of the provider handle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handle | string | Yes |
-| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handle | string | Yes | handle indicates the handle opened by onOpenResource. |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huksExternalCrypto, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam>): Promise<HuksCryptoExtensionResult> {
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onCloseResource
 
@@ -79,16 +115,34 @@ Callback to be called to close the resource handle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handle | string | Yes |
-| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handle | string | Yes | handle indicates the handle opened by onOpenResource. |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huksExternalCrypto, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam>): Promise<HuksCryptoExtensionResult> {
+    // Close the handle. If the underlying handle needs to be closed, close it.
+    const result: HuksCryptoExtensionResult = {
+        resultCode: 0,
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onEnumCertificates
 
@@ -105,15 +159,35 @@ Callback to list all certificates of the provider.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | No | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huksExternalCrypto, CryptoExtensionAbility, HuksCryptoExtensionResult,
+  HuksCryptoExtensionCertInfo } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam>): Promise<HuksCryptoExtensionResult> {
+    const certInfoSetArray: Array<HuksCryptoExtensionCertInfo> = []
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0,
+      certs: certInfoSetArray
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onExportCertificate
 
@@ -130,16 +204,36 @@ Callback to export certificates specified by the resource id.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| resourceId | string | Yes |
-| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resourceId | string | Yes | resourceId indicates the resource id of the extension. |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | No | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huksExternalCrypto, CryptoExtensionAbility, HuksCryptoExtensionResult,
+  HuksCryptoExtensionCertInfo } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksExternalCryptoParam>): Promise<HuksCryptoExtensionResult> {
+    const certInfoSetArray: Array<HuksCryptoExtensionCertInfo> = []
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0,
+      certs: certInfoSetArray
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onExportKeyItem
 
@@ -157,16 +251,44 @@ Callback to export the public key specified by the resource handle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handle | string | Yes |
-| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handle | string | Yes | Indicates the resource handle of the key to be exported. |
+| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | Indicates the needed properties of the export public key operation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. If the function execution fails, the extension needs to set the detailed error information in HuksCryptoExtensionResult.errInfo. HuksCryptoExtensionResult.resultCode may have the following values. 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huks, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onExportKeyItem(handle: string, params: huks.HuksParam[]): Promise<HuksCryptoExtensionResult> {
+    // Parse the optional parameters. It is recommended that the key purpose be passed.
+    let purpose: huks.HuksKeyPurpose | undefined = params.find(
+      param => param.tag === huks.HuksTag.HUKS_TAG_PURPOSE)?.value as huks.HuksKeyPurpose;
+
+    // If the purpose parameter is not passed, set the default value. (The default signing purpose is recommended.)
+    if (purpose === undefined) {
+      purpose = huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN;
+    }
+
+    let pubKey: Uint8Array = new Uint8Array(1024);
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0,
+      outData: pubKey
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onFinishSession
 
@@ -183,16 +305,35 @@ Callback to do the finish operation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| initHandle | string | Yes |
-| params | huks.HuksOptions \| [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| initHandle | string | Yes | initHandle indicates the handle returned by onInitSession. |
+| params | huks.HuksOptions \| [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md) | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huks, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onFinishSession(initHandle: string, params: huks.HuksOptions): Promise<HuksCryptoExtensionResult> {
+    let outBuffer: Uint8Array = new Uint8Array(1024);
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0,
+      outData: outBuffer
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onGenerateKeyItem
 
@@ -210,16 +351,52 @@ Callback to generate a key pair specified by the resource handle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handle | string | Yes |
-| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handle | string | Yes | Indicates the resource handle of the key to be generated. |
+| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | Indicates the properties of the key generation operation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huks, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onGenerateKeyItem(handle: string, params: huks.HuksParam[]): Promise<HuksCryptoExtensionResult> {
+    // Parse optional parameters.
+    let algorithm: huks.HuksKeyAlg | undefined = params.find(
+      param => param.tag === huks.HuksTag.HUKS_TAG_ALGORITHM)?.value as huks.HuksKeyAlg;
+    let keySize: huks.HuksKeySize | undefined = params.find(
+      param => param.tag === huks.HuksTag.HUKS_TAG_KEY_SIZE)?.value as huks.HuksKeySize;
+    let purpose: huks.HuksKeyPurpose | undefined = params.find(
+      param => param.tag === huks.HuksTag.HUKS_TAG_PURPOSE)?.value as huks.HuksKeyPurpose;
+
+    // If there is no input parameter, set the default value.
+    if (algorithm === undefined) {
+      algorithm = huks.HuksKeyAlg.HUKS_ALG_RSA; // RSA is used by default.
+    }
+    if (keySize === undefined) {
+      keySize = huks.HuksKeySize.HUKS_RSA_KEY_SIZE_2048; // The default value is 2048 bits.
+    }
+    if (purpose === undefined) {
+      purpose = huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN; // The default purpose is signing.
+    }
+
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onGetProperty
 
@@ -236,17 +413,37 @@ Callback to be called to do general get operations of the provider.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handle | string | Yes |
-| propertyId | string | Yes |
-| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handle | string | Yes | handle indicates the handle opened by onOpenResource. |
+| propertyId | string | Yes | propertyId indicates the name of the property function to be operated as defined in GMT 0016-2023. |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huksExternalCrypto, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam>): Promise<HuksCryptoExtensionResult> {
+    // Execute the related function based on propertyId. The function parameters are obtained from params. The output data is encapsulated in the property field of the return value and carried by HUKS_EXT_CRYPTO_TAG_EXTRA_DATA.
+    const emptyArray: Array<huksExternalCrypto.HuksExternalCryptoParam> = [];
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0,
+      property: emptyArray
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onGetResourceId
 
@@ -264,15 +461,33 @@ Callback to get the resource ID of the crypto extension.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | Indicates the needed properties of the get resource ID operation. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. If the function execution fails, the extension needs to set the detailed error information in HuksCryptoExtensionResult.errInfo. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huksExternalCrypto, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onGetResourceId(params: huksExternalCrypto.HuksExternalCryptoParam[]): Promise<HuksCryptoExtensionResult> {
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0,
+      resourceId: "test resourceId"
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onGetUkeyPinAuthState
 
@@ -289,16 +504,35 @@ Callback to get the PIN auth state of the provider handle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handle | string | Yes |
-| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handle | string | Yes | handle indicates the handle opened by onOpenResource. |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huksExternalCrypto, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam>): Promise<HuksCryptoExtensionResult> {
+    // Query the PIN authentication state.
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0,
+      authState: 1
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onImportCertificate
 
@@ -317,17 +551,36 @@ Callback to import a certificate specified by the resource handle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handle | string | Yes |
-| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
-| [certInfo](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-cmresult-i.md) | [HuksCryptoExtensionCertInfo](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensioncertinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handle | string | Yes | Indicates the import certificate's resource handle. |
+| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | Indicates the needed properties for the import certificate operation. |
+| certInfo | [HuksCryptoExtensionCertInfo](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensioncertinfo-i.md) | Yes | Indicates the certificate information to be imported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. If the function execution fails, the extension needs to set the detailed error information in HuksCryptoExtensionResult.errInfo. HuksCryptoExtensionResult.resultCode may have the following values. 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huksExternalCrypto, CryptoExtensionAbility, HuksCryptoExtensionResult,
+  HuksCryptoExtensionCertInfo } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onImportCertificate(handle: string, params: huksExternalCrypto.HuksExternalCryptoParam[],
+      certInfo: HuksCryptoExtensionCertInfo): Promise<HuksCryptoExtensionResult> {
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onImportWrappedKeyItem
 
@@ -346,18 +599,55 @@ Callback to import the wrapped key pair specified by the resource handle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handle | string | Yes |
-| wrappingHandle | string | Yes |
-| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
-| [wrappedKey](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-kemencapresult-i.md) | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handle | string | Yes | Indicates the resource handle of the wrapped key to be imported. |
+| wrappingHandle | string | Yes | Indicates the resource handle of the key used to unwrap the imported key. |
+| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | Indicates the needed properties for the import wrapped key operation. |
+| wrappedKey | Uint8Array | Yes | Indicates the wrapped key data, which format is defined by the crypto extension. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. If the function execution fails, the extension needs to set the detailed error information in HuksCryptoExtensionResult.errInfo. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huks, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onImportWrappedKeyItem(handle: string, wrappedHandle: string, params: huks.HuksParam[],
+      wrappedKey: Uint8Array): Promise<HuksCryptoExtensionResult> {
+    // Parse optional parameters.
+    let algorithm: huks.HuksKeyAlg | undefined = params.find(
+      param => param.tag === huks.HuksTag.HUKS_TAG_ALGORITHM)?.value as huks.HuksKeyAlg;
+    let keySize: huks.HuksKeySize | undefined = params.find(
+      param => param.tag === huks.HuksTag.HUKS_TAG_KEY_SIZE)?.value as huks.HuksKeySize;
+    let purpose: huks.HuksKeyPurpose | undefined = params.find(
+      param => param.tag === huks.HuksTag.HUKS_TAG_PURPOSE)?.value as huks.HuksKeyPurpose;
+
+    // If there is no input parameter, set the default value.
+    if (algorithm === undefined) {
+      algorithm = huks.HuksKeyAlg.HUKS_ALG_RSA;
+    }
+    if (keySize === undefined) {
+      keySize = huks.HuksKeySize.HUKS_RSA_KEY_SIZE_2048;
+    }
+    if (purpose === undefined) {
+      purpose = huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT;
+    }
+
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onInitSession
 
@@ -374,16 +664,34 @@ Callback to do the initialize operation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handle | string | Yes |
-| params | huks.HuksOptions \| [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handle | string | Yes | handle indicates the handle opened by onOpenResource. |
+| params | huks.HuksOptions \| [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md) | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huks, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onInitSession(handle: string, params: huks.HuksOptions): Promise<HuksCryptoExtensionResult> {
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0,
+      handle: "test handle"
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onOpenResource
 
@@ -400,16 +708,35 @@ Callback to be called to open the resource handle before crypto operations. NOTE
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| resourceId | string | Yes |
-| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resourceId | string | Yes | resourceId indicates the resource id of the provider. |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huksExternalCrypto, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam>): Promise<HuksCryptoExtensionResult> {
+    // Parse resourceId, open the underlying handle, and map it to a new handle for return.
+    let result: HuksCryptoExtensionResult = {
+      resultCode: 0,
+      handle: "test handle"
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onSetProperty
 
@@ -428,17 +755,35 @@ Callback to perform set operations of the provider.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handle | string | Yes |
-| propertyId | string | Yes |
-| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handle | string | Yes | Indicates the resource handle for the set operation. |
+| propertyId | string | Yes | Indicates the ID of the property needed to set. Currently supports part of the method names defined in GMT 0016-2023 and self-defined methods. |
+| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | Indicates the operation parameters. This parameter contains parameters related to the property ID needed to set. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huksExternalCrypto, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onSetProperty(handle: string, propertyId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam>): Promise<HuksCryptoExtensionResult> {
+    // Perform related setting operations based on propertyId. The operation parameters are obtained from params.
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```
 
 ## onUpdateSession
 
@@ -455,13 +800,32 @@ Callback to do update operation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| initHandle | string | Yes |
-| params | huks.HuksOptions \| [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| initHandle | string | Yes | initHandle indicates the handle returned by onInitSession. |
+| params | huks.HuksOptions \| [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md) | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: |
+
+**Examples**
+
+```TypeScript
+import { huks, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+
+export default class CryptoExtension extends CryptoExtensionAbility {
+  onUpdateSession(initHandle: string, params: huks.HuksOptions): Promise<HuksCryptoExtensionResult> {
+    let outBuffer: Uint8Array = new Uint8Array(1024);
+    const result: HuksCryptoExtensionResult = {
+      resultCode: 0,
+      outData: outBuffer
+    };
+
+    // ...
+    return Promise.resolve(result);
+  }
+}
+```

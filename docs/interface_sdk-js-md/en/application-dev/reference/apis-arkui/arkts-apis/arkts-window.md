@@ -18,26 +18,28 @@ The Window module provides basic window management capabilities, such as creatin
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import floatingBall from '@kit.ArkUI.floatingBall';
+import floatView from '@kit.ArkUI.floatView';
+import window from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Namespaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [window](arkts-arkui-window-n.md) |
+| Name | Description |
+| --- | --- |
+| [window](arkts-arkui-window-n.md) | Window manager. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Callback](arkts-arkui-window-callback-i.md) |
+| Name | Description |
+| --- | --- |
+| [Callback](arkts-arkui-window-callback-i.md) | Defines the window callback. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [WindowAnimationCurveParam](arkts-arkui-windowanimationcurveparam-t.md) |
-| [WindowEventListener](arkts-arkui-windoweventlistener-t.md) |
+| Name | Description |
+| --- | --- |
+| [WindowAnimationCurveParam](arkts-arkui-windowanimationcurveparam-t.md) | Defines the window animation curve param. |
+| [WindowEventListener](arkts-arkui-windoweventlistener-t.md) | Callback function for window event |

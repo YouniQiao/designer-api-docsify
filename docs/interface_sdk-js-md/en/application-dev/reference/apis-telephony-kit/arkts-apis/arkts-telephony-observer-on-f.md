@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## on('networkStateChange')
@@ -23,21 +22,29 @@ Registers an observer for network status change events. This API uses an asynchr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'networkStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'networkStateChange' | Yes | Network status change event. This field has a fixed value of **networkStateChange**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | Yes | Callback used to return the network status object. For details, see [NetworkState](arkts-telephony-radio-networkstate-i.md). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+observer.on('networkStateChange', (data: observer.NetworkState) => {
+    console.info("on networkStateChange, data:" + JSON.stringify(data));
+});
+```
 
 
 ## on('networkStateChange')
@@ -57,22 +64,33 @@ Registers an observer for network status change events of the SIM card in the sp
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'networkStateChange' | Yes |
-| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'networkStateChange' | Yes | Network status change event. This field has a fixed value of **networkStateChange**. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | Yes | Callback used to return the network status object. For details, see [NetworkState](arkts-telephony-radio-networkstate-i.md). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+let options: observer.ObserverOptions = {
+    slotId: 0
+}
+observer.on('networkStateChange', options, (data: observer.NetworkState) => {
+    console.info("on networkStateChange, data:" + JSON.stringify(data));
+});
+```
 
 
 ## on('signalInfoChange')
@@ -89,20 +107,30 @@ Registers an observer for signal status change events. This API uses an asynchro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'signalInfoChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'signalInfoChange' | Yes | Signal status change event. This field has a fixed value of **signalInfoChange**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Callback used to return the signal strength object. For details, see [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+import { radio } from '@kit.TelephonyKit';
+
+observer.on('signalInfoChange', (data: Array<radio.SignalInformation>) => {
+    console.info("on signalInfoChange, data:" + JSON.stringify(data));
+});
+```
 
 
 ## on('signalInfoChange')
@@ -119,21 +147,34 @@ Registers an observer for signal status change events of the SIM card in the spe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'signalInfoChange' | Yes |
-| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'signalInfoChange' | Yes | Signal status change event. This field has a fixed value of **signalInfoChange**. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Callback used to return the signal strength object. For details, see [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+import { radio } from '@kit.TelephonyKit';
+
+let options: observer.ObserverOptions = {
+    slotId: 0
+}
+observer.on('signalInfoChange', options, (data: Array<radio.SignalInformation>) => {
+    console.info("on signalInfoChange, data:" + JSON.stringify(data));
+});
+```
 
 
 ## on('cellularDataConnectionStateChange')
@@ -150,20 +191,28 @@ Registers an observer for connection status change events of the cellular data l
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'cellularDataConnectionStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'cellularDataConnectionStateChange' | Yes | Cellular data connection status event. This field has a fixed value of **cellularDataConnectionStateChange**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes | Callback function used to return the cellular data connection status information object. For details, see [DataConnectState](arkts-telephony-data-dataconnectstate-e.md) of **data** and [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md) of **radio**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+observer.on('cellularDataConnectionStateChange', (data: observer.DataConnectionStateInfo) => {
+    console.info("on cellularDataConnectionStateChange, data:" + JSON.stringify(data));
+});
+```
 
 
 ## on('cellularDataConnectionStateChange')
@@ -181,21 +230,32 @@ Registers an observer for connection status change events of the cellular data l
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'cellularDataConnectionStateChange' | Yes |
-| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'cellularDataConnectionStateChange' | Yes | Cellular data connection status event. This field has a fixed value of **cellularDataConnectionStateChange**. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes | Callback function used to return the cellular data connection status information object. For details, see [DataConnectState](arkts-telephony-data-dataconnectstate-e.md) of **data** and [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md) of **radio**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+let options: observer.ObserverOptions = {
+    slotId: 0
+}
+observer.on('cellularDataConnectionStateChange', options, (data: observer.DataConnectionStateInfo) => {
+    console.info("on cellularDataConnectionStateChange, data:" + JSON.stringify(data));
+});
+```
 
 
 ## on('cellularDataFlowChange')
@@ -212,20 +272,30 @@ Registers an observer for the uplink and downlink data flow status change events
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'cellularDataFlowChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'cellularDataFlowChange' | Yes | Cellular data flow change event. This field has a fixed value of **cellularDataFlowChange**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | Yes | Callback function used to return the data flow status object. For details, see [DataFlowType](arkts-telephony-data-dataflowtype-e.md) in **data**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+
+observer.on('cellularDataFlowChange', (data: data.DataFlowType) => {
+    console.info("on cellularDataFlowChange, data:" + JSON.stringify(data));
+});
+```
 
 
 ## on('cellularDataFlowChange')
@@ -242,21 +312,34 @@ Registers an observer for the uplink and downlink data flow status change events
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'cellularDataFlowChange' | Yes |
-| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'cellularDataFlowChange' | Yes | Cellular data flow change event. This field has a fixed value of **cellularDataFlowChange**. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | Yes | Callback function used to return the data flow status object. For details, see [DataFlowType](arkts-telephony-data-dataflowtype-e.md) in **data**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+
+let options: observer.ObserverOptions = {
+    slotId: 0
+}
+observer.on('cellularDataFlowChange', options, (data: data.DataFlowType) => {
+    console.info("on cellularDataFlowChange, data:" + JSON.stringify(data));
+});
+```
 
 
 ## on('callStateChange')
@@ -273,20 +356,28 @@ Registers an observer for call status change events. This API uses an asynchrono
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'callStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'callStateChange' | Yes | Call status change event. This field has a fixed value of **callStateChange**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes | Callback function used to return the result, which is the **CallStateInfo** object. In this object:    - Only **state** is accessible to third-party applications. - **number** is only accessible to system applications. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+observer.on('callStateChange', (data: observer.CallStateInfo) => {
+    console.info("on callStateChange, data:" + JSON.stringify(data));
+});
+```
 
 
 ## on('callStateChange')
@@ -303,21 +394,32 @@ Registers an observer for call status change events. This API uses an asynchrono
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'callStateChange' | Yes |
-| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'callStateChange' | Yes | Call status change event. This field has a fixed value of **callStateChange**. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes | Callback function used to return the call status information object. The application can obtain the **CallStateInfo** object. In this object:    - Only **state** is accessible to third-party applications. - **number** is only accessible to system applications. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+let options: observer.ObserverOptions = {
+    slotId: 0
+}
+observer.on('callStateChange', options, (data: observer.CallStateInfo) => {
+    console.info("on callStateChange, data:" + JSON.stringify(data));
+});
+```
 
 
 ## on('callStateChangeEx')
@@ -334,20 +436,36 @@ Registers an observer for extended call status change events. This API uses an a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'callStateChangeEx' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | Yes |
-| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'callStateChangeEx' | Yes | Extended call status change event. This field has a fixed value of **callStateChangeEx**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | Yes | Callback function used to return the call status information object. The application can obtain **TelCallState**. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | No | Event subscription parameters. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [8800001](../errorcode-telephony.md#8800001-input-parameter-value-out-of-range) |
-| [8800002](../errorcode-telephony.md#8800002-service-connection-error) |
-| [8800003](../errorcode-telephony.md#8800003-system-internal-error) |
-| [8800999](../errorcode-telephony.md#8800999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [8800001](../errorcode-telephony.md#8800001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8800002](../errorcode-telephony.md#8800002-service-connection-error) | Service connection failed. |
+| [8800003](../errorcode-telephony.md#8800003-system-internal-error) | System internal error. |
+| [8800999](../errorcode-telephony.md#8800999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+import { call } from '@kit.TelephonyKit';
+
+let callback: (data: call.TelCallState) => void = (data: call.TelCallState) => {
+    console.info("on callStateChangeEx, data:" + JSON.stringify(data));
+}
+let options: observer.ObserverOptions = {
+    slotId: 0
+}
+
+observer.on('callStateChangeEx', callback, options);
+observer.on('callStateChangeEx', callback);
+```
 
 
 ## on('simStateChange')
@@ -358,7 +476,8 @@ function on(type: 'simStateChange', callback: Callback<SimStateData>): void
 
 Registers an observer for SIM card status change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The return result of this API does not contain the activation status of the SIM card. For details, see
 > [sim.isSimActive](arkts-telephony-sim-issimactive-f.md).
 
@@ -368,20 +487,28 @@ Registers an observer for SIM card status change events. This API uses an asynch
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'simStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'simStateChange' | Yes | SIM status change event. This field has a fixed value of **simStateChange**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | Yes | Callback function used to return the SIM status data object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+observer.on('simStateChange', (data: observer.SimStateData) => {
+    console.info("on simStateChange, data:" + JSON.stringify(data));
+});
+```
 
 
 ## on('simStateChange')
@@ -398,21 +525,32 @@ Registers an observer for status change events of the SIM card in the specified 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'simStateChange' | Yes |
-| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'simStateChange' | Yes | SIM status change event. This field has a fixed value of **simStateChange**. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | Yes | Callback function used to return the SIM status data object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+let options: observer.ObserverOptions = {
+    slotId: 0
+}
+observer.on('simStateChange', options, (data: observer.SimStateData) => {
+    console.info("on simStateChange, data:" + JSON.stringify(data));
+});
+```
 
 
 ## on('iccAccountInfoChange')
@@ -429,17 +567,25 @@ Registers an observer for account information change events of the SIM card. Thi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'iccAccountInfoChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'iccAccountInfoChange' | Yes | Account information change event. This field has a fixed value of **iccAccountInfoChange**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the account is successfully changed, the value of **err** is **undefined**. Otherwise, the value is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+observer.on('iccAccountInfoChange', () => {
+    console.info("on iccAccountInfoChange success");
+});
+```

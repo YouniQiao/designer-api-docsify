@@ -11,7 +11,6 @@ ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposureq
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getExposure
@@ -30,17 +29,30 @@ Obtains the manual exposure duration in use.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | The current exposure value, in units of ms |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+function getExposure(nightPhotoSession: camera.NightPhotoSession): number | undefined {
+  let exposureRange: Array<number> = nightPhotoSession.getSupportedExposureRange();
+  if (exposureRange === undefined || exposureRange.length <= 0) {
+    return undefined;
+  }
+  let exposure: number = nightPhotoSession.getExposure();
+  return exposure;
+}
+```
 
 ## setExposure
 
@@ -58,14 +70,14 @@ Sets the manual exposure duration. Before using this API, call [getSupportedExpo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [exposure](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| exposure | number | 是 | Manual exposure duration, which must be one of the supported durations obtained by running [getSupportedExposureRange](arkts-camera-camera-manualexposurequery-i-sys.md#getsupportedexposurerange). |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |

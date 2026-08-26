@@ -2,7 +2,8 @@
 
 Defines the configuration policy for the high CPU usage event.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After this API is called, the setting is persisted. If this API is called again and the corresponding parameter
 > is not set, the value used by the system last time is used.
 
@@ -13,7 +14,6 @@ Defines the configuration policy for the high CPU usage event.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## backgroundLoadThreshold

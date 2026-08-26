@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## getInspectorNodes
@@ -25,6 +26,6 @@ Get inspector node infos.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| object |
+| Type | Description |
+| --- | --- |
+| object |  |

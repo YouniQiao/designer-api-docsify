@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
+import storageStatistics from '@kit.CoreFileKit';
 ```
 
 ## getSystemDataSize
@@ -26,15 +26,28 @@ Get the system data size.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | return Promise (Unit: Byte) |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| 13600001 |
-| 13600018 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| 13600001 | IPC error. |
+| 13600018 | Failed to query the system data size. |
+
+**Examples**
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+storageStatistics.getSystemDataSize().then((systemDataSize: number) => {
+  console.info("getSystemDataSize successfully: " + JSON.stringify(systemDataSize));
+}).catch((err: BusinessError) => {
+  console.error(`getSystemDataSize failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```

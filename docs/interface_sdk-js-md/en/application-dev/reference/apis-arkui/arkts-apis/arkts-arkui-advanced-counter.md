@@ -3,30 +3,31 @@
 ## Modules to Import
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUIV2';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md) |
-| [CounterOptions](arkts-arkui-arkui-advanced-counter-counteroptions-c.md) |
-| [DateData](arkts-arkui-arkui-advanced-counter-datedata-c.md) |
-| [DateStyleOptions](arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md) |
-| [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md) |
-| [NumberStyleOptions](arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md) |
+| Name | Description |
+| --- | --- |
+| [CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md) | Defines the common options. |
+| [CounterOptions](arkts-arkui-arkui-advanced-counter-counteroptions-c.md) | Defines the counter options. |
+| [DateData](arkts-arkui-arkui-advanced-counter-datedata-c.md) | Defines the date data. |
+| [DateStyleOptions](arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md) | Defines the date style options. |
+| [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md) | Defines the inline style options. |
+| [NumberStyleOptions](arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md) | Defines the number style options. |
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CounterComponent](arkts-arkui-arkui-advanced-counter-countercomponent-s.md) |
+| Name | Description |
+| --- | --- |
+| [CounterComponent](arkts-arkui-arkui-advanced-counter-countercomponent-s.md) | Defines Counter Component. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md) |
+| Name | Description |
+| --- | --- |
+| [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md) | Enum for the counter type. |

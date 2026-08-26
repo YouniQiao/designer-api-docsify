@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import curves from '@kit.ArkUI';
 ```
 
 ## cubicBezierCurve
@@ -22,15 +22,22 @@ Creates a cubic Bezier curve, with x-coordinates automatically normalized betwee
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x1 | number | Yes |
-| y1 | number | Yes |
-| x2 | number | Yes |
-| y2 | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x1 | number | Yes | X coordinate of the first point on the Bezier curve.Value range: [0, 1]   **NOTE：**A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. |
+| y1 | number | Yes | Y coordinate of the first point on the Bezier curve.Value range: (-∞, +∞) |
+| x2 | number | Yes | X coordinate of the second point on the Bezier curve.Value range: [0, 1]   **NOTE：**A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. |
+| y2 | number | Yes | Y coordinate of the second point on the Bezier curve.Value range: (-∞, +∞) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |
+| Type | Description |
+| --- | --- |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | Interpolation curve. |
+
+**Examples**
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+curves.cubicBezierCurve(0.1, 0.0, 0.1, 1.0); // Create a cubic Bézier curve.
+```

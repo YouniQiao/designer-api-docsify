@@ -24,3 +24,12 @@ Updates the driver state. This interface is reserved and does not provide specif
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
+
+**Examples**
+
+```TypeScript
+// The current code implementation depends on the code implementation in the previous section.
+if (context != null) {
+  context.updateDriverState();
+}
+```

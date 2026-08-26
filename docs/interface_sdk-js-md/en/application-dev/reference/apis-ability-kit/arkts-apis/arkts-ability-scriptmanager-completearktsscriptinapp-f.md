@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from 'kits/@kit.AbilityKit';
+import scriptManager from '@kit.AbilityKit';
 ```
 
 ## completeArkTSScriptInApp
@@ -24,22 +24,22 @@ complete arkTS script for in-app skills.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes |
-| requestCode | string | Yes |
-| result | [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [Context](arkts-ability-context-c.md) | Yes | Ability context, Used for temporary file authorization. |
+| requestCode | string | Yes | Identifying the current operation. It is from ArkTSScriptInfo.requestCode. |
+| result | [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) | Yes | The result of arkTS script execution. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | The promise returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [16000020](../errorcode-ability.md#16000020-context-is-not-an-ability-level-context) |
-| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000020](../errorcode-ability.md#16000020-context-is-not-an-ability-level-context) | The context is not ability context. |
+| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |

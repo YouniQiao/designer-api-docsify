@@ -9,7 +9,6 @@ POI信息结构体。
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## poiArray

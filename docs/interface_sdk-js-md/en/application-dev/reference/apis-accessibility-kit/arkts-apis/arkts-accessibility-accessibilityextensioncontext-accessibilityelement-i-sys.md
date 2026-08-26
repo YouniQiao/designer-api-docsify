@@ -22,17 +22,62 @@ Enables or disables the screen curtain. When the screen curtain is enabled, the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [isEnable](#isenable) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isEnable | boolean | Yes | Whether to enable the screen curtain. The value `true` means to enable the screen curtain, and `false` means to disable it. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
+
+**Examples**
+
+```TypeScript
+import {
+  AccessibilityElement,
+  AccessibilityEvent, 
+  AccessibilityExtensionContext
+} from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class AccessibilityManager {
+  private static instance: AccessibilityManager;
+  context?: AccessibilityExtensionContext;
+
+  static getInstance(): AccessibilityManager {
+    if (!AccessibilityManager.instance) {
+      AccessibilityManager.instance = new AccessibilityManager();
+    }
+    return AccessibilityManager.instance;
+  }
+
+  onStart(context: AccessibilityExtensionContext) {
+    this.context = context;
+  }
+
+  onStop() {
+    this.context = undefined;
+  }
+
+  onEvent(accessibilityEvent: AccessibilityEvent): void {
+    if (!this.context) {
+      console.error('context is not available!');
+      return;
+    }
+    this.context.getRootInActiveWindow().then((rootElement: AccessibilityElement) => {
+      console.info(`succeeded in getting root element of the window, ${JSON.stringify(rootElement)}`);
+      rootElement.enableScreenCurtain(true);
+      console.info(`Succeeded in enabling screen curtain`);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to enable screen curtain. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+}
+```
 
 ## executeAction
 
@@ -52,24 +97,80 @@ Performs an action on an accessibility node element based on the action type and
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| action | [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | Yes |
-| parameters | [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| action | [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | Yes | Action that can be performed on the accessibility node. |
+| parameters | [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | No | Parameter value set when performing the action. This parameter is passed when performing actions that require additional parameter configuration (such as SET_SELECTION, SET_CURSOR_POSITION, etc.); it is not required when performing parameterless actions (such as CLICK, etc.). Defaults to empty if not passed. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
+
+**Examples**
+
+Action without parameters.
+
+```TypeScript
+// Example of parameterless Action:
+import { AccessibilityAction } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement, which must be obtained through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+// Actions without explicit requirements in the description are all parameterless Actions.
+rootElement.executeAction(AccessibilityAction.CLICK).then(() => {
+  console.info(`succeeded in performing action CLICK`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action CLICK. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
+Action with parameters (setSelection).
+
+```TypeScript
+// Example of parameterized Action:
+import { AccessibilityAction, Parameter } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// selectTextBegin: start position of the selection.
+// selectTextEnd: end position of the selection.
+// selectTextInForWard: true indicates the front cursor, and false indicates the rear cursor.
+let parameter : Parameter = { selectTextBegin: '0', selectTextEnd: '8', selectTextInForWard: true };
+// rootElement is an instance of AccessibilityElement, which must be obtained through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+// Example code for setSelection.
+rootElement.executeAction(AccessibilityAction.SET_SELECTION, parameter).then(() => {
+  console.info(`succeeded in performing action SET_SELECTION`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action SET_SELECTION. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
+Action with parameters (setCursorPosition).
+
+```TypeScript
+// Example with parameter Action:
+import { AccessibilityAction, Parameter } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// offset: indicates the cursor position to set.
+let parameter : Parameter = { offset: '1' };
+// rootElement is an instance of AccessibilityElement, which must be obtained through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+// Example code for setCursorPosition.
+rootElement.executeAction(AccessibilityAction.SET_CURSOR_POSITION, parameter).then(() => {
+  console.info(`succeeded in performing action SET_CURSOR_POSITION`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action SET_CURSOR_POSITION. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
 
 ## findElement('textType')
 
@@ -87,22 +188,39 @@ Searches for all node elements based on the accessibility text type configured i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [type](#type) | 'textType' | Yes |
-| condition | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'textType' | Yes | Fixed to 'textType', indicating that elements are searched by text type. |
+| condition | string | Yes | Accessibility text type condition for the search. All node elements whose accessibilityTextHint attribute matches this text type will be returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return all node elements that match the specified accessibility text type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// The content of condition must be consistent with the type field value of the target component's accessibilityTextHint attribute.
+let condition = 'location'; 
+
+// rootElement is an instance of AccessibilityElement. Obtain it through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+rootElement.findElement('textType', condition).then((data: AccessibilityElement[]) => {
+  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElement('elementId')
 
@@ -120,22 +238,39 @@ Queries the node element in the current active window based on the element ID. T
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [type](#type) | 'elementId' | Yes |
-| condition | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'elementId' | Yes | Fixed value **'elementId'**, indicating that the node element in the current active window is queried by element ID. |
+| condition | number | Yes | Element ID of the node element to query. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result, which is the node element that meets the specified query condition. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// elementId is 10.
+let condition = 10;
+
+// rootElement is an instance of AccessibilityElement, which must be obtained through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+rootElement.findElement('elementId', condition).then((data: AccessibilityElement) => {
+  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementByContent
 
@@ -155,23 +290,52 @@ Searches for node elements by their content text, and returns all node elements 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| condition | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| condition | string | Yes | Content text of the element to find. After this parameter is set, all node elements that contain this text content are returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the result. The value is a list of elements that contain the specified content. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+
+**Examples**
+
+```TypeScript
+// Page.ets
+  build() {
+    Text('Connect')
+        .id('connect')
+        .fontSize($r('app.float.page_text_font_size'))
+        .fontWeight(FontWeight.Bold)
+// ...
+
+// AccessibilityExtAbility.ets
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowId: number = 10;
+
+// axContext is an instance of AccessibilityExtensionContext, obtained through the context property of an AccessibilityExtensionAbility subclass instance. For details, see the usage instructions.
+axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
+    root.findElementByContent('connect').then((elements: AccessibilityElement[]) => {
+        console.info('findElementByContent size=' + elements.length);
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to find element by content. Code: ${err.code}, message: ${err.message}`);
+    });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get root in active window. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementByFocusDirection
 
@@ -191,23 +355,55 @@ Searches for an element based on the focus direction. This API uses a promise to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Focus direction, which specifies the search direction for finding elements. For example, 'forward' indicates forward search and 'backward' indicates backward search. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result. The element in the specified focus direction. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+
+**Examples**
+
+```TypeScript
+// Page.ets
+// Click TextInput to make it the accessibility focus element. The next focus element in the upward direction is Text#connect.
+  build() {
+    Text('Connect')
+        .id('connect')
+        .fontSize($r('app.float.page_text_font_size'))
+        .fontWeight(FontWeight.Bold)
+
+    TextInput({ placeholder: 'please input...' })
+        .id('text_input')
+        .fontSize($r('app.float.page_text_font_size'))
+// ...
+
+// AccessibilityExtAbility.ets
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext is an instance of AccessibilityExtensionContext, which must be obtained through the context property of an AccessibilityExtensionAbility subclass instance. For details, see the usage instructions.
+axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
+    focus.findElementByFocusDirection('up').then((element: AccessibilityElement) => {
+        console.info('findElementByFocusDirection UP componentId: ' + element.componentId);
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to find element by focus direction. Code: ${err.code}, message: ${err.message}`);
+    });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementByFocusDirection
 
@@ -229,24 +425,77 @@ Searches for an element based on the focus direction and focus rule type. This A
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes |
-| [type](#type) | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Focus direction. |
+| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes | Focus rule type. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the element that matches the focus rule type in the specified focus direction. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+
+**Examples**
+
+```TypeScript
+// Page.ets
+// Click "Secondary Heading 1" to make it the accessibility focus element. The next focus type is a heading focus element, which is "Secondary Heading 2".
+  build() {
+    Text('Connect')
+        .id('connect')
+        .fontSize($r('app.float.page_text_font_size'))
+        .fontWeight(FontWeight.Bold)
+        
+    SubHeader({
+      secondaryTitle: 'Secondary Heading 1',
+      operationType: OperationType.BUTTON,
+      operationItem: [{
+        value: 'Operation',
+        action: () => {
+          Prompt.showToast({ message: 'demo' });
+        }
+      }]
+    })
+
+    TextInput({ placeholder: 'please input...' })
+        .id('text_input')
+        .fontSize($r('app.float.page_text_font_size'))
+
+    SubHeader({
+      secondaryTitle: 'Secondary Heading 2',
+      operationType: OperationType.BUTTON,
+      operationItem: [{
+        value: 'Operation',
+        action: () => {
+          Prompt.showToast({ message: 'demo' });
+        }
+      }]
+    })
+  }
+
+// AccessibilityExtAbility.ets
+import { AccessibilityElement, FocusRuleType } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
+    focus.findElementByFocusDirection('forward', FocusRuleType.FOCUS_BY_TITLE).then((element: AccessibilityElement) => {
+        console.info(`findElementByFocusDirection forward componentId: ${element.componentId}`);
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to findElementByFocusDirection forward. Code: ${err.code}, message: ${err.message}`);
+    });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getAccessibilityFocusedElement. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementById
 
@@ -266,23 +515,55 @@ Searches for a node element in the active window by element ID. This API uses a 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| condition | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| condition | number | Yes | ID of the node element to query. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the element with the specified ID. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+
+**Examples**
+
+```TypeScript
+// Page.ets
+// Tap TextInput to make it the accessibility focus element.
+  build() {
+    Text('Connect')
+        .id('connect')
+        .fontSize($r('app.float.page_text_font_size'))
+        .fontWeight(FontWeight.Bold)
+
+    TextInput({ placeholder: 'please input...' })
+        .id('text_input')
+        .fontSize($r('app.float.page_text_font_size'))
+// ...
+
+// AccessibilityExtAbility.ets
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext is an instance of AccessibilityExtensionContext, which must be obtained through the context attribute of an AccessibilityExtensionAbility subclass instance. For details, see the usage instructions.
+axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
+    focus.findElementById(0).then((element: AccessibilityElement) => {
+        console.info('findElementById componentId: ' + element.componentId);
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to find element by id. Code: ${err.code}, message: ${err.message}`);
+    });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementsByAccessibilityHintText
 
@@ -302,23 +583,57 @@ Searches for elements by hint text, and returns all node elements whose accessib
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| condition | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| condition | string | Yes | Hint text of the element to find. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the list of elements with the specified hint text. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+
+**Examples**
+
+```TypeScript
+// Page.ets
+  build() {
+    Text('Connect')
+        .id('connect')
+        .fontSize($r('app.float.page_text_font_size'))
+        .fontWeight(FontWeight.Bold)
+
+    TextInput({ placeholder: 'please input...' })
+        .id('text_input')
+        .fontSize($r('app.float.page_text_font_size'))
+        .accessibilityTextHint('location')
+// ...
+
+// AccessibilityExtAbility.ets
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowId: number = 10;
+
+// axContext is an instance of AccessibilityExtensionContext. Obtain it through the context property of an AccessibilityExtensionAbility subclass instance. For details, see the usage instructions.
+axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
+    root.findElementsByAccessibilityHintText('location').then((elements: AccessibilityElement[]) => {
+        console.info('findElementsByAccessibilityHintText size=' + elements.length);
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to find elements by accessibility hint text. Code: ${err.code}, message: ${err.message}`);
+    });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get root in active window. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementsByCondition
 
@@ -338,23 +653,41 @@ Queries focusable nodes that meet the conditions. This API uses a promise to ret
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes |
-| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes | Rule for checking the current node and its child nodes. |
+| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes | Mode for querying focusable nodes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; | Promise used to return the result. The FocusMoveResult object contains the queried accessibility node list and the query result status code. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { AccessibilityElement, FocusMoveResult } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext is an instance of AccessibilityExtensionContext. Obtain it through the context property of an AccessibilityExtensionAbility subclass instance. For details, see the usage instructions.
+axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
+    focus.findElementsByCondition('bypassSelf', 'forward').then((res: FocusMoveResult) => {
+        console.info('findElementsByCondition result: ' + res.result);
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to find elements by condition. Code: ${err.code}, message: ${err.message}`);
+    });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementsByCondition
 
@@ -376,24 +709,77 @@ Searches for focusable nodes of the target type based on the rule and query cond
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes |
-| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes |
-| [type](#type) | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes | Rule for checking the current node and its child nodes. |
+| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes | Method for querying focusable nodes. |
+| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes | Focus type. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; | Promise used to return the query result object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+// Page.ets
+  build() {
+    Text('Connect')
+        .id('connect')
+        .fontSize($r('app.float.page_text_font_size'))
+        .fontWeight(FontWeight.Bold)
+        
+    SubHeader({
+      secondaryTitle: 'Secondary Title 1',
+      operationType: OperationType.BUTTON,
+      operationItem: [{
+        value: 'Operation',
+        action: () => {
+          Prompt.showToast({ message: 'demo' });
+        }
+      }]
+    })
+
+    TextInput({ placeholder: 'please input...' })
+        .id('text_input')
+        .fontSize($r('app.float.page_text_font_size'))
+
+    SubHeader({
+      secondaryTitle: 'Secondary Title 2',
+      operationType: OperationType.BUTTON,
+      operationItem: [{
+        value: 'Operation',
+        action: () => {
+          Prompt.showToast({ message: 'demo' });
+        }
+      }]
+    })
+  }
+
+// AccessibilityExtAbility.ets
+
+import { AccessibilityElement, FocusRuleType } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
+    focus.findElementsByCondition("bypassSelf", "forward", FocusRuleType.FOCUS_BY_TITLE).then((res: FocusMoveResult) => {
+        console.info(`findElementsByCondition result: ${res.result}`);
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to findElementsByCondition. Code: ${err.code}, message: ${err.message}`);
+    });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getAccessibilityFocusedElement. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getChildren
 
@@ -413,16 +799,35 @@ Obtains the list of child elements of this element. This API uses a promise to r
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the list of child elements of the current element. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext is an instance of AccessibilityExtensionContext. It must be obtained through the context property of an AccessibilityExtensionAbility subclass instance. For details, see the usage instructions.
+axContext.getAccessibilityFocusedElement().then((element: AccessibilityElement) => {
+  console.info(`element childrenIds: ${element.childrenIds}`);
+  element.getChildren().then((children: AccessibilityElement[]) => {
+    console.info(`children element's size: ${children.length}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get children. Code: ${err.code}, message: ${err.message}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getCursorPosition
 
@@ -440,9 +845,24 @@ Obtains the cursor position in a text component. This API uses an asynchronous c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the cursor position is obtained successfully, **err** is undefined and **data** is the position index of the cursor in the text; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement, which must be obtained through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+rootElement.getCursorPosition((err: BusinessError, data: number) => {
+  if (err && err.code) {
+    console.error(`Failed to get cursor position. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in getting cursor position, ${data}`);
+});
+```
 
 ## getCursorPosition
 
@@ -460,9 +880,22 @@ Obtains the cursor position in a text component. This API uses a promise to retu
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the current cursor position. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement. Obtain it through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+rootElement.getCursorPosition().then((data: number) => {
+  console.info(`succeeded in getting cursor position, ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get cursor position. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getParent
 
@@ -482,16 +915,35 @@ Obtains the parent element of an accessibility node. This API uses a promise to 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the parent element of the current element. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext is an instance of AccessibilityExtensionContext. Obtain it through the context property of an AccessibilityExtensionAbility subclass instance. For details, see the usage instructions.
+axContext.getAccessibilityFocusedElement().then((element: AccessibilityElement) => {
+  console.info(`element parent id: ${element.parentId}`);
+  element.getParent().then((parent: AccessibilityElement) => {
+    console.info(`parent element's parent id: ${parent.parentId}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get parent. Code: ${err.code}, message: ${err.message}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getRoot
 
@@ -511,16 +963,34 @@ Obtains the root element of the active window. This API uses a promise to return
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the root element of the active window. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext is an instance of AccessibilityExtensionContext, obtained through the context property of an AccessibilityExtensionAbility subclass instance. For details, see the usage instructions.
+let windows: AccessibilityElement[] = axContext.getAccessibilityWindowsSync();
+for (let window of windows) {
+  console.info(`window id: ${window.windowId}`);
+  window.getRoot().then((root: AccessibilityElement) => {
+    console.info(`root element's componentId: ${root.componentId}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get root. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
 
 ## accessibilityFocused
 

@@ -9,7 +9,7 @@ Describes the scale parameters.
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import matrix4 from '@kit.ArkUI';
 ```
 
 ## centerX

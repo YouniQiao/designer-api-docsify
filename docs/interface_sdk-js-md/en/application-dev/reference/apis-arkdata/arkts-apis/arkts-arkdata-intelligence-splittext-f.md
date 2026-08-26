@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from 'kits/@kit.ArkData';
+import intelligence from '@kit.ArkData';
 ```
 
 ## splitText
@@ -20,21 +20,41 @@ Splits text.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| text | string | Yes |
-| config | [SplitConfig](arkts-arkdata-intelligence-splitconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Text for chunking. The length of the text is no longer then 100k tokens. |
+| config | [SplitConfig](arkts-arkdata-intelligence-splitconfig-i.md) | Yes | Configurations of text chunking. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;string & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;string & gt; & gt; | The promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let splitConfig: intelligence.SplitConfig = {
+  size: 10,
+  overlapRatio: 0.1
+}
+let splitText = 'text';
+
+intelligence.splitText(splitText, splitConfig)
+  .then((data: Array<string>) => {
+    console.info("Succeeded in splitting Text");
+  })
+  .catch((err: BusinessError) => {
+    console.error("Failed to split Text and code is " + err.code);
+  })
+```

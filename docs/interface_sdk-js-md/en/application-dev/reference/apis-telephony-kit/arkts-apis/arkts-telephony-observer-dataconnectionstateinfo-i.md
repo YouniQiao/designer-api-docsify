@@ -9,7 +9,6 @@ Defines information about the data connection status.
 ## Modules to Import
 
 ```TypeScript
-import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## network

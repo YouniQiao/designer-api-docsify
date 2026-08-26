@@ -23,13 +23,20 @@ Creates a stream based on the file path. This API returns the result synchronous
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| mode | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the file. |
+| mode | string | Yes | r**: Open a file for reading. The file must exist.   - **r+**: Open a file for both reading and writing. The file must exist.   - **w**: Open a file for writing. If the file exists, clear its content. If the file does not exist, create a file.   - **w+**: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist, create a file.   - **a**: Open a file in append mode for writing at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved).   - **a+**: Open a file in append mode for reading or updating at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Stream](arkts-corefile-fileio-stream-depr-i.md) |
+| Type | Description |
+| --- | --- |
+| [Stream](arkts-corefile-fileio-stream-depr-i.md) | File stream. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let ss = fileio.createStreamSync(filePath, "r+");
+```

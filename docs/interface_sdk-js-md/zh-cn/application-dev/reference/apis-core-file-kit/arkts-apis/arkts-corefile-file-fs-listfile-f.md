@@ -3,9 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -27,26 +25,51 @@ declare function listFile(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
-| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 目录的应用沙箱路径。 |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | 否 | 文件过滤选项。默认不进行过滤。<br>**起始版本：** 11 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string[] & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string[] & gt; | Promise对象。返回文件名数组，默认以'utf-8'编码。 default. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900002 |
-| 13900008 |
-| 13900011 |
-| 13900018 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Filter, ListFileOptions } from '@kit.CoreFileKit';
+
+let listFileOption: ListFileOptions = {
+  recursion: false,
+  listNum: 0,
+  filter: {
+    suffix: [".png", ".jpg", ".jpeg"],
+    displayName: ["*abc", "efg*"],
+    fileSizeOver: 1024
+  }
+}
+fileIo.listFile(pathDir, listFileOption).then((filenames: Array<string>) => {
+  console.info(`Succeeded in listing file.`);
+  for (let i = 0; i < filenames.length; i++) {
+    console.info(`Succeeded in listing file, file name: ${filenames[i]}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to list file. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 
 ## listFile
@@ -65,20 +88,37 @@ declare function listFile(path: string, callback: AsyncCallback<string[]>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 目录的应用沙箱路径。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | 是 | 异步列出文件名数组之后的回调，默认以'utf-8'编码。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900002 |
-| 13900008 |
-| 13900011 |
-| 13900018 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+fileIo.listFile(pathDir, (err: BusinessError, filenames: Array<string>) => {
+  if (err) {
+    console.error(`Failed to list file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in listing file.`);
+    for (let i = 0; i < filenames.length; i++) {
+      console.info(`Succeeded in listing file, file name: ${filenames[i]}`);
+    }
+  }
+});
+```
 
 
 ## listFile
@@ -101,18 +141,45 @@ declare function listFile(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
-| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 目录的应用沙箱路径。 |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | 是 | 文件过滤选项。默认不进行过滤。<br>**起始版本：** 11 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | 是 | 异步列出文件名数组之后的回调，默认以'utf-8'编码。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900002 |
-| 13900008 |
-| 13900011 |
-| 13900018 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Filter, ListFileOptions } from '@kit.CoreFileKit';
+
+let listFileOption: ListFileOptions = {
+  recursion: false,
+  listNum: 0,
+  filter: {
+    suffix: [".png", ".jpg", ".jpeg"],
+    displayName: ["*abc", "efg*"],
+    fileSizeOver: 1024
+  }
+};
+fileIo.listFile(pathDir, listFileOption, (err: BusinessError, filenames: Array<string>) => {
+  if (err) {
+    console.error(`Failed to list file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in listing file.`);
+    for (let i = 0; i < filenames.length; i++) {
+      console.info(`Succeeded in listing file, file name: ${filenames[i]}`);
+    }
+  }
+});
+```

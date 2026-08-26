@@ -29,16 +29,16 @@ Add a text.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
-| textOperationOptions | [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | text value. |
+| textOperationOptions | [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | 否 | operation info. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | caret index |
 
 ## clearPreviewText
 
@@ -90,9 +90,9 @@ Delete text in TextRange.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | range for deleting. |
 
 ## getCaretOffset
 
@@ -112,9 +112,9 @@ Get the index and relative position of the CaretOffset.<p>&lt;strong&gt;NOTE&lt;
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CaretOffset](arkts-arkui-caretoffset-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CaretOffset](arkts-arkui-caretoffset-i.md) | index and relative position of the CaretOffset. |
 
 ## getSelection
 
@@ -134,9 +134,9 @@ Gets the selected range of text content.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | range for selecting. |
 
 ## getTextContentLineCount
 
@@ -156,9 +156,9 @@ Get the lines number of the text content. The getTextContentLineCount type is us
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | Text content line count |
 
 ## getTextContentRect
 
@@ -178,9 +178,9 @@ Get the start and end positions of the text content.<p>&lt;strong&gt;NOTE&lt;/st
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RectResult](arkts-arkui-rectresult-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RectResult](arkts-arkui-rectresult-i.md) | Text content rect.The unit of the return value is pixel. |
 
 ## scrollToVisible
 
@@ -200,9 +200,9 @@ scrollToVisible(range?: TextRange): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | 可见区范围。 若该参数非法，则本方法不会生效。 |
 
 ## setStyledPlaceholder
 
@@ -222,6 +222,6 @@ setStyledPlaceholder(styledString: StyledString): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 设置提示文本样式的属性字符串 若传入的入参无效，则本接口不生效 |

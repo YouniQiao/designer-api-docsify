@@ -11,7 +11,7 @@ The context of an ability or an application. It allows access to application-spe
 ## Modules to Import
 
 ```TypeScript
-import { BackupExtensionContext } from 'kits/@kit.CoreFileKit';
+import BackupExtensionContext from '@kit.CoreFileKit';
 ```
 
 ## backupDir

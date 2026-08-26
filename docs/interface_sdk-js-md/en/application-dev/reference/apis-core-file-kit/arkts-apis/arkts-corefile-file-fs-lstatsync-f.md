@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## lstatSync
@@ -22,27 +20,35 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path or URI of the file.   **Note：**: URIs can be passed since API version 22. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Stat](arkts-corefile-file-fs-stat-i.md) |
+| Type | Description |
+| --- | --- |
+| [Stat](arkts-corefile-file-fs-stat-i.md) | File information obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900002 |
-| 13900008 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900018 |
-| 13900030 |
-| 13900033 |
-| 13900038 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900030 | File name too number |
+| 13900033 | Too many symbolic links encountered |
+| 13900038 | Value too large for defined data type |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/linkToFile";
+let fileStat = fileIo.lstatSync(filePath);
+console.info(`Succeeded in getting symbolic link info, the size of file is ${fileStat.size}`);
+```

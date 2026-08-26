@@ -16,6 +16,6 @@ Navigation单双栏显示状态发生变更时的拦截回调。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [NavigationMode](arkts-arkui-navigationmode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [NavigationMode](arkts-arkui-navigationmode-e.md) | 是 | 导航页的显示模式。 |

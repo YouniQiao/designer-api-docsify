@@ -7,20 +7,20 @@ The module provides page data and callbacks when a callback is triggered for the
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md) |
-| [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) |
-| [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md) |
+| Name | Description |
+| --- | --- |
+| [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md) | Fill fail result. |
+| [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | Defines the information about an auto-fill request. |
+| [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md) | Defines the information about an auto-saving request. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FillRequest](arkts-ability-autofillrequest-fillrequest-i-sys.md) |
-| [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) |
-| [FillResponse](arkts-ability-autofillrequest-fillresponse-i-sys.md) |
-| [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) |
-| [UpdateRequest](arkts-ability-autofillrequest-updaterequest-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [FillRequest](arkts-ability-autofillrequest-fillrequest-i-sys.md) | Defines the information about an auto-fill request. |
+| [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | Implements callbacks for an auto-fill request, which is used to automatically fill in or generate a password. The callbacks can be used to notify the client of the success or failure of the request. |
+| [FillResponse](arkts-ability-autofillrequest-fillresponse-i-sys.md) | Defines the information about the response to an auto-fill request. |
+| [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) | Implements callbacks for an automatic or a manual saving request. |
+| [UpdateRequest](arkts-ability-autofillrequest-updaterequest-i-sys.md) | Defines the information about an auto-update request. |
 <!--DelEnd-->

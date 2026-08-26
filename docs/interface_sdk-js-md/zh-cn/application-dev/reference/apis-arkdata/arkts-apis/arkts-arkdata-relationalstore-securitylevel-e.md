@@ -2,7 +2,8 @@
 
 数据库的安全级别枚举。请使用枚举名称而非枚举值。数据库的安全级别仅支持由低向高设置，不支持由高向低设置。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 若需要进行同步操作，数据库安全级别应不高于对端设备安全级别，具体可见
 > [跨设备同步访问控制机制](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/database/sync-app-data-across-devices-overview.md#跨设备同步访问控制机制)。
 

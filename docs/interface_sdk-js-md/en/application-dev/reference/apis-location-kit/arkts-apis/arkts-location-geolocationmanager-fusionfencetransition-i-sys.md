@@ -11,7 +11,6 @@ Indicates fusion fence transition information.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## identifier

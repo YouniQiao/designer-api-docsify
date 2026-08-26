@@ -23,13 +23,25 @@ function updateId(uri: string, id: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| id | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 表示uri对象。 |
+| id | number | 是 | 表示要更新的ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回更新ID之后的uri对象。 |
+
+**示例**
+
+```TypeScript
+import dataUriUtils from '@ohos.ability.dataUriUtils';
+
+let id = 1122;
+let uri = dataUriUtils.updateId(
+    'com.example.dataUriUtils/1221',
+	id
+);
+```

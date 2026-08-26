@@ -9,7 +9,8 @@ Provides audio debug management capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## printAppInfo
@@ -28,9 +29,9 @@ Prints full audio runtime snapshot for current app process. The snapshot will co
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
 
 ## printCapturerInfo
 
@@ -48,10 +49,10 @@ Prints full audio runtime snapshot for target audio capturer instance. The snaps
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| capturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | Yes |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| capturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | Yes | target audio capturer instance to print snapshot. |
+| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
 
 ## printLoopbackInfo
 
@@ -69,10 +70,10 @@ Prints full audio runtime snapshot for target audio loopback instance. The snaps
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| loopback | [AudioLoopback](arkts-audio-audio-audioloopback-i.md) | Yes |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| loopback | [AudioLoopback](arkts-audio-audio-audioloopback-i.md) | Yes | target audio loopback instance to print snapshot. |
+| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
 
 ## printRendererInfo
 
@@ -90,10 +91,10 @@ Prints full audio runtime snapshot for target audio renderer instance. The snaps
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| renderer | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | Yes |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| renderer | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | Yes | target audio renderer instance to print snapshot. |
+| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
 
 ## printSessionInfo
 
@@ -111,7 +112,7 @@ Prints full audio runtime snapshot for target audio session manager instance. Th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| session | [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | Yes |
-| fd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| session | [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | Yes | target audio session manager instance to print snapshot. |
+| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |

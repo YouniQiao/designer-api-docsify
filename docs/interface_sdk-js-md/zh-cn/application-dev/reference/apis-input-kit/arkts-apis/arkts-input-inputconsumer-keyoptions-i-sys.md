@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputConsumer } from 'kits/@kit.InputKit';
 ```
 
 ## finalKey

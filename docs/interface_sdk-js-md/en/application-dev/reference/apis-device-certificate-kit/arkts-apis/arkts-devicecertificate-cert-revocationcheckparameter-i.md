@@ -9,7 +9,6 @@ Represents the parameters for checking the certificate revocation status for a c
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## crlDownloadURI
@@ -20,7 +19,8 @@ crlDownloadURI?: string
 
 Address used to download the CRLs.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The URI takes effect only for the leaf certificate.
 
 **Type:** string
@@ -89,7 +89,8 @@ ocspResponderURI?: string
 
 URI of the alternative server used to send OCSP requests. HTTP and HTTPS are supported. The specific configuration is determined via the negotiation with the server.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The URI takes effect only for the leaf certificate.
 
 **Type:** string

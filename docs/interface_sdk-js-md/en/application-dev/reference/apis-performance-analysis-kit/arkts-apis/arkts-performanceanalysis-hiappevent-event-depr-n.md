@@ -1,7 +1,7 @@
 # Event(Application Event Logging)
 
 Provides constants that define the names of all predefined events.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | [Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md) | Description | | ------------------------- | ------ | ---- | ---- | -------------------- | | USER_LOGIN | string | Yes | No | User login event. | | USER_LOGOUT | string | Yes | No | User logout event. | | DISTRIBUTED_SERVICE_START | string | Yes | No |
+| Name | Type | Readable| Writable| Description | | ------------------------- | ------ | ---- | ---- | -------------------- | | USER_LOGIN | string | Yes | No | User login event. | | USER_LOGOUT | string | Yes | No | User logout event. | | DISTRIBUTED_SERVICE_START | string | Yes | No | Distributed service startup event.|
 
 **Since:** 7
 
@@ -20,8 +20,8 @@ Provides constants that define the names of all predefined events.
 
 ### Constants
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [USER_LOGIN(Application Event Logging)](arkts-performanceanalysis-event-depr-con.md#user_login) |
-| [USER_LOGOUT(Application Event Logging)](arkts-performanceanalysis-event-depr-con.md#user_logout) |
-| [DISTRIBUTED_SERVICE_START(Application Event Logging)](arkts-performanceanalysis-event-depr-con.md#distributed_service_start) |
+| Name | Description |
+| --- | --- |
+| [USER_LOGIN(Application Event Logging)](arkts-performanceanalysis-event-depr-con.md#user_login) | User login event. |
+| [USER_LOGOUT(Application Event Logging)](arkts-performanceanalysis-event-depr-con.md#user_logout) | User logout event. |
+| [DISTRIBUTED_SERVICE_START(Application Event Logging)](arkts-performanceanalysis-event-depr-con.md#distributed_service_start) | Distributed service event. |

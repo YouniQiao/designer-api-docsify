@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from 'kits/@kit.LocationKit';
+import Geolocation, { GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from '@kit.LocationKit';
 ```
 
 ## getLocation
@@ -36,9 +36,9 @@ Obtains the geographic location.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [GetLocationOption](arkts-location-system-geolocation-getlocationoption-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [GetLocationOption](arkts-location-system-geolocation-getlocationoption-i.md) | No |  |
 
 ## getLocationType
 
@@ -58,9 +58,9 @@ Obtains the location types supported by the system.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [GetLocationTypeOption](arkts-location-system-geolocation-getlocationtypeoption-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [GetLocationTypeOption](arkts-location-system-geolocation-getlocationtypeoption-i.md) | No |  |
 
 ## getSupportedCoordTypes
 
@@ -80,8 +80,8 @@ Obtains the supported coordinate system types.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## subscribe
 
 ```TypeScript
@@ -104,9 +104,9 @@ Listens to the geographical location. If this method is called multiple times, t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SubscribeLocationOption](arkts-location-system-geolocation-subscribelocationoption-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SubscribeLocationOption](arkts-location-system-geolocation-subscribelocationoption-i.md) | Yes |  |
 
 ## unsubscribe
 

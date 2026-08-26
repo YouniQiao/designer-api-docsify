@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## isHotspotDualBandSupported
@@ -28,6 +31,19 @@ Checks whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    let ret = wifi.isHotspotDualBandSupported();
+    console.info("result:" + ret);        
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```

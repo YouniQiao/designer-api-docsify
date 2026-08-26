@@ -21,7 +21,8 @@ arrowModifier(modifier: Optional<SymbolGlyphModifier>)
 
 Creates an arrow modifier to customize the drop-down arrow icon style of the **Select** button. After **arrowModifier** is applied, the drop-down arrow icon style of the **Select** button will be completely customized by the developer.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API cannot be called within attributeModifier.
 
 **Since:** 20
@@ -34,9 +35,9 @@ Creates an arrow modifier to customize the drop-down arrow icon style of the **S
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;SymbolGlyphModifier&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;SymbolGlyphModifier&gt; | Yes | Arrow modifier to apply to the **Select** button for customizing the drop-down arrow icon style. |
 
 ## arrowPosition
 
@@ -56,9 +57,9 @@ Sets the alignment between the text and arrow of an option.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [ArrowPosition](arkts-arkui-arrowposition-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ArrowPosition](arkts-arkui-arrowposition-e.md) | Yes | Alignment between the text and arrow of an option.Default value: **ArrowPosition.END |
 
 ## arrowPosition
 
@@ -78,9 +79,9 @@ Sets the alignment between the text and arrow of an option. Compared with [arrow
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| position | [Optional](arkts-arkui-optional-t.md)&lt;[ArrowPosition](arkts-arkui-arrowposition-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| position | [Optional](arkts-arkui-optional-t.md)&lt;[ArrowPosition](arkts-arkui-arrowposition-e.md)&gt; | Yes | Alignment between the text and arrow of an option.If **position** is set to **undefined**, the default value **ArrowPosition.END** is used. |
 
 ## avoidance
 
@@ -100,9 +101,9 @@ Sets the avoidance mode for the drop-down menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | Yes | Avoidance mode for the drop-down menu.Default value: **AvoidanceMode.COVER_TARGET |
 
 ## controlSize
 
@@ -122,9 +123,9 @@ Sets the size of the **Select** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [ControlSize](arkts-arkui-controlsize-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ControlSize](arkts-arkui-controlsize-e.md) | Yes | Size of the **Select** component.Default value: **ControlSize.NORMAL |
 
 ## controlSize
 
@@ -144,9 +145,9 @@ Sets the size of the **Select** component. Compared with [controlSize](#controls
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | [Optional](arkts-arkui-optional-t.md)&lt;[ControlSize](arkts-arkui-controlsize-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | [Optional](arkts-arkui-optional-t.md)&lt;[ControlSize](arkts-arkui-controlsize-e.md)&gt; | Yes | Size of the **Select** component.If **size** is set to **undefined**, the default value **ControlSize.NORMAL** is used. |
 
 ## divider
 
@@ -166,9 +167,9 @@ Sets the divider style. If this attribute is not set, the divider is displayed b
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;[DividerOptions](arkts-arkui-divideroptions-i.md)&gt; \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[DividerOptions](arkts-arkui-divideroptions-i.md)&gt; \| null | Yes | Divider options. 1. If **DividerOptions** is set, the divider is displayed in the configured style. Default value:{strokeWidth: '1px' , color: '#33182 431'} 2. If this parameter is set to **null**, the divider is not displayed. 3. If the value of **strokeWidth** is too larger, the divider may overlap the text. The divider extends both upwards and downwards from the bottom of each item. 4. The default values for **startMargin** and **endMargin** are consistent with the style of the divider when the **divider** attribute is not set. If the sum of **startMargin** and **endMargin** is equal to the value of **optionWidth**, the divider is not displayed. If the sum of **startMargin** and **endMargin** exceeds the value of **optionWidth**, the divider line is displayed in the default style. |
 
 ## dividerStyle
 
@@ -188,9 +189,9 @@ Sets the divider style. If this attribute is not set, the divider is displayed b
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[DividerStyleOptions](../arkts-apis/arkts-arkui-dividerstyleoptions-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[DividerStyleOptions](../arkts-apis/arkts-arkui-dividerstyleoptions-i.md)&gt; | Yes | Divider options. 1. If **DividerOptions** is set, the divider is displayed in the configured style. Default value:{strokeWidth: '1px' , color: '#33182431'} 2. If this parameter is set to **null** or **undefined**, the default divider is displayed. 3. When **mode** is set to **FLOAT_ABOVE_MENU**, be careful with the **strokeWidth** settings to avoid covering text. The divider extends both upwards and downwards from the bottom of each item. When **mode** is **EMBEDDED_IN_MENU**, the divider expands to fill its own space within the menu. 4. The default values for **startMargin** and **endMargin** are consistent with the style of the divider when the **divider** attribute is not set. If the sum of **startMargin** and **endMargin** is equal to the value of **optionWidth**, the divider is not displayed. If the sum of **startMargin** and **endMargin** exceeds the value of **optionWidth**, the divider line is displayed in the default style. |
 
 ## font
 
@@ -208,9 +209,9 @@ Sets the text style of the drop-down button. When **size** is set to **0**, the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [Font](#font) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Font](#font) | Yes | Text style of the drop-down list button.For API versions 11 and earlier, the default value is as follows:{size: `\\$r('sys.float.ohos_id_text_size_button1')`,weight: FontWeight.Medium} Since API version 12: The default value of **size** is **\\$r('sys.float.ohos_id_text_size_button2')** in the case of **controlSize.SMALL** and **\\$r('sys.float.ohos_id_text_size_button1')** in other cases. |
 
 ## font
 
@@ -230,9 +231,9 @@ Sets the text style of the drop-down button. When **size** is set to **0**, the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | Yes | Text style of the drop-down list button.If **controlSize** is set to **controlSize.SMALL**, the default value of **size** is **\\$r('sys.float.ohos_id_text_size_button2')**. Otherwise, the default value is **\\$r('sys.float.ohos_id_text_size_button1')**.If **selectFont** is set to **undefined**, the default font style is used. |
 
 ## fontColor
 
@@ -250,9 +251,9 @@ Sets the font color of the drop-down button.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the drop-down button.Default value: **\\$r('sys.color.ohos_id_color_text_primary')** with the opacity of **\\$r('sys.color.ohos_id_alpha_content_primary') |
 
 ## fontColor
 
@@ -272,9 +273,9 @@ Sets the font color of the drop-down button. Compared with [fontColor](#fontcolo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Font color of the drop-down button.When **resColor** is set to **undefined**, the default value is a blend of **\\$r('sys.color.ohos_id_color_text_primary')** with the opacity of **\\$r('sys.color.ohos_id_alpha_content_primary')**.If **value** is set to **undefined**, the previous value is retained. |
 
 ## keyboardAvoidMode
 
@@ -294,9 +295,9 @@ Sets whether the drop-down menu avoids the soft keyboard. If this API is not use
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;[MenuKeyboardAvoidMode](arkts-arkui-menukeyboardavoidmode-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[MenuKeyboardAvoidMode](arkts-arkui-menukeyboardavoidmode-e.md)&gt; | Yes | Whether the drop-down menu avoids the soft keyboard. If the value is **undefined**, it is treated as **MenuKeyboardAvoidMode.NONE**. |
 
 ## menuAlign
 
@@ -316,10 +317,10 @@ Sets the alignment between the drop-down button and the drop-down menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [MenuAlignType](arkts-arkui-menualigntype-e.md) | Yes |
-| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| alignType | [MenuAlignType](arkts-arkui-menualigntype-e.md) | Yes | Alignment type.Default value: **MenuAlignType.START |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No | Offset of the drop-down menu relative to the drop-down button after alignment based on the alignment type.Default value: **{dx: 0, dy: 0} |
 
 ## menuAlign
 
@@ -339,10 +340,10 @@ Sets the alignment between the drop-down button and the drop-down menu. Compared
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | Yes |
-| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| alignType | [Optional](arkts-arkui-optional-t.md)&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | Yes | Alignment type.If **alignType** is set to **undefined**, the default value **MenuAlignType.START** is used. |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No | Offset of the drop-down menu relative to the drop-down button after alignment based on the alignment type.Default value: **{dx: 0, dy: 0} |
 
 ## menuBackgroundBlurStyle
 
@@ -352,7 +353,8 @@ menuBackgroundBlurStyle(value: BlurStyle)
 
 Sets the background blur style of the drop-down menu.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -365,9 +367,9 @@ Sets the background blur style of the drop-down menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Background blur style of the drop-down menu.Default value: **BlurStyle.COMPONENT_ULTRA_THICK |
 
 ## menuBackgroundBlurStyle
 
@@ -387,9 +389,9 @@ Sets the background blur style of the drop-down menu. Compared with [menuBackgro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes | Background blur style of the drop-down menu.If **style** is set to **undefined**, the default value **BlurStyle.COMPONENT_ULTRA_THICK** is used. |
 
 ## menuBackgroundBlurStyleOptions
 
@@ -409,9 +411,9 @@ Defines the select menu's background blur style with options
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [blurStyle](arkts-arkui-sheetoptions-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| blurStyle | [Optional](arkts-arkui-optional-t.md)&lt;[BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)&gt; | Yes | The background blur style of menu. |
 
 ## menuBackgroundColor
 
@@ -421,7 +423,8 @@ menuBackgroundColor(value: ResourceColor)
 
 Sets the background color of the drop-down menu.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
@@ -434,9 +437,9 @@ Sets the background color of the drop-down menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the drop-down menu.Default value:Versions earlier than API version 11: **\\$r('sys.color.ohos_id_color_card_bg')**Since API version 11: **Color.Transparent |
 
 ## menuBackgroundColor
 
@@ -456,9 +459,9 @@ Sets the background color of the drop-down menu. Compared with [menuBackgroundCo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Background color of the drop-down menu.If **resColor** is set to **undefined**, the default value **Color.Transparent** is used. |
 
 ## menuBackgroundEffect
 
@@ -478,9 +481,9 @@ Defines the select menu's background effect with options
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| effect | [Optional](arkts-arkui-optional-t.md)&lt;[BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| effect | [Optional](arkts-arkui-optional-t.md)&lt;[BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)&gt; | Yes | Background effect, including saturation, brightness, and color. The configuration does not take effect when it is undefined. |
 
 ## menuItemContentModifier
 
@@ -490,7 +493,8 @@ menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>)
 
 Creates a content modifier for the drop-down menu. After **menuItemContentModifier** is applied, the drop-down menu content will be completely customized by the developer, and the **Select** component's attributes, including the divider, option color, and drop-down menu font color, will not take effect.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API cannot be called within attributeModifier.
 
 **Since:** 12
@@ -503,9 +507,9 @@ Creates a content modifier for the drop-down menu. After **menuItemContentModifi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt; | Yes | Content modifier to apply to the drop-down menu.    **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## menuItemContentModifier
 
@@ -515,7 +519,8 @@ menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration
 
 Creates a content modifier for the drop-down menu. Compared with [menuItemContentModifier](#menuitemcontentmodifier) &lt;sup&gt;12+&lt;/sup&gt;, this API supports the **undefined** type for **modifier** parameter. After **menuItemContentModifier** is applied, the drop-down menu content will be completely customized by the developer, and the **Select** component's attributes, including the divider, option color, and drop-down menu font color, will not take effect.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API cannot be called within attributeModifier.
 
 **Since:** 18
@@ -528,9 +533,9 @@ Creates a content modifier for the drop-down menu. Compared with [menuItemConten
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt;&gt; | Yes | Content modifier to apply to the drop-down menu.   **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API.If **modifier** is set to **undefined**, no content modifier is used. |
 
 ## menuOutline
 
@@ -550,9 +555,9 @@ Sets the outline style for the drop-down menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [outline](arkts-arkui-commonmethod-c.md) | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| outline | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | Yes | Outline style of the drop-down menu. |
 
 ## menuSystemMaterial
 
@@ -572,9 +577,9 @@ Set system-styled materials for select's menu. Different materials have differen
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| material | [Optional](arkts-arkui-optional-t.md)&lt;[SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| material | [Optional](arkts-arkui-optional-t.md)&lt;[SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)&gt; | Yes | The select's menu material, undefined means retaining the original visual style of the select's menu. |
 
 ## minKeyboardAvoidDistance
 
@@ -594,9 +599,9 @@ Sets the minimum distance for the **Select** component to avoid the soft keyboar
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| distance | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| distance | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes | Sets the minimum distance for the drop-down menu to avoid the soft keyboard. If the value is set to a negative number or **undefined**, the value 8 vp will be used. |
 
 ## onSelect
 
@@ -614,9 +619,9 @@ Triggered when a drop-down menu option is selected.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (index: number, value: string) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (index: number, value: string) = & gt; void | Yes |  |
 
 ## onSelect
 
@@ -636,9 +641,9 @@ Triggered when a drop-down menu option is selected. Compared with onSelect, this
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | Yes | Callback invoked when a drop-down menu option is selected.If **callback** is set to **undefined**, the callback function is not used. |
 
 ## optionBgColor
 
@@ -656,9 +661,9 @@ Sets the background color of options in the drop-down menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of options in the drop-down menu.Default value:Versions earlier than API version 11: **Color.White**Since API version 11: **Color.Transparent |
 
 ## optionBgColor
 
@@ -678,9 +683,9 @@ Sets the background color of options in the drop-down menu. Compared with [optio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Background color of options in the drop-down menu.When the value of resColor is undefined, the background color of the drop-down menu item is Color.White. |
 
 ## optionFont
 
@@ -698,9 +703,9 @@ Sets the text font of options in the drop-down menu. When **size** is set to **0
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [Font](#font) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Font](#font) | Yes | Text font of options in the drop-down menu.Default value:{size: \\$r('sys.float.ohos_id_text_size_body1'),weight: FontWeight.Regular} |
 
 ## optionFont
 
@@ -720,9 +725,9 @@ Sets the text font of options in the drop-down menu. When **size** is set to **0
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | Yes | Text font of options in the drop-down menu.If **selectFont** is set to **undefined**, the default value is used:{size: \\$r('sys.float.ohos_id_text_size_body1'),weight: FontWeight.Regular} |
 
 ## optionFontColor
 
@@ -740,9 +745,9 @@ Sets the font color of options in the drop-down menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of options in the drop-down menu.Default value: **\\$r('sys.color.ohos_id_color_text_primary') |
 
 ## optionFontColor
 
@@ -762,9 +767,9 @@ Sets the font color of options in the drop-down menu. Compared with [optionFontC
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Font color of options in the drop-down menu.If **resColor** is set to **undefined**, the default value **\\$r('sys.color.ohos_id_color_text_primary')** is used. |
 
 ## optionHeight
 
@@ -784,9 +789,9 @@ Sets the maximum height for the drop-down menu. Percentage values are not suppor
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Maximum height of the drop-down menu. |
 
 ## optionHeight
 
@@ -806,9 +811,9 @@ Sets the maximum height for the drop-down menu. Percentage values are not suppor
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| height | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt; | Yes | Maximum height of the drop-down menu.If **height** is set to **undefined**, the default value, which is 80% of the available screen height, is used. |
 
 ## optionTextModifier
 
@@ -818,7 +823,8 @@ optionTextModifier(modifier: Optional<TextModifier>)
 
 Creates an option text modifier to customize the text style of unselected options in the drop-down menu. After **optionTextModifier** is applied, the unselected option text style will be completely customized by the developer.If both [optionFont](#optionfont) and **Font** of **optionTextModifier** are set, [optionFont](#optionfont) takes precedence. Any unspecified attributes in **optionFont** will use default values.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API cannot be called within attributeModifier.
 
 **Since:** 20
@@ -831,9 +837,9 @@ Creates an option text modifier to customize the text style of unselected option
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes | Option text modifier to apply to the **Select** component for customizing the text style of unselected options in the drop-down menu. |
 
 ## optionWidth
 
@@ -853,9 +859,9 @@ Sets the width for the drop-down menu option. Percentage values are not supporte
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [OptionWidthMode](../arkts-apis/arkts-arkui-optionwidthmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [OptionWidthMode](../arkts-apis/arkts-arkui-optionwidthmode-e.md) | Yes | Width of the drop-down menu option. |
 
 ## optionWidth
 
@@ -875,9 +881,9 @@ Sets the width for the drop-down menu option. Percentage values are not supporte
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| width | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [OptionWidthMode](../arkts-apis/arkts-arkui-optionwidthmode-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| width | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [OptionWidthMode](../arkts-apis/arkts-arkui-optionwidthmode-e.md)&gt; | Yes | Width of the drop-down menu option.If **width** is set to **undefined**, it has no effect. In this case, the option width uses the default value, which is the width of two columns. |
 
 ## selected
 
@@ -895,9 +901,9 @@ Sets the index of the initially selected option in the drop-down menu, where the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Index of the initially selected option. The index is zero-based.<br>**Since:** 11 |
 
 ## selected
 
@@ -917,9 +923,9 @@ Sets the index of the initially selected option in the drop-down menu, where the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| numCount | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| numCount | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes | Index of the initially selected option.When **numCount** is set to **undefined**, the first option is selected. |
 
 ## selectedOptionBgColor
 
@@ -937,9 +943,9 @@ Sets the background color of the selected option in the drop-down menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the selected option in the drop-down menu.Default value: **\\$r('sys.color.ohos_id_color_component_activated')** with the opacity of **\\$r('sys.color.ohos_id_alpha_highlight_bg') |
 
 ## selectedOptionBgColor
 
@@ -959,9 +965,9 @@ Sets the background color of the selected option in the drop-down menu. Compared
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Background color of the selected option in the drop-down menu.When **resColor** is set to **undefined**, the default value is a blend of **\\$r('sys.color.ohos_id_color_component_activated')** with the opacity of **\\$r('sys.color.ohos_id_alpha_highlight_bg')**. |
 
 ## selectedOptionFont
 
@@ -979,9 +985,9 @@ Sets the text font of the selected option in the drop-down menu. When **size** i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [Font](#font) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Font](#font) | Yes | Text font of the selected option in the drop-down menu.Default value:{size: \\$r('sys.float.ohos_id_text_size_body1'),weight: FontWeight.Regular} |
 
 ## selectedOptionFont
 
@@ -1001,9 +1007,9 @@ Sets the text font of the selected option in the drop-down menu. When **size** i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | Yes | Text font of the selected option in the drop-down menu.If **selectFont** is set to **undefined**, the default value is used:{size: \\$r('sys.float.ohos_id_text_size_body1'),weight: FontWeight.Regular} |
 
 ## selectedOptionFontColor
 
@@ -1021,9 +1027,9 @@ Sets the font color of the selected option in the drop-down menu.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the selected option in the drop-down menu.Default value: **\\$r('sys.color.ohos_id_color_text_primary_activated') |
 
 ## selectedOptionFontColor
 
@@ -1043,9 +1049,9 @@ Sets the font color of the selected option in the drop-down menu. Compared with 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Font color of the selected option in the drop-down menu.If **resColor** is set to **undefined**, the default value **\\$r('sys.color.ohos_id_color_text_primary_activated')** is used. |
 
 ## selectedOptionTextModifier
 
@@ -1055,7 +1061,8 @@ selectedOptionTextModifier(modifier: Optional<TextModifier>)
 
 Creates a selected-option text modifier to customize the text style of selected options in the drop-down menu. After **selectedOptionTextModifier** is applied, the selected-option text style will be completely customized by the developer.If both [selectedOptionFont](#selectedoptionfont) and **Font** of **selectedOptionTextModifier** are set, [selectedOptionFont](#selectedoptionfont) takes precedence. If **selectedOptionFont** is not set, [optionFont](#optionfont) settings are applied. Any unspecified attributes in **selectedOptionFont** or **optionFont** will use default values.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API cannot be called within attributeModifier.
 
 **Since:** 20
@@ -1068,9 +1075,9 @@ Creates a selected-option text modifier to customize the text style of selected 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes | Selected-option text modifier to apply to the **Select** component for customizing the text style of selected options in the drop-down menu.You can manage and maintain the text style as needed. |
 
 ## showDefaultSelectedIcon
 
@@ -1090,9 +1097,9 @@ Sets whether to display the default selection icon.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| show | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| show | boolean | Yes | Whether to display the default selection icon.   **true**: The default icon is displayed. **false**: The default icon is not displayed. The background color is highlighted to indicate that the icon is selected.Default value: **false**When **show** is set to **true** and the background color of the selected option is set, both the background color of the selected option and the icon selected by default are displayed. If the background color of the selected item is not set via **selectedOptionBgColor**, the background color is not highlighted and only the icon selected by default is displayed. |
 
 ## showInSubWindow
 
@@ -1112,9 +1119,9 @@ Sets whether the drop-down menu is displayed in the subwindow. If this API is no
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [showInSubWindow](#showinsubwindow) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| showInSubWindow | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether the drop-down menu is displayed in the subwindow.    **true**: The drop-down menu is displayed in the subwindow.   **false**: The drop-down menu is not displayed in the subwindow. |
 
 ## space
 
@@ -1134,9 +1141,9 @@ Sets the spacing between the text and arrow of a drop-down menu option. This att
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Spacing between the text and arrow of a drop-down menu option.Default value: **8**Note: For the string type, percentage values are not supported. |
 
 ## space
 
@@ -1156,9 +1163,9 @@ Sets the spacing between the text and arrow of a drop-down menu option. This att
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| spaceLength | [Optional](arkts-arkui-optional-t.md)&lt;[Length](../arkts-apis/arkts-arkui-length-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| spaceLength | [Optional](arkts-arkui-optional-t.md)&lt;[Length](../arkts-apis/arkts-arkui-length-t.md)&gt; | Yes | Spacing between the text and arrow of an option.If **spaceLength** is set to **undefined**, the default value **8** is used. |
 
 ## textModifier
 
@@ -1168,7 +1175,8 @@ textModifier(modifier: Optional<TextModifier>)
 
 Creates a text modifier to customize the text style of the **Select** button. After **textModifier** is applied, the text style of the **Select** button will be completely customized by the developer.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API cannot be called within attributeModifier.
 
 **Since:** 20
@@ -1181,9 +1189,9 @@ Creates a text modifier to customize the text style of the **Select** button. Af
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes | Text modifier to apply to the **Select** button for customizing the text style. |
 
 ## value
 
@@ -1201,9 +1209,9 @@ Sets the text content of drop-down button. After a menu option is selected, the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text of the drop-down button.Note: If the text exceeds the column width, it will be truncated.<br>**Since:** 11 |
 
 ## value
 
@@ -1223,6 +1231,6 @@ Sets the text content of drop-down button. After a menu option is selected, the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| resStr | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resStr | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)&gt; | Yes | Text of the drop-down button.If **resStr** is set to **undefined**, the previous value is retained. |

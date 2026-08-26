@@ -44,9 +44,9 @@ Transforms the current 2D matrix back to the identity matrix (i.e., without any 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## invert
 
@@ -68,9 +68,9 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## multiply
 
@@ -92,15 +92,15 @@ The matrix is superimposed in right multiplication mode. When the input paramete
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| other | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| other | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | No | Matrix to be superimposed |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## rotate
 
@@ -122,16 +122,16 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rx | number | No |
-| ry | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rx | number | No | Rotation effect of the X axis |
+| ry | number | No | Rotation effect of the Y-axis |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## scale
 
@@ -153,16 +153,16 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sx | number | No |
-| sy | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sx | number | No | X-axis scaling effect |
+| sy | number | No | Y-axis scaling effect |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## translate
 
@@ -184,16 +184,16 @@ Adds the translation effect of the X and Y axes to the current matrix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tx | number | No |
-| ty | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tx | number | No | X-axis translation effect |
+| ty | number | No | Y-axis translation effect |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## rotateX
 

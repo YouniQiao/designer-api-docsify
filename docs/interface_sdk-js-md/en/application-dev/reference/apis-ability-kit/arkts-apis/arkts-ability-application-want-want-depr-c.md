@@ -183,3 +183,142 @@ URI information to match. If **Uri** is specified in a Want object, the Want obj
 **Substitutes:** [uri](arkts-ability-app-ability-want-want-c.md#uri)
 
 **System capability:** SystemCapability.Ability.AbilityBase
+
+**Examples**
+
+Basic usage (called in a UIAbility object, where context in the example is the context object of the UIAbility).
+
+```TypeScript
+import Want from '@ohos.application.Want';
+import { BusinessError } from '@ohos.base';
+import UIAbility from '@ohos.app.ability.UIAbility';
+import AbilityConstant from '@ohos.app.ability.AbilityConstant';
+
+let want: Want = {
+'deviceId': '', // An empty deviceId indicates the local device.
+'bundleName': 'com.example.myapplication',
+'abilityName': 'EntryAbility',
+};
+class MyAbility extends UIAbility{
+onCreate(want: Want, launchParam: AbilityConstant.LaunchParam){
+    this.context.startAbility(want, (error: BusinessError) => {
+    // Start an ability explicitly. The bundleName, abilityName, and moduleName parameters work together to uniquely identify an ability.
+    console.error(`error.code = ${error.code}`);
+    });
+}
+}
+```
+
+String
+
+```TypeScript
+import Want from '@ohos.application.Want';
+
+let want: Want = {
+    bundleName: 'com.example.myapplication',
+    abilityName: 'EntryAbility',
+    parameters: {
+        keyForString: 'str',
+    },
+};
+```
+
+Number
+
+```TypeScript
+import Want from '@ohos.application.Want';
+
+let want: Want = {
+    bundleName: 'com.example.myapplication',
+    abilityName: 'EntryAbility',
+    parameters: {
+        keyForInt: 100,
+        keyForDouble: 99.99,
+    },
+};
+```
+
+Boolean
+
+```TypeScript
+import Want from '@ohos.application.Want';
+
+let want: Want = {
+    bundleName: 'com.example.myapplication',
+    abilityName: 'EntryAbility',
+    parameters: {
+        keyForBool: true,
+    },
+};
+```
+
+Object
+
+```TypeScript
+import Want from '@ohos.application.Want';
+
+let want: Want = {
+    bundleName: 'com.example.myapplication',
+    abilityName: 'EntryAbility',
+    parameters: {
+        keyForObject: {
+            keyForObjectString: 'str',
+            keyForObjectInt: -200,
+            keyForObjectDouble: 35.5,
+            keyForObjectBool: false,
+        },
+    },
+};
+```
+
+Array
+
+```TypeScript
+import Want from '@ohos.application.Want';
+
+let want: Want = {
+    bundleName: 'com.example.myapplication',
+    abilityName: 'EntryAbility',
+    parameters: {
+        keyForArrayString: ['str1', 'str2', 'str3'],
+        keyForArrayInt: [100, 200, 300, 400],
+        keyForArrayDouble: [0.1, 0.2],
+        keyForArrayObject: [{obj1: 'aaa'}, {obj2: 100}],
+    },
+};
+```
+
+File descriptor (FD)
+
+```TypeScript
+import fs from '@ohos.file.fs';
+import Want from '@ohos.application.Want';
+import { BusinessError } from '@ohos.base';
+import AbilityConstant from '@ohos.app.ability.AbilityConstant';
+import UIAbility from '@ohos.app.ability.UIAbility';
+
+
+let fd: number = 0;
+try {
+fd = fs.openSync('/data/storage/el2/base/haps/pic.png').fd;
+} catch(e) {
+console.error(`openSync fail: ${JSON.stringify(e)}`);
+}
+let want: Want = {
+deviceId: '', // An empty deviceId indicates the local device.
+bundleName: 'com.example.myapplication',
+abilityName: 'EntryAbility',
+parameters: {
+    'keyFd':{'type':'FD', 'value':fd}
+}
+};
+
+class MyAbility extends UIAbility{
+onCreate(want: Want, launchParam: AbilityConstant.LaunchParam){
+    this.context.startAbility(want, (error: BusinessError) => {
+    // Start an ability explicitly. The bundleName, abilityName, and moduleName parameters work together to uniquely identify an ability.
+    console.error(`error.code = ${error.code}`);
+    });
+}
+}
+```

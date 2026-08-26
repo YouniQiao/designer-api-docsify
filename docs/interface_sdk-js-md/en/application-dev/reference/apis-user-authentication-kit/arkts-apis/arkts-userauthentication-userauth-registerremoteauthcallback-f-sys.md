@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## registerRemoteAuthCallback
@@ -26,14 +27,43 @@ Registers a remote authentication callback. This API is used to register a callb
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [IRemoteAuthCallback](arkts-userauthentication-userauth-iremoteauthcallback-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [IRemoteAuthCallback](arkts-userauthentication-userauth-iremoteauthcallback-i-sys.md) | Yes | Remote authentication callback API. It contains the callback function for obtaining authentication page parameters and returning the authentication result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let remoteAuthCallback: userAuth.IRemoteAuthCallback = {
+  onGetRemoteAuthWidgetParam(challenge: Uint8Array): userAuth.WidgetParam {
+    console.info('Received challenge for remote auth, length: ' + challenge.length);
+    return {
+      title: 'Remote Authentication',
+      navigationButtonText: 'Cancel'
+    } as userAuth.WidgetParam;
+  },
+  onRemoteAuthResult(challenge: Uint8Array, result: userAuth.UserAuthResult): void {
+    console.info('remote auth result, result: ' + result.result + ', authType: ' + result.authType);
+  }
+};
+
+try {
+  userAuth.unregisterRemoteAuthCallback();
+  userAuth.registerRemoteAuthCallback(remoteAuthCallback);
+  console.info('Remote auth callback registered successfully');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`failed to register remote auth callback. Code is ${err?.code}, message is ${err?.message}`);
+}
+```

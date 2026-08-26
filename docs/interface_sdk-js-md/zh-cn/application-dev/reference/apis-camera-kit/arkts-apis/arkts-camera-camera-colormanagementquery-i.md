@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getSupportedColorSpaces
@@ -28,12 +27,24 @@ getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;colorSpaceManager.ColorSpace & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;colorSpaceManager.ColorSpace & gt; | 支持的色彩空间列表。若接口调用失败，返回undefined。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage.<br>**适用版本：** 12 - 17 |
+
+**示例**
+
+```TypeScript
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+
+function getSupportedColorSpaces(session: camera.PhotoSession): Array<colorSpaceManager.ColorSpace> {
+  let colorSpaces: Array<colorSpaceManager.ColorSpace> = [];
+  colorSpaces = session.getSupportedColorSpaces();
+  return colorSpaces;
+}
+```

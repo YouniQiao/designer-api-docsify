@@ -18,12 +18,12 @@ Defines the callback triggered when the **Swiper** component is about to scroll.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | [SwiperContentWillScrollResult](arkts-arkui-swipercontentwillscrollresult-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | [SwiperContentWillScrollResult](arkts-arkui-swipercontentwillscrollresult-i.md) | Yes | Information related to the upcoming scroll action, including the index of the current page, the index of the page that will be displayed in the scroll direction, and the displacement of the scroll action. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the scroll action is allowed. The value **true** means the scroll action is allowed, and **false** means the opposite. |

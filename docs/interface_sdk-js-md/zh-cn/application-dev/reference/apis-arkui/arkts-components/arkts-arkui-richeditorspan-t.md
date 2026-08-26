@@ -14,7 +14,7 @@ RichEditor span信息。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) |
-| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) | 后端返回的图片信息。 |
+| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) | 后端返回的文本信息。 |

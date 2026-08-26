@@ -2,7 +2,8 @@
 
 Enumerates the sorting methods of firewall rules.
 
-> **Description**&gt;
+> **Description**
+> 
 > [getNetFirewallRules](arkts-network-netfirewall-getnetfirewallrules-f.md) supports only the **ORDER_BY_RULE_NAME** field.
 
 **Since:** 15

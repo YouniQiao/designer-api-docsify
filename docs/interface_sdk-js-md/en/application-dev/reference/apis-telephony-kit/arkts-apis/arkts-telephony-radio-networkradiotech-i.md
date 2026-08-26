@@ -9,7 +9,6 @@ Defines the radio access technology for the packet switched (PS) or circuit swit
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## csRadioTech

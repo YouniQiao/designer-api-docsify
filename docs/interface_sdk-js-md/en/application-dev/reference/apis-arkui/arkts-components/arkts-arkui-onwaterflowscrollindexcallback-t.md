@@ -16,7 +16,7 @@ Represents a callback for item changes in the visible area of the **WaterFlow** 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| first | number | Yes |
-| [last](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-breakiterator-c.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| first | number | Yes | Index of the first item of the component. |
+| last | number | Yes | Index of the last item of the component. |

@@ -2,7 +2,8 @@
 
 AgentHostProxy用于从 [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)服务端向客户端发送数据或安全认证请求。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 本模块接口需要在主线程中使用，不支持在Worker、TaskPool等子线程中使用。
 @interface AgentHostProxy
 
@@ -28,15 +29,15 @@ authorize(handshakeData: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handshakeData | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handshakeData | string | 是 | 待发送到客户端的安全认证数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35600002](../errorcode-ability.md#35600002-ipc消息发送失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35600002](../errorcode-ability.md#35600002-ipc消息发送失败) | Failed to send the IPC message. |
 
 ## sendData
 
@@ -56,12 +57,12 @@ sendData(data: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | string | 是 | 待发送到[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)客户端的数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [35600002](../errorcode-ability.md#35600002-ipc消息发送失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [35600002](../errorcode-ability.md#35600002-ipc消息发送失败) | Failed to send the IPC message. |

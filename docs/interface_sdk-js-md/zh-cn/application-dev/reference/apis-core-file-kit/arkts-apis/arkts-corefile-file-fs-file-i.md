@@ -9,9 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## getParent
@@ -28,17 +26,26 @@ getParent(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回父目录路径。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900005 |
-| 13900042 |
-| 14300002 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+| 14300002 | Invalid URI |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+console.info(`Succeeded in getting parent path, the parent path is: ${file.getParent()}`);
+fileIo.closeSync(file);
+```
 
 ## lock
 
@@ -54,26 +61,42 @@ lock(exclusive?: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| exclusive | boolean | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| exclusive | boolean | 否 | 是否施加独占锁，默认false。true：施加独占锁；false：不施加独占锁。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900004 |
-| 13900008 |
-| 13900020 |
-| 13900034 |
-| 13900042 |
-| 13900043 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900020 | Invalid argument |
+| 13900034 | Operation would block |
+| 13900042 | Unknown error |
+| 13900043 | No record locks available |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+file.lock(true).then(() => {
+  console.info(`Succeeded in locking file.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  fileIo.closeSync(file);
+});
+```
 
 ## lock
 
@@ -89,20 +112,37 @@ lock(callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当文件上锁成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900004 |
-| 13900008 |
-| 13900020 |
-| 13900034 |
-| 13900042 |
-| 13900043 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900020 | Invalid argument |
+| 13900034 | Operation would block |
+| 13900042 | Unknown error |
+| 13900043 | No record locks available |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+file.lock((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in locking file.`);
+  }
+  fileIo.closeSync(file);
+});
+```
 
 ## lock
 
@@ -118,21 +158,38 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| exclusive | boolean | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| exclusive | boolean | 是 | 是否施加独占锁。true：施加独占锁；false：不施加独占锁。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当文件上锁成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900004 |
-| 13900008 |
-| 13900020 |
-| 13900034 |
-| 13900042 |
-| 13900043 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900020 | Invalid argument |
+| 13900034 | Operation would block |
+| 13900042 | Unknown error |
+| 13900043 | No record locks available |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+file.lock(true, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in locking file.`);
+  }
+  fileIo.closeSync(file);
+});
+```
 
 ## tryLock
 
@@ -148,20 +205,30 @@ tryLock(exclusive?: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| exclusive | boolean | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| exclusive | boolean | 否 | 是否施加独占锁，默认false。true：施加独占锁；false：不施加独占锁。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900004 |
-| 13900008 |
-| 13900020 |
-| 13900034 |
-| 13900042 |
-| 13900043 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900020 | Invalid argument |
+| 13900034 | Operation would block |
+| 13900042 | Unknown error |
+| 13900043 | No record locks available |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+file.tryLock(true);
+console.info(`Succeeded in locking file.`);
+fileIo.closeSync(file);
+```
 
 ## unlock
 
@@ -177,14 +244,25 @@ unlock(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900004 |
-| 13900008 |
-| 13900020 |
-| 13900034 |
-| 13900042 |
-| 13900043 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900020 | Invalid argument |
+| 13900034 | Operation would block |
+| 13900042 | Unknown error |
+| 13900043 | No record locks available |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+file.tryLock(true);
+file.unlock();
+console.info(`Succeeded in unlocking file.`);
+fileIo.closeSync(file);
+```
 
 ## fd
 

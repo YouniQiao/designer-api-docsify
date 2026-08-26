@@ -32,15 +32,15 @@ Set the render type of the builderNode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | Yes | render type |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns if change the render type successfully. |
 
 ## constructor
 
@@ -63,13 +63,13 @@ constructor.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
-| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | Yes |
-| id | string | Yes |
-| type | [XComponentType](arkts-arkui-xcomponenttype-e.md) | Yes |
-| libraryName | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UIContext used to create the FrameNode |
+| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | Yes | Render options of the Builder Node |
+| id | string | Yes | XComponent id defined by the application |
+| type | [XComponentType](arkts-arkui-xcomponenttype-e.md) | Yes | XComponent type |
+| libraryName | string | No | The name of the library to be loaded by XComponent |
 
 ## onCreate
 
@@ -91,9 +91,9 @@ Called when the XComponent surface has been created.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Object | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Object | No | event from native when the library loaded |
 
 ## onDestroy
 

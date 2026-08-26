@@ -9,7 +9,8 @@ A class that provides VM maintenance and test capabilities for developers.
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## enableLocalHandleDetection
@@ -42,9 +43,9 @@ Get all heap memory information from ArkTS-VMs and the shared heap.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HeapMemoryInfo](arkts-arkts-util-heapmemoryinfo-i.md)[]&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HeapMemoryInfo](arkts-arkts-util-heapmemoryinfo-i.md)[]&gt; | Returns a promise containing all the heap memory information from ArkTS-VMs' local heap and the shared heap. |
 
 ## offVMHeapMemoryPressure
 
@@ -76,16 +77,16 @@ Register a callback that is triggered if the heap memory exceeds the critical wa
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
-| heapMemoryThreshold | [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | This callback is triggered if the memory reaches the threshold after a GC. The string parameter indicates the type of memory pressure event:"LocalHeapMemPressure", "SharedHeapMemPressure", or "ProcessHeapMemPressure". |
+| heapMemoryThreshold | [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | Yes | Indicates the percentage threshold of the heap memory to trigger the callback after a GC. The value range is [70, 95]. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
 
 ## setMultithreadingDetectionEnabled
 
@@ -103,10 +104,21 @@ Sets whether to enable multithreading detection. When **enabled** is set to **tr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean | Yes |
-| options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Controls whether to enable multithreading detection. **true** means enabling the detection, and **false** means disabling it. |
+| options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | No | Optional configuration items<br>**Since:** 26.0.0 |
+
+**Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+// Enable multithreading detection.
+util.ArkTSVM.setMultithreadingDetectionEnabled(true);
+// Disable multithreading detection.
+util.ArkTSVM.setMultithreadingDetectionEnabled(false);
+```
 
 ## setTrackGlobalRef
 
@@ -124,6 +136,6 @@ Enable or disable tracking of the relationship between napi_ref and global handl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | The boolean flag enable to Indicates whether to turn on or off tracking, **true** means to turn on tracking, and **false** means to turn off it. |

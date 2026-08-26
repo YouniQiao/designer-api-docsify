@@ -16,6 +16,6 @@ type ImageErrorCallback = (error: ImageError) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| error | [ImageError](arkts-arkui-imageerror-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| error | [ImageError](arkts-arkui-imageerror-i.md) | 是 | 图片加载异常时触发回调的返回对象。 |

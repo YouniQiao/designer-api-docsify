@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WallpaperExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import WallpaperExtensionAbility from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -11,7 +11,7 @@ import { WallpaperExtensionAbility } from 'kits/@kit.BasicServicesKit';
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [WallpaperExtensionAbility](arkts-basicservices-wallpaperextensionability-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [WallpaperExtensionAbility](arkts-basicservices-wallpaperextensionability-c-sys.md) | class of wallpaper extension ability. |
 <!--DelEnd-->

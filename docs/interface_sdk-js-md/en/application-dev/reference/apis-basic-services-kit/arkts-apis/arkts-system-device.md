@@ -3,20 +3,20 @@
 ## Modules to Import
 
 ```TypeScript
-import { Device, DeviceResponse, GetDeviceOptions } from 'kits/@kit.BasicServicesKit';
+import Device, { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Device](arkts-basicservices-system-device-device-c.md) |
+| Name | Description |
+| --- | --- |
+| [Device](arkts-basicservices-system-device-device-c.md) | getInfo interface |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md) |
-| [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md) |  |
+| [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) |  |

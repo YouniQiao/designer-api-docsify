@@ -2,23 +2,27 @@
 
 After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be
 > encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent
-> lifecycle between them.&gt;
+> lifecycle between them.
+> 
 > * When you call drawing APIs in this module, the commands are stored in the associated **Canvas**
 > component's command queue. These commands are only executed when the current frame enters the
 > rendering phase and the associated **Canvas** component is visible. Therefore, when the **Canvas**
 > component is invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent
 > command queue buildup and excessive memory usage. For best practices, see
-> [Controlling Canvas Rendering Based on Component Visibility](../../../ui/arkts-drawing-customization-on-canvas.md#controlling-canvas-rendering-based-on-component-visibility).&gt;
+> [Controlling Canvas Rendering Based on Component Visibility](../../../ui/arkts-drawing-customization-on-canvas.md#controlling-canvas-rendering-based-on-component-visibility).
+> 
 > * The following path-related APIs apply only to paths created within **CanvasRenderingContext2D**
 > and do not affect paths defined in
 > [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)
 > or [Path2D](arkts-arkui-path2d-c.md):
 > [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath),
 > [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc),
-> [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).&gt;
+> [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
+> 
 > * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU
 > causes significant performance degradation.
 
@@ -51,9 +55,51 @@ Constructs a canvas object, which supports configuration of parameters for the *
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). If the value is **undefined** or **null**, the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) is used. |
+
+**Examples**
+
+The following example shows how to specify the unit mode during the creation of a CanvasRenderingContext2D object. The default unit mode is LengthMetricsUnit.DEFAULT, which corresponds to the default unit vp. Once set, this unit mode cannot be changed dynamically. For details, see LengthMetricsUnit.
+
+```TypeScript
+// xxx.ets
+import { LengthMetricsUnit } from '@kit.ArkUI'
+
+@Entry
+@Component
+struct LengthMetricsUnitDemo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
+  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.contextPX)
+        .width('100%')
+        .height(150)
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          // Draw graphics in px unit mode.
+          this.contextPX.fillRect(10, 10, 100, 100)
+          this.contextPX.clearRect(10, 10, 50, 50)
+        })
+
+      Canvas(this.contextVP)
+        .width('100%')
+        .height(150)
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.contextVP.fillRect(10, 10, 100, 100)
+          this.contextVP.clearRect(10, 10, 50, 50)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## constructor
 
@@ -75,10 +121,14 @@ Creates a **CanvasRenderingContext2D** object, allowing for initial configuratio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). If the value is **undefined** or **null**, the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) is used. |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set. Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. Default value: **DEFAULT**. |
+
+**Examples**
+
+See [constructor](#constructor)
 
 ## getContext2DFromDrawingContext
 
@@ -88,10 +138,12 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext** object. This **CanvasRenderingContext2D** object is bound to the same **Canvas** component as the input **DrawingRenderingContext** object.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The **CanvasRenderingContext2D** object obtained via this API cannot be used as a
 > parameter to create a Canvas
-> component. Otherwise, the application crashes.&gt;
+> component. Otherwise, the application crashes.
+> 
 > - If the input **DrawingRenderingContext** object is not bound to a **Canvas** component,
 > an error code is returned.
 
@@ -105,22 +157,50 @@ Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext**
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| drawingContext | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes |
-| options | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| drawingContext | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes | An object of the **DrawingRenderingContext** type.   **undefined** and **null** are treated as invalid values. |
+| options | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | No | Configuration options of the rendering context. Default value: **{ antialias: false } |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) |
+| Type | Description |
+| --- | --- |
+| [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) | Returns a **CanvasRenderingContext2D** object that is bound to the same **Canvas** component as the input **DrawingRenderingContext**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [103702](../errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [103702](../errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) | The drawingContext is not bound to a canvas component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { LengthMetricsUnit } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct CanvasExample {
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas({ unit: LengthMetricsUnit.DEFAULT })
+        .onReady((drawingContext?: DrawingRenderingContext) => {
+          if (!drawingContext) {
+            return
+          }
+          let context2D: CanvasRenderingContext2D =
+            CanvasRenderingContext2D.getContext2DFromDrawingContext(drawingContext, { antialias: true })
+          context2D.fillStyle = 'rgb(39,135,217)'
+          context2D.fillRect(10, 30, 100, 100)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## off('onAttach')
 
@@ -140,16 +220,16 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is bound 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'onAttach' | Yes |
-| callback | Callback & lt;void & gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.    **undefined** and **null** are treated as invalid values. |
+| callback | Callback & lt;void & gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is bound to the **Canvas** component are unsubscribed.If this parameter is not left empty, the callback corresponding to the bind event is unsubscribed.   **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## off('onDetach')
 
@@ -169,16 +249,109 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is unboun
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'onDetach' | Yes |
-| callback | Callback & lt;void & gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.    **undefined** and **null** are treated as invalid values. |
+| callback | Callback & lt;void & gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is unbound from the **Canvas** component are unsubscribed.If this parameter is not left empty, the callback corresponding to the unbind event is unsubscribed.   **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { FrameNode } from '@kit.ArkUI'
+
+// xxx.ets
+@Entry
+@Component
+struct AttachDetachExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true)
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+  private scroller: Scroller = new Scroller()
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  private node: FrameNode | null = null
+  attachCallback = () => {
+    console.info('CanvasRenderingContext2D attached to the canvas frame node.')
+    this.node = this.context.canvas
+  }
+  detachCallback = () => {
+    console.info('CanvasRenderingContext2D detach from the canvas frame node.')
+    this.node = null
+  }
+
+  aboutToAppear(): void {
+    try {
+      this.context.on('onAttach', this.attachCallback)
+      this.context.on('onDetach', this.detachCallback)
+    } catch (error) {
+      let e: BusinessError = error as BusinessError;
+      console.error(`Error code: ${e.code}, message: ${e.message}`);
+    }
+  }
+
+  aboutToDisappear(): void {
+    try {
+      this.context.off('onAttach')
+      this.context.off('onDetach')
+    } catch (error) {
+      let e: BusinessError = error as BusinessError;
+      console.error(`Error code: ${e.code}, message: ${e.message}`);
+    }
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Scroll(this.scroller) {
+        Flex({ direction: FlexDirection.Column }) {
+          ForEach(this.arr, (item: number) => {
+            Row() {
+              if (item == 3) {
+                Canvas(this.context)
+                  .width('100%')
+                  .height(150)
+                  .backgroundColor('rgb(213,213,213)')
+                  .onReady(() => {
+                    this.context.font = '30vp sans-serif'
+                    this.node?.commonEvent.setOnVisibleAreaApproximateChange(
+                      { ratios: [0, 1], expectedUpdateInterval: 10 },
+                      (isVisible: boolean, currentRatio: number) => {
+                        if (!isVisible && currentRatio <= 0.0) {
+                          console.info('Canvas is completely invisible.')
+                        }
+                        if (isVisible && currentRatio >= 1.0) {
+                          console.info('Canvas is fully visible.')
+                        }
+                      }
+                    )
+                  })
+              } else {
+                Text(item.toString())
+                  .width('100%')
+                  .height(150)
+                  .backgroundColor('rgb(39,135,217)')
+                  .borderRadius(15)
+                  .fontSize(16)
+                  .textAlign(TextAlign.Center)
+                  .margin({ top: 5 })
+              }
+            }
+          }, (item: number) => item.toString())
+        }
+      }
+      .width('90%')
+      .scrollBar(BarState.Off)
+      .scrollable(ScrollDirection.Vertical)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## on('onAttach')
 
@@ -188,25 +361,26 @@ on(type: 'onAttach', callback: Callback<void>): void
 
 Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a **Canvas** component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > A **CanvasRenderingContext2D** object can only be bound to one **Canvas** component
 > at a time.
-
+   
 > When a **CanvasRenderingContext2D** object is bound to a **Canvas** component, the
 > **onAttach** callback is triggered, indicating that the
 > [canvas](#canvas)
 > object is accessible.
-
+   
 > Avoid performing drawing operations in the **onAttach** callback. Make sure the
 > **Canvas** component has completed its
 > [onReady](arkts-arkui-canvas-attribute.md#onready)
 > event before performing any drawing.
-
+   
 > The **onAttach** callback is triggered when:
-
+   
 > 1. A **Canvas** component is created and bound to a **CanvasRenderingContext2D**
 > object.
-
+   
 > 2. A **CanvasRenderingContext2D** object is bound to a new **Canvas** component.
 
 **Since:** 13
@@ -219,16 +393,16 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'onAttach' | Yes |
-| callback | Callback & lt;void & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.    **undefined** and **null** are treated as invalid values. |
+| callback | Callback & lt;void & gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is bound to the **Canvas** component.   **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on('onDetach')
 
@@ -238,15 +412,16 @@ on(type: 'onDetach', callback: Callback<void>): void
 
 Subscribes to the event when a **CanvasRenderingContext2D** object is unbound from a **Canvas** component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When a **CanvasRenderingContext2D** object is unbound from a **Canvas** component,
 > the **onDetach** callback is triggered. In this case, cease any drawing operations.
-
+   
 > The **onDetach** callback is triggered when:
-
+   
 > 1. A **Canvas** component is destroyed and unbound from a **CanvasRenderingContext2D**
 > object.
-
+   
 > 2. A **CanvasRenderingContext2D** object is bound to a different **Canvas** component,
 > causing the existing binding to be released.
 
@@ -260,16 +435,16 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'onDetach' | Yes |
-| callback | Callback & lt;void & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.    **undefined** and **null** are treated as invalid values. |
+| callback | Callback & lt;void & gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is unbound from the **Canvas** component.   **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## startImageAnalyzer
 
@@ -279,7 +454,8 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 Configures and starts the AI analyzer. This API uses a promise to return the result. Before use, set [enableAnalyzer](arkts-arkui-canvas-attribute.md#enableanalyzer) to **true** to enable the image AI analyzer.Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.Repeated calls to this method before completion trigger an error callback. For the sample code, see the code for **stopImageAnalyzer**.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The image analysis type cannot be dynamically modified.
 > When image changes are detected, the analysis result is automatically destroyed. You can
 > call this API again to start analysis.
@@ -296,23 +472,23 @@ Configures and starts the AI analyzer. This API uses a promise to return the res
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes | Settings of the AI analyzer.   **undefined** and **null** are treated as invalid values. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is unsupported. |
+| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
+| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
 
 ## stopImageAnalyzer
 
@@ -322,7 +498,8 @@ stopImageAnalyzer(): void
 
 Stops AI image analysis. The content displayed by the AI image analyzer will be destroyed.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If this API is called when the **startImageAnalyzer** API has not yet returned any result,
 > an error is reported.
 > This feature depends on device capabilities.
@@ -334,6 +511,72 @@ Stops AI image analysis. The content displayed by the AI image analyzer will be 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct ImageAnalyzerExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true)
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+  private config: ImageAnalyzerConfig = {
+    types: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT]
+  }
+  // Replace 'common/images/example.png' with the image resource file you use.
+  private img = new ImageBitmap('common/images/example.png')
+  private aiController: ImageAnalyzerController = new ImageAnalyzerController()
+  private options: ImageAIOptions = {
+    types: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT],
+    aiController: this.aiController
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button('start')
+        .width(100)
+        .height(50)
+        .margin(5)
+        .onClick(() => {
+          this.context.startImageAnalyzer(this.config)
+            .then(() => {
+              console.info('analysis complete');
+            })
+            .catch((error: BusinessError) => {
+              let e: BusinessError = error as BusinessError
+              console.error(`Error code: ${e.code}, message: ${e.message}`)
+            })
+        })
+      Button('stop')
+        .width(100)
+        .height(50)
+        .margin(5)
+        .onClick(() => {
+          this.context.stopImageAnalyzer()
+        })
+      Button('getTypes')
+        .width(100)
+        .height(50)
+        .margin(5)
+        .onClick(() => {
+          this.aiController.getImageAnalyzerSupportTypes()
+        })
+      Canvas(this.context, this.options)
+        .width(200)
+        .height(200)
+        .enableAnalyzer(true)
+        .onReady(() => {
+          this.context.drawImage(this.img, 0, 0, 200, 200)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## toDataURL
 
@@ -353,16 +596,76 @@ Creates a data URL that contains a representation of an image. This API involves
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | string | No |
-| quality | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | string | No | Image format. The options are **image/png**, **image/jpeg**, and **image/webp**. Invalid values **undefined** and **null** are treated as the default value. Default value: **image/png |
+| quality | any | No | Image quality, which ranges from 0 to 1, when the image format is **image/jpeg** or **image/webp**. If the set value is beyond the value range, the default value **0.92** is used. Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. Default value: **0.92 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Image URL. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CanvasExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true)
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+  @State toDataURL: string = ""
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width(100)
+        .height(100)
+        .onReady(() =>{
+          this.context.fillStyle = "#00ff00"
+          this.context.fillRect(0,0,100,100)
+          // Generate the image URL in PNG format.
+          this.toDataURL = this.context.toDataURL("image/png", 0.92)
+        })
+      Text(this.toDataURL)
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor('#ffff00')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct ToDataURL {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(100, 100);
+  @State dataURL: string = "";
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width(100)
+        .height(100)
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings)
+          offContext.fillRect(0, 0, 100, 100)
+          this.dataURL = offContext.toDataURL()
+        })
+      Text(this.dataURL)
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor('#ffff00')
+  }
+}
+```
 
 ## canvas
 
@@ -400,6 +703,40 @@ Component height.Default unit: vp
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct OffscreenCanvasPage {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(200, 300);
+
+  build() {
+    Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Start, justifyContent: FlexAlign.Start }) {
+      Column() {
+        Canvas(this.context)
+          .width('100%')
+          .height('100%')
+          .borderWidth(5)
+          .borderColor('#057D02')
+          .backgroundColor('#FFFFFF')
+          .onReady(() => {
+            let offContext = this.offCanvas.getContext("2d", this.settings)
+            offContext.fillStyle = '#CDCDCD'
+            offContext.fillRect(0, 0, 100, this.offCanvas.height)
+            let image = this.offCanvas.transferToImageBitmap()
+            this.context.setTransform(1, 0, 0, 1, 50, 200)
+            this.context.transferFromImageBitmap(image)
+          })
+      }
+    }.width('100%').height('100%')
+  }
+}
+```
+
 ## width
 
 ```TypeScript
@@ -417,3 +754,37 @@ Component width.Default unit: vp
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct OffscreenCanvasPage {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(200, 300);
+
+  build() {
+    Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Start, justifyContent: FlexAlign.Start }) {
+      Column() {
+        Canvas(this.context)
+          .width('100%')
+          .height('100%')
+          .borderWidth(5)
+          .borderColor('#057D02')
+          .backgroundColor('#FFFFFF')
+          .onReady(() => {
+            let offContext = this.offCanvas.getContext("2d", this.settings)
+            offContext.fillStyle = '#CDCDCD'
+            offContext.fillRect(0, 0, this.offCanvas.width, 150)
+            let image = this.offCanvas.transferToImageBitmap()
+            this.context.setTransform(1, 0, 0, 1, 50, 200)
+            this.context.transferFromImageBitmap(image)
+          })
+      }
+    }.width('100%').height('100%')
+  }
+}
+```

@@ -7,23 +7,22 @@ The **mouseEvent** module provides mouse events reported by a device. It is inhe
 ## Modules to Import
 
 ```TypeScript
-import { Action as MouseAction, Axis, AxisValue, Button, MouseEvent, ToolType as MouseToolType } from 'kits/@kit.InputKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AxisValue(Mouse Event)](arkts-input-multimodalinput-mouseevent-axisvalue-i.md) |
-| [MouseEvent(Mouse Event)](arkts-input-multimodalinput-mouseevent-mouseevent-i.md) |
+| Name | Description |
+| --- | --- |
+| [AxisValue(Mouse Event)](arkts-input-multimodalinput-mouseevent-axisvalue-i.md) | Defines the mouse axis type and axis value. |
+| [MouseEvent(Mouse Event)](arkts-input-multimodalinput-mouseevent-mouseevent-i.md) | Defines the mouse event. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Action(Mouse Event)](arkts-input-multimodalinput-mouseevent-action-e.md) |
-| [Axis(Mouse Event)](arkts-input-multimodalinput-mouseevent-axis-e.md) |
-| [Button(Mouse Event)](arkts-input-multimodalinput-mouseevent-button-e.md) |
-| [ToolType(Mouse Event)](arkts-input-multimodalinput-mouseevent-tooltype-e.md) |
+| Name | Description |
+| --- | --- |
+| [Action(Mouse Event)](arkts-input-multimodalinput-mouseevent-action-e.md) | Enumerates mouse event types. |
+| [Axis(Mouse Event)](arkts-input-multimodalinput-mouseevent-axis-e.md) | Enumerates mouse axis types. |
+| [Button(Mouse Event)](arkts-input-multimodalinput-mouseevent-button-e.md) | Enumerates mouse buttons. |
+| [ToolType(Mouse Event)](arkts-input-multimodalinput-mouseevent-tooltype-e.md) | Enumerates tool types. |

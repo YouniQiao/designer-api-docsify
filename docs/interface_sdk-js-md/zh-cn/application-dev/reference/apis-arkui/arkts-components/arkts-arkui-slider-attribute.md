@@ -31,9 +31,9 @@ blockBorderColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 滑块描边颜色。默认值：'#00000000' |
 
 ## blockBorderWidth
 
@@ -53,9 +53,9 @@ blockBorderWidth(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 滑块描边粗细。   **说明：** 设置string类型时，不支持百分比。 |
 
 ## blockColor
 
@@ -75,9 +75,9 @@ blockColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 滑块的颜色。 默认值：`\\$r('sys.color.ohos_id_color_foreground_contrary')` |
 
 ## blockColor
 
@@ -99,9 +99,9 @@ blockColor(value: ResourceColor | LinearGradient)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | 是 | 滑块的颜色。 默认值： `\\$r('sys.color.ohos_id_color_foreground_contrary')` |
 
 ## blockSize
 
@@ -121,9 +121,9 @@ blockSize(value: SizeOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | 是 | 滑块大小。默认值：当参数style的值设置为[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet时为{width: 18, height: 18}，当参数style的值设置为[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet时为{width: 12, height: 12}，当参数style的值设置为 [SliderStyle](arkts-arkui-sliderstyle-e.md).NONE时，此字段不生效。当设置的blockSize的宽高值不相等时，取较小值的尺寸，当设置的宽高值中有一个或两个都小于等于0的时候，取默认 值。 |
 
 ## blockStyle
 
@@ -143,9 +143,9 @@ blockStyle(value: SliderBlockStyle)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [SliderBlockStyle](arkts-arkui-sliderblockstyle-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [SliderBlockStyle](arkts-arkui-sliderblockstyle-i.md) | 是 | 滑块形状参数。默认值：SliderBlockType.DEFAULT，滑块形状为圆形。 |
 
 ## contentModifier
 
@@ -165,9 +165,9 @@ contentModifier(modifier: ContentModifier<SliderConfiguration>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[SliderConfiguration](arkts-arkui-sliderconfiguration-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[SliderConfiguration](arkts-arkui-sliderconfiguration-i.md)&gt; | 是 | 在Slider组件上，定制内容区的方法。ContentModifier为内容修改器，需自定义class实现该接口。 |
 
 ## digitalCrownSensitivity
 
@@ -177,7 +177,8 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 设置旋转表冠灵敏度。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 18
@@ -190,9 +191,9 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [sensitivity](../../apis-localization-kit/arkts-apis/arkts-localization-intl-collatoroptions-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | 是 | 旋转表冠灵敏度。默认值：CrownSensitivity.MEDIUM |
 
 ## enableHapticFeedback
 
@@ -212,9 +213,9 @@ enableHapticFeedback(enabled: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | boolean | 是 | 是否开启触控反馈。true：开启触控反馈；false：不开启触控反馈。默认值：true |
 
 ## maxLabel
 
@@ -224,7 +225,8 @@ maxLabel(value: string)
 
 设置最大值标签的文本内容。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用max替代。max是[SliderOptions](arkts-arkui-slideroptions-i.md)中的属性。
 
 **起始版本：** 7
@@ -237,9 +239,9 @@ maxLabel(value: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | string | 是 | 最大值标签文本。 |
 
 ## minLabel
 
@@ -249,7 +251,8 @@ minLabel(value: string)
 
 设置最小值标签的文本内容。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用min替代。min是[SliderOptions](arkts-arkui-slideroptions-i.md)中的属性。
 
 **起始版本：** 7
@@ -262,9 +265,9 @@ minLabel(value: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | string | 是 | 最小值标签文本。 |
 
 ## minResponsiveDistance
 
@@ -284,9 +287,9 @@ minResponsiveDistance(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 设置滑块开始滑动的最小响应距离。默认值：0   **说明：** 单位与 [SliderOptions](arkts-arkui-slideroptions-i.md)中的属性min以及属性max一致。当value小于0、大于max-min或非法值时，取默认值。 |
 
 ## onChange
 
@@ -306,9 +309,9 @@ Slider拖动或点击时触发事件回调。Begin和End状态在点击时触发
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | (value: number, mode: SliderChangeMode) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (value: number, mode: SliderChangeMode) = & gt; void | 是 |  |
 
 ## prefix
 
@@ -328,10 +331,10 @@ prefix(content: ComponentContent, options?: SliderPrefixOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | 是 |
-| options | [SliderPrefixOptions](arkts-arkui-sliderprefixoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | 是 | 滑块前缀的可视化内容，显示在滑块起始位置。 |
+| options | [SliderPrefixOptions](arkts-arkui-sliderprefixoptions-i.md) | 否 | 滑块前缀的配置选项，用于设置与无障碍功能相关的属性。 默认值：null |
 
 ## selectedBorderRadius
 
@@ -351,9 +354,9 @@ selectedBorderRadius(value: Dimension)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 | 已选择部分的圆角半径。默认值：当style值为SliderStyle.InSet或SliderStyle.OutSet时，跟随底板圆角；当style值为 SliderStyle.NONE时，为0。   **说明：** 不支持Percentage类型。设定值小于0时取默认值。 |
 
 ## selectedColor
 
@@ -373,9 +376,9 @@ selectedColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 滑轨的已滑动部分颜色。 默认值：`\\$r('sys.color.ohos_id_color_emphasize')` |
 
 ## selectedColor
 
@@ -397,9 +400,9 @@ selectedColor(selectedColor: ResourceColor | LinearGradient)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [selectedColor](#selectedcolor) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| selectedColor | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | 是 | 滑轨的已滑动部分颜色。默认值： `\\$r('sys.color.ohos_id_color_emphasize')`    **说明：** 设置渐变色时，若颜色断点颜色值为非法值或者渐变色断点为空时，渐变色不起效果。 |
 
 ## showSteps
 
@@ -419,9 +422,9 @@ showSteps(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 是否显示步长刻度值。true：显示刻度值；false：不显示刻度值。默认值：false |
 
 ## showSteps
 
@@ -443,10 +446,10 @@ showSteps(value: boolean, options?: SliderShowStepOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
-| options | [SliderShowStepOptions](arkts-arkui-slidershowstepoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 是否显示步长刻度值。true：显示刻度值；false：不显示刻度值。默认值：false |
+| options | [SliderShowStepOptions](arkts-arkui-slidershowstepoptions-i.md) | 否 | 刻度点无障碍文本的配置选项，用于设置与无障碍功能相关的属性。默认值：null |
 
 ## showTips
 
@@ -466,10 +469,10 @@ showTips(value: boolean, content?: ResourceStr)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 滑动时是否显示气泡提示。true：显示气泡；false：不显示气泡。默认值：false |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 否 | 气泡提示的文本内容。传入时显示自定义文本（当需要展示特定格式或额外信息时使用），不传入时默认显示当前百分比数值。<br>**起始版本：** 10 |
 
 ## slideRange
 
@@ -489,9 +492,9 @@ slideRange(value: SlideRange)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [SlideRange](arkts-arkui-sliderange-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [SlideRange](arkts-arkui-sliderange-i.md) | 是 | 有效滑动区间 |
 
 ## sliderInteractionMode
 
@@ -511,9 +514,9 @@ sliderInteractionMode(value: SliderInteraction)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [SliderInteraction](arkts-arkui-sliderinteraction-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [SliderInteraction](arkts-arkui-sliderinteraction-e.md) | 是 | 用户与滑动条组件交互方式。 默认值：SliderInteraction.SLIDE_AND_CLICK。 |
 
 ## stepColor
 
@@ -533,9 +536,9 @@ stepColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 刻度颜色。默认值：`\\$r('sys.color.ohos_id_color_foreground')`混合`\\$r('sys.color.ohos_id_alpha_normal_bg')`透明度的颜色 |
 
 ## stepSize
 
@@ -555,9 +558,9 @@ stepSize(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 刻度大小（直径）。 默认值：'4vp'取值范围： [0, [trackThickness](#trackthickness)) |
 
 ## suffix
 
@@ -577,10 +580,10 @@ suffix(content: ComponentContent, options?: SliderSuffixOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | 是 |
-| options | [SliderSuffixOptions](arkts-arkui-slidersuffixoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | 是 | 滑块后缀的可视化内容，显示在滑块结束位置。 |
+| options | [SliderSuffixOptions](arkts-arkui-slidersuffixoptions-i.md) | 否 | 滑块后缀的配置选项，用于设置与无障碍功能相关的属性。 默认值：null |
 
 ## trackBorderRadius
 
@@ -600,9 +603,9 @@ trackBorderRadius(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 底板圆角半径。默认值：style值为SliderStyle.OutSet时默认值为'2vp'。style值为SliderStyle.InSet时默认 值为'10vp'。   **说明：** 设定值小于0时取默认值。 |
 
 ## trackColor
 
@@ -622,9 +625,9 @@ trackColor(value: ResourceColor | LinearGradient)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | 是 | 滑轨的背景颜色。默认值：`\\$r('sys.color.ohos_id_color_component_normal')`    **说明：** 1. 设置渐变色时，如果颜色断点颜色值为非法值或渐变色断点为空，渐变色将不起效果。 2. 该接口中的LinearGradient类型不支持在原子化服务中使用。<br>**起始版本：** 12 |
 
 ## trackColorMetrics
 
@@ -644,9 +647,9 @@ trackColorMetrics(color: ColorMetricsLinearGradient)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color | [ColorMetricsLinearGradient](arkts-arkui-colormetricslineargradient-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | [ColorMetricsLinearGradient](arkts-arkui-colormetricslineargradient-c.md) | 是 | 滑轨轨道的线性渐变背景颜色。设置渐变色时，如果color的值为undefined，渐变色设置无效，轨道背景颜色默认取值为： `\\$r('sys.color.ohos_id_color_component_normal')`。 |
 
 ## trackThickness
 
@@ -666,6 +669,6 @@ trackThickness(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 滑轨的粗细。默认值：当参数style的值设置[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet 时为 4.0vp， [SliderStyle](arkts-arkui-sliderstyle-e.md).InSet时为20.0vp。 |

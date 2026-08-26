@@ -11,7 +11,7 @@ Represents a path used in the **clipShape** and **maskShape** APIs.This API inhe
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## commands
@@ -34,15 +34,15 @@ Sets the path drawing commands.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [commands](#commands) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| commands | string | Yes | Path drawing commands. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) |
+| Type | Description |
+| --- | --- |
+| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) | PathShape** object. |
 
 ## constructor
 
@@ -64,6 +64,6 @@ A constructor used to create a **PathShape** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [PathShapeOptions](arkts-arkui-arkui-shape-pathshapeoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [PathShapeOptions](arkts-arkui-arkui-shape-pathshapeoptions-i.md) | No | Path parameters. |

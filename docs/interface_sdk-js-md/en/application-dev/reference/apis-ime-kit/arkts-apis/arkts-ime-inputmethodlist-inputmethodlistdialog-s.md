@@ -9,7 +9,7 @@ InputMethodListDialog({controller: CustomDialogController, patternOptions?: Patt
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodListDialog, PatternOptions, Pattern } from 'kits/@kit.IMEKit';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 ```
 
 ## controller

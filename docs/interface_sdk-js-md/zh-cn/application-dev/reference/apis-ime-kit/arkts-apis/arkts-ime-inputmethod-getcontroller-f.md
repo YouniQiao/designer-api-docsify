@@ -3,7 +3,12 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import inputMethod from '@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKitEngine';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
+import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
+import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 ```
 
 ## getController
@@ -20,12 +25,18 @@ function getController(): InputMethodController
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | 返回当前客户端实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemCapability } from 'kits/@kit.BasicServicesKit';
+import systemCapability from '@kit.BasicServicesKit';
 ```
 
 ## querySystemCapabilities
@@ -22,9 +22,24 @@ Get System Capability.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
+
+**Examples**
+
+```TypeScript
+try {
+    systemCapability.querySystemCapabilities((err:Error, data:string) => {
+    if (err == undefined) {
+        console.info("get system capabilities:" + data);
+    } else {
+        console.error(" get system capabilities err:" + err);
+    }});
+}catch(e){
+    console.error("get unexpected error: " + e);
+}
+```
 
 
 ## querySystemCapabilities
@@ -43,6 +58,20 @@ Get System Capability.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | system capability string. |
+
+**Examples**
+
+```TypeScript
+try {
+    systemCapability.querySystemCapabilities().then((value:string) => {
+        console.info("get system capabilities: " + value);
+    }).catch((err:Error) => {
+        console.error("get system capabilities error: " + err);
+    });
+}catch(e){
+    console.error("get unexpected error: " + e);
+}
+```

@@ -2,8 +2,10 @@
 
 多条件筛选，帮助用户在大量信息中找到所需内容，应结合具体场景选择合适筛选方式。多条件筛选控件由筛选器与悬浮条构成，悬浮条可下拉展示悬浮筛选器。筛选器样式可分为多行可折叠类型与多行列表类型，并可以在筛选器最后一行附加快捷筛选器。
 
-> **说明：**&gt;
-> - 该组件仅可在Stage模型下使用。&gt;
+> **说明：**
+> 
+> - 该组件仅可在Stage模型下使用。
+> 
 > - 如果Filter设置通用属性和通用事件，编译工具链会额外生
 > 成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到Filter本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议Filter设置通用属性和通用事件。
 
@@ -14,7 +16,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Filter, FilterParams, FilterResult, FilterType } from 'kits/@kit.ArkUI';
+import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 ```
 
 ## container
@@ -51,9 +53,9 @@ onFilterChanged: (filterResults: Array<FilterResult>) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filterResults | Array&lt;[FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filterResults | Array&lt;[FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md)&gt; | 是 |  |
 
 ## additionFilters
 

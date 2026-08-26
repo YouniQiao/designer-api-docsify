@@ -11,7 +11,7 @@ Provides methods to accessing bluetooth OPP(OBEX OBJECT PUSH Profile)-related ca
 ## Modules to Import
 
 ```TypeScript
-import { opp } from 'kits/@kit.ConnectivityKit';
+import opp from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -19,27 +19,27 @@ import { opp } from 'kits/@kit.ConnectivityKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createOppServerProfile](arkts-connectivity-opp-createoppserverprofile-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [createOppServerProfile](arkts-connectivity-opp-createoppserverprofile-f-sys.md) | create the instance of OPP server profile. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FileHolder](arkts-connectivity-opp-fileholder-i-sys.md) |
-| [OppServerProfile](arkts-connectivity-opp-oppserverprofile-i-sys.md) |
-| [OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [FileHolder](arkts-connectivity-opp-fileholder-i-sys.md) | Describes the file info for transfer |
+| [OppServerProfile](arkts-connectivity-opp-oppserverprofile-i-sys.md) | Manager OPP server profile. |
+| [OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md) | Describes the transferred file information. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DirectionType](arkts-connectivity-opp-directiontype-e-sys.md) |
-| [TransferResult](arkts-connectivity-opp-transferresult-e-sys.md) |
-| [TransferStatus](arkts-connectivity-opp-transferstatus-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [DirectionType](arkts-connectivity-opp-directiontype-e-sys.md) | Enum for file transfer direction. |
+| [TransferResult](arkts-connectivity-opp-transferresult-e-sys.md) | Enum for the file transfer result. |
+| [TransferStatus](arkts-connectivity-opp-transferstatus-e-sys.md) | Enum for the file transfer status. |
 <!--DelEnd-->

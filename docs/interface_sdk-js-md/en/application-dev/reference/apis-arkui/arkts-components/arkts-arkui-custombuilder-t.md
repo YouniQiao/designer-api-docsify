@@ -14,7 +14,7 @@ Defines the CustomBuilder Type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| () = & gt; any) |
-| void |
+| Type | Description |
+| --- | --- |
+| () = & gt; any) |  |
+| void |  |

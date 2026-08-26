@@ -11,14 +11,14 @@ Insight intent Provider. @namespace insightIntentProvider
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentProvider } from 'kits/@kit.AbilityKit';
+import insightIntentProvider from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md) |
-| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md) |
+| Name | Description |
+| --- | --- |
+| [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md) | Send execute result. |
+| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md) | Send intent result. |

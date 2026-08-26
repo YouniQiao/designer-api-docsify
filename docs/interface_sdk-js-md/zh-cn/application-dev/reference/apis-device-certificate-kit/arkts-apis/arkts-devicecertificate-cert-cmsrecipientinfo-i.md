@@ -2,7 +2,8 @@
 
 CMS封装数据的接收者信息。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 至少需要设置一个接收者。
 
 **起始版本：** 22
@@ -12,7 +13,6 @@ CMS封装数据的接收者信息。
 ## 导入模块
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## keyAgreeInfo

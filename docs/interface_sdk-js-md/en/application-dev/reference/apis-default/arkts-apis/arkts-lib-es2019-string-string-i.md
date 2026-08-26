@@ -15,8 +15,8 @@ Removes the trailing white space and line terminator characters from a string.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## trimLeft
 
 ```TypeScript
@@ -29,8 +29,8 @@ Removes the leading white space and line terminator characters from a string.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## trimRight
 
 ```TypeScript
@@ -43,8 +43,8 @@ Removes the trailing white space and line terminator characters from a string.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## trimStart
 
 ```TypeScript
@@ -55,5 +55,5 @@ Removes the leading white space and line terminator characters from a string.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

@@ -9,16 +9,16 @@ DataUriUtils模块提供用于处理uri对象的能力，包括获取、绑定�
 ## 导入模块
 
 ```TypeScript
-import { dataUriUtils } from 'kits/@kit.AbilityKit';
+import dataUriUtils from '@kit.AbilityKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [attachId](arkts-ability-datauriutils-attachid-f.md) |
-| [deleteId](arkts-ability-datauriutils-deleteid-f.md) |
-| [getId](arkts-ability-datauriutils-getid-f.md) |
-| [updateId](arkts-ability-datauriutils-updateid-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [attachId](arkts-ability-datauriutils-attachid-f.md) | 将ID附加到uri的路径末尾。 |
+| [deleteId](arkts-ability-datauriutils-deleteid-f.md) | 删除指定uri路径末尾的ID。 |
+| [getId](arkts-ability-datauriutils-getid-f.md) | 获取指定uri路径末尾的ID。 |
+| [updateId](arkts-ability-datauriutils-updateid-f.md) | 更新指定uri中的ID。 |

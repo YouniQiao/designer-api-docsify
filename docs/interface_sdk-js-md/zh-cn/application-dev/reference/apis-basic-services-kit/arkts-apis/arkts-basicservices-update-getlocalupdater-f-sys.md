@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import update from '@kit.BasicServicesKit';
 ```
 
 ## getLocalUpdater
@@ -29,12 +29,19 @@ function getLocalUpdater(): LocalUpdater
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LocalUpdater](arkts-basicservices-update-localupdater-i-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LocalUpdater](arkts-basicservices-update-localupdater-i-sys.md) | 用于执行本地升级相关操作的工具类对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+// 获取本地升级对象
+  let localUpdater = update.getLocalUpdater();
+```

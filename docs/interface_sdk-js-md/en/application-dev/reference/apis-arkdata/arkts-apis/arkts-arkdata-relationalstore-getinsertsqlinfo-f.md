@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import relationalStore from '@kit.ArkData';
 ```
 
 ## getInsertSqlInfo
@@ -20,20 +20,36 @@ Obtains the SQL statement used to insert data. This API returns the result synch
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| table | string | Yes |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| table | string | Yes | Name of the database table to which data is to be written. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Field information and corresponding values of the data to be written to the database. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | Resolution used to resolve the conflict. Default value: **relationalStore.ConflictResolution.ON_CONFLICT_NONE**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) | SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+
+**Examples**
+
+```TypeScript
+const bucket: relationalStore.ValuesBucket = {
+  name: "Logitech",
+  age: 18,
+  sex: "man",
+  desc: "asserter"
+};
+const sqlInfo: relationalStore.SqlInfo = relationalStore.getInsertSqlInfo(
+  "USER",
+  bucket,
+  relationalStore.ConflictResolution.ON_CONFLICT_NONE
+);
+```

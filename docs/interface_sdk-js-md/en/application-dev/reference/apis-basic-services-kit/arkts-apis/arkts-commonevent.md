@@ -13,32 +13,33 @@ The **CommonEvent** module provides capabilities to publish, subscribe to, and u
 ## Modules to Import
 
 ```TypeScript
+import commonEventManager from '@kit.BasicServicesKitManager';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createSubscriber](arkts-basicservices-commonevent-createsubscriber-depr-f.md#createsubscriber) |
-| [createSubscriber](arkts-basicservices-commonevent-createsubscriber-depr-f.md#createsubscriber) |
-| [publish](arkts-basicservices-commonevent-publish-depr-f.md#publish) |
-| [publish](arkts-basicservices-commonevent-publish-depr-f.md#publish) |
-| [subscribe](arkts-basicservices-commonevent-subscribe-depr-f.md#subscribe) |
-| [unsubscribe](arkts-basicservices-commonevent-unsubscribe-depr-f.md#unsubscribe) |
+| Name | Description |
+| --- | --- |
+| [createSubscriber](arkts-basicservices-commonevent-createsubscriber-depr-f.md#createsubscriber) | Creates a subscriber. This API uses an asynchronous callback to return the result. |
+| [createSubscriber](arkts-basicservices-commonevent-createsubscriber-depr-f.md#createsubscriber) | Creates a subscriber. This API uses a promise to return the result. |
+| [publish](arkts-basicservices-commonevent-publish-depr-f.md#publish) | Publishes a common event with given properties. This API uses an asynchronous callback to return the result. |
+| [publish](arkts-basicservices-commonevent-publish-depr-f.md#publish) | Publishes a common event with given properties. This API uses an asynchronous callback to return the result. |
+| [subscribe](arkts-basicservices-commonevent-subscribe-depr-f.md#subscribe) | Subscribes to common events. This API uses an asynchronous callback to return the result. |
+| [unsubscribe](arkts-basicservices-commonevent-unsubscribe-depr-f.md#unsubscribe) | Unsubscribes from common events. This API uses an asynchronous callback to return the result. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [publishAsUser](arkts-basicservices-commonevent-publishasuser-depr-f-sys.md#publishasuser) |
-| [publishAsUser](arkts-basicservices-commonevent-publishasuser-depr-f-sys.md#publishasuser) |
+| Name | Description |
+| --- | --- |
+| [publishAsUser](arkts-basicservices-commonevent-publishasuser-depr-f-sys.md#publishasuser) | Publishes a common event to a specific user. This API uses an asynchronous callback to return the result. |
+| [publishAsUser](arkts-basicservices-commonevent-publishasuser-depr-f-sys.md#publishasuser) | Publishes a common event with given properties to a specific user. This API uses an asynchronous callback to return the result. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Support](arkts-basicservices-commonevent-support-depr-e.md) |
+| Name | Description |
+| --- | --- |
+| [Support](arkts-basicservices-commonevent-support-depr-e.md) | A system common event is an event that is published by a system service or system application and requires specific permissions to subscribe to. To publish or subscribe to this type of event, you must follow the event-specific definitions. |

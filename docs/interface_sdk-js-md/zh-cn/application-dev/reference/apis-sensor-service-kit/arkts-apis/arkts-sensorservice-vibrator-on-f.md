@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## on('vibratorStateChange')
@@ -20,13 +19,34 @@ function on(type: 'vibratorStateChange', callback: Callback<VibratorStatusEvent>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'vibratorStateChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'vibratorStateChange' | 是 | 监听类型，该值固定为vibratorStateChange，表示马达上下线状态变化事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | 是 | 回调函数。当马达设备上线或下线时触发，回调参数为VibratorStatusEvent对象，包含timestamp、deviceId、 vibratorCount、isVibratorOnline等信息。回调中获取的deviceId可用于 [startVibration](arkts-sensorservice-vibrator-startvibration-f.md) 和[stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)等接口指定目标设备。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
+
+**示例**
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 回调函数 
+const vibratorStateChangeCallback = (data: vibrator.VibratorStatusEvent) => {
+  console.info('vibrator state callback info:', JSON.stringify(data));
+}
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  // 订阅 vibratorStateChange事件
+  vibrator.on('vibratorStateChange', vibratorStateChangeCallback);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```

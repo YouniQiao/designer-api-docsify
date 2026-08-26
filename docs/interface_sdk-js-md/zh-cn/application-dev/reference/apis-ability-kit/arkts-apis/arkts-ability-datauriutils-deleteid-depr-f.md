@@ -23,12 +23,20 @@ function deleteId(uri: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 表示要从中删除ID的uri对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回删除ID之后的uri对象。 |
+
+**示例**
+
+```TypeScript
+import dataUriUtils from '@ohos.ability.dataUriUtils';
+
+let uri = dataUriUtils.deleteId('com.example.dataUriUtils/1221');
+```

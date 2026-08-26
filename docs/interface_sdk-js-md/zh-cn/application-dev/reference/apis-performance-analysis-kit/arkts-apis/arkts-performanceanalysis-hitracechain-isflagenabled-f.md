@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## isFlagEnabled
@@ -20,13 +19,27 @@ function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 |
-| flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 | 需要判断指定跟踪标志是否启用的HiTraceId实例。 |
+| flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | 是 | 指定的跟踪标志。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true：HiTraceId已启用flag；false：HiTraceId未启用flag。 |
+
+**示例**
+
+```TypeScript
+// 开始跟踪，跟踪标志是INCLUDE_ASYNC。
+let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.INCLUDE_ASYNC);
+// enabledIncludeAsyncFlag为true。
+let enabledIncludeAsyncFlag = hiTraceChain.isFlagEnabled(traceId, hiTraceChain.HiTraceFlag.INCLUDE_ASYNC);
+if (enabledIncludeAsyncFlag) {
+// 基于INCLUDE_ASYNC跟踪标志已设置场景的处理逻辑。
+}
+// 业务结束，结束跟踪。
+hiTraceChain.end(traceId);
+```

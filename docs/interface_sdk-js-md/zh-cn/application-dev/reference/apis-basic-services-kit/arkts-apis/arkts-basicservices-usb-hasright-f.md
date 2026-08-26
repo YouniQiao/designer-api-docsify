@@ -3,7 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import usb from '@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKitManager';
+import serialManager from '@kit.BasicServicesKitManager.serial';
 ```
 
 ## hasRight
@@ -24,12 +26,20 @@ function hasRight(deviceName: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| deviceName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceName | string | 是 | 设备名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示有访问设备的权限，false表示没有访问设备的权限。 |
+
+**示例**
+
+```TypeScript
+let devicesName= "1-1";
+let bool = usb.hasRight(devicesName);
+console.info(`hasRight = ${bool}`);
+```

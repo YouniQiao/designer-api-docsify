@@ -24,7 +24,12 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import inputMethod from '@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKitEngine';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
+import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
+import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 ```
 
 ## onMessage
@@ -50,10 +55,26 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [msgId](../../apis-network-kit/arkts-apis/arkts-network-eap-eapdata-i.md) | string | 是 |
-| msgParam | ArrayBuffer | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| msgId | string | 是 | 接收到的自定义通信数据的标识符。 |
+| msgParam | ArrayBuffer | 否 | 接收到的自定义通信数据的消息体。 |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+
+let messageHandler: inputMethod.MessageHandler = {
+  onTerminated(): void {
+    console.info('OnTerminated.');
+  },
+  onMessage(msgId: string, msgParam?: ArrayBuffer): void {
+    console.info(`recv message, msg: ${msgId}, msgParam: ${JSON.stringify(msgParam)}`);
+  }
+};
+inputMethodController.recvMessage(messageHandler);
+```
 
 ## onTerminated
 
@@ -75,3 +96,19 @@ onTerminated(): void
 **起始版本：** 15
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+
+let messageHandler: inputMethod.MessageHandler = {
+  onTerminated(): void {
+    console.info('OnTerminated.');
+  },
+  onMessage(msgId: string, msgParam?: ArrayBuffer): void {
+    console.info(`recv message, msg: ${msgId}, msgParam: ${JSON.stringify(msgParam)}`);
+  }
+};
+inputMethodController.recvMessage(messageHandler);
+```

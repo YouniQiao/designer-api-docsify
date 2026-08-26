@@ -13,7 +13,7 @@ Provide methods to access BAS(Battery Service)-related capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { bas } from 'kits/@kit.ConnectivityKit';
+import bas from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -21,26 +21,26 @@ import { bas } from 'kits/@kit.ConnectivityKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getRemoteDeviceBatteryInfo](arkts-connectivity-bas-getremotedevicebatteryinfo-f-sys.md) |
-| [isBasSupported](arkts-connectivity-bas-isbassupported-f-sys.md) |
-| [offBatteryChange](arkts-connectivity-bas-offbatterychange-f-sys.md) |
-| [onBatteryChange](arkts-connectivity-bas-onbatterychange-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getRemoteDeviceBatteryInfo](arkts-connectivity-bas-getremotedevicebatteryinfo-f-sys.md) | Get remote device battery information. |
+| [isBasSupported](arkts-connectivity-bas-isbassupported-f-sys.md) | Determine whether the local device can obtain the battery level of the remote device. |
+| [offBatteryChange](arkts-connectivity-bas-offbatterychange-f-sys.md) | Unsubscribe the event of battery state changes from a remote device. |
+| [onBatteryChange](arkts-connectivity-bas-onbatterychange-f-sys.md) | Subscribe the event of battery state changed from a remote device. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BatteryInfo](arkts-connectivity-bas-batteryinfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [BatteryInfo](arkts-connectivity-bas-batteryinfo-i-sys.md) | Describe the contents of the battery information. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BluetoothAddress](arkts-connectivity-bas-bluetoothaddress-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [BluetoothAddress](arkts-connectivity-bas-bluetoothaddress-t-sys.md) | Bluetooth device address. |
 <!--DelEnd-->

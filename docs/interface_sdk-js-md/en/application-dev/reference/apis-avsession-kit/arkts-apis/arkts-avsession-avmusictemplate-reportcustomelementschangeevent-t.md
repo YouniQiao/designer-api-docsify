@@ -15,8 +15,8 @@ The report custom elements change event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | Yes |
-| customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | Yes |
-| customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | Yes | action type |
+| customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | Yes | custom type |
+| customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | Yes | custom element |

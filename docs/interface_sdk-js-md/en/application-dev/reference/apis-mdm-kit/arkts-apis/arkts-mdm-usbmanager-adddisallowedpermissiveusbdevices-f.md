@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.MDMKit';
+import usbManager from '@kit.MDMKit';
 ```
 
 ## addDisallowedPermissiveUsbDevices
@@ -28,17 +28,58 @@ Adds disallowed USB device types. Unlike the [addDisallowedUsbDevices](arkts-mdm
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-| usbDevices | Array&lt;[PermissiveUsbDeviceType](arkts-mdm-usbmanager-permissiveusbdevicetype-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| usbDevices | Array&lt;[PermissiveUsbDeviceType](arkts-mdm-usbmanager-permissiveusbdevicetype-i.md)&gt; | Yes | Array of USB device types to be added. Partial field matching is supported. The array can have a maximum of 1000 elements. If there are already 500 USB device IDs in the array, only 500 more can be added. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
-| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+
+**Examples**
+
+```TypeScript
+import { usbManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  // Disable USB storage devices (use the actual USB device type parameter).
+  let usbDevices1: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 8
+  }];
+  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices1);
+
+  // Disable USB wired headsets (use the actual USB device type parameter).
+  let usbDevices2: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 0,
+    subClass: 0,
+    protocol: 0,
+    descriptor: usbManager.Descriptor.DEVICE
+  }];
+  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices2);
+
+  // Disable USB wired keyboard input (use the actual USB device type parameter).
+  let usbDevices3: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 3,
+    subClass: 1,
+    protocol: 1,
+    descriptor: usbManager.Descriptor.INTERFACE
+  }];
+  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices3);
+  console.info(`Succeeded in adding disallowed permissive USB devices.`);
+} catch (err) {
+  console.error(`Failed to add disallowed permissive USB devices. Code: ${err.code}, message: ${err.message}`);
+}
+```

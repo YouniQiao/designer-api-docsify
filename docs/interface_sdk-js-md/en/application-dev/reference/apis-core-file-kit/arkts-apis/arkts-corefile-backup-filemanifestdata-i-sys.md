@@ -11,7 +11,7 @@ Manifest file information in incremental data. FileManifestData is useful when d
 ## Modules to Import
 
 ```TypeScript
-import { backup } from 'kits/@kit.CoreFileKit';
+import backup from '@kit.CoreFileKit';
 ```
 
 ## manifestFd

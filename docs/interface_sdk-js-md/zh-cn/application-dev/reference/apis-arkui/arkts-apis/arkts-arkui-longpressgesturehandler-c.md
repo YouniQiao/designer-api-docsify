@@ -31,9 +31,9 @@ constructor(options?: LongPressGestureHandlerOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | 否 | 长按手势处理器配置参数。 |
 
 ## onAction
 
@@ -53,15 +53,15 @@ onAction(event: Callback<GestureEvent>): LongPressGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 长按手势处理器识别成功回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | 返回当前长按手势处理器对象。 |
 
 ## onActionCancel
 
@@ -81,15 +81,15 @@ onActionCancel(event: Callback<void>): LongPressGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback & lt;void & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback & lt;void & gt; | 是 | 长按手势处理器取消回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | 返回当前长按手势处理器对象。 |
 
 ## onActionCancel
 
@@ -109,15 +109,15 @@ onActionCancel(event: Callback<GestureEvent>): LongPressGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 长按手势处理器取消回调。该回调会返回手势事件信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | 返回当前长按手势处理器对象。 |
 
 ## onActionEnd
 
@@ -137,12 +137,12 @@ onActionEnd(event: Callback<GestureEvent>): LongPressGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 长按手势处理器结束回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | 返回当前长按手势处理器对象。 |

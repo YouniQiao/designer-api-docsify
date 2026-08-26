@@ -4,21 +4,32 @@
 
 > **说明：**
 > 谓词(DataSharePredicates)的使用场景如下：
-> - 用于在媒体文件管理服务作为检索条件使用，参考相册管理模块检索条件FetchOptions from 'kits/@kit.ArkData';
+> - 用于在媒体文件管理服务作为检索条件使用，参考相册管理模块检索条件[FetchOptions]{@link
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
+
+## 导入模块
+
+```TypeScript
+import dataSharePredicates from '@kit.ArkData';
 ```
 
 ## 汇总
 
 ### 类
 
-| 名称 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 提供用于不同实现不同查询方法的数据共享谓词。该类型不是多线程安全的，如果应用中存在多线程同时操作该类派生出的实例，注意加锁保护。 |
 
 <!--Del-->
 ### 类（系统接口）
 
-| 名称 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c-sys.md) | 提供用于不同实现不同查询方法的数据共享谓词。该类型不是多线程安全的，如果应用中存在多线程同时操作该类派生出的实例，注意加锁保护。 |
 <!--DelEnd-->

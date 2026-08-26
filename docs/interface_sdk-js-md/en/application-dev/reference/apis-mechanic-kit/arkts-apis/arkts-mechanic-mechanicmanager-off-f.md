@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## off('attachStateChange')
@@ -20,16 +19,30 @@ Unsubscribes from device attachment state change events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'attachStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'attachStateChange' | Yes | Event type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md)&gt; | No | Callback used to return the state change. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+
+**Examples**
+
+```TypeScript
+// Define the callback function for device connection state changes.
+let callback = (result: mechanicManager.AttachStateChangeInfo) => {
+  console.info(`'callback result:' ${result}`);
+};
+
+console.info('Unregister');
+// Unregister the attachStateChange event listener.
+mechanicManager.off("attachStateChange", callback);
+console.info('Succeeded in unregistering callback.');
+```
 
 
 ## off('trackingStateChange')
@@ -46,13 +59,27 @@ Unsubscribes from tracking events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'trackingStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TrackingEventInfo](arkts-mechanic-mechanicmanager-trackingeventinfo-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'trackingStateChange' | Yes | Event type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TrackingEventInfo](arkts-mechanic-mechanicmanager-trackingeventinfo-i.md)&gt; | No | Callback used to return the tracking event information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+
+**Examples**
+
+```TypeScript
+// Define the callback function for tracking state changes.
+let callback = (result: mechanicManager.TrackingEventInfo) => {
+  console.info(`'callback result:' ${result}`);
+};
+
+console.info('Unregister');
+// Unregister the trackingStateChange event listener.
+mechanicManager.off("trackingStateChange", callback);
+console.info('Succeeded in unregistering callback.');
+```

@@ -15,11 +15,11 @@ Registers an object with the registry.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | object | Yes |
-| heldValue | T | Yes |
-| unregisterToken | object | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | object | Yes |  |
+| heldValue | T | Yes |  |
+| unregisterToken | object | No |  |
 
 ## unregister
 
@@ -31,9 +31,9 @@ Unregisters an object from the registry.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| unregisterToken | object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| unregisterToken | object | Yes |  |
 
 ## [Symbol.toStringTag]
 

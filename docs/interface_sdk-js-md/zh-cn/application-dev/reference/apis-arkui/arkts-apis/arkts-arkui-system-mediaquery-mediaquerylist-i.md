@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from 'kits/@kit.ArkUI';
+import SystemMediaQuery, { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
 ## addListener
@@ -28,9 +28,23 @@ addListener(callback: (event: MediaQueryEvent) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | (event: MediaQueryEvent) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (event: MediaQueryEvent) = & gt; void | 是 | 匹配条件发生变化时触发的回调。 |
+
+**示例**
+
+```TypeScript
+import mediaquery, { MediaQueryEvent } from '@system.mediaquery';
+let mMediaQueryList = mediaquery.matchMedia('(max-width: 466)');
+
+function maxWidthMatch(e: MediaQueryEvent): void {
+  if(e.matches){
+    // do something
+  }
+}
+mMediaQueryList.addListener(maxWidthMatch);
+```
 
 ## onchange
 
@@ -48,9 +62,9 @@ onchange?: (matches: boolean) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [matches](#matches) | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| matches | boolean | 是 |  |
 
 ## removeListener
 
@@ -68,9 +82,23 @@ removeListener(callback: (event: MediaQueryEvent) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | (event: MediaQueryEvent) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (event: MediaQueryEvent) = & gt; void | 是 | 匹配条件发生变化时触发的回调。 |
+
+**示例**
+
+```TypeScript
+import mediaquery, { MediaQueryEvent } from '@system.mediaquery';
+let mMediaQueryList = mediaquery.matchMedia('(max-width: 466)');
+
+function maxWidthMatch(e: MediaQueryEvent): void {
+  if(e.matches){
+    // do something
+  }
+}
+mMediaQueryList.removeListener(maxWidthMatch);
+```
 
 ## matches
 

@@ -25,9 +25,19 @@ Obtains the application data of this NFC-B tag.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Application data obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcB tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let respAppData : number[] = nfcB.getRespAppData();
+console.info("nfcB respAppData: " + respAppData);
+```
 
 ## getRespProtocol
 
@@ -45,6 +55,16 @@ Obtains the protocol information of this NFC-B tag.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number[] |
+| Type | Description |
+| --- | --- |
+| number[] | Protocol information obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcB tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let respProtocol : number[] = nfcB.getRespProtocol();
+console.info("nfcB respProtocol: " + respProtocol);
+```

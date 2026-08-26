@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { Decimal } from 'kits/@kit.ArkTS';
 ```
 
 ## abs
@@ -28,9 +27,9 @@ abs(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## abs
 
@@ -48,21 +47,21 @@ static abs(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## acos
 
@@ -80,15 +79,15 @@ acos(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## acos
 
@@ -106,22 +105,22 @@ static acos(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## acosh
 
@@ -139,15 +138,15 @@ acosh(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## acosh
 
@@ -165,22 +164,22 @@ static acosh(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## add
 
@@ -198,21 +197,21 @@ add(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## add
 
@@ -230,22 +229,22 @@ static add(x: Value, y: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
-| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## asin
 
@@ -263,15 +262,15 @@ asin(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## asin
 
@@ -289,22 +288,22 @@ static asin(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## asinh
 
@@ -322,15 +321,15 @@ asinh(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## asinh
 
@@ -348,22 +347,22 @@ static asinh(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## atan
 
@@ -381,15 +380,15 @@ atan(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## atan
 
@@ -407,22 +406,22 @@ static atan(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## atan2
 
@@ -440,23 +439,23 @@ static atan2(y: Value, x: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
-| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} y坐标值，用于计算y/x的反正切值并确定象限。 |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} x坐标值，用于计算y/x的反正切值并确定象限。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## atanh
 
@@ -474,15 +473,15 @@ atanh(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## atanh
 
@@ -500,22 +499,22 @@ static atanh(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## cbrt
 
@@ -533,9 +532,9 @@ cbrt(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## cbrt
 
@@ -553,21 +552,21 @@ static cbrt(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## ceil
 
@@ -585,9 +584,9 @@ ceil(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## ceil
 
@@ -605,21 +604,21 @@ static ceil(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## clamp
 
@@ -637,23 +636,23 @@ clamp(min: Value, max: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [min](#min) | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
-| [max](#max) | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| min | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
+| max | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `min` is out of range. |
 
 ## clamp
 
@@ -671,24 +670,24 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
-| [min](#min) | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
-| [max](#max) | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
+| min | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
+| max | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `min` is out of range. |
 
 ## comparedTo
 
@@ -706,21 +705,21 @@ comparedTo(n: Value): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | the number type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## constructor
 
@@ -738,15 +737,15 @@ Decimal的构造函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## cos
 
@@ -764,9 +763,9 @@ cos(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## cos
 
@@ -784,21 +783,21 @@ static cos(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## cosh
 
@@ -816,9 +815,9 @@ cosh(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## cosh
 
@@ -836,21 +835,21 @@ static cosh(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## decimalPlaces
 
@@ -868,9 +867,9 @@ decimalPlaces(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | the number type |
 
 ## div
 
@@ -888,21 +887,21 @@ div(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## div
 
@@ -920,22 +919,22 @@ static div(x: Value, y: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
-| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## dividedToIntegerBy
 
@@ -953,21 +952,21 @@ dividedToIntegerBy(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## equals
 
@@ -985,21 +984,21 @@ equals(n: Value): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | the boolean type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## exp
 
@@ -1017,15 +1016,15 @@ exp(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## exp
 
@@ -1043,22 +1042,22 @@ static exp(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## floor
 
@@ -1076,9 +1075,9 @@ floor(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## floor
 
@@ -1096,21 +1095,21 @@ static floor(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## greaterThan
 
@@ -1128,21 +1127,21 @@ greaterThan(n: Value): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | the boolean type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -1160,21 +1159,21 @@ greaterThanOrEqualTo(n: Value): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | the boolean type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## hypot
 
@@ -1192,21 +1191,21 @@ static hypot(...n: Value[]): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {number \| string \| Decimal} Decimal |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## isFinite
 
@@ -1224,9 +1223,9 @@ isFinite(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | the boolean type |
 
 ## isInteger
 
@@ -1244,9 +1243,9 @@ isInteger(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | the boolean type |
 
 ## isNaN
 
@@ -1264,9 +1263,9 @@ isNaN(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | the boolean type |
 
 ## isNegative
 
@@ -1284,9 +1283,9 @@ isNegative(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | the boolean type |
 
 ## isPositive
 
@@ -1304,9 +1303,9 @@ isPositive(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | the boolean type |
 
 ## isZero
 
@@ -1324,9 +1323,9 @@ isZero(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | the boolean type |
 
 ## lessThan
 
@@ -1344,21 +1343,21 @@ lessThan(n: Value): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | the boolean type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -1376,21 +1375,21 @@ lessThanOrEqualTo(n: Value): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | the boolean type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## ln
 
@@ -1408,15 +1407,15 @@ ln(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## ln
 
@@ -1434,22 +1433,22 @@ static ln(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## log
 
@@ -1467,22 +1466,22 @@ log(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## log
 
@@ -1500,23 +1499,23 @@ static log(n: Value, base: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
-| base | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
+| base | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## log10
 
@@ -1534,22 +1533,22 @@ static log10(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## log2
 
@@ -1567,22 +1566,22 @@ static log2(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## max
 
@@ -1600,21 +1599,21 @@ static max(...n: Value[]): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## min
 
@@ -1632,21 +1631,21 @@ static min(...n: Value[]): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mod
 
@@ -1664,21 +1663,21 @@ mod(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mod
 
@@ -1696,22 +1695,22 @@ static mod(x: Value, y: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
-| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mul
 
@@ -1729,21 +1728,21 @@ mul(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mul
 
@@ -1761,22 +1760,22 @@ static mul(x: Value, y: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
-| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## negate
 
@@ -1794,9 +1793,9 @@ negate(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## pow
 
@@ -1814,22 +1813,22 @@ pow(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## pow
 
@@ -1847,23 +1846,23 @@ static pow(base: Value, exponent: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| base | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
-| exponent | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| base | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} 幂运算的底数的值。 |
+| exponent | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} 幂运算的指数值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## precision
 
@@ -1881,9 +1880,9 @@ precision(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | the number type |
 
 ## precision
 
@@ -1901,21 +1900,21 @@ precision(includeZeros: boolean | number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| includeZeros | boolean \| number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| includeZeros | boolean \| number | 是 | 是否计算整数部分尾随零。true或1表示计算，false或0表示不计算。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | the number type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `includeZeros` is out of range. |
 
 ## random
 
@@ -1933,15 +1932,15 @@ static random(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
 
 ## random
 
@@ -1959,22 +1958,22 @@ static random(significantDigits: number): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| significantDigits | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| significantDigits | number | 是 | {number} 随机值保留的有效数字。取值范围为[0, 1e9]的整数。[since 12 - 17] |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
 
 ## round
 
@@ -1992,21 +1991,21 @@ static round(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## set
 
@@ -2024,17 +2023,17 @@ static set(config: DecimalConfig): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [DecimalConfig](arkts-arkts-math-decimal-decimalconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [DecimalConfig](arkts-arkts-math-decimal-decimalconfig-i.md) | 是 |  |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `DecimalConfig.properties` is out of range. |
+| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
 
 ## sign
 
@@ -2052,22 +2051,22 @@ static sign(n: Value): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type<br>**适用版本：** 12 - 17 |
+| number | the Decimal type<br>**适用版本：** 18+ |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sin
 
@@ -2085,9 +2084,9 @@ sin(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## sin
 
@@ -2105,21 +2104,21 @@ static sin(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sinh
 
@@ -2137,9 +2136,9 @@ sinh(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## sinh
 
@@ -2157,21 +2156,21 @@ static sinh(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sqrt
 
@@ -2189,9 +2188,9 @@ sqrt(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## sqrt
 
@@ -2209,21 +2208,21 @@ static sqrt(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sub
 
@@ -2241,21 +2240,21 @@ sub(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sub
 
@@ -2273,22 +2272,22 @@ static sub(x: Value, y: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
-| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sum
 
@@ -2306,21 +2305,21 @@ static sum(...n: Value[]): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## tan
 
@@ -2338,9 +2337,9 @@ tan(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## tan
 
@@ -2358,21 +2357,21 @@ static tan(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## tanh
 
@@ -2390,9 +2389,9 @@ tanh(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## tanh
 
@@ -2410,21 +2409,21 @@ static tanh(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toBinary
 
@@ -2442,9 +2441,9 @@ toBinary(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 ## toBinary
 
@@ -2462,21 +2461,21 @@ toBinary(significantDigits: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| significantDigits | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| significantDigits | number | 是 | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
 
 ## toBinary
 
@@ -2494,22 +2493,22 @@ toBinary(significantDigits: number, rounding: Rounding): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| significantDigits | number | 是 |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| significantDigits | number | 是 | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toDecimalPlaces
 
@@ -2527,9 +2526,9 @@ toDecimalPlaces(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## toDecimalPlaces
 
@@ -2547,21 +2546,21 @@ toDecimalPlaces(decimalPlaces: number): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| decimalPlaces | number | 是 | 转换时保留的小数点后有效位数。取值范围为[0, 1e9]的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces` is out of range. |
 
 ## toDecimalPlaces
 
@@ -2579,22 +2578,22 @@ toDecimalPlaces(decimalPlaces: number, rounding: Rounding): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| decimalPlaces | number | 是 | 转换时保留的小数点后有效位数。取值范围为[0, 1e9]的整数。 |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \|
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toExponential
 
@@ -2612,9 +2611,9 @@ toExponential(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 ## toExponential
 
@@ -2632,21 +2631,21 @@ toExponential(decimalPlaces: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| decimalPlaces | number | 是 | 转换时保留的小数点后有效位数。取值范围为[0, 1e9]的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces` is out of range. |
 
 ## toExponential
 
@@ -2664,22 +2663,22 @@ toExponential(decimalPlaces: number, rounding: Rounding): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| decimalPlaces | number | 是 | 转换时保留的小数点后有效位数。取值范围为[0, 1e9]的整数。 |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \|
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toFixed
 
@@ -2697,9 +2696,9 @@ toFixed(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 ## toFixed
 
@@ -2717,21 +2716,21 @@ toFixed(decimalPlaces: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| decimalPlaces | number | 是 | 转换时保留的小数点后有效位数。取值范围为[0, 1e9]的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces` is out of range. |
 
 ## toFixed
 
@@ -2749,22 +2748,22 @@ toFixed(decimalPlaces: number, rounding: Rounding): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| decimalPlaces | number | 是 | 转换时保留的小数点后有效位数。取值范围为[0, 1e9]的整数。 |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \|
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toFraction
 
@@ -2782,9 +2781,9 @@ toFraction(): Decimal[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md)[] |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md)[] | the Decimal[] type |
 
 ## toFraction
 
@@ -2802,21 +2801,21 @@ toFraction(maxDenominator: Value): Decimal[]
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| maxDenominator | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| maxDenominator | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md)[] |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md)[] | the Decimal[] type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toHexadecimal
 
@@ -2834,9 +2833,9 @@ toHexadecimal(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 ## toHexadecimal
 
@@ -2854,21 +2853,21 @@ toHexadecimal(significantDigits: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| significantDigits | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| significantDigits | number | 是 | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
 
 ## toHexadecimal
 
@@ -2886,22 +2885,22 @@ toHexadecimal(significantDigits: number, rounding: Rounding): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| significantDigits | number | 是 |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| significantDigits | number | 是 | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toNearest
 
@@ -2919,21 +2918,21 @@ toNearest(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toNearest
 
@@ -2951,23 +2950,23 @@ toNearest(n: Value, rounding: Rounding): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `rounding` is out of range. |
 
 ## toNumber
 
@@ -2985,9 +2984,9 @@ toNumber(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | the number type |
 
 ## toOctal
 
@@ -3005,9 +3004,9 @@ toOctal(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 ## toOctal
 
@@ -3025,21 +3024,21 @@ toOctal(significantDigits: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| significantDigits | number | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| significantDigits | number | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
 
 ## toOctal
 
@@ -3057,22 +3056,22 @@ toOctal(significantDigits: number, rounding: Rounding): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| significantDigits | number | 是 | {number \| string \|
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| significantDigits | number | 是 | {number \| string \| Decimal} |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toPrecision
 
@@ -3090,9 +3089,9 @@ toPrecision(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 ## toPrecision
 
@@ -3110,21 +3109,21 @@ toPrecision(significantDigits: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| significantDigits | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| significantDigits | number | 是 | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
 
 ## toPrecision
 
@@ -3142,22 +3141,22 @@ toPrecision(significantDigits: number, rounding: Rounding): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| significantDigits | number | 是 |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| significantDigits | number | 是 | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toSignificantDigits
 
@@ -3175,9 +3174,9 @@ toSignificantDigits(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## toSignificantDigits
 
@@ -3195,21 +3194,21 @@ toSignificantDigits(significantDigits: number): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| significantDigits | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| significantDigits | number | 是 | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
 
 ## toSignificantDigits
 
@@ -3227,22 +3226,22 @@ toSignificantDigits(significantDigits: number, rounding: Rounding): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| significantDigits | number | 是 |
-| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| significantDigits | number | 是 | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toString
 
@@ -3260,9 +3259,9 @@ toString(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 ## trunc
 
@@ -3280,9 +3279,9 @@ trunc(): Decimal
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 ## trunc
 
@@ -3300,21 +3299,21 @@ static trunc(n: Value): Decimal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \| Decimal} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## valueOf
 
@@ -3332,9 +3331,9 @@ valueOf(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | the string type |
 
 ## d
 

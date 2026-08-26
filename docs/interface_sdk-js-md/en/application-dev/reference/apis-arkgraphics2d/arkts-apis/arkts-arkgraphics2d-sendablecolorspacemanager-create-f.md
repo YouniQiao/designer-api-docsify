@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableColorSpaceManager } from 'kits/@kit.ArkGraphics2D';
+import sendableColorSpaceManager from '@kit.ArkGraphics2D';
 ```
 
 ## create
@@ -20,22 +20,31 @@ Creates a criterion color space management instance that is sendable.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| colorSpaceName | colorSpaceManager.ColorSpace | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| colorSpaceName | colorSpaceManager.ColorSpace | Yes | Type of the color space.    **UNKNOWN** and **CUSTOM** cannot be used when creating standard color space objects. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) |
+| Type | Description |
+| --- | --- |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Sendable color space object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal. |
+
+**Examples**
+
+```TypeScript
+import { colorSpaceManager, sendableColorSpaceManager } from '@kit.ArkGraphics2D';
+let colorSpace: sendableColorSpaceManager.ColorSpaceManager;
+// Create a color management instance for the criterion sRGB color space.
+colorSpace = sendableColorSpaceManager.create(colorSpaceManager.ColorSpace.SRGB);
+```
 
 
 ## create
@@ -52,20 +61,42 @@ Creates a custom color space object that is sendable.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| primaries | colorSpaceManager.ColorSpacePrimaries | Yes |
-| gamma | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| primaries | colorSpaceManager.ColorSpacePrimaries | Yes | Primaries of the color space. |
+| gamma | number | Yes | Gamma value of the color space, which is a floating point number greater than 0. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) |
+| Type | Description |
+| --- | --- |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Sendable color space object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal. |
+
+**Examples**
+
+```TypeScript
+import { colorSpaceManager, sendableColorSpaceManager } from '@kit.ArkGraphics2D';
+let colorSpace: sendableColorSpaceManager.ColorSpaceManager;
+// Define the color space criterion primary colors parameter.
+let primaries: colorSpaceManager.ColorSpacePrimaries = {
+  redX: 0.1,
+  redY: 0.1,
+  greenX: 0.2,
+  greenY: 0.2,
+  blueX: 0.3,
+  blueY: 0.3,
+  whitePointX: 0.4,
+  whitePointY: 0.4
+};
+// Define the color space gamma value.
+let gamma: number = 2.2;
+// Create a custom color space management instance that is sendable.
+colorSpace = sendableColorSpaceManager.create(primaries, gamma);
+```

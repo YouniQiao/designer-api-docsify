@@ -3,6 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## removeAllSlots
@@ -23,9 +26,24 @@ Removes all notification slots. This API uses an asynchronous callback to return
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let removeAllCallBack = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("removeAllSlots failed " + JSON.stringify(err));
+  } else {
+    console.info("removeAllSlots success");
+  }
+}
+Notification.removeAllSlots(removeAllCallBack);
+```
 
 
 ## removeAllSlots
@@ -46,6 +64,18 @@ Removes all notification slots. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.removeAllSlots().then(() => {
+  console.info("removeAllSlots success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`removeAllSlots failed, code is ${err}`);
+});
+```

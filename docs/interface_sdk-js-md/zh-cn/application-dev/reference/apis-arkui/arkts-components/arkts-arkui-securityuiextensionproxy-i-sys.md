@@ -31,10 +31,10 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'asyncReceiverRegister' | 是 |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'asyncReceiverRegister' | 是 | 固定填'asyncReceiverRegister'，取消订阅被拉起的Ability异步注册时触发的回调。 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空时取消订阅所有异步注册的回调。非空时取消订阅指定的异步注册回调。 |
 
 ## off('syncReceiverRegister')
 
@@ -54,10 +54,10 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'syncReceiverRegister' | 是 |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'syncReceiverRegister' | 是 | 固定填'syncReceiverRegister'，取消订阅被拉起的Ability同步注册时触发的回调。 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空时取消订阅所有同步注册的回调。非空时取消订阅指定的同步注册回调。 |
 
 ## on('asyncReceiverRegister')
 
@@ -77,10 +77,10 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'asyncReceiverRegister' | 是 |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'asyncReceiverRegister' | 是 | 固定填'asyncReceiverRegister'，代表订阅被拉起的Ability异步注册时触发的回调。 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。订阅被拉起的Ability注册setReceiveDataCallback后触发的回调。 |
 
 ## on('syncReceiverRegister')
 
@@ -100,10 +100,10 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'syncReceiverRegister' | 是 |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'syncReceiverRegister' | 是 | 固定填'syncReceiverRegister'，代表订阅被拉起的Ability同步注册时触发的回调。 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。被拉起的Ability注册setReceiveDataForResultCallback后触发的回调。 |
 
 ## send
 
@@ -123,9 +123,9 @@ send(data: Record<string, Object>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | Record & lt;string, Object & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | Record & lt;string, Object & gt; | 是 | 异步发送给被拉起的Ability的数据。 |
 
 ## sendSync
 
@@ -145,19 +145,19 @@ sendSync(data: Record<string, Object>): Record<string, Object>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | Record & lt;string, Object & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | Record & lt;string, Object & gt; | 是 | 同步发送给被拉起的Ability的数据。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Record & lt;string, Object & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Record & lt;string, Object & gt; | 被拉起的Ability对同步发送请求处理后返回的响应数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [100011](../errorcode-uiextension.md#100011-未注册同步回调) |
-| [100012](../errorcode-uiextension.md#100012-数据发送失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [100011](../errorcode-uiextension.md#100011-未注册同步回调) | 没有注册响应该请求的回调。 |
+| [100012](../errorcode-uiextension.md#100012-数据发送失败) | 传输数据失败。 |

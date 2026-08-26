@@ -24,9 +24,9 @@ Returns the offset of the current scrolling. The return value type is Object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ScrollOffset](arkts-arkui-viewmodel-scrolloffset-i.md) |
+| Type | Description |
+| --- | --- |
+| [ScrollOffset](arkts-arkui-viewmodel-scrolloffset-i.md) |  |
 
 ## scrollBy
 
@@ -44,6 +44,6 @@ Scrolls the div for a certain distance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [ScrollParam](arkts-arkui-viewmodel-scrollparam-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | [ScrollParam](arkts-arkui-viewmodel-scrollparam-i.md) | Yes |  |

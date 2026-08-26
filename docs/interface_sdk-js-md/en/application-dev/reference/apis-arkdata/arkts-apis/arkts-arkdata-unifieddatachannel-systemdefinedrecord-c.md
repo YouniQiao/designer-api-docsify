@@ -11,7 +11,7 @@ Represents specific data types defined by OpenHarmony. It is a child class of [U
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## details
@@ -31,3 +31,16 @@ A dictionary type object, where the key is of the string type, and the value can
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Examples**
+
+```TypeScript
+let sdr = new unifiedDataChannel.SystemDefinedRecord();
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+sdr.details = {
+  title: 'recordTitle',
+  version: 1,
+  content: u8Array
+};
+let unifiedData = new unifiedDataChannel.UnifiedData(sdr);
+```

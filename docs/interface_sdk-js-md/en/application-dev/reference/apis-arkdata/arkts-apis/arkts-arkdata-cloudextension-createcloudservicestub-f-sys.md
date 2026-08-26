@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import cloudExtension from '@kit.ArkData';
 ```
 
 ## createCloudServiceStub
@@ -22,12 +22,45 @@ Creates a RemoteObject instance based on a CloudService instance. The system use
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | [CloudService](arkts-arkdata-cloudextension-cloudservice-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | [CloudService](arkts-arkdata-cloudextension-cloudservice-i-sys.md) | Yes | Instance of the CloudService class. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;rpc.RemoteObject & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;rpc.RemoteObject & gt; | Promise used to return the RemoteObject instance of CloudService. |
+
+**Examples**
+
+```TypeScript
+import { Want, ServiceExtensionAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  async connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject> {
+    // ...
+  }
+}
+
+export default class MyServiceExtension extends ServiceExtensionAbility {
+  onCreate(want: Want) {
+    console.info(`onCreate: ${want}`);
+  }
+  onRequest(want: Want, startId: number) {
+    console.info(`onRequest: ${want} ${startId}`);
+  }
+  onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject> {
+    console.info(`onConnect: ${want}`);
+    return cloudExtension.createCloudServiceStub(new MyCloudService());
+  }
+  onDisconnect(want: Want) {
+    console.info(`onDisconnect: ${want}`);
+  }
+  onDestroy() {
+    console.info('onDestroy');
+  }
+}
+```

@@ -9,7 +9,7 @@ Provides the device configurations
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+import mindSporeLite from '@kit.MindSporeLiteKit';
 ```
 
 ## cpu
@@ -59,3 +59,10 @@ The target device
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.AI.MindSporeLite
+
+**Examples**
+
+```TypeScript
+let context: mindSporeLite.Context = {};
+context.target = ['cpu','nnrt'];
+```

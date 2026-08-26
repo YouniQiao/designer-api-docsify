@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## constructTLSSocketServerInstance
@@ -20,6 +20,15 @@ Creates a **TLSSocketServer** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TLSSocketServer](arkts-network-socket-tlssocketserver-i.md) |
+| Type | Description |
+| --- | --- |
+| [TLSSocketServer](arkts-network-socket-tlssocketserver-i.md) | TLSSocketServer** object. |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+```

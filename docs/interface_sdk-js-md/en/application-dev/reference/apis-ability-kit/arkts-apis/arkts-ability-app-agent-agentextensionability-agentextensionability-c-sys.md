@@ -11,7 +11,7 @@ The class of agent extension ability. This class cannot be used in Harmony Archi
 ## Modules to Import
 
 ```TypeScript
-import { AgentExtensionAbility } from 'kits/@kit.AbilityKit';
+import AgentExtensionAbility from '@kit.AbilityKit';
 ```
 
 ## onAgentInvoked
@@ -32,6 +32,6 @@ Called back when a LOW_CODE agent is invoked.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [agentId](arkts-ability-agentcard-i.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| agentId | string | Yes | Indicates the LOW_CODE agent ID. |

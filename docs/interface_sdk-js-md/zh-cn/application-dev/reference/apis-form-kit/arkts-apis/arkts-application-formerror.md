@@ -11,21 +11,21 @@
 ## 导入模块
 
 ```TypeScript
-import { formError } from 'kits/@kit.FormKit';
+import formError from '@kit.FormKit';
 ```
 
 ## 汇总
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [FormError(formError)](arkts-form-formerror-formerror-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [FormError(formError)](arkts-form-formerror-formerror-e.md) | 枚举，卡片错误码。 |
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 |
-| --- |
-| [FormError(formError)](arkts-form-formerror-formerror-e-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [FormError(formError)](arkts-form-formerror-formerror-e-sys.md) | 枚举，卡片错误码。 |
 <!--DelEnd-->

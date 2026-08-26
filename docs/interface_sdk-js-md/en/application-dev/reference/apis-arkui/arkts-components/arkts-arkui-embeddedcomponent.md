@@ -33,10 +33,10 @@ Creates a cross-process embedded component to display the UI of the EmbeddedUIEx
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| loader | import('../api/@ohos.app.ability.Want').default | Yes |
-| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| loader | import('../api/@ohos.app.ability.Want').default | Yes | EmbeddedUIExtensionAbility to load. |
+| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | Yes | Type of the provider. |
 
 ## EmbeddedComponent
 
@@ -60,20 +60,20 @@ Construct the EmbeddedComponent.Called when the EmbeddedComponent is used.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| loader | import('../api/@ohos.app.ability.Want').default | Yes |
-| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | Yes |
-| options | [EmbeddedOptions](arkts-arkui-embeddedoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| loader | import('../api/@ohos.app.ability.Want').default | Yes | indicates initialization parameter. |
+| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | Yes | indicates type of the EmbeddedComponent. |
+| options | [EmbeddedOptions](arkts-arkui-embeddedoptions-i.md) | No | construction configuration of EmbeddedComponent. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |

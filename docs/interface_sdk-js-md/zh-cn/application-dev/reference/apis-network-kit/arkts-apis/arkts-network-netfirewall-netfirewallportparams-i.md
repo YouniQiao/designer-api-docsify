@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { netFirewall } from 'kits/@kit.NetworkKit';
+import netFirewall from '@kit.NetworkKit';
 ```
 
 ## endPort

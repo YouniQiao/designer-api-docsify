@@ -12,7 +12,7 @@ Media favorite type addFavorite & removeFavorite.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'addFavorite' |
-| 'removeFavorite' |
+| Type | Description |
+| --- | --- |
+| 'addFavorite' |  |
+| 'removeFavorite' |  |

@@ -18,6 +18,6 @@ declare type DepthComponentErrorCallback = (error: DepthComponentErrorEvent) => 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| error | [DepthComponentErrorEvent](arkts-arkui-depthcomponenterrorevent-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| error | [DepthComponentErrorEvent](arkts-arkui-depthcomponenterrorevent-i-sys.md) | 是 | 背景资源加载失败的事件信息。 |

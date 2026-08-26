@@ -3,13 +3,14 @@
 ## Modules to Import
 
 ```TypeScript
-import { StartupConfig } from 'kits/@kit.AbilityKit';
+import StartupConfig from '@kit.AbilityKit';
+import StartupConfigEntry from '@kit.AbilityKitEntry';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) |
+| Name | Description |
+| --- | --- |
+| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | The module defines the configuration of [AppStartup](../../../application-models/app-startup.md). |

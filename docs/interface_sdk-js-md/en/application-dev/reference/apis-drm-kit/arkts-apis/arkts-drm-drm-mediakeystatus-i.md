@@ -9,7 +9,7 @@ Defines a status attribute for a media key.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'kits/@kit.DrmKit';
+import drm from '@kit.DrmKit';
 ```
 
 ## name

@@ -12,13 +12,13 @@ type CloudType = null | number | number | string | boolean | Uint8Array | CloudA
 
 **系统接口：** 此接口为系统接口。
 
-| 类型 |
-| --- |
-| null |
-| long |
-| double |
-| string |
-| boolean |
-| Uint8Array |
-| [CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md) |
-| [CloudAssets](arkts-arkdata-cloudextension-cloudassets-t-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| null | 表示值的类型为空。 |
+| long | 表示值的类型为数字类型。 |
+| double | 表示值的类型为数字类型。 |
+| string | 表示值的类型为字符串类型。 |
+| boolean | 表示值的类型为布尔类型。 |
+| Uint8Array | 表示值的类型为Uint8Array类型。 |
+| [CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md) | 表示值的类型为云资产类型。 |
+| [CloudAssets](arkts-arkdata-cloudextension-cloudassets-t-sys.md) | 表示值的类型为云资产数组类型。 |

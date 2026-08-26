@@ -9,7 +9,7 @@ Provides the **TabContent** switching information.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import uiObserver from '@kit.ArkUI';
 ```
 
 ## id

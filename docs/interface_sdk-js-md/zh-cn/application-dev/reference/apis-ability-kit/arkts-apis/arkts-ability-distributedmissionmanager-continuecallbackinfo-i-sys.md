@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedMissionManager } from 'kits/@kit.AbilityKit';
+import distributedMissionManager from '@kit.AbilityKit';
 ```
 
 ## info

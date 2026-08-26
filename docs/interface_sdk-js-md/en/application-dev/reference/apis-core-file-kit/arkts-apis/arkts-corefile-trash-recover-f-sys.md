@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { trash } from 'kits/@kit.CoreFileKit';
+import trash from '@kit.CoreFileKit';
 ```
 
 ## recover
@@ -28,14 +28,22 @@ Recovers a file or directory from the trash.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | URI of the file or directory. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900002 |
-| 13900020 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900020 | Invalid argument |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let fileinfos = trash.listFile();
+let uri = fileinfos[0].uri;
+trash.recover(uri);
+```

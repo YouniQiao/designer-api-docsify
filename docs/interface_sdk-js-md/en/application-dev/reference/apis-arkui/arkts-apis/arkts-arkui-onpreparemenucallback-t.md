@@ -16,12 +16,12 @@ Triggered before the menu is displayed after the text selection area changes. Me
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Yes | Menu items to be displayed. **NOTE** Modifications to the name, icon, or shortcut hint of default menu items do not take effect. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Menu items after the processing. |

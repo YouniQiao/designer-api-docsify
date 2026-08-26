@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## setNetExtAttributeSync
@@ -14,7 +13,8 @@ function setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): 
 
 Sets extended attributes of the network specified by **netHandle** to indicate its security level. This API returns the result synchronously.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Currently, this API is available only for PCs.
 
 **Since:** 20
@@ -25,16 +25,29 @@ Sets extended attributes of the network specified by **netHandle** to indicate i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes |
-| netExtAttribute | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. |
+| netExtAttribute | string | Yes | Extended network attributes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let netExtAttribute: string = "xxx";
+let netHandle = connection.getDefaultNetSync();
+if (netHandle.netId != 0) {
+  connection.setNetExtAttributeSync(netHandle, netExtAttribute);
+}
+```

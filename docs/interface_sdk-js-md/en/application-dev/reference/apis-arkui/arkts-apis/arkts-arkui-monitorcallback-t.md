@@ -16,6 +16,6 @@ Listener callback function of the [IMonitor](../arkts-components/arkts-arkui-imo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| monitorValue | [IMonitor](../arkts-components/arkts-arkui-imonitor-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| monitorValue | [IMonitor](../arkts-components/arkts-arkui-imonitor-i.md) | Yes | Change information passed by the callback. |

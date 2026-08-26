@@ -4,9 +4,11 @@
 
 适用于[ChaCha20-Poly1305](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#chacha20)。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需要
-> 指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。&gt;
+> 指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
+> 
 > 在ChaCha20-Poly1305加密时，需从
 > [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal)或
 > [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync)输出的
@@ -24,7 +26,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## aad

@@ -9,41 +9,41 @@ The module provides APIs to query whether the current application is the default
 ## Modules to Import
 
 ```TypeScript
-import { defaultAppManager } from 'kits/@kit.AbilityKit';
+import defaultAppManager from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [isDefaultApplication](arkts-ability-defaultappmanager-isdefaultapplication-f.md) |
-| [isDefaultApplication](arkts-ability-defaultappmanager-isdefaultapplication-f.md) |
-| [isDefaultApplicationSync](arkts-ability-defaultappmanager-isdefaultapplicationsync-f.md) |
+| Name | Description |
+| --- | --- |
+| [isDefaultApplication](arkts-ability-defaultappmanager-isdefaultapplication-f.md) | Checks whether this application is the default application of a system-defined application type or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result. |
+| [isDefaultApplication](arkts-ability-defaultappmanager-isdefaultapplication-f.md) | Checks whether this application is the default application of a system-defined application type or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses a promise to return the result. |
+| [isDefaultApplicationSync](arkts-ability-defaultappmanager-isdefaultapplicationsync-f.md) | Checks whether this application is the default application of a system-defined application type or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API returns the result synchronously. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getDefaultApplication](arkts-ability-defaultappmanager-getdefaultapplication-f-sys.md) |
-| [getDefaultApplication](arkts-ability-defaultappmanager-getdefaultapplication-f-sys.md) |
-| [getDefaultApplication](arkts-ability-defaultappmanager-getdefaultapplication-f-sys.md) |
-| [getDefaultApplicationSync](arkts-ability-defaultappmanager-getdefaultapplicationsync-f-sys.md) |
-| [resetDefaultApplication](arkts-ability-defaultappmanager-resetdefaultapplication-f-sys.md) |
-| [resetDefaultApplication](arkts-ability-defaultappmanager-resetdefaultapplication-f-sys.md) |
-| [resetDefaultApplication](arkts-ability-defaultappmanager-resetdefaultapplication-f-sys.md) |
-| [resetDefaultApplicationSync](arkts-ability-defaultappmanager-resetdefaultapplicationsync-f-sys.md) |
-| [setDefaultApplication](arkts-ability-defaultappmanager-setdefaultapplication-f-sys.md) |
-| [setDefaultApplication](arkts-ability-defaultappmanager-setdefaultapplication-f-sys.md) |
-| [setDefaultApplication](arkts-ability-defaultappmanager-setdefaultapplication-f-sys.md) |
-| [setDefaultApplicationForAppClone](arkts-ability-defaultappmanager-setdefaultapplicationforappclone-f-sys.md) |
-| [setDefaultApplicationSync](arkts-ability-defaultappmanager-setdefaultapplicationsync-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getDefaultApplication](arkts-ability-defaultappmanager-getdefaultapplication-f-sys.md) | Obtains the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result. |
+| [getDefaultApplication](arkts-ability-defaultappmanager-getdefaultapplication-f-sys.md) | Obtains the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result. |
+| [getDefaultApplication](arkts-ability-defaultappmanager-getdefaultapplication-f-sys.md) | Obtains the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses a promise to return the result. |
+| [getDefaultApplicationSync](arkts-ability-defaultappmanager-getdefaultapplicationsync-f-sys.md) | Obtains the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API returns the result synchronously. |
+| [resetDefaultApplication](arkts-ability-defaultappmanager-resetdefaultapplication-f-sys.md) | Resets the default application for a user based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result. |
+| [resetDefaultApplication](arkts-ability-defaultappmanager-resetdefaultapplication-f-sys.md) | Resets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result. |
+| [resetDefaultApplication](arkts-ability-defaultappmanager-resetdefaultapplication-f-sys.md) | Resets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses a promise to return the result. |
+| [resetDefaultApplicationSync](arkts-ability-defaultappmanager-resetdefaultapplicationsync-f-sys.md) | Resets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API returns the result synchronously. |
+| [setDefaultApplication](arkts-ability-defaultappmanager-setdefaultapplication-f-sys.md) | Sets the default application for a user based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result. |
+| [setDefaultApplication](arkts-ability-defaultappmanager-setdefaultapplication-f-sys.md) | Sets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result. |
+| [setDefaultApplication](arkts-ability-defaultappmanager-setdefaultapplication-f-sys.md) | Sets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses a promise to return the result. |
+| [setDefaultApplicationForAppClone](arkts-ability-defaultappmanager-setdefaultapplicationforappclone-f-sys.md) | Sets an application clone as the default application of the specified type. This API returns the result synchronously. |
+| [setDefaultApplicationSync](arkts-ability-defaultappmanager-setdefaultapplicationsync-f-sys.md) | Sets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API returns the result synchronously. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md) |
+| Name | Description |
+| --- | --- |
+| [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md) | Enumerates the default application types. |

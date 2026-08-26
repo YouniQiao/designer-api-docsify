@@ -16,13 +16,13 @@ ArrayList中sort方法的比较器类型。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| firstValue | T | 是 |
-| secondValue | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| firstValue | T | 是 | 需要排序的前一项元素。 |
+| secondValue | T | 是 | 需要排序的后一项元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 通过回调函数返回的值，ArrayList根据该比较规则维护元素的顺序。返回负数表示firstValue小于secondValue（firstValue排在secondValue之前）， 返回0表示两者相等，返回正数表示firstValue大于secondValue（firstValue排在secondValue之后）。 |

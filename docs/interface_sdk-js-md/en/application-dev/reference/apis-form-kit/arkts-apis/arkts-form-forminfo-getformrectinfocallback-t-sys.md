@@ -14,12 +14,33 @@ Get form rect info callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formId | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formId | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[formInfo.Rect](arkts-form-forminfo-rect-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[formInfo.Rect](arkts-form-forminfo-rect-i.md)&gt; | form rect info |
+
+**Examples**
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+// The widget host needs to process the request, and calculate and return the widget dimension and position information.
+let getFormRectInfoCallback: formInfo.GetFormRectInfoCallback =
+  (formId: string): Promise<formInfo.Rect> => {
+    return new Promise<formInfo.Rect>((resolve: (value: formInfo.Rect) => void) => {
+      console.info(`formId is ${formId}`);
+      let formRect: formInfo.Rect = {
+        left: 0,
+        top: 0,
+        width: 0,
+        height: 0
+      };
+      resolve(formRect);
+    })
+  };
+```

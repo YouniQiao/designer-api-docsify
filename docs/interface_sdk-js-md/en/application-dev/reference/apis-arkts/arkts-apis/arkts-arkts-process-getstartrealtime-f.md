@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## getStartRealtime
@@ -22,6 +22,12 @@ Obtains the duration (excluding the system sleep time), in milliseconds, from th
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Duration obtained, in milliseconds. |
+
+**Examples**
+
+```TypeScript
+let realtime = process.getStartRealtime();
+```

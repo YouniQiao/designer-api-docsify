@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## getMainThreadStackTrace
@@ -22,6 +23,14 @@ function getMainThreadStackTrace(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 主线程的栈追踪信息。若主线程未处于执行 JavaScript 代码状态，则返回空字符串。 |
+
+**示例**
+
+```TypeScript
+let stack = util.getMainThreadStackTrace();
+console.info(stack);
+// 输出当前主线程的栈追踪信息。
+```

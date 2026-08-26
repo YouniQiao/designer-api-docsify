@@ -6,40 +6,39 @@ The **gestureEvent** module provides APIs for gesture events reported by devices
 ## Modules to Import
 
 ```TypeScript
-import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFingersTap, SwipeInward, TouchGestureEvent } from 'kits/@kit.InputKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FourFingersSwipe(Gesture Event)](arkts-input-multimodalinput-gestureevent-fourfingersswipe-i.md) |
-| [Pinch(Gesture Event)](arkts-input-multimodalinput-gestureevent-pinch-i.md) |
-| [Rotate(Gesture Event)](arkts-input-multimodalinput-gestureevent-rotate-i.md) |
-| [ThreeFingersSwipe(Gesture Event)](arkts-input-multimodalinput-gestureevent-threefingersswipe-i.md) |
-| [ThreeFingersTap(Gesture Event)](arkts-input-multimodalinput-gestureevent-threefingerstap-i.md) |
+| Name | Description |
+| --- | --- |
+| [FourFingersSwipe(Gesture Event)](arkts-input-multimodalinput-gestureevent-fourfingersswipe-i.md) | Defines a four-finger swipe gesture event. |
+| [Pinch(Gesture Event)](arkts-input-multimodalinput-gestureevent-pinch-i.md) | Defines a pinch event. |
+| [Rotate(Gesture Event)](arkts-input-multimodalinput-gestureevent-rotate-i.md) | Defines a rotation gesture event. |
+| [ThreeFingersSwipe(Gesture Event)](arkts-input-multimodalinput-gestureevent-threefingersswipe-i.md) | Defines a three-finger swipe gesture event. |
+| [ThreeFingersTap(Gesture Event)](arkts-input-multimodalinput-gestureevent-threefingerstap-i.md) | Defines a three-finger tap gesture event. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SwipeInward(Gesture Event)](arkts-input-multimodalinput-gestureevent-swipeinward-i-sys.md) |
-| [TouchGestureEvent(Gesture Event)](arkts-input-multimodalinput-gestureevent-touchgestureevent-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [SwipeInward(Gesture Event)](arkts-input-multimodalinput-gestureevent-swipeinward-i-sys.md) | Defines an inward swipe event. |
+| [TouchGestureEvent(Gesture Event)](arkts-input-multimodalinput-gestureevent-touchgestureevent-i-sys.md) | Defines a touchscreen gesture event. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ActionType(Gesture Event)](arkts-input-multimodalinput-gestureevent-actiontype-e.md) |
+| Name | Description |
+| --- | --- |
+| [ActionType(Gesture Event)](arkts-input-multimodalinput-gestureevent-actiontype-e.md) | Enumerates gesture event types. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TouchGestureAction(Gesture Event)](arkts-input-multimodalinput-gestureevent-touchgestureaction-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [TouchGestureAction(Gesture Event)](arkts-input-multimodalinput-gestureevent-touchgestureaction-e-sys.md) | Enumerates touchscreen gesture types. |
 <!--DelEnd-->

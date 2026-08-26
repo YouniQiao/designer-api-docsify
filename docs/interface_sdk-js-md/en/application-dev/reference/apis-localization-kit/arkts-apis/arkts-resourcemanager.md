@@ -31,48 +31,48 @@ through context without importing any module. For details about the context, see
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import resourceManager from '@kit.LocalizationKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getResourceManager(Resource Management)](arkts-localization-resourcemanager-getresourcemanager-f.md) |
-| [getResourceManager(Resource Management)](arkts-localization-resourcemanager-getresourcemanager-f.md) |
-| [getResourceManager(Resource Management)](arkts-localization-resourcemanager-getresourcemanager-f.md) |
-| [getResourceManager(Resource Management)](arkts-localization-resourcemanager-getresourcemanager-f.md) |
-| [getSysResourceManager(Resource Management)](arkts-localization-resourcemanager-getsysresourcemanager-f.md) |
-| [getSystemResourceManager(Resource Management)](arkts-localization-resourcemanager-getsystemresourcemanager-f.md) |
+| Name | Description |
+| --- | --- |
+| [getResourceManager(Resource Management)](arkts-localization-resourcemanager-getresourcemanager-f.md) | Obtains the **ResourceManager** object of the current application. This API uses an asynchronous callback to return the result. |
+| [getResourceManager(Resource Management)](arkts-localization-resourcemanager-getresourcemanager-f.md) | Obtains the **ResourceManager** object of the specified application. This API uses an asynchronous callback to return the result. |
+| [getResourceManager(Resource Management)](arkts-localization-resourcemanager-getresourcemanager-f.md) | Obtains the **ResourceManager** object of the current application. This API uses a promise to return the result. |
+| [getResourceManager(Resource Management)](arkts-localization-resourcemanager-getresourcemanager-f.md) | Obtains the **ResourceManager** object of the specified application. This API uses a promise to return the result. |
+| [getSysResourceManager(Resource Management)](arkts-localization-resourcemanager-getsysresourcemanager-f.md) | Obtains a system resource management object for accessing preset system resources. |
+| [getSystemResourceManager(Resource Management)](arkts-localization-resourcemanager-getsystemresourcemanager-f.md) | Obtains a system resource management object for accessing preset system resources. |
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Configuration(Resource Management)](arkts-localization-resourcemanager-configuration-c.md) |
-| [DeviceCapability(Resource Management)](arkts-localization-resourcemanager-devicecapability-c.md) |
+| Name | Description |
+| --- | --- |
+| [Configuration(Resource Management)](arkts-localization-resourcemanager-configuration-c.md) | Defines the device configuration. |
+| [DeviceCapability(Resource Management)](arkts-localization-resourcemanager-devicecapability-c.md) | Defines the device capability. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AsyncCallback(Resource Management)](arkts-localization-resourcemanager-asynccallback-i.md) |
-| [ResourceManager(Resource Management)](arkts-localization-resourcemanager-resourcemanager-i.md) |
+| Name | Description |
+| --- | --- |
+| [AsyncCallback(Resource Management)](arkts-localization-resourcemanager-asynccallback-i.md) | Asynchronous callback interface. |
+| [ResourceManager(Resource Management)](arkts-localization-resourcemanager-resourcemanager-i.md) | Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ColorMode(Resource Management)](arkts-localization-resourcemanager-colormode-e.md) |
-| [DeviceType(Resource Management)](arkts-localization-resourcemanager-devicetype-e.md) |
-| [Direction(Resource Management)](arkts-localization-resourcemanager-direction-e.md) |
-| [ScreenDensity(Resource Management)](arkts-localization-resourcemanager-screendensity-e.md) |
+| Name | Description |
+| --- | --- |
+| [ColorMode(Resource Management)](arkts-localization-resourcemanager-colormode-e.md) | Defines the color mode of the current device. |
+| [DeviceType(Resource Management)](arkts-localization-resourcemanager-devicetype-e.md) | Enumerates the device types.<!--RP1--><!--RP1End--> |
+| [Direction(Resource Management)](arkts-localization-resourcemanager-direction-e.md) | Enumerates the screen directions. |
+| [ScreenDensity(Resource Management)](arkts-localization-resourcemanager-screendensity-e.md) | Enumerates the screen density types. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [RawFileDescriptor(Resource Management)](arkts-localization-resourcemanager-rawfiledescriptor-t.md) |
-| [Resource(Resource Management)](arkts-localization-resourcemanager-resource-t.md) |
+| Name | Description |
+| --- | --- |
+| [RawFileDescriptor(Resource Management)](arkts-localization-resourcemanager-rawfiledescriptor-t.md) | Describes the file descriptor information of the HAP where the rawfile is located. |
+| [Resource(Resource Management)](arkts-localization-resourcemanager-resource-t.md) | Describes the resource information, including the application package name, application module name, resource ID, resource type, and formatting parameters. |

@@ -24,10 +24,10 @@ The width of the offScreen Canvas object The height of the offScreen Canvas obje
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [width](#width) | number | Yes |
-| [height](#height) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| width | number | Yes |  |
+| height | number | Yes |  |
 
 ## getContext
 
@@ -47,16 +47,16 @@ Gets the context object for off-screen drawing.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [contextId](../../apis-arkts/arkts-apis/arkts-arkts-locks-asynclockinfo-c.md) | "2d" | Yes |
-| options | CanvasRenderingContext2DSettings | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| contextId | "2d" | Yes | creates a CanvasRenderingContext2D object representing a two-dimensional rendering context. |
+| options | CanvasRenderingContext2DSettings | No | object representing a three-dimensional rendering context. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [OffscreenCanvasRenderingContext2D](arkts-arkui-viewmodel-offscreencanvasrenderingcontext2d-i.md) |
+| Type | Description |
+| --- | --- |
+| [OffscreenCanvasRenderingContext2D](arkts-arkui-viewmodel-offscreencanvasrenderingcontext2d-i.md) | a render canvas for the offScreen Canvas object. |
 
 ## toDataURL
 
@@ -76,16 +76,16 @@ Converts the draw contents of the current off-screen draw object to a string in 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | string | No |
-| quality | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | string | No | indicating the image format. |
+| quality | number | No | between 0 and 1 indicating image quality if the type option is image/jpeg or image/webp. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | A Promise returning a Blob object representing the image contained in the canvas. |
 
 ## transferToImageBitmap
 
@@ -105,9 +105,9 @@ Converts the draw content in the current off-screen draw object to a Bitmap obje
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageBitmap](arkts-arkui-global-imagebitmap-c.md) |
+| Type | Description |
+| --- | --- |
+| [ImageBitmap](arkts-arkui-global-imagebitmap-c.md) | Returns An ImageBitmap object. |
 
 ## height
 

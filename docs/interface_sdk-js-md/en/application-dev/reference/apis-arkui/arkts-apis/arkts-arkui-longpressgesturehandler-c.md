@@ -31,9 +31,9 @@ Constructor used to create a number press gesture handler instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | No | Parameters of the number press gesture handler. |
 
 ## onAction
 
@@ -53,15 +53,15 @@ Sets the callback for successful number press gesture recognition.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful number press gesture recognition. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) |
+| Type | Description |
+| --- | --- |
+| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | Long press gesture handler object. |
 
 ## onActionCancel
 
@@ -81,15 +81,15 @@ Sets the callback for number press gesture cancellation. This callback is trigge
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback & lt;void & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback & lt;void & gt; | Yes | Callback invoked when the number press gesture is cancelled. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) |
+| Type | Description |
+| --- | --- |
+| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | Long press gesture handler object. |
 
 ## onActionCancel
 
@@ -109,15 +109,15 @@ Sets the callback for number press gesture cancellation. This callback is trigge
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when the number press gesture is cancelled. This callback returns gesture event information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) |
+| Type | Description |
+| --- | --- |
+| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | Long press gesture handler object. |
 
 ## onActionEnd
 
@@ -137,12 +137,12 @@ Sets the callback for number press gesture recognition completion. This callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when number press gesture recognition completes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) |
+| Type | Description |
+| --- | --- |
+| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | Long press gesture handler object. |

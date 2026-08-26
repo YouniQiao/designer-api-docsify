@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## requestTrace
@@ -24,20 +23,42 @@ function requestTrace(config: RequestTraceConfig): Promise<string>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [RequestTraceConfig](arkts-performanceanalysis-hidebug-requesttraceconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [RequestTraceConfig](arkts-performanceanalysis-hidebug-requesttraceconfig-i.md) | 是 | trace采集配置信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回以.sys作为后缀的trace文件的应用沙箱路径。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
-| [11400120](../errorcode-hiviewdfx-hidebug-trace.md#11400120-trace文件存储达到限制) |
-| [11400302](../errorcode-hiviewdfx-hidebug-trace.md#11400302-trace采集超出资源配额) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Remote service exception. |
+| [11400120](../errorcode-hiviewdfx-hidebug-trace.md#11400120-trace文件存储达到限制) | Trace storage limit reached. |
+| [11400302](../errorcode-hiviewdfx-hidebug-trace.md#11400302-trace采集超出资源配额) | Resource unavailable. |
+
+**示例**
+
+```TypeScript
+import { hidebug, hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  hidebug.requestTrace({
+    identifier: "trace_name",
+    bufferSizeKb: 1024,
+    durationMs: 1000,
+    reserved: 0,
+  }).then((tracePath: string) => {
+    hilog.info(0x0000, 'hidebug', `tracePath: ${tracePath}`)
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'hidebug', `error code: ${err.code}, message: ${err.message}`)
+  })
+} catch (error) {
+  hilog.error(0x0000, 'hidebug', `error code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`)
+}
+```

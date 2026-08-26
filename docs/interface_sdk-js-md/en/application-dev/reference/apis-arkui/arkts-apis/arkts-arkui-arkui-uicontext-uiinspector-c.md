@@ -9,10 +9,10 @@ Provides APIs for registering the component layout and drawing display completio
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## createComponentObserver
@@ -33,15 +33,58 @@ Registers a callback for layout and drawing display completion notifications for
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | ID of the target component, set using the universal attributes id or key. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| inspector.ComponentObserver |
+| Type | Description |
+| --- | --- |
+| inspector.ComponentObserver | Component observer, which is used to register or unregister listeners for completion of component layout or drawing display. |
+
+**Examples**
+
+```TypeScript
+import { inspector, UIInspector } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct UIInspectorExample {
+  build() {
+    Column() {
+      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start }) {
+        Row({ space: 5 }) {
+          Text('UIInspector')
+            .width(110)
+            .height(110)
+            .border({ width: 1 })
+            .id('TEXT_ID')
+        }.width(80)
+      }.width(80)
+    }.height(320).width(360).padding({ right: 10, top: 10 })
+  }
+
+  uiInspector: UIInspector = this.getUIContext().getUIInspector();
+  listener:inspector.ComponentObserver = this.uiInspector.createComponentObserver('TEXT_ID');
+
+  aboutToAppear() {
+    let onLayoutComplete: () => void = (): void => {
+      console.info('TEXT_ID layout complete');
+    }
+    let onDrawComplete: () => void = (): void => {
+      console.info('TEXT_ID draw complete');
+    }
+
+    this.listener.on('layout', onLayoutComplete);
+    this.listener.on('draw', onDrawComplete);
+
+    // Unregister callbacks through the handle. You should decide when to call these APIs.
+    // this.listener.off('layout', onLayoutComplete)
+    // this.listener.off('draw', onDrawComplete)
+  }
+}
+```
 
 ## createComponentObserver
 
@@ -61,12 +104,61 @@ Registers a callback for layout and drawing display completion notifications for
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string \| number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string \| number | Yes | When the type is string, it indicates the ID of the specified component, set using the universal attributes id or key. When the type is number, it indicates the unique ID of the node allocated by the system, obtained through    getUniqueId. When using the unique ID to create a listener handle, ensure that the node corresponding to the unique ID exists. Otherwise, the listener does not take effect. The value of the parameter in the number type is an integer ranging from 1 to 2147483647. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| inspector.ComponentObserver |
+| Type | Description |
+| --- | --- |
+| inspector.ComponentObserver | Component observer, which is used to register or unregister listeners for completion of component layout or drawing display. |
+
+**Examples**
+
+```TypeScript
+import { inspector, UIInspector } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct UIInspectorExample {
+  build() {
+    Column() {
+      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start }) {
+        Row({ space: 5 }) {
+          Text('UIInspector')
+            .width(110)
+            .height(110)
+            .border({ width: 1 })
+            .id('TEXT_ID')
+        }.width(80)
+      }.width(80)
+    }.height(320).width(360).padding({ right: 10, top: 10 })
+  }
+
+  uiInspector: UIInspector = this.getUIContext().getUIInspector();
+  listener:inspector.ComponentObserver = this.uiInspector.createComponentObserver('TEXT_ID');
+
+  aboutToAppear() {
+    let onLayoutComplete: () => void = (): void => {
+      console.info('TEXT_ID layout complete');
+    }
+    let onDrawComplete: () => void = (): void => {
+      console.info('TEXT_ID draw complete');
+    }
+    let onLayoutChildrenComplete: () => void = (): void => {
+      console.info('UIInspectorExample children layout');
+    }
+
+    this.listener.on('layout', onLayoutComplete);
+    this.listener.on('draw', onDrawComplete);
+
+    let listenerForThis = this.getUIContext().getUIInspector().createComponentObserver(this.getUniqueId());
+    listenerForThis.onLayoutChildren(onLayoutChildrenComplete);
+
+    // Unregister callbacks through the handle. You should decide when to call these APIs.
+    // this.listener.off('layout', onLayoutComplete)
+    // this.listener.off('draw', onDrawComplete)
+  }
+}
+```

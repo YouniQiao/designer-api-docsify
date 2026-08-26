@@ -21,6 +21,6 @@ export declare function getInspectorTree(): Object
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Object |
+| 类型 | 说明 |
+| --- | --- |
+| Object |  |

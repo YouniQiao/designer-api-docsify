@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getAppPreferredLanguage
@@ -28,9 +28,17 @@ static getAppPreferredLanguage(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 应用偏好语言。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let appPreferredLanguage: string = i18n.System.getAppPreferredLanguage();
+```
 
 ## getDisplayCountry
 
@@ -48,24 +56,45 @@ static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| country | string | 是 |
-| locale | string | 是 |
-| sentenceCase | boolean | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| country | string | 是 | 国家地区，要求是[合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
+| sentenceCase | boolean | 否 | true表示按照首字母大写的格式显示文本，false表示按照区域默认的大小写格式显示文本。默认值：true。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 国家地区名称在指定语言下的翻译。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let displayCountry: string = i18n.System.getDisplayCountry('CN', 'en-GB'); // displayCountry = 'China'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getDisplayCountry failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let countryName: string = i18n.getDisplayCountry('zh-CN', 'en-GB', true); // countryName = 'China'
+countryName = i18n.getDisplayCountry('zh-CN', 'en-GB'); // countryName = 'China'
+```
 
 ## getDisplayLanguage
 
@@ -83,24 +112,46 @@ static getDisplayLanguage(language: string, locale: string, sentenceCase?: boole
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| language | string | 是 |
-| locale | string | 是 |
-| sentenceCase | boolean | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| language | string | 是 | 语言，要求是[合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
+| sentenceCase | boolean | 否 | true表示按照首字母大写的格式显示文本，false表示按照区域默认的大小写格式显示文本。默认值：true。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 语言名称在指定语言下的翻译。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // 获取“中文”在英文下的翻译
+  let displayLanguage: string = i18n.System.getDisplayLanguage('zh', 'en-GB'); // displayLanguage = 'Chinese'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getDisplayLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let languageName: string = i18n.getDisplayLanguage('zh', 'en-GB', true); // languageName = 'Chinese'
+languageName = i18n.getDisplayLanguage('zh', 'en-GB'); // languageName = 'Chinese'
+```
 
 ## getFirstDayOfWeek
 
@@ -118,9 +169,17 @@ static getFirstDayOfWeek(): WeekDay
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [WeekDay](arkts-localization-i18n-weekday-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [WeekDay](arkts-localization-i18n-weekday-e.md) | 周起始日。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let firstDayOfWeek: i18n.WeekDay = i18n.System.getFirstDayOfWeek();
+```
 
 ## getFirstPreferredLanguage
 
@@ -138,9 +197,23 @@ static getFirstPreferredLanguage(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 系统偏好语言列表中的第一个语言。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let firstPreferredLanguage: string = i18n.System.getFirstPreferredLanguage();
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let firstPreferredLanguage: string = i18n.getFirstPreferredLanguage();
+```
 
 ## getPreferredLanguageList
 
@@ -158,9 +231,23 @@ static getPreferredLanguageList(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 系统偏好语言列表。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let preferredLanguageList: Array<string> = i18n.System.getPreferredLanguageList();
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let preferredLanguageList: Array<string> = i18n.getPreferredLanguageList();
+```
 
 ## getSimplifiedLanguage
 
@@ -178,22 +265,39 @@ static getSimplifiedLanguage(language?: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| language | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| language | string | 否 | [合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)。默认值：系统语言。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 不传入language时，会根据系统语言和地区判断是否存在系统支持的方言，若存在则返回方言的简化表示；若不存在，则返回系统语言的简化表示。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // simplifiedLanguage = 'zh'
+  let simplifiedLanguage: string = i18n.System.getSimplifiedLanguage('zh-Hans-CN');
+  // 获取当前系统语言的简化表示
+  let simplifiedSystemLanguage: string = i18n.System.getSimplifiedLanguage();
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getSimplifiedLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getSystemCountries
 
@@ -211,22 +315,37 @@ static getSystemCountries(language: string): Array<string>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| language | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| language | string | 是 | [合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | language参数指定的语言下，系统支持的国家/地区列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // systemCountries = [ 'ZW', 'YT', 'YE', ..., 'ER', 'CN', 'DE' ]
+  let systemCountries: Array<string> = i18n.System.getSystemCountries('zh');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getSystemCountries failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getSystemLanguage
 
@@ -246,9 +365,23 @@ static getSystemLanguage(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 表示语言ID的字符串。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemLanguage: string = i18n.System.getSystemLanguage(); // 如果系统语言为简体中文，systemLanguage = 'zh-Hans'
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemLanguage: string = i18n.getSystemLanguage();
+```
 
 ## getSystemLanguages
 
@@ -266,9 +399,18 @@ static getSystemLanguages(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 系统支持的语言列表。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// systemLanguages = [ 'ug', 'bo', 'zh-Hant', 'en-Latn-US', 'zh-Hans' ]
+let systemLanguages: Array<string> = i18n.System.getSystemLanguages();
+```
 
 ## getSystemLocale
 
@@ -292,9 +434,23 @@ static getSystemLocale(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 表示区域ID的字符串。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemLocale: string = i18n.System.getSystemLocale(); // 如果系统语言为简体中文、地区为中国，systemLocale = 'zh-Hans-CN'
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let locale: string = i18n.getSystemLocale();
+```
 
 ## getSystemLocaleInstance
 
@@ -312,9 +468,17 @@ static getSystemLocaleInstance(): Intl.Locale
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Intl.Locale |
+| 类型 | 说明 |
+| --- | --- |
+| Intl.Locale | 系统区域对象。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemLocale: Intl.Locale = i18n.System.getSystemLocaleInstance();
+```
 
 ## getSystemRegion
 
@@ -332,9 +496,23 @@ static getSystemRegion(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 表示国家地区ID的字符串。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemRegion: string = i18n.System.getSystemRegion(); // 如果系统地区为中国，systemRegion = 'CN'
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let region: string = i18n.getSystemRegion();
+```
 
 ## getTemperatureName
 
@@ -352,21 +530,36 @@ static getTemperatureName(type: TemperatureType): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | 是 | 温度单位。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回温度单位的名称，包括celsius，fahrenheit，kelvin。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // temperatureName = 'celsius'
+  let temperatureName: string = i18n.System.getTemperatureName(i18n.TemperatureType.CELSIUS);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getTemperatureName failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getTemperatureType
 
@@ -384,9 +577,17 @@ static getTemperatureType(): TemperatureType
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | 温度单位。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let temperatureType: i18n.TemperatureType = i18n.System.getTemperatureType();
+```
 
 ## getUsingLocalDigit
 
@@ -404,9 +605,17 @@ static getUsingLocalDigit(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示系统当前使用本地数字，false表示系统当前不使用本地数字。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let usingLocalDigit: boolean = i18n.System.getUsingLocalDigit();
+```
 
 ## is24HourClock
 
@@ -426,9 +635,23 @@ static is24HourClock(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示系统时制为24小时制，false表示系统时制为12小时制。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let is24HourClock: boolean = i18n.System.is24HourClock(); // 如果系统时制是24小时制，is24HourClock = true
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let is24HourClock: boolean = i18n.is24HourClock();
+```
 
 ## isSuggested
 
@@ -446,23 +669,38 @@ static isSuggested(language: string, region?: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| language | string | 是 |
-| region | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| language | string | 是 | [合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)，例如zh。 |
+| region | string | 否 | [合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)，例如CN。 默认值：SIM卡国家地区。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示语言是地区的推荐语言，false表示语言不是地区的推荐语言。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let isSuggestedCountry: boolean = i18n.System.isSuggested('zh', 'CN'); // isSuggestedCountry = true
+  isSuggestedCountry = i18n.System.isSuggested('en'); // 结果和系统当前地区相关
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.isSuggested failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setAppPreferredLanguage
 
@@ -480,13 +718,27 @@ static setAppPreferredLanguage(language: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| language | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| language | string | 是 | [合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)或'default'。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setAppPreferredLanguage('zh');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setAppPreferredLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```

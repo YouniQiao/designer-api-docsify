@@ -9,7 +9,6 @@ ProxyConfig是ArkWeb框架中用于配置网络代理规则的类，配合[Proxy
 ## 导入模块
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## bypassHostnamesWithoutPeriod
@@ -26,6 +25,10 @@ bypassHostnamesWithoutPeriod(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+**示例**
+
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
+
 ## clearImplicitRules
 
 ```TypeScript
@@ -39,6 +42,10 @@ clearImplicitRules(): void
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+**示例**
+
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
 
 ## enableReverseBypass
 
@@ -56,15 +63,19 @@ enableReverseBypass(reverse: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| reverse | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| reverse | boolean | 是 | 参数值默认是false，表示与[insertBypassRule](#insertbypassrule)中的 bypassRule匹配的URL会绕过代理，参数值为true时，表示与[insertBypassRule](#insertbypassrule)中的bypassRule 匹配的URL会使用代理。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+
+**示例**
+
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
 
 ## getBypassRules
 
@@ -82,9 +93,13 @@ getBypassRules(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 不使用代理的URL列表。 |
+
+**示例**
+
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
 
 ## getProxyRules
 
@@ -102,9 +117,13 @@ getProxyRules(): Array<ProxyRule>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; | 代理规则，每个ProxyRule对象表示一条已配置的代理规则。 |
+
+**示例**
+
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
 
 ## insertBypassRule
 
@@ -122,15 +141,19 @@ insertBypassRule(bypassRule: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bypassRule | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bypassRule | string | 是 | bypass规则字符串，用于指定绕过代理的URL匹配规则，支持主机名或域名格式（如"example.com"匹配该域名及其子域名）。与bypassRule匹配的 URL会绕过代理。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+
+**示例**
+
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
 
 ## insertDirectRule
 
@@ -140,7 +163,8 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 插入一条直连规则，指明符合schemeFilter条件的URL将直接连接到服务器。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 与[insertBypassRule](#insertbypassrule)和
 > [bypassHostnamesWithoutPeriod](#bypasshostnameswithoutperiod)均可实现URL直连，区别在于匹配维度：本方法通过
 > schemeFilter按协议类型匹配；insertBypassRule通过bypassRule字符串按URL模式匹配；bypassHostnamesWithoutPeriod无需传参，自动对不含点号的域名直连。可根据需要
@@ -154,15 +178,19 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会直接与服务器相连。 默认值：MATCH_ALL_SCHEMES。 传入undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+
+**示例**
+
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
 
 ## insertProxyRule
 
@@ -187,16 +215,20 @@ insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| proxyRule | string | 是 |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| proxyRule | string | 是 | URL要使用的代理。 |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会使用代理。 默认值：MATCH_ALL_SCHEMES。 传入undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+
+**示例**
+
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
 
 ## isReverseBypassEnabled
 
@@ -214,6 +246,10 @@ isReverseBypassEnabled(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | [enableReverseBypass]{ |
+
+**示例**
+
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。

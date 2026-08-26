@@ -23,12 +23,12 @@ global \$rawfile function
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes | name of the file in the resources/rawfile directory of the project. When referencing resources of the Resource type, make sure the data type is the same as that of the attribute method. For example, if an attribute method supports the string \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | name of the file in the resources/rawfile directory of the project. When referencing resources of the Resource type, make sure the data type is the same as that of the attribute method. For example, if an attribute method supports the string \| Resource types, the data type of the Resource type must be string. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
+| Type | Description |
+| --- | --- |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |  |

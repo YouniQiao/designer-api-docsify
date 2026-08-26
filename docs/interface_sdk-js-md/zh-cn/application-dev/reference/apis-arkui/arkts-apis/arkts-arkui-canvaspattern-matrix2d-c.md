@@ -44,9 +44,9 @@ identity(): Matrix2D
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## invert
 
@@ -68,9 +68,9 @@ invert(): Matrix2D
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## multiply
 
@@ -92,15 +92,15 @@ multiply(other?: Matrix2D): Matrix2D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| other | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| other | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 | 目标矩阵。异常值undefined和null按无效值处理。默认值：null |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## rotate
 
@@ -122,16 +122,16 @@ rotate(rx?: number, ry?: number): Matrix2D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| rx | number | 否 |
-| ry | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rx | number | 否 | 旋转点的水平方向坐标，取值范围无限制。异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。默认单位：vp |
+| ry | number | 否 | 旋转点的垂直方向坐标，取值范围无限制。异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。默认单位：vp |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## scale
 
@@ -153,16 +153,16 @@ scale(sx?: number, sy?: number): Matrix2D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sx | number | 否 |
-| sy | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sx | number | 否 | 水平缩放比例系数，取值范围无限制。异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。默认值：1.0 |
+| sy | number | 否 | 垂直缩放比例系数，取值范围无限制。异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。默认值：1.0 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## translate
 
@@ -184,16 +184,16 @@ translate(tx?: number, ty?: number): Matrix2D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| tx | number | 否 |
-| ty | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tx | number | 否 | 水平方向平移距离，取值范围无限制。异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。默认单位：vp默认值：0 |
+| ty | number | 否 | 垂直方向平移距离，取值范围无限制。异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。默认单位：vp默认值：0 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## rotateX
 

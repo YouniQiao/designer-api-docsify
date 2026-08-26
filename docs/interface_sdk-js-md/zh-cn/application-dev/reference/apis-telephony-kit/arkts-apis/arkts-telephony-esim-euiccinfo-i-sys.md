@@ -11,7 +11,6 @@ euicc信息。
 ## 导入模块
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## osVersion

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import commonEventManager from '@kit.BasicServicesKitManager';
 ```
 
 ## publishAsUser
@@ -25,11 +26,32 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | string | 是 |
-| userId | number | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | string | 是 | 表示要发布的公共事件。 |
+| userId | number | 是 | 表示指定向该用户ID发布此公共事件。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+// 发布公共事件回调
+let publishCallBack = (err:Base.BusinessError) => {
+    if (err.code) {
+        console.error(`Failed to publishAsUser. Code: ${err.code}, message: ${err.message}`);
+    } else {
+        console.info('publishAsUser');
+    }
+}
+
+// 指定发送的用户
+const userId = 100;
+
+// 发布公共事件
+commonEvent.publishAsUser('event', userId, publishCallBack);
+```
 
 
 ## publishAsUser
@@ -57,9 +79,37 @@ function publishAsUser(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | string | 是 |
-| userId | number | 是 |
-| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | string | 是 | 表示要发布的公共事件。 |
+| userId | number | 是 | 表示指定向该用户ID发布此公共事件。 |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | 是 | 表示发布公共事件的属性。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+import CommonEventManager from '@ohos.commonEventManager';
+
+// 公共事件相关信息
+let options:CommonEventManager.CommonEventPublishData = {
+    code: 0,              // 公共事件的初始代码
+    data: 'initial data', // 公共事件的初始数据
+};
+
+// 发布公共事件回调
+let publishCallBack = (err:Base.BusinessError) => {
+    if (err.code) {
+        console.error(`Failed to publishAsUser. Code: ${err.code}, message: ${err.message}`);
+    } else {
+        console.info('publishAsUser');
+    }
+}
+
+// 指定发送的用户
+let userId = 100;
+
+// 发布公共事件
+commonEvent.publishAsUser('event', userId, options, publishCallBack);
+```

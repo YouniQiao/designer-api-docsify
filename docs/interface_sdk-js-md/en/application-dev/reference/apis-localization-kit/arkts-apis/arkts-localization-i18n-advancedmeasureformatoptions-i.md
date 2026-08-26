@@ -9,7 +9,7 @@ Represents optional configuration items for AdvancedMeasureFormat object.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## unitUsage

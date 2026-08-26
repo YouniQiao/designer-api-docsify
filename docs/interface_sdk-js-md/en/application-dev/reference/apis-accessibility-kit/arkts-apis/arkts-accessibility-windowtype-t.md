@@ -10,7 +10,7 @@ Enumerates the window types.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'application' |
-| 'system' |
+| Type | Description |
+| --- | --- |
+| 'application' | Application window. |
+| 'system' | System window. |

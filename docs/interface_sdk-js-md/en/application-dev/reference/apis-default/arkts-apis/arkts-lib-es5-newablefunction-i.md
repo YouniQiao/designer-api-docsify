@@ -15,10 +15,10 @@ Calls the function with the specified object as the this value and the elements 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | new () = & gt; T | Yes |
-| thisArg | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | new () = & gt; T | Yes |  |
+| thisArg | T | Yes |  |
 
 ## apply
 
@@ -28,11 +28,11 @@ apply<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, args: A): voi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | new (...args: A) = & gt; T | Yes |
-| thisArg | T | Yes |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | new (...args: A) = & gt; T | Yes |  |
+| thisArg | T | Yes |  |
+| args | A | Yes |  |
 
 ## bind
 
@@ -44,15 +44,15 @@ For a given function, creates a bound function that has the same body as the ori
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | T | Yes |
-| thisArg | any | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | T | Yes |  |
+| thisArg | any | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## bind
 
 ```TypeScript
@@ -61,16 +61,16 @@ bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | new (arg0: A0, ...args: A) = & gt; R | Yes |
-| thisArg | any | Yes |
-| arg0 | A0 | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | new (arg0: A0, ...args: A) = & gt; R | Yes |  |
+| thisArg | any | Yes |  |
+| arg0 | A0 | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## bind
 
 ```TypeScript
@@ -79,17 +79,17 @@ bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | new (arg0: A0, arg1: A1, ...args: A) = & gt; R | Yes |
-| thisArg | any | Yes |
-| arg0 | A0 | Yes |
-| arg1 | A1 | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | new (arg0: A0, arg1: A1, ...args: A) = & gt; R | Yes |  |
+| thisArg | any | Yes |  |
+| arg0 | A0 | Yes |  |
+| arg1 | A1 | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## bind
 
 ```TypeScript
@@ -98,18 +98,18 @@ bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ..
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | new (arg0: A0, arg1: A1, arg2: A2, ...args: A) = & gt; R | Yes |
-| thisArg | any | Yes |
-| arg0 | A0 | Yes |
-| arg1 | A1 | Yes |
-| arg2 | A2 | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | new (arg0: A0, arg1: A1, arg2: A2, ...args: A) = & gt; R | Yes |  |
+| thisArg | any | Yes |  |
+| arg0 | A0 | Yes |  |
+| arg1 | A1 | Yes |  |
+| arg2 | A2 | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## bind
 
 ```TypeScript
@@ -118,19 +118,19 @@ bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) = & gt; R | Yes |
-| thisArg | any | Yes |
-| arg0 | A0 | Yes |
-| arg1 | A1 | Yes |
-| arg2 | A2 | Yes |
-| arg3 | A3 | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) = & gt; R | Yes |  |
+| thisArg | any | Yes |  |
+| arg0 | A0 | Yes |  |
+| arg1 | A1 | Yes |  |
+| arg2 | A2 | Yes |  |
+| arg3 | A3 | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## bind
 
 ```TypeScript
@@ -139,16 +139,16 @@ bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | new (...args: AX[]) = & gt; R | Yes |
-| thisArg | any | Yes |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | AX[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | new (...args: AX[]) = & gt; R | Yes |  |
+| thisArg | any | Yes |  |
+| args | AX[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## call
 
 ```TypeScript
@@ -159,8 +159,8 @@ Calls the function with the specified object as the this value and the specified
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | new (...args: A) = & gt; T | Yes |
-| thisArg | T | Yes |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | new (...args: A) = & gt; T | Yes |  |
+| thisArg | T | Yes |  |
+| args | A | Yes |  |

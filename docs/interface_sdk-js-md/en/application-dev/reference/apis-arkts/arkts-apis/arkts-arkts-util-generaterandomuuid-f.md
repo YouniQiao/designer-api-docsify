@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## generateRandomUUID
@@ -22,12 +23,20 @@ Uses a secure random number generator to generate a random universally unique id
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| entropyCache | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| entropyCache | boolean | No | Whether to use a cached UUID. The value **true** means to use a cached UUID, and **false** means the opposite. The default value is **true**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | A string representing the UUID generated. |
+
+**Examples**
+
+```TypeScript
+let uuid = util.generateRandomUUID(true);
+console.info("RFC 4122 Version 4 UUID:" + uuid);
+// Output a random UUID.
+```

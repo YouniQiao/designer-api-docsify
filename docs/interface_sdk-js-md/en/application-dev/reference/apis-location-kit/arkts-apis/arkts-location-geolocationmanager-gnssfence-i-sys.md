@@ -11,7 +11,6 @@ Indicates GNSS fence information.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## circularFence

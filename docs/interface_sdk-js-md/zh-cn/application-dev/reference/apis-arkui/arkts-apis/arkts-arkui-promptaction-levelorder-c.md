@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## clamp
@@ -30,15 +30,15 @@ static clamp(order: number): LevelOrder
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| order | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| order | number | 是 | 弹窗显示顺序。取值范围为[-100000.0, 100000.0]，如果值小于-100000.0则设置为-100000.0，如果值大于100000.0则设置为100000. 0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 返回当前对象实例，该对象可用于设置弹窗的显示顺序。 |
 
 ## getOrder
 
@@ -58,6 +58,6 @@ getOrder(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回显示顺序数值。 |

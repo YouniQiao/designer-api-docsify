@@ -9,7 +9,7 @@ Provides APIs for setting different **DataSharePredicates** objects. This type i
 ## Modules to Import
 
 ```TypeScript
-import { dataSharePredicates } from 'kits/@kit.ArkData';
+import dataSharePredicates from '@kit.ArkData';
 ```
 
 ## beginsWith
@@ -30,16 +30,23 @@ Creates a **DataSharePredicates** object to match the data that begins with the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Start value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.beginsWith("NAME", "os");
+```
 
 ## contains
 
@@ -59,16 +66,23 @@ Creates a **DataSharePredicates** object to match the data that contains the spe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.contains("NAME", "os");
+```
 
 ## distinct
 
@@ -88,9 +102,16 @@ Creates a **DataSharePredicates** object to filter out duplicate data records.Cu
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.equalTo("NAME", "Rose").distinct();
+```
 
 ## endsWith
 
@@ -110,16 +131,23 @@ Creates a **DataSharePredicates** object to match the data that ends with the sp
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | End value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.endsWith("NAME", "os");
+```
 
 ## glob
 
@@ -139,16 +167,23 @@ Creates a **DataSharePredicates** object to match the data that matches the spec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Wildcard expression to match.In the expression, '*' represents zero, one, or more digits or characters, and '?' represents a single digit or character. It is case sensitive. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.glob("NAME", "?h*g");
+```
 
 ## groupBy
 
@@ -168,15 +203,22 @@ Creates a **DataSharePredicates** object group the records according to the spec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fields | Array & lt;string & gt; | Yes | Names of the columns by which the records are grouped. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.groupBy(["AGE", "NAME"]);
+```
 
 ## indexedBy
 
@@ -196,15 +238,22 @@ Creates a **DataSharePredicates** object to list data by the specified index. Be
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Name of the index column. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.indexedBy("SALARY_INDEX");
+```
 
 ## inKeys
 
@@ -224,15 +273,22 @@ Creates a **DataSharePredicates** object to match the data whose keys are within
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| keys | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keys | Array & lt;string & gt; | Yes | Array of the keys to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.inKeys(["Lisa", "Rose"]);
+```
 
 ## isNotNull
 
@@ -252,15 +308,22 @@ Creates a **DataSharePredicates** object to match the data whose value is not nu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.isNotNull("NAME");
+```
 
 ## isNull
 
@@ -280,15 +343,22 @@ Creates a **DataSharePredicates** object to match the data whose value is null.C
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.isNull("NAME");
+```
 
 ## prefixKey
 
@@ -308,15 +378,22 @@ Creates a **DataSharePredicates** object to match the data with the specified ke
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| prefix | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| prefix | string | Yes | Key prefix to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.prefixKey("NAME");
+```
 
 ## unlike
 
@@ -336,13 +413,20 @@ Creates a **DataSharePredicates** object to match the data that does not match t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Wildcard expression to match.In the expression, '%' represents zero, one, or more digits or characters, and '_' represents a single digit or character. It is case insensitive. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.unlike("NAME", "%os%");
+```

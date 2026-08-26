@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## startSyncTrace
@@ -22,8 +21,20 @@ Starts a synchronous trace with the trace output level specified. For details, s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes |
-| name | string | Yes |
-| customArgs | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | Trace output level. |
+| name | string | Yes | Name of the trace to start. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name** and **customArgs** be less than or equal to 420 bytes. |
+| customArgs | string | No | Key-value pair. The format is key=value. Multiple key-value pairs are separated by commas (,). The default value is an empty string. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name** and **customArgs** be less than or equal to 420 bytes. |
+
+**Examples**
+
+```TypeScript
+const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
+// If the customArgs parameter is not required, do not pass in this parameter or pass in an empty string.
+hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc");
+hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc", "");
+// Use commas (,) to separate multiple key-value pairs.
+hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc", "key=value");
+hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc", "key1=value1,key2=value2");
+```

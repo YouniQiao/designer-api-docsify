@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { displaySync } from 'kits/@kit.ArkGraphics2D';
+import displaySync from '@kit.ArkGraphics2D';
 ```
 
 ## targetTimestamp

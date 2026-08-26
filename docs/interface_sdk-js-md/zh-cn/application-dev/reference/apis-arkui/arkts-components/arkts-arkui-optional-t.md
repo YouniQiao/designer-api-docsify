@@ -16,7 +16,7 @@ declare type Optional<T> = T | undefined
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| T |
-| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| T | 表示泛型T所指定的类型。 |
+| undefined | 表示该类型声明的对象是undefined。 |

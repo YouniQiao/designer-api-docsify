@@ -11,7 +11,7 @@ Provides the web native messaging capability and is inherited from ExtensionAbil
 ## Modules to Import
 
 ```TypeScript
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from 'kits/@kit.ArkWeb';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## onConnectNative
@@ -30,9 +30,24 @@ Called when a web native message connection is established. In this callback, yo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Connection information. |
+
+**Examples**
+
+```TypeScript
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+
+export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAbility {
+  onConnectNative(info: ConnectionInfo): void {
+    console.info('Web Native connection established!');
+    console.info(`Connection ID: ${info.connectionId}`);
+    console.info(`Caller bundle: ${info.bundleName}`);
+    // Process the service logic after the connection is established.
+  }
+}
+```
 
 ## onDestroy
 
@@ -47,6 +62,19 @@ Called when the WebNativeMessagingExtensionAbility is destroyed. In this callbac
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+```TypeScript
+import { WebNativeMessagingExtensionAbility } from '@kit.ArkWeb';
+
+export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAbility {
+  onDestroy(): void {
+    console.info('WebNativeMessagingExtensionAbility is about to be destroyed!');
+    // Release resources or perform cleanup operations.
+  }
+}
+```
 
 ## onDisconnectNative
 
@@ -64,9 +92,23 @@ Called when a web native message connection is disconnected. In this callback, y
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Connection information. |
+
+**Examples**
+
+```TypeScript
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+
+export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAbility {
+  onDisconnectNative(info: ConnectionInfo): void {
+    console.info('Web Native connection closed!');
+    console.info(`Connection ID: ${info.connectionId}`);
+    // Process the cleanup after the connection is disconnected.
+  }
+}
+```
 
 ## context
 

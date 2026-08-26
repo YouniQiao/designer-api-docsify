@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
+import storageStatistics from '@kit.CoreFileKit';
 ```
 
 ## getTotalInodes
@@ -22,13 +22,25 @@ Get the total inodes.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | return Promise |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13600001 |
-| 13600016 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13600001 | IPC error. |
+| 13600016 | Failed to query the inode information of the data partition. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+storageStatistics.getTotalInodes().then((totalInodes: number) => {
+  console.info("getTotalInodes successfully: " + totalInodes);
+}).catch((err: BusinessError) => {
+  console.error(`getTotalInodes failed. Code: ${err.code}, Message: ${err.message}`);
+});
+```

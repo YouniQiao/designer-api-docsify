@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from 'kits/@kit.ArkData';
+import sendableRelationalStore from '@kit.ArkData';
 ```
 
 ## toSendableAsset
@@ -20,19 +20,33 @@ Converts the asset data that cannot be passed across threads into the data that 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [asset](../../apis-asset-store-kit/arkts-apis/arkts-security-asset.md) | [NonSendableAsset](arkts-arkdata-sendablerelationalstore-nonsendableasset-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| asset | [NonSendableAsset](arkts-arkdata-sendablerelationalstore-nonsendableasset-t.md) | Yes | Asset data that cannot be passed across threads. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) |
+| Type | Description |
+| --- | --- |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | Asset data that can be passed across threads. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+const asset1: sendableRelationalStore.NonSendableAsset = {
+  name: 'hangman',
+  uri: '//path/example',
+  path: '//path/example',
+  createTime: 'createTime1',
+  modifyTime: 'modifyTime1',
+  size: 'size1'
+};
+const sendableAsset = sendableRelationalStore.toSendableAsset(asset1);
+```

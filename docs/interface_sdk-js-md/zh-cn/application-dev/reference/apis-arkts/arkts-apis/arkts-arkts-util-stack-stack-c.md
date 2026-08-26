@@ -9,8 +9,6 @@ Stack基于数组的数据结构实现，特点是先进后出，只能在一端
 ## 导入模块
 
 ```TypeScript
-import { Stack } from 'kits/@kit.ArkTS';
-import { StackForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -29,15 +27,49 @@ import { StackForEachCb } from 'kits/@kit.ArkTS';
 
 **返回值：**
 
-| 类型 |
-| --- |
-| IterableIterator & lt;T & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| IterableIterator & lt;T & gt; | 返回一个迭代器，用于按栈的存储顺序依次遍历Stack中的所有元素。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let stack = new Stack<number>();
+stack.push(2);
+stack.push(4);
+stack.push(5);
+stack.push(4);
+
+// 使用方法一：
+for (let value of stack) {
+  console.info("value:", value);
+}
+// value: 2
+// value: 4
+// value: 5
+// value: 4
+
+// 使用方法二：
+// 创建迭代器
+let iter = stack[Symbol.iterator]();
+// 获取第一个迭代结果
+let currentValue: IteratorResult<number> = iter.next().value;
+// 循环遍历迭代器中的元素
+while (currentValue != undefined) {
+  console.info("value: " + currentValue);
+  currentValue = iter.next().value;
+}
+// value: 2
+// value: 4
+// value: 5
+// value: 4
+```
 
 ## constructor
 
@@ -55,9 +87,17 @@ Stack的构造函数。调用后创建一个空的Stack实例对象，初始leng
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Stack's constructor cannot be directly invoked. |
+
+**示例**
+
+```TypeScript
+// 创建Stack实例
+let stack = new Stack<number | string | Object>();
+console.info("length:", stack.length);  // length: 0
+```
 
 ## forEach
 
@@ -75,16 +115,34 @@ forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisAr
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackFn | (value: T, index?: number, stack?: Stack & lt;T & gt;) = & gt; void | 是 |
-| thisArg | Object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callbackFn | (value: T, index?: number, stack?: Stack & lt;T & gt;) = & gt; void | 是 | 遍历每个元素时执行的回调函数。 |
+| thisArg | Object | 否 | callbackFn被调用时用作this值。不传入时默认值为当前实例对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let stack = new Stack<number>();
+stack.push(2);
+stack.push(4);
+stack.push(5);
+stack.push(4);
+// 遍历stack中每个元素并执行回调函数
+stack.forEach((value: number, index: number): void => {
+  console.info("value:" + value, "index:" + index);
+});
+// value:2 index:0
+// value:4 index:1
+// value:5 index:2
+// value:4 index:3
+```
 
 ## isEmpty
 
@@ -102,15 +160,28 @@ isEmpty(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 为空返回true，不为空返回false。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let stack = new Stack<number>();
+stack.push(2);
+stack.push(4);
+stack.push(5);
+stack.push(4);
+// 判断栈是否为空
+let result = stack.isEmpty();
+console.info("result:", result);  // result: false
+```
 
 ## locate
 
@@ -128,21 +199,34 @@ locate(element: T): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| element | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| element | T | 是 | 待查找的元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 对应元素下标值，查找失败则返回-1。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The locate method cannot be bound. |
+
+**示例**
+
+```TypeScript
+let stack = new Stack<number>();
+stack.push(2);
+stack.push(4);
+stack.push(5);
+stack.push(2);
+// 查找元素5首次出现的下标
+let result = stack.locate(5);
+console.info("result:", result);  // result: 2
+```
 
 ## peek
 
@@ -160,16 +244,29 @@ peek(): T
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回栈顶元素，栈为空时返回undefined。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../errorcode-utils.md#10200010-容器为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The peek method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+
+**示例**
+
+```TypeScript
+let stack = new Stack<number>();
+stack.push(2);
+stack.push(4);
+stack.push(5);
+stack.push(2);
+// 查看栈顶元素，但不删除
+let result = stack.peek();
+console.info("result:", result);  // result: 2
+```
 
 ## pop
 
@@ -187,16 +284,30 @@ pop(): T
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回栈顶元素，栈为空时返回undefined。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../errorcode-utils.md#10200010-容器为空) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The pop method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+
+**示例**
+
+```TypeScript
+let stack = new Stack<number>();
+stack.push(2);
+stack.push(4);
+stack.push(5);
+stack.push(2);
+stack.push(4);
+// 删除栈顶元素并返回该元素
+let result = stack.pop(); 
+console.info("result = " + result); // result = 4
+```
 
 ## push
 
@@ -214,21 +325,45 @@ push(item: T): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| item | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| item | T | 是 | 需要在栈顶插入的元素。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回插入栈顶的元素。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The push method cannot be bound. |
+
+**示例**
+
+```TypeScript
+class PersonInfo {
+  name: string = "";
+  age: string = "";
+  constructor(name: string, age: string) {
+    this.name = name;
+    this.age = age;
+  }
+}
+// 创建支持多种类型的Stack实例
+let stack = new Stack<number | string | PersonInfo>();
+// 向栈中push字符串元素
+console.info("push:", stack.push("a"));  // push: a
+// 向栈中push数字元素
+console.info("push:", stack.push(1));  //  push: 1
+// 创建类实例并push到栈中
+let person1: PersonInfo = new PersonInfo("Dylan", "13");
+let result = stack.push(person1);
+console.info("result instanceof PersonInfo:", result instanceof PersonInfo);  // result instanceof PersonInfo: true
+console.info("length:", stack.length);  // length: 3
+```
 
 ## length
 

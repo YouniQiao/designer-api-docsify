@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audioHaptic } from 'kits/@kit.AudioKit';
+import audioHaptic from '@kit.AudioKit';
 ```
 
 ## muteAudio

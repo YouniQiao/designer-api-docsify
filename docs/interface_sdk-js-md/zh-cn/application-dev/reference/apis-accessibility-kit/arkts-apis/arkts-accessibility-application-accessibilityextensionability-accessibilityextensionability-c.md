@@ -10,8 +10,7 @@ AccessibilityExtensionAbility基于ExtensionAbility框架，提供无障碍扩�
 ## 导入模块
 
 ```TypeScript
-import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from 'kits/@kit.AccessibilityKit';
-import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, FocusDirection, Rect, WindowType, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from 'kits/@kit.AccessibilityKit';
+import AccessibilityExtensionAbility, { AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
 ```
 
 ## onAccessibilityEvent
@@ -30,9 +29,24 @@ onAccessibilityEvent(event: AccessibilityEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | 是 | 无障碍事件信息。 |
+
+**示例**
+
+```TypeScript
+import { AccessibilityExtensionAbility, AccessibilityEvent } from '@kit.AccessibilityKit';
+
+class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
+  onAccessibilityEvent(event: AccessibilityEvent): void {
+    console.info('AxExtensionAbility onAccessibilityEvent');
+    if (event.eventType === 'click') {
+      console.info('AxExtensionAbility onAccessibilityEvent: click');
+    }
+  }
+}
+```
 
 ## onConnect
 
@@ -48,6 +62,18 @@ onConnect(): void
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
+**示例**
+
+```TypeScript
+import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
+
+class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
+  onConnect(): void {
+    console.info('AxExtensionAbility onConnect');
+  }
+}
+```
+
 ## onDisconnect
 
 ```TypeScript
@@ -61,6 +87,18 @@ onDisconnect(): void
 **废弃版本：** 12
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
+
+**示例**
+
+```TypeScript
+import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
+
+class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
+  onDisconnect(): void {
+    console.info('AxExtensionAbility onDisconnect');
+  }
+}
+```
 
 ## onKeyEvent
 
@@ -78,15 +116,33 @@ onKeyEvent(keyEvent: KeyEvent): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [keyEvent](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyeventdata-i-sys.md) | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keyEvent | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 | 按键事件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示此事件被消费，不会继续传递。 |
+
+**示例**
+
+```TypeScript
+import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
+import { KeyEvent } from '@kit.InputKit';
+
+class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
+  onKeyEvent(keyEvent: KeyEvent): boolean {
+    console.info('AxExtensionAbility onKeyEvent');
+    if (keyEvent.key.code === 16) {
+      console.info('AxExtensionAbility onKeyEvent: intercept 16');
+      return true;
+    }
+    return false;
+  }
+}
+```
 
 ## context
 

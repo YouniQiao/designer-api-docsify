@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## getThreadPriority
@@ -24,12 +24,28 @@ function getThreadPriority(v: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| v | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| v | number | 是 | 指定的线程 tid。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回线程的优先级。优先级顺序取决于当前操作系统。 |
+
+**示例**
+
+```TypeScript
+let tid = process.tid;
+let pres = process.getThreadPriority(tid);
+```
+
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// 获取当前线程tid
+let tid = process.tid;
+// 根据tid获取线程优先级
+let pres = processManager.getThreadPriority(tid);
+```

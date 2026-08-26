@@ -9,7 +9,7 @@ TabContent页面的切换信息。
 ## 导入模块
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import uiObserver from '@kit.ArkUI';
 ```
 
 ## id

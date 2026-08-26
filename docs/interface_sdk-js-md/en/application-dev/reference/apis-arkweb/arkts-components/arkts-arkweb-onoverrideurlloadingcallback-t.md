@@ -14,12 +14,12 @@ Callback used to intercept URL loading requests. It can block the loading of spe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| webResourceRequest | [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| webResourceRequest | [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md) | Yes | Information about the URL request. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the loading is blocked. **true** is returned if the loading is blocked; otherwise, **false** is returned. |

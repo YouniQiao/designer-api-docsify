@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## CUSTOM_LABEL
@@ -203,3 +203,23 @@ labelName?: string
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
+
+**示例**
+
+使用JSON格式创建数据。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let imAddress: contact.ImAddress = {
+    imAddress: 'imAddress',
+    labelName: 'labelName'
+};
+```
+
+或使用new一个ImAddress对象的方式创建数据。
+
+```TypeScript
+let imAddress = new contact.ImAddress();
+imAddress.imAddress = 'imAddress';
+```

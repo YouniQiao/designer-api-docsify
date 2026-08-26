@@ -4,7 +4,7 @@
 type PluralRuleType = "cardinal" | "ordinal"
 ```
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| "cardinal" |
-| "ordinal" |
+| Type | Description |
+| --- | --- |
+| "cardinal" |  |
+| "ordinal" |  |

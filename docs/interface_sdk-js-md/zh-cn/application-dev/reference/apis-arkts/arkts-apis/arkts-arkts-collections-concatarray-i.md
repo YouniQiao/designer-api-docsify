@@ -2,7 +2,8 @@
 
 该接口定义了支持数组连接操作的对象，并继承了`ISendable`接口，使其兼具高效数组拼接和跨线程传递能力。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
 > 文档中存在泛型的使用，涉及以下泛型标记符：
 - T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。
@@ -16,7 +17,6 @@
 ## 导入模块
 
 ```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## join
@@ -35,15 +35,15 @@ join(separator?: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| separator | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| separator | string | 否 | 用于分隔ConcatArray元素的字符串。如果省略，则使用逗号分隔。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 包含所有ConcatArray元素连接成的字符串。如果ConcatArray为空，则返回空字符串。 |
 
 ## slice
 
@@ -61,16 +61,16 @@ slice(start?: number, end?: number): ConcatArray<T>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| start | number | 否 |
-| end | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| start | number | 否 | 开始索引。如果`start &lt; 0`，则会从`start + ConcatArray.length`位置开始。默认值为0。 |
+| end | number | 否 | 结束索引（不包括该元素）。如果`end &lt; 0`，则会到`end + ConcatArray.length`位置结束。默认为ArkTS ConcatArray的长度。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| ConcatArray & lt;T & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| ConcatArray & lt;T & gt; | 包含原始ConcatArray切片的新ConcatArray。 |
 
 ## [index: number]
 

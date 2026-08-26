@@ -16,7 +16,7 @@ export type SubHeaderV2SelectOnSelect = (selectedIndex: number, selectedContent?
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| selectedIndex | number | 是 |
-| selectedContent | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| selectedIndex | number | 是 | 选中的下拉菜单项的索引值，索引从0开始计数。 |
+| selectedContent | string | 否 | 选中的下拉菜单项的文本内容，即用户选择的菜单项显示的文本。 |

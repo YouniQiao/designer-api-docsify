@@ -22,14 +22,14 @@ Draw an arc.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| radius | number | Yes |
-| x | number | Yes |
-| y | number | Yes |
-| startAngle | number | Yes |
-| endAngle | number | Yes |
-| counterclockwise | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| radius | number | Yes | Radius of an arc. |
+| x | number | Yes | The X-axis coordinates of the center of the circle. |
+| y | number | Yes | The Y-axis coordinates of the center of an arc (center of a circle). |
+| startAngle | number | Yes | The starting point of the arc, in the X-axis direction, is calculated in radians. |
+| endAngle | number | Yes | The end point of an arc, expressed in radians. |
+| counterclockwise | boolean | No | An optional Boolean value. If true, the arc is drawn counterclockwise, and otherwise clockwise. |
 
 ## arcTo
 
@@ -47,13 +47,13 @@ Draws an arc from the beginning to the end.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x1 | number | Yes |
-| x2 | number | Yes |
-| y1 | number | Yes |
-| y2 | number | Yes |
-| radius | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x1 | number | Yes | The X-axis coordinates of the first control point. |
+| x2 | number | Yes | The X-axis coordinates of the second control point. |
+| y1 | number | Yes | The y-coordinate of the first control point. |
+| y2 | number | Yes | The Y-axis coordinates of the second control point. |
+| radius | number | Yes | Radius of an arc. |
 
 ## beginPath
 
@@ -85,14 +85,14 @@ Draw a third order Bezier curve.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| cp1x | number | Yes |
-| cp1y | number | Yes |
-| cp2x | number | Yes |
-| cp2y | number | Yes |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| cp1x | number | Yes | The X-axis coordinates of the first control point. |
+| cp1y | number | Yes | The y-coordinate of the first control point. |
+| cp2x | number | Yes | The X-axis coordinates of the second control point. |
+| cp2y | number | Yes | The Y-axis coordinates of the second control point. |
+| x | number | Yes | The x-coordinate of the end point. |
+| y | number | Yes | The y-coordinate of the end point |
 
 ## clearRect
 
@@ -110,12 +110,12 @@ Clears the contents of the specified rectangular area.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| w | number | Yes |
-| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | The X-axis coordinates at the beginning of the rectangle. |
+| y | number | Yes | The Y-axis coordinates at the beginning of the rectangle. |
+| w | number | Yes | The width of a rectangle. |
+| h | number | Yes | The height of a rectangle. |
 
 ## clip
 
@@ -161,16 +161,16 @@ Create an ImageData object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sw | number | Yes |
-| sh | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sw | number | Yes | The width of the new object. |
+| sh | number | Yes | The height of the new object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) |
+| Type | Description |
+| --- | --- |
+| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData New ImageData object with width and height specified. |
 
 ## createImageData
 
@@ -188,15 +188,15 @@ Create an ImageData object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | Copy an object of the same width and height from an existing ImageData object The image itself is not allowed to be copied. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) |
+| Type | Description |
+| --- | --- |
+| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData New ImageData object with width and height specified. |
 
 ## createLinearGradient
 
@@ -214,18 +214,18 @@ Creates a linear gradient color.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x0 | number | Yes |
-| y0 | number | Yes |
-| x1 | number | Yes |
-| y1 | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x0 | number | Yes | X-coordinate of the start point. |
+| y0 | number | Yes | Y-coordinate of the start point. |
+| x1 | number | Yes | X-coordinate of the end point. |
+| y1 | number | Yes | Y-coordinate of the end point. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) |
+| Type | Description |
+| --- | --- |
+| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) | LinearGradient object. |
 
 ## createPath2D
 
@@ -243,15 +243,15 @@ Creates a path that is later used by the CanvasRenderingContext2D object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | No | another created Path2D object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Path2D](arkts-arkui-viewmodel-path2d-i.md) |
+| Type | Description |
+| --- | --- |
+| [Path2D](arkts-arkui-viewmodel-path2d-i.md) | the object of Path2D. |
 
 ## createPath2D
 
@@ -269,15 +269,15 @@ Creates a path that is later used by the CanvasRenderingContext2D object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| cmds | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| cmds | string | No | a string defined using the SVG path command. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Path2D](arkts-arkui-viewmodel-path2d-i.md) |
+| Type | Description |
+| --- | --- |
+| [Path2D](arkts-arkui-viewmodel-path2d-i.md) | the object of Path2D. |
 
 ## createPattern
 
@@ -295,16 +295,16 @@ Create a drawing style template.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes |
-| repetition | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | The CanvasImageSource object that is the source of the duplicate image. |
+| repetition | string | Yes | Specify how to repeat images. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md) |
+| Type | Description |
+| --- | --- |
+| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md) | CanvasPattern An opaque object that describes a schema. |
 
 ## createRadialGradient
 
@@ -322,20 +322,20 @@ Create a radial tween object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x0 | number | Yes |
-| y0 | number | Yes |
-| r0 | number | Yes |
-| x1 | number | Yes |
-| y1 | number | Yes |
-| r1 | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x0 | number | Yes | The x coordinate of the circle at the beginning. |
+| y0 | number | Yes | The y coordinate of the circle at the beginning. |
+| r0 | number | Yes | The radius of the starting circle. |
+| x1 | number | Yes | X-coordinate of the end point. |
+| y1 | number | Yes | Y-coordinate of the end point. |
+| r1 | number | Yes | The radius of End Circle. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) |
+| Type | Description |
+| --- | --- |
+| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) | RadialGradient object. |
 
 ## drawImage
 
@@ -353,13 +353,13 @@ Draw an Image object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes |
-| dx | number | Yes |
-| dy | number | Yes |
-| dw | number | Yes |
-| dh | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | An element drawn to the context. |
+| dx | number | Yes | The top left corner of the image is the X-axis coordinates on the target canvas. |
+| dy | number | Yes | The top left corner of the image is the Y-axis coordinates on the target canvas. |
+| dw | number | Yes | Image The width drawn on the target canvas. |
+| dh | number | Yes | Image The height drawn on the target canvas. |
 
 ## drawImage
 
@@ -387,17 +387,17 @@ Draw an Image object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes |
-| sx | number | Yes |
-| sy | number | Yes |
-| sw | number | Yes |
-| sh | number | Yes |
-| dx | number | Yes |
-| dy | number | Yes |
-| dw | number | Yes |
-| dh | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | An element drawn to the context. |
+| sx | number | Yes | The upper-left X-axis coordinates of the image's rectangular (clipped) selection box that need to be drawn into the target context. |
+| sy | number | Yes | The upper-left Y-axis coordinates of the image's rectangular (clipped) selection box that need to be drawn into the target context. |
+| sw | number | Yes | The width of the image's rectangular (clipped) selection box that needs to be drawn into the target context. |
+| sh | number | Yes | The height of the image's rectangular (clipped) selection box that needs to be drawn into the target context. |
+| dx | number | Yes | The top left corner of the image is the X-axis coordinates on the target canvas. |
+| dy | number | Yes | The top left corner of the image is the Y-axis coordinates on the target canvas. |
+| dw | number | Yes | Image The width drawn on the target canvas. |
+| dh | number | Yes | Image The height drawn on the target canvas. |
 
 ## drawImage
 
@@ -415,13 +415,13 @@ Draw an Image object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) | image.PixelMap | Yes |
-| dx | number | Yes |
-| dy | number | Yes |
-| dw | number | Yes |
-| dh | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| image | image.PixelMap | Yes | An element drawn to the context. |
+| dx | number | Yes | The top left corner of the image is the X-axis coordinates on the target canvas. |
+| dy | number | Yes | The top left corner of the image is the Y-axis coordinates on the target canvas. |
+| dw | number | Yes | Image The width drawn on the target canvas. |
+| dh | number | Yes | Image The height drawn on the target canvas. |
 
 ## drawImage
 
@@ -449,17 +449,17 @@ Draw an Image object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) | image.PixelMap | Yes |
-| sx | number | Yes |
-| sy | number | Yes |
-| sw | number | Yes |
-| sh | number | Yes |
-| dx | number | Yes |
-| dy | number | Yes |
-| dw | number | Yes |
-| dh | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| image | image.PixelMap | Yes | An element drawn to the context. |
+| sx | number | Yes | The upper-left X-axis coordinates of the image's rectangular (clipped) selection box that need to be drawn into the target context. |
+| sy | number | Yes | The upper-left Y-axis coordinates of the image's rectangular (clipped) selection box that need to be drawn into the target context. |
+| sw | number | Yes | The width of the image's rectangular (clipped) selection box that needs to be drawn into the target context. |
+| sh | number | Yes | The height of the image's rectangular (clipped) selection box that needs to be drawn into the target context. |
+| dx | number | Yes | The top left corner of the image is the X-axis coordinates on the target canvas. |
+| dy | number | Yes | The top left corner of the image is the Y-axis coordinates on the target canvas. |
+| dw | number | Yes | Image The width drawn on the target canvas. |
+| dh | number | Yes | Image The height drawn on the target canvas. |
 
 ## ellipse
 
@@ -486,16 +486,16 @@ Draw an ellipse.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| radiusX | number | Yes |
-| radiusY | number | Yes |
-| rotation | number | Yes |
-| startAngle | number | Yes |
-| endAngle | number | Yes |
-| counterclockwise | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | The X-axis coordinates of the center of the ellipse. |
+| y | number | Yes | The Y-axis coordinates of the center of the ellipse. |
+| radiusX | number | Yes | The radius of the major axis of an ellipse. |
+| radiusY | number | Yes | The radius of the short axis of an ellipse. |
+| rotation | number | Yes | The Angle of rotation of an ellipse, expressed in radians. |
+| startAngle | number | Yes | The starting point Angle to be plotted, measured from the X-axis, is expressed in radians. |
+| endAngle | number | Yes | The Angle, expressed in radians, at which the ellipse will be drawn. |
+| counterclockwise | boolean | No | If true, the ellipse is drawn counterclockwise (counterclockwise) and clockwise otherwise. |
 
 ## fill
 
@@ -527,12 +527,12 @@ Fills a rectangular area.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| w | number | Yes |
-| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | The X-axis coordinates at the beginning of the rectangle. |
+| y | number | Yes | The Y-axis coordinates at the beginning of the rectangle. |
+| w | number | Yes | The width of a rectangle. |
+| h | number | Yes | The height of a rectangle. |
 
 ## fillText
 
@@ -550,11 +550,11 @@ Stroke a rectangular area.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| text | string | Yes |
-| y | number | Yes |
-| x | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Render text using the current values of font, textAlign, textBaseline, and direction. |
+| y | number | Yes | The Y-axis coordinates of the starting point of the text. |
+| x | number | Yes | The X-axis coordinates of the starting point of the text. |
 
 ## getImageData
 
@@ -572,18 +572,18 @@ Get an ImageData object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sx | number | Yes |
-| sy | number | Yes |
-| sw | number | Yes |
-| sh | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sx | number | Yes | The upper-left x-coordinate of the rectangular area of the image data to be extracted. |
+| sy | number | Yes | The upper-left y coordinate of the rectangular region of the image data to be extracted. |
+| sw | number | Yes | The width of the rectangular area of the image data to be extracted. |
+| sh | number | Yes | The height of the rectangular area of the image data to be extracted. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) |
+| Type | Description |
+| --- | --- |
+| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData An ImageData object that contains the rectangular ImageData given by the canvas. |
 
 ## getPixelMap
 
@@ -601,18 +601,18 @@ Get an PixelMap object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sx | number | Yes |
-| sy | number | Yes |
-| sw | number | Yes |
-| sh | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sx | number | Yes | The upper-left x-coordinate of the rectangular area of the image data to be extracted. |
+| sy | number | Yes | The upper-left y coordinate of the rectangular region of the image data to be extracted. |
+| sw | number | Yes | The width of the rectangular area of the image data to be extracted. |
+| sh | number | Yes | The height of the rectangular area of the image data to be extracted. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| image.PixelMap |
+| Type | Description |
+| --- | --- |
+| image.PixelMap | PixelMap A PixelMap object that contains the rectangular ImageData given by the canvas. |
 
 ## isPointInPath
 
@@ -630,16 +630,16 @@ Check whether the specified coordinate point is on the Path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | The X coordinate of the detection point. |
+| y | number | Yes | The Y coordinate of the detection point. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | boolean Return true if the detection point is contained within the current or specified path Otherwise return false. |
 
 ## isPointInPath
 
@@ -657,17 +657,17 @@ Check whether the specified coordinate point is on the Path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes | The Path2D path that needs to be populated. |
+| x | number | Yes | The X coordinate of the detection point. |
+| y | number | Yes | The Y coordinate of the detection point. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | boolean Return true if the detection point is contained within the current or specified path Otherwise return false. |
 
 ## isPointInStroke
 
@@ -685,16 +685,16 @@ Checks whether the specified coordinate point is on the stroke edge.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | The X coordinate of the detection point. |
+| y | number | Yes | The Y coordinate of the detection point. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | boolean A Boolean value that returns true when the point is on the line of the path, false otherwise. |
 
 ## isPointInStroke
 
@@ -712,17 +712,17 @@ Checks whether the specified coordinate point is on the stroke edge.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes | Path2D path. |
+| x | number | Yes | The X coordinate of the detection point. |
+| y | number | Yes | The Y coordinate of the detection point. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | boolean A Boolean value that returns true when the point is on the line of the path, false otherwise. |
 
 ## lineTo
 
@@ -740,10 +740,10 @@ Draw a straight line.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | The X-axis coordinates at the end of the line. |
+| y | number | Yes | The Y-axis coordinates at the end of the line. |
 
 ## measureText
 
@@ -761,15 +761,15 @@ Returns a TextMetrics object used to obtain the width of specified text.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| text | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Text to be measured. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TextMetrics](arkts-arkui-viewmodel-textmetrics-i.md) |
+| Type | Description |
+| --- | --- |
+| [TextMetrics](arkts-arkui-viewmodel-textmetrics-i.md) | Object that contains the text width. You can obtain the width by TextMetrics.width. |
 
 ## moveTo
 
@@ -787,10 +787,10 @@ Moves the current canvas to the specified coordinate point.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | The x axis. |
+| y | number | Yes | The y axis. |
 
 ## putImageData
 
@@ -808,11 +808,11 @@ Draws the specified ImageData object to the canvas.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes |
-| dx | number | Yes |
-| dy | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | An array object containing pixel values. |
+| dx | number | Yes | The offset of the position of the source image data in the target canvas (the offset in the X-axis direction). |
+| dy | number | Yes | The offset of the position of the source image data in the target canvas (the Y-axis offset). |
 
 ## putImageData
 
@@ -838,15 +838,15 @@ Draws the specified ImageData object to the canvas.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes |
-| dx | number | Yes |
-| dy | number | Yes |
-| dirtyX | number | Yes |
-| dirtyY | number | Yes |
-| dirtyWidth | number | Yes |
-| dirtyHeight | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | An array object containing pixel values. |
+| dx | number | Yes | The offset of the position of the source image data in the target canvas (the offset in the X-axis direction). |
+| dy | number | Yes | he offset of the position of the source image data in the target canvas (the Y-axis offset). |
+| dirtyX | number | Yes | In the source image data, the position of the upper left corner of the rectangular region Default is the upper left corner of the entire image data (x coordinate). |
+| dirtyY | number | Yes | In the source image data, the position of the upper left corner of the rectangular region Default is the top left corner (y coordinate) of the entire image data. |
+| dirtyWidth | number | Yes | In the source image data, the width of a rectangular region. Default is the width of the image data. |
+| dirtyHeight | number | Yes | In the source image data, the height of a rectangular region. Default is the height of the image data. |
 
 ## quadraticCurveTo
 
@@ -864,12 +864,12 @@ Draw a second order Bezier curve.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| cpx | number | Yes |
-| cpy | number | Yes |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| cpx | number | Yes | The X-axis coordinates of the control points. |
+| cpy | number | Yes | The y-coordinate of the control point. |
+| x | number | Yes | The X-axis of the end point. |
+| y | number | Yes | The Y-axis of the end point. |
 
 ## rect
 
@@ -887,12 +887,12 @@ Draw a rectangle.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| w | number | Yes |
-| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | The X-axis coordinates at the beginning of the rectangle. |
+| y | number | Yes | The Y-axis coordinates at the beginning of the rectangle. |
+| w | number | Yes | The width of a rectangle. |
+| h | number | Yes | The height of a rectangle. |
 
 ## resetTransform
 
@@ -938,9 +938,9 @@ Adds a rotation effect to the current canvas.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| angle | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| angle | number | Yes | The radian of clockwise rotation. |
 
 ## save
 
@@ -972,10 +972,10 @@ Adds a zoom effect to the current canvas.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | The horizontal scaling factor. |
+| y | number | Yes | The scaling factor in the vertical direction. |
 
 ## setLineDash
 
@@ -993,9 +993,9 @@ Sets the dotted spacing of a line.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| segments | Array & lt;number & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| segments | Array & lt;number & gt; | Yes | A set of numbers describing the length of alternating drawn line segments and spacing (coordinate space units). |
 
 ## setTransform
 
@@ -1013,14 +1013,14 @@ Set the rotation, pan, and zoom effects.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| a | number | Yes |
-| b | number | Yes |
-| c | number | Yes |
-| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
-| [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
-| f | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| a | number | Yes | The level of zoom. |
+| b | number | Yes | Vertical tilt. |
+| c | number | Yes | Horizontal tilt. |
+| d | number | Yes | Vertical scaling. |
+| e | number | Yes | The level of mobile. |
+| f | number | Yes | Vertical movement. |
 
 ## stroke
 
@@ -1052,9 +1052,9 @@ Stroke draws the current path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes | The object of Path2D. |
 
 ## strokeRect
 
@@ -1072,12 +1072,12 @@ Stroke a rectangular area.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| w | number | Yes |
-| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | The X-axis coordinates at the beginning of the rectangle. |
+| y | number | Yes | The Y-axis coordinates at the beginning of the rectangle. |
+| w | number | Yes | The width of the rectangle. Positive values on the right, negative values on the left. |
+| h | number | Yes | The height of the rectangle. Positive values are down, negative values are up. |
 
 ## strokeText
 
@@ -1095,11 +1095,11 @@ Draws the stroke of a text string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| text | string | Yes |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Text stroke to draw. |
+| x | number | Yes | X-coordinate of the lower left corner of the text stroke. |
+| y | number | Yes | Y-coordinate of the lower left corner of the text stroke. |
 
 ## transform
 
@@ -1117,14 +1117,14 @@ Set the rotation, pan, and zoom effects.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| a | number | Yes |
-| b | number | Yes |
-| c | number | Yes |
-| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
-| [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
-| f | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| a | number | Yes | The level of zoom. |
+| b | number | Yes | Vertical tilt. |
+| c | number | Yes | Horizontal tilt. |
+| d | number | Yes | Vertical scaling. |
+| e | number | Yes | The level of mobile. |
+| f | number | Yes | Vertical movement. |
 
 ## translate
 
@@ -1142,10 +1142,10 @@ Adds a pan effect to the current canvas.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | Horizontal movement distance. |
+| y | number | Yes | Vertical movement. |
 
 ## fillStyle
 

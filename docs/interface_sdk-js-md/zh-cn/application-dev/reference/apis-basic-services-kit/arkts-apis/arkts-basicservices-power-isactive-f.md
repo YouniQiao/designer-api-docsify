@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import power from '@kit.BasicServicesKit';
 ```
 
 ## isActive
@@ -22,6 +22,13 @@ function isActive(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 活动状态返回true，非活动状态返回false。 |
+
+**示例**
+
+```TypeScript
+let isActive = power.isActive();
+console.info('power is active: ' + isActive);
+```

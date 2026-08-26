@@ -9,6 +9,9 @@ WebContextMenuParam是ArkWeb组件中用于承载长按页面元素或鼠标右�
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -41,9 +44,9 @@ existsImageContents(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 长按位置存在图片返回true，否则返回false。 |
 
 ## getContextMenuMediaType
 
@@ -59,9 +62,9 @@ getContextMenuMediaType(): ContextMenuDataMediaType
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ContextMenuDataMediaType](arkts-arkweb-contextmenudatamediatype-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ContextMenuDataMediaType](arkts-arkweb-contextmenudatamediatype-e.md) | 网页元素的媒体类型，包括图片、视频、音频等不同类型，用于区分用户点击的网页元素种类。 |
 
 ## getEditStateFlags
 
@@ -79,9 +82,9 @@ getEditStateFlags(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 获取网页元素可编辑标识，参照[ContextMenuEditStateFlags]{ |
 
 ## getInputFieldType
 
@@ -99,9 +102,9 @@ getInputFieldType(): ContextMenuInputFieldType
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ContextMenuInputFieldType](arkts-arkweb-contextmenuinputfieldtype-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ContextMenuInputFieldType](arkts-arkweb-contextmenuinputfieldtype-e.md) | 网页元素输入框的类型，包括文本框、密码框、邮箱框等不同类型，用于识别当前焦点所在的输入元素种类。 |
 
 ## getLinkUrl
 
@@ -111,7 +114,8 @@ getLinkUrl(): string
 
 获取经过安全检查的URL链接地址，可用于构建自定义菜单时提供"打开链接"、"分享链接"、"复制链接"等操作。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 与getUnfilteredLinkUrl()相比，该方法会对URL进行安全检查；与getSourceUrl()相比，该方法获取的是长按位置处的链接URL，而getSourceUrl()获取的是选中元素的src属性URL（如图
 > 像、媒体等资源）。
 
@@ -123,9 +127,9 @@ getLinkUrl(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 如果长按位置是链接，返回经过安全检查的URL链接，否则返回空字符串。 |
 
 ## getMediaType
 
@@ -135,7 +139,8 @@ getMediaType(): ContextMenuMediaType
 
 获取网页元素的媒体类型。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 22开始，[getContextMenuMediaType](#getcontextmenumediatype)提供更丰富的媒体类型识别能力。
 
 **起始版本：** 9
@@ -146,9 +151,9 @@ getMediaType(): ContextMenuMediaType
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ContextMenuMediaType](arkts-arkweb-contextmenumediatype-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ContextMenuMediaType](arkts-arkweb-contextmenumediatype-e.md) | 网页元素媒体类型。 |
 
 ## getPreviewHeight
 
@@ -164,9 +169,9 @@ getPreviewHeight(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 预览图的高。 |
 
 ## getPreviewWidth
 
@@ -182,9 +187,9 @@ getPreviewWidth(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 预览图的宽。 |
 
 ## getSelectionText
 
@@ -202,9 +207,9 @@ getSelectionText(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 选中文本内容。如果右键单击位置存在选中的文本，返回选中的文本内容；不存在则返回空字符串。 |
 
 ## getSourceType
 
@@ -222,9 +227,9 @@ getSourceType(): ContextMenuSourceType
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ContextMenuSourceType](arkts-arkweb-contextmenusourcetype-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ContextMenuSourceType](arkts-arkweb-contextmenusourcetype-e.md) | 菜单事件的触发来源类型，包括鼠标右键、长按等不同的触发方式。 |
 
 ## getSourceUrl
 
@@ -242,9 +247,9 @@ getSourceUrl(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 如果选中的元素有src属性，返回src的URL。返回URL的最大上限为2MB，超出上限时返回空字符串。 |
 
 ## getUnfilteredLinkUrl
 
@@ -262,9 +267,9 @@ getUnfilteredLinkUrl(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 如果长按位置是链接，返回原始的URL链接，否则返回空字符串。 |
 
 ## isEditable
 
@@ -282,9 +287,9 @@ isEditable(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 网页元素可编辑返回true，否则返回false。 |
 
 ## x
 
@@ -302,9 +307,9 @@ x(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 获取成功时返回非负整数，失败时返回-1。 |
 
 ## y
 
@@ -322,6 +327,6 @@ y(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 获取成功时返回非负整数，失败时返回-1。 |

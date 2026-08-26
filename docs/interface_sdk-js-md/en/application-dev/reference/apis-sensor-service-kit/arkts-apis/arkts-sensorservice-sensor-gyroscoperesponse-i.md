@@ -11,7 +11,6 @@ Describes the gyroscope sensor data. It extends from [Response](arkts-sensorserv
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## x

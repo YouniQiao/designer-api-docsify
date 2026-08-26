@@ -13,7 +13,7 @@ class of wallpaper extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { WallpaperExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import WallpaperExtensionAbility from '@kit.BasicServicesKit';
 ```
 
 ## onCreate
@@ -36,9 +36,22 @@ Called once to initialize the extension ability.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | object | Yes | Indicates connection information about the wallpaper extension ability. |
+
+**Examples**
+
+```TypeScript
+import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+
+class WallpaperExt extends WallpaperExtensionAbility {
+    onCreate(want: Want): void {
+        console.info('onCreate, want:' + want.abilityName);
+    }
+}
+```
 
 ## onDestroy
 
@@ -57,6 +70,18 @@ Called once to destroy the extension ability.
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
+
+class WallpaperExt extends WallpaperExtensionAbility {
+    onDestroy(): void {
+        console.info('onDestroy');
+    }
+}
+```
 
 ## onWallpaperChange
 
@@ -78,6 +103,19 @@ The onWallpaperChange callback is triggered when the user modifies the wallpaper
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| wallpaperType | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| wallpaperType | number | Yes | Indicates the wallpaper type. |
+
+**Examples**
+
+```TypeScript
+import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
+
+class WallpaperExt extends WallpaperExtensionAbility {
+    onWallpaperChange(wallpaperType: wallpaper.WallpaperType): void {
+        console.info('onWallpaperChange, wallpaperType:' + wallpaperType);
+    }
+}
+```

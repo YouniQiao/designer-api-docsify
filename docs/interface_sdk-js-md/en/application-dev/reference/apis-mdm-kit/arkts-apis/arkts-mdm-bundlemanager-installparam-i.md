@@ -9,7 +9,7 @@ Defines the parameters for application installation.
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.MDMKit';
+import bundleManager from '@kit.MDMKit';
 ```
 
 ## installFlag

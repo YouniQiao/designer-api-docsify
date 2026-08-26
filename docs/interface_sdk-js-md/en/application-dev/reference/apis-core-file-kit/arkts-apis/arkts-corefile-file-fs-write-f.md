@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## write
@@ -28,34 +26,51 @@ Writes data into a file. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
-| buffer | ArrayBuffer \| string | Yes |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | FD of the file. |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows:   - **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.   - **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.   - **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported currently.<br>**Since:** 11 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the length of the data written, in bytes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900001 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900013 |
-| 13900020 |
-| 13900024 |
-| 13900025 |
-| 13900034 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900013 | Bad address |
+| 13900020 | Invalid argument |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900034 | Operation would block |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let str: string = "hello, world";
+fileIo.write(file.fd, str).then((writeLen: number) => {
+  console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to write data to file. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  fileIo.closeSync(file);
+});
+```
 
 
 ## write
@@ -74,28 +89,46 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
-| buffer | ArrayBuffer \| string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | FD of the file. |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the length of the data written, in bytes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900001 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900013 |
-| 13900020 |
-| 13900024 |
-| 13900025 |
-| 13900034 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900013 | Bad address |
+| 13900020 | Invalid argument |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900034 | Operation would block |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let str: string = "hello, world";
+fileIo.write(file.fd, str, (err: BusinessError, writeLen: number) => {
+  if (err) {
+    console.error(`Failed to write data to file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
+  }
+  fileIo.closeSync(file);
+});
+```
 
 
 ## write
@@ -119,26 +152,49 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
-| buffer | ArrayBuffer \| string | Yes |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | FD of the file. |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | The options are as follows:   - **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.   - **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.   - **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported currently.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the length of the data written, in bytes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900001 |
-| 13900004 |
-| 13900005 |
-| 13900008 |
-| 13900010 |
-| 13900013 |
-| 13900020 |
-| 13900024 |
-| 13900025 |
-| 13900034 |
-| 13900041 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
+| 13900013 | Bad address |
+| 13900020 | Invalid argument |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900034 | Operation would block |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { WriteOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let str: string = "hello, world";
+let writeOptions: WriteOptions = {
+  offset: 1,
+  length: 5
+};
+fileIo.write(file.fd, str, writeOptions, (err: BusinessError, writeLen: number) => {
+  if (err) {
+    console.error(`Failed to write data to file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
+  }
+  fileIo.closeSync(file);
+});
+```

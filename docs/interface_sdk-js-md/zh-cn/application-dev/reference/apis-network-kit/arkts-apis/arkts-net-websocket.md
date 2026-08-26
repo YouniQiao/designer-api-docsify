@@ -9,45 +9,44 @@
 ## 导入模块
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [createWebSocket(WebSocket连接)](arkts-network-websocket-createwebsocket-f.md) |
-| [createWebSocketServer(WebSocket连接)](arkts-network-websocket-createwebsocketserver-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [createWebSocket(WebSocket连接)](arkts-network-websocket-createwebsocket-f.md) | 创建一个WebSocket对象，里面包括建立连接、关闭连接、发送数据和订阅/取消订阅WebSocket连接的打开事件、接收到服务器消息事件、关闭事件和错误事件。 |
+| [createWebSocketServer(WebSocket连接)](arkts-network-websocket-createwebsocketserver-f.md) | 创建一个WebSocketServer对象，包括启动服务、发送数据、关闭连接、列出客户端信息、停止服务，订阅/取消订阅webSocket连接的连接事件、接收到客户端消息事件、关闭事件和错误事件。 |
 
 ### 接口
 
-| 名称 |
-| --- |
-| [ClientCert(WebSocket连接)](arkts-network-websocket-clientcert-i.md) |
-| [CloseResult(WebSocket连接)](arkts-network-websocket-closeresult-i.md) |
-| [ServerCert(WebSocket连接)](arkts-network-websocket-servercert-i.md) |
-| [WebSocket(WebSocket连接)](arkts-network-websocket-websocket-i.md) |
-| [WebSocketCloseOptions(WebSocket连接)](arkts-network-websocket-websocketcloseoptions-i.md) |
-| [WebSocketConnection(WebSocket连接)](arkts-network-websocket-websocketconnection-i.md) |
-| [WebSocketMessage(WebSocket连接)](arkts-network-websocket-websocketmessage-i.md) |
-| [WebSocketOpenInfo(WebSocket连接)](arkts-network-websocket-websocketopeninfo-i.md) |
-| [WebSocketRequestOptions(WebSocket连接)](arkts-network-websocket-websocketrequestoptions-i.md) |
-| [WebSocketServer(WebSocket连接)](arkts-network-websocket-websocketserver-i.md) |
-| [WebSocketServerConfig(WebSocket连接)](arkts-network-websocket-websocketserverconfig-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [ClientCert(WebSocket连接)](arkts-network-websocket-clientcert-i.md) | 客户端证书类型。 |
+| [CloseResult(WebSocket连接)](arkts-network-websocket-closeresult-i.md) | 关闭WebSocket连接时，订阅close事件得到的关闭结果。 |
+| [ServerCert(WebSocket连接)](arkts-network-websocket-servercert-i.md) | 指定服务端证书的信息，包括服务端证书文件路径和服务端证书的私钥文件路径。 |
+| [WebSocket(WebSocket连接)](arkts-network-websocket-websocket-i.md) | 在调用WebSocket的方法前，需要先通过[webSocket.createWebSocket](arkts-network-websocket-createwebsocket-f.md)创建一个WebSocket。 |
+| [WebSocketCloseOptions(WebSocket连接)](arkts-network-websocket-websocketcloseoptions-i.md) | 关闭WebSocket连接时，可选参数的类型和说明。 |
+| [WebSocketConnection(WebSocket连接)](arkts-network-websocket-websocketconnection-i.md) | 客户端信息，包括客户端的ip地址和端口号port。 |
+| [WebSocketMessage(WebSocket连接)](arkts-network-websocket-websocketmessage-i.md) | 从指定客户端接收到的消息，包括客户端的信息和数据。 |
+| [WebSocketOpenInfo(WebSocket连接)](arkts-network-websocket-websocketopeninfo-i.md) | WebSocket连接成功后的详细信息。 |
+| [WebSocketRequestOptions(WebSocket连接)](arkts-network-websocket-websocketrequestoptions-i.md) | 建立WebSocket连接时，可选参数的类型和说明。 |
+| [WebSocketServer(WebSocket连接)](arkts-network-websocket-websocketserver-i.md) | 在调用WebSocketServer方法前，需要先通过[webSocket.createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md)创建一个 WebSocketServer。 |
+| [WebSocketServerConfig(WebSocket连接)](arkts-network-websocket-websocketserverconfig-i.md) | 启动服务端的service时，需要输入的配置信息和说明。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [TlsProtocol(WebSocket连接)](arkts-network-websocket-tlsprotocol-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [TlsProtocol(WebSocket连接)](arkts-network-websocket-tlsprotocol-e.md) | TLS协议类型。 |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [ClientConnectionCloseCallback(WebSocket连接)](arkts-network-websocket-clientconnectionclosecallback-t.md) |
-| [HttpProxy(WebSocket连接)](arkts-network-websocket-httpproxy-t.md) |
-| [ProxyConfiguration(WebSocket连接)](arkts-network-websocket-proxyconfiguration-t.md) |
-| [ResponseHeaders(WebSocket连接)](arkts-network-websocket-responseheaders-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [ClientConnectionCloseCallback(WebSocket连接)](arkts-network-websocket-clientconnectionclosecallback-t.md) | 关闭WebSocketServer连接时，订阅close事件得到的指定客户端的关闭结果。 |
+| [HttpProxy(WebSocket连接)](arkts-network-websocket-httpproxy-t.md) | 网络全局代理配置信息。 |
+| [ProxyConfiguration(WebSocket连接)](arkts-network-websocket-proxyconfiguration-t.md) | 网络代理配置信息 |
+| [ResponseHeaders(WebSocket连接)](arkts-network-websocket-responseheaders-t.md) | 服务器发送的响应头。 |

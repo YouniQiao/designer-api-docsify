@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { skillManager } from 'kits/@kit.AbilityKit';
+import skillManager from '@kit.AbilityKit';
 ```
 
 ## getSkillInfoForSelf
@@ -24,21 +24,21 @@ function getSkillInfoForSelf(moduleName: string, skillName: string, flags: numbe
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| moduleName | string | 是 |
-| [skillName](arkts-ability-skillinfo-i.md) | string | 是 |
-| flags | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| moduleName | string | 是 | 指定查询技能所属模块的名称。 |
+| skillName | string | 是 | 指定查询技能的名称。 |
+| flags | number | 是 | { |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;SkillInfo & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;SkillInfo & gt; | Promise对象，返回指定技能的SkillInfo。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
-| [17700093](../errorcode-bundle.md#17700093-指定的skillname不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module is not found. |
+| [17700093](../errorcode-bundle.md#17700093-指定的skillname不存在) | The specified skillName is not found. |

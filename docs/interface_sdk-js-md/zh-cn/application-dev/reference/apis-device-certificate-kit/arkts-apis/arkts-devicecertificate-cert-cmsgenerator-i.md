@@ -2,7 +2,8 @@
 
 提供生成CMS（Cryptographic Message Syntax）消息的API。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、
 > 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
 
@@ -13,7 +14,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## addCert
@@ -34,18 +34,75 @@ addCert(cert: X509Cert): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [cert](arkts-security-cert.md) | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | 是 | 要添加的X.509证书。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+
+**示例**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIICXjCCAcegAwIBAgIGAXKnJjrAMA0GCSqGSIb3DQEBCwUAMEgxCzAJBgNVBAYT\n' +
+  'AkNOMQwwCgYDVQQIDANzaGExDTALBgNVBAcMBHhpYW4xDTALBgNVBAoMBHRlc3Qx\n' +
+  'DTALBgNVBAMMBHRlc3QwHhcNMjQxMTIyMDkwNTIyWhcNMzQxMTIwMDkwNTIyWjBI\n' +
+  'MQswCQYDVQQGEwJDTjEMMAoGA1UECAwDc2hhMQ0wCwYDVQQHDAR4aWFuMQ0wCwYD\n' +
+  'VQQKDAR0ZXN0MQ0wCwYDVQQDDAR0ZXN0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB\n' +
+  'iQKBgQC6nCZTM16Rk2c4P/hwfVm++jqe6GCA/PXXGe4YL218q1dTKMHBGEw8kXi0\n' +
+  'XLDcyyC2yUn8ywN2QSyly6ke9EE6PGfZywStLp4g2PTTWB04sS3aXT2y+fToiTXQ\n' +
+  '3AxfFYRpB+EgSdSCkJs6jKXVwbzu54kEtQTfs8UdBQ9nVKaJLwIDAQABo1MwUTAd\n' +
+  'BgNVHQ4EFgQU6QXnt1smb2HRSO/2zuRQnz/SDxowHwYDVR0jBBgwFoAU6QXnt1sm\n' +
+  'b2HRSO/2zuRQnz/SDxowDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOB\n' +
+  'gQBPR/+5xzFG1XlTdgwWVvqVxvhGUkbMTGW0IviJ+jbKsi57vnVsOtFzEA6y+bYx\n' +
+  'xG/kEOcwLtzeVHOQA+ZU5SVcc+qc0dfFiWjL2PSAG4bpqSTjujpuUk+g8ugixbG1\n' +
+  'a26pkDJhNeB/E3eBIbeydSY0A/dIGb6vbGo6BSq2KvnWAA==\n' +
+  '-----END CERTIFICATE-----\n';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+function testAddCert() {
+  let certEncodingBlob: cert.EncodingBlob = {
+    data: stringToUint8Array(certData),
+    // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+    encodingFormat: cert.EncodingFormat.FORMAT_PEM
+  };
+  cert.createX509Cert(certEncodingBlob, (error, x509Cert) => {
+    if (error) {
+      console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
+    } else {
+        try {
+          let cmsContentType = cert.CmsContentType.SIGNED_DATA;
+          let cmsGenerator = cert.createCmsGenerator(cmsContentType);
+          console.info('testAddCert createCmsGenerator result: success.');
+          // 第二次addCert增加相同的证书，会报错。
+          cmsGenerator.addCert(x509Cert);
+          console.info('testAddCert addCert result: success.');
+        } catch (err) {
+          let e: BusinessError = err as BusinessError;
+          console.error(`testAddCert failed, errCode: ${e.code}, errMsg: ${e.message}`);
+        }
+    }
+  });
+}
+```
 
 ## addRecipientInfo
 
@@ -65,24 +122,107 @@ addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| recipientInfo | [CmsRecipientInfo](arkts-devicecertificate-cert-cmsrecipientinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| recipientInfo | [CmsRecipientInfo](arkts-devicecertificate-cert-cmsrecipientinfo-i.md) | 是 | 接收者信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:  1. The type of recipient certificate is invalid or not supported;  2. The digestAlgorithm of CmsKeyAgreeRecipientInfo is invalid or not supported;  3. The recipientInfo does not have any recipient info. |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+
+**示例**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+
+let eccCertData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIICOjCCAd+gAwIBAgIGAXKnJjrAMAoGCCqGSM49BAMCMHkxCzAJBgNVBAYTAmNo\n' +
+  'MQ8wDQYDVQQIDAZodWF3ZWkxDTALBgNVBAcMBHhpYW4xDzANBgNVBAoMBmh1YXdl\n' +
+  'aTENMAsGA1UECwwEdGVzdDENMAsGA1UEAwwEYW5uZTEbMBkGCSqGSIb3DQEJARYM\n' +
+  'dGVzdEAxMjMuY29tMB4XDTI0MTEyNzAzMjQ1MFoXDTM0MTEyNTAzMjQ1MFoweTEL\n' +
+  'MAkGA1UEBhMCY2gxDzANBgNVBAgMBmh1YXdlaTENMAsGA1UEBwwEeGlhbjEPMA0G\n' +
+  'A1UECgwGaHVhd2VpMQ0wCwYDVQQLDAR0ZXN0MQ0wCwYDVQQDDARhbm5lMRswGQYJ\n' +
+  'KoZIhvcNAQkBFgx0ZXN0QDEyMy5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNC\n' +
+  'AARzg16D6tsNHZa7w0tLHFprXg5kUQgXv/vv3KIM21hY+WDYMz1OST4tmTeQWQF8\n' +
+  'kARtjjbHBxtOPufWxMfxf51Wo1MwUTAdBgNVHQ4EFgQUU/P31GCBwyrj3yXkoNaX\n' +
+  'xvPp8uIwHwYDVR0jBBgwFoAUU/P31GCBwyrj3yXkoNaXxvPp8uIwDwYDVR0TAQH/\n' +
+  'BAUwAwEB/zAKBggqhkjOPQQDAgNJADBGAiEA/wCfbTorAWEEZcgd0CgfXI+EzXu2\n' +
+  'Y88BmDD5LFlj3N0CIQDB34h77Li0CSpYpS4+7Mug237zbkFjHR3Q4/VWOT1G1A==\n' +
+  '-----END CERTIFICATE-----\n';
+
+let rsaCertData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIICXjCCAcegAwIBAgIGAXKnJjrAMA0GCSqGSIb3DQEBCwUAMEgxCzAJBgNVBAYT\n' +
+  'AkNOMQwwCgYDVQQIDANzaGExDTALBgNVBAcMBHhpYW4xDTALBgNVBAoMBHRlc3Qx\n' +
+  'DTALBgNVBAMMBHRlc3QwHhcNMjQxMTIyMDkwNTIyWhcNMzQxMTIwMDkwNTIyWjBI\n' +
+  'MQswCQYDVQQGEwJDTjEMMAoGA1UECAwDc2hhMQ0wCwYDVQQHDAR4aWFuMQ0wCwYD\n' +
+  'VQQKDAR0ZXN0MQ0wCwYDVQQDDAR0ZXN0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB\n' +
+  'iQKBgQC6nCZTM16Rk2c4P/hwfVm++jqe6GCA/PXXGe4YL218q1dTKMHBGEw8kXi0\n' +
+  'XLDcyyC2yUn8ywN2QSyly6ke9EE6PGfZywStLp4g2PTTWB04sS3aXT2y+fToiTXQ\n' +
+  '3AxfFYRpB+EgSdSCkJs6jKXVwbzu54kEtQTfs8UdBQ9nVKaJLwIDAQABo1MwUTAd\n' +
+  'BgNVHQ4EFgQU6QXnt1smb2HRSO/2zuRQnz/SDxowHwYDVR0jBBgwFoAU6QXnt1sm\n' +
+  'b2HRSO/2zuRQnz/SDxowDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOB\n' +
+  'gQBPR/+5xzFG1XlTdgwWVvqVxvhGUkbMTGW0IviJ+jbKsi57vnVsOtFzEA6y+bYx\n' +
+  'xG/kEOcwLtzeVHOQA+ZU5SVcc+qc0dfFiWjL2PSAG4bpqSTjujpuUk+g8ugixbG1\n' +
+  'a26pkDJhNeB/E3eBIbeydSY0A/dIGb6vbGo6BSq2KvnWAA==\n' +
+  '-----END CERTIFICATE-----\n';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: number[] = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+async function testAddRecipientInfo() {
+  let eccCertEncodingBlob: cert.EncodingBlob = {
+    data: stringToUint8Array(eccCertData),
+    // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+    encodingFormat: cert.EncodingFormat.FORMAT_PEM
+  };
+
+  let rsaCertEncodingBlob: cert.EncodingBlob = {
+    data: stringToUint8Array(rsaCertData),
+    // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+    encodingFormat: cert.EncodingFormat.FORMAT_PEM
+  };
+  try {
+    let eccX509Cert = await cert.createX509Cert(eccCertEncodingBlob);
+    let rsaX509Cert = await cert.createX509Cert(rsaCertEncodingBlob);
+    let cmsContentType = cert.CmsContentType.ENVELOPED_DATA;
+    let cmsGenerator = cert.createCmsGenerator(cmsContentType);
+    console.info(`createCmsGenerator result: success.`);
+
+    let eccCert : cert.CmsKeyAgreeRecipientInfo = {
+      cert : eccX509Cert,
+      digestAlgorithm : cert.CmsKeyAgreeRecipientDigestAlgorithm.SHA256
+    };
+    let rsaCert : cert.CmsKeyTransRecipientInfo = {
+      cert : rsaX509Cert
+    };
+    let recipientInfo: cert.CmsRecipientInfo = {
+      keyTransInfo : rsaCert,
+      keyAgreeInfo : eccCert
+    };
+    await cmsGenerator.addRecipientInfo(recipientInfo);
+    console.info(`addRecipientInfo result: success.`);
+  } catch (err) {
+    console.error(`testAddRecipientInfo failed: errCode: ${err.code}, errMsg: ${err.message}`);
+  }
+}
+```
 
 ## addSigner
 
@@ -92,7 +232,8 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 用于为内容类型为SIGNED_DATA的CMS添加签名者信息。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 自签名证书不能作为签名者。
 
 **起始版本：** 18
@@ -103,21 +244,107 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [cert](arkts-security-cert.md) | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | 是 |
-| [keyInfo](arkts-devicecertificate-cert-cmsenvelopeddecryptionconfig-i.md) | [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md) | 是 |
-| config | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | 是 | 指定X.509证书。 |
+| keyInfo | [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md) | 是 | 指定私钥信息。 |
+| config | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | 是 | 指定签名者选项。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
-| [19030008](../errorcode-cert.md#19030008-私钥密码错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+| [19030008](../errorcode-cert.md#19030008-私钥密码错误) | Maybe wrong password. |
+
+**示例**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIICXjCCAcegAwIBAgIGAXKnJjrAMA0GCSqGSIb3DQEBCwUAMEgxCzAJBgNVBAYT\n' +
+  'AkNOMQwwCgYDVQQIDANzaGExDTALBgNVBAcMBHhpYW4xDTALBgNVBAoMBHRlc3Qx\n' +
+  'DTALBgNVBAMMBHRlc3QwHhcNMjQxMTIyMDkwNTIyWhcNMzQxMTIwMDkwNTIyWjBI\n' +
+  'MQswCQYDVQQGEwJDTjEMMAoGA1UECAwDc2hhMQ0wCwYDVQQHDAR4aWFuMQ0wCwYD\n' +
+  'VQQKDAR0ZXN0MQ0wCwYDVQQDDAR0ZXN0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB\n' +
+  'iQKBgQC6nCZTM16Rk2c4P/hwfVm++jqe6GCA/PXXGe4YL218q1dTKMHBGEw8kXi0\n' +
+  'XLDcyyC2yUn8ywN2QSyly6ke9EE6PGfZywStLp4g2PTTWB04sS3aXT2y+fToiTXQ\n' +
+  '3AxfFYRpB+EgSdSCkJs6jKXVwbzu54kEtQTfs8UdBQ9nVKaJLwIDAQABo1MwUTAd\n' +
+  'BgNVHQ4EFgQU6QXnt1smb2HRSO/2zuRQnz/SDxowHwYDVR0jBBgwFoAU6QXnt1sm\n' +
+  'b2HRSO/2zuRQnz/SDxowDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOB\n' +
+  'gQBPR/+5xzFG1XlTdgwWVvqVxvhGUkbMTGW0IviJ+jbKsi57vnVsOtFzEA6y+bYx\n' +
+  'xG/kEOcwLtzeVHOQA+ZU5SVcc+qc0dfFiWjL2PSAG4bpqSTjujpuUk+g8ugixbG1\n' +
+  'a26pkDJhNeB/E3eBIbeydSY0A/dIGb6vbGo6BSq2KvnWAA==\n' +
+  '-----END CERTIFICATE-----\n';
+
+let rsaStr1024: string =
+  '-----BEGIN RSA PRIVATE KEY-----\n' +
+    'Proc-Type: 4,ENCRYPTED\n' +
+    'DEK-Info: DES-EDE3-CBC,DB0AC6E3BEE16420\n\n' +
+    '1N5xykdckthZnswMV7blxXm2RCqe/OByBfMwFI7JoXR8STtMiStd4xA3W405k1Ma\n' +
+    'ExpsHgWwZaS23x+sQ1sL1dsqIPMrw1Vr+KrL20vQcCVjXPpGKauafVbtcWQ1r2PZ\n' +
+    'QJ4KWP6FhUp+sGt2ItODW3dK+1GdqL22ZtANrgFzS42Wh8FSn0UMCf6RG62DK62J\n' +
+    'z2jtf4XaorrGSjdTeY+fyyGfSyKidIMMBe+IXwlhCgAe7aHSaqXtMsv+BibB7PJ3\n' +
+    'XmEp1D/0ptL3r46txyYcuy8jSNCkW8er93KKnlRN6KbuYZPvPNncWkzZBzV17t5d\n' +
+    'QgtvVh32AKgqk5jm8YVnspOFiPrbrK9UN3IW15juFkfnhriM3IrKap4/kW+tfawZ\n' +
+    'DmHkSyl8xqFK413Rv0UvYBTjOcGbs2BSJYEvp8CIjtA17SvLmNw70K2nXWuQYutY\n' +
+    '+HyucPtHfEqUPQRzWTAMMntTru77u7dxo2WMMMxOtMJO5h7MAnZH9bAFiuO3ewcY\n' +
+    'eEePg10d8Owcfh9G6kc0HIGT9MMLMi0mTXhpoQTuWPYuSx6uUZL1fsp1x2fuM0qn\n' +
+    'bdf3+UnATYUu4tgvBHrMV7405Y6Y3PnqOFxVMeAHeOTo6UThtJ10mfeCPXGcUaHo\n' +
+    'P5enw7h4145cha3+S4hNrUwj3skrtavld7tY74p4DvgZSlCMF3JAm3DhpnEMVcYP\n' +
+    'Y6TkSevvxOpBvEHE41Y4VBCBwd9clcixI6cSBJKPUU4A/sc/kkNdGFcbzLQCg/zR\n' +
+    '1m7YmBROb2qy4w3lv/uwVnPGLg/YV465irRaN3hgz7/1lm8STKQhmQ==\n' +
+    '-----END RSA PRIVATE KEY-----\n';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+function testAddSigner() {
+  let certEncodingBlob: cert.EncodingBlob = {
+    data: stringToUint8Array(certData),
+    // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+    encodingFormat: cert.EncodingFormat.FORMAT_PEM
+  };
+  cert.createX509Cert(certEncodingBlob, (error, x509Cert) => {
+    if (error) {
+      console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
+    } else {
+        try {
+          let cmsContentType = cert.CmsContentType.SIGNED_DATA;
+          let cmsGenerator = cert.createCmsGenerator(cmsContentType);
+          console.info('testAddSigner createCmsGenerator result: success.');
+          let privateKeyInfo: cert.PrivateKeyInfo = {
+            key: rsaStr1024,
+            password: '123456'
+          };
+          // addCert设置为true时，第二次addSigner增加相同的证书，会报错。
+          let config: cert.CmsSignerConfig = {
+            mdName:'SHA256',
+            addCert:false,
+            addAttr:false,
+            addSmimeCapAttr:false
+          };
+          cmsGenerator.addSigner(x509Cert, privateKeyInfo, config);
+          console.info('testAddSigner addSigner result: success.');
+        } catch (err) {
+          let e: BusinessError = err as BusinessError;
+          console.error(`testAddSigner failed, errCode: ${e.code}, errMsg: ${e.message}`);
+        }
+    }
+  });
+}
+```
 
 ## doFinal
 
@@ -135,25 +362,124 @@ doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | s
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | Uint8Array | 是 |
-| options | [CmsGeneratorOptions](arkts-devicecertificate-cert-cmsgeneratoroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | Uint8Array | 是 | Cms操作的内容。 |
+| options | [CmsGeneratorOptions](arkts-devicecertificate-cert-cmsgeneratoroptions-i.md) | 否 | Cms操作的配置选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Uint8Array \ | string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Uint8Array \ | string & gt; | Promise对象，返回CMS消息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+
+**示例**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIICXjCCAcegAwIBAgIGAXKnJjrAMA0GCSqGSIb3DQEBCwUAMEgxCzAJBgNVBAYT\n' +
+  'AkNOMQwwCgYDVQQIDANzaGExDTALBgNVBAcMBHhpYW4xDTALBgNVBAoMBHRlc3Qx\n' +
+  'DTALBgNVBAMMBHRlc3QwHhcNMjQxMTIyMDkwNTIyWhcNMzQxMTIwMDkwNTIyWjBI\n' +
+  'MQswCQYDVQQGEwJDTjEMMAoGA1UECAwDc2hhMQ0wCwYDVQQHDAR4aWFuMQ0wCwYD\n' +
+  'VQQKDAR0ZXN0MQ0wCwYDVQQDDAR0ZXN0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB\n' +
+  'iQKBgQC6nCZTM16Rk2c4P/hwfVm++jqe6GCA/PXXGe4YL218q1dTKMHBGEw8kXi0\n' +
+  'XLDcyyC2yUn8ywN2QSyly6ke9EE6PGfZywStLp4g2PTTWB04sS3aXT2y+fToiTXQ\n' +
+  '3AxfFYRpB+EgSdSCkJs6jKXVwbzu54kEtQTfs8UdBQ9nVKaJLwIDAQABo1MwUTAd\n' +
+  'BgNVHQ4EFgQU6QXnt1smb2HRSO/2zuRQnz/SDxowHwYDVR0jBBgwFoAU6QXnt1sm\n' +
+  'b2HRSO/2zuRQnz/SDxowDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOB\n' +
+  'gQBPR/+5xzFG1XlTdgwWVvqVxvhGUkbMTGW0IviJ+jbKsi57vnVsOtFzEA6y+bYx\n' +
+  'xG/kEOcwLtzeVHOQA+ZU5SVcc+qc0dfFiWjL2PSAG4bpqSTjujpuUk+g8ugixbG1\n' +
+  'a26pkDJhNeB/E3eBIbeydSY0A/dIGb6vbGo6BSq2KvnWAA==\n' +
+  '-----END CERTIFICATE-----\n';
+
+let rsaStr1024: string =
+  '-----BEGIN RSA PRIVATE KEY-----\n' +
+    'Proc-Type: 4,ENCRYPTED\n' +
+    'DEK-Info: DES-EDE3-CBC,DB0AC6E3BEE16420\n\n' +
+    '1N5xykdckthZnswMV7blxXm2RCqe/OByBfMwFI7JoXR8STtMiStd4xA3W405k1Ma\n' +
+    'ExpsHgWwZaS23x+sQ1sL1dsqIPMrw1Vr+KrL20vQcCVjXPpGKauafVbtcWQ1r2PZ\n' +
+    'QJ4KWP6FhUp+sGt2ItODW3dK+1GdqL22ZtANrgFzS42Wh8FSn0UMCf6RG62DK62J\n' +
+    'z2jtf4XaorrGSjdTeY+fyyGfSyKidIMMBe+IXwlhCgAe7aHSaqXtMsv+BibB7PJ3\n' +
+    'XmEp1D/0ptL3r46txyYcuy8jSNCkW8er93KKnlRN6KbuYZPvPNncWkzZBzV17t5d\n' +
+    'QgtvVh32AKgqk5jm8YVnspOFiPrbrK9UN3IW15juFkfnhriM3IrKap4/kW+tfawZ\n' +
+    'DmHkSyl8xqFK413Rv0UvYBTjOcGbs2BSJYEvp8CIjtA17SvLmNw70K2nXWuQYutY\n' +
+    '+HyucPtHfEqUPQRzWTAMMntTru77u7dxo2WMMMxOtMJO5h7MAnZH9bAFiuO3ewcY\n' +
+    'eEePg10d8Owcfh9G6kc0HIGT9MMLMi0mTXhpoQTuWPYuSx6uUZL1fsp1x2fuM0qn\n' +
+    'bdf3+UnATYUu4tgvBHrMV7405Y6Y3PnqOFxVMeAHeOTo6UThtJ10mfeCPXGcUaHo\n' +
+    'P5enw7h4145cha3+S4hNrUwj3skrtavld7tY74p4DvgZSlCMF3JAm3DhpnEMVcYP\n' +
+    'Y6TkSevvxOpBvEHE41Y4VBCBwd9clcixI6cSBJKPUU4A/sc/kkNdGFcbzLQCg/zR\n' +
+    '1m7YmBROb2qy4w3lv/uwVnPGLg/YV465irRaN3hgz7/1lm8STKQhmQ==\n' +
+    '-----END RSA PRIVATE KEY-----\n';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+async function testDoFinalByPromise() {
+  let certEncodingBlob: cert.EncodingBlob = {
+    data: stringToUint8Array(certData),
+    // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+    encodingFormat: cert.EncodingFormat.FORMAT_PEM
+  };
+  cert.createX509Cert(certEncodingBlob, (error, x509Cert) => {
+    if (error) {
+      console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
+    } else {
+      try {
+        let cmsContentType = cert.CmsContentType.SIGNED_DATA;
+        let cmsGenerator = cert.createCmsGenerator(cmsContentType);
+        console.info('testDoFinalByPromise createCmsGenerator result: success.');
+        let privateKeyInfo: cert.PrivateKeyInfo = {
+          key: rsaStr1024,
+          password: '123456'
+        };
+        // addCert设置为true时，第二次addSigner或者addCert增加相同的证书，会报错。
+        let config: cert.CmsSignerConfig = {
+          mdName:'SHA256',
+          addCert:false,
+          addAttr:true,
+          addSmimeCapAttr:true
+        };
+        cmsGenerator.addSigner(x509Cert, privateKeyInfo, config);
+        console.info('testDoFinalByPromise addSigner result: success.');
+        cmsGenerator.addCert(x509Cert);
+        console.info('testDoFinalByPromise addCert result: success.');
+        let content = new Uint8Array([1, 2, 3, 4]);
+        let optionsFinal: cert.CmsGeneratorOptions = {
+          contentDataFormat : cert.CmsContentDataFormat.BINARY,
+          outFormat : cert.CmsFormat.PEM,
+          isDetached : true
+        };
+        cmsGenerator.doFinal(content, optionsFinal).then(result => {
+          console.info('testDoFinalByPromise doFinal result: success, result = %s', result);
+        }).catch((error: BusinessError) => {
+          console.error(`testDoFinalByPromise failed, errCode: ${error.code}, errMsg: ${error.message}`);
+        });
+      } catch (err) {
+        let e: BusinessError = err as BusinessError;
+        console.error(`testDoFinalByPromise failed, errCode: ${e.code}, errMsg: ${e.message}`);
+      }
+    }
+  });
+}
+```
 
 ## doFinalSync
 
@@ -171,25 +497,121 @@ doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | strin
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | Uint8Array | 是 |
-| options | [CmsGeneratorOptions](arkts-devicecertificate-cert-cmsgeneratoroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | Uint8Array | 是 | Cms操作的内容。 |
+| options | [CmsGeneratorOptions](arkts-devicecertificate-cert-cmsgeneratoroptions-i.md) | 否 | Cms操作的配置选项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Uint8Array \| string |
+| 类型 | 说明 |
+| --- | --- |
+| Uint8Array \| string | 生成的CMS消息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+
+**示例**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIICXjCCAcegAwIBAgIGAXKnJjrAMA0GCSqGSIb3DQEBCwUAMEgxCzAJBgNVBAYT\n' +
+  'AkNOMQwwCgYDVQQIDANzaGExDTALBgNVBAcMBHhpYW4xDTALBgNVBAoMBHRlc3Qx\n' +
+  'DTALBgNVBAMMBHRlc3QwHhcNMjQxMTIyMDkwNTIyWhcNMzQxMTIwMDkwNTIyWjBI\n' +
+  'MQswCQYDVQQGEwJDTjEMMAoGA1UECAwDc2hhMQ0wCwYDVQQHDAR4aWFuMQ0wCwYD\n' +
+  'VQQKDAR0ZXN0MQ0wCwYDVQQDDAR0ZXN0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB\n' +
+  'iQKBgQC6nCZTM16Rk2c4P/hwfVm++jqe6GCA/PXXGe4YL218q1dTKMHBGEw8kXi0\n' +
+  'XLDcyyC2yUn8ywN2QSyly6ke9EE6PGfZywStLp4g2PTTWB04sS3aXT2y+fToiTXQ\n' +
+  '3AxfFYRpB+EgSdSCkJs6jKXVwbzu54kEtQTfs8UdBQ9nVKaJLwIDAQABo1MwUTAd\n' +
+  'BgNVHQ4EFgQU6QXnt1smb2HRSO/2zuRQnz/SDxowHwYDVR0jBBgwFoAU6QXnt1sm\n' +
+  'b2HRSO/2zuRQnz/SDxowDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOB\n' +
+  'gQBPR/+5xzFG1XlTdgwWVvqVxvhGUkbMTGW0IviJ+jbKsi57vnVsOtFzEA6y+bYx\n' +
+  'xG/kEOcwLtzeVHOQA+ZU5SVcc+qc0dfFiWjL2PSAG4bpqSTjujpuUk+g8ugixbG1\n' +
+  'a26pkDJhNeB/E3eBIbeydSY0A/dIGb6vbGo6BSq2KvnWAA==\n' +
+  '-----END CERTIFICATE-----\n';
+
+let rsaStr1024: string =
+  '-----BEGIN RSA PRIVATE KEY-----\n' +
+    'Proc-Type: 4,ENCRYPTED\n' +
+    'DEK-Info: DES-EDE3-CBC,DB0AC6E3BEE16420\n\n' +
+    '1N5xykdckthZnswMV7blxXm2RCqe/OByBfMwFI7JoXR8STtMiStd4xA3W405k1Ma\n' +
+    'ExpsHgWwZaS23x+sQ1sL1dsqIPMrw1Vr+KrL20vQcCVjXPpGKauafVbtcWQ1r2PZ\n' +
+    'QJ4KWP6FhUp+sGt2ItODW3dK+1GdqL22ZtANrgFzS42Wh8FSn0UMCf6RG62DK62J\n' +
+    'z2jtf4XaorrGSjdTeY+fyyGfSyKidIMMBe+IXwlhCgAe7aHSaqXtMsv+BibB7PJ3\n' +
+    'XmEp1D/0ptL3r46txyYcuy8jSNCkW8er93KKnlRN6KbuYZPvPNncWkzZBzV17t5d\n' +
+    'QgtvVh32AKgqk5jm8YVnspOFiPrbrK9UN3IW15juFkfnhriM3IrKap4/kW+tfawZ\n' +
+    'DmHkSyl8xqFK413Rv0UvYBTjOcGbs2BSJYEvp8CIjtA17SvLmNw70K2nXWuQYutY\n' +
+    '+HyucPtHfEqUPQRzWTAMMntTru77u7dxo2WMMMxOtMJO5h7MAnZH9bAFiuO3ewcY\n' +
+    'eEePg10d8Owcfh9G6kc0HIGT9MMLMi0mTXhpoQTuWPYuSx6uUZL1fsp1x2fuM0qn\n' +
+    'bdf3+UnATYUu4tgvBHrMV7405Y6Y3PnqOFxVMeAHeOTo6UThtJ10mfeCPXGcUaHo\n' +
+    'P5enw7h4145cha3+S4hNrUwj3skrtavld7tY74p4DvgZSlCMF3JAm3DhpnEMVcYP\n' +
+    'Y6TkSevvxOpBvEHE41Y4VBCBwd9clcixI6cSBJKPUU4A/sc/kkNdGFcbzLQCg/zR\n' +
+    '1m7YmBROb2qy4w3lv/uwVnPGLg/YV465irRaN3hgz7/1lm8STKQhmQ==\n' +
+    '-----END RSA PRIVATE KEY-----\n';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+function testDoFinalSync() {
+  let certEncodingBlob: cert.EncodingBlob = {
+    data: stringToUint8Array(certData),
+    // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+    encodingFormat: cert.EncodingFormat.FORMAT_PEM
+  };
+  cert.createX509Cert(certEncodingBlob, (error, x509Cert) => {
+    if (error) {
+      console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
+    } else {
+        try {
+          let cmsContentType = cert.CmsContentType.SIGNED_DATA;
+          let cmsGenerator = cert.createCmsGenerator(cmsContentType);
+          console.info('testDoFinalSync createCmsGenerator result: success.');
+          let privateKeyInfo: cert.PrivateKeyInfo = {
+            key: rsaStr1024,
+            password: '123456'
+          };
+          // addCert设置为true时，第二次addSigner或者addCert增加相同的证书，会报错。
+          let config: cert.CmsSignerConfig = {
+            mdName:'SHA256',
+            addCert:false,
+            addAttr:false,
+            addSmimeCapAttr:false
+          };
+          cmsGenerator.addSigner(x509Cert, privateKeyInfo, config);
+          console.info('testDoFinalSync addSigner result: success.');
+          cmsGenerator.addCert(x509Cert);
+          console.info('testDoFinalSync addCert result: success.');
+          let content = new Uint8Array([1, 2, 3, 4]);
+          let optionsFinal: cert.CmsGeneratorOptions = {
+            contentDataFormat : cert.CmsContentDataFormat.BINARY,
+            outFormat : cert.CmsFormat.DER,
+            isDetached : false
+          };
+          let output = cmsGenerator.doFinalSync(content, optionsFinal);
+          console.info('testDoFinalSync doFinalSync result: success, output = %s.', output);
+        } catch (err) {
+          let e: BusinessError = err as BusinessError;
+          console.error(`testDoFinalSync failed, errCode: ${e.code}, errMsg: ${e.message}`);
+        }
+    }
+  });
+}
+```
 
 ## getEncryptedContentData
 
@@ -209,17 +631,114 @@ getEncryptedContentData(): Promise<Uint8Array>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Uint8Array & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Uint8Array & gt; | Promise对象，返回加密的数据内容。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+
+**示例**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+
+let eccCertData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIICOjCCAd+gAwIBAgIGAXKnJjrAMAoGCCqGSM49BAMCMHkxCzAJBgNVBAYTAmNo\n' +
+  'MQ8wDQYDVQQIDAZodWF3ZWkxDTALBgNVBAcMBHhpYW4xDzANBgNVBAoMBmh1YXdl\n' +
+  'aTENMAsGA1UECwwEdGVzdDENMAsGA1UEAwwEYW5uZTEbMBkGCSqGSIb3DQEJARYM\n' +
+  'dGVzdEAxMjMuY29tMB4XDTI0MTEyNzAzMjQ1MFoXDTM0MTEyNTAzMjQ1MFoweTEL\n' +
+  'MAkGA1UEBhMCY2gxDzANBgNVBAgMBmh1YXdlaTENMAsGA1UEBwwEeGlhbjEPMA0G\n' +
+  'A1UECgwGaHVhd2VpMQ0wCwYDVQQLDAR0ZXN0MQ0wCwYDVQQDDARhbm5lMRswGQYJ\n' +
+  'KoZIhvcNAQkBFgx0ZXN0QDEyMy5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNC\n' +
+  'AARzg16D6tsNHZa7w0tLHFprXg5kUQgXv/vv3KIM21hY+WDYMz1OST4tmTeQWQF8\n' +
+  'kARtjjbHBxtOPufWxMfxf51Wo1MwUTAdBgNVHQ4EFgQUU/P31GCBwyrj3yXkoNaX\n' +
+  'xvPp8uIwHwYDVR0jBBgwFoAUU/P31GCBwyrj3yXkoNaXxvPp8uIwDwYDVR0TAQH/\n' +
+  'BAUwAwEB/zAKBggqhkjOPQQDAgNJADBGAiEA/wCfbTorAWEEZcgd0CgfXI+EzXu2\n' +
+  'Y88BmDD5LFlj3N0CIQDB34h77Li0CSpYpS4+7Mug237zbkFjHR3Q4/VWOT1G1A==\n' +
+  '-----END CERTIFICATE-----\n';
+
+let rsaCertData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIICXjCCAcegAwIBAgIGAXKnJjrAMA0GCSqGSIb3DQEBCwUAMEgxCzAJBgNVBAYT\n' +
+  'AkNOMQwwCgYDVQQIDANzaGExDTALBgNVBAcMBHhpYW4xDTALBgNVBAoMBHRlc3Qx\n' +
+  'DTALBgNVBAMMBHRlc3QwHhcNMjQxMTIyMDkwNTIyWhcNMzQxMTIwMDkwNTIyWjBI\n' +
+  'MQswCQYDVQQGEwJDTjEMMAoGA1UECAwDc2hhMQ0wCwYDVQQHDAR4aWFuMQ0wCwYD\n' +
+  'VQQKDAR0ZXN0MQ0wCwYDVQQDDAR0ZXN0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB\n' +
+  'iQKBgQC6nCZTM16Rk2c4P/hwfVm++jqe6GCA/PXXGe4YL218q1dTKMHBGEw8kXi0\n' +
+  'XLDcyyC2yUn8ywN2QSyly6ke9EE6PGfZywStLp4g2PTTWB04sS3aXT2y+fToiTXQ\n' +
+  '3AxfFYRpB+EgSdSCkJs6jKXVwbzu54kEtQTfs8UdBQ9nVKaJLwIDAQABo1MwUTAd\n' +
+  'BgNVHQ4EFgQU6QXnt1smb2HRSO/2zuRQnz/SDxowHwYDVR0jBBgwFoAU6QXnt1sm\n' +
+  'b2HRSO/2zuRQnz/SDxowDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOB\n' +
+  'gQBPR/+5xzFG1XlTdgwWVvqVxvhGUkbMTGW0IviJ+jbKsi57vnVsOtFzEA6y+bYx\n' +
+  'xG/kEOcwLtzeVHOQA+ZU5SVcc+qc0dfFiWjL2PSAG4bpqSTjujpuUk+g8ugixbG1\n' +
+  'a26pkDJhNeB/E3eBIbeydSY0A/dIGb6vbGo6BSq2KvnWAA==\n' +
+  '-----END CERTIFICATE-----\n';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: number[] = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+async function testGetEncryptedContentData() {
+  try {
+    let eccCertEncodingBlob: cert.EncodingBlob = {
+      data: stringToUint8Array(eccCertData),
+      // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+      encodingFormat: cert.EncodingFormat.FORMAT_PEM
+    };
+
+    let rsaCertEncodingBlob: cert.EncodingBlob = {
+      data: stringToUint8Array(rsaCertData),
+      // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+      encodingFormat: cert.EncodingFormat.FORMAT_PEM
+    };
+
+    let eccX509Cert = await cert.createX509Cert(eccCertEncodingBlob);
+    let rsaX509Cert = await cert.createX509Cert(rsaCertEncodingBlob);
+
+    let cmsContentType = cert.CmsContentType.ENVELOPED_DATA;
+    let cmsGenerator = cert.createCmsGenerator(cmsContentType);
+    console.info(`createCmsGenerator result: success.`);
+    let algorithm = cert.CmsRecipientEncryptionAlgorithm.AES_256_GCM;
+    cmsGenerator.setRecipientEncryptionAlgorithm(algorithm);
+    console.info(`setRecipientEncryptionAlgorithm result: success.`);
+    let eccCert : cert.CmsKeyAgreeRecipientInfo = {
+      cert : eccX509Cert,
+      digestAlgorithm : cert.CmsKeyAgreeRecipientDigestAlgorithm.SHA256
+    };
+    let rsaCert : cert.CmsKeyTransRecipientInfo = {
+      cert : rsaX509Cert
+    };
+    let recipientInfo: cert.CmsRecipientInfo = {
+      keyTransInfo : rsaCert,
+      keyAgreeInfo : eccCert
+    };
+    await cmsGenerator.addRecipientInfo(recipientInfo);
+    console.info(`addRecipientInfo result: success.`);
+    let content = new Uint8Array([1, 2, 3, 4]);
+    let optionsFinal: cert.CmsGeneratorOptions = {
+      contentDataFormat : cert.CmsContentDataFormat.BINARY,
+      outFormat : cert.CmsFormat.PEM,
+      isDetached : true
+    };
+    let cms = await cmsGenerator.doFinal(content, optionsFinal);
+    console.info(`doFinal result: success, cms = %s`, cms);
+    let data = await cmsGenerator.getEncryptedContentData();
+    console.info(`getEncryptedContentData result: success, data = %s`, data);
+  } catch (err) {
+    console.error(`testGetEncryptedContentData failed: errCode: ${err.code}, errMsg: ${err.message}`);
+  }
+}
+```
 
 ## setRecipientEncryptionAlgorithm
 
@@ -239,15 +758,34 @@ setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [algorithm](arkts-devicecertificate-cert-certchainvalidator-i.md) | [CmsRecipientEncryptionAlgorithm](arkts-devicecertificate-cert-cmsrecipientencryptionalgorithm-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| algorithm | [CmsRecipientEncryptionAlgorithm](arkts-devicecertificate-cert-cmsrecipientencryptionalgorithm-e.md) | 是 | 用于CMS封装数据的加密算法。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:  1. The type of algorithm is invalid or not supported. |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+
+**示例**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+
+function testSetRecipientEncryptionAlgorithm() {
+  try {
+    let cmsContentType = cert.CmsContentType.ENVELOPED_DATA;
+    let cmsGenerator = cert.createCmsGenerator(cmsContentType);
+    console.info(`createCmsGenerator result: success.`);
+    let algorithm = cert.CmsRecipientEncryptionAlgorithm.AES_128_CBC;
+    cmsGenerator.setRecipientEncryptionAlgorithm(algorithm);
+    console.info(`setRecipientEncryptionAlgorithm result: success.`);
+  } catch (err) {
+    console.error(`testSetRecipientEncryptionAlgorithm failed: errCode: ${err.code}, errMsg: ${err.message}`);
+  }
+}
+```

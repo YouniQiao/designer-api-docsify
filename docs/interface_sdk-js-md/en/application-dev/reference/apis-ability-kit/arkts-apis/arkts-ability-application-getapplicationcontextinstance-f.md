@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import application from '@kit.AbilityKit';
 ```
 
 ## getApplicationContextInstance
@@ -24,12 +24,31 @@ Obtains the application context. This API provides context access independent of
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c.md) |
+| Type | Description |
+| --- | --- |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) | Application context. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Memory operation error. |
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, UIAbility, application, Want, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let applicationContext: common.ApplicationContext = application.getApplicationContextInstance();
+    } catch (error) {
+      let code: number = (error as BusinessError).code;
+      let message: string = (error as BusinessError).message;
+      console.error(`getApplicationContextInstance failed, error.code: ${code}, error.message: ${message}`);
+    }
+  }
+}
+```

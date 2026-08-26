@@ -45,9 +45,9 @@ Obtains the information about the component corresponding to this touch gesture 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) |
+| Type | Description |
+| --- | --- |
+| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | Information about the component corresponding to the current touch gesture recognizer. |
 
 ## isHostBelongsTo
 
@@ -67,12 +67,12 @@ Returns whether the node bound to the current touch gesture recognizer is a desc
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uniqueId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uniqueId | number | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid) API. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the node bound to the current touch gesture recognizer is a descendant of the specified component. Returns **true** if the bound node is a descendant, and **false** otherwise. |

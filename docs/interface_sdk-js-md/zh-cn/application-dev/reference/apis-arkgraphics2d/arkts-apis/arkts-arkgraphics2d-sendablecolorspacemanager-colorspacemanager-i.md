@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableColorSpaceManager } from 'kits/@kit.ArkGraphics2D';
+import sendableColorSpaceManager from '@kit.ArkGraphics2D';
 ```
 
 ## getColorSpaceName
@@ -28,15 +28,22 @@ getColorSpaceName(): colorSpaceManager.ColorSpace
 
 **返回值：**
 
-| 类型 |
-| --- |
-| colorSpaceManager.ColorSpace |
+| 类型 | 说明 |
+| --- | --- |
+| colorSpaceManager.ColorSpace | 返回色域类型枚举值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
+
+**示例**
+
+```TypeScript
+// 获取色域类型
+let spaceName: colorSpaceManager.ColorSpace = colorSpace.getColorSpaceName();
+```
 
 ## getGamma
 
@@ -52,15 +59,22 @@ getGamma(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回色域gamma值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
+
+**示例**
+
+```TypeScript
+// 获取色域gamma值
+let gamma: number = colorSpace.getGamma();
+```
 
 ## getWhitePoint
 
@@ -76,12 +90,20 @@ getWhitePoint(): collections.Array<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| collections.Array & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| collections.Array & lt;number & gt; | 返回色域白点值[x, y]。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
+
+**示例**
+
+```TypeScript
+import { collections } from '@kit.ArkTS';
+// 获取色域白点值[x, y]
+let point: collections.Array<number> = colorSpace.getWhitePoint();
+```

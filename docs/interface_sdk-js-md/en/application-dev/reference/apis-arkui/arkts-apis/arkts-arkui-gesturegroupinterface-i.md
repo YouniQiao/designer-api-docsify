@@ -27,16 +27,16 @@ Return to Obtain GestureGroup.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [GestureMode](arkts-arkui-gesturemode-e.md) | Yes |
-| gesture | [GestureType](arkts-arkui-gesturetype-t.md)[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [GestureMode](arkts-arkui-gesturemode-e.md) | Yes |  |
+| gesture | [GestureType](arkts-arkui-gesturetype-t.md)[] | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |
 
 ## onCancel
 
@@ -54,12 +54,12 @@ Triggered when a tap cancellation event is received after a gesture is recognize
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback for the gesture event. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |

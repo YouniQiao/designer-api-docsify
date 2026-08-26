@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { autoStartupManager } from 'kits/@kit.AbilityKit';
+import autoStartupManager from '@kit.AbilityKit';
 ```
 
 ## isAutoStartupSupported
@@ -22,6 +22,6 @@ Check whether the current device supports auto startup on this device.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | `true`: Device supports auto startup. |

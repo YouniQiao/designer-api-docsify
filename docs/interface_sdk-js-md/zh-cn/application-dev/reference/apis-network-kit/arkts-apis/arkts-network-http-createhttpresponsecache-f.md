@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## createHttpResponseCache
@@ -22,12 +21,20 @@ function createHttpResponseCache(cacheSize?: number): HttpResponseCache
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [cacheSize](../../apis-core-file-kit/arkts-apis/arkts-corefile-storagestatistics-bundlestats-i.md) | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| cacheSize | number | 否 | 响应缓存大小，单位为Byte。取值范围为1*1024*1024到10*1024*1024，即1MB到10MB。默认值为10MB。超出10MB时设置为10MB；小于1MB时，设置 为1MB。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [HttpResponseCache](arkts-network-http-httpresponsecache-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [HttpResponseCache](arkts-network-http-httpresponsecache-i.md) | 返回一个存储HTTP访问请求响应的对象。 |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpResponseCache = http.createHttpResponseCache();
+```

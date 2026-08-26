@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import pasteboard from '@kit.BasicServicesKit';
 ```
 
 ## getSystemPasteboard
@@ -22,6 +22,13 @@ function getSystemPasteboard(): SystemPasteboard
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i.md) | 系统剪贴板对象。 |
+
+**示例**
+
+```TypeScript
+// 获取系统剪贴板对象 
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+```

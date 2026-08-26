@@ -14,12 +14,12 @@ declare type OnGetStartIndexByIndexCallback = (targetIndex: number) => StartLine
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| targetIndex | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| targetIndex | number | 是 | 要滚动到的目标GridItem的索引。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) | 用于记录Grid页面内起始行的位置信息。 |

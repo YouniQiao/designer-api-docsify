@@ -23,6 +23,13 @@ Removes a directory. This API returns the result synchronously.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the directory. |
+
+**Examples**
+
+```TypeScript
+let dirPath = pathDir + '/testDir';
+fileio.rmdirSync(dirPath);
+```

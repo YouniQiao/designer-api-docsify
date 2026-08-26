@@ -26,22 +26,97 @@ Starts the widget provider (application) page. This API uses a promise to return
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information about the application page to be started. [Only explicit Want is supported](../../../application-models/ability-startup-with-explicit-want.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | The promise returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
-| [16501011](../errorcode-form.md#16501011-api-not-supported) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported due to limited device capabilities. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | An IPC connection error happened. |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501011](../errorcode-form.md#16501011-api-not-supported) | The form can not support this operation |
+
+**Examples**
+
+```TypeScript
+// MyLiveFormExtensionAbility.ets
+import { LiveFormInfo, LiveFormExtensionAbility } from '@kit.FormKit';
+import { UIExtensionContentSession } from '@kit.AbilityKit';
+
+export default class MyLiveFormExtensionAbility extends LiveFormExtensionAbility {
+  onLiveFormCreate(liveFormInfo: LiveFormInfo, session: UIExtensionContentSession) {
+    // 1. Pass LiveFormExtensionContext to the widget page component.
+    let storage: LocalStorage = new LocalStorage();
+    storage.setOrCreate('context', this.context);
+    session.loadContent('pages/MyLiveFormPage', storage);
+  }
+};
+```
+
+```TypeScript
+// pages/MyLiveFormPage.ets
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct MyLiveFormPage {
+  private storageForMyLiveFormPage: LocalStorage | undefined = undefined;
+  private liveFormContext: common.LiveFormExtensionContext | undefined = undefined;
+
+  aboutToAppear(): void {
+    // 2. Obtain LiveFormExtensionContext.
+    this.storageForMyLiveFormPage = this.getUIContext().getSharedLocalStorage();
+    this.liveFormContext = this.storageForMyLiveFormPage?.get<common.LiveFormExtensionContext>('context');
+  }
+
+   private startAbilityByLiveForm(): void {
+    try {
+      // Replace the Want information with the actual one.
+      this.liveFormContext?.startAbilityByLiveForm({
+        bundleName: 'com.example.liveformdemo',
+        abilityName: 'EntryAbility',
+      })
+        .then(() => {
+          console.info('startAbilityByLiveForm succeed');
+        })
+        .catch((err: BusinessError) => {
+          console.error(`startAbilityByLiveForm failed, code is ${err?.code}, message is ${err?.message}`);
+        });
+    } catch (err) {
+      console.error(`startAbilityByLiveForm failed, code is ${err?.code}, message is ${err?.message}`);
+    }
+  }
+
+  build() {
+    // Replace the page with the actual one.
+    Stack() {
+      Column()
+        .width('50%')
+        .height('50%')
+        .backgroundColor('#2875F5')
+    }
+    .width('100%')
+    .height('100%')
+    .onClick(() => {
+      // 3. Use the API in the click event callback.
+      console.info('MyLiveFormPage click to start ability');
+      if (!this.liveFormContext) {
+        console.info('MyLiveFormPage liveFormContext is empty');
+        return;
+      }
+      this.startAbilityByLiveForm();
+    });
+  }
+}
+```

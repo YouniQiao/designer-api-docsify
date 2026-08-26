@@ -26,6 +26,35 @@ notifyMissionsChanged是任务监听的callback函数，用于通知任务变化
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+
+// 注册任务监听器
+distributedMissionManager.registerMissionListener(
+  {
+    deviceId: '123456'
+  },
+  {
+    // 任务变化时的回调，接收设备ID
+    notifyMissionsChanged: (deviceId: string) => {
+      console.info(`notifyMissionsChanged deviceId: ${JSON.stringify(deviceId)}`);
+    },
+    // 快照变化时的回调，接收设备ID和任务ID
+    notifySnapshot: (deviceId: string, mission: number) => {
+      console.info(`notifySnapshot deviceId: ${JSON.stringify(deviceId)}`);
+      console.info(`notifySnapshot mission: ${JSON.stringify(mission)}`);
+    },
+    // 网络断开时的回调，接收设备ID和网络状态
+    notifyNetDisconnect: (deviceId: string, state: number) => {
+      console.info(`notifyNetDisconnect deviceId: ${JSON.stringify(deviceId)}`);
+      console.info(`notifyNetDisconnect state: ${JSON.stringify(state)}`);
+    }
+  }
+);
+```
+
 ## notifyNetDisconnect
 
 ```TypeScript
@@ -44,6 +73,35 @@ notifyNetDisconnect是任务监听的callback函数，用于通知断开连接�
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+
+// 注册任务监听器
+distributedMissionManager.registerMissionListener(
+  {
+    deviceId: '123456'
+  },
+  {
+    // 任务变化时的回调，接收设备ID
+    notifyMissionsChanged: (deviceId: string) => {
+      console.info(`notifyMissionsChanged deviceId: ${JSON.stringify(deviceId)}`);
+    },
+    // 快照变化时的回调，接收设备ID和任务ID
+    notifySnapshot: (deviceId: string, mission: number) => {
+      console.info(`notifySnapshot deviceId: ${JSON.stringify(deviceId)}`);
+      console.info(`notifySnapshot mission: ${JSON.stringify(mission)}`);
+    },
+    // 网络断开时的回调，接收设备ID和网络状态
+    notifyNetDisconnect: (deviceId: string, state: number) => {
+      console.info(`notifyNetDisconnect deviceId: ${JSON.stringify(deviceId)}`);
+      console.info(`notifyNetDisconnect state: ${JSON.stringify(state)}`);
+    }
+  }
+);
+```
+
 ## notifySnapshot
 
 ```TypeScript
@@ -61,3 +119,32 @@ notifySnapshot是任务监听的callback函数，用于通知任务快照变化�
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+
+// 注册任务监听器
+distributedMissionManager.registerMissionListener(
+  {
+    deviceId: '123456'
+  },
+  {
+    // 任务变化时的回调，接收设备ID
+    notifyMissionsChanged: (deviceId: string) => {
+      console.info(`notifyMissionsChanged deviceId: ${JSON.stringify(deviceId)}`);
+    },
+    // 快照变化时的回调，接收设备ID和任务ID
+    notifySnapshot: (deviceId: string, mission: number) => {
+      console.info(`notifySnapshot deviceId: ${JSON.stringify(deviceId)}`);
+      console.info(`notifySnapshot mission: ${JSON.stringify(mission)}`);
+    },
+    // 网络断开时的回调，接收设备ID和网络状态
+    notifyNetDisconnect: (deviceId: string, state: number) => {
+      console.info(`notifyNetDisconnect deviceId: ${JSON.stringify(deviceId)}`);
+      console.info(`notifyNetDisconnect state: ${JSON.stringify(state)}`);
+    }
+  }
+);
+```

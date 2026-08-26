@@ -14,7 +14,7 @@ Defines the type can be used for identiting the node, for the string type, it's 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
-| number |
+| Type | Description |
+| --- | --- |
+| string |  |
+| number |  |

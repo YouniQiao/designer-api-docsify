@@ -9,6 +9,9 @@ WebResourceRequest是Web组件中表示网络资源请求的类，提供了关�
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -41,9 +44,9 @@ getRequestHeader(): Array<Header>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | 返回包含请求头键值对信息的数组，每个Header对象包含请求头的名称和对应的值，例如User-Agent、Content-Type等。 |
 
 ## getRequestMethod
 
@@ -61,9 +64,9 @@ getRequestMethod(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回HTTP请求方法字符串，常见值包括GET、POST、PUT、DELETE等，表示该资源请求所使用的HTTP方法类型。 |
 
 ## getRequestUrl
 
@@ -81,9 +84,9 @@ getRequestUrl(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回完整的资源请求URL字符串，包含协议、域名、路径、查询参数等完整信息。 |
 
 ## isMainFrame
 
@@ -101,9 +104,9 @@ isMainFrame(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回资源请求是否为主frame的判断结果。 |
 
 ## isRedirect
 
@@ -121,9 +124,9 @@ isRedirect(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回资源请求是否被服务端重定向。 |
 
 ## isRequestGesture
 
@@ -141,6 +144,6 @@ isRequestGesture(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回资源请求是否与手势（如点击）相关联。 |

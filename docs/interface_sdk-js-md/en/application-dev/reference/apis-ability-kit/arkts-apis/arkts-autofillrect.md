@@ -4,6 +4,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AutoFillRect](arkts-ability-autofillrect-i.md) |
+| Name | Description |
+| --- | --- |
+| [AutoFillRect](arkts-ability-autofillrect-i.md) | AutoFillRect describes the rectangle used for auto-fill. |

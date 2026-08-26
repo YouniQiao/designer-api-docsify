@@ -22,9 +22,9 @@ Add another path to current path.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes | another created Path2D object. |
 
 ## arc
 
@@ -42,14 +42,14 @@ Draws an arc on the canvas.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| radius | number | Yes |
-| startAngle | number | Yes |
-| endAngle | number | Yes |
-| counterclockwise | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X-coordinate of the center point of the arc. |
+| y | number | Yes | Y-coordinate of the center point of the arc. |
+| radius | number | Yes | Radius of the arc. |
+| startAngle | number | Yes | Start radian of the arc. |
+| endAngle | number | Yes | End radian of the arc. |
+| counterclockwise | boolean | No | Whether to draw the arc counterclockwise. |
 
 ## arcTo
 
@@ -67,13 +67,13 @@ Draws an arc based on the radius and points on the arc.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x1 | number | Yes |
-| y1 | number | Yes |
-| x2 | number | Yes |
-| y2 | number | Yes |
-| radius | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x1 | number | Yes | X-coordinate of the first point on the arc. |
+| y1 | number | Yes | Y-coordinate of the first point on the arc. |
+| x2 | number | Yes | X-coordinate of the second point on the arc. |
+| y2 | number | Yes | Y-coordinate of the second point on the arc. |
+| radius | number | Yes | Radius of the arc. |
 
 ## bezierCurveTo
 
@@ -91,14 +91,14 @@ Draws a cubic bezier curve on the canvas.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| cp1x | number | Yes |
-| cp1y | number | Yes |
-| cp2x | number | Yes |
-| cp2y | number | Yes |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| cp1x | number | Yes | X-coordinate of the first parameter of the bezier curve. |
+| cp1y | number | Yes | Y-coordinate of the first parameter of the bezier curve. |
+| cp2x | number | Yes | X-coordinate of the second parameter of the bezier curve. |
+| cp2y | number | Yes | Y-coordinate of the second parameter of the bezier curve. |
+| x | number | Yes | End point x-coordinate of the bezier curve. |
+| y | number | Yes | End point y-coordinate of the bezier curve. |
 
 ## closePath
 
@@ -139,16 +139,16 @@ Draws an ellipse based on the coordinate and radius.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| radiusX | number | Yes |
-| radiusY | number | Yes |
-| rotation | number | Yes |
-| startAngle | number | Yes |
-| endAngle | number | Yes |
-| counterclockwise | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X-coordinate of the center point on the ellipse. |
+| y | number | Yes | Y-coordinate of the center point on the ellipse. |
+| radiusX | number | Yes | X-coordinate of the radius Length on the ellipse. |
+| radiusY | number | Yes | Y-coordinate of the radius Length on the ellipse. |
+| rotation | number | Yes | The rotation angle of the ellipse, in radians. |
+| startAngle | number | Yes | Angle of the start point for ellipse drawing. |
+| endAngle | number | Yes | End Point Angle for Ellipse Drawing. |
+| counterclockwise | number | No | Indicates whether to draw an ellipse counterclockwise. 0: clockwise; 1: counterclockwise. The default value is 0. |
 
 ## lineTo
 
@@ -166,10 +166,10 @@ Connects the current point to a target position using a straight line.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X-coordinate of the target position. |
+| y | number | Yes | Y-coordinate of the target position. |
 
 ## moveTo
 
@@ -187,10 +187,10 @@ Moves a drawing path to a target position on the canvas.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X-coordinate of the target position. |
+| y | number | Yes | Y-coordinate of the target position. |
 
 ## quadraticCurveTo
 
@@ -208,12 +208,12 @@ Draws a quadratic curve on the canvas.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| cpx | number | Yes |
-| cpy | number | Yes |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| cpx | number | Yes | X-coordinate of the bezier curve parameter. |
+| cpy | number | Yes | Y-coordinate of the bezier curve parameter. |
+| x | number | Yes | End point x-coordinate of the bezier curve. |
+| y | number | Yes | End point y-coordinate of the bezier curve. |
 
 ## rect
 
@@ -231,12 +231,12 @@ Creates a rectangular.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
-| width | number | Yes |
-| height | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X-coordinate of the upper left corner of the rectangle. |
+| y | number | Yes | Y-coordinate of the upper left corner of the rectangle. |
+| width | number | Yes | Width of the rectangle. |
+| height | number | Yes | Height of the rectangle. |
 
 ## setTransform
 
@@ -261,11 +261,11 @@ Uses same parameters as the transform() function to reset the existing transform
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scaleX | number | Yes |
-| [skewX](arkts-arkui-viewmodel-transformobject-i.md) | number | Yes |
-| [skewY](arkts-arkui-viewmodel-transformobject-i.md) | number | Yes |
-| scaleY | number | Yes |
-| translateX | number | Yes |
-| translateY | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scaleX | number | Yes | X-axis scale. |
+| skewX | number | Yes | X-axis skew. |
+| skewY | number | Yes | Y-axis skew. |
+| scaleY | number | Yes | Y-axis scale. |
+| translateX | number | Yes | X-axis translation. |
+| translateY | number | Yes | Y-axis translation. |

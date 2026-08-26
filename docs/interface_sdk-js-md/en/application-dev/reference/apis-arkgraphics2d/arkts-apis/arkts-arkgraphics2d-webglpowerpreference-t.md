@@ -12,8 +12,8 @@ WebGL 1.0
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| "default" |
-| "low-power" |
-| "high-performance" |
+| Type | Description |
+| --- | --- |
+| "default" |  |
+| "low-power" |  |
+| "high-performance" |  |

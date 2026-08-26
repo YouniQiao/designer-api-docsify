@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { infraredEmitter } from 'kits/@kit.InputKit';
 ```
 
 ## max

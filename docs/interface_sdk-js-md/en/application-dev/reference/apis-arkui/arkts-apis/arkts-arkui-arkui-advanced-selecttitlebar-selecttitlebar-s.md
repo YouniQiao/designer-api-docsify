@@ -2,8 +2,10 @@
 
 The **SelectTitleBar** component represents a drop-down menu title bar used for switching between pages of different levels (configured with the **Back** button).
 
-> **NOTE：**&gt;
-> - This component can be used only in the stage model.&gt;
+> **NOTE：**
+> 
+> - This component can be used only in the stage model.
+> 
 > - If the **SelectTitleBar** component has universal attributes and
 > universal events configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
@@ -18,7 +20,7 @@ The **SelectTitleBar** component represents a drop-down menu title bar used for 
 ## Modules to Import
 
 ```TypeScript
-import { SelectTitleBar, SelectTitleBarMenuItem } from 'kits/@kit.ArkUI';
+import { SelectTitleBar, SelectTitleBarMenuItem } from '@kit.ArkUI';
 ```
 
 ## badgeValue

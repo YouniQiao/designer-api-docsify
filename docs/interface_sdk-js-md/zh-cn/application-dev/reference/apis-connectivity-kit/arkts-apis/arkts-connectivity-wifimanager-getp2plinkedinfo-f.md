@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## getP2pLinkedInfo
@@ -22,17 +23,35 @@ function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;WifiP2pLinkedInfo & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;WifiP2pLinkedInfo & gt; | 返回P2P连接信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [2801000](../errorcode-wifi.md#2801000-p2p模块异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [2801000](../errorcode-wifi.md#2801000-p2p模块异常) | Operation failed. |
+
+**示例**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+  wifiManager.getP2pLinkedInfo((err, data:wifiManager.WifiP2pLinkedInfo) => {
+    if (err) {
+        console.error("get p2p linked info error");
+        return;
+    }
+    console.info("get wifi p2p linked info: " + JSON.stringify(data));
+  });
+
+  wifiManager.getP2pLinkedInfo().then(data => {
+    console.info("get wifi p2p linked info: " + JSON.stringify(data));
+  });
+```
 
 
 ## getP2pLinkedInfo
@@ -51,15 +70,19 @@ function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pLinkedInfo&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pLinkedInfo&gt; | 是 | 表示回调函数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [2801000](../errorcode-wifi.md#2801000-p2p模块异常) |
-| [2801001](../errorcode-wifi.md#2801001-p2p功能未打开) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [2801000](../errorcode-wifi.md#2801000-p2p模块异常) | Operation failed. |
+| [2801001](../errorcode-wifi.md#2801001-p2p功能未打开) | Wi-Fi STA disabled. |
+
+**示例**
+
+参见 [getP2pLinkedInfo](#getp2plinkedinfo)

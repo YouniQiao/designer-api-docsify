@@ -29,9 +29,9 @@ A constructor used to create a text line height style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [lineHeight](#lineheight) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
 
 ## constructor
 
@@ -41,12 +41,15 @@ constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 
 A constructor used to create a text line height and multiple.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - When **lineHeightMultiple** is set together with **lineHeight** or [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md),
 > only **lineHeightMultiple** takes effect. The line height is the product of the highest font height in the line
-> and the multiplier.&gt;
+> and the multiplier.
+> 
 > - When **lineHeightMultiple** is less than 0 or **undefined**, it does not take effect. Use **lineHeight** and
-> [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) to set the line height and line spacing.&gt;
+> [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) to set the line height and line spacing.
+> 
 > - When **lineHeightMultiple** is set to 0, it is equivalent to setting it to 1.
 **Since**: 26.0.0
 
@@ -60,10 +63,10 @@ A constructor used to create a text line height and multiple.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [lineHeight](#lineheight) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
-| [lineHeightMultiple](#lineheightmultiple) | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
+| lineHeightMultiple | number | No | Multiplier for the text line height.Value range: 0, +∞). Decimals are supported. |
 
 ## lineHeight
 

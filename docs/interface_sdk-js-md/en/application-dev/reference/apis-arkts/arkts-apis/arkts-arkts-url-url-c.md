@@ -9,7 +9,6 @@ The interface of URL is used to parse, construct, normalize, and encode URLs.
 ## Modules to Import
 
 ```TypeScript
-import { url } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -30,10 +29,50 @@ URL constructor, which is used to instantiate a URL object. url: Absolute or rel
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [url](arkts-url.md) | string | Yes |
-| base | string \| URL | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| url | string | Yes | url url |
+| base | string \| URL | No | base base |
+
+**Examples**
+
+```TypeScript
+// Construct a URLParams object in string[][] mode.
+let objectParams = new url.URLParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
+// Construct a URLParams object in Record<string, string> mode.
+let objectParams1 = new url.URLParams({"fod" : '1' , "bard" : '2'});
+// Construct a URLParams object in string mode.
+let objectParams2 = new url.URLParams('?fod=1&bard=2');
+// Construct a URLParams object using the search property of the url object.
+let urlObject = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
+let objectParams3 = new url.URLParams(urlObject.search);
+// Construct a URLParams object using the params property of the url object.
+let urlObject1 = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
+let objectParams4 = urlObject1.params;
+```
+
+```TypeScript
+let mm = 'https://username:password@host:8080';
+let a = new url.URL("/", mm); // Output 'https://username:password@host:8080/';
+let b = new url.URL(mm); // Output 'https://username:password@host:8080/';
+new url.URL('path/path1', b); // Output 'https://username:password@host:8080/path/path1';
+let c = new url.URL('/path/path1', b);  // Output 'https://username:password@host:8080/path/path1'; 
+new url.URL('/path/path1', c); // Output 'https://username:password@host:8080/path/path1';
+new url.URL('/path/path1', a); // Output 'https://username:password@host:8080/path/path1';
+new url.URL('/path/path1', "https://www.exampleUrl/fr-FR/toot"); // Output https://www.exampleUrl/path/path1
+new url.URL('/path/path1', ''); // Raises a TypeError exception as '' is not a valid URL
+new url.URL('/path/path1'); // Raises a TypeError exception as '/path/path1' is not a valid URL
+new url.URL('https://www.example.com', ); // Output https://www.example.com/
+new url.URL('https://www.example.com', b); // Output https://www.example.com/
+```
+
+```TypeScript
+let objectParams = new url.URLSearchParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
+let objectParams1 = new url.URLSearchParams({"fod" : '1' , "bard" : '2'});
+let objectParams2 = new url.URLSearchParams('?fod=1&bard=2');
+let urlObject = new url.URL('https://developer.mozilla.org/?fod=1&bard=2');
+let params = new url.URLSearchParams(urlObject.search);
+```
 
 ## constructor
 
@@ -48,6 +87,10 @@ A no-argument constructor used to create a URL. It returns a URL object after pa
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+See [constructor](#constructor)
 
 ## parseURL
 
@@ -65,22 +108,39 @@ Parses a URL.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [url](arkts-url.md) | string | Yes |
-| base | string \| URL | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| url | string | Yes | A string representing an absolute or a relative URL. In the case of a relative URL, you must specify base to parse the final URL. In the case of an absolute URL, the passed base will be ignored. |
+| base | string \| URL | No | Either a string or an object. The default value is undefined.   - string: string.   - URL: URL object.   This parameter is used when url is a relative URL. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| URL |
+| Type | Description |
+| --- | --- |
+| URL |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid url string. |
+
+**Examples**
+
+```TypeScript
+let mm = 'https://username:password@host:8080/test/test1/test3';
+let urlObject = url.URL.parseURL(mm);
+let result = urlObject.toString(); // Output 'https://username:password@host:8080/test/test1/test3'
+// If url is a relative path, the path in the base parameter is test/test1, and the path of the parsed URL is /test/path2/path3.
+let url1 = url.URL.parseURL('path2/path3', 'https://www.example.com/test/test1'); // Output 'https://www.example.com/test/path2/path3'
+// If url is a root directory, the path in the base parameter is /test/test1/test3, and the path of the parsed URL is /path1/path2.
+let url2 = url.URL.parseURL('/path1/path2', urlObject); // Output 'https://username:password@host:8080/path1/path2'
+url.URL.parseURL('/path/path1', "https://www.exampleUrl/fr-FR/toot"); // Output 'https://www.exampleUrl/path/path1'
+url.URL.parseURL('/path/path1', ''); // Raises a TypeError exception as '' is not a valid URL
+url.URL.parseURL('/path/path1'); // Raises a TypeError exception as '/path/path1' is not a valid URL
+url.URL.parseURL('https://www.example.com', ); // Output 'https://www.example.com/'
+url.URL.parseURL('https://www.example.com', urlObject); // Output 'https://www.example.com/'
+```
 
 ## toJSON
 
@@ -98,9 +158,16 @@ Converts the parsed URL into a JSON string.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Returns the serialized URL as a string. |
+
+**Examples**
+
+```TypeScript
+const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+let result = urlObject.toJSON();
+```
 
 ## toString
 
@@ -118,9 +185,30 @@ Converts the parsed URL into a string.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Returns the serialized URL as a string. |
+
+**Examples**
+
+```TypeScript
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+let params = new url.URLParams(urlObject.search.slice(1));
+params.append('fod', '3');
+console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
+```
+
+```TypeScript
+const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+let result = urlObject.toString(); // Output 'https://username:password@host:8080/directory/file?query=pppppp#qwer=da'
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let params = new url.URLSearchParams(urlObject.search.slice(1));
+params.append('fod', '3');
+console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
+```
 
 ## hash
 

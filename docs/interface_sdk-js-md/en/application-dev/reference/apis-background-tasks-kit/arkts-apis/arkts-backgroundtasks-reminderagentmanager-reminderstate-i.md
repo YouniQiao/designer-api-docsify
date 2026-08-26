@@ -13,7 +13,7 @@ all callbacks associated with user-tapped button types under the application are
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import reminderAgentManager from '@kit.BackgroundTasksKit';
 ```
 
 ## buttonType

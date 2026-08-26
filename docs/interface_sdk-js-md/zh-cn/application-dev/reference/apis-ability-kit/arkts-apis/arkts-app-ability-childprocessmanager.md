@@ -2,8 +2,10 @@
 
 childProcessManager模块提供子进程管理能力，支持子进程创建和启动操作。 创建的子进程会随着父进程的退出而退出，无法脱离父进程独立运行。
 
-> **说明：**&gt;
-> 本模块首批接口从API version 11开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。&gt;
+> **说明：**
+> 
+> 本模块首批接口从API version 11开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> 
 > 本模块接口仅可在Stage模型下使用。
 ## 约束限制  
 ### 功能限制  
@@ -21,24 +23,24 @@ childProcessManager模块提供子进程管理能力，支持子进程创建和�
 ## 导入模块
 
 ```TypeScript
-import { childProcessManager } from 'kits/@kit.AbilityKit';
+import childProcessManager from '@kit.AbilityKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [isArkChildProcessSupported](arkts-ability-childprocessmanager-isarkchildprocesssupported-f.md) |
-| [isNativeChildProcessSupported](arkts-ability-childprocessmanager-isnativechildprocesssupported-f.md) |
-| [startArkChildProcess](arkts-ability-childprocessmanager-startarkchildprocess-f.md) |
-| [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md) |
-| [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md) |
-| [startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [isArkChildProcessSupported](arkts-ability-childprocessmanager-isarkchildprocesssupported-f.md) | 查询是否允许调用者在此设备上创建ArkTS子进程 |
+| [isNativeChildProcessSupported](arkts-ability-childprocessmanager-isnativechildprocesssupported-f.md) | 查询是否允许调用者在此设备上创建Native子进程 |
+| [startArkChildProcess](arkts-ability-childprocessmanager-startarkchildprocess-f.md) | 启动[ArkTS子进程](../../../application-models/ability-terminology.md#arkts子进程)。使用Promise异步回调。 |
+| [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md) | 启动[ArkTS子进程](../../../application-models/ability-terminology.md#arkts子进程)。使用Promise异步回调。 |
+| [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md) | 启动[ArkTS子进程](../../../application-models/ability-terminology.md#arkts子进程)。使用callback异步回调。 |
+| [startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md) | 启动[Native子进程](../../../application-models/ability-terminology.md#native子进程)。使用Promise异步回调。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [StartMode](arkts-ability-childprocessmanager-startmode-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | 子进程启动模式枚举。 |

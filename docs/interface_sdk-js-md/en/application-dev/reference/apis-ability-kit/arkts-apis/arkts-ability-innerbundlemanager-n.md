@@ -2,10 +2,12 @@
 
 The module provides APIs for the Home Screen application.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This module is deprecated since API version 9. You are advised to use
 > [launcherBundleManager](arkts-bundle-launcherbundlemanager.md) and
-> [bundleMonitor](arkts-bundle-bundlemonitor.md) instead.&gt;
+> [bundleMonitor](arkts-bundle-bundlemonitor.md) instead.
+> 
 > The APIs provided by this module are system APIs.
 
 **Since:** 8
@@ -21,7 +23,7 @@ The module provides APIs for the Home Screen application.
 ## Modules to Import
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -29,16 +31,16 @@ import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) |
-| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) |
-| on |
-| on |
-| off |
-| off |
-| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) |
-| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) |
-| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) |
-| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) | Obtains an array of the launcher ability information based on a given bundle name. This API uses an asynchronous callback to return the result. |
+| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) | Obtains an array of the launcher ability information based on a given bundle name. This API uses a promise to return the result. |
+| on | Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result. |
+| on | Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result. |
+| off | Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result. |
+| off | Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result. |
+| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) | Obtains the information about all launcher abilities. This API uses an asynchronous callback to return the result. |
+| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) | Obtains the information about all launcher abilities. This API uses a promise to return the result. |
+| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) | Obtains an array of the shortcut information based on a given bundle name. This API uses an asynchronous callback to return the result. |
+| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) | Obtains an array of the shortcut information based on a given bundle name. This API uses a promise to return the result. |
 <!--DelEnd-->

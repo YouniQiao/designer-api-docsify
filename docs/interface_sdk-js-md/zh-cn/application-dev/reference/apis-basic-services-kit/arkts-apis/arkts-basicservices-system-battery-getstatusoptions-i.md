@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Battery, BatteryResponse, GetStatusOptions } from 'kits/@kit.BasicServicesKit';
+import Battery, { BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -44,10 +44,10 @@ fail?: (data: string, code: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | string | 是 |
-| code | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | string | 是 |  |
+| code | number | 是 |  |
 
 ## success
 
@@ -65,6 +65,6 @@ success?: (data: BatteryResponse) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md) | 是 |  |

@@ -9,7 +9,9 @@ Defines the struct of an intent entity. It represents key information objects in
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from 'kits/@kit.AbilityKit';
+import insightIntent from '@kit.AbilityKit';
+import insightIntentDriver from '@kit.AbilityKitDriver';
+import insightIntentProvider from '@kit.AbilityKitProvider';
 ```
 
 ## entityId

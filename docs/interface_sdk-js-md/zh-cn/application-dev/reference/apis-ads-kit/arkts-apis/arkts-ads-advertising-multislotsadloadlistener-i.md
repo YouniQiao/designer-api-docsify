@@ -9,7 +9,10 @@
 ## 导入模块
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { AdComponent } from '@kit.AdsKit.AdComponent';
+import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
+import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
+import advertising from '@kit.AdsKit';
 ```
 
 ## onAdLoadFailure
@@ -28,10 +31,40 @@ onAdLoadFailure(errorCode: number, errorMsg: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| errorCode | number | 是 |
-| [errorMsg](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-operresult-i.md) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| errorCode | number | 是 | 广告请求失败的错误码。 |
+| errorMsg | string | 是 | 广告请求失败的错误信息。 |
+
+**示例**
+
+```TypeScript
+import { advertising } from '@kit.AdsKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const adLoaderListener: advertising.AdLoadListener = {
+  onAdLoadFailure: (errorCode: number, errorMsg: string) => {
+    hilog.error(0x0000, 'testTag', `Failed to load ad. Code is ${errorCode}, message is ${errorMsg}`);
+  },
+  onAdLoadSuccess: (ads: Array<advertising.Advertisement>) => {
+    hilog.info(0x0000, 'testTag', 'Succeeded in loading ad');
+  }
+}
+```
+
+```TypeScript
+import { advertising } from '@kit.AdsKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const multiSlotsAdLoadListener: advertising.MultiSlotsAdLoadListener = {
+  onAdLoadFailure: (errorCode: number, errorMsg: string) => {
+    hilog.error(0x0000, 'testTag', `Failed to load ad. Code is ${errorCode}, message is ${errorMsg}`);
+  },
+  onAdLoadSuccess: (adsMap: Map<string, Array<advertising.Advertisement>>) => {
+    hilog.info(0x0000, 'testTag', 'Succeeded in loading ad');
+  }
+}
+```
 
 ## onAdLoadSuccess
 
@@ -49,6 +82,22 @@ onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| adsMap | Map & lt;string, Array & lt;Advertisement & gt; & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| adsMap | Map & lt;string, Array & lt;Advertisement & gt; & gt; | 是 | 广告数据，是以广告位ID为键，存储请求到的广告内容的映射集合。 |
+
+**示例**
+
+```TypeScript
+import { advertising } from '@kit.AdsKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const multiSlotsAdLoadListener: advertising.MultiSlotsAdLoadListener = {
+  onAdLoadFailure: (errorCode: number, errorMsg: string) => {
+    hilog.error(0x0000, 'testTag', `Failed to load ad. Code is ${errorCode}, message is ${errorMsg}`);
+  },
+  onAdLoadSuccess: (adsMap: Map<string, Array<advertising.Advertisement>>) => {
+    hilog.info(0x0000, 'testTag', 'Succeeded in loading ad');
+  }
+}
+```

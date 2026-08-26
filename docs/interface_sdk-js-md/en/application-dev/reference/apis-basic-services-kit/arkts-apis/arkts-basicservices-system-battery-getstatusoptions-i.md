@@ -11,7 +11,7 @@ Object that contains the API calling result.
 ## Modules to Import
 
 ```TypeScript
-import { Battery, BatteryResponse, GetStatusOptions } from 'kits/@kit.BasicServicesKit';
+import Battery, { BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -44,10 +44,10 @@ Called when an API call has failed. **data** indicates the error information, an
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | string | Yes |  |
+| code | number | Yes |  |
 
 ## success
 
@@ -65,6 +65,6 @@ Called when an API call is successful. **data** is a return value of the [Batter
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md) | Yes |  |

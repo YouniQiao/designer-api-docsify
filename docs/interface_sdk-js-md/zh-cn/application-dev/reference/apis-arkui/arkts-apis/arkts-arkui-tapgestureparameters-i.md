@@ -2,7 +2,8 @@
 
 点击手势参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 为规范匿名对象的定义，API 12版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
 
 **继承/实现关系：** TapGestureParameters extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)

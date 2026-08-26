@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
+import deviceStandby from '@kit.BackgroundTasksKit';
 ```
 
 ## duration

@@ -5,7 +5,8 @@
 - 需要满足数据安全合规要求的场景。  
 - 对机密文件进行访问控制和加密保护。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 本模块首批接口从API version 26.0.0开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > - 本模块接口为系统接口。
 
@@ -20,7 +21,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
+import dlpSetDlpFeature from '@kit.DataProtectionKit';
 ```
 
 ## 汇总
@@ -28,24 +29,24 @@ import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [setDlpFeature(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [setDlpFeature(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md) | 设置DLP特性开关状态。使用Promise异步回调。调用成功后，DLP特性开关将设置为指定状态，系统将根据该状态启用或禁用DLP保护功能。当特性开关处于开启状态时，右键单击支持加密的文件，右键菜单中会显示“加密保护”选项。可加密类型包括：.txt，.pdf，.xls，.xlsx，.ppt，.pptx，.doc，.docx。企业策略开启或关闭数据防泄漏功能时使用此接口。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 |
-| --- |
-| [DLPFeatureInfo(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-dlpfeatureinfo-i-sys.md) |
-| [StatusInfoResult(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [DLPFeatureInfo(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-dlpfeatureinfo-i-sys.md) | DLP特性开关的状态信息。 |
+| [StatusInfoResult(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md) | DLP特性开关状态设置的结果信息。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 |
-| --- |
-| [DlpFeatureStatus(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [DlpFeatureStatus(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md) | DLP特性开关状态的枚举。 |
 <!--DelEnd-->

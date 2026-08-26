@@ -11,7 +11,6 @@ Defines the call disconnection cause.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## message

@@ -2,7 +2,8 @@
 
 This module provides APIs for providing subscriber information. It allows you to configure parameters such as the subscribed common event type, publisher permission, publisher device ID, user ID, and subscription priority. This module is applicable to scenarios where an app needs to subscribe to system common events or custom common events and requires refined control over event sources.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > After users subscribing to custom common events, any application can send potential
 > malicious common events to subscribers. The **publisherPermission** and
 > **publisherBundleName** parameters of this module can be used to restrict the publisher

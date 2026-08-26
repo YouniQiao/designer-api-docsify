@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from 'kits/@kit.NetworkKit';
+import vpnExtension from '@kit.NetworkKit';
 ```
 
 ## createVpnObserver
@@ -22,6 +22,14 @@ Creates a VPN observer object. It is used to listen for VPN-related events.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) |
+| Type | Description |
+| --- | --- |
+| [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) | VPN observer object. |
+
+**Examples**
+
+```TypeScript
+import { vpnExtension } from '@kit.NetworkKit';
+
+let vpnObserver: vpnExtension.VpnObserver = vpnExtension.createVpnObserver();
+```

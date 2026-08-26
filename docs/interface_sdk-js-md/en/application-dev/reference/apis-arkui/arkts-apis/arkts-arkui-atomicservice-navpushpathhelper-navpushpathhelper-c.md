@@ -9,7 +9,7 @@ On the initial launch, the atomic service only downloads and installs the main p
 ## Modules to Import
 
 ```TypeScript
-import { NavPushPathHelper } from 'kits/@kit.ArkUI';
+import { NavPushPathHelper } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -28,9 +28,9 @@ A constructor used to create a **NavPushPathHelper** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| navPathStack | [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| navPathStack | [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md) | Yes | Navigation stack. |
 
 ## pushDestination
 
@@ -48,27 +48,27 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the NavDestination page. |
+| animated | boolean | No | Whether to support the transition animation. Default value: **true**.    **true**: The transition animation is supported.    **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushDestination
 
@@ -86,27 +86,27 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the NavDestination page. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushDestinationByName
 
@@ -124,28 +124,28 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
-| name | string | Yes |
-| param | Object | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
+| name | string | Yes | Name of the NavDestination page. |
+| param | Object | Yes | Settings of the NavDestination page. |
+| animated | boolean | No | Whether to support the transition animation. Default value: **true**.    **true**: The transition animation is supported.    **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushDestinationByName
 
@@ -164,29 +164,29 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
-| name | string | Yes |
-| param | Object | Yes |
-| [onPop](../arkts-components/arkts-arkui-navpathinfo-c.md) | Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
+| name | string | Yes | Name of the NavDestination page. |
+| param | Object | Yes | Settings of the NavDestination page. |
+| onPop | Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. |
+| animated | boolean | No | Whether to support the transition animation. Default value: **true**.    **true**: The transition animation is supported.    **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushPath
 
@@ -204,23 +204,23 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the NavDestination page. |
+| animated | boolean | No | Whether to support the transition animation. Default value: **true**.    **true**: The transition animation is supported.    **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushPath
 
@@ -238,23 +238,23 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the NavDestination page. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushPathByName
 
@@ -272,24 +272,24 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
-| name | string | Yes |
-| param | Object | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
+| name | string | Yes | Name of the NavDestination page. |
+| param | Object | Yes | Settings of the NavDestination page. |
+| animated | boolean | No | Whether to support the transition animation. Default value: **true**.    **true**: The transition animation is supported.    **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushPathByName
 
@@ -308,25 +308,25 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
-| name | string | Yes |
-| param | Object | Yes |
-| [onPop](../arkts-components/arkts-arkui-navpathinfo-c.md) | Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
+| name | string | Yes | Name of the NavDestination page. |
+| param | Object | Yes | Settings of the NavDestination page. |
+| onPop | Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | Yes | Callback used to receive the result. |
+| animated | boolean | No | Whether to support the transition animation. Default value: **true**.    **true**: The transition animation is supported.    **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## replacePath
 
@@ -344,23 +344,23 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Parameters of the page to replace the top of the navigation stack. |
+| animated | boolean | No | Whether to support the transition animation. Default value: **true**.    **true**: The transition animation is supported.    **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## replacePath
 
@@ -378,23 +378,23 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Parameters of the page to replace the top of the navigation stack. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## replacePathByName
 
@@ -412,21 +412,21 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
-| name | string | Yes |
-| param | Object | Yes |
-| animated | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
+| name | string | Yes | Name of the NavDestination page. |
+| param | Object | Yes | Settings of the NavDestination page. |
+| animated | boolean | No | Whether to support the transition animation. Default value: **true**.    **true**: The transition animation is supported.    **false**: The transition animation is not supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |

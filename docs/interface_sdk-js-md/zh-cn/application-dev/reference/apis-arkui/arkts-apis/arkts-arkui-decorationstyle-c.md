@@ -29,9 +29,9 @@ constructor(value: DecorationStyleInterface)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。 |
 
 ## constructor
 
@@ -51,10 +51,10 @@ constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 |
-| [options](#options) | [DecorationOptions](arkts-arkui-decorationoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。 |
+| options | [DecorationOptions](arkts-arkui-decorationoptions-i.md) | 否 | 文本装饰线额外配置选项。 |
 
 ## color
 

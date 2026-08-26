@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from 'kits/@kit.LocalizationKit';
+import fontManager from '@kit.LocalizationKit';
 ```
 
 ## uninstallFont
@@ -24,22 +24,38 @@ Uninstalls an installed font file from the system font library by font name. Thi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fullName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fullName | string | Yes | Name of the font to be uninstalled. You can open the .ttf or .ttc font file to obtain the name. The font name is case-sensitive. Ensure that it exactly matches the actual font name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the uninstallation result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [31100107](../errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) |
-| [31100108](../errorcode-font-manager.md#31100108-failed-to-delete-font-file) |
-| [31100109](../errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [31100107](../errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) | The font file does not exist. |
+| [31100108](../errorcode-font-manager.md#31100108-failed-to-delete-font-file) | Failed to delete the font file. |
+| [31100109](../errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+
+async function uninstallFont() {
+  try {
+    let res = await fontManager.uninstallFont('fontName');
+    console.info('uninstallFont suc. res is ' + res);
+  } catch (error) {
+    console.error('uninstallFont err.' + error.code);
+  }
+  return;
+}
+```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## getImageSourceSupportedFormats
@@ -20,6 +20,20 @@ function getImageSourceSupportedFormats(): string[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string[] |
+| 类型 | 说明 |
+| --- | --- |
+| string[] | 支持解码的图片格式（mime type）列表。 |
+
+**示例**
+
+```TypeScript
+async function GetImageSourceSupportedFormats() {
+    let formats = image.getImageSourceSupportedFormats();
+    console.info('formats:', formats);
+}
+
+async function IsSupportedTiffFormat() {
+    let formats = image.getImageSourceSupportedFormats();
+    return formats.includes("image/tiff");
+}
+```

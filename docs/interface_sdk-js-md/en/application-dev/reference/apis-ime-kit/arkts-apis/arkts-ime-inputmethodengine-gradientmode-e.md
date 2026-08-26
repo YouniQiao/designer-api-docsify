@@ -1,7 +1,7 @@
 # GradientMode
 
 Enumerates the gradient modes of the input method.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Description | | ------------ | -- | ------------------ | | [NONE](#none) | 0 | The gradient mode is not used.| | [LINEAR_GRADIENT](#linear_gradient) | 1 |
+ | Name | Value| Description | | ------------ | -- | ------------------ | | NONE | 0 | The gradient mode is not used.| | LINEAR_GRADIENT | 1 | Linear gradient.|
 
 **Since:** 20
 

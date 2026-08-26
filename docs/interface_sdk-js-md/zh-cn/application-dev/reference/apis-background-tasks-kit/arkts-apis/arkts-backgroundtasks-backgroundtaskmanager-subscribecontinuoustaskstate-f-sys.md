@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+import backgroundTaskManager from '@kit.BackgroundTasksKit';
 ```
 
 ## subscribeContinuousTaskState
@@ -26,15 +26,41 @@ function subscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| subscriber | [BackgroundTaskSubscriber](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubscriber-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| subscriber | [BackgroundTaskSubscriber](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubscriber-i-sys.md) | 是 | 后台任务监听对象，包含长时任务开始，长时任务更新，长时任务结束。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
-| [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) | System service operation failed. |
+| [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) | Continuous task verification failed. |
+
+**示例**
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
+    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
+    },
+    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
+    }
+}
+
+try {
+    backgroundTaskManager.subscribeContinuousTaskState(backgroundTaskSubscriber);
+    console.info('Operation subscribeContinuousTaskState succeeded');
+} catch (error) {
+    console.error(`Operation subscribeContinuousTaskState failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
+}
+```

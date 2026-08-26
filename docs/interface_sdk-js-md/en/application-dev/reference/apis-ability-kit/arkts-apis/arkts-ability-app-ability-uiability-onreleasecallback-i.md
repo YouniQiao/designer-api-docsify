@@ -9,7 +9,7 @@ Defines the callback that is invoked when the stub on the target UIAbility is di
 ## Modules to Import
 
 ```TypeScript
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from 'kits/@kit.AbilityKit';
+import UIAbility, { Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## [[Call]]
@@ -28,6 +28,6 @@ Defines the callback of OnRelease.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| msg | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| msg | string | Yes | Message used for disconnection. |

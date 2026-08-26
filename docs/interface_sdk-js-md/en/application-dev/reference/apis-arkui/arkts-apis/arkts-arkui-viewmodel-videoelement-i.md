@@ -52,9 +52,9 @@ Requests to enter the full screen mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | { screenOrientation: "default" } | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | { screenOrientation: "default" } | Yes |  |
 
 ## setCurrentTime
 
@@ -72,9 +72,9 @@ Specifies the video playing position.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | { currenttime: number } | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | { currenttime: number } | Yes |  |
 
 ## start
 

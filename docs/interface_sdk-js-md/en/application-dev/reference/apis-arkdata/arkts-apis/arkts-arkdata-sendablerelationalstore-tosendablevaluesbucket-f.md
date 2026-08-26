@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from 'kits/@kit.ArkData';
+import sendableRelationalStore from '@kit.ArkData';
 ```
 
 ## toSendableValuesBucket
@@ -20,19 +20,53 @@ Converts a key-value (KV) pair that cannot be passed across threads into the dat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [valuesBucket](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityoperation-dataabilityoperation-i.md) | [NonSendableBucket](arkts-arkdata-sendablerelationalstore-nonsendablebucket-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| valuesBucket | [NonSendableBucket](arkts-arkdata-sendablerelationalstore-nonsendablebucket-t.md) | Yes | Data that cannot be passed across threads. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) |
+| Type | Description |
+| --- | --- |
+| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Data that can be passed across threads. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+const asset1: sendableRelationalStore.NonSendableAsset = {
+  name: 'hangman',
+  uri: '//path/example',
+  path: '//path/example',
+  createTime: 'createTime1',
+  modifyTime: 'modifyTime1',
+  size: 'size1'
+};
+const asset2: sendableRelationalStore.NonSendableAsset = {
+  name: 'hangman',
+  uri: '//path/example',
+  path: '//path/example',
+  createTime: 'createTime1',
+  modifyTime: 'modifyTime1',
+  size: 'size1'
+};
+const u8 = new Uint8Array([1, 2, 3]);
+const valuesBucket: sendableRelationalStore.NonSendableBucket = {
+  age: 18,
+  name: "hangman",
+  salary: 100.5,
+  passed: true,
+  data1: asset1,
+  blobType: u8,
+  bigValue: BigInt("15822401018187971961171"),
+  data2: [asset1, asset2]
+};
+
+const sendableValuesBucket = sendableRelationalStore.toSendableValuesBucket(valuesBucket);
+```

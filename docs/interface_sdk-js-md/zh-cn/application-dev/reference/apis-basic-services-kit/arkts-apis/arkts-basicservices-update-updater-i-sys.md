@@ -17,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import update from '@kit.BasicServicesKit';
 ```
 
 ## checkNewVersion
@@ -41,17 +41,48 @@ checkNewVersion(callback: AsyncCallback<CheckResult>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CheckResult](arkts-basicservices-update-checkresult-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CheckResult](arkts-basicservices-update-checkresult-i-sys.md)&gt; | 是 | 回调函数，用于接收版本检查结果。回调参数包括err（错误对象，成功时为null）和checkResult（版本检查结果对象）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 检查新版本，通过回调函数获取检查结果
+  onlineUpdater.checkNewVersion((checkNewVersionError: BusinessError,  
+    checkResult: update.CheckResult) => {
+      // 错误处理
+      if (checkNewVersionError) {
+        console.error(`checkNewVersion error, code:${checkNewVersionError.code}, message:${checkNewVersionError.message}.`);
+        return;
+      }
+      console.info(`checkNewVersion isExistNewVersion  ${checkResult?.isExistNewVersion}`);
+    });
+} catch (error) {
+  let errInfo: BusinessError = error as BusinessError;
+  console.error(`Failed to get updater. Code: ${errInfo.code}, message: ${errInfo.message}.`);
+}
+```
 
 ## checkNewVersion
 
@@ -74,17 +105,47 @@ checkNewVersion(): Promise<CheckResult>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[CheckResult](arkts-basicservices-update-checkresult-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[CheckResult](arkts-basicservices-update-checkresult-i-sys.md)&gt; | Promise对象。成功时resolve返回版本检查结果对象，失败时reject返回错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 检查新版本
+  onlineUpdater.checkNewVersion().then((result: update.CheckResult) => {
+    console.info(`checkNewVersion isExistNewVersion: ${result.isExistNewVersion}`);
+    // 版本摘要信息
+    console.info(`checkNewVersion versionDigestInfo: ${result.newVersionInfo.versionDigestInfo.versionDigest}`);
+    }).catch((checkNewVersionError: BusinessError) => {
+      console.error(`checkNewVersion promise error, code:${checkNewVersionError.code}, message:${checkNewVersionError.message}.`);
+    });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Fail to checkNewVersion. Code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## clearError
 
@@ -112,20 +173,61 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, cal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 |
-| clearOptions | [ClearOptions](arkts-basicservices-update-clearoptions-i-sys.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
+| clearOptions | [ClearOptions](arkts-basicservices-update-clearoptions-i-sys.md) | 是 | 清除选项（ClearOptions），用于指定要清除的异常状态类型。status字段仅支持UPGRADE_FAIL状态，当upgrade方法执行失败 (状态为UPGRADE_FAIL)后，系统会保留异常状态阻止重新升级，此时需要传入UPGRADE_FAIL清除异常状态，使系统恢复到初始状态以便重新开始升级流程。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收清除异常状态结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 清除选项
+const clearOptions: update.ClearOptions = {
+  status: update.UpgradeStatus.UPGRADE_FAIL,
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 清除异常状态，通过回调函数处理清除结果
+  onlineUpdater.clearError(versionDigestInfo, clearOptions, (clearFailError: BusinessError) => {
+    if (clearFailError) {
+      // 清除失败
+      console.error(`clearError execute error. code:${clearFailError.code}, message:${clearFailError.message}.`);
+    } else {
+      // 清除成功
+      console.info(`clearError execute success`);
+    };
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## clearError
 
@@ -153,25 +255,62 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Pr
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 |
-| clearOptions | [ClearOptions](arkts-basicservices-update-clearoptions-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
+| clearOptions | [ClearOptions](arkts-basicservices-update-clearoptions-i-sys.md) | 是 | 清除选项（ClearOptions），用于指定要清除的异常状态类型。status字段仅支持UPGRADE_FAIL状态，当upgrade方法执行失败 (状态为UPGRADE_FAIL)后，系统会保留异常状态阻止重新升级，此时需要传入UPGRADE_FAIL清除异常状态，使系统恢复到初始状态以便重新开始升级流程。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。成功时resolve无返回结果，失败时reject返回错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 清除选项
+const clearOptions: update.ClearOptions = {
+  status: update.UpgradeStatus.UPGRADE_FAIL,
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 清除异常状态 
+  onlineUpdater.clearError(versionDigestInfo, clearOptions).then(() => {
+    console.info(`clearError execute success`);
+  }).catch((clearFailError: BusinessError) => {
+    console.error(`clearError execute error. code:${clearFailError.code}, message:${clearFailError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## download
 
@@ -205,20 +344,62 @@ download(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 |
-| downloadOptions | [DownloadOptions](arkts-basicservices-update-downloadoptions-i-sys.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
+| downloadOptions | [DownloadOptions](arkts-basicservices-update-downloadoptions-i-sys.md) | 是 | 下载选项（DownloadOptions），用于控制下载行为。allowNetwork字段设置允许下载的网络类型，建议根据升级包大小和网 络环境选择：升级包大小超过100MB建议使用WIFI避免流量消耗和提升下载速度；移动场景或无WIFI环境可使用CELLULAR；不确定网络环境建议使用CELLULAR_AND_WIFI。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收下载结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 下载选项
+const downloadOptions: update.DownloadOptions = {
+  allowNetwork: update.NetType.CELLULAR, // 允许数据网络下载
+  order: update.Order.DOWNLOAD // 下载
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 下载升级包
+  onlineUpdater.download(versionDigestInfo, downloadOptions, (downloadError: BusinessError) => {
+    if (downloadError) {
+      // 下载失败
+      console.error(`download error. code:${downloadError.code}, message:${downloadError.message}.`);
+    } else {
+      // 下载成功
+      console.info(`download success`);
+    };
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## download
 
@@ -248,25 +429,63 @@ download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 |
-| downloadOptions | [DownloadOptions](arkts-basicservices-update-downloadoptions-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
+| downloadOptions | [DownloadOptions](arkts-basicservices-update-downloadoptions-i-sys.md) | 是 | 下载选项（DownloadOptions），用于控制下载行为。allowNetwork字段设置允许下载的网络类型，建议根据升级包大小和网 络环境选择：升级包大小超过100MB建议使用WIFI避免流量消耗和提升下载速度；移动场景或无WIFI环境可使用CELLULAR；不确定网络环境建议使用CELLULAR_AND_WIFI。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。成功时resolve无返回结果，表示下载任务启动成功；失败时reject返回错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 下载选项
+const downloadOptions: update.DownloadOptions = {
+  allowNetwork: update.NetType.CELLULAR, // 允许数据网络下载
+  order: update.Order.DOWNLOAD // 下载
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 下载升级包
+  onlineUpdater.download(versionDigestInfo, downloadOptions).then(() => {
+    console.info(`download start`);
+  }).catch((downloadError: BusinessError) => {
+    console.error(`download error. code:${downloadError.code}, message:${downloadError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getCurrentVersionDescription
 
@@ -294,19 +513,53 @@ getCurrentVersionDescription(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | 是 | 描述文件选项（DescriptionOptions），用于指定描述文件的格式和语言。format字段设置描述格式(STANDARD标准格式或SIMPLIFIED简易格式)。language字段设置语言类型，格式如'zh-cn'(中文)、'en-us'(英文)、'ja-jp'(日文)等，长度范围[2，10]，单位：字符。有效字符包括 字母（区分大小写）和连字符（-），建议使用小写格式。超出范围或包含无效字符时抛出异常。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | 是 | 回调函数，用于接收当前版本描述信息。回调参数包括： err(错误对象，成功时为null)和 info(当前版本描述信息数组，包含版本说明内容)。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+// 描述文件选项
+const descriptionOptions: update.DescriptionOptions = {
+  format: update.DescriptionFormat.STANDARD, // 标准格式
+  language: 'zh-cn' // 中文
+};
+
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+
+  // 获取当前版本描述信息
+  onlineUpdater.getCurrentVersionDescription(descriptionOptions, (currentDescriptionError, info) => {
+    if (currentDescriptionError) {
+      console.error(`getCurrentVersionDescription error, code:${currentDescriptionError.code}, message:${currentDescriptionError.message}.`);
+      return;
+    }
+    console.info(`getCurrentVersionDescription info ${JSON.stringify(info)}`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getCurrentVersionDescription
 
@@ -331,24 +584,56 @@ getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Ar
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | 是 | 描述文件选项（DescriptionOptions），用于指定描述文件的格式和语言。format字段设置描述格式(STANDARD标准格式或SIMPLIFIED简易格式)。language字段设置语言类型，格式如'zh-cn'(中文)、'en-us'(英文)、'ja-jp'(日文)等，长度范围[2，10]，单位：字符。有效字符包括 字母（区分大小写）和连字符（-），建议使用小写格式。超出范围或包含无效字符时抛出异常。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | Promise对象。成功时resolve返回当前版本描述信息数组，用于展示当前版本详情和版本对比；失败时reject返回错误信 息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 描述文件选项
+const descriptionOptions: update.DescriptionOptions = {
+  format: update.DescriptionFormat.STANDARD, // 标准格式
+  language: 'zh-cn' // 中文
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+
+  // 获取当前版本描述信息
+  onlineUpdater.getCurrentVersionDescription(descriptionOptions).then((info: Array<update.ComponentDescription>) => {
+    console.info(`getCurrentVersionDescription promise info ${JSON.stringify(info)}`);
+  }).catch((descriptionError: BusinessError) => {
+    console.error(`getCurrentVersionDescription error, code:${descriptionError.code}, message:${descriptionError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getCurrentVersionInfo
 
@@ -369,17 +654,50 @@ getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CurrentVersionInfo](arkts-basicservices-update-currentversioninfo-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CurrentVersionInfo](arkts-basicservices-update-currentversioninfo-i-sys.md)&gt; | 是 | 回调函数，用于接收当前版本信息（CurrentVersionInfo）。回调参数包括： err（错误对象，成功时为 null）和currentInfo（当前版本信息对象，包含osVersion、deviceName和versionComponents字段）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+
+  // 获取当前版本信息，通过回调函数接收版本详情
+  onlineUpdater.getCurrentVersionInfo((currentVersionInfoError: BusinessError,
+    currentVersionInfo: update.CurrentVersionInfo) => {
+    if (currentVersionInfoError) {
+      console.error(`getCurrentVersionInfo error, code:${currentVersionInfoError.code}, message:${currentVersionInfoError.message}.`);
+      return;
+    }
+    console.info(`info osVersion = ${currentVersionInfo?.osVersion}`);
+    console.info(`info deviceName = ${currentVersionInfo?.deviceName}`);
+    console.info(`info displayVersion = ${currentVersionInfo?.versionComponents[0].displayVersion}`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getCurrentVersionInfo
 
@@ -400,17 +718,45 @@ getCurrentVersionInfo(): Promise<CurrentVersionInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[CurrentVersionInfo](arkts-basicservices-update-currentversioninfo-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[CurrentVersionInfo](arkts-basicservices-update-currentversioninfo-i-sys.md)&gt; | Promise对象。成功时resolve返回当前版本信息对象，用于展示系统版本和版本对比；失败时reject返回错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 获取当前版本信息
+  onlineUpdater.getCurrentVersionInfo().then((info: update.CurrentVersionInfo) => {
+    console.info(`info osVersion = ${info.osVersion}`);
+    console.info(`info deviceName = ${info.deviceName}`);
+    console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
+  }).catch((currentVersionInfoError: BusinessError) => {
+    console.error(`getCurrentVersionInfo error, code:${currentVersionInfoError.code}, message:${currentVersionInfoError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get updater error: ${error}`);
+}
+```
 
 ## getNewVersionDescription
 
@@ -438,20 +784,60 @@ getNewVersionDescription(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 |
-| descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息对象，包含版本标识（versionDigest字段）。必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取。版本摘要作为服务器生成的版本唯一标识，用于后续的版本查询、下载和升级操 作。仅当isExistNewVersion为true时该参数有效。 |
+| descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | 是 | 描述文件选项（DescriptionOptions），用于指定描述文件的格式和语言。format字段设置描述格式(STANDARD标准格式或SIMPLIFIED简易格式)。language字段设置语言类型，格式如'zh-cn'(中文)、'en-us'(英文)、'ja-jp'(日文)等，长度范围[2，10]，单位：字符。有效字符包括 字母（区分大小写）和连字符（-），建议使用小写格式。超出范围或包含无效字符时抛出异常。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | 是 | 回调函数，用于接收新版本描述信息。回调参数包括： err（错误对象，成功时为null）和 descriptionInfo（新版本描述信息数组，包含各组件的版本说明内容）。调用前须先调用checkNewVersion检查新版本，且仅当isExistNewVersion为true时descriptionInfo 有效；若为false，则descriptionInfo为null。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 从checkNewVersion结果中获取版本摘要信息
+};
+
+// 描述文件选项
+const descriptionOptions: update.DescriptionOptions = {
+  format: update.DescriptionFormat.STANDARD, // 标准格式
+  language: 'zh-cn' // 中文
+};
+
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 获取新版本描述信息
+  onlineUpdater.getNewVersionDescription(versionDigestInfo, descriptionOptions, (descriptionError, descriptionInfo) => {
+    if (descriptionError) {
+      console.error(`getNewVersionDescription error, code:${descriptionError.code}, message:${descriptionError.message}.`);
+      return;
+    }
+    console.info(`getNewVersionDescription info ${JSON.stringify(descriptionInfo)}`);
+  });
+} catch (error) {
+  console.error(`Fail to get updater error: ${error}`);
+}
+```
 
 ## getNewVersionDescription
 
@@ -478,25 +864,66 @@ getNewVersionDescription(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 |
-| descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
+| descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | 是 | 描述文件选项（DescriptionOptions），用于指定描述文件的格式和语言。format字段设置描述格式(STANDARD标准格式或SIMPLIFIED简易格式)。language字段设置语言类型，格式如'zh-cn'(中文)、'en-us'(英文)、'ja-jp'(日文)等，长度范围[2，10]，单位：字符。有效字符包括 字母（区分大小写）和连字符（-），建议使用小写格式。超出范围或包含无效字符时抛出异常。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | Promise对象。成功时resolve返回新版本描述信息数组，用于向用户展示版本更新内容和确认升级；失败时reject返回错 误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 描述文件选项
+const descriptionOptions: update.DescriptionOptions = {
+  format: update.DescriptionFormat.STANDARD, // 标准格式
+  language: 'zh-cn' // 中文
+};
+
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+
+  // 获取新版本描述信息
+  onlineUpdater.getNewVersionDescription(versionDigestInfo, descriptionOptions)
+    .then((info: Array<update.ComponentDescription>) => {
+    console.info(`getNewVersionDescription promise info ${JSON.stringify(info)}`);
+  }).catch((descriptionError: BusinessError) => {
+    console.error(`getNewVersionDescription promise error, code:${descriptionError.code}, message:${descriptionError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getNewVersionInfo
 
@@ -528,17 +955,46 @@ getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)&gt; | 是 | 回调函数，用于接收新版本信息（NewVersionInfo）。回调参数包括：err（错误对象，成功时为null）和 newInfo（新版本信息对象）。调用前须先调用checkNewVersion检查新版本，且仅当isExistNewVersion为true时newInfo有效；若为false，则newInfo为null。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 获取新版本信息，通过回调函数接收版本详情
+  onlineUpdater.getNewVersionInfo((getNewVersionInfoError: BusinessError, newInfo: update.NewVersionInfo) => {
+    if (getNewVersionInfoError) {
+      console.error(`getNewVersionInfo error, code:${getNewVersionInfoError.code}, message:${getNewVersionInfoError.message}.`);
+      return;
+    }
+    console.info(`info displayVersion = ${newInfo?.versionComponents[0].displayVersion}`);
+    console.info(`info innerVersion = ${newInfo?.versionComponents[0].innerVersion}`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getNewVersionInfo
 
@@ -570,17 +1026,44 @@ getNewVersionInfo(): Promise<NewVersionInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)&gt; | Promise对象。成功时resolve返回新版本详细信息对象，用于向用户展示完整版本信息；失败时reject返回错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 获取新版本信息
+  onlineUpdater.getNewVersionInfo().then((info: update.NewVersionInfo) => {
+    console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
+    console.info(`info innerVersion = ${info.versionComponents[0].innerVersion}`);
+  }).catch((getNewVersionInfoError: BusinessError) => {
+    console.error(`getNewVersionInfo promise error, code:${getNewVersionInfoError.code}, message:${getNewVersionInfoError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getTaskInfo
 
@@ -610,17 +1093,47 @@ getTaskInfo(callback: AsyncCallback<TaskInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | 是 | 回调函数，用于接收升级任务信息（TaskInfo）。回调参数包括： err（错误对象，成功时为null）和taskInfo（升级任务信 息对象，包含existTask和taskBody字段）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+
+  // 获取升级任务信息，通过回调函数接收任务状态 
+  onlineUpdater.getTaskInfo((taskInfoError: BusinessError, taskInfo: update.TaskInfo) => {
+    if (taskInfoError) {
+      console.error(`getTaskInfo error, code:${taskInfoError.code}, message:${taskInfoError.message}.`);
+      return;
+    }
+    console.info(`getTaskInfo existTask= ${taskInfo?.existTask}`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getTaskInfo
 
@@ -650,17 +1163,45 @@ getTaskInfo(): Promise<TaskInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;TaskInfo & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;TaskInfo & gt; | Promise对象。成功时resolve返回升级任务信息对象，用于查询和监控升级任务状态；失败时reject返回错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 获取升级任务信息
+  onlineUpdater.getTaskInfo().then((info: update.TaskInfo) => {
+    console.info(`getTaskInfo existTask= ${info.existTask}`);
+  }).catch((taskInfoError: BusinessError) => {
+    // 处理获取任务信息失败的情况
+    console.error(`Failed to get task info. code:${taskInfoError.code}, message:${taskInfoError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getUpgradePolicy
 
@@ -681,17 +1222,46 @@ getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md)&gt; | 是 | 回调函数，用于接收升级策略信息（UpgradePolicy）。回调参数包括： err（错误对象，成功时为null）和 policy（升级策略信息对象，包含downloadStrategy、autoUpgradeStrategy和autoUpgradePeriods字段）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 获取升级策略，通过回调函数接收策略配置
+  onlineUpdater.getUpgradePolicy((upgradePolicyError: BusinessError, policy: update.UpgradePolicy) => {
+    if (upgradePolicyError) {
+      console.error(`getUpgradePolicy error. code:${upgradePolicyError.code}, message:${upgradePolicyError.message}.`);
+      return;
+    }
+    console.info(`policy downloadStrategy = ${policy?.downloadStrategy}`);
+    console.info(`policy autoUpgradeStrategy = ${policy?.autoUpgradeStrategy}`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getUpgradePolicy
 
@@ -712,17 +1282,44 @@ getUpgradePolicy(): Promise<UpgradePolicy>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md)&gt; | Promise对象。成功时resolve返回升级策略信息对象，用于查询自动下载、自动升级、升级时间段等策略配置；失败时reject返回错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 获取升级策略
+  onlineUpdater.getUpgradePolicy().then((policy: update.UpgradePolicy) => {
+    console.info(`policy downloadStrategy = ${policy.downloadStrategy}`);
+    console.info(`policy autoUpgradeStrategy = ${policy.autoUpgradeStrategy}`);
+  }).catch((upgradePolicyError: BusinessError) => {
+    console.error(`getUpgradePolicy error. code:${upgradePolicyError.code}, message:${upgradePolicyError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## off
 
@@ -745,16 +1342,63 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | 是 |
-| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | 是 | 事件信息对象(EventClassifyInfo)，用于指定要取消监听的升级事件类型。前置条件:必须先通过on方法注册监听，注册 后系统维护事件监听列表并持续接收对应类型的本地升级事件通知。使用此参数取消监听后，系统从事件监听列表中移除对应监听记录，释放监听占用的内存和IPC通道资源，应用不再接收该类型的事件通知。 |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | 否 | 事件回调。用于处理升级任务事件。回调签名：(eventInfo: EventInfo) = & gt; void，其中eventInfo为事件信 息对象，包含eventId（事件ID）和taskBody（任务数据）字段。当需要取消特定回调监听时传入此参数，不传入时取消该事件类型的所有监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+const eventClassifyInfo: update.EventClassifyInfo = {
+  eventClassify: update.EventClassify.TASK, // 任务事件类型
+  extraInfo: ''
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 取消事件监听
+  onlineUpdater.off(eventClassifyInfo, (eventInfo: update.EventInfo) => {
+    console.info(`onlineUpdater off ${JSON.stringify(eventInfo)}`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
+
+```TypeScript
+const eventClassifyInfo: update.EventClassifyInfo = {
+  eventClassify: update.EventClassify.TASK, // 任务事件类型
+  extraInfo: ''
+};
+// 定义任务更新回调函数，用于处理升级任务事件
+let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
+  console.info(`on eventInfo id `, eventInfo.eventId);
+};
+
+try {
+  // 获取本地升级对象
+  let localUpdater = update.getLocalUpdater();
+  // 取消本地升级事件监听
+  localUpdater.off(eventClassifyInfo, onTaskUpdate);
+} catch (error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```
 
 ## on
 
@@ -782,16 +1426,63 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | 是 |
-| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | 是 | 事件信息对象(EventClassifyInfo)，用于指定要注册监听的升级事件类型。系统根据eventClassifyInfo 参数注册对应类型的升级事件监听，事件发生时通过taskCallback回调函数传递事件信息。 |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | 是 | 事件回调（UpgradeTaskCallback），用于处理升级任务事件。回调签名：(eventInfo: EventInfo) = & gt; void，其中eventInfo为事件信息对象，包含eventId（事件ID）和taskBody（任务数据）字段。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+const eventClassifyInfo: update.EventClassifyInfo = {
+  eventClassify: update.EventClassify.TASK, // 任务事件类型
+  extraInfo: '' // 额外信息，此处为空表示无额外信息
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 注册事件监听，实时监控升级状态
+  onlineUpdater.on(eventClassifyInfo, (eventInfo: update.EventInfo) => {
+    console.info(`updater on ${JSON.stringify(eventInfo)}`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
+
+```TypeScript
+const eventClassifyInfo: update.EventClassifyInfo = {
+  eventClassify: update.EventClassify.TASK, // 任务事件类型
+  extraInfo: ''
+};
+// 定义任务更新回调函数，用于处理升级任务事件
+let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
+  console.info(`on eventInfo id `, eventInfo.eventId);
+};
+
+try {
+  // 获取本地升级对象
+  let localUpdater = update.getLocalUpdater();
+  // 注册本地升级事件监听
+  localUpdater.on(eventClassifyInfo, onTaskUpdate);
+} catch (error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```
 
 ## pauseDownload
 
@@ -822,20 +1513,60 @@ pauseDownload(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 |
-| pauseDownloadOptions | [PauseDownloadOptions](arkts-basicservices-update-pausedownloadoptions-i-sys.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
+| pauseDownloadOptions | [PauseDownloadOptions](arkts-basicservices-update-pausedownloadoptions-i-sys.md) | 是 | 暂停下载选项（PauseDownloadOptions），用于控制暂停行为。如果没有正在进行的下载任务，使用此参数将 导致暂停操作失败或参数无效。isAllowAutoResume字段设置是否允许自动恢复，建议：网络不稳定场景建议设置true启用自动恢复，提升下载成功率；需要精确控制下载时机或避免在特定网络环境下恢复的场景建议设置 false，通过手动调用resumeDownload控制恢复时机。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收暂停下载结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 暂停下载选项
+const pauseDownloadOptions: update.PauseDownloadOptions = {
+  isAllowAutoResume: true // 允许自动恢复下载
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 暂停下载升级包
+  onlineUpdater.pauseDownload(versionDigestInfo, pauseDownloadOptions,
+    (pauseDownloadError: BusinessError) => {
+    if (pauseDownloadError) {
+      console.error(`pauseDownload error. code:${pauseDownloadError.code}, message:${pauseDownloadError.message}.`);
+    } else {
+      console.info(`pauseDownload success`);
+    };
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## pauseDownload
 
@@ -862,25 +1593,63 @@ pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseD
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 |
-| pauseDownloadOptions | [PauseDownloadOptions](arkts-basicservices-update-pausedownloadoptions-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
+| pauseDownloadOptions | [PauseDownloadOptions](arkts-basicservices-update-pausedownloadoptions-i-sys.md) | 是 | 暂停下载选项（PauseDownloadOptions），用于控制暂停行为。仅当有正在进行的下载任务时才生效。如果没 有正在进行的下载任务，使用此参数将导致暂停操作失败或参数无效。isAllowAutoResume字段设置是否允许自动恢复，建议：网络不稳定场景建议设置true启用自动恢复，提升下载成功率；需要精确控制下载时机或避免在特 定网络环境下恢复的场景建议设置false，通过手动调用resumeDownload控制恢复时机。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。成功时resolve无返回结果，失败时reject返回错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 暂停下载选项
+const pauseDownloadOptions: update.PauseDownloadOptions = {
+  isAllowAutoResume: true // 允许自动恢复下载
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 暂停下载升级包
+  onlineUpdater.pauseDownload(versionDigestInfo, pauseDownloadOptions).then(() => {
+    console.info(`pauseDownload`);
+  }).catch((pauseDownloadError: BusinessError) => {
+    console.error(`pauseDownload error. code:${pauseDownloadError.code}, message:${pauseDownloadError.message}.`);
+    
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## resumeDownload
 
@@ -908,20 +1677,60 @@ resumeDownload(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 |
-| resumeDownloadOptions | [ResumeDownloadOptions](arkts-basicservices-update-resumedownloadoptions-i-sys.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
+| resumeDownloadOptions | [ResumeDownloadOptions](arkts-basicservices-update-resumedownloadoptions-i-sys.md) | 是 | 恢复下载选项（ResumeDownloadOptions），用于指定恢复下载的网络类型。仅当已调用 pauseDownload暂停下载后才生效。如果未调用pauseDownload暂停下载，使用此参数将导致恢复下载失败或参数无效。allowNetwork字段设置允许恢复下载的网络类型，建议根据升级包大小和网络环境选 择：升级包大小超过100MB建议使用WIFI避免流量消耗和提升下载速度；移动场景或无WIFI环境可使用CELLULAR；不确定网络环境建议使用CELLULAR_AND_WIFI。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复下载结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 恢复下载选项
+const resumeDownloadOptions: update.ResumeDownloadOptions = {
+  allowNetwork: update.NetType.CELLULAR, // 允许数据网络下载
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 恢复下载升级包
+  onlineUpdater.resumeDownload(versionDigestInfo, resumeDownloadOptions,
+    (resumeDownloadError: BusinessError) => {
+    if (resumeDownloadError) {
+      console.error(`resumeDownload error. code:${resumeDownloadError.code}, message:${resumeDownloadError.message}.`);
+    } else {
+      console.info(`resumeDownload success`);
+    };
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## resumeDownload
 
@@ -945,25 +1754,62 @@ resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: Resu
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 |
-| resumeDownloadOptions | [ResumeDownloadOptions](arkts-basicservices-update-resumedownloadoptions-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
+| resumeDownloadOptions | [ResumeDownloadOptions](arkts-basicservices-update-resumedownloadoptions-i-sys.md) | 是 | 恢复下载选项（ResumeDownloadOptions），用于指定恢复下载的网络类型。仅当已调用 pauseDownload暂停下载后才生效。如果未调用pauseDownload暂停下载，使用此参数将导致恢复下载失败或参数无效。allowNetwork字段设置允许恢复下载的网络类型，建议根据升级包大小和网络环境选 择：升级包大小超过100MB建议使用WIFI避免流量消耗和提升下载速度；移动场景或无WIFI环境可使用CELLULAR；不确定网络环境建议使用CELLULAR_AND_WIFI。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。成功时resolve无返回结果，失败时reject返回错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 恢复下载选项
+const resumeDownloadOptions: update.ResumeDownloadOptions = {
+  allowNetwork: update.NetType.CELLULAR, // 允许数据网络下载
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 恢复下载升级包
+  onlineUpdater.resumeDownload(versionDigestInfo, resumeDownloadOptions).then(() => {
+    console.info(`resumeDownload start`);
+  }).catch((resumeDownloadError: BusinessError) => {
+    console.error(`resumeDownload error. code:${resumeDownloadError.code}, message:${resumeDownloadError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## setUpgradePolicy
 
@@ -984,18 +1830,52 @@ setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| policy | [UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| policy | [UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md) | 是 | 升级策略对象（UpgradePolicy），用于控制升级行为。包含downloadStrategy(自动下载策略)、autoUpgradeStrategy(自 动升级策略)和autoUpgradePeriods(自动升级时间段)三个字段。downloadStrategy字段设置是否允许自动下载，true表示可自动下载(适用于希望系统自动检测并下载新版本的场景)，false表示 不可自动下载(适用于需要用户手动确认下载的场景)。autoUpgradeStrategy字段设置是否允许自动升级，true表示可自动升级(适用于希望系统自动完成升级流程的场景)，false表示不可自动升级(适用于需要用 户手动确认升级的场景)。autoUpgradePeriods字段设置自动升级时间段(可选)，当需要在特定时间段内自动升级时传入此参数，如夜间时段；不传入时默认为空数组[]，表示不限制自动升级时间段。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收设置升级策略结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradePolicy: update.UpgradePolicy = {
+  downloadStrategy: false, // 禁止自动下载 
+  autoUpgradeStrategy: false, // 禁止自动升级
+  autoUpgradePeriods: [{ start: 120, end: 240 }] // 自动升级时间段，用分钟表示
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 设置升级策略，通过回调函数处理设置结果 
+  onlineUpdater.setUpgradePolicy(upgradePolicy, (setUpgradePolicyError: BusinessError) => {
+    if (setUpgradePolicyError) {
+      console.error(`setUpgradePolicy error, code:${setUpgradePolicyError.code}, message:${setUpgradePolicyError.message}.`);
+    } else {
+      console.info(`setUpgradePolicy success`);
+    };
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## setUpgradePolicy
 
@@ -1016,23 +1896,55 @@ setUpgradePolicy(policy: UpgradePolicy): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| policy | [UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| policy | [UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md) | 是 | 升级策略对象（UpgradePolicy），用于控制升级行为。包含downloadStrategy(自动下载策略)、autoUpgradeStrategy(自 动升级策略)和autoUpgradePeriods(自动升级时间段)三个字段。downloadStrategy字段设置是否允许自动下载，true表示可自动下载(适用于希望系统自动检测并下载新版本的场景)，false表示 不可自动下载(适用于需要用户手动确认下载的场景)。autoUpgradeStrategy字段设置是否允许自动升级，true表示可自动升级(适用于希望系统自动完成升级流程的场景)，false表示不可自动升级(适用于需要用 户手动确认升级的场景)。autoUpgradePeriods字段设置自动升级时间段(可选)，当需要在特定时间段内自动升级时传入此参数，如夜间时段；不传入时默认为空数组[]，表示不限制自动升级时间段。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。成功时resolve无返回结果，表示升级策略设置成功；失败时reject返回错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradePolicy: update.UpgradePolicy = {
+  downloadStrategy: false, // 禁止自动下载 
+  autoUpgradeStrategy: false, // 禁止自动升级
+  autoUpgradePeriods: [{ start: 120, end: 240 }] // 自动升级时间段，用分钟表示
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 设置升级策略 
+  onlineUpdater.setUpgradePolicy(upgradePolicy).then(() => {
+    console.info(`setUpgradePolicy success`);
+  }).catch((setUpgradePolicyError: BusinessError) => {
+    console.error(`setUpgradePolicy promise error, code:${setUpgradePolicyError.code}, message:${setUpgradePolicyError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## terminateUpgrade
 
@@ -1062,17 +1974,45 @@ terminateUpgrade(callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收终止升级结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 终止升级任务，通过回调函数处理终止结果
+  onlineUpdater.terminateUpgrade((terminateUpgradeError: BusinessError) => {
+    if (terminateUpgradeError) {
+      console.error(`terminateUpgrade error, code:${terminateUpgradeError.code}, message:${terminateUpgradeError.message}.`);
+    } else {
+      console.info(`terminateUpgrade success`);
+    };
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## terminateUpgrade
 
@@ -1102,17 +2042,43 @@ terminateUpgrade(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。成功时resolve无返回结果，失败时reject返回错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 终止升级任务
+  onlineUpdater.terminateUpgrade().then(() => {
+    console.info(`terminateUpgrade success`);
+  }).catch((terminateUpgradeError: BusinessError) => {
+    console.error(`terminateUpgrade error, code:${terminateUpgradeError.code}, message:${terminateUpgradeError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## upgrade
 
@@ -1141,20 +2107,59 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, ca
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 |
-| upgradeOptions | [UpgradeOptions](arkts-basicservices-update-upgradeoptions-i-sys.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
+| upgradeOptions | [UpgradeOptions](arkts-basicservices-update-upgradeoptions-i-sys.md) | 是 | 升级选项（UpgradeOptions），用于指定升级操作类型。order字段设置升级指令，应根据当前升级状态和业务需求选择： DOWNLOAD仅下载升级包，适用于需要先下载后手动安装的场景；INSTALL仅安装已下载的升级包，适用于已下载完成需直接安装的场景；DOWNLOAD_AND_INSTALL下载并安装，适用于完整升级流程；APPLY仅 生效，适用于已安装需重启生效的场景；INSTALL_AND_APPLY安装并生效，适用于安装后立即重启生效的场景。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收升级安装结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 安装选项
+const upgradeOptions: update.UpgradeOptions = {
+  order: update.Order.INSTALL // 安装指令
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 安装升级包
+  onlineUpdater.upgrade(versionDigestInfo, upgradeOptions, (upgradeError: BusinessError) => {
+    if (upgradeError) {
+      console.error(`upgrade error. code:${upgradeError.code}, message:${upgradeError.message}.`);
+    } else {
+      console.info(`upgrade success`);
+    };
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## upgrade
 
@@ -1182,22 +2187,59 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): P
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 |
-| upgradeOptions | [UpgradeOptions](arkts-basicservices-update-upgradeoptions-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
+| upgradeOptions | [UpgradeOptions](arkts-basicservices-update-upgradeoptions-i-sys.md) | 是 | 升级选项（UpgradeOptions），用于指定升级操作类型。order字段设置升级指令，应根据当前升级状态和业务需求选择： DOWNLOAD仅下载升级包，适用于需要先下载后手动安装的场景；INSTALL仅安装已下载的升级包，适用于已下载完成需直接安装的场景；DOWNLOAD_AND_INSTALL下载并安装，适用于完整升级流程；APPLY仅 生效，适用于已安装需重启生效的场景；INSTALL_AND_APPLY安装并生效，适用于安装后立即重启生效的场景。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。成功时resolve无返回结果，失败时reject返回错误信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 11500104 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
+| 11500104 | IPC error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 安装选项
+const upgradeOptions: update.UpgradeOptions = {
+  order: update.Order.INSTALL // 安装指令
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 安装升级包
+  onlineUpdater.upgrade(versionDigestInfo, upgradeOptions).then(() => {
+    console.info(`upgrade start`);
+  }).catch((upgradeError: BusinessError) => {
+    console.error(`upgrade error. code:${upgradeError.code}, message:${upgradeError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```

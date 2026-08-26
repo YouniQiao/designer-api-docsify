@@ -16,7 +16,7 @@ The module provides APIs for setting and obtaining installation-free information
 ## 导入模块
 
 ```TypeScript
-import { freeInstall } from 'kits/@kit.AbilityKit';
+import freeInstall from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -24,42 +24,42 @@ import { freeInstall } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md) |
-| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md) |
-| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md) |
-| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md) |
-| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md) |
-| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md) |
-| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md) |
-| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md) | 基于bundleName和bundlePackFlag来获取bundlePackInfo。使用callback异步回调。 |
+| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md) | 基于bundleName和BundlePackFlag来获取bundlePackInfo。使用Promise异步回调。 |
+| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md) | 获取有关dispatch版本的信息。使用callback异步回调。 |
+| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md) | 获取有关dispatch版本的信息。使用Promise异步回调。 |
+| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md) | 查询指定模块是否可以被移除。使用callback异步回调。 |
+| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md) | 查询指定模块是否可以被移除。使用Promise异步回调。 |
+| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md) | 设置指定模块是否升级。使用callback异步回调。 |
+| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md) | 设置指定模块是否升级。使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 |
-| --- |
-| [BundlePackFlag](arkts-ability-freeinstall-bundlepackflag-e-sys.md) |
-| [UpgradeFlag](arkts-ability-freeinstall-upgradeflag-e-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [BundlePackFlag](arkts-ability-freeinstall-bundlepackflag-e-sys.md) | 要查询的应用包标志 |
+| [UpgradeFlag](arkts-ability-freeinstall-upgradeflag-e-sys.md) | 仅供内部系统使用标志位 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 类型（系统接口）
 
-| 名称 |
-| --- |
-| [AbilityFormInfo](arkts-ability-freeinstall-abilityforminfo-t-sys.md) |
-| [ApiVersion](arkts-ability-freeinstall-apiversion-t-sys.md) |
-| [BundleConfigInfo](arkts-ability-freeinstall-bundleconfiginfo-t-sys.md) |
-| [BundlePackInfo](arkts-ability-freeinstall-bundlepackinfo-t-sys.md) |
-| [DispatchInfo](arkts-ability-freeinstall-dispatchinfo-t-sys.md) |
-| [ExtensionAbility](arkts-ability-freeinstall-extensionability-t-sys.md) |
-| [ModuleAbilityInfo](arkts-ability-freeinstall-moduleabilityinfo-t-sys.md) |
-| [ModuleConfigInfo](arkts-ability-freeinstall-moduleconfiginfo-t-sys.md) |
-| [ModuleDistroInfo](arkts-ability-freeinstall-moduledistroinfo-t-sys.md) |
-| [PackageConfig](arkts-ability-freeinstall-packageconfig-t-sys.md) |
-| [PackageSummary](arkts-ability-freeinstall-packagesummary-t-sys.md) |
-| [Version](arkts-ability-freeinstall-version-t-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [AbilityFormInfo](arkts-ability-freeinstall-abilityforminfo-t-sys.md) | 卡片信息。 |
+| [ApiVersion](arkts-ability-freeinstall-apiversion-t-sys.md) | module的api版本。 |
+| [BundleConfigInfo](arkts-ability-freeinstall-bundleconfiginfo-t-sys.md) | 包的配置信息。 |
+| [BundlePackInfo](arkts-ability-freeinstall-bundlepackinfo-t-sys.md) | 应用包信息。 |
+| [DispatchInfo](arkts-ability-freeinstall-dispatchinfo-t-sys.md) | 免安装结构体和接口版本信息类。 |
+| [ExtensionAbility](arkts-ability-freeinstall-extensionability-t-sys.md) | extensionAbilities的配置信息。 |
+| [ModuleAbilityInfo](arkts-ability-freeinstall-moduleabilityinfo-t-sys.md) | module包含的ability组件信息。 |
+| [ModuleConfigInfo](arkts-ability-freeinstall-moduleconfiginfo-t-sys.md) | 包的module配置信息。 |
+| [ModuleDistroInfo](arkts-ability-freeinstall-moduledistroinfo-t-sys.md) | module发行版信息。 |
+| [PackageConfig](arkts-ability-freeinstall-packageconfig-t-sys.md) | pack.info的包信息。 |
+| [PackageSummary](arkts-ability-freeinstall-packagesummary-t-sys.md) | pack.info中的包摘要信息。 |
+| [Version](arkts-ability-freeinstall-version-t-sys.md) | 包的版本。 |
 <!--DelEnd-->

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { common } from 'kits/@kit.MDMKit';
+import common from '@kit.MDMKit';
 ```
 
 ## bundleName

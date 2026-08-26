@@ -29,9 +29,9 @@ Sets the execution function of the custom drop animation. This parameter is vali
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Custom drop animation in this callback.   **NOTE：** 1. This API is valid only in the **onDrop** callback.  2. Before using this API, set **useCustomDropAnimation** to **true**. Otherwise, this API does not take effect.  3. Do not implement logic unrelated to the animation in the animation callback to avoid affecting performance. |
 
 ## getData
 
@@ -51,16 +51,16 @@ Obtains drag-related data.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [UnifiedData](arkts-arkui-unifieddata-t.md) |
+| Type | Description |
+| --- | --- |
+| [UnifiedData](arkts-arkui-unifieddata-t.md) | Drag-related data. For details about the data obtaining result, see the error code description. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [190001](../errorcode-drag-event.md#190001-data-not-found) |
-| [190002](../errorcode-drag-event.md#190002-data-retrieval-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [190001](../errorcode-drag-event.md#190001-data-not-found) | Data not found. |
+| [190002](../errorcode-drag-event.md#190002-data-retrieval-error) | Data error. |
 
 ## getDisplayId
 
@@ -80,9 +80,9 @@ Obtains the ID of the screen where the current drag event occurs. This API is no
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | ID of the screen where the current drag event occurs. |
 
 ## getDisplayX
 
@@ -102,9 +102,9 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | X-coordinate of the drag point relative to the upper left corner of the screen, in vp. |
 
 ## getDisplayY
 
@@ -124,9 +124,9 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Y-coordinate of the drag point relative to the upper left corner of the screen, in vp. |
 
 ## getDragSource
 
@@ -146,9 +146,9 @@ Obtains the package name of the drag source application.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Package name of the drag source application. |
 
 ## getGlobalDisplayX
 
@@ -168,9 +168,9 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | X-coordinate of the drag point relative to the upper left corner of the global screen. |
 
 ## getGlobalDisplayY
 
@@ -190,9 +190,9 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Y-coordinate of the drag point relative to the upper left corner of the global screen. |
 
 ## getModifierKeyState
 
@@ -212,21 +212,21 @@ Obtains the pressed status of modifier keys.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| keys | Array & lt;string & gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl' \| 'Alt' \|
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keys | Array & lt;string & gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl' \| 'Alt' \| 'Shift'.   **NOTE：**This API is not supported in stylus scenarios. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the specified modifier keys are pressed. Returns **true** if the specified modifier keys are pressed; returns **false** otherwise. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## getPreviewRect
 
@@ -246,9 +246,9 @@ Obtains the position of the drag preview relative to the current window and the 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Rectangle](arkts-arkui-rectangle-i.md) |
+| Type | Description |
+| --- | --- |
+| [Rectangle](arkts-arkui-rectangle-i.md) | Position of the drag preview relative to the current window and the preview size, in vp. x and y indicate the window coordinates of the upper left corner of the preview, and width and height indicate the preview size. |
 
 ## getResult
 
@@ -268,9 +268,9 @@ Obtains the drag result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DragResult](arkts-arkui-dragresult-e.md) |
+| Type | Description |
+| --- | --- |
+| [DragResult](arkts-arkui-dragresult-e.md) | Drag result. |
 
 ## getSummary
 
@@ -290,9 +290,9 @@ Obtains a summary of drag data, including data type and size information. In a d
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Summary](arkts-arkui-summary-t.md) |
+| Type | Description |
+| --- | --- |
+| [Summary](arkts-arkui-summary-t.md) | Summary of drag data. |
 
 ## getVelocity
 
@@ -312,9 +312,9 @@ Obtains the dragging velocity along the main axis.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Dragging velocity along the main axis. The value is the arithmetic square root of the sum of the squares of the velocities along the x-axis and y-axis, in vp. |
 
 ## getVelocityX
 
@@ -334,9 +334,9 @@ Obtains the dragging velocity along the x-axis.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Dragging velocity along the x-axis. The origin of the coordinate axis is the upper left corner of the screen. The unit is vp. The velocity is positive if the movement is from left to right, and it is negative if the movement is from right to left. |
 
 ## getVelocityY
 
@@ -356,9 +356,9 @@ Obtains the dragging velocity along the y-axis.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Dragging velocity along the y-axis. The origin of the coordinate axis is the upper left corner of the screen. The unit is vp. The velocity is positive if the movement is from top to bottom, and it is negative if the movement is from bottom to top. |
 
 ## getWindowX
 
@@ -378,9 +378,9 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | X coordinate of the drag point relative to the upper left corner of the window, in vp. |
 
 ## getWindowY
 
@@ -400,9 +400,9 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Y-coordinate of the drag point relative to the upper left corner of the window, in vp. |
 
 ## getX
 
@@ -424,9 +424,9 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | X-coordinate of the drag point relative to the upper left corner of the window. |
 
 ## getY
 
@@ -448,9 +448,9 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Y-coordinate of the drag point relative to the upper left corner of the window. |
 
 ## isRemote
 
@@ -470,9 +470,9 @@ Checks whether the drag operation is cross-device.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the drag operation is cross-device. Returns **true** for cross-device drag operations; returns **false** otherwise. |
 
 ## setData
 
@@ -492,9 +492,9 @@ Sets drag-related data in **DragEvent**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| unifiedData | [UnifiedData](arkts-arkui-unifieddata-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| unifiedData | [UnifiedData](arkts-arkui-unifieddata-t.md) | Yes | Drag-related data. |
 
 ## setDataLoadParams
 
@@ -514,9 +514,9 @@ Sets the parameters for deferred data loading from the drag source. This API pro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [dataLoadParams](../arkts-apis/arkts-arkui-dragcontroller-draginfo-i.md) | [DataLoadParams](arkts-arkui-dataloadparams-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataLoadParams | [DataLoadParams](arkts-arkui-dataloadparams-t.md) | Yes | Data loading parameters used during a drop operation. |
 
 ## setResult
 
@@ -536,9 +536,9 @@ Sets the drag result in **DragEvent**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dragResult | [DragResult](arkts-arkui-dragresult-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dragResult | [DragResult](arkts-arkui-dragresult-e.md) | Yes | Drag result. |
 
 ## startDataLoading
 
@@ -558,22 +558,22 @@ Asynchronously obtains drag data and notifies you of the current data synchroniz
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes | Parameters for obtaining drag data, including the target path, file conflict options, and progress bar type. You can use the [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading) API to cancel data loading during data transmission. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Identifier for the drag data. It is used to distinguish between different drag operations. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 

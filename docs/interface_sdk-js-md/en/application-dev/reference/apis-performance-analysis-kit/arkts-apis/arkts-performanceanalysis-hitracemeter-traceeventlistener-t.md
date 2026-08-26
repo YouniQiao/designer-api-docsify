@@ -14,6 +14,6 @@ Defines a callback to listen for whether the trace capture is enabled.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| traceStatus | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| traceStatus | boolean | Yes | Whether the trace capture is enabled for the current application. The value **true** indicates that the trace capture is enabled, and **false** indicates the opposite. |

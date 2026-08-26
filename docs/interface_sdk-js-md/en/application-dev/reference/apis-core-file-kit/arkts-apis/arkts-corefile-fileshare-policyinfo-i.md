@@ -9,7 +9,7 @@ Policy information to manager permissions on a URI.@interface PolicyInfo
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from 'kits/@kit.CoreFileKit';
+import fileShare from '@kit.CoreFileKit';
 ```
 
 ## operationMode

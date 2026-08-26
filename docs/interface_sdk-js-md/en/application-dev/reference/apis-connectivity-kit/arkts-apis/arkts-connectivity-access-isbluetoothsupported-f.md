@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isBluetoothSupported
@@ -22,12 +21,23 @@ Check whether Bluetooth is available.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 2900099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 2900099 | Operation failed. |
+
+**Examples**
+
+```TypeScript
+try {
+    let isSupported: boolean = access.isBluetoothSupported();
+    console.info("isSupported: " + isSupported);
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```

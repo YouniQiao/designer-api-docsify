@@ -16,12 +16,31 @@ Get want parameters callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [formInfo](arkts-app-form-forminfo.md) | Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formInfo | Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt; | Yes | The list of the form information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;Record & lt;string, Object & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;Record & lt;string, Object & gt; & gt; | The want parameters list of the forms. |
+
+**Examples**
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+let getWantParamsCallback: formInfo.GetWantParamsCallback =
+  (formInfo: Array<formInfo.FormInfo>): Array<Record<string, Object>> => {
+    console.info('get want params callback, form count: ' + formInfo.length);
+    let wantParamsList: Array<Record<string, Object>> = [];
+    for (let i = 0; i < formInfo.length; i++) {
+      let params: Record<string, Object> = {
+        'key': 'value'
+      };
+      wantParamsList.push(params);
+    }
+    return wantParamsList;
+  };
+```

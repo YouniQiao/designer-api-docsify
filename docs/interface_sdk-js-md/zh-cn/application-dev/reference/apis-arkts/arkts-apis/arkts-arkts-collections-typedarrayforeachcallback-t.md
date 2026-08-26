@@ -15,8 +15,8 @@ ArkTS TypedArray遍历函数类型，被TypedArray类的'forEach'接口使用。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | ElementType | 是 |
-| index | number | 是 |
-| array | ArrayType | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | ElementType | 是 | 当前遍历的ArkTS TypedArray元素。 |
+| index | number | 是 | 当前遍历的ArkTS TypedArray元素索引，从0开始。 |
+| array | ArrayType | 是 | 当前遍历的ArkTS TypedArray实例。 |

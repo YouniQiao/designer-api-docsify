@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## hasVoiceCapability
@@ -20,6 +19,13 @@ function hasVoiceCapability(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示设备具备语音通话能力，返回false表示设备不具备语音通话能力。 |
+
+**示例**
+
+```TypeScript
+let result: boolean = call.hasVoiceCapability();
+console.info(`hasVoiceCapability: ${JSON.stringify(result)}`);
+```

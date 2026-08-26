@@ -14,12 +14,12 @@ type QueryCompilationByKeywordEvent = (keyword: string) => Promise<Compilation[]
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| keyword | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keyword | string | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]&gt; | Promise对象，返回与关键字相关的合集数组。 |

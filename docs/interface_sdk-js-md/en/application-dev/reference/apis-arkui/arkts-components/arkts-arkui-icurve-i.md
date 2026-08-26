@@ -29,12 +29,12 @@ Calculates the interpolated value along the curve at the specified normalized ti
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fraction | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fraction | number | Yes | Current normalized time.Value range: [0, 1].   **NOTE：**A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Curve interpolation corresponding to the normalized time point. |

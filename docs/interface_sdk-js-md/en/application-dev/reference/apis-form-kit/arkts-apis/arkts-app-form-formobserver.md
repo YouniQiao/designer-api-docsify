@@ -11,7 +11,7 @@ Interface of formObserver.@namespace formObserver
 ## Modules to Import
 
 ```TypeScript
-import { formObserver } from 'kits/@kit.FormKit';
+import formObserver from '@kit.FormKit';
 ```
 
 ## Summary
@@ -19,37 +19,37 @@ import { formObserver } from 'kits/@kit.FormKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md) |
-| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md) |
-| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md) |
-| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md) |
-| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md) |
-| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md) |
-| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md) |
-| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md) |
-| [getRunningFormInfosByFilter](arkts-form-formobserver-getrunningforminfosbyfilter-f-sys.md) |
-| [getRunningFormInfosByFilter](arkts-form-formobserver-getrunningforminfosbyfilter-f-sys.md) |
-| off |
-| off |
-| off |
-| off |
-| off |
-| off |
-| off |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
+| Name | Description |
+| --- | --- |
+| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md) | Obtains the RunningFormInfo object by formId. |
+| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md) | Obtains the RunningFormInfo object by formId. |
+| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md) | Obtains the RunningFormInfo object by formId. |
+| [getRunningFormInfoById](arkts-form-formobserver-getrunningforminfobyid-f-sys.md) | Obtains the RunningFormInfo object by formId. |
+| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md) | Obtains the RunningFormInfo objects provided by a specific card host application on the device. |
+| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md) | Obtains the RunningFormInfo objects provided by a specific card host application on the device. |
+| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md) | Obtains the RunningFormInfo objects provided by a specific card host application on the device. |
+| [getRunningFormInfos](arkts-form-formobserver-getrunningforminfos-f-sys.md) | Obtains the RunningFormInfo objects provided by a specific card host application on the device. |
+| [getRunningFormInfosByFilter](arkts-form-formobserver-getrunningforminfosbyfilter-f-sys.md) | Obtains the RunningFormInfo objects by FormProviderFilter. |
+| [getRunningFormInfosByFilter](arkts-form-formobserver-getrunningforminfosbyfilter-f-sys.md) | Obtains the RunningFormInfo objects by FormProviderFilter. |
+| off | Cancels listening to the event of add form. & lt;p & gt;You can use this method to cancel listening to the event of add form. & lt;/p & gt; |
+| off | Cancels listening to the event of remove form. & lt;p & gt;You can use this method to cancel listening to the event of remove form. & lt;/p & gt; |
+| off | Cancels listening to the event of notifyVisible type change. & lt;p & gt;You can use this method to cancel listening to the event of notifyVisible type change. & lt;/p & gt; |
+| off | Cancels listening to the event of notifyInvisible type change. & lt;p & gt;You can use this method to cancel listening to the event of notifyInvisible type change. & lt;/p & gt; |
+| off | Unregister form router event Listening. |
+| off | Unregister form message event Listening. |
+| off | Unregister form call event Listening. |
+| on | Listens to the event of add form. & lt;p & gt;You can use this method to listen to the event of add form. & lt;/p & gt; |
+| on | Listens to the event of add form. & lt;p & gt;You can use this method to listen to the event of add form for a particular card host. & lt;/p & gt; |
+| on | Listens to the event of remove form. & lt;p & gt;You can use this method to listen to the event of remove form. & lt;/p & gt; |
+| on | Listens to the event of remove form. & lt;p & gt;You can use this method to listen to the event of remove form for a particular card host. & lt;/p & gt; |
+| on | Listens to the event of notifyVisible type change. & lt;p & gt;You can use this method to listen to the event of notifyVisible type change. & lt;/p & gt; |
+| on | Listens to the event of notifyVisible type change. & lt;p & gt;You can use this method to listen to the event of notifyVisible type change for a particular card host. & lt;/p & gt; |
+| on | Listens to the event of notifyInvisible type change. & lt;p & gt;You can use this method to listen to the event of notifyInvisible type change. & lt;/p & gt; |
+| on | Listens to the event of notifyInvisible type change. & lt;p & gt;You can use this method to listen to the event of notifyInvisible type change for a particular card host. & lt;/p & gt; |
+| on | Router event listening in registered form. & lt;p & gt;This interface requires permission to receive callback. & lt;/p & gt; |
+| on | Router event listening in registered form. & lt;p & gt;This interface requires permission to receive callback. & lt;/p & gt; |
+| on | Message event listening in registered form. & lt;p & gt;This interface requires permission to receive callback. & lt;/p & gt; |
+| on | Message event listening in registered form. & lt;p & gt;This interface requires permission to receive callback. & lt;/p & gt; |
+| on | Call event listening in registered form. & lt;p & gt;This interface requires permission to receive callback. & lt;/p & gt; |
+| on | Call event listening in registered form. & lt;p & gt;This interface requires permission to receive callback. & lt;/p & gt; |
 <!--DelEnd-->

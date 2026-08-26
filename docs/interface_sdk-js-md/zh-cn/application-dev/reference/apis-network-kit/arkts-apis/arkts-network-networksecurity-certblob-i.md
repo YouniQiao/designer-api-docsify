@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { networkSecurity } from 'kits/@kit.NetworkKit';
 ```
 
 ## data

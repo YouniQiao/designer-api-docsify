@@ -31,9 +31,9 @@ Sets the alignment mode of grid items in the grid. For details about the usage, 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| alignment | [Optional](arkts-arkui-optional-t.md)&lt;[GridItemAlignment](arkts-arkui-griditemalignment-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| alignment | [Optional](arkts-arkui-optional-t.md)&lt;[GridItemAlignment](arkts-arkui-griditemalignment-e.md)&gt; | Yes | Alignment mode of grid items in the grid.Default value: **GridItemAlignment.DEFAULT |
 
 ## cachedCount
 
@@ -52,9 +52,9 @@ Sets the number of grid items to be cached (preloaded). It works only in [LazyFo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Number of grid items to be cached (preloaded).Default value: the number of rows visible on the screen for vertical scrolling, or the number of columns visible on the screen for horizontal scrolling. The maximum value is 16.Value range: 0, +∞).Values less than 0 are treated as **1**.When **value** is updated using a state variable, the **Grid** component does not trigger a layout update. The number of cached nodes is updated only during the next layout. |
 
 ## cachedCount
 
@@ -74,10 +74,10 @@ Sets the number of grid items to be cached (preloaded) and specifies whether to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| count | number | Yes |
-| show | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| count | number | Yes | Number of grid items to be cached (preloaded).Default value: the number of rows visible on the screen for vertical scrolling, or the number of columns visible on the screen for horizontal scrolling. The maximum value is 16.Value range: [0, +∞).Values less than 0 are treated as **1**. When the count value is updated using the state variable, the **Grid** component does not trigger a layout update. The number of cached nodes is updated only during the next layout. |
+| show | boolean | Yes | Whether to display the preloaded nodes. If this parameter is set to **true**, the preloaded **GridItem** is displayed. If this parameter is set to **false**, the preloaded **GridItem** is not displayed.Default value: **false |
 
 ## cellLength
 
@@ -95,9 +95,9 @@ Sets the height per row or width per column.When **layoutDirection** is **Row** 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Height per row or width per column.Default value: size of the first element Unit: vp Value range: (0, +∞). If the value is less than or equal to 0, the default value is used. |
 
 ## columnsGap
 
@@ -115,9 +115,9 @@ Sets the gap between columns. A value less than 0 evaluates to the default value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Gap between columns.Default value: **0**Value range: [0, +∞). |
 
 ## columnsTemplate
 
@@ -139,9 +139,9 @@ This parameter specifies the number of columns in the current grid layout.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes |  |
 
 ## columnsTemplate
 
@@ -161,9 +161,9 @@ Number of columns in the current grid layout. If this attribute is not set, one 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string \| [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string \| [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | Yes | Number of columns in the current grid layout. |
 
 ## edgeEffect
 
@@ -183,10 +183,10 @@ Sets the effect used when the scroll boundary is reached.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.Default value: **EdgeEffect.None |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value **{ alwaysEnabled: true }** means to enable the scroll effect, and **{ alwaysEnabled: false }** means the opposite.Default value: **{ alwaysEnabled: false }<br>**Since:** 11 |
 
 ## editMode
 
@@ -204,9 +204,9 @@ Sets whether to enable edit mode. In edit mode, the user can drag the grid items
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable edit mode. If this parameter is set to **true**, the **Grid** component is in edit mode. If this parameter is set to **false**, the **Grid** component is not in edit mode.Default value: **false |
 
 ## editModeOptions
 
@@ -226,9 +226,9 @@ Sets the options of the edit mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | No | Edit mode options. |
 
 ## enableEditMode
 
@@ -248,9 +248,9 @@ Sets whether to enable the edit mode for the **Grid** component. After the edit 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean \| undefined | Yes | Whether to enable the edit mode. **true** means to enable the edit mode and swiping to select multiple items is supported; **false** or **undefined** means to disable the edit mode and swiping to select multiple items is not supported. |
 
 ## enableScrollInteraction
 
@@ -260,7 +260,8 @@ enableScrollInteraction(value: boolean)
 
 Sets whether to support the scrolling gesture.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The component cannot be scrolled through mouse press-and-drag operations.
 
 **Since:** 10
@@ -273,9 +274,9 @@ Sets whether to support the scrolling gesture.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).Default value: **true |
 
 ## focusWrapMode
 
@@ -295,9 +296,9 @@ Sets the focus wrap mode for cross-axis arrow keys.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | Yes | Focus wrap mode for cross-axis arrow keys.Default value: **FocusWrapMode.DEFAULT**   **NOTE：**Abnormal values are treated as the default value, meaning that cross- axis arrow keys cannot wrap. |
 
 ## friction
 
@@ -317,9 +318,9 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Friction coefficient.Default value: **0.9** for wearable devices and **0.6** for non-wearable devices Since API version 11, the default value for non-wearable devices is **0.7**.Since API version 12, the default value for non-wearable devices is **0.75**.Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
 
 ## layoutDirection
 
@@ -337,9 +338,9 @@ Sets the main axis layout direction of the grid.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [GridDirection](arkts-arkui-griddirection-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [GridDirection](arkts-arkui-griddirection-e.md) | Yes | Main axis layout direction of the grid.Default value: **GridDirection.Row |
 
 ## maxCount
 
@@ -357,9 +358,9 @@ Sets the maximum number of rows or columns that can be displayed. A value less t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Maximum number of rows or columns that can be displayed.Default value: **Infinity |
 
 ## minCount
 
@@ -377,9 +378,9 @@ Sets the minimum number of rows or columns that can be displayed. A value less t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Minimum number of rows or columns that can be displayed.Default value: **1 |
 
 ## multiSelectable
 
@@ -397,9 +398,9 @@ Sets whether to enable multiselect. After multiselect is enabled, you can use **
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable multiselect.Default value: **false**   **false**: Multiselect is disabled. **true**: Multiselect is enabled. |
 
 ## nestedScroll
 
@@ -419,9 +420,9 @@ Sets the nested scrolling options. Sets the nested scrolling modes for both forw
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | Nested scrolling options. |
 
 ## onEditModeChange
 
@@ -441,9 +442,9 @@ Triggered when the editing mode status changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback & lt;boolean & gt; \ | undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback & lt;boolean & gt; \ | undefined | Yes | Callback triggered when editing mode status changes. Passing undefined will unregister the callback. |
 
 ## onItemDragEnter
 
@@ -461,9 +462,9 @@ Triggered when the dragged item enters the drop target of the grid.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: ItemDragInfo) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: ItemDragInfo) = & gt; void | Yes | Information about the drag point. |
 
 ## onItemDragLeave
 
@@ -481,9 +482,9 @@ After binding, a callback is triggered when the component is dragged out of the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: ItemDragInfo, itemIndex: number) = & gt; void | Yes |  |
 
 ## onItemDragMove
 
@@ -501,9 +502,9 @@ After binding, a callback is triggered when the drag moves within the range of a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number) = & gt; void | Yes |  |
 
 ## onItemDragStart
 
@@ -521,9 +522,9 @@ Triggered when a grid item starts to be dragged.This event is triggered when the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | Yes | Callback triggered when the dragging of a grid element starts.In API version 22 and earlier versions, the parameter type is **(event: ItemDragInfo, itemIndex: number) = & gt; (() = & gt; any) \ |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | Yes | Callback triggered when the dragging of a grid element starts.In API version 22 and earlier versions, the parameter type is **(event: ItemDragInfo, itemIndex: number) = & gt; (() = & gt; any) \ | void**. For details about the **event** and **itemIndex** parameters, see [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md).<br>**Since:** 23 |
 
 ## onItemDrop
 
@@ -543,9 +544,9 @@ The component bound to this event can be used as the drag release target. This c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) = & gt; void | Yes |  |
 
 ## onReachEnd
 
@@ -565,9 +566,9 @@ Triggered when the grid reaches the end position. This callback is triggered whe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback triggered when the grid reaches the end position. |
 
 ## onReachStart
 
@@ -587,9 +588,9 @@ Triggered when the grid reaches the start position.This event is triggered once 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback triggered when the grid reaches the start position. |
 
 ## onScroll
 
@@ -613,9 +614,9 @@ Called When sliding the grid.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (scrollOffset: number, scrollState: ScrollState) = & gt; void | Yes | callback of grid scroll, scrollOffset: Offset relative to the previous frame. The offset is positive when the **Grid** component is scrolled up and negative when it is scrolled down. Unit: vp scrollState: Current scroll state. |
 
 ## onScrollBarUpdate
 
@@ -635,9 +636,9 @@ Triggered at the end of each frame layout in the grid. You can use the callback 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (index: number, offset: number) = & gt; ComputedBarAttribute | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (index: number, offset: number) = & gt; ComputedBarAttribute | Yes | callback of grid scroll, index: Index of the first item of the grid. offset: Offset of the displayed first item relative to the start position of the grid, in vp. return ComputedBarAttribute to update scrollbar position and height. |
 
 ## onScrollFrameBegin
 
@@ -664,9 +665,9 @@ This event is not triggered in the following scenarios:
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Yes | Callback triggered when each frame scrolling starts.<br>**Since:** 20 |
 
 ## onScrollIndex
 
@@ -684,9 +685,9 @@ Called when the first or last item displayed in the grid changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (first: number, last: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (first: number, last: number) = & gt; void | Yes | of grid scroll, first is the index of the first item displayed in the grid, last is the index of the last item displayed in the grid. |
 
 ## onScrollStart
 
@@ -706,9 +707,9 @@ Triggered when the grid starts scrolling initiated by the user's finger dragging
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback invoked when the grid starts scrolling. |
 
 ## onScrollStop
 
@@ -728,9 +729,9 @@ Triggered when the grid stops scrolling after the user's finger leaves the scree
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback when the grid stops scrolling. |
 
 ## rowsGap
 
@@ -748,9 +749,9 @@ Sets the gap between rows. A value less than 0 evaluates to the default value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Gap between rows.Default value: **0**Value range: [0, +∞). |
 
 ## rowsTemplate
 
@@ -772,9 +773,9 @@ Lets you set the number of rows in the current grid layout,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes |  |
 
 ## scrollBar
 
@@ -792,9 +793,9 @@ Sets the scrollbar state.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.Default value: **BarState.Auto**   **NOTE：**In API version 9 and earlier versions, the default value is **BarState.Off**. Since API version 10, the default value is **BarState.Auto**. |
 
 ## scrollBarColor
 
@@ -812,9 +813,9 @@ Sets the scrollbar color.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Color \| number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Color \| number \| string | Yes | Scrollbar color.Default value: **'#182431'** (40% opacity)A number value indicates a HEX color in RGB or ARGB format, for example, **0xffffff**.A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
 
 ## scrollBarColor
 
@@ -834,9 +835,9 @@ Sets the scrollbar color. Compared with [scrollBarColor](#scrollbarcolor), the p
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | Color \| number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | Color \| number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Scrollbar color.Default value: **'#182431'** (40% opacity)A number value indicates a HEX color in RGB or ARGB format, for example, **0xffffff**. A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
 
 ## scrollBarWidth
 
@@ -854,9 +855,9 @@ Sets the scrollbar width. This attribute cannot be set in percentage. After the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string | Yes | Scrollbar width.Default value: **4**Unit: vp If this parameter is set to a value less than or equal to 0, the default value is used. The value **0** means not to show the scrollbar. |
 
 ## scrollBarWidth
 
@@ -876,9 +877,9 @@ Sets the scrollbar width. This attribute cannot be set in percentage. After the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Scrollbar width.Unit: vp The value range is [0, +∞). If this parameter is set to a value less than 0, **4vp** is used. The value **0** means not to show the scrollbar. |
 
 ## supportAnimation
 
@@ -896,9 +897,9 @@ Sets whether to enable animation. Currently, the grid item drag animation is sup
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable animation. If this parameter is set to **true**, the drag animation of **GridItem** is supported. If this parameter is set to **false**, the drag animation of **GridItem** is not supported.Default value: **false |
 
 ## supportEmptyBranchInLazyLoading
 
@@ -918,9 +919,9 @@ Sets whether the current **Grid** component supports the use of the if/else rend
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| supported | boolean \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| supported | boolean \| undefined | Yes | Whether the current **Grid** component supports the use of the [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) rendering syntax in [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) to generate an empty branch node that contains no child component.   **true**: yes; **false**: no If the value is **undefined**, it is processed as **false**. |
 
 ## syncLoad
 
@@ -940,6 +941,6 @@ Sets whether to synchronously load all child components in the grid.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to synchronously load all child components in the grid.    **true**: yes; **false**: no Default value: **true**   **NOTE：**When this parameter is set to **false**, in the first display or **scrollToIndex** jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the grid are delayed to the next frame for layout. |

@@ -14,6 +14,6 @@ type OnNavigationEntryCommittedCallback = (loadCommittedDetails: LoadCommittedDe
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| loadCommittedDetails | [LoadCommittedDetails](arkts-arkweb-loadcommitteddetails-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| loadCommittedDetails | [LoadCommittedDetails](arkts-arkweb-loadcommitteddetails-i.md) | 是 | 提供已提交跳转的网页的详细信息。 |

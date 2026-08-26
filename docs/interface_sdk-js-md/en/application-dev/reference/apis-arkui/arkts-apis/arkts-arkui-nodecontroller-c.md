@@ -2,7 +2,8 @@
 
 The **NodeController** module provides APIs for managing custom nodes, such as creating, showing, and updating custom nodes, and APIs for mounting custom nodes to a NodeContainer component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - NodeController objects do not support JSON serialization.
 
 **Since:** 11
@@ -17,7 +18,8 @@ aboutToAppear?(): void
 
 Called after the NodeContainer component bound to this **NodeController** instance is attached and about to appear.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about the callback timing, see onAppear.
 
 **Since:** 11
@@ -36,7 +38,8 @@ aboutToDisappear?(): void
 
 Called when the NodeContainer component bound to this **NodeController** instance is destroyed.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about the callback timing, see [onDisAppear](../arkts-components/arkts-arkui-commonmethod-c.md#ondisappear).
 
 **Since:** 11
@@ -65,9 +68,9 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | Size | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | Size | Yes | Width and height of the component, in vp. |
 
 ## makeNode
 
@@ -77,7 +80,8 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 
 Called when the NodeContainer component bound to this **NodeController** instance is created. This callback returns a node, which will be mounted to the **NodeContainer**.This callback can also be invoked through the **rebuild()** method of **NodeController**.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > NodeContainer does not support cross-instance reuse. If
 > NodeContainer is reused across instances and
 > [NodeController](#nodecontroller) of NodeContainer
@@ -97,15 +101,15 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context of the bound NodeContainer component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null |
+| Type | Description |
+| --- | --- |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null | FrameNode** object, which will be mounted to the placeholder node of the [NodeContainer]{ |
 
 ## onAttach
 
@@ -115,7 +119,8 @@ onAttach?(): void
 
 Called when the NodeContainer component bound to this **NodeController** instance is attached to the main node tree.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about the callback timing, see onAttach.
 
 **Since:** 18
@@ -144,9 +149,9 @@ Called after this **NodeController** instance is bound to a NodeContainer compon
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| containerId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| containerId | number | Yes | ID of the NodeContainer component to which the **NodeController** instance is bound. |
 
 ## onDetach
 
@@ -156,7 +161,8 @@ onDetach?(): void
 
 Called when the NodeContainer component bound to this **NodeController** instance is detached from the main node tree.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about the callback timing, see onDetach.
 
 **Since:** 18
@@ -185,9 +191,9 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | Yes | Touch event. |
 
 ## onUnbind
 
@@ -207,9 +213,9 @@ Called after this **NodeController** instance is unbound from a NodeContainer co
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| containerId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| containerId | number | Yes | ID of the NodeContainer component from which the **NodeController** instance is unbound. |
 
 ## onWillBind
 
@@ -229,9 +235,9 @@ Called when this **NodeController** instance is about to be bound to a NodeConta
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| containerId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| containerId | number | Yes | ID of the NodeContainer component to which the **NodeController** instance is about to be bound. |
 
 ## onWillUnbind
 
@@ -251,9 +257,9 @@ Called when this **NodeController** instance is about to be unbound from a NodeC
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| containerId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| containerId | number | Yes | ID of the NodeContainer component from which the **NodeController** instance is about to be unbound. |
 
 ## rebuild
 
@@ -263,10 +269,12 @@ rebuild(): void
 
 Instructs the NodeContainer component bound to this **NodeController** instance to call the [makeNode](#makenode) API again to change child nodes.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Since the **rebuild** API is actively called by the application and is tied to the UI, you need to ensure that
 > the UI context is valid at the time of the call, that is, it must be consistent with the UI context of the bound
-> NodeContainer.&gt;
+> NodeContainer.
+> 
 > In cases where the [UI context is unclear](../../../ui/arkts-global-interface.md#ambiguous-ui-context), for
 > example, during event callbacks, you can use the
 > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) method of

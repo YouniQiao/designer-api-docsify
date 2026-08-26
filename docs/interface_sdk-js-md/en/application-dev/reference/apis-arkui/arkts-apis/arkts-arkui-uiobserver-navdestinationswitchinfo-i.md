@@ -9,7 +9,7 @@ Provides the information about page switching of the **Navigation** component.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import uiObserver from '@kit.ArkUI';
 ```
 
 ## context

@@ -4,9 +4,11 @@ Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher
 
 It is applicable to the CCM and GCM modes of AES. It is applicable to the GCM mode of SM4. It is applicable to ChaCha20-Poly1305.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When **AeadParamsSpec** is used for encryption in AES-CCM mode:
-> - If the tag length is specified during encryption, the same length must be passed during decryption.&gt;
+> - If the tag length is specified during encryption, the same length must be passed during decryption.
+> 
 > - In CCM mode, only one of [update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update) and
 > [doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) can be called for encryption or decryption, and each method can
 > be called only once.
@@ -20,7 +22,7 @@ It is applicable to the CCM and GCM modes of AES. It is applicable to the GCM mo
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## authenticatedData

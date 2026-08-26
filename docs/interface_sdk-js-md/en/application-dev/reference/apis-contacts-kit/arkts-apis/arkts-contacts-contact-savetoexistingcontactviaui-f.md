@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## saveToExistingContactViaUI
@@ -22,24 +22,49 @@ Saves the information to an existing contact through UI interaction.. This API u
 
 **Parameters:**
 
-| [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
-| [contact](arkts-contact.md) | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Indicates the context of application or capability. |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the result, which is the contact ID. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
-| [16700101](../errorcode-contacts.md#16700101-database-query-failed) |
-| [16700102](../errorcode-contacts.md#16700102-database-data-addition-deletion-or-modification-failed) |
-| [16700103](../errorcode-contacts.md#16700103-operation-canceled) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found. |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| [16700101](../errorcode-contacts.md#16700101-database-query-failed) | Failed to get value from contacts data. |
+| [16700102](../errorcode-contacts.md#16700102-database-data-addition-deletion-or-modification-failed) | Failed to set value to contacts data. |
+| [16700103](../errorcode-contacts.md#16700103-operation-canceled) | User cancel. |
+
+**Examples**
+
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { contact } from '@kit.ContactsKit';
+
+// Obtain the context in the component.
+let contactInfo: contact.Contact = {
+  id: 1,
+  name: {
+    fullName: 'xxx'
+  },
+  phoneNumbers: [{
+    phoneNumber: '138xxxxxx'
+  }]
+}
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let promise = contact.saveToExistingContactViaUI(context, contactInfo);
+promise.then((data) => {
+    console.info(`Succeeded in save to existing Contact via UI.data->${JSON.stringify(data)}`);
+  });
+```

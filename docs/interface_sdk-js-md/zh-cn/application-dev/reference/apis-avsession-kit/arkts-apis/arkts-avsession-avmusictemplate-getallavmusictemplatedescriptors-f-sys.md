@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import avMusicTemplate from '@kit.AVSessionKit';
 ```
 
 ## getAllAVMusicTemplateDescriptors
@@ -26,20 +26,20 @@ function getAllAVMusicTemplateDescriptors(userId?: number): AVMusicTemplateDescr
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| userId | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| userId | number | 否 | 用户ID。以用户传递为准，可为空。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AVMusicTemplateDescriptor](arkts-avsession-avmusictemplate-avmusictemplatedescriptor-i-sys.md)[] |
+| 类型 | 说明 |
+| --- | --- |
+| [AVMusicTemplateDescriptor](arkts-avsession-avmusictemplate-avmusictemplatedescriptor-i-sys.md)[] | 音频模板描述的集合。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verify failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function getAllAVMusicTemplateDescriptors can not work correctly due to limited device capabilities. |

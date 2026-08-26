@@ -1,7 +1,7 @@
 # SliderBlockType
 
 Enumerates the types of the slider in the block direction.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Description | | ------- | -- | ---------------------- | | [DEFAULT](#default) | 0 | Round slider. | | [IMAGE](#image) | 1 | Slider with an image background. | | [SHAPE](#shape) | 2 |
+| Name | Value| Description | | ------- | -- | ---------------------- | | DEFAULT | 0 | Round slider. | | IMAGE | 1 | Slider with an image background. | | SHAPE | 2 | Slider in a custom shape.|
 
 **Since:** 10
 

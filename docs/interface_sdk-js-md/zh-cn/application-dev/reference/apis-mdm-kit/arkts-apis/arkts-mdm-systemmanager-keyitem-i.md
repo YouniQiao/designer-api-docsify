@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from 'kits/@kit.MDMKit';
+import systemManager from '@kit.MDMKit';
 ```
 
 ## downTime

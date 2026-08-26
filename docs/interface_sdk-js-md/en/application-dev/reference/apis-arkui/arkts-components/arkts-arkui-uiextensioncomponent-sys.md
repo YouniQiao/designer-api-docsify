@@ -32,25 +32,25 @@ Construct the UIExtensionComponent.Called when the UIExtensionComponent is used.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | import('../api/@ohos.app.ability.Want').default | Yes |
-| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | import('../api/@ohos.app.ability.Want').default | Yes | Ability to start. |
+| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | No | Construction parameters. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md) | Indicates the information when the provider of the embedded UI is terminated. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |

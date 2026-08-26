@@ -1,7 +1,7 @@
 # PanelFlag
 
 Enumerates the state types of the input method panel.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Description | | ------------ | -- | ------------------ | | [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) | 0 | Fixed state type.| | [FLG_FLOATING](arkts-ime-inputmethodengine-panelflag-e.md) | 1 | Floating state type.| | FLAG_CANDIDATE & lt;sup & gt;15+ & lt;/sup & gt; | 2 |
+ | Name | Value| Description | | ------------ | -- | ------------------ | | FLG_FIXED | 0 | Fixed state type.| | FLG_FLOATING | 1 | Floating state type.| | FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt; | 2 | Candidate state type.|
 
 **Since:** 10
 

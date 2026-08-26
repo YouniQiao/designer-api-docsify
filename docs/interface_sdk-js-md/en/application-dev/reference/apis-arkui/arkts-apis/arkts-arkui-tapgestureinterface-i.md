@@ -2,7 +2,8 @@
 
 TapGesture is used to trigger a tap gesture with one, two, or more taps.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When both number-tap and single-tap gestures are bound to a component with the number-tap gesture bound first, the
 > single-tap gesture will have a 300 ms delay.
 
@@ -33,15 +34,15 @@ Creates a tap gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-ges
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | No | Parameters for the tap gesture.<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |  |
 
 ## onAction
 
@@ -59,12 +60,12 @@ Triggered when the tap gesture is recognized.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | Yes | Callback for the tap event. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |  |

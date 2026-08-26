@@ -13,7 +13,9 @@ USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md)中可以�
 ## 导入模块
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import usb from '@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKitManager';
+import serialManager from '@kit.BasicServicesKitManager.serial';
 ```
 
 ## attributes

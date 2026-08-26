@@ -9,7 +9,6 @@ Defines information about entries in the IP neighbor table.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## iface

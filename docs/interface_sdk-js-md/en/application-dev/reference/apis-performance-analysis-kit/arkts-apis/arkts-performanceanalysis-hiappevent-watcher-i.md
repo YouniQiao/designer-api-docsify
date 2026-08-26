@@ -2,7 +2,8 @@
 
 Defines parameters for a **Watcher** object. This API is used to configure and manage event watchers to subscribe to and process specified events.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You are not advised to call [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md) in the callback. Once a watcher is
 > removed, the subscription callback of the watcher becomes invalid, and the callback may not be triggered when an
 > event occurs.
@@ -14,7 +15,6 @@ Defines parameters for a **Watcher** object. This API is used to configure and m
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## onReceive
@@ -33,10 +33,10 @@ Real-time subscription callback. Only this callback function is triggered if it 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| domain | string | Yes |
-| appEventGroups | Array&lt;[AppEventGroup](arkts-performanceanalysis-hiappevent-appeventgroup-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| domain | string | Yes |  |
+| appEventGroups | Array&lt;[AppEventGroup](arkts-performanceanalysis-hiappevent-appeventgroup-i.md)&gt; | Yes |  |
 
 ## onTrigger
 
@@ -57,11 +57,11 @@ Subscription callback. This parameter takes effect only when it is passed togeth
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| curRow | number | Yes |
-| curSize | number | Yes |
-| holder | [AppEventPackageHolder](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| curRow | number | Yes |  |
+| curSize | number | Yes |  |
+| holder | [AppEventPackageHolder](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md) | Yes |  |
 
 ## appEventFilters
 

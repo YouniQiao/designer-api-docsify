@@ -11,7 +11,7 @@ HDR-adaptive darken blender, used to add a darken effect to a specified componen
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import uiEffect from '@kit.ArkGraphics2D';
 ```
 
 ## grayscaleFactor
@@ -51,3 +51,12 @@ HDR brightness ratio. The value range is [1.0, the maximum brightness ratio supp
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+// Create a Filter instance
+let filter: uiEffect.Filter = uiEffect.createFilter();
+// Set the HDR brightness ratio to 2.0
+filter.hdrBrightnessRatio(2.0);
+```

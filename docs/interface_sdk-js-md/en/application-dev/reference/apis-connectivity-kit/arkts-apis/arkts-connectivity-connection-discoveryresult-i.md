@@ -9,7 +9,6 @@ Describes the contents of the discovery results
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deviceClass

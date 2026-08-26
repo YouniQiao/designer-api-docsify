@@ -9,7 +9,6 @@ Defines information about the call status.
 ## Modules to Import
 
 ```TypeScript
-import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## number

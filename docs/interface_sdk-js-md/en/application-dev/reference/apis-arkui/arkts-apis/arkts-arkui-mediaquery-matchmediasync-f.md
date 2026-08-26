@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from 'kits/@kit.ArkUI';
+import mediaquery from '@kit.ArkUI';
 ```
 
 ## matchMediaSync
@@ -14,12 +14,14 @@ function matchMediaSync(condition: string): MediaQueryListener
 
 Sets the media query condition. This API returns the corresponding media query listener.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This API is supported since API version 7 and deprecated since API version 18. You are advised to use
 > [matchMediaSync](arkts-arkui-arkui-uicontext-mediaquery-c.md#matchmediasync) instead. Before calling this API, you
 > need to obtain the [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) object using the
 > [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery) method in
-> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md).&gt;
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md).
+> 
 > - Since API version 10, you can use the
 > [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery) API in
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the
@@ -39,12 +41,20 @@ Sets the media query condition. This API returns the corresponding media query l
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| condition | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| condition | string | Yes | Media query condition. For details, see [Syntax](../../../ui/arkts-layout-development-media-query.md#syntax). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) |
+| Type | Description |
+| --- | --- |
+| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) | Media query listener, which is used to register or deregister the listening callback. |
+
+**Examples**
+
+```TypeScript
+import { mediaquery } from '@kit.ArkUI';
+
+let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // Listen for landscape events.
+```

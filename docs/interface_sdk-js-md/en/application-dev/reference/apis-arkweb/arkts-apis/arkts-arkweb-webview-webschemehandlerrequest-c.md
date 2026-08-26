@@ -9,7 +9,6 @@ The WebSchemeHandlerRequest class defines a wrapper object for resource requests
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getFrameUrl
@@ -26,9 +25,13 @@ Obtains the URL of the frame that triggers this request.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | URL of the frame that triggers the request. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getHeader
 
@@ -46,9 +49,13 @@ Obtains the information about the resource request header.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;WebHeader & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;WebHeader & gt; | Information about the resource request header. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getHttpBodyStream
 
@@ -66,9 +73,13 @@ Obtains the **WebHttpBodyStream** instance in this resource request.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) \| null |
+| Type | Description |
+| --- | --- |
+| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) \| null | WebHttpBodyStream** instance in the resource request. If there is no **WebHttpBodyStream** instance, **null** is returned. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getReferrer
 
@@ -86,9 +97,13 @@ Obtains the referrer.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Obtained referrer. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getRequestMethod
 
@@ -106,9 +121,13 @@ Obtains the request method.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Request method. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getRequestResourceType
 
@@ -124,9 +143,13 @@ Obtains the resource type of this resource request.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) |
+| Type | Description |
+| --- | --- |
+| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | Resource type of the resource request. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getRequestUrl
 
@@ -144,9 +167,13 @@ Obtains the URL of the resource request.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | URL of the resource request. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## hasGesture
 
@@ -164,9 +191,13 @@ Checks whether the resource request is associated with a gesture (for example, a
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true if the resource request is associated with a gesture (such as a tap); false otherwise. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## isMainFrame
 
@@ -184,6 +215,10 @@ Checks whether the resource request is from the main frame.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the resource request is for the main frame. The value **true** indicates the resource request is for the main frame, and **false** indicates otherwise. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).

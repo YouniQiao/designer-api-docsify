@@ -13,6 +13,7 @@ Spring animation model. You can build a spring animation based on the start poin
 ## Modules to Import
 
 ```TypeScript
+import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@ohos.@kit.ArkUI';
 ```
 
 ## constructor
@@ -33,9 +34,9 @@ Constructor parameters
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | Yes |
-| end | number | Yes |
-| velocity | number | Yes |
-| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | Yes |  |
+| end | number | Yes |  |
+| velocity | number | Yes |  |
+| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | Yes |  |

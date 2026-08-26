@@ -31,9 +31,9 @@ contentModifier(modifier: ContentModifier<CheckBoxConfiguration>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md)&gt; | 是 | 在Checkbox组件上，定制内容区的方法。modifier：内容修改器，开发者需要自定义 class实现ContentModifier接口。 |
 
 ## contentModifier
 
@@ -53,9 +53,9 @@ contentModifier(modifier: Optional<ContentModifier<CheckBoxConfiguration>>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md)&gt;&gt; | 是 | 在Checkbox组件上，定制内容区的方法。modifier：内容修改器，开发 者需要自定义class实现ContentModifier接口。当modifier的值为undefined时，不使用内容修改器。 |
 
 ## mark
 
@@ -75,9 +75,9 @@ mark(value: MarkStyle)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | 是 | 多选框内部图标样式。 从API version 12开始，设置了indicatorBuilder时，按照indicatorBuilder中的内容显示。默认值：{strokeColor : `\\$r('sys.color.ohos_id_color_foreground_contrary')`,strokeWidth: `\\$r('sys.float.ohos_id_checkbox_stroke_width')`,size: '20vp'} |
 
 ## mark
 
@@ -97,9 +97,9 @@ mark(style: Optional<MarkStyle>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md)&gt; | 是 | 多选框内部图标样式。 设置了indicatorBuilder时，按照indicatorBuilder中的内容显示。当style的值为 undefined时，默认值：{strokeColor : `\\$r('sys.color.ohos_id_color_foreground_contrary')`,strokeWidth: `\\$r('sys.float.ohos_id_checkbox_stroke_width')`,size: '20vp'} |
 
 ## onChange
 
@@ -119,9 +119,9 @@ onChange(callback: OnCheckboxChangeCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | 是 | 返回选中的状态，true表示已选中，false表示未选中。<br>**起始版本：** 18 |
 
 ## onChange
 
@@ -143,9 +143,9 @@ onChange(callback: Optional<OnCheckboxChangeCallback>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md)&gt; | 是 | 返回选中的状态，true表示已选中，false表示未选中。当callback的值为undefined时，不使用回调函数。 |
 
 ## select
 
@@ -165,9 +165,9 @@ select(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 多选框是否选中。默认值：false值为true时，多选框被选中。值为false时，多选框未选中。 |
 
 ## select
 
@@ -189,9 +189,9 @@ select(isSelected: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isSelected | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isSelected | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 多选框是否选中。当isSelected的值为undefined时取默认值false。值为true时，多选框被选中。值为 false时，多选框未选中。 |
 
 ## selectedColor
 
@@ -211,9 +211,9 @@ selectedColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 多选框选中状态颜色。默认值：\\$r('sys.color.ohos_id_color_text_primary_activated')异常值按照默 认值处理。 |
 
 ## selectedColor
 
@@ -235,9 +235,9 @@ selectedColor(resColor: Optional<ResourceColor>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 多选框选中状态颜色。当resColor的值为undefined时取默认值\\$r('sys.color.ohos_id_color_text_primary_activated')。异常值按照默认值处理。 |
 
 ## shape
 
@@ -259,9 +259,9 @@ shape(value: CheckBoxShape)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | 是 | Checkbox组件形状，包括圆形和圆角方形。默认值：CheckBoxShape.CIRCLE |
 
 ## shape
 
@@ -283,9 +283,9 @@ shape(shape: Optional<CheckBoxShape>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [shape](#shape) | [Optional](arkts-arkui-optional-t.md)&lt;[CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| shape | [Optional](arkts-arkui-optional-t.md)&lt;[CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md)&gt; | 是 | Checkbox组件形状，包括圆形和圆角方形。当shape的值为undefined时，默认值为 CheckBoxShape.CIRCLE。 |
 
 ## unselectedColor
 
@@ -305,9 +305,9 @@ unselectedColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 多选框非选中状态边框颜色。默认值：\\$r('sys.color.ohos_id_color_switch_outline_off') |
 
 ## unselectedColor
 
@@ -327,6 +327,6 @@ unselectedColor(resColor: Optional<ResourceColor>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 多选框非选中状态边框颜色。当resColor的值为undefined时取默认值\\$r('sys.color.ohos_id_color_switch_outline_off') |

@@ -16,7 +16,7 @@ Represents the callback invoked when the Enter key on the soft keyboard is press
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enterKeyType | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes |
-| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enterKeyType | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes | Type of the Enter key. If the type is **EnterKeyType.NEW_LINE**, **onSubmit** is not triggered. |
+| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | No | Submit event. |

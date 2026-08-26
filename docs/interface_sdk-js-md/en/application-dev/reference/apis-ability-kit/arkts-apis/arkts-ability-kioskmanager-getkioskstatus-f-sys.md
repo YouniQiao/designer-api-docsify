@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { kioskManager } from 'kits/@kit.AbilityKit';
+import kioskManager from '@kit.AbilityKit';
 ```
 
 ## getKioskStatus
@@ -24,14 +24,43 @@ Obtains the Kiosk mode status information, including whether the system is in ki
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;KioskStatus & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;KioskStatus & gt; | Promise used to return the kiosk mode status information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
+
+**Examples**
+
+```TypeScript
+import { kioskManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('getKioskInfo').margin({ top: 10 })
+        .onClick(() => {
+          kioskManager.getKioskStatus()
+            .then((data: kioskManager.KioskStatus) => {
+              hilog.info(0x0000, 'testTag', '%{public}s', `getKioskinfo success: ${JSON.stringify(data)}`);
+            })
+            .catch((error: BusinessError) => {
+              hilog.error(0x0000, 'testTag', '%{public}s', `getKioskinfo failed:${JSON.stringify(error)}`);
+            });
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```

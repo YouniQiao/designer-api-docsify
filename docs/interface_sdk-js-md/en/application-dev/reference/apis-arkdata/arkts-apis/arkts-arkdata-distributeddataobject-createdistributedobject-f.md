@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from 'kits/@kit.ArkData';
+import distributedDataObject from '@kit.ArkData';
 ```
 
 ## createDistributedObject
@@ -24,12 +24,31 @@ Creates a distributed data object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| source | object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| source | object | Yes | Properties of the distributed data object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) |
+| Type | Description |
+| --- | --- |
+| [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) | Distributed data object created. |
+
+**Examples**
+
+```TypeScript
+class SourceObject {
+  name: string
+  age: number
+  isVis: boolean
+
+  constructor(name: string, age: number, isVis: boolean) {
+    this.name = name;
+    this.age = age;
+    this.isVis = isVis;
+  }
+}
+
+let source: SourceObject = new SourceObject('jack', 18, false);
+let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
+```

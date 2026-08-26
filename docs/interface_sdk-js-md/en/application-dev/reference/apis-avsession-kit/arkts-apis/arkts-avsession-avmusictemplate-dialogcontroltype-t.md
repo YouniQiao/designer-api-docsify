@@ -12,9 +12,9 @@ Dialog control type open & close, refresh, toast.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'open' |
-| 'close' |
-| 'refresh' |
-| 'toast' |
+| Type | Description |
+| --- | --- |
+| 'open' |  |
+| 'close' |  |
+| 'refresh' |  |
+| 'toast' |  |

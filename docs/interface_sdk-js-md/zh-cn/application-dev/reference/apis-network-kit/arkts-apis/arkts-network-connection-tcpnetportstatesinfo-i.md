@@ -9,7 +9,6 @@ TCP端口状态信息。
 ## 导入模块
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## tcpLocalIp

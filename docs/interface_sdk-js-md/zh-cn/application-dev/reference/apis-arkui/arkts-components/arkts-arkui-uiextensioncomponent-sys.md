@@ -32,25 +32,25 @@ UIExtensionComponent(
 
 **参数:**
 
-| 参数名 | [类型](#类型) | 必填 |
-| --- | --- | --- |
-| want | import('../api/@ohos.app.ability.Want').default | 是 |
-| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | import('../api/@ohos.app.ability.Want').default | 是 | 表示UIExtensionAbility的want |
+| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | 否 | UIExtensionComponentAttribute的构造配置 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
-| [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md) | 用于表示被拉起的UIExtensionAbility通过调用terminateSelfWithResult或者terminateSelf正常退出时的返回结果。 |
 
 ### 类型
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 枚举
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |

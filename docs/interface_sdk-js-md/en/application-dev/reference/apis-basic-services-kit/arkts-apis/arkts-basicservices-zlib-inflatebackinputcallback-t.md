@@ -14,12 +14,12 @@ A callback function for reading input data provided by a user. When the decompre
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| inDesc | object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| inDesc | object | Yes | A universal user-defined data object. The specific type and content depend on the actual application scenario, which can include configuration data, file handles, etc. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| ArrayBuffer |
+| Type | Description |
+| --- | --- |
+| ArrayBuffer | Return the buffer successfully read by the data source through the input descriptor. |

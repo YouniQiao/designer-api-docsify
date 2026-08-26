@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## certPurpose

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
+import backgroundLoader from '@kit.BackgroundTasksKit';
 ```
 
 ## finishTask
@@ -24,14 +24,14 @@ function finishTask(taskInfo: TaskInfo): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [taskInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-cloudmediaassetstatus-i-sys.md) | [TaskInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| taskInfo | [TaskInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md) | 是 |  |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) |
-| [9700004](../errorcode-workScheduler.md#9700004-参数校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 后台加载任务信息。 |
+| [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
+| [9700004](../errorcode-workScheduler.md#9700004-参数校验失败) | Check on taskInfo failed. |

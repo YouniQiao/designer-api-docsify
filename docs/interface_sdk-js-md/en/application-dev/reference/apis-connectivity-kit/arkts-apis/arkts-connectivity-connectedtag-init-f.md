@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from 'kits/@kit.ConnectivityKit';
+import connectedTag from '@kit.ConnectivityKit';
 ```
 
 ## init
@@ -14,7 +14,8 @@ function init(): boolean
 
 Initializes the active tag chip.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [initialize](arkts-connectivity-connectedtag-initialize-f.md) instead.
 
@@ -30,6 +31,6 @@ Initializes the active tag chip.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true**: The initialization is successful. |

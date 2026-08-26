@@ -9,7 +9,9 @@ CompletionHandler provides two callback functions, [onRequestSuccess](#onrequest
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandler } from 'kits/@kit.AbilityKit';
+import CompletionHandler from '@kit.AbilityKit';
+import CompletionHandlerForAtomicService, { FailureCode } from '@kit.AbilityKitForAtomicService';
+import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKitForAbilityStartCallback';
 ```
 
 ## onRequestFailure
@@ -30,10 +32,14 @@ Called when the application fails to be launched.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes |
-| message | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | ElementName** information used to identify the target application.   - Typically, **ElementName** includes only **abilityName** and **bundleName**. The presence of **moduleName** and   **deviceId** depends on whether the caller provides them. **shortName** and **uri** are empty.   - **ElementName** information cannot be obtained if the implicit startup fails. |
+| message | string | Yes | Message displayed when the application fails to be launched. This message is in JSON format, as follows:{?"errMsg": "xxx"}The value of *xxx* is described as follows:Failed to call & lt;api-name & gt;: An error occurs when calling the API. & lt;api-name & gt; is the specific API name, for example, **startAbility**.User refused redirection: The user has closed the application redirection dialog box.User closed the implicit startup picker: The user has closed the dialog box for selecting an application for implicit startup.User closed the app clone picker: The user has closed the dialog box for selecting a cloned application.Free installation failed: The free installation fails. |
+
+**Examples**
+
+See Usage of CompletionHandler.
 
 ## onRequestSuccess
 
@@ -53,7 +59,11 @@ Called when the application is successfully launched.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes |
-| message | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | ElementName** information used to identify the target application. Typically, **ElementName** includes only **abilityName** and **bundleName**. The presence of **moduleName** and **deviceId** depends on whether the caller provides them. **shortName** and **uri** are empty. |
+| message | string | Yes | Message displayed when the application is successfully launched. This message is in JSON format, as follows:{?"errMsg": "Succeeded."} |
+
+**Examples**
+
+See Usage of CompletionHandler.

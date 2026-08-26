@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ParticleModifier](arkts-arkui-particlemodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [ParticleModifier](arkts-arkui-particlemodifier-c.md) | Defines Particle Modifier@extends ParticleAttribute @implements AttributeModifier & lt;ParticleAttribute & gt; |

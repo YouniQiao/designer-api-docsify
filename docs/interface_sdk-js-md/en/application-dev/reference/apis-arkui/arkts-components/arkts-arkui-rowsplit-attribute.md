@@ -32,6 +32,6 @@ Sets whether the divider can be dragged.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the divider can be dragged. **true**: The divider can be dragged. **false**: The divider cannot be dragged. Default value: **false** Invalid values are treated as the default value. |

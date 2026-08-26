@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -25,6 +24,24 @@ constructor()
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**示例**
+
+```TypeScript
+let writableStream = new stream.Writable();
+```
+
+```TypeScript
+let readableStream = new stream.Readable();
+```
+
+```TypeScript
+let duplex = new stream.Duplex();
+```
+
+```TypeScript
+let transformStream = new stream.Transform();
+```
 
 ## cork
 
@@ -42,9 +59,33 @@ cork(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回设置cork状态是否成功。true表示成功，false表示失败。 |
+
+**示例**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+let result = writableStream.cork();
+console.info("Writable cork result", result); // Writable cork result true
+```
+
+```TypeScript
+let duplexStream = new stream.Duplex();
+let result = duplexStream.cork();
+console.info("duplexStream cork result", result); // duplexStream cork result true
+```
 
 ## doInitialize
 
@@ -62,9 +103,42 @@ doInitialize(callback: Function): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | Function | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | Function | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+class MyWritable extends stream.Writable {
+  doInitialize(callback: Function) {
+    super.doInitialize(callback);
+    console.info("Writable doInitialize"); // Writable doInitialize
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    super.doWrite(chunk, encoding, callback);
+  }
+}
+
+new MyWritable();
+```
+
+```TypeScript
+class MyReadable extends stream.Readable {
+  doInitialize(callback: Function) {
+    super.doInitialize(callback);
+    console.info("Readable doInitialize"); // Readable doInitialize
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let myReadable = new MyReadable();
+myReadable.on("data", () => {
+});
+```
 
 ## doWrite
 
@@ -82,11 +156,48 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| chunk | string \| Uint8Array | 是 |
-| encoding | string | 是 |
-| callback | Function | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| chunk | string \| Uint8Array | 是 | 要写出的数据。 |
+| encoding | string | 是 | 字符编码类型。当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
+| callback | Function | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Writable chunk is", chunk); // Writable chunk is data
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+writableStream.write("data", "utf8");
+```
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("duplexStream chunk is", chunk); // duplexStream chunk is data
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.write("data", "utf8");
+```
 
 ## doWritev
 
@@ -104,10 +215,60 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| chunks | string[] \| Uint8Array[] | 是 |
-| callback | Function | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| chunks | string[] \| Uint8Array[] | 是 | 待批量写出的数据块数组。 |
+| callback | Function | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
+    console.info("Writable chunk", chunks);
+    callback();
+  }
+  // Writable chunk data1
+  // Writable chunk data2
+}
+
+let writableStream = new TestWritable();
+writableStream.write("data1", "utf8");
+writableStream.write("data2", "utf8");
+writableStream.uncork();
+writableStream.end();
+```
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+
+  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
+    console.info("duplexStream chunk", chunks[0]); // duplexStream chunk data1
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.cork();
+duplexStream.write("data1", "utf8");
+duplexStream.write("data2", "utf8");
+duplexStream.uncork();
+duplexStream.end();
+```
 
 ## end
 
@@ -125,23 +286,67 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| chunk | string \| Uint8Array | 否 |
-| encoding | string | 否 |
-| callback | Function | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| chunk | string \| Uint8Array | 否 | 待写入的数据。默认值为**undefined**。 |
+| encoding | string | 否 | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
+| callback | Function | 否 | 用于返回结果的回调函数。传入时异步调用，不传入时，不调用回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Writable](arkts-arkts-stream-writable-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Writable](arkts-arkts-stream-writable-c.md) | 返回当前可写流对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200035](../errorcode-utils.md#10200035-dowrite接口未实现) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200035](../errorcode-utils.md#10200035-dowrite接口未实现) | The doWrite method has not been implemented. |
+
+**示例**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Writable chunk is", chunk);
+    callback();
+  }
+  // Writable chunk is test
+  // Writable chunk is finish
+}
+
+let writableStream = new TestWritable();
+writableStream.write("test", "utf8");
+writableStream.end("finish", "utf8", () => {
+  console.info("Writable is end"); // Writable is end
+});
+```
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Duplex chunk is", chunk); // Duplex chunk is test
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.end("test", "utf8", () => {
+  console.info("Duplex is end"); // Duplex is end
+});
+```
 
 ## off
 
@@ -159,10 +364,60 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \|
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \| 'finish'。   - 'close'：完成end()调用，结束写入操作，触发该事件。   - 'drain'：在可写流缓冲区中数据清空时触发该事件。   - 'error'：在可写流发生异常时触发该事件。   - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
+
+**示例**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+let testListenerCalled = false;
+let testListener = () => {
+  testListenerCalled = true;
+};
+writableStream.on("finish", testListener);
+writableStream.off("finish");
+writableStream.write("test");
+writableStream.end();
+setTimeout(() => {
+  console.info("Writable off test", testListenerCalled.toString()); // Writable off test false
+}, 0);
+```
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let readableStream = new TestReadable();
+
+function read() {
+  console.info("read() called");
+}
+
+readableStream.setEncoding("utf8");
+readableStream.on("readable", read);
+readableStream.off("readable");
+readableStream.push("test");
+// off注销对readable事件的监听后，read函数不会被调用，"read() called"也不会被打印
+```
 
 ## on
 
@@ -180,10 +435,50 @@ on(event: string, callback: Callback<emitter.EventData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \|
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \| 'finish'。   - 'close'：完成end()调用，结束写入操作，触发该事件。   - 'drain'：在可写流缓冲区中数据清空时触发该事件。   - 'error'：在可写流发生异常时触发该事件。   - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件传输的数据。 |
+
+**示例**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback(new Error());
+  }
+}
+
+let callbackCalled = false;
+let writableStream = new TestWritable();
+writableStream.on("error", () => {
+  console.info("Writable event test", callbackCalled.toString()); // Writable event test false
+});
+writableStream.write("hello", "utf8", () => {
+});
+```
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+    throw new Error("Simulated error");
+  }
+}
+
+let readableStream = new TestReadable();
+readableStream.push("test");
+readableStream.on("error", () => {
+  console.error("error event called"); // error event called
+});
+```
 
 ## setDefaultEncoding
 
@@ -201,15 +496,52 @@ setDefaultEncoding(encoding?: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| encoding | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| encoding | string | 否 | 设置默认字符编码类型。默认值是'utf8'，当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回是否设置成功。true表示成功，false表示失败。 |
+
+**示例**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+let result = writableStream.setDefaultEncoding("utf8");
+console.info("Writable is result", result); // Writable is result true
+```
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+let result = duplexStream.setDefaultEncoding("utf8");
+console.info("duplexStream is result", result); // duplexStream is result true
+```
 
 ## uncork
 
@@ -227,9 +559,57 @@ uncork(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回解除cork状态是否成功。true表示成功，false表示失败。 |
+
+**示例**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+writableStream.cork();
+writableStream.write("data1", "utf8");
+writableStream.write("data2", "utf8");
+writableStream.uncork();
+writableStream.end();
+writableStream.on("finish", () => {
+  console.info("all Data is End"); // all Data is End
+});
+```
+
+```TypeScript
+let dataWritten = "";
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    dataWritten += chunk;
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.cork();
+duplexStream.write("a");
+duplexStream.write("b");
+duplexStream.uncork();
+console.info("Duplex test uncork", dataWritten); // Duplex test uncork ab
+```
 
 ## write
 
@@ -247,25 +627,63 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| chunk | string \| Uint8Array | 否 |
-| encoding | string | 否 |
-| callback | Function | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| chunk | string \| Uint8Array | 否 | 需要写入的数据。默认值为undefined。当前版本不支持传入null、undefined和空字符串，会抛出异常。 |
+| encoding | string | 否 | 字符编码类型。默认值是**'utf8'**，当前版本支持**'utf8'**、**'gb18030'**、**'gbk'**以及**'gb2312'**。 |
+| callback | Function | 否 | 回调函数，用于在数据写入完成后执行特定逻辑。传入callback时，数据写入缓冲区后会调用该回调函数；不传入时，不调用回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 可写流的缓冲区中是否还有空间。**true**表示缓冲区还有空间，**false**表示流的内部缓冲区数据量已达到设定水位线，不建议继续写入以避免内存溢出。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200035](../errorcode-utils.md#10200035-dowrite接口未实现) |
-| [10200036](../errorcode-utils.md#10200036-流已经结束仍进行写操作) |
-| [10200037](../errorcode-utils.md#10200037-多次调用callback) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200035](../errorcode-utils.md#10200035-dowrite接口未实现) | The doWrite method has not been implemented. |
+| [10200036](../errorcode-utils.md#10200036-流已经结束仍进行写操作) | The stream has been ended. |
+| [10200037](../errorcode-utils.md#10200037-多次调用callback) | The callback is invoked multiple times consecutively. |
+
+**示例**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Writable chunk is", chunk); // Writable chunk is test
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+writableStream.write("test", "utf8");
+```
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("duplexStream chunk is", chunk); // duplexStream chunk is test
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+let result = duplexStream.write("test", "utf8");
+console.info("duplexStream result", result); // duplexStream result true
+```
 
 ## writable
 

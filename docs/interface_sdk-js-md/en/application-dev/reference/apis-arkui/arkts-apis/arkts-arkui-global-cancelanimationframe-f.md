@@ -18,6 +18,6 @@ Cancels the vsync callback set by "requestAnimationFrame()".
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| requestId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| requestId | number | Yes | Indicates the vsync callback ID returned by "requestAnimationFrame()". |

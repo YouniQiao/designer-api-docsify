@@ -13,9 +13,9 @@ type PiPControlGroup = VideoPlayControlGroup | VideoCallControlGroup | VideoMeet
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-| 类型 |
-| --- |
-| [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md) |
-| [VideoCallControlGroup](arkts-arkui-pipwindow-videocallcontrolgroup-e.md) |
-| [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md) |
-| [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md) | 视频播放控件组。 |
+| [VideoCallControlGroup](arkts-arkui-pipwindow-videocallcontrolgroup-e.md) | 视频通话控件组。 |
+| [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md) | 视频会议控件组。 |
+| [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md) | 视频直播控件组。 |

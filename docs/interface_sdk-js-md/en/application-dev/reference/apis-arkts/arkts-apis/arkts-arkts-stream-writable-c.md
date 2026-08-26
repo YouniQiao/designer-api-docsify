@@ -9,7 +9,6 @@ Stream to which data can be written. A writable stream allows data to be written
 ## Modules to Import
 
 ```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -25,6 +24,24 @@ A constructor used to create a **Writable** object.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+```TypeScript
+let writableStream = new stream.Writable();
+```
+
+```TypeScript
+let readableStream = new stream.Readable();
+```
+
+```TypeScript
+let duplex = new stream.Duplex();
+```
+
+```TypeScript
+let transform = new stream.Transform();
+```
 
 ## cork
 
@@ -42,9 +59,33 @@ Forces subsequent writes to be buffered. This API is called to optimize the perf
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Operation result. **true** means successful; **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+let result = writableStream.cork();
+console.info("Writable cork result", result); // Writable cork result true
+```
+
+```TypeScript
+let duplexStream = new stream.Duplex();
+let result = duplexStream.cork();
+console.info("duplexStream cork result", result); // duplexStream cork result true
+```
 
 ## doInitialize
 
@@ -62,9 +103,42 @@ You need to implement this API but do not call it directly. It is automatically 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Function | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Function | Yes | Callback function. |
+
+**Examples**
+
+```TypeScript
+class MyWritable extends stream.Writable {
+  doInitialize(callback: Function) {
+    super.doInitialize(callback);
+    console.info("Writable doInitialize"); // Writable doInitialize
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    super.doWrite(chunk, encoding, callback);
+  }
+}
+
+new MyWritable();
+```
+
+```TypeScript
+class MyReadable extends stream.Readable {
+  doInitialize(callback: Function) {
+    super.doInitialize(callback);
+    console.info("Readable doInitialize"); // Readable doInitialize
+}
+
+  doRead(size: number) {
+  }
+}
+
+let myReadable = new MyReadable();
+myReadable.on('data', () => {
+});
+```
 
 ## doWrite
 
@@ -82,11 +156,48 @@ A data write API. You need to implement this API but do not call it directly. Th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| chunk | string \| Uint8Array | Yes |
-| encoding | string | Yes |
-| callback | Function | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| chunk | string \| Uint8Array | Yes | Data to write. |
+| encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
+| callback | Function | Yes | Callback function. |
+
+**Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Writable chunk is", chunk); // Writable chunk is data
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+writableStream.write('data', 'utf8');
+```
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("duplexStream chunk is", chunk); // duplexStream chunk is data
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.write('data', 'utf8');
+```
 
 ## doWritev
 
@@ -104,10 +215,60 @@ A batch data write API. You need to implement this API but do not call it direct
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| chunks | string[] \| Uint8Array[] | Yes |
-| callback | Function | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| chunks | string[] \| Uint8Array[] | Yes | Data arrays to write in batches. |
+| callback | Function | Yes | Callback function. |
+
+**Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
+    console.info("Writable chunk", chunks);
+    callback();
+  }
+  // Writable chunk data1
+  // Writable chunk data2
+}
+
+let writableStream = new TestWritable();
+writableStream.write('data1', 'utf8');
+writableStream.write('data2', 'utf8');
+writableStream.uncork();
+writableStream.end();
+```
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+
+  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
+    console.info("duplexStream chunk", chunks[0]); // duplexStream chunk data1
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.cork();
+duplexStream.write('data1', 'utf8');
+duplexStream.write('data2', 'utf8');
+duplexStream.uncork();
+duplexStream.end();
+```
 
 ## end
 
@@ -125,23 +286,67 @@ Ends the writing process in a writable stream. If the value of **writableCorked*
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| chunk | string \| Uint8Array | No |
-| encoding | string | No |
-| callback | Function | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| chunk | string \| Uint8Array | No | Data to write. The default value is **undefined**. |
+| encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
+| callback | Function | No | Callback used to return the result. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Writable](arkts-arkts-stream-writable-c.md) |
+| Type | Description |
+| --- | --- |
+| [Writable](arkts-arkts-stream-writable-c.md) | Current **Writable** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200035](../errorcode-utils.md#10200035-dowrite-is-not-implemented) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200035](../errorcode-utils.md#10200035-dowrite-is-not-implemented) | The doWrite method has not been implemented. |
+
+**Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Writable chunk is", chunk);
+    callback();
+  }
+  // Writable chunk is test
+  // Writable chunk is finish
+}
+
+let writableStream = new TestWritable();
+writableStream.write('test', 'utf8');
+writableStream.end('finish', 'utf8', () => {
+  console.info("Writable is end"); // Writable is end
+});
+```
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+  console.info("Duplex chunk is", chunk); // Duplex chunk is test
+  callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.end('test', 'utf8', () => {
+  console.info("Duplex is end"); // Duplex is end
+});
+```
 
 ## off
 
@@ -159,10 +364,60 @@ Unregisters an event processing callback used to listen for different events on 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | string | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | string | Yes | Type of the event. The following events are supported: |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | Callback function. |
+
+**Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+ }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+let testListenerCalled = false;
+let testListener = () => {
+  testListenerCalled = true;
+};
+writableStream.on('finish', testListener);
+writableStream.off('finish');
+writableStream.write('test');
+writableStream.end();
+setTimeout(() => {
+  console.info("Writable off test", testListenerCalled.toString()); // Writable off test false
+}, 0);
+```
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let readable = new TestReadable();
+
+function read() {
+  console.info("read() called");
+}
+
+readable.setEncoding('utf8');
+readable.on('readable', read);
+readable.off('readable');
+readable.push('test');
+// After off is used to unregister the listening of the readable stream events, the read function is not called and "read() called" is not printed.
+```
 
 ## on
 
@@ -180,10 +435,50 @@ Registers an event processing callback to listen for different events on the wri
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | string | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | string | Yes | Type of the event. The following events are supported: |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
+
+**Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback(new Error());
+  }
+}
+
+let callbackCalled = false;
+let writable = new TestWritable();
+writable.on('error', () => {
+  console.info("Writable event test", callbackCalled.toString()); // Writable event test false
+});
+writable.write('hello', 'utf8', () => {
+});
+```
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+    throw new Error('Simulated error');
+  }
+}
+
+let readable = new TestReadable();
+readable.push('test');
+readable.on('error', () => {
+  console.info("error event called"); // error event called
+});
+```
 
 ## setDefaultEncoding
 
@@ -201,15 +496,52 @@ Sets the default encoding format for the writable stream.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| encoding | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encoding | string | No | Default encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Operation result. **true** means successful; **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+let result = writableStream.setDefaultEncoding('utf8');
+console.info("Writable is result", result); // Writable is result true
+```
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+let result = duplexStream.setDefaultEncoding('utf8');
+console.info("duplexStream is result", result); // duplexStream is result true
+```
 
 ## uncork
 
@@ -227,9 +559,57 @@ Releases the cork state, flushing the buffered data and writing it to the target
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Operation result. **true** means successful; **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+writableStream.cork();
+writableStream.write('data1', 'utf8');
+writableStream.write('data2', 'utf8');
+writableStream.uncork();
+writableStream.end();
+writableStream.on('finish', () => {
+  console.info("all Data is End"); // all Data is End
+});
+```
+
+```TypeScript
+let dataWritten = '';
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    dataWritten += chunk;
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.cork();
+duplexStream.write('a');
+duplexStream.write('b');
+duplexStream.uncork();
+console.info("Duplex test uncork", dataWritten); // Duplex test uncork ab
+```
 
 ## write
 
@@ -247,25 +627,63 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| chunk | string \| Uint8Array | No |
-| encoding | string | No |
-| callback | Function | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| chunk | string \| Uint8Array | No | Data to write. It cannot be **null**, **undefined**, or an empty string. |
+| encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
+| callback | Function | No | Callback used to return the result. It is not called by default. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether there is space in the buffer of the writable stream. The value **true** means that there is still space in the buffer. The value **false** means that the buffer is full, and you are not advised to continue writing data. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200035](../errorcode-utils.md#10200035-dowrite-is-not-implemented) |
-| [10200036](../errorcode-utils.md#10200036-write-operation-is-still-performed-after-the-stream-ends) |
-| [10200037](../errorcode-utils.md#10200037-callback-is-invoked-multiple-times) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200035](../errorcode-utils.md#10200035-dowrite-is-not-implemented) | The doWrite method has not been implemented. |
+| [10200036](../errorcode-utils.md#10200036-write-operation-is-still-performed-after-the-stream-ends) | The stream has been ended. |
+| [10200037](../errorcode-utils.md#10200037-callback-is-invoked-multiple-times) | The callback is invoked multiple times consecutively. |
+
+**Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Writable chunk is", chunk); // Writable chunk is test
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+writableStream.write('test', 'utf8');
+```
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("duplexStream chunk is", chunk); // duplexStream chunk is test
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+let result = duplexStream.write('test', 'utf8');
+console.info("duplexStream result", result); // duplexStream result true
+```
 
 ## writable
 

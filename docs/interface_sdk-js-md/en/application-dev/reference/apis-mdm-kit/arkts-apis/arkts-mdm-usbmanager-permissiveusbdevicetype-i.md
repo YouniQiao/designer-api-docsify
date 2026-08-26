@@ -15,7 +15,7 @@ parameters in this API are optional, allowing for more flexible USB device disab
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.MDMKit';
+import usbManager from '@kit.MDMKit';
 ```
 
 ## baseClass

@@ -16,13 +16,13 @@ Search filter callback.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [tabIndex](arkts-arkui-commonmethod-c.md) | number | Yes |
-| text | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tabIndex | number | Yes | Index of the tab to filter. |
+| text | string | Yes | The current search text. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the tab matches the search criteria, **false** otherwise. |

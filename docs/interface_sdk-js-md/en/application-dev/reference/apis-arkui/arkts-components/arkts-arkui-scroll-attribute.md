@@ -29,10 +29,10 @@ Sets the effect used when the scroll boundary is reached.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [edgeEffect](#edgeeffect) | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported. Default value: & lt;em & gt;EdgeEffect.None & lt;/em & gt; |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value & lt;em & gt;{ alwaysEnabled: true } & lt;/em & gt; means to enable the scroll effect, and & lt;em & gt;{ alwaysEnabled: false } & lt;/em & gt; means the opposite. Default value: & lt;em & gt;{ alwaysEnabled: true } & lt;/em & gt;<br>**Since:** 11 |
 
 ## enableBouncesZoom
 
@@ -52,9 +52,9 @@ Enable bounces zoom scale.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Enable bounces zoom scale. Default value: true. |
 
 ## enablePaging
 
@@ -74,9 +74,9 @@ Sets whether to enable the swipe-to-turn-pages feature. If both &lt;em&gt;enable
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable the swipe-to-turn-pages feature. Default value: false. The value & lt;em & gt;true & lt;/em & gt; means to enable the swipe-to-turn-pages feature, and & lt;em & gt;false & lt;/em & gt; means the opposite. |
 
 ## enableScrollInteraction
 
@@ -96,9 +96,9 @@ Sets whether to support scroll gestures. When this attribute is set to &lt;em&gt
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to support scroll gestures.Default value: & lt;em & gt;true & lt;/em & gt; |
 
 ## friction
 
@@ -118,9 +118,9 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Friction coefficient. Default value: & lt;em & gt;0.9 & lt;/em & gt; for wearable devices and & lt;em & gt;0.6 & lt;/em & gt; for non-wearable devices Since API version 11, the default value for non-wearable devices is & lt;em & gt;0.7 & lt;/em & gt;. Since API version 12, the default value for non-wearable devices is & lt;em & gt;0.75 & lt;/em & gt;. |
 
 ## initialOffset
 
@@ -140,9 +140,9 @@ Sets the initial scrolling offset. This attribute takes effect only during the i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [OffsetOptions](arkts-arkui-offsetoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [OffsetOptions](arkts-arkui-offsetoptions-i.md) | Yes | Initial scrolling offset. When the value specified is a percentage, the initial scrolling offset is calculated as the product of the & lt;em & gt;Scroll & lt;/em & gt; component's size in the main axis direction and the percentage value. |
 
 ## maxZoomScale
 
@@ -162,9 +162,9 @@ Set maximum zoom scale.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scale | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scale | number | Yes | Set maximum zoom scale. Default value: 1. Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
 
 ## minZoomScale
 
@@ -184,9 +184,9 @@ Set minimum zoom scale. Setting either &lt;em&gt;maxZoomScale&lt;/em&gt; and &lt
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scale | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scale | number | Yes | Set minimum zoom scale. Default value: 1. Value range: (0, maxZoomScale]. If the value is greater than & lt;em & gt;maxZoomScale & lt;/em & gt;, & lt;em & gt;maxZoomScale & lt;/em & gt; is used. |
 
 ## nestedScroll
 
@@ -206,9 +206,9 @@ Sets the nested scrolling options. You can set the nested scrolling mode in the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | Nested scrolling options. Default value: & lt;em & gt;{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY} & lt;/em & gt; |
 
 ## onDidScroll
 
@@ -231,9 +231,9 @@ Triggered when the Scroll component scrolls.<p>&lt;strong&gt;NOTE&lt;/strong&gt;
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) | Yes | Callback triggered when the & lt;em & gt;Scroll & lt;/em & gt; component scrolls. |
 
 ## onDidZoom
 
@@ -253,9 +253,9 @@ Called when the Scroll did zoom.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [ScrollOnDidZoomCallback](arkts-arkui-scrollondidzoomcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [ScrollOnDidZoomCallback](arkts-arkui-scrollondidzoomcallback-t.md) | Yes | callback of zoom. |
 
 ## onScroll
 
@@ -280,9 +280,9 @@ Triggered to return the horizontal and vertical offsets, in vp, during scrolling
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (xOffset: number, yOffset: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (xOffset: number, yOffset: number) = & gt; void | Yes | callback when scroll, xOffset: Actual scroll offset relative to the previous frame.Unit: vp yOffset: Vertical offset relative to the previous frame. A positive offset indicates scrolling upward, and a negative offset indicates scrolling downward.Unit: vp |
 
 ## onScrollEdge
 
@@ -303,9 +303,9 @@ Triggered when scrolling reaches the edge. Anonymous Object Rectification.<p>&lt
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [OnScrollEdgeCallback](arkts-arkui-onscrolledgecallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [OnScrollEdgeCallback](arkts-arkui-onscrolledgecallback-t.md) | Yes | Edge position to scroll to.<br>**Since:** 18 |
 
 ## onScrollEnd
 
@@ -327,9 +327,9 @@ Triggered when scrolling stops.<p>&lt;strong&gt;NOTE&lt;/strong&gt;
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes |  |
 
 ## onScrollFrameBegin
 
@@ -354,9 +354,9 @@ This event is not triggered when any of the following conditions is met:
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Yes | Callback triggered when each frame scrolling starts.<br>**Since:** 18 |
 
 ## onScrollStart
 
@@ -376,9 +376,9 @@ Called when scrolling start. Anonymous Object Rectification.<p>&lt;strong&gt;NOT
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback triggered when scrolling starts.<br>**Since:** 18 |
 
 ## onScrollStop
 
@@ -398,9 +398,9 @@ Called when scrolling has stopped. Anonymous Object Rectification.<p>&lt;strong&
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback triggered when scrolling stops.<br>**Since:** 18 |
 
 ## onWillScroll
 
@@ -423,9 +423,9 @@ Triggered before scrolling.<p>&lt;strong&gt;NOTE&lt;/strong&gt;
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) | Yes | Callback triggered before scrolling. |
 
 ## onZoomStart
 
@@ -445,9 +445,9 @@ Called when zooming has stated.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Zoom start callback. |
 
 ## onZoomStop
 
@@ -467,9 +467,9 @@ Called when zooming has stopped.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Zoom stop callback. |
 
 ## scrollable
 
@@ -487,9 +487,9 @@ Sets the scrolling direction. The scroll offset is reset when this value is chan
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | Yes | Scrolling direction.Default value: & lt;em & gt;ScrollDirection.Vertical & lt;/em & gt; |
 
 ## scrollBar
 
@@ -507,9 +507,9 @@ Sets the scrollbar state. If the container component cannot be scrolled, the scr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.Default value: & lt;em & gt;BarState.Auto & lt;/em & gt; |
 
 ## scrollBarColor
 
@@ -527,9 +527,9 @@ Sets the scrollbar color.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | Color \| number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | Color \| number \| string | Yes | Scrollbar color.Default value: & lt;em & gt;'\#182431' & lt;/em & gt; (40% opacity) |
 
 ## scrollBarColor
 
@@ -549,9 +549,9 @@ Sets the scrollbar color.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| color | Color \| number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | Color \| number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Scrollbar color. Default value: & lt;em & gt;'\#182431' & lt;/em & gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, & lt;em & gt;0xffffff & lt;/em & gt;. A string value indicates a color in RGB or ARGB format, for example, & lt;em & gt;'#ffffff' & lt;/em & gt;. |
 
 ## scrollBarWidth
 
@@ -569,9 +569,9 @@ Sets the scrollbar width.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string | Yes | Scrollbar width.Default value: & lt;em & gt;4 & lt;/em & gt; Unit: vp Values less than 0 are treated as the default value. The value & lt;em & gt;0 & lt;/em & gt; means not to show the scrollbar. |
 
 ## scrollBarWidth
 
@@ -591,9 +591,9 @@ Sets the scrollbar width.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Scrollbar width. Unit: vp Default value: & lt;em & gt;4 & lt;/em & gt; If this parameter is set to a value less than or equal to 0, the default value is used. The value & lt;em & gt;0 & lt;/em & gt; means not to show the scrollbar. |
 
 ## scrollSnap
 
@@ -613,9 +613,9 @@ Sets the scroll snapping mode. During the snap animation, the scroll operation s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ScrollSnapOptions](arkts-arkui-scrollsnapoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ScrollSnapOptions](arkts-arkui-scrollsnapoptions-i.md) | Yes | Scroll snapping mode. |
 
 ## zoomScale
 
@@ -635,6 +635,6 @@ Current zoom scale. This parameter supports !! for two-way binding of variables.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scale | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scale | number | Yes | Current zoom scale. Default value: 1. Value range: (0, +∞). |

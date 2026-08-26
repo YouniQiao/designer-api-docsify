@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
+import componentUtils from '@kit.ArkUI';
 ```
 
 ## getRectangleById
@@ -14,7 +14,8 @@ function getRectangleById(id: string): ComponentInfo
 
 Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Since API version 10, you can use the
 > [getComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentutils) API in
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [ComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md) object
@@ -39,18 +40,25 @@ Obtains a **ComponentInfo** object based on the component ID and synchronously r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | Component ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ComponentInfo](arkts-arkui-componentutils-componentinfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [ComponentInfo](arkts-arkui-componentutils-componentinfo-i.md) | ComponentInfo** object, which provides the size, position, translation, scaling, rotation, and affine matrix information of the component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100001](../errorcode-internal.md#100001-internal-error) | UI execution context not found. |
+
+**Examples**
+
+```TypeScript
+import { componentUtils } from '@kit.ArkUI';
+let modePosition:componentUtils.ComponentInfo = componentUtils.getRectangleById('onClick');
+```

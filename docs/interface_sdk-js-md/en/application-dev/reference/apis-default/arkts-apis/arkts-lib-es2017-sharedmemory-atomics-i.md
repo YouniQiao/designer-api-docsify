@@ -15,16 +15,16 @@ Adds a value to the value at the given position in the array, returning the orig
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |
-| index | number | Yes |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| index | number | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## and
 
 ```TypeScript
@@ -35,16 +35,16 @@ Stores the bitwise AND of a value with the value at the given position in the ar
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |
-| index | number | Yes |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| index | number | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## compareExchange
 
 ```TypeScript
@@ -55,17 +55,17 @@ Replaces the value at the given position in the array if the original value equa
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |
-| index | number | Yes |
-| expectedValue | number | Yes |
-| replacementValue | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| index | number | Yes |  |
+| expectedValue | number | Yes |  |
+| replacementValue | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## exchange
 
 ```TypeScript
@@ -76,16 +76,16 @@ Replaces the value at the given position in the array, returning the original va
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |
-| index | number | Yes |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| index | number | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## isLockFree
 
 ```TypeScript
@@ -96,14 +96,14 @@ Returns a value indicating whether high-performance algorithms can use atomic op
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| size | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## load
 
 ```TypeScript
@@ -114,15 +114,15 @@ Returns the value at the given position in the array. Until this atomic operatio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| index | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## notify
 
 ```TypeScript
@@ -133,16 +133,16 @@ Wakes up sleeping agents that are waiting on the given index of the array, retur
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | Int32Array | Yes |
-| index | number | Yes |
-| count | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | Int32Array | Yes |  |
+| index | number | Yes |  |
+| count | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## or
 
 ```TypeScript
@@ -153,16 +153,16 @@ Stores the bitwise OR of a value with the value at the given position in the arr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |
-| index | number | Yes |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| index | number | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## store
 
 ```TypeScript
@@ -173,16 +173,16 @@ Stores a value at the given position in the array, returning the new value. Unti
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |
-| index | number | Yes |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| index | number | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## sub
 
 ```TypeScript
@@ -193,16 +193,16 @@ Subtracts a value from the value at the given position in the array, returning t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |
-| index | number | Yes |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| index | number | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## wait
 
 ```TypeScript
@@ -213,17 +213,17 @@ If the value at the given position in the array is equal to the provided value, 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | Int32Array | Yes |
-| index | number | Yes |
-| value | number | Yes |
-| timeout | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | Int32Array | Yes |  |
+| index | number | Yes |  |
+| value | number | Yes |  |
+| timeout | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## xor
 
 ```TypeScript
@@ -234,16 +234,16 @@ Stores the bitwise XOR of a value with the value at the given position in the ar
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |
-| index | number | Yes |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| index | number | Yes |  |
+| value | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [Symbol.toStringTag]
 
 ```TypeScript

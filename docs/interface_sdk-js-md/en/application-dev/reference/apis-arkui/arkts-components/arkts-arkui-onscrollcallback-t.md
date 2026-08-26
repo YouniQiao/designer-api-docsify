@@ -18,7 +18,7 @@ On scroll callback using in scrollable onDidScroll.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scrollOffset | number | Yes |
-| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scrollOffset | number | Yes | offset this frame did scroll. |
+| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes | current scroll state. |

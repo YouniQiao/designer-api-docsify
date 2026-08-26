@@ -15,5 +15,5 @@ The class of media control extension ability.@extends UIExtensionAbility
 ## Modules to Import
 
 ```TypeScript
-import { MediaControlExtensionAbility } from 'kits/@kit.AVSessionKit';
+import MediaControlExtensionAbility from '@kit.AVSessionKit';
 ```

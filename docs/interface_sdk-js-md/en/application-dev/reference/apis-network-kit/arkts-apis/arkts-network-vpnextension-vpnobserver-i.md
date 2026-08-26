@@ -9,7 +9,7 @@ Defines a VPN observer object. It is used to listen for VPN-related events. Befo
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from 'kits/@kit.NetworkKit';
+import vpnExtension from '@kit.NetworkKit';
 ```
 
 ## offAuthorizationResult
@@ -20,7 +20,8 @@ offAuthorizationResult(callback?: Callback<boolean>): void
 
 Unregisters a listener for the user authorization result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If you have called [onAuthorizationResult](#onauthorizationresult) multiple times to register
 > listeners and want to unregister the listener, you need to pass the callback passed in the last call or pass no
 > parameter.
@@ -33,9 +34,29 @@ Unregisters a listener for the user authorization result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback & lt;boolean & gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback & lt;boolean & gt; | No | Listener callback used to return the user authorization result. If this parameter is passed, the specified listener is unregistered. If no parameter is passed, all registered listeners are unregistered. |
+
+**Examples**
+
+```TypeScript
+import { vpnExtension } from '@kit.NetworkKit';
+
+let vpnObserver: vpnExtension.VpnObserver = vpnExtension.createVpnObserver();
+
+let callback = (result: boolean) => {
+  console.info('Authorization result: ' + result);
+};
+// Register a listener.
+vpnObserver.onAuthorizationResult(callback);
+
+// Unregister a specified listener.
+vpnObserver.offAuthorizationResult(callback);
+
+// Unregister all registered listeners.
+vpnObserver.offAuthorizationResult();
+```
 
 ## onAuthorizationResult
 
@@ -45,7 +66,8 @@ onAuthorizationResult(callback: Callback<boolean>): void
 
 Registers a listener for the user authorization result. The authorization result is displayed in a dialog box after [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md) is called. The notification is sent only when the user taps the dialog box, and only the result of the current VPN is received. If you do not need to listen for the authorization result, call [offAuthorizationResult](#offauthorizationresult) to cancel the registration.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If this API is called multiple times, only the last callback takes effect.
 
 **Since:** 26.0.0
@@ -56,6 +78,21 @@ Registers a listener for the user authorization result. The authorization result
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback & lt;boolean & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback & lt;boolean & gt; | Yes | Callback used to return the user authorization result. The value **true** indicates that the user agrees to the authorization, and the value **false** indicates the opposite. |
+
+**Examples**
+
+```TypeScript
+import { vpnExtension } from '@kit.NetworkKit';
+
+let vpnObserver: vpnExtension.VpnObserver = vpnExtension.createVpnObserver();
+vpnObserver.onAuthorizationResult((result: boolean) => {
+  if (result) {
+    console.info('VPN authorization succeeded');
+  } else {
+    console.error('VPN authorization failed');
+  }
+});
+```

@@ -24,6 +24,53 @@ Obtains the canvas used for drawing.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, DrawContext } from "@kit.ArkUI";
+
+class MyRenderNode extends RenderNode {
+  flag: boolean = false;
+
+  draw(context: DrawContext) {
+    const size = context.size;
+    const canvas = context.canvas;
+    const sizeInPixel = context.sizeInPixel;
+  }
+}
+
+const renderNode = new MyRenderNode();
+renderNode.frame = { x: 0, y: 0, width: 100, height: 100 };
+renderNode.backgroundColor = 0xff519db4;
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## size
 
 ```TypeScript

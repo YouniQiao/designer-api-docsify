@@ -9,29 +9,29 @@ JS cross-thread communication tool
 ## Modules to Import
 
 ```TypeScript
-import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from 'kits/@kit.ArkTS';
+import worker, { DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ThreadWorker](arkts-arkts-worker-threadworker-c.md) |
-| [Worker](arkts-arkts-worker-worker-c.md) |
+| Name | Description |
+| --- | --- |
+| [ThreadWorker](arkts-arkts-worker-threadworker-c.md) | Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from WorkerEventTarget. |
+| [Worker](arkts-arkts-worker-worker-c.md) | The Worker class contains all Worker functions. |
 
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [RestrictedWorker](arkts-arkts-worker-restrictedworker-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [RestrictedWorker](arkts-arkts-worker-restrictedworker-c-sys.md) | The RestrictedWorker class contains all Worker functions. |
 <!--DelEnd-->
 
 ### Constants
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [parentPort](arkts-arkts-worker-con.md#parentport) |
-| [workerPort](arkts-arkts-worker-con.md#workerport) |
+| Name | Description |
+| --- | --- |
+| [parentPort](arkts-arkts-worker-con.md#parentport) | The object used by the worker thread to communicate with the host thread. |
+| [workerPort](arkts-arkts-worker-con.md#workerport) | The object used by the worker thread to communicate with the host thread. |

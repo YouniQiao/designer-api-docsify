@@ -9,6 +9,7 @@ Describes the object returned by the image loading error callback.This event is 
 ## Modules to Import
 
 ```TypeScript
+import @kit.ArkUIGeneration from '@ohos.arkui.intelligence.@kit.ArkUIGeneration';
 ```
 
 ## componentHeight

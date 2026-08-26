@@ -24,19 +24,19 @@ The **measure** module provides APIs for measuring text metrics, such as text he
 ## 导入模块
 
 ```TypeScript
-import { MeasureText, MeasureOptions } from 'kits/@kit.ArkUI';
+import MeasureText, { MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## 汇总
 
 ### 类
 
-| 名称 |
-| --- |
-| [MeasureText(Text Measurement)](arkts-arkui-measure-measuretext-c.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [MeasureText(Text Measurement)](arkts-arkui-measure-measuretext-c.md) | 定义测算文本相关接口。 |
 
 ### 接口
 
-| 名称 |
-| --- |
-| [MeasureOptions(Text Measurement)](arkts-arkui-measure-measureoptions-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [MeasureOptions(Text Measurement)](arkts-arkui-measure-measureoptions-i.md) | 被计算文本属性。 |

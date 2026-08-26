@@ -11,7 +11,8 @@
 ## 导入模块
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import dataShare from '@kit.ArkData';
+import dataSharePredicates from '@kit.ArkDataPredicates';
 ```
 
 ## predicates
@@ -69,3 +70,73 @@ update?: string
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+```TypeScript
+import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+let key1: string = "name";
+let value1: string = "roe1";
+let key2: string = "age";
+let value2: number = 21;
+let key3: string = "salary";
+let value3: number = 20.5;
+const va: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).update(uri, da, va, (err: BusinessError, data: number) => {
+      if (err !== undefined) {
+        console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info("update succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to update. Code: ${code}, message: ${message}`);
+}
+```
+
+```TypeScript
+import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+let key1: string = "name";
+let value1: string = "roe1";
+let key2: string = "age";
+let value2: number = 21;
+let key3: string = "salary";
+let value3: number = 20.5;
+const va: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).update(uri, da, va).then((data: number) => {
+      console.info("update succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to update. Code: ${code}, message: ${message}`);
+}
+```

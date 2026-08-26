@@ -9,7 +9,7 @@ Defines an application that creates the contact.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## bundleName
@@ -53,3 +53,15 @@ Application ID.
 **Since:** 7
 
 **System capability:** SystemCapability.Applications.ContactsData
+
+**Examples**
+
+Create data in JSON format.
+
+```TypeScript
+let holder: contact.Holder = {
+  bundleName: 'com.ohos.contacts',
+  displayName: 'displayName',
+  holderId: 1
+};
+```

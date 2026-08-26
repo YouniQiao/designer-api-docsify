@@ -2,7 +2,8 @@
 
 **FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > To implement an embeddable atomic service within this component, it must inherit from
 > [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). Otherwise, the system
 > cannot guarantee that the atomic service will function properly.
@@ -14,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FullScreenLaunchComponent } from 'kits/@kit.ArkUI';
+import { FullScreenLaunchComponent } from '@kit.ArkUI';
 ```
 
 ## appId

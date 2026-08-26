@@ -29,9 +29,9 @@ Obtains the routing configuration of the current **NavDestination** component.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RouteMapConfig](arkts-arkui-routemapconfig-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [RouteMapConfig](arkts-arkui-routemapconfig-i.md) \| undefined | Routing configuration of the current page. |
 
 ## mode
 

@@ -9,7 +9,7 @@ Options for conversion.
 ## Modules to Import
 
 ```TypeScript
-import { convertxml } from 'kits/@kit.ArkTS';
+import convertxml from '@kit.ArkTS';
 ```
 
 ## attributesKey

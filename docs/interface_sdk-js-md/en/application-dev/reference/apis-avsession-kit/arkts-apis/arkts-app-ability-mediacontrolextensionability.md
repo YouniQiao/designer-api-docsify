@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { MediaControlExtensionAbility } from 'kits/@kit.AVSessionKit';
+import MediaControlExtensionAbility from '@kit.AVSessionKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MediaControlExtensionAbility](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c.md) |
+| Name | Description |
+| --- | --- |
+| [MediaControlExtensionAbility](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c.md) | The class of media control extension ability.@extends UIExtensionAbility |

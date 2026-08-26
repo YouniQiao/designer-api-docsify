@@ -14,8 +14,8 @@ declare type SegmentButtonItemTuple = ItemRestriction<SegmentButtonTextItem> | I
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonTextItem & gt; |
-| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonIconItem & gt; |
-| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonIconTextItem & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonTextItem & gt; | 仅文本按钮信息的元组。 |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonIconItem & gt; | 仅图标按钮信息的元组。 |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonIconTextItem & gt; | 图标+文本按钮信息的元组。 |

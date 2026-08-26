@@ -2,12 +2,16 @@
 
 Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used in [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md), [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md), and [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - For intents developed using a configuration file, the full and brief information queried through the preceding
-> APIs are the same.&gt;
+> APIs are the same.
+> 
 > - For intents developed using a decorator, the full and brief information queried through the preceding APIs are
-> different, as described below.&gt;
-> Table 1 Differences between full intent information and brief intent information&gt;
+> different, as described below.
+> 
+> Table 1 Differences between full intent information and brief intent information
+> 
 > | Name| Included in Full Intent Information| Included in Brief Intent Information|
 > | -------- | -------- | -------- |
 > | bundleName | Yes| Yes|

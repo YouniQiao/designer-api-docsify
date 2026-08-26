@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## isFusionFenceSupported
@@ -24,13 +23,25 @@ function isFusionFenceSupported(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true：支持融合围栏能力。 false：不支持融合围栏能力。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
+
+**示例**
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+
+try {
+  let isFusionFenceSupported = geoLocationManager.isFusionFenceSupported();
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:"  + err.message);
+}
+```

@@ -15,14 +15,14 @@ type QueryMediaEntityByKeywordEvent = (keyword: string, searchType: EntityType,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| keyword | string | 是 |
-| searchType | [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | 是 |
-| pageIndex | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keyword | string | 是 |  |
+| searchType | [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | 是 | 搜索内容的类型 |
+| pageIndex | number | 是 | 页面索引 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | 通过promise返回PageMediaEntity |

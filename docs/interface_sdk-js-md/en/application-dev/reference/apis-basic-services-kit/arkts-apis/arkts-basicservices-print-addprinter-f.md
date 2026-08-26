@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import print from '@kit.BasicServicesKit';
 ```
 
 ## addPrinter
@@ -24,22 +24,38 @@ Add a printer to system.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| printerName | string | Yes |
-| uri | string | Yes |
-| [ppdName](arkts-basicservices-print-ppdinfo-i.md) | string | No |
-| options | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| printerName | string | Yes | Indicates the printer name. Name of the printer to be added. |
+| uri | string | Yes | Indicates the printer uri. Uri of the printer to be added. |
+| ppdName | string | No | Indicates the ppd name. Ppd name of the printer to be added. |
+| options | string | No | Indicates the options. Optional parameters when adding a printer. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | the promise returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [13100003](../errorcode-print.md#13100003-print-service-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [13100003](../errorcode-print.md#13100003-print-service-error) | Add the printer to system failed. |
+
+**Examples**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let printerName : string = 'printerName';
+let uri : string = 'uri';
+let ppdName : string = 'ppdName';
+print.addPrinter(printerName, uri, ppdName).then(() => {
+    console.info('add printer success');
+}).catch((error: BusinessError) => {
+    console.error('add printer error : ' + JSON.stringify(error));
+})
+```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
+import emitter from '@kit.BasicServicesKit';
 ```
 
 ## emit
@@ -22,10 +22,28 @@ function emit(event: InnerEvent, data?: EventData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | 是 |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | 是 | 发送的事件，其中[EventPriority](arkts-basicservices-emitter-eventpriority-e.md)用于指定事件被发送的优先级。 |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 否 | 事件携带的数据，默认为空。 |
+
+**示例**
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+let innerEvent: emitter.InnerEvent = {
+  eventId: 1,
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit(innerEvent, eventData);
+```
 
 
 ## emit
@@ -44,10 +62,35 @@ function emit(eventId: string, data?: EventData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| eventId | string | 是 |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventId | string | 是 | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 否 | 事件携带的数据，默认为空。 |
+
+**示例**
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter1.emit('eventId', eventData);
+```
 
 
 ## emit
@@ -66,10 +109,51 @@ function emit<T>(eventId: string, data?: GenericEventData<T>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| eventId | string | 是 |
-| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventId | string | 是 | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
+| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | 否 | 事件携带的数据，默认为空。 |
+
+**示例**
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter1.emit('eventId', eventData);
+```
 
 
 ## emit
@@ -88,11 +172,44 @@ function emit(eventId: string, options: Options, data?: EventData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| eventId | string | 是 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | 是 |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventId | string | 是 | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | 是 | 事件优先级。 |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 否 | 事件携带的数据，默认为空。 |
+
+**示例**
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit('eventId', options, eventData);
+```
+
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter1.emit('eventId', options, eventData);
+```
 
 
 ## emit
@@ -111,8 +228,56 @@ function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| eventId | string | 是 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | 是 |
-| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventId | string | 是 | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | 是 | 事件优先级。 |
+| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | 否 | 事件携带的数据，默认为空。 |
+
+**示例**
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter.emit('eventId', options, eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter1.emit('eventId', options, eventData);
+```

@@ -14,9 +14,9 @@ export type ValueType = number | number | string | boolean
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
-| 类型 |
-| --- |
-| long |
-| double |
-| string |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| long | [since 20] |
+| double | [since 20] |
+| string | The value is a string. [since 12] |
+| boolean | The value is **true** or **false**. [since 12] |

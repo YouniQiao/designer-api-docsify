@@ -71,3 +71,24 @@ Information about a multi-instance application with the specific bundle name in 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName = "ohos.samples.etsclock";
+  appManager.getRunningMultiAppInfo(bundleName)
+    .then((info: appManager.RunningMultiAppInfo) => {
+      console.info(`getRunningMultiAppInfo success, data: ${JSON.stringify(info)}`);
+    }).catch((err: BusinessError) => {
+    console.error(`getRunningMultiAppInfo failed, code: ${err.code}, msg:${err.message}`);
+  })
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`getRunningMultiAppInfo error, code: ${code}, msg:${msg}`);
+}
+```

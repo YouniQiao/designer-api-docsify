@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFingersTap, SwipeInward, TouchGestureEvent } from 'kits/@kit.InputKit';
 ```
 
 ## type
@@ -18,7 +17,7 @@ import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFi
 type: ActionType
 ```
 
-手势事件类型，包括手势取消、手势开始、手势更新、手势结束。
+手势事件类型。如：手势开始、手势更新、手势结束等。
 
 **类型：** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 

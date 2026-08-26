@@ -23,11 +23,25 @@ function setFormNextRefreshTime(formId: string, minute: number, callback: AsyncC
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
-| minute | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | 卡片标识。 |
+| minute | number | 是 | 指定多久之后刷新。单位分钟，大于等于5。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { formProvider } from '@kit.FormKit';
+// 使用时需要用已经存在formId
+let formId: string = '12400633174999288';
+formProvider.setFormNextRefreshTime(formId, 5, (error: BusinessError) => {
+  if (error.code) {
+    console.error(`formProvider setFormNextRefreshTime, errorCode: ${error.code}, errorMessage: ${error.message}`);
+  }
+});
+```
 
 
 ## setFormNextRefreshTime
@@ -48,13 +62,27 @@ function setFormNextRefreshTime(formId: string, minute: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
-| minute | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | 卡片标识。 |
+| minute | number | 是 | 指定多久之后刷新。单位分钟，大于等于5。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { formProvider } from '@kit.FormKit';
+// 使用时需要用已经存在formId
+let formId: string = '12400633174999288';
+formProvider.setFormNextRefreshTime(formId, 5).then(() => {
+  console.info('formProvider setFormNextRefreshTime success');
+}).catch((error: BusinessError) => {
+  console.error(`formProvider setFormNextRefreshTime, errorCode: ${error.code}, errorMessage: ${error.message}`);
+});
+```

@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { PhotoEditorExtensionAbility } from 'kits/@kit.AbilityKit';
+import PhotoEditorExtensionAbility from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PhotoEditorExtensionAbility](arkts-ability-app-ability-photoeditorextensionability-photoeditorextensionability-c.md) |
+| Name | Description |
+| --- | --- |
+| [PhotoEditorExtensionAbility](arkts-ability-app-ability-photoeditorextensionability-photoeditorextensionability-c.md) | Class of the photo editor ExtensionAbility, which provides APIs for you to edit photos.@extends ExtensionAbility |

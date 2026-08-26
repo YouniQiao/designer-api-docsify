@@ -2,7 +2,8 @@
 
 Represents the ECC/SM2 signature data that contains (r, s).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **r** and **s** are each 256 bits number.
 
 **Since:** 20
@@ -12,7 +13,7 @@ Represents the ECC/SM2 signature data that contains (r, s).
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## r

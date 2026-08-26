@@ -35,9 +35,9 @@ layout(childLayoutInfo: LayoutInfo)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| childLayoutInfo | [LayoutInfo](arkts-arkui-layoutinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| childLayoutInfo | [LayoutInfo](arkts-arkui-layoutinfo-i.md) | 是 |  |
 
 ## measure
 
@@ -59,9 +59,9 @@ measure(childConstraint: ConstraintSizeOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| childConstraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| childConstraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | 是 |  |
 
 ## borderInfo
 

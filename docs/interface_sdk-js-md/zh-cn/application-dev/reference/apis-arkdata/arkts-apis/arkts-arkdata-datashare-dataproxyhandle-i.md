@@ -9,7 +9,8 @@
 ## 导入模块
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import dataShare from '@kit.ArkData';
+import dataSharePredicates from '@kit.ArkDataPredicates';
 ```
 
 ## delete
@@ -28,23 +29,40 @@ delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uris | string[] | 是 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uris | string[] | 是 | 表示需要删除的共享配置对应的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度 为64。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内 不允许重复，字符串长度不超过256个字节。 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; | Promise对象。返回批量操作的结果数组。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+
+**示例**
+
+```TypeScript
+const urisToDelete: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+dataProxyHandle.delete(urisToDelete, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to delete config. code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## deleteMyPublishedData
 
@@ -62,22 +80,37 @@ deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; | Promise对象。返回批量操作的结果数组。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+
+**示例**
+
+```TypeScript
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+dataProxyHandle.deleteMyPublishedData(config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to delete all configs. Code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## get
 
@@ -95,23 +128,40 @@ get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uris | string[] | 是 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uris | string[] | 是 | 表示需要获取的共享配置的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度为6 4。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内不允 许重复，字符串长度不超过256个字节。 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。从API版本26.0.0开始，获取的共享配置项的值长度不能超出 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中maxValueLength字段配置的最大长度限制。超出限制时，对应获取操作结果的返回值状态码 [DataProxyErrorCode](arkts-arkdata-datashare-dataproxyerrorcode-e.md)为OVER_LIMIT。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md)[]&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md)[]&gt; | Promise对象。返回批量获取操作的结果数组。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+
+**示例**
+
+```TypeScript
+const urisToGet: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+dataProxyHandle.get(urisToGet, config).then((results: dataShare.DataProxyGetResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}, AllowList: ${result.allowList}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get config. code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## getValues
 
@@ -129,25 +179,56 @@ getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 表示要操作的数据所对应的URI。 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 数据代理操作的配置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ValueType](arkts-arkdata-valuetype-t.md)[]&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ValueType](arkts-arkdata-valuetype-t.md)[]&gt; | Promise对象，用于返回URI下所有值的数组。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
-| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
+
+**示例**
+
+```TypeScript
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+let testUri: string = 'datashareproxy://com.test.dataproxyhandle/test/pv/001';
+let newConfigData: dataShare.ProxyData[] = [{
+  uri: testUri,
+  values: { 0: 'init' },
+  isMultiValues: true,
+  allowList: [],
+  trustProviders: []
+}];
+
+await dataProxyHandle!.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
+});
+
+try {
+  let result: ValueType[] = await dataProxyHandle?.getValues(testUri, config);
+  console.info(`getValues success. Values: ` + JSON.stringify(result));
+} catch (error) {
+  console.error(`getValues failed: code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## off
 
@@ -170,25 +251,48 @@ off(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | 'dataChange' | 是 |
-| uris | string[] | 是 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | 'dataChange' | 是 | 订阅的事件/回调类型，支持的事件为'dataChange'。 |
+| uris | string[] | 是 | 表示要取消订阅的共享配置对应的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长 度为64。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用 内不允许重复，字符串长度不超过256个字节。 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 | 回调函数。表示指定取消订阅的callback通知，如果为空、undefined或null，则取消订阅这些 URI下所有的通知事件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] |
+| 类型 | 说明 |
+| --- | --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | 批量操作的结果数组。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+
+**示例**
+
+```TypeScript
+const urisToUnWatch: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeInfo[]): void => {
+  if (err) {
+    console.error(`Failed to receive data change notification. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    changes.forEach((change) => {
+      console.info(`Change Type: ${change.type}, URI: ${change.uri}, Value: ${change.value}`);
+    });
+  }
+};
+const results: dataShare.DataProxyResult[] = dataProxyHandle.off('dataChange', urisToUnWatch, config, callback);
+results.forEach((result) => {
+  console.info(`URI: ${result.uri}, Result: ${result.result}`);
+});
+```
 
 ## on
 
@@ -211,25 +315,48 @@ on(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | 'dataChange' | 是 |
-| uris | string[] | 是 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | 'dataChange' | 是 | 订阅的事件/回调类型，支持的事件为'dataChange'，当配置发布方修改配置时，触发该事件。 |
+| uris | string[] | 是 | 表示要订阅的共享配置对应的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度为 64。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内不 允许重复，字符串长度不超过256个字节。 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。从API版本26.0.0开始，当变更的共享配置内容长度超过 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中maxValueLength字段配置的最大长度限制时，该共享配置内容会被截断。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 | 回调函数。当配置发布方修改配置时会回调该函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] |
+| 类型 | 说明 |
+| --- | --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | 批量操作的结果数组。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+
+**示例**
+
+```TypeScript
+const urisToWatch: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeInfo[]): void => {
+  if (err) {
+    console.error(`Failed to receive data change notification. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    changes.forEach((change) => {
+      console.info(`Change Type: ${change.type}, URI: ${change.uri}, Value: ${change.value}`);
+    });
+  }
+};
+const results: dataShare.DataProxyResult[] = dataProxyHandle.on('dataChange', urisToWatch, config, callback);
+results.forEach((result) => {
+  console.info(`URI: ${result.uri}, Result: ${result.result}`);
+});
+```
 
 ## publish
 
@@ -247,23 +374,47 @@ publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | [ProxyData[]](arkts-arkdata-datashare-proxydata-i.md) | 是 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | [ProxyData[]](arkts-arkdata-datashare-proxydata-i.md) | 是 | 表示需要创建或者更新的共享配置项数组。API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度为64。 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。从API版本26.0.0开始，如果发布的配置项中存在任一值的长度超过 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中maxValueLength字段配置的最大长度限制，则当前发布操作失败。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; | Promise对象。返回批量操作的结果数组。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+
+**示例**
+
+```TypeScript
+const newConfigData: dataShare.ProxyData[] = [{
+  uri: 'datashareproxy://com.example.app1/config1',
+  value: 'Value1',
+  allowList: ['appIdentifier2', 'appIdentifier3'], // 此处字符串仅作示例，使用时需替换为应用实际的appIdentifier
+}, {
+  uri: 'datashareproxy://com.example.app1/config2',
+  value: 'Value2',
+  allowList: ['appIdentifier3', 'appIdentifier4'], // 此处字符串仅作示例，使用时需替换为应用实际的appIdentifier
+}];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+dataProxyHandle.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## putValue
 
@@ -281,27 +432,58 @@ putValue(uri: string, key: number, value: ValueType, config: DataProxyConfig): P
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| key | number | 是 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 表示要操作的数据所对应的URI。 |
+| key | number | 是 | 添加的值所对应的Key，对同一个应用来说是唯一的。 取值范围为全体整数。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 待添加的值。 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 数据代理操作的配置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
-| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
+
+**示例**
+
+```TypeScript
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+let testUri: string = 'datashareproxy://com.test.dataproxyhandle/test/pv/001';
+let newConfigData: dataShare.ProxyData[] = [{
+  uri: testUri,
+  values: { 0: 'init' },
+  isMultiValues: true,
+  allowList: [],
+  trustProviders: []
+}];
+
+await dataProxyHandle?.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
+});
+
+try {
+  await dataProxyHandle?.putValue(testUri, 1, 'hello', config);
+  console.info(`putValue success`);
+} catch (error) {
+  console.error(`putValue failed: code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## removeValue
 
@@ -319,23 +501,54 @@ removeValue(uri: string, key: number, config: DataProxyConfig): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
-| key | number | 是 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 表示要操作的数据所对应的URI。 |
+| key | number | 是 | 添加的值所对应的key。 取值范围为全体整数。 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 数据代理操作的配置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
-| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
+
+**示例**
+
+```TypeScript
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+let testUri: string = 'datashareproxy://com.test.dataproxyhandle/test/pv/001';
+let newConfigData: dataShare.ProxyData[] = [{
+  uri: testUri,
+  values: { 0: 'init' },
+  isMultiValues: true,
+  allowList: [],
+  trustProviders: []
+}];
+
+await dataProxyHandle?.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
+});
+
+try {
+  await dataProxyHandle?.removeValue(testUri, 0, config);
+  console.info(`removeValue success`);
+} catch (error) {
+  console.error(`removeValue failed: code: ${error.code}, message: ${error.message}`);
+}
+```

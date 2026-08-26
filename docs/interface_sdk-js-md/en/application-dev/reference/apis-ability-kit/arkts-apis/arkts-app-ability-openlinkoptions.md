@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { OpenLinkOptions } from 'kits/@kit.AbilityKit';
+import OpenLinkOptions from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OpenLinkOptions](arkts-ability-app-ability-openlinkoptions-openlinkoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [OpenLinkOptions](arkts-ability-app-ability-openlinkoptions-openlinkoptions-i.md) | **OpenLinkOptions** can be used as an input parameter of [openLink()](arkts-ability-uiabilitycontext-c.md#openlink) to indicate whether to enable only App Linking and pass in optional parameters in the form of key-value pairs. |

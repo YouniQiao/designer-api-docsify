@@ -3,7 +3,12 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import inputMethod from '@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKitEngine';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
+import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
+import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 ```
 
 ## getSetting
@@ -20,12 +25,18 @@ function getSetting(): InputMethodSetting
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | 返回当前客户端设置实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800007](../errorcode-inputmethod-framework.md#12800007-输入法设置器异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800007](../errorcode-inputmethod-framework.md#12800007-输入法设置器异常) | input method setter error. Possible cause: create InputMethodSetting object failed. |
+
+**示例**
+
+```TypeScript
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+```

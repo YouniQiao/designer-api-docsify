@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { drm } from 'kits/@kit.DrmKit';
+import drm from '@kit.DrmKit';
 ```
 
 ## checkMediaKeyStatus
@@ -28,16 +28,26 @@ checkMediaKeyStatus(): MediaKeyStatus[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MediaKeyStatus](arkts-drm-drm-mediakeystatus-i.md)[] |
+| 类型 | 说明 |
+| --- | --- |
+| [MediaKeyStatus](arkts-drm-drm-mediakeystatus-i.md)[] | 当前媒体密钥状态值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
-| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+
+**示例**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+let keyStatus: drm.MediaKeyStatus[] =  mediaKeySession.checkMediaKeyStatus();
+```
 
 ## clearMediaKeys
 
@@ -55,10 +65,25 @@ clearMediaKeys(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
-| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+
+**示例**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyResponse是从DRM服务获取的媒体密钥响应，按实际值填入。
+let mediaKeyResponse = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.processMediaKeyResponse(mediaKeyResponse).then((mediaKeyId: Uint8Array) => {
+  console.info('processMediaKeyResponse:' + mediaKeyId);
+});
+mediaKeySession.clearMediaKeys();
+```
 
 ## destroy
 
@@ -76,10 +101,27 @@ destroy(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
-| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+
+**示例**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+mediaKeySession.destroy();
+```
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+mediaKeySystem.destroy();
+```
 
 ## generateMediaKeyRequest
 
@@ -97,26 +139,40 @@ generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: nu
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mimeType | string | 是 |
-| initData | Uint8Array | 是 |
-| mediaKeyType | number | 是 |
-| options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mimeType | string | 是 | 媒体类型，DRM解决方案名称，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md) 查询。 |
+| initData | Uint8Array | 是 | 初始数据，即加密流中的PSSH box中的实际PSSH数据。可通过监听AVPlayer的'mediaKeySystemInfoUpdate'事件（ on('mediaKeySystemInfoUpdate') ）获取DRM信息，从中提取pssh字段生成initData。具体开发流程可参考 [基于AVPlayer播放DRM节目(ArkTS)](../../../media/drm/drm-avplayer-arkts-integration.md)。 |
+| mediaKeyType | number | 是 | 媒体密钥类型。取值范围为[0, 1]。0表示在线，1表示离线。传入指定范围外的参数会导致参数校验失败，抛出错误码401。 |
+| options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | 否 | 可选数据。默认值为空数组。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[MediaKeyRequest](arkts-drm-drm-mediakeyrequest-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[MediaKeyRequest](arkts-drm-drm-mediakeyrequest-i.md)&gt; | Promise对象，媒体密钥请求。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
-| [24700201](../errorcode-drm.md#24700201-服务异常) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+
+**示例**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// pssh数据为版权保护系统描述头，封装在加密码流中，mp4文件中位于pssh box、dash码流中位于mpd及mp4的pssh box、hls+ts的码流位于m3u8及每个ts片段中，请按实际值传入。
+let uint8pssh = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.generateMediaKeyRequest('video/avc', uint8pssh, drm.MediaKeyType.MEDIA_KEY_TYPE_ONLINE).then((mediaKeyRequest: drm.MediaKeyRequest) =>{
+  console.info('generateMediaKeyRequest' + mediaKeyRequest);
+});
+```
 
 ## generateOfflineReleaseRequest
 
@@ -134,23 +190,37 @@ generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mediaKeyId | Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mediaKeyId | Uint8Array | 是 | 离线媒体密钥标识。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Uint8Array & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Uint8Array & gt; | Promise对象，设备上的DRM解决方案支持离线媒体密钥释放处理，则返回离线媒体密钥释放请求。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
-| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+
+**示例**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyId是processMediaKeyResponse或getOfflineMediaKeyIds接口返回的媒体密钥标识，请按实际值传入。
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.generateOfflineReleaseRequest(mediaKeyId).then((offlineReleaseRequest: Uint8Array) => {
+  console.info('generateOfflineReleaseRequest:' + offlineReleaseRequest);
+});
+```
 
 ## getContentProtectionLevel
 
@@ -168,16 +238,27 @@ getContentProtectionLevel(): ContentProtectionLevel
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | 返回当前会话内容保护级别。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
-| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+
+**示例**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+let contentProtectionLevel: drm.ContentProtectionLevel = mediaKeySession.getContentProtectionLevel();
+console.info(`contentProtectionLevel: ${contentProtectionLevel}`);
+```
 
 ## off('keyRequired')
 
@@ -195,17 +276,17 @@ off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'keyRequired' | 是 |
-| callback | (eventInfo: EventInfo) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keyRequired' | 是 | 监听事件类型，固定为'keyRequired'。 |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## off('keyExpired')
 
@@ -223,17 +304,17 @@ off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'keyExpired' | 是 |
-| callback | (eventInfo: EventInfo) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keyExpired' | 是 | 监听事件类型，固定为'keyExpired'。 |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## off('vendorDefined')
 
@@ -251,17 +332,17 @@ off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'vendorDefined' | 是 |
-| callback | (eventInfo: EventInfo) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'vendorDefined' | 是 | 监听事件，固定为'vendorDefined'。 |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## off('expirationUpdate')
 
@@ -279,17 +360,17 @@ off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'expirationUpdate' | 是 |
-| callback | (eventInfo: EventInfo) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'expirationUpdate' | 是 | 监听事件类型，固定为'expirationUpdate'。 |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## off('keysChange')
 
@@ -307,17 +388,17 @@ off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolea
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'keysChange' | 是 |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keysChange' | 是 | 监听事件类型，固定为'keysChange'。 |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | 否 | 回调函数，返回事件信息，包含密钥标识和密钥状态描述的列表及密钥是否可用。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## on('keyRequired')
 
@@ -335,17 +416,17 @@ on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'keyRequired' | 是 |
-| callback | (eventInfo: EventInfo) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keyRequired' | 是 | 事件类型，固定为'keyRequired'，当播放DRM节目需要获取媒体密钥时触发。 |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## on('keyExpired')
 
@@ -363,17 +444,17 @@ on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'keyExpired' | 是 |
-| callback | (eventInfo: EventInfo) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keyExpired' | 是 | 监听事件类型，固定为'keyExpired'。密钥过期时触发。 |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## on('vendorDefined')
 
@@ -391,17 +472,17 @@ on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'vendorDefined' | 是 |
-| callback | (eventInfo: EventInfo) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'vendorDefined' | 是 | 监听事件，固定为'vendorDefined'。自定义事件发生时触发。 |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## on('expirationUpdate')
 
@@ -419,17 +500,17 @@ on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'expirationUpdate' | 是 |
-| callback | (eventInfo: EventInfo) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'expirationUpdate' | 是 | 监听事件类型，固定为'expirationUpdate'。密钥过期更新时触发。 |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## on('keysChange')
 
@@ -447,17 +528,17 @@ on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'keysChange' | 是 |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keysChange' | 是 | 监听事件类型，固定为'keysChange'。密钥变化时触发。 |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | 是 | 回调函数，返回事件信息，包含密钥标识和密钥状态描述的列表及密钥是否可用。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## processMediaKeyResponse
 
@@ -475,23 +556,37 @@ processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| response | Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| response | Uint8Array | 是 | 媒体密钥响应。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Uint8Array & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Uint8Array & gt; | Promise对象，媒体密钥标识。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
-| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+
+**示例**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyResponse是从DRM服务获取的媒体密钥响应，按实际值填入。
+let mediaKeyResponse = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.processMediaKeyResponse(mediaKeyResponse).then((mediaKeyId: Uint8Array) => {
+  console.info('processMediaKeyResponse:' + mediaKeyId);
+});
+```
 
 ## processOfflineReleaseResponse
 
@@ -509,24 +604,43 @@ processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Pro
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mediaKeyId | Uint8Array | 是 |
-| response | Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mediaKeyId | Uint8Array | 是 | 离线媒体密钥标识。 |
+| response | Uint8Array | 是 | 离线媒体密钥释放响应。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
-| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+
+**示例**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyId是processMediaKeyResponse或getOfflineMediaKeyIds接口返回的媒体密钥标识，请按实际长度申请内存。
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.generateOfflineReleaseRequest(mediaKeyId).then((offlineReleaseRequest: Uint8Array) => {
+  console.info('generateOfflineReleaseRequest:' + offlineReleaseRequest);
+});
+// offlineReleaseResponse是从DRM服务获取的离线媒体密钥释放响应，请按实际长度申请内存。
+let offlineReleaseResponse = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.processOfflineReleaseResponse(mediaKeyId, offlineReleaseResponse).then(() => {
+  console.info('processOfflineReleaseResponse');
+});
+```
 
 ## requireSecureDecoderModule
 
@@ -544,23 +658,33 @@ requireSecureDecoderModule(mimeType: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mimeType | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mimeType | string | 是 | 媒体类型，支持的媒体类型取决于DRM解决方案，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md) 查询。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否需要安全解码，true表示需要安全解码，false表示不需要安全解码。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
-| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+
+**示例**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+let status: boolean = mediaKeySession.requireSecureDecoderModule('video/avc');
+```
 
 ## restoreOfflineMediaKeys
 
@@ -578,20 +702,34 @@ restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mediaKeyId | Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mediaKeyId | Uint8Array | 是 | 离线媒体密钥标识。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [24700101](../errorcode-drm.md#24700101-未知错误) |
-| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+
+**示例**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyId是processMediaKeyResponse或getOfflineMediaKeyIds接口返回的媒体密钥标识，请按实际数据传入。
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.restoreOfflineMediaKeys(mediaKeyId).then(() => {
+  console.info("restoreOfflineMediaKeys");
+});
+```

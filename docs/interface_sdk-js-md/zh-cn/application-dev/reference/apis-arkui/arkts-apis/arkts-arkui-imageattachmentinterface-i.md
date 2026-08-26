@@ -65,6 +65,24 @@ objectFit?: ImageFit
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## resizable
+
+```TypeScript
+resizable?: ResizableOptions
+```
+
+获取属性字符串的图片拉伸选项。
+
+**类型：** [ResizableOptions](../arkts-components/arkts-arkui-resizableoptions-i.md)
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## size
 
 ```TypeScript

@@ -9,7 +9,7 @@ Defines static functions of App class
 ## Modules to Import
 
 ```TypeScript
-import { App, AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } from 'kits/@kit.ArkUI';
+import App, { AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } from '@kit.ArkUI';
 ```
 
 ## getInfo
@@ -28,9 +28,124 @@ Obtains the declared information in the **config.json** file of an application. 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AppResponse](arkts-arkui-system-app-appresponse-i.md) |
+| Type | Description |
+| --- | --- |
+| [AppResponse](arkts-arkui-system-app-appresponse-i.md) | Application response information. |
+
+**Examples**
+
+ArkTS example:
+
+```TypeScript
+import app, { AppResponse } from '@system.app';
+export default class Info {
+  getInfo() {
+    let info:AppResponse = app.getInfo();
+    console.info(JSON.stringify(info));
+  }
+}
+```
+
+JS example:
+
+```TypeScript
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        app.getInfo example
+    </text>
+    <div class="info-item">
+        <text class="label">appName:</text>
+        <text class="value">{{appName}}</text>
+    </div>
+    <div class="info-item">
+        <text class="label">versionName:</text>
+        <text class="value">{{versionName}}</text>
+    </div>
+    <div class="info-item">
+        <text class="label">versionCode:</text>
+        <text class="value">{{versionCode}}</text>
+    </div>
+    <input type="button" value="getAppInfo" style="width: 240px; height: 50px; margin: 5px;" onclick="getAppInfo"></input>
+</div>
+```
+
+```TypeScript
+/* xxx.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0px;
+    top: 0px;
+    width: 454px;
+    height: 454px;
+    background-color: #000000;
+}
+.title {
+    font-size: 32px;
+    text-align: center;
+    width: 400px;
+    height: 80px;
+    margin-top: 20px;
+    color: #ffffff;
+}
+.info-item {
+    width: 400px;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}
+.label {
+    font-size: 24px;
+    color: #aaaaaa;
+}
+.value {
+    font-size: 24px;
+    color: #ffffff;
+}
+```
+
+```TypeScript
+// xxx.js
+import app from '@system.app';
+
+export default {
+    data: {
+        fontSize: '32px',
+        fontColor: '#ffffff',
+        appName: '',
+        versionName: '',
+        versionCode: ''
+    },
+    onInit() {
+        this.getAppInfo();
+    },
+    getAppInfo() {
+        try {
+            const info = app.getInfo();
+            console.info('app.getInfo success');
+            console.info('appName: ' + info.appName);
+            console.info('versionName: ' + info.versionName);
+            console.info('versionCode: ' + info.versionCode);
+            this.appName = info.appName || 'Unknown';
+            this.versionName = info.versionName || 'Unknown';
+            this.versionCode = String(info.versionCode) || 'Unknown';
+        } catch (error) {
+            console.error('app.getInfo failed: ' + error.message);
+            this.appName = 'Failed';
+            this.versionName = 'Failed';
+            this.versionCode = 'Failed';
+        }
+    }
+}
+```
 
 ## requestFullWindow
 
@@ -50,9 +165,22 @@ Requests the application to run in full window. In some scenarios, such as semi-
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [RequestFullWindowOptions](arkts-arkui-system-app-requestfullwindowoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [RequestFullWindowOptions](arkts-arkui-system-app-requestfullwindowoptions-i.md) | No | Transition time from non-full window to full window, in milliseconds. By default, the value is in direct proportion to the distance between the non-full window and the full window. |
+
+**Examples**
+
+```TypeScript
+import app, { AppResponse } from '@system.app';
+export default class Req {
+  requestFullWindow() {
+    app.requestFullWindow({
+      duration: 200
+    });
+  }
+}
+```
 
 ## screenOnVisible
 
@@ -70,9 +198,9 @@ Defines whether to keep the application visible when the screen is woken up.This
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [ScreenOnVisibleOptions](arkts-arkui-system-app-screenonvisibleoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [ScreenOnVisibleOptions](arkts-arkui-system-app-screenonvisibleoptions-i.md) | No | With keep-alive, the system is prevented from returning to the home screen when the screen is locked, so that the application is visible when the screen is woken up. |
 
 ## setImageCacheCount
 
@@ -90,9 +218,38 @@ Set image cache capacity of decoded image count. if not set, the application wil
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | capacity of decoded image count. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import app, { AppResponse } from '@system.app';
+
+@Entry
+@Component
+struct Index {
+  onPageShow() {
+    // Set the maximum number of decoded images that can be cached in the memory to 100.
+    app.setImageCacheCount(100);
+    console.info('Application onPageShow');
+  }
+  onDestroy() {
+    console.info('Application onDestroy');
+  }
+
+  build() {
+    Row(){
+      // xxxxxxxxxxxxx indicates the image address.
+      Image('xxxxxxxxxxxxx')
+        .width(200)
+        .height(50)
+    }.width('100%')
+  }
+}
+```
 
 ## setImageFileCacheSize
 
@@ -110,9 +267,27 @@ Set image file cache size in bytes on disk before decode. if not set, the applic
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | capacity of raw image data size in bytes. |
+
+**Examples**
+
+```TypeScript
+// app.ets
+import app, { AppResponse } from '@system.app';
+
+export default class OnC {
+  onCreate() {
+    app.setImageFileCacheSize(209715200);
+    // Set the upper limit of the image file cache to 200 MB. (200 × 1024 × 1024 B= 209715200 B = 200 MB).
+    console.info('Application onCreate');
+  }
+  onDestroy() {
+    console.info('Application onDestroy');
+  }
+}
+```
 
 ## setImageRawDataCacheSize
 
@@ -130,9 +305,38 @@ Set image cache capacity of raw image data size in bytes before decode. if not s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | capacity of raw image data size in bytes. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import app, { AppResponse } from '@system.app';
+
+@Entry
+@Component
+struct Index {
+  onPageShow() {
+    // Set the upper limit of the memory for caching image data before decoding to 100 MB. (100 × 1024 × 1024 B =104857600 B = 100 MB).
+    app.setImageRawDataCacheSize(104857600); 
+    console.info('Application onPageShow');
+  }
+  onDestroy() {
+    console.info('Application onDestroy');
+  }
+
+  build() {
+    Row(){
+      // xxxxxxxxxxxxx indicates the image address.
+      Image('xxxxxxxxxxxxx')
+        .width(200)
+        .height(50)
+    }.width('100%')
+  }
+}
+```
 
 ## terminate
 
@@ -147,3 +351,82 @@ Terminates the current ability. In the stage model, this API has no effect.This 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
+
+**Examples**
+
+ArkTS example:
+
+```TypeScript
+import app, { AppResponse } from '@system.app';
+export default class TerM {
+  terminate() {
+    app.terminate();
+  }
+}
+```
+
+JS example:
+
+```TypeScript
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        app.terminate example
+    </text>
+    <text class="desc">
+        Click the button below to exit the app
+    </text>
+    <input type="button" value="exit app" style="width: 240px; height: 50px; margin: 5px;" onclick="terminateApp"></input>
+</div>
+```
+
+```TypeScript
+/* xxx.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0px;
+    top: 0px;
+    width: 454px;
+    height: 454px;
+    background-color: #000000;
+}
+.title {
+    font-size: 32px;
+    text-align: center;
+    width: 400px;
+    height: 80px;
+    margin-top: 60px;
+    color: #ffffff;
+}
+.desc {
+    font-size: 24px;
+    text-align: center;
+    width: 290px;
+    height: 120px;
+    margin-top: 20px;
+    color: #aaaaaa;
+}
+```
+
+```TypeScript
+// xxx.js
+import app from '@system.app';
+
+export default {
+    data: {
+        fontSize: '32px',
+        fontColor: '#ffffff'
+    },
+    terminateApp() {
+        console.info('Calling app.terminate...');
+        try {
+            app.terminate();
+            console.info('app.terminate called');
+        } catch (error) {
+            console.error('app.terminate failed: ' + error.message);
+        }
+    }
+}
+```

@@ -31,9 +31,9 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
+| Type | Description |
+| --- | --- |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## getHorizontalAxisValue
 
@@ -53,9 +53,9 @@ Obtains the horizontal axis value of this axis event.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Horizontal axis value. |
 
 ## getPinchAxisScaleValue
 
@@ -75,9 +75,9 @@ Obtains the two-finger pinch zoom ratio from the axis event.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Two-finger pinch zoom ratio. |
 
 ## getVerticalAxisValue
 
@@ -97,9 +97,9 @@ Obtains the vertical axis value of this axis event.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Vertical axis value. |
 
 ## hasAxis
 
@@ -119,15 +119,15 @@ Checks whether this axis event contains the specified axis type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | Yes | Axis type to check for. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the axis event contains the specified axis type. |
 
 ## action
 

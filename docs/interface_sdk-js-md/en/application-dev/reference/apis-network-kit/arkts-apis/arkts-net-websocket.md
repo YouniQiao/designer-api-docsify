@@ -9,45 +9,44 @@ Provides WebSocket clients and servers for third-party applications to implement
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createWebSocket(WebSocket Connection)](arkts-network-websocket-createwebsocket-f.md) |
-| [createWebSocketServer(WebSocket Connection)](arkts-network-websocket-createwebsocketserver-f.md) |
+| Name | Description |
+| --- | --- |
+| [createWebSocket(WebSocket Connection)](arkts-network-websocket-createwebsocket-f.md) | Creates a **WebSocket** object, which provides methods to create or close a WebSocket connection, send data over the connection, and enable or disable listening for the **open**, **close**, **message**, and **error** events. |
+| [createWebSocketServer(WebSocket Connection)](arkts-network-websocket-createwebsocketserver-f.md) | Creates a **WebSocketServer** object, which provides methods to start or stop the WebSocketServer service, send data over the connection, close the connection, list all connections, and enable or disable listening for the **open**, **close**, **message**, and **error** events. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ClientCert(WebSocket Connection)](arkts-network-websocket-clientcert-i.md) |
-| [CloseResult(WebSocket Connection)](arkts-network-websocket-closeresult-i.md) |
-| [ServerCert(WebSocket Connection)](arkts-network-websocket-servercert-i.md) |
-| [WebSocket(WebSocket Connection)](arkts-network-websocket-websocket-i.md) |
-| [WebSocketCloseOptions(WebSocket Connection)](arkts-network-websocket-websocketcloseoptions-i.md) |
-| [WebSocketConnection(WebSocket Connection)](arkts-network-websocket-websocketconnection-i.md) |
-| [WebSocketMessage(WebSocket Connection)](arkts-network-websocket-websocketmessage-i.md) |
-| [WebSocketOpenInfo(WebSocket Connection)](arkts-network-websocket-websocketopeninfo-i.md) |
-| [WebSocketRequestOptions(WebSocket Connection)](arkts-network-websocket-websocketrequestoptions-i.md) |
-| [WebSocketServer(WebSocket Connection)](arkts-network-websocket-websocketserver-i.md) |
-| [WebSocketServerConfig(WebSocket Connection)](arkts-network-websocket-websocketserverconfig-i.md) |
+| Name | Description |
+| --- | --- |
+| [ClientCert(WebSocket Connection)](arkts-network-websocket-clientcert-i.md) | Defines the client certificate type. |
+| [CloseResult(WebSocket Connection)](arkts-network-websocket-closeresult-i.md) | Represents the result obtained from the **close** event reported when the WebSocket connection is closed. |
+| [ServerCert(WebSocket Connection)](arkts-network-websocket-servercert-i.md) | Certificate information, which includes the paths of the WebSocketServer certificate file and private key file. |
+| [WebSocket(WebSocket Connection)](arkts-network-websocket-websocket-i.md) | Defines a **WebSocket** object. Before invoking WebSocket APIs, you need to call [webSocket.createWebSocket](arkts-network-websocket-createwebsocket-f.md) to create a **WebSocket** object. |
+| [WebSocketCloseOptions(WebSocket Connection)](arkts-network-websocket-websocketcloseoptions-i.md) | Defines the optional parameters carried in the request for closing a WebSocket connection. |
+| [WebSocketConnection(WebSocket Connection)](arkts-network-websocket-websocketconnection-i.md) | Client information, including the IP address and port number. |
+| [WebSocketMessage(WebSocket Connection)](arkts-network-websocket-websocketmessage-i.md) | Callback used to return the result, which contains: |
+| [WebSocketOpenInfo(WebSocket Connection)](arkts-network-websocket-websocketopeninfo-i.md) | The result for open info of a WebSocket connection. |
+| [WebSocketRequestOptions(WebSocket Connection)](arkts-network-websocket-websocketrequestoptions-i.md) | Defines the optional parameters carried in the request for establishing a WebSocket connection. |
+| [WebSocketServer(WebSocket Connection)](arkts-network-websocket-websocketserver-i.md) | Defines a **WebSocketServer** object. You need to use [webSocket.createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md) to create a **WebSocketServer** object before using its methods. |
+| [WebSocketServerConfig(WebSocket Connection)](arkts-network-websocket-websocketserverconfig-i.md) | Defines the WebSocketServer configuration. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TlsProtocol(WebSocket Connection)](arkts-network-websocket-tlsprotocol-e.md) |
+| Name | Description |
+| --- | --- |
+| [TlsProtocol(WebSocket Connection)](arkts-network-websocket-tlsprotocol-e.md) | Enumerates the TLS protocol types. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ClientConnectionCloseCallback(WebSocket Connection)](arkts-network-websocket-clientconnectionclosecallback-t.md) |
-| [HttpProxy(WebSocket Connection)](arkts-network-websocket-httpproxy-t.md) |
-| [ProxyConfiguration(WebSocket Connection)](arkts-network-websocket-proxyconfiguration-t.md) |
-| [ResponseHeaders(WebSocket Connection)](arkts-network-websocket-responseheaders-t.md) |
+| Name | Description |
+| --- | --- |
+| [ClientConnectionCloseCallback(WebSocket Connection)](arkts-network-websocket-clientconnectionclosecallback-t.md) | Callback invoked when the WebSocketServer connection is closed. |
+| [HttpProxy(WebSocket Connection)](arkts-network-websocket-httpproxy-t.md) | Defines the global HTTP proxy configuration of the network. |
+| [ProxyConfiguration(WebSocket Connection)](arkts-network-websocket-proxyconfiguration-t.md) | Represents the HTTP proxy configuration. |
+| [ResponseHeaders(WebSocket Connection)](arkts-network-websocket-responseheaders-t.md) | Enumerates the response headers sent by the server. |

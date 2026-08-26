@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { businessAbilityRouter } from 'kits/@kit.AbilityKit';
+import businessAbilityRouter from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -19,32 +19,32 @@ import { businessAbilityRouter } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md) |
-| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md) | 通过给定的过滤条件查询Ability信息。使用callback异步回调，成功时返回查询到的路由Ability信息，失败时返回错误信息。 |
+| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md) | 通过给定的过滤条件查询Ability信息。使用Promise异步回调，成功时返回查询到的路由Ability信息，失败时返回错误信息。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 |
-| --- |
-| [BusinessAbilityFilter](arkts-ability-businessabilityrouter-businessabilityfilter-i-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [BusinessAbilityFilter](arkts-ability-businessabilityrouter-businessabilityfilter-i-sys.md) | 此过滤值用于过滤查询的Ability类型。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 |
-| --- |
-| [BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md) | 此枚举值用于标识过滤条件类型。 |
 <!--DelEnd-->
 
 <!--Del-->
 ### 类型（系统接口）
 
-| 名称 |
-| --- |
-| [BusinessAbilityInfo](arkts-ability-businessabilityrouter-businessabilityinfo-t-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [BusinessAbilityInfo](arkts-ability-businessabilityrouter-businessabilityinfo-t-sys.md) | 业务路由信息。 |
 <!--DelEnd-->

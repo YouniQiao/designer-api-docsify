@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SliderModifier](arkts-arkui-slidermodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [SliderModifier](arkts-arkui-slidermodifier-c.md) | Defines Slider Modifier@extends SliderAttribute @implements AttributeModifier & lt;SliderAttribute & gt; |

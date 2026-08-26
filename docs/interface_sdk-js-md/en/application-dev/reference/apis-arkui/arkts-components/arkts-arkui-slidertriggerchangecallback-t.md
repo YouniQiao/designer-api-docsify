@@ -16,7 +16,7 @@ Defines the callback type used in **SliderConfiguration**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
-| mode | [SliderChangeMode](arkts-arkui-sliderchangemode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Current progress. Value range: [[min](arkts-arkui-slideroptions-i.md), [max](arkts-arkui-slideroptions-i.md)] |
+| mode | [SliderChangeMode](arkts-arkui-sliderchangemode-e.md) | Yes | State triggered by the event. |

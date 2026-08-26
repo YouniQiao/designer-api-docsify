@@ -9,7 +9,7 @@ Defines the popup button
 ## Modules to Import
 
 ```TypeScript
-import { PopupV2, PopupV2InitInfo, PopupV2Button } from 'kits/@kit.ArkUI';
+import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 ```
 
 ## action

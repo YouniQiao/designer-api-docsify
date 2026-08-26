@@ -23,5 +23,5 @@ Returns an object whose properties have the value 'true'when they will be absent
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

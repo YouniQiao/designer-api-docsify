@@ -15,8 +15,8 @@ Returns the WeakRef instance's target object, or undefined if the target object 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [Symbol.toStringTag]
 
 ```TypeScript

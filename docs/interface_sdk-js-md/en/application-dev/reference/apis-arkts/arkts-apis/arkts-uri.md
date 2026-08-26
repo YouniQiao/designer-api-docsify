@@ -9,13 +9,12 @@ The uri module provides APIs for parsing URI strings that comply with the RFC398
 ## Modules to Import
 
 ```TypeScript
-import { uri } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [URI](arkts-arkts-uri-uri-c.md) |
+| Name | Description |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | URI Represents a Uniform Resource Identifier (URI) reference. |

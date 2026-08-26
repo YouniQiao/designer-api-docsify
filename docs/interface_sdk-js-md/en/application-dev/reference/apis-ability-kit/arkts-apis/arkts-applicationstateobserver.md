@@ -4,12 +4,12 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) |
+| Name | Description |
+| --- | --- |
+| [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | The module defines an observer to listen for application state changes. It can be used as an input parameter in [on('applicationState')](arkts-ability-appmanager-on-f.md#onapplicationstate) to listen for lifecycle changes of the application. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ProcessData](arkts-ability-processdata-t.md) |
+| Name | Description |
+| --- | --- |
+| [ProcessData](arkts-ability-processdata-t.md) | The process data. |

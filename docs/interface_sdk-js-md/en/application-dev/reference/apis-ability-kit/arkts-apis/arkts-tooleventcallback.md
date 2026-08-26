@@ -5,15 +5,15 @@
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ToolEventCallback](arkts-ability-tooleventcallback-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ToolEventCallback](arkts-ability-tooleventcallback-i-sys.md) | This interface is used to receive cli event when the cli tool process is running.@interface ToolEventCallback |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnEventFn](arkts-ability-oneventfn-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [OnEventFn](arkts-ability-oneventfn-t-sys.md) | Defines cli event callback function. |
 <!--DelEnd-->

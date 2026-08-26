@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import matrix4 from '@kit.ArkUI';
 ```
 
 ## translate
@@ -24,12 +24,34 @@ Translates this matrix object along the x, y, and z axes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes | Translation configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after translation. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { matrix4 } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Test {
+  private matrix1 = matrix4.identity().translate({ x: 100, y: 200, z: 30 });
+
+  build() {
+    Column() {
+      // Replace $r("app.media.bg1") with the image resource file you use.
+      Image($r("app.media.bg1")).transform(this.matrix1)
+        .width('40%')
+        .height(100)
+    }
+  }
+}
+```

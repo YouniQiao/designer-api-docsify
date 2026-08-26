@@ -9,7 +9,7 @@ ImageSource类，用于获取图片相关信息。在调用ImageSource的方法�
 ## 导入模块
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## createWideGamutSdrPixelMap
@@ -20,9 +20,12 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 
 创建SDR的PixelMap对象。当图片为带有3通道GainMap的HDR图片时，会将其基础图扩展为BT.2020色域的SDR图。使用Promise异步回调。
 
-> **说明：**&gt;
-> - 对SDR图片源，按图片自带的色彩空间解码，输出SDR图。&gt;
-> - 对带有单通道GainMap的HDR图片源，解码其基础图（SDR图），忽略GainMap。&gt;
+> **说明：**
+> 
+> - 对SDR图片源，按图片自带的色彩空间解码，输出SDR图。
+> 
+> - 对带有单通道GainMap的HDR图片源，解码其基础图（SDR图），忽略GainMap。
+> 
 > - 对带有3通道GainMap的HDR图片源，解码其基础图（SDR图），并将输出SDR图的色域扩展为
 > [ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md).DISPLAY_BT2020_SRGB。
 
@@ -34,18 +37,53 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;PixelMap & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;PixelMap & gt; | Promise对象，返回PixelMap。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700103](../errorcode-image.md#7700103-图片太大) |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
+
+**示例**
+
+```TypeScript
+async function CreateWideGamutSdrPixelMap(context: Context) {
+  // 此处'sdr.jpg'仅作示例，请开发者自行替换。
+  let filePath: string = context.filesDir + "/sdr.jpg";
+  let sdrImageSource = image.createImageSource(filePath);
+  let pixelmap = sdrImageSource.createWideGamutSdrPixelMap();
+  if (pixelmap != undefined) {
+    console.info('Succeeded in creating sdr pixelMap object.');
+  } else {
+    console.error('Failed to create pixelMap.');
+  }
+
+  // 此处'singleChannelGainmapFilePath.jpg'仅作示例，请开发者自行替换。
+  let singleChannelGainmapFilePath: string = context.filesDir + "/singleChannelGainmapFilePath.jpg";
+  let singleChannelGainmapImageSource = image.createImageSource(singleChannelGainmapFilePath);
+  let singleChannelGainmapPixelmap = singleChannelGainmapImageSource.createWideGamutSdrPixelMap();
+  if (singleChannelGainmapPixelmap != undefined) {
+    console.info('Succeeded in creating sdr pixelMap object by using singleChannelGainmapImageSource.');
+  } else {
+    console.error('Failed to create pixelMap.');
+  }
+  // 此处'threeChannelGainmapFilePath.jpg'仅作示例，请开发者自行替换。
+  let threeChannelGainmapFilePath: string = context.filesDir + "/threeChannelGainmapFilePath.jpg";
+  let threeChannelGainmapImageSource = image.createImageSource(threeChannelGainmapFilePath);
+  let threeChannelGainmapPixelmap = threeChannelGainmapImageSource.createWideGamutSdrPixelMap();
+  if (threeChannelGainmapPixelmap != undefined) {
+    console.info('Succeeded in creating sdr pixelMap using DISPLAY_BT2020_SRGB.');
+  } else {
+    console.error('Failed to create pixelMap.');
+  }
+}
+```
 
 ## isJpegProgressive
 
@@ -65,16 +103,31 @@ isJpegProgressive(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示Jpeg图片是渐进式；返回false表示Jpeg图片不是渐进式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function IsJpegProgressive(imageSource : image.ImageSource) {
+  imageSource.isJpegProgressive()
+    .then((isProgressive: boolean) => {
+      console.info("isJpegProgressive: " + isProgressive);
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to obtain the jpeg image isprogressive error.code is ${error.code}, message is ${error.message}`);
+    })
+}
+```
 
 ## modifyImageAllProperties
 
@@ -84,9 +137,11 @@ modifyImageAllProperties(records: Record<string, string|null>): Promise<void>
 
 批量修改图片属性。使用Promise异步回调。Exif属性中除"JPEGInterchangeFormat"/"JPEGInterchangeFormatLength"/"GIFLoopCount"字段外，其他均支持修改。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md)实例或通过传入的uri创建
-> [image.createImageSource](arkts-image-image-createimagesource-f.md)实例。&gt;
+> [image.createImageSource](arkts-image-image-createimagesource-f.md)实例。
+> 
 > - 支持修改JPEG、PNG、HEIF和WEBP文件类型的图片属性，图片需要包含Exif信息。
 
 **起始版本：** 24
@@ -99,21 +154,36 @@ modifyImageAllProperties(records: Record<string, string|null>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| records | Record & lt;string, string \ | null & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| records | Record & lt;string, string \ | null & gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
-| [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
+| [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) | Failed to write image properties to the file. |
+
+**示例**
+
+```TypeScript
+async function ModifyImageAllProperties(imageSource: image.ImageSource) {
+  try {
+    let record: Record<string, string | null> = {
+      "HwMnotePhysicalAperture": "13",
+    }
+    await imageSource.modifyImageAllProperties(record);
+  } catch (err) {
+    console.error('[modifyImageAllProperties]', `modify image property failed.err: ${err.code}, errorMessage: ${err.message}`);
+  }
+}
+```

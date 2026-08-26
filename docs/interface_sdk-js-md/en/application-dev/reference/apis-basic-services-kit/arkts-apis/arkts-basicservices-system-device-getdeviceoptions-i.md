@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Device, DeviceResponse, GetDeviceOptions } from 'kits/@kit.BasicServicesKit';
+import Device, { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -42,10 +42,10 @@ Called when the device information fails to be obtained.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | any | Yes |
-| code | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | any | Yes |  |
+| code | number | Yes |  |
 
 ## success
 
@@ -63,6 +63,6 @@ Called when the device information is obtained.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md) | Yes |  |

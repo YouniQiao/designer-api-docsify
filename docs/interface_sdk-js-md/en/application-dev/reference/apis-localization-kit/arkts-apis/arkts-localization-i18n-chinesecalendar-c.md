@@ -11,7 +11,7 @@ Provide a ChineseCalendar interface which could handle unique characteristics of
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## checkLeapMonth
@@ -32,23 +32,29 @@ Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [gregorianYear](arkts-localization-i18n-chinesecalendartime-i.md) | number | Yes |
-| [cyclicalYear](arkts-localization-i18n-chinesecalendartime-i.md) | number | Yes |
-| month | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| gregorianYear | number | Yes | Gregorian year to check, supported range is from 1900 to 2100. The value range is all integers. Year. |
+| cyclicalYear | number | Yes | Cyclical year to check, supported range is from 1 to 60. The value range is all integers. Year. |
+| month | number | Yes | Month to check. Note: The month starts from 0. For example, 0 indicates January. The value range is all integers. Month. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check whether the input month is a leap month. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let isExist = i18n.ChineseCalendar.checkLeapMonth(2026, 43, 2);
+```
 
 ## setChineseCalendarTime
 
@@ -68,6 +74,19 @@ Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCal
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | Yes | Indicates the time element used to set for ChineseCalendar. |
+
+**Examples**
+
+```TypeScript
+let locale: Intl.Locale = i18n.System.getSystemLocaleInstance();
+let calendar: i18n.ChineseCalendar = i18n.getChineseCalendar(locale);
+calendar.setChineseCalendarTime({
+  gregorianYear: 2026,
+  cyclicalYear: 43,
+  month: 1,
+  date: 15
+});
+```

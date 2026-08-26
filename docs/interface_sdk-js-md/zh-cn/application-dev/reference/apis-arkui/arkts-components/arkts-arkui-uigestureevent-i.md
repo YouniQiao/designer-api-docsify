@@ -29,11 +29,11 @@ addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: Ges
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | 是 |
-| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | 否 |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | 是 | 手势处理器对象。 |
+| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | 否 | 绑定手势的优先级。默认值：GesturePriority.NORMAL |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。默认值：GestureMask.Normal |
 
 ## addParallelGesture
 
@@ -53,10 +53,10 @@ addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | 是 |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | 是 | 手势处理器对象。 |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。默认值：GestureMask.Normal |
 
 ## clearGestures
 
@@ -92,6 +92,6 @@ removeGestureByTag(tag: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| tag | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tag | string | 是 | 手势处理器标志。 |

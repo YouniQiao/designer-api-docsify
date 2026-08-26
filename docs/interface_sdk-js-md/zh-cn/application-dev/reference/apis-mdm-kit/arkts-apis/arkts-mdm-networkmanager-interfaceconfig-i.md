@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from 'kits/@kit.MDMKit';
+import networkManager from '@kit.MDMKit';
 ```
 
 ## dnsServers

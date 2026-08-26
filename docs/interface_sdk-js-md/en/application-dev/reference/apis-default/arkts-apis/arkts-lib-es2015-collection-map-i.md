@@ -19,14 +19,14 @@ delete(key: K): boolean
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## forEach
 
 ```TypeScript
@@ -37,10 +37,10 @@ Executes a provided function once per each key/value pair in the Map, in inserti
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackfn | (value: V, key: K, map: Map & lt;K, V & gt;) = & gt; void | Yes |
-| thisArg | any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackfn | (value: V, key: K, map: Map & lt;K, V & gt;) = & gt; void | Yes |  |
+| thisArg | any | No |  |
 
 ## get
 
@@ -52,14 +52,14 @@ Returns a specified element from the Map object. If the value that is associated
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## has
 
 ```TypeScript
@@ -68,14 +68,14 @@ has(key: K): boolean
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## set
 
 ```TypeScript
@@ -86,15 +86,15 @@ Adds a new element with a specified key and value to the Map. If an element with
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
-| value | V | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes |  |
+| value | V | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## size
 
 ```TypeScript

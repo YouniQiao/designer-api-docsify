@@ -27,6 +27,19 @@ protected constructor()
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**示例**
+
+```TypeScript
+@Builder
+function myBuilder(value: string, size: number) {
+  Text(value)
+    .fontSize(size)
+}
+
+// 使用WrappedBuilder封装myBuilder
+let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
+```
+
 ## create
 
 ```TypeScript
@@ -45,9 +58,9 @@ static create<T>(): CustomEnvKey<T>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CustomEnvKey](arkts-arkui-customenvkey-c.md)&lt;T&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| [CustomEnvKey](arkts-arkui-customenvkey-c.md)&lt;T&gt; | 自定义环境变量Key，用于标识要获取的自定义环境变量。 |
 
 ## type
 

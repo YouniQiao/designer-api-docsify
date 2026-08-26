@@ -16,6 +16,6 @@ Implements an interception callback invoked when the display mode of the **Navig
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [NavigationMode](arkts-arkui-navigationmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [NavigationMode](arkts-arkui-navigationmode-e.md) | Yes | Display mode of the navigation page. |

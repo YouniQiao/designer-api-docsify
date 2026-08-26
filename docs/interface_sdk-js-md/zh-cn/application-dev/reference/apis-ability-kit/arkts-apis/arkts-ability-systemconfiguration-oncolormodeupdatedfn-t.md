@@ -16,6 +16,6 @@ type OnColorModeUpdatedFn = (colorMode: ConfigurationConstant.ColorMode) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| colorMode | ConfigurationConstant.ColorMode | 是 | 变化后的系统深浅色模式。 |

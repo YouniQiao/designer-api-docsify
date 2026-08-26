@@ -29,15 +29,15 @@ onMove(handler: Optional<OnMoveHandler>): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnMoveHandler](arkts-arkui-onmovehandler-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnMoveHandler](arkts-arkui-onmovehandler-t.md)&gt; | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前组件。 |
 
 ## onMove
 
@@ -57,13 +57,13 @@ onMove(handler: Optional<OnMoveHandler>, eventHandler: ItemDragEventHandler): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnMoveHandler](arkts-arkui-onmovehandler-t.md)&gt; | 是 |
-| eventHandler | [ItemDragEventHandler](arkts-arkui-itemdrageventhandler-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnMoveHandler](arkts-arkui-onmovehandler-t.md)&gt; | 是 |  |
+| eventHandler | [ItemDragEventHandler](arkts-arkui-itemdrageventhandler-i.md) | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| T |
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前组件。 |

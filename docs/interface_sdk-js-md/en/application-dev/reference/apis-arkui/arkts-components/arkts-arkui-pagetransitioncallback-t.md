@@ -16,7 +16,7 @@ Represents the callback for page transition events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [RouteType](arkts-arkui-routetype-e.md) | Yes |
-| progress | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [RouteType](arkts-arkui-routetype-e.md) | Yes | transition route type |
+| progress | number | Yes | transition progess |

@@ -4,6 +4,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ProcessRunningInfo](arkts-ability-processrunninginfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [ProcessRunningInfo](arkts-ability-processrunninginfo-i.md) | The module defines the running information of a process. The information can be obtained through [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getprocessrunninginfos) of appManager. |

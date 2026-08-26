@@ -2,7 +2,8 @@
 
 Encapsulates binary data. The core field **data** is of the Uint8Array type.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The Uint8Array typed array represents an array of 8-bit unsigned integers.
 
 **Since:** 9
@@ -12,7 +13,7 @@ Encapsulates binary data. The core field **data** is of the Uint8Array type.
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import cryptoFramework from '@kit.CryptoArchitectureKit';
 ```
 
 ## data

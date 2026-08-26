@@ -2,9 +2,11 @@
 
 Intended only for the **UIExtensionComponent** that has process isolation requirements, the **uiExtensionHost** module provides APIs for obtaining the host application window information and information about the component itself.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > No new function will be added to this module. Related functions will be provided in the
-> [uiExtension](arkts-arkui-uiextension.md) interface.&gt;
+> [uiExtension](arkts-arkui-uiextension.md) interface.
+> 
 > The APIs provided by this module are system APIs.
 
 **Since:** 11
@@ -18,7 +20,7 @@ Intended only for the **UIExtensionComponent** that has process isolation requir
 ## Modules to Import
 
 ```TypeScript
-import { uiExtensionHost } from 'kits/@kit.ArkUI';
+import uiExtensionHost from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -26,8 +28,8 @@ import { uiExtensionHost } from 'kits/@kit.ArkUI';
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [UIExtensionHostWindowProxy](arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md) |
-| [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [UIExtensionHostWindowProxy](arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md) | Transition Controller |
+| [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md) | Defines information about the host application window and **UIExtensionComponent**. |
 <!--DelEnd-->

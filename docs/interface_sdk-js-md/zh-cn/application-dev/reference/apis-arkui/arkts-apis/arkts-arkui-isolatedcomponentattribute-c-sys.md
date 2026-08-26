@@ -35,12 +35,12 @@ IsolatedComponent加载的Abc（以Ability扩展形式运行）在运行过程�
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](arkts-arkui-errorcallback-t-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](arkts-arkui-errorcallback-t-sys.md) | 是 | 异常发生时的错误回调，可通过回调参数获取code、name和message错误信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) |  |

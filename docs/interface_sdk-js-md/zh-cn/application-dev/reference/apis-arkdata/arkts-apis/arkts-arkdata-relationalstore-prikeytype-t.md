@@ -10,8 +10,8 @@ type PRIKeyType = number | number | string
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-| 类型 |
-| --- |
-| long |
-| double |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| long | 主键的类型可以是长整型。 |
+| double | 主键的类型可以是双精度浮点型。 |
+| string | 主键的类型可以是string。 |

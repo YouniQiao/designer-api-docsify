@@ -24,9 +24,9 @@ getLazyLayoutDirection(): LazyLayoutDirection
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [LazyLayoutDirection](arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [LazyLayoutDirection](arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md) | 懒加载布局方向。 |
 
 ## getViewEnd
 
@@ -46,9 +46,9 @@ getViewEnd(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 可视区域的结束位置。 |
 
 ## getViewStart
 
@@ -68,9 +68,9 @@ getViewStart(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 可视区域的起始位置。 |
 
 ## setAdjustedOffset
 
@@ -90,9 +90,9 @@ setAdjustedOffset(offset: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 设置的调整偏移量，往内容末尾端调整为正，往内容起始端调整为负。单位：px。 |
 
 ## setChildrenInactive
 
@@ -113,6 +113,6 @@ LazyForEach或Repeat（启 用[virtualScroll](arkts-arkui-repeatattribute-c.md#v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| children | number[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| children | number[] | 是 | 设置为非激活状态的子组件索引数组。 |

@@ -9,7 +9,6 @@ ProxyConfig is a class in the ArkWeb framework used to configure network proxy r
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## bypassHostnamesWithoutPeriod
@@ -26,6 +25,10 @@ Hostnames without a period character will bypass the proxy and directly connect 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+**Examples**
+
+For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
+
 ## clearImplicitRules
 
 ```TypeScript
@@ -39,6 +42,10 @@ Overrides the default behavior and forcibly sends the local host address or loca
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
 
 ## enableReverseBypass
 
@@ -56,15 +63,19 @@ Reverses the bypass rule.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| reverse | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| reverse | boolean | Yes | Whether to reverse the bypass rule. The default value is **false**, indicating the bypass rule set in [insertBypassRule](#insertbypassrule) is not reversed. The value **true** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+
+**Examples**
+
+For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
 
 ## getBypassRules
 
@@ -82,9 +93,13 @@ Obtains the list of URLs that do not use the proxy.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | List of URLs that do not use the proxy. |
+
+**Examples**
+
+For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
 
 ## getProxyRules
 
@@ -102,9 +117,13 @@ Obtains proxy rules.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; | Proxy rule. Each ProxyRule object represents a configured proxy rule. |
+
+**Examples**
+
+For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
 
 ## insertBypassRule
 
@@ -122,15 +141,19 @@ Inserts a bypass rule, specifying which URLs should bypass the proxy and directl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bypassRule | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bypassRule | string | Yes | Bypass rule string that specifies the URL matching rule for bypassing the proxy. It supports host name or domain name formats (for example, "example.com" matches the domain and its subdomains). URLs matching the bypassRule bypass the proxy. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+
+**Examples**
+
+For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
 
 ## insertDirectRule
 
@@ -140,7 +163,8 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 Inserts a direct rule, specifying that URLs matching the schemeFilter condition will directly connect to the server.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Both [insertBypassRule](#insertbypassrule) and
 > [bypassHostnamesWithoutPeriod](#bypasshostnameswithoutperiod) can also implement
 > direct URL connection. The difference lies in the matching dimension: this method matches by protocol type
@@ -156,15 +180,19 @@ Inserts a direct rule, specifying that URLs matching the schemeFilter condition 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs to be directly connected to the server. Default value: **MATCH_ALL_SCHEMES**. If **undefined** or **null** is passed, error code **401** will be thrown. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+
+**Examples**
+
+For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
 
 ## insertProxyRule
 
@@ -189,16 +217,20 @@ Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. I
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| proxyRule | string | Yes |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| proxyRule | string | Yes | The specified proxy. |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs that use the proxy. Default value: **MATCH_ALL_SCHEMES**. If **undefined** or **null** is passed, error code **401** will be thrown. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+
+**Examples**
+
+For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
 
 ## isReverseBypassEnabled
 
@@ -216,6 +248,10 @@ Obtains the value of [enableReverseBypass](#enablereversebypass). For details, s
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Value of [enableReverseBypass]{ |
+
+**Examples**
+
+For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).

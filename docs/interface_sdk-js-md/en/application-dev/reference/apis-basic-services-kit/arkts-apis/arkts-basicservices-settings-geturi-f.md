@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import settings from '@kit.BasicServicesKit';
+import settingsLite from '@kit.BasicServicesKitLite';
 ```
 
 ## getURI
@@ -22,10 +23,18 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Indicates the name of the setting to set. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes | The callback of getURI result. |
+
+**Examples**
+
+```TypeScript
+settings.getURI(settings.display.SCREEN_BRIGHTNESS_STATUS, (uri:string) => {
+    console.info(`callback:uri -> ${JSON.stringify(uri)}`)
+})
+```
 
 
 ## getURI
@@ -44,12 +53,20 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Indicates the name of the setting to set. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;object & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;object & gt; | Returns the corresponding URI; returns { |
+
+**Examples**
+
+```TypeScript
+settings.getURI(settings.display.SCREEN_BRIGHTNESS_STATUS).then((uri:string) => {
+    console.info(`promise:uri -> ${JSON.stringify(uri)}`)
+})
+```

@@ -11,43 +11,42 @@ Provides basic profile methods.
 ## Modules to Import
 
 ```TypeScript
-import { baseProfile } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md) |
-| [StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md) |
+| Name | Description |
+| --- | --- |
+| [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md) | Base interface of profile. |
+| [StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md) | Profile state change parameters. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i-sys.md) | Base interface of profile. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DisconnectCause](arkts-connectivity-baseprofile-disconnectcause-e.md) |
-| [PanRole](arkts-connectivity-baseprofile-panrole-e.md) |
+| Name | Description |
+| --- | --- |
+| [DisconnectCause](arkts-connectivity-baseprofile-disconnectcause-e.md) | Enum for cause of disconnect. |
+| [PanRole](arkts-connectivity-baseprofile-panrole-e.md) | Enum for PAN profile role. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ConnectionStrategy](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ConnectionStrategy](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md) | Enum for connection strategy of the profile |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) |
+| Name | Description |
+| --- | --- |
+| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | Indicate the profile connection state. |

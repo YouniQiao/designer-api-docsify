@@ -9,7 +9,7 @@ Before calling any of the following APIs to manage the calendar, you must use [g
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
+import calendarManager from '@kit.CalendarKit';
 ```
 
 ## createCalendar
@@ -30,24 +30,45 @@ Creates a Calendar object based on the calendar account information. This API us
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes | Calendar account information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Calendar & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Calendar & gt; | Promise used to return the created Calendar object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+const calendarAccount: calendarManager.CalendarAccount = {
+  name: 'CreateMyCalendarByPromise',
+  type: calendarManager.CalendarType.LOCAL,
+  displayName : 'MyApplication'
+};
+calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
+  console.info(`Succeeded in creating calendar data->${JSON.stringify(data)}`);
+}).catch((error : BusinessError) => {
+  // Check whether the permission is granted or whether the parameters are correct.
+  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## createCalendar
 
@@ -67,19 +88,45 @@ Creates a Calendar object based on the calendar account information. This API us
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes | Calendar account information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | Callback used to return the created Calendar object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+const calendarAccount: calendarManager.CalendarAccount = {
+  name: 'CreateMyCalendarByCallBack',
+  type: calendarManager.CalendarType.LOCAL
+};
+try {
+  calendarMgr?.createCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
+    if (err) {
+      console.error(`Failed to create calendar. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
+    }
+  });
+} catch (error) {
+  // Check whether the permission is granted or whether the parameters are correct.
+  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## deleteCalendar
 
@@ -99,24 +146,56 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md) | Yes | Calendar object to delete. The default account cannot be deleted. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+const calendarAccount: calendarManager.CalendarAccount = {
+  name: 'DeleteMyCalendarByPromise',
+  type: calendarManager.CalendarType.LOCAL
+};
+calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
+  console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
+  calendarMgr?.getCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
+    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+    calendarMgr?.deleteCalendar(data).then(() => {
+      console.info('Succeeded in deleting calendar');
+    }).catch((err: BusinessError) => {
+      // Check whether the parameters are correct.
+      console.error(`Failed to delete calendar. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    // Check whether the permission is granted or whether the parameters are correct.
+    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+  });
+}).catch((error: BusinessError) => {
+  // Check whether the permission is granted or whether the parameters are correct.
+  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
+})
+```
 
 ## deleteCalendar
 
@@ -136,19 +215,54 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md) | Yes | Calendar object to delete. The default account cannot be deleted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+const calendarAccount: calendarManager.CalendarAccount = {
+  name: 'DeleteMyCalendarByCallBack',
+  type: calendarManager.CalendarType.LOCAL
+};
+calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
+  console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
+  calendarMgr?.getCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
+    if (err) {
+      console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+      calendarMgr?.deleteCalendar(data, (err1: BusinessError) => {
+        if (err1) {
+          // Check whether the parameters are correct.
+          console.error(`Failed to delete calendar. Code: ${err1.code}, message: ${err1.message}`);
+        } else {
+          console.info('Succeeded in deleting calendar');
+        }
+      });
+    }
+  });
+}).catch((error: BusinessError) => {
+  // Check whether the permission is granted or whether the parameters are correct.
+  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
+})
+```
 
 ## editEvent
 
@@ -166,15 +280,34 @@ Edits an event on the event creation page, with no event ID specified in **Event
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event** object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the event creation fails, no value is returned; if the value is less than **0**, the event creation is canceled; if the value is greater than **0**, the event creation is successful. The return value cannot be **0 |
+
+**Examples**
+
+```TypeScript
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+const date = new Date();
+const event: calendarManager.Event = {
+  title: 'title',
+  type: calendarManager.EventType.NORMAL,
+  startTime: date.getTime(),
+  endTime: date.getTime() + 60 * 60 * 1000
+};
+calendarMgr?.editEvent(event).then((eventId: number): void => {
+  console.info(`create Event id = ${eventId}`);
+});
+```
 
 ## getAllCalendars
 
@@ -194,18 +327,39 @@ Obtains the created and default Calendar objects of the current application. Thi
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Calendar[] & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Calendar[] & gt; | Promise used to return an array of obtained Calendar objects. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+calendarMgr?.getAllCalendars().then((data: calendarManager.Calendar[]) => {
+  console.info(`Succeeded in getting all calendars, data -> ${JSON.stringify(data)}`);
+  data.forEach((calendar) => {
+    const account = calendar.getAccount();
+    console.info(`account -> ${JSON.stringify(account)}`);
+  })
+}).catch((err: BusinessError) => {
+  // Check whether the permission has been successfully applied for.
+  console.error(`Failed to get all calendars. Code: ${err.code}, message: ${err.message}`);
+  
+});
+```
 
 ## getAllCalendars
 
@@ -225,18 +379,39 @@ Obtains the created and default Calendar objects of the current application. Thi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar[]&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar[]&gt; | Yes | Callback used to return an array of the obtained Calendar objects. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+calendarMgr?.getAllCalendars((err: BusinessError, data: calendarManager.Calendar[]) => {
+  if (err) {
+    console.error(`Failed to get all calendars. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting all calendars, data -> ${JSON.stringify(data)}`);
+    data.forEach((calendar) => {
+      const account = calendar.getAccount();
+      console.info(`account -> ${JSON.stringify(account)}`);
+    })
+  }
+});
+```
 
 ## getCalendar
 
@@ -258,25 +433,41 @@ Obtains the default or specified Calendar object. This API uses a promise to ret
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | No | Calendar account information, which is used to obtain a specified Calendar object. If this parameter is not set, the default Calendar object is obtained. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Calendar & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Calendar & gt; | the promise returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) | The specified account was not found.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
+  console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  // Check whether the permission has been successfully applied for.
+  console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getCalendar
 
@@ -298,20 +489,48 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes | Calendar account information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) | The specified account was not found.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+const calendarAccount: calendarManager.CalendarAccount = {
+  name: 'MyCalendar',
+  type: calendarManager.CalendarType.LOCAL
+};
+calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
+  console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
+  calendarMgr?.getCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
+    if (err) {
+      console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+      // Check whether the permission is granted or whether the parameters are correct.
+    } else {
+      console.info(`Succeeded in getting calendar data -> ${JSON.stringify(data)}`);
+    }
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
+  // Check whether the permission is granted or whether the parameters are correct.
+})
+```
 
 ## getCalendar
 
@@ -333,15 +552,33 @@ Obtains the default Calendar object, which is created when the data storage runs
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
+  if (err) {
+    // Check whether the permission is granted or whether the parameters are correct.
+    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+  }
+});
+```

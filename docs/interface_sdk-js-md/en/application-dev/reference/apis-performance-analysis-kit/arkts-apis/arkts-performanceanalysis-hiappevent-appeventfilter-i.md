@@ -2,7 +2,8 @@
 
 Defines parameters of subscription filtering conditions of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md). This API is used to set event filtering conditions in the event watcher to ensure that only the events that meet the filtering conditions are subscribed to.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The subscription specifications of system events vary according to application types. For details, see
 > [HiAppEvent Constraints](../../../dfx/hiappevent-intro.md#constraints).
 
@@ -13,7 +14,6 @@ Defines parameters of subscription filtering conditions of a [Watcher](arkts-per
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## domain

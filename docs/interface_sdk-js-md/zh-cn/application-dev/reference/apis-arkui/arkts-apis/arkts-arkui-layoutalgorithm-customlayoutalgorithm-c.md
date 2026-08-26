@@ -2,7 +2,8 @@
 
 自定义布局算法类。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > CustomLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件
 > 的入参指定布局算法。
 
@@ -20,7 +21,8 @@ onLayout(self: FrameNode, position: Position): void
 
 通过重写此函数，开发者可以自定义排列子组件的位置。ArkUI框架会在动态布局组件确定位置时，将该组件对应的FrameNode和布局位置通过onLayout传递给开发者。不允许在onLayout函数中改变状态变量。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 在此函数中，开发者可以调用[FrameNode](arkts-arkui-framenode-c.md)的
 > [getChild()](arkts-arkui-framenode-c.md#getchild)方法获取子组件FrameNode，调用
 > [FrameNode](arkts-arkui-framenode-c.md)的[layout()](arkts-arkui-framenode-c.md#layout)方法设置子组件位置，参考DynamicLayout组件
@@ -38,10 +40,10 @@ onLayout(self: FrameNode, position: Position): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| position | [Position](arkts-arkui-position-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 动态布局组件在组件树上的实体节点。 |
+| position | [Position](arkts-arkui-position-t.md) | 是 | 动态布局组件进行布局时使用的位置信息。 |
 
 ## onMeasure
 
@@ -51,7 +53,8 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint): void
 
 通过重写此函数，开发者可以自定义测量子组件的大小。ArkUI框架会在动态布局组件确定尺寸时，将该组件对应的FrameNode和布局约束通过onMeasure传递给开发者。不允许在onMeasure函数中改变状态变量。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 在此函数中，开发者可以调用[FrameNode](arkts-arkui-framenode-c.md)的
 > [getChild()](arkts-arkui-framenode-c.md#getchild)方法获取子组件FrameNode，调用
 > [FrameNode](arkts-arkui-framenode-c.md)的[measure()](arkts-arkui-framenode-c.md#measure)方法测量子组件大小，参考DynamicLayout组
@@ -70,7 +73,7 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 动态布局组件在组件树上的实体节点。 |
+| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | 是 | 动态布局组件进行测量时使用的布局约束。 |

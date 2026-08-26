@@ -9,7 +9,7 @@ Represents data of the file URI type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import uniformDataStruct from '@kit.ArkData';
 ```
 
 ## details
@@ -91,3 +91,24 @@ Defines URI authorization policies for drag intention.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Examples**
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+let fileUriDetails : Record<string, number | string | Uint8Array> = {
+  'fileUriKey1': 123,
+  'fileUriKey2': 'fileUriValue',
+  'fileUriKey3': u8Array
+}
+let fileUri : uniformDataStruct.FileUri = {
+  uniformDataType : 'general.file-uri',
+  oriUri : 'www.xx.com',
+  fileType : 'general.image',
+  details : fileUriDetails
+}
+console.info('fileUri.uniformDataType: ' + fileUri.uniformDataType);
+// You are advised to set type to uniformTypeDescriptor.UniformDataType.FILE_URI to use the uniform data struct of FileUri type to construct records.
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.FILE_URI, fileUri);
+```

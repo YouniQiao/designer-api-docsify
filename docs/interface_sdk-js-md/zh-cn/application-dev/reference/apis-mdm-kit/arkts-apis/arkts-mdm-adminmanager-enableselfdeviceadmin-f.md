@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from 'kits/@kit.MDMKit';
+import adminManager from '@kit.MDMKit';
 ```
 
 ## enableSelfDeviceAdmin
@@ -24,19 +24,42 @@ function enableSelfDeviceAdmin(admin: Want, credential: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
-| credential | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| credential | string | 是 | 激活凭证。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [9200003](../errorcode-enterpriseDeviceManager.md#9200003-指定的设备管理器元能力组件无效) |
-| [9200004](../errorcode-enterpriseDeviceManager.md#9200004-激活设备管理器失败) |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [9200017](../errorcode-enterpriseDeviceManager.md#9200017-企业设备管理员自激活凭证无效) |
-| [9200018](../errorcode-enterpriseDeviceManager.md#9200018-该设备非企业设备) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [9200003](../errorcode-enterpriseDeviceManager.md#9200003-指定的设备管理器元能力组件无效) | The administrator ability component is invalid. |
+| [9200004](../errorcode-enterpriseDeviceManager.md#9200004-激活设备管理器失败) | Failed to activate the administrator application of the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
+| [9200017](../errorcode-enterpriseDeviceManager.md#9200017-企业设备管理员自激活凭证无效) | The self-activation credential of the enterprise device administrator is invalid. |
+| [9200018](../errorcode-enterpriseDeviceManager.md#9200018-该设备非企业设备) | This device is not an enterprise device. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+
+**示例**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { adminManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 需根据实际情况进行替换
+let credential: string = '{"enterpriseId": "123456", "appIdentifier": "123456", "type": "SDA", "sign": "", "certs": []}';
+
+try {
+  adminManager.enableSelfDeviceAdmin(wantTemp, credential);
+  console.info(`succeed in enabling self device admin.`);
+} catch (err) {
+  console.error(`Failed to enable self device admin. Code: ${err.code}, message: ${err.message}`);
+}
+```

@@ -14,7 +14,7 @@ type OnAVDownloadProgressChangeHandle = (taskId: string, progress: number) => vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| taskId | string | 是 |
-| progress | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| taskId | string | 是 | 离线下载任务ID。 |
+| progress | number | 是 |  |

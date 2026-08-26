@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from 'kits/@kit.AbilityKit';
+import UIAbility, { Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## onBackground
@@ -29,6 +29,20 @@ onBackground(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class MyUIAbility extends UIAbility {
+  onBackground() {
+    // UIAbility回到后台
+    hilog.info(0x0000, 'testTag', `onBackground`);
+  }
+}
+```
 
 ## onBackPressed
 
@@ -50,9 +64,21 @@ UIAbility生命周期回调，当UIAbility侧滑返回时触发，根据返回�
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | The value & lt;code & gt;true & lt;/code & gt; means that the UIAbility instance will be moved to the background and will not be destroyed, and & lt;code & gt;false & lt;/code & gt; means that the UIAbility instance will be destroyed. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onBackPressed() {
+    return true;
+  }
+}
+```
 
 ## onCollaborate
 
@@ -62,12 +88,15 @@ onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateRes
 
 UIAbility生命周期回调，在多设备协同场景下，协同方应用在被拉起的过程中返回是否接受协同。
 
-> **说明：**&gt;
-> - 该生命周期回调不支持[specified启动模式](../../../application-models/uiability-launch-type.md#specified启动模式)。&gt;
+> **说明：**
+> 
+> - 该生命周期回调不支持[specified启动模式](../../../application-models/uiability-launch-type.md#specified启动模式)。
+> 
 > - 通过
 > [startAbility](arkts-ability-uiabilitycontext-c.md#startability)
 > 等方法拉起协同方应用时，需要在Want对象中设置协同标记[Flags](arkts-ability-wantconstant-flags-e.md)为
-> FLAG_ABILITY_ON_COLLABORATE。&gt;
+> FLAG_ABILITY_ON_COLLABORATE。
+> 
 > - [冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时，该回调在
 > [onForeground](#onforeground)前或[onBackground](#onbackground)后调用；
 > [热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)时，该回调在
@@ -81,15 +110,27 @@ UIAbility生命周期回调，在多设备协同场景下，协同方应用在�
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| wantParam | Record & lt;string, Object & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| wantParam | Record & lt;string, Object & gt; | 是 | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该 key值可以获取到调用方传输的数据并进行相应的处理。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| AbilityConstant.CollaborateResult |
+| 类型 | 说明 |
+| --- | --- |
+| AbilityConstant.CollaborateResult | 协同方是否接受协同的结果。 |
+
+**示例**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onCollaborate(wantParam: Record<string, Object>) {
+    return AbilityConstant.CollaborateResult.ACCEPT;
+  }
+}
+```
 
 ## onContinue
 
@@ -100,7 +141,8 @@ onContinue(wantParam: Record<string, Object>):
 
 当UIAbility准备跨端迁移时触发，可以保存待迁移的业务数据。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 对于API version 18（不含18） 之前版本仅支持同步调用，从API version 18及后续版本可支持异步调用。
 
 **起始版本：** 9
@@ -113,16 +155,56 @@ onContinue(wantParam: Record<string, Object>):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| wantParam | Record & lt;string, Object & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| wantParam | Record & lt;string, Object & gt; | 是 | 开发者通过该参数保存待迁移的数据。<br>**起始版本：** 11 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| AbilityConstant.OnContinueResult |
-| AbilityConstant.OnContinueResult \| Promise & lt;AbilityConstant.OnContinueResult & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| AbilityConstant.OnContinueResult | Return the result of onContinue.<br>**适用版本：** 9 - 11 |
+| AbilityConstant.OnContinueResult \| Promise & lt;AbilityConstant.OnContinueResult & gt; | 表示是否同意迁移的结果： |
+
+**示例**
+
+应用迁移时使用同步接口进行数据保存，示例如下：
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyUIAbility extends UIAbility {
+  onContinue(wantParam: Record<string, Object>) {
+    console.info('onContinue');
+    wantParam['myData'] = 'my1234567'; // 保存待迁移的业务数据
+    return AbilityConstant.OnContinueResult.AGREE;
+  }
+}
+```
+
+应用迁移时使用异步接口进行数据保存，示例如下：
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyUIAbility extends UIAbility {
+  async setWant(wantParams: Record<string, Object>) {
+    console.info('setWant start');
+    for (let time = 0; time < 1000; ++time) {
+      wantParams[time] = time;
+    }
+    console.info('setWant end');
+  }
+
+  async onContinue(wantParams: Record<string, Object>) {
+    console.info('onContinue');
+    // 异步保存待迁移数据
+    return this.setWant(wantParams).then(() => {
+      return AbilityConstant.OnContinueResult.AGREE;
+    });
+  }
+}
+```
 
 ## onCreate
 
@@ -142,10 +224,25 @@ onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-| launchParam | AbilityConstant.LaunchParam | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 调用方拉起该UIAbility时传递的数据。 |
+| launchParam | AbilityConstant.LaunchParam | 是 | 应用启动参数，包含应用启动原因、应用上次退出原因等。 |
+
+**示例**
+
+```TypeScript
+import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class MyUIAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    // 执行异步任务
+    hilog.info(0x0000, 'testTag',
+      `onCreate, want: ${want.abilityName}, the launchReason is ${launchParam.launchReason}, the lastExitReason is ${launchParam.lastExitReason}`);
+  }
+}
+```
 
 ## onDestroy
 
@@ -155,8 +252,10 @@ onDestroy(): void | Promise<void>
 
 当UIAbility被销毁（例如使用 [terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself) 接口停止UIAbility）时，系统触发该回调。开发者可以在该生命周期中执行资源清理、数据保存等相关操作。使用同步回调或Promise异步回调。
 
-> **说明：**&gt;
-> - 在执行完onDestroy生命周期回调后，应用可能会退出，从而导致其中的异步函数（比如异步写入数据库）未能正确执行。在此情况下，推荐使用Promise异步回调。&gt;
+> **说明：**
+> 
+> - 在执行完onDestroy生命周期回调后，应用可能会退出，从而导致其中的异步函数（比如异步写入数据库）未能正确执行。在此情况下，推荐使用Promise异步回调。
+> 
 > - 该回调仅在UIAbility正常退出时触发，当UIAbility异常退出（例如低内存终止进程）时，该回调将不被触发。
 
 **起始版本：** 9
@@ -166,6 +265,36 @@ onDestroy(): void | Promise<void>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**示例**
+
+同步回调示例如下：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class MyUIAbility extends UIAbility {
+  onDestroy() {
+    hilog.info(0x0000, 'testTag', `onDestroy`);
+    // 调用同步函数...
+  }
+}
+```
+
+Promise异步回调示例如下：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class MyUIAbility extends UIAbility {
+  async onDestroy() {
+    hilog.info(0x0000, 'testTag', `onDestroy`);
+    // 调用异步函数...
+  }
+}
+```
 
 ## onDidBackground
 
@@ -183,6 +312,58 @@ UIAbility生命周期回调，当应用从前台转到后台后触发，在[onBa
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { audio } from '@kit.AudioKit';
+
+export default class MyUIAbility extends UIAbility {
+  static audioRenderer: audio.AudioRenderer;
+
+  // ...
+  onForeground(): void {
+    let audioStreamInfo: audio.AudioStreamInfo = {
+      samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000, // 采样率，单位：Hz。
+      channels: audio.AudioChannel.CHANNEL_2, // 通道。
+      sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE, // 采样格式。
+      encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW // 编码格式。
+    };
+
+    let audioRendererInfo: audio.AudioRendererInfo = {
+      usage: audio.StreamUsage.STREAM_USAGE_MUSIC, // 音频流使用类型：音乐。根据业务场景配置，参考StreamUsage。
+      rendererFlags: 0 // 音频渲染器标志。
+    };
+
+    let audioRendererOptions: audio.AudioRendererOptions = {
+      streamInfo: audioStreamInfo,
+      rendererInfo: audioRendererInfo
+    };
+
+    // 在前台时申请audioRenderer，用于播放PCM（Pulse Code Modulation）音频数据
+    audio.createAudioRenderer(audioRendererOptions).then((data) => {
+      MyUIAbility.audioRenderer = data;
+      hilog.info(0x0000, 'testTag', `AudioRenderer Created : Success : Stream Type: SUCCESS.`);
+    }).catch((err: BusinessError) => {
+      hilog.error(0x0000, 'testTag', `AudioRenderer Created : F : ${JSON.stringify(err)}.`);
+    });
+  }
+
+  onDidBackground() {
+    // 转到后台后，释放audioRenderer资源
+    MyUIAbility.audioRenderer.release((err: BusinessError) => {
+      if (err) {
+        hilog.error(0x0000, 'testTag', `AudioRenderer release failed, error: ${JSON.stringify(err)}.`);
+      } else {
+        hilog.info(0x0000, 'testTag', `AudioRenderer released.`);
+      }
+    });
+  }
+}
+```
+
 ## onDidForeground
 
 ```TypeScript
@@ -198,6 +379,10 @@ UIAbility生命周期回调，应用转到前台后触发，在[onForeground](#o
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**示例**
+
+参考[onWillForeground](#onwillforeground)。
 
 ## onDump
 
@@ -217,15 +402,28 @@ onDump(params: Array<string>): Array<string>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| params | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| params | Array & lt;string & gt; | 是 | 表示dump命令参数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 返回的dump信息。 |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyUIAbility extends UIAbility {
+  onDump(params: Array<string>) {
+    console.info(`dump, params: ${JSON.stringify(params)}`);
+    return ['params'];
+  }
+}
+```
 
 ## onForeground
 
@@ -242,6 +440,19 @@ onForeground(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class MyUIAbility extends UIAbility {
+  onForeground() {
+    hilog.info(0x0000, 'testTag', `onForeground`);
+  }
+}
+```
 
 ## onNewWant
 
@@ -261,10 +472,23 @@ onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-| launchParam | AbilityConstant.LaunchParam | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 调用方再次拉起该UIAbility时传递的数据。 |
+| launchParam | AbilityConstant.LaunchParam | 是 | UIAbility启动参数，包含启动原因等。 |
+
+**示例**
+
+```TypeScript
+import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
+
+export default class MyUIAbility extends UIAbility {
+  onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info(`onNewWant, want: ${want.abilityName}`);
+    console.info(`onNewWant, launchParam: ${JSON.stringify(launchParam)}`);
+  }
+}
+```
 
 ## onPrepareToTerminate
 
@@ -274,12 +498,14 @@ onPrepareToTerminate(): boolean
 
 在UIAbility即将关闭前（例如用户通过点击应用窗口右上角的关闭按钮、或者通过Dock栏/托盘右键退出应用时），系统会触发该回调，用于在UIAbility正式关闭前执行其他操作。开发者可以在该回调中返回true阻拦此次关闭，然 后在合适时机主动调用 [terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself) 接口关闭。例如，询问用户是否确认关闭UIAbility，再主动销毁UIAbility。 该接口仅在2in1和Tablet设备中可正常执行回调，在其他设备上不执行回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 从API version 15开始，当[UIAbility.onPrepareToTerminateAsync](#onpreparetoterminateasync)实现时，本回调函数将不执
 > 行。当
 > [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)
 > 或[AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)实现时，在
-> dock栏或系统托盘处右键点击关闭，本回调函数将不执行。&gt;
+> dock栏或系统托盘处右键点击关闭，本回调函数将不执行。
+> 
 > - 如果应用本身或者所使用的三方框架注册了
 > window.WindowStage.on
 > 监听，本回调函数将不执行。
@@ -296,9 +522,42 @@ onPrepareToTerminate(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | Whether to terminate the UIAbility. |
+
+**示例**
+
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onPrepareToTerminate() {
+    // 开发者定义预关闭动作
+    // 例如拉起另一个ability，根据ability处理结果执行异步关闭
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      moduleName: 'entry',
+      abilityName: 'SecondAbility'
+    }
+    this.context.startAbilityForResult(want)
+      .then((result) => {
+        // 获取ability处理结果，当返回结果的resultCode为0关闭当前UIAbility
+        console.info('startAbilityForResult success, resultCode is ' + result.resultCode);
+        if (result && result.resultCode === 0) {
+          this.context.terminateSelf(); // 关闭当前UIAbility
+        }
+      }).catch((err: BusinessError) => {
+      // 异常处理
+      console.error('startAbilityForResult failed, err:' + JSON.stringify(err));
+      this.context.terminateSelf();
+    });
+
+    return true; // 已定义预关闭操作后，返回true表示UIAbility取消关闭
+  }
+}
+```
 
 ## onPrepareToTerminateAsync
 
@@ -308,14 +567,17 @@ onPrepareToTerminateAsync(): Promise<boolean>
 
 在UIAbility关闭前（例如用户通过点击应用窗口右上角的关闭按钮、或者通过Dock栏/托盘右键退出应用时），系统会触发该回调，用于在UIAbility正式关闭前执行其他操作。开发者可以在该回调中返回true阻拦此次关闭，然后在合适时机主动调用 [terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself) 接口关闭。例如，询问用户是否确认关闭UIAbility，再主动销毁UIAbility。 从API version 15开始，该接口仅在2in1设备中可正常执行回调，在其他设备上不执行回调。 从API version 19开始，该接口在2in1和Tablet设备中可正常执行回调，在其他设备上不执行回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 当
 > [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)
 > 或[AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)实现时，在
-> dock栏或系统托盘处右键点击关闭，本回调函数将不执行。&gt;
+> dock栏或系统托盘处右键点击关闭，本回调函数将不执行。
+> 
 > - 如果应用本身或者所使用的三方框架注册了
 > [window.WindowStage.on('windowStageClose')](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#onwindowstageclose)
-> 监听，本回调函数将不执行。&gt;
+> 监听，本回调函数将不执行。
+> 
 > - 若异步回调内发生crash，按超时处理，执行等待超过10秒未响应，UIAbility将被强制关闭。
 
 **起始版本：** 15
@@ -330,9 +592,24 @@ onPrepareToTerminateAsync(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  async onPrepareToTerminateAsync(): Promise<boolean> {
+    await new Promise<boolean>((res, rej) => {
+      setTimeout(res, 2000); // 延时2秒
+    });
+    return true; // 已定义预关闭操作后，返回true表示UIAbility取消关闭
+  }
+}
+```
 
 ## onSaveState
 
@@ -342,7 +619,8 @@ onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>
 
 该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即 [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)接口中的saveOccasion参数设置为 SAVE_WHEN_ERROR），当应用出现故障时，系统将触发该回调来保存UIAbility的数据。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 20开始，当
 > [onSaveStateAsync](#onsavestateasync)
 > 实现时，本回调函数将不执行。
@@ -357,16 +635,30 @@ onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| reason | AbilityConstant.StateType | 是 |
-| wantParam | Record & lt;string, Object & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| reason | AbilityConstant.StateType | 是 | 触发应用保存状态的原因，当前仅支持APP_RECOVERY（即应用故障恢复场景）。 |
+| wantParam | Record & lt;string, Object & gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](#oncreate)的 Want.parameters中。<br>**起始版本：** 11 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| AbilityConstant.OnSaveResult |
+| 类型 | 说明 |
+| --- | --- |
+| AbilityConstant.OnSaveResult | 返回一个数据保存策略的对象（如全部拒绝、全部允许、只允许故障恢复场景等）。 |
+
+**示例**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyUIAbility extends UIAbility {
+  onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>) {
+    console.info('onSaveState');
+    wantParam['myData'] = 'my1234567'; // 保存UIAbility的状态数据，用于故障恢复
+    return AbilityConstant.OnSaveResult.RECOVERY_AGREE;
+  }
+}
+```
 
 ## onSaveStateAsync
 
@@ -386,16 +678,32 @@ onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [stateType](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-bundlestate-bundleactivestate-i.md) | AbilityConstant.StateType | 是 |
-| wantParam | Record & lt;string, Object & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| stateType | AbilityConstant.StateType | 是 | 触发应用保存状态的原因，当前仅支持`APP_RECOVERY`（即应用故障恢复场景）。 |
+| wantParam | Record & lt;string, Object & gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](#oncreate)的 Want.parameters中。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;AbilityConstant.OnSaveResult & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;AbilityConstant.OnSaveResult & gt; | Promise对象。返回一个数据保存策略的对象（如全部拒绝、全部允许、只允许故障恢复场景等）。 |
+
+**示例**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+class MyUIAbility extends UIAbility {
+  async onSaveStateAsync(stateType: AbilityConstant.StateType,
+    wantParam: Record<string, Object>): Promise<AbilityConstant.OnSaveResult> {
+    await new Promise<string>((res, rej) => {
+      setTimeout(res, 1000); // 延时1秒后执行
+    });
+    return AbilityConstant.OnSaveResult.RECOVERY_AGREE;
+  }
+}
+```
 
 ## onShare
 
@@ -415,9 +723,22 @@ onShare(wantParam: Record<string, Object>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| wantParam | Record & lt;string, Object & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| wantParam | Record & lt;string, Object & gt; | 是 | 待分享的数据。<br>**起始版本：** 11 |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyUIAbility extends UIAbility {
+  onShare(wantParams: Record<string, Object>) {
+    console.info('onShare');
+    wantParams['ohos.extra.param.key.shareUrl'] = 'example.com';
+  }
+}
+```
 
 ## onWillBackground
 
@@ -435,6 +756,36 @@ UIAbility生命周期回调，当应用从前台转到后台前触发，在[onBa
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { hiAppEvent, hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyUIAbility extends UIAbility {
+  onWillBackground(): void {
+    let eventParams: Record<string, number | string> = {
+      "int_data": 100,
+      "str_data": "strValue",
+    };
+    // 写入打点应用故障信息
+    hiAppEvent.write({
+      domain: "test_domain",
+      name: "test_event",
+      eventType: hiAppEvent.EventType.FAULT,
+      params: eventParams,
+    }, (err: BusinessError) => {
+      if (err) {
+        hilog.error(0x0000, 'testTag', `hiAppEvent code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      hilog.info(0x0000, 'testTag', `hiAppEvent success to write event`);
+    });
+  }
+}
+```
+
 ## onWillForeground
 
 ```TypeScript
@@ -450,6 +801,60 @@ UIAbility生命周期回调，应用转到前台前触发，在[onForeground](#o
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { hiAppEvent, hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWillForeground(): void {
+    // 应用开始进入前台事件打点
+    let eventParams: Record<string, number> = { 'xxxx': 100 };
+    let eventInfo: hiAppEvent.AppEventInfo = {
+      // 事件领域定义
+      domain: "lifecycle",
+      // 事件名称定义
+      name: "onwillforeground",
+      // 事件类型定义
+      eventType: hiAppEvent.EventType.BEHAVIOR,
+      // 事件参数定义
+      params: eventParams,
+    };
+    hiAppEvent.write(eventInfo).then(() => {
+      hilog.info(0x0000, 'testTag', `HiAppEvent success to write event`);
+    }).catch((err: BusinessError) => {
+      hilog.error(0x0000, 'testTag', `HiAppEvent err.code: ${err.code}, err.message: ${err.message}`);
+    });
+  }
+
+  // ...
+
+  onDidForeground(): void {
+    // 应用进入前台后事件打点
+    let eventParams: Record<string, number> = { 'xxxx': 100 };
+    let eventInfo: hiAppEvent.AppEventInfo = {
+      // 事件领域定义
+      domain: "lifecycle",
+      // 事件名称定义
+      name: "ondidforeground",
+      // 事件类型定义
+      eventType: hiAppEvent.EventType.BEHAVIOR,
+      // 事件参数定义
+      params: eventParams,
+    };
+    hiAppEvent.write(eventInfo).then(() => {
+      hilog.info(0x0000, 'testTag', `HiAppEvent success to write event`);
+    }).catch((err: BusinessError) => {
+      hilog.error(0x0000, 'testTag', `HiAppEvent err.code: ${err.code}, err.message: ${err.message}`);
+    });
+  }
+}
+```
 
 ## onWindowStageCreate
 
@@ -469,9 +874,30 @@ onWindowStageCreate(windowStage: window.WindowStage): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| windowStage | window.WindowStage | 是 | WindowStage实例对象。 |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { window } from '@kit.ArkUI';
+
+export default class MyUIAbility extends UIAbility {
+  // 主窗口已创建，为该UIAbility设置主页面
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    windowStage.loadContent('pages/Index', (err, data) => {
+      if (err.code) {
+        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause: ${JSON.stringify(err)}`);
+        return;
+      }
+      hilog.info(0x0000, 'testTag', `Succeeded in loading the content. Data: ${JSON.stringify(data)}`);
+    });
+  }
+}
+```
 
 ## onWindowStageDestroy
 
@@ -489,6 +915,20 @@ onWindowStageDestroy(): void
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class MyUIAbility extends UIAbility {
+  onWindowStageDestroy() {
+    // 主窗口已销毁，释放UI相关资源
+    hilog.info(0x0000, 'testTag', `onWindowStageDestroy`);
+  }
+}
+```
+
 ## onWindowStageRestore
 
 ```TypeScript
@@ -497,7 +937,8 @@ onWindowStageRestore(windowStage: window.WindowStage): void
 
 当UIAbility跨端迁移时，目标端UIAbility恢复页面栈时回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 在应用迁移启动时，无论是[冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)还是
 > [热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)，都会在执行完
 > [onCreate()](#oncreate)/[onNewWant()](#onnewwant)后，触发onWindowStageRestore()生命周期函数，不
@@ -513,9 +954,23 @@ onWindowStageRestore(windowStage: window.WindowStage): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| windowStage | window.WindowStage | 是 | WindowStage实例对象。 |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { window } from '@kit.ArkUI';
+
+export default class MyUIAbility extends UIAbility {
+  onWindowStageRestore(windowStage: window.WindowStage) {
+    hilog.info(0x0000, 'testTag', `onWindowStageRestore`);
+  }
+}
+```
 
 ## onWindowStageWillDestroy
 
@@ -535,9 +990,23 @@ onWindowStageWillDestroy(windowStage: window.WindowStage): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| windowStage | window.WindowStage | 是 | WindowStage实例对象。 |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { window } from '@kit.ArkUI';
+
+export default class MyUIAbility extends UIAbility {
+  onWindowStageWillDestroy(windowStage: window.WindowStage) {
+    hilog.info(0x0000, 'testTag', `onWindowStageWillDestroy`);
+  }
+}
+```
 
 ## callee
 

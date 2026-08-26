@@ -12,7 +12,7 @@ Declares the cipher suite for TLS 1.3, which is also compatible with TLS 1.2.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TlsV12CipherSuite](arkts-network-http-tlsv12ciphersuite-t.md) |
-| [TlsV13SpecificCipherSuite](arkts-network-http-tlsv13specificciphersuite-t.md) |
+| Type | Description |
+| --- | --- |
+| [TlsV12CipherSuite](arkts-network-http-tlsv12ciphersuite-t.md) | [TlsV11CipherSuite]{ |
+| [TlsV13SpecificCipherSuite](arkts-network-http-tlsv13specificciphersuite-t.md) | [TlsV13SpecificCipherSuite]{ |

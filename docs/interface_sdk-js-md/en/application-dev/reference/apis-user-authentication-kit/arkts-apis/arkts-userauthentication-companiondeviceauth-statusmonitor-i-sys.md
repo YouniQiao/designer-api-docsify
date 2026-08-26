@@ -11,7 +11,7 @@ Status monitor object. It is used to listen for or obtain information such as th
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import companionDeviceAuth from '@kit.UserAuthenticationKit';
 ```
 
 ## getTemplateStatus
@@ -34,15 +34,31 @@ Obtains the status of the companion device template. This API is used to query t
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md)[]&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md)[]&gt; | Promise used to return the status list of all templates of the current user. The status of each template contains the template ID, validity, and device information. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const localUserId = 100;
+const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+statusMonitor.getTemplateStatus()
+  .then((templateStatus) => {
+    console.info(`templateStatus: ${JSON.stringify(templateStatus)}`);
+  })
+  .catch((error: BusinessError) => {
+    console.error(`error has been captured: message:${error?.message}`);
+  })
+```
 
 ## offAvailableDeviceChange
 
@@ -64,15 +80,34 @@ Unsubscribes from the events for status changes of companion devices that can be
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is not specified, all callbacks corresponding to the event type are unsubscribed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localUserId = 100;
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const handler = (deviceStatusList: companionDeviceAuth.DeviceStatus[]): void => {
+    console.info('available device changed');
+  };
+  statusMonitor.onAvailableDeviceChange(handler);
+  statusMonitor.offAvailableDeviceChange(handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured: message:${message}`);
+}
+```
 
 ## offContinuousAuthChange
 
@@ -94,15 +129,43 @@ Unsubscribes from the continuous authentication status change event of the compa
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is passed, only the specified callback is unregistered. If this parameter is not passed, all callbacks registered with **onContinuousAuthChange** are unregistered. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+const localUserId = 100;
+try {
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const continuousAuthParam: companionDeviceAuth.ContinuousAuthParam = {
+    templateId: new Uint8Array([])
+  };
+  const handler = (isAuthPassed: boolean, authTrustLevel?: userAuth.AuthTrustLevel): void => {
+    console.info('continuous auth changed');
+    console.info(`isAuthPassed: ${isAuthPassed}`);
+    if (authTrustLevel !== undefined) {
+      console.info(`authTrustLevel: ${authTrustLevel}`);
+    }
+  };
+
+  statusMonitor.onContinuousAuthChange(continuousAuthParam, handler);
+  statusMonitor.offContinuousAuthChange(handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured: message:${message}`);
+}
+```
 
 ## offTemplateChange
 
@@ -124,15 +187,34 @@ Unsubscribes from template status change events. This API uses an asynchronous c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is not specified, all callbacks corresponding to the event type are unsubscribed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localUserId = 100;
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const handler = (templates: companionDeviceAuth.TemplateStatus[]): void => {
+    console.info('template status updated');
+  };
+  statusMonitor.onTemplateChange(handler);
+  statusMonitor.offTemplateChange(handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured: message:${message}`);
+}
+```
 
 ## onAvailableDeviceChange
 
@@ -154,15 +236,33 @@ Subscribes to the events for status changes of companion devices that can be add
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | Yes | Callback used to return the available device status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localUserId = 100;
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const handler = (deviceStatusList: companionDeviceAuth.DeviceStatus[]): void => {
+    console.info('available device changed');
+  };
+  statusMonitor.onAvailableDeviceChange(handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured: message:${message}`);
+}
+```
 
 ## onContinuousAuthChange
 
@@ -184,17 +284,44 @@ Subscribes to the events for continuous authentication status of companion devic
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | [ContinuousAuthParam](arkts-userauthentication-companiondeviceauth-continuousauthparam-i-sys.md) | Yes |
-| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [ContinuousAuthParam](arkts-userauthentication-companiondeviceauth-continuousauthparam-i-sys.md) | Yes | Device for which the events are subscribed to. |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | Yes | Called when the continuous authentication status of the device changes. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
-| [32600002](../errorcode-useriam.md#32600002-template-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600002](../errorcode-useriam.md#32600002-template-not-found) | The template is not found. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+const localUserId = 100;
+try {
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const continuousAuthParam: companionDeviceAuth.ContinuousAuthParam = {
+    templateId: new Uint8Array([])
+  };
+  const handler = (isAuthPassed: boolean, authTrustLevel?: userAuth.AuthTrustLevel): void => {
+    console.info('continuous auth changed');
+    console.info(`isAuthPassed: ${isAuthPassed}`);
+    if (authTrustLevel !== undefined) {
+      console.info(`authTrustLevel: ${authTrustLevel}`);
+    }
+  };
+
+  statusMonitor.onContinuousAuthChange(continuousAuthParam, handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured: message:${message}`);
+}
+```
 
 ## onTemplateChange
 
@@ -216,12 +343,30 @@ Subscribes to template status change events. This API uses an asynchronous callb
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | Yes | Callback used to receive the template status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localUserId = 100;
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const handler = (templates: companionDeviceAuth.TemplateStatus[]): void => {
+    console.info('template status updated');
+  };
+  statusMonitor.onTemplateChange(handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured: message:${message}`);
+}
+```

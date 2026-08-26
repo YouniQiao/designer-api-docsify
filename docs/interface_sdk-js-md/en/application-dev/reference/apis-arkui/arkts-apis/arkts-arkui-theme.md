@@ -3,28 +3,28 @@
 ## Modules to Import
 
 ```TypeScript
-import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from 'kits/@kit.ArkUI';
+import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ThemeControl](arkts-arkui-arkui-theme-themecontrol-c.md) |
+| Name | Description |
+| --- | --- |
+| [ThemeControl](arkts-arkui-arkui-theme-themecontrol-c.md) | Class ThemeControl provides the Theme management for whole Ability and pages. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Colors](arkts-arkui-arkui-theme-colors-i.md) |
-| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md) |
-| [Theme](arkts-arkui-arkui-theme-theme-i.md) |
+| Name | Description |
+| --- | --- |
+| [Colors](arkts-arkui-arkui-theme-colors-i.md) | Defines the struct of Colors. |
+| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md) | Defines the struct of CustomTheme. |
+| [Theme](arkts-arkui-arkui-theme-theme-i.md) | Defines the struct of Theme. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CustomColors](arkts-arkui-customcolors-t.md) |
-| [CustomDarkColors](arkts-arkui-customdarkcolors-t.md) |
+| Name | Description |
+| --- | --- |
+| [CustomColors](arkts-arkui-customcolors-t.md) | Defines the struct of CustomColors. |
+| [CustomDarkColors](arkts-arkui-customdarkcolors-t.md) | Defines the struct of CustomDarkColors. |

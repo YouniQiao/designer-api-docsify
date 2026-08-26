@@ -16,7 +16,7 @@ Defines the callback for submission.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enterKey | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes |
-| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enterKey | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes | Type of the Enter key. |
+| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | Yes | Submit event. It can be used to control whether to dismiss the keyboard. |

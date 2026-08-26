@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedMissionManager } from 'kits/@kit.AbilityKit';
+import distributedMissionManager from '@kit.AbilityKit';
 ```
 
 ## off('continueStateChange')
@@ -26,14 +26,29 @@ function off(type: 'continueStateChange', callback?: Callback<ContinueCallbackIn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'continueStateChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ContinueCallbackInfo](arkts-ability-distributedmissionmanager-continuecallbackinfo-i-sys.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'continueStateChange' | 是 | 取消订阅的事件类型，固定取值为'continueStateChange'，表示取消订阅任务流转状态变化事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ContinueCallbackInfo](arkts-ability-distributedmissionmanager-continuecallbackinfo-i-sys.md)&gt; | 否 | 需要取消的回调函数。当需要取消特定回调监听时传入callback参数，当需要取消type对应的所有回调监听时不传callback参数。不传入时将取消该事件类型的所有回调监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+
+  try {
+    // 取消任务流转状态变化事件监听
+    distributedMissionManager.off('continueStateChange', (data) => {
+      console.info("continueStateChange off:" + JSON.stringify(data));
+    });
+  } catch (err) {
+    console.error(`continueStateChange failed. Code: ${err.code}, message: ${err.message}`);
+  }
+```

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
+import userAccessCtrl from '@kit.UserAuthenticationKit';
 ```
 
 ## authTrustLevel

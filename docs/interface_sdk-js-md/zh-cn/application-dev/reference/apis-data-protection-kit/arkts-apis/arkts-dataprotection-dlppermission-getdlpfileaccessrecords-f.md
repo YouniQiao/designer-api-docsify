@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import dlpPermission from '@kit.DataProtectionKit';
 ```
 
 ## getDLPFileAccessRecords
@@ -20,17 +20,29 @@ function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt;&gt; | Promise对象。返回最近访问的DLP文件列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) | No permission to call this API, which is available only for non-DLP sandbox applications. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+
+**示例**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getDLPFileAccessRecords().then((accessRecords) => { // 获取DLP访问列表。
+  console.info('accessRecords', JSON.stringify(accessRecords));
+}).catch((error: BusinessError)=> {
+  console.error(JSON.stringify(error));
+});
+```
 
 
 ## getDLPFileAccessRecords
@@ -47,15 +59,29 @@ function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileIn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt;&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) | No permission to call this API, which is available only for non-DLP sandbox applications. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+
+**示例**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getDLPFileAccessRecords((err, accessRecords) => {
+  if (err) {
+    console.error(`Failed to get DLP file access records. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('accessRecords', JSON.stringify(accessRecords));
+  }
+}); // 获取DLP访问列表。
+```

@@ -46,15 +46,15 @@ Obtains the content size.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SizeResult](arkts-arkui-sizeresult-i.md) |
+| Type | Description |
+| --- | --- |
+| [SizeResult](arkts-arkui-sizeresult-i.md) | Total size of the scrollable component's content, including the content width and height. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## currentOffset
 
@@ -74,9 +74,9 @@ Obtains the current scrolling offset.<p>&lt;strong&gt;NOTE&lt;/strong&gt;
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [OffsetResult](arkts-arkui-offsetresult-i.md) |
+| Type | Description |
+| --- | --- |
+| [OffsetResult](arkts-arkui-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is void.<br>**Applicable version:** 11 and later |
 
 ## fling
 
@@ -96,16 +96,16 @@ Performs inertial scrolling based on the initial velocity passed in.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| velocity | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| velocity | number | Yes | Initial velocity of inertial scrolling. Unit: vp/s & lt;em & gt;NOTE & lt;/em & gt; If the value specified is 0, it is considered as invalid, and the scrolling for this instance will not take effect. A positive value indicates scrolling towards the top, while a negative value indicates scrolling towards the bottom. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getFrameNode
 
@@ -125,9 +125,9 @@ Obtains the FrameNode corresponding to this scroller.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| FrameNode \| undefined |
+| Type | Description |
+| --- | --- |
+| FrameNode \| undefined | Returns the FrameNode bound to this scroller. If the scroller is not bound to a component, the return value is undefined. |
 
 ## getItemIndex
 
@@ -147,23 +147,23 @@ Obtains the index of a child component based on coordinates.<p>&lt;strong&gt;NOT
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | number | Yes |
-| y | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | X-coordinate, in vp. |
+| y | number | Yes | Y-coordinate, in vp. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the item. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getItemRect
 
@@ -185,22 +185,22 @@ Obtains the size and position of a child component relative to its container.<p>
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the target child component. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RectResult](arkts-arkui-rectresult-i.md) |
+| Type | Description |
+| --- | --- |
+| [RectResult](arkts-arkui-rectresult-i.md) | Size and position of the child component relative to the component. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## isAtEnd
 
@@ -220,9 +220,9 @@ Checks whether the component has scrolled to the bottom.<p>&lt;strong&gt;NOTE&lt
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns whether the component scrolls to the end position. |
 
 ## offset
 
@@ -242,9 +242,9 @@ Obtains the current scrolling offset.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [OffsetResult](arkts-arkui-offsetresult-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [OffsetResult](arkts-arkui-offsetresult-i.md) \| undefined | Returns the current scrolling offset. If the scroller not bound to a component, the return value is undefined. |
 
 ## scrollBy
 
@@ -262,10 +262,10 @@ Scrolls by the specified amount.<p>&lt;strong&gt;NOTE&lt;/strong&gt; This API is
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dx | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
-| dy | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dx | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Amount to scroll by in the horizontal direction. The percentage format is not supported. |
+| dy | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Amount to scroll by in the vertical direction. The percentage format is not supported. |
 
 ## scrollEdge
 
@@ -283,10 +283,10 @@ Scrolls to the edge of the container, regardless of the scroll axis direction. B
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | Yes |
-| options | [ScrollEdgeOptions](arkts-arkui-scrolledgeoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | Yes | Edge position to scroll to. & lt;em & gt;Atomic service API & lt;/em & gt;: This API can be used in atomic services since API version 11. |
+| options | [ScrollEdgeOptions](arkts-arkui-scrolledgeoptions-i.md) | No | Mode of scrolling to the edge position. & lt;em & gt;Atomic service API & lt;/em & gt;: This API can be used in atomic services since API version 12.<br>**Since:** 12 |
 
 ## scrollPage
 
@@ -304,9 +304,9 @@ Scrolls to the next or previous page.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ScrollPageOptions](arkts-arkui-scrollpageoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ScrollPageOptions](arkts-arkui-scrollpageoptions-i.md) | Yes | Page turning mode.<br>**Since:** 14 |
 
 ## scrollPage
 
@@ -326,9 +326,9 @@ Scrolls to the next or previous page.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | { next: boolean; direction?: Axis } | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | { next: boolean; direction?: Axis } | Yes | next: Whether to turn to the next page. The value & lt;em & gt;true & lt;/em & gt; means to scroll to the next page, and & lt;em & gt;false & lt;/em & gt; means to scroll to the previous page. direction: Scrolling direction: horizontal or vertical. |
 
 ## scrollTo
 
@@ -346,9 +346,9 @@ Scrolls to the specified position. Anonymous Object Rectification.<p>&lt;strong&
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [ScrollOptions](arkts-arkui-scrolloptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [ScrollOptions](arkts-arkui-scrolloptions-i.md) | Yes | Parameters for scrolling to the specified position.<br>**Since:** 18 |
 
 ## scrollToIndex
 
@@ -369,9 +369,9 @@ Scrolls to a specified index, with support for setting an extra offset for the s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
-| [smooth](../arkts-apis/arkts-arkui-viewmodel-scrollparam-i.md) | boolean | No |
-| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No |
-| options | [ScrollToIndexOptions](arkts-arkui-scrolltoindexoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Index of the item to be scrolled to in the container. & lt;em & gt;NOTE & lt;/em & gt; If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
+| smooth | boolean | No | Whether to enable the smooth animation for scrolling to the item with the specified index. The value & lt;em & gt;true & lt;/em & gt; means to enable that the smooth animation, and & lt;em & gt;false & lt;/em & gt; means the opposite.Default value: & lt;em & gt;false & lt;/em & gt;<br>**Since:** 12 |
+| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No | How the list item to scroll to is aligned with the container. Default value when the container is & lt;em & gt;List & lt;/em & gt;: & lt;em & gt;ScrollAlign.START & lt;/em & gt; Default value when the container is & lt;em & gt;Grid & lt;/em & gt;: & lt;em & gt;ScrollAlign.AUTO & lt;/em & gt; Default value when the container is & lt;em & gt;WaterFlow & lt;/em & gt;: & lt;em & gt;ScrollAlign.START & lt;/em & gt; & lt;em & gt;NOTE & lt;/em & gt; This parameter is only available for the & lt;em & gt;List & lt;/em & gt;, & lt;em & gt;Grid & lt;/em & gt;, and & lt;em & gt;WaterFlow & lt;/em & gt; components.<br>**Since:** 12 |
+| options | [ScrollToIndexOptions](arkts-arkui-scrolltoindexoptions-i.md) | No | Options for scrolling to a specified index, for example, an extra offset for the scroll.Default value: & lt;em & gt;0 & lt;/em & gt;, in vp<br>**Since:** 12 |

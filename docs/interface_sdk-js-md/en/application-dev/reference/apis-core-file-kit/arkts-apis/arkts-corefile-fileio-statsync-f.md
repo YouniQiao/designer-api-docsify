@@ -23,12 +23,19 @@ Obtains file information. This API returns the result synchronously.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the file. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Stat](arkts-corefile-fileio-stat-depr-i.md) |
+| Type | Description |
+| --- | --- |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) | File information obtained. |
+
+**Examples**
+
+```TypeScript
+let stat = fileio.statSync(pathDir);
+// Example code in Stat
+```

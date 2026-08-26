@@ -16,13 +16,13 @@ Represents the callback used to set the parallel relationship between gestures o
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| current | [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | Yes |
-| others | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| current | [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | Yes | Gesture recognizer of the current component. Currently only a gesture recognizer of the GestureType.PAN_GESTURE type is supported. |
+| others | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | Gesture recognizers of the same GestureType from other components with higher priority in the response chain. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) |
+| Type | Description |
+| --- | --- |
+| [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | Gesture recognizer that is bound in parallel with the current recognizer. |

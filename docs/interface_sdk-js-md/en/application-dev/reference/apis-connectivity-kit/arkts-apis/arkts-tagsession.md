@@ -4,6 +4,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TagSession(Standard NFC Tag Session)](arkts-connectivity-tagsession-tagsession-i.md) |
+| Name | Description |
+| --- | --- |
+| [TagSession(Standard NFC Tag Session)](arkts-connectivity-tagsession-tagsession-i.md) | The **tagSession** module provides common APIs for establishing connections and transferring data. |

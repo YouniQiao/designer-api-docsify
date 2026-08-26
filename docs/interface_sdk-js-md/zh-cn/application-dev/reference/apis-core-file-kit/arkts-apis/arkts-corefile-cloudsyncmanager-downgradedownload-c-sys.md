@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+import cloudSyncManager from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -32,18 +32,32 @@ constructor(bundleName: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 应用包名。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13900020 |
-| 22400005 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.demo.a';
+try {
+  let downgradeMgr = new cloudSyncManager.DowngradeDownload(bundleName);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to create downgrade manager object, error code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getCloudFileInfo
 
@@ -63,19 +77,33 @@ getCloudFileInfo(): Promise<CloudFileInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[CloudFileInfo](arkts-corefile-cloudsyncmanager-cloudfileinfo-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[CloudFileInfo](arkts-corefile-cloudsyncmanager-cloudfileinfo-i.md)&gt; | Promise对象，返回携带本地与云端文件信息的对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13600001 |
-| 13900010 |
-| 22400005 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900010 | Try again. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName: string = "com.demo.a";
+let downgradeMgr = new cloudSyncManager.DowngradeDownload(bundleName);
+downgradeMgr.getCloudFileInfo().then((fileInfo: cloudSyncManager.CloudFileInfo) => {
+  console.info("cloud file info: " + JSON.stringify(fileInfo));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get downgrade info, error message: ${err.message}, error code: ${err.code}`);
+});
+```
 
 ## startDownload
 
@@ -95,27 +123,49 @@ startDownload(callback: Callback<DownloadProgress>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 | 回调函数。全量下载进度，参数为DownloadProgress，返回值为void。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13600001 |
-| 13900010 |
-| 13900020 |
-| 22400005 |
-| 22400006 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900010 | Try again. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400006 | The same task is already in progress. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName: string = "com.demo.a";
+let downgradeMgr = new cloudSyncManager.DowngradeDownload(bundleName);
+let callback = (data: cloudSyncManager.DownloadProgress) => {
+  console.info(`Downgrade progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
+  if (data.state == cloudSyncManager.DownloadState.COMPLETED) {
+    console.info('Downgrade finished.');
+  } else if (data.state == cloudSyncManager.DownloadState.STOPPED) {
+    console.info(`Downgrade stopped, reason: ${data.stopReason}.`);
+  }
+};
+downgradeMgr.startDownload(callback).then(() => {
+  console.info("Downgrade started successfully.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to start downgrade, error message: ${err.message}, error code: ${err.code}`);
+});
+```
 
 ## startTransfer
 
@@ -137,22 +187,39 @@ startTransfer(targetUri: string, callback: Callback<TransferProgress>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| targetUri | string | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TransferProgress](arkts-corefile-cloudsyncmanager-transferprogress-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| targetUri | string | 是 | 用于存放搬迁后的文件路径URI，必须以“/file://docs/storage/Users/currentUser/”为前缀。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TransferProgress](arkts-corefile-cloudsyncmanager-transferprogress-i-sys.md)&gt; | 是 | 回调函数，返回搬迁进度。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13900001 |
-| 13900002 |
-| 13900010 |
-| 13900020 |
-| 22400006 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13900001 | Operation not permitted. Possible causes:  1.The DowngradeDownload task is running.  2.The full data synchronization task is running. |
+| 13900002 | No such file or directory. |
+| 13900010 | Try again. |
+| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified.  2.The length of the input uri does not meet the value range requirement.  3.The input uri does not belong to a File Manager public directory. |
+| 22400006 | The same task is already in progress. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetPath: string = "file://docs/storage/Users/currentUser/Download/";
+try {
+    let downgradeMgr = new cloudSyncManager.DowngradeDownload("com.demo");
+    downgradeMgr.startTransfer(targetPath, (data: cloudSyncManager.TransferProgress) => {
+        console.info(`Transfer progress: successfulCount: ${data.successfulCount}, totalCount: ${data.totalCount}`);
+    });
+} catch (err) {
+    let e = err as BusinessError;
+    console.error(`transfer files failed with error message: ${e.message}, error code: ${e.code}`);
+}
+```
 
 ## stopDownload
 
@@ -172,15 +239,39 @@ stopDownload(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| 13600001 |
-| 22400005 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName: string = "com.demo.a";
+let downgradeMgr = new cloudSyncManager.DowngradeDownload(bundleName);
+downgradeMgr.startDownload((data: cloudSyncManager.DownloadProgress) => {
+  console.info(`Downgrade progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
+}).then(() => {
+  console.info("Downgrade started successfully.");
+  let needStop = true;
+  if (needStop) {
+    downgradeMgr.stopDownload().then(() => {
+      console.info("Downgrade stopped successfully.");
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to stop downgrade, error message: ${err.message}, error code: ${err.code}`);
+    });
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to start downgrade, error message: ${err.message}, error code: ${err.code}`);
+});
+```

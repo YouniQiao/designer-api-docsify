@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import rpc from '@kit.IPCKit';
 ```
 
 ## code

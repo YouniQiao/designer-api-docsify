@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## contactAttributes
@@ -299,3 +299,24 @@ websites?: Website[]
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
+
+**示例**
+
+使用JSON格式创建联系人数据。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let myContact: contact.Contact = {
+    phoneNumbers: [{
+        phoneNumber: '138xxxxxxxx'
+    }],
+    name: {
+        fullName: 'fullName',
+        namePrefix: 'namePrefix'
+    },
+    nickName: {
+        nickName: 'nickName'
+    }
+};
+```

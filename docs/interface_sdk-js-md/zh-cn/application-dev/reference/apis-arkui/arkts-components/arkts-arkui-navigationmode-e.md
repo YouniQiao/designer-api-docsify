@@ -2,7 +2,8 @@
 
 导航页显示模式。Navigation处于分栏显示状态时，导航页和内容区之间会显示分割线。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 为了简化表示，可以将`组件宽度 - minContentWidth - 分割线宽度 (1px)`称为calcNavBarWidth。
 **表1** navBarWidth最终取值与开发者设置值的关系表  
 | 开发者设置的navBarWidth值 | calcNavBarWidth计算值 | navBarWidth最终取值 | | --- | --- | --- | | navBarWidth &lt; minNavBarWidth | NA | minNavBarWidth | | navBarWidth   

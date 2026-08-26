@@ -4,14 +4,14 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ViewData](arkts-ability-viewdata-i.md) |
+| Name | Description |
+| --- | --- |
+| [ViewData](arkts-ability-viewdata-i.md) | The module defines the view data used for auto-fill. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ViewData](arkts-ability-viewdata-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ViewData](arkts-ability-viewdata-i-sys.md) | The module defines the view data used for auto-fill. |
 <!--DelEnd-->

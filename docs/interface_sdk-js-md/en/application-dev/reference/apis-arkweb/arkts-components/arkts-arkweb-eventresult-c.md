@@ -9,6 +9,9 @@ EventResult is a class in ArkWeb Kit used to notify the **Web** component of the
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -41,9 +44,13 @@ Sets the gesture event consumption result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | boolean | Yes | Whether to consume the gesture event. The value **true** means to consume the gesture event, and **false** means the opposite. If **null** or **undefined** is passed in, the value is **true**. |
+
+**Examples**
+
+For details, see [onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent).
 
 ## setGestureEventResult
 
@@ -59,10 +66,14 @@ Sets the gesture event consumption result and bubbling control.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | boolean | Yes |
-| stopPropagation | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | boolean | Yes | Whether to consume the gesture event. The value **true** means to consume the gesture event, and **false** means the opposite. If **null** or **undefined** is passed in, the value is **true**. |
+| stopPropagation | boolean | Yes | Whether to stop propagation. This parameter is valid only when **result** is set to **true**. The value **true** means to stop propagation, and **false** means the opposite. If **null** or **undefined** is passed in, the value is **true**. |
+
+**Examples**
+
+For details, see [onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent).
 
 ## setMouseEventResult
 
@@ -78,7 +89,11 @@ Sets the mouse event consumption result and bubbling control.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | boolean | Yes |
-| stopPropagation | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | boolean | Yes | Whether to consume the mouse event. true indicates consumption of the mouse event, and false indicates no consumption of the mouse event. The value is true when null or undefined is passed in. |
+| stopPropagation | boolean | No | Whether to stop bubbling. This parameter takes effect only when result is true. true indicates that bubbling is stopped, and false indicates that bubbling is not stopped. The value is true when null or undefined is passed in. Default value: true. |
+
+**Examples**
+
+For details about the sample code of the mouse event, see [onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent).

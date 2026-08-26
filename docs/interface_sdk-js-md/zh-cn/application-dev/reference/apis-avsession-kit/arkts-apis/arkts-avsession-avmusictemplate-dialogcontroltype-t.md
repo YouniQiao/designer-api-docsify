@@ -12,9 +12,9 @@ type DialogControlType = 'open' | 'close' | 'refresh' | 'toast'
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| 类型 |
-| --- |
-| 'open' |
-| 'close' |
-| 'refresh' |
-| 'toast' |
+| 类型 | 说明 |
+| --- | --- |
+| 'open' |  |
+| 'close' |  |
+| 'refresh' |  |
+| 'toast' |  |

@@ -2,7 +2,8 @@
 
 An array-like object that can be concatenated. This API extends **ISendable**.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
 - T: type, which can be any of the
@@ -17,7 +18,6 @@ An array-like object that can be concatenated. This API extends **ISendable**.
 ## Modules to Import
 
 ```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## join
@@ -36,15 +36,15 @@ Concatenates all elements in this array into a string, with a given separator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| separator | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| separator | string | No | Separator to be used. If no value is passed in, a comma (,) is used as the separator. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String obtained. If the array is empty, an empty string is returned. |
 
 ## slice
 
@@ -62,16 +62,16 @@ Selects a range of elements in this array to create an array.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| start | number | No |
-| end | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | number | No | Start index of the range. If a negative number is passed in, it refers to the index of 'start + array.length' The default value is '0'. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of 'end + array.length'. The default value is the length of the ArkTS array. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| ConcatArray & lt;T & gt; |
+| Type | Description |
+| --- | --- |
+| ConcatArray & lt;T & gt; | New array containing the selected elements. |
 
 ## [index: number]
 

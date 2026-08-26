@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## download
@@ -26,14 +26,41 @@ function download(url: string, options: CacheDownloadOptions): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| url | string | 是 |
-| options | [CacheDownloadOptions](arkts-basicservices-cachedownload-cachedownloadoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| url | string | 是 | 目标资源的地址。支持HTTP和HTTPS协议，长度不超过8192字节。 |
+| options | [CacheDownloadOptions](arkts-basicservices-cachedownload-cachedownloadoptions-i.md) | 是 | 目标资源的缓存下载选项。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
+
+// 提供缓存下载任务的配置选项。
+let options: cacheDownload.CacheDownloadOptions = {
+  headers: { 'Accept': 'application/json' },
+  sslType: cacheDownload.SslType.TLS,
+  caPath: '/path/to/ca.pem',
+  cacheStrategy: cacheDownload.CacheStrategy.FORCE,
+  retry: { maxRetryCount: 1 },
+  timeout: {
+    networkCheckTimeout: 20,
+    httpTotalTimeout: 60,
+  }
+};
+
+try {
+  // 进行缓存下载，资源若下载成功会被缓存到应用内存或应用沙箱目录的特定文件中。
+  cacheDownload.download("https://www.example.com", options);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to download the resource. err code: ${err.code}, err message: ${err.message}`);
+}
+```

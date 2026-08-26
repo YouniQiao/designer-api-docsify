@@ -9,7 +9,6 @@ Result of certificate validation.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## certChain

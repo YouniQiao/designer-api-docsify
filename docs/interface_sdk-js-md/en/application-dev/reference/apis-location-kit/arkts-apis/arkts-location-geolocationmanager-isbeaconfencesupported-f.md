@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## isBeaconFenceSupported
@@ -22,6 +21,18 @@ Check whether the BeaconFence service is supported.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
+
+**Examples**
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+
+try {
+  let isBeaconFenceSupported = geoLocationManager.isBeaconFenceSupported();
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```

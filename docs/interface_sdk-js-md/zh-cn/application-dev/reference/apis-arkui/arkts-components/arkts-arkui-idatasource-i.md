@@ -27,15 +27,15 @@ getData(index: number): any
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 获取数据对应的索引值。取值范围是[0, 数据源长度-1]。超出取值范围时行为由数据源实现决定，建议开发者做边界检查。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| any |
+| 类型 | 说明 |
+| --- | --- |
+| any | 获取索引值index对应的数据，由数据源决定具体类型。 |
 
 ## registerDataChangeListener
 
@@ -53,9 +53,9 @@ registerDataChangeListener(listener: DataChangeListener): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | 是 | 数据变化监听器，用于在数据源发生变化时通知组件刷新。 |
 
 ## totalCount
 
@@ -73,9 +73,9 @@ totalCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 获得数据总数，由数据源决定实际大小。 |
 
 ## unregisterDataChangeListener
 
@@ -93,6 +93,6 @@ unregisterDataChangeListener(listener: DataChangeListener): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | 是 | 数据变化监听器，用于在数据源发生变化时通知组件刷新。 |

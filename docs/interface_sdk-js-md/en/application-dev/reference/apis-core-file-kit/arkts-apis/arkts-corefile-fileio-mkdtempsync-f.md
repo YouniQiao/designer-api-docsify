@@ -23,12 +23,18 @@ Creates a temporary directory. This API returns the result synchronously.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| prefix | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Unique directory generated. |
+
+**Examples**
+
+```TypeScript
+let res = fileio.mkdtempSync(pathDir + "/XXXXXX");
+```

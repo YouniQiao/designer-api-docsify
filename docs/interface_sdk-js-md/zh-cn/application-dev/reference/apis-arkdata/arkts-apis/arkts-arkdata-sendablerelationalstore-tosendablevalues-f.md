@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableRelationalStore } from 'kits/@kit.ArkData';
+import sendableRelationalStore from '@kit.ArkData';
 ```
 
 ## toSendableValues
@@ -20,18 +20,29 @@ function toSendableValues(values: NonSendableValues): collections.Array<ValueTyp
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| values | [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| values | [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | 是 | 不可跨线程传递的数组数据。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| collections.Array & lt;ValueType & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| collections.Array & lt;ValueType & gt; | 可跨线程传递的数组数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { relationalStore, sendableRelationalStore } from '@kit.ArkData';
+const array: relationalStore.ValueType[] = [];
+array.push(1);
+array.push(2);
+array.push("aaaaaa")
+const values = sendableRelationalStore.toSendableValues(array);
+```

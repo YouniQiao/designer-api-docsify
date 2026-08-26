@@ -9,8 +9,7 @@ Defines a common callback that carries an error parameter. It is used to return 
 ## Modules to Import
 
 ```TypeScript
-import { AsyncCallback, BusinessError, Callback, ErrorCallback } from 'kits/@kit.BasicServicesKit';
-import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from 'kits/@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
 ```
 
 ## [[Call]]
@@ -27,6 +26,6 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| err | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| err | T | Yes | Common error information returned when the API fails to be called. The default type is **BusinessError**, including the error code (**code**) and optional additional data (**data**). |

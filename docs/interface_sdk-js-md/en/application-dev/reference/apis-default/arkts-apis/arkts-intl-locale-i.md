@@ -15,8 +15,8 @@ Gets the most likely values for the language, script, and region of the locale b
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## minimize
 
 ```TypeScript
@@ -27,8 +27,8 @@ Attempts to remove information about the locale that would be added by calling `
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toString
 
 ```TypeScript
@@ -39,8 +39,8 @@ Returns the locale's full locale identifier string.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## baseName
 
 ```TypeScript

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from 'kits/@kit.ConnectivityKit';
+import partnerAgent from '@kit.ConnectivityKit';
 ```
 
 ## bindDevice
@@ -29,26 +29,26 @@ the application's ability will be launched when the device is detected via Bluet
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes |
-| deviceCapability | [DeviceCapability](arkts-connectivity-partneragent-devicecapability-i.md) | Yes |
-| businessCapability | [BusinessCapability](arkts-connectivity-partneragent-businesscapability-i.md) | Yes |
-| partnerAgentExtensionAbilityName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes | The address of partner device. |
+| deviceCapability | [DeviceCapability](arkts-connectivity-partneragent-devicecapability-i.md) | Yes | The capability of partner device. |
+| businessCapability | [BusinessCapability](arkts-connectivity-partneragent-businesscapability-i.md) | Yes | The business capability of application. |
+| partnerAgentExtensionAbilityName | string | Yes | The name of PartnerAgentExtensionAbility. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [34900003](../errorcode-fusionConnectivity.md#34900003-device-not-paired) |
-| [34900004](../errorcode-fusionConnectivity.md#34900004-device-address-registered) |
-| [34900005](../errorcode-fusionConnectivity.md#34900005-bluetooth-disabled) |
-| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [34900003](../errorcode-fusionConnectivity.md#34900003-device-not-paired) | The device is not paired. |
+| [34900004](../errorcode-fusionConnectivity.md#34900004-device-address-registered) | The device has already been bound to the PartnerAgentExtensionAbility. |
+| [34900005](../errorcode-fusionConnectivity.md#34900005-bluetooth-disabled) | Bluetooth disabled. |
+| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal error. |

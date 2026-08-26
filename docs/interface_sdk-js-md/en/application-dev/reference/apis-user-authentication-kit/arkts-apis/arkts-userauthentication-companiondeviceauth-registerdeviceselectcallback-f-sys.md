@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import companionDeviceAuth from '@kit.UserAuthenticationKit';
 ```
 
 ## registerDeviceSelectCallback
@@ -26,14 +26,48 @@ Registers a callback for companion device selection. When the system requires th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [DeviceSelectCallback](arkts-userauthentication-companiondeviceauth-deviceselectcallback-t-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [DeviceSelectCallback](arkts-userauthentication-companiondeviceauth-deviceselectcallback-t-sys.md) | Yes | Callback for the companion device selection. When this callback is invoked, **selectPurpose** is passed in. The application needs to return the corresponding **DeviceSelectResult**, including the information about the selected device. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  companionDeviceAuth.registerDeviceSelectCallback((purpose) => {
+    const addDeviceId = 'addDeviceId';
+    const otherDeviceId = 'otherDeviceId';
+    const addDeviceUserId = 100;
+    const otherDeviceUserId = 100;
+    if (purpose === companionDeviceAuth.SelectPurpose.SELECT_ADD_DEVICE) {
+      return {
+        deviceKeys: [{
+          deviceIdType: companionDeviceAuth.DeviceIdType.UNIFIED_DEVICE_ID,
+          deviceId: addDeviceId,
+          deviceUserId: addDeviceUserId
+        }]
+      };
+    }
+    return {
+      deviceKeys: [{
+        deviceIdType: companionDeviceAuth.DeviceIdType.UNIFIED_DEVICE_ID,
+        deviceId: otherDeviceId,
+        deviceUserId: otherDeviceUserId
+      }]
+    };
+  })
+} catch (error) {
+  const err = error as BusinessError;
+  console.error(`error has been captured: ${err.code} ${err.message}`);
+}
+```

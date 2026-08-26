@@ -1,7 +1,7 @@
 # MenuItemGroup
 
 The **MenuItemGroup** component represents a group of menu items.
-> **NOTE**>> This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate> their
+> **NOTE** > > This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate > their
 
 ## Child Components
 
@@ -25,13 +25,13 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | No | Header and footer of the menu item group. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |

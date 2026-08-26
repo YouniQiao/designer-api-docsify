@@ -15,6 +15,10 @@ controller: TextController = new TextController()
 ## Modules to Import
 
 ```TypeScript
+import { AtomicServiceBar, ComponentUtils, Con@kit.ArkUIMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UICon@kit.ArkUI, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUICon@kit.ArkUI, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@ohos.arkui.UICon@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@ohos.arkui.UICon@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@ohos.arkui.UICon@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@ohos.arkui.UICon@kit.ArkUI';
 ```
 
 ## closeSelectionMenu
@@ -51,9 +55,9 @@ Obtains the **LayoutManager** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) |
+| Type | Description |
+| --- | --- |
+| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | LayoutManager** object. |
 
 ## setStyledString
 
@@ -73,9 +77,9 @@ Binds to or updates the specified styled string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string.   **NOTE：**The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
 
 ## setTextSelection
 
@@ -86,19 +90,25 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 
 Sets the text selection area, which will be highlighted.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If [copyOption](arkts-arkui-text-attribute.md#copyoption) is set to **CopyOptions.None**, the setting of
-> **setTextSelection** does not take effect.&gt;
+> **setTextSelection** does not take effect.
+> 
 > If [textOverflow](arkts-arkui-text-attribute.md#textoverflow) is set to **TextOverflow.MARQUEE**, the setting of
-> **setTextSelection** does not take effect.&gt;
+> **setTextSelection** does not take effect.
+> 
 > If the value of **selectionStart** is greater than or equal to that of **selectionEnd**, no text will be
 > selected. The value range is [0, textSize], where **textSize** indicates the maximum number of characters in the
 > text content. If the value is less than 0, the value **0** will be used. If the value is greater than
-> **textSize**, **textSize** will be used.&gt;
+> **textSize**, **textSize** will be used.
+> 
 > If the selection range falls within a truncated or invisible area, selection is ignored. When truncation is
-> disabled, selection can extend beyond the parent component's bounds.&gt;
+> disabled, selection can extend beyond the parent component's bounds.
+> 
 > On PC or 2-in-1 devices, calling **setTextSelection** does not show the menu even if **options** is set to
-> **MenuPolicy.SHOW**.&gt;
+> **MenuPolicy.SHOW**.
+> 
 > When an emoji is truncated by the selection range, the emoji is selected if its start position is within the
 > specified text selection range.
 
@@ -112,8 +122,8 @@ Sets the text selection area, which will be highlighted.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectionStart | number \| undefined | Yes |
-| selectionEnd | number \| undefined | Yes |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectionStart | number \| undefined | Yes | Start position of the text selection range.Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
+| selectionEnd | number \| undefined | Yes | End position of the text selection range.Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.Default value: **MenuPolicy.DEFAULT** in **SelectionOptions |

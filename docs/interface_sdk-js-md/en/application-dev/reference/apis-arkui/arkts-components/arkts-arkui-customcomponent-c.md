@@ -31,9 +31,9 @@ aboutToReuse Method
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| params | Record & lt;string, Object \ | undefined \| null & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| params | Record & lt;string, Object \ | undefined \| null & gt; | Yes | Custom component init params.<br>**Since:** 20 |
 
 ## onLayout
 
@@ -55,10 +55,10 @@ Invoked when the custom component lays out its child components. Through this ca
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| children | Array&lt;[LayoutChild](arkts-arkui-layoutchild-i.md)&gt; | Yes |
-| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| children | Array&lt;[LayoutChild](arkts-arkui-layoutchild-i.md)&gt; | Yes | Child component layout information. |
+| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Size constraint of the parent component. |
 
 ## onMeasure
 
@@ -80,7 +80,7 @@ Invoked when the custom component needs to determine its size. Through this call
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| children | Array&lt;[LayoutChild](arkts-arkui-layoutchild-i.md)&gt; | Yes |
-| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| children | Array&lt;[LayoutChild](arkts-arkui-layoutchild-i.md)&gt; | Yes | Child component layout information. |
+| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Size constraint of the parent component. |

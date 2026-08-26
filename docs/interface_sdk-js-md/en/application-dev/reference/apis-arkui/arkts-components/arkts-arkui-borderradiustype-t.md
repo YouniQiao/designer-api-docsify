@@ -14,8 +14,8 @@ Enumerates the border corner radius types.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Length](../arkts-apis/arkts-arkui-length-t.md) |
-| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) |
-| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) |
+| Type | Description |
+| --- | --- |
+| [Length](../arkts-apis/arkts-arkui-length-t.md) | Size unit. |
+| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) | Corner radius of a component's border. |
+| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Localized corner radius of a component's border. |

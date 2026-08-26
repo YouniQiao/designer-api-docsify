@@ -11,7 +11,7 @@ RectShape 带有圆角半径的构造函数参数。继承自[ShapeSize](arkts-a
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## radiusHeight

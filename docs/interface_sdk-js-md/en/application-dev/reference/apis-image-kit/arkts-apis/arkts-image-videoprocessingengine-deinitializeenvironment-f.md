@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from 'kits/@kit.ImageKit';
+import videoProcessingEngine from '@kit.ImageKit';
 ```
 
 ## deinitializeEnvironment
@@ -22,12 +22,23 @@ Deinitialize global environment for image processing.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [29200006](../errorcode-videoprocessingengine.md#29200006-operation-not-allowed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [29200006](../errorcode-videoprocessingengine.md#29200006-operation-not-allowed) | The operation is not permitted. This may be caused by incorrect status. |
+
+**Examples**
+
+```TypeScript
+import { videoProcessingEngine } from '@kit.ImageKit';
+
+async function deinitializeEnvironment() {
+  videoProcessingEngine.initializeEnvironment();
+  videoProcessingEngine.deinitializeEnvironment();
+}
+```

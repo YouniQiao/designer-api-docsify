@@ -12,9 +12,9 @@ Login type queryLoginInfo & refreshLoginInfo, logout.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'queryLoginInfo' |
-| 'refreshLoginInfo' |
-| 'cancel' |
-| 'logout' |
+| Type | Description |
+| --- | --- |
+| 'queryLoginInfo' |  |
+| 'refreshLoginInfo' |  |
+| 'cancel' |  |
+| 'logout' |  |

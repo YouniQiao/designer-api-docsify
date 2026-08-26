@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## callback
@@ -28,11 +28,11 @@ callback: (buffer: ArrayBuffer, length: number, pos?: number) => number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| buffer | ArrayBuffer | 是 |
-| length | number | 是 |
-| pos | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| buffer | ArrayBuffer | 是 |  |
+| length | number | 是 |  |
+| pos | number | 否 |  |
 
 ## fileSize
 

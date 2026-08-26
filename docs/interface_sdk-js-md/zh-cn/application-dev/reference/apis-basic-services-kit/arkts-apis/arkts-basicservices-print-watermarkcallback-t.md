@@ -14,7 +14,7 @@ type WatermarkCallback = (jobId: string, fd: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| jobId | string | 是 |
-| fd | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| jobId | string | 是 | 表示当前打印任务的id。 |
+| fd | number | 是 | 表示当前文件的文件描述符。 |

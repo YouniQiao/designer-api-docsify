@@ -9,8 +9,7 @@ Defines a common callback used to return the processing result when an asynchron
 ## Modules to Import
 
 ```TypeScript
-import { AsyncCallback, BusinessError, Callback, ErrorCallback } from 'kits/@kit.BasicServicesKit';
-import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from 'kits/@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
 ```
 
 ## [[Call]]
@@ -29,6 +28,6 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | T | Yes | Common callback information. The type is defined by the developer. The callback is used to return data of the corresponding type. No data is returned if the callback fails. |

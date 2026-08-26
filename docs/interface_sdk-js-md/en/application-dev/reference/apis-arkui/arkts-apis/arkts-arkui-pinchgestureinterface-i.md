@@ -2,7 +2,8 @@
 
 **PinchGesture** is used to trigger a pinch gesture, which requires two to five fingers with a minimum 5 vp distance between the fingers.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > To trigger the pinch gesture again after successful recognition, all fingers must be lifted and then make
 > contact again to satisfy the recognition criteria.
 
@@ -33,15 +34,15 @@ Sets the parameters for the pinch gesture. Inherits from [GestureInterface&lt;T&
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | { fingers?: number; distance?: number } | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | { fingers?: number; distance?: number } | No | Parameters for the pinch gesture.     - **fingers**: minimum number of fingers to trigger a pinch. The value ranges from 2 to 5.   Default value: **2** Value range: [2, 5]. Values outside this range are automatically adjusted to the default value.While more fingers than the minimum number can be pressed to trigger the gesture, only the first fingers of the minimum number participate in gesture calculation.     - **distance**: minimum recognition distance, in vp. This distance refers to the difference between the current average distance from the multiple finger positions to their center point and the average distance when the fingers first made contact. If this difference meets or exceeds the minimum recognition distance, the pinch gesture is recognized.   Default value: **5**   **NOTE：**Value range: [0, +∞). If the value is less than or equal to 0, it will be converted to the default value. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 
 ## [[Call]]
 
@@ -61,15 +62,15 @@ Sets the parameters for the pinch gesture. Compared with PinchGesture)}, this AP
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [PinchGestureHandlerOptions](arkts-arkui-pinchgesturehandleroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [PinchGestureHandlerOptions](arkts-arkui-pinchgesturehandleroptions-i.md) | No | Parameters of the pinch gesture handler. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -87,15 +88,15 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback for the pinch event. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -115,15 +116,15 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for the pinch event. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 
 ## onActionEnd
 
@@ -141,15 +142,15 @@ Triggered when all fingers are lifted after successful pinch gesture recognition
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | Yes | Callback for the pinch event. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 
 ## onActionStart
 
@@ -167,15 +168,15 @@ Triggered after the pinch gesture is recognized.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | Yes | Callback for the pinch event. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 
 ## onActionUpdate
 
@@ -193,12 +194,12 @@ Triggered when the user moves the finger in the pinch gesture on the screen.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | Yes | Callback for the pinch event. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |
+| Type | Description |
+| --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |

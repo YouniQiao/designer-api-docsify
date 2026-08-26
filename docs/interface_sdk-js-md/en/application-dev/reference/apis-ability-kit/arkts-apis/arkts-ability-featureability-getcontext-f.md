@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import featureAbility from '@kit.AbilityKit';
 ```
 
 ## getContext
@@ -22,6 +22,21 @@ Obtains the application context.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) |
+| Type | Description |
+| --- | --- |
+| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Application context. |
+
+**Examples**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+let context = featureAbility.getContext();
+context.getBundleName((error, data) => {
+  if (error && error.code !== 0) {
+    console.error(`getBundleName fail, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`getBundleName success, data: ${JSON.stringify(data)}`);
+  }
+});
+```

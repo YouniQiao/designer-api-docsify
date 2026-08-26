@@ -8,54 +8,54 @@ The Accessibility Extension Context module provides a context environment, suppo
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AccessibilityExtensionContext(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-c.md) |
+| Name | Description |
+| --- | --- |
+| [AccessibilityExtensionContext(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-c.md) | The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**.The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection. |
 
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AccessibilityExtensionContext(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-c-sys.md) |
-| [Parameter(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AccessibilityExtensionContext(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-c-sys.md) | The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**.The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection. |
+| [Parameter(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | Provides parameter values for specific settings when an accessibility node element performs a specific action. Different action types require different parameter fields. For details about the mapping between action types and parameter fields, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) (actions that can be performed by an accessibility node element). |
 <!--DelEnd-->
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AccessibilityElement(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md) |
-| [ElementAttributeValues(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md) |
-| [Rect(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-rect-i.md) |
+| Name | Description |
+| --- | --- |
+| [AccessibilityElement(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md) | An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes.Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement) or [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow). |
+| [ElementAttributeValues(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md) | Provides attribute names and value types of a node element. |
+| [Rect(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-rect-i.md) | Defines a rectangle. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AccessibilityElement(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md) |
-| [AccessibilityGrid(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) |
-| [AccessibilitySpan(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md) |
-| [AccessibilityVirtualNode(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) |
-| [ElementAttributeValues(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i-sys.md) |
-| [FocusMoveResult(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md) |
-| [TouchPosition(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-touchposition-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AccessibilityElement(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md) | An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes.Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement) or [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow). |
+| [AccessibilityGrid(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | Accessibility grid information. For details, see the property currentItem in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md). |
+| [AccessibilitySpan(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md) | Hyperlink text information for accessibility. For details, see the attribute spans in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md). |
+| [AccessibilityVirtualNode(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | Defines an accessibility virtual node. |
+| [ElementAttributeValues(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i-sys.md) | Provides attribute names and value types of a node element. |
+| [FocusMoveResult(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md) | Return value type of the accessibility node query. |
+| [TouchPosition(Provides accessibility extension context)](arkts-accessibility-accessibilityextensioncontext-touchposition-i-sys.md) | Touch tap position. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FocusDirection(Provides accessibility extension context)](arkts-accessibility-focusdirection-t.md) |
-| [FocusType(Provides accessibility extension context)](arkts-accessibility-focustype-t.md) |
-| [WindowType(Provides accessibility extension context)](arkts-accessibility-windowtype-t.md) |
+| Name | Description |
+| --- | --- |
+| [FocusDirection(Provides accessibility extension context)](arkts-accessibility-focusdirection-t.md) | Enumerates the focus directions. |
+| [FocusType(Provides accessibility extension context)](arkts-accessibility-focustype-t.md) | Enumerates the focus types. |
+| [WindowType(Provides accessibility extension context)](arkts-accessibility-windowtype-t.md) | Enumerates the window types. |
 
 <!--Del-->
 ### Types(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FocusCondition(Provides accessibility extension context)](arkts-accessibility-focuscondition-t-sys.md) |
-| [FocusRule(Provides accessibility extension context)](arkts-accessibility-focusrule-t-sys.md) |
+| Name | Description |
+| --- | --- |
+| [FocusCondition(Provides accessibility extension context)](arkts-accessibility-focuscondition-t-sys.md) | Describes the method for querying focusable nodes. |
+| [FocusRule(Provides accessibility extension context)](arkts-accessibility-focusrule-t-sys.md) | Describes how to determine the focus capability of the starting node and its child nodes when searching for focusable nodes. |
 <!--DelEnd-->

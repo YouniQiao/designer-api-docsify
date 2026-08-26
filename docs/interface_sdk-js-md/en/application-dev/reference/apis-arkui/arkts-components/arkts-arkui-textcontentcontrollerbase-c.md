@@ -30,16 +30,16 @@ Inserts text at a specified position in the editable content. If no position is 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| text | string | Yes |
-| textOperationOptions | [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Text to insert. |
+| textOperationOptions | [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | No | Configuration option for inserting text. If this parameter is not provided, the text is appended to the end. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | New cursor position after insertion. |
 
 ## clearPreviewText
 
@@ -49,7 +49,8 @@ clearPreviewText(): void
 
 Notifies the input method to clear the current preview text.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 
 **Since:** 17
@@ -68,7 +69,8 @@ deleteBackward(): void
 
 Deletes the character before the text cursor in the text box bound to the basic controller. If some text has been selected using the mouse or keyboard before this function is called, the selected text will be deleted.This API is not supported in preview display scenarios.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 
 **Since:** 23
@@ -87,8 +89,10 @@ deleteText(range?: TextRange): void
 
 Deletes text within a specified range in the editable content.
 
-> **NOTE：**&gt;
-> - This API does not work when the text is being dragged.&gt;
+> **NOTE：**
+> 
+> - This API does not work when the text is being dragged.
+> 
 > - **deleteText** only affects the UI performance within the application and has no effect on the internal logic
 > of the input method application. Therefore, avoid calling this API for the preview text.
 
@@ -102,9 +106,9 @@ Deletes text within a specified range in the editable content.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Range of the text to be deleted, including the start and end positions.If the range is not specified, the entire text is deleted. If the start position is not specified, deletion starts from index 0. If the end position is not specified, deletion ends at the end of the text. |
 
 ## getCaretOffset
 
@@ -114,13 +118,18 @@ getCaretOffset() : CaretOffset
 
 Obtains the position information of the caret.
 
-> **NOTE：**&gt;
-> - If this API is called when the caret position is updated in the current frame, it will not take effect.&gt;
+> **NOTE：**
+> 
+> - If this API is called when the caret position is updated in the current frame, it will not take effect.
+> 
 > - For the **Search** component, the returned position information is the offset of the first character relative
-> to the search icon in the component.&gt;
+> to the search icon in the component.
+> 
 > - If no text is entered in the **Search** component, the return value contains the position information relative
-> to the component.&gt;
-> - The location information in the return value is the location of the caret relative to the editable component.&gt;
+> to the component.
+> 
+> - The location information in the return value is the location of the caret relative to the editable component.
+> 
 > - If the caret position cannot be obtained (for example, when the
 > [TextInputController](arkts-arkui-textinputcontroller-c.md) is not bound to the TextInput component),
 > **null** is returned.
@@ -135,9 +144,9 @@ Obtains the position information of the caret.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CaretOffset](arkts-arkui-caretoffset-i.md) |
+| Type | Description |
+| --- | --- |
+| [CaretOffset](arkts-arkui-caretoffset-i.md) | Position of the caret relative to the text box. |
 
 ## getSelection
 
@@ -157,9 +166,9 @@ Obtains the current text selection range.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) |
+| Type | Description |
+| --- | --- |
+| [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | Current text selection range, or cursor position if no text is selected. |
 
 ## getTextContentLineCount
 
@@ -179,9 +188,9 @@ Obtains the number of lines of the edited text.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of lines of the edited text. |
 
 ## getTextContentRect
 
@@ -201,9 +210,9 @@ Obtains the position of the edited text area relative to the component and its s
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RectResult](arkts-arkui-rectresult-i.md) |
+| Type | Description |
+| --- | --- |
+| [RectResult](arkts-arkui-rectresult-i.md) | Position of the edited text area relative to the component and its size. |
 
 ## scrollToVisible
 
@@ -226,9 +235,9 @@ Passes the start and end indexes to the bound text box components (**TextInput**
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Text range to be scrolled to the visible area, including the start and end positions. of the text.The start position must be less than or equal to the end position. Otherwise, the API call is invalid. If the start position is less than 0, it is treated as the value **0**. If the end position is greater than the length of the entire text, it is treated as the length of the entire text.If no range is specified, the entire text is used by default. If the start position is not specified, the default start position is 0. If the end position is not specified, the default end position is the length of the entire text. |
 
 ## setStyledPlaceholder
 
@@ -238,7 +247,8 @@ setStyledPlaceholder(styledString: StyledString): void
 
 Binds or updates the styled placeholder string.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 
 **Since:** 22
@@ -251,6 +261,6 @@ Binds or updates the styled placeholder string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string for the placeholder. This takes precedence over the plain text. **placeholder** attribute.The placeholder does not support gesture events or hyperlink navigation within styled strings. |

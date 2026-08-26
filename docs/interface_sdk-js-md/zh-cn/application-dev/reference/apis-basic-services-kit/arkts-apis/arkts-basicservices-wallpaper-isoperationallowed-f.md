@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import wallpaper from '@kit.BasicServicesKit';
 ```
 
 ## isOperationAllowed
@@ -22,9 +22,23 @@ function isOperationAllowed(callback: AsyncCallback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |  |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.isOperationAllowed((error: BusinessError, data: boolean) => {
+    if (error) {
+        console.error(`Failed to isOperationAllowed. Code: ${error.code}, message: ${error.message}`);
+        return;
+    }
+    console.info(`success to isOperationAllowed: ${JSON.stringify(data)}`);
+});
+```
 
 
 ## isOperationAllowed
@@ -43,6 +57,18 @@ function isOperationAllowed(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | 异步回调函数，返回是否允许用户设置壁纸。如果允许返回true，否则返回false。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.isOperationAllowed().then((data: boolean) => {
+    console.info(`success to isOperationAllowed: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to isOperationAllowed. Code: ${error.code}, message: ${error.message}`);
+});
+```

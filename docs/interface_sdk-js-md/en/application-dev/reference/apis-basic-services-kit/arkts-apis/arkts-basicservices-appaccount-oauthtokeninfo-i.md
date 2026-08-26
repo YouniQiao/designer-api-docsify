@@ -2,7 +2,8 @@
 
 Defines authorization token information.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) instead.
 
@@ -17,7 +18,7 @@ Defines authorization token information.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import appAccount from '@kit.BasicServicesKit';
 ```
 
 ## authType

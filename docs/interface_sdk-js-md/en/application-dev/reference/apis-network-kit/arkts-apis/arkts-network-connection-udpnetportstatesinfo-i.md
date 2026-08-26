@@ -9,7 +9,6 @@ Describes the UDP port state information.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## udpLocalIp

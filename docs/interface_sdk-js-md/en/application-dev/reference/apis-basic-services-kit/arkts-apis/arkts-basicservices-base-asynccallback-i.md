@@ -9,8 +9,7 @@ Defines a common callback that carries an error parameter and asynchronous retur
 ## Modules to Import
 
 ```TypeScript
-import { AsyncCallback, BusinessError, Callback, ErrorCallback } from 'kits/@kit.BasicServicesKit';
-import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from 'kits/@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
 ```
 
 ## [[Call]]
@@ -29,7 +28,7 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| err | [BusinessError](arkts-basicservices-base-businesserror-i.md)&lt;E&gt; | Yes |
-| data | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| err | [BusinessError](arkts-basicservices-base-businesserror-i.md)&lt;E&gt; | Yes | Common error information returned when the API fails to be called, including the error code and optional additional data. If the **E** parameter is not specified, the default value **void** is used. In this case, **BusinessError** contains only the error code. If the API call succeeds, this parameter returns **null**. |
+| data | T | Yes | Data returned asynchronously when the API is successfully called. The data type is defined by the developer. This parameter is unavailable when the API fails to be called. |

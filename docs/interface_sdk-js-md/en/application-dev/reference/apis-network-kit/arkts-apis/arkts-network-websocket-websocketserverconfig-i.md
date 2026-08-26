@@ -9,7 +9,6 @@ Defines the WebSocketServer configuration.
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## maxConcurrentClientsNumber

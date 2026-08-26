@@ -29,6 +29,6 @@ constructor(value?: GestureStyleInterface)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [GestureStyleInterface](arkts-arkui-gesturestyleinterface-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [GestureStyleInterface](arkts-arkui-gesturestyleinterface-i.md) | 否 | 事件手势设置项。 默认值：不传入时不绑定任何手势事件。 |

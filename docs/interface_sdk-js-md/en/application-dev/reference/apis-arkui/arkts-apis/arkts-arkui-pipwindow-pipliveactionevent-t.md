@@ -12,7 +12,7 @@ Defines the PiP action event in a live.
 
 **System capability:** SystemCapability.Window.SessionManager
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'playbackStateChanged' |
-| 'voiceStateChanged' |
+| Type | Description |
+| --- | --- |
+| 'playbackStateChanged' | The live is played or paused. |
+| 'voiceStateChanged' | The speaker is muted or unmuted. [since 12] |

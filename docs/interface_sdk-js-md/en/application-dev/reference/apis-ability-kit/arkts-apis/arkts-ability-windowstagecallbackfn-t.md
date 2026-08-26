@@ -14,7 +14,7 @@ The callback was called when both ability and window stage are registered for li
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ability | any | Yes |
-| windowStage | window.WindowStage | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ability | any | Yes | Indicates the ability to register for listening. |
+| windowStage | window.WindowStage | Yes | Indicates the window stage to register for listening. |

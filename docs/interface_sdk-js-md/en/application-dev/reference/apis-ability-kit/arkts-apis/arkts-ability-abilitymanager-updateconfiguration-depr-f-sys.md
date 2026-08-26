@@ -27,10 +27,25 @@ Updates the configuration. This API uses an asynchronous callback to return the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) | Yes | New configuration. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the configuration is updated, **err** is undefined; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import abilityManager from '@ohos.application.abilityManager';
+import { Configuration } from '@ohos.application.Configuration';
+
+let config: Configuration = {
+  language: 'chinese' 
+};
+
+abilityManager.updateConfiguration(config, () => {
+    console.info('------------ updateConfiguration -----------');
+});
+```
 
 
 ## updateConfiguration
@@ -55,12 +70,30 @@ Updates the configuration. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| config | [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) | Yes | New configuration. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import abilityManager from '@ohos.application.abilityManager';
+import { Configuration } from '@ohos.application.Configuration';
+import { BusinessError } from '@ohos.base';
+
+let config: Configuration = {
+  language: 'chinese' 
+};
+
+abilityManager.updateConfiguration(config).then(() => {
+  console.info('updateConfiguration success');
+}).catch((err: BusinessError) => {
+  console.error('updateConfiguration fail');
+});
+```

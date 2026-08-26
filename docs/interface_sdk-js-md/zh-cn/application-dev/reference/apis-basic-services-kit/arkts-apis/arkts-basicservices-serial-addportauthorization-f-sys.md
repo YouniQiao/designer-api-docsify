@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
+import serial from '@kit.BasicServicesKit';
 ```
 
 ## addPortAuthorization
@@ -24,22 +24,22 @@ function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| tokenId | string | 是 |
-| deviceId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tokenId | string | 是 | 被授权应用的Token ID，用于标识被授予串口访问权限的应用。设置后，指定该应用可获得对相应串口设备的访问权限。可通过 [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md)获取。 |
+| deviceId | string | 是 | 串口设备ID，用于指定需要授权访问的串口设备。可通过接口[getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md)获取 串口设备列表。板载串口取值为portName；USB虚拟串口取值为VID+PID+SN的组合或设备路径（如/dev/ttyUSB0）。设置后，应用将获得对指定串口设备的访问权限。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700002](../errorcode-busmanager-serial.md#35700002-参数错误) |
-| [35700008](../errorcode-busmanager-serial.md#35700008-权限被拒绝) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application |
+| [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700002](../errorcode-busmanager-serial.md#35700002-参数错误) | Invalid parameter. |
+| [35700008](../errorcode-busmanager-serial.md#35700008-权限被拒绝) | Permission denied. |

@@ -31,9 +31,9 @@ Obtains the recognized direction of the current pan gesture recognizer.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PanDirection](arkts-arkui-pandirection-e.md) |
+| Type | Description |
+| --- | --- |
+| [PanDirection](arkts-arkui-pandirection-e.md) | Recognized direction of the current pan gesture recognizer. |
 
 ## getDistance
 
@@ -53,9 +53,9 @@ Obtains the minimum pan distance required to trigger this pan gesture recognizer
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Minimum swipe distance. Unit: vp. |
 
 ## getDistanceMap
 
@@ -65,7 +65,8 @@ getDistanceMap(): Map<SourceTool, number>
 
 Obtains the minimum pan distances required for different input sources to trigger this pan gesture recognizer.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API only returns thresholds for input sources that have been explicitly configured during pan gesture
 > initialization. The default threshold can be queried using the [SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md).Unknown type.
 > Thresholds for unconfigured device types are not available.
@@ -80,9 +81,9 @@ Obtains the minimum pan distances required for different input sources to trigge
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), number&gt; |
+| Type | Description |
+| --- | --- |
+| Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), number&gt; | Minimum pan distances required for different input sources to trigger the pan gesture recognizer. Unit: vp. |
 
 ## getPanGestureOptions
 
@@ -102,6 +103,6 @@ Obtains the properties of this pan gesture recognizer.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) |
+| Type | Description |
+| --- | --- |
+| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | Properties of the current pan gesture recognizer. |

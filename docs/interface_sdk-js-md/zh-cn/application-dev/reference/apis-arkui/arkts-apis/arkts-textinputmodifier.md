@@ -4,6 +4,6 @@
 
 ### 类
 
-| 名称 |
-| --- |
-| [TextInputModifier](arkts-arkui-textinputmodifier-c.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [TextInputModifier](arkts-arkui-textinputmodifier-c.md) | Defines TextInput Modifier |

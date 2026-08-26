@@ -2,7 +2,8 @@
 
 AVSessionController控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 本Interface首批接口从API version 10开始支持。
 @interface AVSessionController [since 10 - 11]
 
@@ -13,7 +14,7 @@ AVSessionController控制器可查看会话ID，并可完成对会话发送命�
 ## 导入模块
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import avSession from '@kit.AVSessionKit';
 ```
 
 ## destroy
@@ -30,16 +31,40 @@ destroy(callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当控制器销毁成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.destroy((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to destroy, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in destroying.');
+});
+```
+
+```TypeScript
+avcontroller.destroy((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to destroy controller, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in destroying.');
+});
+```
 
 ## destroy
 
@@ -57,16 +82,30 @@ destroy(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。当控制器销毁成功，无返回结果，否则返回错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+currentAVSession.destroy().then(() => {
+  console.info('Succeeded in destroying.');
+});
+```
+
+```TypeScript
+avcontroller.destroy().then(() => {
+  console.info('Succeeded in destroying.');
+});
+```
 
 ## getAVCallState
 
@@ -82,17 +121,29 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | 回调函数，返回通话状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getAVCallState((err: BusinessError, callstate: avSession.AVCallState) => {
+  if (err) {
+    console.error(`Failed to get AV call state, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting AV call state: ${callstate.state}`);
+});
+```
 
 ## getAVCallState
 
@@ -108,17 +159,25 @@ getAVCallState(): Promise<AVCallState>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Promise对象，返回通话状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getAVCallState().then((callstate: avSession.AVCallState) => {
+  console.info(`Succeeded in getting AV call state: ${callstate.state}`);
+});
+```
 
 ## getAVMetadata
 
@@ -134,17 +193,29 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | 是 | 回调函数，返回会话元数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getAVMetadata((err: BusinessError, metadata: avSession.AVMetadata) => {
+  if (err) {
+    console.error(`Failed to get AV metadata, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting AV metadata, assetId: ${metadata.assetId}`);
+});
+```
 
 ## getAVMetadata
 
@@ -162,17 +233,25 @@ getAVMetadata(): Promise<AVMetadata>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;AVMetadata & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;AVMetadata & gt; | Promise对象，返回会话元数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getAVMetadata().then((metadata: avSession.AVMetadata) => {
+  console.info(`Succeeded in getting AV metadata, assetId: ${metadata.assetId}`);
+});
+```
 
 ## getAVMetadataSync
 
@@ -190,17 +269,23 @@ getAVMetadataSync(): AVMetadata
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | 会话元数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let metaData: avSession.AVMetadata = avcontroller.getAVMetadataSync();
+```
 
 ## getAVPlaybackState
 
@@ -216,17 +301,39 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | 回调函数，返回远端播放状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
+  if (err) {
+    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting AV playback state.');
+});
+```
+
+```TypeScript
+avcontroller.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
+  if (err) {
+    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting AV playback state.');
+});
+```
 
 ## getAVPlaybackState
 
@@ -244,17 +351,33 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Promise对象,返回远端播放状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
+  console.info('Succeeded in getting AV playback state.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+avcontroller.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
+  console.info('Succeeded in getting AV playback state.');
+});
+```
 
 ## getAVPlaybackStateSync
 
@@ -272,17 +395,23 @@ getAVPlaybackStateSync(): AVPlaybackState
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | 当前会话的播放状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let playbackState: avSession.AVPlaybackState = avcontroller.getAVPlaybackStateSync();
+```
 
 ## getAVQueueItems
 
@@ -298,17 +427,29 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 是 | 回调函数，返回播放列表队列。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getAVQueueItems((err: BusinessError, items: avSession.AVQueueItem[]) => {
+  if (err) {
+    console.error(`Failed to get AV queue items, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting AV queue items, length: ${items.length}`);
+});
+```
 
 ## getAVQueueItems
 
@@ -326,17 +467,25 @@ getAVQueueItems(): Promise<Array<AVQueueItem>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | Promise对象。返回播放列表队列。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getAVQueueItems().then((items: avSession.AVQueueItem[]) => {
+  console.info(`Succeeded in getting AV queue items, length: ${items.length}`);
+});
+```
 
 ## getAVQueueItemsSync
 
@@ -354,17 +503,23 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 当前会话播放列表队列。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let currentQueueItems: Array<avSession.AVQueueItem> = avcontroller.getAVQueueItemsSync();
+```
 
 ## getAVQueueTitle
 
@@ -380,17 +535,29 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回播放列表名称。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getAVQueueTitle((err: BusinessError, title: string) => {
+  if (err) {
+    console.error(`Failed to get AV queue title, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting AV queue title: ${title}`);
+});
+```
 
 ## getAVQueueTitle
 
@@ -408,17 +575,25 @@ getAVQueueTitle(): Promise<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象。返回播放列表名称。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getAVQueueTitle().then((title: string) => {
+  console.info(`Succeeded in getting AV queue title: ${title}`);
+});
+```
 
 ## getAVQueueTitleSync
 
@@ -436,17 +611,23 @@ getAVQueueTitleSync(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 当前会话播放列表名称。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let currentQueueTitle: string = avcontroller.getAVQueueTitleSync();
+```
 
 ## getCallMetadata
 
@@ -462,17 +643,29 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | 回调函数，返回会话元数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getCallMetadata((err: BusinessError, calldata: avSession.CallMetadata) => {
+  if (err) {
+    console.error(`Failed to get call metadata, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting call metadata, name: ${calldata.name}`);
+});
+```
 
 ## getCallMetadata
 
@@ -488,17 +681,25 @@ getCallMetadata(): Promise<CallMetadata>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Promise对象，返回会话元数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getCallMetadata().then((calldata: avSession.CallMetadata) => {
+  console.info(`Succeeded in getting call metadata, name: ${calldata.name}`);
+});
+```
 
 ## getDesktopLyricState
 
@@ -516,19 +717,34 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | Promise对象。返回桌面歌词状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+
+**示例**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).getDesktopLyricState()
+    .then((state: avSession.DesktopLyricState) => {
+    console.info(`getDesktopLyricState: ${state.isLocked}`);
+  })
+}
+```
+
+```TypeScript
+avcontroller.getDesktopLyricState();
+```
 
 ## getExtras
 
@@ -544,20 +760,32 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{[key: string]: Object}&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{[key: string]: Object}&gt; | 是 |  |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+
+**示例**
+
+```TypeScript
+avcontroller.getExtras((err: BusinessError, extras) => {
+  if (err) {
+    console.error(`Failed to get extras, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting extras: ${extras}`);
+});
+```
 
 ## getExtras
 
@@ -575,20 +803,61 @@ getExtras(): Promise<{[key: string]: Object}>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;{[key: string]: Object |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;{[key: string]: Object | > } Promise对象，返回媒体提供方设置的自定义媒体数据包，数据包的内容与setExtras设置的内容完全一致。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+
+**示例**
+
+```TypeScript
+// Index.ets
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  private tag: string = "createNewSession";
+  private sessionId: string = "";
+  private controller: avSession.AVSessionController | undefined = undefined;
+  private currentAVSession?: avSession.AVSession;
+
+  aboutToAppear(): void {
+
+    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
+      .then(async (data: avSession.AVSession) => {
+        this.currentAVSession = data;
+        this.sessionId = this.currentAVSession.sessionId;
+        this.controller = await this.currentAVSession.getController();
+        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
+        (this.controller as avSession.AVSessionController).getExtras().then((extras) => {
+          console.info(`Succeeded in getting extras: ${extras}`);
+        });
+      });
+  }
+
+  build() {
+    Column() {
+      Text('AVSession Demo')
+        .fontSize(20)
+        .margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
 
 ## getExtrasWithEvent
 
@@ -604,24 +873,46 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| extraEvent | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| extraEvent | string | 是 | 远端分布式事件类型。可获取的事件类型来自于 setExtras)}。 对Wearable设备类型，额外提供以下预设的事件类型： 'AUDIO_GET_VOLUME'：获取远端设备音量。 'AUDIO_GET_AVAILABLE_DEVICES'：获取远端所有可连接设备。 'AUDIO_GET_PREFERRED_OUTPUT_DEVICE_FOR_RENDERER_INFO'：获取远端实际发声设备。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ExtraInfo](arkts-avsession-avsession-extrainfo-t.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ExtraInfo](arkts-avsession-avsession-extrainfo-t.md)&gt; | Promise对象，返回远端分布式媒体提供方设置的自定义媒体数据包。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+
+**示例**
+
+```TypeScript
+let controller: avSession.AVSessionController | undefined;
+const COMMON_COMMAND_STRING_1 = 'AUDIO_GET_VOLUME';
+const COMMON_COMMAND_STRING_2 = 'AUDIO_GET_AVAILABLE_DEVICES';
+const COMMON_COMMAND_STRING_3 = 'AUDIO_GET_PREFERRED_OUTPUT_DEVICE_FOR_RENDERER_INFO';
+if (controller !== undefined) {
+  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_1).then(() => {
+    console.info(`${[COMMON_COMMAND_STRING_1]}`);
+  })
+
+  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_2).then(() => {
+    console.info(`${[COMMON_COMMAND_STRING_2]}`);
+  })
+
+  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_3).then(() => {
+    console.info(`${[COMMON_COMMAND_STRING_3]}`);
+  })
+}
+```
 
 ## getLaunchAbility
 
@@ -637,17 +928,29 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | 是 | 回调函数。返回在 [setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setlaunchability)保存的对象，包括应用的相关属性信息，如 bundleName，abilityName，deviceId等。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getLaunchAbility((err: BusinessError, agent: WantAgent) => {
+  if (err) {
+    console.error(`Failed to get launch ability, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting launch ability: ${agent}`);
+});
+```
 
 ## getLaunchAbility
 
@@ -665,17 +968,25 @@ getLaunchAbility(): Promise<WantAgent>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Promise对象，返回在 [setLaunchAbility]{ |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getLaunchAbility().then((agent: WantAgent) => {
+  console.info(`Succeeded in getting launch ability: ${agent}`);
+});
+```
 
 ## getMediaCenterControlType
 
@@ -693,16 +1004,24 @@ getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | Promise对象。返回应用希望优先显示的控制类型列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getMediaCenterControlType().then((types: avSession.AVMediaCenterControlType[]) => {
+  console.info(`Succeeded in getting media center control types, size: ${types.length}`);
+});
+```
 
 ## getOutputDevice
 
@@ -718,16 +1037,40 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | 是 | 回调函数，返回播放设备信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 600101 |
-| 600103 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 600101 | Session service exception. |
+| 600103 | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.getOutputDevice((err: BusinessError, outputDeviceInfo: avSession.OutputDeviceInfo) => {
+  if (err) {
+    console.error(`Failed to get output device, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting output device, devices length: ${outputDeviceInfo.devices.length}`);
+});
+```
+
+```TypeScript
+avcontroller.getOutputDevice((err: BusinessError, deviceInfo: avSession.OutputDeviceInfo) => {
+  if (err) {
+    console.error(`Failed to get output device, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting output device.');
+});
+```
 
 ## getOutputDevice
 
@@ -745,16 +1088,30 @@ getOutputDevice(): Promise<OutputDeviceInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | Promise对象，返回播放设备信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 600101 |
-| 600103 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 600101 | Session service exception. |
+| 600103 | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+currentAVSession.getOutputDevice().then((outputDeviceInfo: avSession.OutputDeviceInfo) => {
+  console.info(`Succeeded in getting output device, devices length: ${outputDeviceInfo.devices.length}`);
+})
+```
+
+```TypeScript
+avcontroller.getOutputDevice().then((deviceInfo: avSession.OutputDeviceInfo) => {
+  console.info('Succeeded in getting output device.');
+});
+```
 
 ## getOutputDeviceSync
 
@@ -772,16 +1129,26 @@ getOutputDeviceSync(): OutputDeviceInfo
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) | 当前输出设备信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let currentOutputDevice: avSession.OutputDeviceInfo = currentAVSession.getOutputDeviceSync();
+```
+
+```TypeScript
+let currentOutputDevice: avSession.OutputDeviceInfo = avcontroller.getOutputDeviceSync();
+```
 
 ## getRealPlaybackPositionSync
 
@@ -799,16 +1166,22 @@ getRealPlaybackPositionSync(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 时间节点，毫秒数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let time: number = avcontroller.getRealPlaybackPositionSync();
+```
 
 ## getSupportedLoopModes
 
@@ -828,16 +1201,24 @@ getSupportedLoopModes(): Promise<Array<LoopMode>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | Promise对象。返回支持的循环模式列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getSupportedLoopModes().then((loopModes: avSession.LoopMode[]) => {
+  console.info(`Succeeded in getting supported loop modes, size: ${loopModes.length}`);
+});
+```
 
 ## getSupportedPlaySpeeds
 
@@ -857,16 +1238,35 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;number & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;number & gt; & gt; | Promise对象。返回支持的播放倍速列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.getSupportedPlaySpeeds().then((nums: number[]) => {
+  console.info(`Succeeded in getting supported play speeds, length: ${nums.length}`);
+  if (nums.length > 0 ) {
+    console.info(`Succeeded in getting supported play speed: ${nums[0]}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get supported play speeds, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+avcontroller.getSupportedPlaySpeeds().then((speeds: number[]) => {
+  console.info(`Succeeded in getting supported play speeds, size: ${speeds.length}`);
+});
+```
 
 ## getValidCommands
 
@@ -882,17 +1282,29 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 是 | 回调函数，返回有效命令的集合。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getValidCommands((err: BusinessError, validCommands: avSession.AVControlCommandType[]) => {
+  if (err) {
+    console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting valid commands, size: ${validCommands.length}`);
+});
+```
 
 ## getValidCommands
 
@@ -910,17 +1322,25 @@ getValidCommands(): Promise<Array<AVControlCommandType>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Promise对象。返回有效命令的集合。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getValidCommands().then((validCommands: avSession.AVControlCommandType[]) => {
+  console.info(`Succeeded in getting valid commands, size: ${validCommands.length}`);
+});
+```
 
 ## getValidCommandsSync
 
@@ -938,17 +1358,23 @@ getValidCommandsSync(): Array<AVControlCommandType>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt; | 会话支持的有效命令的集合。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let validCommands: Array<avSession.AVControlCommandType> = avcontroller.getValidCommandsSync();
+```
 
 ## isActive
 
@@ -964,17 +1390,29 @@ isActive(callback: AsyncCallback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回会话是否为激活状态，true表示被激活，false表示禁用。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.isActive((err: BusinessError, isActive: boolean) => {
+  if (err) {
+    console.error(`Failed to check active state, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in checking active state: ${isActive}`);
+});
+```
 
 ## isActive
 
@@ -992,17 +1430,25 @@ isActive(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回会话是否为激活状态，true表示被激活，false表示禁用。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.isActive().then((isActive: boolean) => {
+  console.info(`Succeeded in checking active state: ${isActive}`);
+});
+```
 
 ## isActiveSync
 
@@ -1020,17 +1466,23 @@ isActiveSync(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| 会话是否为激活状态，true表示被激活，false表示禁用。 |
+| 类型 | 说明 |
+| --- | --- |
+| 会话是否为激活状态，true表示被激活，false表示禁用。 | 会话是否为激活状态，true表示被激活，false表示禁用。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let isActive: boolean = avcontroller.isActiveSync();
+```
 
 ## isDesktopLyricEnabled
 
@@ -1048,18 +1500,18 @@ isDesktopLyricEnabled(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示启用桌面歌词功能；返回false表示不启用桌面歌词功能。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
 ## isDesktopLyricVisible
 
@@ -1077,19 +1529,33 @@ isDesktopLyricVisible(): Promise<boolean>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象。返回true表示显示桌面歌词；返回false表示不显示桌面歌词。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+
+**示例**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).isDesktopLyricVisible().then((visible: boolean) => {
+    console.info(`isDesktopLyricVisible: ${visible}`);
+  })
+}
+```
+
+```TypeScript
+avcontroller.isDesktopLyricVisible();
+```
 
 ## off('metadataChange')
 
@@ -1107,18 +1573,18 @@ off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'metadataChange' | 是 |
-| callback | (data: AVMetadata) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'metadataChange' | 是 |  |
+| callback | (data: AVMetadata) = & gt; void | 否 | 回调函数，参数data是需要更新的元数据。只包含需要更新的元数据属性，并不代表当前全量的元数据。 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('playbackStateChange')
 
@@ -1136,18 +1602,18 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'playbackStateChange' | 是 |
-| callback | (state: AVPlaybackState) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'playbackStateChange' | 是 |  |
+| callback | (state: AVPlaybackState) = & gt; void | 否 | 回调函数，参数state是需要更新的播放状态。只包含需要更新的播放状态属性，并不代表当前全量的播放状态。 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('callMetadataChange')
 
@@ -1165,18 +1631,18 @@ off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'callMetadataChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'callMetadataChange' | 是 | 取消对应的监听事件，支持事件`'callMetadataChange'`。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 | 回调函数，参数calldata是变化后的通话原数据。 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('callStateChange')
 
@@ -1194,18 +1660,18 @@ off(type: 'callStateChange', callback?: Callback<AVCallState>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'callStateChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'callStateChange' | 是 | 取消对应的监听事件，支持事件`'callStateChange'`。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 | 回调函数，参数callstate是变化后的通话状态。 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('sessionDestroy')
 
@@ -1223,18 +1689,18 @@ off(type: 'sessionDestroy', callback?: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'sessionDestroy' | 是 |
-| callback | () = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'sessionDestroy' | 是 | 取消对应的监听事件，支持事件`'sessionDestroy'`。 |
+| callback | () = & gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('activeStateChange')
 
@@ -1252,18 +1718,18 @@ off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'activeStateChange' | 是 |
-| callback | (isActive: boolean) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'activeStateChange' | 是 | 取消对应的监听事件，支持事件`'activeStateChange'`。 |
+| callback | (isActive: boolean) = & gt; void | 否 | 回调函数。参数isActive表示会话是否被激活。true表示被激活，false表示禁用。 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('validCommandChange')
 
@@ -1281,18 +1747,18 @@ off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'validCommandChange' | 是 |
-| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'validCommandChange' | 是 | 取消对应的监听事件，支持事件`'validCommandChange'`。 |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 否 | 回调函数。参数commands是有效命令的集合。 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('outputDeviceChange')
 
@@ -1310,18 +1776,18 @@ off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: Outp
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'outputDeviceChange' | 是 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'outputDeviceChange' | 是 | 取消对应的监听事件，支持事件`'outputDeviceChange'`。 |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | 否 | 回调函数，参数device是设备相关信息。 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
 
 ## off('sessionEvent')
 
@@ -1339,18 +1805,18 @@ off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'sessionEvent' | 是 |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'sessionEvent' | 是 | 取消对应的监听事件，支持事件`'sessionEvent'`。 |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | 否 | 回调函数，参数sessionEvent是变化的事件名，args为事件的参数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('queueItemsChange')
 
@@ -1368,18 +1834,18 @@ off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'queueItemsChange' | 是 |
-| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'queueItemsChange' | 是 | 取消对应的监听事件，支持事件`'queueItemsChange'`。 |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 否 | 回调函数，参数items是变化的播放列表。 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('queueTitleChange')
 
@@ -1397,18 +1863,18 @@ off(type: 'queueTitleChange', callback?: (title: string) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'queueTitleChange' | 是 |
-| callback | (title: string) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'queueTitleChange' | 是 | 取消对应的监听事件，支持事件`'queueTitleChange'`。 |
+| callback | (title: string) = & gt; void | 否 | 回调函数，参数items是变化的播放列表名称。 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('extrasChange')
 
@@ -1426,18 +1892,18 @@ off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'extrasChange' | 是 |
-| callback | (extras: {[key: string]: Object}) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'extrasChange' | 是 | 取消对应的监听事件，支持事件`'extrasChange'`。 |
+| callback | (extras: {[key: string]: Object}) = & gt; void | 否 | 注册监听事件时的回调函数。 该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('customDataChange')
 
@@ -1455,17 +1921,17 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'customDataChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'customDataChange' | 是 | 取消对应的监听事件，支持的事件是'customDataChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | 注册监听事件时的回调函数。该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offDesktopLyricEnabled
 
@@ -1483,16 +1949,22 @@ offDesktopLyricEnabled(callback?: Callback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词功能启用状态变更事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.offDesktopLyricEnabled();
+```
 
 ## offDesktopLyricStateChanged
 
@@ -1510,16 +1982,28 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词状态变更事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).offDesktopLyricStateChanged();
+}
+```
+
+```TypeScript
+avcontroller.offDesktopLyricStateChanged();
+```
 
 ## offDesktopLyricVisibilityChanged
 
@@ -1537,16 +2021,28 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 该参数为可选参数，若不填写该参数，则认为取消所有显示桌面歌词状态变更事件监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).offDesktopLyricVisibilityChanged();
+}
+```
+
+```TypeScript
+avcontroller.offDesktopLyricVisibilityChanged();
+```
 
 ## offMediaCenterControlTypeChanged
 
@@ -1564,16 +2060,22 @@ offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlT
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有控制类型列表变化事件取消监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.offMediaCenterControlTypeChanged();
+```
 
 ## offSupportedLoopModesChange
 
@@ -1593,16 +2095,22 @@ offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有支持的循环模式列表变化事件取消监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.offSupportedLoopModesChange();
+```
 
 ## offSupportedPlaySpeedsChange
 
@@ -1622,16 +2130,22 @@ offSupportedPlaySpeedsChange(callback?: Callback<Array<number>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有支持的播放倍速列表变化事件取消监听。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.offSupportedPlaySpeedsChange();
+```
 
 ## on('metadataChange')
 
@@ -1649,19 +2163,19 @@ on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (d
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'metadataChange' | 是 |
-| filter | Array & lt;keyof AVMetadata & gt; \ | 'all' | 是 |
-| callback | (data: AVMetadata) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'metadataChange' | 是 |  |
+| filter | Array & lt;keyof AVMetadata & gt; \ | 'all' | 是 | 'all'表示关注元数据所有字段变化；Array & lt;keyof AVMetadata & gt;表示关注Array中的字段变化。 |
+| callback | (data: AVMetadata) = & gt; void | 是 | 回调函数，参数data是需要更新的元数据。只包含需要更新的元数据属性，不代表当前全量的元数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('playbackStateChange')
 
@@ -1679,19 +2193,19 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'playbackStateChange' | 是 |
-| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | 是 |
-| callback | (state: AVPlaybackState) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'playbackStateChange' | 是 |  |
+| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | 是 | 'all'表示关注播放状态所有字段更新。 Array & lt;keyof AVPlaybackstate & gt; 表示关注Array中的字段更新。 |
+| callback | (state: AVPlaybackState) = & gt; void | 是 | 回调函数，参数state是需要更新的播放状态。只包含需要更新的播放状态属性，并不代表当前全量的播放状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('callMetadataChange')
 
@@ -1709,19 +2223,19 @@ on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callba
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'callMetadataChange' | 是 |
-| filter | Array & lt;keyof CallMetadata & gt; \ | 'all' | 是 | 'all'表示关注通话元数据所有字段变化；Array & lt;keyof CallMetadata & gt; 表示关注Array中的字 段变化。\ |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'callMetadataChange' | 是 | 事件回调类型，支持事件`'callMetadataChange'`：当通话元数据变化时，触发该事件。 |
+| filter | Array & lt;keyof CallMetadata & gt; \ | 'all' | 是 | 'all'表示关注通话元数据所有字段变化；Array & lt;keyof CallMetadata & gt; 表示关注Array中的字 段变化。\ | 'all'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | 回调函数，参数callmetadata是变化后的通话元数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('callStateChange')
 
@@ -1739,19 +2253,19 @@ on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'callStateChange' | 是 |
-| filter | Array & lt;keyof AVCallState & gt; \ | 'all' | 是 | 'all' 表示关注通话状态所有字段变化；Array & lt;keyof AVCallState & gt;表示关注Array中的字段变 化。\ |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'callStateChange' | 是 | 事件回调类型，支持事件`'callStateChange'`：当通话状态变化时，触发该事件。 |
+| filter | Array & lt;keyof AVCallState & gt; \ | 'all' | 是 | 'all' 表示关注通话状态所有字段变化；Array & lt;keyof AVCallState & gt;表示关注Array中的字段变 化。\ | 'all'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | 回调函数，参数callstate是变化后的通话状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('sessionDestroy')
 
@@ -1769,18 +2283,18 @@ on(type: 'sessionDestroy', callback: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'sessionDestroy' | 是 |
-| callback | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'sessionDestroy' | 是 |  |
+| callback | () = & gt; void | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('activeStateChange')
 
@@ -1798,18 +2312,18 @@ on(type: 'activeStateChange', callback: (isActive: boolean) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'activeStateChange' | 是 |
-| callback | (isActive: boolean) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'activeStateChange' | 是 | 事件回调类型，支持事件`'activeStateChange'`：当检测到会话的激活状态发生改变时，触发该事件。 |
+| callback | (isActive: boolean) = & gt; void | 是 | 回调函数。参数isActive表示会话是否被激活。true表示被激活，false表示禁用。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('validCommandChange')
 
@@ -1827,18 +2341,18 @@ on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'validCommandChange' | 是 |
-| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'validCommandChange' | 是 | 事件回调类型，支持事件`'validCommandChange'`：当检测到会话的合法命令发生改变时，触发该事件。 |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 是 | 回调函数。参数commands是有效命令的集合。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('outputDeviceChange')
 
@@ -1856,18 +2370,18 @@ on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: Output
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'outputDeviceChange' | 是 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'outputDeviceChange' | 是 | 事件回调类型，支持事件为`'outputDeviceChange'`：当播放设备变化时，触发该事件）。 |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | 是 | 回调函数，参数device是设备相关信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
 
 ## on('sessionEvent')
 
@@ -1885,18 +2399,18 @@ on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'sessionEvent' | 是 |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'sessionEvent' | 是 | 事件回调类型，支持事件`'sessionEvent'`：当会话事件变化时，触发该事件。 |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | 是 | 回调函数，sessionEvent为变化的会话事件名，args为事件的参数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('queueItemsChange')
 
@@ -1914,18 +2428,18 @@ on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'queueItemsChange' | 是 |
-| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'queueItemsChange' | 是 | 事件回调类型，支持事件`'queueItemsChange'`：当session修改播放列表时，触发该事件。 |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 是 | 回调函数，items为变化的播放列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('queueTitleChange')
 
@@ -1943,18 +2457,18 @@ on(type: 'queueTitleChange', callback: (title: string) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'queueTitleChange' | 是 |
-| callback | (title: string) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'queueTitleChange' | 是 | 事件回调类型，支持事件`'queueTitleChange'`：当session修改播放列表名称时，触发该事件。 |
+| callback | (title: string) = & gt; void | 是 | 回调函数，title为变化的播放列表名称。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('extrasChange')
 
@@ -1972,18 +2486,18 @@ on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'extrasChange' | 是 |
-| callback | (extras: {[key: string]: Object}) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'extrasChange' | 是 | 事件回调类型，支持事件`'extrasChange'`：当媒体提供方设置自定义媒体数据包时，触发该事件。 |
+| callback | (extras: {[key: string]: Object}) = & gt; void | 是 | 回调函数，extras为媒体提供方新设置的自定义媒体数据包，该自定义媒体数据包与dispatchSessionEvent方法设置的数据包完全一致。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('customDataChange')
 
@@ -2001,17 +2515,17 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'customDataChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'customDataChange' | 是 | 事件回调类型，支持事件'customDataChange'，当媒体提供方发送自定义数据时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onDesktopLyricEnabled
 
@@ -2029,16 +2543,24 @@ onDesktopLyricEnabled(callback: Callback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示桌面歌词功能启用；返回false表示桌面歌词功能未启用。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onDesktopLyricEnabled((enabled: boolean) => {
+  console.info(`desktop lyric enabled state : ${enabled}`);
+})
+```
 
 ## onDesktopLyricStateChanged
 
@@ -2056,16 +2578,32 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 是 | 回调函数。返回桌面歌词状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
+    console.info(`desktop lyric isLocked : ${state.isLocked}`);
+  })
+}
+```
+
+```TypeScript
+avcontroller.onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
+  console.info(`desktop lyric isLocked : ${state.isLocked}`);
+})
+```
 
 ## onDesktopLyricVisibilityChanged
 
@@ -2083,16 +2621,32 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示开启显示桌面歌词状态；返回false表示关闭显示桌面歌词状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).onDesktopLyricVisibilityChanged((visible: boolean) => {
+    console.info(`desktop lyric visible state: ${visible}`);
+  });
+}
+```
+
+```TypeScript
+avcontroller.onDesktopLyricVisibilityChanged((visible: boolean) => {
+  console.info(`desktop lyric visible state: ${visible}`);
+});
+```
 
 ## onMediaCenterControlTypeChanged
 
@@ -2110,16 +2664,24 @@ onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlTyp
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 是 | 回调函数。返回变化后的控制类型列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onMediaCenterControlTypeChanged((types: avSession.AVMediaCenterControlType[]) => {
+  console.info(`Media center control types changed, size: ${types.length}`);
+});
+```
 
 ## onSupportedLoopModesChange
 
@@ -2139,16 +2701,24 @@ onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 是 | 回调函数。返回变化后支持的循环模式列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onSupportedLoopModesChange((loopModes: avSession.LoopMode[]) => {
+  console.info(`Supported loop modes changed, size: ${loopModes.length}`);
+});
+```
 
 ## onSupportedPlaySpeedsChange
 
@@ -2168,16 +2738,24 @@ onSupportedPlaySpeedsChange(callback: Callback<Array<number>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 回调函数。返回变化后支持的播放倍速列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onSupportedPlaySpeedsChange((speeds: number[]) => {
+  console.info(`Supported play speeds changed, size: ${speeds.length}`);
+});
+```
 
 ## sendAVKeyEvent
 
@@ -2193,21 +2771,38 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 | 按键事件。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当事件发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 600101 |
-| 600102 |
-| 600103 |
-| 600105 |
-| 600106 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 600101 | Session service exception. |
+| 600102 | The session does not exist. |
+| 600103 | The session controller does not exist. |
+| 600105 | Invalid session command. |
+| 600106 | The session is not activated. |
+
+**示例**
+
+```TypeScript
+import { Key, KeyEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let keyItem: Key = {code:0x49, pressedTime:2, deviceId:0};
+let event:KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
+avcontroller.sendAVKeyEvent(event, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to send AV key event, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in sending AV key event.');
+});
+```
 
 ## sendAVKeyEvent
 
@@ -2225,26 +2820,39 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 | 按键事件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。当事件发送成功，无返回结果，否则返回错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 600101 |
-| 600102 |
-| 600103 |
-| 600105 |
-| 600106 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 600101 | Session service exception. |
+| 600102 | The session does not exist. |
+| 600103 | The session controller does not exist. |
+| 600105 | Invalid session command. |
+| 600106 | The session is not activated. |
+
+**示例**
+
+```TypeScript
+import { Key, KeyEvent } from '@kit.InputKit';
+
+let keyItem: Key = {code:0x49, pressedTime:2, deviceId:0};
+let event:KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
+
+avcontroller.sendAVKeyEvent(event).then(() => {
+  console.info('Succeeded in sending AV key event.');
+});
+```
 
 ## sendCommonCommand
 
@@ -2260,23 +2868,36 @@ sendCommonCommand(command: string, args: {[key: string]: Object}, callback: Asyn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| command | string | 是 |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | {[key: string]: Object} | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| command | string | 是 | 需要设置的自定义控制命令的名称。 |
+| args | {[key: string]: Object} | 是 | 需要传递的控制命令键值对。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
-| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+
+**示例**
+
+```TypeScript
+let commandName = "my_command";
+avcontroller.sendCommonCommand(commandName, {command : "This is my command"}, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to send common command, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in sending common command.');
+})
+```
 
 ## sendCommonCommand
 
@@ -2294,28 +2915,37 @@ sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| command | string | 是 |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | {[key: string]: Object} | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| command | string | 是 | 需要设置的自定义控制命令的名称。 |
+| args | {[key: string]: Object} | 是 | 需要传递的控制命令键值对。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
-| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+
+**示例**
+
+```TypeScript
+let commandName = "my_command";
+avcontroller.sendCommonCommand(commandName, {command : "This is my command"}).then(() => {
+  console.info('Succeeded in sending common command.');
+});
+```
 
 ## sendControlCommand
 
@@ -2325,7 +2955,8 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 
 通过会话控制器发送命令到其对应的会话。结果通过callback异步回调方式返回。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口
 > on('play')、
 > on('pause')等。
@@ -2336,22 +2967,35 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | 是 | 会话的相关命令和命令相关参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
-| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+
+**示例**
+
+```TypeScript
+let avCommand: avSession.AVControlCommand = {command:'play'};
+avcontroller.sendControlCommand(avCommand, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in sending control command.');
+});
+```
 
 ## sendControlCommand
 
@@ -2361,7 +3005,8 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 
 通过控制器发送命令到其对应的会话。结果通过Promise异步回调方式返回。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口
 > on('play')、
 > on('pause')等。
@@ -2374,27 +3019,36 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | 是 | 会话的相关命令和命令相关参数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
-| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+
+**示例**
+
+```TypeScript
+let avCommand: avSession.AVControlCommand = {command:'play'};
+avcontroller.sendControlCommand(avCommand).then(() => {
+  console.info('Succeeded in sending control command.');
+});
+```
 
 ## sendCustomData
 
@@ -2412,23 +3066,75 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | Record & lt;string, Object & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | Record & lt;string, Object & gt; | 是 | 应用程序填充的自定义数据。服务端仅解析key为'customData'，且Object为string类型的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.sendCustomData({customData: 'This is custom data'}).then(() => {
+  console.info('Succeeded in sending custom data.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to send custom data, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+currentAVSession.sendCustomData({customData : "This is custom data"}).then(() => {
+  console.info('Succeeded in sending custom data.');
+});
+```
+
+```TypeScript
+// Index.ets
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  private tag: string = "createNewSession";
+  private sessionId: string = "";
+  private controller: avSession.AVSessionController | undefined = undefined;
+  private currentAVSession?: avSession.AVSession;
+
+  aboutToAppear(): void {
+    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
+      .then(async (data: avSession.AVSession) => {
+        this.currentAVSession = data;
+        this.sessionId = this.currentAVSession.sessionId;
+        this.controller = await this.currentAVSession.getController();
+        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
+        (this.controller as avSession.AVSessionController).sendCustomData({ customData: "This is my data" });
+      });
+  }
+
+  build() {
+    Column() {
+      Text('AVSession Demo')
+        .fontSize(20)
+        .margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
 
 ## setDesktopLyricState
 
@@ -2446,25 +3152,43 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| state | [DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| state | [DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md) | 是 | 桌面歌词状态。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+
+**示例**
+
+```TypeScript
+let state: avSession.DesktopLyricState = {
+  isLocked: true,
+};
+currentAVSession.setDesktopLyricState(state).then(() => {
+  console.info('Succeeded in setting desktop lyric state.');
+})
+```
+
+```TypeScript
+let state: avSession.DesktopLyricState = {
+  isLocked: true,
+};
+avcontroller.setDesktopLyricState(state);
+```
 
 ## setDesktopLyricVisible
 
@@ -2482,25 +3206,37 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| visible | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| visible | boolean | 是 | 是否显示桌面歌词。true表示显示；false表示不显示。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+
+**示例**
+
+```TypeScript
+currentAVSession.setDesktopLyricVisible(true).then(() => {
+  console.info('Succeeded in setting desktop lyric visible.');
+});
+```
+
+```TypeScript
+avcontroller.setDesktopLyricVisible(true);
+```
 
 ## skipToQueueItem
 
@@ -2516,19 +3252,32 @@ skipToQueueItem(itemId: number, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [itemId](arkts-avsession-avsession-avqueueitem-i.md) | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| itemId | number | 是 | 播放列表单项的ID值，用以表示选中的播放列表单项。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let queueItemId = 0;
+avcontroller.skipToQueueItem(queueItemId, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to skip to queue item, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in skipping to queue item.');
+});
+```
 
 ## skipToQueueItem
 
@@ -2546,24 +3295,33 @@ skipToQueueItem(itemId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [itemId](arkts-avsession-avsession-avqueueitem-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| itemId | number | 是 | 播放列表单项的ID值，用以表示选中的播放列表单项。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。当播放列表单项ID设置成功，无返回结果，否则返回错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let queueItemId = 0;
+avcontroller.skipToQueueItem(queueItemId).then(() => {
+  console.info('Succeeded in skipping to queue item.');
+});
+```
 
 ## sessionId
 

@@ -11,7 +11,7 @@ Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddat
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## htmlContent
@@ -67,3 +67,15 @@ Defines URI authorization policies for drag intention.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Examples**
+
+```TypeScript
+let html = new unifiedDataChannel.HTML();
+html.htmlContent = '<div><p>Title</p></div>';
+html.plainContent = 'This is plainContent';
+// Since API version 26.0.0, the URI authorization policy is supported.
+html.uriAuthorizationPolicies = [
+  unifiedDataChannel.UriPermission.WRITE
+];
+```

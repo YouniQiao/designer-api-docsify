@@ -9,13 +9,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { HalfScreenLaunchComponent } from 'kits/@kit.ArkUI';
+import { HalfScreenLaunchComponent } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [HalfScreenLaunchComponent(Defines the halfScreen launch component)](arkts-arkui-atomicservice-halfscreenlaunchcomponent-halfscreenlaunchcomponent-s.md) |
+| Name | Description |
+| --- | --- |
+| [HalfScreenLaunchComponent(Defines the halfScreen launch component)](arkts-arkui-atomicservice-halfscreenlaunchcomponent-halfscreenlaunchcomponent-s.md) | **HalfScreenLaunchComponent** is a component designed for launching atomic services in half screen. If the invoked application (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in half-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner. |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pluginBundleManager } from 'kits/@kit.AbilityKit';
+import pluginBundleManager from '@kit.AbilityKit';
 ```
 
 ## uninstallLocalPlugin
@@ -24,19 +24,19 @@ function uninstallLocalPlugin(pluginBundleName: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pluginBundleName | string | 是 | 插件的Bundle名称，表示要卸载的插件的应用包名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700092](../errorcode-bundle.md#17700092-插件包名不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Calling interface without permission 'ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN'. |
+| [17700092](../errorcode-bundle.md#17700092-插件包名不存在) | Failed to uninstall the plugin because the specified plugin is not found. |

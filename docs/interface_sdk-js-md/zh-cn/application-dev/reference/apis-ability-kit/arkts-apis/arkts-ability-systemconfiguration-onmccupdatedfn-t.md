@@ -16,6 +16,6 @@ type OnMCCUpdatedFn = (mcc: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mcc | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mcc | string | 是 | 变化后的移动设备国家代码。 |

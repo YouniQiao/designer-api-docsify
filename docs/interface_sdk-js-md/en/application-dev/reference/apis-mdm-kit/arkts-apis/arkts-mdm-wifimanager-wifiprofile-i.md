@@ -9,7 +9,7 @@ Represents the Wi-Fi configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.MDMKit';
+import wifiManager from '@kit.MDMKit';
 ```
 
 ## bssid

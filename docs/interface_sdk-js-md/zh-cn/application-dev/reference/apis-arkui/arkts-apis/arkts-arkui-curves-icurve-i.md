@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import curves from '@kit.ArkUI';
 ```
 
 ## interpolate
@@ -28,12 +28,20 @@ interpolate(fraction : number) : number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fraction | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fraction | number | 是 | 当前的归一化时间参数。取值范围：[0,1]   **说明：** 设置的值小于0时，按0处理；设置的值大于1时，按1处理。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回归一化time时间点对应的曲线插值。 |
+
+**示例**
+
+```TypeScript
+import { curves } from '@kit.ArkUI'
+let curveValue = curves.initCurve(Curve.EaseIn); // 创建一个默认先慢后快插值曲线
+let interpolatedValue: number = curveValue.interpolate(0.5); // 计算得到时间到一半时的插值
+```

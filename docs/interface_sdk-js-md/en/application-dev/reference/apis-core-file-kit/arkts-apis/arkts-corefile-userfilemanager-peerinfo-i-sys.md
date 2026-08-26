@@ -13,7 +13,7 @@ Defines information about a registered device.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'kits/@kit.CoreFileKit';
+import userFileManager from '@kit.CoreFileKit';
 ```
 
 ## deviceName

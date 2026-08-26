@@ -2,7 +2,8 @@
 
 The module provides resource information of an application, such as the icon and label. The information can be obtained by calling getBundleResourceInfo.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The APIs provided by this module are system APIs.
 
 **Since:** 11

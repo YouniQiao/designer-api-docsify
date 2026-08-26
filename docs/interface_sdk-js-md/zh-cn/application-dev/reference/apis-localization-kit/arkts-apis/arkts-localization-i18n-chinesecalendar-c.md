@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## checkLeapMonth
@@ -32,23 +32,29 @@ public static checkLeapMonth(gregorianYear: number, cyclicalYear: number, month:
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [gregorianYear](arkts-localization-i18n-chinesecalendartime-i.md) | number | 是 |
-| [cyclicalYear](arkts-localization-i18n-chinesecalendartime-i.md) | number | 是 |
-| month | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| gregorianYear | number | 是 | 公历的年。 取值范围：[1900, 2100]。 |
+| cyclicalYear | number | 是 | 农历的干支年。 取值范围：[1, 60]。 |
+| month | number | 是 | 农历的月。    **说明：** 月份从0开始计数，0表示一月。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否存在闰月。true表示该月存在闰月，false表示该月不存在闰月。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+let isExist = i18n.ChineseCalendar.checkLeapMonth(2026, 43, 2);
+```
 
 ## setChineseCalendarTime
 
@@ -68,6 +74,19 @@ public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | 是 | 农历时间对象。 |
+
+**示例**
+
+```TypeScript
+let locale: Intl.Locale = i18n.System.getSystemLocaleInstance();
+let calendar: i18n.ChineseCalendar = i18n.getChineseCalendar(locale);
+calendar.setChineseCalendarTime({
+  gregorianYear: 2026,
+  cyclicalYear: 43,
+  month: 1,
+  date: 15
+});
+```

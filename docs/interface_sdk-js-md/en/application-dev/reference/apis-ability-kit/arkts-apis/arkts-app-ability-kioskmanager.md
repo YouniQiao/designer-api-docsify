@@ -11,28 +11,28 @@ The KioskManager module provides APIs to manage kiosk mode, including entering/e
 ## Modules to Import
 
 ```TypeScript
-import { kioskManager } from 'kits/@kit.AbilityKit';
+import kioskManager from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [enterKioskMode](arkts-ability-kioskmanager-enterkioskmode-f.md) |
-| [exitKioskMode](arkts-ability-kioskmanager-exitkioskmode-f.md) |
+| Name | Description |
+| --- | --- |
+| [enterKioskMode](arkts-ability-kioskmanager-enterkioskmode-f.md) | Enters kiosk mode. This API uses a promise to return the result. This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the error code 801. |
+| [exitKioskMode](arkts-ability-kioskmanager-exitkioskmode-f.md) | Exits kiosk mode. This API uses a promise to return the result. This API takes effect only for applications that have entered kiosk mode. This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the error code 801. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getKioskStatus](arkts-ability-kioskmanager-getkioskstatus-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getKioskStatus](arkts-ability-kioskmanager-getkioskstatus-f-sys.md) | Obtains the Kiosk mode status information, including whether the system is in kiosk mode, and the name and UID of the application that has entered Kiosk mode. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [KioskStatus](arkts-ability-kioskmanager-kioskstatus-t.md) |
+| Name | Description |
+| --- | --- |
+| [KioskStatus](arkts-ability-kioskmanager-kioskstatus-t.md) | Defines the kiosk status information, including whether the system is in kiosk mode and the information about the application in kiosk mode. |

@@ -53,3 +53,15 @@ The version does not match. The application on the initiator can obtain the vers
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onContinue(wantParam: Record<string, Object>) {
+    return AbilityConstant.OnContinueResult.AGREE;
+  }
+}
+```

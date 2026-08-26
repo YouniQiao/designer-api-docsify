@@ -34,57 +34,57 @@ next highest priority. To stop delivering the event, call **abortCommonEvent** t
 ## Modules to Import
 
 ```TypeScript
-import { commonEventManager } from 'kits/@kit.BasicServicesKit';
+import commonEventManager from '@kit.BasicServicesKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md) |
-| [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md) |
-| [createSubscriberSync](arkts-basicservices-commoneventmanager-createsubscribersync-f.md) |
-| [publish](arkts-basicservices-commoneventmanager-publish-f.md) |
-| [publish](arkts-basicservices-commoneventmanager-publish-f.md) |
-| [subscribe](arkts-basicservices-commoneventmanager-subscribe-f.md) |
-| [subscribeToEvent](arkts-basicservices-commoneventmanager-subscribetoevent-f.md) |
-| [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md) |
+| Name | Description |
+| --- | --- |
+| [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md) | Creates a subscriber. This API uses an asynchronous callback to return the result. |
+| [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md) | Creates a subscriber. This API uses a promise to return the result. |
+| [createSubscriberSync](arkts-basicservices-commoneventmanager-createsubscribersync-f.md) | Creates a subscriber synchronously. |
+| [publish](arkts-basicservices-commoneventmanager-publish-f.md) | Publishes a common event. This API uses an asynchronous callback to return the result. |
+| [publish](arkts-basicservices-commoneventmanager-publish-f.md) | Publishes a common event. This API uses an asynchronous callback to return the result. |
+| [subscribe](arkts-basicservices-commoneventmanager-subscribe-f.md) | Subscribes to a common event. This API uses an asynchronous callback to return the result. |
+| [subscribeToEvent](arkts-basicservices-commoneventmanager-subscribetoevent-f.md) | Subscribes to a common event. This API uses a promise to return the result, indicating subscription success or failure. |
+| [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md) | Unsubscribes from a common event. This API uses an asynchronous callback to return the result. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md) |
-| [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md) |
-| [removeStickyCommonEvent](arkts-basicservices-commoneventmanager-removestickycommonevent-f-sys.md) |
-| [removeStickyCommonEvent](arkts-basicservices-commoneventmanager-removestickycommonevent-f-sys.md) |
-| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) |
-| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) |
-| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md) | Publishes a common event to a specified user. This API uses an asynchronous callback to return the result. |
+| [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md) | Publishes a common event to a specified user and specifies the information to be published. This API uses an asynchronous callback to return the result. |
+| [removeStickyCommonEvent](arkts-basicservices-commoneventmanager-removestickycommonevent-f-sys.md) | Removes a sticky common event. This API uses an asynchronous callback to return the result. |
+| [removeStickyCommonEvent](arkts-basicservices-commoneventmanager-removestickycommonevent-f-sys.md) | Removes a sticky common event that has been published. This API uses a promise to return the result. |
+| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) | Enables or disables static subscription for an app. This API uses an asynchronous callback to return the result. |
+| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) | Enables or disables static subscription for an app. This API uses a promise to return the result. |
+| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) | Enables or disables static subscription to a common event for the current app. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Support](arkts-basicservices-commoneventmanager-support-e.md) |
+| Name | Description |
+| --- | --- |
+| [Support](arkts-basicservices-commoneventmanager-support-e.md) | System common events are events published by system services or system apps. Subscribing to these common events requires specific permissions and event values. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Support](arkts-basicservices-commoneventmanager-support-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [Support](arkts-basicservices-commoneventmanager-support-e-sys.md) | System common events are events published by system services or system apps. Subscribing to these common events requires specific permissions and event values. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CommonEventData](arkts-basicservices-commoneventmanager-commoneventdata-t.md) |
-| [CommonEventPublishData](arkts-basicservices-commoneventmanager-commoneventpublishdata-t.md) |
-| [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) |
-| [CommonEventSubscriber](arkts-basicservices-commoneventmanager-commoneventsubscriber-t.md) |
+| Name | Description |
+| --- | --- |
+| [CommonEventData](arkts-basicservices-commoneventmanager-commoneventdata-t.md) | Describes the data of a common event. |
+| [CommonEventPublishData](arkts-basicservices-commoneventmanager-commoneventpublishdata-t.md) | Describes the content and properties of a common event. |
+| [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | Describes information about a common event subscriber. |
+| [CommonEventSubscriber](arkts-basicservices-commoneventmanager-commoneventsubscriber-t.md) | Describes the subscriber of a common event. |

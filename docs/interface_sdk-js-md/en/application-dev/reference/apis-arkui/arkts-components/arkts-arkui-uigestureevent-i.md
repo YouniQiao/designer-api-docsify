@@ -29,11 +29,11 @@ Adds a gesture.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes |
-| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | No |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes | Gesture handler object. |
+| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | No | Priority of the bound gesture.Default value: **GesturePriority.NORMAL**. |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.Default value: **GestureMask.Normal**. |
 
 ## addParallelGesture
 
@@ -53,10 +53,10 @@ Adds a gesture that can be recognized at once by the component and its child com
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes | Gesture handler object. |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.Default value: **GestureMask.Normal**. |
 
 ## clearGestures
 
@@ -92,6 +92,6 @@ Remove a gesture from a component that has been bound with a specific tag throug
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tag | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tag | string | Yes | Gesture handler flag. |

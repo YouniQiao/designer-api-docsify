@@ -16,6 +16,6 @@ Obtain the objects exposed in app.js
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| object |
+| Type | Description |
+| --- | --- |
+| object |  |

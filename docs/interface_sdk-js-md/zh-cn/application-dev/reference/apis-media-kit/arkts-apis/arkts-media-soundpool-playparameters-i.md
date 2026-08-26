@@ -70,7 +70,7 @@ priority?: number
 rate?: number
 ```
 
-设置音频播放的倍速，具体倍速范围参照[AudioRendererRate](../../../reference/apis-audio-kit/arkts-apis-audio-e.md)。默认值：0。
+设置音频播放的倍速，具体倍速范围参照[AudioRendererRate](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererrate-e.md)。默认值：0。
 
 **类型：** number
 

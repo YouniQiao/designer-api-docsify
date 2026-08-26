@@ -3,9 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## listFileSync
@@ -27,23 +25,44 @@ declare function listFileSync(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
-| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 目录的应用沙箱路径。 |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | 否 | 文件过滤选项。默认不进行过滤。<br>**起始版本：** 11 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string[] |
+| 类型 | 说明 |
+| --- | --- |
+| string[] | 返回文件名数组，默认以'utf-8'编码。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900002 |
-| 13900008 |
-| 13900011 |
-| 13900018 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+import { Filter, ListFileOptions} from '@kit.CoreFileKit';
+
+let listFileOption: ListFileOptions = {
+  recursion: false,
+  listNum: 0,
+  filter: {
+    suffix: [".png", ".jpg", ".jpeg"],
+    displayName: ["*abc", "efg*"],
+    fileSizeOver: 1024
+  }
+};
+let filenames = fileIo.listFileSync(pathDir, listFileOption);
+console.info(`Succeeded in listing file.`);
+for (let i = 0; i < filenames.length; i++) {
+  console.info(`Succeeded in listing file, file name: ${filenames[i]}`);
+}
+```

@@ -11,7 +11,7 @@ Represents a set of optional parameters for [onGetData](arkts-basicservices-osac
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## challenge

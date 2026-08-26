@@ -16,8 +16,8 @@ Represents the type of a file asset member.
 
 **System API:** This is a system API.
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
-| string |
-| boolean |
+| Type | Description |
+| --- | --- |
+| number | The member is a number. |
+| string | The member is a string. |
+| boolean | The member is a Boolean value. |

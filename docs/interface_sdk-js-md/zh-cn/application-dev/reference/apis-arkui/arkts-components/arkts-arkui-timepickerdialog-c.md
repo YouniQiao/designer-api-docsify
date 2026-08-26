@@ -19,7 +19,8 @@ static show(options?: TimePickerDialogOptions)
 
 定义时间滑动选择器弹窗并弹出。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [showTimePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showtimepickerdialog)来明确UI的执行上下文。
 
@@ -35,6 +36,6 @@ static show(options?: TimePickerDialogOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [TimePickerDialogOptions](arkts-arkui-timepickerdialogoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [TimePickerDialogOptions](arkts-arkui-timepickerdialogoptions-i.md) | 否 | 配置时间选择器弹窗的参数。参数缺省时不弹出弹窗。 |

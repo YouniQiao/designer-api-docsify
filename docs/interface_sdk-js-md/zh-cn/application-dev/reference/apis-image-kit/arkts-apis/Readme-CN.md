@@ -84,6 +84,8 @@
   - [Region](arkts-image-image-region-i.md)
   - [Size](arkts-image-image-size-i.md)
   - [SourceOptions](arkts-image-image-sourceoptions-i.md)
+  <!--Del-->
+  - [SourceOptions(系统接口)](arkts-image-image-sourceoptions-i-sys.md)<!--DelEnd-->
   - [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md)
   - [XMPNamespace](arkts-image-image-xmpnamespace-i.md)
   - [XMPTag](arkts-image-image-xmptag-i.md)
@@ -116,6 +118,8 @@
   <!--Del-->
   - [ResolutionQuality(系统接口)](arkts-image-image-resolutionquality-e-sys.md)<!--DelEnd-->
   - [ScaleMode](arkts-image-image-scalemode-e.md)
+  <!--Del-->
+  - [SVGResourceLimitLevel(系统接口)](arkts-image-image-svgresourcelimitlevel-e-sys.md)<!--DelEnd-->
   - [TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md)
   - [WebPPropertyKey](arkts-image-image-webppropertykey-e.md)
   - [XmageColorMode](arkts-image-image-xmagecolormode-e.md)

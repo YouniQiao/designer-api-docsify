@@ -2,9 +2,11 @@
 
 本模块提供分布式包的管理。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 9开始，该模块不再维护，建议使用
-> [@ohos.bundle.distributedBundleManager](arkts-bundle-distributedbundlemanager.md)替代。&gt;
+> [@ohos.bundle.distributedBundleManager](arkts-bundle-distributedbundlemanager.md)替代。
+> 
 > 本模块为系统接口。
 
 **起始版本：** 8
@@ -20,7 +22,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedBundle } from 'kits/@kit.AbilityKit';
+import distributedBundle from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -28,10 +30,10 @@ import { distributedBundle } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) |
-| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) |
-| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) | 根据给定的ElementName获取有关远程设备AbilityInfo信息，使用callback异步回调。 |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) | 根据给定的ElementName获取有关远程设备AbilityInfo信息，使用Promise异步回调。 |
+| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) | 根据给定的ElementName获取有关远程设备AbilityInfos信息，使用callback异步回调。 |
+| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) | 根据给定的ElementName获取有关远程设备AbilityInfos信息，使用Promise异步回调。 |
 <!--DelEnd-->

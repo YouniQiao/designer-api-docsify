@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
+import systemSoundManager from '@kit.AudioKit';
 ```
 
 ## getSystemSoundManager
@@ -22,6 +22,12 @@ function getSystemSoundManager(): SystemSoundManager
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md) | 系统声音管理类。 |
+
+**示例**
+
+```TypeScript
+let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
+```

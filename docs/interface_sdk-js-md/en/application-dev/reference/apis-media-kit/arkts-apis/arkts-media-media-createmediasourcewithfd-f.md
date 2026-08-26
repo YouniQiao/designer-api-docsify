@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithFd
@@ -24,12 +24,22 @@ Creates a media source from file descriptor.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fdSrc | [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fdSrc | [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md) | Yes | file descriptor handler. file descriptor handler. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MediaSource](arkts-media-media-mediasource-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [MediaSource](arkts-media-media-mediasource-i.md) \| undefined | MediaSource instance if the operation is successful; returns undefined otherwise. |
+
+**Examples**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let fdSrc = await context.resourceManager.getRawFd('xxx.mp4');
+let mediaSource : media.MediaSource | undefined = media.createMediaSourceWithFd(fdSrc);
+```

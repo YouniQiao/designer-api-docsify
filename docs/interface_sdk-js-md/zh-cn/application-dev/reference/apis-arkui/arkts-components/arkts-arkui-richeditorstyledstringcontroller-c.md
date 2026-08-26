@@ -37,9 +37,9 @@ getSelection(): RichEditorRange
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RichEditorRange](arkts-arkui-richeditorrange-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 选中区域范围。 |
 
 ## getStyledString
 
@@ -59,9 +59,9 @@ getStyledString(): MutableStyledString
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。 |
 
 ## onContentChanged
 
@@ -81,9 +81,9 @@ onContentChanged(listener: StyledStringChangedListener): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| listener | [StyledStringChangedListener](../arkts-apis/arkts-arkui-styledstringchangedlistener-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| listener | [StyledStringChangedListener](../arkts-apis/arkts-arkui-styledstringchangedlistener-i.md) | 是 | 文本内容变化回调监听器。 |
 
 ## setStyledString
 
@@ -93,8 +93,10 @@ setStyledString(styledString: StyledString): void
 
 设置富文本组件显示的属性字符串。
 
-> **说明：**&gt;
-> - 调用该接口时，会全量替换富文本组件的StyledString，并重新渲染。&gt;
+> **说明：**
+> 
+> - 调用该接口时，会全量替换富文本组件的StyledString，并重新渲染。
+> 
 > - 当内容超过组件本身区域时，组件会自动向上滚动内容直到末尾处可见。
 
 **起始版本：** 12
@@ -107,6 +109,6 @@ setStyledString(styledString: StyledString): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 属性字符串。   **说明：** StyledString的子类 [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md)也可以作为入参值。 |

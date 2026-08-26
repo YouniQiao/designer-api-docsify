@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AbilityLifecycleCallback } from 'kits/@kit.AbilityKit';
+import AbilityLifecycleCallback from '@kit.AbilityKit';
 ```
 
 ## onAbilityBackground
@@ -30,9 +30,13 @@ onAbilityBackground(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityContinue
 
@@ -52,9 +56,13 @@ onAbilityContinue(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityCreate
 
@@ -74,9 +82,13 @@ onAbilityCreate(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityDestroy
 
@@ -96,9 +108,13 @@ onAbilityDestroy(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityForeground
 
@@ -118,9 +134,13 @@ onAbilityForeground(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onAbilitySaveState
 
@@ -140,9 +160,13 @@ onAbilitySaveState?(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityWillBackground
 
@@ -162,9 +186,13 @@ onAbilityWillBackground?(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityWillContinue
 
@@ -184,9 +212,13 @@ onAbilityWillContinue?(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityWillCreate
 
@@ -206,9 +238,13 @@ onAbilityWillCreate?(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityWillDestroy
 
@@ -228,9 +264,13 @@ onAbilityWillDestroy?(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityWillForeground
 
@@ -250,9 +290,13 @@ onAbilityWillForeground?(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityWillSaveState
 
@@ -272,9 +316,13 @@ onAbilityWillSaveState?(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onNewWant
 
@@ -294,9 +342,13 @@ onNewWant?(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onWillNewWant
 
@@ -316,9 +368,13 @@ onWillNewWant?(ability: UIAbility): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onWindowStageActive
 
@@ -338,10 +394,14 @@ onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-| [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onWindowStageCreate
 
@@ -361,10 +421,14 @@ onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-| [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onWindowStageDestroy
 
@@ -384,10 +448,14 @@ onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-| [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onWindowStageInactive
 
@@ -407,10 +475,14 @@ onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-| [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onWindowStageRestore
 
@@ -430,10 +502,14 @@ onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-| [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onWindowStageWillCreate
 
@@ -453,10 +529,14 @@ onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-| [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onWindowStageWillDestroy
 
@@ -476,10 +556,14 @@ onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-| [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 
 ## onWindowStageWillRestore
 
@@ -499,7 +583,11 @@ onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-| [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。

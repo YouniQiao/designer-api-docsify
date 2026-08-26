@@ -15,13 +15,17 @@ Parameter of the [onCreateNativeMediaPlayer](arkts-arkweb-webview-webviewcontrol
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | [NativeMediaPlayerHandler](arkts-arkweb-webview-nativemediaplayerhandler-i.md) | Yes |
-| mediaInfo | [MediaInfo](arkts-arkweb-webview-mediainfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | [NativeMediaPlayerHandler](arkts-arkweb-webview-nativemediaplayerhandler-i.md) | Yes | Object used by the app to report player status events, such as play, pause, and error, to the ArkWeb kernel, enabling the kernel to synchronize media playback states in web pages. |
+| mediaInfo | [MediaInfo](arkts-arkweb-webview-mediainfo-i.md) | Yes | Information about the media on the web page. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md) |
+| Type | Description |
+| --- | --- |
+| [NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md) | An interface class that bridges the web media player and the ArkWeb kernel. |
+
+**Examples**
+
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
+import systemSoundManager from '@kit.AudioKit';
 ```
 
 ## createCustomizedToneAttrs
@@ -22,12 +22,18 @@ Create customized tone attributes.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) |
+| Type | Description |
+| --- | --- |
+| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) | Tone attributes created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+
+**Examples**
+
+```TypeScript
+let toneAttrs: systemSoundManager.ToneAttrs = systemSoundManager.createCustomizedToneAttrs();
+```

@@ -14,7 +14,7 @@ declare type TipsMessageType = ResourceStr | StyledString
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) |
-| [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 字符串类型，用于描述字符串入参可以使用的类型。 |
+| [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 属性字符串。 |

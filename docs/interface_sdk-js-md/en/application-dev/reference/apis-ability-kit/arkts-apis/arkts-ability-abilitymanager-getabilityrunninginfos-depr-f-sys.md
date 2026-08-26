@@ -27,9 +27,22 @@ Obtains the ability running information. This API uses a promise to return the r
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)&gt;&gt; | Promise used to return the ability running information. |
+
+**Examples**
+
+```TypeScript
+import abilityManager from '@ohos.application.abilityManager';
+import { BusinessError } from '@ohos.base';
+
+abilityManager.getAbilityRunningInfos().then((data) => {
+  console.info(`getAbilityRunningInfos success, data: ${JSON.stringify(data)}`);
+}).catch((error: BusinessError) => {
+  console.error(`getAbilityRunningInfos error code : ${error.code}, error msg: ${error.message}.`);
+});
+```
 
 
 ## getAbilityRunningInfos
@@ -54,6 +67,21 @@ Obtains the ability running information. This API uses an asynchronous callback 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)&gt;&gt; | Yes | Callback used to return the ability running information. |
+
+**Examples**
+
+```TypeScript
+import abilityManager from '@ohos.application.abilityManager';
+import { BusinessError } from '@ohos.base';
+
+abilityManager.getAbilityRunningInfos((error: BusinessError, data) => {
+  if (error) {
+    console.error(`GetAbilityRunningInfos failed, error code: ${error.code}, error msg: ${error.message}.`);
+    return;
+  }
+  console.info(`GetAbilityRunningInfos success, data: ${JSON.stringify(data)}.`);
+});
+```

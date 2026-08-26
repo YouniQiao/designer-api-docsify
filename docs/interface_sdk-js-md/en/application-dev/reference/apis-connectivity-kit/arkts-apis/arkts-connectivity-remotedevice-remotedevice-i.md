@@ -9,7 +9,7 @@ Provides the method for operating on a remote device. Before using this method, 
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import remoteDevice from '@kit.ConnectivityKit';
 ```
 
 ## getAcbState
@@ -30,17 +30,17 @@ Obtains the logical link connection status with a remote device. This method is 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md) |
+| Type | Description |
+| --- | --- |
+| [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md) | Logical link connection state with a remote device. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| 36100003 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## getConnectionState
 
@@ -60,17 +60,17 @@ Obtains the connection status between the local and remote devices. Unlike [getA
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) |
+| Type | Description |
+| --- | --- |
+| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) | Connection status between the local and remote devices. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| 36100003 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## getDeviceClass
 
@@ -90,17 +90,17 @@ Obtains the type of a remote device.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) |
+| Type | Description |
+| --- | --- |
+| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | Remote device type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| 36100003 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## getDeviceInformation
 
@@ -120,17 +120,17 @@ Obtains the information of a remote device.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DeviceInformation](arkts-connectivity-remotedevice-deviceinformation-i.md) |
+| Type | Description |
+| --- | --- |
+| [DeviceInformation](arkts-connectivity-remotedevice-deviceinformation-i.md) | Information of a remote device. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| 36100003 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## getDeviceName
 
@@ -150,17 +150,17 @@ Obtains the name of a remote device.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Remote device name. The value contains a maximum of 30 characters. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| 36100003 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## getPairingState
 
@@ -180,17 +180,17 @@ Obtains the pairing status with a remote device.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) |
+| Type | Description |
+| --- | --- |
+| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) | Pairing status with a remote device. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| 36100003 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 
 ## startPairing
 
@@ -210,14 +210,14 @@ Initiates pairing with a remote device. This API uses a promise to return the re
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| 36100003 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |

@@ -14,10 +14,10 @@ Enumerates the font edge types of captions.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'none' |
-| 'raised' |
-| 'depressed' |
-| 'uniform' |
-| 'dropShadow' |
+| Type | Description |
+| --- | --- |
+| 'none' | No effect. |
+| 'raised' | Raised effect. |
+| 'depressed' | Depressed effect. |
+| 'uniform' | Uniform effect. |
+| 'dropShadow' | Drop shadow effect. |

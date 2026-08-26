@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataAbility } from 'kits/@kit.ArkData';
+import dataAbility from '@kit.ArkData';
 ```
 
 ## createRdbPredicates
@@ -20,13 +20,22 @@ Creates an **RdbPredicates** object with a table name and **DataAbilityPredicate
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of a database table. |
+| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | DataAbilityPredicates** object. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| rdb.RdbPredicates |
+| Type | Description |
+| --- | --- |
+| rdb.RdbPredicates | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let dataAbilityPredicates = new dataAbility.DataAbilityPredicates()
+dataAbilityPredicates.equalTo("NAME", "Rose")
+// EMPLOYEE is a table created in an RDB store.
+let predicates = dataAbility.createRdbPredicates("EMPLOYEE", dataAbilityPredicates)
+```

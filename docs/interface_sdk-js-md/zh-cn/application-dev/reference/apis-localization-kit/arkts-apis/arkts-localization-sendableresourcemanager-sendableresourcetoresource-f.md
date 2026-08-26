@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
+import sendableResourceManager from '@kit.LocalizationKit';
 ```
 
 ## sendableResourceToResource
@@ -22,18 +22,45 @@ export function sendableResourceToResource(resource: SendableResource): Resource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| resource | [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resource | [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | 是 | SendableResource对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Resource](arkts-localization-resource-resource-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Resource](arkts-localization-resource-resource-i.md) | 转换后的Resource对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a test string resource."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { sendableResourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let resource: sendableResourceManager.Resource = sendableResourceManager.sendableResourceToResource(sendableResourceManager.resourceToSendableResource($r('app.string.test')));
+} catch (error) {
+    let code = (error as BusinessError).code;
+    let message = (error as BusinessError).message;
+    console.error(`sendableResourceToResource failed, error code: ${code}, message: ${message}.`);
+}
+```

@@ -16,8 +16,8 @@ Represents the callback triggered when the content in the text box changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
-| previewText | [PreviewText](arkts-arkui-previewtext-i.md) | No |
-| options | [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Text displayed in the text box. |
+| previewText | [PreviewText](arkts-arkui-previewtext-i.md) | No | Information about the preview text, including its start position and text content. |
+| options | [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | No | Information about the text change, including the selection range, text displayed in the text box, and preview text. |

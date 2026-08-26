@@ -15,14 +15,14 @@ The type of conversion result function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | [ISendable](arkts-arkts-ason-isendable-t.md) | Yes |
-| key | string | Yes |
-| value | ISendable \| undefined \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | [ISendable](arkts-arkts-ason-isendable-t.md) | Yes | The ISendable to which the parsed key value pair belongs. |
+| key | string | Yes | Attribute name. |
+| value | ISendable \| undefined \| null | Yes | The value of the parsed key value pair. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| ISendable \| undefined \| null |
+| Type | Description |
+| --- | --- |
+| ISendable \| undefined \| null | Return the modified ISendable or undefined or null. |

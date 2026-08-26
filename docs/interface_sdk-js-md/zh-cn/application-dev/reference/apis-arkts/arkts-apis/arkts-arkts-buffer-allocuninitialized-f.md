@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## allocUninitialized
@@ -22,12 +21,22 @@ function allocUninitialized(size: number): Buffer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| size | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| size | number | 是 | 指定的Buffer对象长度，单位：字节。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Buffer |
+| 类型 | 说明 |
+| --- | --- |
+| Buffer | 未初始化的Buffer实例。 |
+
+**示例**
+
+```TypeScript
+import { buffer, JSON } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitialized(10);
+buf.fill(0);
+console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[0,0,0,0,0,0,0,0,0,0]}
+```

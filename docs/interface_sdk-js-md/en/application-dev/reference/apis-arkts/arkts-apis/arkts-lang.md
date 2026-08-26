@@ -5,25 +5,25 @@ ArkTS language
 ## Modules to Import
 
 ```TypeScript
-import { lang, Retention, RetentionPolicy } from 'kits/@kit.ArkTS';
+import lang, { Retention, RetentionPolicy } from '@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Namespaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [lang](arkts-arkts-lang-n.md) |
+| Name | Description |
+| --- | --- |
+| [lang](arkts-arkts-lang-n.md) | ArkTS language |
 
-### Annotations
+### Annotation
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Retention](arkts-arkts-lang-retention-a.md) |
+| Name | Description |
+| --- | --- |
+| [Retention](arkts-arkts-lang-retention-a.md) | An annotation used to annotate the lifecycle of other annotations. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [RetentionPolicy](arkts-arkts-lang-retentionpolicy-e.md) |
+| Name | Description |
+| --- | --- |
+| [RetentionPolicy](arkts-arkts-lang-retentionpolicy-e.md) | Enum for Retention annotation field type. |

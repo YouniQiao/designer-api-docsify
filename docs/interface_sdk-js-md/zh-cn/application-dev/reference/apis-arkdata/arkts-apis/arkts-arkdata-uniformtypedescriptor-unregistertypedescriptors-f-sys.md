@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
+import uniformTypeDescriptor from '@kit.ArkData';
 ```
 
 ## unregisterTypeDescriptors
@@ -31,20 +31,20 @@ function unregisterTypeDescriptors(typeIds: Array<string>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| typeIds | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| typeIds | Array & lt;string & gt; | 是 | 待注销的typeId列表。列表不可为空，其中元素个数不超过50。每项长度不超过127。    **typeId约束限制：** 1.typeId对应的标准化数据类型必须在系统中已注册；  2.typeId必须以当前应用的包名开头；  3.typeId对应的标准化数据类型必须已通过registerTypeDescriptors接口注册。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [20400004](../errorcode-udmf.md#20400004-标准化数据类型id列表错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [20400004](../errorcode-udmf.md#20400004-标准化数据类型id列表错误) | One or more typeIds are invalid or do not exist. |

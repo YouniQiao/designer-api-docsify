@@ -12,10 +12,10 @@ Defines the single-value type that can be used in **QueryParamObject**.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
-| int |
-| boolean |
-| null |
-| undefined |
+| Type | Description |
+| --- | --- |
+| string | String type. |
+| int | Number type, which is converted into a string before being encoded. |
+| boolean | Boolean type, which is converted into a string before being encoded. |
+| null | Null type, which is serialized in the format of only the key without the = value. |
+| undefined | Undefined type, which is serialized in the format of only the key without the = value. |

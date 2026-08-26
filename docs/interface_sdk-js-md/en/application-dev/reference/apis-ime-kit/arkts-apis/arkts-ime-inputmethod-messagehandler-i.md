@@ -22,7 +22,12 @@ Represents a custom communication object.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import inputMethod from '@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKitEngine';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
+import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
+import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 ```
 
 ## onMessage
@@ -39,10 +44,26 @@ This method is called when a custom message is received.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [msgId](../../apis-network-kit/arkts-apis/arkts-network-eap-eapdata-i.md) | string | Yes |
-| msgParam | ArrayBuffer | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| msgId | string | Yes | the identifier of the message. |
+| msgParam | ArrayBuffer | No | the parameter of the custom message. |
+
+**Examples**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+
+let messageHandler: inputMethod.MessageHandler = {
+  onTerminated(): void {
+    console.info('OnTerminated.');
+  },
+  onMessage(msgId: string, msgParam?: ArrayBuffer): void {
+    console.info(`recv message, msg: ${msgId}, msgParam: ${JSON.stringify(msgParam)}`);
+  }
+};
+inputMethodController.recvMessage(messageHandler);
+```
 
 ## onTerminated
 
@@ -55,3 +76,19 @@ This method is called when a new message handler is set.
 **Since:** 15
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Examples**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+
+let messageHandler: inputMethod.MessageHandler = {
+  onTerminated(): void {
+    console.info('OnTerminated.');
+  },
+  onMessage(msgId: string, msgParam?: ArrayBuffer): void {
+    console.info(`recv message, msg: ${msgId}, msgParam: ${JSON.stringify(msgParam)}`);
+  }
+};
+inputMethodController.recvMessage(messageHandler);
+```

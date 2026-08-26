@@ -16,7 +16,7 @@ Called when the search icon, search button, or soft keyboard search button is cl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| searchContent | string | Yes |
-| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| searchContent | string | Yes | Current text input. |
+| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | No | Submit event. |

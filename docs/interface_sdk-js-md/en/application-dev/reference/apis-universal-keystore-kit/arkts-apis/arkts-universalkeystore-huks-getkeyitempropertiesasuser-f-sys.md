@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import huks from '@kit.UniversalKeystoreKit';
+import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 ```
 
 ## getKeyItemPropertiesAsUser
@@ -28,32 +29,103 @@ Obtains key properties for the specified user. This API uses a promise to return
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| userId | number | Yes |
-| keyAlias | string | Yes |
-| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| userId | number | Yes | User ID. |
+| keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Promise used to return the result. If the operation is successful, **properties** in **HuksReturnResult** holds the parameters required for generating the key. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [12000001](../errorcode-huks.md#12000001-feature-not-supported) |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) |
-| [12000004](../errorcode-huks.md#12000004-file-error) |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) |
-| [12000012](../errorcode-huks.md#12000012-external-error) |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application permission is not sufficient, which may be caused by lack of cross-account permission, or the system has not been unlocked by user, or the user does not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | non-system applications are not allowed to use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | Feature is not supported. Possible causes: 1. The algorithm mode is not supported. 2. The group key is not supported. 3. The crypto extension key is not supported. |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+
+**Examples**
+
+Prerequisites: see Example of generateKeyItemAsUser.
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+import { BusinessError } from "@kit.BasicServicesKit"
+
+const aesKeyAlias = 'test_aesKeyAlias';
+const userId = 100;
+const userIdStorageLevel = huks.HuksAuthStorageLevel.HUKS_AUTH_STORAGE_LEVEL_CE;
+
+function GetAesGenerateProperties(): Array<huks.HuksParam> {
+  return [{
+    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
+    value: huks.HuksKeyAlg.HUKS_ALG_AES
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
+    value: huks.HuksKeySize.HUKS_AES_KEY_SIZE_128
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
+    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT |
+    huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_DECRYPT
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_PADDING,
+    value: huks.HuksKeyPadding.HUKS_PADDING_PKCS7
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE,
+    value: huks.HuksCipherMode.HUKS_MODE_CBC
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_AUTH_STORAGE_LEVEL,
+    value: userIdStorageLevel,
+  }]
+}
+
+async function GenerateKey(keyAlias: string, genProperties: Array<huks.HuksParam>) {
+  const options: huks.HuksOptions = {
+    properties: genProperties
+  }
+  await huks.generateKeyItemAsUser(userId, keyAlias, options).then((data) => {
+    console.info("Generated a key with alias of: " + keyAlias + "")
+  }).catch((err: BusinessError) => {
+    console.error("Failed to generate the key. Error code: " + err.code + " Error message: " + err.message)
+  })
+}
+
+async function GetKeyProperties(keyAlias: string) {
+  const options: huks.HuksOptions = {
+    properties: [{
+      tag: huks.HuksTag.HUKS_TAG_AUTH_STORAGE_LEVEL,
+      value: userIdStorageLevel,
+    }]
+  }
+  await huks.getKeyItemPropertiesAsUser(userId, keyAlias, options).then((data) => {
+    console.info("Obtained key properties: " + JSON.stringify(data))
+  }).catch((err: BusinessError) => {
+    console.error("Failed to obtain key properties. Error code: " + err.code + " Error message: " + err.message)
+  })
+}
+
+async function TestHuksGet() {
+  await GenerateKey(aesKeyAlias, GetAesGenerateProperties())
+  await GetKeyProperties(aesKeyAlias)
+}
+
+export default function HuksAsUserTest() {
+  console.info('begin huks as user test')
+  TestHuksGet()
+}
+```

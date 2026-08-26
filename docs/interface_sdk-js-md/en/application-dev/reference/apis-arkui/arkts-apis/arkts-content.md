@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Content](arkts-arkui-content-c.md) |
+| Name | Description |
+| --- | --- |
+| [Content](arkts-arkui-content-c.md) | Defines the base class for ComponentContent and [NodeContent](arkts-arkui-nodecontent-c.md). |

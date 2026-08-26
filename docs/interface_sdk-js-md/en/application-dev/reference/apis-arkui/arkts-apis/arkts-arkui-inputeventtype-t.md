@@ -14,8 +14,8 @@ Defines the type of input event to be dispatched. For details, see [postInputEve
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) |
-| [MouseEvent](../arkts-components/arkts-arkui-mouseevent-i.md) |
-| [AxisEvent](../arkts-components/arkts-arkui-axisevent-i.md) |
+| Type | Description |
+| --- | --- |
+| [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | Touch event. |
+| [MouseEvent](../arkts-components/arkts-arkui-mouseevent-i.md) | Mouse event. |
+| [AxisEvent](../arkts-components/arkts-arkui-axisevent-i.md) | Axis event. |

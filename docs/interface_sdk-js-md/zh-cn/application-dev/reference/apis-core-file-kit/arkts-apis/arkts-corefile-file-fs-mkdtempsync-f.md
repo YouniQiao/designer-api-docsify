@@ -3,9 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## mkdtempSync
@@ -22,32 +20,38 @@ declare function mkdtempSync(prefix: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| prefix | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| prefix | string | 是 | 指定目录路径，命名时需要以"XXXXXX"作为结尾。路径末尾的"XXXXXX"字符串将被替换为随机字符，以创建唯一的目录名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 产生的唯一目录路径。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900001 |
-| 13900002 |
-| 13900008 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900015 |
-| 13900018 |
-| 13900020 |
-| 13900025 |
-| 13900028 |
-| 13900030 |
-| 13900033 |
-| 13900041 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900028 | Too many links |
+| 13900030 | File name too number |
+| 13900033 | Too many symbolic links encountered |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let res = fileIo.mkdtempSync(pathDir + "/XXXXXX");
+```

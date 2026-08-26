@@ -24,6 +24,6 @@ Obtains attributes of the element.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | attributes of the element in json string. |

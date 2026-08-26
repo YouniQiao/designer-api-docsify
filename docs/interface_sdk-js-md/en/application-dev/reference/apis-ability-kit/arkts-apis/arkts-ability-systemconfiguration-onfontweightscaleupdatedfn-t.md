@@ -16,6 +16,6 @@ Defines an OnFontWeightScaleUpdatedFn function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [fontWeightScale](arkts-ability-app-ability-configuration-configuration-i.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fontWeightScale | number | Yes | Indicates the system's font weight |

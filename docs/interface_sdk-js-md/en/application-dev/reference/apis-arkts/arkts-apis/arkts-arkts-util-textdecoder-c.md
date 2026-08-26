@@ -9,7 +9,8 @@ Provides APIs to decode byte arrays into strings. It supports multiple formats, 
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## constructor
@@ -25,6 +26,35 @@ A constructor used to create a **TextDecoder** object.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// Output: retStr = utf-8
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let base64 = new  util.Base64();
+```
 
 ## constructor
 
@@ -44,10 +74,16 @@ A constructor used to create a **TextDecoder** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [encoding](#encoding) | string | No |
-| options | { fatal?: boolean; ignoreBOM?: boolean } | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encoding | string | No | Encoding format. The default format is **'utf-8'**. |
+| options | { fatal?: boolean; ignoreBOM?: boolean } | No | Decoding-related options, which include **fatal** and **ignoreBOM**. |
+
+**Examples**
+
+```TypeScript
+let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
+```
 
 ## create
 
@@ -65,16 +101,29 @@ Creates a **TextDecoder** object. It provides the same function as the deprecate
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [encoding](#encoding) | string | No |
-| options | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encoding | string | No | Encoding format. The default format is **'utf-8'**.<br>**Since:** 11 |
+| options | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | No | Decoding-related options, which include **fatal** and **ignoreBOM**.<br>**Since:** 11 |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [TextDecoder](arkts-arkts-util-textdecoder-c.md) |
+| Type | Description |
+| --- | --- |
+| [TextDecoder](arkts-arkts-util-textdecoder-c.md) | TextDecoder** object created. |
+
+**Examples**
+
+```TypeScript
+let textDecoderOptions: util.TextDecoderOptions = {
+  fatal: false,
+  ignoreBOM : true
+}
+let textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// Output: retStr = utf-8
+```
 
 ## decode
 
@@ -94,16 +143,33 @@ Decodes the input content into a string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| input | Uint8Array | Yes |
-| options | { stream?: false } | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| input | Uint8Array | Yes | Uint8Array object to decode. |
+| options | { stream?: false } | No | Decoding-related options. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String obtained. |
+
+**Examples**
+
+```TypeScript
+let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
+let uint8 = new Uint8Array(6);
+uint8[0] = 0xEF;
+uint8[1] = 0xBB;
+uint8[2] = 0xBF;
+uint8[3] = 0x61;
+uint8[4] = 0x62;
+uint8[5] = 0x63;
+console.info("input num:");
+let retStr = textDecoder.decode(uint8, {stream: false});
+console.info("retStr = " + retStr);
+// Output: retStr = abc
+```
 
 ## decodeToString
 
@@ -121,16 +187,33 @@ Decodes the input content into a string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| input | Uint8Array | Yes |
-| options | [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| input | Uint8Array | Yes | Uint8Array object to decode. |
+| options | [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | No | Decoding-related options. The default value is **undefined**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String obtained. |
+
+**Examples**
+
+```TypeScript
+let textDecoderOptions: util.TextDecoderOptions = {
+  fatal: false,
+  ignoreBOM : true
+}
+let decodeToStringOptions: util.DecodeToStringOptions = {
+  stream: false
+}
+let textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
+let uint8 = new Uint8Array([0xEF, 0xBB, 0xBF, 0x61, 0x62, 0x63]);
+let retStr = textDecoder.decodeToString(uint8, decodeToStringOptions);
+console.info("retStr = " + retStr);
+// Output: retStr = abc
+```
 
 ## decodeWithStream
 
@@ -152,16 +235,40 @@ Decodes the input content into a string. If **input** is an empty array, **undef
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| input | Uint8Array | Yes |
-| options | [DecodeWithStreamOptions](arkts-arkts-util-decodewithstreamoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| input | Uint8Array | Yes | Uint8Array object to decode. |
+| options | [DecodeWithStreamOptions](arkts-arkts-util-decodewithstreamoptions-i.md) | No | Decoding-related options.<br>**Since:** 11 |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String obtained. |
+
+**Examples**
+
+```TypeScript
+let textDecoderOptions: util.TextDecoderOptions = {
+  fatal: false,
+  ignoreBOM : true
+}
+let decodeWithStreamOptions: util.DecodeWithStreamOptions = {
+  stream: false
+}
+let textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
+let uint8 = new Uint8Array(6);
+uint8[0] = 0xEF;
+uint8[1] = 0xBB;
+uint8[2] = 0xBF;
+uint8[3] = 0x61;
+uint8[4] = 0x62;
+uint8[5] = 0x63;
+console.info("input num:");
+let retStr = textDecoder.decodeWithStream(uint8, decodeWithStreamOptions);
+console.info("retStr = " + retStr);
+// Output: retStr = abc
+```
 
 ## encoding
 

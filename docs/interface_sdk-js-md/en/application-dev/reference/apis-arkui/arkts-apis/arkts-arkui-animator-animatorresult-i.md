@@ -9,7 +9,7 @@ Defines the animator result.
 ## Modules to Import
 
 ```TypeScript
-import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from 'kits/@kit.ArkUI';
+import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -26,6 +26,14 @@ Cancels the animation, triggering the [onCancel](../../../reference/apis-arkui/j
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+animator.cancel();
+```
+
 ## finish
 
 ```TypeScript
@@ -39,6 +47,14 @@ Ends the animation, triggering the [onFinish](../../../reference/apis-arkui/js-a
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+animator.finish();
+```
 
 ## oncancel
 
@@ -128,9 +144,9 @@ Called when a frame is received.Note: This API is supported since API version 6 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| progress | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| progress | number | Yes |  |
 
 ## onFrame
 
@@ -151,9 +167,9 @@ Called when a frame is received.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| progress | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| progress | number | Yes |  |
 
 ## onrepeat
 
@@ -203,6 +219,14 @@ Pauses this animation.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+animator.pause();
+```
+
 ## play
 
 ```TypeScript
@@ -216,6 +240,14 @@ Plays this animation. The animation retains the previous playback state. For exa
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+animator.play();
+```
 
 ## reset
 
@@ -233,16 +265,55 @@ Resets the animation parameters of this animator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The specified page is not found or the object property list is not obtained. |
+
+**Examples**
+
+```TypeScript
+import { AnimatorResult } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator({
+      duration: 1500,
+      easing: "friction",
+      delay: 0,
+      fill: "forwards",
+      direction: "normal",
+      iterations: 3,
+      begin: 200.0,
+      end: 400.0
+    })
+    this.animatorResult.reset({
+      duration: 1500,
+      easing: "friction",
+      delay: 0,
+      fill: "forwards",
+      direction: "normal",
+      iterations: 5,
+      begin: 200.0,
+      end: 400.0
+    });
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## reset
 
@@ -262,16 +333,41 @@ Resets the animation parameters of this animator. Compared with [reset](#reset),
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [100001](../errorcode-internal.md#100001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The specified page is not found or the object property list is not obtained. |
+
+**Examples**
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+import { Animator as animator, AnimatorResult, AnimatorOptions, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+let options: AnimatorOptions = {
+  duration: 1500,
+  easing: 'ease',
+  delay: 0,
+  fill: "forwards",
+  direction: "normal",
+  iterations: 1,
+  begin: 100,
+  end: 200
+};
+let optionsNew: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200)
+  .duration(2000)
+  .iterations(3)
+  .delay(1000);
+let animatorResult: AnimatorResult = animator.create(options);
+animatorResult.reset(optionsNew);
+```
 
 ## reverse
 
@@ -286,6 +382,14 @@ Plays this animation in reverse order. This API does not take effect when the in
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+animator.reverse();
+```
 
 ## setExpectedFrameRateRange
 
@@ -305,9 +409,45 @@ Sets the expected frame rate range.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes | Expected frame rate range. |
+
+**Examples**
+
+```TypeScript
+import { AnimatorResult } from '@kit.ArkUI';
+
+let expectedFrameRate: ExpectedFrameRateRange = {
+  min: 0,
+  max: 120,
+  expected: 30
+}
+
+@Entry
+@Component
+struct AnimatorTest {
+  private backAnimator: AnimatorResult | undefined = undefined;
+
+  create() {
+    this.backAnimator = this.getUIContext().createAnimator({
+      duration: 2000,
+      easing: "ease",
+      delay: 0,
+      fill: "forwards",
+      direction: "normal",
+      iterations: 1,
+      begin: 100, // Start point of the animation interpolation.
+      end: 200 // End point of the animation interpolation.
+    })
+    this.backAnimator.setExpectedFrameRateRange(expectedFrameRate);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## update
 
@@ -327,6 +467,14 @@ Updates this animator.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
+
+**Examples**
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+animator.update(options);
+```

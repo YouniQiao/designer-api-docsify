@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import intl from '@kit.LocalizationKit';
 ```
 
 ## compare
@@ -28,16 +28,27 @@ compare(first: string, second: string): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| first | string | 是 |
-| second | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| first | string | 是 | 进行比较的第一个字符串。 |
+| second | string | 是 | 进行比较的第二个字符串。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 比较结果。 |
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用en-GB区域ID创建Collator对象
+let collator = new intl.Collator('en-GB');
+// 比较first和second的先后顺序
+let compareResult = collator.compare('first', 'second'); // compareResult = -1
+```
 
 ## constructor
 
@@ -52,6 +63,52 @@ constructor()
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 默认构造函数使用系统当前区域ID创建
+let locale = new intl.Locale();
+// 返回系统当前区域ID
+let localeID = locale.toString();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统当前区域ID创建DateTimeFormat对象
+let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统当前区域ID创建NumberFormat对象
+let formatter: intl.NumberFormat = new intl.NumberFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建Collator对象
+let collator = new intl.Collator();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建PluralRules对象
+let pluralRules = new intl.PluralRules();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建RelativeTimeFormat对象
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
+```
 
 ## constructor
 
@@ -69,10 +126,19 @@ constructor(locale: string | Array<string>, options?: CollatorOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string \| Array & lt;string & gt; | 是 |
-| options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string \| Array & lt;string & gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | 否 | 创建排序对象时可设置的配置项。 默认值：所有属性都取默认值时的配置项。 |
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用zh-CN区域ID创建Collator对象，localeMatcher设置为lookup，usage设置为sort
+let collator = new intl.Collator('zh-CN', {localeMatcher: 'lookup', usage: 'sort'});
+```
 
 ## resolvedOptions
 
@@ -90,6 +156,18 @@ resolvedOptions(): CollatorOptions
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | 返回排序对象的属性。 |
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+let collator = new intl.Collator('zh-Hans', { usage: 'sort', ignorePunctuation: true });
+// 获取Collator对象的配置项
+let options = collator.resolvedOptions();
+let usage = options.usage; // usage = 'sort'
+let ignorePunctuation = options.ignorePunctuation; // ignorePunctuation = true
+```

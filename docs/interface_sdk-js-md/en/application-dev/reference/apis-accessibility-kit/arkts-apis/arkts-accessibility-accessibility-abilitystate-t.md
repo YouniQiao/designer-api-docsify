@@ -14,8 +14,8 @@ Enumerates the states of an accessibility application.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'enable' |
-| 'disable' |
-| 'install' |
+| Type | Description |
+| --- | --- |
+| 'enable' | The accessibility application is enabled. |
+| 'disable' | The accessibility app is disabled. |
+| 'install' | The accessibility app is installed. |

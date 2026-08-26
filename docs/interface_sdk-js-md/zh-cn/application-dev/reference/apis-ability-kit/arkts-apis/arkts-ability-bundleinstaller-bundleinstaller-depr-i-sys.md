@@ -34,11 +34,38 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleFilePaths | Array & lt;string & gt; | 是 |
-| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleFilePaths | Array & lt;string & gt; | 是 | 指示存储HAP的沙箱路径。 |
+| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 | 指定安装所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，程序 启动作为入参的回调函数，返回安装状态信息。 |
+
+**示例**
+
+```TypeScript
+import bundleInstall from '@ohos.bundle.installer';
+import { BusinessError } from '@ohos.base';
+
+let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/files/'];
+let installParam: bundleInstall.InstallParam = {
+  userId: 100,
+  isKeepData: false,
+  installFlag: 1,
+};
+
+bundleInstall.getBundleInstaller().then(installer => {
+  installer.install(hapFilePaths, installParam, err => {
+    if (err) {
+      console.error('install failed:' + JSON.stringify(err));
+    } else {
+      console.info('install successfully.');
+    }
+  });
+}).catch((error: BusinessError)=> {
+  let message = (error as BusinessError).message;
+  console.error('getBundleInstaller failed. Cause: ' + message);
+});
+```
 
 ## recover
 
@@ -62,11 +89,38 @@ recover(bundleName: string, param: InstallParam, callback: AsyncCallback<Install
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 应用Bundle名称。 |
+| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 | 指定应用恢复所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，程序 启动作为入参的回调函数，返回安装状态信息。 |
+
+**示例**
+
+```TypeScript
+import bundleInstall from '@ohos.bundle.installer';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = 'com.example.myapplication';
+let installParam: bundleInstall.InstallParam = {
+  userId: 100,
+  isKeepData: false,
+  installFlag: 1,
+};
+
+bundleInstall.getBundleInstaller().then(installer => {
+  installer.recover(bundleName, installParam, err => {
+    if (err) {
+      console.error('recover failed:' + JSON.stringify(err));
+    } else {
+      console.info('recover successfully.');
+    }
+  });
+}).catch((error: BusinessError) => {
+  let message = (error as BusinessError).message;
+  console.error('getBundleInstaller failed. Cause: ' + message);
+});
+```
 
 ## uninstall
 
@@ -90,8 +144,35 @@ uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<Insta
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 应用Bundle名称。 |
+| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 | 指定卸载所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，程序 启动作为入参的回调函数，返回安装状态信息。 |
+
+**示例**
+
+```TypeScript
+import bundleInstall from '@ohos.bundle.installer';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = 'com.example.myapplication';
+let installParam: bundleInstall.InstallParam = {
+  userId: 100,
+  isKeepData: false,
+  installFlag: 1,
+};
+
+bundleInstall.getBundleInstaller().then(installer => {
+  installer.uninstall(bundleName, installParam, err => {
+    if (err) {
+      console.error('uninstall failed:' + JSON.stringify(err));
+    } else {
+      console.info('uninstall successfully.');
+    }
+  });
+}).catch((error: BusinessError) => {
+  let message = (error as BusinessError).message;
+  console.error('getBundleInstaller failed. Cause: ' + message);
+});
+```

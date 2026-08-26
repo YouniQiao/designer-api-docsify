@@ -9,26 +9,25 @@
 ## 导入模块
 
 ```TypeScript
-import { cameraPicker } from 'kits/@kit.CameraKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [pick(相机选择器)](arkts-camera-camerapicker-pick-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [pick(相机选择器)](arkts-camera-camerapicker-pick-f.md) | 拉起相机选择器，根据媒体类型进入相应的模式。使用Promise异步回调。 |
 
 ### 类
 
-| 名称 |
-| --- |
-| [PickerProfile(相机选择器)](arkts-camera-camerapicker-pickerprofile-c.md) |
-| [PickerResult(相机选择器)](arkts-camera-camerapicker-pickerresult-c.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [PickerProfile(相机选择器)](arkts-camera-camerapicker-pickerprofile-c.md) | 相机选择器的配置信息。 |
+| [PickerResult(相机选择器)](arkts-camera-camerapicker-pickerresult-c.md) | 相机选择器的处理结果。 |
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [PickerMediaType(相机选择器)](arkts-camera-camerapicker-pickermediatype-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [PickerMediaType(相机选择器)](arkts-camera-camerapicker-pickermediatype-e.md) | 枚举，相机选择器的媒体类型。 |

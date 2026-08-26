@@ -11,7 +11,6 @@ Obtains the list of default downloadable profiles.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## downloadableProfiles

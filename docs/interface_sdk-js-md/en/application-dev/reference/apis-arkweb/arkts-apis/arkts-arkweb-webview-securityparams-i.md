@@ -9,7 +9,6 @@ Security feature option configuration. This class provides a set of boolean swit
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## disableJITCompilation

@@ -9,7 +9,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## constructor
@@ -25,6 +26,35 @@ constructor()
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**示例**
+
+```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// 输出结果：retStr = utf-8
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let base64 = new  util.Base64();
+```
 
 ## isAnyArrayBuffer
 
@@ -42,15 +72,24 @@ isAnyArrayBuffer(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 ArrayBuffer 或 SharedArrayBuffer 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isAnyArrayBuffer(new ArrayBuffer(0));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isArgumentsObject
 
@@ -68,15 +107,27 @@ isArgumentsObject(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 **arguments** 对象，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+function foo() {
+    let result = type.isArgumentsObject(arguments);
+    console.info("result = " + result);
+}
+let f = foo();
+// 输出结果：result = true
+```
 
 ## isArrayBuffer
 
@@ -94,15 +145,24 @@ isArrayBuffer(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 ArrayBuffer 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isArrayBuffer(new ArrayBuffer(0));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isArrayBufferView
 
@@ -120,15 +180,24 @@ isArrayBufferView(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 ArrayBufferView 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isArrayBufferView(new Int8Array([]));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isAsyncFunction
 
@@ -138,8 +207,10 @@ isAsyncFunction(value: Object): boolean
 
 判断入参是否为异步函数。
 
-> **说明：**&gt;
-> 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的constructor.name属性与'AsyncGeneratorFunction'做判等的方式替代。&gt;
+> **说明：**
+> 
+> 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的constructor.name属性与'AsyncGeneratorFunction'做判等的方式替代。
+> 
 > 该接口无法对Sendable class中的async成员函数进行有效判断，无替代方案。
 
 **起始版本：** 8
@@ -150,15 +221,54 @@ isAsyncFunction(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为异步函数，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isAsyncFunction(async () => {});
+console.info("result = " + result);
+// 输出结果：result = true
+```
+
+该接口无法对Sendable class中的async成员函数进行有效判断，无替代方案。
+
+```TypeScript
+// /entry/src/main/ets/pages/test.ts
+export async function* asyncGeneratorFunc() {}
+```
+
+```TypeScript
+import { asyncGeneratorFunc } from './test'
+
+@Sendable
+class SendableClass {
+  async asyncFunction() {}
+}
+
+let type = new util.types();
+let result1 = type.isAsyncFunction(asyncGeneratorFunc);
+console.info("result = " + result1);
+// 输出结果：result = false
+
+console.info("asyncGeneratorFunc.constructor.name === AsyncGeneratorFunction : " +
+  (asyncGeneratorFunc.constructor.name === 'AsyncGeneratorFunction'));
+// 输出结果：asyncGeneratorFunc.constructor.name === AsyncGeneratorFunction : true
+
+const instance = new SendableClass();
+let result2 = type.isAsyncFunction(instance.asyncFunction);
+console.info("result = " + result2);
+// 输出结果：result = false
+```
 
 ## isBigInt64Array
 
@@ -176,15 +286,24 @@ isBigInt64Array(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 BigInt64Array 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isBigInt64Array(new BigInt64Array([]));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isBigUint64Array
 
@@ -202,15 +321,24 @@ isBigUint64Array(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 BigUint64Array 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isBigUint64Array(new BigUint64Array([]));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isBooleanObject
 
@@ -220,7 +348,8 @@ isBooleanObject(value: Object): boolean
 
 判断入参是否为 Boolean 类型。
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
@@ -233,15 +362,24 @@ isBooleanObject(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Boolean 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isBooleanObject(new Boolean(true));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isBoxedPrimitive
 
@@ -251,7 +389,8 @@ isBoxedPrimitive(value: Object): boolean
 
 判断入参是否为 Boolean、Number、String 或 Symbol 类型。
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
@@ -264,15 +403,24 @@ isBoxedPrimitive(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Boolean、Number、String 或 Symbol 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isBoxedPrimitive(new Boolean(false));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isDataView
 
@@ -290,15 +438,25 @@ isDataView(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 DataView 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+const ab = new ArrayBuffer(20);
+let result = type.isDataView(new DataView(ab));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isDate
 
@@ -316,15 +474,24 @@ isDate(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Date 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isDate(new Date());
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isExternal
 
@@ -342,15 +509,62 @@ isExternal(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 native external 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+// /entry/src/main/cpp/napi_init.cpp
+#include "napi/native_api.h"
+#include <js_native_api.h>
+#include <stdlib.h>
+
+napi_value result;
+static napi_value Testexternal(napi_env env, napi_callback_info info) {
+    int* raw = (int*) malloc(1024);
+    napi_status status = napi_create_external(env, (void*) raw, NULL, NULL, &result);
+    if (status != napi_ok) {
+        napi_throw_error(env, NULL, "create external failed");
+        return NULL;
+    }
+    return result;
+}
+
+EXTERN_C_START
+static napi_value Init(napi_env env, napi_value exports)
+{
+    napi_property_descriptor desc[] = {
+        {"testexternal", nullptr, Testexternal, nullptr, nullptr, nullptr, napi_default, nullptr},
+    };
+    napi_define_properties(env, exports, sizeof(desc) / sizeof(desc[0]), desc);
+    return exports;
+}
+EXTERN_C_END
+// 此处已省略模块注册的代码, 你可能需要自行注册Testexternal方法
+// ...
+```
+
+```TypeScript
+import testNapi from 'libentry.so';
+
+let type = new util.types();
+const data = testNapi.testexternal();
+let result = type.isExternal(data);
+
+let result01 = type.isExternal(true);
+console.info("result = " + result);
+console.info("result01 = " + result01);
+// 输出结果：result = true
+// 输出结果：result01 = false
+```
 
 ## isFloat32Array
 
@@ -368,15 +582,24 @@ isFloat32Array(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Float32Array 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isFloat32Array(new Float32Array());
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isFloat64Array
 
@@ -394,15 +617,24 @@ isFloat64Array(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Float64Array 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isFloat64Array(new Float64Array());
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isGeneratorFunction
 
@@ -412,7 +644,8 @@ isGeneratorFunction(value: Object): boolean
 
 判断入参是否为 generator 函数。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的constructor.name属性与'AsyncGeneratorFunction'做判等的方式替代。
 
 **起始版本：** 8
@@ -423,15 +656,51 @@ isGeneratorFunction(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 generator 函数，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+// /entry/src/main/ets/pages/test.ts
+export function* foo() {}
+```
+
+```TypeScript
+import { foo } from './test'
+
+let type = new util.types();
+let result = type.isGeneratorFunction(foo);
+console.info("result = " + result);
+// 输出结果：result = true
+```
+
+该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的属性与做判等的方式替代。
+
+```TypeScript
+// /entry/src/main/ets/pages/test.ts
+export async function* asyncGeneratorFunc() {}
+```
+
+```TypeScript
+import { asyncGeneratorFunc } from './test'
+
+let type = new util.types();
+let result = type.isGeneratorFunction(asyncGeneratorFunc);
+console.info("result = " + result);
+// 输出结果：result = false
+
+console.info("asyncGeneratorFunc.constructor.name === AsyncGeneratorFunction : " +
+  (asyncGeneratorFunc.constructor.name === 'AsyncGeneratorFunction'));
+// 输出结果：asyncGeneratorFunc.constructor.name === AsyncGeneratorFunction : true
+```
 
 ## isGeneratorObject
 
@@ -449,15 +718,32 @@ isGeneratorObject(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 generator 对象，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+// /entry/src/main/ets/pages/test.ts
+function* foo() {}
+export const generator = foo();
+```
+
+```TypeScript
+import { generator } from './test'
+
+let type = new util.types();
+let result = type.isGeneratorObject(generator);
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isInt16Array
 
@@ -475,15 +761,24 @@ isInt16Array(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Int16Array 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isInt16Array(new Int16Array([]));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isInt32Array
 
@@ -501,15 +796,24 @@ isInt32Array(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Int32Array 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isInt32Array(new Int32Array([]));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isInt8Array
 
@@ -527,15 +831,24 @@ isInt8Array(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Int8Array 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isInt8Array(new Int8Array([]));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isMap
 
@@ -553,15 +866,24 @@ isMap(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Map 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isMap(new Map());
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isMapIterator
 
@@ -579,15 +901,25 @@ isMapIterator(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 MapIterator 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+const map : Map<number,number> = new Map();
+let result = type.isMapIterator(map.keys());
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isModuleNamespaceObject
 
@@ -605,15 +937,33 @@ isModuleNamespaceObject(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为模块命名空间对象，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+// /entry/src/main/ets/pages/test.ts
+export function func() {
+  console.info("hello world");
+}
+```
+
+```TypeScript
+import * as nameSpace from './test';
+
+let type = new util.types();
+let result = type.isModuleNamespaceObject(nameSpace);
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isNativeError
 
@@ -631,15 +981,24 @@ isNativeError(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Error 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isNativeError(new TypeError());
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isNumberObject
 
@@ -649,7 +1008,8 @@ isNumberObject(value: Object): boolean
 
 判断入参是否为 Number 类型。
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
@@ -662,15 +1022,24 @@ isNumberObject(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Number 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isNumberObject(new Number(0));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isPromise
 
@@ -688,15 +1057,24 @@ isPromise(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 promise，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isPromise(Promise.resolve(1));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isProxy
 
@@ -714,15 +1092,28 @@ isProxy(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 proxy，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+class Target{
+}
+let type = new util.types();
+const target : Target = {};
+const proxy = new Proxy(target, target);
+let result = type.isProxy(proxy);
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isRegExp
 
@@ -740,15 +1131,24 @@ isRegExp(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 RegExp 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isRegExp(new RegExp('abc'));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isSet
 
@@ -766,15 +1166,25 @@ isSet(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Set 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let set : Set<number> = new Set();
+let result = type.isSet(set);
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isSetIterator
 
@@ -792,15 +1202,25 @@ isSetIterator(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 SetIterator 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+const set : Set<number> = new Set();
+let result = type.isSetIterator(set.keys());
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isSharedArrayBuffer
 
@@ -818,15 +1238,24 @@ isSharedArrayBuffer(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 SharedArrayBuffer 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isSharedArrayBuffer(new SharedArrayBuffer(0));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isStringObject
 
@@ -836,7 +1265,8 @@ isStringObject(value: Object): boolean
 
 判断入参是否为字符串对象。
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
@@ -849,15 +1279,24 @@ isStringObject(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为字符串对象，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isStringObject(new String('foo'));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isSymbolObject
 
@@ -867,7 +1306,8 @@ isSymbolObject(value: Object): boolean
 
 判断入参是否为 symbol 对象。
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
@@ -880,15 +1320,31 @@ isSymbolObject(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 symbol 对象，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+// /entry/src/main/ets/pages/test.ts
+export const symbols = Symbol('foo');
+```
+
+```TypeScript
+import { symbols } from './test'
+
+let type = new util.types();
+let result = type.isSymbolObject(Object(symbols));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isTypedArray
 
@@ -906,15 +1362,24 @@ isTypedArray(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 TypedArray 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isTypedArray(new Float64Array([]));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isUint16Array
 
@@ -932,15 +1397,24 @@ isUint16Array(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Uint16Array 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isUint16Array(new Uint16Array([]));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isUint32Array
 
@@ -958,15 +1432,24 @@ isUint32Array(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Uint32Array 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isUint32Array(new Uint32Array([]));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isUint8Array
 
@@ -984,15 +1467,24 @@ isUint8Array(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Uint8Array 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isUint8Array(new Uint8Array([]));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isUint8ClampedArray
 
@@ -1010,15 +1502,24 @@ isUint8ClampedArray(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 Uint8ClampedArray 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isUint8ClampedArray(new Uint8ClampedArray([]));
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isWeakMap
 
@@ -1036,15 +1537,25 @@ isWeakMap(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 WeakMap 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let value : WeakMap<object, number> = new WeakMap();
+let result = type.isWeakMap(value);
+console.info("result = " + result);
+// 输出结果：result = true
+```
 
 ## isWeakSet
 
@@ -1062,12 +1573,21 @@ isWeakSet(value: Object): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Object | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Object | 是 | 要检查的对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果入参为 WeakSet 类型，则返回 **true**；否则返回 **false**。 |
+
+**示例**
+
+```TypeScript
+let type = new util.types();
+let result = type.isWeakSet(new WeakSet());
+console.info("result = " + result);
+// 输出结果：result = true
+```

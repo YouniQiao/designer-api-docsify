@@ -9,7 +9,7 @@ Defines the predicates for an RDB store. This class determines whether the condi
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import relationalStore from '@kit.ArkData';
 ```
 
 ## and
@@ -26,9 +26,19 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+// Find the records in the EMPLOYEE table where the NAME column is Lisa and the SALARY column is 200.5.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa")
+  .and()
+  .equalTo("SALARY", 200.5);
+```
 
 ## beginsWith
 
@@ -44,22 +54,30 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records that start with "Li" in the NAME column, for example, Lisa.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.beginsWith("NAME", "Li");
+```
 
 ## beginWrap
 
@@ -75,9 +93,21 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa")
+  .beginWrap()
+  .equalTo("AGE", 18)
+  .or()
+  .equalTo("SALARY", 200.5)
+  .endWrap();
+```
 
 ## between
 
@@ -93,23 +123,31 @@ Creates an **RdbPredicates** object to search for the records that are within th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
-| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value of the range to set. |
+| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find the records that are greater than or equal to 10 and less than or equal to 50 in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.between("AGE", 10, 50);
+```
 
 ## constructor
 
@@ -125,15 +163,21 @@ Defines a constructor used to create an **RdbPredicates** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Database table name. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+```
 
 ## contains
 
@@ -149,22 +193,30 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records that contain the string 'os' in the NAME column, for example, Rose.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.contains("NAME", "os");
+```
 
 ## distinct
 
@@ -180,9 +232,16 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object that can filter out duplicate records. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Rose").distinct(); // Deduplicate result sets whose NAME is Rose.
+```
 
 ## endsWith
 
@@ -198,22 +257,30 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records that end with "se" in the NAME column, for example, Rose.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.endsWith("NAME", "se");
+```
 
 ## endWrap
 
@@ -229,9 +296,21 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa")
+  .beginWrap()
+  .equalTo("AGE", 18)
+  .or()
+  .equalTo("SALARY", 200.5)
+  .endWrap();
+```
 
 ## equalTo
 
@@ -247,22 +326,30 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records in the NAME column where the value is Lisa.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa");
+```
 
 ## glob
 
@@ -278,22 +365,30 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match.Wildcards are supported. An asterisk (*) indicates zero, one, or multiple digits or characters, and a question mark (?) indicates a single digit or character. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find the strings that match "?h*g" in the NAME column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.glob("NAME", "?h*g");
+```
 
 ## greaterThan
 
@@ -309,22 +404,30 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records that are greater than 18 in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.greaterThan("AGE", 18);
+```
 
 ## greaterThanOrEqualTo
 
@@ -340,22 +443,30 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records that are greater than or equal to 18 in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.greaterThanOrEqualTo("AGE", 18);
+```
 
 ## groupBy
 
@@ -371,21 +482,28 @@ Creates a **RdbPredicates** object to group the query results based on the speci
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fields | Array & lt;string & gt; | Yes | Names of columns to group. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Predicates that group rows with the same value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.groupBy(["AGE", "NAME"]);
+```
 
 ## having
 
@@ -401,22 +519,22 @@ Filters for group data that meets the conditions.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| conditions | string | Yes |
-| [args](arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;ValueType & gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| conditions | string | Yes | Condition used to filter the data obtained using [groupBy](#groupby). This parameter cannot be empty and must be used with [groupBy](#groupby). |
+| args | Array & lt;ValueType & gt; | No | Parameters used in **conditions**, which replace the placeholder in the conditional statement. If this parameter is not specified, the default value is an empty array. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range;  2. Missing GROUP BY clause. |
 
 ## in
 
@@ -426,7 +544,8 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records that are in the given range in the specified column.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The **value** array cannot be empty; otherwise, this condition becomes invalid. As a result, the operation (
 > such as full query, update, or deletion) is performed on all data. Before calling this API, check whether the
 > **value** array is empty to avoid misoperations.
@@ -437,22 +556,30 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | Array & lt;ValueType & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | Array & lt;ValueType & gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Match the values in the "AGE" column of the data table that are within [18, 20].
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.in("AGE", [18, 20]);
+```
 
 ## inAllDevices
 
@@ -468,9 +595,16 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.inAllDevices();
+```
 
 ## inDevices
 
@@ -480,7 +614,8 @@ inDevices(devices: Array<string>): RdbPredicates
 
 Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync]
 > [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync).
 > When calling **sync()**, you need to call **inDevices** to specify the devices. If **inDevices** is not used,
@@ -492,21 +627,46 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| devices | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| devices | Array & lt;string & gt; | Yes | IDs of the remote devices to connect. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dmInstance: distributedDeviceManager.DeviceManager;
+let deviceIds: Array<string> = [];
+
+try {
+  dmInstance = distributedDeviceManager.createDeviceManager("com.example.appdatamgrverify");
+  let devices: Array<distributedDeviceManager.DeviceBasicInfo> = dmInstance.getAvailableDeviceListSync();
+  for (let i = 0; i < devices.length; i++) {
+    deviceIds[i] = devices[i].networkId!;
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error("createDeviceManager errCode:" + code + ",errMessage:" + message);
+}
+
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.inDevices(deviceIds);
+```
 
 ## indexedBy
 
@@ -522,21 +682,28 @@ Creates a **RdbPredicates** object to specify the index column.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Name of the index column. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.indexedBy("SALARY");
+```
 
 ## isNotNull
 
@@ -552,21 +719,28 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.isNotNull("NAME");
+```
 
 ## isNull
 
@@ -582,21 +756,28 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.isNull("NAME");
+```
 
 ## lessThan
 
@@ -612,22 +793,30 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records that are less than 20 in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.lessThan("AGE", 20);
+```
 
 ## lessThanOrEqualTo
 
@@ -643,22 +832,30 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records that are less than or equal to 20 in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.lessThanOrEqualTo("AGE", 20);
+```
 
 ## like
 
@@ -674,22 +871,30 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Condition for fuzzy match. Generally, this parameter is used together with a wildcard. A percent sign (%) represents any character of any length, and an underscore (_) represents a single character. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records that are similar to "os" in the NAME column, for example, Rose.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.like("NAME", "%os%");
+```
 
 ## limitAs
 
@@ -705,21 +910,28 @@ Creates a **RdbPredicates** object to limit the number of records.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Maximum number of data records. The value should be a positive integer. If a value less than or equal to **0** is specified, the number of records is not limited. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Predicates that specify the maximum number of records. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Rose").limitAs(3);
+```
 
 ## notBetween
 
@@ -735,23 +947,31 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
-| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value of the range to set. |
+| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find the records that are less than 10 or greater than 50 in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.notBetween("AGE", 10, 50);
+```
 
 ## notContains
 
@@ -767,22 +987,30 @@ Creates an **RdbPredicates** object to search for the records that do not contai
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find the records that do not contain the string "os" in the NAME column, for example, Lisa.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.notContains("NAME", "os");
+```
 
 ## notEqualTo
 
@@ -798,22 +1026,30 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records in the NAME column where the value is not Lisa.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.notEqualTo("NAME", "Lisa");
+```
 
 ## notIn
 
@@ -829,22 +1065,30 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | Array & lt;ValueType & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | Array & lt;ValueType & gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find the records that are not within [Lisa, Rose] in the NAME column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.notIn("NAME", ["Lisa", "Rose"]);
+```
 
 ## notLike
 
@@ -860,22 +1104,30 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Condition for fuzzy match. Generally, this parameter is used together with a wildcard. A percent sign (%) represents any character of any length, and an underscore (_) represents a single character. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records that are not similar to "os" in the NAME column, for example, Lisa.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.notLike("NAME", "%os%");
+```
 
 ## offsetAs
 
@@ -891,21 +1143,28 @@ Creates an **RdbPredicates** object to set the start position of the query resul
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rowOffset | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rowOffset | number | Yes | Start position of the query result. By default, the start position is the beginning of the result set. If **rowOffset** is a negative number, the start position is the beginning of the result set. If **rowOffset** exceeds the end of the result set, the query result is empty. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Predicates that specify the start position of the returned result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Rose").limitAs(-1).offsetAs(3);
+```
 
 ## or
 
@@ -921,9 +1180,19 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+// Find all records in the NAME column where the value is Lisa or Rose.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa")
+  .or()
+  .equalTo("NAME", "Rose");
+```
 
 ## orderByAsc
 
@@ -939,21 +1208,28 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.orderByAsc("NAME");
+```
 
 ## orderByDesc
 
@@ -969,18 +1245,25 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| Type | Description |
+| --- | --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.orderByDesc("AGE");
+```

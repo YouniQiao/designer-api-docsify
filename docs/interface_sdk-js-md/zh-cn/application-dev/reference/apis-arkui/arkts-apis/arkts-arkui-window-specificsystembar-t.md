@@ -12,8 +12,8 @@ type SpecificSystemBar = 'status' | 'navigation'| 'navigationIndicator'
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-| 类型 |
-| --- |
-| 'status' |
-| 'navigation' |
-| 'navigationIndicator' |
+| 类型 | 说明 |
+| --- | --- |
+| 'status' | Status bar. |
+| 'navigation' | <!--RP13--><!--RP13End-->Three-button navigation bar. |
+| 'navigationIndicator' | Bottom navigation bar.<!--RP12-->OpenHarmony devices do not support this capability.<!--RP12End--> |

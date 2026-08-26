@@ -13,7 +13,8 @@ Provides APIs for managing the **UserAuth** object.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## auth
@@ -41,18 +42,41 @@ Starts user authentication. This API uses a callback to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| challenge | Uint8Array | Yes |
-| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes |
-| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes |
-| callback | [IUserAuthCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| challenge | Uint8Array | Yes | Challenge value, which can be passed in Uint8Array([]) format. |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Authentication trust level. |
+| callback | [IUserAuthCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the result. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Uint8Array |
+| Type | Description |
+| --- | --- |
+| Uint8Array | Context ID, which is used as the input parameter of [cancelAuth]{ |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let challenge = new Uint8Array([]);
+auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
+  onResult: (result, extraInfo) => {
+    try {
+      console.info(`auth onResult result = ${result}`);
+      if (result == userAuth.ResultCode.SUCCESS) {
+        // Add the logic to be executed when the authentication is successful.
+      } else {
+        // Add the logic to be executed when the authentication fails.
+      }
+    } catch (error) {
+      console.error(`auth onResult failed. Code: ${error?.code}, message: ${error?.message}`);
+    }
+  }
+});
+```
 
 ## cancelAuth
 
@@ -74,15 +98,31 @@ Cancels the authentication based on the context ID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| contextID | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| contextID | Uint8Array | Yes | Context ID, which is obtained by [auth](#auth). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns **SUCCESS** if the cancellation is successful. Returns a [ResultCode]{ |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+// contextId can be obtained via auth(). In this example, it is defined here.
+let contextId = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7]);
+let auth = new userAuth.UserAuth();
+let cancelCode = auth.cancelAuth(contextId);
+if (cancelCode == userAuth.ResultCode.SUCCESS) {
+  console.info('cancel auth successfully.');
+} else {
+  console.error('cancel auth failed.');
+}
+```
 
 ## constructor
 
@@ -99,6 +139,14 @@ A constructor used to create a **UserAuth** instance.
 **Substitutes:** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+```
 
 ## getAvailableStatus
 
@@ -120,16 +168,30 @@ Checks whether the specified authentication capability is supported.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes |
-| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Authentication trust level. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Query result. If the authentication capability is supported, **SUCCESS** is returned. Otherwise, a [ResultCode]{ |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let checkCode = auth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1);
+if (checkCode == userAuth.ResultCode.SUCCESS) {
+  console.info('check auth support successfully.');
+} else {
+  console.error(`check auth support failed, code = ${checkCode}`);
+}
+```
 
 ## getVersion
 
@@ -149,6 +211,16 @@ Obtains the version of this authenticator.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Authenticator version obtained. |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let version = auth.getVersion();
+console.info(`auth version = ${version}`);
+```

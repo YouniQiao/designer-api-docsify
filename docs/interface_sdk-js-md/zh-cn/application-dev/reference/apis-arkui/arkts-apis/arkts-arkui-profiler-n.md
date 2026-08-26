@@ -11,6 +11,7 @@ inspector的性能分析（Profiler）工具。@namespace Profiler
 ## 导入模块
 
 ```TypeScript
+import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## 汇总
@@ -18,8 +19,8 @@ inspector的性能分析（Profiler）工具。@namespace Profiler
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 |
-| --- |
-| [registerVsyncCallback](arkts-arkui-profiler-registervsynccallback-f-sys.md) |
-| [unregisterVsyncCallback](arkts-arkui-profiler-unregistervsynccallback-f-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [registerVsyncCallback](arkts-arkui-profiler-registervsynccallback-f-sys.md) | 为profiler注册vsync回调。 |
+| [unregisterVsyncCallback](arkts-arkui-profiler-unregistervsynccallback-f-sys.md) | 注销vsync回调。 |
 <!--DelEnd-->

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { conversation } from 'kits/@kit.DistributedServiceKit';
+import conversation from '@kit.DistributedServiceKit';
 ```
 
 ## registerConversationListener
@@ -31,18 +31,38 @@ Registers a listener to receive data from trusted devices under the same account
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| abilityName | string | Yes |
-| dataCallback | [DataCallback](arkts-distributedservice-conversation-datacallback-t-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Name of the bundle that receives data. The value contains 1 to 127 bytes and must be the same as the bundle name of the app. If this requirement is not met, the listener cannot receive data correctly. If an invalid or empty value is passed, error code 401 is returned. |
+| abilityName | string | Yes | Name of the ability that receives data. The value contains 1 to 127 bytes and must be the same as the ability name of the app. If this requirement is not met, the listener cannot receive data correctly. If an invalid or empty value is passed, error code 401 is returned. |
+| dataCallback | [DataCallback](arkts-distributedservice-conversation-datacallback-t-sys.md) | Yes | Callback function used to receive data transferred across devices. If an invalid value is passed, error code 401 is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [2000001](../errorcode-conversation.md#2000001-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. The application does not have the required permission to access distributed data. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. The bundleName, abilityName or dataCallback is invalid or empty. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2000001](../errorcode-conversation.md#2000001-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { conversation } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName: string = 'com.example.demo';
+  let abilityName: string = 'EntryAbility';
+
+  conversation.registerConversationListener(bundleName, abilityName, (deviceId: string, msg: ArrayBuffer) => {
+    console.info(`received message, deviceId: ${deviceId}, msg length: ${msg.byteLength}`);
+  });
+  console.info(`registerConversationListener success`);
+} catch (err) {
+  const e: BusinessError = err as BusinessError;
+  console.error(`registerConversationListener errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```

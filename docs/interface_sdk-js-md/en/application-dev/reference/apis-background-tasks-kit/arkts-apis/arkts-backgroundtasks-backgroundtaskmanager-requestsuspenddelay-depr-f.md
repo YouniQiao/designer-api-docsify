@@ -23,13 +23,32 @@ Requests delayed suspension after the application switches to the background.The
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| reason | string | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| reason | string | Yes | Reason for delayed transition to the suspended state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Invoked when a delay is about to time out. Generally, this callback is used to notify the application 6 seconds before the delay times out. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) | Information about the suspension delay. |
+
+**Examples**
+
+```TypeScript
+import backgroundTaskManager from '@ohos.backgroundTaskManager';
+import { BusinessError } from '@ohos.base';
+
+// Set the reason for delayed suspension.
+let myReason = 'test requestSuspendDelay';
+// Request delayed suspension.
+let delayInfo = backgroundTaskManager.requestSuspendDelay(myReason, () => {
+    console.info("Request suspension delay will time out.");
+})
+// Print the delayed suspension information.
+let id = delayInfo.requestId;
+let time = delayInfo.actualDelayTime;
+console.info("The requestId is: " + id);
+console.info("The actualDelayTime is: " + time);
+```

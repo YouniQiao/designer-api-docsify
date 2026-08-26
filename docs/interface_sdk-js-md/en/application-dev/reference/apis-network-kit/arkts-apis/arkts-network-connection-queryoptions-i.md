@@ -9,7 +9,6 @@ Defines the type of the IP address to be queried.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## family

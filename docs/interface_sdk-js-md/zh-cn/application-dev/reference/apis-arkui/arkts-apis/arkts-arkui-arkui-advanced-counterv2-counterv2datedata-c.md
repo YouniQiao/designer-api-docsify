@@ -9,7 +9,7 @@ CounterV2DateData定义了日期通用属性和方法，包括年、月、日。
 ## 导入模块
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from 'kits/@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -30,11 +30,11 @@ CounterV2DateData的构造函数用于初始化日期对象。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [year](#year) | number | 是 |
-| [month](#month) | number | 是 |
-| [day](#day) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| year | number | 是 | 日期内联型的年份。取值范围：[1, 5000]。超出取值范围按默认值处理。 |
+| month | number | 是 | 日期内联型的月份。取值范围：[1, 12]。超出取值范围按默认值处理。 |
+| day | number | 是 | 日期内联型的日。取值范围：[1, 31]。必须为合法日期，如month为2月时，day传入30将视为异常值，按默认值处理。超出取值范围按默认值处理。 |
 
 ## toString
 
@@ -54,9 +54,9 @@ toString(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 格式为“YYYY-MM-DD”的日期字符串，例如“2024-01-15”。 |
 
 ## day
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
+import linkEnhance from '@kit.DistributedServiceKit';
 ```
 
 ## close
@@ -30,9 +30,30 @@ close(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+**示例**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+  server.start();
+  server.close();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## off('connectionAccepted')
 
@@ -52,17 +73,44 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'connectionAccepted' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'connectionAccepted' | 是 | 事件回调类型，支持的事件为'connectionAccepted'，收到对端连接，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | 注册的回调函数，参数为连接对象[Connection](arkts-distributedservice-linkenhance-connection-i.md)。 需传入对应on方法 最后一次注册的回调函数，用于取消该回调的订阅，默认缺省效果与传入行为一致。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [32390206](../errorcode-link-enhance.md#32390206-参数非法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+
+**示例**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  // 使用服务名构造Server
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+  server.on('connectionAccepted', (connection: linkEnhance.Connection): void => {
+    hilog.info(0x0000, TAG, 'accept new connection');
+  });
+  // 取消订阅服务接收
+  server.off('connectionAccepted', (connection: linkEnhance.Connection): void => {
+    hilog.info(0x0000, TAG, 'accept new connection');
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## off('serverStopped')
 
@@ -82,17 +130,44 @@ off(type: 'serverStopped', callback?: Callback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'serverStopped' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'serverStopped' | 是 | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时触发。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 注册的回调函数，当底层服务异常停止时触发，number为返回的错误码。需传入对应on方法最后一次注册的回调函数，用于取消该回调的订阅，默认缺省效 果与传入行为一致。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [32390206](../errorcode-link-enhance.md#32390206-参数非法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+
+**示例**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  // 使用服务名构造Server
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+  server.on('serverStopped', (reason: number): void => {
+    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
+  });
+  // 取消订阅服务停止
+  server.off('serverStopped', (reason: number): void => {
+    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## on('connectionAccepted')
 
@@ -112,17 +187,44 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'connectionAccepted' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'connectionAccepted' | 是 | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [32390206](../errorcode-link-enhance.md#32390206-参数非法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+
+**示例**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  // 使用服务名构造Server
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+
+  // 订阅服务接收事件
+  server.on('connectionAccepted', (connection: linkEnhance.Connection): void => {
+    hilog.info(0x0000, TAG, 'serverOnCallback = ' + JSON.stringify(connection));
+  });
+  // 启动服务
+  server.start();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## on('serverStopped')
 
@@ -142,17 +244,44 @@ on(type: 'serverStopped', callback: Callback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'serverStopped' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'serverStopped' | 是 | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时触发。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 注册的回调函数，当底层服务异常停止时触发，number为返回的错误码。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [32390206](../errorcode-link-enhance.md#32390206-参数非法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+
+**示例**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  // 使用服务名构造Server
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+
+  // 订阅服务停止
+  server.on('serverStopped', (reason: number): void => {
+    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
+  });
+  // 启动服务
+  server.start();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## start
 
@@ -172,11 +301,31 @@ start(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [32390202](../errorcode-link-enhance.md#32390202-服务个数超出限制) |
-| [32390300](../errorcode-link-enhance.md#32390300-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390202](../errorcode-link-enhance.md#32390202-服务个数超出限制) | The number of servers exceeds the limit. |
+| [32390300](../errorcode-link-enhance.md#32390300-内部错误) | Internal error. |
+
+**示例**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+  server.start();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## stop
 
@@ -196,6 +345,27 @@ stop(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+**示例**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+  server.start();
+  server.stop();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```

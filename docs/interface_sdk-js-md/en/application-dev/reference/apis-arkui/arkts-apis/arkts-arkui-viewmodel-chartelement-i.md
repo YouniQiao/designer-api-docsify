@@ -43,6 +43,6 @@ Data is dynamiconlyally added to an existing data sequence. The target sequence 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| params | {     /**      * Set the data subscript of the line chart to be updated.      *      * @type { number }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     serial: number;     /**      * Set the new data.      *      * @type { Array & lt;number & gt; }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     data: Array & lt;number & gt;;   } | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| params | {     /**      * Set the data subscript of the line chart to be updated.      *      * @type { number }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     serial: number;     /**      * Set the new data.      *      * @type { Array & lt;number & gt; }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     data: Array & lt;number & gt;;   } | Yes |  |

@@ -21,8 +21,16 @@ declare function lchownSync(path: string, uid: number, gid: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
-| uid | number | 是 |
-| gid | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 待打开文件的应用沙箱路径。 |
+| uid | number | 是 | 新的UID。 |
+| gid | number | 是 | 新的GID。 |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let stat = fileio.statSync(filePath);
+fileio.lchownSync(filePath, stat.uid, stat.gid);
+```

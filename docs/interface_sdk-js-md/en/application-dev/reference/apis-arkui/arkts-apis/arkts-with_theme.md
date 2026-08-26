@@ -9,26 +9,26 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [WithThemeAttribute(Defines WithTheme component.)](arkts-arkui-withthemeattribute-c.md) |
+| Name | Description |
+| --- | --- |
+| [WithThemeAttribute(Defines WithTheme component.)](arkts-arkui-withthemeattribute-c.md) | The universal attributes are not supported.The universal events are not supported. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [WithThemeOptions(Defines WithTheme component.)](arkts-arkui-withthemeoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [WithThemeOptions(Defines WithTheme component.)](arkts-arkui-withthemeoptions-i.md) | Defines the default theme and color mode for components within the **WithTheme** scope. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CustomTheme(Defines WithTheme component.)](arkts-arkui-customtheme-t.md) |
-| [WithThemeInterface(Defines WithTheme component.)](arkts-arkui-withthemeinterface-t.md) |
+| Name | Description |
+| --- | --- |
+| [CustomTheme(Defines WithTheme component.)](arkts-arkui-customtheme-t.md) | Defines a custom theme. |
+| [WithThemeInterface(Defines WithTheme component.)](arkts-arkui-withthemeinterface-t.md) | Define the function of WithThemeInterface. |
 
 ### Constants
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [WithTheme(Defines WithTheme component.)](arkts-arkui-withtheme-con.md) |
-| [WithThemeInstance(Defines WithTheme component.)](arkts-arkui-withtheme-con.md#withthemeinstance) |
+| Name | Description |
+| --- | --- |
+| [WithTheme(Defines WithTheme component.)](arkts-arkui-withtheme-con.md) | Defines WithTheme Logic Component. |
+| [WithThemeInstance(Defines WithTheme component.)](arkts-arkui-withtheme-con.md#withthemeinstance) | Defines WithTheme Logic Component Instance. |

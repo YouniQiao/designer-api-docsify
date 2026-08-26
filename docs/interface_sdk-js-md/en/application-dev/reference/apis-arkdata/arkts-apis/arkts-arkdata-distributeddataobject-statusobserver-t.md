@@ -12,8 +12,8 @@ Defines an observer for obtaining the status change of a distributed object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sessionId | string | Yes |
-| networkId | string | Yes |
-| status | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sessionId | string | Yes | Session ID of the distributed data object, with a maximum length of 128 bytes. The value can contain only letters, digits, and underscores (_). |
+| networkId | string | Yes | Network ID of the peer device, with a maximum of 255 bytes. The value must be a non- empty string. |
+| status | string | Yes | Status of the distributed object. The value can be **online**, **offline**, or **restore. |

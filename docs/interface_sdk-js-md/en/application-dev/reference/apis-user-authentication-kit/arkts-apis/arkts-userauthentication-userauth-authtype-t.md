@@ -14,7 +14,7 @@ Enumerates the authentication types.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'ALL' |
-| 'FACE_ONLY' |
+| Type | Description |
+| --- | --- |
+| 'ALL' | Reserved parameter. Authentication of the **ALL** type is not supported in the current version. |
+| 'FACE_ONLY' | Face authentication. |

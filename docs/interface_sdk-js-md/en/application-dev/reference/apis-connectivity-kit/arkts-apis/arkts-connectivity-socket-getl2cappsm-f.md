@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.ConnectivityKit';
+import socket from '@kit.ConnectivityKit';
 ```
 
 ## getL2capPsm
@@ -20,12 +20,26 @@ Get l2cap socket psm.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| serverSocket | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| serverSocket | number | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Returns the l2cap socket psm |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// The server obtains the address of the client.
+let serverNumber = 1; // Set serverNumber to the value of serverNumber returned by the sppListen callback.
+try {
+    let l2capPsm: number = socket.getL2capPsm(serverNumber);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```

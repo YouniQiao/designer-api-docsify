@@ -12,7 +12,7 @@
 ## 导入模块
 
 ```TypeScript
-import { StaticSubscriberExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import StaticSubscriberExtensionAbility from '@kit.BasicServicesKit';
 ```
 
 ## onReceiveEvent
@@ -33,9 +33,21 @@ onReceiveEvent(event: CommonEventData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | 是 | 静态订阅接收到的公共事件数据。 |
+
+**示例**
+
+```TypeScript
+import { commonEventManager } from '@kit.BasicServicesKit';
+
+class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
+  onReceiveEvent(event: commonEventManager.CommonEventData) {
+    console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
+  }
+}
+```
 
 ## context
 

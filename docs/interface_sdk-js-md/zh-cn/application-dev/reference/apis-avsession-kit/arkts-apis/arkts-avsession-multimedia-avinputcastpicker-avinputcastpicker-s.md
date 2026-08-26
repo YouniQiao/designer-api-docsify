@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AVInputCastPicker } from 'kits/@kit.AVSessionKit';
+import { AVInputCastPicker } from '@kit.AVSessionKit';
 ```
 
 ## onStateChange

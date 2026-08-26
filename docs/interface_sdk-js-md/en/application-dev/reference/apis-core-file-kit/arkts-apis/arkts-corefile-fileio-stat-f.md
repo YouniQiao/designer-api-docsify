@@ -23,15 +23,27 @@ Obtains file information. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the file. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Promise that returns the file information obtained. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "test.txt";
+fileio.stat(filePath).then((stat: fileio.Stat) => {
+  console.info("getFileInfo succeed, the size of file is " + stat.size);
+}).catch((err: BusinessError) => {
+  console.error("getFileInfo failed with error:" + err);
+});
+```
 
 
 ## stat
@@ -52,7 +64,16 @@ Obtains file information. This API uses an asynchronous callback to return the r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Yes | Callback used to return the file information obtained. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+fileio.stat(pathDir, (err: BusinessError, stat: fileio.Stat) => {
+  // Example code in Stat
+});
+```

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getSingleSensorByDeviceSync
@@ -20,13 +19,31 @@ Obtains information about the sensor of a specific type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Yes |
-| deviceId | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Yes | Sensor type. |
+| deviceId | number | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md) or sensorStatusChange to obtain the device ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;Sensor & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;Sensor & gt; | Sensor attribute list. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const deviceId = 1;
+  // The second deviceId is optional.
+  const sensorList: sensor.Sensor[] = sensor.getSingleSensorByDeviceSync(sensor.SensorId.ACCELEROMETER, deviceId);
+  console.info(`sensorList length: ${sensorList.length}`);
+  console.info(`sensorList Json: ${JSON.stringify(sensorList)}`);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get sensorList. Code: ${e.code}, message: ${e.message}`);
+}
+```

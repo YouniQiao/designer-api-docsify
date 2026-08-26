@@ -2,7 +2,8 @@
 
 List组件的滚动控制器，通过它控制List组件的滚动，仅支持一对一绑定到List组件。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > ListScroller继承自[Scroller](arkts-arkui-scroller-c.md)，具有[Scroller](arkts-arkui-scroller-c.md)的全部方法。
 
 ## 导入对象
@@ -40,16 +41,16 @@ closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | 否 | 收起[EXPANDED](arkts-arkui-swipeactionstate-e.md)状态的ListItem的回 调事件集合。不传入时不设置回调事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## getItemRectInGroup
 
@@ -69,23 +70,23 @@ getItemRectInGroup(index: number, indexInGroup: number): RectResult
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
-| indexInGroup | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | ListItemGroup在List中的索引值。 |
+| indexInGroup | number | 是 | ListItem在ListItemGroup中的索引值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RectResult](arkts-arkui-rectresult-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RectResult](arkts-arkui-rectresult-i.md) | ListItemGroup中的ListItem的大小和相对于List的位置。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## getVisibleListContentInfo
 
@@ -105,23 +106,23 @@ getVisibleListContentInfo(x: number, y: number): VisibleListContentInfo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | x轴坐标，单位为vp。 |
+| y | number | 是 | y轴坐标，单位为vp。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | 入参坐标处的子组件的索引信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## scrollToItemInGroup
 
@@ -141,16 +142,16 @@ scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
-| indexInGroup | number | 是 |
-| smooth | boolean | 否 |
-| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 要滑动到的目标元素所在的ListItemGroup在当前容器中的索引值。    **说明：** index值设置成负值或者大于当前容器子组件的最大索引值， 视为异常值，本次跳转不生效。 |
+| indexInGroup | number | 是 | 要滑动到的目标元素在index指定的ListItemGroup中的索引值。    **说明：** indexInGroup值设置成负值或者大 于index指定的ListItemGroup容器子组件的最大索引值，视为异常值，本次跳转不生效。 |
+| smooth | boolean | 否 | 设置该次滑动是否有动效，true表示有动效，false表示没有动效。默认值：false   **说明：** 开启动效时，会对经过的所有item进行加载 和布局计算，当大量加载item时会导致性能问题。 |
+| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | 否 | 指定滑动到的元素与当前容器的对齐方式。默认值：ScrollAlign.START。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |

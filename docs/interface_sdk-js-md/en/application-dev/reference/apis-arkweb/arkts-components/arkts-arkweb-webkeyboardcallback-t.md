@@ -14,12 +14,12 @@ Defines a callback to intercept the soft keyboard initiated from editable elemen
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| keyboardCallbackInfo | [WebKeyboardCallbackInfo](arkts-arkweb-webkeyboardcallbackinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keyboardCallbackInfo | [WebKeyboardCallbackInfo](arkts-arkweb-webkeyboardcallbackinfo-i.md) | Yes | Input parameter of the callback used to intercept the soft keyboard initiated from editable elements on a web page, including WebKeyboardController and editable element attributes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md) |
+| Type | Description |
+| --- | --- |
+| [WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md) | [WebKeyboardOptions]{ |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getChineseCalendar
@@ -24,12 +24,19 @@ Obtains the ChineseCalendar object for the specified locale.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locale | Intl.Locale | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locale | Intl.Locale | No | Locale object. The default value is the current system locale. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) |
+| Type | Description |
+| --- | --- |
+| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | ChineseCalendar object. |
+
+**Examples**
+
+```TypeScript
+let locale: Intl.Locale = i18n.System.getSystemLocaleInstance();
+let calendar: i18n.ChineseCalendar = i18n.getChineseCalendar(locale);
+```

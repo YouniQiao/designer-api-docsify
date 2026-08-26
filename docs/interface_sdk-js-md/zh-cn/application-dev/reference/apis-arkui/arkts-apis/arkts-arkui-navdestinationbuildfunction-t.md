@@ -16,7 +16,7 @@ MultiNavigation用以加载NavDestination的方法。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-| param | object | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 路由页面的标识符。 |
+| param | object | 否 | 路由跳转创建页面时传递的参数。默认效果：不传入时无参数传递。 |

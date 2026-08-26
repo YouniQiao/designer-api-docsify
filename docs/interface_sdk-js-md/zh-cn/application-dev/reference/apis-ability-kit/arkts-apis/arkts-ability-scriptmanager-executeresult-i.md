@@ -9,7 +9,7 @@ ArkTS脚本执行结果。
 ## 导入模块
 
 ```TypeScript
-import { scriptManager } from 'kits/@kit.AbilityKit';
+import scriptManager from '@kit.AbilityKit';
 ```
 
 ## code

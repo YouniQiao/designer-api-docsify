@@ -29,9 +29,9 @@ Callback invoked when the OK button in the dialog box is clicked.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [TimePickerResult](arkts-arkui-timepickerresult-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [TimePickerResult](arkts-arkui-timepickerresult-i.md) | Yes |  |
 
 ## onCancel
 
@@ -63,9 +63,9 @@ Triggered when the text picker in the dialog box snaps to the selected item.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [TimePickerResult](arkts-arkui-timepickerresult-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [TimePickerResult](arkts-arkui-timepickerresult-i.md) | Yes |  |
 
 ## onDidAppear
 

@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentEntryExecutor } from 'kits/@kit.AbilityKit';
+import InsightIntentEntryExecutor from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [InsightIntentEntryExecutor](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md) |
+| Name | Description |
+| --- | --- |
+| [InsightIntentEntryExecutor](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md) | The class of insight intent entry executor.@class InsightIntentEntryExecutor & lt;T & gt; |

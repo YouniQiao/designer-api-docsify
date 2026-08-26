@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getCpuUsage
@@ -14,7 +13,8 @@ function getCpuUsage() : number
 
 Obtains the CPU usage of a process.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API involves cross-process communication and takes a number time. To avoid performance problems, you are
 > advised not to call this API in the main thread.
 
@@ -24,6 +24,15 @@ Obtains the CPU usage of a process.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | CPU usage of a process. For example, if the CPU usage is **50%**, **0.5** is returned. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let cpuUsage: number = hidebug.getCpuUsage();
+console.info(`cpuUsage = ${cpuUsage}`);
+```

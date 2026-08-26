@@ -11,20 +11,20 @@ As a part of the Unified Data Management Framework (UDMF), the **uniformDataStru
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import uniformDataStruct from '@kit.ArkData';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ContentForm](arkts-arkdata-uniformdatastruct-contentform-i.md) |
-| [FileUri](arkts-arkdata-uniformdatastruct-fileuri-i.md) |
-| [Form](arkts-arkdata-uniformdatastruct-form-i.md) |
-| [HTML](arkts-arkdata-uniformdatastruct-html-i.md) |
-| [Hyperlink](arkts-arkdata-uniformdatastruct-hyperlink-i.md) |
-| [OpenHarmonyAppItem](arkts-arkdata-uniformdatastruct-openharmonyappitem-i.md) |
-| [PixelMap](arkts-arkdata-uniformdatastruct-pixelmap-i.md) |
-| [PlainText](arkts-arkdata-uniformdatastruct-plaintext-i.md) |
+| Name | Description |
+| --- | --- |
+| [ContentForm](arkts-arkdata-uniformdatastruct-contentform-i.md) | Represents data of the content widget type. |
+| [FileUri](arkts-arkdata-uniformdatastruct-fileuri-i.md) | Represents data of the file URI type. |
+| [Form](arkts-arkdata-uniformdatastruct-form-i.md) | Represents data of the widget type defined by the system. |
+| [HTML](arkts-arkdata-uniformdatastruct-html-i.md) | Represents data of the HTML type. |
+| [Hyperlink](arkts-arkdata-uniformdatastruct-hyperlink-i.md) | Represents data of the hyperlink type. |
+| [OpenHarmonyAppItem](arkts-arkdata-uniformdatastruct-openharmonyappitem-i.md) | Represents data of the home screen icon type defined by the system. |
+| [PixelMap](arkts-arkdata-uniformdatastruct-pixelmap-i.md) | Represents data of the pixel map type defined by the system. |
+| [PlainText](arkts-arkdata-uniformdatastruct-plaintext-i.md) | Represents data of the plain text type. |

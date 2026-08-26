@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## concat
@@ -22,19 +21,31 @@ Concatenates an array of **Buffer** objects of the specified length into a new o
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| list | Buffer[] \| Uint8Array[] | Yes |
-| [totalLength](../../apis-arkui/arkts-components/arkts-arkui-computedbarattribute-i.md) | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| list | Buffer[] \| Uint8Array[] | Yes | Array of objects to concatenate. |
+| totalLength | number | No | Total length of bytes to be copied. The default value is **0**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Buffer |
+| Type | Description |
+| --- | --- |
+| Buffer | Buffer** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "length" is out of range. It must be & gt;= 0 and & lt;= uint32 max. Received value is: [length] |
+
+**Examples**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from("1234");
+let buf2 = buffer.from("abcd");
+let buf = buffer.concat([buf1, buf2]);
+console.info(buf.toString('hex'));
+// Output: 3132333461626364
+```

@@ -16,6 +16,6 @@ Defines an OnHasPointerDeviceUpdatedFn function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [hasPointerDevice](arkts-ability-app-ability-configuration-configuration-i.md) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| hasPointerDevice | boolean | Yes | Indicates whether a pointing device is connected, such as a mouse, keyboard, or touchpad |

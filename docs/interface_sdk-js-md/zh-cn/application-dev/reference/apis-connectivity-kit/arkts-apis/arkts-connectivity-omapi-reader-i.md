@@ -9,7 +9,7 @@ Reader的实例表示该设备支持的SE，如果支持eSE、SIM和SIM2，则�
 ## 导入模块
 
 ```TypeScript
-import { omapi } from 'kits/@kit.ConnectivityKit';
+import omapi from '@kit.ConnectivityKit';
 ```
 
 ## closeSessions
@@ -26,10 +26,42 @@ closeSessions(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, service state exception. |
+
+**示例**
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seReaders : omapi.Reader[];
+let seSession : omapi.Session;
+let reader : omapi.Reader;
+
+// 在使用seReaders之前，需要对seReaders进行初始化
+function secureElementDemo() {
+    try {
+        reader = seReaders[0]; // 将其更改为所选的reader：eSE、SIM、SIM2
+        seSession = reader.openSession();
+    } catch (error) {
+        hilog.error(0x0000, 'testTag', 'openSession error %{public}s', JSON.stringify(error));
+    }
+    if (seSession == undefined) {
+        hilog.error(0x0000, 'testTag', 'seSession invalid.');
+        // 释放SeService资源
+        seService.shutdown();
+        return;
+    }
+    try {
+        reader.closeSessions();
+    } catch (error) {
+        hilog.error(0x0000, 'testTag', 'closeSessions error %{public}s', JSON.stringify(error));
+    }
+}
+```
 
 ## getName
 
@@ -45,15 +77,34 @@ getName(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | [Reader]{ |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+
+**示例**
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seReaders : omapi.Reader[];
+
+// 在使用seReaders之前，需要对seReaders进行初始化
+
+try {
+    let reader = seReaders[0]; // 将其更改为所选的reader：eSE、SIM、SIM2
+    let name = reader.getName();
+    hilog.info(0x0000, 'testTag', 'name %{public}s', JSON.stringify(name));
+} catch (error) {
+    hilog.error(0x0000, 'testTag', 'getName error %{public}s', JSON.stringify(error));
+}
+```
 
 ## isSecureElementPresent
 
@@ -69,16 +120,35 @@ isSecureElementPresent(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true: 安全单元可用， false: 安全单元不可用。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, service state exception. |
+
+**示例**
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seReaders : omapi.Reader[];
+
+// 在使用seReaders之前，需要对seReaders进行初始化
+
+try {
+    let reader = seReaders[0]; // 将其更改为所选的reader：eSE、SIM、SIM2
+    let isPresent = reader.isSecureElementPresent();
+    hilog.info(0x0000, 'testTag', 'isPresent %{public}s', JSON.stringify(isPresent));
+} catch (error) {
+    hilog.error(0x0000, 'testTag', 'isSecureElementPresent error %{public}s', JSON.stringify(error));
+}
+```
 
 ## openSession
 
@@ -94,14 +164,38 @@ openSession(): Session
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-camera-session-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-camera-session-i.md) | 连接会话Session实例。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
-| [3300104](../errorcode-se.md#3300104-se芯片io异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, service state exception. |
+| [3300104](../errorcode-se.md#3300104-se芯片io异常) | IOError, there is a communication problem to the reader or the SE. |
+
+**示例**
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seReaders : omapi.Reader[];
+let seSession : omapi.Session;
+
+// 在使用seReaders之前，需要对seReaders进行初始化
+function secureElementDemo() {
+    try {
+        let reader = seReaders[0]; // 将其更改为所选的reader：eSE、SIM、SIM2
+        seSession = reader.openSession();
+    } catch (error) {
+        hilog.error(0x0000, 'testTag', 'openSession error %{public}s', JSON.stringify(error));
+    }
+    if (seSession == undefined) {
+        hilog.error(0x0000, 'testTag', 'seSession invalid.');
+        return;
+    }
+}
+```

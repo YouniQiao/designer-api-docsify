@@ -9,7 +9,6 @@ Describe the protocol data is received from remote host.
 ## Modules to Import
 
 ```TypeScript
-import { hid } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## protocol

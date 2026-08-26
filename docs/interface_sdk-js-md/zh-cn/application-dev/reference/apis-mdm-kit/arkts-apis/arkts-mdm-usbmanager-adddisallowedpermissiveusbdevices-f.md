@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.MDMKit';
+import usbManager from '@kit.MDMKit';
 ```
 
 ## addDisallowedPermissiveUsbDevices
@@ -28,17 +28,58 @@ function addDisallowedPermissiveUsbDevices(admin: Want, usbDevices: Array<Permis
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
-| usbDevices | Array&lt;[PermissiveUsbDeviceType](arkts-mdm-usbmanager-permissiveusbdevicetype-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| usbDevices | Array&lt;[PermissiveUsbDeviceType](arkts-mdm-usbmanager-permissiveusbdevicetype-i.md)&gt; | 是 | 要添加的USB设备类型的数组，支持部分字段匹配。USB设备禁用名单数组长度上限为1000，若当前禁用名单中已有500个 USB设备ID，则只允许再添加500个。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
-| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
+| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) | A conflict policy has been configured. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+**示例**
+
+```TypeScript
+import { usbManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  // 禁用USB存储设备（以实际USB设备类型参数为准）
+  let usbDevices1: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 8
+  }];
+  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices1);
+
+  // 禁用USB线控耳机（以实际USB设备类型参数为准）
+  let usbDevices2: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 0,
+    subClass: 0,
+    protocol: 0,
+    descriptor: usbManager.Descriptor.DEVICE
+  }];
+  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices2);
+
+  // 禁用USB线控键盘输入（以实际USB设备类型参数为准）
+  let usbDevices3: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 3,
+    subClass: 1,
+    protocol: 1,
+    descriptor: usbManager.Descriptor.INTERFACE
+  }];
+  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices3);
+  console.info(`Succeeded in adding disallowed permissive USB devices.`);
+} catch (err) {
+  console.error(`Failed to add disallowed permissive USB devices. Code: ${err.code}, message: ${err.message}`);
+}
+```

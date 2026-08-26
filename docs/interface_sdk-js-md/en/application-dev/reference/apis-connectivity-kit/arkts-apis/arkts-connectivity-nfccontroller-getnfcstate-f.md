@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import nfcController from '@kit.ConnectivityKit';
 ```
 
 ## getNfcState
@@ -22,6 +22,16 @@ Obtains the NFC state.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) |
+| Type | Description |
+| --- | --- |
+| [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) | NFC state obtained. For details, see [NfcState]{ |
+
+**Examples**
+
+```TypeScript
+import { nfcController } from '@kit.ConnectivityKit';
+
+// Obtain the NFC state.
+let nfcState: nfcController.NfcState = nfcController.getNfcState();
+console.info("nfcController on callback nfcstate: " + nfcState);
+```

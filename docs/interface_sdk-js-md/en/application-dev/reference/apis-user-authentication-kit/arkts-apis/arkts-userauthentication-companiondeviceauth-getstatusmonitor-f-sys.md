@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import companionDeviceAuth from '@kit.UserAuthenticationKit';
 ```
 
 ## getStatusMonitor
@@ -26,21 +26,49 @@ Obtains the status monitor. This API is used to obtain the status monitor object
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [localUserId](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| localUserId | number | Yes | Local user ID. User ID on the primary device, which is a positive integer greater than or equal to 0. It is used to obtain the status monitor of the companion device corresponding to the user. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) |
+| Type | Description |
+| --- | --- |
+| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | Status monitor object. It can be used to query the template status ([getTemplateStatus]{ |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
-| [32600002](../errorcode-useriam.md#32600002-template-not-found) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600002](../errorcode-useriam.md#32600002-template-not-found) | The local user is not found. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+const localUserId = 100;
+try {
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const continuousAuthParam: companionDeviceAuth.ContinuousAuthParam = {
+    templateId: new Uint8Array([])
+  };
+  const handler = (isAuthPassed: boolean, authTrustLevel?: userAuth.AuthTrustLevel): void => {
+    console.info('continuous auth changed');
+    console.info(`isAuthPassed: ${isAuthPassed}`);
+    if (authTrustLevel !== undefined) {
+      console.info(`authTrustLevel: ${authTrustLevel}`);
+    }
+  };
+
+  statusMonitor.onContinuousAuthChange(continuousAuthParam, handler);
+  statusMonitor.offContinuousAuthChange(handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured: message:${message}`);
+}
+```

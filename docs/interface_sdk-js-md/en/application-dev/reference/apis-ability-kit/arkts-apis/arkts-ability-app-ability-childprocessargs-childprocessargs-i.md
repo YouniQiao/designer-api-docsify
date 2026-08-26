@@ -9,7 +9,7 @@ The module describes the parameters transferred to the child process. When start
 ## Modules to Import
 
 ```TypeScript
-import { ChildProcessArgs } from 'kits/@kit.AbilityKit';
+import { ChildProcessArgs } from '@kit.AbilityKit';
 ```
 
 ## entryParams
@@ -45,3 +45,55 @@ File Descriptor (FD) handles, which are used for communication between the main 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+// In the main process:
+import { common, ChildProcessArgs, childProcessManager } from '@kit.AbilityKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Text('Click')
+          .fontSize(30)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+            let path = context.filesDir + "/test.txt";
+            let file = fileIo.openSync(path, fileIo.OpenMode.READ_ONLY | fileIo.OpenMode.CREATE);
+            let args: ChildProcessArgs = {
+              entryParams: "testParam",
+              fds: {
+                "key1": file.fd
+              }
+            };
+            childProcessManager.startArkChildProcess("entry/./ets/process/DemoProcess.ets", args);
+          });
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// In the child process:
+import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
+
+export default class DemoProcess extends ChildProcess {
+
+  onStart(args?: ChildProcessArgs) {
+    let entryParams = args?.entryParams;
+    let fd = args?.fds?.key1;
+    // ..
+  }
+}
+```

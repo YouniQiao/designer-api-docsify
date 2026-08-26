@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import pasteboard from '@kit.BasicServicesKit';
 ```
 
 ## createUriRecord
@@ -24,12 +24,18 @@ function createUriRecord(uri: string): PasteDataRecord
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | URI内容，需符合标准URI格式。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 一条新建的URI内容条目。 |
+
+**示例**
+
+```TypeScript
+let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
+```

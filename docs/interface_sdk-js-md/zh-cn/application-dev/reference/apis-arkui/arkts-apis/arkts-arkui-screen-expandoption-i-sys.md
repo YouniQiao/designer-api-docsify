@@ -11,7 +11,8 @@
 ## 导入模块
 
 ```TypeScript
-import { screen } from 'kits/@kit.ArkUI';
+import screen from '@kit.ArkUI';
+import screenshot from '@kit.ArkUIshot';
 ```
 
 ## screenId

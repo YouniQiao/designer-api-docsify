@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import router from '@kit.ArkUI';
 ```
 
 ## replace
@@ -24,6 +24,42 @@ Replaces the current page with another one in the application and destroys the c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Description of the new page. |
+
+**Examples**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replace({
+  url: 'pages/detail',
+  params: new RouterParams('message')
+});
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replace({
+  url: 'pages/detail',
+  params: new RouterParams('message')
+});
+```

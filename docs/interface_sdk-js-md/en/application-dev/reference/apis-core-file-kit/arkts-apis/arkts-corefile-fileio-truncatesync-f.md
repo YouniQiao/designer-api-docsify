@@ -23,7 +23,15 @@ Truncates a file based on the file path. This API returns the result synchronous
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| len | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the file to truncate. |
+| len | number | No | File length after truncation, in bytes. The default value is **0**. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let len = 5;
+fileio.truncateSync(filePath, len);
+```

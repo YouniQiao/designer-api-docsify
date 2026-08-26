@@ -9,7 +9,7 @@ Declare class TreeListenerManagerV2
 ## Modules to Import
 
 ```TypeScript
-import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from 'kits/@kit.ArkUI';
+import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUI';
 ```
 
 ## getInstance
@@ -30,9 +30,9 @@ Get instance of treeListenerManagerV2.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TreeListenerManagerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenermanagerv2-c.md) |
+| Type | Description |
+| --- | --- |
+| [TreeListenerManagerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenermanagerv2-c.md) | Returns the treeListenerManagerV2 instance. |
 
 ## getTreeListener
 
@@ -52,6 +52,6 @@ Get treeListenerV2.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TreeListenerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenerv2-c.md) |
+| Type | Description |
+| --- | --- |
+| [TreeListenerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenerv2-c.md) | Returns the treeListenerV2 object. |

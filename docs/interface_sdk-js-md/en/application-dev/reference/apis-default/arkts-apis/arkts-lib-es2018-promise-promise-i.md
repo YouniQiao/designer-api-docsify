@@ -17,11 +17,11 @@ Attaches a callback that is invoked when the Promise is settled (fulfilled or re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| onfinally | (() = & gt; void) \ | undefined \| null | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| onfinally | (() = & gt; void) \ | undefined \| null | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

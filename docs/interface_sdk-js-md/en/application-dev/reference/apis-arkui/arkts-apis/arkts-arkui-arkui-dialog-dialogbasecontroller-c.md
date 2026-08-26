@@ -9,7 +9,7 @@ The class used to control dialog.
 ## Modules to Import
 
 ```TypeScript
-import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from 'kits/@kit.ArkUI';
+import dialog, { DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from '@kit.ArkUI';
 ```
 
 ## close
@@ -62,6 +62,6 @@ Get the state.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DialogState](arkts-arkui-arkui-dialog-dialogstate-e.md) |
+| Type | Description |
+| --- | --- |
+| [DialogState](arkts-arkui-arkui-dialog-dialogstate-e.md) | return the state. |

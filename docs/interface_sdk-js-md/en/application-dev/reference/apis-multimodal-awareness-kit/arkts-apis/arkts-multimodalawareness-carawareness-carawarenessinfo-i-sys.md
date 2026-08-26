@@ -11,7 +11,7 @@ Interface for car awareness response info.
 ## Modules to Import
 
 ```TypeScript
-import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
+import carAwareness from '@kit.MultimodalAwarenessKit';
 ```
 
 ## awarenessEvent

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import curves from '@kit.ArkUI';
 ```
 
 ## stepsCurve
@@ -22,13 +22,20 @@ Creates a step curve.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| count | number | Yes |
-| end | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| count | number | Yes | Number of steps. The value must be a positive integer.Value range: [1, +∞)   **NOTE：**A value less than 1 evaluates to the value **1**. |
+| end | boolean | Yes | Whether the step change occurs at the start or end of each interval.   - **true**: The step change occurs at the end of each interval.   - **false**: The step change occurs at the start of each interval. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |
+| Type | Description |
+| --- | --- |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | Interpolation curve. |
+
+**Examples**
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+curves.stepsCurve(9, true);  // Create a step curve.
+```

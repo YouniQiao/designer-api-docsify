@@ -16,7 +16,7 @@ Defines the callback type used in accessibility hover events. The value of isHov
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isHover | boolean | 是 |
-| event | [AccessibilityHoverEvent](arkts-arkui-accessibilityhoverevent-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isHover | boolean | 是 |  |
+| event | [AccessibilityHoverEvent](arkts-arkui-accessibilityhoverevent-i.md) | 是 |  |

@@ -16,8 +16,8 @@ Defines a callback for pan gesture events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [GestureEvent](arkts-arkui-gestureevent-i.md) | Yes |
-| current | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | Yes |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [GestureEvent](arkts-arkui-gestureevent-i.md) | Yes | Information about the gesture event that triggers the callback. |
+| current | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | Yes | Information about the gesture recognizer that detects the event. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | No | Component bound to the gesture event. |

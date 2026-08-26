@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getAltitude
@@ -24,11 +23,26 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| seaPressure | number | Yes |
-| currentPressure | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| seaPressure | number | Yes | Sea-level atmospheric pressure, in hPa. |
+| currentPressure | number | Yes | Atmospheric pressure at the altitude where the device is located, in hPa. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the altitude, in meters. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sensor.getAltitude(0, 200, (err: BusinessError, data: number) => {
+  if (err) {
+    console.error(`Failed to operate. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info("Succeeded in getting getAltitude interface get data: " + data);
+});
+```
 
 
 ## getAltitude
@@ -49,13 +63,27 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| seaPressure | number | Yes |
-| currentPressure | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| seaPressure | number | Yes | Sea-level atmospheric pressure, in hPa. |
+| currentPressure | number | Yes | Atmospheric pressure at the altitude where the device is located, in hPa. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the altitude, in meters. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.getAltitude(0, 200);
+promise.then((data: number) => {
+  console.info('Succeeded in getting sensor_getAltitude_Promise success', data);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to operate.`);
+})
+```

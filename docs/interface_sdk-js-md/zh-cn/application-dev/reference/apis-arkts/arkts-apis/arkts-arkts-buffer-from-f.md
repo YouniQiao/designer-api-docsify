@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## from
@@ -22,15 +21,25 @@ function from(array: number[]): Buffer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| array | number[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| array | number[] | 是 | 由0~255范围内的整数组成的数组，用于根据数组内容创建新的Buffer对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Buffer |
+| 类型 | 说明 |
+| --- | --- |
+| Buffer | 新的Buffer对象。 |
+
+**示例**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0x62, 0x75, 0x66, 0x66, 0x65, 0x72]);
+console.info(buf.toString('hex'));
+// 输出结果：627566666572
+```
 
 
 ## from
@@ -49,23 +58,33 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer \| SharedArrayBuffer | 是 |
-| byteOffset | number | 否 |
-| length | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| arrayBuffer | ArrayBuffer \| SharedArrayBuffer | 是 | 用于创建Buffer的ArrayBuffer或SharedArrayBuffer对象。 |
+| byteOffset | number | 否 | 字节偏移量。指定从arrayBuffer起始位置偏移的字节数，创建的Buffer从该偏移位置开始。默认值：0。 |
+| length | number | 否 | 字节长度， 默认值:（arrayBuffer.byteLength - byteOffset）。在传入null时字节长度为0。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Buffer |
+| 类型 | 说明 |
+| --- | --- |
+| Buffer | 返回一个Buffer对象，该对象与入参对象`arrayBuffer`共享相同的内存区域。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be & gt;= [left range] and & lt;= [right range]. Received value is: [byteOffset/length] |
+
+**示例**
+
+```TypeScript
+import { buffer, JSON } from '@kit.ArkTS';
+
+let ab = new ArrayBuffer(10);
+let buf = buffer.from(ab, 0, 2);
+console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[0,0]}
+```
 
 
 ## from
@@ -84,15 +103,32 @@ function from(buffer: Buffer | Uint8Array): Buffer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [buffer](arkts-buffer.md) | Buffer \| Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| buffer | Buffer \| Uint8Array | 是 | 用于创建新Buffer的Buffer或Uint8Array对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Buffer |
+| 类型 | 说明 |
+| --- | --- |
+| Buffer | 新的Buffer对象。 |
+
+**示例**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+// 以Buffer对象类型进行创建新的Buffer对象
+let buf1 = buffer.from('buffer');
+let buf2 = buffer.from(buf1);
+
+// 以Uint8Array对象类型进行创建Buffer对象，保持对象间内存共享
+let uint8Array = new Uint8Array(10);
+let buf3 = buffer.from(uint8Array);
+buf3.fill(1);
+console.info("uint8Array:", uint8Array);
+// 输出结果：1,1,1,1,1,1,1,1,1,1
+```
 
 
 ## from
@@ -111,17 +147,26 @@ function from(object: Object, offsetOrEncoding: number | string, length: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| object | Object | 是 |
-| offsetOrEncoding | number \| string | 是 |
-| length | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| object | Object | 是 | 支持Symbol.toPrimitive或valueOf()的对象，valueOf()或Symbol.toPrimitive的返回值支持string和ArrayBuffer等类型。 |
+| offsetOrEncoding | number \| string | 是 | 字节偏移量或编码格式。当object的valueOf()返回值为ArrayBuffer时，作为字节偏移量；其他情况下作为编码格式。 |
+| length | number | 是 | 字节长度（此入参仅在object的valueOf()返回值为ArrayBuffer时生效，取值范围：0 & lt;= length & lt;= ArrayBuffer.byteLength，超出范 围时报错: 10200001）。其他情况下可填任意number类型值，该参数不会对结果产生影响。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Buffer |
+| 类型 | 说明 |
+| --- | --- |
+| Buffer | 返回新的Buffer对象。 |
+
+**示例**
+
+```TypeScript
+import { buffer, JSON } from '@kit.ArkTS';
+
+let buf = buffer.from(new String('this is a test'), 'utf8', 14);
+console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[116,104,105,115,32,105,115,32,97,32,116,101,115,116]}
+```
 
 
 ## from
@@ -140,13 +185,27 @@ function from(string: String, encoding?: BufferEncoding): Buffer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| string | String | 是 |
-| encoding | BufferEncoding | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| string | String | 是 | 要编码创建Buffer对象的字符串内容。 |
+| encoding | BufferEncoding | 否 | 编码格式。默认值：'utf8'。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Buffer |
+| 类型 | 说明 |
+| --- | --- |
+| Buffer | 返回新的Buffer对象。 |
+
+**示例**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from('this is a test');
+let buf2 = buffer.from('7468697320697320612074c3a97374', 'hex');
+
+console.info(buf1.toString());
+// 输出结果：this is a test
+console.info(buf2.toString());
+// 输出结果：this is a tést
+```

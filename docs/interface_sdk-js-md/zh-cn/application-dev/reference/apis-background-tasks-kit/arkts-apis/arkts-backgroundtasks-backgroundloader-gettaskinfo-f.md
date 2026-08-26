@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
+import backgroundLoader from '@kit.BackgroundTasksKit';
 ```
 
 ## getTaskInfo
@@ -24,20 +24,20 @@ function getTaskInfo(taskId: number): Promise<TaskInfo>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| taskId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| taskId | number | 是 | 后台加载任务id。 取值范围为全体整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;TaskInfo & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;TaskInfo & gt; | Promise对象， 返回任务信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) |
-| [9700004](../errorcode-workScheduler.md#9700004-参数校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
+| [9700004](../errorcode-workScheduler.md#9700004-参数校验失败) | Check on taskId failed. |

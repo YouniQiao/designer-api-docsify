@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## CreateIncrementalSource
@@ -30,15 +30,39 @@ function CreateIncrementalSource(buf: ArrayBuffer): ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| buf | ArrayBuffer | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | 是 | 增量数据。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource，失败时返回undefined。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function CreateIncrementalImageSource(context : Context) {
+  let imageArray = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id); // 获取图像资源。
+  // 此处'app.media.startIcon'仅作示例，请开发者自行替换，否则imageArray创建失败会导致后续无法正常执行。
+  let splitBuff1 = imageArray.slice(0, imageArray.byteLength / 2);  // 分片。
+  let splitBuff2 = imageArray.slice(imageArray.byteLength / 2);
+  const imageSourceIncrementalSApi: image.ImageSource = image.CreateIncrementalSource(new ArrayBuffer(imageArray.byteLength));
+  imageSourceIncrementalSApi.updateData(splitBuff1, false, 0, splitBuff1.byteLength).then(() => {
+    imageSourceIncrementalSApi.updateData(splitBuff2, true, 0, splitBuff2.byteLength).then(() => {
+      let pixelMap = imageSourceIncrementalSApi.createPixelMapSync();
+      console.info('Succeeded in creating pixelMap');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
+    })
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
+  })
+}
+```
 
 
 ## CreateIncrementalSource
@@ -55,13 +79,39 @@ function CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): Ima
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| buf | ArrayBuffer | 是 |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | 是 | 增量数据。 |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | 否 | 图片属性，包括图片像素密度、像素格式和图片尺寸。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource，失败时返回undefined。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function CreateIncrementalImageSource(context : Context) {
+  let imageArray = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id); // 获取图像资源。
+  // 此处'app.media.startIcon'仅作示例，请开发者自行替换，否则imageArray创建失败会导致后续无法正常执行。
+  let splitBuff1 = imageArray.slice(0, imageArray.byteLength / 2);  // 分片。
+  let splitBuff2 = imageArray.slice(imageArray.byteLength / 2);
+  let sourceOptions: image.SourceOptions = { sourceDensity: 120};
+
+  const imageSourceIncrementalSApi: image.ImageSource = image.CreateIncrementalSource(new ArrayBuffer(imageArray.byteLength), sourceOptions);
+  imageSourceIncrementalSApi.updateData(splitBuff1, false, 0, splitBuff1.byteLength).then(() => {
+    imageSourceIncrementalSApi.updateData(splitBuff2, true, 0, splitBuff2.byteLength).then(() => {
+      let pixelMap = imageSourceIncrementalSApi.createPixelMapSync();
+      console.info('Succeeded in creating pixelMap');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
+    })
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
+  })
+}
+```

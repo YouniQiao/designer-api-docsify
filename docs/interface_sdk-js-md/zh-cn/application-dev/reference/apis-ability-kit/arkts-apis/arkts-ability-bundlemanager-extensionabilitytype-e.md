@@ -50,7 +50,7 @@ INPUT_METHOD = 2
 SERVICE = 3
 ```
 
-[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md)：后台服务扩展能力，提供后台运 行并对外提供相应能力。
+ServiceExtensionAbility：后台服务扩展能力，提供后台运 行并对外提供相应能力。
 
 **起始版本：** 9
 
@@ -74,7 +74,7 @@ AccessibilityExtensionAbility：无障碍服务扩展能力，支持访问与操
 DATA_SHARE = 5
 ```
 
-[DataShareExtensionAbility](../../apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md)：数据共享扩展能力，用于对外提供数据读写服务。
+DataShareExtensionAbility：数据共享扩展能力，用于对外提供数据读写服务。
 
 **起始版本：** 9
 
@@ -98,7 +98,7 @@ FileShareExtensionAbility：文件共享扩展能力，用于应用间的文件�
 STATIC_SUBSCRIBER = 7
 ```
 
-[StaticSubscriberExtensionAbility](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md) ：静态广播扩展能力，用于处理静态事件，比如开机事件。
+StaticSubscriberExtensionAbility：静态广播扩展能力，用于处理静态事件，比如开机事件。
 
 **起始版本：** 9
 
@@ -134,7 +134,7 @@ BACKUP = 9
 WINDOW = 10
 ```
 
-[WindowExtensionAbility](../../apis-arkui/arkts-apis/arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md)：界面组合扩展能力，允许系统应用进行跨应用的界面拉起和嵌入。
+WindowExtensionAbility：界面组合扩展能力，允许系统应用进行跨应用的界面拉起和嵌入。
 
 **起始版本：** 9
 
@@ -364,7 +364,7 @@ LIVE_FORM = 30
 SELECTION = 31
 ```
 
-[SelectionExtensionAbility](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md)：为开发者提 供划词弹窗能力的ExtensionAbility。  
+SelectionExtensionAbility：为开发者提 供划词弹窗能力的ExtensionAbility。  
 **模型约束**：此接口仅可在Stage模型下使用。
 
 **起始版本：** 24

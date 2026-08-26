@@ -12,10 +12,10 @@ type AVSessionType = 'audio' | 'video' | 'voice_call' | 'video_call' | 'photo'
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
-| 类型 |
-| --- |
-| 'audio' |
-| 'video' |
-| 'voice_call' |
-| 'video_call' |
-| 'photo' |
+| 类型 | 说明 |
+| --- | --- |
+| 'audio' | 音频 |
+| 'video' | 视频 |
+| 'voice_call' | 音频通话。 [since 11] |
+| 'video_call' | 视频通话。 [since 12] |
+| 'photo' | 图片。 [since 22] |

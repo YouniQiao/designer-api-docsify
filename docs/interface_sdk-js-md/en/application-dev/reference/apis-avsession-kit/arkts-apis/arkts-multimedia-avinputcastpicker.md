@@ -3,19 +3,19 @@
 ## Modules to Import
 
 ```TypeScript
-import { AVInputCastPicker } from 'kits/@kit.AVSessionKit';
+import { AVInputCastPicker } from '@kit.AVSessionKit';
 ```
 
 ## Summary
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AVInputCastPicker](arkts-avsession-multimedia-avinputcastpicker-avinputcastpicker-s.md) |
+| Name | Description |
+| --- | --- |
+| [AVInputCastPicker](arkts-avsession-multimedia-avinputcastpicker-avinputcastpicker-s.md) | Picker used to show available input devices. @struct { AVInputCastPicker } |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md) |
+| Name | Description |
+| --- | --- |
+| [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md) | Callback for picker state |

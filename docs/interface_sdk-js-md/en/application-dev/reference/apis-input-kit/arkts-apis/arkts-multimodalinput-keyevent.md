@@ -7,20 +7,19 @@ The **keyEvent** module provides key events reported by a device. It is inherite
 ## Modules to Import
 
 ```TypeScript
-import { Action, Key, KeyEvent } from 'kits/@kit.InputKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Key(Key Event)](arkts-input-multimodalinput-keyevent-key-i.md) |
-| [KeyEvent(Key Event)](arkts-input-multimodalinput-keyevent-keyevent-i.md) |
+| Name | Description |
+| --- | --- |
+| [Key(Key Event)](arkts-input-multimodalinput-keyevent-key-i.md) | Defines a key.@interface Key [since 9 - 11] |
+| [KeyEvent(Key Event)](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Key event.@interface KeyEvent [since 9 - 11] |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Action(Key Event)](arkts-input-multimodalinput-keyevent-action-e.md) |
+| Name | Description |
+| --- | --- |
+| [Action(Key Event)](arkts-input-multimodalinput-keyevent-action-e.md) | Key event type. |

@@ -16,6 +16,6 @@ Cancels the interval set by " setInterval()".
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| intervalID | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| intervalID | number | No | Indicates the timer ID returned by "setInterval()". |

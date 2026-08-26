@@ -11,7 +11,7 @@ The definition of the tab page content.@extends OperResult @interface MediaTabCo
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import avMusicTemplate from '@kit.AVSessionKit';
 ```
 
 ## compilations

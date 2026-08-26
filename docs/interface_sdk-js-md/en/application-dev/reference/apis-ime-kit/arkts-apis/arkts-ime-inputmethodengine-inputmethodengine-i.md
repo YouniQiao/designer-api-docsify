@@ -13,7 +13,7 @@ In the following API examples, you must first use [getInputMethodEngine](arkts-i
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKit';
 ```
 
 ## off('inputStart')
@@ -37,10 +37,20 @@ Disables listening for the input method binding event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'inputStart' | Yes |
-| callback | (kbController: KeyboardController, textInputClient: TextInputClient) = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
+| callback | (kbController: KeyboardController, textInputClient: TextInputClient) = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine()
+  .off('inputStart',
+    (kbController: inputMethodEngine.KeyboardController, textClient: inputMethodEngine.TextInputClient) => {
+      console.info('delete inputStart notification.');
+    });
+```
 
 ## off('keyboardShow' | 'keyboardHide')
 
@@ -60,10 +70,17 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes |
-| callback | () = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| callback | () = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine().off('keyboardShow');
+inputMethodEngine.getInputMethodEngine().off('keyboardHide');
+```
 
 ## off('keyboardShow' | 'keyboardHide')
 
@@ -83,10 +100,14 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes |
-| callback | () = & gt; void | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| callback | () = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+
+**Examples**
+
+See off
 
 ## on('inputStart')
 
@@ -109,10 +130,21 @@ Enables listening for the input method binding event. This API uses an asynchron
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'inputStart' | Yes |
-| callback | (kbController: KeyboardController, textInputClient: TextInputClient) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
+| callback | (kbController: KeyboardController, textInputClient: TextInputClient) = & gt; void | Yes | Callback used to return the **KeyboardController** and **TextInputClient** instances. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine()
+  .on('inputStart',
+    (kbController: inputMethodEngine.KeyboardController, textClient: inputMethodEngine.TextInputClient) => {
+      let keyboardController: inputMethodEngine.KeyboardController = kbController;
+      let textInputClient: inputMethodEngine.TextInputClient = textClient;
+    });
+```
 
 ## on('keyboardShow' | 'keyboardHide')
 
@@ -132,10 +164,21 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| callback | () = & gt; void | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine().on('keyboardShow', () => {
+  console.info('inputMethodEngine keyboardShow.');
+});
+inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
+  console.info('inputMethodEngine keyboardHide.');
+});
+```
 
 ## on('keyboardShow' | 'keyboardHide')
 
@@ -155,7 +198,11 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| callback | () = & gt; void | Yes | Callback used to return the result. |
+
+**Examples**
+
+See on

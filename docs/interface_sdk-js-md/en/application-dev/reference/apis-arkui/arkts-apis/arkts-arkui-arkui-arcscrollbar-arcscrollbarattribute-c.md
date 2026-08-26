@@ -13,5 +13,5 @@ Defines the arc scroll bar attribute functions.
 ## Modules to Import
 
 ```TypeScript
-import { ArcScrollBar, ArcScrollBarAttribute } from 'kits/@kit.ArkUI';
+import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 ```

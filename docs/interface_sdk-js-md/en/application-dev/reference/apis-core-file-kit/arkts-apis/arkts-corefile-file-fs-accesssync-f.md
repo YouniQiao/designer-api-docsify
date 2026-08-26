@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## accessSync
@@ -24,33 +22,52 @@ Checks whether a file or directory exists or has the operation permission. This 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the file or directory. |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | No | Permission on the file or directory to check. If this parameter is left blank, the system checks whether the file or directory exists.<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | The value **true** means the file exists; the value **false** means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900002 |
-| 13900005 |
-| 13900008 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900018 |
-| 13900020 |
-| 13900023 |
-| 13900030 |
-| 13900033 |
-| 13900042 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900005 | I/O error |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
+| 13900023 | Text file busy |
+| 13900030 | File name too number |
+| 13900033 | Too many symbolic links encountered |
+| 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+try {
+  let res = fileIo.accessSync(filePath);
+  if (res) {
+    console.info(`Succeeded in checking file, file exists.`);
+  } else {
+    console.info(`Succeeded in checking file, file does not exist.`);
+  }
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to accessSync. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 
 ## accessSync
@@ -67,29 +84,48 @@ Checks whether a file or directory is stored locally or has the operation permis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
-| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | Yes |
-| flag | [AccessFlagType](arkts-corefile-file-fs-accessflagtype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the file to check. |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | Yes | Permission on the file or directory to check. |
+| flag | [AccessFlagType](arkts-corefile-file-fs-accessflagtype-e.md) | Yes | Position of the file or directory to check. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | The value **true** means the file is a local file and has the related permission. The value **false** means the file does not exist or is on the cloud or a distributed device. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 13900005 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900018 |
-| 13900020 |
-| 13900023 |
-| 13900030 |
-| 13900033 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900018 | Not a directory |
+| 13900020 | Invalid argument |
+| 13900023 | Text file busy |
+| 13900030 | File name too number |
+| 13900033 | Too many symbolic links encountered |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+try {
+  let res = fileIo.accessSync(filePath, fileIo.AccessModeType.EXIST, fileIo.AccessFlagType.LOCAL);
+  if (res) {
+    console.info(`Succeeded in checking file, file exists.`);
+  } else {
+    console.info(`Succeeded in checking file, file does not exist.`);
+  }
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to accessSync. Code: ${err.code}, message: ${err.message}`);
+}
+```

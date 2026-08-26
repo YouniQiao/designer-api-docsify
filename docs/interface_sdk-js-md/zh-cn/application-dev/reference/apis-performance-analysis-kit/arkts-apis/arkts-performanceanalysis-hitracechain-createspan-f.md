@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## createSpan
@@ -20,6 +19,21 @@ function createSpan(): HiTraceId
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | HiTraceId实例。 |
+
+**示例**
+
+```TypeScript
+// 开始跟踪，跟踪标志是DEFAULT。
+let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.DEFAULT);
+// 若干业务逻辑完成后，创建跟踪分支。
+let spanTraceId = hiTraceChain.createSpan();
+// 同一跟踪链的跟踪标识的chainId一定相同。
+if (spanTraceId.chainId != traceId.chainId) {
+// 基于异常场景的处理逻辑。
+}
+// 业务结束，结束跟踪。
+hiTraceChain.end(traceId);
+```

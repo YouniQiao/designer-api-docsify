@@ -23,7 +23,7 @@ settings.You are advised to select **factoryReset** for routine maintenance, **f
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import update from '@kit.BasicServicesKit';
 ```
 
 ## deepFactoryReset
@@ -63,24 +63,47 @@ app status needs to be saved in advance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| factoryResetStrategy | [FactoryResetStrategy](arkts-basicservices-update-factoryresetstrategy-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| factoryResetStrategy | [FactoryResetStrategy](arkts-basicservices-update-factoryresetstrategy-i-sys.md) | Yes | Factory reset strategy, which contains the **scope** (reset scope) and **strategy** (reset strategy description) fields. This parameter is used to control the scope and mode of factory reset. **scope** specifies the data clearance scope. **DATA** indicates that only data in the user partition is cleared; **DATA_AND_OS** indicates that data in both the user partition and OS partition is cleared. **strategy** is the custom description of the reset operation. The value is a string of 0 to 64 characters. The value can contain letters, digits, underscores (_), hyphens (-), and spaces. An exception is thrown if the value is out of range or contains invalid characters. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, **resolve** returns no value. If the operation fails, the return value of **reject** is an error message. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
-| [11500104](../errorcode-update.md#11500104-ipc-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
+| [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // Obtain a Restorer object for restoring factory settings.
+  let factoryRestorer = update.getRestorer();
+  // Create a FactoryResetStrategy object.
+  let factoryResetStrategy: update.FactoryResetStrategy = {
+    scope: update.FactoryResetScope.DATA, // The reset scope is user data.
+    strategy: 'deepFactoryReset test' // Reset scope
+  };
+  // Perform deep factory reset.
+  factoryRestorer.deepFactoryReset(factoryResetStrategy).then(() => {
+    console.info(`deepFactoryReset success`);
+  }).catch((deepResetError: BusinessError) => {
+    console.error(`deepFactoryReset error, code:${deepResetError.code}, message:${deepResetError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
+}
+```
 
 ## factoryReset
 
@@ -106,18 +129,40 @@ Clears data in the user partition, deletes installed apps, user files, and perso
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the factory reset result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
-| [11500104](../errorcode-update.md#11500104-ipc-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
+| [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Obtain a Restorer object for restoring factory settings.
+  let factoryRestorer = update.getRestorer();
+  // Restore factory settings.
+  factoryRestorer.factoryReset((resetError: BusinessError) => {
+    if (resetError) {
+      console.error(`factoryReset error, code:${resetError.code}, message:${resetError.message}.`);
+      return;
+    }
+    console.info(`factoryReset success`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Fail to get factoryRestorer. Code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## factoryReset
 
@@ -143,18 +188,37 @@ Clears data in the user partition, deletes installed apps, user files, and perso
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, **resolve** returns no value. If the operation fails, the return value of **reject** is an error message. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
-| [11500104](../errorcode-update.md#11500104-ipc-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
+| [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Obtain a Restorer object for restoring factory settings.
+  let factoryRestorer = update.getRestorer();
+  // Restore factory settings.
+  factoryRestorer.factoryReset().then(() => {
+    console.info(`factoryReset success`);
+  }).catch((resetError: BusinessError) => {
+    console.error(`factoryReset error, code:${resetError.code}, message:${resetError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
+}
+```
 
 ## forceFactoryReset
 
@@ -184,18 +248,36 @@ and device handover.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, **resolve** returns no value. If the operation fails, the return value of **reject** is an error message. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
-| [11500104](../errorcode-update.md#11500104-ipc-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
+| [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // Obtain a Restorer object for restoring factory settings.
+  let factoryRestorer = update.getRestorer();
+  // Perform forcible factory reset.
+  factoryRestorer.forceFactoryReset().then(() => {
+    console.info(`forceFactoryReset success`);
+  }).catch((forceResetError: BusinessError) => {
+    console.error(`forceFactoryReset error, code:${forceResetError.code}, message:${forceResetError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
+}
+```
 
 ## getDeepFactoryResetInfo
 
@@ -225,20 +307,44 @@ not perform the deep factory reset. Otherwise, the operation may fail due to pow
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| factoryResetStrategy | [FactoryResetStrategy](arkts-basicservices-update-factoryresetstrategy-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| factoryResetStrategy | [FactoryResetStrategy](arkts-basicservices-update-factoryresetstrategy-i-sys.md) | Yes | Factory reset strategy, which contains the **scope** (reset scope) and **strategy** (reset strategy description) fields. This parameter is used to control the scope and mode of factory reset. **scope** specifies the data clearance scope. **DATA** indicates that only data in the user partition is cleared; **DATA_AND_OS** indicates that data in both the user partition and OS partition is cleared. **strategy** is the custom description of the reset operation. The value is a string of 0 to 64 characters. The value can contain letters, digits, underscores (_), hyphens (-), and spaces. An exception is thrown if the value is out of range or contains invalid characters. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[FactoryResetInfo](arkts-basicservices-update-factoryresetinfo-i-sys.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[FactoryResetInfo](arkts-basicservices-update-factoryresetinfo-i-sys.md)&gt; | Promise used to return the result. If the operation is successful, the return value of **resolve** is a **FactoryResetInfo** object, including the estimated time required for reset. If the operation fails, the return value of **reject** is an error message. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [11500104](../errorcode-update.md#11500104-ipc-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Create a FactoryResetStrategy object.
+let factoryResetStrategy: update.FactoryResetStrategy = {
+  scope: update.FactoryResetScope.DATA, // The reset scope is user data.
+  strategy: 'getDeepFactoryResetInfo test' // Reset scope
+};
+try {
+  // Obtain a Restorer object for restoring factory settings.
+  let factoryRestorer = update.getRestorer();
+  // Query the deep factory reset strategy.
+  factoryRestorer.getDeepFactoryResetInfo(factoryResetStrategy).then((deepResetInfo: update.FactoryResetInfo) => {
+    console.info(`getDeepFactoryResetInfo success`);
+  }).catch((resetInfoError: BusinessError) => {
+    console.error(`getDeepFactoryResetInfo promise error, code:${resetInfoError.code}, message:${resetInfoError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
+}
+```

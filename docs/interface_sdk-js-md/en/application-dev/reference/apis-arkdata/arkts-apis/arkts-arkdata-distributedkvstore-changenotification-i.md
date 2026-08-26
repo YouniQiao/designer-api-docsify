@@ -9,7 +9,7 @@ Defines the content of a data change notification, including inserted data, upda
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import distributedKVStore from '@kit.ArkData';
 ```
 
 ## deleteEntries
@@ -43,6 +43,23 @@ UUID of the device.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.deviceId('deviceId');
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## insertEntries
 

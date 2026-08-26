@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileUri } from 'kits/@kit.CoreFileKit';
+import fileUri from '@kit.CoreFileKit';
 ```
 
 ## getUriFromPath
@@ -22,18 +22,25 @@ Get the uri from the path of file in app sandbox
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| path | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | the path of file in app sandbox |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Return the file uri |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test";
+let uri = fileUri.getUriFromPath(filePath);
+```

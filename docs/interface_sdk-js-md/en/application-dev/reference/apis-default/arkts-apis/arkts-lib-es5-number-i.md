@@ -15,14 +15,14 @@ Returns a string containing a number represented in exponential notation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fractionDigits | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fractionDigits | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toFixed
 
 ```TypeScript
@@ -33,14 +33,14 @@ Returns a string representing a number in fixed-point notation.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fractionDigits | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fractionDigits | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toLocaleString
 
 ```TypeScript
@@ -51,15 +51,15 @@ Converts a number to a string by using the current or specified locale.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locales | string \| string[] | No |
-| options | [Intl.NumberFormatOptions](arkts-intl-numberformatoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locales | string \| string[] | No |  |
+| options | [Intl.NumberFormatOptions](arkts-intl-numberformatoptions-i.md) | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toPrecision
 
 ```TypeScript
@@ -70,14 +70,14 @@ Returns a string containing a number represented either in exponential or fixed-
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| precision | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| precision | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toString
 
 ```TypeScript
@@ -88,14 +88,14 @@ Returns a string representation of an object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| radix | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| radix | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## valueOf
 
 ```TypeScript
@@ -106,5 +106,5 @@ Returns the primitive value of the specified object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

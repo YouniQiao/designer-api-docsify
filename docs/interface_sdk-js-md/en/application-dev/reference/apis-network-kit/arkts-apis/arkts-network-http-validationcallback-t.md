@@ -14,12 +14,12 @@ Self defined remote validation. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [ValidationContext](arkts-network-http-validationcontext-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [ValidationContext](arkts-network-http-validationcontext-i.md) | Yes | Certificate context. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean \| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| boolean \| Promise & lt;boolean & gt; | Returns a boolean value indicating whether the validation is successful. Promise used to return the result. The value true indicates valid, and false indicates invalid. |

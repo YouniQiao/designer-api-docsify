@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import pasteboard from '@kit.BasicServicesKit';
 ```
 
 ## createUriData
@@ -24,12 +24,18 @@ function createUriData(uri: string): PasteData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | URI内容，需符合标准URI格式。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 剪贴板内容对象。 |
+
+**示例**
+
+```TypeScript
+let pasteData: pasteboard.PasteData = pasteboard.createUriData('dataability:///com.example.myapplication1/user.txt');
+```

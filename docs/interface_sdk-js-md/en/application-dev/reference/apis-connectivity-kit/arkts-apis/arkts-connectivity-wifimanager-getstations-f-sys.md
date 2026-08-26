@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## getStations
@@ -24,15 +25,28 @@ Obtain the list of stations that are connected to the Wi-Fi hotspot. This method
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;StationInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;StationInfo & gt; | the list of clients that are connected to the Wi-Fi hotspot. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+try {
+  let stations = wifiManager.getStations();
+  console.info("result:" + JSON.stringify(stations));    
+}catch (error) {
+  console.error("failed:" + JSON.stringify(error));
+}
+```

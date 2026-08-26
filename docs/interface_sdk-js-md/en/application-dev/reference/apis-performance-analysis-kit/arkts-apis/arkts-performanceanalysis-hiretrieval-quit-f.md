@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## quit
@@ -22,6 +21,6 @@ Quit the HiRetrieval project. This operation clears the current HiRetrieval conf
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 36000001 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 36000001 | Initialization error. Possibly caused by invoking this function before invoking init function. |

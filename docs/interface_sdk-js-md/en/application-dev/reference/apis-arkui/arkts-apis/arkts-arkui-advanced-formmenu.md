@@ -3,20 +3,20 @@
 ## Modules to Import
 
 ```TypeScript
-import { AddFormMenuItem, FormMenuItemStyle, AddFormOptions } from 'kits/@kit.ArkUI';
+import { AddFormMenuItem, FormMenuItemStyle, AddFormOptions } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AddFormMenuItem(Defines the form menu)](arkts-arkui-arkui-advanced-formmenu-addformmenuitem-f.md) |
+| Name | Description |
+| --- | --- |
+| [AddFormMenuItem(Defines the form menu)](arkts-arkui-arkui-advanced-formmenu-addformmenuitem-f.md) | Build function of AddFormMenuItem. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AddFormOptions(Defines the form menu)](arkts-arkui-arkui-advanced-formmenu-addformoptions-i.md) |
-| [FormMenuItemStyle(Defines the form menu)](arkts-arkui-arkui-advanced-formmenu-formmenuitemstyle-i.md) |
+| Name | Description |
+| --- | --- |
+| [AddFormOptions(Defines the form menu)](arkts-arkui-arkui-advanced-formmenu-addformoptions-i.md) | Defines the add form options. |
+| [FormMenuItemStyle(Defines the form menu)](arkts-arkui-arkui-advanced-formmenu-formmenuitemstyle-i.md) | Defines the form menu item style. |

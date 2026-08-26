@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## onDownloadSuccess
@@ -20,7 +20,25 @@ Subscribes to the pre-download completion events. This API uses an asynchronous 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| url | string | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| url | string | Yes | Callback URL to be registered, with a maximum of 8,192 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { cacheDownload } from '@kit.BasicServicesKit';
+
+try {
+  const successCallback = () => {
+    console.info("Succeeded in getting callback from cacheDownload");
+  };
+  // Subscribe to the pre-download completion events. Callback is invoked when the download is complete.
+  cacheDownload.onDownloadSuccess("https://www.example.com", successCallback)
+  // Download the resource. If the download is successful, the resource will be cached to the specified file in the application memory or sandbox directory. 
+  cacheDownload.download("https://www.example.com", {});
+} catch (err) {
+  console.error(`Failed to download the resource. err code: ${err.code}, err message: ${err.message}`);
+}
+```

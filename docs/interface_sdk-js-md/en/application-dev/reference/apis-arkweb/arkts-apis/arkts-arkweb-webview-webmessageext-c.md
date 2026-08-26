@@ -9,7 +9,6 @@ Implements a **WebMessageExt** object that received and sent by the [WebMessageP
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getArray
@@ -28,15 +27,15 @@ Obtains array-type data of the data object. For details about the sample code, s
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string \ | number \| boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string \ | number \| boolean & gt; | Data of the array type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getArrayBuffer
 
@@ -54,15 +53,15 @@ Obtains raw binary data of the data object. For details about the sample code, s
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| ArrayBuffer |
+| Type | Description |
+| --- | --- |
+| ArrayBuffer | Raw binary data. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getBoolean
 
@@ -80,15 +79,15 @@ Obtains Boolean-type data of the data object. For details about the sample code,
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Data of the Boolean type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getError
 
@@ -106,15 +105,15 @@ Obtains the error-object-type data of the data object. For details about the sam
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Error |
+| Type | Description |
+| --- | --- |
+| Error | Data of the error object type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getNumber
 
@@ -132,15 +131,15 @@ Obtains number-type data of the data object. For details about the sample code, 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Data of the number type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getString
 
@@ -158,15 +157,15 @@ Obtains string-type data of the data object. For details about the sample code, 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Data of the string type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getType
 
@@ -184,9 +183,9 @@ Obtains the type of the data object. For details about the sample code, see onMe
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) |
+| Type | Description |
+| --- | --- |
+| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Data types supported by the [webMessagePort]{ |
 
 ## setArray
 
@@ -204,16 +203,16 @@ Sets the array-type data for the data object. For details about the sample code,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | Array & lt;string \ | number \| boolean & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | Array & lt;string \ | number \| boolean & gt; | Yes | Data of the array type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setArrayBuffer
 
@@ -231,16 +230,16 @@ Sets the raw binary data for the data object. For details about the sample code,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | ArrayBuffer | Yes | Raw binary data. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setBoolean
 
@@ -258,16 +257,16 @@ Sets the Boolean-type data for the data object. For details about the sample cod
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | boolean | Yes | Data of the Boolean type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setError
 
@@ -285,16 +284,16 @@ Sets the error-object-type data for the data object. For details about the sampl
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | Error | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | Error | Yes | Data of the error object type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setNumber
 
@@ -312,16 +311,16 @@ Sets the number-type data of the data object. For details about the sample code,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | number | Yes | Data of the number type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setString
 
@@ -339,16 +338,16 @@ Sets the string-type data of the data object. For details about the sample code,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes | String type. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setType
 
@@ -366,13 +365,13 @@ Sets the type for the data object. For details about the sample code, see onMess
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Yes | Data types supported by the [webMessagePort](arkts-arkweb-webview-webmessageport-i.md) API. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |

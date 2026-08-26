@@ -4,53 +4,53 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Animation](arkts-arkgraphics3d-sceneresources-animation-i.md) |
-| [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md) |
-| [Effect](arkts-arkgraphics3d-sceneresources-effect-i.md) |
-| [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md) |
-| [Image](arkts-arkgraphics3d-sceneresources-image-i.md) |
-| [ImageStream](arkts-arkgraphics3d-sceneresources-imagestream-i.md) |
-| [Material](arkts-arkgraphics3d-sceneresources-material-i.md) |
-| [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md) |
-| [Mesh](arkts-arkgraphics3d-sceneresources-mesh-i.md) |
-| [MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md) |
-| [MetallicRoughnessMaterial](arkts-arkgraphics3d-sceneresources-metallicroughnessmaterial-i.md) |
-| [Morpher](arkts-arkgraphics3d-sceneresources-morpher-i.md) |
-| [OcclusionMaterial](arkts-arkgraphics3d-sceneresources-occlusionmaterial-i.md) |
-| [RenderSort](arkts-arkgraphics3d-sceneresources-rendersort-i.md) |
-| [Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md) |
-| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md) |
-| [Shader](arkts-arkgraphics3d-sceneresources-shader-i.md) |
-| [ShaderMaterial](arkts-arkgraphics3d-sceneresources-shadermaterial-i.md) |
-| [SubMesh](arkts-arkgraphics3d-sceneresources-submesh-i.md) |
-| [UnlitMaterial](arkts-arkgraphics3d-sceneresources-unlitmaterial-i.md) |
+| Name | Description |
+| --- | --- |
+| [Animation](arkts-arkgraphics3d-sceneresources-animation-i.md) | Animation resource, which inherits from SceneResource.@extends SceneResource @interface Animation |
+| [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md) | Controls the transparency of materials.@interface Blend |
+| [Effect](arkts-arkgraphics3d-sceneresources-effect-i.md) | Effect resource, which inherits from SceneResource. It is obtained from the createEffect API.@extends SceneResource @interface Effect |
+| [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md) | Environment resource, which inherits from SceneResource.@extends SceneResource @interface Environment |
+| [Image](arkts-arkgraphics3d-sceneresources-image-i.md) | Image resource, which inherits from SceneResource.@extends SceneResource @interface Image |
+| [ImageStream](arkts-arkgraphics3d-sceneresources-imagestream-i.md) | ImageStream resource. |
+| [Material](arkts-arkgraphics3d-sceneresources-material-i.md) | Material resource, which inherits from SceneResource.@extends SceneResource @interface Material |
+| [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | Defines the textures, property factors, and texture samplers used by a material.@interface MaterialProperty |
+| [Mesh](arkts-arkgraphics3d-sceneresources-mesh-i.md) | Mesh resource, which inherits from SceneResource.@extends SceneResource @interface Mesh |
+| [MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md) | Mesh resource, which inherits from SceneResource.@extends SceneResource @interface MeshResource |
+| [MetallicRoughnessMaterial](arkts-arkgraphics3d-sceneresources-metallicroughnessmaterial-i.md) | Material resource for creating realistic appearances, using the Metallic-Roughness model based on PBR. It simulates the surface lighting and reflection effects of different materials like metal and plastic by adjusting metallicity and roughness parameters. It inherits from Material.@extends Material @interface MetallicRoughnessMaterial |
+| [Morpher](arkts-arkgraphics3d-sceneresources-morpher-i.md) | Defines the deformation of 3D models by adjusting the weights of different deformation targets to create dynamic effects.@interface Morpher |
+| [OcclusionMaterial](arkts-arkgraphics3d-sceneresources-occlusionmaterial-i.md) | Occlusion material: occludes other objects in the scene but does not occlude the environment. It is inherited from Material.@extends Material @interface OcclusionMaterial |
+| [RenderSort](arkts-arkgraphics3d-sceneresources-rendersort-i.md) | Describes the order in which materials are rendered, controlling the sequence of drawing in the rendering pipeline.@interface RenderSort |
+| [Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md) | Describes the sampling modes used during texture sampling.@interface { Sampler } |
+| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md) | Describes a resource in a scene.@interface SceneResource |
+| [Shader](arkts-arkgraphics3d-sceneresources-shader-i.md) | Shader resource, which inherits from SceneResource.@extends SceneResource @interface Shader |
+| [ShaderMaterial](arkts-arkgraphics3d-sceneresources-shadermaterial-i.md) | Shader material, which inherits from Material.@extends Material @interface ShaderMaterial |
+| [SubMesh](arkts-arkgraphics3d-sceneresources-submesh-i.md) | Sub-mesh resource.@interface SubMesh |
+| [UnlitMaterial](arkts-arkgraphics3d-sceneresources-unlitmaterial-i.md) | Material that is not affected by lighting. The shading value of the material is related only to the base color and is irrelevant to lighting conditions. It inherits from Material.@extends Material @interface UnlitMaterial |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [UnlitShadowAlphaMaterial](arkts-arkgraphics3d-sceneresources-unlitshadowalphamaterial-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [UnlitShadowAlphaMaterial](arkts-arkgraphics3d-sceneresources-unlitshadowalphamaterial-i-sys.md) | This material inherits from Material and draws only the surface shadows. When the Blend property is enabled, the material can be blended with the background to simulate transparency.@extends Material @interface UnlitShadowAlphaMaterial |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CullMode](arkts-arkgraphics3d-sceneresources-cullmode-e.md) |
-| [EnvironmentBackgroundType](arkts-arkgraphics3d-sceneresources-environmentbackgroundtype-e.md) |
-| [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md) |
-| [PolygonMode](arkts-arkgraphics3d-sceneresources-polygonmode-e.md) |
-| [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md) |
-| [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md) |
-| [SceneResourceType](arkts-arkgraphics3d-sceneresources-sceneresourcetype-e.md) |
+| Name | Description |
+| --- | --- |
+| [CullMode](arkts-arkgraphics3d-sceneresources-cullmode-e.md) | Enumerates the culling modes of PBR materials. You can improve rendering performance and visual quality by determining whether the front or back faces of objects are culled.@enum { number } |
+| [EnvironmentBackgroundType](arkts-arkgraphics3d-sceneresources-environmentbackgroundtype-e.md) | Enumerates the environment background types, which are used to define how the background of a scene is presented. @enum { number } |
+| [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md) | Enumerates the material types in a scene. The material type defines how materials in a scene are rendered.@enum { number } |
+| [PolygonMode](arkts-arkgraphics3d-sceneresources-polygonmode-e.md) | Enumerates the polygon drawing mode.@enum { number } |
+| [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md) | Enumerates the sampler addressing modes, which are used to control how texture coordinates are handled when they go beyond the [0, 1] range.@enum { number } |
+| [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md) | Enumerates the filtering modes of a sampler. The filtering mode determines the interpolation method used when sampling textures, controlling how final pixel colors are calculated during texture scaling or deformation.@enum { number } |
+| [SceneResourceType](arkts-arkgraphics3d-sceneresources-sceneresourcetype-e.md) | Enumerates the scene resource types, which are used to classify resources in a scene.@enum { number } |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e-sys.md) | Enumerates the material types in a scene. The material type defines how materials in a scene are rendered.@enum { number } |
 <!--DelEnd-->

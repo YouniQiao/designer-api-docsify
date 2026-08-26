@@ -11,7 +11,6 @@ CSR属性字段，当前仅支持字符串类型的属性字段，属性值添�
 ## 导入模块
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## type

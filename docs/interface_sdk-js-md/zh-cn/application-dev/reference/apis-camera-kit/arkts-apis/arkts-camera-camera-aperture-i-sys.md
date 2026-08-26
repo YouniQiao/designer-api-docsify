@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getVirtualAperture
@@ -30,16 +29,25 @@ getVirtualAperture(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前设置的虚拟光圈值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+function getVirtualAperture(session: camera.PortraitPhotoSession): number {
+  let virtualAperture: number = session.getVirtualAperture();
+  return virtualAperture;
+}
+```
 
 ## setVirtualAperture
 
@@ -57,13 +65,21 @@ setVirtualAperture(aperture: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [aperture](arkts-camera-camera-apertureinfo-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| aperture | number | 是 | 虚拟光圈值，通过getSupportedVirtualApertures接口获取。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+function setVirtualAperture(session: camera.PortraitPhotoSession, virtualAperture: number): void {
+  session.setVirtualAperture(virtualAperture);
+}
+```

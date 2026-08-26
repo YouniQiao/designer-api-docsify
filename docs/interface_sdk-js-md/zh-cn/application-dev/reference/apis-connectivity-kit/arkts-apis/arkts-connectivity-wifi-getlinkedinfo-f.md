@@ -3,7 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import wifi from '@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKitext';
+import wifiManager from '@kit.ConnectivityKitManager';
+import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 ```
 
 ## getLinkedInfo
@@ -26,9 +29,29 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;WifiLinkedInfo & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;WifiLinkedInfo & gt; | 表示WLAN连接信息。 |
+
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getLinkedInfo((err, data:wifi.WifiLinkedInfo) => {
+    if (err) {
+        console.error("get linked info error");
+        return;
+    }
+    console.info("get wifi linked info: " + JSON.stringify(data));
+});
+
+wifi.getLinkedInfo().then(data => {
+    console.info("get wifi linked info: " + JSON.stringify(data));
+}).catch((error:number) => {
+    console.info("get linked info error");
+});
+```
 
 
 ## getLinkedInfo
@@ -51,6 +74,10 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 |  |
+
+**示例**
+
+参见 [getLinkedInfo](#getlinkedinfo)

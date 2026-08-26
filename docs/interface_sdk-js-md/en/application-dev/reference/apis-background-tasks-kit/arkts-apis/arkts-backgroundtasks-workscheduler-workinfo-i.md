@@ -9,7 +9,7 @@ Represents the deferred task information, which is used to set the trigger condi
 ## Modules to Import
 
 ```TypeScript
-import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
+import workScheduler from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName

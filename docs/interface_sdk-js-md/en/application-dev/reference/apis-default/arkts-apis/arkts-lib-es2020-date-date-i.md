@@ -15,15 +15,15 @@ Converts a date to a string by using the current or specified locale.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locales | Intl.LocalesArgument | No |
-| options | Intl.DateTimeFormatOptions | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locales | Intl.LocalesArgument | No |  |
+| options | Intl.DateTimeFormatOptions | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toLocaleString
 
 ```TypeScript
@@ -34,15 +34,15 @@ Converts a date and time to a string by using the current or specified locale.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locales | Intl.LocalesArgument | No |
-| options | Intl.DateTimeFormatOptions | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locales | Intl.LocalesArgument | No |  |
+| options | Intl.DateTimeFormatOptions | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## toLocaleTimeString
 
 ```TypeScript
@@ -53,12 +53,12 @@ Converts a time to a string by using the current or specified locale.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locales | Intl.LocalesArgument | No |
-| options | Intl.DateTimeFormatOptions | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locales | Intl.LocalesArgument | No |  |
+| options | Intl.DateTimeFormatOptions | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

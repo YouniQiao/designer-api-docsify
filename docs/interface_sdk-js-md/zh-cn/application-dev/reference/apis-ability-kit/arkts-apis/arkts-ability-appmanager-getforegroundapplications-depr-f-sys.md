@@ -27,9 +27,23 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | 是 | 回调函数，返回所有当前处于前台的应用信息。 |
+
+**示例**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+
+appManager.getForegroundApplications((err, data) => {
+  if (err) {
+    console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
+  } else {
+    console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
+  }
+});
+```
 
 
 ## getForegroundApplications
@@ -54,6 +68,21 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Promise对象，返回所有当前处于前台的应用信息。 |
+
+**示例**
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+appManager.getForegroundApplications()
+  .then((data) => {
+    console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
+  });
+```

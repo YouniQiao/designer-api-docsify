@@ -9,7 +9,7 @@ Implements a PiP controller that starts, stops, or updates a PiP window and regi
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
+import PiPWindow from '@kit.ArkUI';
 ```
 
 ## isPiPSupported
@@ -28,13 +28,13 @@ Returns a Boolean value that indicates whether picture-in-picture is supported
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | True if picture-in-picture is supported, otherwise false |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
+import errorManager from '@kit.AbilityKit';
 ```
 
 ## instanceName

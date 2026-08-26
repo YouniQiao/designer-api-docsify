@@ -27,11 +27,31 @@ function updateForm(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
-| [formBindingData](arkts-application-formbindingdata.md) | formBindingData.FormBindingData | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | 请求更新的卡片标识。 |
+| formBindingData | formBindingData.FormBindingData | 是 | 用于更新的数据。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { formProvider, formBindingData } from '@kit.FormKit';
+
+// 使用时需要用已经存在formId
+let formId: string = '12400633174999288';
+let param: Record<string, string> = {
+  'temperature': '22c',
+  'time': '22:00'
+}
+let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+formProvider.updateForm(formId, obj, (error: BusinessError) => {
+  if (error.code) {
+    console.error(`formProvider updateForm, errorCode: ${error.code}, errorMessage: ${error.message}`);
+  }
+});
+```
 
 
 ## updateForm
@@ -52,13 +72,33 @@ function updateForm(formId: string, formBindingData: formBindingData.FormBinding
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
-| [formBindingData](arkts-application-formbindingdata.md) | formBindingData.FormBindingData | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | 请求更新的卡片标识。 |
+| formBindingData | formBindingData.FormBindingData | 是 | 用于更新的数据。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { formProvider, formBindingData } from '@kit.FormKit';
+
+// 使用时需要用已经存在formId
+let formId: string = '12400633174999288';
+let param: Record<string, string> = {
+  'temperature': '22c',
+  'time': '22:00'
+}
+let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+formProvider.updateForm(formId, obj).then(() => {
+  console.info('formProvider updateForm success');
+}).catch((error: BusinessError) => {
+  console.error(`formProvider updateForm, errorCode: ${error.code}, errorMessage: ${error.message}`);
+});
+```

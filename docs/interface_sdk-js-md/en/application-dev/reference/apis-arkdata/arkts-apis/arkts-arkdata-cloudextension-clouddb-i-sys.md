@@ -11,7 +11,7 @@ Provides APIs for performing cloud database operations.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import cloudExtension from '@kit.ArkData';
 ```
 
 ## delete
@@ -33,16 +33,32 @@ Deletes data from a cloud database table. This API uses a promise to return the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| table | string | Yes |
-| [extensions](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-nnrtdevice-i.md) | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| table | string | Yes | Table name. |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes | Extended information about the current data. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the deleted data and operation result. |
+
+**Examples**
+
+```TypeScript
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+  async delete(table: string, extensions: Array<Record<string, cloudExtension.CloudType>>): Promise<Array<cloudExtension.Result<Record<string, cloudExtension.CloudType>>>> {
+    console.info(`delete, table: ${table}`);
+    let deleteRes: Array<cloudExtension.Result<Record<string, cloudExtension.CloudType>>> = [];
+    // ...
+    // Returns the result of deleting data.
+    return deleteRes;
+  }
+  // ...
+}
+```
 
 ## generateId
 
@@ -60,15 +76,33 @@ Generates IDs for the data records inserted to the cloud database. The IDs are u
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| count | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| count | number | Yes | Number of IDs to generate. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Result & lt;Array & lt;string & gt; & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Result & lt;Array & lt;string & gt; & gt; & gt; | Promise used to return the generated IDs in Result. |
+
+**Examples**
+
+```TypeScript
+class MyCloudDB implements cloudExtension.CloudDB {
+  async generateId(count: number): Promise<cloudExtension.Result<Array<string>>> {
+    console.info(`generate id, count: ${count}`);
+    let result = new Array<string>();
+    // ...
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: 'generateId succeeded',
+      value: result
+    };
+  }
+  // ...
+}
+```
 
 ## heartbeat
 
@@ -86,15 +120,39 @@ Extends the lock period of the database. This API uses a promise to return the r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [lockId](arkts-arkdata-cloudextension-lockinfo-i-sys.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| lockId | number | Yes | Lock ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Result & lt;LockInfo & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Result & lt;LockInfo & gt; & gt; | Promise used to return the lock ID and lock period. |
+
+**Examples**
+
+```TypeScript
+let testLockId: number = 1;
+let testTime: number = 10;
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+  async heartbeat(lockId: number): Promise<cloudExtension.Result<cloudExtension.LockInfo>> {
+    console.info(`heartbeat lock`);
+    // ...
+    // Return the heartbeat check result.
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: 'heartbeat succeeded',
+      value: {
+        interval: testTime,
+        lockId: testLockId
+      }
+    };
+  }
+  // ...
+}
+```
 
 ## insert
 
@@ -116,17 +174,33 @@ Inserts data to a cloud database table. This API uses a promise to return the re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| table | string | Yes |
-| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes |
-| [extensions](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-nnrtdevice-i.md) | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| table | string | Yes | Table name. |
+| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes | Data to insert. |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes | Extended information about the current data. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the inserted data and operation result. |
+
+**Examples**
+
+```TypeScript
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+  async insert(table: string, values: Array<Record<string, cloudExtension.CloudType>>, extensions: Array<Record<string, cloudExtension.CloudType>>): Promise<Array<cloudExtension.Result<Record<string, cloudExtension.CloudType>>>> {
+    console.info(`insert, table: ${table}`);
+    let insertRes: Array<cloudExtension.Result<Record<string, cloudExtension.CloudType>>> = [];
+    // ...
+    // Return the operation result.
+    return insertRes;
+  }
+  // ...
+}
+```
 
 ## lock
 
@@ -144,9 +218,33 @@ Locks this cloud database. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Result & lt;LockInfo & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Result & lt;LockInfo & gt; & gt; | Promise used to return the lock ID and lock period. |
+
+**Examples**
+
+```TypeScript
+let testTime: number = 10;
+let testLockId: number = 1;
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+  async lock(): Promise<cloudExtension.Result<cloudExtension.LockInfo>> {
+    console.info(`DB lock`);
+    // ...
+    // Returns the result of locking data.
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: 'lock succeeded',
+      value: {
+        interval: testTime,
+        lockId: testLockId
+      }
+    };
+  }
+  // ...
+}
+```
 
 ## query
 
@@ -164,18 +262,41 @@ Queries data in a cloud database table. This API uses a promise to return the re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| table | string | Yes |
-| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | Yes |
-| queryCount | number | Yes |
-| queryCursor | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| table | string | Yes | Table name. |
+| fields | Array & lt;string & gt; | Yes | Name of the fields to query. |
+| queryCount | number | Yes | Number of data records to query. |
+| queryCursor | string | Yes | Cursor for the query. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Result&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Result&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; | Promise used to return the data and operation result. |
+
+**Examples**
+
+```TypeScript
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+  async query(table: string, fields: Array<string>, queryCount: number, queryCursor: string): Promise<cloudExtension.Result<cloudExtension.CloudData>> {
+    console.info(`query, table: ${table}`);
+    // ...
+    // Return the result of querying data.
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: 'query succeeded',
+      value: {
+        nextCursor: "test_nextCursor",
+        hasMore: true,
+        values: []
+      }
+    };
+  }
+  // ...
+}
+```
 
 ## unlock
 
@@ -193,15 +314,34 @@ Unlocks a cloud database. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [lockId](arkts-arkdata-cloudextension-lockinfo-i-sys.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| lockId | number | Yes | Lock ID to release. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Result & lt;boolean & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Result & lt;boolean & gt; & gt; | Promise used to return the result. The value true means the operation is successful; the value false means the opposite. |
+
+**Examples**
+
+```TypeScript
+class MyCloudDB implements cloudExtension.CloudDB {
+    // ...
+  async unlock(lockId: number): Promise<cloudExtension.Result<boolean>> {
+    console.info(`unlock`);
+    // ...
+    // Returns the result of unlocking data.
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: 'unlock succeeded',
+      value: false
+    };
+  }
+  // ...
+}
+```
 
 ## update
 
@@ -223,14 +363,30 @@ Updates data in the cloud. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| table | string | Yes |
-| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes |
-| [extensions](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-nnrtdevice-i.md) | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| table | string | Yes | Table name. |
+| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes | Data to insert. |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes | Extended information about the current data. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the update result and updated data. |
+
+**Examples**
+
+```TypeScript
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+  async update(table: string, values: Array<Record<string, cloudExtension.CloudType>>, extensions: Array<Record<string, cloudExtension.CloudType>>): Promise<Array<cloudExtension.Result<Record<string, cloudExtension.CloudType>>>> {
+    console.info(`update, table: ${table}`);
+    let updateRes: Array<cloudExtension.Result<Record<string, cloudExtension.CloudType>>> = [];
+    // ...
+    // Return the data update result.
+    return updateRes;
+  }
+  // ...
+}
+```

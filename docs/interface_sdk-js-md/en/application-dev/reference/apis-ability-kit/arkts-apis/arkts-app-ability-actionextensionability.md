@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { ActionExtensionAbility } from 'kits/@kit.AbilityKit';
+import ActionExtensionAbility from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md) |
+| Name | Description |
+| --- | --- |
+| [ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md) | The ActionExtensionAbility module provides a template for you to implement custom actions. It inherits from [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md).By implementing ActionExtensionAbility, you can provide content viewing and processing functionalities for other applications. For example, you can use ActionExtensionAbility to implement a text translation feature. Other applications can then call this ActionExtensionAbility to process content that requires translation and obtain the translated result.For details about the inheritance relationship of each ability, see [Inheritance Relationship](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship). |

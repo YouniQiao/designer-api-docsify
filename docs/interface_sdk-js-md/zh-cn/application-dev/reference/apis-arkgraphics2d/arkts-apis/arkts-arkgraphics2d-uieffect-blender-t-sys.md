@@ -14,8 +14,8 @@ type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender
 
 **系统接口：** 此接口为系统接口。
 
-| 类型 |
-| --- |
-| [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) |
-| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i.md) |
-| [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | 提亮混合器 |
+| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i.md) | 支持HDR的提亮混合器 [since 20] |
+| [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | 支持HDR的压暗混合器 [since 26.0.0] |

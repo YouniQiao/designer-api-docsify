@@ -14,6 +14,6 @@ type OnAdsBlockedCallback = (details: AdsBlockedDetails) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| details | [AdsBlockedDetails](arkts-arkweb-adsblockeddetails-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| details | [AdsBlockedDetails](arkts-arkweb-adsblockeddetails-i.md) | 是 | 发生广告拦截时，广告资源信息。 |

@@ -31,9 +31,9 @@ Sets the maximum pull-down distance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| distance | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| distance | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Maximum pull-down distance. The minimum value for the maximum pull-down distance is 0. Values less than 0 are treated as **0**. If this value is less than the refresh offset (**refreshOffset**), the refresh action will not be triggered when the pull-down gesture is released.If set to **undefined** or **null**, this parameter is considered not set.Default value: **undefined**.Unit: vp |
 
 ## maxPullDownDistance
 
@@ -53,9 +53,9 @@ Sets the maximum pull-down distance. The resource type is supported.If this API 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| distance | number \| Resource \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| distance | number \| Resource \| undefined | Yes | Maximum pull-down distance.Default value: **undefined**.Unit: vp Value range: [0, +∞). If the value is less than 0, **0** is used. If this value is less than the [refreshOffset](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#refreshoffset12), the refresh action will not be triggered when the pull-down gesture is released. If this parameter is set to **undefined** or **null**, it is considered that this attribute is not set, meaning there is no limit on the maximum pull-down distance. |
 
 ## onOffsetChange
 
@@ -65,7 +65,8 @@ onOffsetChange(callback: Callback<number>)
 
 Called when the pull-down distance changes.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 12
@@ -78,9 +79,9 @@ Called when the pull-down distance changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback & lt;number & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback & lt;number & gt; | Yes | Callback used to listen for the pull-down distance changes. It is triggered when the pull-down distance changes and returns the current pull-down distance.Unit: vp |
 
 ## onRefreshing
 
@@ -98,9 +99,9 @@ Called when the component starts refreshing.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | () = & gt; void | Yes | Callback triggered when the component enters the refresh state. |
 
 ## onStateChange
 
@@ -118,9 +119,9 @@ Called when the refresh status changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (state: RefreshStatus) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (state: RefreshStatus) = & gt; void | Yes |  |
 
 ## pullDownRatio
 
@@ -140,9 +141,9 @@ Sets the pull-down ratio.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [ratio](../arkts-apis/arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ratio | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Pull-down ratio. A larger value indicates higher responsiveness to the pull- down gesture. The value **0** indicates that the pull-down does not follow the gesture, and **1** indicates that the pull-down follows the gesture proportionally.If this parameter is not set or is set to **undefined**, a dynamic pull-down ratio is used. That is, the larger the pull-down distance, the smaller the ratio.The value ranges from 0 to 1. A value less than 0 is handled as **0**, and a value greater than 1 is handled as **1**. |
 
 ## pullToRefresh
 
@@ -162,9 +163,9 @@ Sets whether to initiate a refresh when the pull-down distance exceeds the value
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to initiate a refresh when the pull-down distance exceeds the value of [refreshOffset](#refreshoffset). The value **true** means to initiate a refresh, and **false** means the opposite.Default value: **true |
 
 ## pullUpToCancelRefresh
 
@@ -184,9 +185,9 @@ Sets whether to enable the pull-up-to-cancel gesture for refreshing operations.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean \| undefined | Yes | Whether to enable the pull-up-to-cancel gesture for refreshing operations.    **true**: Enable the pull-up-to-cancel gesture. **false**: Disable the pull-up-to-cancel gesture.    **undefined**: Enable the pull-up-to-cancel gesture. |
 
 ## refreshOffset
 
@@ -206,9 +207,9 @@ Sets the minimum pull-down offset required to trigger a refresh. If the distance
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Pull-down offset, in vp.Default value: 96 vp when [promptText](arkts-arkui-refreshoptions-i.md) is set and 64 vp when [promptText](arkts-arkui-refreshoptions-i.md) is not set.If the value specified is 0 or less than 0, the default value is used. |
 
 ## refreshOffset
 
@@ -228,6 +229,6 @@ Sets the pull-down offset that triggers the refresh. When the pull-down distance
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Pull-down offset.Unit: vp Value range: (0, +∞). If the value is 0 or a negative number, the default value will be used. |

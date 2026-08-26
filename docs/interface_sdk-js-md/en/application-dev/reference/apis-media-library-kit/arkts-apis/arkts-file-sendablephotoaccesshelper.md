@@ -9,66 +9,66 @@ The module provides APIs for album management, including creating an album and a
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getPhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f.md) |
+| Name | Description |
+| --- | --- |
+| [getPhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f.md) | Obtains a PhotoAccessHelper instance, which can be used for accessing and modifying media files in an album. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getPhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getPhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f-sys.md) | Obtains a PhotoAccessHelper instance for the specified user, letting you access and modify media files in an album. |
 <!--DelEnd-->
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AbsAlbum(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i.md) |
-| [Album(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) |
-| [FetchResult(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md) |
-| [PhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-photoaccesshelper-i.md) |
-| [PhotoAsset(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) |
+| Name | Description |
+| --- | --- |
+| [AbsAlbum(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i.md) | Defines the abstract interface of albums. |
+| [Album(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | Provides APIs to manage albums. |
+| [FetchResult(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md) | Provides APIs to manage the file retrieval result. |
+| [PhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-photoaccesshelper-i.md) | Helper functions to access photos and albums. |
+| [PhotoAsset(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | Provides APIs for encapsulating file asset attributes. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AbsAlbum(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i-sys.md) |
-| [Album(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-album-i-sys.md) |
-| [PhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-photoaccesshelper-i-sys.md) |
-| [PhotoAsset(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i-sys.md) |
-| [SharedPhotoAsset(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-sharedphotoasset-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AbsAlbum(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i-sys.md) | Defines the abstract interface of albums. |
+| [Album(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-album-i-sys.md) | Provides APIs to manage albums. |
+| [PhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-photoaccesshelper-i-sys.md) | Helper functions to access photos and albums. |
+| [PhotoAsset(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i-sys.md) | Provides APIs for encapsulating file asset attributes. |
+| [SharedPhotoAsset(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-sharedphotoasset-i-sys.md) | Defines the shared photo asset |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AlbumSubtype(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) |
-| [AlbumType(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e.md) |
-| [DynamicRangeType(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-dynamicrangetype-e.md) |
-| [PhotoSubtype(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e.md) |
-| [PhotoType(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) |
+| Name | Description |
+| --- | --- |
+| [AlbumSubtype(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | Enumerate the album subtypes. |
+| [AlbumType(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e.md) | Enumerates the album types. |
+| [DynamicRangeType(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-dynamicrangetype-e.md) | Enumerates the dynamic range types of media assets. |
+| [PhotoSubtype(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e.md) | Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) types. |
+| [PhotoType(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Enumerates media file types. |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AlbumSubtype(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e-sys.md) |
-| [AlbumType(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e-sys.md) |
-| [MovingPhotoEffectMode(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-movingphotoeffectmode-e-sys.md) |
-| [PhotoSubtype(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e-sys.md) |
-| [PositionType(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-positiontype-e-sys.md) |
-| [ThumbnailVisibility(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AlbumSubtype(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e-sys.md) | Enumerate the album subtypes. |
+| [AlbumType(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e-sys.md) | Enumerates the album types. |
+| [MovingPhotoEffectMode(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-movingphotoeffectmode-e-sys.md) | Enumeration of moving photo effect mode. |
+| [PhotoSubtype(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e-sys.md) | Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) types. |
+| [PositionType(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-positiontype-e-sys.md) | Photo asset position |
+| [ThumbnailVisibility(Helper functions to access image and video assets)](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md) | Ability to access thumbnail |
 <!--DelEnd-->

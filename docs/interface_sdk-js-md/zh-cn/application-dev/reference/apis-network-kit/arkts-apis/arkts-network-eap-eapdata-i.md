@@ -9,7 +9,7 @@ EAP信息。​**系统能力**​：SystemCapability.Communication.NetManager.E
 ## 导入模块
 
 ```TypeScript
-import { eap } from 'kits/@kit.NetworkKit';
+import eap from '@kit.NetworkKit';
 ```
 
 ## bufferLen

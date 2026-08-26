@@ -4,6 +4,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) |
+| Name | Description |
+| --- | --- |
+| [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | The ContinuationExtraParams module provides the filter parameters required by the device selection module in the continuation management entry. These filter parameters can be used as an input parameter of [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md). |

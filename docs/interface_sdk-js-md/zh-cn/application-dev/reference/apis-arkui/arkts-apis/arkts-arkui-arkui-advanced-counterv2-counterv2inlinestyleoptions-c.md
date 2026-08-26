@@ -2,7 +2,8 @@
 
 CounterV2InlineStyleOptions定义了数值内联型CounterV2的属性和事件。继承于[CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)，包含该接口所有属性。本节仅展示新增属性，继承属性请参见父接口。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 1. min应小于等于max。若min大于max，则按max处理。
 
 **继承/实现关系：** CounterV2InlineStyleOptions extends [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)
@@ -14,7 +15,7 @@ CounterV2InlineStyleOptions定义了数值内联型CounterV2的属性和事件�
 ## 导入模块
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from 'kits/@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
 
 ## onChange

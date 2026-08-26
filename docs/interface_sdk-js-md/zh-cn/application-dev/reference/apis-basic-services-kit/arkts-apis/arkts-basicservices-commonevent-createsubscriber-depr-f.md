@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import commonEventManager from '@kit.BasicServicesKitManager';
 ```
 
 ## createSubscriber
@@ -26,10 +27,37 @@ function createSubscriber(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | 是 | 表示订阅信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; | 是 | 表示创建订阅者的回调方法。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+import CommonEventManager from '@ohos.commonEventManager';
+
+let subscriber:CommonEventManager.CommonEventSubscriber; // 用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
+
+// 订阅者信息
+let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
+    events: ["event"]
+};
+
+// 创建订阅者回调
+let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
+    if (err.code) {
+        console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info("createSubscriber");
+        subscriber = commonEventSubscriber;
+    }
+}
+
+// 创建订阅者
+commonEvent.createSubscriber(subscribeInfo, createCallBack);
+```
 
 
 ## createSubscriber
@@ -50,12 +78,34 @@ function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<Comm
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | 是 | 表示订阅信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; | 返回订阅者对象。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+import CommonEventManager from '@ohos.commonEventManager';
+
+let subscriber:CommonEventManager.CommonEventSubscriber; // 用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
+
+// 订阅者信息
+let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
+    events: ["event"]
+};
+
+// 创建订阅者
+commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
+    console.info("createSubscriber");
+    subscriber = commonEventSubscriber;
+}).catch((err:Base.BusinessError) => {
+    console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
+});
+```

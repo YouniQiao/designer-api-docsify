@@ -31,9 +31,9 @@ constructor(options: RadialGradientOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [options](#options) | [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md) | 是 | 显示为径向渐变效果。 |
 
 ## options
 

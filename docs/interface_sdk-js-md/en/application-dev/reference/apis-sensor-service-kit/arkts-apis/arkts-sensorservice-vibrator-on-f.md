@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## on('vibratorStateChange')
@@ -20,13 +19,34 @@ Enables listening for vibrator status changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'vibratorStateChange' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'vibratorStateChange' | Yes | Event type. The value **vibratorStateChange** indicates a vibrator online/ offline event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | Yes | Callback used to return the vibrator status change event. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
+
+**Examples**
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Callback
+const vibratorStateChangeCallback = (data: vibrator.VibratorStatusEvent) => {
+  console.info('vibrator state callback info:', JSON.stringify(data));
+}
+
+// Use try catch to capture possible exceptions.
+try {
+  // Subscribe to vibratorStateChange events.
+  vibrator.on('vibratorStateChange', vibratorStateChangeCallback);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```

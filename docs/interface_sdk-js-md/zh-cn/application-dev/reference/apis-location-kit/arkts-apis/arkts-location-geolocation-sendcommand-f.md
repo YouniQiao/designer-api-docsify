@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import geolocation from '@kit.LocationKit';
 ```
 
 ## sendCommand
@@ -26,10 +26,25 @@ function sendCommand(command: LocationCommand, callback: AsyncCallback<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | 是 | 指定目标场景，和将要发送的命令（字符串）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示命令发送成功；返回false表示命令发送失败。 |
+
+**示例**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
+geolocation.sendCommand(requestInfo, (err, result) => {
+    if (err) {
+        console.info('sendCommand: err=' + JSON.stringify(err));
+    }
+    if (result) {
+        console.info('sendCommand: result=' + JSON.stringify(result));
+    }
+});
+```
 
 
 ## sendCommand
@@ -52,12 +67,22 @@ function sendCommand(command: LocationCommand): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | 是 | 指定目标场景，和将要发送的命令（字符串）。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;boolean & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise对象，返回true表示命令发送成功；返回false表示命令发送失败。 |
+
+**示例**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
+geolocation.sendCommand(requestInfo).then((result) => {
+    console.info('promise, sendCommand: ' + JSON.stringify(result));
+});
+```

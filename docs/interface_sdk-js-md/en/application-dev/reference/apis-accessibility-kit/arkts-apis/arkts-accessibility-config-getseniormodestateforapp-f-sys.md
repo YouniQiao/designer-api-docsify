@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from 'kits/@kit.AccessibilityKit';
+import config from '@kit.AccessibilityKit';
 ```
 
 ## getSeniorModeStateForApp
@@ -26,22 +26,35 @@ Queries the senior mode state of an app. This API uses a promise to return the r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| appIndex | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name of the app whose senior mode state is to be queried. |
+| appIndex | number | No | Clone index of the app bundle. Value range: an integer greater than or equal to 0. If not specified, the default value is **0**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the senior mode is enabled for the app, and **false** indicates that the senior mode is not enabled for the app. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |
-| [9300008](../errorcode-accessibility.md#9300008-app-clone-index-invalid) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality. |
+| [9300008](../errorcode-accessibility.md#9300008-app-clone-index-invalid) | The appIndex is invalid. Possible causes:  1.The appIndex is out of the valid range.  2.The application corresponding to the appIndex does not exist. |
+
+**Examples**
+
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+config.getSeniorModeStateForApp('com.example.myapplication', 0).then((data: boolean) => {
+  console.info(`Succeeded in getting seniorModeState for app, data: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get seniorModeState for app. Code: ${err.code}, message: ${err.message}`);
+});
+```

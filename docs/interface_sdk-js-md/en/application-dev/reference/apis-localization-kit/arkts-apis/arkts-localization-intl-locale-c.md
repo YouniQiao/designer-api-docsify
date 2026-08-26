@@ -13,7 +13,7 @@ Provides APIs for obtaining locale information.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import intl from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -35,6 +35,52 @@ Creates a **Locale** object.
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
+
+**Examples**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// The current locale ID is used by the default constructor.
+let locale = new intl.Locale();
+// Return the current system locale ID.
+let localeID = locale.toString();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a DateTimeFormat object using the current system locale ID.
+let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a NumberFormat object using the current system locale ID.
+let formatter: intl.NumberFormat = new intl.NumberFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a Collator object using the current system locale ID.
+let collator = new intl.Collator();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a PluralRules object using the current system locale ID.
+let pluralRules = new intl.PluralRules();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a RelativeTimeFormat object using the current system locale ID.
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
+```
 
 ## constructor
 
@@ -58,10 +104,20 @@ Creates a **Locale** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locale | string | Yes |
-| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locale | string | Yes | Locale information, which consists of the language, script, and country/region. |
+| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | No | Options for creating the **Locale** object.<br>**Since:** 12 |
+
+**Examples**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a zh-CN locale object.
+let locale = new intl.Locale('zh-CN');
+let localeID = locale.toString(); // localeID = 'zh-CN'
+```
 
 ## maximize
 
@@ -85,9 +141,27 @@ Maximizes locale information by supplementing the missing script and country/reg
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Locale](arkts-localization-intl-locale-c.md) |
+| Type | Description |
+| --- | --- |
+| [Locale](arkts-localization-intl-locale-c.md) | Locale** object with the script and country/region information. |
+
+**Examples**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a zh locale object.
+let locale = new intl.Locale('zh');
+// Supplement the locale object's script and region.
+let maximizedLocale = locale.maximize();
+let localeID = maximizedLocale.toString(); // localeID = 'zh-Hans-CN'
+
+// Create an en-US locale object.
+locale = new intl.Locale('en-US');
+// Supplement the locale object's script.
+maximizedLocale = locale.maximize();
+localeID = maximizedLocale.toString(); // localeID = 'en-Latn-US'
+```
 
 ## minimize
 
@@ -111,9 +185,27 @@ Minimizes locale information by removing the script and country/region informati
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Locale](arkts-localization-intl-locale-c.md) |
+| Type | Description |
+| --- | --- |
+| [Locale](arkts-localization-intl-locale-c.md) | Locale** object without the script and country/region information. |
+
+**Examples**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a zh-Hans-CN locale object.
+let locale = new intl.Locale('zh-Hans-CN');
+// Remove the locale object's script and region.
+let minimizedLocale = locale.minimize();
+let localeID = minimizedLocale.toString(); // localeID = 'zh'
+
+// Create an en-US locale object.
+locale = new intl.Locale('en-US');
+// Remove locale object's region.
+minimizedLocale = locale.minimize();
+localeID = minimizedLocale.toString(); // localeID = 'en'
+```
 
 ## toString
 
@@ -137,9 +229,19 @@ Obtains the string that represents a **Locale** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String that represents the **Locale** object. |
+
+**Examples**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create an en-GB locale object.
+let locale = new intl.Locale('en-GB');
+let localeID = locale.toString(); // localeID = 'en-GB'
+```
 
 ## baseName
 

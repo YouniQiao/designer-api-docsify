@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getGwpAsanGrayscaleState
@@ -14,7 +13,8 @@ function getGwpAsanGrayscaleState(): number
 
 Obtains the number of remaining days for enabling GWP-ASan.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API involves cross-process communication and takes a number time. To avoid performance problems, you are
 > advised not to call this API in the main thread. You can use [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) or
 > [@ohos.worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md) to enable asynchronous threads to avoid application frame freezing.
@@ -25,6 +25,21 @@ Obtains the number of remaining days for enabling GWP-ASan.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of remaining days for enabling GWP-ASan. If GWP-Asan is disabled, **0** is returned. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { taskpool } from '@kit.ArkTS';
+
+@Concurrent
+function getGwpAsanStateTask(): number {
+  return hidebug.getGwpAsanGrayscaleState();
+}
+taskpool.execute(getGwpAsanStateTask).then((remainDays: Object) => {
+  console.info(`GWP-ASan remain days: ${remainDays as number}.`);
+})
+```

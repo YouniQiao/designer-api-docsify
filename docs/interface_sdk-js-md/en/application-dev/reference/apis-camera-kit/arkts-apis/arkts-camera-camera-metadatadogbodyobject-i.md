@@ -13,5 +13,4 @@ Dog body metadata detected by the camera, which is extended from [MetadataObject
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```

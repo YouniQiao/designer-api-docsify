@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithStreamData
@@ -22,12 +22,22 @@ function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSour
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| streams | Array&lt;[MediaStream](arkts-media-media-mediastream-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| streams | Array&lt;[MediaStream](arkts-media-media-mediastream-i.md)&gt; | 是 | 可设置MediaStream数组，支持的流媒体格式：HTTP-FLV。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MediaSource](arkts-media-media-mediasource-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [MediaSource](arkts-media-media-mediasource-i.md) | 返回MediaSource，用于媒体资源设置。 |
+
+**示例**
+
+```TypeScript
+let streams : Array<media.MediaStream> = [];
+streams.push({url: "http://xxx/480p.flv", width: 854, height: 480, bitrate: 800000});
+streams.push({url: "http://xxx/720p.flv", width: 1280, height: 720, bitrate: 2000000});
+streams.push({url: "http://xxx/1080p.flv", width: 1920, height: 1080, bitrate: 2000000});
+let mediaSource : media.MediaSource = media.createMediaSourceWithStreamData(streams);
+```

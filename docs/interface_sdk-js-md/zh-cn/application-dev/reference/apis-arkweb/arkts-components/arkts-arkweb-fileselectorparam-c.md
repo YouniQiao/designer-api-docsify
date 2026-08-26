@@ -9,6 +9,9 @@ FileSelectorParam是ArkWeb组件中的文件选择器参数类，用于获取Web
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -39,9 +42,9 @@ getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)&gt;&gt; | 返回文件类型信息，为二维数组结构，包含多组可选文件类型的详细信息。对应HTML option的types属性。 |
 
 ## getAcceptType
 
@@ -59,9 +62,9 @@ getAcceptType(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 返回文件过滤类型数组，包含用于限制文件选择器可选文件范围的类型信息。元素为扩展名（如'.png'），对应HTML accept属性。 |
 
 ## getDefaultPath
 
@@ -77,9 +80,9 @@ getDefaultPath(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回默认起始路径。 |
 
 ## getDescriptions
 
@@ -95,9 +98,9 @@ getDescriptions(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 返回文件类型的描述字符串数组，包含各组文件类型的可选描述文本。 |
 
 ## getMimeTypes
 
@@ -113,9 +116,9 @@ getMimeTypes(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 原样返回HTML input标签的accept属性的值，包含指定允许选择的文件的MIME类型和扩展名信息。 |
 
 ## getMode
 
@@ -133,9 +136,9 @@ getMode(): FileSelectorMode
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [FileSelectorMode](arkts-arkweb-fileselectormode-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [FileSelectorMode](arkts-arkweb-fileselectormode-e.md) | 返回文件选择器的模式。 |
 
 ## getSuggestedName
 
@@ -151,9 +154,9 @@ getSuggestedName(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回建议选择的文件名字符串，表示建议用于文件选择器的默认文件名。 |
 
 ## getTitle
 
@@ -171,9 +174,9 @@ getTitle(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回文件选择器标题字符串，表示当前文件选择器在界面上显示的标题文本。 |
 
 ## isAcceptAllOptionExcluded
 
@@ -189,9 +192,9 @@ isAcceptAllOptionExcluded(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回是否排除“所有文件类型”选项。 |
 
 ## isCapture
 
@@ -209,6 +212,6 @@ isCapture(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回是否调用多媒体能力。 |

@@ -9,7 +9,7 @@ Represents media query list information.
 ## Modules to Import
 
 ```TypeScript
-import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from 'kits/@kit.ArkUI';
+import SystemMediaQuery, { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
 ## addListener
@@ -28,9 +28,23 @@ Adds a listener for this **MediaQueryList** object. The listener must be added b
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (event: MediaQueryEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (event: MediaQueryEvent) = & gt; void | Yes | Callback invoked when the query condition changes. |
+
+**Examples**
+
+```TypeScript
+import mediaquery, { MediaQueryEvent } from '@system.mediaquery';
+let mMediaQueryList = mediaquery.matchMedia('(max-width: 466)');
+
+function maxWidthMatch(e: MediaQueryEvent): void {
+  if(e.matches){
+    // do something
+  }
+}
+mMediaQueryList.addListener(maxWidthMatch);
+```
 
 ## onchange
 
@@ -48,9 +62,9 @@ Callback invoked when the match result changes. **matches** indicates whether th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [matches](#matches) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| matches | boolean | Yes |  |
 
 ## removeListener
 
@@ -68,9 +82,23 @@ Removes the listener for this **MediaQueryList** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (event: MediaQueryEvent) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (event: MediaQueryEvent) = & gt; void | Yes | Callback invoked when the query condition changes. |
+
+**Examples**
+
+```TypeScript
+import mediaquery, { MediaQueryEvent } from '@system.mediaquery';
+let mMediaQueryList = mediaquery.matchMedia('(max-width: 466)');
+
+function maxWidthMatch(e: MediaQueryEvent): void {
+  if(e.matches){
+    // do something
+  }
+}
+mMediaQueryList.removeListener(maxWidthMatch);
+```
 
 ## matches
 

@@ -3,6 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## addSlot
@@ -23,10 +26,26 @@ Adds a notification slot of a specified type. This API uses an asynchronous call
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Type of the notification slot to add. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+// addSlot callback
+let addSlotCallBack = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("addSlot failed " + JSON.stringify(err));
+  } else {
+    console.info("addSlot success");
+  }
+}
+Notification.addSlot(Notification.SlotType.SOCIAL_COMMUNICATION, addSlotCallBack);
+```
 
 
 ## addSlot
@@ -47,12 +66,24 @@ Adds a notification slot of a specified type. This API uses a promise to return 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Type of the notification slot to add. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.addSlot(Notification.SlotType.SOCIAL_COMMUNICATION).then(() => {
+  console.info("addSlot success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`addSlot failed, code is ${err}`);
+});
+```

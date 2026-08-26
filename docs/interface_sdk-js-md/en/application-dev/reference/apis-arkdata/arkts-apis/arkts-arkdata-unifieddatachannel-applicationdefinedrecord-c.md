@@ -11,7 +11,7 @@ Represents the custom data type for applications only. It is a child class of [U
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## applicationDefinedType
@@ -49,3 +49,13 @@ Indicates the raw data of application defined data
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Examples**
+
+```TypeScript
+let record = new unifiedDataChannel.ApplicationDefinedRecord();
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+record.applicationDefinedType = 'ApplicationDefinedType';
+record.rawData = u8Array;
+let unifiedData = new unifiedDataChannel.UnifiedData(record);
+```

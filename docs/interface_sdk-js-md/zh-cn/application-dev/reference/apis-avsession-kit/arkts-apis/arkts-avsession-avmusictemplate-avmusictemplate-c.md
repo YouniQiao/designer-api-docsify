@@ -2,7 +2,8 @@
 
 调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取 方法。随后，同步数据给模板控制方，以完成后续操作。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 本模块仅适用于API version 23及以上版本的Car设备。
 
 **起始版本：** 23
@@ -12,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import avMusicTemplate from '@kit.AVSessionKit';
 ```
 
 ## destroy
@@ -31,15 +32,15 @@ destroy(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function destroy can not work correctly due to limited device capabilities. |
 
 ## offClearSearchHistory
 
@@ -57,17 +58,17 @@ offClearSearchHistory(callback?: ClearSearchHistoryEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ClearSearchHistoryEvent](arkts-avsession-avmusictemplate-clearsearchhistoryevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ClearSearchHistoryEvent](arkts-avsession-avmusictemplate-clearsearchhistoryevent-t.md) | 否 | 清除搜索历史的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offClearSearchHistory can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offDownloadMediaEntity
 
@@ -85,17 +86,17 @@ offDownloadMediaEntity(callback?: DownloadMediaEntityEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [DownloadMediaEntityEvent](arkts-avsession-avmusictemplate-downloadmediaentityevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [DownloadMediaEntityEvent](arkts-avsession-avmusictemplate-downloadmediaentityevent-t.md) | 否 | 下载媒体实体的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offDownloadMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offExecuteAction
 
@@ -113,17 +114,17 @@ offExecuteAction(callback?: ExecuteActionEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ExecuteActionEvent](arkts-avsession-avmusictemplate-executeactionevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ExecuteActionEvent](arkts-avsession-avmusictemplate-executeactionevent-t.md) | 否 | 执行操作的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offExecuteAction can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offFavoriteMediaEntity
 
@@ -141,17 +142,17 @@ offFavoriteMediaEntity(callback?: FavoriteMediaEntityEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [FavoriteMediaEntityEvent](arkts-avsession-avmusictemplate-favoritemediaentityevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [FavoriteMediaEntityEvent](arkts-avsession-avmusictemplate-favoritemediaentityevent-t.md) | 否 | 收藏媒体实体的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offFavoriteMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offHandleMemberPurchase
 
@@ -169,17 +170,17 @@ offHandleMemberPurchase(callback?: HandleMemberPurchaseEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [HandleMemberPurchaseEvent](arkts-avsession-avmusictemplate-handlememberpurchaseevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [HandleMemberPurchaseEvent](arkts-avsession-avmusictemplate-handlememberpurchaseevent-t.md) | 否 | 处理购买会员的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offHandleMemberPurchase can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offLogin
 
@@ -197,17 +198,17 @@ offLogin(callback?: LoginEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [LoginEvent](arkts-avsession-avmusictemplate-loginevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [LoginEvent](arkts-avsession-avmusictemplate-loginevent-t.md) | 否 | 登录事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offLogin can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offPlayForSearch
 
@@ -225,17 +226,17 @@ offPlayForSearch(callback?: PlayForSearchEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [PlayForSearchEvent](arkts-avsession-avmusictemplate-playforsearchevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [PlayForSearchEvent](arkts-avsession-avmusictemplate-playforsearchevent-t.md) | 否 | 搜播的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offPlayForSearch can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offPlayMediaEntity
 
@@ -253,17 +254,17 @@ offPlayMediaEntity(callback?: PlayMediaEntityEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [PlayMediaEntityEvent](arkts-avsession-avmusictemplate-playmediaentityevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [PlayMediaEntityEvent](arkts-avsession-avmusictemplate-playmediaentityevent-t.md) | 否 | 播放媒体实体的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offPlayMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offProblemAndAdvice
 
@@ -281,17 +282,17 @@ offProblemAndAdvice(callback?: ProblemAndAdviceEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ProblemAndAdviceEvent](arkts-avsession-avmusictemplate-problemandadviceevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ProblemAndAdviceEvent](arkts-avsession-avmusictemplate-problemandadviceevent-t.md) | 否 | 处理问题与建议的回调。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offProblemAndAdvice can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryCompilation
 
@@ -309,17 +310,17 @@ offQueryCompilation(callback?: QueryCompilationEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryCompilationEvent](arkts-avsession-avmusictemplate-querycompilationevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryCompilationEvent](arkts-avsession-avmusictemplate-querycompilationevent-t.md) | 否 | 查询合集的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryCompilation can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryCompilationByKeyword
 
@@ -337,17 +338,17 @@ offQueryCompilationByKeyword(callback?: QueryCompilationByKeywordEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryCompilationByKeywordEvent](arkts-avsession-avmusictemplate-querycompilationbykeywordevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryCompilationByKeywordEvent](arkts-avsession-avmusictemplate-querycompilationbykeywordevent-t.md) | 否 | 按关键字查询合集的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryCompilationByKeyword can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryCurrentSingle
 
@@ -365,17 +366,17 @@ offQueryCurrentSingle(callback?: QueryCurrentSingleEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryCurrentSingleEvent](arkts-avsession-avmusictemplate-querycurrentsingleevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryCurrentSingleEvent](arkts-avsession-avmusictemplate-querycurrentsingleevent-t.md) | 否 | 查询当前单曲的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryCurrentSingle can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryCustomContent
 
@@ -393,17 +394,17 @@ offQueryCustomContent(callback?: QueryCustomContentEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryCustomContentEvent](arkts-avsession-avmusictemplate-querycustomcontentevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryCustomContentEvent](arkts-avsession-avmusictemplate-querycustomcontentevent-t.md) | 否 | 查询自定义内容的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryCustomContent can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryHotWords
 
@@ -421,17 +422,17 @@ offQueryHotWords(callback?: QueryHotWordsEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryHotWordsEvent](arkts-avsession-avmusictemplate-queryhotwordsevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryHotWordsEvent](arkts-avsession-avmusictemplate-queryhotwordsevent-t.md) | 否 | 查询热词的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryHotWords can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryMainTabs
 
@@ -449,17 +450,17 @@ offQueryMainTabs(callback?: QueryMainTabsEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryMainTabsEvent](arkts-avsession-avmusictemplate-querymaintabsevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryMainTabsEvent](arkts-avsession-avmusictemplate-querymaintabsevent-t.md) | 否 | 查询主标签事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMainTabs can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryMediaEntity
 
@@ -477,17 +478,17 @@ offQueryMediaEntity(callback?: QueryMediaEntityEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryMediaEntityEvent](arkts-avsession-avmusictemplate-querymediaentityevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryMediaEntityEvent](arkts-avsession-avmusictemplate-querymediaentityevent-t.md) | 否 | 查询媒体实体的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryMediaEntityByKeyword
 
@@ -505,17 +506,17 @@ offQueryMediaEntityByKeyword(callback?: QueryMediaEntityByKeywordEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryMediaEntityByKeywordEvent](arkts-avsession-avmusictemplate-querymediaentitybykeywordevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryMediaEntityByKeywordEvent](arkts-avsession-avmusictemplate-querymediaentitybykeywordevent-t.md) | 否 | 按关键字查询媒体实体的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMediaEntityByKeyword can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryMediaTabContent
 
@@ -533,17 +534,17 @@ offQueryMediaTabContent(callback?: QueryMediaTabContentEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryMediaTabContentEvent](arkts-avsession-avmusictemplate-querymediatabcontentevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryMediaTabContentEvent](arkts-avsession-avmusictemplate-querymediatabcontentevent-t.md) | 否 | 查询媒体标签页内容的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMediaTabContent can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryMemberPurchase
 
@@ -561,17 +562,17 @@ offQueryMemberPurchase(callback?: QueryMemberPurchaseEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryMemberPurchaseEvent](arkts-avsession-avmusictemplate-querymemberpurchaseevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryMemberPurchaseEvent](arkts-avsession-avmusictemplate-querymemberpurchaseevent-t.md) | 否 | 查询购买会员的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryMemberPurchase can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryPlaylist
 
@@ -589,17 +590,17 @@ offQueryPlaylist(callback?: QueryPlaylistEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryPlaylistEvent](arkts-avsession-avmusictemplate-queryplaylistevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryPlaylistEvent](arkts-avsession-avmusictemplate-queryplaylistevent-t.md) | 否 | 查询播放列表的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryPlaylist can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQueryRecommendMediaEntityList
 
@@ -617,17 +618,17 @@ offQueryRecommendMediaEntityList(callback?: QueryRecommendMediaEntityListEvent):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryRecommendMediaEntityListEvent](arkts-avsession-avmusictemplate-queryrecommendmediaentitylistevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryRecommendMediaEntityListEvent](arkts-avsession-avmusictemplate-queryrecommendmediaentitylistevent-t.md) | 否 | 查询推荐媒体列表的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQueryRecommendMediaEntityList can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offQuerySearchHistory
 
@@ -645,17 +646,17 @@ offQuerySearchHistory(callback?: QuerySearchHistoryEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QuerySearchHistoryEvent](arkts-avsession-avmusictemplate-querysearchhistoryevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QuerySearchHistoryEvent](arkts-avsession-avmusictemplate-querysearchhistoryevent-t.md) | 否 | 查询搜索历史的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offQuerySearchHistory can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offRequestDialogInfo
 
@@ -673,17 +674,17 @@ offRequestDialogInfo(callback?: RequestDialogInfoEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [RequestDialogInfoEvent](arkts-avsession-avmusictemplate-requestdialoginfoevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [RequestDialogInfoEvent](arkts-avsession-avmusictemplate-requestdialoginfoevent-t.md) | 否 | 请求对话框信息的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offRequestDialogInfo can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offSettingsChange
 
@@ -701,17 +702,17 @@ offSettingsChange(callback?: SettingsChangeEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [SettingsChangeEvent](arkts-avsession-avmusictemplate-settingschangeevent-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [SettingsChangeEvent](arkts-avsession-avmusictemplate-settingschangeevent-t.md) | 否 | 设置改变的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offSettingsChange can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onClearSearchHistory
 
@@ -729,17 +730,17 @@ onClearSearchHistory(callback: ClearSearchHistoryEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ClearSearchHistoryEvent](arkts-avsession-avmusictemplate-clearsearchhistoryevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ClearSearchHistoryEvent](arkts-avsession-avmusictemplate-clearsearchhistoryevent-t.md) | 是 | 回调函数，返回清除搜索历史的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onClearSearchHistory can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onDownloadMediaEntity
 
@@ -757,17 +758,17 @@ onDownloadMediaEntity(callback: DownloadMediaEntityEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [DownloadMediaEntityEvent](arkts-avsession-avmusictemplate-downloadmediaentityevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [DownloadMediaEntityEvent](arkts-avsession-avmusictemplate-downloadmediaentityevent-t.md) | 是 | 回调函数，返回下载媒体实体的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onDownloadMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onExecuteAction
 
@@ -785,17 +786,17 @@ onExecuteAction(callback: ExecuteActionEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ExecuteActionEvent](arkts-avsession-avmusictemplate-executeactionevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ExecuteActionEvent](arkts-avsession-avmusictemplate-executeactionevent-t.md) | 是 | 回调函数，返回执行操作的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onExecuteAction can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onFavoriteMediaEntity
 
@@ -813,17 +814,17 @@ onFavoriteMediaEntity(callback: FavoriteMediaEntityEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [FavoriteMediaEntityEvent](arkts-avsession-avmusictemplate-favoritemediaentityevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [FavoriteMediaEntityEvent](arkts-avsession-avmusictemplate-favoritemediaentityevent-t.md) | 是 | 回调函数，返回收藏媒体实体的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onFavoriteMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onHandleMemberPurchase
 
@@ -841,17 +842,17 @@ onHandleMemberPurchase(callback: HandleMemberPurchaseEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [HandleMemberPurchaseEvent](arkts-avsession-avmusictemplate-handlememberpurchaseevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [HandleMemberPurchaseEvent](arkts-avsession-avmusictemplate-handlememberpurchaseevent-t.md) | 是 | 回调函数，返回处理购买会员的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onHandleMemberPurchase can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onLogin
 
@@ -869,17 +870,17 @@ onLogin(callback: LoginEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [LoginEvent](arkts-avsession-avmusictemplate-loginevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [LoginEvent](arkts-avsession-avmusictemplate-loginevent-t.md) | 是 | 回调函数，返回登录事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onLogin can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onPlayForSearch
 
@@ -897,17 +898,17 @@ onPlayForSearch(callback: PlayForSearchEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [PlayForSearchEvent](arkts-avsession-avmusictemplate-playforsearchevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [PlayForSearchEvent](arkts-avsession-avmusictemplate-playforsearchevent-t.md) | 是 | 回调函数，返回搜播的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onPlayForSearch can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onPlayMediaEntity
 
@@ -925,17 +926,17 @@ onPlayMediaEntity(callback: PlayMediaEntityEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [PlayMediaEntityEvent](arkts-avsession-avmusictemplate-playmediaentityevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [PlayMediaEntityEvent](arkts-avsession-avmusictemplate-playmediaentityevent-t.md) | 是 | 回调函数，返回播放媒体实体的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onPlayMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onProblemAndAdvice
 
@@ -953,17 +954,17 @@ onProblemAndAdvice(callback: ProblemAndAdviceEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ProblemAndAdviceEvent](arkts-avsession-avmusictemplate-problemandadviceevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ProblemAndAdviceEvent](arkts-avsession-avmusictemplate-problemandadviceevent-t.md) | 是 | 回调函数，返回问题与建议的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onProblemAndAdvice can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryCompilation
 
@@ -981,17 +982,17 @@ onQueryCompilation(callback: QueryCompilationEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryCompilationEvent](arkts-avsession-avmusictemplate-querycompilationevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryCompilationEvent](arkts-avsession-avmusictemplate-querycompilationevent-t.md) | 是 | 回调函数，返回查询合集的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryCompilation can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryCompilationByKeyword
 
@@ -1009,17 +1010,17 @@ onQueryCompilationByKeyword(callback: QueryCompilationByKeywordEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryCompilationByKeywordEvent](arkts-avsession-avmusictemplate-querycompilationbykeywordevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryCompilationByKeywordEvent](arkts-avsession-avmusictemplate-querycompilationbykeywordevent-t.md) | 是 | 回调函数，返回按关键字查询合集的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryCompilationByKeyword can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryCurrentSingle
 
@@ -1037,17 +1038,17 @@ onQueryCurrentSingle(callback: QueryCurrentSingleEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryCurrentSingleEvent](arkts-avsession-avmusictemplate-querycurrentsingleevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryCurrentSingleEvent](arkts-avsession-avmusictemplate-querycurrentsingleevent-t.md) | 是 | 回调函数，返回查询当前单曲的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryCurrentSingle can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryCustomContent
 
@@ -1065,17 +1066,17 @@ onQueryCustomContent(callback: QueryCustomContentEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryCustomContentEvent](arkts-avsession-avmusictemplate-querycustomcontentevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryCustomContentEvent](arkts-avsession-avmusictemplate-querycustomcontentevent-t.md) | 是 | 回调函数，返回查询自定义内容的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryCustomContent can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryHotWords
 
@@ -1093,17 +1094,17 @@ onQueryHotWords(callback: QueryHotWordsEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryHotWordsEvent](arkts-avsession-avmusictemplate-queryhotwordsevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryHotWordsEvent](arkts-avsession-avmusictemplate-queryhotwordsevent-t.md) | 是 | 回调函数，返回查询热词的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryHotWords can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryMainTabs
 
@@ -1121,17 +1122,17 @@ onQueryMainTabs(callback: QueryMainTabsEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryMainTabsEvent](arkts-avsession-avmusictemplate-querymaintabsevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryMainTabsEvent](arkts-avsession-avmusictemplate-querymaintabsevent-t.md) | 是 | 回调函数，返回查询主标签事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMainTabs can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryMediaEntity
 
@@ -1149,17 +1150,17 @@ onQueryMediaEntity(callback: QueryMediaEntityEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryMediaEntityEvent](arkts-avsession-avmusictemplate-querymediaentityevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryMediaEntityEvent](arkts-avsession-avmusictemplate-querymediaentityevent-t.md) | 是 | 回调函数，返回查询媒体实体的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMediaEntity can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryMediaEntityByKeyword
 
@@ -1177,17 +1178,17 @@ onQueryMediaEntityByKeyword(callback: QueryMediaEntityByKeywordEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryMediaEntityByKeywordEvent](arkts-avsession-avmusictemplate-querymediaentitybykeywordevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryMediaEntityByKeywordEvent](arkts-avsession-avmusictemplate-querymediaentitybykeywordevent-t.md) | 是 | 回调函数，返回按关键字查询媒体实体的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMediaEntityByKeyword can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryMediaTabContent
 
@@ -1205,17 +1206,17 @@ onQueryMediaTabContent(callback: QueryMediaTabContentEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryMediaTabContentEvent](arkts-avsession-avmusictemplate-querymediatabcontentevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryMediaTabContentEvent](arkts-avsession-avmusictemplate-querymediatabcontentevent-t.md) | 是 | 回调函数，返回查询媒体标签页内容的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMediaTabContent can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryMemberPurchase
 
@@ -1233,17 +1234,17 @@ onQueryMemberPurchase(callback: QueryMemberPurchaseEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryMemberPurchaseEvent](arkts-avsession-avmusictemplate-querymemberpurchaseevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryMemberPurchaseEvent](arkts-avsession-avmusictemplate-querymemberpurchaseevent-t.md) | 是 | 回调函数，返回查询购买会员的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryMemberPurchase can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryPlaylist
 
@@ -1261,17 +1262,17 @@ onQueryPlaylist(callback: QueryPlaylistEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryPlaylistEvent](arkts-avsession-avmusictemplate-queryplaylistevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryPlaylistEvent](arkts-avsession-avmusictemplate-queryplaylistevent-t.md) | 是 | 回调函数，返回查询播放列表的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryPlaylist can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQueryRecommendMediaEntityList
 
@@ -1289,17 +1290,17 @@ onQueryRecommendMediaEntityList(callback: QueryRecommendMediaEntityListEvent): v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QueryRecommendMediaEntityListEvent](arkts-avsession-avmusictemplate-queryrecommendmediaentitylistevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QueryRecommendMediaEntityListEvent](arkts-avsession-avmusictemplate-queryrecommendmediaentitylistevent-t.md) | 是 | 回调函数，返回查询推荐媒体列表的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQueryRecommendMediaEntityList can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onQuerySearchHistory
 
@@ -1317,17 +1318,17 @@ onQuerySearchHistory(callback: QuerySearchHistoryEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [QuerySearchHistoryEvent](arkts-avsession-avmusictemplate-querysearchhistoryevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [QuerySearchHistoryEvent](arkts-avsession-avmusictemplate-querysearchhistoryevent-t.md) | 是 | 回调函数，返回查询搜索历史的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onQuerySearchHistory can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onRequestDialogInfo
 
@@ -1345,17 +1346,17 @@ onRequestDialogInfo(callback: RequestDialogInfoEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [RequestDialogInfoEvent](arkts-avsession-avmusictemplate-requestdialoginfoevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [RequestDialogInfoEvent](arkts-avsession-avmusictemplate-requestdialoginfoevent-t.md) | 是 | 回调函数，返回请求对话框信息的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onRequestDialogInfo can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onSettingsChange
 
@@ -1373,17 +1374,17 @@ onSettingsChange(callback: SettingsChangeEvent): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [SettingsChangeEvent](arkts-avsession-avmusictemplate-settingschangeevent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [SettingsChangeEvent](arkts-avsession-avmusictemplate-settingschangeevent-t.md) | 是 | 回调函数，返回设置改变的事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onSettingsChange can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## reportExecuteAction
 
@@ -1401,24 +1402,24 @@ reportExecuteAction(actionType: string, params: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| actionType | string | 是 |
-| params | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| actionType | string | 是 | 行为类型。 |
+| params | string | 是 | 行为信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function reportExecuteAction can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setCurrentSingle
 
@@ -1436,23 +1437,23 @@ setCurrentSingle(single: Single): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| single | [Single](arkts-avsession-avmusictemplate-single-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| single | [Single](arkts-avsession-avmusictemplate-single-i.md) | 是 | 当前单曲。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setCurrentSingle can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setCustomElements
 
@@ -1471,25 +1472,25 @@ setCustomElements(actionType: ActionType, customType: CustomType,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | 是 |
-| customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | 是 |
-| customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | 是 | 操作类型 |
+| customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | 是 | 自定义数据的类型 |
+| customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | 是 | 自定义数据 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 通过promise'返回上报自定义数据的结果 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setCustomElements can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setDialogCommand
 
@@ -1507,24 +1508,24 @@ setDialogCommand(type: DialogControlType, dialogInfo: DialogInfo): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | [DialogControlType](arkts-avsession-avmusictemplate-dialogcontroltype-t.md) | 是 |
-| dialogInfo | [DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [DialogControlType](arkts-avsession-avmusictemplate-dialogcontroltype-t.md) | 是 | 对话框控制类型。 |
+| dialogInfo | [DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md) | 是 | 对话框信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setDialogCommand can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setDownloadMediaEntityStatus
 
@@ -1542,23 +1543,23 @@ setDownloadMediaEntityStatus(single: MediaEntity): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| single | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| single | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | 是 | 单曲。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setDownloadMediaEntityStatus can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setExtensionAbility
 
@@ -1576,23 +1577,23 @@ setExtensionAbility(want: WantAgent): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | 是 | 能力信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setMediaEntities
 
@@ -1610,23 +1611,23 @@ setMediaEntities(entities: MediaEntity[]): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| entities | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| entities | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[] | 是 | 媒体实体的数组。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setMediaEntities can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setPlaylist
 
@@ -1644,23 +1645,23 @@ setPlaylist(playlist: PageMediaEntity): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| playlist | [PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| playlist | [PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md) | 是 | 分页媒体实体。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setPlaylist can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setSettings
 
@@ -1678,23 +1679,23 @@ setSettings(settingItems: SettingItem[]): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| settingItems | [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| settingItems | [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[] | 是 | 设置项数组。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setSettings can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setTabContent
 
@@ -1712,24 +1713,24 @@ setTabContent(tabId: string, tabContent: MediaTabContent): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| tabId | string | 是 |
-| tabContent | [MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tabId | string | 是 | 标签的ID。 |
+| tabContent | [MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md) | 是 | 媒体标签页内容。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setTabContent can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## setUserInfo
 
@@ -1747,23 +1748,23 @@ setUserInfo(userInfo: UserInfo): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| userInfo | [UserInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-userinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| userInfo | [UserInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-userinfo-i.md) | 是 | 用户信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setUserInfo can not work correctly due to limited device capabilities. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) | Thr data write error, data is invalid. |
 
 ## startTemplate
 
@@ -1781,15 +1782,15 @@ startTemplate(): Promise<OperResult>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; | Promise对象，返回启动音频模板界面的操作结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
 
 ## sessionId
 

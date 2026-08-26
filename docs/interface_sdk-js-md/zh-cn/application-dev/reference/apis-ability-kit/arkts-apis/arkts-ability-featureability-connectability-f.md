@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import featureAbility from '@kit.AbilityKit';
 ```
 
 ## connectAbility
@@ -14,7 +14,8 @@ function connectAbility(request: Want, options: ConnectOptions): number
 
 将当前Ability与指定的ServiceAbility进行连接。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 > 
 > 跨应用连接serviceAbility，对端应用需配置关联启动。
@@ -27,13 +28,40 @@ function connectAbility(request: Want, options: ConnectOptions): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| request | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| request | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 表示被连接的ServiceAbility。 |
+| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 | 表示连接回调函数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 连接的ServiceAbility的ID(ID从0开始自增，每连接成功一次ID加1)。 |
+
+**示例**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+// 连接ServiceAbility
+let connectId = featureAbility.connectAbility(
+  {
+    deviceId: '',
+    bundleName: 'com.ix.ServiceAbility',
+    abilityName: 'com.ix.ServiceAbility.ServiceAbilityA',
+  },
+  {
+    onConnect: (element, remote) => {
+      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
+    },
+    onDisconnect: (element) => {
+      console.info(`ConnectAbility onDisconnect element.deviceId : ${element.deviceId}`);
+    },
+    onFailed: (code) => {
+      console.error(`featureAbilityTest ConnectAbility onFailed errCode : ${code}`);
+    },
+  },
+);
+```

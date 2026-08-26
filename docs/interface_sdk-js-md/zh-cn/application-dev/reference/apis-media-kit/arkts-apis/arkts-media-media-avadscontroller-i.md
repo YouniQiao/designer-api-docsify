@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## addAdsMediaSource
@@ -28,22 +28,22 @@ addAdsMediaSource(src: MediaSource, start: number): Promise<string>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| src | [MediaSource](arkts-media-media-mediasource-i.md) | 是 |
-| start | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| src | [MediaSource](arkts-media-media-mediasource-i.md) | 是 | 要插入到主内容中播放的媒体源。 |
+| start | number | 是 | 广告媒体源在主媒体资源播放进度中的插入位置，从主媒体资源开始播放时计算。 Unit: 单位为毫秒（ms）。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回添加到广告控制器中的媒体源ID，removeAdsMediaSource接口可用该ID移除对应的广告源。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Insert a media asset whose start value exceeds the value of the main content. |
 
 ## disableAllAdsMediaSource
 
@@ -75,9 +75,9 @@ offAdsEventListenerLoadingError(callback?: OnAdsEventLoadingErrorHandle): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | 否 | 广告内容加载失败的处理函数。 传入指定回调时，仅取消订阅该回调；不传入该参数时，默认取消订阅该事件的所有回调函数。 |
 
 ## offAdsListenerAdsCompleted
 
@@ -95,9 +95,9 @@ offAdsListenerAdsCompleted(callback?: Callback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 广告播放完成的处理函数。 传入指定回调时，仅取消订阅该回调；不传入该参数时默认取消订阅该事件的所有回调函数。 |
 
 ## offAdsListenerAdsSkipped
 
@@ -115,9 +115,9 @@ offAdsListenerAdsSkipped(callback?: Callback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 广告跳过的处理函数。 传入指定回调时，仅取消订阅该回调；不传入该参数时，默认取消订阅该事件的所有回调函数。 |
 
 ## offAdsListenerAdsStarted
 
@@ -135,9 +135,9 @@ offAdsListenerAdsStarted(callback?: OnAdsEventAdsStartedHandle): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | 否 | 广告内容开始播放时的处理函数。 常用于从主内容播放界面切换到广告播放界面的场景。 传入指定回调时，仅取消订阅该回调；不传入该参数时，默认取消订阅该事件的所有回调函数。 |
 
 ## onAdsEventListenerLoadingError
 
@@ -155,9 +155,9 @@ onAdsEventListenerLoadingError(callback: OnAdsEventLoadingErrorHandle): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | 是 | 广告内容加载失败的处理函数。 由使用方实现。 第一个参数用于传递广告ID，第二个参数用于传递失败原因。 |
 
 ## onAdsListenerAdsCompleted
 
@@ -175,9 +175,9 @@ onAdsListenerAdsCompleted(callback: Callback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 广告播放完成的处理函数。常用于恢复主内容播放。参数为播放完成的广告ID。 |
 
 ## onAdsListenerAdsSkipped
 
@@ -195,9 +195,9 @@ onAdsListenerAdsSkipped(callback: Callback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 广告跳过的处理函数。常用于恢复主内容播放。参数为被跳过的广告ID。 |
 
 ## onAdsListenerAdsStarted
 
@@ -215,9 +215,9 @@ onAdsListenerAdsStarted(callback: OnAdsEventAdsStartedHandle): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | 是 | 广告内容开始播放时的处理函数。 常用于从主内容播放界面切换到广告播放界面的场景。 第一个参数表示正在播放的广告ID，第二个参数表示广告的时长，单位为毫秒（ms）。 |
 
 ## release
 
@@ -232,6 +232,21 @@ release(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**示例**
+
+```TypeScript
+audioPlayer.release();
+audioPlayer = undefined;
+```
+
+```TypeScript
+audioRecorder.on('release', () => {    // 设置'release'事件回调。
+  console.info('audio recorder release called');
+});
+audioRecorder.release();
+audioRecorder = undefined;
+```
 
 ## removeAdsMediaSource
 
@@ -249,15 +264,15 @@ removeAdsMediaSource(id: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | string | 是 | 广告媒体源ID，由addAdsMediaSource接口返回。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | If the specified ID is not in the AdsController. |
 
 ## skipCurrentAdsMediaSource
 

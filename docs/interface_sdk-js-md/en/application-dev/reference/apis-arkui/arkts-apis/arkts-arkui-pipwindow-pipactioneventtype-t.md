@@ -12,9 +12,9 @@ Enumerates the types of action events of the PiP controller.
 
 **System capability:** SystemCapability.Window.SessionManager
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) |
-| [PiPCallActionEvent](arkts-arkui-pipwindow-pipcallactionevent-t.md) |
-| [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) |
-| [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) |
+| Type | Description |
+| --- | --- |
+| [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) | Action event for components displayed on the video playback controller. |
+| [PiPCallActionEvent](arkts-arkui-pipwindow-pipcallactionevent-t.md) | Action event for components displayed on the video call controller. |
+| [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) | Action event for components displayed on the video meeting controller. |
+| [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) | Action event for components displayed on the live video controller. |

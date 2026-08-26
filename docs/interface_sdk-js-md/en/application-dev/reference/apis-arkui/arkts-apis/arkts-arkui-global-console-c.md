@@ -27,16 +27,16 @@ Prints assertion information.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Object | No |
-| arguments | Object[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | No | Result value. If value is false or left blank, the output starting with "Assertion failed" is printed. If value is true, no information is printed. |
+| arguments | Object[] | Yes | Other information to be printed when value is false. If this parameter is left blank, other information is not printed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## count
 
@@ -54,15 +54,15 @@ Maintains an internal counter. When this counter is invoked, its label name and 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| label | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| label | string | No | Counter label name. The default value is default. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## countReset
 
@@ -80,15 +80,15 @@ Resets a counter based on the specified label name.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| label | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| label | string | No | Counter label name. The default value is default. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## debug
 
@@ -108,10 +108,10 @@ Prints debugging information in formatted output mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
-| arguments | any[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes | Text to print. |
+| arguments | any[] | Yes | Arguments in the message or other information to be printed. |
 
 ## dir
 
@@ -129,9 +129,9 @@ Prints content of the specified object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [dir](#dir) | Object | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dir | Object | No | Object whose content needs to be printed. If this parameter is left blank, no information is printed. |
 
 ## dirxml
 
@@ -149,9 +149,9 @@ Displays an interactive tree of the descendant elements of the specified XML ele
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| arguments | Object[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arguments | Object[] | Yes | Information to be printed. |
 
 ## error
 
@@ -171,10 +171,10 @@ Prints error information in formatted output mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
-| arguments | any[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes | Error information to be printed. |
+| arguments | any[] | Yes | Arguments in the message or other information to be printed. |
 
 ## group
 
@@ -192,9 +192,9 @@ Increases the indentation of subsequent lines by two spaces. If the information 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| arguments | Object[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arguments | Object[] | Yes | Information to be printed. |
 
 ## groupCollapsed
 
@@ -212,9 +212,9 @@ Creates a new inline group in collapsed mode. The usage and function of this API
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| arguments | Object[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arguments | Object[] | Yes | Information to be printed. |
 
 ## groupEnd
 
@@ -248,10 +248,10 @@ Prints log information in formatted output mode. This API is the alias of consol
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
-| arguments | any[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes | Text to print. |
+| arguments | any[] | Yes | Arguments in the message or other information to be printed. |
 
 ## log
 
@@ -271,10 +271,10 @@ Prints log information in formatted output mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
-| arguments | any[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes | Text to print. |
+| arguments | any[] | Yes | Arguments in the message or other information to be printed. |
 
 ## table
 
@@ -292,9 +292,9 @@ Prints data in a table.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| tableData | Object | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tableData | Object | No | Data to be printed in a table. If this parameter is left blank, no information is printed. |
 
 ## time
 
@@ -312,15 +312,15 @@ Starts a timer to track the duration of an operation. You can use console.timeEn
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| label | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| label | string | No | Timer label. The default value is default. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## timeEnd
 
@@ -338,15 +338,15 @@ Stops the timer started by calling console.time() and prints the elapsed time (i
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| label | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| label | string | No | Timer label. The default value is default. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## timeLog
 
@@ -364,16 +364,16 @@ Prints the elapsed time and other data parameters for the timer started by conso
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| label | string | No |
-| arguments | Object[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| label | string | No | Timer label. The default value is default. |
+| arguments | Object[] | Yes | Logs to be printed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 
 ## trace
 
@@ -391,9 +391,9 @@ Creates a stack trace.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| arguments | Object[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arguments | Object[] | Yes | Logs to be printed. If this parameter is left blank, only stack information is printed. |
 
 ## traceHybridStack
 
@@ -427,7 +427,7 @@ Prints warning information in formatted output mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| message | string | Yes |
-| arguments | any[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| message | string | Yes | Warning information to be printed. |
+| arguments | any[] | Yes | Arguments in the message or other information to be printed. |

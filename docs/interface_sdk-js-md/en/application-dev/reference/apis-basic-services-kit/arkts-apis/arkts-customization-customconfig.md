@@ -9,13 +9,13 @@ This module provides APIs for applications to obtain custom configurations, such
 ## Modules to Import
 
 ```TypeScript
-import { customConfig } from 'kits/@kit.BasicServicesKit';
+import customConfig from '@kit.BasicServicesKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getChannelId](arkts-basicservices-customconfig-getchannelid-f.md) |
+| Name | Description |
+| --- | --- |
+| [getChannelId](arkts-basicservices-customconfig-getchannelid-f.md) | Obtains a pre-installed channel ID of this application. |

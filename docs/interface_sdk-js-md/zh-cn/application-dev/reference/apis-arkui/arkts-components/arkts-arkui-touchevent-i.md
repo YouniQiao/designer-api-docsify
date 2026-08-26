@@ -31,9 +31,9 @@ getHistoricalPoints(): Array<HistoricalPoint>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[HistoricalPoint](arkts-arkui-historicalpoint-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[HistoricalPoint](arkts-arkui-historicalpoint-i.md)&gt; | 由历史点组成的数组。 |
 
 ## preventDefault
 
@@ -54,9 +54,9 @@ preventDefault: () => void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [100017](../errorcode-event.md#100017-组件不支持阻止默认事件) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [100017](../errorcode-event.md#100017-组件不支持阻止默认事件) | Component does not support prevent function. |
 
 ## stopPropagation
 

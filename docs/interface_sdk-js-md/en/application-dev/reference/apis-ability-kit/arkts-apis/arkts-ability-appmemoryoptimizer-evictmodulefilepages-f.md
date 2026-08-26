@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appMemoryOptimizer } from 'kits/@kit.AbilityKit';
+import appMemoryOptimizer from '@kit.AbilityKit';
 ```
 
 ## evictModuleFilePages
@@ -22,19 +22,19 @@ Sends a request to the system to release file page cache of specified modules. T
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleNames | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleNames | Array & lt;string & gt; | Yes | Array of module names for which file page cache needs to be released. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 16000163 |
-| 16000164 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 16000163 | File type error. File names in the evictFilePages array of the configuration file do not end with .so, .hap, or .hsp. |
+| 16000164 | Failed to parse configuration file. |

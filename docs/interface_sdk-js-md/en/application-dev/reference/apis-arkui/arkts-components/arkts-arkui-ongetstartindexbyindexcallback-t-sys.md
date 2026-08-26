@@ -16,12 +16,12 @@ Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| targetIndex | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| targetIndex | number | Yes | The target index to scroll to. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) |
+| Type | Description |
+| --- | --- |
+| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) | - |

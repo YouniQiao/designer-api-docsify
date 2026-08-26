@@ -15,15 +15,15 @@ Gets the Float32 value at the specified byte offset from the start of the view. 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getFloat64
 
 ```TypeScript
@@ -34,15 +34,15 @@ Gets the Float64 value at the specified byte offset from the start of the view. 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getInt16
 
 ```TypeScript
@@ -53,15 +53,15 @@ Gets the Int16 value at the specified byte offset from the start of the view. Th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getInt32
 
 ```TypeScript
@@ -72,15 +72,15 @@ Gets the Int32 value at the specified byte offset from the start of the view. Th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getInt8
 
 ```TypeScript
@@ -91,14 +91,14 @@ Gets the Int8 value at the specified byte offset from the start of the view. The
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getUint16
 
 ```TypeScript
@@ -109,15 +109,15 @@ Gets the Uint16 value at the specified byte offset from the start of the view. T
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getUint32
 
 ```TypeScript
@@ -128,15 +128,15 @@ Gets the Uint32 value at the specified byte offset from the start of the view. T
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## getUint8
 
 ```TypeScript
@@ -147,14 +147,14 @@ Gets the Uint8 value at the specified byte offset from the start of the view. Th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## setFloat32
 
 ```TypeScript
@@ -165,11 +165,11 @@ Stores an Float32 value at the specified byte offset from the start of the view.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| value | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| value | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 ## setFloat64
 
@@ -181,11 +181,11 @@ Stores an Float64 value at the specified byte offset from the start of the view.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| value | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| value | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 ## setInt16
 
@@ -197,11 +197,11 @@ Stores an Int16 value at the specified byte offset from the start of the view.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| value | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| value | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 ## setInt32
 
@@ -213,11 +213,11 @@ Stores an Int32 value at the specified byte offset from the start of the view.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| value | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| value | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 ## setInt8
 
@@ -229,10 +229,10 @@ Stores an Int8 value at the specified byte offset from the start of the view.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| value | number | Yes |  |
 
 ## setUint16
 
@@ -244,11 +244,11 @@ Stores an Uint16 value at the specified byte offset from the start of the view.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| value | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| value | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 ## setUint32
 
@@ -260,11 +260,11 @@ Stores an Uint32 value at the specified byte offset from the start of the view.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| value | number | Yes |
-| littleEndian | boolean | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| value | number | Yes |  |
+| littleEndian | boolean | No |  |
 
 ## setUint8
 
@@ -276,10 +276,10 @@ Stores an Uint8 value at the specified byte offset from the start of the view.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [byteOffset](#byteoffset) | number | Yes |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| byteOffset | number | Yes |  |
+| value | number | Yes |  |
 
 ## buffer
 

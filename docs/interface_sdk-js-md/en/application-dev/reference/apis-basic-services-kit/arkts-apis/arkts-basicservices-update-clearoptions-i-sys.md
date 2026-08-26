@@ -11,7 +11,7 @@ Defines the clearing options, which specify the errors to be cleared.
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import update from '@kit.BasicServicesKit';
 ```
 
 ## status

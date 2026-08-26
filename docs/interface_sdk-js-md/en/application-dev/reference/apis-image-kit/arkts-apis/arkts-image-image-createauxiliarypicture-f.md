@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## createAuxiliaryPicture
@@ -20,20 +20,43 @@ Creates an AuxiliaryPicture instance based on the ArrayBuffer image data, auxili
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffer | ArrayBuffer | Yes |
-| size | Size | Yes |
-| type | [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | ArrayBuffer | Yes | Image data stored in the buffer. |
+| size | Size | Yes | Size of the auxiliary picture, in px. |
+| type | [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | Yes | Type of the auxiliary picture. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) |
+| Type | Description |
+| --- | --- |
+| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) | AuxiliaryPicture instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+async function CreateAuxiliaryPicture(context: Context) {
+  let funcName = "CreateAuxiliaryPicture";
+  const resourceMgr = context.resourceManager;
+  const rawFile = await resourceMgr.getRawFileContent("hdr.jpg"); // An HDR-compatible image is required.
+  let auxBuffer: ArrayBuffer = rawFile.buffer as ArrayBuffer;
+  let auxSize: image.Size = {
+    height: 180,
+    width: 240
+  };
+  let auxType: image.AuxiliaryPictureType = image.AuxiliaryPictureType.GAINMAP;
+  let auxPictureObj: image.AuxiliaryPicture | null = image.createAuxiliaryPicture(auxBuffer, auxSize, auxType);
+  if(auxPictureObj != null) {
+    let type: image.AuxiliaryPictureType = auxPictureObj.getType();
+    console.info(funcName, `CreateAuxiliaryPicture succeeded this.Aux_picture.type ${type}`);
+  } else {
+    console.error(funcName, 'CreateAuxiliaryPicture failed');
+  }
+}
+```

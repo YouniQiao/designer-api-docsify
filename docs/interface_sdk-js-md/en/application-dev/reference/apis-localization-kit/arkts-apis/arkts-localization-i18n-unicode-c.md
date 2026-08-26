@@ -9,7 +9,7 @@ Provides character attribute management capabilities, such as checking whether a
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## detectEncoding
@@ -30,15 +30,24 @@ Detects the encoding information of the input byte stream.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bytes | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bytes | Uint8Array | Yes | Input byte stream. To detect the encoding of a text string, convert the text to a byte stream first while preserving its original format. Byte stream to be identified and encoded |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [EncodingInfo](arkts-localization-i18n-encodinginfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [EncodingInfo](arkts-localization-i18n-encodinginfo-i.md) | An object containing the detected encoding name and detection confidence level. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let uint8Array = new Uint8Array([0xEF, 0xBB, 0xBF, 0xE4, 0xB8, 0xAD]);
+let info = i18n.Unicode.detectEncoding(uint8Array); // info.encodingName = 'UTF-8', info.confidence = 100
+```
 
 ## getType
 
@@ -56,15 +65,23 @@ Obtains the type of the input character.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ch | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Type of the input character.U_UNASSIGNED： Non-category for unassigned and non-character code points. The value can be |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let unicodeType: string = i18n.Unicode.getType('a'); // unicodeType = 'U_LOWERCASE_LETTER'
+```
 
 ## isDigit
 
@@ -82,15 +99,23 @@ Checks whether the input character is a digit.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ch | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the input character is a digit, and **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isDigit: boolean = i18n.Unicode.isDigit('1'); // isDigit = true
+```
 
 ## isIdeograph
 
@@ -108,15 +133,23 @@ Checks whether the input character is an ideographic character.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ch | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the input character an ideographic character, and **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isIdeograph: boolean = i18n.Unicode.isIdeograph('a'); // isIdeograph = false
+```
 
 ## isLetter
 
@@ -134,15 +167,23 @@ Checks whether the input character is a letter.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ch | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the input character a letter, and **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isLetter: boolean = i18n.Unicode.isLetter('a'); // isLetter = true
+```
 
 ## isLowerCase
 
@@ -160,15 +201,23 @@ Checks whether the input character is a lowercase letter.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ch | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the input character a lowercase letter, and **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isLowercase: boolean = i18n.Unicode.isLowerCase('a'); // isLowercase = true
+```
 
 ## isRTL
 
@@ -186,15 +235,23 @@ Checks whether the input character is of the right to left (RTL) language.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ch | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the input character is of the RTL language, and **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isRtl: boolean = i18n.Unicode.isRTL('a'); // isRtl = false
+```
 
 ## isSpaceChar
 
@@ -212,15 +269,23 @@ Checks whether the input character is a space.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ch | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the input character is a space, and **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isSpacechar: boolean = i18n.Unicode.isSpaceChar('a'); // isSpacechar = false
+```
 
 ## isUpperCase
 
@@ -238,15 +303,23 @@ Checks whether the input character is an uppercase letter.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ch | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the input character an uppercase letter, and **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isUppercase: boolean = i18n.Unicode.isUpperCase('a'); // isUppercase = false
+```
 
 ## isWhitespace
 
@@ -264,12 +337,20 @@ Checks whether the input character is a whitespace.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ch | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** if the input character is a white space, and **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isWhitespace: boolean = i18n.Unicode.isWhitespace('a'); // isWhitespace = false
+```

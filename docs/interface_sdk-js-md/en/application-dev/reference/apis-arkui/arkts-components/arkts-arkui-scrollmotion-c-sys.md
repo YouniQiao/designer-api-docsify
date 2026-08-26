@@ -13,6 +13,7 @@ Rolling animation model: You can build rolling animation based on the initial po
 ## Modules to Import
 
 ```TypeScript
+import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@ohos.@kit.ArkUI';
 ```
 
 ## constructor
@@ -33,10 +34,10 @@ Constructor parameters
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| position | number | Yes |
-| velocity | number | Yes |
-| min | number | Yes |
-| max | number | Yes |
-| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| position | number | Yes |  |
+| velocity | number | Yes |  |
+| min | number | Yes |  |
+| max | number | Yes |  |
+| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | Yes |  |

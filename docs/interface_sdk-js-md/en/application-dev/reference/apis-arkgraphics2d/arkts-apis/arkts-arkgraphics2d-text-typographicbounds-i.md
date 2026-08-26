@@ -2,15 +2,21 @@
 
 Describes the typographic boundaries of a text line. These boundaries depend on the typographic font and font size, but not on the characters themselves. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line. Similarly, the strings "j" and "E" have identical typographic boundaries, independent of the characters themselves.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The figure shows the text line typesetting parameters: width (the width of the text line including left and right
 > spaces), ascent (the highest point of the ascent), descent (the lowest point of the descent), leading (line
 > spacing), top (the highest point of the current line), baseline (the character baseline), bottom (the lowest
-> point of the current line), and next line top (the highest point of the next line).&gt;
-> &gt;
-> The figure shows the typesetting boundaries for the string " a b ".&gt;
-> &gt;
-> The figure shows the typesetting boundaries for the string "j" or "E".&gt;
+> point of the current line), and next line top (the highest point of the next line).
+> 
+> 
+> 
+> The figure shows the typesetting boundaries for the string " a b ".
+> 
+> 
+> 
+> The figure shows the typesetting boundaries for the string "j" or "E".
+> 
 > !
 > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
 
@@ -21,7 +27,7 @@ Describes the typographic boundaries of a text line. These boundaries depend on 
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import text from '@kit.ArkGraphics2D';
 ```
 
 ## ascent

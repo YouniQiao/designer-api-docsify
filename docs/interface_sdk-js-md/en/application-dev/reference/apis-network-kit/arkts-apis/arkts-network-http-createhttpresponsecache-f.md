@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## createHttpResponseCache
@@ -22,12 +21,26 @@ Creates an **HttpResponseCache** object that stores the response data of HTTP re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [cacheSize](../../apis-core-file-kit/arkts-apis/arkts-corefile-storagestatistics-bundlestats-i.md) | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| cacheSize | number | No | Cache size. The maximum value is 10*1024*1024 (10 MB). The maximum value is used by default. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [HttpResponseCache](arkts-network-http-httpresponsecache-i.md) |
+| Type | Description |
+| --- | --- |
+| [HttpResponseCache](arkts-network-http-httpresponsecache-i.md) | Object that stores the response to the HTTP request. |
+
+**Examples**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpResponseCache = http.createHttpResponseCache();
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpResponseCache = http.createHttpResponseCache();
+```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
+import appManager from '@kit.AbilityKit';
 ```
 
 ## preloadApplication
@@ -26,25 +26,49 @@ function preloadApplication(bundleName: string, userId: number, mode: PreloadMod
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| userId | number | 是 |
-| mode | [PreloadMode](arkts-ability-appmanager-preloadmode-e-sys.md) | 是 |
-| appIndex | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bundleName | string | 是 | 预加载的应用包名。 |
+| userId | number | 是 | 预加载的用户Id。 |
+| mode | [PreloadMode](arkts-ability-appmanager-preloadmode-e-sys.md) | 是 | 预加载模式。 |
+| appIndex | number | 否 | 预加载应用分身的appIndex。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16300005](../errorcode-ability.md#16300005-指定的包信息不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16300005](../errorcode-ability.md#16300005-指定的包信息不存在) | The target bundle does not exist. |
+
+**示例**
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let bundleName = 'ohos.samples.etsclock';
+  let userId = 100;
+  let mode = appManager.PreloadMode.PRESS_DOWN;
+  let appIndex = 0;
+  appManager.preloadApplication(bundleName, userId, mode, appIndex)
+    .then(() => {
+      hilog.info(0x0000, 'testTag', `preloadApplication success`);
+    })
+    .catch((err: BusinessError) => {
+      hilog.error(0x0000, 'testTag', `preloadApplication error, code: ${err.code}, msg:${err.message}`);
+    })
+} catch (err) {
+  hilog.error(0x0000, 'testTag', `preloadApplication error, code: ${(err as BusinessError).code}, msg:${(err as BusinessError).message}`);
+}
+```

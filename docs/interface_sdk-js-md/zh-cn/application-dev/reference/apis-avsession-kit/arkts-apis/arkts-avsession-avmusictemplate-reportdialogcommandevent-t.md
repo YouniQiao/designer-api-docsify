@@ -14,7 +14,7 @@ type ReportDialogCommandEvent = (type: DialogControlType, buttonInfo: DialogInfo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | [DialogControlType](arkts-avsession-avmusictemplate-dialogcontroltype-t.md) | 是 |
-| buttonInfo | [DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [DialogControlType](arkts-avsession-avmusictemplate-dialogcontroltype-t.md) | 是 |  |
+| buttonInfo | [DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md) | 是 | 对话框信息。 |

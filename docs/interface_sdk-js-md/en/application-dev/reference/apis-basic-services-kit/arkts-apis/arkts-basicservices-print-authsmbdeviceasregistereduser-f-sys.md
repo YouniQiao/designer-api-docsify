@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import print from '@kit.BasicServicesKit';
 ```
 
 ## authSmbDeviceAsRegisteredUser
@@ -26,24 +26,24 @@ Authenticate SMB device as registered user and get available printers.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| host | [SharedHost](arkts-basicservices-print-sharedhost-i.md) | Yes |
-| username | string | Yes |
-| password | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| host | [SharedHost](arkts-basicservices-print-sharedhost-i.md) | Yes | The SMB host to authenticate. The SMB host to authenticate. |
+| username | string | Yes | The username for authentication. User name used for authentication. |
+| password | string | Yes | The password for authentication. Password used for authentication. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)[]&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)[]&gt; | Promise that resolves with the list of available printers. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| 13100012 |
-| 13100013 |
-| 13100014 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| 13100012 | SMB account is locked due to multiple failed login attempts. |
+| 13100013 | SMB connection failed (network error, host unreachable, or port blocked). |
+| 13100014 | Invalid login account or password. |

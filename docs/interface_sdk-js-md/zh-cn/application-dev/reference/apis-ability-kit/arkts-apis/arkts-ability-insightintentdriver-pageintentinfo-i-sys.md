@@ -11,7 +11,7 @@ PageIntentInfo用于描述 [@InsightIntentPage](../../../reference/apis-ability-
 ## 导入模块
 
 ```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+import insightIntentDriver from '@kit.AbilityKit';
 ```
 
 ## navDestinationName

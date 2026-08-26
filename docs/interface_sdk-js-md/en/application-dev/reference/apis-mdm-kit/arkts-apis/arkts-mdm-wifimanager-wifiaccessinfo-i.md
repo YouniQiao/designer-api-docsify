@@ -9,7 +9,7 @@ Represents Wi-Fi access information containing Service Set Identifier (SSID) and
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.MDMKit';
+import wifiManager from '@kit.MDMKit';
 ```
 
 ## bssid

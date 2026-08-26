@@ -11,48 +11,48 @@ The **componentUtils** module provides API for obtaining the coordinates and siz
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
+import componentUtils from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md) |
+| Name | Description |
+| --- | --- |
+| [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md) | Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md) | Get the image objects located within the selected area. |
 <!--DelEnd-->
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ComponentInfo](arkts-arkui-componentutils-componentinfo-i.md) |
-| [Offset](arkts-arkui-componentutils-offset-i.md) |
-| [RotateResult](arkts-arkui-componentutils-rotateresult-i.md) |
-| [ScaleResult](arkts-arkui-componentutils-scaleresult-i.md) |
-| [Size](arkts-arkui-componentutils-size-i.md) |
-| [TranslateResult](arkts-arkui-componentutils-translateresult-i.md) |
+| Name | Description |
+| --- | --- |
+| [ComponentInfo](arkts-arkui-componentutils-componentinfo-i.md) | Implements a **ComponentInfo** object, which provides the size, position, translation, scaling, rotation, and affine matrix information of the component. |
+| [Offset](arkts-arkui-componentutils-offset-i.md) | Defines the offset property. |
+| [RotateResult](arkts-arkui-componentutils-rotateresult-i.md) | Rotation Result. |
+| [ScaleResult](arkts-arkui-componentutils-scaleresult-i.md) | Scale Result |
+| [Size](arkts-arkui-componentutils-size-i.md) | Defines the size property. |
+| [TranslateResult](arkts-arkui-componentutils-translateresult-i.md) | Translation Result |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [GetItemsInShapePathParams](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) |
-| [ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md) |
-| [Rotation2D](arkts-arkui-componentutils-rotation2d-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [GetItemsInShapePathParams](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | Image options setted when need to get the image objects.@interface GetItemsInShapePathParams |
+| [ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md) | Image object with layout information.@interface ImageItem |
+| [Rotation2D](arkts-arkui-componentutils-rotation2d-i-sys.md) | Describes a rotation in 2D, which can be defined by rotation angle and rotation center. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Matrix4Result](arkts-arkui-componentutils-matrix4result-t.md) |
+| Name | Description |
+| --- | --- |
+| [Matrix4Result](arkts-arkui-componentutils-matrix4result-t.md) | The matrix is column-first fourth-order matrix. |

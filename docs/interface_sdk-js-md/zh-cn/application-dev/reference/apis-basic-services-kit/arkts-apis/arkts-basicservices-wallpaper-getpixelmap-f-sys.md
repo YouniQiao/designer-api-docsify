@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import wallpaper from '@kit.BasicServicesKit';
 ```
 
 ## getPixelMap
@@ -14,7 +14,8 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 
 获取壁纸图片的像素图。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
@@ -29,10 +30,25 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数，调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError, data: image.PixelMap) => {
+  if (error) {
+    console.error(`Failed to getPixelMap. Code: ${error.code}, message: ${error.message}`);
+    return;
+  }
+  console.info(`success to getPixelMap: ${JSON.stringify(data.getImageInfoSync())}`);
+});
+```
 
 
 ## getPixelMap
@@ -43,7 +59,8 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 
 获取壁纸图片的像素图。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
@@ -58,12 +75,25 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;image.PixelMap & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;image.PixelMap & gt; | 调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: image.PixelMap) => {
+  console.info(`success to getPixelMap : ${JSON.stringify(data.getImageInfoSync())}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to getPixelMap. Code: ${error.code}, Message: ${error.message}`);
+});
+```

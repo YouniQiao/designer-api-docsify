@@ -9,7 +9,7 @@ Provides the CPU device info
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+import mindSporeLite from '@kit.MindSporeLiteKit';
 ```
 
 ## precisionMode
@@ -75,3 +75,15 @@ The thread num
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.AI.MindSporeLite
+
+**Examples**
+
+```TypeScript
+let context: mindSporeLite.Context = {};
+context.cpu = {};
+context.target = ['cpu'];
+context.cpu.threadNum = 2;
+context.cpu.threadAffinityMode = 0;
+context.cpu.precisionMode = 'preferred_fp16';
+context.cpu.threadAffinityCoreList = [0, 1, 2];
+```

@@ -9,7 +9,6 @@ Prediction information about the first screen loading of the page, mainly includ
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## errCode

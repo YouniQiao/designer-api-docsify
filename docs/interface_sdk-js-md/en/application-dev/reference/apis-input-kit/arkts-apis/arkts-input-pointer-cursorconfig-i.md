@@ -9,7 +9,6 @@ Defines custom cursor configuration.
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## followSystem

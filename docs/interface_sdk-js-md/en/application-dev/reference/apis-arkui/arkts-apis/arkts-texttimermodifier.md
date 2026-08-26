@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TextTimerModifier](arkts-arkui-texttimermodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [TextTimerModifier](arkts-arkui-texttimermodifier-c.md) | Defines TextTimer Modifier |

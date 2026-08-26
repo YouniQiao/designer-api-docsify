@@ -11,13 +11,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { FullScreenLaunchComponent } from 'kits/@kit.ArkUI';
+import { FullScreenLaunchComponent } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FullScreenLaunchComponent(Defines the fullScreen launch component)](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md) |
+| Name | Description |
+| --- | --- |
+| [FullScreenLaunchComponent(Defines the fullScreen launch component)](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md) | **FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner. |

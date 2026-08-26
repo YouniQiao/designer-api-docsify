@@ -1,7 +1,8 @@
 # ApplicationStateObserver
 
-应用状态监听器，可以作为入参传入 on('applicationState') 方法，监听应用的生命周期变化。  
-> **说明：**&gt;
+应用状态监听器，可以作为入参传入 on('applicationState') 方法，监听应用的生命周期变化。   
+> **说明：**
+> 
 > 本模块首批接口从API version 14开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 ## 导入模块  
 ```ts
@@ -26,9 +27,9 @@ Ability状态发生变化时执行的回调函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | 是 | Ability状态信息。 |
 
 ## onAppStarted
 
@@ -44,9 +45,9 @@ onAppStarted(appStateData: AppStateData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | 是 | 应用状态信息。 |
 
 ## onAppStopped
 
@@ -62,9 +63,9 @@ onAppStopped(appStateData: AppStateData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | 是 | 应用状态信息。 |
 
 ## onForegroundApplicationChanged
 
@@ -80,9 +81,9 @@ onForegroundApplicationChanged(appStateData: AppStateData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | 是 | 应用状态信息。 |
 
 ## onProcessCreated
 
@@ -98,9 +99,9 @@ onProcessCreated(processData: ProcessData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | 是 | 进程数据信息。 |
 
 ## onProcessDied
 
@@ -116,9 +117,9 @@ onProcessDied(processData: ProcessData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | 是 | 进程数据信息。 |
 
 ## onProcessStateChanged
 
@@ -134,6 +135,6 @@ onProcessStateChanged(processData: ProcessData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | 是 | 进程数据信息。 |

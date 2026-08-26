@@ -11,7 +11,9 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import floatingBall from '@kit.ArkUI.floatingBall';
+import floatView from '@kit.ArkUI.floatView';
+import window from '@kit.ArkUI';
 ```
 
 ## completeTransition
@@ -30,16 +32,47 @@ completeTransition(isCompleted: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isCompleted | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isCompleted | boolean | 是 | 窗口属性转换是否完成。true表示完成本次转换；false表示撤销本次转换。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+(context: window.TransitionContext) => {
+  let toWindow: window.Window = context.toWindow;
+  this.getUIContext()?.animateTo({
+    duration: 1000, // 动画时长
+    tempo: 0.5, // 播放速率
+    curve: Curve.EaseInOut, // 动画曲线
+    delay: 0, // 动画延迟
+    iterations: 1, // 播放次数
+    playMode: PlayMode.Normal, // 动画模式
+  }, () => {
+    let obj: window.TranslateOptions = {
+      x: 100.0,
+      y: 0.0,
+      z: 0.0
+    };
+    toWindow?.translate(obj);
+    console.info('toWindow translate end');
+  }
+  );
+  try {
+    context.completeTransition(true)
+  } catch (exception) {
+    console.error(`toWindow translate fail. Cause code: ${exception.code}, message: ${exception.message}`);
+  }
+  console.info('complete transition end');
+};
+```
 
 ## toWindow
 

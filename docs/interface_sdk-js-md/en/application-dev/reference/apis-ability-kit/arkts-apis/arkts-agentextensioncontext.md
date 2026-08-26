@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md) |
+| Name | Description |
+| --- | --- |
+| [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md) | The context of the agent service extension. It provides resources and methods that developers can access.@extends ExtensionContext |

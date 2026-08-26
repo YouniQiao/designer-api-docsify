@@ -1,6 +1,6 @@
 # Ellipse
 
-The **Ellipse** component is used to draw an ellipse.> **Child Components**>> None
+The **Ellipse** component is used to draw an ellipse. > **Child Components** > > None
 
 ## Ellipse
 
@@ -20,9 +20,9 @@ use new function to set the value. Anonymous Object Rectification.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | ellipse options |
 
 ## Ellipse
 
@@ -42,13 +42,13 @@ Set the value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | Options of the ellipse. The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |

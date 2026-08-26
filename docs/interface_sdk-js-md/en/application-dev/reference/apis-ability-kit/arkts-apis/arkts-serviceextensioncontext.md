@@ -5,7 +5,7 @@
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ServiceExtensionContext](arkts-ability-serviceextensioncontext-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ServiceExtensionContext](arkts-ability-serviceextensioncontext-c-sys.md) | The ServiceExtensionContext module provides the context environment for the ServiceExtensionAbility. It inherits from ExtensionContext.You can use the APIs of this module to start, terminate, connect, and disconnect an ability. |
 <!--DelEnd-->

@@ -16,6 +16,17 @@ type UpdateFormsConfigCallback = (configInfo: Array<FormCustomConfig>) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| configInfo | Array&lt;[FormCustomConfig](arkts-form-forminfo-formcustomconfig-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| configInfo | Array&lt;[FormCustomConfig](arkts-form-forminfo-formcustomconfig-i-sys.md)&gt; | 是 | 卡片配置信息列表。 |
+
+**示例**
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+let updateFormsConfigCallback: formInfo.UpdateFormsConfigCallback =
+  (configInfo: Array<formInfo.FormCustomConfig>): void => {
+    console.info('update forms config callback, config count: ' + configInfo.length);
+  };
+```

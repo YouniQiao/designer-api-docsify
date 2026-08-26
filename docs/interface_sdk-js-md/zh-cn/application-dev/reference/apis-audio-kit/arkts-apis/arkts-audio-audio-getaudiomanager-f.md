@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## getAudioManager
@@ -22,6 +23,14 @@ function getAudioManager(): AudioManager
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AudioManager](arkts-audio-audio-audiomanager-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AudioManager](arkts-audio-audio-audiomanager-i.md) | 音频管理器对象。 |
+
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let audioManager = audio.getAudioManager();
+```

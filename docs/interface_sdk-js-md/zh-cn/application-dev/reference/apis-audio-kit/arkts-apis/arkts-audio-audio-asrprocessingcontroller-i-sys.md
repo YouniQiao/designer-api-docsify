@@ -11,7 +11,8 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## getAsrAecMode
@@ -30,16 +31,22 @@ getAsrAecMode(): AsrAecMode
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AsrAecMode](arkts-audio-audio-asraecmode-e-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AsrAecMode](arkts-audio-audio-asraecmode-e-sys.md) | AEC模式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+
+**示例**
+
+```TypeScript
+let mode = asrProcessingController.getAsrAecMode();
+```
 
 ## getAsrNoiseSuppressionMode
 
@@ -57,16 +64,22 @@ getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AsrNoiseSuppressionMode](arkts-audio-audio-asrnoisesuppressionmode-e-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AsrNoiseSuppressionMode](arkts-audio-audio-asrnoisesuppressionmode-e-sys.md) | ASR噪音抑制模式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+
+**示例**
+
+```TypeScript
+let mode = asrProcessingController.getAsrNoiseSuppressionMode();
+```
 
 ## getAsrWhisperDetectionMode
 
@@ -84,16 +97,22 @@ getAsrWhisperDetectionMode(): AsrWhisperDetectionMode
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AsrWhisperDetectionMode](arkts-audio-audio-asrwhisperdetectionmode-e-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AsrWhisperDetectionMode](arkts-audio-audio-asrwhisperdetectionmode-e-sys.md) | ASR耳语检测模式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+
+**示例**
+
+```TypeScript
+let mode = asrProcessingController.getAsrWhisperDetectionMode();
+```
 
 ## isWhispering
 
@@ -111,16 +130,22 @@ isWhispering(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回耳语状态，true为开启，false为关闭。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+
+**示例**
+
+```TypeScript
+let flag = asrProcessingController.isWhispering();
+```
 
 ## setAsrAecMode
 
@@ -138,24 +163,30 @@ setAsrAecMode(mode: AsrAecMode): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [AsrAecMode](arkts-audio-audio-asraecmode-e-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [AsrAecMode](arkts-audio-audio-asraecmode-e-sys.md) | 是 | AEC模式。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回设置AEC模式结果，true为设置成功，false为设置失败。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+
+**示例**
+
+```TypeScript
+let flag = asrProcessingController.setAsrAecMode(audio.AsrAecMode.BYPASS);
+```
 
 ## setAsrNoiseSuppressionMode
 
@@ -173,24 +204,30 @@ setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [AsrNoiseSuppressionMode](arkts-audio-audio-asrnoisesuppressionmode-e-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [AsrNoiseSuppressionMode](arkts-audio-audio-asrnoisesuppressionmode-e-sys.md) | 是 | ASR噪音抑制模式。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回设置ASR噪音抑制模式结果，true为设置成功，false为设置失败。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+
+**示例**
+
+```TypeScript
+let flag = asrProcessingController.setAsrNoiseSuppressionMode(audio.AsrNoiseSuppressionMode.BYPASS);
+```
 
 ## setAsrVoiceControlMode
 
@@ -208,25 +245,31 @@ setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [AsrVoiceControlMode](arkts-audio-audio-asrvoicecontrolmode-e-sys.md) | 是 |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [AsrVoiceControlMode](arkts-audio-audio-asrvoicecontrolmode-e-sys.md) | 是 | ASR音频通路模式。 |
+| enable | boolean | 是 | 表示系统通话中上报mode及通话录音的上行通路的ASR音频通路选择开关状态。true表示打开，false表示关闭。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回设置在系统通话中上报mode及通话录音的上行通路的ASR音频通路选择的结果。true为设置成功，false为设置失败。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+
+**示例**
+
+```TypeScript
+let flag = asrProcessingController.setAsrVoiceControlMode(audio.AsrVoiceControlMode.AUDIO_2_VOICE_TX, true);
+```
 
 ## setAsrVoiceMuteMode
 
@@ -244,25 +287,31 @@ setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [AsrVoiceMuteMode](arkts-audio-audio-asrvoicemutemode-e-sys.md) | 是 |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [AsrVoiceMuteMode](arkts-audio-audio-asrvoicemutemode-e-sys.md) | 是 | ASR静音控制模式。 |
+| enable | boolean | 是 | 表示在系统通话中设置ASR音频通路静音状态。true表示静音，false表示非静音。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回在系统通话中，对ASR音频通路进行静音控制的结果。true为设置成功，false为设置失败。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+
+**示例**
+
+```TypeScript
+let flag = asrProcessingController.setAsrVoiceMuteMode(audio.AsrVoiceMuteMode.OUTPUT_MUTE, true);
+```
 
 ## setAsrWhisperDetectionMode
 
@@ -280,21 +329,27 @@ setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| mode | [AsrWhisperDetectionMode](arkts-audio-audio-asrwhisperdetectionmode-e-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [AsrWhisperDetectionMode](arkts-audio-audio-asrwhisperdetectionmode-e-sys.md) | 是 | ASR耳语检测模式。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回设置ASR耳语检测模式结果，true为设置成功，false为设置失败。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+
+**示例**
+
+```TypeScript
+let flag = asrProcessingController.setAsrWhisperDetectionMode(audio.AsrWhisperDetectionMode.BYPASS);
+```

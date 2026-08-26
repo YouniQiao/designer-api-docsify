@@ -11,7 +11,9 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import floatingBall from '@kit.ArkUI.floatingBall';
+import floatView from '@kit.ArkUI.floatView';
+import window from '@kit.ArkUI';
 ```
 
 ## animationForHidden
@@ -30,16 +32,74 @@ animationForHidden(context: TransitionContext): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | 是 | 属性转换时的上下文。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+// xxx.ts
+export class AnimationConfig {
+  private animationForHiddenCallFunc_: ((context : window.TransitionContext) => void) | undefined = undefined;
+  HideWindowWithCustomAnimation(windowClass: window.Window, callback: (context : window.TransitionContext) => void) {
+    if (!windowClass) {
+      console.error('windowClass is undefined');
+      return false;
+    }
+    this.animationForHiddenCallFunc_ = callback;
+    let controller: window.TransitionController = windowClass.getTransitionController();
+    controller.animationForHidden = (context : window.TransitionContext)=> {
+      this.animationForHiddenCallFunc_(context);
+    };
+    windowClass.hideWithAnimation(()=>{
+      console.info('hide with animation success');
+    });
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+let animationConfig = new AnimationConfig();
+let systemTypeWindow = window.findWindow("systemTypeWindow"); // 此处需要获取一个系统类型窗口。
+try {
+  animationConfig?.HideWindowWithCustomAnimation(systemTypeWindow, (context : window.TransitionContext)=>{
+    console.info('complete transition end');
+    let toWindow = context.toWindow;
+    this.getUIContext()?.animateTo({
+      duration: 1000, // 动画时长
+      tempo: 0.5, // 播放速率
+      curve: Curve.EaseInOut, // 动画曲线
+      delay: 0, // 动画延迟
+      iterations: 1, // 播放次数
+      playMode: PlayMode.Normal, // 动画模式
+      onFinish: () => {
+        console.info('onFinish in animation');
+        context.completeTransition(true)
+      }
+    }, () => {
+      let translateOptions : window.TranslateOptions = {
+        x : 100.0,
+        y : 0.0,
+        z : 0.0
+      };
+      toWindow?.translate(translateOptions); // 设置动画过程中的属性转换
+      console.info('toWindow translate end in animation');
+    });
+    console.info('complete transition end');
+  });
+} catch (error) {
+  console.error(`HideWindowWithCustomAnimation error code: ${error.code}, message: ${error.message}` );
+}
+```
 
 ## animationForShown
 
@@ -57,13 +117,91 @@ animationForShown(context: TransitionContext): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | 是 | 属性转换时的上下文。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+// xxx.ts
+export class AnimationConfig {
+  private animationForShownCallFunc_: ((context : window.TransitionContext) => void) | undefined = undefined;
+  ShowWindowWithCustomAnimation(windowClass: window.Window, callback: (context : window.TransitionContext) => void) {
+    if (!windowClass) {
+      console.error('windowClass is undefined');
+      return false;
+    }
+    this.animationForShownCallFunc_ = callback;
+    let controller: window.TransitionController = windowClass.getTransitionController();
+    controller.animationForShown = (context : window.TransitionContext)=> {
+      this.animationForShownCallFunc_(context);
+    };
+    windowClass.showWithAnimation(()=>{
+      console.info('Show with animation success');
+    });
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+let animationConfig = new AnimationConfig();
+let systemTypeWindow = window.findWindow("systemTypeWindow"); // 此处需要获取一个系统类型窗口。
+try {
+  animationConfig?.ShowWindowWithCustomAnimation(systemTypeWindow, (context : window.TransitionContext)=>{
+    console.info('complete transition end');
+    let toWindow = context.toWindow;
+    this.getUIContext()?.animateTo({
+      duration: 1000, // 动画时长
+      tempo: 0.5, // 播放速率
+      curve: Curve.EaseInOut, // 动画曲线
+      delay: 0, // 动画延迟
+      iterations: 1, // 播放次数
+      playMode: PlayMode.Normal, // 动画模式
+      onFinish: () => {
+        console.info('onFinish in animation');
+        context.completeTransition(true)
+      }
+    }, () => {
+      let translateOptions : window.TranslateOptions = {
+        x : 100.0,
+        y : 0.0,
+        z : 0.0
+      };
+      toWindow?.translate(translateOptions); // 设置动画过程中的属性转换
+      console.info('toWindow translate end in animation');
+    });
+    console.info('complete transition end');
+  });
+} catch (error) {
+  console.error(`ShowWindowWithCustomAnimation error code: ${error.code}, message: ${error.message}`);
+}
+```
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowClass: window.Window | undefined = undefined;
+let config: window.Configuration = {
+  name: "systemTypeWindow",
+  windowType: window.WindowType.TYPE_PANEL, // 根据需要自选系统窗口类型
+  ctx: this.context
+};
+let promise = window.createWindow(config);
+promise.then((data) => {
+  windowClass = data;
+  console.info('Succeeded in creating the window. Data:' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create the Window. Cause code: ${err.code}, message: ${err.message}`);
+});
+```

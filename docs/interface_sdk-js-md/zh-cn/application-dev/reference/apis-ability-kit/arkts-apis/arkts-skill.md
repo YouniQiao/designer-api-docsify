@@ -12,7 +12,7 @@ The module defines a skill object. Such an object can be obtained through
 
 ### 接口
 
-| 名称 |
-| --- |
-| [Skill](arkts-ability-skill-i.md) |
-| [SkillUri](arkts-ability-skill-skilluri-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [Skill](arkts-ability-skill-i.md) | skill标签对象。 |
+| [SkillUri](arkts-ability-skill-skilluri-i.md) | Want匹配的Uri集合。 |

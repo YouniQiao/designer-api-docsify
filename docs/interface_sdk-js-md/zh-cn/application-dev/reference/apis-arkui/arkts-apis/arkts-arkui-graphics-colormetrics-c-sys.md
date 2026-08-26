@@ -24,19 +24,19 @@ static createHDRColor(colorSpace: ColorSpace, red: number, green: number, blue: 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 |
-| red | number | 是 |
-| green | number | 是 |
-| blue | number | 是 |
-| alpha | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 | 色彩空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要在当前窗口调用 [setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace)接口，将当前窗口设置为广色 域模式。 |
+| red | number | 是 | 颜色的R分量（红色），取值范围：[0, +∞)。大于1.0的值会使能HDR特性。传入负数时将被自动钳位到0.0。 |
+| green | number | 是 | 颜色的G分量（绿色），取值范围：[0, +∞)。大于1.0的值会使能HDR特性。传入负数时将被自动钳位到0.0。 |
+| blue | number | 是 | 颜色的B分量（蓝色），取值范围：[0, +∞)。大于1.0的值会使能HDR特性。传入负数时将被自动钳位到0.0。 |
+| alpha | number | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 支持HDR的ColorMetrics类的实例，可用于表示HDR颜色及进行后续色彩空间查询、HDR状态判断和RGB分量获取等操作。 |
 
 ## createHDRColorWithLinearExposure
 
@@ -57,20 +57,20 @@ static createHDRColorWithLinearExposure(linearExposure: number, colorSpace: Colo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| linearExposure | number | 是 |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 |
-| red | number | 是 |
-| green | number | 是 |
-| blue | number | 是 |
-| alpha | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| linearExposure | number | 是 | 线性曝光系数，取值范围：[1, +∞)。1.0表示标准曝光系数，大于1.0的值表示线性增加的曝光程度。传入小于1.0的值时将被自动钳位到1.0。 |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 | 色彩空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要在当前窗口调用 [setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace)接口，将当前窗口设置为广色 域模式。 |
+| red | number | 是 | 颜色的R分量（红色），值是0.0~1.0的浮点数。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
+| green | number | 是 | 颜色的G分量（绿色），值是0.0~1.0的浮点数。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
+| blue | number | 是 | 颜色的B分量（蓝色），值是0.0~1.0的浮点数。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
+| alpha | number | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 支持HDR的ColorMetrics类的实例，可用于表示HDR颜色及进行后续色彩空间查询、HDR状态判断和RGB分量获取等操作。 |
 
 ## createHDRColorWithLogExposure
 
@@ -91,20 +91,20 @@ static createHDRColorWithLogExposure(exposure: number, colorSpace: ColorSpace,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [exposure](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md) | number | 是 |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 |
-| red | number | 是 |
-| green | number | 是 |
-| blue | number | 是 |
-| alpha | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| exposure | number | 是 | 对数型曝光系数，取值范围：[0, +∞)。0.0表示标准曝光系数，大于0.0的值表示指数级增加的曝光程度。传入负数时将被自动钳位到0.0。 |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 | 色彩空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要在当前窗口调用 [setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace)接口，将当前窗口设置为广色 域模式。 |
+| red | number | 是 | 颜色的R分量（红色），值是0.0~1.0的浮点数。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
+| green | number | 是 | 颜色的G分量（绿色），值是0.0~1.0的浮点数。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
+| blue | number | 是 | 颜色的B分量（蓝色），值是0.0~1.0的浮点数。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
+| alpha | number | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。超出范围时将被自动钳位到[0.0, 1.0]范围内。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 支持HDR的ColorMetrics类的实例，可用于表示HDR颜色及进行后续色彩空间查询、HDR状态判断和RGB分量获取等操作。 |
 
 ## getBlueValue
 
@@ -124,9 +124,9 @@ getBlueValue(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 颜色的B分量（蓝色），值是大于等于0的浮点数。 |
 
 ## getColorSpace
 
@@ -146,9 +146,9 @@ getColorSpace(): ColorSpace
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ColorSpace](arkts-arkui-window-colorspace-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ColorSpace](arkts-arkui-window-colorspace-e.md) | 当前ColorMetrics对象所配置的色彩空间，可用于判断当前颜色使用的色彩空间类型。 |
 
 ## getGreenValue
 
@@ -168,9 +168,9 @@ getGreenValue(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 颜色的G分量（绿色），值是大于等于0的浮点数。 |
 
 ## getRedValue
 
@@ -190,9 +190,9 @@ getRedValue(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 颜色的R分量（红色），值是大于等于0的浮点数。 |
 
 ## isHDR
 
@@ -212,6 +212,6 @@ isHDR(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | ColorMetrics是否呈现了HDR色彩。当色彩是通过createHDRColorWith系列方法（如 [createHDRColorWithLinearExposure]{ |

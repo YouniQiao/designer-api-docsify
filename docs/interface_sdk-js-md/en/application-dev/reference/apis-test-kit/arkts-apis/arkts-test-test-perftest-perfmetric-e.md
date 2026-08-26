@@ -1,6 +1,6 @@
 # PerfMetric
 
-APP_START_COMPLETE_TIME**):  
+APP_START_COMPLETE_TIME**):   
 > - Application startup latency data is subject to the system logging and reporting and may be different from
 > what end users perceive. The start time is when the tap event is reported, the end time of the response
 > latency is when the first frame is displayed on the screen after the tap, and the end time of the

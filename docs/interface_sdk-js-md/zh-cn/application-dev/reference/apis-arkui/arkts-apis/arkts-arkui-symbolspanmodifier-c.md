@@ -26,9 +26,9 @@ Defines the normal update attribute function.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| attribute | [SymbolSpanAttribute](../arkts-components/arkts-arkui-symbolspan-attribute.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| attribute | [SymbolSpanAttribute](../arkts-components/arkts-arkui-symbolspan-attribute.md) | 是 |  |
 
 ## constructor
 
@@ -48,6 +48,6 @@ constructor
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 |  |

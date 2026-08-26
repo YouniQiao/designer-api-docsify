@@ -23,13 +23,25 @@ Attaches an ID to the end of a given URI.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
-| id | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | Target URI object. |
+| id | number | Yes | ID to be attached. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | URI object with the ID attached. |
+
+**Examples**
+
+```TypeScript
+import dataUriUtils from '@ohos.ability.dataUriUtils';
+
+let id = 1122;
+let uri = dataUriUtils.attachId(
+    'com.example.dataUriUtils',
+	id,
+);
+```

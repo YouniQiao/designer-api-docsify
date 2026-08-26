@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import cloudExtension from '@kit.ArkData';
 ```
 
 ## delete
@@ -33,16 +33,32 @@ delete(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| table | string | 是 |
-| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| table | string | 是 | 表名。 |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 | 表示当前数据的扩展信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回被删除的数据和删除结果。 |
+
+**示例**
+
+```TypeScript
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+  async delete(table: string, extensions: Array<Record<string, cloudExtension.CloudType>>): Promise<Array<cloudExtension.Result<Record<string, cloudExtension.CloudType>>>> {
+    console.info(`delete, table: ${table}`);
+    let deleteRes: Array<cloudExtension.Result<Record<string, cloudExtension.CloudType>>> = [];
+    // ...
+    // 返回删除数据的结果
+    return deleteRes;
+  }
+  // ...
+}
+```
 
 ## generateId
 
@@ -60,15 +76,33 @@ generateId(count: number): Promise<Result<Array<string>>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| count | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| count | number | 是 | 表示要生成ID的数量。取值范围大于等于1。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Result & lt;Array & lt;string & gt; & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Result & lt;Array & lt;string & gt; & gt; & gt; | Promise对象，以Result结构将生成的ID以数组形式返回。 |
+
+**示例**
+
+```TypeScript
+class MyCloudDB implements cloudExtension.CloudDB {
+  async generateId(count: number): Promise<cloudExtension.Result<Array<string>>> {
+    console.info(`generate id, count: ${count}`);
+    let result = new Array<string>();
+    // ...
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: 'generateId succeeded',
+      value: result
+    };
+  }
+  // ...
+}
+```
 
 ## heartbeat
 
@@ -86,15 +120,39 @@ heartbeat(lockId: number): Promise<Result<LockInfo>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [lockId](arkts-arkdata-cloudextension-lockinfo-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| lockId | number | 是 | 表示需要延时的锁ID，取值为lock方法返回的LockInfo中的lockId。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Result & lt;LockInfo & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Result & lt;LockInfo & gt; & gt; | Promise对象，返回锁的信息，包含加锁时长和锁的ID。 |
+
+**示例**
+
+```TypeScript
+let testLockId: number = 1;
+let testTime: number = 10;
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+  async heartbeat(lockId: number): Promise<cloudExtension.Result<cloudExtension.LockInfo>> {
+    console.info(`heartbeat lock`);
+    // ...
+    // 返回心跳检查的结果
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: 'heartbeat succeeded',
+      value: {
+        interval: testTime,
+        lockId: testLockId
+      }
+    };
+  }
+  // ...
+}
+```
 
 ## insert
 
@@ -116,17 +174,33 @@ insert(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| table | string | 是 |
-| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 |
-| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| table | string | 是 | 表名。 |
+| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 | 表示要插入的数据。 |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 | 表示当前数据的扩展信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回插入的数据和插入结果。 |
+
+**示例**
+
+```TypeScript
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+  async insert(table: string, values: Array<Record<string, cloudExtension.CloudType>>, extensions: Array<Record<string, cloudExtension.CloudType>>): Promise<Array<cloudExtension.Result<Record<string, cloudExtension.CloudType>>>> {
+    console.info(`insert, table: ${table}`);
+    let insertRes: Array<cloudExtension.Result<Record<string, cloudExtension.CloudType>>> = [];
+    // ...
+    // 返回插入数据的结果
+    return insertRes;
+  }
+  // ...
+}
+```
 
 ## lock
 
@@ -144,9 +218,33 @@ lock(): Promise<Result<LockInfo>>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Result & lt;LockInfo & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Result & lt;LockInfo & gt; & gt; | Promise对象，返回加锁的信息，包含加锁时长和锁的ID。 |
+
+**示例**
+
+```TypeScript
+let testTime: number = 10;
+let testLockId: number = 1;
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+  async lock(): Promise<cloudExtension.Result<cloudExtension.LockInfo>> {
+    console.info(`DB lock`);
+    // ...
+    // 返回锁定数据的结果
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: 'lock succeeded',
+      value: {
+        interval: testTime,
+        lockId: testLockId
+      }
+    };
+  }
+  // ...
+}
+```
 
 ## query
 
@@ -164,18 +262,41 @@ query(table: string, fields: Array<string>, queryCount: number, queryCursor: str
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| table | string | 是 |
-| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | 是 |
-| queryCount | number | 是 |
-| queryCursor | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| table | string | 是 | 表名。 |
+| fields | Array & lt;string & gt; | 是 | 表示要查询的字段名数组。 |
+| queryCount | number | 是 | 表示要查询的数据记录条数。取值范围大于等于1。 |
+| queryCursor | string | 是 | 表示要查询的游标。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Result&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Result&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; | Promise对象，返回被查询的数据和查询结果。 |
+
+**示例**
+
+```TypeScript
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+  async query(table: string, fields: Array<string>, queryCount: number, queryCursor: string): Promise<cloudExtension.Result<cloudExtension.CloudData>> {
+    console.info(`query, table: ${table}`);
+    // ...
+    // 返回查询数据的结果
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: 'query succeeded',
+      value: {
+        nextCursor: "test_nextCursor",
+        hasMore: true,
+        values: []
+      }
+    };
+  }
+  // ...
+}
+```
 
 ## unlock
 
@@ -193,15 +314,34 @@ unlock(lockId: number): Promise<Result<boolean>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [lockId](arkts-arkdata-cloudextension-lockinfo-i-sys.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| lockId | number | 是 | 表示锁的ID，取值为lock方法返回的LockInfo中的lockId。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Result & lt;boolean & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Result & lt;boolean & gt; & gt; | Promise对象，返回解锁结果，true表示解锁成功，false表示解锁失败。 |
+
+**示例**
+
+```TypeScript
+class MyCloudDB implements cloudExtension.CloudDB {
+    // ...
+  async unlock(lockId: number): Promise<cloudExtension.Result<boolean>> {
+    console.info(`unlock`);
+    // ...
+    // 返回解锁数据的结果
+    return {
+      code: cloudExtension.ErrorCode.SUCCESS,
+      description: 'unlock succeeded',
+      value: false
+    };
+  }
+  // ...
+}
+```
 
 ## update
 
@@ -223,14 +363,30 @@ update(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| table | string | 是 |
-| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 |
-| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| table | string | 是 | 表名。 |
+| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 | 表示要更新的数据。 |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 | 表示当前数据的扩展信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回更新的数据和更新结果。 |
+
+**示例**
+
+```TypeScript
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+  async update(table: string, values: Array<Record<string, cloudExtension.CloudType>>, extensions: Array<Record<string, cloudExtension.CloudType>>): Promise<Array<cloudExtension.Result<Record<string, cloudExtension.CloudType>>>> {
+    console.info(`update, table: ${table}`);
+    let updateRes: Array<cloudExtension.Result<Record<string, cloudExtension.CloudType>>> = [];
+    // ...
+    // 返回更新数据的结果
+    return updateRes;
+  }
+  // ...
+}
+```

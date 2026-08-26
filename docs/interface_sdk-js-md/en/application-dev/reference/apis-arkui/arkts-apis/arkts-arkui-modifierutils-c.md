@@ -24,13 +24,13 @@ Checks if the given instance is of the specified component type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | T | Yes |
-| componentName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | T | Yes | The instance to check. |
+| componentName | string | Yes | The name of the component type to check against. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns true if the instance is of the specified component type. Otherwise, returns false. |

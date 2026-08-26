@@ -2,13 +2,16 @@
 
 The [universal attributes](../arkts-components/arkts-arkui-commonmethod-c.md) are supported.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - When the layout algorithm is [RowLayoutAlgorithm](arkts-arkui-layoutalgorithm-rowlayoutalgorithm-c.md) or
 > [ColumnLayoutAlgorithm](arkts-arkui-layoutalgorithm-columnlayoutalgorithm-c.md),
 > the [Flex layout](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-flex-layout.md) attributes set
-> for child components take effect.&gt;
+> for child components take effect.
+> 
 > - When the layout algorithm is [StackLayoutAlgorithm](arkts-arkui-layoutalgorithm-stacklayoutalgorithm-c.md),
-> the [layoutGravity](../arkts-components/arkts-arkui-commonmethod-c.md#layoutgravity) attribute set for child components takes effect.&gt;
+> the [layoutGravity](../arkts-components/arkts-arkui-commonmethod-c.md#layoutgravity) attribute set for child components takes effect.
+> 
 > - When the layout algorithm is
 > [CustomLayoutAlgorithm](arkts-arkui-layoutalgorithm-customlayoutalgorithm-c.md),
 > the [setMeasuredSize](arkts-arkui-framenode-c.md#setmeasuredsize) method of the
@@ -34,5 +37,5 @@ The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-gener
 ## Modules to Import
 
 ```TypeScript
-import { DynamicLayout, DynamicLayoutAttribute } from 'kits/@kit.ArkUI';
+import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
 ```

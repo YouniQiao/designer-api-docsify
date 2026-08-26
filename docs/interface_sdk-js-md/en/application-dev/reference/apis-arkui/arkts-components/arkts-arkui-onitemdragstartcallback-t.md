@@ -14,13 +14,13 @@ Defines the callback type used in onItemDragStart.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [ItemDragInfo](arkts-arkui-itemdraginfo-i.md) | Yes |
-| itemIndex | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [ItemDragInfo](arkts-arkui-itemdraginfo-i.md) | Yes | Information about the dragged item. |
+| itemIndex | number | Yes | The index number of the dragged item. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CustomBuilder](arkts-arkui-custombuilder-t.md) |
+| Type | Description |
+| --- | --- |
+| [CustomBuilder](arkts-arkui-custombuilder-t.md) | - |

@@ -12,7 +12,7 @@ Defines the keyword of the authentication event type. It is used as a parameter 
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'result' |
-| 'tip' |
+| Type | Description |
+| --- | --- |
+| 'result' | If the first parameter of [on]{ |
+| 'tip' | If the first parameter of [on]{ |

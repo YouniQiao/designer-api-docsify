@@ -11,19 +11,19 @@ Used to do observer layout and draw event for component.
 ## Modules to Import
 
 ```TypeScript
-import { inspector } from 'kits/@kit.ArkUI';
+import inspector from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createComponentObserver(Layout Callback)](arkts-arkui-inspector-createcomponentobserver-f.md) |
+| Name | Description |
+| --- | --- |
+| [createComponentObserver(Layout Callback)](arkts-arkui-inspector-createcomponentobserver-f.md) | Sets the component after layout or draw criteria and returns the corresponding listening handle |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ComponentObserver(Layout Callback)](arkts-arkui-inspector-componentobserver-i.md) |
+| Name | Description |
+| --- | --- |
+| [ComponentObserver(Layout Callback)](arkts-arkui-inspector-componentobserver-i.md) | The ComponentObserver is used to listen for layout, draw and drawChildren events. |

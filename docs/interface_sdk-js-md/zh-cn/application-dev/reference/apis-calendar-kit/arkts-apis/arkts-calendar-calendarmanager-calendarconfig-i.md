@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
+import calendarManager from '@kit.CalendarKit';
 ```
 
 ## color

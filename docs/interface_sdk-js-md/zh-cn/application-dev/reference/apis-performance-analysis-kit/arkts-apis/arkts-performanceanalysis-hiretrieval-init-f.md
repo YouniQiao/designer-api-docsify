@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## init
@@ -22,6 +21,6 @@ function init(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 36000002 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 36000002 | Multi-instance applications not supported error. Possibly caused by invoking this function in a multi-instance application. |

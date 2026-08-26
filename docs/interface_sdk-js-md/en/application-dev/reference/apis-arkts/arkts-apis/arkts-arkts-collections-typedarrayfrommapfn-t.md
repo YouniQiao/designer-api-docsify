@@ -14,13 +14,13 @@ Describes the mapping function of the ArkTS typed array.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | FromElementType | Yes |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | FromElementType | Yes | Element that is currently traversed and used to construct an ArkTS typed array. |
+| index | number | Yes | Index of the element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| ToElementType |
+| Type | Description |
+| --- | --- |
+| ToElementType | The transformed value. |

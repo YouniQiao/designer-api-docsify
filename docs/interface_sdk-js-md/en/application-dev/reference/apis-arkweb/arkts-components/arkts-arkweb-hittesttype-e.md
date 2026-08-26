@@ -2,7 +2,8 @@
 
 Enumerates the test result types of the click event.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Supported since API version 9 and deprecated since API version 21. You are advised to use
 > [WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md) instead.
 

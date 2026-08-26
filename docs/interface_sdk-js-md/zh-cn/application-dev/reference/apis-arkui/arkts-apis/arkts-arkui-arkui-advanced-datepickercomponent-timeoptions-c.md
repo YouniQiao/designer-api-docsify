@@ -2,7 +2,8 @@
 
 TimeOptions定义时间选择器的选项。继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 若设置了start或end参数且为有效值，loop参数将不生效，具体请参考[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)的参数说明。
 
 **继承/实现关系：** TimeOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)
@@ -14,7 +15,7 @@ TimeOptions定义时间选择器的选项。继承于[CommonOptions](arkts-arkui
 ## 导入模块
 
 ```TypeScript
-import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from '@kit.ArkUI';
 ```
 
 ## format

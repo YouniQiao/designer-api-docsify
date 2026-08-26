@@ -31,9 +31,9 @@ Sets the colors of the gauge.Since API version 11, this API follows the followin
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [colors](#colors) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient \| Array & lt;[ResourceColor \ | LinearGradient, number] & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| colors | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient \| Array & lt;[ResourceColor \ | LinearGradient, number] & gt; | Yes | Colors of the gauge. You can set colors for individual segments.Default value in API version 9: **Color.Black**Default value in API version 11:If no color is provided or the array is empty, the ring color will be a gradient consisting of the following colors: 0xFF64BB5C, 0xFFF7CE00, and 0xFFE84026.If a color value is provided but invalid, the ring will be in the color of 0xFFE84026.Colors with a weight of 0 are not displayed in the ring. If all weights are 0, the ring is not displayed.<br>**Since:** 11 |
 
 ## contentModifier
 
@@ -53,9 +53,9 @@ Creates a content modifier.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[GaugeConfiguration](arkts-arkui-gaugeconfiguration-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[GaugeConfiguration](arkts-arkui-gaugeconfiguration-i.md)&gt; | Yes | Content modifier to apply to the current component.    **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## description
 
@@ -77,9 +77,9 @@ Sets the description of the gauge.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Description.   **NOTE：**You need to customize the content – text or imagery recommended – in @Builder.If the width and height of the custom content are in percentage, the reference range is a rectangle that is 44.4% of the diameter of the ring horizontally and 25.4% vertically (for images, it is 28.6% both horizontally and vertically), positioned 0 vp away from the bottom of the ring and centered horizontally.If this parameter is set to null, no description is displayed.If this parameter is not set, what's displayed is subject to the maximum and minimum value settings.If either or both of the maximum and minimum values are set, they are displayed.If neither maximum nor minimum values are set, no description is displayed.The maximum and minimum values are displayed at the bottom of the ring and cannot be relocated. They may be blocked by the ring if the ring's start and end angles are not set properly. |
 
 ## endAngle
 
@@ -99,9 +99,9 @@ Sets the end angle of the gauge. Ensure an appropriate difference between the st
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| angle | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| angle | number | Yes | End angle of the gauge. The 0 o'clock is defined as 0 degrees. Clockwise rotation represents positive angles, and counterclockwise rotation represents negative angles. Values exceeding 360 degrees are equivalent to the remainder after division by 360 degrees.Default value: **360**Drawing from the start position to the end position is performed only in the clockwise direction. |
 
 ## indicator
 
@@ -123,9 +123,9 @@ Sets the indicator style of the gauge.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md) | Yes | Indicator style.   **NOTE：**If this attribute is set to **null**, no indicator is displayed. |
 
 ## privacySensitive
 
@@ -135,7 +135,8 @@ privacySensitive(isPrivacySensitiveMode: Optional<boolean>)
 
 Sets whether to enable privacy mode.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 12
@@ -150,9 +151,9 @@ Sets whether to enable privacy mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isPrivacySensitiveMode | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isPrivacySensitiveMode | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable privacy mode. In privacy mode, the gauge indicator points to **0**, the maximum and minimum values are masked, and the scale range is displayed in gray or the background color. The value **true** means to enable privacy mode, and **false** means the opposite. Default value: **false**.<!--Del-->For widgets, this property must be used with FormComponentand the [obscured](arkts-arkui-commonmethod-c.md#obscured) attribute to display privacy masking effects.<!--DelEnd-->. |
 
 ## startAngle
 
@@ -172,9 +173,9 @@ Sets the start angle of the gauge.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| angle | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| angle | number | Yes | Start angle of the gauge. The 0 o'clock is defined as 0 degrees. Clockwise rotation represents positive angles, and counterclockwise rotation represents negative angles. Values exceeding 360 degrees are equivalent to the remainder after division by 360 degrees.Default value: **0**Drawing from the start position to the end position is performed only in the clockwise direction. |
 
 ## strokeWidth
 
@@ -194,9 +195,9 @@ Sets the stroke width of the gauge.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| length | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| length | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Stroke width of the gauge.Default value: **4**Unit: vp   **NOTE：**A value less than or equal to 0 is handled as the default value.If the value exceeds the maximum value, the radius of the gauge, the maximum value is used.The value cannot be in percentage. |
 
 ## trackShadow
 
@@ -218,9 +219,9 @@ Sets the shadow style of the gauge.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md) | Yes | Shadow effect. You can specify the blur radius, and the offset along the X and Y axes.   **NOTE：**The shadow color is the same as the ring color.If this attribute is set to **null**, the shadow effect is disabled. |
 
 ## value
 
@@ -240,6 +241,6 @@ Sets the value of the gauge.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Value of the gauge. It can be dynamically changed.Default value: **0 |

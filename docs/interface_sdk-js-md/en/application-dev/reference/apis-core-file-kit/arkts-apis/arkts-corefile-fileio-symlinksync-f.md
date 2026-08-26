@@ -23,7 +23,15 @@ Creates a symbolic link based on the file path. This API returns the result sync
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | string | Yes |
-| srcPath | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | string | Yes | Application sandbox path of the target file. |
+| srcPath | string | Yes | Application sandbox path of the symbolic link. |
+
+**Examples**
+
+```TypeScript
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + '/test';
+fileio.symlinkSync(srcFile, dstFile);
+```

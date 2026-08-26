@@ -9,7 +9,7 @@ Defines a struct for the details about the device-cloud sync process.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import relationalStore from '@kit.ArkData';
 ```
 
 ## deleted

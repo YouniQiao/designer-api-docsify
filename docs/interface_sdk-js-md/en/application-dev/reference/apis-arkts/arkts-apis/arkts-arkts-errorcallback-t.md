@@ -14,6 +14,6 @@ The event handler to be called when an exception occurs during worker execution.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes | Error event class, which provides detailed information about the exception occurred during Worker execution. |

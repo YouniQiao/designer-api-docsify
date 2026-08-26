@@ -9,7 +9,7 @@ Defines the lazy column layout component.@interface LazyColumnLayoutInterface
 ## Modules to Import
 
 ```TypeScript
-import { LazyColumnLayout, LazyColumnLayoutAttribute } from 'kits/@kit.ArkUI';
+import { LazyColumnLayout, LazyColumnLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## [[Call]]
@@ -30,6 +30,6 @@ Construct the lazy column layout attribute.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |
+| Type | Description |
+| --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |

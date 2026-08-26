@@ -29,12 +29,12 @@ Defines the callback info.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | T | Yes | the data will be used in the callback. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| V |
+| Type | Description |
+| --- | --- |
+| V | Returns result of the callback. |

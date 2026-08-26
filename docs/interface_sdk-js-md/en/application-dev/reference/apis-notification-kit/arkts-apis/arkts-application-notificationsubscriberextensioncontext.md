@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { NotificationSubscriberExtensionContext } from 'kits/@kit.NotificationKit';
+import NotificationSubscriberExtensionContext from '@kit.NotificationKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md) |
+| Name | Description |
+| --- | --- |
+| [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md) | The **NotificationSubscriberExtensionContext** module provides the context for the **NotificationSubscriberExtensionAbility**. |

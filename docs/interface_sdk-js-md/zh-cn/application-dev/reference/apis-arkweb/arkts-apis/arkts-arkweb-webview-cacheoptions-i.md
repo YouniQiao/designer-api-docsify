@@ -9,7 +9,6 @@ Web组件预编译JavaScript生成字节码缓存的配置对象，用于控制�
 ## 导入模块
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## responseHeaders

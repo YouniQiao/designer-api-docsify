@@ -1,7 +1,8 @@
 # CheckPackageHasInstalledOptions
 
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 3开始支持，从API version 9开始废弃。
 指示应用包是否已安装。
 
@@ -14,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from 'kits/@kit.AbilityKit';
+import Package, { CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
 ```
 
 ## complete
@@ -47,10 +48,10 @@ fail?: (data: any, code: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | any | 是 |
-| code | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | any | 是 |  |
+| code | number | 是 |  |
 
 ## success
 
@@ -68,9 +69,9 @@ success?: (data: CheckPackageHasInstalledResponse) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md) | 是 |  |
 
 ## bundleName
 

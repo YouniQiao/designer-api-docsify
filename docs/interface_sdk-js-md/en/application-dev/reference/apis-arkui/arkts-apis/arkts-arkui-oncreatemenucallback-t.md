@@ -16,12 +16,12 @@ Callback function when the selection menu create.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Yes | currently displayed menu items. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Return the menu items will displayed after operations. |

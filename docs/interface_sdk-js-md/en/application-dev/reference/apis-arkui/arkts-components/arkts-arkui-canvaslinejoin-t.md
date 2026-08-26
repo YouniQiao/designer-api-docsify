@@ -14,8 +14,8 @@ Defines the type of join between two non-zero-length segments (lines, arcs, and 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| "bevel" |
-| "miter" |
-| "round" |
+| Type | Description |
+| --- | --- |
+| "bevel" | The intersection is a triangle. The rectangular corner of each line is independent. |
+| "miter" | The intersection has a miter corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in **miterLimit**. |
+| "round" | The intersection is a sector, whose radius at the rounded corner is equal to the line width. |

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## byteLength
@@ -25,13 +24,23 @@ Obtains the number of bytes of a string based on the encoding format.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes |
-| encoding | BufferEncoding | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | Target string. |
+| encoding | BufferEncoding | No | Encoding format. The default value is **'utf8'**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of bytes of the string. |
+
+**Examples**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let str = '\u00bd + \u00bc = \u00be';
+console.info(`${str}: ${str.length} characters, ${buffer.byteLength(str, 'utf-8')} bytes`);
+// Output: ½ + ¼ = ¾: 9 characters, 12 bytes
+```

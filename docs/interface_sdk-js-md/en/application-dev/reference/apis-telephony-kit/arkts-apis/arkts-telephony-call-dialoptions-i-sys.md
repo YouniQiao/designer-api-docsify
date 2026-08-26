@@ -9,7 +9,6 @@ Provides an option for determining whether a call is a video call.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## accountId

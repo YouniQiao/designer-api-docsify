@@ -2,7 +2,8 @@
 
 Enumerates the properties available for the metadata of a Avis image.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For detail about the return value type, see [AvisMetadata](arkts-image-image-avismetadata-c.md).
 
 **Since:** 26.0.0

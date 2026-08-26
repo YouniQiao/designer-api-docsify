@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from 'kits/@kit.BasicServicesKit';
+import systemParameter from '@kit.BasicServicesKit';
 ```
 
 ## getSync
@@ -26,13 +26,24 @@ Obtains a value of the specified key.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| def | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key to be queried. |
+| def | string | No | Default value of the system parameter.It works only when the system parameter does not exist.The value can be **undefined** or any custom value. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Value of the system parameter. |
+
+**Examples**
+
+```TypeScript
+try {
+    let info: string = systemParameter.getSync("const.ohos.apiversion");
+    console.info(JSON.stringify(info));
+} catch(e) {
+    console.error("getSync unexpected error: " + e);
+}
+```

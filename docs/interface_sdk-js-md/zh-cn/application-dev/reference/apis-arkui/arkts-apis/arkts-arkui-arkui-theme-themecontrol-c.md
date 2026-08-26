@@ -9,7 +9,7 @@ ThemeControl将自定义Theme应用于App组件内，实现App组件风格跟随
 ## 导入模块
 
 ```TypeScript
-import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from 'kits/@kit.ArkUI';
+import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from '@kit.ArkUI';
 ```
 
 ## setDefaultTheme
@@ -30,6 +30,6 @@ static setDefaultTheme(theme: CustomTheme): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| theme | [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| theme | [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md) | 是 |  |

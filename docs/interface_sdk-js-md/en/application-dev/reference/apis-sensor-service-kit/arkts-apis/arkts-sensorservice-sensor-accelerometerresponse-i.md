@@ -11,7 +11,6 @@ Describes the acceleration sensor data. It extends from [Response](arkts-sensors
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## x

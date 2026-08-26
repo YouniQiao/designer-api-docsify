@@ -10,9 +10,9 @@ Describes the HDR metadata values used by a PixelMap, which corresponds to the v
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [HdrMetadataType](arkts-image-image-hdrmetadatatype-e.md) |
-| [HdrStaticMetadata](arkts-image-image-hdrstaticmetadata-i.md) |
-| ArrayBuffer |
-| [HdrGainmapMetadata](arkts-image-image-hdrgainmapmetadata-i.md) |
+| Type | Description |
+| --- | --- |
+| [HdrMetadataType](arkts-image-image-hdrmetadatatype-e.md) | Metadata value corresponding to the **HDR_METADATA_TYPE** key in [HdrMetadataKey]{ |
+| [HdrStaticMetadata](arkts-image-image-hdrstaticmetadata-i.md) | Metadata value corresponding to the **HDR_STATIC_METADATA** key in [HdrMetadataKey]{ |
+| ArrayBuffer | Metadata value corresponding to the **HDR_DYNAMIC_METADATA** key in [HdrMetadataKey]{ |
+| [HdrGainmapMetadata](arkts-image-image-hdrgainmapmetadata-i.md) | Metadata value corresponding to the **HDR_GAINMAP_METADATA** key in [HdrMetadataKey]{ |

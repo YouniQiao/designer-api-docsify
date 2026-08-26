@@ -14,13 +14,13 @@ type DownloadMediaEntityEvent = (controlType: DownloadControlType, mediaEntity: 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| controlType | [DownloadControlType](arkts-avsession-avmusictemplate-downloadcontroltype-t.md) | 是 |
-| mediaEntity | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| controlType | [DownloadControlType](arkts-avsession-avmusictemplate-downloadcontroltype-t.md) | 是 | controlType的可选项包括：开始下载、删除下载、恢复下载、暂停下载。 |
+| mediaEntity | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | 是 | 媒体实体。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; | Promise对象，返回下载媒体实体的操作结果对象。 |

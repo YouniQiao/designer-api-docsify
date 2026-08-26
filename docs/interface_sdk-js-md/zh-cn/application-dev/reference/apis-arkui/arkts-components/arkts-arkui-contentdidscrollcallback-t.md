@@ -16,9 +16,9 @@ Swiper滑动时触发的回调，参数可参考[SwiperContentTransitionProxy](a
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| selectedIndex | number | 是 |
-| index | number | 是 |
-| position | number | 是 |
-| mainAxisLength | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| selectedIndex | number | 是 | 当前选中页面的索引。 |
+| index | number | 是 | 视窗内页面的索引。 |
+| position | number | 是 | 视窗内页面的索引。 |
+| mainAxisLength | number | 是 | 视窗内页面的索引。 |

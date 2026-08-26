@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import matrix4 from '@kit.ArkUI';
 ```
 
 ## init
@@ -41,12 +41,39 @@ Matrix constructor, which is used to create a 4 x 4 matrix with the input parame
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number     ] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number     ] | Yes | A number array whose length is 16 (4 x 4). For details, see **4 x 4 matrix description**.Value range of each number: (-∞, +∞)Default value:   [1, 0, 0, 0,0, 1, 0, 0,0, 0, 1, 0,0, 0, 0, 1] |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |
+| Type | Description |
+| --- | --- |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 4 x 4 matrix object created based on the input parameters. |
+
+**Examples**
+
+```TypeScript
+import { matrix4 } from '@kit.ArkUI';
+
+// Create a 4 x 4 matrix.
+let matrix = matrix4.init(
+  [1.0, 0.0, 0.0, 0.0,
+    0.0, 1.0, 0.0, 0.0,
+    0.0, 0.0, 1.0, 0.0,
+    0.0, 0.0, 0.0, 1.0]);
+
+@Entry
+@Component
+struct Tests {
+  build() {
+    Column() {
+      // Replace $r("app.media.zh") with the image resource file you use.
+      Image($r("app.media.zh"))
+        .width('40%')
+        .height(100)
+        .transform(matrix)
+    }
+  }
+}
+```

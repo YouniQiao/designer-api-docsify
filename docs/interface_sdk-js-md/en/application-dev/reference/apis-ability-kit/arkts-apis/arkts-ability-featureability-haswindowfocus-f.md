@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import featureAbility from '@kit.AbilityKit';
 ```
 
 ## hasWindowFocus
@@ -22,9 +22,23 @@ Checks whether the main window of this ability has the focus. This API uses an a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result.If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+featureAbility.hasWindowFocus((error, data) => {
+  if (error && error.code !== 0) {
+    console.error(`hasWindowFocus fail, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`hasWindowFocus success, data: ${JSON.stringify(data)}`);
+  }
+});
+```
 
 
 ## hasWindowFocus
@@ -43,6 +57,16 @@ Checks whether the main window of this ability has the focus. This API uses a pr
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+featureAbility.hasWindowFocus().then((data) => {
+  console.info(`hasWindowFocus data: ${JSON.stringify(data)}`);
+});
+```

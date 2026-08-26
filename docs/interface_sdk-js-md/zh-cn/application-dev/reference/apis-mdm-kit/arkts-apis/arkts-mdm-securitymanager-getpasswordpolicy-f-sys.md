@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from 'kits/@kit.MDMKit';
+import securityManager from '@kit.MDMKit';
 ```
 
 ## getPasswordPolicy
@@ -24,12 +24,25 @@ function getPasswordPolicy(): PasswordPolicy
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PasswordPolicy](arkts-mdm-securitymanager-passwordpolicy-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PasswordPolicy](arkts-mdm-securitymanager-passwordpolicy-i.md) | 设备锁屏口令策略。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+
+try {
+  let result: securityManager.PasswordPolicy = securityManager.getPasswordPolicy();
+  console.info(`Succeeded in getting password policy, result : ${JSON.stringify(result)}`);
+} catch(err) {
+  console.error(`Failed to get password policy. Code: ${err.code}, message: ${err.message}`);
+}
+```

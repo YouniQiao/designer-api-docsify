@@ -14,7 +14,7 @@ Defines the allowed data types for specifying the background border color of a d
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ResourceColor](arkts-arkui-resourcecolor-t.md) |
-| EdgeColors |
+| Type | Description |
+| --- | --- |
+| [ResourceColor](arkts-arkui-resourcecolor-t.md) |  |
+| EdgeColors |  |

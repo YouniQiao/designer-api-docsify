@@ -16,6 +16,6 @@ Called when auto fill request is successfully handled.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| viewData | [ViewData](arkts-ability-autofillmanager-viewdata-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| viewData | [ViewData](arkts-ability-autofillmanager-viewdata-t.md) | Yes | Indicates the ui context where the filling operation will be performed. |

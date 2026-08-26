@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { configPolicy } from 'kits/@kit.BasicServicesKit';
+import configPolicy from '@kit.BasicServicesKit';
 ```
 
 ## getCfgFilesSync
@@ -22,20 +22,37 @@ Obtains a list of all files of a specified file name based on the provided follo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| relPath | string | Yes |
-| followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | No |
-| extra | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| relPath | string | Yes | Name of the configuration file. |
+| followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | No | Follow mode. The default value is [DEFAULT](arkts-basicservices-configpolicy-followxmode-e-sys.md#default) if this parameter is not set. |
+| extra | string | No | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#user_defined). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;string & gt; | List of configuration files obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let relpath: string = 'etc/config.xml';
+  let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
+  let result: Array<string> = configPolicy.getCfgFilesSync(relpath, configPolicy.FollowXMode.USER_DEFINED, extra);
+  console.info('result is ' + result);
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error('error:' + code + ', ' + message);
+}
+```

@@ -9,7 +9,6 @@ Describes the frame rate range.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## max

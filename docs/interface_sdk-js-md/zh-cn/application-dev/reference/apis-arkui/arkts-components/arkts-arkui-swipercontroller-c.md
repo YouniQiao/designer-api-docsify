@@ -31,10 +31,10 @@ changeIndex(index: number, useAnimation?: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
-| useAnimation | boolean | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 指定页面在Swiper中的索引值。   **说明：** 设置的值小于0或大于最大页面索引时，取0。 |
+| useAnimation | boolean | 否 | 设置翻至指定页面时是否有动效，true表示有动效，false表示没有动效。默认值：false。 |
 
 ## changeIndex
 
@@ -61,10 +61,10 @@ changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
-| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) \| boolean | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 指定页面在Swiper中的索引值。   **说明：** 设置的值小于0或大于最大页面索引时，取0。 |
+| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) \| boolean | 否 | 设置翻页到指定页面的动效模式。默认值： SwiperAnimationMode.NO_ANIMATION   **说明：** 当传入true时有动效，等同于SwiperAnimationMode.DEFAULT_ANIMATION；当传入 false时无动效，等同于SwiperAnimationMode.NO_ANIMATION。 |
 
 ## constructor
 
@@ -92,9 +92,11 @@ fakeDragBy(offset: number): boolean
 
 > **说明：**
 
-> - 模拟拖拽的距离需要依赖布局体现，建议接口在布局前调用，拖拽效果可以在当前帧布局后体现。如果在未布局前调用了多次该接口，当前帧布局时只生效最后一次调用传入的拖拽距离。&gt;
+> - 模拟拖拽的距离需要依赖布局体现，建议接口在布局前调用，拖拽效果可以在当前帧布局后体现。如果在未布局前调用了多次该接口，当前帧布局时只生效最后一次调用传入的拖拽距离。
+> 
 > - 在[loop](arkts-arkui-swiper-attribute.md#loop)设置为true的循环场景下，如果设置的模拟拖拽的距离大于布局总长度，此时模拟拖拽距离会被调整为拖拽到刚好显示第一个子节点（向布局起点拖拽）或者最后一个子
-> 节点（向布局终点方向拖拽）的距离。&gt;
+> 节点（向布局终点方向拖拽）的距离。
+> 
 > - [onGestureSwipe](arkts-arkui-swiper-attribute.md#ongestureswipe)事件、
 > [onContentWillScroll](arkts-arkui-swiper-attribute.md#oncontentwillscroll)事件在拖拽过程中不触发。
 > [customContentTransition](arkts-arkui-swiper-attribute.md#customcontenttransition)会在布局前触发，由于真实的拖拽距离可能在布局时被调整，在传入拖拽距离过大时，触发事
@@ -112,15 +114,15 @@ fakeDragBy(offset: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 需要模拟拖拽的拖拽距离。正数表示向布局起点拖拽；负数表示向布局终点方向拖拽。 单位为：vp。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否消费传入的拖拽距离。 |
 
 ## finishAnimation
 
@@ -140,9 +142,9 @@ finishAnimation(callback?: VoidCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 否 | 动画结束的回调。<br>**起始版本：** 18 |
 
 ## isFakeDragging
 
@@ -164,9 +166,9 @@ isFakeDragging(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否处在模拟拖拽状态。 |
 
 ## preloadItems
 
@@ -192,22 +194,22 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [indices](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| indices | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 | 需预加载的子节点的下标数组。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter invalid. Possible causes:   1. The parameter type is not Array & lt;number & gt;.   2. The parameter is an empty array.   3. The parameter contains an invalid index. |
+| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to component. |
 
 ## showNext
 
@@ -251,7 +253,8 @@ startFakeDrag(): boolean
 
 > **说明：**
 
-> - Swiper已经处在真实手势拖拽中，或者已经开启了模拟拖拽，调用接口会返回false表示操作失败。&gt;
+> - Swiper已经处在真实手势拖拽中，或者已经开启了模拟拖拽，调用接口会返回false表示操作失败。
+> 
 > - 模拟拖拽无法触发嵌套滚动。
 
 **起始版本：** 23
@@ -266,9 +269,9 @@ startFakeDrag(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否开启模拟拖拽功能。 |
 
 ## stopFakeDrag
 
@@ -294,6 +297,6 @@ stopFakeDrag(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否关闭模拟拖拽功能。 |

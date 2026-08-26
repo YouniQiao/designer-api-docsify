@@ -35,12 +35,12 @@ Invoked when an error occurs during the running of the **IsolatedComponent**. Yo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](arkts-arkui-errorcallback-t-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](arkts-arkui-errorcallback-t-sys.md) | Yes | Error information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) |
+| Type | Description |
+| --- | --- |
+| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) |  |

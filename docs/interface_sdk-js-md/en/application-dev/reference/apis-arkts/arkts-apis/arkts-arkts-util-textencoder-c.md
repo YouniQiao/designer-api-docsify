@@ -9,7 +9,8 @@ Provides APIs to encode strings into byte arrays. Multiple encoding formats are 
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## constructor
@@ -25,6 +26,35 @@ A constructor used to create a **TextEncoder** object.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// Output: retStr = utf-8
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let base64 = new  util.Base64();
+```
 
 ## constructor
 
@@ -42,9 +72,19 @@ A constructor used to create a **TextEncoder** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [encoding](#encoding) | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encoding | string | No | Encoding format. The default format is **'utf-8'**. |
+
+**Examples**
+
+```TypeScript
+let textEncoder = new util.TextEncoder("utf-8");
+```
+
+```TypeScript
+let decoder = new util.StringDecoder();
+```
 
 ## create
 
@@ -62,15 +102,21 @@ Creates a **TextEncoder** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [encoding](#encoding) | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encoding | string | No | Encoding format. The default format is **'utf-8'**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [TextEncoder](arkts-arkts-util-textencoder-c.md) |
+| Type | Description |
+| --- | --- |
+| [TextEncoder](arkts-arkts-util-textencoder-c.md) | TextEncoder** object. |
+
+**Examples**
+
+```TypeScript
+let textEncoder = util.TextEncoder.create("utf-8");
+```
 
 ## encode
 
@@ -90,15 +136,24 @@ Encodes the input content in to a Uint8Array object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| input | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| input | string | No | String to encode. The default value is an empty string. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Uint8Array |
+| Type | Description |
+| --- | --- |
+| Uint8Array | Uint8Array object obtained. |
+
+**Examples**
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let result = textEncoder.encode("\uD800¥¥");
+console.info("result = " + result);
+// Output: result = 237,160,128,194,165,194,165
+```
 
 ## encodeInto
 
@@ -116,15 +171,24 @@ Encodes the input content into a Uint8Array object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| input | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| input | string | No | String to encode. The default value is an empty string. If the input parameter is an empty string, the return value is undefined. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Uint8Array |
+| Type | Description |
+| --- | --- |
+| Uint8Array | Uint8Array object obtained. |
+
+**Examples**
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let result = textEncoder.encodeInto("\uD800¥¥");
+console.info("result = " + result);
+// Output: result = 237,160,128,194,165,194,165
+```
 
 ## encodeInto
 
@@ -144,16 +208,27 @@ Writes the generated UTF-8 encoded text to an array.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| input | string | Yes |
-| dest | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| input | string | Yes | String to encode. |
+| dest | Uint8Array | Yes | Uint8Array object used to store the UTF-8 encoded text. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| object |
+| Type | Description |
+| --- | --- |
+| object | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters. |
+
+**Examples**
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let buffer = new ArrayBuffer(4);
+let uint8 = new Uint8Array(buffer);
+let result = textEncoder.encodeInto('abcd', uint8);
+console.info("uint8 = " + uint8);
+// Output: uint8 = 97,98,99,100
+```
 
 ## encodeIntoUint8Array
 
@@ -171,17 +246,32 @@ Encodes the input content and stores the result into a Uint8Array object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| input | string | Yes |
-| dest | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| input | string | Yes | String to encode. |
+| dest | Uint8Array | Yes | Uint8Array object used to store the UTF-8 encoded text. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| object |
-| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) |
+| Type | Description |
+| --- | --- |
+| object | Return the object, where read represents the number of characters that have been encoded, and written represents the number of bytes occupied by the encoded characters.<br>**Applicable version:** 9 - 10 |
+| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters.<br>**Applicable version:** 11 and later |
+
+**Examples**
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let buffer = new ArrayBuffer(4);
+let uint8 = new Uint8Array(buffer);
+let result = textEncoder.encodeIntoUint8Array('abcd', uint8);
+console.info("uint8 = " + uint8);
+// Output: uint8 = 97,98,99,100
+console.info("result.read = " + result.read);
+// Output: result.read = 4
+console.info("result.written = " + result.written);
+// Output: result.written = 4
+```
 
 ## encoding
 

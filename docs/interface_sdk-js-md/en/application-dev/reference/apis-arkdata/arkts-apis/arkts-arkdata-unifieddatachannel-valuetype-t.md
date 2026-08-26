@@ -14,16 +14,16 @@ Enumerates the data field types allowed in a unified data record.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| int |
-| long |
-| double |
-| string |
-| boolean |
-| image.PixelMap |
-| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) |
-| ArrayBuffer |
-| object |
-| null |
-| undefined |
+| Type | Description |
+| --- | --- |
+| int | Int. |
+| long | Long. |
+| double | Double. |
+| string | String. |
+| boolean | Boolean. |
+| image.PixelMap | The value is of the [image.PixelMap]{ |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | [Want]{ |
+| ArrayBuffer | ArrayBuffer. |
+| object | Object. |
+| null | Null. |
+| undefined | Undefined. |

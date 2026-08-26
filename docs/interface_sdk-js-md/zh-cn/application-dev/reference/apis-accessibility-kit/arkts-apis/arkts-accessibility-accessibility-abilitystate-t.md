@@ -14,8 +14,8 @@ type AbilityState = 'enable' | 'disable' | 'install'
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-| 类型 |
-| --- |
-| 'enable' |
-| 'disable' |
-| 'install' |
+| 类型 | 说明 |
+| --- | --- |
+| 'enable' | 表示辅助应用已启用。 |
+| 'disable' | 表示辅助应用已禁用。 |
+| 'install' | 表示辅助应用已安装。 |

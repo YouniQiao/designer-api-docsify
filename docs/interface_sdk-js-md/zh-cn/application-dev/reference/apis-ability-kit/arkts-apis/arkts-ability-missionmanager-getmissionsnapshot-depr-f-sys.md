@@ -27,11 +27,33 @@ function getMissionSnapShot(deviceId: string, missionId: number, callback: Async
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| deviceId | string | 是 |
-| missionId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceId | string | 是 | 设备ID，本机默认为空字符串。 |
+| missionId | number | 是 | 任务ID。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | 是 | 回调函数，返回任务快照信息。 |
+
+**示例**
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+let testMissionId = 2;
+try {
+  // 获取任务快照
+  missionManager.getMissionSnapShot('', testMissionId, (err, data) => {
+    if (err) {
+      console.error(`getMissionSnapShot failed. Code: ${err.code}, message: ${err.message}.`);
+    } else {
+      console.info(`getMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getMissionSnapShot sync failed. Code: ${error.code}, message: ${error.message}.`);
+}
+```
 
 
 ## getMissionSnapShot
@@ -56,13 +78,32 @@ function getMissionSnapShot(deviceId: string, missionId: number): Promise<Missio
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| deviceId | string | 是 |
-| missionId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceId | string | 是 | 设备ID，本机默认为空字符串。 |
+| missionId | number | 是 | 任务ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | Promise对象，返回任务快照信息。 |
+
+**示例**
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+let testMissionId = 2;
+try {
+  // 获取任务快照
+  missionManager.getMissionSnapShot('', testMissionId).then((data) => {
+    console.info(`getMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
+}
+```

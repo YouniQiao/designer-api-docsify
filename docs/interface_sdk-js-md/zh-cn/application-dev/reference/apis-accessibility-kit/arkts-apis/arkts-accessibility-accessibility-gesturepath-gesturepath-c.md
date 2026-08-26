@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { GesturePath } from 'kits/@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -28,9 +28,20 @@ constructor(durationTime: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [durationTime](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| durationTime | number | 是 | 手势总耗时，单位：ms。取值需大于0。 |
+
+**示例**
+
+```TypeScript
+import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
+
+let gesturePath = new GesturePath(20);
+let startPoint = new GesturePoint(100, 100);
+let endPoint = new GesturePoint(200, 200);
+gesturePath.points = [startPoint, endPoint];
+```
 
 ## durationTime
 

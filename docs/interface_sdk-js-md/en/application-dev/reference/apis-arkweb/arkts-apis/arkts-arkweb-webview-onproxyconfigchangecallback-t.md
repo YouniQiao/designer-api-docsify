@@ -11,3 +11,7 @@ Callback invoked when the proxy configuration changes. A successful callback ind
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).

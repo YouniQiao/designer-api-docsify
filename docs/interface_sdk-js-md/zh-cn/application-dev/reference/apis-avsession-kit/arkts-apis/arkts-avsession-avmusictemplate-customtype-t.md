@@ -12,9 +12,9 @@ type CustomType = 'USER_INFO' | 'TAB' | 'COMPILATION' | 'SETTINGS'
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| 类型 |
-| --- |
-| 'USER_INFO' |
-| 'TAB' |
-| 'COMPILATION' |
-| 'SETTINGS' |
+| 类型 | 说明 |
+| --- | --- |
+| 'USER_INFO' |  |
+| 'TAB' |  |
+| 'COMPILATION' |  |
+| 'SETTINGS' |  |

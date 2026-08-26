@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { screenshot } from 'kits/@kit.ArkUI';
+import screenshot from '@kit.ArkUI';
 ```
 
 ## capture
@@ -26,21 +26,45 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [CaptureOption](arkts-arkui-screenshot-captureoption-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [CaptureOption](arkts-arkui-screenshot-captureoption-i.md) | 否 | 截取图像的相关信息。此参数不填时，默认截取displayId为0的屏幕截图。<br>**起始版本：** 22 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;image.PixelMap & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;image.PixelMap & gt; | Promise used to return a PixelMap object. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Incorrect parameter types. 2.Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported on this device. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+// 配置截图参数，指定截取displayId为0的屏幕
+let captureOption: screenshot.CaptureOption = {
+  displayId: 0
+};
+try {
+  // 调用capture接口获取全屏截图
+  let promise = screenshot.capture(captureOption);
+  promise.then((pixelMap: image.PixelMap) => {
+    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
+    pixelMap.release(); // PixelMap使用完后及时释放内存
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
+}
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import display from '@kit.ArkUI';
 ```
 
 ## getCurrentFoldCreaseRegion
@@ -22,12 +22,19 @@ Obtains the crease region of the foldable device in the current display mode.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) |
+| Type | Description |
+| --- | --- |
+| [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) | Crease region of the device. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+**Examples**
+
+```TypeScript
+let data: display.FoldCreaseRegion = display.getCurrentFoldCreaseRegion();
+console.info(`Succeeded in obtaining current fold crease region. Data: ${JSON.stringify(data)}`);
+```

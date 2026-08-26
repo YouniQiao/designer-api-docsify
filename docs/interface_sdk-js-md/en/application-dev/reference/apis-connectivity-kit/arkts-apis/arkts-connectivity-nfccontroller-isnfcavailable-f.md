@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import nfcController from '@kit.ConnectivityKit';
 ```
 
 ## isNfcAvailable
@@ -14,7 +14,8 @@ function isNfcAvailable(): boolean
 
 Checks whether the device supports NFC.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [canIUse("SystemCapability.Communication.NFC.Core")](../../../reference/common/init.md#caniuse) instead.
 
@@ -28,6 +29,6 @@ Checks whether the device supports NFC.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the device supports NFC; returns **false** otherwise. |

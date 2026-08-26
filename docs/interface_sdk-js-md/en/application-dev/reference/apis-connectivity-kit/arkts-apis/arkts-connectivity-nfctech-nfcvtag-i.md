@@ -25,9 +25,19 @@ Obtains the data storage format identifier (DSFID) from this NFC-V tag.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | DSFID obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcV tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let dsfId : number = nfcV.getDsfId();
+console.info("nfcV dsfId: " + dsfId);
+```
 
 ## getResponseFlags
 
@@ -45,6 +55,16 @@ Obtains the response flags from this NFC-V tag.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Response flags obtained, which consist of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcV tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let responseFlags : number = nfcV.getResponseFlags();
+console.info("nfcV responseFlags: " + responseFlags);
+```

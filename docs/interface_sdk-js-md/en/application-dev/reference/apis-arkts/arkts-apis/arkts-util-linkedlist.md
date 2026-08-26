@@ -25,14 +25,12 @@ LinkedList is implemented based on the doubly linked list. Each node of the doub
 ## Modules to Import
 
 ```TypeScript
-import { LinkedList } from 'kits/@kit.ArkTS';
-import { LinkedListForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LinkedList](arkts-arkts-util-linkedlist-linkedlist-c.md) |
+| Name | Description |
+| --- | --- |
+| [LinkedList](arkts-arkts-util-linkedlist-linkedlist-c.md) | LinkedList is implemented based on the doubly linked list. Each node of the doubly linked list has references pointing to the previous element and the next element. When querying an element, the system traverses the list from the beginning or end. |

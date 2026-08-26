@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import dragController from '@kit.ArkUI';
 ```
 
 ## getDragPreview
@@ -14,7 +14,8 @@ function getDragPreview(): DragPreview
 
 返回一个代表拖拽背板的对象。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 11开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI
 > 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md)对象。
@@ -33,6 +34,6 @@ function getDragPreview(): DragPreview
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) | 一个代表拖拽背板的对象，提供背板样式设置的接口，在OnDrop和OnDragEnd回调中使用不生效。 |

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## hasSmsCapability
@@ -20,6 +19,15 @@ function hasSmsCapability(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true：设备具备短信发送和接收能力。 |
+
+**示例**
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+
+let result = sms.hasSmsCapability(); 
+console.info(`hasSmsCapability: ${JSON.stringify(result)}`);
+```

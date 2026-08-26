@@ -16,12 +16,12 @@ Provide an interface for the IsolatedComponent, which is used to render UI of ot
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [IsolatedOptions](arkts-arkui-isolatedoptions-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [IsolatedOptions](arkts-arkui-isolatedoptions-i-sys.md) | Yes | Construction configuration of IsolatedComponentAttribute |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) |
+| Type | Description |
+| --- | --- |
+| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) | Attribute of IsolatedComponent |

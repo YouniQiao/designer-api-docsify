@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cardEmulation } from 'kits/@kit.ConnectivityKit';
+import cardEmulation from '@kit.ConnectivityKit';
 ```
 
 ## hasHceCapability
@@ -24,13 +24,35 @@ function hasHceCapability(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true: 支持HCE， false: 不支持HCE。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+
+**示例**
+
+```TypeScript
+// 适用于除轻量级智能穿戴产品之外其他设备
+import { cardEmulation } from '@kit.ConnectivityKit';
+
+let hasHceCap: boolean = cardEmulation.hasHceCapability();
+if (!hasHceCap) {
+    console.error('this device hasHceCapability false, ignore it.');
+}
+```
+
+```TypeScript
+// 适用于轻量级智能穿戴设备
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+let hasHceCap = cardEmulation.hasHceCapability();
+if (!hasHceCap) {
+    console.error('this device hasHceCapability false, ignore it.');
+}
+```

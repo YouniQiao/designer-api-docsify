@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import pasteboard from '@kit.BasicServicesKit';
 ```
 
 ## createPlainTextData
@@ -24,12 +24,18 @@ function createPlainTextData(text: string): PasteData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| text | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 纯文本内容。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 剪贴板内容对象。 |
+
+**示例**
+
+```TypeScript
+let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
+```

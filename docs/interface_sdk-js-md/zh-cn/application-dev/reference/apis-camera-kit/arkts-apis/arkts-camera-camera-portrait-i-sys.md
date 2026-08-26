@@ -13,7 +13,6 @@ Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getPortraitEffect
@@ -32,16 +31,25 @@ Obtains the portrait effect in use.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md) | Portrait effect. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
+
+**示例**
+
+```TypeScript
+function getPortraitEffect(portraitPhotoSession: camera.PortraitPhotoSession): camera.PortraitEffect {
+  let portraitEffect: camera.PortraitEffect = portraitPhotoSession.getPortraitEffect();
+  return portraitEffect;
+}
+```
 
 ## setPortraitEffect
 
@@ -59,13 +67,31 @@ Sets a portrait effect. Before the setting, use [getSupportedPortraitEffects](ar
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| effect | [PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| effect | [PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md) | 是 | Effect Portrait effect to set. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setPortraitEffect(portraitPhotoSession: camera.PortraitPhotoSession, portraitEffects: Array<camera.PortraitEffect>): void {
+  if (portraitEffects === undefined || portraitEffects.length <= 0) {
+    return;
+  }
+  try {
+    portraitPhotoSession.setPortraitEffect(portraitEffects[0]);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setPortraitEffect call failed. error code: ${err.code}`);
+  }
+}
+```

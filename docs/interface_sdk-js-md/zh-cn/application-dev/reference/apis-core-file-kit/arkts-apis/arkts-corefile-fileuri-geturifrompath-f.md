@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileUri } from 'kits/@kit.CoreFileKit';
+import fileUri from '@kit.CoreFileKit';
 ```
 
 ## getUriFromPath
@@ -22,18 +22,26 @@ function getUriFromPath(path: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 应用沙箱内的文件路径。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回通过文件路径生成的URI。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+let pathDir = this.context.filesDir; // 获取应用沙箱路径。
+let filePath = pathDir + '/test';
+let uri = fileUri.getUriFromPath(filePath);
+```

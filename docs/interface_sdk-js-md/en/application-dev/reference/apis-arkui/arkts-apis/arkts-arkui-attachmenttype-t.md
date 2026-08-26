@@ -14,7 +14,7 @@ Defines the image attachment type, which is used to set images of PixelMap or [R
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) |
-| [ResourceImageAttachmentOptions](arkts-arkui-resourceimageattachmentoptions-i.md) |
+| Type | Description |
+| --- | --- |
+| [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | Settings for images of the PixelMap type. |
+| [ResourceImageAttachmentOptions](arkts-arkui-resourceimageattachmentoptions-i.md) | Settings for images of the ResourceStr type. |

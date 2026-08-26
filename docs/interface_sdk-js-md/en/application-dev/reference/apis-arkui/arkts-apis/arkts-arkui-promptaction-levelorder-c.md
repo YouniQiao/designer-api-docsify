@@ -9,7 +9,7 @@ Defines the display order of a dialog box.
 ## Modules to Import
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## clamp
@@ -30,15 +30,15 @@ Creates a dialog box level with the specified order.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| order | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| order | number | Yes | Display order of the dialog box. The value range is [-100000.0, +100000.0]. Values outside this range are clamped to the nearest limit. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) |
+| Type | Description |
+| --- | --- |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | Current instance. |
 
 ## getOrder
 
@@ -58,6 +58,6 @@ Obtains the display order of this dialog box.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Display order of the dialog box. |

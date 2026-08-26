@@ -9,7 +9,9 @@
 ## 导入模块
 
 ```TypeScript
-import { ChildProcess } from 'kits/@kit.AbilityKit';
+import ChildProcess from '@kit.AbilityKit';
+import { ChildProcessArgs } from '@kit.AbilityKitArgs';
+import { ChildProcessOptions } from '@kit.AbilityKitOptions';
 ```
 
 ## onStart
@@ -28,6 +30,21 @@ onStart(args?: ChildProcessArgs): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | 否 | 传递到子进程的参数。参数为可选，不传或传null时使用默认配置启动。 |
+
+**示例**
+
+```TypeScript
+import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
+
+export default class DemoProcess extends ChildProcess {
+
+  onStart(args?: ChildProcessArgs) {
+    let entryParams = args?.entryParams;
+    let fd = args?.fds?.key1;
+    // ...
+  }
+}
+```

@@ -15,15 +15,15 @@ Pads the current string with a given string (possibly repeated) so that the resu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| maxLength | number | Yes |
-| fillString | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| maxLength | number | Yes |  |
+| fillString | string | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## padStart
 
 ```TypeScript
@@ -34,12 +34,12 @@ Pads the current string with a given string (possibly repeated) so that the resu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| maxLength | number | Yes |
-| fillString | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| maxLength | number | Yes |  |
+| fillString | string | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

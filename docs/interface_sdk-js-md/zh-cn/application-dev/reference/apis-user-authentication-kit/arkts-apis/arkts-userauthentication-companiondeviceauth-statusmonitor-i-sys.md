@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import companionDeviceAuth from '@kit.UserAuthenticationKit';
 ```
 
 ## getTemplateStatus
@@ -34,15 +34,31 @@ getTemplateStatus(): Promise<TemplateStatus[]>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md)[]&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md)[]&gt; | Promise对象，成功时返回当前用户下全部模板的状态列表，每个模板状态包含模板ID、有效性、设备信息等；失败时抛出相应错误码。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const localUserId = 100;
+const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+statusMonitor.getTemplateStatus()
+  .then((templateStatus) => {
+    console.info(`templateStatus: ${JSON.stringify(templateStatus)}`);
+  })
+  .catch((error: BusinessError) => {
+    console.error(`error has been captured. Code: ${error.code}, message: ${error.message}`);
+  })
+```
 
 ## offAvailableDeviceChange
 
@@ -64,15 +80,34 @@ offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | 否 | 此前通过onAvailableDeviceChange注册的回调函数。指定该参数时，仅取消指定的这一个回调；省略该参数 时，取消全部已注册的回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localUserId = 100;
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const handler = (deviceStatusList: companionDeviceAuth.DeviceStatus[]): void => {
+    console.info('available device changed');
+  };
+  statusMonitor.onAvailableDeviceChange(handler);
+  statusMonitor.offAvailableDeviceChange(handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured. Code: ${(error as BusinessError).code}, message: ${message}`);
+}
+```
 
 ## offContinuousAuthChange
 
@@ -94,15 +129,43 @@ offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | 否 | 此前通过onContinuousAuthChange注册的回调函数。指定该参数时，仅取消指定的这一个回调；省略该参数时， 取消全部已注册的回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+const localUserId = 100;
+try {
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const continuousAuthParam: companionDeviceAuth.ContinuousAuthParam = {
+    templateId: new Uint8Array([])
+  };
+  const handler = (isAuthPassed: boolean, authTrustLevel?: userAuth.AuthTrustLevel): void => {
+    console.info('continuous auth changed');
+    console.info(`isAuthPassed: ${isAuthPassed}`);
+    if (authTrustLevel !== undefined) {
+      console.info(`authTrustLevel: ${authTrustLevel}`);
+    }
+  };
+
+  statusMonitor.onContinuousAuthChange(continuousAuthParam, handler);
+  statusMonitor.offContinuousAuthChange(handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured. Code: ${(error as BusinessError).code}, message: ${message}`);
+}
+```
 
 ## offTemplateChange
 
@@ -124,15 +187,34 @@ offTemplateChange(callback?: TemplateStatusCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | 否 | 回调函数，指定该参数时，仅取消指定的这一个回调；省略该参数时，取消全部已注册的回调。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localUserId = 100;
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const handler = (templates: companionDeviceAuth.TemplateStatus[]): void => {
+    console.info('template status updated');
+  };
+  statusMonitor.onTemplateChange(handler);
+  statusMonitor.offTemplateChange(handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured. Code: ${(error as BusinessError).code}, message: ${message}`);
+}
+```
 
 ## onAvailableDeviceChange
 
@@ -154,15 +236,33 @@ onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | 是 | 处理可用设备状态变化的回调函数。当可添加设备列表变化（如新设备上线、设备离线等）时触发，回调参数为设备状态列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localUserId = 100;
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const handler = (deviceStatusList: companionDeviceAuth.DeviceStatus[]): void => {
+    console.info('available device changed');
+  };
+  statusMonitor.onAvailableDeviceChange(handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured. Code: ${(error as BusinessError).code}, message: ${message}`);
+}
+```
 
 ## onContinuousAuthChange
 
@@ -184,17 +284,44 @@ onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatu
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| param | [ContinuousAuthParam](arkts-userauthentication-companiondeviceauth-continuousauthparam-i-sys.md) | 是 |
-| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| param | [ContinuousAuthParam](arkts-userauthentication-companiondeviceauth-continuousauthparam-i-sys.md) | 是 | 用于指定订阅参数，可通过templateId字段指定目标模板。 |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | 是 | 回调函数。当持续认证状态变化时触发，回调参数为认证结果（isAuthPassed）和认证可信等级（ authTrustLevel）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
-| [32600002](../errorcode-useriam.md#32600002-模板未找到) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+| [32600002](../errorcode-useriam.md#32600002-模板未找到) | The template is not found. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+const localUserId = 100;
+try {
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const continuousAuthParam: companionDeviceAuth.ContinuousAuthParam = {
+    templateId: new Uint8Array([])
+  };
+  const handler = (isAuthPassed: boolean, authTrustLevel?: userAuth.AuthTrustLevel): void => {
+    console.info('continuous auth changed');
+    console.info(`isAuthPassed: ${isAuthPassed}`);
+    if (authTrustLevel !== undefined) {
+      console.info(`authTrustLevel: ${authTrustLevel}`);
+    }
+  };
+
+  statusMonitor.onContinuousAuthChange(continuousAuthParam, handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured. Code: ${(error as BusinessError).code}, message: ${message}`);
+}
+```
 
 ## onTemplateChange
 
@@ -216,12 +343,30 @@ onTemplateChange(callback: TemplateStatusCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | 是 | 回调函数。当模板状态发生变化（如添加、删除、有效性变更等）时触发，回调参数为模板状态列表。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localUserId = 100;
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const handler = (templates: companionDeviceAuth.TemplateStatus[]): void => {
+    console.info('template status updated');
+  };
+  statusMonitor.onTemplateChange(handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured. Code: ${(error as BusinessError).code}, message: ${message}`);
+}
+```

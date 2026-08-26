@@ -11,7 +11,7 @@ CDSM客户端类，提供了获取远端设备的合作设备集合信息等操�
 ## 导入模块
 
 ```TypeScript
-import { cdsm } from 'kits/@kit.ConnectivityKit';
+import cdsm from '@kit.ConnectivityKit';
 ```
 
 ## getCdsmInfo
@@ -32,17 +32,17 @@ getCdsmInfo(): CdsmInfo
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | 远端设备的合作设备集合信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## offCdsmInfoChange
 
@@ -60,9 +60,9 @@ offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 否 | 事件回调类型，返回远端设备合作设备集合信息。 填写该参数则取消当前callback订阅。不填写该参数则取消远端设备合作设备集合信息变化事件对应的所有回调。 |
 
 ## onCdsmInfoChange
 
@@ -80,6 +80,6 @@ onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 是 | 事件回调类型，返回远端设备合作设备集合信息。 |

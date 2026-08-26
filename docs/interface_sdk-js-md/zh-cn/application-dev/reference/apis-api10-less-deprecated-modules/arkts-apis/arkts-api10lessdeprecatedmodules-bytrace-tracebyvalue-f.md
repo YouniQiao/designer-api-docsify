@@ -13,7 +13,8 @@ function traceByValue(name: string, count: number): void
 
 标记预追踪耗时任务的数值变量，该变量的数值会不断变化。traceByValue可独立使用，用于记录某个数值变量的变化轨迹。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 从API version 7开始支持，从API version 8开始废弃。
 
 **起始版本：** 7
@@ -26,7 +27,17 @@ function traceByValue(name: string, count: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-| count | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 数值变量的名称。 |
+| count | number | 是 | 数值变量的值。 |
+
+**示例**
+
+```TypeScript
+let traceCount = 3;
+bytrace.traceByValue("myTestCount", traceCount);
+traceCount = 4;
+bytrace.traceByValue("myTestCount", traceCount);
+// 业务流程......
+```

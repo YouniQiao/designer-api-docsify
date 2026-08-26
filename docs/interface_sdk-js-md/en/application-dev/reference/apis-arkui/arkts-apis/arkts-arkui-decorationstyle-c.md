@@ -29,9 +29,9 @@ A constructor used to create a text decorative line style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | Text decorative line options.Default value:{ type: TextDecorationType.None, color: Color.Black, style: TextDecorationStyle.SOLID } |
 
 ## constructor
 
@@ -51,10 +51,10 @@ Constructor of a text decoration line style, including additional configuration 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes |
-| [options](#options) | [DecorationOptions](arkts-arkui-decorationoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | Text decorative line options.Default value:{ type: TextDecorationType.None, color: Color.Black, style: TextDecorationStyle.SOLID,  thicknessScale: 1.0 } |
+| options | [DecorationOptions](arkts-arkui-decorationoptions-i.md) | No | Additional configuration options for the text decoration line.Default value:{ enableMultiType: undefined} |
 
 ## color
 

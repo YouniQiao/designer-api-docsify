@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from 'kits/@kit.ArkUI';
+import floatingBall from '@kit.ArkUI';
 ```
 
 ## isFloatingBallEnabled
@@ -20,6 +20,14 @@ Checks whether the device supports floating balls.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result for the support of floating balls. **true** if supported, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+// Check whether the current device supports the floating ball feature.
+let enable: boolean = floatingBall.isFloatingBallEnabled();
+console.info('Floating ball enabled is: ' + enable);
+```

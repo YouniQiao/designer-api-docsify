@@ -14,7 +14,7 @@ Called when the position of the text selection changes or when the cursor positi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectionStart | number | Yes |
-| selectionEnd | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectionStart | number | Yes | Start position of the text to be selected. |
+| selectionEnd | number | Yes | End position of the text to be selected. |

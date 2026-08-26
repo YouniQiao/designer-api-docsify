@@ -2,8 +2,10 @@
 
 提供根据不同媒体类型定义不同的样式。
 
-> **说明：**&gt;
-> - 该模块不支持在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)的文件声明处使用，即不能在UIAbility的生命周期中调用，需要在创建组件实例后使用。&gt;
+> **说明：**
+> 
+> - 该模块不支持在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)的文件声明处使用，即不能在UIAbility的生命周期中调用，需要在创建组件实例后使用。
+> 
 > - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)说明。
 
@@ -14,20 +16,20 @@
 ## 导入模块
 
 ```TypeScript
-import { mediaquery } from 'kits/@kit.ArkUI';
+import mediaquery from '@kit.ArkUI';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [matchMediaSync(媒体查询)](arkts-arkui-mediaquery-matchmediasync-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [matchMediaSync(媒体查询)](arkts-arkui-mediaquery-matchmediasync-f.md) | 设置媒体查询的查询条件，并返回对应的监听句柄。 |
 
 ### 接口
 
-| 名称 |
-| --- |
-| [MediaQueryListener(媒体查询)](arkts-arkui-mediaquery-mediaquerylistener-i.md) |
-| [MediaQueryResult(媒体查询)](arkts-arkui-mediaquery-mediaqueryresult-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [MediaQueryListener(媒体查询)](arkts-arkui-mediaquery-mediaquerylistener-i.md) | 媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)。 |
+| [MediaQueryResult(媒体查询)](arkts-arkui-mediaquery-mediaqueryresult-i.md) | 用于执行媒体查询操作。 |

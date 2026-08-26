@@ -14,7 +14,7 @@ type SnapshotRegionType = SnapshotRegion | LocalizedSnapshotRegion
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md) |
-| [LocalizedSnapshotRegion](arkts-arkui-componentsnapshot-localizedsnapshotregion-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md) |  |
+| [LocalizedSnapshotRegion](arkts-arkui-componentsnapshot-localizedsnapshotregion-i.md) |  |

@@ -16,6 +16,6 @@ declare type OnHomeShowOnTopCallback = (name: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 显示在栈顶的页面的标识符。 |

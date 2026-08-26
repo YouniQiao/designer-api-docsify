@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+import onScreen from '@kit.MultimodalAwarenessKit';
 ```
 
 ## getPageContent
@@ -24,25 +24,46 @@ function getPageContent(options?: ContentOptions): Promise<PageContent>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [ContentOptions](arkts-multimodalawareness-onscreen-contentoptions-i-sys.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [ContentOptions](arkts-multimodalawareness-onscreen-contentoptions-i-sys.md) | 否 | 获取屏上内容的选项，默认为不指定window ID，且其余选项均为false。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md)&gt; | Promise对象，返回获取到的页面内容 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [34000001](../errorcode-carAwareness.md#34000001-服务异常) |
-| [34000002](../errorcode-carAwareness.md#34000002-指定能力不支持) |
-| [34000003](../errorcode-onScreen.md#34000003-窗口id无效) |
-| [34000004](../errorcode-onScreen.md#34000004-页面未准备就绪) |
-| [34000006](../errorcode-onScreen.md#34000006-请求超时) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to get page content forbidden by permission: ohos.permission.GET_SCREEN_CONTENT. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited device capabilities. |
+| [34000001](../errorcode-carAwareness.md#34000001-服务异常) | Service exception. |
+| [34000002](../errorcode-carAwareness.md#34000002-指定能力不支持) | The application or page is not supported. |
+| [34000003](../errorcode-onScreen.md#34000003-窗口id无效) | The window ID is invalid. Possible causes: 1. window id is not passed when screen is splited. 2. passed window id is not on screen or floating. |
+| [34000004](../errorcode-onScreen.md#34000004-页面未准备就绪) | The page is not ready. |
+| [34000006](../errorcode-onScreen.md#34000006-请求超时) | The request timed out. |
+
+**示例**
+
+```TypeScript
+import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: onScreen.ContentOptions = {
+   contentUnderstand: true,
+   pageLink: true
+};
+try {
+   onScreen.getPageContent(options).then((pageContent: onScreen.PageContent) => {
+      console.info("get page content succeed, bundleName = " + pageContent.bundleName);
+   }).catch((err: BusinessError) => {
+      console.error(`get page content failed, Code: ${err.code}, message: ${err.message}`);
+   });
+} catch (err) {
+   console.error(`get page content failed, Code: ${err.code}, message: ${err.message}`);
+}
+```

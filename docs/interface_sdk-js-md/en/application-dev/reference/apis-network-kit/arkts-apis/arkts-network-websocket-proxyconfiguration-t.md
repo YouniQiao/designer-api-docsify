@@ -10,8 +10,8 @@ Represents the HTTP proxy configuration.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'system' |
-| 'no-proxy' |
-| [HttpProxy](arkts-network-ethernet-httpproxy-t.md) |
+| Type | Description |
+| --- | --- |
+| 'system' | The default network proxy is used. |
+| 'no-proxy' | No network proxy is used. |
+| [HttpProxy](arkts-network-ethernet-httpproxy-t.md) | The specified network proxy is used. |

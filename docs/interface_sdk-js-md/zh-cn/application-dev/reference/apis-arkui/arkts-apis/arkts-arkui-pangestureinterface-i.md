@@ -29,15 +29,15 @@
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } \| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } \| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | 否 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## [[Call]]
 
@@ -57,15 +57,15 @@
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | 否 | 滑动手势处理器配置参数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -83,15 +83,15 @@ onActionCancel(event: () => void): PanGestureInterface
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 滑动手势取消回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -111,15 +111,15 @@ onActionCancel(event: Callback<GestureEvent>): PanGestureInterface
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势取消回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionEnd
 
@@ -137,15 +137,15 @@ onActionEnd(event: (event: GestureEvent) => void): PanGestureInterface
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | 是 | 滑动手势结束回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionStart
 
@@ -163,15 +163,15 @@ onActionStart(event: (event: GestureEvent) => void): PanGestureInterface
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | 是 | 滑动手势识别成功回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionUpdate
 
@@ -189,12 +189,12 @@ onActionUpdate(event: (event: GestureEvent) => void): PanGestureInterface
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | 是 | 滑动手势更新回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |

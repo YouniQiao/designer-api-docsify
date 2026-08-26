@@ -12,10 +12,10 @@ type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'
 
 **系统接口：** 此接口为系统接口。
 
-| 类型 |
-| --- |
-| 'Shortest' |
-| 'Short' |
-| 'Medium' |
-| 'Long' |
-| 'Longest' |
+| 类型 | 说明 |
+| --- | --- |
+| 'Shortest' | 表示最短。 |
+| 'Short' | 表示短。 |
+| 'Medium' | 表示中。 |
+| 'Long' | 表示长。 |
+| 'Longest' | 表示最长。 |

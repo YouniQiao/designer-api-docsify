@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## off('vibratorStateChange')
@@ -20,13 +19,35 @@ function off(type: 'vibratorStateChange', callback?: Callback<VibratorStatusEven
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'vibratorStateChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'vibratorStateChange' | 是 | 监听类型，该值固定为vibratorStateChange，表示马达上下线状态变化事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | 否 | 回调函数，需要注销的回调函数。不传此参数时注销所有vibratorStateChange类型的回调。使用场景：若仅需注销特定回调则传入对应 callback；若需注销全部回调则不传此参数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
+
+**示例**
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 回调函数 
+const vibratorStateChangeCallback = (data: vibrator.VibratorStatusEvent) => {
+  console.info('vibrator state callback info:', JSON.stringify(data));
+}
+// 使用try catch对可能出现的异常进行捕获
+try {
+  // 取消订阅 vibratorStateChange事件
+  vibrator.off('vibratorStateChange', vibratorStateChangeCallback);
+  // 取消订阅所有 vibratorStateChange事件
+  // vibrator.off('vibratorStateChange');
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```

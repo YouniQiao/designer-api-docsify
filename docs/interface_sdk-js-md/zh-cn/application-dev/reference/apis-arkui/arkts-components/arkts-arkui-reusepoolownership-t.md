@@ -14,7 +14,7 @@ declare type ReusePoolOwnership = 'shared' | 'perInstance'
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| 'shared' |
-| 'perInstance' |
+| 类型 | 说明 |
+| --- | --- |
+| 'shared' |  |
+| 'perInstance' |  |

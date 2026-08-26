@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import application from '@kit.AbilityKit';
 ```
 
 ## exitMasterProcessRole
@@ -22,14 +22,39 @@ export function exitMasterProcessRole(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [16000118](../errorcode-ability.md#16000118-当前进程非主控进程) |
-| [16000119](../errorcode-ability.md#16000119-存在未完成的请求) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000118](../errorcode-ability.md#16000118-当前进程非主控进程) | Not a master process. |
+| [16000119](../errorcode-ability.md#16000119-存在未完成的请求) | Cannot exit because there is an unfinished request. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      application.exitMasterProcessRole()
+        .then(() => {
+          console.info('exitMasterProcessRole succeed');
+        })
+        .catch((err: BusinessError) => {
+          console.error(`exitMasterProcessRole failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (error) {
+      let code: number = (error as BusinessError).code;
+      let message: string = (error as BusinessError).message;
+      console.error(`exitMasterProcessRole failed, error.code: ${code}, error.message: ${message}`);
+    }
+  }
+}
+```

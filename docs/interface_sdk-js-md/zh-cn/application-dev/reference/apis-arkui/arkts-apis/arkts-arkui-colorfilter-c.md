@@ -29,6 +29,6 @@ Creates ColorFilter with 4*5 matrix.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number[] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number[] | 是 | 4*5 color matrix values. The value[m*n] is located in the m row and n column. The matrix is row-first. |

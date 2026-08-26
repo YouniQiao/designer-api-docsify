@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formProvider } from 'kits/@kit.FormKit';
+import formProvider from '@kit.FormKit';
 ```
 
 ## getPublishedRunningFormInfos
@@ -22,14 +22,31 @@ function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;formInfo.RunningFormInfo & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;formInfo.RunningFormInfo & gt; & gt; | Promise对象。返回符合条件的卡片信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
-| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+
+**示例**
+
+```TypeScript
+import { formInfo, formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formProvider.getPublishedRunningFormInfos().then((data: formInfo.RunningFormInfo[]) => {
+    console.info(`formProvider getPublishedRunningFormInfos, data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```

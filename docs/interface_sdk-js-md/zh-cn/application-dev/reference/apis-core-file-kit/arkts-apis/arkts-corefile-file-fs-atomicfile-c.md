@@ -9,9 +9,7 @@ AtomicFile是一个用于对文件进行原子读写等操作的类。在写操�
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -28,15 +26,15 @@ constructor(path: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 文件的沙箱路径。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
 
 ## delete
 
@@ -52,13 +50,41 @@ delete(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900001 |
-| 13900002 |
-| 13900012 |
-| 13900027 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900001 |  |
+| 13900002 |  |
+| 13900012 |  |
+| 13900027 |  |
+| 13900042 |  |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { util } from '@kit.ArkTS';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let pathDir = context.filesDir;
+
+try {
+  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
+  let writeStream = file.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    file.finishWrite();
+    setTimeout(()=>{
+      let data = file.readFully();
+      let decoder = util.TextDecoder.create('utf-8');
+      let str = decoder.decodeToString(new Uint8Array(data));
+      file.delete();
+      console.info(`Succeeded in delete atomicfile.`);
+    },1000);
+  })
+} catch (err) {
+  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## failWrite
 
@@ -74,9 +100,30 @@ failWrite(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900042 |  |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let pathDir = context.filesDir;
+
+let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
+try {
+  let writeStream = file.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    console.info(`Succeeded in writing atomicFile.`);
+  })
+} catch (err) {
+  file.failWrite();
+  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## finishWrite
 
@@ -92,9 +139,29 @@ finishWrite(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900042 |  |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let pathDir = context.filesDir;
+
+try {
+  let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
+  let writeStream = file.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    file.finishWrite();
+  })
+} catch (err) {
+  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## getBaseFile
 
@@ -110,18 +177,40 @@ getBaseFile(): File
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [File](arkts-corefile-file-fs-file-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [File](arkts-corefile-file-fs-file-i.md) | 打开的File对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900002 |
-| 13900005 |
-| 13900012 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900002 |  |
+| 13900005 |  |
+| 13900012 |  |
+| 13900042 |  |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let pathDir = context.filesDir;
+
+try {
+  let atomicFile = new fileIo.AtomicFile(`${pathDir}/write.txt`);
+  let writeStream = atomicFile.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    atomicFile.finishWrite();
+    let file = atomicFile.getBaseFile();
+    console.info(`Succeeded in getting base file. fd: ${file.fd}, path: ${file.path}, name:${file.name}`);
+  })
+} catch (err) {
+  console.error(`Failed to get baseFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## openRead
 
@@ -137,18 +226,49 @@ openRead(): ReadStream
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ReadStream](arkts-corefile-file-fs-readstream-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | 文件可读流。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900001 |
-| 13900002 |
-| 13900012 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900001 |  |
+| 13900002 |  |
+| 13900012 |  |
+| 13900042 |  |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let pathDir = context.filesDir;
+
+try {
+  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
+  let writeStream = file.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    file.finishWrite();
+    setTimeout(()=>{
+      let readStream = file.openRead();
+      readStream.on('readable', () => {
+        const data = readStream.read();
+        if (!data) {
+          console.error(`Failed to read atomicfile, data is null.`);
+          return;
+        }
+        console.info(`Succeeded in reading atomicfile, data is: ${data}`);
+      });
+    },1000);
+  })
+} catch (err) {
+  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## readFully
 
@@ -164,16 +284,43 @@ readFully(): ArrayBuffer
 
 **返回值：**
 
-| 类型 |
-| --- |
-| ArrayBuffer |
+| 类型 | 说明 |
+| --- | --- |
+| ArrayBuffer | 文件的全部内容。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900005 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 |  |
+| 13900042 |  |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { util, buffer } from '@kit.ArkTS';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let pathDir = context.filesDir;
+
+try {
+  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
+  let writeStream = file.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    file.finishWrite();
+    setTimeout(()=>{
+      let data = file.readFully();
+      let decoder = util.TextDecoder.create('utf-8');
+      let str = decoder.decodeToString(new Uint8Array(data));
+      console.info(`Succeeded in reading atomicfile fully, str is: ${str}`);
+    },1000);
+  })
+} catch (err) {
+  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## startWrite
 
@@ -189,16 +336,37 @@ startWrite(): WriteStream
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [WriteStream](arkts-corefile-file-fs-writestream-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | 文件可写流。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900001 |
-| 13900002 |
-| 13900012 |
-| 13900027 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900001 |  |
+| 13900002 |  |
+| 13900012 |  |
+| 13900027 |  |
+| 13900042 |  |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let pathDir = context.filesDir;
+
+try {
+  let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
+  let writeStream = file.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    file.finishWrite();
+    console.info(`Succeeded in writing atomicfile finished.`);
+  })
+} catch (err) {
+  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
+}
+```

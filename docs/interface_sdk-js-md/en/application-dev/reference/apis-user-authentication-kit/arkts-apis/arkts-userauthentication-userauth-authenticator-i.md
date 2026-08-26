@@ -13,7 +13,8 @@ Provides APIs for managing the **Authenticator** object.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## execute
@@ -36,11 +37,26 @@ Starts user authentication. This API uses an asynchronous callback to return the
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [AuthType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtype-e-sys.md) | Yes |
-| level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [AuthType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication type. Currently, only **FACE_ONLY** is supported.    **ALL** is reserved and not supported by the current version. |
+| level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Yes | Security level of the authentication. It can be **S1** (lowest), **S2**, **S3**, or **S4** (highest). Devices capable of 3D facial recognition support S3 and lower-level authentication. Devices capable of 2D facial recognition support S2 and lower-level authentication. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. **number** indicates the [AuthenticationResult](arkts-userauthentication-userauth-authenticationresult-e.md). |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let authenticator = userAuth.getAuthenticator();
+authenticator.execute('FACE_ONLY', 'S2', (error, code) => {
+  if (code === userAuth.ResultCode.SUCCESS) {
+    console.info('auth successfully.');
+    return;
+  }
+  console.error(`auth failed, code = ${code}`);
+});
+```
 
 ## execute
 
@@ -62,13 +78,28 @@ Starts user authentication. This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [AuthType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtype-e-sys.md) | Yes |
-| level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [AuthType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication type. Currently, only **FACE_ONLY** is supported.    **ALL** is reserved and not supported by the current version. |
+| level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Yes | Security level of the authentication. It can be **S1** (lowest), **S2**, **S3**, or **S4** (highest). Devices capable of 3D facial recognition support S3 and lower-level authentication. Devices capable of 2D facial recognition support S2 and lower-level authentication. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the authentication result, which is a number. For details, see [AuthenticationResult]{ |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  let authenticator = userAuth.getAuthenticator();
+  authenticator.execute('FACE_ONLY', 'S2').then((code) => {
+    console.info('auth successfully.');
+  })
+} catch (error) {
+  console.error(`auth failed, Code: ${error?.code}, message: ${error?.message}`);
+}
+```

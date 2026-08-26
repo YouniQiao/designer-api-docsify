@@ -2,7 +2,8 @@
 
 **FoldSplitContainer** is a layout container designed to manage regions for two-panel and three-panel arrangements on a foldable device across various states, including the expanded state, the semi-folded state, and the folded state.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > By default, a two-panel layout is used when the window width is less than or equal to 600 vp.
 > When the window width exceeds 600 vp, an extended area is supported alongside the top-bottom split layout.
 > A semi-folded state layout can be triggered when the window width is greater than 600 vp and the device
@@ -17,7 +18,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from 'kits/@kit.ArkUI';
+import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from '@kit.ArkUI';
 ```
 
 ## onHoverStatusChange

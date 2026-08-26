@@ -29,9 +29,9 @@ setExtraConfig(config: InputMethodExtraConfig): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| config | [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| config | [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | 是 | 输入法扩展信息。 |
 
 ## nodeId
 

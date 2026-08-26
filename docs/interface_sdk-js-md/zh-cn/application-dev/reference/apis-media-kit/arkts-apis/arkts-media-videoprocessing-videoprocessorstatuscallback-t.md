@@ -14,6 +14,6 @@ type VideoProcessorStatusCallback = (status: VideoProcessorStatus) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| status | [VideoProcessorStatus](arkts-media-videoprocessing-videoprocessorstatus-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| status | [VideoProcessorStatus](arkts-media-videoprocessing-videoprocessorstatus-i.md) | 是 | 视频处理功能状态。 |

@@ -2,7 +2,8 @@
 
 Implements the **RichEditor** component controller. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When the length of the content exceeds the height of the display area of the component, the insertion interface (
 > such as [addTextSpan](#addtextspan),
 > [addImageSpan](#addimagespan),
@@ -29,26 +30,36 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 
 Adds a custom layout (BuilderSpan) to **RichEditor**.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This API adds a builder span to take up space in the layout. It calls the system **measure** method to
-> calculate the actual length, width, and position.&gt;
+> calculate the actual length, width, and position.
+> 
 > - You can use [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) to set the index of the builder
-> in the **RichEditor** component (with one character as the unit).&gt;
+> in the **RichEditor** component (with one character as the unit).
+> 
 > - This builder span is unfocusable, draggable, and equipped with certain universal attributes. It behaves
 > similarly to an image span in terms of placeholder and deletion functionality, and it is treated as a single
-> character in length.&gt;
-> - Custom menus can be set using [bindSelectionMenu](arkts-arkui-richeditor-attribute.md#bindselectionmenu).&gt;
+> character in length.
+> 
+> - Custom menus can be set using [bindSelectionMenu](arkts-arkui-richeditor-attribute.md#bindselectionmenu).
+> 
 > - The information about the builder span cannot be obtained through
 > [getSpans](#getspans), [getSelection](#getselection),
-> [onSelect](arkts-arkui-richeditor-attribute.md#onselect), or [aboutToDelete](arkts-arkui-richeditor-attribute.md#abouttodelete).&gt;
+> [onSelect](arkts-arkui-richeditor-attribute.md#onselect), or [aboutToDelete](arkts-arkui-richeditor-attribute.md#abouttodelete).
+> 
 > - The builder span cannot be updated using [updateSpanStyle](#updatespanstyle) or
-> [updateParagraphStyle](#updateparagraphstyle).&gt;
-> - Copying or pasting the builder span does not take effect.&gt;
+> [updateParagraphStyle](#updateparagraphstyle).
+> 
+> - Copying or pasting the builder span does not take effect.
+> 
 > - The layout constraints of the builder span are passed in from the **RichEditor** component. If the size of the
 > outermost component in the builder span is not set, the size of the **RichEditor** is used as the value of
-> **maxSize**.&gt;
+> **maxSize**.
+> 
 > - The gesture event mechanism of the builder span is the same as the universal gesture event mechanism. If
-> transparent transmission is not set in the builder, only the child components in the builder respond.&gt;
+> transparent transmission is not set in the builder, only the child components in the builder respond.
+> 
 > - If the caret in the component is blinking, the caret position is updated to be after the inserted image span.
 Only the following universal attributes are supported: [size](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#size), [padding](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#padding), [margin](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#margin), [aspectRatio](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-layout-constraints.md#aspectratio), [borderStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderstyle), [borderWidth](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderwidth), [borderColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#bordercolor), [borderRadius](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderradius), [backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor), [backgroundBlurStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9), opacity, [blur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#blur), [backdropBlur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backdropblur), [shadow](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#shadow), [grayscale](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#grayscale), [brightness](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#brightness), [saturate](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#saturate), [contrast](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#contrast), [invert](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#invert), [sepia](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#sepia), [hueRotate](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#huerotate), [colorBlend](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#colorblend), [linearGradientBlur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#lineargradientblur12), [clip](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12), [mask](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#mask12), [foregroundBlurStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-foreground-blur-style.md#foregroundblurstyle), [accessibilityGroup](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitygroup), [accessibilityText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitytext), [accessibilityDescription](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitydescription), [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel), [sphericalEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#sphericaleffect12), [lightUpEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#lightupeffect12),  
 [pixelStretchEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#pixelstretcheffect12).
@@ -63,16 +74,16 @@ Only the following universal attributes are supported: [size](../../../reference
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
-| options | [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Custom component. |
+| options | [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) | No | Builder options. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the added builder span in all spans. |
 
 ## addImageSpan
 
@@ -92,16 +103,16 @@ Adds an image span. If the caret in the component is blinking, the caret positio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
-| options | [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Image content. |
+| options | [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md) | No | Image options. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the added image span in all spans. |
 
 ## addSymbolSpan
 
@@ -121,16 +132,16 @@ Adds a symbol span. If the caret in the component is blinking, the caret positio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
-| options | [RichEditorSymbolSpanOptions](arkts-arkui-richeditorsymbolspanoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Symbol resource object. |
+| options | [RichEditorSymbolSpanOptions](arkts-arkui-richeditorsymbolspanoptions-i.md) | No | Symbol options. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the added symbol span in all spans. |
 
 ## addTextSpan
 
@@ -150,16 +161,16 @@ Adds a text span. If the caret in the component is blinking, the caret position 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
-| options | [RichEditorTextSpanOptions](arkts-arkui-richeditortextspanoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text content.The Resource type is supported since API version 20.<br>**Since:** 20 |
+| options | [RichEditorTextSpanOptions](arkts-arkui-richeditortextspanoptions-i.md) | No | Text options. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the added text span in all spans. |
 
 ## deleteSpans
 
@@ -179,9 +190,9 @@ Deletes the text and image spans in a specified range.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | No | Range of the target spans. If this parameter is left empty, all text and image spans will be deleted. |
 
 ## fromStyledString
 
@@ -201,21 +212,21 @@ Converts a styled string into a span.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string before conversion. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[RichEditorSpan](arkts-arkui-richeditorspan-t.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[RichEditorSpan](arkts-arkui-richeditorspan-t.md)&gt; | Text and image span information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
 
 ## getParagraphs
 
@@ -235,15 +246,15 @@ Obtains the paragraph information within a specified range.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | No | Range of the paragraphs to obtain. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditorparagraphresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditorparagraphresult-i.md)&gt; | Information about the selected paragraphs. |
 
 ## getSelection
 
@@ -263,9 +274,9 @@ Obtains the range and span information of the selected content. If no text is se
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RichEditorSelection](arkts-arkui-richeditorselection-i.md) |
+| Type | Description |
+| --- | --- |
+| [RichEditorSelection](arkts-arkui-richeditorselection-i.md) | Provides information about the selected content. |
 
 ## getSpans
 
@@ -285,15 +296,15 @@ Obtains span information.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | No | Range of the target span. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | Text and image span information. |
 
 ## toStyledString
 
@@ -313,21 +324,21 @@ Convert the component content within the given range into a styled string. Symbo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | Yes | Source range. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) |
+| Type | Description |
+| --- | --- |
+| [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Styled string after conversion. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
 
 ## updateParagraphStyle
 
@@ -347,9 +358,9 @@ Updates the paragraph style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [RichEditorParagraphStyleOptions](arkts-arkui-richeditorparagraphstyleoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [RichEditorParagraphStyleOptions](arkts-arkui-richeditorparagraphstyleoptions-i.md) | Yes | Information about the paragraph style. |
 
 ## updateSpanStyle
 
@@ -369,6 +380,6 @@ Updates the text, image, or symbol span style.If only part of a span is updated,
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditorupdatetextspanstyleoptions-i.md) \| [RichEditorUpdateImageSpanStyleOptions](arkts-arkui-richeditorupdateimagespanstyleoptions-i.md) \| [RichEditorUpdateSymbolSpanStyleOptions](arkts-arkui-richeditorupdatesymbolspanstyleoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditorupdatetextspanstyleoptions-i.md) \| [RichEditorUpdateImageSpanStyleOptions](arkts-arkui-richeditorupdateimagespanstyleoptions-i.md) \| [RichEditorUpdateSymbolSpanStyleOptions](arkts-arkui-richeditorupdatesymbolspanstyleoptions-i.md) | Yes | Style options of the text, image, or symbol span.<br>**Since:** 11 |

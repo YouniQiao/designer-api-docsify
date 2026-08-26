@@ -1,7 +1,8 @@
 # DisplayOrientation
 
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
 > [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)替代。
 屏幕显示方向。

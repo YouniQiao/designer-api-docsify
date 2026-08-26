@@ -11,19 +11,19 @@
 compile(pattern: string, flags?: string): this
 ```
 
-**Deprecated since:** legacy feature for browser compatibility 
+**Deprecated since:** legacy feature for browser compatibility
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
-| flags | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pattern | string | Yes |  |
+| flags | string | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## exec
 
 ```TypeScript
@@ -34,14 +34,14 @@ Executes a search on a string using a regular expression pattern, and returns an
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| string | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| string | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## test
 
 ```TypeScript
@@ -52,14 +52,14 @@ Returns a Boolean value that indicates whether or not a pattern exists in a sear
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| string | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| string | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## global
 
 ```TypeScript

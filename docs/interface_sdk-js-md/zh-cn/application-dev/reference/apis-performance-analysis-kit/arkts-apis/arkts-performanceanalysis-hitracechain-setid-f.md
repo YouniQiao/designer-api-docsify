@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## setId
@@ -20,6 +19,15 @@ function setId(id: HiTraceId): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 | HiTraceId实例。 |
+
+**示例**
+
+```TypeScript
+// 获取当前跟踪链中的跟踪标识。
+let traceId = hiTraceChain.getId();
+// 将获取的跟踪标识设置为当前traceId。
+hiTraceChain.setId(traceId);
+```

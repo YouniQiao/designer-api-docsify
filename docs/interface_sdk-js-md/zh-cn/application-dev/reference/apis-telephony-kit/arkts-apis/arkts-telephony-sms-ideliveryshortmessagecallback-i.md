@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## pdu

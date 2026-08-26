@@ -16,6 +16,6 @@ type OnFontWeightScaleUpdatedFn = (fontWeightScale: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [fontWeightScale](arkts-ability-app-ability-configuration-configuration-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fontWeightScale | number | 是 | 变化后的系统字体粗细缩放比例。 |

@@ -14,7 +14,7 @@ declare type AttachmentType = ImageAttachmentInterface | ResourceImageAttachment
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) |
-| [ResourceImageAttachmentOptions](arkts-arkui-resourceimageattachmentoptions-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | PixelMap类型图片设置项。 |
+| [ResourceImageAttachmentOptions](arkts-arkui-resourceimageattachmentoptions-i.md) | ResourceStr类型图片设置项。 |

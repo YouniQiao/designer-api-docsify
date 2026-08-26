@@ -16,7 +16,7 @@ Defines the callback type used in accessibility hover events. The value of isHov
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isHover | boolean | Yes |
-| event | [AccessibilityHoverEvent](arkts-arkui-accessibilityhoverevent-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isHover | boolean | Yes |  |
+| event | [AccessibilityHoverEvent](arkts-arkui-accessibilityhoverevent-i.md) | Yes |  |

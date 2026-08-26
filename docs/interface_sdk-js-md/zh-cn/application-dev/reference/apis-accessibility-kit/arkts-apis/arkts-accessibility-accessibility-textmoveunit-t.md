@@ -14,10 +14,10 @@ type TextMoveUnit = 'char' | 'word' | 'line' | 'page' | 'paragraph'
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-| 类型 |
-| --- |
-| 'char' |
-| 'word' |
-| 'line' |
-| 'page' |
-| 'paragraph' |
+| 类型 | 说明 |
+| --- | --- |
+| 'char' | 表示以字符为移动粒度遍历节点文本。 |
+| 'word' | 表示以词为移动粒度遍历节点文本。 |
+| 'line' | 表示以行为移动粒度遍历节点文本。 |
+| 'page' | 表示以页为移动粒度遍历节点文本。 |
+| 'paragraph' | 表示以段落为移动粒度遍历节点文本。 |

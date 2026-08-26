@@ -11,22 +11,22 @@ This module is used to manage plugins for applications.
 ## Modules to Import
 
 ```TypeScript
-import { pluginBundleManager } from 'kits/@kit.AbilityKit';
+import pluginBundleManager from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md) |
-| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md) |
-| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md) |
+| Name | Description |
+| --- | --- |
+| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md) | Obtains information about all local plugins installed on the current application. |
+| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md) | Install the plugin for self application. |
+| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md) | Uninstall the plugin for self application. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PluginBundleInfo](arkts-ability-pluginbundlemanager-pluginbundleinfo-t.md) |
-| [PluginModuleInfo](arkts-ability-pluginbundlemanager-pluginmoduleinfo-t.md) |
+| Name | Description |
+| --- | --- |
+| [PluginBundleInfo](arkts-ability-pluginbundlemanager-pluginbundleinfo-t.md) | Indicates the information about a plugin. |
+| [PluginModuleInfo](arkts-ability-pluginbundlemanager-pluginmoduleinfo-t.md) | Indicates the plugin module info. |

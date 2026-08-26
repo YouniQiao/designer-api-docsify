@@ -2,7 +2,8 @@
 
 提供一个可通过开发者自定义回调释放由开发者管理的资源的接口。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > AutoFinalizer&lt;T&gt;需要和AutoFinalizerCleaner&lt;T&gt;一起使用，只实现该接口类没有任何功能。
 
 **起始版本：** 22
@@ -12,7 +13,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## onFinalization
@@ -31,6 +33,6 @@ onFinalization(heldValue: T): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| heldValue | T | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| heldValue | T | 是 | 传递给 finalizer 的值。 |

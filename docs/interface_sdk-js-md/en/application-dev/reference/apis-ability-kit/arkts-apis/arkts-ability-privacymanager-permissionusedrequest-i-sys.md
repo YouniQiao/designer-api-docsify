@@ -11,7 +11,7 @@ Represents the request for querying permission usage records.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import privacyManager from '@kit.AbilityKit';
 ```
 
 ## beginTime

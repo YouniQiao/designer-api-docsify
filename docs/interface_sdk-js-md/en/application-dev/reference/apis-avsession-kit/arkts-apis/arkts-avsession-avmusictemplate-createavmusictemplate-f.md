@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import avMusicTemplate from '@kit.AVSessionKit';
 ```
 
 ## createAVMusicTemplate
@@ -22,19 +22,19 @@ Create an AVMusicTemplate instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [accessType](../../apis-telephony-kit/arkts-apis/arkts-telephony-esim-accessrule-i-sys.md) | [AVMusicTemplateType](arkts-avsession-avmusictemplate-avmusictemplatetype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| accessType | [AVMusicTemplateType](arkts-avsession-avmusictemplate-avmusictemplatetype-e.md) | Yes | type of access, default is 'smartCar' |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AVMusicTemplate](arkts-avsession-avmusictemplate-avmusictemplate-c.md) |
+| Type | Description |
+| --- | --- |
+| [AVMusicTemplate](arkts-avsession-avmusictemplate-avmusictemplate-c.md) | an AVMusicTemplate instance |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |
-| [35000001](../errorcode-avmusictemplate.md#35000001-audio-template-creation-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.function createAVMusicTemplate can not work correctly due to limited device capabilities. |
+| [35000001](../errorcode-avmusictemplate.md#35000001-audio-template-creation-failure) | Failed to create the AVMusicTemplate. |

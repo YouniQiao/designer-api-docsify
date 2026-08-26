@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## openCertificateManagerDialog
@@ -24,21 +23,46 @@ function openCertificateManagerDialog(context: common.Context, pageType: Certifi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | common.Context | 是 |
-| pageType | [CertificateDialogPageType](arkts-devicecertificate-certificatemanagerdialog-certificatedialogpagetype-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | common.Context | 是 | 表示应用的上下文信息。 |
+| pageType | [CertificateDialogPageType](arkts-devicecertificate-certificatemanagerdialog-certificatedialogpagetype-e.md) | 是 | 表示页面类型。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;  2. Memory operation error; 3. File operation error. Please try again. |
+
+**示例**
+
+```TypeScript
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { UIContext } from '@kit.ArkUI';
+
+/* context为应用的上下文信息，调用方自行获取，此处仅为示例 */
+let context: common.Context = new UIContext().getHostContext() as common.Context;
+/* pageType为页面类型，此处赋值PAGE_MAIN，即拉起证书管理主界面 */
+let pageType: certificateManagerDialog.CertificateDialogPageType =
+  certificateManagerDialog.CertificateDialogPageType.PAGE_MAIN;
+try {
+  certificateManagerDialog.openCertificateManagerDialog(context, pageType).then(() => {
+    console.info('Succeeded in opening certificate manager dialog.');
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to open certificate manager dialog. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  console.error(`Failed to open certificate manager dialog. Code: ${error.code}, message: ${error.message}`);
+}
+```

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import settings from '@kit.BasicServicesKit';
+import settingsLite from '@kit.BasicServicesKitLite';
 ```
 
 ## enableAirplaneMode
@@ -22,10 +23,23 @@ Enables or disables airplane mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Specifies whether to enable airplane mode. The value {@code true} means to enable airplane mode, and {@code false} means to disable airplane mode. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of enableAirplaneMode result. |
+
+**Examples**
+
+```TypeScript
+let isEnabled :boolean = true;
+settings.enableAirplaneMode(isEnabled, (err:Error) => {
+    if (err) {
+        console.error('Failed to enable AirplaneMode.');
+        return;
+    }
+    console.info('Return true if enable.');
+})
+```
 
 
 ## enableAirplaneMode
@@ -44,12 +58,23 @@ Enables or disables airplane mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Specifies whether to enable airplane mode. The value {@code true} means to enable airplane mode, and {@code false} means to disable airplane mode. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Return Promise. |
+
+**Examples**
+
+```TypeScript
+let isEnabled :boolean = true;
+settings.enableAirplaneMode(isEnabled).then(() => {
+  console.info('Succeeded in enabling AirplaneMode.');
+}).catch((err:Error) => {
+  console.error(`Failed to enable AirplaneMode. Cause: ${err}`);
+})
+```

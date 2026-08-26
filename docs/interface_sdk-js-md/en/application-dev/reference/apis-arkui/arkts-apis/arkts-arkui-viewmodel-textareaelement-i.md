@@ -24,6 +24,6 @@ Obtains or loses the focus of a component, which can display or collapse the inp
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | { focus: boolean } | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | { focus: boolean } | Yes | If focus is not passed, the default value true is used. |

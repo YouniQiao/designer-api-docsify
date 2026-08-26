@@ -2,7 +2,8 @@
 
 Raw input event wrapper class.Provides a unified interface to access different types of input events, ensuring type safety and backward compatibility.This class encapsulates either a raw **MouseEvent**, **TouchEvent**, or **KeyEvent** object and provides type-safe methods for access.This class is an abstract class. Developers cannot create instances on their own. The system automatically creates an instance and passes it to the callback when the input event listener is triggered.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Since the listener is executed before events are dispatched to specific components, some fields in the event will
 > not provide valid values: the trigger object [target](arkts-arkui-eventtarget-i.md), coordinates relative to the component
 > [x](arkts-arkui-mouseevent-i.md#x) and [y](arkts-arkui-mouseevent-i.md#y), [getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getcurrentlocalposition)
@@ -37,9 +38,9 @@ Obtains the key event.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [KeyEvent](arkts-arkui-keyevent-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [KeyEvent](arkts-arkui-keyevent-i.md) \| null | Key event object if it is a key event, or **null** otherwise. |
 
 ## asMouseEvent
 
@@ -59,9 +60,9 @@ Obtains the mouse event.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MouseEvent](arkts-arkui-mouseevent-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [MouseEvent](arkts-arkui-mouseevent-i.md) \| null | Mouse event object if it is a mouse event, or **null** otherwise. |
 
 ## asTouchEvent
 
@@ -81,9 +82,9 @@ Obtains the touch event.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TouchEvent](arkts-arkui-touchevent-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [TouchEvent](arkts-arkui-touchevent-i.md) \| null | Touch event object if it is a touch event, or **null** otherwise. |
 
 ## isKeyEvent
 
@@ -103,9 +104,9 @@ Checks whether the event is a key event.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether it is a key event. Returns **true** if it is a key event, and **false** otherwise. |
 
 ## isMouseEvent
 
@@ -125,9 +126,9 @@ Checks whether the event is a mouse event.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether it is a mouse event. Returns **true** if it is a mouse event, and **false** otherwise. |
 
 ## isTouchEvent
 
@@ -147,6 +148,6 @@ Checks whether the event is a touch event.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether it is a touch event. Returns **true** if it is a touch event, and **false** otherwise. |

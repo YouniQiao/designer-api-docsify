@@ -14,13 +14,13 @@ Defines the callback function triggered when the page content changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| currentIndex | number | Yes |
-| [comingIndex](../arkts-components/arkts-arkui-swipercontentwillscrollresult-i.md) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| currentIndex | number | Yes | Index of the current tab. |
+| comingIndex | number | Yes | Index of the tab to be switched to. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | - |

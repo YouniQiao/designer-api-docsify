@@ -9,7 +9,7 @@ Gzip相关接口。
 ## 导入模块
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import zlib from '@kit.BasicServicesKit';
 ```
 
 ## gzbuffer
@@ -28,22 +28,63 @@ gzbuffer(size: number): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| size | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| size | number | 是 | 需要设置的内部缓冲区尺寸。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，成功时，返回0。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+import { zlib } from '@kit.BasicServicesKit';
+
+async function gzbufferDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzbuffer");
+  let path = pathDir + "/gzbuffer/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let result = await gzip.gzbuffer(648);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzbufferDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzclearerr
 
@@ -61,9 +102,60 @@ gzclearerr(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回值。 |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzclearerrDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzclearerr");
+  let path = pathDir + "/gzclearerr/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let writeBufferWithData = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(writeBufferWithData);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  let writeNum = await gzip.gzwrite(writeBufferWithData, 16)
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let readBufferWithData = new ArrayBuffer(20);
+  let readNum = await gzip.gzread(readBufferWithData);
+  let eofNum = await gzip.gzeof();
+  await gzip.gzclearerr();
+  let eofNumClear = await gzip.gzeof();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzclearerrDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzclose
 
@@ -81,16 +173,54 @@ gzclose(): Promise<ReturnStatus>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise对象，返回结果状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
-| [17800006](../../apis-ability-kit/errorcode-zlib.md#17800006-内存分配失败错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800006](../../apis-ability-kit/errorcode-zlib.md#17800006-内存分配失败错误) | Memory allocation failed. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzcloseDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzclose");
+  let path = pathDir + "/gzclose/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzcloseDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzcloser
 
@@ -108,15 +238,55 @@ gzcloser(): Promise<ReturnStatus>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise对象，返回结果状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzcloserDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzcloser");
+  let path = pathDir + "/gzcloser/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  await gzip.gzcloser();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzcloserDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzclosew
 
@@ -134,16 +304,54 @@ gzclosew(): Promise<ReturnStatus>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise对象，返回结果状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
-| [17800006](../../apis-ability-kit/errorcode-zlib.md#17800006-内存分配失败错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800006](../../apis-ability-kit/errorcode-zlib.md#17800006-内存分配失败错误) | Memory allocation failed. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzclosewDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzclosew");
+  let path = pathDir + "/gzclosew/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclosew();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzclosewDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzdirect
 
@@ -161,9 +369,48 @@ gzdirect(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，如果直接访问原始未压缩数据，则返回1。 |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzdirectDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzdirect");
+  let path = pathDir + "/gzdirect/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let directNum = await gzip.gzdirect();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzdirectDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzdopen
 
@@ -181,23 +428,62 @@ gzdopen(fd: number, mode: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fd | number | 是 |
-| mode | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fd | number | 是 | 文件描述符。通常情况下，通过系统调用“open”或其他方法获得的。 |
+| mode | string | 是 | 用于指定访问模式。详情与[gzopen](#gzopen)一致。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800002](../../apis-ability-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800002](../../apis-ability-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) | No such file or access mode error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzdopenDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzdopen");
+  let path = pathDir + "/gzdopen/test.gz";
+  let file = fs.openSync(path, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+  let gzip = zlib.createGZipSync();
+  await gzip.gzdopen(file.fd, "wb");
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzdopenDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzeof
 
@@ -215,9 +501,58 @@ gzeof(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，如果在读取时设置了文件的文件结束指示符，则返回1。 |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzeofDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzeof");
+  let path = pathDir + "/gzeof/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let writeBufferWithData = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(writeBufferWithData);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  let writeNum = await gzip.gzwrite(writeBufferWithData, 16)
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let readBufferWithData = new ArrayBuffer(20);
+  let readNum = await gzip.gzread(readBufferWithData);
+  let eofNum = await gzip.gzeof();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzeofDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzerror
 
@@ -235,15 +570,66 @@ gzerror(): Promise<GzErrorOutputInfo>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[GzErrorOutputInfo](arkts-basicservices-zlib-gzerroroutputinfo-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[GzErrorOutputInfo](arkts-basicservices-zlib-gzerroroutputinfo-i.md)&gt; | Promise对象，返回结果状态和出现的最后一个状态的状态消息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzerrorDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzerror");
+  let path = pathDir + "/gzerror/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let writeBufferWithData = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(writeBufferWithData);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  try {
+    await gzip.gzwrite(writeBufferWithData, -1);
+  } catch (errData) {
+    await gzip.gzerror().then((GzErrorOutputInfo) => {
+      console.info('errCode', GzErrorOutputInfo.status);
+      console.info('errMsg', GzErrorOutputInfo.statusMsg);
+    })
+  }
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzerrorDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzflush
 
@@ -261,22 +647,61 @@ gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | 是 | 控制刷新操作的行为，参考[CompressFlushMode枚举](arkts-basicservices-zlib-compressflushmode-e.md)的定义。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise对象，返回结果状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzflushDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzflush");
+  let path = pathDir + "/gzflush/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let flushNum = await gzip.gzflush(zlib.CompressFlushMode.NO_FLUSH);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzflushDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzfread
 
@@ -294,24 +719,72 @@ gzfread(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| buf | ArrayBuffer | 是 |
-| size | number | 是 |
-| nitems | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | 是 | 用于存储读取结果的目标缓冲区。 |
+| size | number | 是 | 单个数据块中的字节数。 |
+| nitems | number | 是 | 要写入的数据块数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回读取大小为size的完整数据块的数目。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzfreadDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzfread");
+  let path = pathDir + "/gzfread/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let writeBuffer = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(writeBuffer);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  await gzip.gzfwrite(writeBuffer, 8, 2);
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let readBuffer = new ArrayBuffer(16);
+  let result = await gzip.gzfread(readBuffer, 8, 2);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzfreadDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzfwrite
 
@@ -329,24 +802,68 @@ gzfwrite(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| buf | ArrayBuffer | 是 |
-| size | number | 是 |
-| nitems | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | 是 | 要将数据写入的缓冲区。 |
+| size | number | 是 | 单个数据块中的字节数。 |
+| nitems | number | 是 | 要写入的数据块数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回写入大小为size的完整数据块的数目。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzfwriteDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzfwrite");
+  let path = pathDir + "/gzfwrite/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let bufferWithData = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(bufferWithData);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  let result = await gzip.gzfwrite(bufferWithData, 8, 2)
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzfwriteDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzgetc
 
@@ -364,15 +881,57 @@ gzgetc(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回读取字符的ASCII值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzgetcDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzgetc");
+  let path = pathDir + "/gzgetc/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzputc(1);
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let result = await gzip.gzgetc();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzgetcDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzgets
 
@@ -390,22 +949,65 @@ gzgets(buf: ArrayBuffer): Promise<string>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| buf | ArrayBuffer | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | 是 | 存储读取的行数据。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象，返回以null结尾的字符串。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzgetsDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzgets");
+  let path = pathDir + "/gzgets/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzputs("hello");
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let bufferWithData = new ArrayBuffer(16);
+  let result = await gzip.gzgets(bufferWithData);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzgetsDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzoffset
 
@@ -423,15 +1025,54 @@ gzoffset(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回文件的当前压缩（实际）读或写偏移量。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzoffsetDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzoffset");
+  let path = pathDir + "/gzoffset/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gzoffset();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzoffsetDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzopen
 
@@ -449,23 +1090,61 @@ gzopen(path: string, mode: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
-| mode | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 需要打开的文件路径。 |
+| mode | string | 是 | 指定文件打开方法。基础模式（必须三选一）：   -?“r”或“rb”：读取模式，自动检测并解压gzip文件（若非gzip格式则直接读取原始数据）。   -? “w”或“wb”：写入模式，创建新文件并压缩数据。   -?“a”或“ab”：追加模式，在现有文件末尾追加新的gzip流（不校验原文件格式）。   可选功能参数（可组合使用）：   -?压缩级别：0（不压 缩）至9（最佳压缩），默认压缩级别为6，需要配合写入模式或者追加模式使用。   -?压缩策略：“f”（过滤策略）、“h”（霍夫曼策略）、“R”（游标编码策略）、“F”（固定编码策略），只能选取一种压缩策略。    - 透明模式：“T”，写入时不压缩且不生成gzip头（生成普通文件），与压缩策略互斥。   -?独占创建：“x”，如果文件存在则打开失败，需要配合写入模式或者追加模式使用   -? close-on-exec标志：“e”，设置文件描述符的FD_CLOEXEC属性（依赖系统支持）。   模式字符串示例：   -?“r”：读取模式，读取时以二进制形式读取。   -?“rb”：读取模式，读 取时以二进制形式读取。   -“wb6”：写入模式，压缩时以二进制形式写入，压缩级别为6。   -?“wb9f”：写入模式，压缩时以二进制形式写入，压缩级别为最佳压缩，压缩策略采用过滤策略。   -? “wbT”：写入模式，不压缩，生成普通文件。   -?“wbx”：写入模式，压缩时以二进制形式写入，采用独占创建的方式写入文件。   -?“abx”：追加模式，压缩时以二进制形式追加并写入，采用独占创建的方式 写入文件。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800002](../../apis-ability-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800002](../../apis-ability-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) | No such file or access mode error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzopenDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzopen");
+  let path = pathDir + "/gzopen/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzopenDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzprintf
 
@@ -483,24 +1162,63 @@ gzprintf(format: string, ...args: Array<string | number>): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| format | string | 是 |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;string \ | number & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| format | string | 是 | 格式化描述符和纯文本。 |
+| args | Array & lt;string \ | number & gt; | 是 | 可变参数列表。传入可变参数，例如gzprintf("name is %s, age is %d", "Tom", 23)，写入内容为“name is Tom, age is 23”。不传可变参数，例如gzprintf("name is %s, age is %d")，写入内容为“name is %s, age is %d”。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回实际写入的未压缩字节数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzprintfDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzprintf");
+  let path = pathDir + "/gzprintf/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gzprintf("name is %s, age is %d", "Tom", 23);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzprintfDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzputc
 
@@ -518,22 +1236,61 @@ gzputc(ch: number): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ch | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ch | number | 是 | 写入字符ASCII。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回已写入的值。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzputcDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzputc");
+  let path = pathDir + "/gzputc/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gzputc(0);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzputcDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzputs
 
@@ -551,22 +1308,61 @@ gzputs(str: string): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| str | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| str | string | 是 | 格式化描述符和纯文本。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回写入的字符数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzputsDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzputs");
+  let path = pathDir + "/gzputs/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gzputs("hello");
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzputsDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzread
 
@@ -584,22 +1380,70 @@ gzread(buf: ArrayBuffer): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| buf | ArrayBuffer | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | 是 | 目标偏移位置。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回实际读取的未压缩字节数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzreadDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzread");
+  let path = pathDir + "/gzread/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let writeBuffer = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(writeBuffer);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  await gzip.gzwrite(writeBuffer, 16);
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let readBuffer = new ArrayBuffer(16);
+  let result = await gzip.gzread(readBuffer);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzreadDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzrewind
 
@@ -617,15 +1461,56 @@ gzrewind(): Promise<ReturnStatus>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise对象，返回结果状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzrewindDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzrewind");
+  let path = pathDir + "/gzrewind/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let result = await gzip.gzrewind();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzrewindDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzseek
 
@@ -643,23 +1528,62 @@ gzseek(offset: number, whence: OffsetReferencePoint): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
-| whence | [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 目标偏移位置。 |
+| whence | [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md) | 是 | 定义偏移的参考点，参考[OffsetReferencePoint枚举定义](arkts-basicservices-zlib-offsetreferencepoint-e.md)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回从未压缩流开始以字节为单位测量的结果偏移位置。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzseekDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzseek");
+  let path = pathDir + "/gzseek/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gzseek(2, zlib.OffsetReferencePoint.SEEK_CUR);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzseekDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzsetparams
 
@@ -677,23 +1601,63 @@ gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnSta
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 |
-| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 压缩级别，参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md)。 |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 压缩策略，参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md)。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise对象，返回结果状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzsetparamsDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzsetparams");
+  let path = pathDir + "/gzsetparams/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gzsetparams(zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION,
+    zlib.CompressStrategy.COMPRESS_STRATEGY_DEFAULT_STRATEGY);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzsetparamsDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gztell
 
@@ -711,15 +1675,54 @@ gztell(): Promise<number>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回文件种下一个gzread或gzwrite的起始位置。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gztellDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gztell");
+  let path = pathDir + "/gztell/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gztell();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gztellDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzungetc
 
@@ -737,22 +1740,64 @@ gzungetc(c: number): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| c | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| c | number | 是 | 回退到输入流之前的字符。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回推送的字符。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzungetcDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzungetc");
+  let path = pathDir + "/gzungetc/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  await gzip.gzread(new ArrayBuffer(1));
+  let result = await gzip.gzungetc(1);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzungetcDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## gzwrite
 
@@ -770,20 +1815,64 @@ gzwrite(buf: ArrayBuffer, len: number): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| buf | ArrayBuffer | 是 |
-| len | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | 是 | 对象指向要写入的数据缓冲区。 |
+| len | number | 是 | 未压缩字节长度。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;number & gt; | Promise对象，返回写入的未压缩字节数。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-ability-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzwriteDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzwrite");
+  let path = pathDir + "/gzwrite/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let bufferWithData = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(bufferWithData);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  let result = await gzip.gzwrite(bufferWithData, 16);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzwriteDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```

@@ -9,7 +9,7 @@ Describes the measurement information of a single line of text in the text layou
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import text from '@kit.ArkGraphics2D';
 ```
 
 ## ascent

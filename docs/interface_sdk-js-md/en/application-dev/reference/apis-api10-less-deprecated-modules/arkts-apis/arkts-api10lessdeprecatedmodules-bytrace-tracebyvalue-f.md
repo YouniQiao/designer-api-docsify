@@ -23,7 +23,17 @@ Defines a numeric variable that indicates the number of timeslice trace tasks.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| count | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the numeric variable. |
+| count | number | Yes | Value of the numeric variable. |
+
+**Examples**
+
+```TypeScript
+let traceCount = 3;
+bytrace.traceByValue("myTestCount", traceCount);
+traceCount = 4;
+bytrace.traceByValue("myTestCount", traceCount);
+// Service flow...
+```

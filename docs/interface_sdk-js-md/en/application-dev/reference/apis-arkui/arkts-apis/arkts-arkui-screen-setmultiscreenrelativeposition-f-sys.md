@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { screen } from 'kits/@kit.ArkUI';
+import screen from '@kit.ArkUI';
+import screenshot from '@kit.ArkUIshot';
 ```
 
 ## setMultiScreenRelativePosition
@@ -23,22 +24,48 @@ Sets the positions of the primary and secondary screens in extend mode. This API
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mainScreenOptions | [MultiScreenPositionOptions](arkts-arkui-screen-multiscreenpositionoptions-i-sys.md) | Yes |
-| secondaryScreenOptions | [MultiScreenPositionOptions](arkts-arkui-screen-multiscreenpositionoptions-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mainScreenOptions | [MultiScreenPositionOptions](arkts-arkui-screen-multiscreenpositionoptions-i-sys.md) | Yes | Position of the primary screen. |
+| secondaryScreenOptions | [MultiScreenPositionOptions](arkts-arkui-screen-multiscreenpositionoptions-i-sys.md) | Yes | Position of the secondary screen. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the screen ID using getAllScreens().
+let mainScreenOptions: screen.MultiScreenPositionOptions = {
+  id: 0, // Main screen ID.
+  startX : 0,
+  startY : 0
+}; // Position of the main screen.
+
+let secondaryScreenOptions: screen.MultiScreenPositionOptions = {
+  id : 12,  // Secondary screen ID.
+  startX : 1000,
+  startY : 1000
+}; // Position of the secondary screen.
+
+// Set the positions of the main and secondary screens.
+screen.setMultiScreenRelativePosition(mainScreenOptions, secondaryScreenOptions).then(() => {
+  console.info('Succeeded in setting multi screen relative position.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set multi screen relative position. Code: ${err.code}, message: ${err.message}`);
+});
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+import deviceManager from '@kit.DriverDevelopmentKit';
 ```
 
 ## queryDevices
@@ -22,19 +22,35 @@ Queries the list of peripheral devices. If the device has no peripheral device c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| busType | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| busType | number | No | Device bus type specified by [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md). If this parameter is left empty, all types of devices are searched. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;Readonly & lt;Device & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;Readonly & lt;Device & gt; & gt; | List of peripheral devices obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [22900001](../errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
+| [22900001](../errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception or busType parameter error. |
+
+**Examples**
+
+```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
+
+try {
+  let devices : Array<deviceManager.Device> = deviceManager.queryDevices(deviceManager.BusType.USB);
+  for (let item of devices) {
+    let device : deviceManager.USBDevice = item as deviceManager.USBDevice;
+    console.info(`Device id is ${device.deviceId}`);
+  }
+} catch (error) {
+  console.error(`Failed to query device. Code is ${error.code}, message is ${error.message}`);
+}
+```

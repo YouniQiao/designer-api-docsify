@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## sendSize

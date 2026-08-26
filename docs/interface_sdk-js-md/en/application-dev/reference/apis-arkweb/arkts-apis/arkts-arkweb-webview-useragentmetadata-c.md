@@ -9,7 +9,6 @@ UserAgentMetadata is a class in the ArkWeb framework used to configure the compl
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getArchitecture
@@ -28,9 +27,13 @@ Obtains the architecture type of the platform. If the corresponding [setArchitec
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Platform architecture type. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getBitness
 
@@ -48,9 +51,13 @@ Obtains the bitness type of the platform. If the corresponding [setBitness](#set
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Bitness type of the platform. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getBrandVersionList
 
@@ -68,9 +75,13 @@ Obtains the brand and version information list. If the corresponding [setBrandVe
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Brand and version information list. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getFormFactors
 
@@ -88,9 +99,13 @@ Obtains the device form factor information, such as phone and tablet. If the cor
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Device form information. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getFullVersion
 
@@ -108,9 +123,15 @@ Obtains the full version number. If the corresponding [setFullVersion](#setfullv
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Full version number. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getMobile
 
@@ -128,9 +149,13 @@ Obtains whether the device is a mobile device. If the corresponding [setMobile](
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the device is a mobile device. **true** means yes; **false** otherwise. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getModel
 
@@ -148,9 +173,13 @@ Obtains the device model. If the corresponding [setModel](#setmodel) is not call
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Device model. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getPlatform
 
@@ -168,9 +197,13 @@ Obtains the operating system name. If the corresponding [setPlatform](#setplatfo
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | OS name. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getPlatformVersion
 
@@ -188,9 +221,13 @@ Obtains the operating system version number. If the corresponding [setPlatformVe
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | OS version. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getWow64
 
@@ -208,9 +245,13 @@ Obtains whether the binary file is running in 32-bit mode on 64-bit Windows. If 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the binary file runs in 32-bit mode on a 64-bit Windows. **true** means yes; **false** otherwise. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setArchitecture
 
@@ -228,9 +269,13 @@ Sets the architecture type of the platform.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| arch | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arch | string | Yes | Sec-CH-UA-Arch** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setBitness
 
@@ -248,9 +293,13 @@ Sets the bitness type of the platform.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bitness | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bitness | string | Yes | Corresponds to the Sec-CH-UA-Bitness request header. If empty, the default value of ArkWeb is used. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setBrandVersionList
 
@@ -268,9 +317,13 @@ Sets the brand and version information.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Yes | Sec-CH-UA-Full-Version-List** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setFormFactors
 
@@ -288,9 +341,13 @@ Sets the device form, such as the mobile phone or tablet.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Yes | Sec-CH-UA-Form-Factor** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setFullVersion
 
@@ -308,9 +365,15 @@ Sets the full version number.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fullVersion | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fullVersion | string | Yes | Sec-CH-UA-Full-Version** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setMobile
 
@@ -328,9 +391,13 @@ Sets whether the device is a mobile device.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isMobile | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isMobile | boolean | Yes | Whether the device is a mobile device. Corresponds to the Sec-CH-UA-Mobile request header. The value true means the device is a mobile device, and false means the opposite. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setModel
 
@@ -348,9 +415,13 @@ Sets the device model.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| model | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| model | string | Yes | Value of the Sec-CH-UA-Model request header. If empty, the default value of ArkWeb is used. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setPlatform
 
@@ -368,9 +439,13 @@ Sets the OS name.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| platform | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| platform | string | Yes | Sec-CH-UA-Platform** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setPlatformVersion
 
@@ -388,9 +463,13 @@ Sets the OS version.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| platformVersion | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| platformVersion | string | Yes | Sec-CH-UA-Platform-Version** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setWow64
 
@@ -408,6 +487,10 @@ Sets whether the binary file runs in 32-bit mode on a 64-bit Windows.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| isWow64 | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isWow64 | boolean | Yes | Corresponds to the Sec-CH-UA-WoW64 request header. Whether the binary file is running in 32-bit mode on 64-bit Windows. The value **true** means yes, and **false** means no. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).

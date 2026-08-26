@@ -9,6 +9,9 @@ FileSelectorResult是ArkWeb组件中用于通知Web组件文件选择结果的�
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -41,6 +44,6 @@ handleFileList(fileList: Array<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [fileList](../../apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filelistresponse-depr-i.md) | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fileList | Array & lt;string & gt; | 是 | 文件URI字符串数组，用于向Web组件传递用户选择的文件路径。 |

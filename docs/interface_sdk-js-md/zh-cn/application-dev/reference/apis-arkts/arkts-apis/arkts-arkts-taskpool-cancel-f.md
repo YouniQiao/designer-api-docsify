@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import taskpool from '@kit.ArkTS';
 ```
 
 ## cancel
@@ -26,17 +26,97 @@ function cancel(task: Task): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要取消执行的任务。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) |
-| [10200016](../errorcode-utils.md#10200016-取消正在执行的任务错误) |
-| [10200055](../errorcode-utils.md#10200055-异步任务被取消) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) | The task to cancel does not exist. |
+| [10200016](../errorcode-utils.md#10200016-取消正在执行的任务错误) | The task to cancel is being executed.<br>**适用版本：** 9 - 17 |
+| [10200055](../errorcode-utils.md#10200055-异步任务被取消) | The asyncRunner task has been canceled.<br>**适用版本：** 18+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Concurrent
+function printArgs(args: number): number {
+  let t: number = Date.now();
+  while (Date.now() - t < 2000) {
+    continue;
+  }
+  console.info("printArgs: " + args);
+  return args;
+}
+
+function concurrentFunc() {
+  let taskGroup1: taskpool.TaskGroup = new taskpool.TaskGroup();
+  taskGroup1.addTask(printArgs, 10); // 10: test number
+  let taskGroup2: taskpool.TaskGroup = new taskpool.TaskGroup();
+  taskGroup2.addTask(printArgs, 100); // 100: test number
+  taskpool.execute(taskGroup1).then((res: Array<Object>) => {
+    console.info(`Succeeded in executing task. res is: ` + res);
+  });
+  taskpool.execute(taskGroup2).then((res: Array<Object>) => {
+    console.info(`Succeeded in executing task. res is: ` + res);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to execute task. Code: ${err.code}, message: ${err.message}`);
+  });
+  setTimeout(() => {
+    try {
+      taskpool.cancel(taskGroup2);
+    } catch (e) {
+      console.error(`Failed to cancel task. Code: ${e.code}, message: ${e.message}`);
+    }
+  }, 1000);
+}
+
+concurrentFunc();
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Concurrent
+function printArgs(args: number): number {
+  let t: number = Date.now();
+  while (Date.now() - t < 2000) {
+    continue;
+  }
+  if (taskpool.Task.isCanceled()) {
+    console.info("task has been canceled after 2s sleep.");
+    return args + 1;
+  }
+  console.info("printArgs: " + args);
+  return args;
+}
+
+@Concurrent
+function cancelFunction(taskId: number) {
+  try {
+    taskpool.cancel(taskId);
+  } catch (e) {
+    console.error(`Failed to cancel task. Code: ${e.code}, message: ${e.message}`);
+  }
+}
+
+function concurrentFunc() {
+  let task = new taskpool.Task(printArgs, 100); // 100: test number
+  taskpool.execute(task).catch((err: BusinessError) => {
+    console.error(`Failed to execute task. Code: ${err.code}, message: ${err.message}`);
+  });
+  setTimeout(() => {
+    let cancelTask = new taskpool.Task(cancelFunction, task.taskId);
+    taskpool.execute(cancelTask);
+  }, 1000);
+}
+
+concurrentFunc();
+```
 
 
 ## cancel
@@ -55,15 +135,55 @@ function cancel(group: TaskGroup): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 | 需要取消执行的任务组。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200018](../errorcode-utils.md#10200018-取消不存在的任务组错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200018](../errorcode-utils.md#10200018-取消不存在的任务组错误) | The task group to cancel does not exist. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Concurrent
+function printArgs(args: number): number {
+  let t: number = Date.now();
+  while (Date.now() - t < 2000) {
+    continue;
+  }
+  console.info("printArgs: " + args);
+  return args;
+}
+
+function concurrentFunc() {
+  let taskGroup1: taskpool.TaskGroup = new taskpool.TaskGroup();
+  taskGroup1.addTask(printArgs, 10); // 10: test number
+  let taskGroup2: taskpool.TaskGroup = new taskpool.TaskGroup();
+  taskGroup2.addTask(printArgs, 100); // 100: test number
+  taskpool.execute(taskGroup1).then((res: Array<Object>) => {
+    console.info(`Succeeded in executing task. res is: ` + res);
+  });
+  taskpool.execute(taskGroup2).then((res: Array<Object>) => {
+    console.info(`Succeeded in executing task. res is: ` + res);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to execute task. Code: ${err.code}, message: ${err.message}`);
+  });
+  setTimeout(() => {
+    try {
+      taskpool.cancel(taskGroup2);
+    } catch (e) {
+      console.error(`Failed to cancel task. Code: ${e.code}, message: ${e.message}`);
+    }
+  }, 1000);
+}
+
+concurrentFunc();
+```
 
 
 ## cancel
@@ -87,13 +207,55 @@ function cancel(taskId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| taskId | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| taskId | number | 是 | 需要取消执行的任务的ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) |
-| [10200055](../errorcode-utils.md#10200055-异步任务被取消) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) | The task to cancel does not exist. |
+| [10200055](../errorcode-utils.md#10200055-异步任务被取消) | The asyncRunner task has been canceled. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Concurrent
+function printArgs(args: number): number {
+  let t: number = Date.now();
+  while (Date.now() - t < 2000) {
+    continue;
+  }
+  if (taskpool.Task.isCanceled()) {
+    console.info("task has been canceled after 2s sleep.");
+    return args + 1;
+  }
+  console.info("printArgs: " + args);
+  return args;
+}
+
+@Concurrent
+function cancelFunction(taskId: number) {
+  try {
+    taskpool.cancel(taskId);
+  } catch (e) {
+    console.error(`Failed to cancel task. Code: ${e.code}, message: ${e.message}`);
+  }
+}
+
+function concurrentFunc() {
+  let task = new taskpool.Task(printArgs, 100); // 100: test number
+  taskpool.execute(task).catch((err: BusinessError) => {
+    console.error(`Failed to execute task. Code: ${err.code}, message: ${err.message}`);
+  });
+  setTimeout(() => {
+    let cancelTask = new taskpool.Task(cancelFunction, task.taskId);
+    taskpool.execute(cancelTask);
+  }, 1000);
+}
+
+concurrentFunc();
+```

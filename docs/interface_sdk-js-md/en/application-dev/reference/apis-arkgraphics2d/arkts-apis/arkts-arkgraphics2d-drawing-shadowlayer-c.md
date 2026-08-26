@@ -2,9 +2,12 @@
 
 Implements a shadow layer.
 
-> **NOTE：**&gt;
-> - The initial APIs of this class are supported since API version 12.&gt;
-> - This module uses the physical pixel unit, px.&gt;
+> **NOTE：**
+> 
+> - The initial APIs of this class are supported since API version 12.
+> 
+> - This module uses the physical pixel unit, px.
+> 
 > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
@@ -15,7 +18,7 @@ Implements a shadow layer.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import drawing from '@kit.ArkGraphics2D';
 ```
 
 ## create
@@ -32,24 +35,39 @@ Creates a **ShadowLayer** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | Yes |
-| x | number | Yes |
-| y | number | Yes |
-| color | common2D.Color | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| blurRadius | number | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
+| x | number | Yes | Offset on the X axis. The value is a floating point number. |
+| y | number | Yes | Offset on the Y axis. The value is a floating point number. |
+| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) |
+| Type | Description |
+| --- | --- |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | ShadowLayer** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
+    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, color);
+  }
+}
+```
 
 ## create
 
@@ -65,21 +83,35 @@ Creates a **ShadowLayer** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | Yes |
-| x | number | Yes |
-| y | number | Yes |
-| color | common2D.Color \| number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| blurRadius | number | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
+| x | number | Yes | Offset on the X axis. The value is a floating point number. |
+| y | number | Yes | Offset on the Y axis. The value is a floating point number. |
+| color | common2D.Color \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) |
+| Type | Description |
+| --- | --- |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | ShadowLayer** object created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, 0xff00ff00);
+  }
+}
+```

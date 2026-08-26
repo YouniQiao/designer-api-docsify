@@ -9,7 +9,7 @@ Provides the data reported when the state changes during dragging.
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import dragController from '@kit.ArkUI';
 ```
 
 ## event

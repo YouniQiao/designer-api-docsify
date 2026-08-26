@@ -11,31 +11,31 @@ The **uiExtension** module provides APIs for the [EmbeddedUIExtensionAbility](..
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from 'kits/@kit.ArkUI';
+import uiExtension from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md) |
-| [RectChangeOptions](arkts-arkui-uiextension-rectchangeoptions-i.md) |
-| [WindowProxy](arkts-arkui-uiextension-windowproxy-i.md) |
-| [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md) |
+| Name | Description |
+| --- | --- |
+| [AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md) | Represents the information about the avoidance area of the window. |
+| [RectChangeOptions](arkts-arkui-uiextension-rectchangeoptions-i.md) | Provides the values and reasons returned when the rectangle (position and size) of the component (**EmbeddedComponent** or **UIExtensionComponent**) changes. |
+| [WindowProxy](arkts-arkui-uiextension-windowproxy-i.md) | The proxy of the UIExtension window. |
+| [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md) | Provides information about a component. |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [WindowProxy](arkts-arkui-uiextension-windowproxy-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [WindowProxy](arkts-arkui-uiextension-windowproxy-i-sys.md) | The proxy of the UIExtension window. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [EventFlag](arkts-arkui-uiextension-eventflag-e.md) |
-| [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md) |
+| Name | Description |
+| --- | --- |
+| [EventFlag](arkts-arkui-uiextension-eventflag-e.md) | Enumerates event types. |
+| [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md) | Enumerates the reasons for changes in the rectangle (position and size) of the component (**EmbeddedComponent** or **UIExtensionComponent**). |

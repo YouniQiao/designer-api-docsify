@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## setOutputType
@@ -22,12 +21,26 @@ Sets the output type of hilog.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | [OutputType](arkts-performanceanalysis-hilog-outputtype-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [OutputType](arkts-performanceanalysis-hilog-outputtype-e.md) | Yes | output type of hilog. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [OutputType](arkts-performanceanalysis-hilog-outputtype-e.md) |
+| Type | Description |
+| --- | --- |
+| [OutputType](arkts-performanceanalysis-hilog-outputtype-e.md) | previous output type of hilog. |
+
+**Examples**
+
+```TypeScript
+hilog.setOutputType(hilog.OutputType.SHARE_SANDBOX_ONLY);
+hilog.info(0x0001, "testTag", 'sandbox log to share sandbox only');
+hilog.flush();
+```
+
+Sandbox log output.
+
+```TypeScript
+05-15 16:57:04.238 40518 40518 I A00001/testTag: sandbox log to share sandbox only
+```

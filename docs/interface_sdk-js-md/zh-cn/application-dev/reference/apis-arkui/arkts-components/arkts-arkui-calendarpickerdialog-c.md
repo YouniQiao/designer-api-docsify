@@ -29,6 +29,6 @@ static show(options?: CalendarDialogOptions): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | 否 | 配置日历选择器弹窗的参数，缺省时无法弹出弹窗。 |

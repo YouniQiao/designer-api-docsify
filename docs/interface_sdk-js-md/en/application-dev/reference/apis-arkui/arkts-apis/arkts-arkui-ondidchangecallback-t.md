@@ -16,7 +16,7 @@ Represents the callback invoked after text changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| rangeBefore | [TextRange](arkts-arkui-textrange-i.md) | Yes |
-| [rangeAfter](arkts-arkui-textchangeoptions-i.md) | [TextRange](arkts-arkui-textrange-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rangeBefore | [TextRange](arkts-arkui-textrange-i.md) | Yes | Range of the text to be changed. |
+| rangeAfter | [TextRange](arkts-arkui-textrange-i.md) | Yes | Range of the text added. |

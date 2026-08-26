@@ -9,6 +9,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ContextMenu](arkts-arkui-contextmenu-c.md) |
+| Name | Description |
+| --- | --- |
+| [ContextMenu](arkts-arkui-contextmenu-c.md) | Defines Close contextMenu. |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from 'kits/@kit.AbilityKit';
+import childProcessManager from '@kit.AbilityKit';
 ```
 
 ## isArkChildProcessSupported
@@ -22,6 +22,6 @@ Checks whether the caller is allowed to create ark child processes on this devic
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | `true`: The caller is allowed to create ark child processes. |

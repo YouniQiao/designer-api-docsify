@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setPreferredApn
@@ -14,7 +13,8 @@ function setPreferredApn(apnId: number): Promise<boolean>
 
 Sets the APN corresponding to the specified **apnId** as the preferred APN. This API returns the result asynchronously.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If the input APN ID is invalid, the default preferred APN configured by the carrier is used.
 
 **Since:** 16
@@ -25,18 +25,32 @@ Sets the APN corresponding to the specified **apnId** as the preferred APN. This
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| apnId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| apnId | number | Yes | APN ID, which can be obtained by calling [queryApnIds](arkts-telephony-data-queryapnids-f.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. If no SIM card is installed, the value **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+**Examples**
+
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let apnId: number = 0; // apnId is a valid value returned by queryApnIds. If an invalid APN ID is passed to setPreferredApn, the default preferred APN configured by the carrier is used.
+data.setPreferredApn(apnId).then((result: boolean) => {
+    console.info(`setPreferredApn result: ${result}`);
+}).catch((err: BusinessError) => {
+    console.error(`setPreferredApn failed. code: ${err.code}, message: ${err.message}`);
+});
+```

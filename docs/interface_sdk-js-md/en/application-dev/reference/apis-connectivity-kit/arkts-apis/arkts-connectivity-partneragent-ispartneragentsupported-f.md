@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from 'kits/@kit.ConnectivityKit';
+import partnerAgent from '@kit.ConnectivityKit';
 ```
 
 ## isPartnerAgentSupported
@@ -22,6 +22,6 @@ Checks whether the current device supports the partner agent feature.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result for the support of the partner agent feature. |

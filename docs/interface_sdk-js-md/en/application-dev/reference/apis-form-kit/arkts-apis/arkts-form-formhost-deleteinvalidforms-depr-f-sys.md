@@ -27,10 +27,25 @@ Deletes invalid widgets from the list. This API uses an asynchronous callback to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formIds | Array & lt;string & gt; | Yes | List of valid widget IDs. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the invalid widgets are deleted, **error** is undefined and **data** is the number of widgets deleted; otherwise, **error** is an error object. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+formHost.deleteInvalidForms(formIds, (error: Base.BusinessError, data: number) => {
+  if (error.code) {
+    console.error(`formHost deleteInvalidForms, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`formHost deleteInvalidForms, data: ${JSON.stringify(data)}`);
+  }
+});
+```
 
 
 ## deleteInvalidForms
@@ -55,12 +70,25 @@ Deletes invalid widgets from the list. This API uses a promise to return the res
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formIds | Array & lt;string & gt; | Yes | List of valid widget IDs. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;number & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;number & gt; | Promise used to return the number of widgets deleted. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+formHost.deleteInvalidForms(formIds).then((data: number) => {
+  console.info(`formHost deleteInvalidForms, data: ${JSON.stringify(data)}`);
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost deleteInvalidForms, error: ${JSON.stringify(error)}`);
+});
+```

@@ -9,7 +9,6 @@ Client information, including the IP address and port number.
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## clientIP

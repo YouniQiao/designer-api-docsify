@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SelectionContainerModifier](arkts-arkui-selectioncontainermodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [SelectionContainerModifier](arkts-arkui-selectioncontainermodifier-c.md) | Defines SelectionContainer Modifier |

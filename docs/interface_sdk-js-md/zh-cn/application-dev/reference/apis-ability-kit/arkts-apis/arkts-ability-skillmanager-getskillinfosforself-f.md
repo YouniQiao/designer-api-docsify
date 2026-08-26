@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { skillManager } from 'kits/@kit.AbilityKit';
+import skillManager from '@kit.AbilityKit';
 ```
 
 ## getSkillInfosForSelf
@@ -24,18 +24,18 @@ function getSkillInfosForSelf(flags: number): Promise<Array<SkillInfo>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| flags | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| flags | number | 是 | { |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Array & lt;SkillInfo & gt; & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Array & lt;SkillInfo & gt; & gt; | Promise对象，返回调用方所在应用的所有技能信息数组。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [17700101](../errorcode-bundle.md#17700101-包管理服务异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17700101](../errorcode-bundle.md#17700101-包管理服务异常) | Bundle manager service is exception. Possible causes: 1. Failed to connect to the system service. 2. IPC data transmission failed. 3. Failed to obtain the object constructor. |

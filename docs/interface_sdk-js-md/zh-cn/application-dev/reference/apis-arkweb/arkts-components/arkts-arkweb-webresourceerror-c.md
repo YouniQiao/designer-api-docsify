@@ -9,6 +9,9 @@ WebResourceError是Web组件中提供资源加载失败错误信息的类。该�
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -39,9 +42,9 @@ getCustomErrorCode(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回加载资源的自定义错误码。 |
 
 ## getErrorCode
 
@@ -59,9 +62,9 @@ getErrorCode(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回加载资源的错误码。错误码含义参考[WebNetErrorList]{ |
 
 ## getErrorInfo
 
@@ -79,6 +82,6 @@ getErrorInfo(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回加载资源的错误信息。 |

@@ -2,7 +2,8 @@
 
 This module provides the capability of displaying ads, covering native, roll, splash, and other ad styles.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > To ensure that ads can be displayed correctly, this API must be used in conjunction with the ad request API.
 > For effects and usage methods, refer to
 > [Native Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-native),
@@ -17,7 +18,7 @@ This module provides the capability of displaying ads, covering native, roll, sp
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from 'kits/@kit.AdsKit';
+import { AdComponent } from '@kit.AdsKit';
 ```
 
 ## adRenderer
@@ -111,3 +112,89 @@ Used to provide the playback status of roll ads externally. Set to 1 for playing
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Advertising.Ads
+
+**Examples**
+
+```TypeScript
+import { AdComponent, advertising } from '@kit.AdsKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+@Entry
+@Component
+struct Index {
+  // Requested ad content
+  private ads: advertising.Advertisement[] = [];
+  // Ad display parameters
+  private adDisplayOptions: advertising.AdDisplayOptions = {};
+
+  build() {
+    Column() {
+      AdComponent({
+        ads: this.ads,
+        displayOptions: this.adDisplayOptions,
+        interactionListener: {
+          onStatusChanged: (status: string, ad: advertising.Advertisement, data: string) => {
+            switch (status) {
+              case 'onAdOpen':
+                hilog.info(0x0000, 'testTag', 'onAdOpen');
+                break;
+              case 'onAdClick':
+                hilog.info(0x0000, 'testTag', 'onAdClick');
+                break;
+              case 'onAdClose':
+                hilog.info(0x0000, 'testTag', 'onAdClose');
+                break;
+            }
+          }
+        }
+      })
+        .width('100%')
+        .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+import { AdComponent, advertising } from '@kit.AdsKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+@Entry
+@Component
+struct Index {
+  // Requested ad content
+  private ads: advertising.Advertisement[] = [];
+  // Ad display parameters
+  private adDisplayOptions: advertising.AdDisplayOptions = {};
+
+  build() {
+    Column() {
+      AdComponent({
+        ads: this.ads,
+        displayOptions: this.adDisplayOptions,
+        interactionListener: {
+          onStatusChanged: (status: string, ad: advertising.Advertisement, data: string) => {
+            switch (status) {
+              case 'onAdOpen':
+                hilog.info(0x0000, 'testTag', 'onAdOpen');
+                break;
+              case 'onAdClick':
+                hilog.info(0x0000, 'testTag', 'onAdClick');
+                break;
+              case 'onAdClose':
+                hilog.info(0x0000, 'testTag', 'onAdClose');
+                break;
+            }
+          }
+        }
+      })
+        .width('100%')
+        .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```

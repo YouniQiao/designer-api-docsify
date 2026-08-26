@@ -16,6 +16,6 @@ Defines the callback triggered when the image is successfully loaded or decoded.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | [ImageLoadResult](arkts-arkui-imageloadresult-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | [ImageLoadResult](arkts-arkui-imageloadresult-i.md) | Yes | Object returned after the callback is triggered when an image is successfully loaded or decoded. |

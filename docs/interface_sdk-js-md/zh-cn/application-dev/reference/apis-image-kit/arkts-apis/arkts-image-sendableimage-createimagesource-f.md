@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import sendableImage from '@kit.ImageKit';
 ```
 
 ## createImageSource
@@ -60,15 +60,26 @@ function createImageSource(uri: string): ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uri | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 图片路径，当前仅支持应用沙箱路径。 & lt;/br & gt;当前支持格式有：.jpg .png .gif .bmp .webp .dng.SVG .ico。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
+
+**示例**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+
+async function CreateImageSource(context : Context) {
+  const path: string = context.cacheDir + "/test.jpg";
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
+}
+```
 
 
 ## createImageSource
@@ -87,15 +98,28 @@ function createImageSource(fd: number): ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fd | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fd | number | 是 | 文件描述符fd。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
+
+**示例**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+async function CreateImageSource(context : Context) {
+  const path: string = context.cacheDir + "/test.jpg";
+  let file = fileIo.openSync(path, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(file.fd);
+}
+```
 
 
 ## createImageSource
@@ -116,12 +140,23 @@ function createImageSource(buf: ArrayBuffer): ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| buf | ArrayBuffer | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | 是 | 图像缓冲区数组。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
+
+**示例**
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+
+async function CreateImageSource() {
+  const buf: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素buffer大小，取值为：height * width *4。
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(buf);
+}
+```

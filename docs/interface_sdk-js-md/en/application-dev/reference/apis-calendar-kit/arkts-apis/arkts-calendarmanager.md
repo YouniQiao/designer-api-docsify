@@ -9,45 +9,45 @@ The calendarManager module provides APIs for calendar and event management, incl
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
+import calendarManager from '@kit.CalendarKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getCalendarManager](arkts-calendar-calendarmanager-getcalendarmanager-f.md) |
+| Name | Description |
+| --- | --- |
+| [getCalendarManager](arkts-calendar-calendarmanager-getcalendarmanager-f.md) | Obtains a CalendarManager object based on the context. |
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) |
+| Name | Description |
+| --- | --- |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | Implements an event filter.You can use [filterById()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbyid), [filterByTime()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbytime), [filterByTitle()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbytitle) to obtain an event filter, and then pass the filter in getEvents() for filtering. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Attendee](arkts-calendar-calendarmanager-attendee-i.md) |
-| [Calendar](arkts-calendar-calendarmanager-calendar-i.md) |
-| [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) |
-| [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) |
-| [CalendarManager](arkts-calendar-calendarmanager-calendarmanager-i.md) |
-| [Event](arkts-calendar-calendarmanager-event-i.md) |
-| [EventService](arkts-calendar-calendarmanager-eventservice-i.md) |
-| [Location](arkts-calendar-calendarmanager-location-i.md) |
-| [RecurrenceRule](arkts-calendar-calendarmanager-recurrencerule-i.md) |
+| Name | Description |
+| --- | --- |
+| [Attendee](arkts-calendar-calendarmanager-attendee-i.md) | Describes the attendees in a meeting. |
+| [Calendar](arkts-calendar-calendarmanager-calendar-i.md) | In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or getCalendar() to obtain a **Calendar** object before calling related APIs. |
+| [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Describes the calendar account information. |
+| [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | Describes the calendar configuration information. |
+| [CalendarManager](arkts-calendar-calendarmanager-calendarmanager-i.md) | Before calling any of the following APIs to manage the calendar, you must use [getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md) to obtain a **CalendarManager** object first. |
+| [Event](arkts-calendar-calendarmanager-event-i.md) | Describes an **Event** object, including the event title, start time, and end time. |
+| [EventService](arkts-calendar-calendarmanager-eventservice-i.md) | Describes the event service. |
+| [Location](arkts-calendar-calendarmanager-location-i.md) | Describes the event location. |
+| [RecurrenceRule](arkts-calendar-calendarmanager-recurrencerule-i.md) | Describes the recurrence rule of a recurring event. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AttendeeRole](arkts-calendar-calendarmanager-attendeerole-e.md) |
-| [AttendeeStatus](arkts-calendar-calendarmanager-attendeestatus-e.md) |
-| [AttendeeType](arkts-calendar-calendarmanager-attendeetype-e.md) |
-| [CalendarType](arkts-calendar-calendarmanager-calendartype-e.md) |
-| [EventType](arkts-calendar-calendarmanager-eventtype-e.md) |
-| [RecurrenceFrequency](arkts-calendar-calendarmanager-recurrencefrequency-e.md) |
-| [ServiceType](arkts-calendar-calendarmanager-servicetype-e.md) |
+| Name | Description |
+| --- | --- |
+| [AttendeeRole](arkts-calendar-calendarmanager-attendeerole-e.md) | Enumerates the attendee role types in a conference event. |
+| [AttendeeStatus](arkts-calendar-calendarmanager-attendeestatus-e.md) | Enumerates the status types of an attendee. |
+| [AttendeeType](arkts-calendar-calendarmanager-attendeetype-e.md) | Enumerates the types of attendees invited to a conference event. |
+| [CalendarType](arkts-calendar-calendarmanager-calendartype-e.md) | Enumerates the account types. |
+| [EventType](arkts-calendar-calendarmanager-eventtype-e.md) | Enumerates event types. |
+| [RecurrenceFrequency](arkts-calendar-calendarmanager-recurrencefrequency-e.md) | Enumerates the types of the event recurrence rule. |
+| [ServiceType](arkts-calendar-calendarmanager-servicetype-e.md) | Enumerates the event service types. |

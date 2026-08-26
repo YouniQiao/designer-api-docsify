@@ -3,9 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## lseek
@@ -22,24 +20,34 @@ declare function lseek(fd: number, offset: number, whence?: WhenceType): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fd | number | 是 |
-| offset | number | 是 |
-| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fd | number | 是 | 文件描述符。 |
+| offset | number | 是 | 相对偏移位置，单位为Byte。 |
+| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | 否 | 偏移指针相对位置类型。不指定则默认为文件起始位置处。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前文件偏移指针位置（相对于文件头的偏移量，单位为Byte）。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900008 |
-| 13900020 |
-| 13900026 |
-| 13900038 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900008 | Bad file descriptor |
+| 13900020 | Invalid argument |
+| 13900026 | Illegal seek |
+| 13900038 | Value too large for defined data type |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let offset = fileIo.lseek(file.fd, 5, fileIo.WhenceType.SEEK_SET);
+console.info(`Succeeded in seeking, the current offset is at ${offset}`);
+fileIo.closeSync(file);
+```

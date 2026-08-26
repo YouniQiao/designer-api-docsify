@@ -15,14 +15,14 @@ Converts a Date object to a string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| hint | "default" | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| hint | "default" | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [Symbol.toPrimitive]
 
 ```TypeScript
@@ -33,14 +33,14 @@ Converts a Date object to a string.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| hint | "string" | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| hint | "string" | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [Symbol.toPrimitive]
 
 ```TypeScript
@@ -51,14 +51,14 @@ Converts a Date object to a number.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| hint | "number" | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| hint | "number" | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [Symbol.toPrimitive]
 
 ```TypeScript
@@ -69,11 +69,11 @@ Converts a Date object to a string or number.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| hint | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| hint | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

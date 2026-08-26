@@ -12,7 +12,7 @@ Type of message, only "message" and "messageerror".
 
 **System capability:** SystemCapability.Utils.Lang
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| 'message' |
-| 'messageerror' |
+| Type | Description |
+| --- | --- |
+| 'message' |  |
+| 'messageerror' |  |

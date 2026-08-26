@@ -11,7 +11,7 @@ Defines the network packet filtering rule to add.
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from 'kits/@kit.MDMKit';
+import networkManager from '@kit.MDMKit';
 ```
 
 ## action

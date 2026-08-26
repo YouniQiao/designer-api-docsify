@@ -26,9 +26,9 @@ applyNormalAttribute?(instance: SymbolGlyphAttribute): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| instance | [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-attribute.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instance | [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-attribute.md) | 是 |  |
 
 ## constructor
 
@@ -48,6 +48,6 @@ SymbolGlyphModifier的构造函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 |  |

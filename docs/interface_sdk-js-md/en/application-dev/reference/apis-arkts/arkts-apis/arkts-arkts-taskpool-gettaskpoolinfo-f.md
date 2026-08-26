@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import taskpool from '@kit.ArkTS';
 ```
 
 ## getTaskPoolInfo
@@ -22,6 +22,12 @@ Obtains the thread information and task information of the task pool.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [TaskPoolInfo](arkts-arkts-taskpool-taskpoolinfo-c.md) |
+| Type | Description |
+| --- | --- |
+| [TaskPoolInfo](arkts-arkts-taskpool-taskpoolinfo-c.md) | Internal information about the task pool. |
+
+**Examples**
+
+```TypeScript
+let taskpoolInfo: taskpool.TaskPoolInfo = taskpool.getTaskPoolInfo();
+```

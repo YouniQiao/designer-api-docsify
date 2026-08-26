@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getMaxSimCount
@@ -20,6 +19,14 @@ Obtains the number of card slots.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of card slots. |
+
+**Examples**
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+
+console.info("Result: "+ sim.getMaxSimCount());
+```

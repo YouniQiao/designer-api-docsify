@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## watch
@@ -23,7 +22,14 @@ function watch(obj: object, msg: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| obj | object | 是 |
-| msg | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| obj | object | 是 | 需要检测的对象。    **说明：**可传入任何非null的ArkTS对象，不支持undefined和基本类型。 |
+| msg | string | 是 | 自定义对象信息。 |
+
+**示例**
+
+```TypeScript
+let obj:Object = new Object();
+jsLeakWatcher.watch(obj, "Trace Object");
+```

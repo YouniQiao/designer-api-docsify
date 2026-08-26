@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## isPoiServiceSupported
@@ -22,6 +21,15 @@ Check whether the POI service is supported.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
+
+**Examples**
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+
+let poiServiceState = geoLocationManager.isPoiServiceSupported();
+console.info("poiServiceState:" + poiServiceState);
+```

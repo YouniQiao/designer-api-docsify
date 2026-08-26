@@ -12,15 +12,13 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## 汇总
 
 ### 命名空间
 
-| 名称 |
-| --- |
-| [OpenMode(@ohos.file.fs (文件管理))](arkts-corefile-fileio-openmode-n.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [OpenMode(@ohos.file.fs (文件管理))](arkts-corefile-fileio-openmode-n.md) | open接口flags参数常量，用于指定文件打开模式（如只读、只写、读写、创建等）。 |

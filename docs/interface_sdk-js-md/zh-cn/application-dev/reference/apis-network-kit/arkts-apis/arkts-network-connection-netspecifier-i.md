@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## bearerPrivateIdentifier
@@ -43,3 +42,29 @@ netCapabilities: NetCapabilities
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
+
+**示例**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let config: wifiManager.WifiDeviceConfig = {
+  ssid: "TEST",
+  preSharedKey: "**********",
+  securityType: wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
+};
+// 通过wifiManager.addCandidateConfig获取注册WLAN的networkId。
+wifiManager.addCandidateConfig(config,(error,networkId) => {
+ let netConnectionWlan = connection.createNetConnection({
+   netCapabilities: {
+     bearerTypes: [connection.NetBearType.BEARER_WIFI]
+   },
+   bearerPrivateIdentifier: `${networkId}`
+ });
+ netConnectionWlan.register((error: BusinessError) => {
+   console.error(`Failed to register. Code:${error.code}, message:${error.message}`);
+ });
+});
+```

@@ -22,8 +22,8 @@ AbilityComponent(value: { want: import('../api/@ohos.app.ability.Want').default 
 
 **参数:**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | { want: import('../api/@ohos.app.ability.Want').default } | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | { want: import('../api/@ohos.app.ability.Want').default } | 是 |  |
 
 ## 汇总

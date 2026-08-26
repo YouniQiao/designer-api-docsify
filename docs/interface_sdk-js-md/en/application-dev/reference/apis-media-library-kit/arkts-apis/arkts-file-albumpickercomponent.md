@@ -17,27 +17,27 @@ The **AlbumPickerComponent** embedded in the UI of an application allows the app
 ## Modules to Import
 
 ```TypeScript
-import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from 'kits/@kit.MediaLibraryKit';
+import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from '@kit.MediaLibraryKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AlbumInfo(AlbumPickerComponent)](arkts-medialibrary-file-albumpickercomponent-albuminfo-c.md) |
-| [AlbumPickerController(AlbumPickerComponent)](arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md) |
-| [AlbumPickerOptions(AlbumPickerComponent)](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md) |
+| Name | Description |
+| --- | --- |
+| [AlbumInfo(AlbumPickerComponent)](arkts-medialibrary-file-albumpickercomponent-albuminfo-c.md) | Represents album information. |
+| [AlbumPickerController(AlbumPickerComponent)](arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md) | A controller that enables applications to send data to the **AlbumPickerComponent**. |
+| [AlbumPickerOptions(AlbumPickerComponent)](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md) | Represents the **AlbumPicker** configuration. |
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AlbumPickerComponent(AlbumPickerComponent)](arkts-medialibrary-file-albumpickercomponent-albumpickercomponent-s.md) |
+| Name | Description |
+| --- | --- |
+| [AlbumPickerComponent(AlbumPickerComponent)](arkts-medialibrary-file-albumpickercomponent-albumpickercomponent-s.md) | AlbumPickerComponent( {albumPickerOptions?: AlbumPickerOptions, onAlbumClick?: (albumInfo: AlbumInfo) = & gt; boolean, onEmptyAreaClick?: EmptyAreaClickCallback, albumPickerController?: AlbumPickerController })The **AlbumPickerComponent** embedded in the UI of an application allows the application to access the albums in the user directory without any permission. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [EmptyAreaClickCallback(AlbumPickerComponent)](arkts-medialibrary-emptyareaclickcallback-t.md) |
+| Name | Description |
+| --- | --- |
+| [EmptyAreaClickCallback(AlbumPickerComponent)](arkts-medialibrary-emptyareaclickcallback-t.md) | Called when the blank area of the **AlbumPickerComponent** is tapped. |

@@ -21,7 +21,7 @@ InputMethodAbility是输入法应用的核心能力对象，提供输入法生�
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKit';
 ```
 
 ## createPanel
@@ -61,18 +61,50 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [ctx](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
-| info | [PanelInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前输入法应用上下文信息。 |
+| info | [PanelInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 | 输入法面板信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | 是 | 回调函数。当输入法面板创建成功，err为undefined，data为获取到的Panel对象;否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMethodEngine, InputMethodExtensionAbility } from '@kit.IMEKit';
+import { Want } from '@kit.AbilityKit';
+
+// 创建面板信息，设置面板类型为软键盘，状态为固定态
+let panelInfo: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+
+class InputMethodExt extends InputMethodExtensionAbility {
+    onCreate(want: Want): void {
+        console.info(`onCreate, want: ${want.abilityName}`);
+        // context为InputMethodExtensionAbility类提供的上下文对象，无需额外获取
+        if (this.context) {
+            // 创建输入法面板
+            inputMethodEngine.getInputMethodAbility()
+            .createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
+                if (err) {
+                console.error(`Failed to createPanel. Code is ${err.code}, message is ${err.message}`);
+                return;
+              }
+                console.info('Succeed in creating panel.');
+            })
+        }
+    }
+}
+```
 
 ## createPanel
 
@@ -107,23 +139,51 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [ctx](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
-| info | [PanelInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前输入法应用上下文信息。 |
+| info | [PanelInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 | 输入法面板信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Panel & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Panel & gt; | Promise对象，返回Panel对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMethodEngine, InputMethodExtensionAbility } from '@kit.IMEKit';
+import { Want } from '@kit.AbilityKit';
+
+// 创建面板信息，设置面板类型为软键盘，状态为固定态
+let panelInfo: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+
+class InputMethodExt extends InputMethodExtensionAbility {
+    onCreate(want: Want): void {
+        console.info(`onCreate, want: ${want.abilityName}`);
+        if (this.context) {
+            inputMethodEngine.getInputMethodAbility().createPanel(this.context, panelInfo)
+                .then((panel: inputMethodEngine.Panel) => {
+                console.info('Succeed in creating panel.');
+            }).catch((err: BusinessError) => {
+                console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+            })
+        }
+    }
+}
+```
 
 ## destroyPanel
 
@@ -142,16 +202,49 @@ destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| panel | [Panel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| panel | [Panel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | 是 | 要销毁的面板对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当输入法面板销毁成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建面板信息，设置面板类型为软键盘，状态为固定态
+let panelInfo: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+
+// 在InputMethodExtensionAbility类中使用
+let inputPanel: inputMethodEngine.Panel | undefined = undefined;
+inputMethodEngine.getInputMethodAbility().createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
+  if (err) {
+    console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  inputPanel = panel;
+  console.info('Succeed in creating panel.');
+  // 创建成功后再销毁
+  if (inputPanel) {
+    inputMethodEngine.getInputMethodAbility().destroyPanel(inputPanel, (err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to destroy panel. Code is ${err.code}, message is ${err.message}`);
+        return;
+      }
+      console.info('Succeed in destroying panel.');
+    });
+  }
+});
+```
 
 ## destroyPanel
 
@@ -170,21 +263,55 @@ destroyPanel(panel: Panel): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| panel | [Panel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| panel | [Panel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | 是 | 要销毁的面板对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建面板信息，设置面板类型为软键盘，状态为固定态
+let panelInfo: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+
+let inputPanel: inputMethodEngine.Panel | undefined = undefined;
+// context为InputMethodExtensionAbility类提供的上下文对象，无需额外获取
+if (this.context) {
+  inputMethodEngine.getInputMethodAbility()
+    .createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
+      if (err) {
+        console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+        return;
+      }
+      inputPanel = panel;
+      console.info('Succeed in creating panel.');
+    })
+}
+
+if (inputPanel) {
+  inputMethodEngine.getInputMethodAbility().destroyPanel(inputPanel).then(() => {
+    console.info('Succeed in destroying panel.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to destroy panel. Code is ${err.code}, message is ${err.message}`);
+  });
+}
+```
 
 ## getSecurityMode
 
@@ -200,15 +327,22 @@ getSecurityMode(): SecurityMode
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md) | 安全模式。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
+
+**示例**
+
+```TypeScript
+let security: inputMethodEngine.SecurityMode = inputMethodEngine.getInputMethodAbility().getSecurityMode();
+console.info(`getSecurityMode, securityMode is : ${security}`);
+```
 
 ## off('inputStart')
 
@@ -224,10 +358,16 @@ off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClien
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'inputStart' | 是 |
-| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'inputStart' | 是 | 设置监听类型，固定取值为'inputStart'。 |
+| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('inputStart');
+```
 
 ## off('inputStop')
 
@@ -243,10 +383,18 @@ off(type: 'inputStop', callback: () => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'inputStop' | 是 |
-| callback | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'inputStop' | 是 | 设置监听类型，固定取值为'inputStop'。 |
+| callback | () = & gt; void | 是 | 取消订阅的回调函数。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('inputStop', () => {
+  console.info('inputMethodAbility delete inputStop notification.');
+});
+```
 
 ## off('setCallingWindow')
 
@@ -262,10 +410,18 @@ off(type: 'setCallingWindow', callback: (wid: number) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'setCallingWindow' | 是 |
-| callback | (wid: number) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'setCallingWindow' | 是 | 设置监听类型，固定取值为'setCallingWindow'。 |
+| callback | (wid: number) = & gt; void | 是 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('setCallingWindow', (windowId: number) => {
+  console.info('inputMethodAbility delete setCallingWindow notification.');
+});
+```
 
 ## off('keyboardShow' | 'keyboardHide')
 
@@ -281,10 +437,21 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | 是 |
-| callback | () = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。   - 'keyboardShow'表示显示输入法软键盘。   - 'keyboardHide'表示隐 藏输入法软键盘。 |
+| callback | () = & gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('keyboardShow', () => {
+  console.info('InputMethodAbility delete keyboardShow notification.');
+});
+inputMethodEngine.getInputMethodAbility().off('keyboardHide', () => {
+  console.info('InputMethodAbility delete keyboardHide notification.');
+});
+```
 
 ## off('keyboardShow' | 'keyboardHide')
 
@@ -300,10 +467,14 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | 是 |
-| callback | () = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。   - 'keyboardShow'表示显示输入法软键盘。   - 'keyboardHide'表示隐 藏输入法软键盘。 |
+| callback | () = & gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+
+**示例**
+
+参见 off
 
 ## off('setSubtype')
 
@@ -319,10 +490,18 @@ off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'setSubtype' | 是 |
-| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'setSubtype' | 是 | 设置监听类型，固定取值为'setSubtype'。 |
+| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('setSubtype', () => {
+  console.info('InputMethodAbility delete setSubtype notification.');
+});
+```
 
 ## off('securityModeChange')
 
@@ -338,10 +517,22 @@ off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'securityModeChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'securityModeChange' | 是 | 设置监听类型，固定取值为'securityModeChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+
+**示例**
+
+```TypeScript
+let securityChangeCallback: (securityMode: inputMethodEngine.SecurityMode) => void =
+  (securityMode: inputMethodEngine.SecurityMode) => {
+    console.info(`InputMethodAbility securityModeChange, security is ${securityMode}`);
+  };
+let inputMethodAbility: inputMethodEngine.InputMethodAbility = inputMethodEngine.getInputMethodAbility();
+inputMethodAbility.on('securityModeChange', securityChangeCallback);
+inputMethodAbility.off('securityModeChange', securityChangeCallback);
+```
 
 ## off('privateCommand')
 
@@ -357,16 +548,29 @@ off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'privateCommand' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'privateCommand' | 是 | 设置监听类型，固定取值为'privateCommand'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
+
+**示例**
+
+```TypeScript
+let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
+  (record: Record<string, inputMethodEngine.CommandDataType>) => {
+    for (const key in record) {
+      console.info(`private command key: ${key}, value: ${record[key]}`);
+    }
+  }
+
+inputMethodEngine.getInputMethodAbility().off('privateCommand', privateCommandCallback);
+```
 
 ## off('callingDisplayDidChange')
 
@@ -382,10 +586,18 @@ off(type: 'callingDisplayDidChange', callback?: Callback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'callingDisplayDidChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'callingDisplayDidChange' | 是 | 设置监听类型，固定取值为'callingDisplayDidChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('callingDisplayDidChange', (displayId: number) => {
+  console.info('InputMethodAbility delete calling display notification.');
+});
+```
 
 ## off('discardTypingText')
 
@@ -401,10 +613,18 @@ off(type: 'discardTypingText', callback?: Callback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'discardTypingText' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'discardTypingText' | 是 | 设置监听类型，固定取值为'discardTypingText'。    - 'discardTypingText'：表示取消订阅编辑框应用发送“清 空候选词”事件到输入法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().off('discardTypingText', () => {
+  console.info('InputMethodAbility discard the typing text.');
+});
+```
 
 ## on('inputStart')
 
@@ -420,10 +640,20 @@ on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient:
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'inputStart' | 是 |
-| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'inputStart' | 是 | 设置监听类型，固定取值为'inputStart'。 |
+| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | 是 | 回调函数，返回输入法操作相关实例。kbController为键盘控制器实例，用于控制键盘显示/隐藏；inputClient为输入客户端实例，用于与编辑框进行文本交 互。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility()
+  .on('inputStart',
+    (keyboardController: inputMethodEngine.KeyboardController, inputClient: inputMethodEngine.InputClient) => {
+      // 使用kbController和client进行相关操作
+    });
+```
 
 ## on('inputStop')
 
@@ -439,10 +669,18 @@ on(type: 'inputStop', callback: () => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'inputStop' | 是 |
-| callback | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'inputStop' | 是 | 设置监听类型，固定取值为'inputStop'。 |
+| callback | () = & gt; void | 是 | 回调函数，无返回参数。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().on('inputStop', () => {
+  console.info('inputMethodAbility inputStop');
+});
+```
 
 ## on('setCallingWindow')
 
@@ -458,10 +696,18 @@ on(type: 'setCallingWindow', callback: (wid: number) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'setCallingWindow' | 是 |
-| callback | (wid: number) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'setCallingWindow' | 是 | 设置监听类型，固定取值为'setCallingWindow'。 |
+| callback | (wid: number) = & gt; void | 是 | 回调函数，参数为调用方窗口的Id。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().on('setCallingWindow', (windowId: number) => {
+  console.info('inputMethodAbility setCallingWindow');
+});
+```
 
 ## on('keyboardShow' | 'keyboardHide')
 
@@ -477,10 +723,21 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | 是 |
-| callback | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。   - 'keyboardShow'表示显示输入法软键盘。   - 'keyboardHide'表示隐 藏输入法软键盘。 |
+| callback | () = & gt; void | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().on('keyboardShow', () => {
+  console.info('InputMethodAbility keyboardShow.');
+});
+inputMethodEngine.getInputMethodAbility().on('keyboardHide', () => {
+  console.info('InputMethodAbility keyboardHide.');
+});
+```
 
 ## on('keyboardShow' | 'keyboardHide')
 
@@ -496,10 +753,14 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | 是 |
-| callback | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。   - 'keyboardShow'表示显示输入法软键盘。   - 'keyboardHide'表示隐 藏输入法软键盘。 |
+| callback | () = & gt; void | 是 | 回调函数。 |
+
+**示例**
+
+参见 on
 
 ## on('setSubtype')
 
@@ -515,10 +776,20 @@ on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'setSubtype' | 是 |
-| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'setSubtype' | 是 | 设置监听类型，固定取值为'setSubtype'。 |
+| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | 是 | 回调函数，返回设置的输入法子类型（InputMethodSubtype，输入法子类型）。 |
+
+**示例**
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+
+inputMethodEngine.getInputMethodAbility().on('setSubtype', (inputMethodSubtype: InputMethodSubtype) => {
+  console.info('InputMethodAbility setSubtype.');
+});
+```
 
 ## on('securityModeChange')
 
@@ -534,10 +805,19 @@ on(type: 'securityModeChange', callback: Callback<SecurityMode>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'securityModeChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'securityModeChange' | 是 | 设置监听类型，固定取值为'securityModeChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 是 | 回调函数，返回当前输入法应用的安全模式。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility()
+  .on('securityModeChange', (securityMode: inputMethodEngine.SecurityMode) => {
+    console.info(`InputMethodAbility securityModeChange, security is ${securityMode}`);
+  });
+```
 
 ## on('privateCommand')
 
@@ -553,16 +833,28 @@ on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'privateCommand' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'privateCommand' | 是 | 设置监听类型，固定取值为'privateCommand'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 是 | 回调函数，返回向输入法应用发送的私有数据。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
+
+**示例**
+
+```TypeScript
+let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
+  (record: Record<string, inputMethodEngine.CommandDataType>) => {
+    for (const key in record) {
+      console.info(`private command key: ${key}, value: ${record[key]}`);
+    }
+  }
+inputMethodEngine.getInputMethodAbility().on('privateCommand', privateCommandCallback);
+```
 
 ## on('callingDisplayDidChange')
 
@@ -578,16 +870,25 @@ on(type: 'callingDisplayDidChange', callback: Callback<number>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'callingDisplayDidChange' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'callingDisplayDidChange' | 是 | 设置监听类型，固定取值为'callingDisplayDidChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数，返回编辑框设置对应窗口屏幕ID。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', (displayId: number) => {
+  console.info(`display id: ${displayId}`);
+});
+inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', callingDisplayDidChangeCallback);
+```
 
 ## on('discardTypingText')
 
@@ -603,7 +904,15 @@ on(type: 'discardTypingText', callback: Callback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'discardTypingText' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'discardTypingText' | 是 | 设置监听类型，固定取值为'discardTypingText'。    - 'discardTypingText'：表示订阅编辑框应用发送“清空候 选词”事件到输入法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility().on('discardTypingText', () => {
+  console.info('InputMethodAbility discard the typing text.');
+});
+```

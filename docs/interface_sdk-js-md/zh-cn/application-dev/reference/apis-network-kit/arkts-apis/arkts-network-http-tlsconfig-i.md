@@ -9,7 +9,6 @@ TLS加密版本及套件配置。
 ## 导入模块
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## cipherSuites

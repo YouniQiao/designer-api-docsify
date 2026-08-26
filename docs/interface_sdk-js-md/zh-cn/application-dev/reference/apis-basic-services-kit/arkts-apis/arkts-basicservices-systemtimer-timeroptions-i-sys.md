@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTimer } from 'kits/@kit.BasicServicesKit';
+import systemTimer from '@kit.BasicServicesKit';
 ```
 
 ## callback

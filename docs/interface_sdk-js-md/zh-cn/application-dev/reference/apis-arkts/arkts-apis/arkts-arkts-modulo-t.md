@@ -12,7 +12,7 @@ type Modulo = Rounding | 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
-| 类型 |
-| --- |
-| [Rounding](arkts-arkts-rounding-t.md) |
-| 9 |
+| 类型 | 说明 |
+| --- | --- |
+| [Rounding](arkts-arkts-rounding-t.md) |  |
+| 9 |  |

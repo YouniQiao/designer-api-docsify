@@ -3,7 +3,8 @@
 Vector is a linear data structure that is implemented based on arrays. When the memory of a vector is used up, a larger contiguous memory area is automatically allocated, all the elements are copied to the new memory area, and the current memory area is reclaimed. Vector can be used to efficiently access elements. Both Vector and [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md) are implemented based on arrays, but Vector provides more interfaces for operating the arrays. Both of them can dynamically adjust the capacity. Vector doubles the capacity each time, whereas ArrayList increases the capacity by 50%. **Recommended use case**: Use Vector when the data volume is large. This topic uses the following to identify the use of generics:  
 - T: Type
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The APIs provided by this module are deprecated since API version 9. You are advised to use
 > [@ohos.util.ArrayList](arkts-arkts-util-arraylist-arraylist-c.md).
 
@@ -18,7 +19,7 @@ Vector is a linear data structure that is implemented based on arrays. When the 
 ## Modules to Import
 
 ```TypeScript
-import { Vector } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -37,9 +38,32 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+// Method 1:
+let nums: Array<number> =  vector.convertToArray()
+for (let item of nums) {
+  console.info("value:" + item);
+}
+
+// Method 2:
+let iter = vector[Symbol.iterator]();
+let temp: IteratorResult<number> = iter.next().value;
+while(temp != undefined) {
+  console.info("value:" + temp);
+  temp = iter.next().value;
+}
+```
 
 ## add
 
@@ -57,15 +81,31 @@ Adds an element at the end of this Vector.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+class C1 {
+  name: string = ""
+  age: string = ""
+}
+let vector : Vector<string | number | C1 | Array<number>> = new Vector();
+let result = vector.add("a");
+let result1 = vector.add(1);
+let b = [1, 2, 3];
+let result2 = vector.add(b);
+let c: C1 = {name : "Jack", age : "13"};
+let result3 = vector.add(c);
+```
 
 ## clear
 
@@ -80,6 +120,17 @@ Clears all elements in this Vector and sets its length to **0**.
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.clear();
+```
 
 ## clone
 
@@ -97,9 +148,20 @@ Clones this Vector and returns a copy. The modification to the copy does not aff
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | New **Vector** instance obtained. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.clone();
+```
 
 ## constructor
 
@@ -114,6 +176,12 @@ A constructor used to create a **Vector** instance.
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+```TypeScript
+let vector : Vector<string | number | Array<number>> = new Vector();
+```
 
 ## convertToArray
 
@@ -131,9 +199,20 @@ Converts this Vector into an array.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Array & lt;T & gt; |
+| Type | Description |
+| --- | --- |
+| Array & lt;T & gt; | Array obtained. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.convertToArray();
+```
 
 ## copyToArray
 
@@ -151,9 +230,9 @@ Copies elements in this Vector into an array to overwrite elements of the same p
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| array | Array & lt;T & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| array | Array & lt;T & gt; | Yes | Array to which the elements in the Vector will be copied. |
 
 ## forEach
 
@@ -171,10 +250,23 @@ Uses a callback to traverse the elements in this Vector and obtain their positio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; void | Yes |
-| thisArg | Object | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; void | Yes | Callback invoked for replacement. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.forEach((value : number, index ?: number) : void => {
+  console.info("value:" + value, "index:" + index);
+});
+```
 
 ## get
 
@@ -192,15 +284,26 @@ Obtains an element at the specified position in this Vector.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Position index of the target element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Element obtained. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.get(2);
+```
 
 ## getCapacity
 
@@ -218,9 +321,20 @@ Obtains the capacity of this Vector.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Capacity obtained. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.getCapacity();
+```
 
 ## getFirstElement
 
@@ -238,9 +352,20 @@ Obtains the first element in this Vector.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | The first element obtained. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.getFirstElement();
+```
 
 ## getIndexFrom
 
@@ -258,16 +383,27 @@ Searches for an element forward from the specified position index and returns th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | T | Yes |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | T | Yes | Target element. |
+| index | number | Yes | Position index where the search starts. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the element. If no match is found, **-1** is returned. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.getIndexFrom(4, 3);
+```
 
 ## getIndexOf
 
@@ -285,15 +421,29 @@ Obtains the index of the first occurrence of the specified element in this Vecto
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the element. If no match is found, **-1** is returned. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(2);
+vector.add(1);
+vector.add(2);
+vector.add(4);
+let result = vector.getIndexOf(2);
+```
 
 ## getLastElement
 
@@ -311,9 +461,20 @@ Obtains the last element in this Vector.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | The last element obtained. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.getLastElement();
+```
 
 ## getLastIndexFrom
 
@@ -331,16 +492,27 @@ Searches for an element backward from the specified position index and returns t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | T | Yes |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | T | Yes | Target element. |
+| index | number | Yes | Position index where the search starts. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the element. If no match is found, **-1** is returned. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.getLastIndexFrom(4,3);
+```
 
 ## getLastIndexOf
 
@@ -358,15 +530,29 @@ Obtains the index of the last occurrence of the specified element in this Vector
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Index of the element. If no match is found, **-1** is returned. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(2);
+vector.add(1);
+vector.add(2);
+vector.add(4);
+let result = vector.getLastIndexOf(2);
+```
 
 ## has
 
@@ -384,15 +570,24 @@ Checks whether this Vector has the specified element.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the Vector has the specified element; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<string> = new Vector();
+let result = vector.has("squirrel");
+vector.add("squirrel");
+let result1 = vector.has("squirrel");
+```
 
 ## increaseCapacityTo
 
@@ -410,9 +605,21 @@ Increases the capacity of this Vector.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| newCapacity | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| newCapacity | number | Yes | New capacity. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.increaseCapacityTo(2);
+vector.increaseCapacityTo(12);
+```
 
 ## insert
 
@@ -430,10 +637,19 @@ Inserts an element within the length range and moves its subsequent elements rig
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | T | Yes |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | T | Yes | Target element. |
+| index | number | Yes | Index of the position where the element is to be inserted. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<string | number | Object | Array<number>> = new Vector();
+vector.insert("A", 0);
+vector.insert(0, 1);
+vector.insert(true, 2);
+```
 
 ## isEmpty
 
@@ -451,9 +667,20 @@ Checks whether this Vector is empty (contains no elements).
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the Vector is empty; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.isEmpty();
+```
 
 ## remove
 
@@ -471,15 +698,26 @@ Removes the first occurrence of the specified element from this Vector.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| element | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Operation result. The value **true** is returned if the element is removed; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.remove(2);
+```
 
 ## removeByIndex
 
@@ -497,15 +735,27 @@ Searches for an element based on its index, removes the element after returning 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Position index of the target element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Element removed. If the Vector is empty, **undefined** is returned. If the index is out of range, an exception is thrown. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(2);
+vector.add(4);
+let result = vector.removeByIndex(2);
+```
 
 ## removeByRange
 
@@ -523,10 +773,21 @@ Removes from this Vector all of the elements within a range, including the eleme
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fromIndex | number | Yes |
-| toIndex | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fromIndex | number | Yes | Index of the start position. |
+| toIndex | number | Yes | Index of the end position. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.removeByRange(2,4);
+```
 
 ## replaceAllElements
 
@@ -544,10 +805,24 @@ Replaces all elements in this Vector with new elements, and returns the new ones
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; T | Yes |
-| thisArg | Object | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; T | Yes | Callback invoked for replacement. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.replaceAllElements((value : number) : number => {
+  // Add the user operation logic based on the actual scenario.
+  return value;
+});
+```
 
 ## set
 
@@ -565,16 +840,16 @@ Replaces an element at the specified position in this Vector with a given elemen
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| element | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Position index of the target element. |
+| element | T | Yes | Element to be used for replacement. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | New element. |
 
 ## setLength
 
@@ -592,9 +867,21 @@ Sets a new length for this Vector.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| newSize | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| newSize | number | Yes | New length to set. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.setLength(8);
+vector.setLength(2);
+```
 
 ## sort
 
@@ -612,9 +899,22 @@ Sorts elements in this Vector.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) = & gt; number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| comparator | (firstValue: T, secondValue: T) = & gt; number | No | Callback invoked for sorting. The default value is this instance. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.sort((a: number, b: number) => a - b);
+vector.sort((a: number, b: number) => b - a);
+vector.sort();
+```
 
 ## subVector
 
@@ -632,16 +932,30 @@ Obtains elements within a range in this Vector, including the element at the sta
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fromIndex | number | Yes |
-| toIndex | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fromIndex | number | Yes | Index of the start position. |
+| toIndex | number | Yes | Index of the end position. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | New **Vector** instance obtained. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.add(6);
+vector.add(8);
+let result = vector.subVector(0,4);
+let result1 = vector.subVector(2,4);
+```
 
 ## toString
 
@@ -659,9 +973,20 @@ Uses commas (,) to concatenate elements in this Vector into a string.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String obtained. |
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+let result = vector.toString();
+```
 
 ## trimToCurrentLength
 
@@ -676,6 +1001,17 @@ Trims the capacity of this Vector into its current length.
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+```TypeScript
+let vector : Vector<number> = new Vector();
+vector.add(2);
+vector.add(4);
+vector.add(5);
+vector.add(4);
+vector.trimToCurrentLength();
+```
 
 ## length
 

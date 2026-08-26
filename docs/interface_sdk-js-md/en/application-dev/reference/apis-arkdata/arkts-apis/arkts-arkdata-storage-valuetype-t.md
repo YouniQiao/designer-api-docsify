@@ -10,8 +10,8 @@ Enumerates the value types.
 
 **Deprecated since:** 9
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
-| string |
-| boolean |
+| Type | Description |
+| --- | --- |
+| number | The value is a number. |
+| string | The value is a string. |
+| boolean | The value is of Boolean type. |

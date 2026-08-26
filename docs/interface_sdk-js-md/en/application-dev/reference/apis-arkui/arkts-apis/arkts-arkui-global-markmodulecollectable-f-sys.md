@@ -23,12 +23,12 @@ Mark moduleNamespace which loaded by dynamic-import is collectable.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| namespace | Object | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| namespace | Object | Yes | moduleNamespace to be marked. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | if type of object is not moduleNameSpace. |

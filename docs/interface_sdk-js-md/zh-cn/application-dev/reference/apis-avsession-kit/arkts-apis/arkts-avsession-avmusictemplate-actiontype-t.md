@@ -12,7 +12,7 @@ type ActionType = 'add' | 'remove'
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| 类型 |
-| --- |
-| 'add' |
-| 'remove' |
+| 类型 | 说明 |
+| --- | --- |
+| 'add' |  |
+| 'remove' |  |

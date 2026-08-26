@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { DistributedExtensionAbility } from 'kits/@kit.DistributedServiceKit';
+import DistributedExtensionAbility from '@kit.DistributedServiceKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DistributedExtensionAbility](arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md) |
+| Name | Description |
+| --- | --- |
+| [DistributedExtensionAbility](arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md) | The **DistributedExtensionAbility** module provides distributed extension capabilities and lifecycle callbacks for distributed ability creation, destruction, and connection. |

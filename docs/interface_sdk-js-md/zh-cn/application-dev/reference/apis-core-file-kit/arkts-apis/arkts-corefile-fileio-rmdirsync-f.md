@@ -23,6 +23,13 @@ declare function rmdirSync(path: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| path | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 待删除目录的应用沙箱路径。 |
+
+**示例**
+
+```TypeScript
+let dirPath = pathDir + '/testDir';
+fileio.rmdirSync(dirPath);
+```

@@ -9,25 +9,25 @@ The **DataAbility** module provides APIs to create predicates for querying data 
 ## Modules to Import
 
 ```TypeScript
-import { dataAbility } from 'kits/@kit.ArkData';
+import dataAbility from '@kit.ArkData';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md) |
+| Name | Description |
+| --- | --- |
+| [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md) | Creates an **RdbPredicates** object with a table name and **DataAbilityPredicates** object. |
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+| Name | Description |
+| --- | --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | Provides APIs for creating diverse query conditions. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ValueType](arkts-arkdata-dataability-valuetype-t.md) |
+| Name | Description |
+| --- | --- |
+| [ValueType](arkts-arkdata-dataability-valuetype-t.md) | Defines the value types. |

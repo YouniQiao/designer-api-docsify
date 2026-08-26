@@ -31,6 +31,6 @@ Obtains the number of consecutive taps required for the tap gesture to be recogn
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of consecutive taps required for the tap gesture to be recognized. |

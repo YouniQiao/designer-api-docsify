@@ -9,7 +9,6 @@ UserAgentBrandVersion is a data class in the ArkWeb framework used to configure 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getBrand
@@ -28,9 +27,13 @@ Obtains the brand name.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Brand name string. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getFullVersion
 
@@ -48,9 +51,15 @@ Obtains the full version number.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Full version number string. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getMajorVersion
 
@@ -68,9 +77,13 @@ Obtains the major version number.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Major version number string. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setBrand
 
@@ -88,9 +101,13 @@ Sets the brand name.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| brand | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| brand | string | Yes | Brand name, which cannot be an empty string. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setFullVersion
 
@@ -108,9 +125,15 @@ Sets the full version number.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fullVersion | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fullVersion | string | Yes | Full version number, which cannot be an empty string. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setMajorVersion
 
@@ -128,6 +151,10 @@ Sets the major version number.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [majorVersion](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-deviceinfo-con.md) | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| majorVersion | string | Yes | Major version number, which cannot be an empty string. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).

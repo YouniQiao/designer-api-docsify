@@ -51,7 +51,8 @@ updateTransition?(progress: number): void
 
 Updates the progress of this interactive transition animation. (Non-interactive animations do not support setting the animation progress).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You are not advised to use stack operations in aboutToAppear, as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
@@ -66,9 +67,9 @@ Updates the progress of this interactive transition animation. (Non-interactive 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| progress | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| progress | number | Yes | Progress percentage of the interactive transition animation. Value range: [0, 1]. |
 
 ## from
 

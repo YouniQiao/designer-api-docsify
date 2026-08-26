@@ -31,9 +31,9 @@ activateCircleStyle(options: Optional<CircleStyleOptions>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;[CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)&gt; | 是 | 宫格圆点在“激活”状态的背景圆环样式。 |
 
 ## activeColor
 
@@ -51,9 +51,9 @@ activeColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 宫格圆点在“激活”状态的填充颜色。 |
 
 ## autoReset
 
@@ -71,9 +71,9 @@ autoReset(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 在完成密码输入后再次在组件区域按下时是否重置组件状态。 true：重置组件状态（即清除之前输入的密码）；false：不重置组件状态。 |
 
 ## backgroundColor
 
@@ -83,7 +83,8 @@ backgroundColor(value: ResourceColor)
 
 设置背景颜色。未通过该接口设置时，默认为透明，无背景色。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 9
@@ -94,9 +95,9 @@ backgroundColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 背景颜色。 |
 
 ## circleRadius
 
@@ -114,9 +115,9 @@ circleRadius(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 宫格中圆点的半径。 取值范围：(0, sideLength/11]。设置小于等于0的值时，按默认值处理；超过最大值时，按最大值处理。 |
 
 ## onDotConnect
 
@@ -126,7 +127,8 @@ onDotConnect(callback: import('../api/@ohos.base').Callback<number>)
 
 密码输入选中宫格圆点时触发该回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
@@ -139,9 +141,9 @@ onDotConnect(callback: import('../api/@ohos.base').Callback<number>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | import('../api/@ohos.base').Callback & lt;number & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | import('../api/@ohos.base').Callback & lt;number & gt; | 是 | 密码输入选中宫格圆点时触发该回调。回调参数为选中宫格圆点的索引值（第一行圆点从左往右依次为0、1 、2，第二行圆点从左往右依次为3、4、5，第三行圆点从左往右依次为6、7、8）。 |
 
 ## onPatternComplete
 
@@ -151,7 +153,8 @@ onPatternComplete(callback: (input: Array<number>) => void)
 
 密码输入结束时触发该回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该回调在密码输入结束时触发，返回完整密码数组。与[onDotConnect](#ondotconnect)的关系：onDotConnect在选中每个圆点时实时触发，
 > onPatternComplete在输入结束时触发，两者可以配合使用以实现实时反馈和最终验证。
 
@@ -163,9 +166,9 @@ onPatternComplete(callback: (input: Array<number>) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | (input: Array & lt;number & gt;) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (input: Array & lt;number & gt;) = & gt; void | 是 | Array of digits representing the indices of the selected grid dots, in the order they were connected. Grid dots are indexed row-wise from top to bottom, left to right: The first row contains indices 0, 1, 2; the second row 3, 4, 5; and the third row 6, 7, 8. |
 
 ## pathColor
 
@@ -183,9 +186,9 @@ pathColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 连线的颜色。 |
 
 ## pathStrokeWidth
 
@@ -203,9 +206,9 @@ pathStrokeWidth(value: number | string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string | 是 | 连线的宽度。 单位：vp 取值范围：(0, sideLength/3]，设置为0或负数时连线不显示，超过最大值按最大值处理。 |
 
 ## regularColor
 
@@ -223,9 +226,9 @@ regularColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 宫格圆点在“未选中”状态的填充颜色。 |
 
 ## selectedColor
 
@@ -243,9 +246,9 @@ selectedColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 宫格圆点在“选中”状态的填充颜色。 |
 
 ## sideLength
 
@@ -255,7 +258,8 @@ sideLength(value: Length)
 
 设置组件的宽度和高度（宽高相同）。当设置为0或负数时，组件不显示。未通过该接口设置时，默认宽高为288vp。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > PatternLock组件设置了通用属性宽高比[aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio)，且不等于1时（组件尺寸被设定为长方形），九宫格依然绘制为正方形（超出组件范围）。
 
 **起始版本：** 9
@@ -266,9 +270,9 @@ sideLength(value: Length)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 组件的宽度和高度。 取值范围：大于0。 设置为0或负数时，组件不显示。 |
 
 ## skipUnselectedPoint
 
@@ -288,6 +292,6 @@ skipUnselectedPoint(skipped: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| skipped | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| skipped | boolean | 是 | 未选中的宫格圆点在密码路径经过时是否跳过选中。 true：跳过选中；false：自动选中。 |

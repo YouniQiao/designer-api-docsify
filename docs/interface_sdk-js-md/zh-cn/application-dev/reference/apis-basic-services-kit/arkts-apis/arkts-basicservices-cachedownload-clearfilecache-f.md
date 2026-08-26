@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## clearFileCache
@@ -17,3 +17,11 @@ function clearFileCache(): void
 **起始版本：** 23
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
+
+**示例**
+
+```TypeScript
+import { cacheDownload } from '@kit.BasicServicesKit';
+  
+cacheDownload.clearFileCache();
+```

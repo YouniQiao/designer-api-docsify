@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PanelModifier](arkts-arkui-panelmodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [PanelModifier](arkts-arkui-panelmodifier-c.md) | Defines Panel Modifier@extends PanelAttribute @implements AttributeModifier & lt;PanelAttribute & gt; |

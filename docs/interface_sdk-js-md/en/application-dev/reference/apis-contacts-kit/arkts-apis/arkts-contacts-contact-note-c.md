@@ -9,7 +9,7 @@ Defines a contact's note.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## noteContent
@@ -27,3 +27,13 @@ Notes of the contact.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
+
+**Examples**
+
+Create data in JSON format.
+
+```TypeScript
+let note: contact.Note = {
+    noteContent: 'noteContent'
+};
+```

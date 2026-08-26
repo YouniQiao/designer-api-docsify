@@ -2,7 +2,8 @@
 
 The module provides application information. Unless otherwise specified, the information is obtained through [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
 > [bundleManager-ApplicationInfo](#applicationinfo) instead.
 

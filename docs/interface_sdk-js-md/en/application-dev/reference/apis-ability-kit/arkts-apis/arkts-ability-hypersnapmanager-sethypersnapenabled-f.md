@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hyperSnapManager } from 'kits/@kit.AbilityKit';
+import hyperSnapManager from '@kit.AbilityKit';
 ```
 
 ## setHyperSnapEnabled
@@ -29,12 +29,12 @@ to standard cold start processes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [enableFlag](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hitracechain-enableflag-f.md) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enableFlag | boolean | Yes | Indicates the desired optimization state:   - `true`: Indicates the application's compatibility with Hyper Snap optimization (system may   apply when appropriate)   - `false`: Disables Hyper Snap; uses standard cold-start process. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 16000150 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 16000150 | Failed to send request to system service. |

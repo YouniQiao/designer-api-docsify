@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.MDMKit';
+import bundleManager from '@kit.MDMKit';
 ```
 
 ## appIndex

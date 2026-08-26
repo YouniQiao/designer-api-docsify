@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appDomainVerify } from 'kits/@kit.AbilityKit';
+import appDomainVerify from '@kit.AbilityKit';
 ```
 
 ## queryAssociatedBundleNames
@@ -26,21 +26,35 @@ query bundleNames associated with domain.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| domain | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| domain | string | Yes | Parameters related to the function. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string[] |
+| Type | Description |
+| --- | --- |
+| string[] | Result bundleNames. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [29900001](../errorcode-appDomainVerify-sys.md#29900001-internal-system-service-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API accessed by non-system app. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [29900001](../errorcode-appDomainVerify-sys.md#29900001-internal-system-service-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { appDomainVerify } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+// Obtain the list of bundle names associated with the domain name "example.com".
+let domain = "example.com";
+let bundleNames = appDomainVerify.queryAssociatedBundleNames(domain);
+bundleNames.forEach(bundleName => {
+  hilog.info(0x0000, 'testTag', `domain:${domain} associate with app:${bundleName}`);
+});
+```

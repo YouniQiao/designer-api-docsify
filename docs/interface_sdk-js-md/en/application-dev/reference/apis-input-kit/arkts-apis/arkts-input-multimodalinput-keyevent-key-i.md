@@ -9,7 +9,6 @@ Defines a key.@interface Key [since 9 - 11]
 ## Modules to Import
 
 ```TypeScript
-import { Action, Key, KeyEvent } from 'kits/@kit.InputKit';
 ```
 
 ## code

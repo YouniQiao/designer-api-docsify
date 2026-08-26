@@ -9,7 +9,6 @@ Defines the TLS configuration, including the version and cipher suite.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## cipherSuites

@@ -14,7 +14,8 @@ Provides APIs for user authentication. The user authentication widget is support
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## cancel
@@ -39,11 +40,54 @@ Cancels this authentication. This API is commonly used in the following scenario
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Incorrect parameter types. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam : userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: 'Enter password',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // The cancel() API can be called only after the authentication is started by start() of UserAuthInstance.
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+  userAuthInstance.cancel();
+  console.info('auth cancel successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+}
+```
 
 ## off('result')
 
@@ -66,17 +110,62 @@ Unsubscribes from the user authentication result. This API is commonly used in t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'result' | Yes |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'result' | Yes | Event type. The value is **result**, which indicates the authentication result. |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | No | Callback used to return the user authentication result. If this parameter is not passed, the value passed when the [on('result')](#onresult) API is called is used by default. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  // Subscribe to the authentication result.
+  auth.on('result', {
+    callback: (result: userAuth.AuthResultInfo) => {
+      console.info(`result: ${result.result}`);
+    }
+  });
+  // Unsubscribe from the authentication result.
+  auth.off('result');
+  console.info('cancel subscribe authentication event successfully.');
+} catch (error) {
+  console.error(`cancel subscribe authentication event failed. Code: ${error?.code}, message: ${error?.message}`);
+  // do error.
+}
+```
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const userAuthWidgetMgrVersion = 1;
+try {
+  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
+  console.info('get userAuthWidgetMgr instance successfully.');
+  userAuthWidgetMgr.off('command', {
+    sendCommand: (cmdData) => {
+      console.info(`The cmdData is ${cmdData}`);
+    }
+  })
+  console.info('cancel subscribe authentication event successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`userAuth widgetMgr failed. Code is ${err?.code}, message is ${err?.message}`);
+}
+```
 
 ## off('authTip')
 
@@ -99,16 +188,20 @@ Unsubscribes from the authentication tip information. This API is commonly used 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'authTip' | Yes |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This API unsubscribes from the event triggered by [on('authTip')](#onauthtip) after the [start()](#start) call and the initiation of authentication. |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No | Callback used to return the intermediate authentication status. If this parameter is not passed, the value passed when the [on('authTip')](#onauthtip) API is called is used by default. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+
+**Examples**
+
+See off
 
 ## on('result')
 
@@ -135,17 +228,76 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'result' | Yes |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'result' | Yes | Event type used to return the authentication result. It is triggered when [start()](#start) is called, identity authentication is initiated, and the authentication interaction is completed. |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | Yes | Callback used to return the user authentication result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  // Subscribe to the authentication result.
+  auth.on('result', {
+    callback: (result: userAuth.AuthResultInfo) => {
+      console.info(`result: ${result.result}`);
+    }
+  });
+  // Subscribe to authentication tip information.
+  auth.on('tip', {
+    callback : (result : userAuth.TipInfo) => {
+      switch (result.tip) {
+        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_BRIGHT:
+          // Do something.
+          break;
+        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_DARK:
+          // Do something.
+          break;
+        default:
+          // do others.
+      }
+    }
+  } as userAuth.AuthEvent);
+  auth.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
+  // do error.
+}
+```
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const userAuthWidgetMgrVersion = 1;
+try {
+  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
+  console.info('get userAuthWidgetMgr instance successfully.');
+  userAuthWidgetMgr.on('command', {
+    sendCommand: (cmdData) => {
+      console.info(`The cmdData is ${cmdData}`);
+    }
+  })
+  console.info('subscribe authentication event successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`userAuth widgetMgr failed. Code is ${err?.code}, message is ${err?.message}`);
+}
+```
 
 ## on('authTip')
 
@@ -172,16 +324,20 @@ Subscribes to authentication tip information. This API is used to obtain the wid
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'authTip' | Yes |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This event is triggered when [start()](#start) is called and authentication is initiated. |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes | Callback used to return the intermediate authentication status. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+
+**Examples**
+
+See on
 
 ## start
 
@@ -208,18 +364,58 @@ Starts authentication. This API is commonly used in the following service scenar
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12500001](../errorcode-useriam.md#12500001-authentication-failed) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
-| [12500003](../errorcode-useriam.md#12500003-authentication-canceled) |
-| [12500004](../errorcode-useriam.md#12500004-authentication-timed-out) |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
-| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
-| [12500007](../errorcode-useriam.md#12500007-authentication-service-is-busy) |
-| [12500009](../errorcode-useriam.md#12500009-authentication-locked) |
-| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) |
-| [12500011](../errorcode-useriam.md#12500011-switched-to-custom-authentication) |
-| [12500013](../errorcode-useriam.md#12500013-password-expired) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Possible causes:  1. No permission to access biometric.  2. No permission to start authentication from background. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Incorrect parameter types. |
+| [12500001](../errorcode-useriam.md#12500001-authentication-failed) | Authentication failed.<br>**Applicable version:** 10 - 19 |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500003](../errorcode-useriam.md#12500003-authentication-canceled) | Authentication canceled. |
+| [12500004](../errorcode-useriam.md#12500004-authentication-timed-out) | Authentication timeout.<br>**Applicable version:** 10 - 19 |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
+| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
+| [12500007](../errorcode-useriam.md#12500007-authentication-service-is-busy) | Authentication service is busy.<br>**Applicable version:** 10 - 19 |
+| [12500009](../errorcode-useriam.md#12500009-authentication-locked) | Authentication is locked out. |
+| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
+| [12500011](../errorcode-useriam.md#12500011-switched-to-custom-authentication) | Switched to the customized authentication process. |
+| [12500013](../errorcode-useriam.md#12500013-password-expired) | Operation failed because of PIN expired.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: 'Enter password',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+}
+```

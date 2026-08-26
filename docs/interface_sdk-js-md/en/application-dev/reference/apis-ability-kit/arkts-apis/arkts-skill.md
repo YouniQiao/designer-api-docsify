@@ -12,7 +12,7 @@ The module defines a skill object. Such an object can be obtained through
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Skill](arkts-ability-skill-i.md) |
-| [SkillUri](arkts-ability-skill-skilluri-i.md) |
+| Name | Description |
+| --- | --- |
+| [Skill](arkts-ability-skill-i.md) | The module defines a skill object. |
+| [SkillUri](arkts-ability-skill-skilluri-i.md) | Indicates the uris of the skill |

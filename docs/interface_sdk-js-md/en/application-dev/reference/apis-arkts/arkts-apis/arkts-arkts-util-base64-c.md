@@ -13,7 +13,8 @@ Decodes a string or Uint8Array containing Base64 data into a newly allocated Uin
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## constructor
@@ -31,6 +32,35 @@ A constructor used to create a **Base64** object.
 **Substitutes:** [constructor](arkts-arkts-util-base64helper-c.md#constructor)
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// Output: retStr = utf-8
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let base64 = new  util.Base64();
+```
 
 ## decode
 
@@ -50,15 +80,26 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | Uint8Array \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Uint8Array & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Uint8Array & gt; | Promise used to return the Uint8Array object obtained. |
+
+**Examples**
+
+```TypeScript
+let base64 = new util.Base64();
+let array = new Uint8Array([99,122,69,122]);
+base64.decode(array).then((val) => {
+  console.info(val.toString());
+  // Output: 115,49,51
+})
+```
 
 ## decodeSync
 
@@ -78,15 +119,25 @@ Decodes the input content into a Uint8Array object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | Uint8Array \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Uint8Array |
+| Type | Description |
+| --- | --- |
+| Uint8Array | Uint8Array object obtained. |
+
+**Examples**
+
+```TypeScript
+let base64 = new util.Base64();
+let buff = 'czEz';
+let result = base64.decodeSync(buff);
+console.info("result = " + result);
+// Output: result = 115,49,51
+```
 
 ## encode
 
@@ -106,15 +157,26 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | Uint8Array | Yes | Uint8Array object to encode. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Uint8Array & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Uint8Array & gt; | Promise used to return the Uint8Array object obtained. |
+
+**Examples**
+
+```TypeScript
+let base64 = new util.Base64();
+let array = new Uint8Array([115,49,51]);
+base64.encode(array).then((val) => {
+  console.info(val.toString());
+  // Output: 99,122,69,122
+})
+```
 
 ## encodeSync
 
@@ -134,15 +196,25 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | Uint8Array | Yes | Uint8Array object to encode. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Uint8Array |
+| Type | Description |
+| --- | --- |
+| Uint8Array | Uint8Array object obtained. |
+
+**Examples**
+
+```TypeScript
+let base64 = new util.Base64();
+let array = new Uint8Array([115,49,51]);
+let result = base64.encodeSync(array);
+console.info("result = " + result);
+// Output: result = 99,122,69,122
+```
 
 ## encodeToString
 
@@ -162,15 +234,26 @@ Encodes the input content into a string. This API uses a promise to return the r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | Uint8Array | Yes | Uint8Array object to encode. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return the string obtained. |
+
+**Examples**
+
+```TypeScript
+let base64 = new util.Base64();
+let array = new Uint8Array([115,49,51]);
+base64.encodeToString(array).then((val) => {
+    console.info(val);
+    // Output: czEz
+})
+```
 
 ## encodeToStringSync
 
@@ -190,12 +273,22 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| src | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | Uint8Array | Yes | Uint8Array object to encode. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | String obtained. |
+
+**Examples**
+
+```TypeScript
+let base64 = new util.Base64();
+let array = new Uint8Array([115,49,51]);
+let result = base64.encodeToStringSync(array);
+console.info("result = " + result);
+// Output: result = czEz
+```

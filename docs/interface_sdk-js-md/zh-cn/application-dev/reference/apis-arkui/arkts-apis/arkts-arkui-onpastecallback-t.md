@@ -14,7 +14,7 @@ declare type OnPasteCallback = (pasteValue: string, event: PasteEvent) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| pasteValue | string | 是 |
-| event | [PasteEvent](../arkts-components/arkts-arkui-pasteevent-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pasteValue | string | 是 | 要粘贴的文本内容。 |
+| event | [PasteEvent](../arkts-components/arkts-arkui-pasteevent-i.md) | 是 | 用户自定义粘贴事件。 |

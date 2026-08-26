@@ -9,7 +9,6 @@ A simple API for XML handling
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## characters
@@ -30,9 +29,9 @@ CallBack function triggered by the text content
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| content | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| content | string | Yes | literal content |
 
 ## endDocument
 
@@ -68,11 +67,40 @@ CallBack function triggered at the end of the element
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| elementName | string | Yes |
-| namespaceURI | string \| undefined | Yes |
-| qName | string \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| elementName | string | Yes | Name of the element |
+| namespaceURI | string \| undefined | Yes | URI of the namespace |
+| qName | string \| undefined | Yes | Fully qualified name with namespace |
+
+**Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.startElement("note");
+thatSer.setText("Happy");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result);
+// <note>Happy</note>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.startElement("note");
+serializer.setText("Happy");
+serializer.endElement();
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note>Happy</note>
+```
 
 ## startDocument
 
@@ -108,9 +136,38 @@ CallBack function triggered at the beginning of the element
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| elementName | string | Yes |
-| namespaceURI | string \| undefined | Yes |
-| qName | string \| undefined | Yes |
-| attributes | Map & lt;string, string & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| elementName | string | Yes | Name of the element |
+| namespaceURI | string \| undefined | Yes | URI of the namespace |
+| qName | string \| undefined | Yes | Fully qualified name with namespace |
+| attributes | Map & lt;string, string & gt; | Yes | attributes mapping |
+
+**Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.startElement("note");
+thatSer.setText("Happy");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result);
+// <note>Happy</note>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.startElement("note");
+serializer.setText("Happy");
+serializer.endElement();
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note>Happy</note>
+```

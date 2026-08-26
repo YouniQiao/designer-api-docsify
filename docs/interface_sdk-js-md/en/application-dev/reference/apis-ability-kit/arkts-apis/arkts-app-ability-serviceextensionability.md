@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ServiceExtensionAbility } from 'kits/@kit.AbilityKit';
+import ServiceExtensionAbility from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -11,7 +11,7 @@ import { ServiceExtensionAbility } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md) | The ServiceExtensionAbility module provides extended capabilities for background services, including lifecycle callbacks for creating, destroying, connecting, and disconnecting background services. |
 <!--DelEnd-->

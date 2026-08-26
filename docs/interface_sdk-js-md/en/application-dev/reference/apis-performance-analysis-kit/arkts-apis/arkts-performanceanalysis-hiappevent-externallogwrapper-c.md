@@ -9,7 +9,6 @@ The wrapper of external log, providing various information.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getFilePath
@@ -28,9 +27,9 @@ Get the file path
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | The file path |
 
 ## getGenerationTime
 
@@ -48,9 +47,9 @@ Get the generation time point (ms) of the file
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The generation time |
 
 ## getSizeInKb
 
@@ -68,9 +67,9 @@ Get the file size in kb
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The file size in kb |
 
 ## getSysEvent
 
@@ -88,6 +87,6 @@ Get the system event of the file
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | The string form of system event |

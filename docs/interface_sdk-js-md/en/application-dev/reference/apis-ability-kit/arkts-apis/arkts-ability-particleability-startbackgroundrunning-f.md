@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from 'kits/@kit.AbilityKit';
+import particleAbility from '@kit.AbilityKit';
 ```
 
 ## startBackgroundRunning
@@ -28,11 +28,55 @@ Requests a continuous task from the system. This API uses an asynchronous callba
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | number | Yes |
-| request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | number | Yes | Notification ID of the continuous task. |
+| request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | Notification parameter, which is used to display information in the notification bar. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the continuous task is requested, **err** is **undefined**. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { particleAbility, wantAgent } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import notification from '@ohos.notification';
+
+function callback(error: BusinessError, data: void) {
+  if (error && error.code !== 0) {
+    console.error(`Operation failed error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`Operation succeeded, data: ${data}`);
+  }
+}
+
+let wantAgentInfo: wantAgent.WantAgentInfo = {
+  wants: [
+    {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    }
+  ],
+  operationType: wantAgent.OperationType.START_ABILITY,
+  requestCode: 0,
+  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+};
+
+wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj) => {
+  let id = 1;
+  particleAbility.startBackgroundRunning(id, {
+    content:
+    {
+      contentType: notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+      normal:
+      {
+        title: 'title',
+        text: 'text'
+      }
+    },
+    wantAgent: wantAgentObj
+  }, callback);
+});
+```
 
 
 ## startBackgroundRunning
@@ -57,13 +101,53 @@ Requests a continuous task from the system. This API uses a promise to return th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | number | Yes |
-| request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | number | Yes | Notification ID of the continuous task. |
+| request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | Notification parameter, which is used to display information in the notification bar. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { particleAbility, wantAgent } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import notification from '@ohos.notification';
+
+let wantAgentInfo: wantAgent.WantAgentInfo = {
+  wants: [
+    {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    }
+  ],
+  operationType: wantAgent.OperationType.START_ABILITY,
+  requestCode: 0,
+  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+};
+
+wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj) => {
+  let id = 1;
+  particleAbility.startBackgroundRunning(id, {
+    content:
+    {
+      contentType: notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+      normal:
+      {
+        title: 'title',
+        text: 'text'
+      }
+    },
+    wantAgent: wantAgentObj
+  }).then(() => {
+    console.info('Operation succeeded');
+  }).catch((err: BusinessError) => {
+    console.error(`Operation failed cause: ${JSON.stringify(err)}`);
+  });
+});
+```

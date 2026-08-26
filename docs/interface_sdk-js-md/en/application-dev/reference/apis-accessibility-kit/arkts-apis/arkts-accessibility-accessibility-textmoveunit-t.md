@@ -14,10 +14,10 @@ Enumerates the movement units for traversing the node text.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'char' |
-| 'word' |
-| 'line' |
-| 'page' |
-| 'paragraph' |
+| Type | Description |
+| --- | --- |
+| 'char' | The movement unit for traversing the node text is by character. |
+| 'word' | The movement unit for traversing the node text is by word. |
+| 'line' | The movement unit for traversing the node text is by line. |
+| 'page' | The movement unit for traversing the node text is by page. |
+| 'paragraph' | The movement unit for traversing the node text is by paragraph. |

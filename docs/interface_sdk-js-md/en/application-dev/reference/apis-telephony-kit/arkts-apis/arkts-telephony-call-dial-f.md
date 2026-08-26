@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## dial
@@ -14,7 +13,8 @@ function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback
 
 Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
 > only for system applications.
 
@@ -30,11 +30,24 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| phoneNumber | string | Yes |
-| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| phoneNumber | string | Yes | Phone number. |
+| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | Yes | Call option, which indicates whether the call is a voice call or video call. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dialOptions: call.DialOptions = {
+    extras: false
+}
+call.dial("138xxxxxxxx", dialOptions, (err: BusinessError, data: boolean) => {
+    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
 
 
 ## dial
@@ -45,7 +58,8 @@ function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 
 Initiates a call. You can set call options as needed. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
 > only for system applications.
 
@@ -61,16 +75,31 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| phoneNumber | string | Yes |
-| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| phoneNumber | string | Yes | Phone number. |
+| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | No | Call option, which indicates whether the call is a voice call or video call. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dialOptions: call.DialOptions = {
+    extras: false
+}
+call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
+    console.info(`dial success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`dial fail, promise: err->${JSON.stringify(err)}`);
+});
+```
 
 
 ## dial
@@ -81,7 +110,8 @@ function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void
 
 Initiates a call. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
 > only for system applications.
 
@@ -97,7 +127,17 @@ Initiates a call. This API uses an asynchronous callback to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| phoneNumber | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| phoneNumber | string | Yes | Phone number. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.dial("138xxxxxxxx", (err: BusinessError, data: boolean) => {
+    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```

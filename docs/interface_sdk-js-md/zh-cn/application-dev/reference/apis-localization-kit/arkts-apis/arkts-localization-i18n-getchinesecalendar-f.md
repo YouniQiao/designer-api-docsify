@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getChineseCalendar
@@ -24,12 +24,19 @@ export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | Intl.Locale | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | Intl.Locale | 否 | 区域对象，默认值：系统区域对象。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | 农历对象。 |
+
+**示例**
+
+```TypeScript
+let locale: Intl.Locale = i18n.System.getSystemLocaleInstance();
+let calendar: i18n.ChineseCalendar = i18n.getChineseCalendar(locale);
+```

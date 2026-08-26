@@ -1,7 +1,8 @@
 # DisplayOrientation
 
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
 > [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md) instead.
 Enumerates display orientations.

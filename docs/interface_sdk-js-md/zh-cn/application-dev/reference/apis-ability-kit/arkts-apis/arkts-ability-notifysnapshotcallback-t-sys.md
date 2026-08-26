@@ -14,7 +14,7 @@ type NotifySnapshotCallback = (deviceId: string, mission: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| deviceId | string | 是 |
-| mission | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceId | string | 是 | 设备ID，表示快照发生变化的远程设备。 |
+| mission | number | 是 | 任务ID，表示快照发生变化的任务。 |

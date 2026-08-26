@@ -11,7 +11,7 @@ Configuration result for AI-generated text tasks.@interface GenerateTextTaskResu
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'kits/@kit.ArkUI';
+import imageGeneration from '@kit.ArkUI';
 ```
 
 ## content

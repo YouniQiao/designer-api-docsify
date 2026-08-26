@@ -13,5 +13,17 @@ Describes a continuous task. **LongTask** inherits from [Task](arkts-arkts-taskp
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import taskpool from '@kit.ArkTS';
+```
+
+**Examples**
+
+```TypeScript
+@Concurrent
+function printArgs(args: string): string {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let task: taskpool.LongTask = new taskpool.LongTask(printArgs, "this is my first LongTask");
 ```

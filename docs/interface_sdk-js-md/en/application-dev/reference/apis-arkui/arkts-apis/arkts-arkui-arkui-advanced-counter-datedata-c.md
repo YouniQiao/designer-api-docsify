@@ -9,7 +9,8 @@ Defines the date data.
 ## Modules to Import
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUIV2';
 ```
 
 ## constructor
@@ -30,11 +31,11 @@ Constructor of the DateData.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [year](#year) | number | Yes |
-| [month](#month) | number | Yes |
-| [day](#day) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| year | number | Yes | set the year of the DateData. |
+| month | number | Yes | set the month of the DateData. |
+| day | number | Yes | set the day of the DateData. |
 
 ## toString
 
@@ -54,9 +55,9 @@ Convert the date data to string.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | date data in string form. |
 
 ## day
 

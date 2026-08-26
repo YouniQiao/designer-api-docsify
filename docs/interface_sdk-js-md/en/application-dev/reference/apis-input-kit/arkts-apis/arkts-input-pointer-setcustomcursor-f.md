@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## setCustomCursor
@@ -20,24 +19,67 @@ Sets a custom pointer style for a specified window. This API can set only the cu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| windowId | number | Yes |
-| pixelMap | image.PixelMap | Yes |
-| [focusX](arkts-input-pointer-customcursor-i.md) | number | No |
-| [focusY](arkts-input-pointer-customcursor-i.md) | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| windowId | number | Yes | Window ID. |
+| pixelMap | image.PixelMap | Yes | Custom cursor resource. |
+| focusX | number | No | Custom cursor focus X, in px. The value must be greater than or equal to 0. The default value is **0**. |
+| focusY | number | No | Custom cursor focus Y, in px. The value must be greater than or equal to 0. The default value is **0**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          // app_icon is an example resource. Configure the resource file based on the actual requirements.
+          this.getUIContext()?.getHostContext()?.resourceManager.getMediaContent(
+            $r("app.media.app_icon").id, (error: BusinessError, svgFileData: Uint8Array) => {
+            const svgBuffer: ArrayBuffer = svgFileData.buffer.slice(0);
+            let svgImageSource: image.ImageSource = image.createImageSource(svgBuffer);
+            let svgDecodingOptions: image.DecodingOptions = { desiredSize: { width: 50, height: 50 } };
+            // Create a PixelMap
+            svgImageSource.createPixelMap(svgDecodingOptions).then((pixelMap) => {
+              window.getLastWindow(this.getUIContext().getHostContext(), (error: BusinessError, win: window.Window) => {
+                let windowId = win.getWindowProperties().id;
+                try {
+                  pointer.setCustomCursor(windowId, pixelMap).then(() => {
+                    console.info(`Succeeded in setting custom cursor.`);
+                  });
+                } catch (error) {
+                  console.error(`Failed to set custom cursor, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                }
+              });
+            }).catch((error: BusinessError) => {
+                console.error(`Failed to create pixel map promise, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              });
+          });
+        })
+    }
+  }
+}
+```
 
 
 ## setCustomCursor
@@ -54,21 +96,67 @@ Sets a custom pointer style for a specified window. This API can set only the cu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| windowId | number | Yes |
-| cursor | [CustomCursor](arkts-input-pointer-customcursor-i.md) | Yes |
-| config | [CursorConfig](arkts-input-pointer-cursorconfig-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| windowId | number | Yes | Window ID. |
+| cursor | [CustomCursor](arkts-input-pointer-customcursor-i.md) | Yes | Custom cursor resource. |
+| config | [CursorConfig](arkts-input-pointer-cursorconfig-i.md) | Yes | Custom cursor configuration, which specifies whether to adjust the cursor size based on system settings. If **followSystem** in **CursorConfig** is set to **true**, the supported adjustment range is [size of the cursor image, 256 x 256]. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [26500001](../errorcode-pointer.md#26500001-invalid-window-id) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Abnormal windowId parameter passed in;  2. Abnormal pixelMap parameter passed in; 3. Abnormal focusX parameter passed in;  4. Abnormal focusY parameter passed in. |
+| [26500001](../errorcode-pointer.md#26500001-invalid-window-id) | Invalid windowId. Possible causes: The window id does not belong to the current process. |
+
+**Examples**
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          // app_icon is an example resource. Configure the resource file based on the actual requirements.
+          this.getUIContext()?.getHostContext()?.resourceManager.getMediaContent(
+            $r("app.media.app_icon").id, (error: BusinessError, svgFileData: Uint8Array) => {
+            const svgBuffer: ArrayBuffer = svgFileData.buffer.slice(0);
+            let svgImageSource: image.ImageSource = image.createImageSource(svgBuffer);
+            let svgDecodingOptions: image.DecodingOptions = { desiredSize: { width: 50, height: 50 } };
+            // Create a PixelMap
+            svgImageSource.createPixelMap(svgDecodingOptions).then((pixelMap) => {
+              // Get the most recent window within the application
+              window.getLastWindow(this.getUIContext().getHostContext(), (error: BusinessError, win: window.Window) => {
+                let windowId = win.getWindowProperties().id;
+                try {
+                  // Set a custom pointer
+                  pointer.setCustomCursor(windowId, { pixelMap: pixelMap, focusX: 25, focusY: 25 },
+                    { followSystem: false }).then(() => {
+                    console.info(`Succeeded in setting custom cursor.`);
+                  });
+                } catch (error) {
+                  console.error(`Failed to set custom cursor, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                }
+              });
+            }).catch((error: BusinessError) => {
+                console.error(`Failed to create pixel map promise, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              });
+          });
+        })
+    }
+  }
+}
+```

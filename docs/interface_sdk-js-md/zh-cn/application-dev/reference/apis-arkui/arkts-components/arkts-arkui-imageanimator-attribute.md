@@ -31,9 +31,9 @@ duration(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 播放时长。value为0时，不播放图片。value平均分配给单张图片的播放时长小于一帧时间，将导致播放异常。设置为负数时，取默认值1000毫秒。value的改变只会在下一次循环开始时生效。单位：毫秒默认值：1000 |
 
 ## fillMode
 
@@ -53,9 +53,9 @@ fillMode(value: FillMode)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [FillMode](../arkts-apis/arkts-arkui-fillmode-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [FillMode](../arkts-apis/arkts-arkui-fillmode-e.md) | 是 | 当前播放方向下，动画开始前和结束后的状态。默认值：FillMode.Forwards |
 
 ## fixedSize
 
@@ -75,9 +75,9 @@ fixedSize(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 设置图片大小是否固定为组件大小。 true表示图片大小与组件大小一致，此时设置图片的width 、height 、top 和left属性无效。false表示每一张图片的 width 、height 、top和left属性都要单独设置。图片宽高与组件宽高不一致时，图片不会被拉伸。默认值：true |
 
 ## images
 
@@ -97,9 +97,9 @@ images(value: Array<ImageFrameInfo>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | Array&lt;[ImageFrameInfo](arkts-arkui-imageframeinfo-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Array&lt;[ImageFrameInfo](arkts-arkui-imageframeinfo-i.md)&gt; | 是 | 设置图片帧信息集合。每一帧的帧信息(ImageFrameInfo)包含图片路径、图片大小、图片位置和图片播放时长信息，详见 [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md) 。默认值：[]    **说明：** 传入数组的内容过大时，内存占用会随之升高。此内存由开发者自行控制。因此，开发者在传入数据 前，请充分评估内存消耗情况，以避免内存不足等问题。 |
 
 ## iterations
 
@@ -117,9 +117,9 @@ iterations(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 默认播放一次；-1表示无限次播放，小于-1的负数取默认值1；浮点数向下取整。默认值：1 |
 
 ## monitorInvisibleArea
 
@@ -139,9 +139,9 @@ monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [monitorInvisibleArea](#monitorinvisiblearea) | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| monitorInvisibleArea | boolean | 是 | true时，组件基于系统的 [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) 可见性判定控制暂停和播放；当组件的运行状态为[AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md)的Running时，若判定不可见则自动暂停，若判定可见则自动恢复播放。false时，组件的暂停和播 放不受onVisibleAreaChange影响。默认值：false    **说明：** 当该属性由true动态修改为false时，组件将依据当前的 [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md)状态进行处理。例如，若当前状态为Running且因 [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) 的不可见回调暂停，则在属性由true改为false后，组件会从上次暂停的位置重新开始播放。由该属性导致的不可见暂停和可见播放操作不会改变用户设置的 [state](#state)值。 |
 
 ## onCancel
 
@@ -161,9 +161,9 @@ onCancel(event: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 状态回调，动画取消时触发。当state被设置为AnimationStatus.Initial时触发；触发后图片显示回到第一帧（正播）或最后一帧（逆播）。 |
 
 ## onFinish
 
@@ -183,9 +183,9 @@ onFinish(event: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 状态回调，动画播放完成时（iterations轮次全部播完且动画自然结束）或者停止播放时（state被切换为AnimationStatus.Stopped）触发。 |
 
 ## onPause
 
@@ -205,9 +205,9 @@ onPause(event: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 状态回调，动画暂停播放时触发。 |
 
 ## onRepeat
 
@@ -225,9 +225,9 @@ onRepeat(event: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 状态回调，动画重复播放时触发。 |
 
 ## onStart
 
@@ -247,9 +247,9 @@ onStart(event: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 | 状态回调，动画开始播放时触发。 |
 
 ## preDecode
 
@@ -259,7 +259,8 @@ preDecode(value: number)
 
 设置预解码的图片数量。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 7开始支持，从API version 9开始废弃。当前无可替代接口。
 
 **起始版本：** 7
@@ -270,9 +271,9 @@ preDecode(value: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 预解码的图片数量。例如，设置为2时，播放当前帧时会提前加载后面两张图片至缓存，以提升性能。默认值：0 |
 
 ## reverse
 
@@ -292,9 +293,9 @@ reverse(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 播放方向。false表示从第1张图片播放到最后1张图片，true表示从最后1张图片播放到第1张图片。动画结束后保留哪一帧还与 [fillMode](#fillmode)属性有关，详见fillMode说明。默认值：false |
 
 ## state
 
@@ -314,6 +315,6 @@ state(value: AnimationStatus)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) | 是 | 用于控制播放状态。默认值：AnimationStatus.Initial |

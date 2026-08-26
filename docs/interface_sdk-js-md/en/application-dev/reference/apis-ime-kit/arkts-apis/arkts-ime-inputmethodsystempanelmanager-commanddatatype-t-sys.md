@@ -14,8 +14,8 @@ Describes the private data type, which varies depending on its function.
 
 **System API:** This is a system API.
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| int |
-| string |
-| boolean |
+| Type | Description |
+| --- | --- |
+| int |  |
+| string |  |
+| boolean |  |

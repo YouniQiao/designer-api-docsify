@@ -12,9 +12,9 @@ type DownloadControlType = 'startDownload' | 'deleteDownload' | 'resumeDownload'
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| 类型 |
-| --- |
-| 'startDownload' |
-| 'deleteDownload' |
-| 'resumeDownload' |
-| 'pauseDownload' |
+| 类型 | 说明 |
+| --- | --- |
+| 'startDownload' |  |
+| 'deleteDownload' |  |
+| 'resumeDownload' |  |
+| 'pauseDownload' |  |

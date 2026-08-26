@@ -1,7 +1,7 @@
 # param(Application Event Logging)
 
 Provides parameter name constants.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Read Only | Description | | ------------------------------- | ------ | ------ | ------------------ | | USER_ID | string | Yes| Custom user ID. | | DISTRIBUTED_SERVICE_NAME | string | Yes| Distributed service name. | | DISTRIBUTED_SERVICE_INSTANCE_ID | string | Yes|
+| Name | Type | Read Only | Description | | ------------------------------- | ------ | ------ | ------------------ | | USER_ID | string | Yes| Custom user ID. | | DISTRIBUTED_SERVICE_NAME | string | Yes| Distributed service name. | | DISTRIBUTED_SERVICE_INSTANCE_ID | string | Yes| Distributed service instance ID.|
 
 **Since:** 9
 
@@ -10,15 +10,14 @@ Provides parameter name constants.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary
 
 ### Constants
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [USER_ID(Application Event Logging)](arkts-performanceanalysis-param-con.md#user_id) |
-| [DISTRIBUTED_SERVICE_NAME(Application Event Logging)](arkts-performanceanalysis-param-con.md#distributed_service_name) |
-| [DISTRIBUTED_SERVICE_INSTANCE_ID(Application Event Logging)](arkts-performanceanalysis-param-con.md#distributed_service_instance_id) |
+| Name | Description |
+| --- | --- |
+| [USER_ID(Application Event Logging)](arkts-performanceanalysis-param-con.md#user_id) | Custom user ID. |
+| [DISTRIBUTED_SERVICE_NAME(Application Event Logging)](arkts-performanceanalysis-param-con.md#distributed_service_name) | Distributed service name. |
+| [DISTRIBUTED_SERVICE_INSTANCE_ID(Application Event Logging)](arkts-performanceanalysis-param-con.md#distributed_service_instance_id) | Distributed service instance ID. |

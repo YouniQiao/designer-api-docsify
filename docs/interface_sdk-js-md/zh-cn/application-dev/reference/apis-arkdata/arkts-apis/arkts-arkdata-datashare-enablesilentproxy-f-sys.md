@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import dataShare from '@kit.ArkData';
+import dataSharePredicates from '@kit.ArkDataPredicates';
 ```
 
 ## enableSilentProxy
@@ -29,21 +30,40 @@ Datashare的开启状态。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 |
-| uri | string | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用的上下文环境。 |
+| uri | string | 否 | 要开启的数据提供方的数据路径。1、全局开关状态：入参不带uri、uri为undefined、uri为null，会清空掉之前设置的所有uri开关状态，开启数据提供方静默访问 。2、精准开关状态：uri的入参为固定的值，仅开启该uri对应的静默访问。在调用datashareHelper相关接口时，优先精准匹配uri的开关状态。如果匹配不到，继续匹配全局的开关状态。uri格式：datashare:///{bundleName}/{moduleName}/{storeName}/{tableName} |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    let uri = "datashare:///com.acts.datasharetest/entry/DB00/TBL00?Proxy=true";
+    let context = this.context;
+    dataShare.enableSilentProxy(context, uri).then(() => {
+      console.info("enableSilentProxy succeed");
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to enable silent proxy. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+}
+```

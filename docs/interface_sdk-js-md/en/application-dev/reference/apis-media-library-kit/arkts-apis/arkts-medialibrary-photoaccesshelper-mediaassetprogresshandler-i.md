@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import photoAccessHelper from '@kit.MediaLibraryKit';
 ```
 
 ## onProgress
@@ -26,6 +26,6 @@ Called when the progress of the requested video is returned.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| progress | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| progress | number | Yes | Progress in percentage. Value range: [0, 100] |

@@ -9,7 +9,7 @@ Represents the text rectangle size, which is used to describe the width and heig
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import text from '@kit.ArkGraphics2D';
 ```
 
 ## height

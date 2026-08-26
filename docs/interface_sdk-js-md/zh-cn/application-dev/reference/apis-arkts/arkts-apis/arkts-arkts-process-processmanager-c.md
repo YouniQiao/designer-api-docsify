@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## exit
@@ -28,9 +28,20 @@ exit(code: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| code | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| code | number | 是 | 进程的退出码。 |
+
+**示例**
+
+```TypeScript
+process.exit(0);
+```
+
+```TypeScript
+let processManager = new process.ProcessManager();
+processManager.exit(0);
+```
 
 ## getEnvironmentVar
 
@@ -48,15 +59,28 @@ getEnvironmentVar(name: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 环境变量名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回指定环境变量名对应的值。如果环境变量不存在，返回undefined。 |
+
+**示例**
+
+```TypeScript
+let pres = process.getEnvironmentVar("PATH");
+```
+
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// 获取PATH环境变量的值
+let pres = processManager.getEnvironmentVar("PATH");
+```
 
 ## getSystemConfig
 
@@ -74,15 +98,31 @@ getSystemConfig(name: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | number | 是 | 指定系统配置参数名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回系统配置信息。如果配置不存在，返回 -1。 |
+
+**示例**
+
+```TypeScript
+let _SC_ARG_MAX = 0;
+let pres = process.getSystemConfig(_SC_ARG_MAX);
+```
+
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// 定义系统配置参数
+let _SC_ARG_MAX = 0;
+// 获取系统配置信息
+let pres = processManager.getSystemConfig(_SC_ARG_MAX);
+```
 
 ## getThreadPriority
 
@@ -100,15 +140,31 @@ getThreadPriority(v: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| v | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| v | number | 是 | 指定的线程 tid。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回线程的优先级。优先级顺序取决于当前操作系统。 |
+
+**示例**
+
+```TypeScript
+let tid = process.tid;
+let pres = process.getThreadPriority(tid);
+```
+
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// 获取当前线程tid
+let tid = process.tid;
+// 根据tid获取线程优先级
+let pres = processManager.getThreadPriority(tid);
+```
 
 ## getUidForName
 
@@ -126,15 +182,28 @@ getUidForName(v: string): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| v | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| v | string | 是 | 用户名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 获取用户 uid，如果用户不存在则返回 -1。 |
+
+**示例**
+
+```TypeScript
+let pres = process.getUidForName("tool");
+```
+
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// 根据用户名获取uid
+let pres = processManager.getUidForName("tool");
+```
 
 ## isAppUid
 
@@ -152,15 +221,33 @@ isAppUid(v: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| v | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| v | number | 是 | 应用程序的 uid。可通过 process.uid 获取。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回判断结果。如果是应用程序的 uid 则返回 true； 否则返回 false。 |
+
+**示例**
+
+```TypeScript
+// uid通过process.uid获取
+let pres = process.uid;
+let result = process.isAppUid(pres);
+```
+
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// uid通过process.uid获取
+let pres = process.uid;
+// 判断uid是否属于当前应用程序
+let result = processManager.isAppUid(pres);
+console.info("result:", result); // result: true
+```
 
 ## kill
 
@@ -178,13 +265,29 @@ kill(signal: number, pid: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [signal](arkts-arkts-locks-asynclockoptions-c.md) | number | 是 |
-| pid | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| signal | number | 是 | 发送特定的信号给指定进程。取值范围：1 & lt;= signal & lt;= 64。 |
+| pid | number | 是 | 进程的id。可通过process.pid获取。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 信号是否发送成功。如果信号发送成功则返回true，否则返回false。 |
+
+**示例**
+
+```TypeScript
+let pid = process.pid;
+let result = process.kill(28, pid);
+```
+
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// 获取当前进程pid
+let pres = process.pid;
+// 发送信号28结束当前进程
+let result = processManager.kill(28, pres);
+```

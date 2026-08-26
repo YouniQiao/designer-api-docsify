@@ -31,9 +31,9 @@ constructor(options?: PanGestureHandlerOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | 否 | 滑动手势处理器配置参数。 |
 
 ## onActionCancel
 
@@ -53,15 +53,15 @@ onActionCancel(event: Callback<void>): PanGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback & lt;void & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback & lt;void & gt; | 是 | 滑动手势处理器取消回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | 返回当前滑动手势处理器对象。 |
 
 ## onActionCancel
 
@@ -81,15 +81,15 @@ onActionCancel(event: Callback<GestureEvent>): PanGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器取消回调。返回手势事件信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | 返回当前滑动手势处理器对象。 |
 
 ## onActionEnd
 
@@ -109,15 +109,15 @@ onActionEnd(event: Callback<GestureEvent>): PanGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器结束回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | 返回当前滑动手势处理器对象。 |
 
 ## onActionStart
 
@@ -137,15 +137,15 @@ onActionStart(event: Callback<GestureEvent>): PanGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器识别成功回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | 返回当前滑动手势处理器对象。 |
 
 ## onActionUpdate
 
@@ -165,12 +165,12 @@ onActionUpdate(event: Callback<GestureEvent>): PanGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器更新回调。fingerList为多根手指时，该回调监听每次只会更新一根手指的位置信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | 返回当前滑动手势处理器对象。 |

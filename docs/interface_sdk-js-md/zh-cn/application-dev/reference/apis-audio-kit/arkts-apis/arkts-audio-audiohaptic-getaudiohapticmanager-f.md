@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audioHaptic } from 'kits/@kit.AudioKit';
+import audioHaptic from '@kit.AudioKit';
 ```
 
 ## getAudioHapticManager
@@ -20,6 +20,12 @@ function getAudioHapticManager(): AudioHapticManager
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | 音振管理器。 |
+
+**示例**
+
+```TypeScript
+let audioHapticManagerInstance: audioHaptic.AudioHapticManager = audioHaptic.getAudioHapticManager();
+```

@@ -33,9 +33,21 @@ Stops the **watcher** instance. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | return Promise |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let watcher = fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
+  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
+});
+watcher.stop().then(() => {
+  console.info("close watcher succeed");
+});
+```
 
 ## stop
 
@@ -55,6 +67,18 @@ Stops the **watcher** instance. This API uses an asynchronous callback to return
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when **watcher** is stopped asynchronously. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let watcher = fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
+  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
+});
+watcher.stop(() => {
+  console.info("close watcher succeed");
+})
+```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
+import componentUtils from '@kit.ArkUI';
 ```
 
 ## getRectangleById
@@ -14,7 +14,8 @@ function getRectangleById(id: string): ComponentInfo
 
 根据组件ID获取组件实例对象，通过组件实例对象将获取的坐标位置和大小同步返回给开发者。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentutils)方法获取当前UI上下
 > 文关联的[ComponentUtils](arkts-arkui-arkui-uicontext-componentutils-c.md)对象。在目标组件布局完成后，通过该接口能够获取组件坐标和尺寸信息。建议在
@@ -35,18 +36,25 @@ function getRectangleById(id: string): ComponentInfo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | string | 是 | 指定组件id。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ComponentInfo](arkts-arkui-componentutils-componentinfo-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ComponentInfo](arkts-arkui-componentutils-componentinfo-i.md) | 组件大小、位置、平移缩放旋转及仿射矩阵属性信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | UI execution context not found. |
+
+**示例**
+
+```TypeScript
+import { componentUtils } from '@kit.ArkUI';
+let modePosition:componentUtils.ComponentInfo = componentUtils.getRectangleById('onClick');
+```

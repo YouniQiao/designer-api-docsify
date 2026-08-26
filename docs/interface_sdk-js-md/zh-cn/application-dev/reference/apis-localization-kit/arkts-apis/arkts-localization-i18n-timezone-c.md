@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getAppDefaultTimeZone
@@ -30,9 +30,28 @@ static getAppDefaultTimeZone(): TimeZone
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | 应用使用的默认时区对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let zoneID: string = 'Asia/Shanghai';
+  i18n.TimeZone.setAppDefaultTimeZoneById(zoneID);
+  console.info('setAppDefaultTimeZoneById success.');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call TimeZone.setAppDefaultTimeZoneById failed, error code: ${err.code}, message: ${err.message}.`);
+}
+let timeZone: i18n.TimeZone = i18n.TimeZone.getAppDefaultTimeZone();
+let id: string = timeZone.getID();
+console.info(`getAppDefaultTimeZone success, time zone id: ${id}`);
+```
 
 ## getAvailableIDs
 
@@ -50,9 +69,18 @@ static getAvailableIDs(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 系统支持的时区ID列表。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// ids = ['America/Adak', 'America/Anchorage', 'America/Bogota', 'America/Denver', 'America/Los_Angeles', 'America/Montevideo', 'America/Santiago', 'America/Sao_Paulo', 'Asia/Ashgabat', 'Asia/Hovd', 'Asia/Jerusalem', 'Asia/Magadan', 'Asia/Omsk', 'Asia/Shanghai', 'Asia/Tokyo', 'Asia/Yerevan', 'Atlantic/Cape_Verde', 'Australia/Lord_Howe', 'Europe/Dublin', 'Europe/London', 'Europe/Moscow', 'Pacific/Auckland', 'Pacific/Easter', 'Pacific/Pago-Pago']
+let ids: Array<string> = i18n.TimeZone.getAvailableIDs();
+```
 
 ## getAvailableZoneCityIDs
 
@@ -70,9 +98,18 @@ static getAvailableZoneCityIDs(): Array<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;string & gt; | 系统支持的时区城市ID列表。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// cityIDs = ['Auckland', 'Magadan', 'Lord Howe Island', 'Tokyo', 'Shanghai', 'Hovd', 'Omsk', 'Ashgabat', 'Yerevan', 'Moscow', 'Tel Aviv', 'Dublin', 'London', 'Praia', 'Montevideo', 'Brasília', 'Santiago', 'Bogotá', 'Easter Island', 'Salt Lake City', 'Los Angeles', 'Anchorage', 'Adak', 'Pago Pago']
+let cityIDs: Array<string> = i18n.TimeZone.getAvailableZoneCityIDs();
+```
 
 ## getCityDisplayName
 
@@ -90,16 +127,24 @@ static getCityDisplayName(cityID: string, locale: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| cityID | string | 是 |
-| locale | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| cityID | string | 是 | 时区城市ID。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 时区城市名称在指定语言下的翻译。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let displayName: string = i18n.TimeZone.getCityDisplayName('Shanghai', 'zh-CN'); // displayName = '上海 (中国)'
+```
 
 ## getDisplayName
 
@@ -117,16 +162,25 @@ getDisplayName(locale?: string, isDST?: boolean): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string | 否 |
-| isDST | boolean | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 否 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区 组成。默认值：系统当前区域ID。 |
+| isDST | boolean | 否 | true表示显示夏令时信息，false表示不显示夏令时信息。默认值：false。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 时区对象名称在指定语言下的翻译。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
+let timezoneName: string = timezone.getDisplayName('zh-CN', false); // timezoneName = '中国标准时间'
+```
 
 ## getID
 
@@ -144,9 +198,18 @@ getID(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 时区对象对应的时区ID。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
+let timezoneID: string = timezone.getID(); // timezoneID = 'Asia/Shanghai'
+```
 
 ## getOffset
 
@@ -164,15 +227,24 @@ getOffset(date?: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| date | number | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| date | number | 否 | 待计算时区偏移量的时刻，单位为毫秒（ms）。默认值：系统时间。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 时区的偏移量，单位为毫秒（ms）。当处于夏令时时，时区偏移量为时区原始偏移量加夏令时偏移量。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
+let offset: number = timezone.getOffset(1234567890); // offset = 28800000
+```
 
 ## getRawOffset
 
@@ -190,9 +262,18 @@ getRawOffset(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 时区的原始偏移量，单位为毫秒（ms）。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
+let offset: number = timezone.getRawOffset(); // offset = 28800000
+```
 
 ## getTimezoneFromCity
 
@@ -210,15 +291,23 @@ static getTimezoneFromCity(cityID: string): TimeZone
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| cityID | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| cityID | string | 是 | 时区城市ID，要求是系统支持的时区城市ID。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | 时区城市对应的时区对象。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.TimeZone.getTimezoneFromCity('Shanghai');
+```
 
 ## getTimezonesByLocation
 
@@ -236,23 +325,37 @@ static getTimezonesByLocation(longitude: number, latitude: number): Array<TimeZo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| longitude | number | 是 |
-| latitude | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| longitude | number | 是 | 经度，范围[-180, 179.9)，东经取正值，西经取负值。 |
+| latitude | number | 是 | 纬度，范围[-90, 89.9)，北纬取正值，南纬取负值。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[TimeZone](arkts-localization-i18n-timezone-c.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[TimeZone](arkts-localization-i18n-timezone-c.md)&gt; | 时区对象数组，数组中对象对应的时区为该地理位置推荐的时区。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let timezoneArray: Array<i18n.TimeZone> = i18n.TimeZone.getTimezonesByLocation(-118.1, 34.0);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call TimeZone.getTimezonesByLocation failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getZoneRules
 
@@ -270,9 +373,34 @@ public getZoneRules(): ZoneRules
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ZoneRules](arkts-localization-i18n-zonerules-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ZoneRules](arkts-localization-i18n-zonerules-c.md) | 时区跳变规则，包含跳变的时间点、跳变前后的偏移量信息。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let tzId: string = 'America/Tijuana';
+let timeZone: i18n.TimeZone = i18n.getTimeZone(tzId);
+let zoneRules: i18n.ZoneRules = timeZone.getZoneRules();
+let date = new Date(2025, 4, 13);
+let zoneOffsetTransition: i18n.ZoneOffsetTransition =
+    zoneRules.nextTransition(date.getTime()); // 获取2025年5月13日以后的下一个时区跳变对象
+zoneOffsetTransition.getMilliseconds(); // 跳变点的时间戳: 1762074000000
+zoneOffsetTransition.getOffsetAfter(); // 跳变后的偏移量: -28800000
+zoneOffsetTransition.getOffsetBefore(); // 跳变前的偏移量: -25200000
+// 将跳变点时间格式化
+let dateTimeFormat: Intl.DateTimeFormat = new Intl.DateTimeFormat('en-US', {
+  timeZone: tzId,
+  dateStyle: 'long',
+  timeStyle: 'long',
+  hour12: false
+});
+let dateFormat: string =
+  dateTimeFormat.format(new Date(zoneOffsetTransition.getMilliseconds())); // November 2, 2025, 1:00:00 PST
+```
 
 ## isDaylightSavingTime
 
@@ -292,15 +420,22 @@ public isDaylightSavingTime(date: Date): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| date | Date | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| date | Date | 是 | 时间日期。    **说明：** 月份从0开始计数，0表示一月。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否处于夏令时。true表示处于夏令时，false表示不处于夏令时。 |
+
+**示例**
+
+```TypeScript
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
+let isDST = timezone.isDaylightSavingTime(new Date(2026, 3, 15));
+```
 
 ## setAppDefaultTimeZoneById
 
@@ -310,7 +445,8 @@ static setAppDefaultTimeZoneById(zoneID: string): void
 
 设置当前应用的默认时区，在应用运行时生命周期内有效。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 进行日期时间格式化时，若未指定时区，会优先使用应用设置的默认时区。
 
 **起始版本：** 26.0.0
@@ -323,12 +459,28 @@ static setAppDefaultTimeZoneById(zoneID: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| zoneID | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| zoneID | string | 是 | 应用设置默认的时区ID，如："Asia/Shanghai"。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let zoneID: string = 'Asia/Shanghai';
+  i18n.TimeZone.setAppDefaultTimeZoneById(zoneID);
+  console.info('setAppDefaultTimeZoneById success.');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call TimeZone.setAppDefaultTimeZoneById failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```

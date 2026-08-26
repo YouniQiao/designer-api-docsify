@@ -11,7 +11,6 @@ Describes the scene feature detection result.
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## detected

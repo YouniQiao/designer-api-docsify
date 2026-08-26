@@ -24,15 +24,15 @@ Calls an AA.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | [CallAbilityParam](arkts-arkui-featureability-callabilityparam-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [CallAbilityParam](arkts-arkui-featureability-callabilityparam-i.md) | Yes | Indicates the request param. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
 
 ## continueAbility
 
@@ -50,9 +50,9 @@ Start FA migration.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
 
 ## finishWithResult
 
@@ -72,15 +72,15 @@ FA call the interface to destroy itself and set the result as parameters.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | [FinishWithResultParams](arkts-arkui-featureability-finishwithresultparams-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [FinishWithResultParams](arkts-arkui-featureability-finishwithresultparams-i.md) | Yes | Indicates the request param. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result whether to callback successfully. |
 
 ## getDeviceList
 
@@ -98,15 +98,15 @@ Get device information list.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| flag | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| flag | number | Yes | Default 0, get the information list of all devices in the network. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result whether the device information list is obtained successfully. |
 
 ## sendMsg
 
@@ -124,9 +124,9 @@ Sends messages to the destination device.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SendMessageOptions](arkts-arkui-featureability-sendmessageoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SendMessageOptions](arkts-arkui-featureability-sendmessageoptions-i.md) | Yes | Options. |
 
 ## startAbility
 
@@ -146,15 +146,15 @@ Start a FA without callback result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| request | [RequestParams](arkts-arkui-featureability-requestparams-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| request | [RequestParams](arkts-arkui-featureability-requestparams-i.md) | Yes | Indicates the request param. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result of whether to call Ability's interface successfully. |
 
 ## startAbilityForResult
 
@@ -174,15 +174,15 @@ Start a FA with callback result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| request | [RequestParams](arkts-arkui-featureability-requestparams-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| request | [RequestParams](arkts-arkui-featureability-requestparams-i.md) | Yes | Indicates the request param. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result of the data FA returned. |
 
 ## subscribeAbilityEvent
 
@@ -200,16 +200,16 @@ Subscribe to events of an AA.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | [SubscribeAbilityEventParam](arkts-arkui-featureability-subscribeabilityeventparam-i.md) | Yes |
-| func | Function | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [SubscribeAbilityEventParam](arkts-arkui-featureability-subscribeabilityeventparam-i.md) | Yes | Indicates the request param. |
+| func | Function | Yes | Indicates the event reporting callback. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
 
 ## subscribeMsg
 
@@ -227,9 +227,9 @@ Listens for messages sent from other devices.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SubscribeMessageOptions](arkts-arkui-featureability-subscribemessageoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SubscribeMessageOptions](arkts-arkui-featureability-subscribemessageoptions-i.md) | Yes | Options. |
 
 ## unsubscribeAbilityEvent
 
@@ -247,15 +247,15 @@ Unsubscribe from events of an AA.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| param | [SubscribeAbilityEventParam](arkts-arkui-featureability-subscribeabilityeventparam-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [SubscribeAbilityEventParam](arkts-arkui-featureability-subscribeabilityeventparam-i.md) | Yes | Indicates the request param. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
 
 ## unsubscribeMsg
 

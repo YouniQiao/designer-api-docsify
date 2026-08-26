@@ -9,7 +9,7 @@ The definition of QR code Information.@interface QrCodeInfo
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import avMusicTemplate from '@kit.AVSessionKit';
 ```
 
 ## codeData

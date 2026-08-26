@@ -5,7 +5,7 @@
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LauncherAbilityResourceInfo](arkts-ability-launcherabilityresourceinfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [LauncherAbilityResourceInfo](arkts-ability-launcherabilityresourceinfo-i-sys.md) | The module provides resource information of the entry ability of an application, such as the icon and label. The information can be obtained by calling [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md). |
 <!--DelEnd-->

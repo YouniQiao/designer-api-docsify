@@ -14,10 +14,10 @@ declare type DimensionNoPercentage = PX | VP | FP | LPX | Resource
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [PX](arkts-arkui-px-t.md) |
-| [VP](arkts-arkui-vp-t.md) |
-| [FP](arkts-arkui-fp-t.md) |
-| [LPX](arkts-arkui-lpx-t.md) |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PX](arkts-arkui-px-t.md) | 长度类型，用于描述以px为单位的长度。 |
+| [VP](arkts-arkui-vp-t.md) | 长度类型，用于描述以vp为单位的长度。 |
+| [FP](arkts-arkui-fp-t.md) | 长度类型，用于描述以fp为单位的长度。 |
+| [LPX](arkts-arkui-lpx-t.md) | 长度类型，用于描述以lpx为单位的长度。 |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 资源引用类型，用于设置组件属性的值。 |

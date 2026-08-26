@@ -70,3 +70,16 @@ useSharedStorage? : boolean
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+```TypeScript
+// 设置路由页面名字为myPage
+@Entry({ routeName: 'myPage' })
+@Component
+struct Index {
+  build() {
+    Text('Index')
+  }
+}
+```

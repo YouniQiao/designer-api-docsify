@@ -9,7 +9,7 @@ AbilityStage is a [module](../../../quick-start/application-package-overview.md#
 ## Modules to Import
 
 ```TypeScript
-import { AbilityStage } from 'kits/@kit.AbilityKit';
+import AbilityStage from '@kit.AbilityKit';
 ```
 
 ## onAboutToCreateAbility
@@ -42,9 +42,9 @@ Called when the ability stage is about to create the first ability. This API use
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 ## onAcceptWant
 
@@ -54,7 +54,8 @@ onAcceptWant(want: Want): string
 
 Called when a UIAbility with the launch mode set to [specified](../../../application-models/uiability-launch-type.md#specified) is launched. This API returns a string representing the unique ID of the UIAbility instance. This API returns the result synchronously and does not support asynchronous callbacks.If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Starting from API version 20, this callback is not triggered when
 > [AbilityStage.onAcceptWantAsync](#onacceptwantasync) is implemented.
 
@@ -68,15 +69,28 @@ Called when a UIAbility with the launch mode set to [specified](../../../applica
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the ability name and bundle name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | ID of the UIAbility. If a UIAbility with the same ID has been launched, that UIAbility is reused. Otherwise, a new instance is created and launched. |
+
+**Examples**
+
+```TypeScript
+import { AbilityStage, Want } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onAcceptWant(want: Want) {
+    console.info('MyAbilityStage.onAcceptWant called');
+    return 'com.example.test';
+  }
+}
+```
 
 ## onAcceptWantAsync
 
@@ -96,15 +110,30 @@ Called when a UIAbility with the launch mode set to [specified](../../../applica
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility, such as the UIAbility name and bundle name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return a string that uniquely identifies the UIAbility instance launched. If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created. |
+
+**Examples**
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+
+class MyAbilityStage extends AbilityStage {
+  async onAcceptWantAsync(): Promise<string> {
+    await new Promise<string>((res, rej) => {
+      setTimeout(res, 1000); // Execute the operation after 1 second.
+    });
+    return 'default';
+  }
+}
+```
 
 ## onConfigurationUpdate
 
@@ -114,7 +143,8 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 Called when the system global configuration (such as the system language and dark/light color mode) changes. All the configuration items are defined in the [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) class. This API returns the result synchronously and does not support asynchronous callbacks.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > There are certain restrictions when this callback is actually triggered. For example, if you set the application
 > language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the
 > system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details,
@@ -130,9 +160,21 @@ Called when the system global configuration (such as the system language and dar
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | Callback invoked when the global configuration is updated. The global configuration indicates the configuration of the environment where the application is running and includes the language and color mode. |
+
+**Examples**
+
+```TypeScript
+import { AbilityStage, Configuration } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onConfigurationUpdate(config: Configuration) {
+    console.info(`MyAbilityStage.onConfigurationUpdate, language: ${config.language}`);
+  }
+}
+```
 
 ## onCreate
 
@@ -150,6 +192,18 @@ Called when an AbilityStage instance is created. Such an instance is automatical
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Examples**
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onCreate() {
+    console.info('MyAbilityStage.onCreate is called');
+  }
+}
+```
+
 ## onDestroy
 
 ```TypeScript
@@ -165,6 +219,18 @@ Called when the last Ability instance of the corresponding module exits. This AP
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onDestroy() {
+    console.info('MyAbilityStage.onDestroy is called');
+  }
+}
+```
 
 ## onLaunchFromHyperSnap
 
@@ -188,7 +254,8 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 Listens for changes in the system memory level status. Called when the available memory of the entire device changes to a specified level. You can implement this callback to promptly release non-essential resources (such as cached data or temporary objects) upon receiving a memory shortage event, thereby preventing the application process from being forcibly terminated by the system.This API returns the result synchronously and does not support asynchronous callbacks.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Releasing UI components in the **onMemoryLevel** callback may block the main thread tasks of the current process.
 > Therefore, you are advised not to release UI components in this callback.
 
@@ -202,9 +269,21 @@ Listens for changes in the system memory level status. Called when the available
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| level | AbilityConstant.MemoryLevel | Yes | Memory level that indicates the memory usage status. When the specified memory level is reached, a callback will be invoked and the system will start adjustment.   **NOTE：**The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory: - A callback with value 0 is triggered when available memory drops between 1700 MB and 1800 MB. - A callback with value 1 is triggered when available memory drops between 1600 MB and 1700 MB. - A callback with value 2 is triggered when available memory falls below 1600 MB. |
+
+**Examples**
+
+```TypeScript
+import { AbilityStage, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
+    console.info(`MyAbilityStage.onMemoryLevel, level: ${JSON.stringify(level)}`);
+  }
+}
+```
 
 ## onNewProcessRequest
 
@@ -214,9 +293,12 @@ onNewProcessRequest(want: Want): string
 
 Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API returns the result synchronously and does not support asynchronous callbacks.If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd- -> runs in that process. Otherwise, a new process is created.If you implement both **onNewProcessRequest** and [onAcceptWant](#onacceptwant), the system first invokes the **onNewProcessRequest** callback, and then the **onAcceptWant** callback.<!--Del-->The **isolationProcess** field can be set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type.<!--DelEnd-->
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - In API version 19 and earlier, only a UIAbility can be launched in the specified process. <!--Del-->Starting
-> from API version 20, a UIExtensionAbility can also be launched in the specified process.<!--DelEnd-->>
+> from API version 20, a UIExtensionAbility can also be launched in the specified process.&lt;!--DelEnd--
+&gt; 
+> 
 > - Starting from API version 20, this callback is not executed when
 > [AbilityStage.onNewProcessRequestAsync](#onnewprocessrequestasync) is implemented.
 
@@ -228,15 +310,28 @@ Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd--> name and bundle name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Custom process identifier. If the process with this identifier has been created, the ability runs in the process. Otherwise, a new process is created and the ability runs in it. |
+
+**Examples**
+
+```TypeScript
+import { AbilityStage, Want } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onNewProcessRequest(want: Want) {
+    console.info('MyAbilityStage.onNewProcessRequest called');
+    return 'com.example.test';
+  }
+}
+```
 
 ## onNewProcessRequestAsync
 
@@ -256,15 +351,30 @@ Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is c
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd--> name and bundle name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return a string representing the process ID. If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd--> runs in that process. Otherwise, a new process is created. |
+
+**Examples**
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+
+class MyAbilityStage extends AbilityStage {
+  async onNewProcessRequestAsync(): Promise<string> {
+    await new Promise<string>((res, rej) => {
+      setTimeout(res, 1000); // Execute the operation after 1 second.
+    });
+    return '';
+  }
+}
+```
 
 ## onPrepareTermination
 
@@ -274,10 +384,12 @@ onPrepareTermination(): AbilityConstant.PrepareTermination
 
 Called when the application is closed by the user, allowing the user to choose between immediate termination or cancellation. This API returns the result synchronously and does not support asynchronous callbacks.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The API is called only when the application exits under normal circumstances (for example, when the application
 > is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be
-> called if the application is terminated forcibly.&gt;
+> called if the application is terminated forcibly.
+> 
 > - This API is not executed when
 > [AbilityStage.onPrepareTerminationAsync](#onprepareterminationasync) is implemented.
 
@@ -293,9 +405,22 @@ Called when the application is closed by the user, allowing the user to choose b
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| AbilityConstant.PrepareTermination |
+| Type | Description |
+| --- | --- |
+| AbilityConstant.PrepareTermination | The user's choice. |
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, AbilityStage } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onPrepareTermination(): AbilityConstant.PrepareTermination {
+    console.info('MyAbilityStage.onPrepareTermination is called');
+    return AbilityConstant.PrepareTermination.CANCEL;
+  }
+}
+```
 
 ## onPrepareTerminationAsync
 
@@ -305,10 +430,12 @@ onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination>
 
 Called when the application is closed by the user, allowing the user to choose between immediate termination or cancellation. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The API is called only when the application exits under normal circumstances (for example, when the application
 > is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be
-> called if the application is terminated forcibly.&gt;
+> called if the application is terminated forcibly.
+> 
 > - If an asynchronous callback crashes, it will be handled as a timeout. If the application does not respond
 > within 10 seconds, it will be terminated forcibly.
 
@@ -324,9 +451,24 @@ Called when the application is closed by the user, allowing the user to choose b
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;AbilityConstant.PrepareTermination & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;AbilityConstant.PrepareTermination & gt; | Promise used to return the user's choice. |
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, AbilityStage } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  async onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination> {
+    await new Promise<AbilityConstant.PrepareTermination>((res, rej) => {
+      setTimeout(res, 3000); // Execute the operation after 3 seconds.
+    });
+    return AbilityConstant.PrepareTermination.CANCEL;
+  }
+}
+```
 
 ## context
 

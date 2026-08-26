@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getProxyMode
@@ -24,13 +23,26 @@ Obtains the current proxy mode. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[ProxyMode](arkts-network-connection-proxymode-e-sys.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ProxyMode](arkts-network-connection-proxymode-e-sys.md)&gt; | Promise used to return the current proxy mode. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getProxyMode().then(mode => {
+    console.info("Current proxy mode:", mode);
+}).catch((error: BusinessError) => {
+    console.error("Error getting proxy mode:", error);
+});
+```

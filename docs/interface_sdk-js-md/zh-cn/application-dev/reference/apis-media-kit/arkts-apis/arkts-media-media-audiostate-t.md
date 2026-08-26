@@ -18,10 +18,10 @@ type AudioState = 'idle' | 'playing' | 'paused' | 'stopped' | 'error'
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
-| 类型 |
-| --- |
-| 'idle' |
-| 'playing' |
-| 'paused' |
-| 'stopped' |
-| 'error' |
+| 类型 | 说明 |
+| --- | --- |
+| 'idle' | 音频播放空闲，dataload/reset成功后处于此状态。 |
+| 'playing' | 音频正在播放，play成功后处于此状态。 |
+| 'paused' | 音频暂停播放，pause成功后处于此状态。 |
+| 'stopped' | 音频播放停止，stop/播放结束后处于此状态。 |
+| 'error' | 错误状态。 |

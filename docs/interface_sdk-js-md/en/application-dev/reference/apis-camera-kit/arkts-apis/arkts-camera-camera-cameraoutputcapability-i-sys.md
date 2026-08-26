@@ -9,7 +9,6 @@ Describes the camera output capability.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## depthProfiles

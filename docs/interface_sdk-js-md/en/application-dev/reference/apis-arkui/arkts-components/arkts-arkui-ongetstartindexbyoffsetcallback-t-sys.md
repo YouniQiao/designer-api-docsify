@@ -16,12 +16,12 @@ Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| totalOffset | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| totalOffset | number | Yes | Total scrolling offset, that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component.  Unit:vp. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) |
+| Type | Description |
+| --- | --- |
+| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) | - |

@@ -26,15 +26,35 @@ Creates an application context with a specific data encryption level. You can ca
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [areaMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-statemanagement-connectoptions-c.md) | contextConstant.AreaMode | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| areaMode | contextConstant.AreaMode | Yes | Data encryption level. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Context](arkts-ability-context-c.md) |
+| Type | Description |
+| --- | --- |
+| [Context](arkts-ability-context-c.md) | Context created based on the data encryption level. |
+
+**Examples**
+
+```TypeScript
+import { common, UIAbility, contextConstant } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    let areaMode: contextConstant.AreaMode = contextConstant.AreaMode.EL2;
+    let areaModeContext: common.Context;
+    try {
+      areaModeContext = this.context.createAreaModeContext(areaMode);
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', 'createAreaModeContext error is:%{public}s', JSON.stringify(error));
+    }
+  }
+}
+```
 
 ## createDisplayContext
 
@@ -54,21 +74,40 @@ Creates an application context based on the specified display ID with screen inf
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| displayId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| displayId | number | Yes | Display ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Context](arkts-ability-context-c.md) |
+| Type | Description |
+| --- | --- |
+| [Context](arkts-ability-context-c.md) | Context with the specified screen information. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    let displayContext: common.Context;
+    try {
+      displayContext = this.context.createDisplayContext(0);
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', 'createDisplayContext error is:%{public}s', JSON.stringify(error));
+    }
+  }
+}
+```
 
 ## createModuleContext
 
@@ -78,12 +117,15 @@ createModuleContext(moduleName: string): Context
 
 Creates the context based on the module name.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Only the context of other modules in the current application and the context of the intra-application HSP can
-> be obtained. The context of other applications cannot be obtained.&gt;
+> be obtained. The context of other applications cannot be obtained.
+> 
 > - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use
 > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md)
-> instead. Otherwise, resource acquisition may fail.&gt;
+> instead. Otherwise, resource acquisition may fail.
+> 
 > - Creating a module context involves resource querying and initialization, which can be time-consuming. In
 > scenarios where application fluidity is critical, avoid frequently or repeatedly calling the
 > **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
@@ -102,21 +144,40 @@ Creates the context based on the module name.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Context](arkts-ability-context-c.md) |
+| Type | Description |
+| --- | --- |
+| [Context](arkts-ability-context-c.md) | Context created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let moduleContext: common.Context;
+    try {
+      moduleContext = this.context.createModuleContext('entry');
+    } catch (error) {
+      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## getApplicationContext
 
@@ -136,15 +197,34 @@ Obtains the application context.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c.md) |
+| Type | Description |
+| --- | --- |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) | Application context. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let applicationContext: common.Context;
+    try {
+      applicationContext = this.context.getApplicationContext();
+    } catch (error) {
+      console.error(`getApplicationContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## getGroupDir
 
@@ -164,17 +244,39 @@ Obtains the shared directory based on a group ID. This API uses an asynchronous 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataGroupID | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataGroupID | string | Yes | Group ID, which is assigned by the system when an application of the atomic service type is created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent). Otherwise, an error object is returned.Note: Only the EL2 encryption level is supported. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+
+**Examples**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let getGroupDirContext: common.Context = this.context;
+
+    getGroupDirContext.getGroupDir("1", (err: BusinessError, data) => {
+      if (err) {
+        console.error(`getGroupDir failed, err: ${JSON.stringify(err)}`);
+      } else {
+        console.info(`getGroupDir result is: ${JSON.stringify(data)}`);
+      }
+    });
+  }
+}
+```
 
 ## getGroupDir
 
@@ -194,22 +296,44 @@ Obtains the shared directory based on a group ID. This API uses a promise to ret
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| dataGroupID | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataGroupID | string | Yes | Group ID, which is assigned by the system when an application of the atomic service type is created. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return the result. If no shared directory exists, null is returned. Only the encryption level EL2 is supported. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+
+**Examples**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let groupId = "1";
+    let getGroupDirContext: common.Context = this.context;
+    try {
+      getGroupDirContext.getGroupDir(groupId).then(data => {
+        console.info("getGroupDir result:" + data);
+      })
+    } catch (error) {
+      console.error(`getGroupDirContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## isContextOf
 
@@ -229,15 +353,15 @@ Checks if the current instance is associated with the specified context type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| contextType | contextConstant.ContextType | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| contextType | contextConstant.ContextType | Yes | Indicates the context type. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
 
 ## applicationInfo
 
@@ -463,7 +587,8 @@ resourceDir: string
 
 Resource directory.
 
-> **NOTE: **&gt;
+> **NOTE: **
+> 
 > You are required to manually create the resfile directory in **&lt;module-name&gt;\resource**.
 > The **resfile** directory can be accessed only in read-only mode.
 

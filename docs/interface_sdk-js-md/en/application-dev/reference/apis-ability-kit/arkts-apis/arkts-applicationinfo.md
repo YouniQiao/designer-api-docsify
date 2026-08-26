@@ -10,17 +10,17 @@ The module defines the application information. An application can obtain its ow
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ApplicationInfo](arkts-ability-applicationinfo-i.md) |
-| [ModuleMetadata](arkts-ability-applicationinfo-modulemetadata-i.md) |
-| [MultiAppMode](arkts-ability-applicationinfo-multiappmode-i.md) |
+| Name | Description |
+| --- | --- |
+| [ApplicationInfo](arkts-ability-applicationinfo-i.md) | The module defines the application information. |
+| [ModuleMetadata](arkts-ability-applicationinfo-modulemetadata-i.md) | Describes the metadata of a module. |
+| [MultiAppMode](arkts-ability-applicationinfo-multiappmode-i.md) | Defines the [multi-app mode](../../../quick-start/multiInstance.md). |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ApplicationInfo](arkts-ability-applicationinfo-i-sys.md) |
-| [PreinstalledApplicationInfo](arkts-ability-applicationinfo-preinstalledapplicationinfo-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ApplicationInfo](arkts-ability-applicationinfo-i-sys.md) | The module defines the application information. |
+| [PreinstalledApplicationInfo](arkts-ability-applicationinfo-preinstalledapplicationinfo-i-sys.md) | Indicates the information of preinstalled application. |
 <!--DelEnd-->

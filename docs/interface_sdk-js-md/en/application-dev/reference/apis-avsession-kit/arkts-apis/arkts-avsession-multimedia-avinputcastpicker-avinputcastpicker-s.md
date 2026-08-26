@@ -9,7 +9,7 @@ Picker used to show available input devices. @struct { AVInputCastPicker }
 ## Modules to Import
 
 ```TypeScript
-import { AVInputCastPicker } from 'kits/@kit.AVSessionKit';
+import { AVInputCastPicker } from '@kit.AVSessionKit';
 ```
 
 ## onStateChange

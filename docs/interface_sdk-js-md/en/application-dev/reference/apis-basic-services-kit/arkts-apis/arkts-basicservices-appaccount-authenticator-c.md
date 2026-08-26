@@ -9,7 +9,7 @@ Defines an authenticator.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import appAccount from '@kit.BasicServicesKit';
 ```
 
 ## addAccountImplicitly
@@ -25,7 +25,8 @@ addAccountImplicitly(
 
 Adds an application account implicitly based on the specified authentication type and options. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [createAccountImplicitly](#createaccountimplicitly)
 > instead.
@@ -40,12 +41,53 @@ Adds an application account implicitly based on the specified authentication typ
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| authType | string | Yes |
-| callerBundleName | string | Yes |
-| options | { [key: string]: any } | Yes |
-| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| authType | string | Yes | Authentication type. The value is user-defined and contains a maximum of 1024 characters. |
+| callerBundleName | string | Yes | Bundle name of the authentication requester. |
+| options | { [key: string]: any } | Yes | Options for the authentication. |
+| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, result: Record<string, Object>): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    appAccountManager.addAccountImplicitly('com.example.accountjsdemo', 'getSocialData', {}, {
+      onResult: this.onResultCallback,
+      onRequestRedirected: this.onRequestRedirectedCallback
+    });
+  }
+
+  build() {}
+}
+```
 
 ## auth
 
@@ -61,12 +103,105 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| authType | string | Yes |
-| options | Record & lt;string, Object & gt; | Yes |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the application account. The value contains a maximum of 512 characters. |
+| authType | string | Yes | Authentication type. The value is user-defined and contains a maximum of 1024 characters. |
+| options | Record & lt;string, Object & gt; | Yes | Options for the authentication. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, authResult?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('authResult: ' + JSON.stringify(authResult));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    try {
+      appAccountManager.auth('LiSi', 'com.example.accountjsdemo', 'getSocialData', {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e) {
+      const err = e as BusinessError;
+      console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+
+  build() {}
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, authResult?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('authResult: ' + JSON.stringify(authResult));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    let options: Record<string, Object> = {
+      'password': 'xxxx',
+    };
+    try {
+      appAccountManager.auth('LiSi', 'com.example.accountjsdemo', 'getSocialData', options, {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e) {
+      const err = e as BusinessError;
+      console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+
+  build() {}
+}
+```
 
 ## authenticate
 
@@ -82,7 +217,8 @@ authenticate(
 
 Authenticates an application account to obtain the OAuth token. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [auth](#auth)
 > instead.
@@ -97,13 +233,54 @@ Authenticates an application account to obtain the OAuth token. This API uses an
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| authType | string | Yes |
-| callerBundleName | string | Yes |
-| options | { [key: string]: any } | Yes |
-| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the application account. The value contains a maximum of 512 characters. |
+| authType | string | Yes | Authentication type. The value is user-defined and contains a maximum of 1024 characters. |
+| callerBundleName | string | Yes | Bundle name of the authentication requester. |
+| options | { [key: string]: any } | Yes | Options for the authentication. |
+| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, result: Record<string, Object>): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    appAccountManager.authenticate('LiSi', 'com.example.accountjsdemo', 'getSocialData', {}, {
+      onResult: this.onResultCallback,
+      onRequestRedirected: this.onRequestRedirectedCallback
+    });
+  }
+
+  build() {}
+}
+```
 
 ## checkAccountLabels
 
@@ -119,11 +296,15 @@ Checks the account labels. This API uses an asynchronous callback to return the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| labels | Array & lt;string & gt; | Yes |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the application account. The value contains a maximum of 512 characters. |
+| labels | Array & lt;string & gt; | Yes | Labels to check. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+
+**Examples**
+
+This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
 
 ## checkAccountRemovable
 
@@ -139,10 +320,14 @@ Checks whether an application account can be deleted. This API uses an asynchron
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the application account. The value contains a maximum of 512 characters. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+
+**Examples**
+
+This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
 
 ## createAccountImplicitly
 
@@ -158,10 +343,102 @@ Creates an application account implicitly based on the specified account owner. 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Yes |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Yes | Options for implicitly creating the account. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, result?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    try {
+      appAccountManager.createAccountImplicitly('com.example.accountjsdemo', {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e) {
+      const err = e as BusinessError;
+      console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+  build() {}
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, result?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    let options: appAccount.CreateAccountImplicitlyOptions = {
+      authType: 'getSocialData',
+      requiredLabels: ['student']
+    };
+    try {
+      appAccountManager.createAccountImplicitly('com.example.accountjsdemo', options, {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e) {
+      const err = e as BusinessError;
+      console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+  build() {}
+}
+```
 
 ## getRemoteObject
 
@@ -177,9 +454,56 @@ Obtains the remote object of an authenticator. This API cannot be overloaded.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| rpc.RemoteObject |
+| Type | Description |
+| --- | --- |
+| rpc.RemoteObject | Remote object of the authenticator, which is used for inter-process communication. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { Want } from '@kit.AbilityKit';
+
+class MyAuthenticator extends appAccount.Authenticator {
+  verifyCredential(name: string,
+    options: appAccount.VerifyCredentialOptions, callback: appAccount.AuthCallback) {
+      let want: Want = {
+        bundleName: 'com.example.accountjsdemo',
+        abilityName: 'com.example.accountjsdemo.VerifyAbility',
+        parameters: {
+          name: name
+        }
+      };
+      callback.onRequestRedirected(want);
+  }
+
+  setProperties(options: appAccount.SetPropertiesOptions, callback: appAccount.AuthCallback) {
+    let want: Want = {
+      bundleName: 'com.example.accountjsdemo',
+      abilityName: 'com.example.accountjsdemo.SetPropertiesAbility',
+      parameters: {
+        options: options
+      }
+    };
+    callback.onRequestRedirected(want);
+  }
+
+  checkAccountLabels(name: string, labels: string[], callback: appAccount.AuthCallback) {
+    callback.onResult(0);
+  }
+
+  checkAccountRemovable(name: string, callback: appAccount.AuthCallback) {
+    callback.onResult(0);
+  }
+}
+
+export default {
+  onConnect(want: Want): rpc.RemoteObject { // serviceAbility lifecycle function, which needs to be placed in serviceAbility.
+    let authenticator = new MyAuthenticator();
+    return authenticator.getRemoteObject();
+  }
+}
+```
 
 ## setProperties
 
@@ -195,10 +519,14 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | Yes |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | Yes | Authenticator properties to set. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+
+**Examples**
+
+This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
 
 ## verifyCredential
 
@@ -214,8 +542,12 @@ Verifies the credential of an application account. This API uses an asynchronous
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | Yes |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the application account. The value contains a maximum of 512 characters. |
+| options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | Yes | Options for credential verification. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+
+**Examples**
+
+This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.

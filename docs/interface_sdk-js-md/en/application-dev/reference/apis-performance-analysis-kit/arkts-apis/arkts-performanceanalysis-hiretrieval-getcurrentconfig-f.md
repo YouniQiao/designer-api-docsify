@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getCurrentConfig
@@ -22,6 +21,6 @@ Query the current HiRetrieval config.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [HiRetrievalConfig](arkts-performanceanalysis-hiretrieval-hiretrievalconfig-i.md) |
+| Type | Description |
+| --- | --- |
+| [HiRetrievalConfig](arkts-performanceanalysis-hiretrieval-hiretrievalconfig-i.md) | Returns the current HiRetrieval config, an empty HiRetrievalConfig will be returned if the result of invoking isParticipant function is false. |

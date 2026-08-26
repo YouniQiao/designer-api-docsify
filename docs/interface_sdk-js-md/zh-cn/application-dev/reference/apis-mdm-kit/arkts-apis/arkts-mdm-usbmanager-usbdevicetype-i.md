@@ -9,7 +9,7 @@ USB设备类型信息。可通过[getDevices](../../apis-basic-services-kit/arkt
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.MDMKit';
+import usbManager from '@kit.MDMKit';
 ```
 
 ## baseClass

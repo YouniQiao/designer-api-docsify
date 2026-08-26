@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceMenuBar } from 'kits/@kit.ArkUI';
+import { AtomicServiceMenuBar } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -17,7 +17,7 @@ import { AtomicServiceMenuBar } from 'kits/@kit.ArkUI';
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AtomicServiceMenuBar(System API)](arkts-arkui-atomicservice-atomicservicemenubar-atomicservicemenubar-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AtomicServiceMenuBar(System API)](arkts-arkui-atomicservice-atomicservicemenubar-atomicservicemenubar-c-sys.md) | Creates an **AtomicServiceMenuBar** object based on the context of the current atomic service. The object is used to control the display of the menu function capsule in the upper right corner. |
 <!--DelEnd-->

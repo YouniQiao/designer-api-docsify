@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## isCachedGnssServiceSupported
@@ -24,12 +23,23 @@ function isCachedGnssServiceSupported(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true：支持GNSS batching功能。false：不支持GNSS batching功能。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
+
+**示例**
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+try {
+    let cachedGnssServiceSupported = geoLocationManager.isCachedGnssServiceSupported();
+} catch (err) {
+    console.error("errCode:" + err.code + ", message:"  + err.message);
+}
+```

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getNativeHeapSize
@@ -20,6 +19,15 @@ Obtains the total number of bytes occupied by the total space (**uordblks** + **
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| bigint |
+| Type | Description |
+| --- | --- |
+| bigint | Size of the memory occupied by the total space held by the process, in bytes. |
+
+**Examples**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let nativeHeapSize: bigint = hidebug.getNativeHeapSize();
+console.info(`nativeHeapSize = ${nativeHeapSize}`);
+```

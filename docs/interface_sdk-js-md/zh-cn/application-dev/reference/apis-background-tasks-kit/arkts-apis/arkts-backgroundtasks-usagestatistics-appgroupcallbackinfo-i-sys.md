@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+import usageStatistics from '@kit.BackgroundTasksKit';
 ```
 
 ## appNewGroup

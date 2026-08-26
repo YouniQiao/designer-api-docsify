@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AdsServiceExtensionAbility, RespCallback } from 'kits/@kit.AdsKit';
+import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit';
 ```
 
 ## onLoadAd
@@ -30,11 +30,26 @@ onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [adParam](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdRequestParams | 是 |
-| [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdOptions | 是 |
-| respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| adParam | advertising.AdRequestParams | 是 | 广告请求参数。 |
+| adOptions | advertising.AdOptions | 是 | 广告配置参数。 |
+| respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | 是 | 广告请求回调。 |
+
+**示例**
+
+```TypeScript
+import { AdsServiceExtensionAbility, advertising, RespCallback } from '@kit.AdsKit';
+
+export default class AdsExtensionAbility extends AdsServiceExtensionAbility {
+  onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions, respCallback: RespCallback) {
+    const respData: Map<string, Array<advertising.Advertisement>> = new Map();
+    // 设置广告返回数据
+    // ...
+    respCallback(respData);
+  }
+}
+```
 
 ## onLoadAdWithMultiSlots
 
@@ -53,8 +68,24 @@ onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: adver
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| adParams | advertising.AdRequestParams[] | 是 |
-| [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdOptions | 是 |
-| respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| adParams | advertising.AdRequestParams[] | 是 | 广告请求参数。 |
+| adOptions | advertising.AdOptions | 是 | 广告配置参数。 |
+| respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | 是 | 广告请求回调。 |
+
+**示例**
+
+```TypeScript
+import { AdsServiceExtensionAbility, advertising, RespCallback } from '@kit.AdsKit';
+
+export default class AdsExtensionAbility extends AdsServiceExtensionAbility {
+  onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: advertising.AdOptions,
+    respCallback: RespCallback) {
+    const respData: Map<string, Array<advertising.Advertisement>> = new Map();
+    // 设置广告返回数据
+    // ...
+    respCallback(respData);
+  }
+}
+```

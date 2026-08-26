@@ -18,9 +18,9 @@ PageTransitionEnter(value: PageTransitionOptions)
 
 **参数:**
 
-| 参数名 | [类型](#类型) | 必填 |
-| --- | --- | --- |
-| value | [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | 是 | 配置入场动效的参数。 |
 
 ## PageTransitionEnter
 
@@ -38,23 +38,35 @@ PageTransitionEnter(event: PageTransitionCallback)
 
 **参数:**
 
-| 参数名 | [类型](#类型) | 必填 |
-| --- | --- | --- |
-| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | 是 | 入场动画的逐帧回调直到入场动画结束，progress从0变化到1。 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 类型
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
 
 ### 枚举
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
+
+## 示例
+
+```TypeScript
+pageTransition() {
+    PageTransitionEnter({ duration: 1200, curve: Curve.Linear })
+      // 转场动画时入场动画 type 为路由类型 ，progress为从0到1逐渐变大
+      .onEnter((type: RouteType, progress: number) => {
+        // 业务逻辑代码
+      })
+  }
+```

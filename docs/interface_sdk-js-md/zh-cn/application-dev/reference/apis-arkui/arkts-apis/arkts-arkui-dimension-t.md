@@ -16,11 +16,11 @@ declare type Dimension = PX | VP | FP | LPX | Percentage | Resource
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 |
-| --- |
-| [PX](arkts-arkui-px-t.md) |
-| [VP](arkts-arkui-vp-t.md) |
-| [FP](arkts-arkui-fp-t.md) |
-| [LPX](arkts-arkui-lpx-t.md) |
-| [Percentage](arkts-arkui-percentage-t.md) |
-| [Resource](arkts-arkui-resource-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PX](arkts-arkui-px-t.md) |  |
+| [VP](arkts-arkui-vp-t.md) |  |
+| [FP](arkts-arkui-fp-t.md) |  |
+| [LPX](arkts-arkui-lpx-t.md) |  |
+| [Percentage](arkts-arkui-percentage-t.md) |  |
+| [Resource](arkts-arkui-resource-t.md) |  |

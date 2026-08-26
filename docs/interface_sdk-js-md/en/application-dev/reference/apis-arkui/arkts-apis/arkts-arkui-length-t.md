@@ -14,8 +14,8 @@ Defines the length property with string, number and resource unit.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
-| number |
-| [Resource](arkts-arkui-resource-t.md) |
+| Type | Description |
+| --- | --- |
+| string |  |
+| number |  |
+| [Resource](arkts-arkui-resource-t.md) |  |

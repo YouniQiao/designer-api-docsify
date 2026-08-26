@@ -31,6 +31,6 @@ Obtains the minimum distance required for the pinch gesture to be recognized.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Minimum distance required for the pinch gesture to be recognized, in vp. |

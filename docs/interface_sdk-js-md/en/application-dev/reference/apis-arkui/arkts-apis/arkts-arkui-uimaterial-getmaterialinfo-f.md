@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import uiMaterial from '@kit.ArkUI';
 ```
 
 ## getMaterialInfo
@@ -24,6 +24,6 @@ Obtains the material configuration information of this application. The returned
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md) | Material configuration information of this application, including the material enabling state and material type. |

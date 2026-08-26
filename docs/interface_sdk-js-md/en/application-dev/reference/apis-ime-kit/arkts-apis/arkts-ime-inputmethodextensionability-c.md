@@ -14,7 +14,7 @@ The **InputMethodExtensionAbility** module provides APIs for developing input me
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodExtensionAbility } from 'kits/@kit.IMEKit';
+import InputMethodExtensionAbility from '@kit.IMEKit';
 ```
 
 ## onCreate
@@ -33,9 +33,22 @@ Called when the **InputMethodExtensionAbility** is started to implement initiali
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information related to the **InputMethodExtensionAbility**, including the ability name and bundle name. |
+
+**Examples**
+
+```TypeScript
+import { InputMethodExtensionAbility } from '@kit.IMEKit';
+import { Want } from '@kit.AbilityKit';
+
+class InputMethodExt extends InputMethodExtensionAbility {
+  onCreate(want: Want): void {
+    console.info('onCreate, want:' + want.abilityName);
+  }
+}
+```
 
 ## onDestroy
 
@@ -50,6 +63,18 @@ Called when this **InputMethodExtensionAbility** is destroyed to clear resources
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Examples**
+
+```TypeScript
+import { InputMethodExtensionAbility } from '@kit.IMEKit';
+
+class InputMethodExt extends InputMethodExtensionAbility {
+  onDestroy(): void {
+    console.info('onDestroy');
+  }
+}
+```
 
 ## context
 

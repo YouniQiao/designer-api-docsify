@@ -14,13 +14,13 @@ The login event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| controlType | [LoginType](arkts-avsession-avmusictemplate-logintype-t.md) | Yes |
-| id | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| controlType | [LoginType](arkts-avsession-avmusictemplate-logintype-t.md) | Yes | control type |
+| id | string | No | id |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md)[]&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md)[]&gt; | (QrCodeInfo[]) returned through promise |

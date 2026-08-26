@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
+import deviceStatus from '@kit.MultimodalAwarenessKit';
 ```
 
 ## x

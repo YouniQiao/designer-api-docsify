@@ -23,12 +23,23 @@ Defining wrapBuilder function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| builder | (...args: Args) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| builder | (...args: Args) = & gt; void | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;Args&gt; |
+| Type | Description |
+| --- | --- |
+| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;Args&gt; |  |
+
+**Examples**
+
+```TypeScript
+@Builder
+function MyBuilder(value: string, size: number) {
+  Text(value)
+    .fontSize(size)
+}
+let builderVar: WrappedBuilder<[string, number]> = wrapBuilder(MyBuilder);
+```

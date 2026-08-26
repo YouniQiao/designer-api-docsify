@@ -14,12 +14,12 @@ type OnOverrideUrlLoadingCallback = (webResourceRequest: WebResourceRequest) => 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| webResourceRequest | [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| webResourceRequest | [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md) | 是 | url请求的相关信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示阻止此次加载，否则允许此次加载。 |

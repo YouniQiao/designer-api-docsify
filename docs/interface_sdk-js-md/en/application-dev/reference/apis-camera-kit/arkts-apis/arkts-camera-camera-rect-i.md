@@ -9,7 +9,6 @@ Describes a rectangle. The coordinate system for the returned detection points i
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## height

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inspector } from 'kits/@kit.ArkUI';
+import inspector from '@kit.ArkUI';
 ```
 
 ## createComponentObserver
@@ -28,12 +28,18 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | component id. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) |
+| Type | Description |
+| --- | --- |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | create listener for observer component event. |
+
+**Examples**
+
+```TypeScript
+let listener: inspector.ComponentObserver = inspector.createComponentObserver('COMPONENT_ID'); // Listen for callback events for the component whose ID is COMPONENT_ID.
+```

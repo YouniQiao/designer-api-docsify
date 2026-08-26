@@ -9,7 +9,6 @@ Defines the historical traffic information.
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## rxBytes

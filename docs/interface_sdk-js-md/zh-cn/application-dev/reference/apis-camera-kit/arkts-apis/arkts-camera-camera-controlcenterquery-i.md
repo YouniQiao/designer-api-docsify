@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getSupportedEffectTypes
@@ -28,9 +27,19 @@ getSupportedEffectTypes(): Array<ControlCenterEffectType>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[ControlCenterEffectType](arkts-camera-camera-controlcentereffecttype-e.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[ControlCenterEffectType](arkts-camera-camera-controlcentereffecttype-e.md)&gt; | 支持的效果类型。 |
+
+**示例**
+
+```TypeScript
+function getSupportedEffectTypes(videoSession: camera.VideoSession): Array<camera.ControlCenterEffectType> {
+    let effectTypes: Array<camera.ControlCenterEffectType> = [];
+    effectTypes = videoSession.getSupportedEffectTypes();
+    return effectTypes;
+}
+```
 
 ## isControlCenterSupported
 
@@ -48,6 +57,15 @@ isControlCenterSupported(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回是否支持相机控制器。true表示支持，false表示不支持。 |
+
+**示例**
+
+```TypeScript
+function isControlCenterSupported(videoSession: camera.VideoSession): boolean {
+    let isSupported: boolean = videoSession.isControlCenterSupported();
+    return isSupported;
+}
+```

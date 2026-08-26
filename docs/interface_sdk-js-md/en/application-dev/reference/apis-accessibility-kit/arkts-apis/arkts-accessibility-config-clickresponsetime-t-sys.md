@@ -12,8 +12,8 @@ Click duration of different lengths.
 
 **System API:** This is a system API.
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'Short' |
-| 'Medium' |
-| 'Long' |
+| Type | Description |
+| --- | --- |
+| 'Short' | Indicates short (default). |
+| 'Medium' | Medium. |
+| 'Long' | Long. |

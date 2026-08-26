@@ -29,10 +29,10 @@ edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [edgeEffect](#edgeeffect) | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | Scroll组件的边缘滑动效果，支持弹簧效果和阴影效果。默认值：EdgeEffect.None |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时，是否开启滑动效果。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启；不传入时使用默认值。默认值：{ alwaysEnabled: true }<br>**起始版本：** 11 |
 
 ## enableBouncesZoom
 
@@ -52,9 +52,9 @@ enableBouncesZoom(enable: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 是否启用过缩放回弹效果。当用户缩放超出最大或最小缩放比例时，释放手势后内容会回弹到最大或最小缩放比例。设置为true表示启用该效果，设置为false表示禁用该效果。 默认值：true |
 
 ## enablePaging
 
@@ -74,9 +74,9 @@ enablePaging(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 是否支持滑动翻页。设置为true支持滑动翻页，false不支持。 默认值：false |
 
 ## enableScrollInteraction
 
@@ -96,9 +96,9 @@ enableScrollInteraction(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroller-c.md)的滚动 接口。默认值：true |
 
 ## friction
 
@@ -118,9 +118,9 @@ friction(value: number | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 摩擦系数。默认值：非可穿戴设备为0.6，可穿戴设备为0.9。从API version 11开始，非可穿戴设备默认值为0.7。从 API version 12开始，非可穿戴设备默认值为0.75。取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
 
 ## initialOffset
 
@@ -140,9 +140,9 @@ initialOffset(value: OffsetOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [OffsetOptions](arkts-arkui-offsetoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [OffsetOptions](arkts-arkui-offsetoptions-i.md) | 是 | 当输入的大小为百分比时，初始滚动偏移量为Scroll组件主轴方向大小与百分比数值之积。 |
 
 ## maxZoomScale
 
@@ -162,9 +162,9 @@ maxZoomScale(scale: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scale | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scale | number | 是 | Scroll组件内容的最大手势缩放比例。 默认值：1 取值范围：(0, +∞)，小于或等于0时按默认值1处理。 |
 
 ## minZoomScale
 
@@ -184,9 +184,9 @@ minZoomScale(scale: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scale | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scale | number | 是 | Scroll组件内容的最小手势缩放比例。 默认值：1 取值范围：(0, maxZoomScale]，小于或等于0时按默认值1处理，大于maxZoomScale时按maxZoomScale处理。 |
 
 ## nestedScroll
 
@@ -206,9 +206,9 @@ nestedScroll(value: NestedScrollOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项，用于配置前后两个方向的嵌套滚动模式，包含scrollForward（向前滚动模式）和scrollBackward（向后滚动模式）字段。 NestedScrollMode.SELF_ONLY表示仅自身滚动，NestedScrollMode.SELF_FIRST表示自身优先滚动，NestedScrollMode.PARENT_FIRST表示父组件优先滚动， NestedScrollMode.PARALLEL表示自身和父组件同时滚动。默认值：{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY }Scroll设置[enablePaging](#enablepaging)或者 [scrollSnap](#scrollsnap)，并同时设置父组件优先的嵌套滚动时，嵌套滚动不生效。 |
 
 ## onDidScroll
 
@@ -231,9 +231,9 @@ onDidScroll(handler: ScrollOnScrollCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handler | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handler | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) | 是 | Scroll滚动时触发的回调。 |
 
 ## onDidZoom
 
@@ -253,9 +253,9 @@ onDidZoom(event: ScrollOnDidZoomCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [ScrollOnDidZoomCallback](arkts-arkui-scrollondidzoomcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [ScrollOnDidZoomCallback](arkts-arkui-scrollondidzoomcallback-t.md) | 是 | 每帧缩放完成时回调。 |
 
 ## onScroll
 
@@ -280,9 +280,9 @@ onScroll(event: (xOffset: number, yOffset: number) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | (xOffset: number, yOffset: number) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (xOffset: number, yOffset: number) = & gt; void | 是 | callback when scroll, xOffset: 相对于上一帧水平方向的偏移量，Scroll中的内容向左滚动时偏移量为正，向右滚动时偏移量为负。单位vp。 yOffset: 相对于上一帧竖直方向的偏移量，Scroll中的内容向上滚动时偏移量为正，向下滚动时偏移量为负。单位vp。 |
 
 ## onScrollEdge
 
@@ -303,9 +303,9 @@ onScrollEdge(event: OnScrollEdgeCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [OnScrollEdgeCallback](arkts-arkui-onscrolledgecallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [OnScrollEdgeCallback](arkts-arkui-onscrolledgecallback-t.md) | 是 | 滚动到的边缘位置。当Scroll设置为水平方向滚动时，上报[Edge.Center](../arkts-apis/arkts-arkui-edge-e.md)表示水平方向起始位置，上报 [Edge.Baseline](../arkts-apis/arkts-arkui-edge-e.md)表示水平方向末尾位置。由于[Edge.Center](../arkts-apis/arkts-arkui-edge-e.md)和[Edge.Baseline](../arkts-apis/arkts-arkui-edge-e.md)枚举值已经废弃，推荐使用 onReachStart、 onReachEnd事件监听是否滚动到边 界。<br>**起始版本：** 18 |
 
 ## onScrollEnd
 
@@ -327,9 +327,9 @@ onScrollEnd(event: () => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | () = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | () = & gt; void | 是 |  |
 
 ## onScrollFrameBegin
 
@@ -354,9 +354,9 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | 是 | 每帧滚动开始回调函数。<br>**起始版本：** 18 |
 
 ## onScrollStart
 
@@ -376,9 +376,9 @@ onScrollStart(event: VoidCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | 滚动开始回调。<br>**起始版本：** 18 |
 
 ## onScrollStop
 
@@ -398,9 +398,9 @@ onScrollStop(event: VoidCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | 滚动停止回调。<br>**起始版本：** 18 |
 
 ## onWillScroll
 
@@ -413,7 +413,8 @@ onWillScroll(handler: ScrollOnWillScrollCallback)
 2. 通过滚动控制器API接口调用。
 3. 越界回弹。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 滚动事件的回调函数在滚动过程中会被频繁触发，因此应避免在该回调函数中执行耗时操作，以防止应用出现卡顿和丢帧的问题。
 
 **起始版本：** 12
@@ -426,9 +427,9 @@ onWillScroll(handler: ScrollOnWillScrollCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| handler | [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| handler | [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) | 是 | Scroll滚动前触发的回调。 |
 
 ## onZoomStart
 
@@ -448,9 +449,9 @@ onZoomStart(event: VoidCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | 缩放开始回调。 |
 
 ## onZoomStop
 
@@ -470,9 +471,9 @@ onZoomStop(event: VoidCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | 缩放停止回调。 |
 
 ## scrollable
 
@@ -490,9 +491,9 @@ scrollable(value: ScrollDirection)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | 是 | 滚动方向。默认值：ScrollDirection.Vertical |
 
 ## scrollBar
 
@@ -510,9 +511,9 @@ scrollBar(barState: BarState)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | 滚动条状态。默认值：BarState.Auto |
 
 ## scrollBarColor
 
@@ -530,9 +531,9 @@ scrollBarColor(color: Color | number | string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color | Color \| number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | Color \| number \| string | 是 | 滚动条的颜色。默认值：'#66182431'number为HEX格式颜色，支持rgb或者argb，取值范围： [0x0, 0xFFFFFFFF]，示例：0xffffff。string为rgb或者argb格式颜色，示例：'#ffffff'。 |
 
 ## scrollBarColor
 
@@ -552,9 +553,9 @@ scrollBarColor(color: Color | number | string | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color | Color \| number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | Color \| number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 滚动条的颜色。默认值：'#66182431'number为HEX格式颜色，支持rgb或者argb，取值 范围：[0x0, 0xFFFFFFFF]，示例：0xffffff。string为rgb或者argb格式颜色，示例：'#ffffff'。 |
 
 ## scrollBarWidth
 
@@ -572,9 +573,9 @@ scrollBarWidth(value: number | string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string | 是 | 滚动条的宽度。默认值：4单位：vp 取值范围：设置为小于0的值时，按4vp处理。设置为0时，不显示滚动条。 |
 
 ## scrollBarWidth
 
@@ -594,9 +595,9 @@ scrollBarWidth(value: number | string | Resource)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 滚动条的宽度。默认值：4单位：vp 取值范围： [0, +∞)。设置为小于0的值时，按4vp处理。设置为0时，不显示滚动条。 |
 
 ## scrollSnap
 
@@ -616,9 +617,9 @@ scrollSnap(value: ScrollSnapOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ScrollSnapOptions](arkts-arkui-scrollsnapoptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ScrollSnapOptions](arkts-arkui-scrollsnapoptions-i.md) | 是 | Scroll组件的限位滚动模式。该对象包含snapAlign（对齐方式）、snapPagination（分页点）、enableSnapToStart（是否在 开头限位）和enableSnapToEnd（是否在末尾限位）等属性。 |
 
 ## zoomScale
 
@@ -638,6 +639,6 @@ zoomScale(scale: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scale | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scale | number | 是 | 设置Scroll组件内容的缩放比例，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。 默认值：1 取值范围：(0, +∞)，小于或等于0时按默认值1处理。 |

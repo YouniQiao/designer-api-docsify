@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## allowDownloadIntermediateCa

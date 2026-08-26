@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dataSharePredicates } from 'kits/@kit.ArkData';
+import dataSharePredicates from '@kit.ArkData';
 ```
 
 ## beginsWith
@@ -30,16 +30,23 @@ beginsWith(field: string, value: string): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。 |
+| value | string | 是 | 指示值以该字符串起始。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.beginsWith("NAME", "os");
+```
 
 ## contains
 
@@ -59,16 +66,23 @@ contains(field: string, value: string): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。 |
+| value | string | 是 | 指示值中包含该字段。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.contains("NAME", "os");
+```
 
 ## distinct
 
@@ -88,9 +102,16 @@ distinct(): DataSharePredicates
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.equalTo("NAME", "Rose").distinct();
+```
 
 ## endsWith
 
@@ -110,16 +131,23 @@ endsWith(field: string, value: string): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。 |
+| value | string | 是 | 指示值以该字符串结尾。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.endsWith("NAME", "os");
+```
 
 ## glob
 
@@ -139,16 +167,23 @@ glob(field: string, value: string): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。 |
+| value | string | 是 | 指示要与谓词匹配的通配符表达式。表达式中'*'代表零个、一个或多个数字或字符，'?'代表一个单一的数字或字符，区分大小写。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.glob("NAME", "?h*g");
+```
 
 ## groupBy
 
@@ -168,15 +203,22 @@ groupBy(fields: Array<string>): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fields | Array & lt;string & gt; | 是 | 指定分组依赖的列名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.groupBy(["AGE", "NAME"]);
+```
 
 ## indexedBy
 
@@ -196,15 +238,22 @@ indexedBy(field: string): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 索引列的名称。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.indexedBy("SALARY_INDEX");
+```
 
 ## inKeys
 
@@ -224,15 +273,22 @@ inKeys(keys: Array<string>): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| keys | Array & lt;string & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keys | Array & lt;string & gt; | 是 | 指定范围的键数组。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.inKeys(["Lisa", "Rose"]);
+```
 
 ## isNotNull
 
@@ -252,15 +308,22 @@ isNotNull(field: string): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.isNotNull("NAME");
+```
 
 ## isNull
 
@@ -280,15 +343,22 @@ isNull(field: string): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.isNull("NAME");
+```
 
 ## prefixKey
 
@@ -308,15 +378,22 @@ prefixKey(prefix: string): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| prefix | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| prefix | string | 是 | 指定的键前缀。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.prefixKey("NAME");
+```
 
 ## unlike
 
@@ -336,13 +413,20 @@ unlike(field: string, value: string): DataSharePredicates
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| field | string | 是 | 数据库表中的列名。 |
+| value | string | 是 | 指示要与谓词匹配的通配符表达式。表达式中'%'代表零个、一个或多个数字或字符，'_'代表一个单一的数字或字符，不区分大小写。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.unlike("NAME", "%os%");
+```

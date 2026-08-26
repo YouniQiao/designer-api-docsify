@@ -9,7 +9,7 @@ Defines a contact's SIP address.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## CUSTOM_LABEL
@@ -139,3 +139,24 @@ SIP address.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
+
+**Examples**
+
+Create data in JSON format.
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let sipAddress: contact.SipAddress = {
+    sipAddress: 'sipAddress'
+};
+```
+
+Alternatively, create data by instantiating a SipAddress object.
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let sipAddress = new contact.SipAddress();
+sipAddress.sipAddress = 'sipAddress';
+```

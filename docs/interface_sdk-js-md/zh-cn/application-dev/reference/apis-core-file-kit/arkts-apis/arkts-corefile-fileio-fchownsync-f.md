@@ -21,8 +21,17 @@ declare function fchownSync(fd: number, uid: number, gid: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fd | number | 是 |
-| uid | number | 是 |
-| gid | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fd | number | 是 | 待改变文件的文件描述符。 |
+| uid | number | 是 | 文件所有者的UID。 |
+| gid | number | 是 | 文件所有组的GID。 |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+let stat = fileio.statSync(filePath);
+fileio.fchownSync(fd, stat.uid, stat.gid);
+```

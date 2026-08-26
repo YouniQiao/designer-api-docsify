@@ -31,6 +31,6 @@ Sets the vertex coordinates of the polygon. This attribute can be dynamically se
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Array & lt;any & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Array & lt;any & gt; | Yes | Vertex coordinates of the polygon. A two-dimensional array is passed, and each subarray indicates the `[x, y]` coordinates of a vertex.Default value: **[]** (empty array) Default unit: vp The **undefined** and **null** values are invalid and treated as the default value. |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
+import errorManager from '@kit.AbilityKit';
 ```
 
 ## setDefaultErrorHandler
@@ -22,18 +22,39 @@ Returns the previously registered handler when a JavaScript crash exception occu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| defaultHandler | [ErrorHandler](arkts-ability-errormanager-errorhandler-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| defaultHandler | [ErrorHandler](arkts-ability-errormanager-errorhandler-t.md) | No | Newly registered error handler. The default value is empty. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ErrorHandler](arkts-ability-errormanager-errorhandler-t.md) |
+| Type | Description |
+| --- | --- |
+| [ErrorHandler](arkts-ability-errormanager-errorhandler-t.md) | Previously registered error handler. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
+
+**Examples**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { process } from '@kit.ArkTS';
+
+let oldHandler: errorManager.ErrorHandler;
+const errorHandler: errorManager.ErrorHandler = (reason: Error) => {
+    // Customize the errorHandler logic.
+    console.info('[Handler]  Uncaught exception handler invoked.');
+    if (oldHandler) {
+        oldHandler(reason);
+    } else {
+        // You are advised to add a null check. If the value is null, use a synchronous exit approach.
+        const processManager = new process.ProcessManager();
+        processManager.exit(0);
+    }
+};
+oldHandler = errorManager.setDefaultErrorHandler(errorHandler);
+```

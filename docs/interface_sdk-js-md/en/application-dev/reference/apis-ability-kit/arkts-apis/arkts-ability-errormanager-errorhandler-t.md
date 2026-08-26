@@ -14,6 +14,6 @@ The ErrorHandler will be called when the ArkTS runtime throws an exception that 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| errObject | Error | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| errObject | Error | Yes | Event name, message, and error stack of the exception. |

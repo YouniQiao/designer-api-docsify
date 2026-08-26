@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import wifiManager from '@kit.ConnectivityKit';
+import wifiManagerExt from '@kit.ConnectivityKitExt';
 ```
 
 ## isWlanSupported
@@ -22,12 +23,12 @@ function isWlanSupported(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | WLAN是否可用。{ |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [2401000](../errorcode-wifi.md#2401000-sta内部异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [2401000](../errorcode-wifi.md#2401000-sta内部异常) | Operation failed. |

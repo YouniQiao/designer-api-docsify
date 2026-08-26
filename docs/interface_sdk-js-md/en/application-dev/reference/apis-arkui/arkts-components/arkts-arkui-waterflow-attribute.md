@@ -31,9 +31,9 @@ Number of items to be preloaded.This attribute takes effect only in [LazyForEach
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Number of water flow items to be preloaded (cached).Default value: number of nodes visible on the screen, with the maximum value of 16Value range: 0, +∞).Values less than 0 are treated as **1**. |
 
 ## cachedCount
 
@@ -53,10 +53,10 @@ Sets the number of flow items to be cached (preloaded) and specifies whether to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| count | number | Yes |
-| show | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| count | number | Yes | Number of water flow items to be preloaded (cached).Default value: number of nodes visible on the screen, with the maximum value of 16Value range: [0, +∞).Values less than 0 are treated as **1**. |
+| show | boolean | Yes | Whether to display the cached water flow items. If this parameter is set to **true**, the preloaded flow items are displayed. If this parameter is set to **false**, the preloaded flow items are not displayed.Default value: **false**. |
 
 ## columnsGap
 
@@ -74,9 +74,9 @@ Sets the gap between columns.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Gap between columns.Default value: **0**Value range: [0, +∞). A value less than 0 evaluates to the value **0**. |
 
 ## columnsTemplate
 
@@ -94,9 +94,9 @@ Sets the number of columns in the layout. If this attribute is not set, one colu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Number of columns in the layout.Default value: **'1fr' |
 
 ## columnsTemplate
 
@@ -116,9 +116,9 @@ Sets the number of columns in the layout. If this attribute is not set, one colu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string \| [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string \| [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | Yes | Number of columns in the layout. |
 
 ## enableScrollInteraction
 
@@ -128,7 +128,8 @@ enableScrollInteraction(value: boolean)
 
 Sets whether to support the scrolling gesture.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The component cannot be scrolled through mouse press-and-drag operations.
 
 **Since:** 10
@@ -141,9 +142,9 @@ Sets whether to support the scrolling gesture.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).Default value: **true |
 
 ## friction
 
@@ -163,9 +164,9 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Friction coefficient.Default value: **0.9** for wearable devices and **0.6** for non-wearable devices.Since API version 11, the default value for non-wearable devices is **0.7**.Since API version 12, the default value for non-wearable devices is **0.75**.Value range: (0, + ∞).If the value is less than or equal to 0, the default value is used. |
 
 ## itemConstraintSize
 
@@ -183,9 +184,9 @@ Sets the size constraints of the child components during layout. For details abo
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Size constraints of the child components during layout. If the value specified is less than **0**, this parameter does not take effect.   **NOTE：** 1. If both **itemConstraintSize** and the constraintSize attribute of the **FlowItem** are set, the **minWidth** (or **minHeight**) will be the larger of the two values, and the **maxWidth** (or **maxHeight**) will be the smaller of the two values. The resulting values will then be used as the **constraintSize** for the **FlowItem**. 2. When only **itemConstraintSize** is set, it effectively applies a uniform size constraint to all child components in the **WaterFlow**. 3. The **itemConstraintSize** attribute, once converted to the **constraintSize** attribute of the **FlowItem** through the two methods mentioned above, follows the same rules for taking effect as the universal attribute constraintSize. |
 
 ## layoutDirection
 
@@ -203,9 +204,9 @@ Sets the main axis direction of the layout.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md) | Yes | Main axis direction of the layout.Default value: **FlexDirection.Column |
 
 ## nestedScroll
 
@@ -225,9 +226,9 @@ Sets the nested scrolling mode in the forward and backward directions to impleme
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | Nested scrolling options. |
 
 ## onReachEnd
 
@@ -245,9 +246,9 @@ Triggered when the **WaterFlow** content reaches the end position.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback triggered when the **WaterFlow** content reaches the end position. |
 
 ## onReachStart
 
@@ -265,9 +266,9 @@ Triggered when the **WaterFlow** content reaches the start position.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback triggered when the **WaterFlow** content reaches the start position. |
 
 ## onScrollFrameBegin
 
@@ -294,9 +295,9 @@ This event is not triggered in the following scenarios:
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Yes | Callback triggered when each frame scrolling starts.<br>**Since:** 20 |
 
 ## onScrollIndex
 
@@ -316,9 +317,9 @@ Triggered when the first or last item displayed in the component changes. It is 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (first: number, last: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (first: number, last: number) = & gt; void | Yes | Callback function, triggered when the first or last item displayed in the waterflow changes."first": the index of the first item displayed in the waterflow,"last": the index of the last item displayed in the waterflow. |
 
 ## rowsGap
 
@@ -336,9 +337,9 @@ Sets the gap between rows.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Gap between rows.Default value: **0**Value range: [0, +∞). A value less than 0 evaluates to the value **0**. |
 
 ## rowsTemplate
 
@@ -356,9 +357,9 @@ Sets the number of rows in the layout. If this attribute is not set, one row is 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Number of rows in the layout.Default value: **'1fr' |
 
 ## supportEmptyBranchInLazyLoading
 
@@ -368,7 +369,8 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 
 Defines whether the **WaterFlow** component supports the generation of empty branch nodes that do not contain any child components using the **if/else** rendering control syntax in **LazyForEach** or **Repeat**. If this attribute is not set, empty branch nodes are not supported. This attribute cannot be updated after being set. Therefore, you cannot switch between the behavior of supporting empty branches and the behavior of not supporting empty branches after setting this attribute.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > When [WaterFlowSections](arkts-arkui-waterflowsections-c.md) is set using the [sections](arkts-arkui-waterflowoptions-i.md) parameter,
 > or when the [SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md) layout mode is set using the
 > [layoutMode](arkts-arkui-waterflowoptions-i.md) parameter, the **FlowItem** after the empty branch is displayed regardless
@@ -384,9 +386,9 @@ Defines whether the **WaterFlow** component supports the generation of empty bra
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| supported | boolean \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| supported | boolean \| undefined | Yes | Whether the current **WaterFlow** component supports the use of the [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) rendering syntax in [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) to generate an empty branch node that contains no child component.   **true** indicates that the **FlowItem** after the empty branch is displayed; **false** indicates the opposite.If the value is **undefined**, it is processed as **false**. |
 
 ## syncLoad
 
@@ -406,6 +408,6 @@ Sets whether to synchronously load all child components in the **WaterFlow** com
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to synchronously load all child components in the **WaterFlow** component.    **true**: synchronous loading; false: asynchronous loading Default value: **true**   **NOTE：**When this parameter is set to **false**, in the first display or [scrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex) jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the **WaterFlow** component are delayed to the next frame for layout. |

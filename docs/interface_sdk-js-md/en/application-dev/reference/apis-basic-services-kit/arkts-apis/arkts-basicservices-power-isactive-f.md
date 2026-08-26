@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import power from '@kit.BasicServicesKit';
 ```
 
 ## isActive
@@ -22,6 +22,13 @@ Checks whether the current device is active.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Return value **true** if the device is active; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let isActive = power.isActive();
+console.info('power is active: ' + isActive);
+```

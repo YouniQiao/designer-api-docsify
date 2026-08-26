@@ -6,7 +6,7 @@ type DisplayNamesLanguageDisplay =
         | "standard"
 ```
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| "dialect" |
-| "standard" |
+| Type | Description |
+| --- | --- |
+| "dialect" |  |
+| "standard" |  |

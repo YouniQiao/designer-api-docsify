@@ -14,6 +14,17 @@ function that returns backup datasize by bundleName.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| reportInfo | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| reportInfo | string | Yes | the scanned backup datasize infos. |
+
+**Examples**
+
+```TypeScript
+import { backup } from '@kit.CoreFileKit';
+
+onBackupSizeReport: (OnBackupSizeReport: backup.OnBackupSizeReport) => {
+  console.info('dataSizeCallback success');
+  console.info('dataSizeCallback report : ' + OnBackupSizeReport);
+}
+```

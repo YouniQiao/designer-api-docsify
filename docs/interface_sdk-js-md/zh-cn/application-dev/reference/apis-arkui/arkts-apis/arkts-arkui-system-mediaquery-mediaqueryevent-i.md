@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from 'kits/@kit.ArkUI';
+import SystemMediaQuery, { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
 ## matches

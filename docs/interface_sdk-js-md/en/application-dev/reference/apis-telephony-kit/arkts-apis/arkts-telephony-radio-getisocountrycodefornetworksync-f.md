@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getISOCountryCodeForNetworkSync
@@ -20,12 +19,20 @@ Obtains the ISO country code of the network with which the SIM card in the speci
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| slotId | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | ISO country code of the network, for example, **CN** (China). If the device is not registered with any network, an empty string is returned. |
+
+**Examples**
+
+```TypeScript
+let slotId: number = 0;
+let countryISO: string = radio.getISOCountryCodeForNetworkSync(slotId);
+console.info(`the country ISO is:` + countryISO);
+```

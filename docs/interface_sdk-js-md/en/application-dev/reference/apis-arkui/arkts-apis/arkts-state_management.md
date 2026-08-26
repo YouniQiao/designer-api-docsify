@@ -10,14 +10,14 @@
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [Storage](arkts-arkui-storage-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [Storage](arkts-arkui-storage-c-sys.md) | Defines the base class of storage. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ColorMode](arkts-arkui-colormode-e.md) |
-| [LayoutDirection](arkts-arkui-layoutdirection-e.md) |
+| Name | Description |
+| --- | --- |
+| [ColorMode](arkts-arkui-colormode-e.md) | Enumerates system color modes. |
+| [LayoutDirection](arkts-arkui-layoutdirection-e.md) | Enumerates system layout directions. |

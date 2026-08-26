@@ -31,9 +31,9 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
+| Type | Description |
+| --- | --- |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## getHistoricalPoints
 
@@ -53,9 +53,9 @@ Obtains all historical point information of the current frame. Historical points
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[MouseHistoricalPoint](arkts-arkui-mousehistoricalpoint-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[MouseHistoricalPoint](arkts-arkui-mousehistoricalpoint-i.md)&gt; | Array of all historical point information for the current frame. |
 
 ## stopPropagation
 

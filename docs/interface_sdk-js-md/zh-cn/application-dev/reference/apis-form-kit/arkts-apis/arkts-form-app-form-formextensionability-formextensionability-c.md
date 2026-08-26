@@ -9,7 +9,7 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 ## 导入模块
 
 ```TypeScript
-import { FormExtensionAbility } from 'kits/@kit.FormKit';
+import FormExtensionAbility from '@kit.FormKit';
 ```
 
 ## onAcquireFormState
@@ -30,15 +30,29 @@ Called to notify the widget provider that the widget host is requesting the widg
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Description of the widget state, including the bundle name, ability name, module name, and widget name. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| formInfo.FormState |
+| 类型 | 说明 |
+| --- | --- |
+| formInfo.FormState | Enumerated values of the current widget status. |
+
+**示例**
+
+```TypeScript
+import { FormExtensionAbility, formInfo } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onAcquireFormState(want: Want) {
+    console.info(`FormExtensionAbility onAcquireFormState, want: ${want}`);
+    return formInfo.FormState.UNKNOWN;
+  }
+}
+```
 
 ## onAddForm
 
@@ -58,15 +72,35 @@ Called to notify the widget provider that a widget is being created.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want information of the widget. You can set the **parameters** field to one or more values enumerated in [widget parameters](arkts-form-forminfo-formparam-e.md), such as widget ID, widget name, and widget style. The information must be managed as persistent data to facilitate subsequent widget update and deletion. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| formBindingData.FormBindingData |
+| 类型 | 说明 |
+| --- | --- |
+| formBindingData.FormBindingData | A **formBindingData.FormBindingData** object containing the data to be displayed on the widget. |
+
+**示例**
+
+```TypeScript
+import { formBindingData, FormExtensionAbility } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onAddForm(want: Want) {
+    console.info(`FormExtensionAbility onAddForm, want: ${want.abilityName}`);
+    let temperatureData: Record<string, string> = {
+      'temperature': '11°C',
+      'time': '11:00'
+    };
+
+    let formBindingDataObj: formBindingData.FormBindingData = formBindingData.createFormBindingData(temperatureData);
+    return formBindingDataObj;
+  }
+}
+```
 
 ## onCastToNormalForm
 
@@ -86,9 +120,22 @@ Called to notify the widget provider that a temporary widget has been converted 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | ID of the widget that requests to be converted to a normal one. |
+
+**示例**
+
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onCastToNormalForm(formId: string) {
+    // 卡片提供方收到卡片使用方将临时卡片转常态卡片的通知时触发，开发者需根据实际需求做相应的处理
+    console.info(`FormExtensionAbility onCastToNormalForm, formId: ${formId}`);
+  }
+}
+```
 
 ## onChangeFormVisibility
 
@@ -106,9 +153,45 @@ Called to notify the widget provider that the widget visibility status is being 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [newStatus](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | Record & lt;string, number & gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| newStatus | Record & lt;string, number & gt; | 是 | ID and visibility status of the widget to be changed.<br>**起始版本：** 11 |
+
+**示例**
+
+```TypeScript
+import { formBindingData, FormExtensionAbility, formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// ArkTS规范中ets文件无法使用Object.keys和for..in...获取Object的key值，请使用自定义函数getObjKeys代替。
+// 使用时请将此函数单独抽离至一个ts文件中并导出，在需要用到的ets文件中导入此函数后使用。
+function getObjKeys(obj: Object): string[] {
+  let keys = Object.keys(obj);
+  return keys;
+}
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onChangeFormVisibility(newStatus: Record<string, number>) {
+    console.info(`FormExtensionAbility onChangeFormVisibility, newStatus: ${newStatus}`);
+    let param: Record<string, string> = {
+      'temperature': '22°C',
+      'time': '22:00'
+    }
+    let formBindingDataObj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+
+    let keys: string[] = getObjKeys(newStatus);
+
+    for (let i: number = 0; i < keys.length; i++) {
+      console.info(`FormExtensionAbility onChangeFormVisibility, key: ${keys[i]}, value= ${newStatus[keys[i]]}`);
+      formProvider.updateForm(keys[i], formBindingDataObj).then(() => {
+        console.info('FormExtensionAbility context updateForm');
+      }).catch ((error: BusinessError) => {
+        console.error(`Operation updateForm failed, code: ${error.code}, message: ${error.message}`);
+      });
+    }
+  }
+}
+```
 
 ## onConfigurationUpdate
 
@@ -128,9 +211,24 @@ Called when system configuration items change. The **onConfigurationUpdate** cal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| newConfig | [Configuration](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| newConfig | [Configuration](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | 是 | New configuration. |
+
+**示例**
+
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+import { Configuration } from '@kit.AbilityKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onConfigurationUpdate(newConfig: Configuration) {
+    // 仅当前formExtensionAbility存活时更新配置才会触发此生命周期。
+    // 需要注意：formExtensionAbility创建后10秒内无操作将会被清理。
+    console.info(`onConfigurationUpdate, config: ${newConfig?.language}`);
+  }
+}
+```
 
 ## onFormEvent
 
@@ -150,10 +248,22 @@ Called to instruct the widget provider to process the widget event.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
-| message | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | ID of the widget that requests the event. |
+| message | string | 是 | Event message. |
+
+**示例**
+
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onFormEvent(formId: string, message: string) {
+    console.info(`FormExtensionAbility onFormEvent, formId: ${formId}, message: ${message}`);
+  }
+}
+```
 
 ## onFormLocationChanged
 
@@ -173,10 +283,29 @@ Called when the widget location changes.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
-| newFormLocation | formInfo.FormLocation | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | Widget ID. |
+| newFormLocation | formInfo.FormLocation | 是 | Enumerated value of the latest widget location. |
+
+**示例**
+
+```TypeScript
+import { formBindingData, FormExtensionAbility, formInfo } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+
+export default class EntryFormAbility extends FormExtensionAbility {
+  onAddForm(want: Want) {
+    let formData: Record<string, string | Object> = {
+      'data': 'addForm'
+    };
+    return formBindingData.createFormBindingData(formData);
+  }
+  onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation) {
+    console.info('EntryFormAbility onFormLocationChanged current location: ' + newFormLocation);
+  }
+}
+```
 
 ## onRemoveForm
 
@@ -196,9 +325,21 @@ Called to notify the widget provider that a widget is being destroyed.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | ID of the widget to be destroyed. |
+
+**示例**
+
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onRemoveForm(formId: string) {
+    console.info(`FormExtensionAbility onRemoveForm, formId: ${formId}`);
+  }
+}
+```
 
 ## onSizeChanged
 
@@ -218,11 +359,23 @@ Called when the widget size changes.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
-| newDimension | formInfo.FormDimension | 是 |
-| newRect | formInfo.Rect | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | Widget ID. |
+| newDimension | formInfo.FormDimension | 是 | Widget dimension. For example, **Dimension_1_2** indicates a 1 x 2 widget. |
+| newRect | formInfo.Rect | 是 | Widget position information, including the X and Y coordinates of the widget's top- left corner, as well as its width and height. |
+
+**示例**
+
+```TypeScript
+import { FormExtensionAbility, formInfo } from '@kit.FormKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect) {
+    console.info(`FormExtensionAbility onSizeChanged, formId: ${formId}, newDimension: ${newDimension}`);
+  }
+}
+```
 
 ## onStop
 
@@ -239,6 +392,18 @@ Called when the widget process of the widget provider exits.
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.Form
+
+**示例**
+
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onStop() {
+    console.info(`FormExtensionAbility onStop`);
+  }
+}
+```
 
 ## onUpdateForm
 
@@ -258,10 +423,34 @@ Called to notify the widget provider that a widget is being updated, with update
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| formId | string | 是 |
-| wantParams | Record & lt;string, Object & gt; | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| formId | string | 是 | ID of the widget that requests to be updated. |
+| wantParams | Record & lt;string, Object & gt; | 否 | Parameters used for the update. |
+
+**示例**
+
+```TypeScript
+import { formBindingData, FormExtensionAbility, formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onUpdateForm(formId: string, wantParams?: Record<string, Object>) {
+    console.info(`FormExtensionAbility onUpdateForm, formId: ${formId},
+        wantPara: ${wantParams?.['ohos.extra.param.key.host_bg_inverse_color']}`);
+    let param: Record<string, string> = {
+      'temperature': '22c',
+      'time': '22:00'
+    }
+    let obj2: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+    formProvider.updateForm(formId, obj2).then(() => {
+      console.info(`FormExtensionAbility context updateForm`);
+    }).catch((error: BusinessError) => {
+      console.error(`FormExtensionAbility context updateForm failed, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+    });
+  }
+}
+```
 
 ## context
 

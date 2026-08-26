@@ -14,7 +14,7 @@ SubHeaderV2OperationItemType
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ResourceStr](arkts-arkui-resourcestr-t.md) |
-| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md) |
+| Type | Description |
+| --- | --- |
+| [ResourceStr](arkts-arkui-resourcestr-t.md) |  |
+| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md) |  |

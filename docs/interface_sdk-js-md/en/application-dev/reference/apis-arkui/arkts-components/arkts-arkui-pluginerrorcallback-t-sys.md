@@ -16,6 +16,6 @@ Callback invoked when an error occurs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| info | [PluginErrorData](arkts-arkui-pluginerrordata-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [PluginErrorData](arkts-arkui-pluginerrordata-i-sys.md) | Yes | Plugin error data |

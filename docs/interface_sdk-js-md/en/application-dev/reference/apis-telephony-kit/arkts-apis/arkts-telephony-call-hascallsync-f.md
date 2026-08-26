@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## hasCallSync
@@ -20,6 +19,13 @@ Checks whether a call is in progress.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Promise used to return the result. The value **true** indicates that a call is in progress, and the value **false** indicates the opposite. |
+
+**Examples**
+
+```TypeScript
+let hasCall: boolean = call.hasCallSync();
+console.info(`hasCallSync success, has call is ` + hasCall);
+```

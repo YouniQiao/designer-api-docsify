@@ -9,25 +9,25 @@ Provides extended methods to operate or manage Wi-Fi.<p>The APIs involved in thi
 ## Modules to Import
 
 ```TypeScript
-import { wifiext } from 'kits/@kit.ConnectivityKit';
+import wifiext from '@kit.ConnectivityKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md) |
-| [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md) |
-| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) |
-| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) |
-| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) |
-| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) |
-| [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md) |
+| Name | Description |
+| --- | --- |
+| [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md) | Disables a Wi-Fi hotspot. |
+| [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md) | Enables a Wi-Fi hotspot. |
+| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) | Obtains the current Wi-Fi power mode. |
+| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) | Obtains the current Wi-Fi power mode. |
+| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) | Obtains the supported power model. |
+| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) | Obtains the supported power model. |
+| [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md) | Set the current Wi-Fi power mode. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PowerModel](arkts-connectivity-wifiext-powermodel-e.md) |
+| Name | Description |
+| --- | --- |
+| [PowerModel](arkts-connectivity-wifiext-powermodel-e.md) | The power model enumeration.@enum { number } PowerModel |

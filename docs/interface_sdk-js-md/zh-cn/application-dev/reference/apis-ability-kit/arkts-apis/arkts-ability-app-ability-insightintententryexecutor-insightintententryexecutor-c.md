@@ -13,5 +13,5 @@
 ## 导入模块
 
 ```TypeScript
-import { InsightIntentEntryExecutor } from 'kits/@kit.AbilityKit';
+import InsightIntentEntryExecutor from '@kit.AbilityKit';
 ```

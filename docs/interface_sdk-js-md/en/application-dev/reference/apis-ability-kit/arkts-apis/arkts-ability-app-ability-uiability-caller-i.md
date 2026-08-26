@@ -9,7 +9,7 @@ A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilityconte
 ## Modules to Import
 
 ```TypeScript
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from 'kits/@kit.AbilityKit';
+import UIAbility, { Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## call
@@ -28,25 +28,83 @@ Used by a Caller UIAbility to send serialized data, as agreed upon by both parti
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| method | string | Yes |
-| data | rpc.Parcelable | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
+| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16200001](../errorcode-ability.md#16200001-caller-released) |
-| [16200002](../errorcode-ability.md#16200002-invalid-callee) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility, Caller } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class MyMessageAble implements rpc.Parcelable { // Custom parcelable data structure.
+  name: string;
+  str: string;
+  num: number = 1;
+
+  constructor(name: string, str: string) {
+    this.name = name;
+    this.str = str;
+  }
+
+  marshalling(messageSequence: rpc.MessageSequence) {
+    messageSequence.writeInt(this.num);
+    messageSequence.writeString(this.str);
+    console.info(`MyMessageAble marshalling num[${this.num}] str[${this.str}]`);
+    return true;
+  }
+
+  unmarshalling(messageSequence: rpc.MessageSequence) {
+    this.num = messageSequence.readInt();
+    this.str = messageSequence.readString();
+    console.info(`MyMessageAble unmarshalling num[${this.num}] str[${this.str}]`);
+    return true;
+  }
+}
+
+let method = 'call_Function'; // Agreed notification message string
+
+export default class MainUIAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    this.context.startAbilityByCall({
+      bundleName: 'com.example.myservice',
+      abilityName: 'MainUIAbility',
+      deviceId: ''
+    }).then((obj) => {
+      let caller: Caller = obj;
+      let msg = new MyMessageAble('msg', 'world'); // See the definition of Parcelable.
+      caller.call(method, msg)
+        .then(() => {
+          console.info('Caller call() called');
+        })
+        .catch((callErr: BusinessError) => {
+          console.error(`Caller.call catch error, error.code: ${callErr.code}, error.message: ${callErr.message}`);
+        });
+    }).catch((err: BusinessError) => {
+      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
+    });
+  }
+}
+```
 
 ## callWithResult
 
@@ -64,25 +122,86 @@ Used by a Caller UIAbility to send serialized data to a Callee UIAbility and ret
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| method | string | Yes |
-| data | rpc.Parcelable | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
+| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;rpc.MessageSequence & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;rpc.MessageSequence & gt; | Promise used to return the response data from the Callee UIAbility. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16200001](../errorcode-ability.md#16200001-caller-released) |
-| [16200002](../errorcode-ability.md#16200002-invalid-callee) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility, Caller } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class MyMessageAble implements rpc.Parcelable {
+  name: string
+  str: string
+  num: number = 1
+
+  constructor(name: string, str: string) {
+    this.name = name;
+    this.str = str;
+  }
+
+  marshalling(messageSequence: rpc.MessageSequence) {
+    messageSequence.writeInt(this.num);
+    messageSequence.writeString(this.str);
+    console.info(`MyMessageAble marshalling num[${this.num}] str[${this.str}]`);
+    return true;
+  }
+
+  unmarshalling(messageSequence: rpc.MessageSequence) {
+    this.num = messageSequence.readInt();
+    this.str = messageSequence.readString();
+    console.info(`MyMessageAble unmarshalling num[${this.num}] str[${this.str}]`);
+    return true;
+  }
+}
+
+let method = 'call_Function';
+let caller: Caller;
+
+export default class MainUIAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    this.context.startAbilityByCall({
+      bundleName: 'com.example.myservice',
+      abilityName: 'MainUIAbility',
+      deviceId: ''
+    }).then((obj) => {
+      caller = obj;
+      let msg = new MyMessageAble('msg', 'world');
+      caller.callWithResult(method, msg)
+        .then((data) => {
+          console.info('Caller callWithResult() called');
+          let retMsg = new MyMessageAble('msg', 'world');
+          data.readParcelable(retMsg);
+        })
+        .catch((callErr: BusinessError) => {
+          console.error(`Caller.callWithResult catch error, error.code: ${callErr.code}, error.message: ${callErr.message}`);
+        });
+    }).catch((err: BusinessError) => {
+      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
+    });
+  }
+}
+```
 
 ## off('release')
 
@@ -100,16 +219,35 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'release' | Yes |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
+
+let method = 'call_Function';
+
+export default class MainUIAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info('Callee onCreate is called');
+    try {
+      this.callee.off(method);
+    } catch (error) {
+      console.error(`Callee.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
+    }
+  }
+}
+```
 
 ## off('release')
 
@@ -127,15 +265,19 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'release' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+See off
 
 ## on('release')
 
@@ -153,17 +295,68 @@ Used by the Caller UIAbility to register a listener for disconnection notificati
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'release' | Yes |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+class MyMessageAble implements rpc.Parcelable {
+  name: string
+  str: string
+  num: number = 1
+
+  constructor(name: string, str: string) {
+    this.name = name;
+    this.str = str;
+  }
+
+  marshalling(messageSequence: rpc.MessageSequence) {
+    messageSequence.writeInt(this.num);
+    messageSequence.writeString(this.str);
+    console.info(`MyMessageAble marshalling num[${this.num}] str[${this.str}]`);
+    return true;
+  }
+
+  unmarshalling(messageSequence: rpc.MessageSequence) {
+    this.num = messageSequence.readInt();
+    this.str = messageSequence.readString();
+    console.info(`MyMessageAble unmarshalling num[${this.num}] str[${this.str}]`);
+    return true;
+  }
+}
+
+let method = 'call_Function';
+
+function funcCallBack(pdata: rpc.MessageSequence) {
+  let msg = new MyMessageAble('test', '');
+  pdata.readParcelable(msg);
+  return new MyMessageAble('test1', 'Callee test');
+}
+
+export default class MainUIAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info('Callee onCreate is called');
+    try {
+      this.callee.on(method, funcCallBack);
+    } catch (error) {
+      console.error(`Callee.on catch error, error.code: ${error.code}, error.message: ${error.message}`);
+    }
+  }
+}
+```
 
 ## onRelease
 
@@ -181,16 +374,45 @@ Used by the Caller UIAbility to register a listener for disconnection notificati
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility, Caller } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MainUIAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    this.context.startAbilityByCall({
+      bundleName: 'com.example.myservice',
+      abilityName: 'MainUIAbility',
+      deviceId: ''
+    }).then((obj) => {
+      let caller: Caller = obj;
+      try {
+        caller.onRelease((str) => {
+          console.info(`Caller OnRelease CallBack is called ${str}`);
+        });
+      } catch (error) {
+        console.error(`Caller.onRelease catch error, error.code: ${error.code}, error.message: ${error.message}`);
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
+    });
+  }
+}
+```
 
 ## onRemoteStateChange
 
@@ -208,16 +430,46 @@ Called when the remote UIAbility state changes in the collaboration scenario. Th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility, Caller } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MainAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let dstDeviceId: string = 'xxxxx';
+    this.context.startAbilityByCall({
+      bundleName: 'com.example.myservice',
+      abilityName: 'MainUIAbility',
+      deviceId: dstDeviceId
+    }).then((obj) => {
+      let caller: Caller = obj;
+      try {
+        caller.onRemoteStateChange((str) => {
+          console.info('Remote state changed ' + str);
+        });
+      } catch (error) {
+        console.error(`Caller.onRemoteStateChange catch error, error.code: ${JSON.stringify(error.code)}, error.message: ${JSON.stringify(error.message)}`);
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Caller GetCaller error, error.code: ${JSON.stringify(err.code)}, error.message: ${JSON.stringify(err.message)}`);
+    });
+  }
+}
+```
 
 ## release
 
@@ -235,7 +487,36 @@ Used by a Caller UIAbility to proactively release the connection with the Callee
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [16200001](../errorcode-ability.md#16200001-caller-released) |
-| [16200002](../errorcode-ability.md#16200002-invalid-callee) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility, Caller } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let caller: Caller;
+
+export default class MainUIAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    this.context.startAbilityByCall({
+      bundleName: 'com.example.myservice',
+      abilityName: 'MainUIAbility',
+      deviceId: ''
+    }).then((obj) => {
+      caller = obj;
+      try {
+        caller.release();
+      } catch (releaseErr) {
+        console.error(`Caller.release catch error, error.code: ${releaseErr.code}, error.message: ${releaseErr.message}`);
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
+    });
+  }
+}
+```

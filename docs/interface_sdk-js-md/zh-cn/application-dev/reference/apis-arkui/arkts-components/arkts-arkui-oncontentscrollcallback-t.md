@@ -16,7 +16,7 @@ declare type OnContentScrollCallback = (totalOffsetX: number, totalOffsetY: numb
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| totalOffsetX | number | 是 |
-| totalOffsetY | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| totalOffsetX | number | 是 | 文本在内容区的横坐标偏移，单位px。 |
+| totalOffsetY | number | 是 | 文本在内容区的纵坐标偏移，单位px。 |

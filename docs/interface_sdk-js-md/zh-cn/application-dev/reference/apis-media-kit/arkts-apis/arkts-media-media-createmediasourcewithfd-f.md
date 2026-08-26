@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithFd
@@ -24,12 +24,22 @@ function createMediaSourceWithFd(fdSrc: AVFileDescriptor): MediaSource | undefin
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| fdSrc | [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fdSrc | [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md) | 是 | 媒体文件描述符。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [MediaSource](arkts-media-media-mediasource-i.md) \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| [MediaSource](arkts-media-media-mediasource-i.md) \| undefined | 返回MediaSource，用于媒体资源设置。 |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let fdSrc = await context.resourceManager.getRawFd('xxx.mp4');
+let mediaSource : media.MediaSource | undefined = media.createMediaSourceWithFd(fdSrc);
+```

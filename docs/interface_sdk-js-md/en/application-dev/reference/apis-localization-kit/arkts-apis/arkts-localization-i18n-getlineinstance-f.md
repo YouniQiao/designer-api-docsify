@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## getLineInstance
@@ -22,12 +22,20 @@ Obtains a **BreakIterator** object. The **BreakIterator** object maintains an in
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locale | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. The generated [BreakIterator](arkts-localization-i18n-breakiterator-c.md) object calculates the positions of line breaks based on the rules of the specified locale. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BreakIterator](arkts-localization-i18n-breakiterator-c.md) |
+| Type | Description |
+| --- | --- |
+| [BreakIterator](arkts-localization-i18n-breakiterator-c.md) | BreakIterator** object. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
+```

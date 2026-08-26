@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## detectEncoding
@@ -30,15 +30,24 @@ static detectEncoding(bytes: Uint8Array): EncodingInfo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bytes | Uint8Array | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bytes | Uint8Array | 是 | 输入字节流。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [EncodingInfo](arkts-localization-i18n-encodinginfo-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [EncodingInfo](arkts-localization-i18n-encodinginfo-i.md) | 编码信息，包含编码名称和置信度。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let uint8Array = new Uint8Array([0xEF, 0xBB, 0xBF, 0xE4, 0xB8, 0xAD]);
+let info = i18n.Unicode.detectEncoding(uint8Array); // info.encodingName = 'UTF-8', info.confidence = 100
+```
 
 ## getType
 
@@ -56,15 +65,23 @@ static getType(ch: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ch | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 输入字符的一般类别值。取值包括： |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let unicodeType: string = i18n.Unicode.getType('a'); // unicodeType = 'U_LOWERCASE_LETTER'
+```
 
 ## isDigit
 
@@ -82,15 +99,23 @@ static isDigit(ch: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ch | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示输入的字符是数字，false表示输入的字符不是数字。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isDigit: boolean = i18n.Unicode.isDigit('1'); // isDigit = true
+```
 
 ## isIdeograph
 
@@ -108,15 +133,23 @@ static isIdeograph(ch: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ch | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示输入的字符是表意文字，false表示输入的字符不是表意文字。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isIdeograph: boolean = i18n.Unicode.isIdeograph('a'); // isIdeograph = false
+```
 
 ## isLetter
 
@@ -134,15 +167,23 @@ static isLetter(ch: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ch | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示输入的字符是字母，false表示输入的字符不是字母。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isLetter: boolean = i18n.Unicode.isLetter('a'); // isLetter = true
+```
 
 ## isLowerCase
 
@@ -160,15 +201,23 @@ static isLowerCase(ch: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ch | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示输入的字符是小写字母，false表示输入的字符不是小写字母。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isLowercase: boolean = i18n.Unicode.isLowerCase('a'); // isLowercase = true
+```
 
 ## isRTL
 
@@ -186,15 +235,23 @@ static isRTL(ch: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ch | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示输入的字符是从右到左语言的字符，false表示输入的字符不是从右到左语言的字符。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isRtl: boolean = i18n.Unicode.isRTL('a'); // isRtl = false
+```
 
 ## isSpaceChar
 
@@ -212,15 +269,23 @@ static isSpaceChar(ch: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ch | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示输入的字符是空格符，false表示输入的字符不是空格符。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isSpacechar: boolean = i18n.Unicode.isSpaceChar('a'); // isSpacechar = false
+```
 
 ## isUpperCase
 
@@ -238,15 +303,23 @@ static isUpperCase(ch: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ch | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示输入的字符是大写字母，false表示输入的字符不是大写字母。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isUppercase: boolean = i18n.Unicode.isUpperCase('a'); // isUppercase = false
+```
 
 ## isWhitespace
 
@@ -264,12 +337,20 @@ static isWhitespace(ch: string): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ch | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ch | string | 是 | 输入的字符。如果输入的是字符串，则只判断首字符的类别。<br>**起始版本：** 12 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示输入的字符是空白符，false表示输入的字符不是空白符。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isWhitespace: boolean = i18n.Unicode.isWhitespace('a'); // isWhitespace = false
+```

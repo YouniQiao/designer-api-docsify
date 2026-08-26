@@ -10,20 +10,20 @@ The **mediaquery** module provides different styles for different media types.
 ## Modules to Import
 
 ```TypeScript
-import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from 'kits/@kit.ArkUI';
+import SystemMediaQuery, { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MediaQuery](arkts-arkui-system-mediaquery-mediaquery-c.md) |
+| Name | Description |
+| --- | --- |
+| [MediaQuery](arkts-arkui-system-mediaquery-mediaquery-c.md) | Defines the MediaQuery API. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MediaQueryEvent](arkts-arkui-system-mediaquery-mediaqueryevent-i.md) |
-| [MediaQueryList](arkts-arkui-system-mediaquery-mediaquerylist-i.md) |
+| Name | Description |
+| --- | --- |
+| [MediaQueryEvent](arkts-arkui-system-mediaquery-mediaqueryevent-i.md) | Defines a media query event. |
+| [MediaQueryList](arkts-arkui-system-mediaquery-mediaquerylist-i.md) | Represents media query list information. |

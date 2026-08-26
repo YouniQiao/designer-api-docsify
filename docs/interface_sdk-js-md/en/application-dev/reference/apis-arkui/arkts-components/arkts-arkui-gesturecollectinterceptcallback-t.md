@@ -17,13 +17,13 @@ Defines the callback type used in [onGestureCollectIntercept](arkts-arkui-common
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes |
-| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | Gesture recognizer objects of the component on the response chain. |
+| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | No | Touch recognizer objects of the component on the response chain. The default value is **null**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [GestureCollectIntervention](../arkts-apis/arkts-arkui-gesturecollectintervention-e.md) |
+| Type | Description |
+| --- | --- |
+| [GestureCollectIntervention](../arkts-apis/arkts-arkui-gesturecollectintervention-e.md) | Gesture collection intervention result. |

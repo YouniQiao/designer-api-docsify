@@ -15,28 +15,28 @@ The **faultLogger** APIs can be used to query fault logs of an application cache
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
+import FaultLogger from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [query(FaultLogger)](arkts-performanceanalysis-faultlogger-query-f.md) |
-| [query(FaultLogger)](arkts-performanceanalysis-faultlogger-query-f.md) |
-| [querySelfFaultLog(FaultLogger)](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md) |
-| [querySelfFaultLog(FaultLogger)](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md) |
+| Name | Description |
+| --- | --- |
+| [query(FaultLogger)](arkts-performanceanalysis-faultlogger-query-f.md) | Obtains the fault information about the current application. This API uses an asynchronous callback to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
+| [query(FaultLogger)](arkts-performanceanalysis-faultlogger-query-f.md) | Obtains the fault information about the current application. This API uses a promise to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
+| [querySelfFaultLog(FaultLogger)](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md) | Obtains the fault information about the current application. This API uses an asynchronous callback to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
+| [querySelfFaultLog(FaultLogger)](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md) | Obtains the fault information about the current application. This API uses a promise to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FaultLogInfo(FaultLogger)](arkts-performanceanalysis-faultlogger-faultloginfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [FaultLogInfo(FaultLogger)](arkts-performanceanalysis-faultlogger-faultloginfo-i.md) | Defines the data structure of the fault log information. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FaultType(FaultLogger)](arkts-performanceanalysis-faultlogger-faulttype-e.md) |
+| Name | Description |
+| --- | --- |
+| [FaultType(FaultLogger)](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Enumerates the fault types. |

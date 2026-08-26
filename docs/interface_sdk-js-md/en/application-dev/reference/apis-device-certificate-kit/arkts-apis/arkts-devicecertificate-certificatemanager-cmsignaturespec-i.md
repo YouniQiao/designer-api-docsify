@@ -9,7 +9,6 @@ Represents a set of parameters used for signing or signature verification, inclu
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## digest

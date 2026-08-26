@@ -16,6 +16,6 @@ export type OnCounterV2HoverCallback = (isHover: boolean) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isHover | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isHover | boolean | 是 |  |

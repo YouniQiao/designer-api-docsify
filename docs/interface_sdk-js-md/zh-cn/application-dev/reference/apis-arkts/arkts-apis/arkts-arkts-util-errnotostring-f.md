@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import Vector from '@kit.ArkTS.Vector';
+import JSON from '@kit.ArkTS.json';
 ```
 
 ## errnoToString
@@ -22,12 +23,21 @@ function errnoToString(errno: number): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [errno](../../apis-universal-keystore-kit/arkts-apis/arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| errno | number | 是 | 系统发生错误产生的错误码。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 错误码对应的详细信息，包含可读的错误描述文本，便于开发者定位问题。 |
+
+**示例**
+
+```TypeScript
+let errnum = -1; // -1 : a system error number
+let result = util.errnoToString(errnum);
+console.info("result = " + result);
+// 输出结果：result = operation not permitted
+```

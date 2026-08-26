@@ -13,5 +13,4 @@ Portrait Photo Conflict Functions object.
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```

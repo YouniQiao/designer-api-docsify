@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { advertising } from 'kits/@kit.ConnectivityKit';
+import advertising from '@kit.ConnectivityKit';
 ```
 
 ## advertisingId

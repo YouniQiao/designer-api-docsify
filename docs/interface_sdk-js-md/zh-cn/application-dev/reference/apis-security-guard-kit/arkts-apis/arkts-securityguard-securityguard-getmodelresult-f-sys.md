@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+import securityGuard from '@kit.SecurityGuardKit';
 ```
 
 ## getModelResult
@@ -24,20 +24,20 @@ function getModelResult(rule: ModelRule): Promise<ModelResult>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| rule | [ModelRule](arkts-securityguard-securityguard-modelrule-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rule | [ModelRule](arkts-securityguard-securityguard-modelrule-i-sys.md) | 是 | 安全模型规则，指定模型名称与参数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[ModelResult](arkts-securityguard-securityguard-modelresult-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ModelResult](arkts-securityguard-securityguard-modelresult-i-sys.md)&gt; | 以Promise形式返回模型结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | check permission fail. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | non-system application uses the system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |

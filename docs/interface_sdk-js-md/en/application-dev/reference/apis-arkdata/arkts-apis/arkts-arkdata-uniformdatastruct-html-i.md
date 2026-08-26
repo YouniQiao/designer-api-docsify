@@ -9,7 +9,7 @@ Represents data of the HTML type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import uniformDataStruct from '@kit.ArkData';
 ```
 
 ## details
@@ -91,3 +91,21 @@ Defines URI authorization policies for drag intention.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Examples**
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+let htmlObjDetails : Record<string, string> = {
+  'attr1': 'value1',
+  'attr2': 'value2'
+}
+let htmlObj : uniformDataStruct.HTML = {
+  uniformDataType :'general.html',
+  htmlContent: '<div><p>Title</p></div>',
+  plainContent : 'this is plainContent',
+  details : htmlObjDetails
+}
+console.info('htmlObj.uniformDataType: ' + htmlObj.uniformDataType);
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HTML, htmlObj);
+```

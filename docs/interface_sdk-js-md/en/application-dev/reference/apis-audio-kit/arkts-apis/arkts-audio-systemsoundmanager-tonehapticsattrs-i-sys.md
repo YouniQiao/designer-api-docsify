@@ -11,7 +11,7 @@ Haptics attributes in tone scenario.
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
+import systemSoundManager from '@kit.AudioKit';
 ```
 
 ## getFileName
@@ -30,15 +30,25 @@ Get file name of haptics.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Haptics title. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+
+**Examples**
+
+```TypeScript
+toneAttrs.getFileName();
+```
+
+```TypeScript
+toneHapticsAttrs.getFileName();
+```
 
 ## getGentleFileName
 
@@ -56,15 +66,21 @@ Get file name of gentle haptics.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string \| null |
+| Type | Description |
+| --- | --- |
+| string \| null | Haptics file name or null if not gentle haptics not exist. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+
+**Examples**
+
+```TypeScript
+toneHapticsAttrs.getGentleFileName();
+```
 
 ## getGentleTitle
 
@@ -82,15 +98,21 @@ Get title of gentle haptics.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string \| null |
+| Type | Description |
+| --- | --- |
+| string \| null | Haptics title or null if not gentle haptics not exist. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+
+**Examples**
+
+```TypeScript
+toneHapticsAttrs.getGentleTitle();
+```
 
 ## getGentleUri
 
@@ -108,15 +130,21 @@ Get gentle haptics URI.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string \| null |
+| Type | Description |
+| --- | --- |
+| string \| null | Haptics URI or null if not gentle haptics not exist. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+
+**Examples**
+
+```TypeScript
+toneHapticsAttrs.getGentleUri();
+```
 
 ## getTitle
 
@@ -134,15 +162,25 @@ Get title of haptics.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Haptics title. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+
+**Examples**
+
+```TypeScript
+toneAttrs.getTitle();
+```
+
+```TypeScript
+toneHapticsAttrs.getTitle();
+```
 
 ## getUri
 
@@ -160,12 +198,22 @@ Get haptics uri.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Haptics uri. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+
+**Examples**
+
+```TypeScript
+toneAttrs.getUri();
+```
+
+```TypeScript
+toneHapticsAttrs.getUri();
+```

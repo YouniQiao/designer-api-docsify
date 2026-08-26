@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { thermal } from 'kits/@kit.BasicServicesKit';
+import thermal from '@kit.BasicServicesKit';
 ```
 
 ## unsubscribeThermalLevel
@@ -24,6 +24,14 @@ Unsubscribes from the thermal level changes. This API uses an asynchronous callb
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback that returns no value. If this parameter is not set, all callbacks will be unregistered. |
+
+**Examples**
+
+```TypeScript
+thermal.unsubscribeThermalLevel(() => {
+    console.info('unsubscribe thermal level success.');
+});
+```

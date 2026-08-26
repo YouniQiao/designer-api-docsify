@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import featureAbility from '@kit.AbilityKit';
 ```
 
 ## startAbilityForResult
@@ -20,7 +20,8 @@ Starts an ability. This API uses an asynchronous callback to return the result. 
 - If different applications call this API to start an ability that uses the singleton mode and then call  
 [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about the startup rules for the components in the FA model, see
 > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 
@@ -32,10 +33,40 @@ Starts an ability. This API uses an asynchronous callback to return the result. 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | Ability to start. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is an AbilityResult object; otherwise, err is an error object. |
+
+**Examples**
+
+```TypeScript
+import { featureAbility, wantConstant } from '@kit.AbilityKit';
+
+featureAbility.startAbilityForResult(
+  {
+    want:
+    {
+      action: 'ohos.want.action.home',
+      entities: ['entity.system.home'],
+      type: 'MIMETYPE',
+      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      /* In the FA model, abilityName consists of package and ability names. */
+      abilityName: 'com.example.myapplication.secondAbility',
+      uri: ''
+    },
+  },
+  (error, data) => {
+    if (error && error.code !== 0) {
+      console.error(`startAbilityForResult fail, error: ${JSON.stringify(error)}`);
+    } else {
+      console.info(`startAbilityForResult success, data: ${JSON.stringify(data)}`);
+    }
+  }
+);
+```
 
 
 ## startAbilityForResult
@@ -52,7 +83,8 @@ Starts an ability. This API uses a promise to return the result. The following s
 - If different applications call this API to start an ability that uses the singleton mode and then call  
 [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For details about the startup rules for the components in the FA model, see
 > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 
@@ -64,12 +96,48 @@ Starts an ability. This API uses a promise to return the result. The following s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | Ability to start. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { featureAbility, wantConstant } from '@kit.AbilityKit';
+
+featureAbility.startAbilityForResult(
+  {
+    want:
+    {
+      action: 'ohos.want.action.home',
+      entities: ['entity.system.home'],
+      type: 'MIMETYPE',
+      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      /* In the FA model, abilityName consists of package and ability names. */
+      abilityName: 'com.example.myapplication.secondAbility',
+      uri: '',
+      parameters:
+      {
+        mykey0: 1111,
+        mykey1: [1, 2, 3],
+        mykey2: '[1, 2, 3]',
+        mykey3: 'xxxxxxxxxxxxxxxxxxxxxx',
+        mykey4: [1, 15],
+        mykey5: [false, true, false],
+        mykey6: ['aaaaaa', 'bbbbb', 'ccccccccccc'],
+        mykey7: true,
+      },
+    },
+  },
+).then((data) => {
+  console.info(`startAbilityForResult data: ${JSON.stringify(data)}`);
+});
+```

@@ -15,7 +15,7 @@ Defines the vibration options.
 ## Modules to Import
 
 ```TypeScript
-import { Vibrator, VibrateOptions } from 'kits/@kit.SensorServiceKit';
+import Vibrator, { VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## complete
@@ -60,10 +60,10 @@ Called when the API call fails.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | string | Yes |  |
+| code | number | Yes |  |
 
 ## success
 

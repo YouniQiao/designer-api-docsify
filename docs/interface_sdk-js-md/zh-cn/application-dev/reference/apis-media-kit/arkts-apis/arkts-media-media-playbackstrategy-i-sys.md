@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## enableCameraPostprocessing
@@ -27,3 +27,13 @@ enableCameraPostprocessing?: boolean
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+```TypeScript
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至initialized状态后才能调用。
+  avPlayer.enableCameraPostprocessing();
+}
+```

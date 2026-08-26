@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import router from '@kit.ArkUI';
 ```
 
 ## getLength
@@ -14,7 +14,8 @@ function getLength(): string
 
 Obtains the number of pages in the current stack.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated
@@ -32,6 +33,13 @@ Obtains the number of pages in the current stack.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Number of pages in the stack. The maximum value is **32**. |
+
+**Examples**
+
+```TypeScript
+let size = this.getUIContext().getRouter().getLength();
+console.info('pages stack size = ' + size);
+```

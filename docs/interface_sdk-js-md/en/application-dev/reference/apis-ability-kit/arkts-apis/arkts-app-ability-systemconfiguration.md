@@ -11,27 +11,27 @@ The class of a system configuration.@namespace systemConfiguration
 ## Modules to Import
 
 ```TypeScript
-import { systemConfiguration } from 'kits/@kit.AbilityKit';
+import systemConfiguration from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) |
+| Name | Description |
+| --- | --- |
+| [UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | System configuration updated callback. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnColorModeUpdatedFn](arkts-ability-systemconfiguration-oncolormodeupdatedfn-t.md) |
-| [OnFontIdUpdatedFn](arkts-ability-systemconfiguration-onfontidupdatedfn-t.md) |
-| [OnFontSizeScaleUpdatedFn](arkts-ability-systemconfiguration-onfontsizescaleupdatedfn-t.md) |
-| [OnFontWeightScaleUpdatedFn](arkts-ability-systemconfiguration-onfontweightscaleupdatedfn-t.md) |
-| [OnHasPointerDeviceUpdatedFn](arkts-ability-systemconfiguration-onhaspointerdeviceupdatedfn-t.md) |
-| [OnLanguageUpdatedFn](arkts-ability-systemconfiguration-onlanguageupdatedfn-t.md) |
-| [OnLocaleUpdatedFn](arkts-ability-systemconfiguration-onlocaleupdatedfn-t.md) |
-| [OnMCCUpdatedFn](arkts-ability-systemconfiguration-onmccupdatedfn-t.md) |
-| [OnMNCUpdatedFn](arkts-ability-systemconfiguration-onmncupdatedfn-t.md) |
+| Name | Description |
+| --- | --- |
+| [OnColorModeUpdatedFn](arkts-ability-systemconfiguration-oncolormodeupdatedfn-t.md) | Defines an OnColorModeUpdatedFn function. |
+| [OnFontIdUpdatedFn](arkts-ability-systemconfiguration-onfontidupdatedfn-t.md) | Defines an OnFontIdUpdatedFn function. |
+| [OnFontSizeScaleUpdatedFn](arkts-ability-systemconfiguration-onfontsizescaleupdatedfn-t.md) | Defines an OnFontSizeScaleUpdatedFn function. |
+| [OnFontWeightScaleUpdatedFn](arkts-ability-systemconfiguration-onfontweightscaleupdatedfn-t.md) | Defines an OnFontWeightScaleUpdatedFn function. |
+| [OnHasPointerDeviceUpdatedFn](arkts-ability-systemconfiguration-onhaspointerdeviceupdatedfn-t.md) | Defines an OnHasPointerDeviceUpdatedFn function. |
+| [OnLanguageUpdatedFn](arkts-ability-systemconfiguration-onlanguageupdatedfn-t.md) | Defines an OnLanguageUpdatedFn function. |
+| [OnLocaleUpdatedFn](arkts-ability-systemconfiguration-onlocaleupdatedfn-t.md) | Defines an OnLocaleUpdatedFn function. |
+| [OnMCCUpdatedFn](arkts-ability-systemconfiguration-onmccupdatedfn-t.md) | Defines an OnMCCUpdatedFn function. |
+| [OnMNCUpdatedFn](arkts-ability-systemconfiguration-onmncupdatedfn-t.md) | Defines an OnMNCUpdatedFn function. |

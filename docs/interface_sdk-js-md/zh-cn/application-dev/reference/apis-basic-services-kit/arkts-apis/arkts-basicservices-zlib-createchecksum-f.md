@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import zlib from '@kit.BasicServicesKit';
 ```
 
 ## createChecksum
@@ -22,6 +22,16 @@ function createChecksum(): Promise<Checksum>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[Checksum](arkts-basicservices-zlib-checksum-i.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Checksum](arkts-basicservices-zlib-checksum-i.md)&gt; | Promise对象。返回校验对象实例。 |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+
+zlib.createChecksum().then((data) => {
+  console.info('createChecksum success');
+})
+```

@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import geolocation from '@kit.LocationKit';
 ```
 
 ## accuracy

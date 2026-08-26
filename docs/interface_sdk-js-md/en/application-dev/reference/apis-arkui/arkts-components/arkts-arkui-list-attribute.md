@@ -31,9 +31,9 @@ Sets the layout mode of list items along the cross axis when the cross-axis widt
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ListItemAlign](arkts-arkui-listitemalign-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ListItemAlign](arkts-arkui-listitemalign-e.md) | Yes | Alignment mode of list items along the cross axis.Default value: **ListItemAlign.Start |
 
 ## backPressBehavior
 
@@ -53,9 +53,9 @@ Sets the system back button behavior of the **List** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| behavior | [ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md) \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| behavior | [ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md) \| undefined | Yes | System back button behavior of the **List** component. Currently, you can use the [ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md) parameter to configure whether to collapse the expanded swipe-out component of a **ListItem** when the system back button takes effect.If this parameter is set to **undefined**, the default behavior is restored. That is, when the system back button takes effect, the expanded swipe-out component of the **ListItem** is collapsed. |
 
 ## cachedCount
 
@@ -75,9 +75,9 @@ Sets the number of **ListItem** or **ListItemGroup** components to be preloaded 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Number of list items or list item groups to be preloaded (cached).Default value: number of nodes visible on the screen, with the maximum value of 16Value range: 0, +∞).Values less than 0 are treated as **1**. |
 
 ## cachedCount
 
@@ -87,7 +87,8 @@ cachedCount(count: number, show: boolean)
 
 Sets the number of list items or list item groups to be cached (preloaded) and specifies whether to display the preloaded nodes.When **cachedCount** is set for the list, the system preloads and lays out the **cachedCount**-specified number of rows of list items both above and below the currently visible area of the list. When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row. This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You are advised to set cachedCount to n/2 (n indicates the number of list items displayed on one screen). You
 > also need to consider other factors to balance the experience and memory usage. For best practices, see
 > [Cache List Items](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-number-list#section11667144010222).
@@ -104,10 +105,10 @@ Sets the number of list items or list item groups to be cached (preloaded) and s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| count | number | Yes |
-| show | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| count | number | Yes | Number of list items to be preloaded.Default value: number of nodes visible on the screen, with the maximum value of 16Value range: 0, +∞).Values less than 0 are treated as **1**. |
+| show | boolean | Yes | Whether to display the preloaded list items. If this parameter is set to **true**, the preloaded list items are displayed. If this parameter is set to **false**, the preloaded list items are not displayed.Default value: **false |
 
 ## cachedCount
 
@@ -117,7 +118,8 @@ cachedCount(count: number | CacheCountInfo, show: boolean)
 
 Sets the number of list items or list item groups to be cached (preloaded) and specifies whether to display the preloaded nodes.If the first parameter of the **cachedCount** attribute is of the **number** type, a specified number (specified by **count**) of rows of list items will be preloaded and laid out above and below the visible area during idle frames.If the first parameter of the **cachedCount** attribute is of the **CacheCountInfo** type, preloading and layout will occur during idle frames when the number of cached rows is less than **CacheCountInfo.minCount**. When the number of cached rows is greater than **CacheCountInfo.maxCount**, the nodes outside the specified range will be destroyed or reused. When the UI is idle (no animation or user operation), a specified number (specified by **CacheCountInfo.maxCount**) of rows of list items will be preloaded above and below the visible area.When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row. This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.Default behavior: The **count** parameter is of the **number** type by default, with its value set based on the number of nodes displayed on the screen, up to a maximum of 16. Preloaded **ListItem** components are not involved in drawing by default.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You are advised to set cachedCount to n/2 (n indicates the number of list items displayed on one screen). You
 > also need to consider other factors to balance the experience and memory usage. Starting from API version 22,
 > setting both minimum and maximum cache counts is supported. The maximum cache count can be set to a moderately
@@ -138,10 +140,10 @@ Sets the number of list items or list item groups to be cached (preloaded) and s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| count | number \| [CacheCountInfo](../arkts-apis/arkts-arkui-cachecountinfo-i.md) | Yes |
-| show | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| count | number \| [CacheCountInfo](../arkts-apis/arkts-arkui-cachecountinfo-i.md) | Yes | Number of preloaded **ListItem** components if the parameter is of the **number** type.Value range: [0, +∞).Values less than 0 are treated as **1**. If the parameter type is CacheCountInfo, the parameter indicates the maximum and minimum preloading range. |
+| show | boolean | Yes | Whether to display the preloaded list items.   **true**: yes   **false**: no |
 
 ## chainAnimation
 
@@ -151,14 +153,18 @@ chainAnimation(value: boolean)
 
 Sets whether to enable the chain linkage effect for the current **List** component.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The chain linkage effect refers to the interaction where, during finger swiping, the dragged **ListItem** acts
 > as the driving object, while adjacent items are driven objects. The driving object drives the linkage of the
-> driven objects, following a physics-based spring animation.&gt;
+> driven objects, following a physics-based spring animation.
+> 
 > - The driving effect of the chain linkage effect is reflected in the spacing between **ListItem**s. The spacing
 > in the static state can be set by using the **space** parameter of the **List** component. If the **space**
-> parameter is not set and the chain linkage effect is enabled, the spacing is 20 vp by default.&gt;
-> - After the chain linkage effect is enabled, the divider of the **List** component is not displayed.&gt;
+> parameter is not set and the chain linkage effect is enabled, the spacing is 20 vp by default.
+> 
+> - After the chain linkage effect is enabled, the divider of the **List** component is not displayed.
+> 
 > - The chain linkage effect takes effect only when the **List** component is in single-column mode and the edge
 > effect is of the **EdgeEffect.Spring** type.
 
@@ -172,9 +178,9 @@ Sets whether to enable the chain linkage effect for the current **List** compone
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable chained animations.   **false** (default): Chained animations are disabled. **true**: Chained animations are enabled. |
 
 ## childrenMainSize
 
@@ -184,21 +190,25 @@ childrenMainSize(value: ChildrenMainSize)
 
 Sets the size information of the child components of a **List** component along the main axis.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This attribute provides the **List** component with the size of all child components in the main-axis
 > direction. This ensures that the **List** component can maintain the accuracy of the scrolling position in
 > scenarios such as varying main-axis sizes among child components, adding or removing child components, or using
 > [scrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex). In this way, scrollTo can accurately
 > jump to the specified position, currentOffset can obtain the accurate scroll
-> position, and the built-in scroll bar can be smoothly moved without jumps.&gt;
+> position, and the built-in scroll bar can be smoothly moved without jumps.
+> 
 > - If a child component is **ListItemGroup**, the overall size of **ListItemGroup** in the main-axis direction
 > needs to be accurately calculated based on the column count of **ListItemGroup**, the spacing between list items
 > in **ListItemGroup** in the main-axis direction, and the size of the header, footer, and **ListItem** components
-> in **ListItemGroup**. This calculated size must then be passed to the **List** component.&gt;
+> in **ListItemGroup**. This calculated size must then be passed to the **List** component.
+> 
 > - If a child component contains **ListItemGroup** components, the
 > childrenMainSize attribute must be set for each
 > **ListItemGroup** component. The **List** component and each **ListItemGroup** component must be bound to a
-> **ChildrenMainSize** object through the **childrenMainSize** attribute in one-to-one mode.&gt;
+> **ChildrenMainSize** object through the **childrenMainSize** attribute in one-to-one mode.
+> 
 > - For a multi-column list where child components are generated using **LazyForEach**, ensure that **LazyForEach**
 > generates either all **ListItemGroup** components or all **ListItem** components.
 
@@ -212,9 +222,9 @@ Sets the size information of the child components of a **List** component along 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ChildrenMainSize](arkts-arkui-childrenmainsize-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ChildrenMainSize](arkts-arkui-childrenmainsize-c.md) | Yes | Size information of child components in the main axis direction. |
 
 ## contentEndOffset
 
@@ -234,9 +244,9 @@ Sets the offset from the end of the list content to the boundary of the list dis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Offset from the end of the list content to the boundary of the list display area.Default value: **0**Unit: vp   **NOTE：**If the set value is a negative number, the default value will be used. |
 
 ## contentEndOffset
 
@@ -256,9 +266,9 @@ Sets the offset from the end of the list content to the boundary of the list dis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| offset | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Offset from the end of the list content to the boundary of the list display area.Default value: **0**If the parameter type is number, the unit is vp.Invalid values (negative numbers or non-numeric Resource values) are treated as the default value. |
 
 ## contentStartOffset
 
@@ -278,9 +288,9 @@ Sets the offset from the start of the list content to the boundary of the list d
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Offset from the start of the list content to the boundary of the list display area.Default value: **0**Unit: vp   **NOTE：**If the set value is a negative number, the default value will be used. |
 
 ## contentStartOffset
 
@@ -300,9 +310,9 @@ Sets the offset from the start of the list content to the boundary of the list d
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| offset | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Offset from the start of the list content to the boundary of the list display area.Default value: **0**If the parameter type is number, the unit is vp.Invalid values (negative numbers or non-numeric Resource values) are treated as the default value. |
 
 ## divider
 
@@ -324,9 +334,9 @@ Sets the style of the divider for the list items. By default, there is no divide
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) \| null | Yes | Style of the divider for the list items.Default value: **null<br>**Since:** 18 |
 
 ## edgeEffect
 
@@ -336,7 +346,8 @@ edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions)
 
 Sets the effect used when the scroll boundary is reached.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > By default, this component can produce a bounce effect only when there is more than one screen of content. To
 > produce a bounce effect when there is less than one screen of content, set the **options** parameter of the
 > **edgeEffect** attribute to **{ alwaysEnabled: true }**.
@@ -351,10 +362,10 @@ Sets the effect used when the scroll boundary is reached.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.Default value: **EdgeEffect.Spring |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value **{ alwaysEnabled: true }** means to enable the scroll effect, and **{ alwaysEnabled: false }** means the opposite.Default value: **{ alwaysEnabled: false }<br>**Since:** 11 |
 
 ## editMode
 
@@ -364,7 +375,8 @@ editMode(value: boolean)
 
 Sets whether to enable edit mode. For details about how to delete selected list items, see [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#example-3-setting-the-edit-mode).
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is supported since API version 7 and deprecated since API version 9. No substitute is provided.
 
 **Since:** 7
@@ -375,9 +387,9 @@ Sets whether to enable edit mode. For details about how to delete selected list 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable edit mode.Default value: **false** (the edit mode is disabled). |
 
 ## editModeOptions
 
@@ -397,9 +409,9 @@ Configures the options of the edit mode.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | No | Edit mode options. |
 
 ## enableEditMode
 
@@ -419,9 +431,9 @@ Sets whether to enable the edit mode for the **List** component. After the edit 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean \| undefined | Yes | Whether to enable the edit mode.   **true** means to enable the edit mode and swiping to select multiple items is supported; **false** or **undefined** means to disable the edit mode and swiping to select multiple items is not supported. |
 
 ## enableScrollInteraction
 
@@ -441,9 +453,9 @@ Sets whether to support the scroll gesture.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to support the scroll gesture. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).Default value: **true |
 
 ## focusWrapMode
 
@@ -463,9 +475,9 @@ Sets the focus wrap mode for arrow keys.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | Yes | Focus wrap mode for cross-axis arrow keys.Default value: **FocusWrapMode.DEFAULT**   **NOTE：**Abnormal values are treated as the default value, meaning that cross- axis arrow keys cannot wrap. |
 
 ## friction
 
@@ -485,9 +497,9 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Friction coefficient.Default value: **0.6** for non-wearable devices and **0.9** for wearable devices.Since API version 11, the default value for non-wearable devices is **0.7**.Since API version 12, the default value for non-wearable devices is **0.75**. |
 
 ## lanes
 
@@ -514,10 +526,10 @@ on the width of **ListItemGroup**. Therefore, when the width of **ListItemGroup*
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| LengthConstrain | Yes |
-| gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| LengthConstrain | Yes | Number of columns or rows in the list.Default value: **1**Value range: [1, +∞) |
+| gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | No | Column gap or row gap.Default value: **0** Value range: [0, +∞)    **NOTE：**This parameter takes effect when the number of columns or rows is greater than 1.<br>**Since:** 10 |
 
 ## lanes
 
@@ -539,10 +551,10 @@ Sets the number of columns and the column spacing of the **List** component. By 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| LengthConstrain \| [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | Yes |
-| gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| LengthConstrain \| [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | Yes | Number of columns in the layout of the **List** component.If this parameter is set to a number, the number of columns is determined by this value. The value range of the number type is [1, +∞).If this parameter is set to a value of the **LengthConstrain** type, the number of columns is determined based on the maximum and minimum values specified in **LengthConstrain**. If this parameter is set to a value of the **ItemFillPolicy** type, the number of columns is determined based on the [breakpoint type](../../../ui/arkts-layout-development-grid-layout.md#breakpoints) corresponding to the width of the **List** component. This type takes effect only when the scrolling direction of the list is vertical. |
+| gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | No | Gap between columns.Default value: **0**Value range: [0, +∞) |
 
 ## listDirection
 
@@ -562,9 +574,9 @@ Sets the direction in which the list items are arranged.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | Yes | Direction in which the list items are arranged.Default value: **Axis.Vertical |
 
 ## maintainVisibleContentPosition
 
@@ -584,9 +596,9 @@ Sets whether to maintain the visible content's position when data is inserted or
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Whether to maintain the visible content's position when data is inserted or deleted outside the visible area of the component.Default value: **false**   **false**: The visible content position will change when data is inserted or deleted. **true**: The visible content position remains unchanged when data is inserted or deleted. |
 
 ## multiSelectable
 
@@ -606,9 +618,9 @@ Sets whether to enable multiselect.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable multiselect.   **false** (default): Multiselect is disabled. **true**: Multiselect is enabled. |
 
 ## nestedScroll
 
@@ -628,9 +640,9 @@ Sets the nested scrolling mode in the forward and backward directions to impleme
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | Nested scrolling options.Default value: **{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY } |
 
 ## onEditModeChange
 
@@ -650,9 +662,9 @@ Triggered when the editing mode status changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | Callback & lt;boolean & gt; \ | undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | Callback & lt;boolean & gt; \ | undefined | Yes | Callback triggered when editing mode status changes. Passing undefined will unregister the callback. |
 
 ## onItemDelete
 
@@ -670,9 +682,9 @@ Triggered when a list item is deleted.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (index: number) = & gt; boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (index: number) = & gt; boolean | Yes |  |
 
 ## onItemDragEnter
 
@@ -690,9 +702,9 @@ Called when a dragged list item enters the list.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: ItemDragInfo) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: ItemDragInfo) = & gt; void | Yes | Information about the drag point. |
 
 ## onItemDragLeave
 
@@ -710,9 +722,9 @@ Triggered when the dragged item leaves the drop target of the list.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: ItemDragInfo, itemIndex: number) = & gt; void | Yes |  |
 
 ## onItemDragMove
 
@@ -730,9 +742,9 @@ Triggered when the dragged item moves over the drop target of the list.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number) = & gt; void | Yes |  |
 
 ## onItemDragStart
 
@@ -742,7 +754,8 @@ onItemDragStart(event: OnItemDragStartCallback)
 
 Triggered when a list item starts to be dragged.Automatic scrolling of the list cannot be triggered when a list item is dragged to the edge of the list. You can use the [onMove](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-drag-sorting.md#onmove) API of **ForEach**, **LazyForEach**, or **Repeat** to implement this effect. For details, see [Example 12: Implementing Dragging with OnMove](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#example-12-implementing-dragging-with-onmove). However, note that the [onMove](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-drag-sorting.md#onmove) API does not support cross-**ListItemGroup** dragging.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API can be called within attributeModifier since API version 14.
 
 **Since:** 8
@@ -753,9 +766,9 @@ Triggered when a list item starts to be dragged.Automatic scrolling of the list 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | Yes | Callback triggered when the dragging of a list item starts.In API version 22 and earlier versions, the parameter type is **(event: ItemDragInfo, itemIndex: number) = & gt; (() = & gt; any) \ |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | Yes | Callback triggered when the dragging of a list item starts.In API version 22 and earlier versions, the parameter type is **(event: ItemDragInfo, itemIndex: number) = & gt; (() = & gt; any) \ | void**. For details about the **event** and **itemIndex** parameters, see [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md).<br>**Since:** 23 |
 
 ## onItemDrop
 
@@ -773,9 +786,9 @@ Triggered when the dragged item is dropped on the drop target of the list. Durin
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) = & gt; void | Yes | Callback triggered when dragging is stopped within the scope of the list. event: Information about the drag point. itemIndex: Initial position of the dragged item. insertIndex: Index of the position to which the dragged item is dropped. isSuccess: Whether the dragged item is successfully dropped. If the return value is **true**, the list item is successfully dropped. If the return value is **false**, the list item is not successfully dropped. |
 
 ## onItemMove
 
@@ -793,9 +806,9 @@ Triggered when a list item moves.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (from: number, to: number) = & gt; boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (from: number, to: number) = & gt; boolean | Yes |  |
 
 ## onReachEnd
 
@@ -815,9 +828,9 @@ Called when the list reaches the end position. This callback is triggered when t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback triggered when the list reaches the end position. |
 
 ## onReachStart
 
@@ -837,9 +850,9 @@ Triggered when the list reaches the start position.This event is triggered once 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback triggered when the list reaches the start position. |
 
 ## onScroll
 
@@ -863,9 +876,9 @@ Triggered when the list scrolls.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (scrollOffset: number, scrollState: ScrollState) = & gt; void | Yes | Callback when scroll, scrollOffset: Offset relative to the previous frame. The offset is positive when the list content scrolls up and negative when the list content scrolls down. Unit: vp scrollState: Current scroll state. |
 
 ## onScrollFrameBegin
 
@@ -892,9 +905,9 @@ This event is not triggered in the following scenarios:
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Yes | Callback triggered when each frame scrolling starts.<br>**Since:** 20 |
 
 ## onScrollIndex
 
@@ -914,9 +927,9 @@ Triggered when a child component enters or leaves the list display area.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | (start: number, end: number, center: number) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (start: number, end: number, center: number) = & gt; void | Yes |  |
 
 ## onScrollStart
 
@@ -936,9 +949,9 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback invoked when the list starts scrolling. |
 
 ## onScrollStop
 
@@ -958,9 +971,9 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | () = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () = & gt; void | Yes | Callback triggered when the list stops sliding. |
 
 ## onScrollVisibleContentChange
 
@@ -980,9 +993,9 @@ Triggered when a child component enters or leaves the list display area. During 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| handler | [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) | Yes | Callback invoked when the displayed content changes. |
 
 ## scrollBar
 
@@ -1002,9 +1015,9 @@ Sets the scrollbar state.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.In API version 9 and earlier versions, the default value is **BarState.Off**. Since API version 10, the default value is **BarState.Auto**. |
 
 ## scrollSnapAlign
 
@@ -1024,9 +1037,9 @@ Sets the scroll snap alignment effect for list items when scrolling ends.This AP
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md) | Yes | Alignment mode of the scroll snap position.Default value: **ScrollSnapAlign.NONE |
 
 ## scrollSnapAnimationSpeed
 
@@ -1046,9 +1059,9 @@ Sets the speed of the snap animation for list item scrolling. This parameter tak
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| speed | [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| speed | [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md) | Yes | Speed of the snap animation for listing scrolling.Default value: **ScrollSnapAnimationSpeed.NORMAL |
 
 ## stackFromEnd
 
@@ -1068,9 +1081,9 @@ Whether the list's layout starts from the bottom (end) rather than the top (begi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Whether the list's layout starts from the bottom (end) rather than the top (beginning).   **false** (default): The layout starts from the top. **true**: The layout starts from the bottom. |
 
 ## sticky
 
@@ -1080,7 +1093,8 @@ sticky(value: StickyStyle)
 
 Sets whether to pin the header to the top or the footer to the bottom in the list item group, if set. To support both the pin-to-top and pin-to-bottom features, set **sticky** to **StickyStyle.Header \| StickyStyle.Footer**. From API version 20, the **sticky** attribute can also be set to **StickyStyle.BOTH** to enable both sticky header and sticky footer at the same time.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Occasionally, after **sticky** is set, floating-point calculation precision may result in small gaps appearing
 > during scrolling. To address this issue, you can apply the [pixelRound](arkts-arkui-commonmethod-c.md#pixelround) attribute
 > to the current component, which rounds down the pixel values and help eliminate the gaps.
@@ -1095,9 +1109,9 @@ Sets whether to pin the header to the top or the footer to the bottom in the lis
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [StickyStyle](arkts-arkui-stickystyle-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [StickyStyle](arkts-arkui-stickystyle-e.md) | Yes | Whether to pin the header to the top or the footer to the bottom in the list item group.Default value: **StickyStyle.None |
 
 ## supportEmptyBranchInLazyLoading
 
@@ -1117,9 +1131,9 @@ Defines whether the **List** component supports the generation of empty branch n
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| supported | boolean \| undefined | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| supported | boolean \| undefined | Yes | Whether the current **List** component supports the use of the [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) rendering syntax in [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) to generate an empty branch node that contains no child component.   **true**: yes; **false**: no If the value is **undefined**, it is processed as **false**. |
 
 ## syncLoad
 
@@ -1139,6 +1153,6 @@ Sets whether to synchronously load all child components in the list.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to synchronously load all child components in the list.   **true**: yes; **false**: no Default value: **true**   **NOTE：**When this parameter is set to **false**, in the first display or **scrollToIndex** jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the list are delayed to the next frame for layout. |

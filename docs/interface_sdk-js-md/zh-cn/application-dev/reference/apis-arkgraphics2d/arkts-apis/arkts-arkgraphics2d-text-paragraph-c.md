@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import text from '@kit.ArkGraphics2D';
 ```
 
 ## didExceedMaxLines
@@ -28,9 +28,15 @@ didExceedMaxLines(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true表示段落超出了最大行限制，false则表示没有超出最大行限制。 |
+
+**示例**
+
+```TypeScript
+let didExceed = paragraph.didExceedMaxLines();
+```
 
 ## forceReuseRasterResult
 
@@ -50,9 +56,56 @@ forceReuseRasterResult(isForce: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isForce | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isForce | boolean | 是 | 是否强制复用光栅化结果。true表示强制复用光栅化结果，false表示允许更新光栅化结果。 |
+
+**示例**
+
+```TypeScript
+// Index.ets
+import { text, drawing } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+ 
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  let textData = "Hello World";
+  let myTextStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let myParagraphStyle: text.ParagraphStyle = {
+    textStyle: myTextStyle
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+  paragraphBuilder.addText(textData);
+  let paragraph = paragraphBuilder.build();
+  paragraph.layoutSync(200);
+  paragraph.forceReuseRasterResult(true);
+  paragraph.paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button("Click").onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
 
 ## getActualTextRange
 
@@ -70,16 +123,22 @@ getActualTextRange(lineNumber: number, includeSpaces: boolean): Range
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [lineNumber](arkts-arkgraphics2d-text-linemetrics-i.md) | number | 是 |
-| includeSpaces | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| lineNumber | number | 是 | 要获取文本范围的行索引，行索引从0开始。该接口只能获取已有行的边界，即输入行索引从0开始。最大行索引为文本行数量-1，文本行数量可通过 [getLineCount](#getlinecount)接口获取。 |
+| includeSpaces | boolean | 是 | 表示是否应包含空白字符。true表示包含空白字符，false表示不包含空白字符。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 返回对应行数的实际文本范围。如果行索引非法，返回的start和end均为0。 |
+
+**示例**
+
+```TypeScript
+let rang = paragraph.getActualTextRange(0, true);
+```
 
 ## getAlphabeticBaseline
 
@@ -97,9 +156,15 @@ getAlphabeticBaseline(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 拉丁字母下的基线位置，浮点数，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+let alphabeticBaseline = paragraph.getAlphabeticBaseline();
+```
 
 ## getCharacterPositionAtCoordinate
 
@@ -119,23 +184,59 @@ getCharacterPositionAtCoordinate(x: number, y: number, encoding: drawing.TextEnc
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
-| encoding | drawing.TextEncoding | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 文本排版区域内的水平坐标，单位为物理像素（px）。相对于文本排版区域左上角的x偏移量，向右为正方向。支持浮点数，可取负值（表示在文本区域左侧）。坐标超出文本区域范围时，将返回最近的字 符位置。可通过触摸事件或点击事件获取。 |
+| y | number | 是 | 文本排版区域内的垂直坐标，单位为物理像素（px）。相对于文本排版区域左上角的y偏移量，向下为正方向。支持浮点数，可取负值（表示在文本区域上方）。坐标超出文本区域范围时，将返回最近的字 符位置。可通过触摸事件或点击事件获取。 |
+| encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符位置表示字节偏移量。对于UTF-16编码，返回的字符 位置表示UTF-16编码单元偏移量。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | 字符位置信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+
+**示例**
+
+```TypeScript
+import { drawing, text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("get character position")
+        .onClick(() => {
+          let encoding: drawing.TextEncoding = drawing.TextEncoding.TEXT_ENCODING_UTF8;
+          let textData = "Heน้ำl👨‍👩‍👧lo1️⃣World";
+          let myTextStyle: text.TextStyle = {
+            color: { alpha: 255, red: 255, green: 0, blue: 0 },
+            fontSize: 33,
+          };
+          let myParagraphStyle: text.ParagraphStyle = {
+            textStyle: myTextStyle,
+            align: text.TextAlign.END,
+          };
+          let fontCollection = new text.FontCollection();
+          let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+          paragraphBuilder.addText(textData);
+          let paragraph = paragraphBuilder.build();
+          paragraph.layoutSync(200);
+          let x = 10;
+          let y = 5;
+          let position = paragraph.getCharacterPositionAtCoordinate(x, y, encoding);
+        })
+    }
+  }
+}
+```
 
 ## getCharacterRangeForGlyphRange
 
@@ -155,22 +256,57 @@ getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| glyphRange | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 是 |
-| encoding | drawing.TextEncoding | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| glyphRange | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 是 | 字形范围。 |
+| encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符范围表示字节范围。对于UTF-16编码，返回的字符范 围表示UTF-16编码单元范围。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;Range & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;Range & gt; | 字符范围。如果数组包含一个元素，它表示字符范围。如果包含两个元素，第一个是字符范围，第二个是实际的字形范围。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+
+**示例**
+
+```TypeScript
+import { drawing, text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("get character range")
+        .onClick(() => {
+          let glyphRange: text.Range = { start: 0, end: 5 };
+          let encoding: drawing.TextEncoding = drawing.TextEncoding.TEXT_ENCODING_UTF8;
+          let textData = "Heน้ำl👨‍👩‍👧lo1️⃣World";
+          let myTextStyle: text.TextStyle = {
+            color: { alpha: 255, red: 255, green: 0, blue: 0 },
+            fontSize: 33,
+          };
+          let myParagraphStyle: text.ParagraphStyle = {
+            textStyle: myTextStyle,
+            align: text.TextAlign.END,
+          };
+          let fontCollection = new text.FontCollection();
+          let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+          paragraphBuilder.addText(textData);
+          let paragraph = paragraphBuilder.build();
+          paragraph.layoutSync(200);
+          let ranges = paragraph.getCharacterRangeForGlyphRange(glyphRange, encoding);
+        })
+    }
+  }
+}
+```
 
 ## getGlyphPositionAtCoordinate
 
@@ -188,16 +324,22 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| x | number | 是 |
-| y | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 横坐标，浮点数，单位为物理像素px。 |
+| y | number | 是 | 纵坐标，浮点数，单位为物理像素px。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | 字形位置信息。 |
+
+**示例**
+
+```TypeScript
+let positionWithAffinity = paragraph.getGlyphPositionAtCoordinate(0, 0);
+```
 
 ## getGlyphRangeForCharacterRange
 
@@ -217,22 +359,57 @@ getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEnco
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| characterRange | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 是 |
-| encoding | drawing.TextEncoding | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| characterRange | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 是 | 字符范围。 |
+| encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的实际字符范围表示字节范围。对于UTF-16编码，返回的实 际字符范围表示UTF-16编码单元范围。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;Range & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;Range & gt; | 字形范围。数组包含两个元素，第一个是字形范围，第二个是实际的字符范围。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+
+**示例**
+
+```TypeScript
+import { drawing, text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("get glyph range")
+        .onClick(() => {
+          let characterRange: text.Range = { start: 0, end: 5 };
+          let encoding: drawing.TextEncoding = drawing.TextEncoding.TEXT_ENCODING_UTF8;
+          let textData = "Heน้ำl👨‍👩‍👧lo1️⃣World";
+          let myTextStyle: text.TextStyle = {
+            color: { alpha: 255, red: 255, green: 0, blue: 0 },
+            fontSize: 33,
+          };
+          let myParagraphStyle: text.ParagraphStyle = {
+            textStyle: myTextStyle,
+            align: text.TextAlign.END,
+          };
+          let fontCollection = new text.FontCollection();
+          let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+          paragraphBuilder.addText(textData);
+          let paragraph = paragraphBuilder.build();
+          paragraph.layoutSync(200);
+          let ranges = paragraph.getGlyphRangeForCharacterRange(characterRange, encoding);
+        })
+    }
+  }
+}
+```
 
 ## getHeight
 
@@ -250,9 +427,15 @@ getHeight(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 总高度，浮点数，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+let height = paragraph.getHeight();
+```
 
 ## getIdeographicBaseline
 
@@ -270,9 +453,15 @@ getIdeographicBaseline(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 表意字下的基线位置，浮点数，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+let ideographicBaseline = paragraph.getIdeographicBaseline();
+```
 
 ## getLineCount
 
@@ -290,9 +479,15 @@ getLineCount(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 文本行数量，整数。 |
+
+**示例**
+
+```TypeScript
+let lineCount = paragraph.getLineCount();
+```
 
 ## getLineHeight
 
@@ -310,15 +505,21 @@ getLineHeight(line: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| line | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| line | number | 是 | 文本行索引，整数，范围为0~[getLineCount](#getlinecount)-1。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 行高，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+let lineHeight = paragraph.getLineHeight(0);
+```
 
 ## getLineMetrics
 
@@ -336,9 +537,15 @@ getLineMetrics(): Array<LineMetrics>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;LineMetrics & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;LineMetrics & gt; | 文本行的行度量数组。 |
+
+**示例**
+
+```TypeScript
+let arrLineMetric =  paragraph.getLineMetrics();
+```
 
 ## getLineMetrics
 
@@ -356,15 +563,21 @@ getLineMetrics(lineNumber: number): LineMetrics | undefined
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [lineNumber](arkts-arkgraphics2d-text-linemetrics-i.md) | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| lineNumber | number | 是 | 要查询度量信息的行的编号，行号从0开始，最大行索引为文本行数量-1，文本行数量可通过 [getLineCount](#getlinecount)接口获取。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| LineMetrics \| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| LineMetrics \| undefined | 如果指定的行号有效且度量信息存在，则返回一个包含该行度量数据的LineMetrics对象；如果行号无效或无法获取度量信息，则返回undefined。 |
+
+**示例**
+
+```TypeScript
+let lineMetrics =  paragraph.getLineMetrics(0);
+```
 
 ## getLineWidth
 
@@ -382,15 +595,21 @@ getLineWidth(line: number): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| line | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| line | number | 是 | 文本行索引，整数，范围为0~[getLineCount](#getlinecount)-1。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 行宽，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+let lineWidth = paragraph.getLineWidth(0);
+```
 
 ## getLongestLine
 
@@ -408,9 +627,15 @@ getLongestLine(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 最长一行的宽度，浮点数，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+let longestLine = paragraph.getLongestLine();
+```
 
 ## getLongestLineWithIndent
 
@@ -428,9 +653,15 @@ getLongestLineWithIndent(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 最长一行的宽度（该宽度包含当前行缩进的宽度），浮点数，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+let longestLineWithIndent = paragraph.getLongestLineWithIndent();
+```
 
 ## getMaxIntrinsicWidth
 
@@ -448,9 +679,15 @@ getMaxIntrinsicWidth(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 该段落所占水平空间的最大固有宽度，浮点数，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+let maxIntrinsicWidth = paragraph.getMaxIntrinsicWidth();
+```
 
 ## getMaxWidth
 
@@ -468,9 +705,15 @@ getMaxWidth(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 最大的行宽，浮点数，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+let maxWidth = paragraph.getMaxWidth();
+```
 
 ## getMinIntrinsicWidth
 
@@ -488,9 +731,15 @@ getMinIntrinsicWidth(): number
 
 **返回值：**
 
-| 类型 |
-| --- |
-| number |
+| 类型 | 说明 |
+| --- | --- |
+| number | 该段落所占水平空间的最小固有宽度，浮点数，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+let minIntrinsicWidth = paragraph.getMinIntrinsicWidth();
+```
 
 ## getParagraphStyle
 
@@ -510,9 +759,57 @@ getParagraphStyle(): ParagraphStyle
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | 段落的样式配置。 |
+
+**示例**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+import { common2D } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("Click")
+        .onClick(() => {
+          let textData = "Hello World";
+          let myTextStyle: text.TextStyle = {
+            color: { alpha: 255, red: 255, green: 0, blue: 0 },
+            fontSize: 33,
+          };
+          let myParagraphStyle: text.ParagraphStyle = {
+            textStyle: myTextStyle
+          };
+          let fontCollection = new text.FontCollection();
+          let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+          paragraphBuilder.addText(textData);
+          let paragraph = paragraphBuilder.build();
+          paragraph.layoutSync(200);
+          let paragraphStyle = paragraph.getParagraphStyle();
+          if (paragraphStyle.textStyle != undefined) {
+            console.info("Print fontSize: " + paragraphStyle.textStyle?.fontSize);
+            if (paragraphStyle.textStyle?.color != undefined && typeof paragraphStyle.textStyle?.color == 'number') {
+              let textColor: common2D.Color = numberToRGBA(paragraphStyle.textStyle?.color);
+              console.info(`Print text color ARGB: ${textColor.alpha}, ${textColor.red}, ${textColor.green}, ${textColor.blue}`);
+            }
+          }
+        })
+    }
+  }
+}
+
+function numberToRGBA(colorNum: number): common2D.Color {
+  const a = (colorNum >>> 24) & 0xFF;
+  const r = (colorNum >>> 16) & 0xFF;
+  const g = (colorNum >>> 8) & 0xFF;
+  const b = colorNum & 0xFF;
+  return { alpha: a, red: r, green: g, blue: b };
+}
+```
 
 ## getProcessState
 
@@ -532,9 +829,44 @@ getProcessState(): TextProcessState
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TextProcessState](arkts-arkgraphics2d-text-textprocessstate-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TextProcessState](arkts-arkgraphics2d-text-textprocessstate-e.md) | 段落的文本处理状态。 |
+
+**示例**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("Click")
+        .onClick(() => {
+          let textData = "Hello World";
+          let myTextStyle: text.TextStyle = {
+            color: { alpha: 255, red: 255, green: 0, blue: 0 },
+            fontSize: 33,
+          };
+          let myParagraphStyle: text.ParagraphStyle = {
+            textStyle: myTextStyle
+          };
+          let fontCollection = new text.FontCollection();
+          let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+          paragraphBuilder.addText(textData);
+          let paragraph = paragraphBuilder.build();
+          let processState = paragraph.getProcessState(); // Now it is INIT
+          console.info("Print state: " + processState);
+          paragraph.layoutSync(200);
+          processState = paragraph.getProcessState(); // Now it is FORMATTED
+          console.info("Print state: " + processState);
+        })
+    }
+  }
+}
+```
 
 ## getRectsForPlaceholders
 
@@ -552,9 +884,15 @@ getRectsForPlaceholders(): Array<TextBox>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;TextBox & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;TextBox & gt; | 矩形区域数组。 |
+
+**示例**
+
+```TypeScript
+let placeholderRects = paragraph.getRectsForPlaceholders();
+```
 
 ## getRectsForRange
 
@@ -572,17 +910,24 @@ getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeig
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| range | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 是 |
-| widthStyle | [RectWidthStyle](arkts-arkgraphics2d-text-rectwidthstyle-e.md) | 是 |
-| heightStyle | [RectHeightStyle](arkts-arkgraphics2d-text-rectheightstyle-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| range | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 是 | 需要获取的区域的文本区间。 |
+| widthStyle | [RectWidthStyle](arkts-arkgraphics2d-text-rectwidthstyle-e.md) | 是 | 返回的矩形区域的宽度的规格。 |
+| heightStyle | [RectHeightStyle](arkts-arkgraphics2d-text-rectheightstyle-e.md) | 是 | 返回的矩形区域的高度的规格。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;TextBox & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;TextBox & gt; | 矩形区域数组。 |
+
+**示例**
+
+```TypeScript
+let range: text.Range = { start: 0, end: 1};
+let rects = paragraph.getRectsForRange(range, text.RectWidthStyle.TIGHT, text.RectHeightStyle.TIGHT);
+```
 
 ## getTextDisplayState
 
@@ -602,9 +947,44 @@ getTextDisplayState(): TextDisplayState
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TextDisplayState](arkts-arkgraphics2d-text-textdisplaystate-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TextDisplayState](arkts-arkgraphics2d-text-textdisplaystate-e.md) | 段落的文本显示状态。 |
+
+**示例**
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("Click")
+        .onClick(() => {
+          let textData = "Hello World";
+          let myTextStyle: text.TextStyle = {
+            color: { alpha: 255, red: 255, green: 0, blue: 0 },
+            fontSize: 33,
+          };
+          let myParagraphStyle: text.ParagraphStyle = {
+            textStyle: myTextStyle
+          };
+          let fontCollection = new text.FontCollection();
+          let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+          paragraphBuilder.addText(textData);
+          let paragraph = paragraphBuilder.build();
+          let displayState = paragraph.getTextDisplayState(); // Now it is UNKNOWN
+          console.info("Print state: " + displayState);
+          paragraph.layoutSync(200);
+          displayState = paragraph.getTextDisplayState(); // Now it is CLIP
+          console.info("Print state: " + displayState);
+        })
+    }
+  }
+}
+```
 
 ## getTextLines
 
@@ -622,9 +1002,15 @@ getTextLines(): Array<TextLine>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[TextLine](arkts-arkgraphics2d-text-textline-c.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[TextLine](arkts-arkgraphics2d-text-textline-c.md)&gt; | 文本行载体数组。 |
+
+**示例**
+
+```TypeScript
+let lines = paragraph.getTextLines();
+```
 
 ## getVisibleTextRanges
 
@@ -645,9 +1031,15 @@ getVisibleTextRanges(): Array<Range>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;Range & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;Range & gt; | 段落可见文本范围数组，范围为UTF-16编码单元索引。 |
+
+**示例**
+
+```TypeScript
+let visibleRanges = paragraph.getVisibleTextRanges();
+```
 
 ## getWordBoundary
 
@@ -665,15 +1057,21 @@ getWordBoundary(offset: number): Range
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| offset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 字形的偏移量，整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 单词的索引区间。 |
+
+**示例**
+
+```TypeScript
+let wordRange = paragraph.getWordBoundary(0);
+```
 
 ## layout
 
@@ -691,21 +1089,94 @@ layout(width: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| width | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | number | 是 | 单行的最大宽度，浮点数，单位为物理像素px。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { drawing, text } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+
+let textStyle: text.TextStyle = {
+  color: {
+    alpha: 255,
+    red: 255,
+    green: 0,
+    blue: 0
+  },
+  fontSize: 30,
+};
+let paragraphStyle: text.ParagraphStyle = {
+  textStyle: textStyle,
+};
+let fontCollection: text.FontCollection = new text.FontCollection();
+let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
+// 添加文本字符串
+paragraphBuilder.addText("test");
+// 生成排版对象
+let paragraph = paragraphBuilder.build();
+
+function textFunc(pixelmap: PixelMap) {
+  // 通过图片对象构造画布
+  let canvas = new drawing.Canvas(pixelmap);
+  // 进行绘制文本字符串
+  paragraph.paint(canvas, 100, 10);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+
+async prepareLayoutPromise() {
+    try {
+      await paragraph.layout(200);
+      console.info('Succeeded in doing layout');
+    } catch (error) {
+      let err: BusinessError = error as BusinessError;
+      console.error(`Failed to do layout, error: ${err.code} message: ${err.message}`);
+    }
+  }
+
+  aboutToAppear() {
+    this.prepareLayoutPromise();
+  }
+
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button("layout")
+        .width(100)
+        .height(50)
+        .onClick(() => {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+          if (this.pixelmap == undefined) {
+            // 构造图片对象
+            this.pixelmap = image.createPixelMapSync(color, opts);
+          }
+          // 进行绘制文字
+          this.fun(this.pixelmap);
+        })
+    }
+  }
+}
+```
 
 ## layoutSync
 
@@ -723,9 +1194,15 @@ layoutSync(width: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| width | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | number | 是 | 单行的最大宽度，浮点数，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+paragraph.layoutSync(100);
+```
 
 ## layoutWithConstraints
 
@@ -745,15 +1222,26 @@ layoutWithConstraints(size: TextRectSize): TextLayoutResult
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| size | [TextRectSize](arkts-arkgraphics2d-text-textrectsize-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| size | [TextRectSize](arkts-arkgraphics2d-text-textrectsize-i.md) | 是 | 约束的高度和宽度，单位为物理像素px。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TextLayoutResult](arkts-arkgraphics2d-text-textlayoutresult-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TextLayoutResult](arkts-arkgraphics2d-text-textlayoutresult-i.md) | 布局后的实际尺寸和排版后容下的字符范围。 |
+
+**示例**
+
+```TypeScript
+let size: text.TextRectSize = { width: 200, height: 100 };
+let result = paragraph.layoutWithConstraints(size); // 功能增强的 layoutSync
+console.info('Width: ' + result.correctRect.width + ', Height: ' + result.correctRect.height);
+for (let i = 0; i < result.fitStrRange.length; ++i) {
+  console.info('fitRange: [' + result.fitStrRange[i].start + ', ' + result.fitStrRange[i].end + ']');
+}
+```
 
 ## paint
 
@@ -771,11 +1259,82 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| canvas | drawing.Canvas | 是 |
-| x | number | 是 |
-| y | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| canvas | drawing.Canvas | 是 | 绘制的目标画布。 |
+| x | number | 是 | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
+| y | number | 是 | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+const color: ArrayBuffer = new ArrayBuffer(160000);
+let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
+let canvas = new drawing.Canvas(pixelMap);
+paragraph.paint(canvas, 0, 0);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  lines[0].paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button().onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D'
+import { text } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  runs[0].paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button().onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
 
 ## paintOnPath
 
@@ -793,12 +1352,24 @@ paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: number, vOffset
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| canvas | drawing.Canvas | 是 |
-| path | drawing.Path | 是 |
-| hOffset | number | 是 |
-| vOffset | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| canvas | drawing.Canvas | 是 | 绘制的目标画布。 |
+| path | drawing.Path | 是 | 确认文字位置的路径。 |
+| hOffset | number | 是 | 沿路径方向偏置，从路径起点向前为正，向后为负，单位为物理像素px。 |
+| vOffset | number | 是 | 沿路径垂直方向偏置，沿路径方向左侧为负，右侧为正，单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+const color: ArrayBuffer = new ArrayBuffer(160000);
+let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
+let canvas = new drawing.Canvas(pixelMap);
+let path = new drawing.Path();
+path.arcTo(20, 20, 180, 180, 180, 90);
+paragraph.paintOnPath(canvas, path, 0, 0);
+```
 
 ## updateColor
 
@@ -816,9 +1387,15 @@ updateColor(color: common2D.Color): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color | common2D.Color | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | common2D.Color | 是 | 更新后的字体色。 |
+
+**示例**
+
+```TypeScript
+paragraph.updateColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+```
 
 ## updateDecoration
 
@@ -836,6 +1413,17 @@ updateDecoration(decoration: Decoration): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| decoration | [Decoration](arkts-arkgraphics2d-text-decoration-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| decoration | [Decoration](arkts-arkgraphics2d-text-decoration-i.md) | 是 | 更新后的装饰线。 |
+
+**示例**
+
+```TypeScript
+paragraph.updateDecoration({
+  textDecoration: text.TextDecorationType.OVERLINE,
+  color: { alpha: 255, red: 255, green: 0, blue: 0 },
+  decorationStyle: text.TextDecorationStyle.WAVY,
+  decorationThicknessScale: 2.0,
+});
+```

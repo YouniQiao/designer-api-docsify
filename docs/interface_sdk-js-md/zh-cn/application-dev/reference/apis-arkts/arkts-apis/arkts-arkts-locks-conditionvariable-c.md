@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import ArkTSUtils from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -70,15 +70,15 @@ static request(name: string): ConditionVariable
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 按指定名称查找或创建等待通知操作的对象名称，字符串无特别限制。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) | 返回查找到或创建后的异步等待通知操作的实例。 |
 
 ## wait
 
@@ -96,9 +96,9 @@ wait(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
 
 ## waitFor
 
@@ -116,12 +116,12 @@ waitFor(timeout: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| timeout | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| timeout | number | 是 | 等待时间，单位为毫秒，正整数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | 无返回结果的Promise对象。 |

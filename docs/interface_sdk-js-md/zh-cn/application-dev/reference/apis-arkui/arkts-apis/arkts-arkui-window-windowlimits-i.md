@@ -6,12 +6,18 @@
 3. 应用在[module.json5配置文件中的abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)中配置windowLimits。
 4. 默认系统限制（基于不同产品和窗口类型，其windowLimits系统默认限制存在差异）。
 
-> **说明：**&gt;
-> 针对maxWidth、maxHeight、minWidth、minHeight属性：&gt;
-> - 默认单位为px，从API version 22开始支持通过pixelUnit设置单位为px或vp。&gt;
-> - 参数为整数，浮点数会向下取整。&gt;
-> - 默认值为0，表示属性不发生变化。&gt;
-> - 可生效范围下限值：系统限定的最小高度/宽度。&gt;
+> **说明：**
+> 
+> 针对maxWidth、maxHeight、minWidth、minHeight属性：
+> 
+> - 默认单位为px，从API version 22开始支持通过pixelUnit设置单位为px或vp。
+> 
+> - 参数为整数，浮点数会向下取整。
+> 
+> - 默认值为0，表示属性不发生变化。
+> 
+> - 可生效范围下限值：系统限定的最小高度/宽度。
+> 
 > - 可生效范围上限值：系统限定的最大高度/宽度。
 
 **起始版本：** 11
@@ -21,7 +27,9 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import floatingBall from '@kit.ArkUI.floatingBall';
+import floatView from '@kit.ArkUI.floatView';
+import window from '@kit.ArkUI';
 ```
 
 ## maxHeight

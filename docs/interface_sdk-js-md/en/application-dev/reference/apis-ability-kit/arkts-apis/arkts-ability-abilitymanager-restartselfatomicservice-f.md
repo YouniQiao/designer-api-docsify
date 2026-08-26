@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from 'kits/@kit.AbilityKit';
+import abilityManager from '@kit.AbilityKit';
 ```
 
 ## restartSelfAtomicService
@@ -14,8 +14,10 @@ function restartSelfAtomicService(context: Context): void
 
 Restarts the current atomic service.
 
-> **NOTE：**&gt;
-> - Currently, atomic services can be started only in an independent window.&gt;
+> **NOTE：**
+> 
+> - Currently, atomic services can be started only in an independent window.
+> 
 > - If you call this API,
 > ApplicationContext.restartApp(), or
 > [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds
@@ -31,16 +33,33 @@ Restarts the current atomic service.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [Context](arkts-ability-context-c.md) | Yes | Context of the ability.Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000064](../errorcode-ability.md#16000064-frequent-application-restart) |
-| [16000086](../errorcode-ability.md#16000086-context-is-not-a-uiabilitycontext) |
-| [16000090](../errorcode-ability.md#16000090-caller-is-not-an-atomic-service) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000064](../errorcode-ability.md#16000064-frequent-application-restart) | Restart too frequently. Try again at least 3s later. |
+| [16000086](../errorcode-ability.md#16000086-context-is-not-a-uiabilitycontext) | The context is not UIAbilityContext. |
+| [16000090](../errorcode-ability.md#16000090-caller-is-not-an-atomic-service) | The caller is not an atomic service. |
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, EmbeddableUIAbility, Want, abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends EmbeddableUIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      abilityManager.restartSelfAtomicService(this.context);
+    } catch (e) {
+      console.error(`restartSelfAtomicService error: ${JSON.stringify(e as BusinessError)}`);
+    }
+  }
+}
+```

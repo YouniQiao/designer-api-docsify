@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import commonEventManager from '@kit.BasicServicesKitManager';
 ```
 
 ## publish
@@ -23,10 +24,28 @@ function publish(event: string, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | string | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | string | 是 | 表示要发布的公共事件。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示发布公共事件的回调方法。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+// 发布公共事件回调
+let publishCallBack = (err: Base.BusinessError) => {
+    if (err.code) {
+        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info('publish');
+    }
+}
+
+// 发布公共事件
+commonEvent.publish("event", publishCallBack);
+```
 
 
 ## publish
@@ -47,8 +66,34 @@ function publish(event: string, options: CommonEventPublishData, callback: Async
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | string | 是 |
-| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | string | 是 | 表示要发布的公共事件。 |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | 是 | 表示发布公共事件的属性。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示发布公共事件的回调方法。 |
+
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+import CommonEventManager from '@ohos.commonEventManager';
+
+// 公共事件相关信息
+let options:CommonEventManager.CommonEventPublishData = {
+    code: 0,             // 公共事件的初始代码
+    data: "initial data", // 公共事件的初始数据
+    isOrdered: true  // 有序公共事件
+};
+
+// 发布公共事件回调
+let publishCallBack = (err: Base.BusinessError) => {
+    if (err.code) {
+        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info("publish");
+    }
+}
+
+// 发布公共事件
+commonEvent.publish("event", options, publishCallBack);
+```

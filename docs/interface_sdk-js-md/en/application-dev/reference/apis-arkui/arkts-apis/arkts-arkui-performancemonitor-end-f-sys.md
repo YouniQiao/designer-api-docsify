@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { performanceMonitor } from 'kits/@kit.ArkUI';
+import performanceMonitor from '@kit.ArkUI';
 ```
 
 ## end
@@ -24,6 +24,14 @@ Marks the end of a user scene. Call this API when the scene ends.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| scene | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scene | string | Yes | User scene ID, which must be strictly consistent with that in **begin**; otherwise, the monitoring will be invalid. |
+
+**Examples**
+
+End point of the user scene where the user taps an icon to launch an application.
+
+```TypeScript
+performanceMonitor.end("LAUNCHER_APP_LAUNCH_FROM_ICON");
+```

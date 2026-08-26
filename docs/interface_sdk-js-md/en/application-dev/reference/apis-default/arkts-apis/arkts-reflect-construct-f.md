@@ -19,16 +19,16 @@ Constructs the target with the elements of specified array as the arguments and 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | new (...args: A) = & gt; R | Yes |
-| argumentsList | Readonly & lt;A & gt; | Yes |
-| newTarget | new (...args: any) = & gt; any | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | new (...args: A) = & gt; R | Yes |  |
+| argumentsList | Readonly & lt;A & gt; | Yes |  |
+| newTarget | new (...args: any) = & gt; any | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 
 ## construct
 
@@ -38,13 +38,13 @@ function construct(target: Function, argumentsList: ArrayLike<any>, newTarget?: 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | Function | Yes |
-| argumentsList | ArrayLike & lt;any & gt; | Yes |
-| newTarget | Function | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | Function | Yes |  |
+| argumentsList | ArrayLike & lt;any & gt; | Yes |  |
+| newTarget | Function | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

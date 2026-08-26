@@ -9,7 +9,7 @@ The definition of dialog button information.@interface DialogButtonInfo
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import avMusicTemplate from '@kit.AVSessionKit';
 ```
 
 ## buttonId

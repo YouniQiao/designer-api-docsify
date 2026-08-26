@@ -21,7 +21,8 @@ static show(value: ActionSheetOptions)
 
 Shows an action sheet in the given settings.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Since API version 10, you can use
 > [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet) in
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
@@ -38,6 +39,6 @@ Shows an action sheet in the given settings.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | Yes | Parameters of the action sheet. |

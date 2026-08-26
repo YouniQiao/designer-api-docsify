@@ -29,10 +29,10 @@ constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [lineSpacing](#linespacing) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 |
-| [options](#options) | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| lineSpacing | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 | 文本的行间距。 取值范围：[0, +∞) |
+| options | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | 否 | 行间距的配置项。 |
 
 ## lineSpacing
 

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## dumpHeapData
@@ -13,7 +12,8 @@ function dumpHeapData(filename: string): void
 ```
 
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 8支持，从API version 9开始废弃，
 > 虚拟机堆数据转储，生成`filename.heapsnapshot`文件。
 
@@ -27,6 +27,14 @@ function dumpHeapData(filename: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filename | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filename | string | 是 | 用户自定义的虚拟机堆转储文件名，将在应用的`files`目录下生成以该参数命名的heapsnapshot文件。string长度的最大值为128。 |
+
+**示例**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+hidebug.dumpHeapData("heap-20220216");
+```

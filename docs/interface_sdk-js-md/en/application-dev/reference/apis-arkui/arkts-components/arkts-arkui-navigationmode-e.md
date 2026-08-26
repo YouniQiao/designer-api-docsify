@@ -2,7 +2,8 @@
 
 Display mode of the navigation page. When **Navigation** is displayed in split-column mode, a divider is displayed between the navigation page and the content area.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > For simplicity, **calcNavBarWidth** is defined as follows: Component width �C minContentWidth �C Divider width (1 px)
 **Table 1** Relationship between actual navBarWidth and the developer-defined value  
 | Developer-defined navBarWidth| calcNavBarWidth Value| Actual navBarWidth| | --- | --- | --- | | navBarWidth &lt; minNavBarWidth | NA | minNavBarWidth | | navBarWidth   

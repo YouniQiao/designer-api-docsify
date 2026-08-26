@@ -15,7 +15,7 @@ Callback to be invoked when the moving photo effect of the **PhotoPickerComponen
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
-| state | photoAccessHelper.MovingPhotoBadgeStateType | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | URI of the moving photo. |
+| state | photoAccessHelper.MovingPhotoBadgeStateType | Yes | State of the moving photo badge. |

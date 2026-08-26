@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import componentSnapshot from '@kit.ArkUI';
 ```
 
 ## colorSpace
@@ -47,3 +47,50 @@ isAuto?: boolean
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+
+@Entry
+@Component
+struct SnapshotColorModeExample {
+  @State pixmap: image.PixelMap | undefined = undefined;
+
+  build() {
+    Column() {
+      Row() {
+        Image(this.pixmap).width(200).height(200).border({ color: Color.Black, width: 2 }).margin(5)
+        // $r('app.media.img')需要替换为开发者所需的图像资源文件
+        Image($r('app.media.img'))
+          .autoResize(true)
+          .width(200)
+          .height(200)
+          .margin(5)
+          .id('root')
+      }
+
+      Button('click to generate UI snapshot')
+        .onClick(() => {
+          this.getUIContext().getComponentSnapshot().get('root', (error: Error, pixmap: image.PixelMap) => {
+            if (error) {
+              console.error(`error:${JSON.stringify(error)}`);
+              return;
+            }
+            this.pixmap = pixmap;
+          }, {
+            scale: 2,
+            waitUntilRenderFinished: true,
+            // 设置色彩空间为：DISPLAY_P3
+            colorMode: { colorSpace: colorSpaceManager.ColorSpace.DISPLAY_P3, isAuto: false }
+          })
+        }).margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .alignItems(HorizontalAlign.Center)
+  }
+}
+```

@@ -3,33 +3,33 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from 'kits/@kit.ArkUI';
+import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |
+| Name | Description |
+| --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) |
-| [ArcAlphabetIndexerInterface](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinterface-i.md) |
+| Name | Description |
+| --- | --- |
+| [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | Initialization parameters for the **ArcAlphabetIndexer** component. |
+| [ArcAlphabetIndexerInterface](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinterface-i.md) | The **ArcAlphabetIndexer** component is an arc-shaped component designed for quick navigation through alphabetically sorted items. It can be integrated with container components to quickly locate items within the visible area. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) |
+| Name | Description |
+| --- | --- |
+| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | Defines the callback used in [onSelect](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md#onselect). |
 
 ### Constants
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ArcAlphabetIndexer](arkts-arkui-arkui-arcalphabetindexer-con.md) |
-| [ArcAlphabetIndexerInstance](arkts-arkui-arkui-arcalphabetindexer-con.md#arcalphabetindexerinstance) |
+| Name | Description |
+| --- | --- |
+| [ArcAlphabetIndexer](arkts-arkui-arkui-arcalphabetindexer-con.md) | The **ArcAlphabetIndexer** component is an arc-shaped component designed for quick navigation through alphabetically sorted items. It can be integrated with container components to quickly locate items within the visible area. |
+| [ArcAlphabetIndexerInstance](arkts-arkui-arkui-arcalphabetindexer-con.md#arcalphabetindexerinstance) | Defines ArcAlphabetIndexer Component instance. |

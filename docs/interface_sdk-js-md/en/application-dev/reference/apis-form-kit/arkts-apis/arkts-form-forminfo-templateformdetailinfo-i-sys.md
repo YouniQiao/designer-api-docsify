@@ -11,7 +11,7 @@ TemplateFormDetailInfo
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from 'kits/@kit.FormKit';
+import formInfo from '@kit.FormKit';
 ```
 
 ## abilityName

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import dlpPermission from '@kit.DataProtectionKit';
 ```
 
 ## generateDLPFile
@@ -24,32 +24,70 @@ DLP管理应用调用该接口，将明文文件加密生成DLPFile管理对象�
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| plaintextFd | number | 是 |
-| ciphertextFd | number | 是 |
-| property | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| plaintextFd | number | 是 | 待加密明文文件的fd。取值范围为[0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2 & lt;sup & gt;31 & lt;/sup & gt;-1 时，fd的值被截断。 |
+| ciphertextFd | number | 是 | 目标加密文件的fd。取值范围为[0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2 & lt;sup & gt;31 & lt;/sup & gt;-1 时，fd的值被截断。 |
+| property | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | 是 | 授权用户信息：授权用户列表、owner账号、联系人账号。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | Promise对象。resolve时返回DLPFile对象表示成功生成DLP文件，reject时抛出错误表示失败。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100002](../errorcode-dlp.md#19100002-加解密出错) |
-| [19100003](../errorcode-dlp.md#19100003-加解密超时) |
-| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) |
-| [19100005](../errorcode-dlp.md#19100005-凭据认证服务器错误) |
-| [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100002](../errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100003](../errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
+| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
+| [19100005](../errorcode-dlp.md#19100005-凭据认证服务器错误) | Credential authentication server error. |
+| [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+
+**示例**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+async function ExampleFunction() {
+  let dlpUri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt';
+  let file: number | undefined = undefined;
+  let dlp: number | undefined = undefined;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  file = fileIo.openSync(uri).fd;
+  dlp = fileIo.openSync(dlpUri).fd;
+  let dlpProperty: dlpPermission.DLPProperty = {
+    ownerAccount: 'zhangsan',
+    ownerAccountType: dlpPermission.AccountType.DOMAIN_ACCOUNT,
+    authUserList: [],
+    contactAccount: 'zhangsan',
+    offlineAccess: true,
+    ownerAccountID: 'xxxxxxx',
+    everyoneAccessList: []
+  };
+  dlpFile = await dlpPermission.generateDLPFile(file, dlp, dlpProperty); // 生成DLP文件。
+
+  await dlpFile?.closeDLPFile(); // 关闭DLP对象。
+  if (file) {
+    fileIo.closeSync(file);
+  }
+  if (dlp) {
+    fileIo.closeSync(dlp);
+  }
+}
+
+ExampleFunction();
+```
 
 
 ## generateDLPFile
@@ -70,24 +108,57 @@ DLP管理应用调用该接口，将明文文件加密生成权限受控文件�
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| plaintextFd | number | 是 |
-| ciphertextFd | number | 是 |
-| property | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| plaintextFd | number | 是 | 待加密明文文件的fd。取值范围为[0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2 & lt;sup & gt;31 & lt;/sup & gt;-1 时，fd的值被截断。 |
+| ciphertextFd | number | 是 | 目标加密文件的fd。取值范围为[0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2 & lt;sup & gt;31 & lt;/sup & gt;-1 时，fd的值被截断。 |
+| property | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | 是 | 授权用户信息：授权用户列表、owner账号、联系人账号。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | 是 | 回调函数。当生成DLP文件成功，err为undefined，data为获取到的DLP文件信息；否则为错误对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100002](../errorcode-dlp.md#19100002-加解密出错) |
-| [19100003](../errorcode-dlp.md#19100003-加解密超时) |
-| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) |
-| [19100005](../errorcode-dlp.md#19100005-凭据认证服务器错误) |
-| [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100002](../errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100003](../errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
+| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
+| [19100005](../errorcode-dlp.md#19100005-凭据认证服务器错误) | Credential authentication server error. |
+| [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+
+**示例**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+let dlpUri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt';
+let file: number | undefined = undefined;
+let dlp: number | undefined = undefined;
+
+file = fileIo.openSync(uri).fd;
+dlp = fileIo.openSync(dlpUri).fd;
+let dlpProperty: dlpPermission.DLPProperty = {
+  ownerAccount: 'zhangsan',
+  ownerAccountType: dlpPermission.AccountType.DOMAIN_ACCOUNT,
+  authUserList: [],
+  contactAccount: 'zhangsan',
+  offlineAccess: true,
+  ownerAccountID: 'xxxxxxx',
+  everyoneAccessList: []
+};
+dlpPermission.generateDLPFile(file, dlp, dlpProperty, (err, res) => { // 生成DLP文件。
+  if (err) {
+    console.error(`Failed to generate DLPFile. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('res', JSON.stringify(res));
+  }
+  fileIo.closeSync(file);
+  fileIo.closeSync(dlp);
+});
+```

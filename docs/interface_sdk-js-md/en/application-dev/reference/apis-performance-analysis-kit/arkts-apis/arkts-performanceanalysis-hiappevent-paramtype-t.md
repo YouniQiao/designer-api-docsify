@@ -12,11 +12,11 @@ Enumerates the types of custom event parameter values.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| int |
-| long |
-| double |
-| string |
-| boolean |
-| Array & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| int | Int. |
+| long | Long. |
+| double | Double. |
+| string | String. |
+| boolean | The value is true or false. |
+| Array & lt;string & gt; | The value is an array of strings. |

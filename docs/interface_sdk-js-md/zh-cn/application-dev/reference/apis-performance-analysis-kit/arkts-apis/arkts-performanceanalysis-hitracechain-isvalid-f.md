@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## isValid
@@ -20,12 +19,26 @@ function isValid(id: HiTraceId): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 | 需要判断是否有效的HiTraceId实例。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true：HiTraceId有效；false：HiTraceId无效。 |
+
+**示例**
+
+```TypeScript
+// 开始跟踪，跟踪标志是DEFAULT。
+let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.DEFAULT);
+// traceIdIsvalid为true
+let traceIdIsvalid = hiTraceChain.isValid(traceId);
+if (traceIdIsvalid) {
+// 基于跟踪标识合法性校验成功的场景的处理逻辑。
+}
+// 业务结束，结束跟踪。
+hiTraceChain.end(traceId);
+```

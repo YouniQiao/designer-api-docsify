@@ -41,9 +41,9 @@ Sets the route mode used for redirecting the user from the **NavRouter** compone
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [mode](#mode) | [NavRouteMode](arkts-arkui-navroutemode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [NavRouteMode](arkts-arkui-navroutemode-e.md) | Yes | Route mode used for redirection.Default value: **NavRouteMode.PUSH_WITH_RECREATE |
 
 ## onStateChange
 
@@ -67,6 +67,6 @@ Called when the component activation status changes. **onStateChange(true)** is 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (isActivated: boolean) = & gt; void | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (isActivated: boolean) = & gt; void | Yes | Component activation status. The value **true** means that component is activated, and **false** means the opposite. |

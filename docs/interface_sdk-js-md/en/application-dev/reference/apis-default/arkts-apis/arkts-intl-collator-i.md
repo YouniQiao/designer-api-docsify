@@ -13,15 +13,15 @@ compare(x: string, y: string): number
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x | string | Yes |
-| y | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | string | Yes |  |
+| y | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## resolvedOptions
 
 ```TypeScript
@@ -30,5 +30,5 @@ resolvedOptions(): ResolvedCollatorOptions
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

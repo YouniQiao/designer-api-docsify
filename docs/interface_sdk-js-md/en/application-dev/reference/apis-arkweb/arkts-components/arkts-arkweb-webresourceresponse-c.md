@@ -9,6 +9,9 @@ WebResourceResponse is a class in the Web component that represents HTTP respons
 ## Modules to Import
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -41,9 +44,9 @@ Obtains the status code description of the resource response.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Status code description of the resource response, for example, 'OK' and 'Not Found'. |
 
 ## getResponseCode
 
@@ -61,9 +64,9 @@ Obtains the status code of the resource response.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Status code of the resource response. For example, 200 indicates success and 404 indicates not found. |
 
 ## getResponseData
 
@@ -81,9 +84,9 @@ Obtains the data in the resource response.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Resource response data in HTML string format. |
 
 ## getResponseDataEx
 
@@ -99,9 +102,9 @@ Obtains resource response data, supporting multiple data types. Compared with ge
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string \| number \| ArrayBuffer \| Resource \| undefined |
+| Type | Description |
+| --- | --- |
+| string \| number \| ArrayBuffer \| Resource \| undefined | An HTML string when the type is string; a file descriptor when the type is number; binary data when the type is ArrayBuffer; a **\\$rawfile** resource when the type is resource; or **undefined** if no data is available. |
 
 ## getResponseEncoding
 
@@ -119,9 +122,9 @@ Obtains the encoding string of the resource response.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Encoding of the resource response, for example, 'utf-8', 'gbk', and other character set encodings. |
 
 ## getResponseHeader
 
@@ -139,9 +142,9 @@ Obtains the resource response header.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Resource response header. |
 
 ## getResponseIsReady
 
@@ -157,9 +160,9 @@ Obtains whether the response data is ready.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** indicates that the response data is ready, and **false** indicates the opposite. |
 
 ## getResponseMimeType
 
@@ -177,9 +180,9 @@ Obtains the MIME type of the resource response.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Media (MIME) type of the resource response, for example, 'text/html', 'application/json', etc. |
 
 ## setReasonMessage
 
@@ -197,9 +200,9 @@ Sets the status code description of the resource response.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| reason | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| reason | string | Yes | Status code description of the resource response to set. The status code description is a textual explanation of the status code, usually used in correspondence with the status code. For example, when the status code is 200, the description can be set to "OK", and when the status code is 404, the description can be set to "Not Found". This description is included in the HTTP response, making it easier for the client or developer to understand the response result. |
 
 ## setResponseCode
 
@@ -217,9 +220,9 @@ Sets the status code of the resource response.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| code | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| code | number | Yes | Status code of the resource response to set. If the resource request fails or the response status is an error status, refer to [@ohos.web.netErrorList](../arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) to set the corresponding error code. Common error code scenarios: 404 indicates that the resource does not exist. Check the resource path. 500 indicates an internal server error. Check the server status. 403 indicates no access permission. Apply for the corresponding access permission. 401 indicates unauthorized access. Check the authentication information. Check the network configuration, server status, or resource access permission based on the error code. Avoid setting the error code to ERR_IO_PENDING, which may cause XMLHttpRequest synchronous requests to be blocked. |
 
 ## setResponseData
 
@@ -237,9 +240,9 @@ Sets the data in the resource response.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string \| number \| Resource \| ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | string \| number \| Resource \| ArrayBuffer | Yes | Resource response data to set. When set to a string, the value indicates a string in HTML format. When set to a number, the value indicates a file handle, which is closed by the system **Web** component. When set to a **Resource** object, the value indicates the file resources in the **rawfile** directory of the application. When set to an **ArrayBuffer** object, the value indicates the original binary data of a resource.<br>**Since:** 11 |
 
 ## setResponseEncoding
 
@@ -257,9 +260,9 @@ Sets the encoding string of the resource response.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| encoding | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encoding | string | Yes | Encoding of the resource response to set. The encoding format must be consistent with the actual encoding of the response data. The encoding format affects how the browser or client parses and displays the response content. |
 
 ## setResponseHeader
 
@@ -277,9 +280,9 @@ Sets the resource response header.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| header | Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| header | Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Yes | Resource response header to set. The response header is used to pass HTTP protocol header information, for example, setting "Cache-Control" to control the caching policy, setting "Access-Control-Allow-Origin" to implement cross-origin access, and setting "Content-Type" to specify the content type. Setting the response header affects how the browser or client processes the resource. |
 
 ## setResponseIsReady
 
@@ -289,12 +292,15 @@ setResponseIsReady(IsReady: boolean): void
 
 Sets whether the resource response data is ready.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - In resource request interception scenarios, call setResponseData(), setResponseEncoding(), setResponseMimeType(
 > ), setResponseHeader(), setResponseCode(), setReasonMessage(), and other methods first to set the response
-> attributes. Finally, call setResponseIsReady(true) to trigger resource return.&gt;
+> attributes. Finally, call setResponseIsReady(true) to trigger resource return.
+> 
 > - Asynchronous data scenario: Call setResponseIsReady(false) first. After the data is ready, call setResponseData
-> () and other setting methods, and finally call setResponseIsReady(true) to trigger resource return.&gt;
+> () and other setting methods, and finally call setResponseIsReady(true) to trigger resource return.
+> 
 > - If the calling sequence is incorrect, XMLHttpRequest synchronous requests may be blocked.
 
 **Since:** 9
@@ -305,9 +311,9 @@ Sets whether the resource response data is ready.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| IsReady | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| IsReady | boolean | Yes | Whether the resource response data is ready. The value **true** indicates that the resource response data is ready, and **false** indicates the opposite. If the data is provided asynchronously, this parameter must be explicitly set to **false**. If this parameter is set to an invalid value, for example, **null** or **undefined**, or is not set, the data is considered ready. |
 
 ## setResponseMimeType
 
@@ -325,6 +331,6 @@ Sets the MIME type of the resource response.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| mimeType | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mimeType | string | Yes | Media (MIME) type of the resource response to set. Common MIME types include text/html (HTML document), application/json (JSON data), image/png (PNG image), etc. |

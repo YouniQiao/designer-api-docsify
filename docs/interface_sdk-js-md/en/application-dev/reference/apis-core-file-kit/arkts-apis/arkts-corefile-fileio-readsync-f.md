@@ -31,14 +31,23 @@ Reads data from a file. This API returns the result synchronously.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| fd | number | Yes |
-| buffer | ArrayBuffer | Yes |
-| options | {     offset?: number;     length?: number;     position?: number;   } | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | File descriptor of the file to read. |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
+| options | {     offset?: number;     length?: number;     position?: number;   } | No | The options are as follows:   - **offset** (number): position to store the data read in the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The default value is **0**.   - **length** (number): length of the data to read. This parameter is optional. The default value is the buffer length minus the offset, in bytes.   - **position** (number): position of the data to read in the file. This parameter is optional. By default, data is read from the current position, in bytes.    Constraints: offset + length & lt;= Buffer size |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Length of the data read, in bytes. |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath, 0o2);
+let buf = new ArrayBuffer(4096);
+let num = fileio.readSync(fd, buf);
+```

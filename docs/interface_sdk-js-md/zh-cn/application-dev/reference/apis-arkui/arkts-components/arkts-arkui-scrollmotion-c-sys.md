@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@ohos.@kit.ArkUI';
 ```
 
 ## constructor
@@ -33,10 +34,10 @@ constructor(position: number, velocity: number, min: number, max: number, prop: 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| position | number | 是 |
-| velocity | number | 是 |
-| min | number | 是 |
-| max | number | 是 |
-| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| position | number | 是 |  |
+| velocity | number | 是 |  |
+| min | number | 是 |  |
+| max | number | 是 |  |
+| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | 是 |  |

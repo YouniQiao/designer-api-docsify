@@ -24,6 +24,26 @@ onAbilityStateChanged(abilityStateData: AbilityStateData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | 是 | Ability状态信息。 |
+
+**示例**
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer: abilityManager.AbilityForegroundStateObserver = {
+  onAbilityStateChanged(abilityStateData) {
+    console.info(`onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
+  },
+};
+try {
+  abilityManager.on('abilityForegroundState', observer);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error code: ${code}, error msg: ${message}`);
+}
+```

@@ -22,7 +22,7 @@ Represents a custom communication object.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKit';
 ```
 
 ## onMessage
@@ -48,10 +48,30 @@ Receives the custom data callback sent by the edit box application attached to t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [msgId](../../apis-network-kit/arkts-apis/arkts-network-eap-eapdata-i.md) | string | Yes |
-| msgParam | ArrayBuffer | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| msgId | string | Yes | Identifier of the received custom communication data. |
+| msgParam | ArrayBuffer | No | Message body of the received custom communication data. |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility()
+  .on('inputStart',
+    (kbController: inputMethodEngine.KeyboardController, client: inputMethodEngine.InputClient) => {
+      let keyboardController: inputMethodEngine.KeyboardController = kbController;
+      let inputClient: inputMethodEngine.InputClient = client;
+      let messageHandler: inputMethodEngine.MessageHandler = {
+        onTerminated(): void {
+          console.info('OnTerminated.');
+        },
+        onMessage(msgId: string, msgParam?: ArrayBuffer): void {
+          console.info(`recv message, msgId is ${msgId}, msgParam is ${JSON.stringify(msgParam)}`);
+        }
+      }
+      inputClient.recvMessage(messageHandler);
+    });
+```
 
 ## onTerminated
 
@@ -73,3 +93,23 @@ Listens for MessageHandler termination.
 **Since:** 15
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility()
+  .on('inputStart',
+    (kbController: inputMethodEngine.KeyboardController, client: inputMethodEngine.InputClient) => {
+      let keyboardController: inputMethodEngine.KeyboardController = kbController;
+      let inputClient: inputMethodEngine.InputClient = client;
+      let messageHandler: inputMethodEngine.MessageHandler = {
+        onTerminated(): void {
+          console.info('OnTerminated.');
+        },
+        onMessage(msgId: string, msgParam?: ArrayBuffer): void {
+          console.info(`recv message, msgId is ${msgId}, msgParam is ${JSON.stringify(msgParam)}`);
+        }
+      }
+      inputClient.recvMessage(messageHandler);
+    });
+```

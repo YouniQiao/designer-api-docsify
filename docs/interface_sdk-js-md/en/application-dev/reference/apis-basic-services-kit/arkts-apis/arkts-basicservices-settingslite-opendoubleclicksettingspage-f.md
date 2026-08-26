@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settingsLite } from 'kits/@kit.BasicServicesKit';
+import settingsLite from '@kit.BasicServicesKit';
 ```
 
 ## openDoubleClickSettingsPage

@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DataPanelModifier](arkts-arkui-datapanelmodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [DataPanelModifier](arkts-arkui-datapanelmodifier-c.md) | Defines DataPanel Modifier |

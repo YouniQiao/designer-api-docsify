@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
+import backgroundLoader from '@kit.BackgroundTasksKit';
 ```
 
 ## finishTask
@@ -14,7 +14,7 @@ function finishTask(taskInfo: TaskInfo): void
 
 Finish background load task.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -24,14 +24,14 @@ Finish background load task.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [taskInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-cloudmediaassetstatus-i-sys.md) | [TaskInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| taskInfo | [TaskInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md) | Yes |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [9700003](../errorcode-workScheduler.md#9700003-system-service-failure) |
-| [9700004](../errorcode-workScheduler.md#9700004-workinfo-verification-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [9700003](../errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
+| [9700004](../errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on taskInfo failed. |

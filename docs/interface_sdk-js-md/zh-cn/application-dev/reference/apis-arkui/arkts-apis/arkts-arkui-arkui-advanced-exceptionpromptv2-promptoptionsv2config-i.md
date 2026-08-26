@@ -9,7 +9,7 @@ PromptOptionsV2Config定义用于构造PromptOptionsV2对象的配置信息接�
 ## 导入模块
 
 ```TypeScript
-import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2 } from 'kits/@kit.ArkUI';
+import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2 } from '@kit.ArkUI';
 ```
 
 ## actionText

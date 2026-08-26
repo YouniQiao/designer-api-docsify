@@ -2,7 +2,8 @@
 
 AtomicServiceSearch为开发者提供满足定制化需求的功能，内容包括默认显示的搜索区、可自定义的选择区和功能区（最多两个）。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该组件从API version 18开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 18
@@ -12,7 +13,7 @@ AtomicServiceSearch为开发者提供满足定制化需求的功能，内容包�
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from 'kits/@kit.ArkUI';
+import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from '@kit.ArkUI';
 ```
 
 ## controller

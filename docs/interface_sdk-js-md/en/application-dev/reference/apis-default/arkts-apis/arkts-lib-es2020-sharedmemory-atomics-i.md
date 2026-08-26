@@ -15,16 +15,16 @@ Adds a value to the value at the given position in the array, returning the orig
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |
-| index | number | Yes |
-| value | bigint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| index | number | Yes |  |
+| value | bigint | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## and
 
 ```TypeScript
@@ -35,16 +35,16 @@ Stores the bitwise AND of a value with the value at the given position in the ar
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |
-| index | number | Yes |
-| value | bigint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| index | number | Yes |  |
+| value | bigint | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## compareExchange
 
 ```TypeScript
@@ -55,17 +55,17 @@ Replaces the value at the given position in the array if the original value equa
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |
-| index | number | Yes |
-| expectedValue | bigint | Yes |
-| replacementValue | bigint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| index | number | Yes |  |
+| expectedValue | bigint | Yes |  |
+| replacementValue | bigint | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## exchange
 
 ```TypeScript
@@ -76,16 +76,16 @@ Replaces the value at the given position in the array, returning the original va
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |
-| index | number | Yes |
-| value | bigint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| index | number | Yes |  |
+| value | bigint | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## load
 
 ```TypeScript
@@ -96,15 +96,15 @@ Returns the value at the given position in the array. Until this atomic operatio
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| index | number | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## notify
 
 ```TypeScript
@@ -115,16 +115,16 @@ Wakes up sleeping agents that are waiting on the given index of the array, retur
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) | Yes |
-| index | number | Yes |
-| count | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) | Yes |  |
+| index | number | Yes |  |
+| count | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## or
 
 ```TypeScript
@@ -135,16 +135,16 @@ Stores the bitwise OR of a value with the value at the given position in the arr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |
-| index | number | Yes |
-| value | bigint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| index | number | Yes |  |
+| value | bigint | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## store
 
 ```TypeScript
@@ -155,16 +155,16 @@ Stores a value at the given position in the array, returning the new value. Unti
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |
-| index | number | Yes |
-| value | bigint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| index | number | Yes |  |
+| value | bigint | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## sub
 
 ```TypeScript
@@ -175,16 +175,16 @@ Subtracts a value from the value at the given position in the array, returning t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |
-| index | number | Yes |
-| value | bigint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| index | number | Yes |  |
+| value | bigint | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## wait
 
 ```TypeScript
@@ -195,17 +195,17 @@ If the value at the given position in the array is equal to the provided value, 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) | Yes |
-| index | number | Yes |
-| value | bigint | Yes |
-| timeout | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) | Yes |  |
+| index | number | Yes |  |
+| value | bigint | Yes |  |
+| timeout | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## xor
 
 ```TypeScript
@@ -216,13 +216,13 @@ Stores the bitwise XOR of a value with the value at the given position in the ar
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |
-| index | number | Yes |
-| value | bigint | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| index | number | Yes |  |
+| value | bigint | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

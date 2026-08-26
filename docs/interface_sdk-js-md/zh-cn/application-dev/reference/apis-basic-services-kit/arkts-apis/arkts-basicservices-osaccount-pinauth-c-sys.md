@@ -11,7 +11,7 @@ PIN码认证基类。
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## constructor
@@ -30,9 +30,23 @@ constructor()
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+
+**示例**
+
+```TypeScript
+let userAuth = new osAccount.UserAuth();
+```
+
+```TypeScript
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+```
+
+```TypeScript
+let userIDM = new osAccount.UserIdentityManager();
+```
 
 ## registerInputer
 
@@ -52,20 +66,40 @@ registerInputer(inputer: IInputer): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | 是 | PIN码输入器，用于获取PIN码。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) |
-| [12300002](../errorcode-account.md#12300002-无效参数) |
-| [12300103](../errorcode-account.md#12300103-凭据输入器已注册) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid inputer. |
+| [12300103](../errorcode-account.md#12300103-凭据输入器已注册) | The credential inputer already exists. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+let password = new Uint8Array([0, 0, 0, 0, 0]);
+try {
+  pinAuth.registerInputer({
+    onGetData: (authSubType: osAccount.AuthSubType, callback: osAccount.IInputData) => {
+      callback.onSetData(authSubType, password);
+    }
+  });
+  console.info('registerInputer success.');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`registerInputer exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## unregisterInputer
 
@@ -85,7 +119,14 @@ unregisterInputer(): void
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+
+**示例**
+
+```TypeScript
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+pinAuth.unregisterInputer();
+```

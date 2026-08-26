@@ -9,7 +9,6 @@ Defines a **WebSocket** object. Before invoking WebSocket APIs, you need to call
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## close
@@ -30,16 +29,32 @@ Closes the WebSocket connection. This API uses an asynchronous callback to retur
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+ws.close((err: BusinessError) => {
+  if (!err) {
+    console.info("close success")
+  } else {
+    console.error(`close fail. Code: ${err.code}, message: ${err.message}`)
+  }
+});
+```
 
 ## close
 
@@ -59,17 +74,39 @@ Closes the WebSocket connection based on the options parameter. This API uses an
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | Yes | Request options. For details, see [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+
+let options: webSocket.WebSocketCloseOptions | undefined;
+if (options != undefined) {
+    options.code = 1000
+    options.reason = "your reason"
+}
+ws.close(options, (err: BusinessError) => {
+    if (!err) {
+        console.info("close success")
+    } else {
+        console.error(`close fail. Code: ${err.code}, message: ${err.message}`)
+    }
+});
+```
 
 ## close
 
@@ -89,22 +126,41 @@ Closes a WebSocket connection based on the specified options. This API uses a pr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | No | Request options. For details, see [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+let options: webSocket.WebSocketCloseOptions | undefined;
+if (options != undefined) {
+    options.code = 1000
+    options.reason = "your reason"
+}
+let promise = ws.close();
+promise.then((value: boolean) => {
+    console.info("close success")
+}).catch((err:string) => {
+    console.error("close fail, error:" + JSON.stringify(err))
+});
+```
 
 ## connect
 
@@ -114,13 +170,15 @@ connect(url: string, callback: AsyncCallback<boolean>): void
 
 Initiates a WebSocket request to establish a WebSocket connection to a given URL. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The boolean value returned in the callback indicates only whether the connection request is created
 > successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
 > event via on('open') before
 > calling this API.
 > 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the
 > maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum
 > length of URLs is changed from 2048 characters to 8196 characters.
@@ -135,22 +193,39 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| url | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| url | string | Yes | URL for establishing a WebSocket connection. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) |
-| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) |
-| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) |
-| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) |
-| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error.<br>**Applicable version:** 10 and later |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error.<br>**Applicable version:** 12 and later |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist.<br>**Applicable version:** 12 and later |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists.<br>**Applicable version:** 12 and later |
+| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+let url = "ws://";
+ws.connect(url, (err: BusinessError, value: boolean) => {
+  if (!err) {
+    console.info("connect success")
+  } else {
+    console.error(`connect fail. Code: ${err.code}, message: ${err.message}`)
+  }
+});
+```
 
 ## connect
 
@@ -160,13 +235,15 @@ connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<b
 
 Initiates a WebSocket request to establish a WebSocket connection to a given URL. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The boolean value returned in the callback indicates only whether the connection request is created
 > successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
 > event via on('open') before
 > calling this API.
 > 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the
 > maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum
 > length of URLs is changed from 2048 characters to 8196 characters.
@@ -181,23 +258,64 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| url | string | Yes |
-| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| url | string | Yes | URL for establishing a WebSocket connection. |
+| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | Yes | Request options. For details, see [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) |
-| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) |
-| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) |
-| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) |
-| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error.<br>**Applicable version:** 10 and later |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error.<br>**Applicable version:** 12 and later |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist.<br>**Applicable version:** 12 and later |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists.<br>**Applicable version:** 12 and later |
+| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Example 1:
+let ws = webSocket.createWebSocket();
+let options: webSocket.WebSocketRequestOptions | undefined;
+if (options !=undefined) {
+  options.header = {
+     name1: "value1",
+     name2: "value2",
+     name3: "value3"
+  };
+  options.caPath = "";
+}
+let url = "ws://"
+ws.connect(url, options, (err: BusinessError, value: Object) => {
+  if (!err) {
+    console.info("connect success")
+  } else {
+    console.error(`connect fail. Code: ${err.code}, message: ${err.message}`)
+  }
+});
+
+// Example 2:
+let url = "ws://"
+let ws = webSocket.createWebSocket();
+let options: webSocket.WebSocketRequestOptions = {
+  minSupportTlsProtocol: webSocket.TlsProtocol.TLS_V_1_1
+};
+ws.connect(url, options, (err: BusinessError, value: Object) => {
+  if (!err) {
+    console.info("connect success")
+  } else {
+    console.error(`connect fail. Code: ${err.code}, message: ${err.message}`)
+  }
+});
+```
 
 ## connect
 
@@ -207,13 +325,15 @@ connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>
 
 Establishes a WebSocket connection to a given URL. This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The boolean value returned in the callback indicates only whether the connection request is created
 > successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open**
 > event via on('open') before
 > calling this API.
 > 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the
 > maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum
 > length of URLs is changed from 2048 characters to 8196 characters.
@@ -228,28 +348,43 @@ Establishes a WebSocket connection to a given URL. This API uses a promise to re
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| url | string | Yes |
-| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| url | string | Yes | URL for establishing a WebSocket connection. |
+| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | No | Request options. For details, see [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) |
-| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) |
-| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) |
-| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) |
-| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error.<br>**Applicable version:** 10 and later |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error.<br>**Applicable version:** 12 and later |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist.<br>**Applicable version:** 12 and later |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists.<br>**Applicable version:** 12 and later |
+| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+let url = "ws://"
+let promise = ws.connect(url);
+promise.then((value: boolean) => {
+  console.info("connect success")
+}).catch((err:string) => {
+  console.error("connect fail, error:" + JSON.stringify(err))
+});
+```
 
 ## off('open')
 
@@ -259,7 +394,8 @@ off(type: 'open', callback?: AsyncCallback<Object>): void
 
 Unsubscribes from WebSocket open events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -271,10 +407,29 @@ Unsubscribes from WebSocket open events. This API uses an asynchronous callback 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'open' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'open' | Yes | Event type.    **open**: event indicating that a WebSocket connection has been opened. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+class OutValue {
+  status: number = 0
+  message: string = ""
+}
+let callback1 = (err: BusinessError, value: Object) => {
+ console.info("on open, status:" + ((value as OutValue).status + ", message:" + (value as OutValue).message))
+}
+ws.on('open', callback1);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+ws.off('open', callback1);
+```
 
 ## off('openInfo')
 
@@ -292,10 +447,29 @@ Cancels listening for the open info events of a WebSocket connection.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'openInfo' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'openInfo' | Yes | event indicating that the open info of a WebSocket connection is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | No | the callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+let callback1 = (err: BusinessError, value: webSocket.WebSocketOpenInfo) => {
+  if (value?.protocol != undefined) {
+    console.info(`on openInfo exist protocol: status: ${value.status}, message: ${value.message}, protocol: ${value.protocol}`);
+  } else {
+    console.info(`on openInfo , status: ${value.status}, message: ${value.message}, protocol: ${value.protocol}`);
+  }
+}
+ws.on('openInfo', callback1);
+// You can pass the callback used in on to unsubscribe from a specific subscription, or omit the callback to clear all subscriptions.
+ws.off('openInfo', callback1);
+```
 
 ## off('message')
 
@@ -305,8 +479,10 @@ off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void
 
 Unsubscribes from WebSocket server message receiving events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
-> The data in **AsyncCallback** can be in the format of string (API version 6) or ArrayBuffer (API version 8).&gt;
+> **NOTE：**
+> 
+> The data in **AsyncCallback** can be in the format of string (API version 6) or ArrayBuffer (API version 8).
+> 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -318,10 +494,19 @@ Unsubscribes from WebSocket server message receiving events. This API uses an as
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'message' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer & gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'message' | Yes | Event type.    **message**: event indicating that a message has been received from the server. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer & gt; | No | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+ws.off('message');
+```
 
 ## off('close')
 
@@ -331,7 +516,8 @@ off(type: 'close', callback?: AsyncCallback<CloseResult>): void
 
 Unsubscribes from WebSocket close events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -343,10 +529,19 @@ Unsubscribes from WebSocket close events. This API uses an asynchronous callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'close' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'close' | Yes | Event type.    **close**: event indicating that a WebSocket connection has been closed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No | Callback used to return the result.    **close** and **reason** indicate the error code and error cause for closing the connection, respectively. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+ws.off('close');
+```
 
 ## off('error')
 
@@ -356,7 +551,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 Unsubscribes from WebSocket error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -368,10 +564,19 @@ Unsubscribes from WebSocket error events. This API uses an asynchronous callback
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'error' | Yes |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Event type.    **error**: event indicating the WebSocket connection has encountered an error. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+ws.off('error');
+```
 
 ## off('dataEnd')
 
@@ -381,7 +586,8 @@ off(type: 'dataEnd', callback?: Callback<void>): void
 
 Unsubscribes from WebSocket data receiving end events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -391,10 +597,19 @@ Unsubscribes from WebSocket data receiving end events. This API uses an asynchro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'dataEnd' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'dataEnd' | Yes | Event type.    **dataEnd**: event indicating the data receiving over the WebSocket connection has ended. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |  |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+ws.off('dataEnd');
+```
 
 ## off('headerReceive')
 
@@ -404,7 +619,8 @@ off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void
 
 Unsubscribes from HTTP response header events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
 
@@ -414,10 +630,19 @@ Unsubscribes from HTTP response header events. This API uses an asynchronous cal
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'headerReceive' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'headerReceive' | Yes | Event type.Event type. The value is **headerReceive**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+ws.off('headerReceive');
+```
 
 ## on('open')
 
@@ -435,10 +660,26 @@ Subscribes to WebSocket open events. This API uses an asynchronous callback to r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'open' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'open' | Yes | Event type.    **open**: event indicating that a WebSocket connection has been opened. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError, Callback } from '@kit.BasicServicesKit';
+
+let ws= webSocket.createWebSocket();
+class OutValue {
+  status: number = 0
+  message: string = ""
+}
+ws.on('open', (err: BusinessError, value: Object) => {
+  console.info("on open, status:" + (value as OutValue).status + ", message:" + (value as OutValue).message)
+});
+```
 
 ## on('message')
 
@@ -448,7 +689,8 @@ on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void
 
 Subscribes to WebSocket server message receiving events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The data in **AsyncCallback** can be in the format of string (API version 6) or ArrayBuffer (API version 8).
 
 **Since:** 6
@@ -459,10 +701,22 @@ Subscribes to WebSocket server message receiving events. This API uses an asynch
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'message' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer & gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'message' | Yes | Event type.    **message**: event indicating that a message has been received from the server. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer & gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+ws.on('message', (err: BusinessError<void>, value: string | ArrayBuffer) => {
+  console.info("on message, message:" + value)
+});
+```
 
 ## on('openInfo')
 
@@ -480,10 +734,26 @@ Enables listening for the open info events of a WebSocket connection.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'openInfo' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'openInfo' | Yes | event indicating that the open info of a WebSocket connection is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | Yes | the callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError, Callback } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+ws.on('openInfo', (err: BusinessError, value: webSocket.WebSocketOpenInfo) => {
+  if (value?.protocol != undefined) {
+    console.info(`on openInfo exist protocol: status: ${value.status}, message: ${value.message}, protocol: ${value.protocol}`);
+  } else {
+    console.info(`on openInfo , status: ${value.status}, message: ${value.message}, protocol: ${value.protocol}`);
+  }
+});
+```
 
 ## on('close')
 
@@ -501,10 +771,22 @@ Subscribes to WebSocket close events. This API uses an asynchronous callback to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'close' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'close' | Yes | Event type.    **close**: event indicating that a WebSocket connection has been closed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes | Callback used to return the result.    **close** and **reason** indicate the error code and error cause for closing the connection, respectively. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+ws.on('close', (err: BusinessError, value: webSocket.CloseResult) => {
+  console.info("on close, code is " + value.code + ", reason is " + value.reason)
+});
+```
 
 ## on('error')
 
@@ -522,10 +804,22 @@ Subscribes to WebSocket error events. This API uses an asynchronous callback to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'error' | Yes |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Event type.    **error**: event indicating the WebSocket connection has encountered an error. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+ws.on('error', (err: BusinessError) => {
+  console.error(`on error. Code: ${err.code}, message: ${err.message}`)
+});
+```
 
 ## on('dataEnd')
 
@@ -541,10 +835,21 @@ Subscribes to the WebSocket data receiving end event. This API uses an asynchron
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'dataEnd' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'dataEnd' | Yes | Event type.    **dataEnd**: event indicating the data receiving over the WebSocket connection has ended. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+ws.on('dataEnd', () => {
+  console.info("on dataEnd")
+});
+```
 
 ## on('headerReceive')
 
@@ -560,10 +865,21 @@ Subscribes to HTTP response header events. This API uses an asynchronous callbac
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'headerReceive' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'headerReceive' | Yes | Event type.Event type. The value is **headerReceive**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+ws.on('headerReceive', (data) => {
+  console.info("on headerReceive " + JSON.stringify(data))
+});
+```
 
 ## send
 
@@ -583,17 +899,48 @@ Sends data through a WebSocket connection. This API uses an asynchronous callbac
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string \| ArrayBuffer | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | string \| ArrayBuffer | Yes | Data to send. Only the string type is supported for API version 6 or earlier. Both the string and ArrayBuffer types are supported for API version 8 or later. A maximum of 5,242,864 bytes (that is, 5 x 1024 x 1024 - 16) can be sent. If the data size exceeds the upper limit, error code 401 will be returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+let url = "ws://"
+class OutValue {
+  status: number = 0
+  message: string = ""
+}
+ws.connect(url, (err: BusinessError, value: boolean) => {
+    if (!err) {
+      console.info("connect success")
+    } else {
+      console.error(`connect fail. Code: ${err.code}, message: ${err.message}`)
+    }
+});
+ws.on('open', (err: BusinessError, value: Object) => {
+  console.info("on open, status:" + (value as OutValue).status + ", message:" + (value as OutValue).message)
+    ws.send("Hello, server!", (err: BusinessError, value: boolean) => {
+    if (!err) {
+      console.info("send success")
+    } else {
+      console.error(`send fail. Code: ${err.code}, message: ${err.message}`)
+    }
+  });
+});
+```
 
 ## send
 
@@ -613,19 +960,50 @@ Sends data through the WebSocket connection. This API uses a promise to return t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string \| ArrayBuffer | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | string \| ArrayBuffer | Yes | Data to send. Only the string type is supported for API version 6 or earlier. Both the string and ArrayBuffer types are supported for API version 8 or later. A maximum of 5,242,864 bytes (that is, 5 x 1024 x 1024 - 16) can be sent. If the data size exceeds the upper limit, error code 401 will be returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+**Examples**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+let url = "ws://"
+class OutValue {
+  status: number = 0
+  message: string = ""
+}
+ws.connect(url, (err: BusinessError, value: boolean) => {
+    if (!err) {
+      console.info("connect success")
+    } else {
+      console.error("connect fail. Code: ${err.code}, message: ${err.message}")
+    }
+});
+
+ws.on('open', (err: BusinessError, value: Object) => {
+  console.info("on open, status:" + (value as OutValue).status + ", message:" + (value as OutValue).message)
+  let promise = ws.send("Hello, server!");
+  promise.then((value: boolean) => {
+    console.info("send success")
+  }).catch((err:string) => {
+    console.error("send fail, error:" + JSON.stringify(err))
+  });
+});
+```

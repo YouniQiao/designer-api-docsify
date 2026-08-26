@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## openAccessory
@@ -20,24 +21,47 @@ function openAccessory(accessory: USBAccessory): USBAccessoryHandle
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | 是 | USB配件，需要通过[getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md)获取。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | USB配件句柄。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [14400001](../errorcode-usb.md#14400001-usb设备访问权限被拒绝) |
-| [14400004](../errorcode-usb.md#14400004-服务异常) |
-| [14401001](../errorcode-usb.md#14401001-目标usb配件未匹配) |
-| [14401002](../errorcode-usb.md#14401002-打开配件节点失败) |
-| [14401003](../errorcode-usb.md#14401003-不能重复打开配件) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| [14400001](../errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| [14400004](../errorcode-usb.md#14400004-服务异常) | Service exception. Possible causes:  1. No accessory is plugged in. |
+| [14401001](../errorcode-usb.md#14401001-目标usb配件未匹配) | The target USBAccessory not matched. |
+| [14401002](../errorcode-usb.md#14401002-打开配件节点失败) | Failed to open the native accessory node. |
+| [14401003](../errorcode-usb.md#14401003-不能重复打开配件) | Cannot reopen the accessory. |
+
+**示例**
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+async function openAccessory() {
+  try {
+    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+    let flag = await usbManager.requestAccessoryRight(accList?.[0]);
+    if (!flag) {
+      return;
+    }
+    let handle = usbManager.openAccessory(accList?.[0]);
+    console.info(`openAccessory success`);
+    let arrayBuffer = new ArrayBuffer(4096);
+    let readLength = fileIo.readSync(handle.accessoryFd, arrayBuffer, {offset: 0, length: 4096});
+    console.info('readSync ret: ' + readLength.toString(10));
+    usbManager.closeAccessory(handle);
+  } catch (error) {
+    console.error(`openAccessory error ${error.code}, message is ${error.message}`);
+  }
+}
+```

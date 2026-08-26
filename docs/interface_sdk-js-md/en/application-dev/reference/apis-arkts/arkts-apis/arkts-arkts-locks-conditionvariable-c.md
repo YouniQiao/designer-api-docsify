@@ -9,7 +9,7 @@ Object used for thread synchronization.
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import ArkTSUtils from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -70,15 +70,15 @@ Find or create an instance of ConditionVariable using the specified name.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the ConditionVariable to find or create. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) |
+| Type | Description |
+| --- | --- |
+| [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) | Returns an instance of ConditionVariable. |
 
 ## wait
 
@@ -96,9 +96,9 @@ Waits for the ConditionVariable to be notified.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | A promise will be resolved once the ConditionVariable is notified.. |
 
 ## waitFor
 
@@ -116,12 +116,12 @@ Waits for the ConditionVariable to be notified, or until the specified time limi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| timeout | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| timeout | number | Yes | The maximum time to wait. The value should be an integer. Unit: ms. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | A promise that will be resolved once the ConditionVariable is notified or the specified time limit is reached. |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from 'kits/@kit.AbilityKit';
+import continuationManager from '@kit.AbilityKit';
 ```
 
 ## startDeviceManager
@@ -26,10 +26,25 @@ function startDeviceManager(token: number, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| token | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| token | number | 是 | 注册后的token。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
+
+**示例**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = 1;
+continuationManager.startDeviceManager(token, (err) => {
+  if (err.code != 0) {
+    console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('startDeviceManager finished. ');
+});
+```
 
 
 ## startDeviceManager
@@ -52,11 +67,31 @@ function startDeviceManager(token: number, options: ContinuationExtraParams, cal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| token | number | 是 |
-| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| token | number | 是 | 注册后的token。 |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 是 | 过滤可选择设备列表的额外参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
+
+**示例**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = 1;
+continuationManager.startDeviceManager(
+  token,
+  {
+    deviceType: ["00E"]
+  },
+  (err) => {
+    if (err.code != 0) {
+      console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
+      return;
+    }
+    console.info('startDeviceManager finished. ');
+});
+```
 
 
 ## startDeviceManager
@@ -79,13 +114,31 @@ function startDeviceManager(token: number, options?: ContinuationExtraParams): P
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| token | number | 是 |
-| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| token | number | 是 | 注册后的token。 |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 否 | 过滤可选择设备列表的额外参数，该参数可缺省。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise形式返回接口调用结果。 |
+
+**示例**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = -1;
+continuationManager.startDeviceManager(
+  token,
+  {
+    deviceType: ["00E"]
+  }).then(() => {
+    console.info('startDeviceManager finished. ');
+  }).catch((err: BusinessError) => {
+    console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
+});
+```

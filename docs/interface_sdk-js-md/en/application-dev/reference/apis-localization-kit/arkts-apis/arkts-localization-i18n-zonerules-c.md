@@ -9,7 +9,7 @@ Queries the time zone transition rule.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import i18n from '@kit.LocalizationKit';
 ```
 
 ## nextTransition
@@ -28,12 +28,26 @@ Obtains the **nextTransition** object for the specified time.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| date | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| date | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) |
+| Type | Description |
+| --- | --- |
+| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | ZoneOffsetTransition** object for next transition. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// Obtain the time zone of Tijuana.
+let timeZone: i18n.TimeZone = i18n.getTimeZone('America/Tijuana');
+// Obtain the time zone transition rule of Tijuana.
+let zoneRules: i18n.ZoneRules = timeZone.getZoneRules();
+let date = new Date(2025, 4, 13);
+// Obtain the next time zone transition for Tijuana after May 13, 2025.
+let zoneOffsetTransition: i18n.ZoneOffsetTransition = zoneRules.nextTransition(date.getTime());
+```

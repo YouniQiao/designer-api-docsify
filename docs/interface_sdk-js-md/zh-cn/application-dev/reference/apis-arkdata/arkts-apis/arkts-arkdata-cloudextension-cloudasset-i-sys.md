@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import cloudExtension from '@kit.ArkData';
 ```
 
 ## assetId

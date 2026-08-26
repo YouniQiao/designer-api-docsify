@@ -2,7 +2,8 @@
 
 Common properties for intent decorators, used to define basic information about an intent (including the intent name and version number). It applies to all decorators provided by this module.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > If a matching intent is found in the standard intent list based on the **schema** and **intentVersion** fields, the
 > system automatically populates the **intentName**, **domain**, **llmDescription**, **keywords**, **parameters**,
 > and **result** fields with the values from the matching standard intent.
@@ -14,8 +15,7 @@ Common properties for intent decorators, used to define basic information about 
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, InsightIntentForm, InsightIntentEntity } from 'kits/@kit.AbilityKit';
-import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, LinkIntentParamMapping, InsightIntentEntity, InsightIntentForm } from 'kits/@kit.AbilityKit';
+import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, InsightIntentForm, InsightIntentEntity } from '@kit.AbilityKit';
 ```
 
 ## displayDescription

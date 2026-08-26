@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { VpnExtensionAbility, VpnExtensionContext } from 'kits/@kit.NetworkKit';
+import VpnExtensionAbility, { VpnExtensionContext } from '@kit.NetworkKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [VpnExtensionAbility](arkts-network-app-ability-vpnextensionability-vpnextensionability-c.md) |
+| Name | Description |
+| --- | --- |
+| [VpnExtensionAbility](arkts-network-app-ability-vpnextensionability-vpnextensionability-c.md) | **VpnExtensionContext** represents the context of **VpnExtensionAbility** and is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).This module provides the context required for APIs to access the resources of a **VpnExtensionAbility** object. |

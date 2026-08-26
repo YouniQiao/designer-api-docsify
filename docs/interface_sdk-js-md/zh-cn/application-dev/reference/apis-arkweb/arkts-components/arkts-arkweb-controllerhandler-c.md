@@ -9,6 +9,9 @@ ControllerHandler是ArkWeb提供的处理新建Web组件控制器分配的帮助
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -41,6 +44,6 @@ setWebController(controller: WebviewController): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| controller | [WebviewController](arkts-arkweb-webviewcontroller-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| controller | [WebviewController](arkts-arkweb-webviewcontroller-t.md) | 是 | 新建Web组件的WebviewController对象，如果不需要打开新窗口请设置为null。 |

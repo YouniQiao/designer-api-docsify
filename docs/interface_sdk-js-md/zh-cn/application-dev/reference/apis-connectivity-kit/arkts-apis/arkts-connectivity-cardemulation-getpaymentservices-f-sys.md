@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cardEmulation } from 'kits/@kit.ConnectivityKit';
+import cardEmulation from '@kit.ConnectivityKit';
 ```
 
 ## getPaymentServices
@@ -26,14 +26,25 @@ function getPaymentServices(): AbilityInfo[]
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AbilityInfo](../../apis-ability-kit/arkts-apis/arkts-ability-abilityinfo-i.md)[] |
+| 类型 | 说明 |
+| --- | --- |
+| [AbilityInfo](../../apis-ability-kit/arkts-apis/arkts-ability-abilityinfo-i.md)[] | 返回所有支付类型的服务。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+
+**示例**
+
+```TypeScript
+import { cardEmulation } from '@kit.ConnectivityKit';
+
+let paymentServices = cardEmulation.getPaymentServices();
+if (paymentServices == undefined || paymentServices.length == 0) {
+  console.error('paymentServices is null.');
+}
+```

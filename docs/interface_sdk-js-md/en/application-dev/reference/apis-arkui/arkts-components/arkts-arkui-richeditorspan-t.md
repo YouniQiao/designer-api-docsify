@@ -14,7 +14,7 @@ Provides the span information of the **RichEditor** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) |
-| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) |
+| Type | Description |
+| --- | --- |
+| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) | Returned image information. |
+| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) | Describes the returned text information. |

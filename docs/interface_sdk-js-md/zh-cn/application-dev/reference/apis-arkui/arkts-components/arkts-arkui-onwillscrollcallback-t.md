@@ -17,14 +17,14 @@ Called before scroll to allow developer to control real offset the Scrollable ca
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| scrollOffset | number | 是 |
-| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | 是 |
-| scrollSource | [ScrollSource](../arkts-apis/arkts-arkui-scrollsource-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| scrollOffset | number | 是 | offset this frame will scroll, which may or may not be reached. |
+| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | 是 | current scroll state. |
+| scrollSource | [ScrollSource](../arkts-apis/arkts-arkui-scrollsource-e.md) | 是 | source of current scroll. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| void \| [ScrollResult](arkts-arkui-scrollresult-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| void \| [ScrollResult](arkts-arkui-scrollresult-c.md) | the remain offset for the scrollable, same as scrollOffset when no ScrollResult is returned. |

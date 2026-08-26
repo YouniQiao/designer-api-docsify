@@ -3,6 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
+import notificationManager from '@kit.NotificationKitManager';
+import notificationSubscribe from '@kit.NotificationKitSubscribe';
+import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## supportDoNotDisturbMode
@@ -27,9 +30,25 @@ Checks whether DND mode is supported. This API uses an asynchronous callback to 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let supportDoNotDisturbModeCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("supportDoNotDisturbMode failed " + JSON.stringify(err));
+  } else {
+    console.info("supportDoNotDisturbMode success");
+  }
+}
+
+Notification.supportDoNotDisturbMode(supportDoNotDisturbModeCallback);
+```
 
 
 ## supportDoNotDisturbMode
@@ -54,6 +73,18 @@ Checks whether DND mode is supported. This API uses a promise to return the resu
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.supportDoNotDisturbMode().then((data: boolean) => {
+  console.info("supportDoNotDisturbMode success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`supportDoNotDisturbMode failed, code is ${err}`);
+});
+```

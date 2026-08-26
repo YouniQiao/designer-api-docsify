@@ -11,7 +11,6 @@ Defines an MMS message delivery index.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## date

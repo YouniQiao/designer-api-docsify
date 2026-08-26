@@ -12,7 +12,7 @@ type MessageType = 'message' | 'messageerror'
 
 **系统能力：** SystemCapability.Utils.Lang
 
-| 类型 |
-| --- |
-| 'message' |
-| 'messageerror' |
+| 类型 | 说明 |
+| --- | --- |
+| 'message' |  |
+| 'messageerror' |  |

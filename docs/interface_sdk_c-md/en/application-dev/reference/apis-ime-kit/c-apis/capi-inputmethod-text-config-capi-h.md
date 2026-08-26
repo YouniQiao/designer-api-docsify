@@ -380,7 +380,7 @@ Get cursor info from TextConfig.
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_TextConfig](capi-inputmethod-inputmethod-textconfig.md) *config | Represents a pointer to an [InputMethod_TextConfig](capi-inputmethod-inputmethod-textconfig.md) instance which will be get from. |
-| InputMethod_CursorInfo **cursorInfo | Represents a pointer to an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
+| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) **cursorInfo | Represents a pointer to an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
 
 **Returns**:
 
@@ -405,7 +405,7 @@ Get text avoid information from text configuration.
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_TextConfig](capi-inputmethod-inputmethod-textconfig.md) *config | Indicates the text configuration. |
-| [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md) **avoidInfo | Indicates the text avoid information. |
+| InputMethod_TextAvoidInfo **avoidInfo | Indicates the text avoid information. |
 
 **Returns**:
 

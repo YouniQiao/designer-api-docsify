@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from 'kits/@kit.AssetStoreKit';
+import asset from '@kit.AssetStoreKit';
 ```
 
 ## batchUpdate
@@ -20,28 +20,28 @@ Updates assets in batches based on an attributes array.Only assets with the same
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sourceAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes |
-| destAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to query. The [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) attributes of all assets must be the same. |
+| destAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to be updated. The [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) attributes of all assets must be the same. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[BatchResult](arkts-assetstore-asset-batchresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[BatchResult](arkts-assetstore-asset-batchresult-i.md)&gt; | the promise object returned by the function. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) |
-| [24000006](../errorcode-asset.md#24000006-insufficient-memory) |
-| [24000007](../errorcode-asset.md#24000007-asset-corrupted) |
-| [24000008](../errorcode-asset.md#24000008-database-operation-failed) |
-| [24000010](../errorcode-asset.md#24000010-ipc-failed) |
-| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) |
-| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) |
-| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
-| [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) |
-| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
+| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
+| [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
+| [24000008](../errorcode-asset.md#24000008-database-operation-failed) | The database operation failed. |
+| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
+| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
+| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
+| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
+| [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) | Getting the system time failed. |
+| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) in the array is not consistent. |

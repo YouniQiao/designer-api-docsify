@@ -9,7 +9,7 @@ Defines the descriptor of an audio and video file, which is used in DataSource p
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## callback
@@ -28,11 +28,11 @@ Callback function implemented by users, which is used to fill data. buffer - The
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buffer | ArrayBuffer | Yes |
-| length | number | Yes |
-| pos | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | ArrayBuffer | Yes |  |
+| length | number | Yes |  |
+| pos | number | No |  |
 
 ## fileSize
 

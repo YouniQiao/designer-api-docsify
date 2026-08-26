@@ -9,7 +9,7 @@ Provides APIs for throwing exceptions during the addition of a process.Construct
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## exit
@@ -28,9 +28,20 @@ Terminates this process.Exercise caution when using this API. After this API is 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| code | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| code | number | Yes | Exit code of the process. |
+
+**Examples**
+
+```TypeScript
+process.exit(0);
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+pro.exit(0);
+```
 
 ## getEnvironmentVar
 
@@ -40,7 +51,8 @@ getEnvironmentVar(name: string): string
 
 Obtains the value of an environment variable.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Obtains the value of an environment variable. If the environment variable does not exist, **undefined** is
 > returned.
 
@@ -52,15 +64,26 @@ Obtains the value of an environment variable.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Environment variable name. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Value of the environment variable. |
+
+**Examples**
+
+```TypeScript
+let pres = process.getEnvironmentVar("PATH");
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+let pres = pro.getEnvironmentVar("PATH");
+```
 
 ## getSystemConfig
 
@@ -78,15 +101,28 @@ Obtains the system configuration.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | number | Yes | System configuration parameter name. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | System configuration obtained. If the configuration does not exist, **-1** is returned. |
+
+**Examples**
+
+```TypeScript
+let _SC_ARG_MAX = 0;
+let pres = process.getSystemConfig(_SC_ARG_MAX);
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+let _SC_ARG_MAX = 0;
+let pres = pro.getSystemConfig(_SC_ARG_MAX);
+```
 
 ## getThreadPriority
 
@@ -104,15 +140,28 @@ Obtains the thread priority based on the specified TID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| v | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| v | number | Yes | TID. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Priority of the thread. The priority depends on the operating system. |
+
+**Examples**
+
+```TypeScript
+let tid = process.tid;
+let pres = process.getThreadPriority(tid);
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+let tid = process.tid;
+let pres = pro.getThreadPriority(tid);
+```
 
 ## getUidForName
 
@@ -130,15 +179,26 @@ Obtains the UID of a user from the user database of the system based on the spec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| v | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| v | string | Yes | User name. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | UID of the user. If the user does not exist, **-1** is returned. |
+
+**Examples**
+
+```TypeScript
+let pres = process.getUidForName("tool");
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+let pres = pro.getUidForName("tool");
+```
 
 ## isAppUid
 
@@ -156,15 +216,29 @@ Checks whether a UID belongs to this application.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| v | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| v | number | Yes | UID. which can be obtained by running **process.uid**. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the UID belongs to the application; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let result = process.isAppUid(688);
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+// Use process.uid to obtain the UID.
+let pres = process.uid;
+let result = pro.isAppUid(pres);
+console.info("result: " + result); // result: true
+```
 
 ## kill
 
@@ -182,13 +256,26 @@ Sends a signal to the specified process to terminate it. Only the current proces
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [signal](arkts-arkts-locks-asynclockoptions-c.md) | number | Yes |
-| pid | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| signal | number | Yes | Signal to send. Value range: 1 & lt;= signal & lt;= 64. |
+| pid | number | Yes | PID of the process, to which the signal will be sent. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Signal sending result. The value **true** is returned if the signal is sent successfully; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let pres = process.pid;
+let result = process.kill(28, pres);
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+let pres = process.pid;
+let result = pro.kill(28, pres);
+```

@@ -13,10 +13,13 @@ export declare function loadNativeModule(moduleName: string): Object
 
 The **loadNativeModule** API is used to synchronously and dynamically load a native module, that is, only load the required module at a time. Using this API increases the time for loading the .so file. You need to evaluate the impact on the functionality.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The name of the module loaded by **loadNativeModule** is the name provided in **dependencies** in the
-> **oh-package.json5** file of the dependency.&gt;
-> **loadNativeModule** can be used only to load native modules in the UI main thread.&gt;
+> **oh-package.json5** file of the dependency.
+> 
+> **loadNativeModule** can be used only to load native modules in the UI main thread.
+> 
 > Dependencies must be configured for the API call regardless of whether the parameter is a constant string or
 > variable expression.
 
@@ -30,19 +33,19 @@ The **loadNativeModule** API is used to synchronously and dynamically load a nat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Name of the module to load. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Object |
+| Type | Description |
+| --- | --- |
+| Object | Default export of the native module. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [10200301](../../apis-arkts/errorcode-utils.md#10200301-failed-to-load-the-native-module) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
+| [10200301](../../apis-arkts/errorcode-utils.md#10200301-failed-to-load-the-native-module) | Loading native module failed. |

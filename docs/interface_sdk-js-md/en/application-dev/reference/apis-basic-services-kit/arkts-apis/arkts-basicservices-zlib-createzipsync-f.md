@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import zlib from '@kit.BasicServicesKit';
 ```
 
 ## createZipSync
@@ -22,6 +22,14 @@ Creates this **Zip** instance. A **Zip** instance is returned upon a success.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [Zip](arkts-basicservices-zlib-zip-i.md) |
+| Type | Description |
+| --- | --- |
+| [Zip](arkts-basicservices-zlib-zip-i.md) | The **Zip** instance created. |
+
+**Examples**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+
+let zip = zlib.createZipSync();
+```

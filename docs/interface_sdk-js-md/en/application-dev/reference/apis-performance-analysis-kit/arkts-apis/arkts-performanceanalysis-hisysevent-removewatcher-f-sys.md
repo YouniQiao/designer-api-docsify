@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## removeWatcher
@@ -24,15 +23,44 @@ Removes a watcher used for event subscription.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md) | Yes | Watcher for event subscription. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [11200201](../errorcode-hisysevent-sys.md#11200201-event-watcher-not-exist) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [11200201](../errorcode-hisysevent-sys.md#11200201-event-watcher-not-exist) | The watcher does not exist. |
+
+**Examples**
+
+```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let watchRules: hiSysEvent.WatchRule[] = [{
+    domain: "RELIABILITY",
+    name: "STACK",
+    tag: "STABILITY",
+    ruleType: hiSysEvent.RuleType.WHOLE_WORD,
+  } as hiSysEvent.WatchRule ];
+let watcher: hiSysEvent.Watcher = {
+  rules: watchRules,
+  onEvent: (info: hiSysEvent.SysEventInfo) => {
+    // do something here.
+  },
+  onServiceDied: () => {
+    // do something here.
+  }
+};
+try {
+  hiSysEvent.addWatcher(watcher);
+  hiSysEvent.removeWatcher(watcher);
+} catch (err) {
+  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
+}
+```

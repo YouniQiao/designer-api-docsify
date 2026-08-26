@@ -18,13 +18,13 @@ Defines Monitor Decorator type
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string \| [MonitorDecoratorOptions](arkts-arkui-monitordecoratoroptions-i.md) | Yes |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | string[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string \| [MonitorDecoratorOptions](arkts-arkui-monitordecoratoroptions-i.md) | Yes | Monitored path input by the user or config options. |
+| args | string[] | Yes | Monitored path(s) input by the user |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MethodDecorator](../../apis-default/arkts-apis/arkts-methoddecorator-t.md) |
+| Type | Description |
+| --- | --- |
+| [MethodDecorator](../../apis-default/arkts-apis/arkts-methoddecorator-t.md) | Monitor decorator |

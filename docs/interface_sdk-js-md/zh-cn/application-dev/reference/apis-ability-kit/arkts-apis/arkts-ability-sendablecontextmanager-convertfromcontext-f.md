@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableContextManager } from 'kits/@kit.AbilityKit';
+import sendableContextManager from '@kit.AbilityKit';
 ```
 
 ## convertFromContext
@@ -24,18 +24,55 @@ function convertFromContext(context: common.Context): SendableContext
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | common.Context | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | common.Context | 是 |  |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | [SendableContext]{ |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want, sendableContextManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { worker } from '@kit.ArkTS';
+
+@Sendable
+export class SendableObject {
+  constructor(sendableContext: sendableContextManager.SendableContext) {
+    this.sendableContext = sendableContext;
+  }
+
+  sendableContext: sendableContextManager.SendableContext;
+  // other sendable object
+}
+
+export default class EntryAbility extends UIAbility {
+  worker: worker.ThreadWorker = new worker.ThreadWorker('entry/ets/workers/Worker.ets');
+
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+
+    // convert and post
+    try {
+      let sendableContext: sendableContextManager.SendableContext =
+        sendableContextManager.convertFromContext(this.context);
+      let object: SendableObject = new SendableObject(sendableContext);
+      hilog.info(0x0000, 'testTag', '%{public}s', 'Ability post message');
+      this.worker.postMessageWithSharedSendable(object);
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', `convertFromContext failed, error code: ${error.code}, error msg: ${error.message}`);
+    }
+  }
+}
+```

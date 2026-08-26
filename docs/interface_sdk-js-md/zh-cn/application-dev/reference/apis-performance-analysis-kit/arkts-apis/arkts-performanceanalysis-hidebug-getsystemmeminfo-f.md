@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getSystemMemInfo
@@ -20,6 +19,17 @@ function getSystemMemInfo(): SystemMemInfo
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | 系统内存信息。 |
+
+**示例**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let systemMemInfo: hidebug.SystemMemInfo = hidebug.getSystemMemInfo();
+
+console.info(`totalMem: ${systemMemInfo.totalMem}, freeMem: ${systemMemInfo.freeMem}, ` +
+  `availableMem: ${systemMemInfo.availableMem}`);
+```

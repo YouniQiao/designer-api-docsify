@@ -9,7 +9,7 @@ Provides methods for managing device standby, including the methods for querying
 ## Modules to Import
 
 ```TypeScript
-import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
+import deviceStandby from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary
@@ -17,27 +17,27 @@ import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md) |
-| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md) |
-| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md) |
-| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md) | Returns the information about the specified exempted application. |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md) | Returns the information about the specified exempted application. |
+| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md) | Releases exemption resources. |
+| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md) | Requests exemption resources. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md) |
-| [ResourceRequest](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md) | Information about an exempted application.@interface ExemptedAppInfo |
+| [ResourceRequest](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md) | The request of standby resources.@interface ResourceRequest |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md) | The type of exemption resources requested by the application.@enum { number } |
 <!--DelEnd-->

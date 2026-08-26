@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'kits/@kit.DrmKit';
+import drm from '@kit.DrmKit';
 ```
 
 ## getMediaKeySystems
@@ -22,13 +22,30 @@ Obtains the list of plugins supported by the device.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [MediaKeySystemDescription](arkts-drm-drm-mediakeysystemdescription-i.md)[] |
+| Type | Description |
+| --- | --- |
+| [MediaKeySystemDescription](arkts-drm-drm-mediakeysystemdescription-i.md)[] | Array of supported plugins. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let description: drm.MediaKeySystemDescription[] = drm.getMediaKeySystems();
+// Verify the returned result. description indicates the plugin information list, including the plugin names and unique IDs.
+if (description.length > 0) {
+  console.info(`getMediaKeySystems success, count: ${description.length}`);
+  for (let i = 0; i < description.length; i++) {
+    console.info(`name: ${description[i].name}, uuid: ${description[i].uuid}`);
+  }
+} else {
+  console.info('No DRM system available');
+}
+```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hyperSnapManager } from 'kits/@kit.AbilityKit';
+import hyperSnapManager from '@kit.AbilityKit';
 ```
 
 ## requestRebuildHyperSnap
@@ -28,6 +28,6 @@ Most applications don't require manual intervention for snapshot management.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 16000150 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 16000150 | Failed to send request to system service. |

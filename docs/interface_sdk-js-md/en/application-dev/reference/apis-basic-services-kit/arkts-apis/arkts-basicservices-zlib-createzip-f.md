@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import zlib from '@kit.BasicServicesKit';
 ```
 
 ## createZip
@@ -22,6 +22,18 @@ Creates this **Zip** instance. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Zip](arkts-basicservices-zlib-zip-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Zip](arkts-basicservices-zlib-zip-i.md)&gt; | Promise used to return the **Zip** instance created. |
+
+**Examples**
+
+```TypeScript
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+zlib.createZip().then(data => {
+  console.info('createZip success');
+}).catch((errData: BusinessError) => {
+  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+})
+```

@@ -9,19 +9,19 @@
 ## 导入模块
 
 ```TypeScript
-import { fileUri } from 'kits/@kit.CoreFileKit';
+import fileUri from '@kit.CoreFileKit';
 ```
 
 ## 汇总
 
 ### 函数
 
-| 名称 |
-| --- |
-| [getUriFromPath(文件URI)](arkts-corefile-fileuri-geturifrompath-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [getUriFromPath(文件URI)](arkts-corefile-fileuri-geturifrompath-f.md) | 通过应用沙箱内的文件路径生成URI。路径中的中文及非数字字母的特殊字符会进行百分号编码。 |
 
 ### 类
 
-| 名称 |
-| --- |
-| [FileUri(文件URI)](arkts-corefile-fileuri-fileuri-c.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [FileUri(文件URI)](arkts-corefile-fileuri-fileuri-c.md) | FileUri表示文件的URI，继承自uri.URI。@extends uri.URI |

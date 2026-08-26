@@ -14,7 +14,7 @@ declare type OnSelectCallback = (index: number, selectValue: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
-| [selectValue](arkts-arkui-atomicservice-atomicservicesearch-selectparams-i.md) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 选中项的索引，索引从0开始。 |
+| selectValue | string | 是 | 选中项的值。 |

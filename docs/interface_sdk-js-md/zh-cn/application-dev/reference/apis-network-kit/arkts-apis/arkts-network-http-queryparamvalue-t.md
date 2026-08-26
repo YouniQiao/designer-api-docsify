@@ -12,10 +12,10 @@ QueryParamObject中允许使用的单个参数值类型。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-| 类型 |
-| --- |
-| string |
-| int |
-| boolean |
-| null |
-| undefined |
+| 类型 | 说明 |
+| --- | --- |
+| string | 字符串类型。 |
+| int | 数字类型，会先转为字符串再参与编码。 |
+| boolean | 布尔类型，会先转为字符串再参与编码。 |
+| null | 空值类型，会按仅key不带`=`值的形式序列化。 |
+| undefined | 未定义类型，会按仅key不带`=`值的形式序列化。 |

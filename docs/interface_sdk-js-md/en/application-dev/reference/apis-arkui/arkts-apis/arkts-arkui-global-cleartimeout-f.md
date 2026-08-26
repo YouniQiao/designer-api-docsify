@@ -16,6 +16,6 @@ Cancels the timer set by " setTimeout()".
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| timeoutID | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| timeoutID | number | No | Indicates the timer ID returned by "setTimeout()". |

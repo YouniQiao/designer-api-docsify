@@ -9,8 +9,6 @@ HashMap is a map implemented based on the array, linked list, and red-black tree
 ## Modules to Import
 
 ```TypeScript
-import { HashMap } from 'kits/@kit.ArkTS';
-import { HashMapCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -29,15 +27,58 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+
+// Method 1:
+for (let item of hashMap) {
+  console.info("key:", item[0]);
+  console.info("value:", item[1]);
+}
+// key: squirrel
+// value: 123
+// key: sparrow
+// value: 356
+
+// Method 2:
+let iter = hashMap[Symbol.iterator]();
+let temp: IteratorResult<Object[]> = iter.next();
+while(!temp.done) {
+  console.info("key:", temp.value[0]);
+  console.info("value:", temp.value[1]);
+  temp = iter.next();
+}
+// key: squirrel
+// value: 123
+// key: sparrow
+// value: 356
+```
+
+```TypeScript
+// You are not advised to use the set or remove APIs in Symbol.iterator because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
+let hashMap = new HashMap<string, number>();
+for(let i = 0; i < 10; i++) {
+  hashMap.set("sparrow" + i, 123);
+}
+
+for(let i = 0; i < 10; i++) {
+  hashMap.remove("sparrow" + i);
+}
+```
 
 ## clear
 
@@ -55,9 +96,20 @@ Clears this HashMap and sets its length to **0**.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+hashMap.clear();
+let result = hashMap.isEmpty();
+console.info("result:", result);  // result: true
+```
 
 ## constructor
 
@@ -75,9 +127,15 @@ A constructor used to create a **HashMap** instance.
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The HashMap's constructor cannot be directly invoked. |
+
+**Examples**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+```
 
 ## entries
 
@@ -95,15 +153,42 @@ Returns an iterator that contains all the elements in this HashMap.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; | Iterator obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+let iter = hashMap.entries();
+let temp: IteratorResult<Object[]> = iter.next();
+while(!temp.done) {
+  console.info("key:" + temp.value[0]);
+  console.info("value:" + temp.value[1]);
+  temp = iter.next();
+}
+```
+
+```TypeScript
+// You are not advised to use the set or remove APIs in entries because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
+let hashMap = new HashMap<string, number>();
+for(let i = 0; i < 10; i++) {
+  hashMap.set("sparrow" + i, 123);
+}
+
+for(let i = 0; i < 10; i++) {
+  hashMap.remove("sparrow" + i);
+}
+```
 
 ## forEach
 
@@ -121,16 +206,41 @@ Uses a callback to traverse each element.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackFn | (value?: V, key?: K, map?: HashMap & lt;K, V & gt;) = & gt; void | Yes |
-| thisArg | Object | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callbackFn | (value?: V, key?: K, map?: HashMap & lt;K, V & gt;) = & gt; void | Yes | Callback invoked to traverse the elements in the HashMap. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("sparrow", 123);
+hashMap.set("gull", 357);
+hashMap.forEach((value: number, key: string) => {
+  console.info("value: " + value, "key: " + key);
+});
+// value: 123 key: sparrow
+// value: 357 key: gull
+```
+
+```TypeScript
+// You are not advised to use the set or remove APIs in forEach because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
+let hashMap = new HashMap<string, number>();
+for(let i = 0; i < 10; i++) {
+  hashMap.set("sparrow" + i, 123);
+}
+
+for(let i = 0; i < 10; i++) {
+  hashMap.remove("sparrow" + i);
+}
+```
 
 ## get
 
@@ -148,21 +258,31 @@ Obtains the value of the specified key in this HashMap. If nothing is obtained, 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | Target key. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V |
+| Type | Description |
+| --- | --- |
+| V | Value obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+const hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+let result = hashMap.get("sparrow");
+console.info("result:", result);  // result: 356
+```
 
 ## hasKey
 
@@ -180,21 +300,30 @@ Checks whether this HashMap has the specified key.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | Target key. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the specified key is contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasKey method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+const hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+let result = hashMap.hasKey("squirrel");
+console.info("result:", result);  // result: true
+```
 
 ## hasValue
 
@@ -212,21 +341,30 @@ Checks whether this HashMap has the specified value.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | V | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | V | Yes | Target value. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the specified value is contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasValue method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+const hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+let result = hashMap.hasValue(123);
+console.info("result:", result);  // result: true
+```
 
 ## isEmpty
 
@@ -244,15 +382,23 @@ Checks whether this HashMap is empty (contains no element).
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the HashMap is empty; otherwise, **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+const hashMap = new HashMap<string, number>();
+let result = hashMap.isEmpty();
+console.info("result = ", result) // result = true
+```
 
 ## keys
 
@@ -270,15 +416,29 @@ Returns an iterator that contains all the keys in this HashMap.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; | Iterator obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+let keys = hashMap.keys();
+for (let key of keys) {
+  console.info("key:" + key);
+}
+// key:squirrel
+// key:sparrow
+```
 
 ## remove
 
@@ -296,21 +456,31 @@ Removes an element with the specified key from this HashMap.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | Key of the target element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V |
+| Type | Description |
+| --- | --- |
+| V | Value of the element. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+let result = hashMap.remove("sparrow");
+console.info("result:", result);  // result: 356
+```
 
 ## replace
 
@@ -328,22 +498,31 @@ Replaces the value of a specified key.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
-| newValue | V | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | Key of the target element. |
+| newValue | V | Yes | New value of the element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Operation result. The value **true** is returned if the element is replaced; otherwise, **false** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replace method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("sparrow", 123);
+let result = hashMap.replace("sparrow", 357);
+console.info("result:", result);  // result: true
+```
 
 ## set
 
@@ -361,22 +540,30 @@ Adds or updates an element in this HashMap.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
-| value | V | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | Key of the target element. |
+| value | V | Yes | Value of the target element. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| Object |
+| Type | Description |
+| --- | --- |
+| Object | HashMap that contains the new element. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123)
+console.info("result:", hashMap.get("squirrel"));  // result: 123
+```
 
 ## setAll
 
@@ -394,15 +581,28 @@ Adds all elements in a **HashMap** instance to this HashMap.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | Yes | HashMap** instance whose elements are to be added to the current HashMap. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setAll method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+const hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+let newHashMap = new HashMap<string, number>();
+newHashMap.set("newMap", 99);
+hashMap.setAll(newHashMap);
+let result = hashMap.hasKey("newMap");
+console.info("result:", result);  // result: true
+```
 
 ## values
 
@@ -420,15 +620,29 @@ Returns an iterator that contains all the values in this HashMap.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;V&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;V&gt; | Iterator obtained. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let hashMap = new HashMap<string, number>();
+hashMap.set("squirrel", 123);
+hashMap.set("sparrow", 356);
+let values = hashMap.values();
+for (let value of values) {
+  console.info("value:", value)
+}
+// value: 123
+// value: 356
+```
 
 ## length
 

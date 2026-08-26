@@ -11,7 +11,7 @@ Provides the password data callback.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## onSetData
@@ -30,15 +30,31 @@ Called to notify the caller the data is set.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| authSubType | [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md) | Yes |
-| data | Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| authSubType | [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md) | Yes | Credential subtype. |
+| data | Uint8Array | Yes | Data (credential) to set. The data is used for authentication and operations for adding and modifying credentials. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid pinSubType. |
+
+**Examples**
+
+```TypeScript
+let password: Uint8Array = new Uint8Array([0, 0, 0, 0, 0, 0]);
+let passwordNumber: Uint8Array = new Uint8Array([1, 2, 3, 4]);
+let inputer: osAccount.IInputer = {
+  onGetData: (authSubType: osAccount.AuthSubType, callback: osAccount.IInputData) => {
+      if (authSubType == osAccount.AuthSubType.PIN_NUMBER) {
+        callback.onSetData(authSubType, passwordNumber);
+      } else {
+        callback.onSetData(authSubType, password);
+      }
+  }
+};
+```

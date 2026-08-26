@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [RowModifier](arkts-arkui-rowmodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [RowModifier](arkts-arkui-rowmodifier-c.md) | Defines Row Modifier@extends RowAttribute @implements AttributeModifier & lt;RowAttribute & gt; |

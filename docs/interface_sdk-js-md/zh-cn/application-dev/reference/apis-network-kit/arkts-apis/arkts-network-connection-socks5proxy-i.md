@@ -9,7 +9,6 @@ SOCKS5代理配置信息。
 ## 导入模块
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## dnsStrategy

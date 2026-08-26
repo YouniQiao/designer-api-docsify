@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { commonEventManager } from 'kits/@kit.BasicServicesKit';
+import commonEventManager from '@kit.BasicServicesKit';
 ```
 
 ## createSubscriberSync
@@ -22,18 +22,38 @@ function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEv
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | 是 | 表示订阅信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | 返回订阅者对象。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 定义订阅者，用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
+let subscriber: commonEventManager.CommonEventSubscriber | null = null;
+// 订阅者信息
+let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {
+  events: ['event']
+};
+// 创建订阅者
+try {
+  subscriber = commonEventManager.createSubscriberSync(subscribeInfo);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
+}
+```

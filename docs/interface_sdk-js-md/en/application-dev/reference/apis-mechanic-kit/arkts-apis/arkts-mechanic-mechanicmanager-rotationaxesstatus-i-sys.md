@@ -11,7 +11,6 @@ Rotation axes status
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## pitchEnabled

@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ColumnSplitModifier](arkts-arkui-columnsplitmodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [ColumnSplitModifier](arkts-arkui-columnsplitmodifier-c.md) | Defines ColumnSplit Modifier@extends ColumnSplitAttribute @implements AttributeModifier & lt;ColumnSplitAttribute & gt; |

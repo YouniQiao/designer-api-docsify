@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import contact from '@kit.ContactsKit';
 ```
 
 ## bundleName
@@ -53,3 +53,15 @@ holderId?: number
 **起始版本：** 7
 
 **系统能力：** SystemCapability.Applications.ContactsData
+
+**示例**
+
+使用JSON格式创建数据。
+
+```TypeScript
+let holder: contact.Holder = {
+  bundleName: 'com.ohos.contacts',
+  displayName: 'displayName',
+  holderId: 1
+};
+```

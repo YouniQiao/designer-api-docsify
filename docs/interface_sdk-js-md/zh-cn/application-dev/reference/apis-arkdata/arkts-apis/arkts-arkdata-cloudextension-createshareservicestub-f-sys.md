@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import cloudExtension from '@kit.ArkData';
 ```
 
 ## createShareServiceStub
@@ -22,12 +22,31 @@ function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| instance | [ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instance | [ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md) | 是 | ShareCenter类的实例。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;rpc.RemoteObject & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;rpc.RemoteObject & gt; | Promise对象，返回ShareCenter的RemoteObject对象。 |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class MyShareCenter implements cloudExtension.ShareCenter {
+  constructor() {}
+  // ...
+}
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  async connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject> {
+    console.info(`connect share center, bundle: ${bundleName}`);
+    return cloudExtension.createShareServiceStub(new MyShareCenter());
+  }
+}
+```

@@ -27,10 +27,10 @@ A constructor used to create a **BottomTabBarStyle** instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | Yes |
-| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | Yes | Image for the tab.<br>**Since:** 12 |
+| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
 
 ## iconStyle
 
@@ -50,15 +50,15 @@ Sets the style of the label icon on the bottom tab.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | Yes | Style of the label icon on the bottom tab. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) |
+| Type | Description |
+| --- | --- |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 
 ## id
 
@@ -78,15 +78,15 @@ Sets the ID of the bottom tab.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | ID of the bottom tab. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) |
+| Type | Description |
+| --- | --- |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 
 ## labelStyle
 
@@ -106,15 +106,15 @@ Sets the style of the label text and font for the bottom tab.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | Yes | Style of the label text and font for the bottom tab. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) |
+| Type | Description |
+| --- | --- |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 
 ## layoutMode
 
@@ -134,15 +134,15 @@ Sets the layout mode of the images and texts on the bottom tab.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [LayoutMode](arkts-arkui-layoutmode-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [LayoutMode](arkts-arkui-layoutmode-e.md) | Yes | Layout mode of the images and text on the bottom tab.Default value: **LayoutMode.VERTICAL |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) |
+| Type | Description |
+| --- | --- |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 
 ## of
 
@@ -162,16 +162,16 @@ Static constructor used to create a **BottomTabBarStyle** instance.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | Yes |
-| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | Yes | Image for the tab.<br>**Since:** 12 |
+| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) |
+| Type | Description |
+| --- | --- |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object created. |
 
 ## padding
 
@@ -191,15 +191,15 @@ Sets the padding of the bottom tab. It cannot be set in percentage. When the par
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | Padding \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Padding \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Padding of the bottom tab.Value range: [0, +∞]Default value: **{left:4.0vp,right:4.0vp,top:0.0vp,bottom:0.0vp}**If of the LocalizedPadding type, this attribute supports the mirroring capability.Default value: **{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),**    **top:LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) |
+| Type | Description |
+| --- | --- |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 
 ## symmetricExtensible
 
@@ -219,15 +219,15 @@ Sets whether the images and text on the bottom tab can be symmetrically extended
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the available space on the left and right bottom tabs.Default value: **false**, indicating that the images and text on the bottom tab cannot be symmetrically extended by the minimum value of the available space on the left and right bottom tabs. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) |
+| Type | Description |
+| --- | --- |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 
 ## verticalAlign
 
@@ -247,12 +247,12 @@ Sets the vertical alignment mode of the images and text on the bottom tab.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | Yes | Vertical alignment mode of the images and text on the bottom tab.Default value: **VerticalAlign.Center |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) |
+| Type | Description |
+| --- | --- |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |

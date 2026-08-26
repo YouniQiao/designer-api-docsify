@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, OnContentWillChangeCallback } from 'kits/@kit.ArkUI';
+import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, OnContentWillChangeCallback } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -29,9 +29,9 @@ TabBarOptions的构造函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](../arkts-components/arkts-arkui-tabbarsymbol-c.md) | 是 |
-| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 |
-| unselectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 否 |
-| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](../arkts-components/arkts-arkui-tabbarsymbol-c.md) | 是 | 页签内的图标内容。 |
+| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 页签内的文字内容。 |
+| unselectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 否 | 未选择时的页签颜色，默认值为#99182431。 |
+| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 否 | 已选择时的页签颜色，默认值为#FF007DFF。 |

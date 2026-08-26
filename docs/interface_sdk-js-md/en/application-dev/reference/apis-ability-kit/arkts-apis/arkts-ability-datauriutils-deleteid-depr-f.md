@@ -23,12 +23,20 @@ Deletes the ID from the end of a given URI.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| uri | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | URI object from which the ID is to be deleted. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | URI object with the ID deleted. |
+
+**Examples**
+
+```TypeScript
+import dataUriUtils from '@ohos.ability.dataUriUtils';
+
+let uri = dataUriUtils.deleteId('com.example.dataUriUtils/1221');
+```

@@ -21,14 +21,14 @@ Sends an event to the component with the specified ID.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | string | Yes |
-| action | number | Yes |
-| params | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | string | Yes | ID of the component for which the event is to be sent. |
+| action | number | Yes | Type of the event to be sent. The options are as follows: Click event: 10 LongClick: 11. |
+| params | string | Yes | Event parameters. If there is no parameter, pass an empty string "". |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean |  |

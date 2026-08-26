@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import relationalStore from '@kit.ArkData';
 ```
 
 ## getDeleteSqlInfo
@@ -20,18 +20,27 @@ Obtains the SQL statement used to delete data. This API returns the result synch
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | RdbPredicates** object that matches the specified field. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) |
+| Type | Description |
+| --- | --- |
+| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) | SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+
+**Examples**
+
+```TypeScript
+const predicates = new relationalStore.RdbPredicates("users");
+predicates.equalTo("tableName", "a");
+predicates.notEqualTo("age", 18);
+const sqlInfo: relationalStore.SqlInfo = relationalStore.getDeleteSqlInfo(predicates);
+```

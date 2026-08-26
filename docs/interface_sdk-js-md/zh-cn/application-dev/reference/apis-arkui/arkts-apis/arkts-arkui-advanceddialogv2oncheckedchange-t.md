@@ -16,6 +16,6 @@ export declare type AdvancedDialogV2OnCheckedChange = (checked: boolean) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| checked | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| checked | boolean | 是 | 表示选择框选中状态。 checked为true时，表示选择框已选中。checked为false时，表示选择框未选中。 |

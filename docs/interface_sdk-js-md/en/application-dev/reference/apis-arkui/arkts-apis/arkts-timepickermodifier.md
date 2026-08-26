@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TimePickerModifier](arkts-arkui-timepickermodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [TimePickerModifier](arkts-arkui-timepickermodifier-c.md) | Defines TimePicker Modifier@extends TimePickerAttribute @implements AttributeModifier & lt;TimePickerAttribute & gt; |

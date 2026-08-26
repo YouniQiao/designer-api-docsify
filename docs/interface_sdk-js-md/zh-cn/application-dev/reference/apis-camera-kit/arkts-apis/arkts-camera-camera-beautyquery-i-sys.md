@@ -11,7 +11,6 @@ Provides APIs to obtain and set the beauty effect.
 ## 导入模块
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getSupportedBeautyRange
@@ -30,22 +29,46 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | 是 | Beauty type. |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;number & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;number & gt; | Array of levels supported. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+
+**示例**
+
+```TypeScript
+function getSupportedBeautyRange(portraitPhotoSession: camera.PortraitPhotoSession): Array<number> {
+  let beautyTypes: Array<camera.BeautyType> = portraitPhotoSession.getSupportedBeautyTypes();
+  if (beautyTypes === undefined || beautyTypes.length <= 0) {
+    return [];
+  }
+  let beautyLevels: Array<number> = portraitPhotoSession.getSupportedBeautyRange(beautyTypes[0]);
+  return beautyLevels;
+}
+```
+
+```TypeScript
+function getSupportedBeautyRange(captureSession: camera.CaptureSession): Array<number> {
+  let beautyTypes: Array<camera.BeautyType> = captureSession.getSupportedBeautyTypes();
+  if (beautyTypes === undefined || beautyTypes.length <= 0) {
+    return [];
+  }
+  let beautyLevels: Array<number> = captureSession.getSupportedBeautyRange(beautyTypes[0]);
+  return beautyLevels;
+}
+```
 
 ## getSupportedBeautyTypes
 
@@ -63,16 +86,32 @@ Obtains the supported beauty types.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[BeautyType](arkts-camera-camera-beautytype-e-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[BeautyType](arkts-camera-camera-beautytype-e-sys.md)&gt; | Array of beauty types supported. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+
+**示例**
+
+```TypeScript
+function getSupportedBeautyTypes(portraitPhotoSession: camera.PortraitPhotoSession): Array<camera.BeautyType> {
+  let beautyTypes: Array<camera.BeautyType> = portraitPhotoSession.getSupportedBeautyTypes();
+  return beautyTypes;
+}
+```
+
+```TypeScript
+function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<camera.BeautyType> {
+  let beautyTypes: Array<camera.BeautyType> = captureSession.getSupportedBeautyTypes();
+  return beautyTypes;
+}
+```
 
 ## getSupportedPortraitThemeTypes
 
@@ -90,16 +129,16 @@ Gets supported portrait theme type.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array&lt;[PortraitThemeType](arkts-camera-camera-portraitthemetype-e-sys.md)&gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[PortraitThemeType](arkts-camera-camera-portraitthemetype-e-sys.md)&gt; | Lists of portrait theme types |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 
 ## isPortraitThemeSupported
 
@@ -117,13 +156,13 @@ Checks whether portrait theme is supported.
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | Is portrait theme supported. |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |

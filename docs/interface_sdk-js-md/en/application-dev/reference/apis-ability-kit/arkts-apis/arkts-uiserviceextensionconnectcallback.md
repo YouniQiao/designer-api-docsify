@@ -4,6 +4,6 @@
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [UIServiceExtensionConnectCallback](arkts-ability-uiserviceextensionconnectcallback-i.md) |
+| Name | Description |
+| --- | --- |
+| [UIServiceExtensionConnectCallback](arkts-ability-uiserviceextensionconnectcallback-i.md) | UIServiceExtensionConnectCallback provides callbacks for the connection to a UIServiceExtensionAbility. |

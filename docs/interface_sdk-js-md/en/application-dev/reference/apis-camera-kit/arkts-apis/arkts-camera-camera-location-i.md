@@ -9,7 +9,6 @@ Describes the geolocation information.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## altitude

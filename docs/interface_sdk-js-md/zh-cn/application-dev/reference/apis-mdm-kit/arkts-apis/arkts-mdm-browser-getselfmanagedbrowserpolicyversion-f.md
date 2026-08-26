@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { browser } from 'kits/@kit.MDMKit';
+import browser from '@kit.MDMKit';
 ```
 
 ## getSelfManagedBrowserPolicyVersion
@@ -22,6 +22,19 @@ function getSelfManagedBrowserPolicyVersion(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 浏览器策略版本。 |
+
+**示例**
+
+```TypeScript
+import { browser } from '@kit.MDMKit';
+
+try {
+  let version: string = browser.getSelfManagedBrowserPolicyVersion();
+  console.info(`Succeeded in getting self managed browser policy version, result : ${version}`);
+} catch (err) {
+  console.error(`Failed to get self managed browser policy version. Code is ${err.code}, message is ${err.message}`);
+}
+```

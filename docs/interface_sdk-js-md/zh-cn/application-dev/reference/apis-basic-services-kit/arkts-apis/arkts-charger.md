@@ -2,7 +2,8 @@
 
 提供充电类型。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 本模块为系统接口。
 
 **起始版本：** 10
@@ -14,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { charger } from 'kits/@kit.BasicServicesKit';
+import charger from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -22,7 +23,7 @@ import { charger } from 'kits/@kit.BasicServicesKit';
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 |
-| --- |
-| [ChargeType](arkts-basicservices-charger-chargetype-e-sys.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [ChargeType](arkts-basicservices-charger-chargetype-e-sys.md) | 表示充电类型的枚举。 |
 <!--DelEnd-->

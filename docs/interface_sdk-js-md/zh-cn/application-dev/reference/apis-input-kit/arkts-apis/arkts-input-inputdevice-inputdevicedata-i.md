@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
+import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## axisRanges
@@ -46,7 +46,7 @@ bus: number
 displayId?: number
 ```
 
-绑定的目标displayId。如果bindToDisplay接口没有调用过，则不填此值
+绑定的目标显示器ID。当系统中有绑定关系时存在该字段，未绑定时不存在该字段。
 
 **类型：** number
 

@@ -16,6 +16,6 @@ type OnEventFn = (event: CliToolEvent) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [CliToolEvent](arkts-ability-clitoolevent-i-sys.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [CliToolEvent](arkts-ability-clitoolevent-i-sys.md) | 是 | CLI工具发送的事件。 |

@@ -2,7 +2,8 @@
 
 Represents the result returned.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - For details about the error codes, see
 > [HUKS Error Codes](../errorcode-huks.md).
 
@@ -17,7 +18,8 @@ Represents the result returned.
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import huks from '@kit.UniversalKeystoreKit';
+import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 ```
 
 ## certChains

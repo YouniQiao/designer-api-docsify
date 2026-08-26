@@ -9,7 +9,6 @@ TestRunner模块提供了框架测试的能力。包括准备单元测试环境�
 ## 导入模块
 
 ```TypeScript
-import { TestRunner } from 'kits/@kit.TestKit';
 ```
 
 ## onPrepare
@@ -26,6 +25,23 @@ onPrepare(): void
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+**示例**
+
+```TypeScript
+import { TestRunner } from '@kit.TestKit';
+
+// 实现自定义测试运行器
+export default class UserTestRunner implements TestRunner {
+  // 准备单元测试环境
+  onPrepare() {
+    console.info('Trigger onPrepare');
+  }
+
+  onRun() {
+  }
+}
+```
+
 ## onRun
 
 ```TypeScript
@@ -39,6 +55,23 @@ onRun(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { TestRunner } from '@kit.TestKit';
+
+// 实现自定义测试运行器
+export default class UserTestRunner implements TestRunner {
+  onPrepare() {
+  }
+
+  // 运行测试用例
+  onRun() {
+    console.info('Trigger onRun');
+  }
+}
+```
 
 ## onStop
 
@@ -55,3 +88,27 @@ onStop?: OnStopFn
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { TestRunner } from '@kit.TestKit';
+
+// 实现自定义测试运行器
+export default class UserTestRunner implements TestRunner {
+  // 准备单元测试环境
+  onPrepare() {
+    console.info('Trigger onPrepare');
+  }
+
+  // 运行测试用例
+  onRun() {
+    console.info('Trigger onRun');
+  }
+
+  // 测试完成时的回调处理
+  onStop() {
+    console.info('Trigger onStop');
+  }
+}
+```

@@ -3,7 +3,12 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import inputMethod from '@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKitEngine';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
+import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
+import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 ```
 
 ## getCurrentInputMethodSubtype
@@ -20,6 +25,14 @@ function getCurrentInputMethodSubtype(): InputMethodSubtype
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | 返回当前输入法子类型对象。 |
+
+**示例**
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+
+let currentImeSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
+```

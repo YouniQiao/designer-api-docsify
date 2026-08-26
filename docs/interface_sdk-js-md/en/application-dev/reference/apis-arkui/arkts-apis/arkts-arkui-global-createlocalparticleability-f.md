@@ -18,12 +18,12 @@ Get the java interface instance. The java instance needs to register, otherwise 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | No | Java interface name, including package path, such as com.example.test.timeinterfaceimpl. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | A promise object is returned. The resolve callback is the object of PA. The reject callback returns the object containing code and error data. |

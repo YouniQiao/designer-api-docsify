@@ -10,8 +10,8 @@ The type of the priority key can be number or string
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| long |
-| double |
-| string |
+| Type | Description |
+| --- | --- |
+| long | The value is a long |
+| double | The value is a double |
+| string | The value is a string |

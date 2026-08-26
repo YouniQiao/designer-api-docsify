@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## constructor
@@ -28,9 +27,26 @@ constructor(watcherName: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| watcherName | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| watcherName | string | 是 | 已通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md)添加的事件观察者名称。若未通过addWatcher添加，则默认无数据。 |
+
+**示例**
+
+```TypeScript
+// 添加数据观察者“Watcher1”，订阅监听系统事件
+hiAppEvent.addWatcher({
+  name: "Watcher1",
+  appEventFilters: [
+    {
+      domain: hiAppEvent.domain.OS,
+    }
+  ],
+});
+
+// 创建订阅数据持有者实例，holder1持有的数据为上述addWatcher中添加的观察者“Watcher1”监听到的事件
+let holder1: hiAppEvent.AppEventPackageHolder = new hiAppEvent.AppEventPackageHolder("Watcher1");
+```
 
 ## setRow
 
@@ -48,16 +64,25 @@ setRow(size: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| size | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| size | number | 是 | 事件条数，单位为条。取值范围(0, 2^31-1]，超出范围会抛异常。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
+
+**示例**
+
+```TypeScript
+// 创建订阅数据持有者实例，holder3持有的数据为已通过addWatcher添加的观察者“Watcher1”监听到的事件
+let holder3: hiAppEvent.AppEventPackageHolder = new hiAppEvent.AppEventPackageHolder("Watcher1");
+// 设置每次取出的事件包的数据条数为1000条
+holder3.setRow(1000);
+```
 
 ## setSize
 
@@ -75,16 +100,25 @@ setSize(size: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| size | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| size | number | 是 | 数据大小阈值，单位为byte。取值范围[0, 2^31-1]，超出范围会抛异常。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
+
+**示例**
+
+```TypeScript
+// 创建订阅数据持有者实例，holder2持有的数据为已通过addWatcher添加的观察者“Watcher1”监听到的事件
+let holder2: hiAppEvent.AppEventPackageHolder = new hiAppEvent.AppEventPackageHolder("Watcher1");
+// 设置每次取出事件包的数据大小阈值为1000byte
+holder2.setSize(1000);
+```
 
 ## takeNext
 
@@ -102,6 +136,15 @@ takeNext(): AppEventPackage
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) | 取出的事件包对象，订阅事件数据被全部取出后会返回null。 |
+
+**示例**
+
+```TypeScript
+// 创建订阅数据持有者实例，holder4持有的数据为已通过addWatcher添加的观察者“Watcher1”监听到的事件
+let holder4: hiAppEvent.AppEventPackageHolder = new hiAppEvent.AppEventPackageHolder("Watcher1");
+// 获取订阅事件
+let eventPkg: hiAppEvent.AppEventPackage | null = holder4.takeNext();
+```

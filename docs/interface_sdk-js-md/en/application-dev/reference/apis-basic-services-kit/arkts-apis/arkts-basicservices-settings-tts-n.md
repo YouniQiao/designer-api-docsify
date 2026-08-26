@@ -9,16 +9,17 @@ Provides methods for setting information about text-to-speech (TTS) conversion, 
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import settings from '@kit.BasicServicesKit';
+import settingsLite from '@kit.BasicServicesKitLite';
 ```
 
 ## Summary
 
 ### Constants
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DEFAULT_TTS_PITCH](arkts-basicservices-tts-con.md#default_tts_pitch) |
-| [DEFAULT_TTS_RATE](arkts-basicservices-tts-con.md#default_tts_rate) |
-| [DEFAULT_TTS_SYNTH](arkts-basicservices-tts-con.md#default_tts_synth) |
-| [ENABLED_TTS_PLUGINS](arkts-basicservices-tts-con.md#enabled_tts_plugins) |
+| Name | Description |
+| --- | --- |
+| [DEFAULT_TTS_PITCH](arkts-basicservices-tts-con.md#default_tts_pitch) | Indicates the default pitch of the text-to-speech (TTS) engine. & lt;p & gt;100 = 1x. If the value is set to {@code 200}, the frequency is twice the normal sound frequency. |
+| [DEFAULT_TTS_RATE](arkts-basicservices-tts-con.md#default_tts_rate) | Indicates the default speech rate of the TTS engine. 100 = 1x. |
+| [DEFAULT_TTS_SYNTH](arkts-basicservices-tts-con.md#default_tts_synth) | Indicates the default TTS engine. |
+| [ENABLED_TTS_PLUGINS](arkts-basicservices-tts-con.md#enabled_tts_plugins) | Indicates the list of activated plug-in packages used for TTS. Multiple plug-in packages are separated by spaces. |

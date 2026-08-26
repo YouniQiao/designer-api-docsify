@@ -24,34 +24,34 @@
 
 ### 函数
 
-| 名称 |
-| --- |
-| [deleteStorage(轻量级存储)](arkts-arkdata-storage-deletestorage-f.md) |
-| [deleteStorage(轻量级存储)](arkts-arkdata-storage-deletestorage-f.md) |
-| [deleteStorageSync(轻量级存储)](arkts-arkdata-storage-deletestoragesync-f.md) |
-| [getStorage(轻量级存储)](arkts-arkdata-storage-getstorage-f.md) |
-| [getStorage(轻量级存储)](arkts-arkdata-storage-getstorage-f.md) |
-| [getStorageSync(轻量级存储)](arkts-arkdata-storage-getstoragesync-f.md) |
-| [removeStorageFromCache(轻量级存储)](arkts-arkdata-storage-removestoragefromcache-f.md) |
-| [removeStorageFromCache(轻量级存储)](arkts-arkdata-storage-removestoragefromcache-f.md) |
-| [removeStorageFromCacheSync(轻量级存储)](arkts-arkdata-storage-removestoragefromcachesync-f.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [deleteStorage(轻量级存储)](arkts-arkdata-storage-deletestorage-f.md) | 从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题，使用callback方式返回结果，此方法为异步方法。 |
+| [deleteStorage(轻量级存储)](arkts-arkdata-storage-deletestorage-f.md) | 从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题，使用Promise方式返回结果，此方法为异步方法。 |
+| [deleteStorageSync(轻量级存储)](arkts-arkdata-storage-deletestoragesync-f.md) | 从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。 |
+| [getStorage(轻量级存储)](arkts-arkdata-storage-getstorage-f.md) | 读取指定文件，将数据加载到Storage实例，用于数据操作，使用callback方式返回结果，此方法为异步方法。 |
+| [getStorage(轻量级存储)](arkts-arkdata-storage-getstorage-f.md) | 读取指定文件，将数据加载到Storage实例，用于数据操作，使用Promise方式返回结果，此方法为异步方法。 |
+| [getStorageSync(轻量级存储)](arkts-arkdata-storage-getstoragesync-f.md) | 读取指定文件，将数据加载到Storage实例，用于数据操作。 |
+| [removeStorageFromCache(轻量级存储)](arkts-arkdata-storage-removestoragefromcache-f.md) | 从内存中移除指定文件对应的Storage单实例。移除Storage单实例时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。使用callback方式返回结果，此方法为异步方法。 |
+| [removeStorageFromCache(轻量级存储)](arkts-arkdata-storage-removestoragefromcache-f.md) | 从内存中移除指定文件对应的Storage单实例。移除Storage单实例时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。使用Promise方式返回结果，此方法为异步方法。 |
+| [removeStorageFromCacheSync(轻量级存储)](arkts-arkdata-storage-removestoragefromcachesync-f.md) | 从内存中移除指定文件对应的Storage单实例。移除Storage单实例时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。 |
 
 ### 接口
 
-| 名称 |
-| --- |
-| [Storage(轻量级存储)](arkts-arkdata-storage-storage-i.md) |
-| [StorageObserver(轻量级存储)](arkts-arkdata-storage-storageobserver-i.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [Storage(轻量级存储)](arkts-arkdata-storage-storage-i.md) | 提供获取和修改存储数据的接口。下列接口都需先使用[data_storage.getStorage](arkts-arkdata-storage-getstorage-f.md)或 [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md)获取到Storage实例，再通过此实例调用对应接口。 |
+| [StorageObserver(轻量级存储)](arkts-arkdata-storage-storageobserver-i.md) |  |
 
 ### 类型
 
-| 名称 |
-| --- |
-| [ValueType(轻量级存储)](arkts-arkdata-storage-valuetype-t.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [ValueType(轻量级存储)](arkts-arkdata-storage-valuetype-t.md) | 用于表示允许的数据字段类型。 |
 
 ### 常量
 
-| 名称 |
-| --- |
-| [MAX_KEY_LENGTH(轻量级存储)](arkts-arkdata-storage-con.md#max_key_length) |
-| [MAX_VALUE_LENGTH(轻量级存储)](arkts-arkdata-storage-con.md#max_value_length) |
+| 名称 | 说明 |
+| --- | --- |
+| [MAX_KEY_LENGTH(轻量级存储)](arkts-arkdata-storage-con.md#max_key_length) | key的最大长度限制为80字节。 |
+| [MAX_VALUE_LENGTH(轻量级存储)](arkts-arkdata-storage-con.md#max_value_length) | value的最大长度限制为16MB。 |

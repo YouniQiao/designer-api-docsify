@@ -18,15 +18,15 @@ Returns a new array with all sub-array elements concatenated into it recursively
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| this | A | Yes |
-| depth | D | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | A | Yes |  |
+| depth | D | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## flatMap
 
 ```TypeScript
@@ -40,12 +40,12 @@ Calls a defined callback function on each element of an array. Then, flattens th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | (this: This, value: T, index: number, array: T[]) = & gt; U \ | ReadonlyArray & lt;U & gt; | Yes |
-| thisArg | This | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (this: This, value: T, index: number, array: T[]) = & gt; U \ | ReadonlyArray & lt;U & gt; | Yes |  |
+| thisArg | This | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |

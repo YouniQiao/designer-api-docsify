@@ -61,3 +61,53 @@ The ability is displayed in split-screen mode. It is valid only in intra-app red
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { UIAbility, StartOptions, Want, AbilityConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want: Want = {
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EntryAbility'
+};
+let option: StartOptions = {
+  windowMode: AbilityConstant.WindowMode.WINDOW_MODE_SPLIT_PRIMARY
+};
+
+// Ensure that the context is obtained.
+export default class MyAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    this.context.startAbility(want, option).then(() => {
+      console.info('Succeed to start ability.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to start ability with error: ${JSON.stringify(error)}`);
+    });
+  }
+}
+```
+
+```TypeScript
+import { UIAbility, StartOptions, Want, AbilityConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want: Want = {
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EntryAbility'
+};
+let option: StartOptions = {
+  windowMode: AbilityConstant.WindowMode.WINDOW_MODE_FULLSCREEN
+};
+
+// Ensure that the context is obtained.
+export default class MyAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    this.context.startAbility(want, option).then(() => {
+      console.info('Succeed to start ability.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to start ability with error: ${JSON.stringify(error)}`);
+    });
+  }
+}
+```

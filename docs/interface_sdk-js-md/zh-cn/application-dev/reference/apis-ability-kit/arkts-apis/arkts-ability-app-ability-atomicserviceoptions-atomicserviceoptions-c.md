@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceOptions } from 'kits/@kit.AbilityKit';
+import AtomicServiceOptions from '@kit.AbilityKit';
 ```
 
 ## completionHandlerForAtomicService

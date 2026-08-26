@@ -9,7 +9,7 @@ Defines the options for encoding animated images.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## delayTimeList

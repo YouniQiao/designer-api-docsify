@@ -11,74 +11,75 @@ The **request** module provides applications with basic upload, download, and ba
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import request from '@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
 ```
 
 ## Summary
 
 ### Namespaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [agent(Upload and Download)](arkts-basicservices-request-agent-n.md) |
+| Name | Description |
+| --- | --- |
+| [agent(Upload and Download)](arkts-basicservices-request-agent-n.md) | The request agent api. Supports "background" and "frontend" tasks as while. Though "background" and "frontend" here do not the same with process's concept. All tasks will be executed at request manager service and recorded. Background tasks is for concurrent transfer, such as caching videos for a later play. Frontend tasks is for instant transfer, such as submitting forms for a consumption bill. Background tasks use notification to tell user tasks' status information. Frontend tasks use callback to tell caller tasks' status information. Background has some automatically restore mechanism. Frontend tasks controlled by caller. Uses `multipart/form-data` in client request for upload. A `Content-Disposition: attachment; filename=&lt;filename&gt;` response from server leads to download. More details, please see the architecture documents of the request subsystem. Only front-end mode is supported in cross-platform scenarios. |
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [download(Upload and Download)](arkts-basicservices-request-download-f.md) |
-| [downloadFile(Upload and Download)](arkts-basicservices-request-downloadfile-f.md) | Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use on('complete'\|'pause'\|
-| [download(Upload and Download)](arkts-basicservices-request-download-f.md) |
-| [downloadFile(Upload and Download)](arkts-basicservices-request-downloadfile-f.md) | Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use on('complete'\|'pause'\|
-| [upload(Upload and Download)](arkts-basicservices-request-upload-f.md) |
-| [uploadFile(Upload and Download)](arkts-basicservices-request-uploadfile-f.md) | Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use on('complete'\|
-| [upload(Upload and Download)](arkts-basicservices-request-upload-f.md) |
-| [uploadFile(Upload and Download)](arkts-basicservices-request-uploadfile-f.md) | Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use on('complete'\|
+| Name | Description |
+| --- | --- |
+| [download(Upload and Download)](arkts-basicservices-request-download-f.md) | Downloads a file. This API uses an asynchronous callback to return the result. |
+| [downloadFile(Upload and Download)](arkts-basicservices-request-downloadfile-f.md) | Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use on('complete'\|'pause'\|'remove') to obtain the download task state, including task completion, pause, and removal. You can also use on('fail') to obtain the task download error information. |
+| [download(Upload and Download)](arkts-basicservices-request-download-f.md) | Downloads a file. This API uses a promise to return the result. |
+| [downloadFile(Upload and Download)](arkts-basicservices-request-downloadfile-f.md) | Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use on('complete'\|'pause'\|'remove') to obtain the download task state, including task completion, pause, and removal. You can also use on('fail') to obtain the task download error information. |
+| [upload(Upload and Download)](arkts-basicservices-request-upload-f.md) | Uploads a file. This API uses an asynchronous callback to return the result. |
+| [uploadFile(Upload and Download)](arkts-basicservices-request-uploadfile-f.md) | Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use on('complete'\|'fail') to obtain the upload success or error information. |
+| [upload(Upload and Download)](arkts-basicservices-request-upload-f.md) | Uploads a file. This API uses a promise to return the result. |
+| [uploadFile(Upload and Download)](arkts-basicservices-request-uploadfile-f.md) | Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use on('complete'\|'fail') to obtain the upload success or error information. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DownloadConfig(Upload and Download)](arkts-basicservices-request-downloadconfig-i.md) |
-| [DownloadInfo(Upload and Download)](arkts-basicservices-request-downloadinfo-i.md) |
-| [DownloadTask(Upload and Download)](arkts-basicservices-request-downloadtask-i.md) |
-| [File(Upload and Download)](arkts-basicservices-request-file-i.md) |
-| [RequestData(Upload and Download)](arkts-basicservices-request-requestdata-i.md) |
-| [UploadConfig(Upload and Download)](arkts-basicservices-request-uploadconfig-i.md) |
-| [TaskState(Upload and Download)](arkts-basicservices-request-taskstate-i.md) | Upload task information, which is the callback parameter of the on('complete' \| 'fail') and off('complete' \|
-| [UploadTask(Upload and Download)](arkts-basicservices-request-uploadtask-i.md) |
+| Name | Description |
+| --- | --- |
+| [DownloadConfig(Upload and Download)](arkts-basicservices-request-downloadconfig-i.md) | Defines the download task configuration. |
+| [DownloadInfo(Upload and Download)](arkts-basicservices-request-downloadinfo-i.md) | Defines the download task information, which is the callback parameter of the [getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo) API. |
+| [DownloadTask(Upload and Download)](arkts-basicservices-request-downloadtask-i.md) | Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md). |
+| [File(Upload and Download)](arkts-basicservices-request-file-i.md) | Describes the list of files in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md). |
+| [RequestData(Upload and Download)](arkts-basicservices-request-requestdata-i.md) | Describes the form data in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md). |
+| [UploadConfig(Upload and Download)](arkts-basicservices-request-uploadconfig-i.md) | Describes the configuration of an upload task. |
+| [TaskState(Upload and Download)](arkts-basicservices-request-taskstate-i.md) | Upload task information, which is the callback parameter of the on('complete' \| 'fail') and off('complete' \| 'fail') APIs. |
+| [UploadTask(Upload and Download)](arkts-basicservices-request-uploadtask-i.md) | Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md). |
 
 ### Constants
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [EXCEPTION_PERMISSION(Upload and Download)](arkts-basicservices-request-con.md#exception_permission) |
-| [EXCEPTION_PARAMCHECK(Upload and Download)](arkts-basicservices-request-con.md#exception_paramcheck) |
-| [EXCEPTION_UNSUPPORTED(Upload and Download)](arkts-basicservices-request-con.md#exception_unsupported) |
-| [EXCEPTION_FILEIO(Upload and Download)](arkts-basicservices-request-con.md#exception_fileio) |
-| [EXCEPTION_FILEPATH(Upload and Download)](arkts-basicservices-request-con.md#exception_filepath) |
-| [EXCEPTION_SERVICE(Upload and Download)](arkts-basicservices-request-con.md#exception_service) |
-| [EXCEPTION_OTHERS(Upload and Download)](arkts-basicservices-request-con.md#exception_others) |
-| [NETWORK_MOBILE(Upload and Download)](arkts-basicservices-request-con.md#network_mobile) |
-| [NETWORK_WIFI(Upload and Download)](arkts-basicservices-request-con.md#network_wifi) |
-| [ERROR_CANNOT_RESUME(Upload and Download)](arkts-basicservices-request-con.md#error_cannot_resume) |
-| [ERROR_DEVICE_NOT_FOUND(Upload and Download)](arkts-basicservices-request-con.md#error_device_not_found) |
-| [ERROR_FILE_ALREADY_EXISTS(Upload and Download)](arkts-basicservices-request-con.md#error_file_already_exists) |
-| [ERROR_FILE_ERROR(Upload and Download)](arkts-basicservices-request-con.md#error_file_error) |
-| [ERROR_HTTP_DATA_ERROR(Upload and Download)](arkts-basicservices-request-con.md#error_http_data_error) |
-| [ERROR_INSUFFICIENT_SPACE(Upload and Download)](arkts-basicservices-request-con.md#error_insufficient_space) |
-| [ERROR_TOO_MANY_REDIRECTS(Upload and Download)](arkts-basicservices-request-con.md#error_too_many_redirects) |
-| [ERROR_UNHANDLED_HTTP_CODE(Upload and Download)](arkts-basicservices-request-con.md#error_unhandled_http_code) |
-| [ERROR_UNKNOWN(Upload and Download)](arkts-basicservices-request-con.md#error_unknown) |
-| [ERROR_OFFLINE(Upload and Download)](arkts-basicservices-request-con.md#error_offline) |
-| [ERROR_UNSUPPORTED_NETWORK_TYPE(Upload and Download)](arkts-basicservices-request-con.md#error_unsupported_network_type) |
-| [PAUSED_QUEUED_FOR_WIFI(Upload and Download)](arkts-basicservices-request-con.md#paused_queued_for_wifi) |
-| [PAUSED_WAITING_FOR_NETWORK(Upload and Download)](arkts-basicservices-request-con.md#paused_waiting_for_network) |
-| [PAUSED_WAITING_TO_RETRY(Upload and Download)](arkts-basicservices-request-con.md#paused_waiting_to_retry) |
-| [PAUSED_BY_USER(Upload and Download)](arkts-basicservices-request-con.md#paused_by_user) |
-| [PAUSED_UNKNOWN(Upload and Download)](arkts-basicservices-request-con.md#paused_unknown) |
-| [SESSION_SUCCESSFUL(Upload and Download)](arkts-basicservices-request-con.md#session_successful) |
-| [SESSION_RUNNING(Upload and Download)](arkts-basicservices-request-con.md#session_running) |
-| [SESSION_PENDING(Upload and Download)](arkts-basicservices-request-con.md#session_pending) |
-| [SESSION_PAUSED(Upload and Download)](arkts-basicservices-request-con.md#session_paused) |
-| [SESSION_FAILED(Upload and Download)](arkts-basicservices-request-con.md#session_failed) |
+| Name | Description |
+| --- | --- |
+| [EXCEPTION_PERMISSION(Upload and Download)](arkts-basicservices-request-con.md#exception_permission) | (Universal error codes) Permission verification failed. |
+| [EXCEPTION_PARAMCHECK(Upload and Download)](arkts-basicservices-request-con.md#exception_paramcheck) | (Universal error codes) Parameter check failed. |
+| [EXCEPTION_UNSUPPORTED(Upload and Download)](arkts-basicservices-request-con.md#exception_unsupported) | (Universal error codes) The device does not support this API. |
+| [EXCEPTION_FILEIO(Upload and Download)](arkts-basicservices-request-con.md#exception_fileio) | (Specific error codes) Abnormal file operation. |
+| [EXCEPTION_FILEPATH(Upload and Download)](arkts-basicservices-request-con.md#exception_filepath) | (Specific error codes) Abnormal file path. |
+| [EXCEPTION_SERVICE(Upload and Download)](arkts-basicservices-request-con.md#exception_service) | (Specific error codes) Abnormal service. |
+| [EXCEPTION_OTHERS(Upload and Download)](arkts-basicservices-request-con.md#exception_others) | (Specific error codes) Other errors. |
+| [NETWORK_MOBILE(Upload and Download)](arkts-basicservices-request-con.md#network_mobile) | (Network type) Bit flag download allowed on a mobile network. |
+| [NETWORK_WIFI(Upload and Download)](arkts-basicservices-request-con.md#network_wifi) | (Network type) Bit flag download allowed on a WLAN. |
+| [ERROR_CANNOT_RESUME(Upload and Download)](arkts-basicservices-request-con.md#error_cannot_resume) | (Download error codes) Failure to resume the download due to network errors. |
+| [ERROR_DEVICE_NOT_FOUND(Upload and Download)](arkts-basicservices-request-con.md#error_device_not_found) | (Download error codes) Failure to find a storage device such as a memory card. |
+| [ERROR_FILE_ALREADY_EXISTS(Upload and Download)](arkts-basicservices-request-con.md#error_file_already_exists) | (Download error codes) Failure to download the file because it already exists. |
+| [ERROR_FILE_ERROR(Upload and Download)](arkts-basicservices-request-con.md#error_file_error) | (Download error codes) File operation failed. |
+| [ERROR_HTTP_DATA_ERROR(Upload and Download)](arkts-basicservices-request-con.md#error_http_data_error) | (Download error codes) HTTP transmission failed. |
+| [ERROR_INSUFFICIENT_SPACE(Upload and Download)](arkts-basicservices-request-con.md#error_insufficient_space) | (Download error codes) Insufficient storage space. |
+| [ERROR_TOO_MANY_REDIRECTS(Upload and Download)](arkts-basicservices-request-con.md#error_too_many_redirects) | (Download error codes) Error caused by too many network redirections. |
+| [ERROR_UNHANDLED_HTTP_CODE(Upload and Download)](arkts-basicservices-request-con.md#error_unhandled_http_code) | (Download error codes) Unidentified HTTP code. |
+| [ERROR_UNKNOWN(Upload and Download)](arkts-basicservices-request-con.md#error_unknown) | (Download error codes) Unknown error.In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain name is supported, and the connection time for a single IP address is not controllable. If the first IP address returned by the DNS is blocked, a handshake timeout may occur, leading to an ERROR_UNKNOWN error. |
+| [ERROR_OFFLINE(Upload and Download)](arkts-basicservices-request-con.md#error_offline) | (Download error codes) No network connection. |
+| [ERROR_UNSUPPORTED_NETWORK_TYPE(Upload and Download)](arkts-basicservices-request-con.md#error_unsupported_network_type) | (Download error codes) Network type mismatch. |
+| [PAUSED_QUEUED_FOR_WIFI(Upload and Download)](arkts-basicservices-request-con.md#paused_queued_for_wifi) | (Causes of download pause) Download paused and queuing for a WLAN connection because the file size exceeds the maximum value allowed for a mobile network session. |
+| [PAUSED_WAITING_FOR_NETWORK(Upload and Download)](arkts-basicservices-request-con.md#paused_waiting_for_network) | (Causes of download pause) Download paused due to a network connection problem.Example: network disconnection |
+| [PAUSED_WAITING_TO_RETRY(Upload and Download)](arkts-basicservices-request-con.md#paused_waiting_to_retry) | (Causes of download pause) Download paused due to network error and then retried. |
+| [PAUSED_BY_USER(Upload and Download)](arkts-basicservices-request-con.md#paused_by_user) | (Causes of download pause) The user paused the session. |
+| [PAUSED_UNKNOWN(Upload and Download)](arkts-basicservices-request-con.md#paused_unknown) | (Causes of download pause) Download paused due to unknown reasons. |
+| [SESSION_SUCCESSFUL(Upload and Download)](arkts-basicservices-request-con.md#session_successful) | (Download task status codes) Successful download. |
+| [SESSION_RUNNING(Upload and Download)](arkts-basicservices-request-con.md#session_running) | (Download task status codes) Download in progress. |
+| [SESSION_PENDING(Upload and Download)](arkts-basicservices-request-con.md#session_pending) | (Download task status codes) Download pending. |
+| [SESSION_PAUSED(Upload and Download)](arkts-basicservices-request-con.md#session_paused) | (Download task status codes) Download paused. |
+| [SESSION_FAILED(Upload and Download)](arkts-basicservices-request-con.md#session_failed) | (Download task status codes) Download failure without retry. |

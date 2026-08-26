@@ -11,7 +11,7 @@ Callback API type used during data migration, defining the callback methods for 
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from 'kits/@kit.LocalizationKit';
+import fontManager from '@kit.LocalizationKit';
 ```
 
 ## onHeartBeat
@@ -27,6 +27,32 @@ Callback function that is periodically invoked during the execution of the data 
 **System capability:** SystemCapability.Global.FontManager
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+
+async function dataMigration() {
+  const callback: fontManager.DataMigrationCallback = {
+    onHeartBeat: () => {
+      console.info('onHeartBeat callback');
+    },
+    onProgress: (progress : fontManager.DataMigrationProgress) => {
+      console.info('onProgress callback');
+    },
+    onResult: (result : number) => {
+      console.info('onResult callback');
+    }
+  }
+  try {
+    let res = await fontManager.dataMigration(callback);
+    console.info('dataMigration suc. res is ' + res);
+  } catch (error) {
+    console.error('dataMigration err.' + error.code);
+  }
+}
+```
 
 ## onProgress
 
@@ -44,9 +70,35 @@ Callback function that is periodically invoked during the execution of the data 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| progress | [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| progress | [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | Yes | Data migration progress. |
+
+**Examples**
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+
+async function dataMigration() {
+  const callback: fontManager.DataMigrationCallback = {
+    onHeartBeat: () => {
+      console.info('onHeartBeat callback');
+    },
+    onProgress: (progress : fontManager.DataMigrationProgress) => {
+      console.info('onProgress callback');
+    },
+    onResult: (result : number) => {
+      console.info('onResult callback');
+    }
+  }
+  try {
+    let res = await fontManager.dataMigration(callback);
+    console.info('dataMigration suc. res is ' + res);
+  } catch (error) {
+    console.error('dataMigration err.' + error.code);
+  }
+}
+```
 
 ## onResult
 
@@ -64,6 +116,32 @@ Callback function that is invoked after the data migration task is completed (wh
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | number | Yes | Data migration result.    **0**: Data migration succeeded.    **1**: No data migration is required.    **2**: Failed to obtain the user ID.    **3**: Failed to check the directory.    **4**: Failed to initialize the cache directory.    **5**: Failed to open the source file.    **6**: Failed to copy the file.    **7**: Failed to rename the file.    **8**: Failed to delete the file. |
+
+**Examples**
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+
+async function dataMigration() {
+  const callback: fontManager.DataMigrationCallback = {
+    onHeartBeat: () => {
+      console.info('onHeartBeat callback');
+    },
+    onProgress: (progress : fontManager.DataMigrationProgress) => {
+      console.info('onProgress callback');
+    },
+    onResult: (result : number) => {
+      console.info('onResult callback');
+    }
+  }
+  try {
+    let res = await fontManager.dataMigration(callback);
+    console.info('dataMigration suc. res is ' + res);
+  } catch (error) {
+    console.error('dataMigration err.' + error.code);
+  }
+}
+```

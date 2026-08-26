@@ -31,15 +31,15 @@ Sets the offset of the baseline. This attribute coexists with the **baselineOffs
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Offset of the baseline. If the value specified is a percentage, the default value is used.A positive value moves the content upwards, while a negative value moves it downwards.Default value: **0**In the **ImageSpan**, when this parameter is set to a non-zero value, the verticalAlign is fixed to **ImageSpanAlignment.BASELINE**; when this parameter is set to **0**, verticalAlign must be set to **ImageSpanAlignment.BASELINE** for the baseline alignment strategy to take effect. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Attributes of the span. |
 
 ## textBackgroundStyle
 
@@ -59,12 +59,12 @@ Background style. This attribute prioritizes the value separately set for the co
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| style | [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | Yes | Sets the background style.Default value:{color: Color.Transparent,radius: 0} |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T |
+| Type | Description |
+| --- | --- |
+| T | Attributes of the span. |

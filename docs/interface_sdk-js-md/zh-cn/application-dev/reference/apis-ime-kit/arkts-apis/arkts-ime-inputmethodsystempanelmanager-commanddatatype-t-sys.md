@@ -4,7 +4,7 @@
 type CommandDataType = number | string | boolean
 ```
 
-表示命令的数据类型。
+表示私有数据的数据类型。
 
 **起始版本：** 26.0.0
 
@@ -14,8 +14,8 @@ type CommandDataType = number | string | boolean
 
 **系统接口：** 此接口为系统接口。
 
-| 类型 |
-| --- |
-| int |
-| string |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| int | 表示值类型为数字。 |
+| string | 表示值类型为字符串。 |
+| boolean | 表示值类型为布尔值。 |

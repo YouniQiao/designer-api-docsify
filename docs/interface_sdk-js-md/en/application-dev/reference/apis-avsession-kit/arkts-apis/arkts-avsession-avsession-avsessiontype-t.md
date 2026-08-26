@@ -12,10 +12,10 @@ Session type supports audio & video, voice_call, video_call, photo
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'audio' |
-| 'video' |
-| 'voice_call' |
-| 'video_call' |
-| 'photo' |
+| Type | Description |
+| --- | --- |
+| 'audio' | audio type [since 10] |
+| 'video' | video type [since 10] |
+| 'voice_call' | voice call type [since 11] |
+| 'video_call' | video call type [since 12] |
+| 'photo' | photo type [since 22] |

@@ -19,6 +19,6 @@ ConfigurationConstant模块提供配置信息枚举值定义的能力。
 
 ### 枚举
 
-| 名称 |
-| --- |
-| [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md) |
+| 名称 | 说明 |
+| --- | --- |
+| [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md) | 表示颜色模式的枚举。 |

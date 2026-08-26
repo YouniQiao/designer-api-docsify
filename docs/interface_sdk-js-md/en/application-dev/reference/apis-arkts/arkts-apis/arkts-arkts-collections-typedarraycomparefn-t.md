@@ -14,13 +14,13 @@ Describes the sort function of the ArkTS typed array.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| first | ElementType | Yes |
-| second | ElementType | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| first | ElementType | Yes | First element to be compared. |
+| second | ElementType | Yes | Second element to be compared. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The result of the comparison. |

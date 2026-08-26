@@ -9,7 +9,6 @@ Provides USB Key certificate credential attribute information.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## certPurpose

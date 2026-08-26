@@ -2,7 +2,8 @@
 
 This interface provides APIs for audio rendering.Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) to create an AudioRenderer instance.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The initial APIs of this interface are supported since API version 8.
 
 **Since:** 8
@@ -12,7 +13,8 @@ This interface provides APIs for audio rendering.Before calling any API in Audio
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import audio from '@kit.AudioKit';
+import audioHaptic from '@kit.AudioKitHaptic';
 ```
 
 ## getTarget
@@ -31,15 +33,29 @@ Gets the currently render target of this audio renderer. If the render target ha
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) |
+| Type | Description |
+| --- | --- |
+| [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | Render target of this audio renderer. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+
+**Examples**
+
+```TypeScript
+async function getTarget(){
+  // (Optional) Set the injection mode.
+  await audioRenderer.setTarget(audio.RenderTarget.INJECT_TO_VOICE_COMMUNICATION_CAPTURE);
+  console.info('Succeeded in setting target.');
+
+  // If the SetTarget API has been called before this API is called, ensure that the SetTarget API has been successfully called. Otherwise, the obtained value may be inaccurate.
+  let renderTarget = audioRenderer.getTarget();
+  console.info(`Succeeded in getting target, RenderTarget: ${renderTarget}.`);
+}
+```
 
 ## setTarget
 
@@ -66,26 +82,38 @@ return error code 6800301.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | Yes | Render target. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at running and release state. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Current renderer is not supported to set target. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.setTarget(audio.RenderTarget.INJECT_TO_VOICE_COMMUNICATION_CAPTURE).then(() => {
+  console.info('Succeeded in setting target.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set target. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## setTarget
 
@@ -116,24 +144,28 @@ This API uses a promise to return the result.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| target | [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | Yes |
-| targetParams | [AudioRendererTargetParams](arkts-audio-audio-audiorenderertargetparams-i-sys.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | Yes | Render target. |
+| targetParams | [AudioRendererTargetParams](arkts-audio-audio-audiorenderertargetparams-i-sys.md) | No | Parameter used to specify the target capturer stream into which the renderer stream is injected. If this parameter is not specified when target is not [PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md#playback), the renderer stream is automatically injected into all voice communication capture streams by default. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at running and release state. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Current renderer is not supported to set target. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio server process died. |
+
+**Examples**
+
+See [setTarget](#settarget)

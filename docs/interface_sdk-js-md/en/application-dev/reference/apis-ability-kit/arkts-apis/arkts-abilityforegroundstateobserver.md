@@ -5,7 +5,7 @@
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AbilityForegroundStateObserver](arkts-ability-abilityforegroundstateobserver-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AbilityForegroundStateObserver](arkts-ability-abilityforegroundstateobserver-c-sys.md) | The module defines the listener used to listen for ability foreground and background state changes. |
 <!--DelEnd-->

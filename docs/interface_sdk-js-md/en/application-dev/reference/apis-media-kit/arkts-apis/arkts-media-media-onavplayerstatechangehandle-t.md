@@ -14,7 +14,7 @@ Describes the callback invoked for the AVPlayer state change event.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| state | [AVPlayerState](arkts-media-media-avplayerstate-t.md) | Yes |
-| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| state | [AVPlayerState](arkts-media-media-avplayerstate-t.md) | Yes | State of the AVPlayer. |
+| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | Yes | Reason for the state change. |

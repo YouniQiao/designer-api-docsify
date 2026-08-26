@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## isTraceEnabled
@@ -22,6 +21,16 @@ Checks whether application trace capture is enabled.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true** is returned when the trace capture is enabled using [hitrace](../../../dfx/hitrace.md). **false** is returned when it is disabled or stopped. In this case, calling the HiTraceMeter API does not take effect. |
+
+**Examples**
+
+```TypeScript
+if (hiTraceMeter.isTraceEnabled()) {
+  // Service flow...
+} else {
+  // Service flow...
+}
+```

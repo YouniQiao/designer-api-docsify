@@ -13,28 +13,29 @@
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
+import prompt from '@kit.ArkUI';
+import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUIAction';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md) |
-| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md) |
-| [showDialog](arkts-arkui-prompt-showdialog-f.md) |
-| [showDialog](arkts-arkui-prompt-showdialog-f.md) |
-| [showToast](arkts-arkui-prompt-showtoast-f.md) |
+| Name | Description |
+| --- | --- |
+| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md) | Displays the menu. |
+| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md) | Displays the menu. |
+| [showDialog](arkts-arkui-prompt-showdialog-f.md) | Displays the dialog box. |
+| [showDialog](arkts-arkui-prompt-showdialog-f.md) | Displays the dialog box. |
+| [showToast](arkts-arkui-prompt-showtoast-f.md) | Displays the notification text. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) |
-| [ActionMenuSuccessResponse](arkts-arkui-prompt-actionmenusuccessresponse-i.md) |
-| [Button](arkts-arkui-prompt-button-i.md) |
-| [ShowDialogOptions](arkts-arkui-prompt-showdialogoptions-i.md) |
-| [ShowDialogSuccessResponse](arkts-arkui-prompt-showdialogsuccessresponse-i.md) |
-| [ShowToastOptions](arkts-arkui-prompt-showtoastoptions-i.md) |
+| Name | Description |
+| --- | --- |
+| [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Defines the option of ShowActionMenu.@interface ActionMenuOptions |
+| [ActionMenuSuccessResponse](arkts-arkui-prompt-actionmenusuccessresponse-i.md) | Defines the response of ShowActionMenu.@interface ActionMenuSuccessResponse |
+| [Button](arkts-arkui-prompt-button-i.md) | Defines the prompt info of button.@interface Button |
+| [ShowDialogOptions](arkts-arkui-prompt-showdialogoptions-i.md) | Defines the option of show dialog.@interface ShowDialogOptions |
+| [ShowDialogSuccessResponse](arkts-arkui-prompt-showdialogsuccessresponse-i.md) | Defines the response of ShowDialog.@interface ShowDialogSuccessResponse |
+| [ShowToastOptions](arkts-arkui-prompt-showtoastoptions-i.md) | Defines the options of ShowToast.@interface ShowToastOptions |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import media from '@kit.MediaKit';
 ```
 
 ## createAudioRecorder
@@ -29,6 +29,12 @@ function createAudioRecorder(): AudioRecorder
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AudioRecorder](arkts-media-media-audiorecorder-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AudioRecorder](arkts-media-media-audiorecorder-i.md) | 返回AudioRecorder类实例，失败时返回null。可用于录制音频媒体。 |
+
+**示例**
+
+```TypeScript
+let audioRecorder: media.AudioRecorder = media.createAudioRecorder();
+```

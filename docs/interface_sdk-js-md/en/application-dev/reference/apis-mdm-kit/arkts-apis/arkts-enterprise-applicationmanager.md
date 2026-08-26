@@ -2,7 +2,8 @@
 
 This module provides application management capabilities, including managing the application running blocklist, application running trustlist, auto-startup application list, keep-alive application list, non-stoppable application list, background freeze-exempt application list, notification trustlist, and cross-device application trustlist. It is suitable for enterprise device management scenarios, enabling control over application running permissions, auto- startup management, keep-alive application management, and more, thereby enhancing enterprise device security and compliance.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The APIs of this module can be called only by a device administrator application that is enabled. For details, see
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md). The
 > [applicationManager.isAppKioskAllowed](arkts-mdm-applicationmanager-isappkioskallowed-f.md) API is available to all
@@ -15,99 +16,99 @@ This module provides application management capabilities, including managing the
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from 'kits/@kit.MDMKit';
+import applicationManager from '@kit.MDMKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [addAllowedDistributeAbilityConnBundles(Application Management)](arkts-mdm-applicationmanager-addalloweddistributeabilityconnbundles-f.md) |
-| [addAllowedNotificationBundles(Application Management)](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md) |
-| [addAllowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md) |
-| [addAutoStartApps(Application Management)](arkts-mdm-applicationmanager-addautostartapps-f.md) |
-| [addAutoStartApps(Application Management)](arkts-mdm-applicationmanager-addautostartapps-f.md) |
-| [addDisallowedRunningBundlesSync(Application Management)](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md) |
-| [addDockApp(Application Management)](arkts-mdm-applicationmanager-adddockapp-f.md) |
-| [addFreezeExemptedApps(Application Management)](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md) |
-| [addHideLauncherIcon(Application Management)](arkts-mdm-applicationmanager-addhidelaunchericon-f.md) |
-| [addKeepAliveApps(Application Management)](arkts-mdm-applicationmanager-addkeepaliveapps-f.md) |
-| [addKeepAliveApps(Application Management)](arkts-mdm-applicationmanager-addkeepaliveapps-f.md) |
-| [addUserNonStopApps(Application Management)](arkts-mdm-applicationmanager-addusernonstopapps-f.md) |
-| [clearUpApplicationData(Application Management)](arkts-mdm-applicationmanager-clearupapplicationdata-f.md) |
-| [getAllowedDistributeAbilityConnBundles(Application Management)](arkts-mdm-applicationmanager-getalloweddistributeabilityconnbundles-f.md) |
-| [getAllowedKioskApps(Application Management)](arkts-mdm-applicationmanager-getallowedkioskapps-f.md) |
-| [getAllowedKioskApps(Application Management)](arkts-mdm-applicationmanager-getallowedkioskapps-f.md) |
-| [getAllowedNotificationBundles(Application Management)](arkts-mdm-applicationmanager-getallowednotificationbundles-f.md) |
-| [getAllowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-getallowedrunningbundles-f.md) |
-| [getAllowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-getallowedrunningbundles-f.md) |
-| [getApplicationWindowStates(Application Management)](arkts-mdm-applicationmanager-getapplicationwindowstates-f.md) |
-| [getAutoStartApps(Application Management)](arkts-mdm-applicationmanager-getautostartapps-f.md) |
-| [getAutoStartApps(Application Management)](arkts-mdm-applicationmanager-getautostartapps-f.md) |
-| [getAutoStartApps(Application Management)](arkts-mdm-applicationmanager-getautostartapps-f.md) |
-| [getAutoStartApps(Application Management)](arkts-mdm-applicationmanager-getautostartapps-f.md) |
-| [getDisallowedRunningBundlesSync(Application Management)](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md) |
-| [getDisallowedRunningBundlesSync(Application Management)](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md) |
-| [getDockApps(Application Management)](arkts-mdm-applicationmanager-getdockapps-f.md) |
-| [getFreezeExemptedApps(Application Management)](arkts-mdm-applicationmanager-getfreezeexemptedapps-f.md) |
-| [getFreezeExemptedApps(Application Management)](arkts-mdm-applicationmanager-getfreezeexemptedapps-f.md) |
-| [getHideLauncherIcon(Application Management)](arkts-mdm-applicationmanager-gethidelaunchericon-f.md) |
-| [getKeepAliveApps(Application Management)](arkts-mdm-applicationmanager-getkeepaliveapps-f.md) |
-| [getKeepAliveApps(Application Management)](arkts-mdm-applicationmanager-getkeepaliveapps-f.md) |
-| [getUserNonStopApps(Application Management)](arkts-mdm-applicationmanager-getusernonstopapps-f.md) |
-| [getUserNonStopApps(Application Management)](arkts-mdm-applicationmanager-getusernonstopapps-f.md) |
-| [isAbilityDisabled(Application Management)](arkts-mdm-applicationmanager-isabilitydisabled-f.md) |
-| [isAbilityDisabled(Application Management)](arkts-mdm-applicationmanager-isabilitydisabled-f.md) |
-| [isAppKioskAllowed(Application Management)](arkts-mdm-applicationmanager-isappkioskallowed-f.md) |
-| [isModifyAutoStartAppsDisallowed(Application Management)](arkts-mdm-applicationmanager-ismodifyautostartappsdisallowed-f.md) |
-| [isModifyKeepAliveAppsDisallowed(Application Management)](arkts-mdm-applicationmanager-ismodifykeepaliveappsdisallowed-f.md) |
-| [queryBundleStatsInfos(Application Management)](arkts-mdm-applicationmanager-querybundlestatsinfos-f.md) |
-| [queryTrafficStats(Application Management)](arkts-mdm-applicationmanager-querytrafficstats-f.md) |
-| [removeAllowedDistributeAbilityConnBundles(Application Management)](arkts-mdm-applicationmanager-removealloweddistributeabilityconnbundles-f.md) |
-| [removeAllowedNotificationBundles(Application Management)](arkts-mdm-applicationmanager-removeallowednotificationbundles-f.md) |
-| [removeAllowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-removeallowedrunningbundles-f.md) |
-| [removeAutoStartApps(Application Management)](arkts-mdm-applicationmanager-removeautostartapps-f.md) |
-| [removeAutoStartApps(Application Management)](arkts-mdm-applicationmanager-removeautostartapps-f.md) |
-| [removeDisallowedRunningBundlesSync(Application Management)](arkts-mdm-applicationmanager-removedisallowedrunningbundlessync-f.md) |
-| [removeDockApp(Application Management)](arkts-mdm-applicationmanager-removedockapp-f.md) |
-| [removeFreezeExemptedApps(Application Management)](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md) |
-| [removeHideLauncherIcon(Application Management)](arkts-mdm-applicationmanager-removehidelaunchericon-f.md) |
-| [removeKeepAliveApps(Application Management)](arkts-mdm-applicationmanager-removekeepaliveapps-f.md) |
-| [removeUserNonStopApps(Application Management)](arkts-mdm-applicationmanager-removeusernonstopapps-f.md) |
-| [setAbilityDisabled(Application Management)](arkts-mdm-applicationmanager-setabilitydisabled-f.md) |
-| [setAllowedKioskApps(Application Management)](arkts-mdm-applicationmanager-setallowedkioskapps-f.md) |
-| [setKioskFeatures(Application Management)](arkts-mdm-applicationmanager-setkioskfeatures-f.md) |
+| Name | Description |
+| --- | --- |
+| [addAllowedDistributeAbilityConnBundles(Application Management)](arkts-mdm-applicationmanager-addalloweddistributeabilityconnbundles-f.md) | Adds the cross-device application trustlist for a specific distributed service for a specified user. Applications in the trustlist can use the specific distributed service to transfer data across devices without being subject to the restrictions imposed by [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md).Currently, the following distributed service type is supported: [collaboration service](arkts-mdm-applicationmanager-servicetype-e.md). |
+| [addAllowedNotificationBundles(Application Management)](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md) | Adds applications to the notification trustlist. After the notification trustlist is set, applications not in the trustlist cannot send notifications. |
+| [addAllowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md) | Adds applications to the application running trustlist. Only applications in the trustlist are allowed to run under the specified user. |
+| [addAutoStartApps(Application Management)](arkts-mdm-applicationmanager-addautostartapps-f.md) | Adds the auto-start applications for the current user. Applications added to the auto-start list via this API cannot be manually disabled for auto-start by users on the device. However, they can be removed from the auto-start list using the [removeAutoStartApps](arkts-mdm-applicationmanager-removeautostartapps-f.md) API. |
+| [addAutoStartApps(Application Management)](arkts-mdm-applicationmanager-addautostartapps-f.md) | Adds a list of applications that automatically start upon device startup for a specified user, and sets whether to prohibit the user from manually canceling application auto-start.Applications can be added to the auto-start list via this API and the [addAutoStartApps](arkts-mdm-applicationmanager-addautostartapps-f.md) API. Settings from both APIs can take effect simultaneously. For a single user, the auto-start list supports a maximum of 10 applications. For example, if there are already 3 applications in the current list, a maximum of 7 more can be added for the user via this API. |
+| [addDisallowedRunningBundlesSync(Application Management)](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md) | Adds applications to the application running blocklist. Applications added to the blocklist are not allowed to run under the current or specified user. Since API version 21, if the application running trustlist [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md) is not empty, the application running blocklist cannot be added via this API. Otherwise, the error code 9200010 is reported. |
+| [addDockApp(Application Management)](arkts-mdm-applicationmanager-adddockapp-f.md) | Adds an application to the bottom shortcut bar of a PC/2-in-1 device based on the location index. Then users can tap the application icon in the shortcut bar to directly launch the application. The application icon is the default icon displayed on the home screen. |
+| [addFreezeExemptedApps(Application Management)](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md) | Adds applications to the background freeze-exempt application list for a specified user. This policy applies only to installed applications. If the parameter list contains uninstalled applications, error code 9200012 will be returned. If an application in the list is uninstalled after the policy is set, the uninstalled application will be removed from the list. Adding an application that already exists in the list will return success, but the application will not be added repeatedly to the policy list.Freezing operations include suspending the target application, and managing software resource agents, hardware resource agents, and high-power consumption. |
+| [addHideLauncherIcon(Application Management)](arkts-mdm-applicationmanager-addhidelaunchericon-f.md) | Adds applications to the home screen icon hide list. |
+| [addKeepAliveApps(Application Management)](arkts-mdm-applicationmanager-addkeepaliveapps-f.md) | Adds applications to the keep-alive list; once added, the application processes will be kept alive automatically. After the device is powered on or the application is killed, the system will proactively restart these application processes.For applications added to the keep-alive list via this API, users cannot manually revoke their keep-alive status on the device. However, you can call the [removeKeepAliveApps](arkts-mdm-applicationmanager-removekeepaliveapps-f.md) API to remove them from the keep-alive list.If applications are disallowed to run by calling [addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md), they cannot be kept alive. Otherwise, error code 9200010 will be reported.To use similar functions on phones or tablets, call [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md) or [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md). For details, see the relevant documents. |
+| [addKeepAliveApps(Application Management)](arkts-mdm-applicationmanager-addkeepaliveapps-f.md) | Adds applications to the keep-alive list; once added, the application processes will be kept alive automatically. You can also set whether to disable manual keep-alive cancellation. After the device is powered on or the application is killed, the system will proactively restart these application processes.Applications can be added to the keep-alive list via this API and the [addKeepAliveApps](arkts-mdm-applicationmanager-addkeepaliveapps-f.md) API. Settings from both APIs can take effect simultaneously. For a single user, the keep-alive list supports a maximum of 5 applications. For example, if there are already 3 applications in the current list, a maximum of 2 more can be added for the user via this API.If applications are disallowed to run by calling [addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md), they cannot be kept alive. Otherwise, error code 9200010 will be reported.To use similar functions on phones or tablets, call [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md) or [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md). For details, see the relevant documents. |
+| [addUserNonStopApps(Application Management)](arkts-mdm-applicationmanager-addusernonstopapps-f.md) | Adds applications to the non-stoppable application list for a specified user. This policy only applies to installed applications. If the parameter list contains uninstalled applications, error code 9200012 will be returned. If an application in the list is uninstalled after the policy is set, the uninstalled application will be removed from the list. Adding an application that already exists in the list will return success, but the application will not be added repeatedly to the policy list.On phones and tablets, non-stoppable applications cannot be closed by swiping up in the task center. After a user taps the application name in **Settings**  > **Apps & services** to go to the details page, the forcible stop button is unavailable, and the disable button does not take effect. On PCs/2-in-1 devices, after a user taps the application name in **Settings**  > **Apps & services** to go to the details page, the forcible stop button is unavailable, and the disable button does not take effect. Since API version 26.0.0, if you call [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) to disable [SUPER_HUB](arkts-mdm-restrictions-featureforaccount-e.md) and then call this API to add SuperHub to the non-stoppable application list, a policy conflict occurs and error code 9200010 is reported. |
+| [clearUpApplicationData(Application Management)](arkts-mdm-applicationmanager-clearupapplicationdata-f.md) | Clears all application data. |
+| [getAllowedDistributeAbilityConnBundles(Application Management)](arkts-mdm-applicationmanager-getalloweddistributeabilityconnbundles-f.md) | Obtains the cross-device application trustlist for a specific distributed service under a specified user. |
+| [getAllowedKioskApps(Application Management)](arkts-mdm-applicationmanager-getallowedkioskapps-f.md) | Obtains the applications allowed to run in kiosk mode. |
+| [getAllowedKioskApps(Application Management)](arkts-mdm-applicationmanager-getallowedkioskapps-f.md) | Obtains the applications allowed to run in kiosk mode. |
+| [getAllowedNotificationBundles(Application Management)](arkts-mdm-applicationmanager-getallowednotificationbundles-f.md) | Obtains the list of applications that are allowed to send notifications. |
+| [getAllowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-getallowedrunningbundles-f.md) | Obtains the list of applications allowed to run by a specified user. |
+| [getAllowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-getallowedrunningbundles-f.md) | Obtains the application running trustlist of a specified user. |
+| [getApplicationWindowStates(Application Management)](arkts-mdm-applicationmanager-getapplicationwindowstates-f.md) | Queries the window state information list of the specified application. It can retrieve information such as whether the application is in the bottom dock and whether the application window is currently displayed in the foreground. |
+| [getAutoStartApps(Application Management)](arkts-mdm-applicationmanager-getautostartapps-f.md) | Checks the auto-start applications for the current user. |
+| [getAutoStartApps(Application Management)](arkts-mdm-applicationmanager-getautostartapps-f.md) | Checks the auto-start applications for the current user. |
+| [getAutoStartApps(Application Management)](arkts-mdm-applicationmanager-getautostartapps-f.md) | Checks the auto-start applications for the specified user. |
+| [getAutoStartApps(Application Management)](arkts-mdm-applicationmanager-getautostartapps-f.md) | Checks the auto-start applications for the specified user. |
+| [getDisallowedRunningBundlesSync(Application Management)](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md) | Obtains applications that are not allowed to run by the current user or specified user. |
+| [getDisallowedRunningBundlesSync(Application Management)](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md) | Obtains the application running blocklist of the current user or specified user. |
+| [getDockApps(Application Management)](arkts-mdm-applicationmanager-getdockapps-f.md) | Obtains the list of applications in the shortcut bar currently. |
+| [getFreezeExemptedApps(Application Management)](arkts-mdm-applicationmanager-getfreezeexemptedapps-f.md) | Obtains the background freeze-exempt application list of all users on the current device. |
+| [getFreezeExemptedApps(Application Management)](arkts-mdm-applicationmanager-getfreezeexemptedapps-f.md) | Obtains the background freeze-exempt application list of all users on the current device. |
+| [getHideLauncherIcon(Application Management)](arkts-mdm-applicationmanager-gethidelaunchericon-f.md) | Queries the list of applications whose home screen icons are hidden for the current user. |
+| [getKeepAliveApps(Application Management)](arkts-mdm-applicationmanager-getkeepaliveapps-f.md) | Obtains the bundle name of the keep-alive application. |
+| [getKeepAliveApps(Application Management)](arkts-mdm-applicationmanager-getkeepaliveapps-f.md) | Obtains the bundle name of the keep-alive application. |
+| [getUserNonStopApps(Application Management)](arkts-mdm-applicationmanager-getusernonstopapps-f.md) | Obtains the non-stoppable application list of all users on the current device. |
+| [getUserNonStopApps(Application Management)](arkts-mdm-applicationmanager-getusernonstopapps-f.md) | Obtains the non-stoppable application list of all users on the current device. |
+| [isAbilityDisabled(Application Management)](arkts-mdm-applicationmanager-isabilitydisabled-f.md) | Checks whether the Ability component of a specified application (system application or third-party application) is disabled. |
+| [isAbilityDisabled(Application Management)](arkts-mdm-applicationmanager-isabilitydisabled-f.md) | Checks whether the Ability component of a specified application (system application or third-party application) is disabled. |
+| [isAppKioskAllowed(Application Management)](arkts-mdm-applicationmanager-isappkioskallowed-f.md) | Checks whether an application is allowed to run in kiosk mode. |
+| [isModifyAutoStartAppsDisallowed(Application Management)](arkts-mdm-applicationmanager-ismodifyautostartappsdisallowed-f.md) | Checks whether a specified user is prohibited from canceling application auto-start. |
+| [isModifyKeepAliveAppsDisallowed(Application Management)](arkts-mdm-applicationmanager-ismodifykeepaliveappsdisallowed-f.md) | Checks whether the application is forbidden to cancel the keep-alive status. |
+| [queryBundleStatsInfos(Application Management)](arkts-mdm-applicationmanager-querybundlestatsinfos-f.md) | Queries the accumulated foreground runtime statistics of applications under a specified user account within a given time period. The minimum query granularity is one day. The API requires the start time (**startTime**), end time (**endTime**), and target user account ID (**accountId**) to be passed in. **startTime** and **endTime** are millisecond-level timestamps. The caller can pass custom values. The default value of **startTime** is 00:00:00.000 of the current day, and the default of **endTime** is 24:00:00.000 of the current day (that is, 00:00:00 of the following day). The API returns an array of **BundleStatsInfo**, where each element contains the bundle name of an application, its clone index, and the foreground usage duration (in milliseconds) within the specified time period. If **startTime** is set to **0**, the query starts from the device's first boot time. If **startTime** is later than **endTime**, the API returns error code 9200012. |
+| [queryTrafficStats(Application Management)](arkts-mdm-applicationmanager-querytrafficstats-f.md) | Queries the data usage of a specified application within a specified period for the current user. This API uses a promise to return the result. |
+| [removeAllowedDistributeAbilityConnBundles(Application Management)](arkts-mdm-applicationmanager-removealloweddistributeabilityconnbundles-f.md) | Removes the cross-device application trustlist for a specific distributed service for a specified user. After the trustlist is removed, if there are still remaining applications in the list, only those applications can use the specific distributed service to transmit data across devices without being subject to the restrictions imposed by [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md). If the list has been removed and there are no remaining applications, no applications under the specified user are allowed to use the specific distributed service for cross-device data transmission. |
+| [removeAllowedNotificationBundles(Application Management)](arkts-mdm-applicationmanager-removeallowednotificationbundles-f.md) | Removes applications from the notification trustlist. |
+| [removeAllowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-removeallowedrunningbundles-f.md) | Removes applications from the application running trustlist of the specified user. After an application is removed, it is not allowed to run under the current or specified user. |
+| [removeAutoStartApps(Application Management)](arkts-mdm-applicationmanager-removeautostartapps-f.md) | Removes the auto-start applications for the current user. After the deletion, the applications will no longer automatically start upon system boot. |
+| [removeAutoStartApps(Application Management)](arkts-mdm-applicationmanager-removeautostartapps-f.md) | Removes the specified application from the auto-start application list of a specified user. |
+| [removeDisallowedRunningBundlesSync(Application Management)](arkts-mdm-applicationmanager-removedisallowedrunningbundlessync-f.md) | Removes applications from the application running blocklist of the current or specified user. After an application is removed, it is allowed to run under the current or specified user. |
+| [removeDockApp(Application Management)](arkts-mdm-applicationmanager-removedockapp-f.md) | Removes an application from the shortcut bar. |
+| [removeFreezeExemptedApps(Application Management)](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md) | Removes the background freeze-exempt application list for a specified user. After the removal, the applications can be frozen by the system. If the parameter list includes uninstalled applications, the removal will still succeed. Installed applications will be removed from the list, while uninstalled ones will not impact the removal process. |
+| [removeHideLauncherIcon(Application Management)](arkts-mdm-applicationmanager-removehidelaunchericon-f.md) | Removes applications from the home screen icon hide list. |
+| [removeKeepAliveApps(Application Management)](arkts-mdm-applicationmanager-removekeepaliveapps-f.md) | Removes a specified application from the keep-alive list. |
+| [removeUserNonStopApps(Application Management)](arkts-mdm-applicationmanager-removeusernonstopapps-f.md) | Removes the non-stoppable application list for a specified user. After the removal, the user can stop the applications on the device. If the parameter list includes uninstalled applications, the removal will still succeed. Installed applications will be removed from the list, while uninstalled ones will not impact the removal process. |
+| [setAbilityDisabled(Application Management)](arkts-mdm-applicationmanager-setabilitydisabled-f.md) | Sets whether to disable the Ability component of a specified application (system application or third-party application). Currently, only the UIAbility type is supported. After the UIAbility type is disabled, the UI of the Ability component cannot be started. |
+| [setAllowedKioskApps(Application Management)](arkts-mdm-applicationmanager-setallowedkioskapps-f.md) | Sets applications allowed to run in kiosk mode.Kiosk mode is a system-level runtime mode that restricts a device to a single application or a set of applications. It controls the lock screen, status bar, gestures, and key features to prevent users from launching other applications or performing other operations on the device. |
+| [setKioskFeatures(Application Management)](arkts-mdm-applicationmanager-setkioskfeatures-f.md) | Sets the features of the kiosk mode. You can use this API to control whether the notification center and control panel can be accessed in kiosk mode.Since API version 24, you can set whether to allow users to swipe up from the bottom to access the recent taskbar and swipe left or right to display the side dock.In non-kiosk mode, this API can be called normally but does not take effect. The settings will take effect after kiosk mode is enabled. |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [addDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md) |
-| [addDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md) |
-| [addDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md) |
-| [getDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-getdisallowedrunningbundles-f-sys.md) |
-| [getDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-getdisallowedrunningbundles-f-sys.md) |
-| [getDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-getdisallowedrunningbundles-f-sys.md) |
-| [removeDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-removedisallowedrunningbundles-f-sys.md) |
-| [removeDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-removedisallowedrunningbundles-f-sys.md) |
-| [removeDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-removedisallowedrunningbundles-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [addDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md) | Adds the applications that are not allowed to run under the current user. This API uses an asynchronous callback to return the result. From API version 21, if the allowed application list [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md) is not empty, the prohibited application list cannot be added using this API. Otherwise, the error code 9200010 is reported. |
+| [addDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md) | Adds the applications that are not allowed to run under a specified user (specified by **userId**). This API uses an asynchronous callback to return the result. From API version 21, if the allowed application list [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md) is not empty, the prohibited application list cannot be added using this API. Otherwise, the error code 9200010 is reported. |
+| [addDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f-sys.md) | Adds the applications that are not allowed to run by the current or specified user. This API uses a promise to return the result. From API version 21, if the allowed application list [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md) is not empty, the prohibited application list cannot be added using this API. Otherwise, the error code 9200010 is reported. |
+| [getDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-getdisallowedrunningbundles-f-sys.md) | Obtains applications that are not allowed to run by the current user. This API uses an asynchronous callback to return the result. |
+| [getDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-getdisallowedrunningbundles-f-sys.md) | Obtains an application from the applications that are not allowed to run by the current user (specified by **userId**). This API uses an asynchronous callback to return the result. |
+| [getDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-getdisallowedrunningbundles-f-sys.md) | Obtains applications that are not allowed to run under the current user or a specified user. This API uses a promise to return the result. |
+| [removeDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-removedisallowedrunningbundles-f-sys.md) | Removes an application from the applications that are not allowed to run under the current user. This API uses an asynchronous callback to return the result. |
+| [removeDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-removedisallowedrunningbundles-f-sys.md) | Removes an application from the applications that are not allowed to run under the current user (specified by **userId**). This API uses an asynchronous callback to return the result. |
+| [removeDisallowedRunningBundles(Application Management)](arkts-mdm-applicationmanager-removedisallowedrunningbundles-f-sys.md) | Removes applications from the applications that are not allowed to run under the current or specified user. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BundleStatsInfo(Application Management)](arkts-mdm-applicationmanager-bundlestatsinfo-i.md) |
-| [DockInfo(Application Management)](arkts-mdm-applicationmanager-dockinfo-i.md) |
-| [WindowStateInfo(Application Management)](arkts-mdm-applicationmanager-windowstateinfo-i.md) |
+| Name | Description |
+| --- | --- |
+| [BundleStatsInfo(Application Management)](arkts-mdm-applicationmanager-bundlestatsinfo-i.md) | Application bundle statistics. |
+| [DockInfo(Application Management)](arkts-mdm-applicationmanager-dockinfo-i.md) | Describes information about an application in the shortcut bar. |
+| [WindowStateInfo(Application Management)](arkts-mdm-applicationmanager-windowstateinfo-i.md) | Defines the application window state information. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [KioskFeature(Application Management)](arkts-mdm-applicationmanager-kioskfeature-e.md) |
-| [ServiceType(Application Management)](arkts-mdm-applicationmanager-servicetype-e.md) |
-| [WindowState(Application Management)](arkts-mdm-applicationmanager-windowstate-e.md) |
+| Name | Description |
+| --- | --- |
+| [KioskFeature(Application Management)](arkts-mdm-applicationmanager-kioskfeature-e.md) | Defines the features of the kiosk mode. |
+| [ServiceType(Application Management)](arkts-mdm-applicationmanager-servicetype-e.md) | Distributed service type. |
+| [WindowState(Application Management)](arkts-mdm-applicationmanager-windowstate-e.md) | Enumerates application window states. |

@@ -9,7 +9,7 @@ The **Image** class is used to obtain image content.An Image instance is returne
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import image from '@kit.ImageKit';
 ```
 
 ## getBufferData
@@ -20,7 +20,8 @@ getBufferData(): ImageBufferData | null
 
 Obtains ImageBufferData from an image.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > **byteBuffer** in **ImageBufferData** is a shallow copy of the internal buffer. When the lifecycle of an image
 > ends, do not perform any operations on **byteBuffer**, as this may lead to undefined behavior.
 
@@ -32,9 +33,22 @@ Obtains ImageBufferData from an image.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ImageBufferData](arkts-image-image-imagebufferdata-i.md) \| null |
+| Type | Description |
+| --- | --- |
+| [ImageBufferData](arkts-image-image-imagebufferdata-i.md) \| null | Struct that encapsulates the image data buffer. If no struct is obtained, **null** is returned. |
+
+**Examples**
+
+```TypeScript
+function GetBufferData(img: image.Image) {
+  const bufferData = img.getBufferData();
+  if (bufferData == null) {
+    console.error('Failed to get the bufferData: bufferData is null.');
+    return;
+  }
+  console.info('Succeeded in getting bufferData.');
+}
+```
 
 ## getComponent
 
@@ -50,10 +64,26 @@ Obtains the component buffer from the Image instance based on the color componen
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| componentType | [ComponentType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| componentType | [ComponentType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function GetComponent(img : image.Image) {
+  img.getComponent(image.ComponentType.JPEG, (err: BusinessError, component: image.Component) => {
+    if (err) {
+      console.error(`Failed to get the component.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in getting component.');
+    }
+  })
+}
+```
 
 ## getComponent
 
@@ -69,15 +99,29 @@ Obtains the component buffer from the Image instance based on the color componen
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| componentType | [ComponentType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| componentType | [ComponentType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Component & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Component & gt; | Promise used to return the component buffer. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function GetComponent(img : image.Image) {
+  img.getComponent(image.ComponentType.JPEG).then((component: image.Component) => {
+    console.info('Succeeded in getting component.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get the component.code ${error.code},message is ${error.message}`);
+  })
+}
+```
 
 ## getMetadata
 
@@ -95,22 +139,35 @@ Obtains the HDR metadata from an image based on the HDR metadata type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | Yes | HDR metadata key. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) \| null |
+| Type | Description |
+| --- | --- |
+| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) \| null | Value of the HDR metadata key. If the image does not have HDR metadata, **null** is returned. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
+
+**Examples**
+
+```TypeScript
+async function GetMetadata(img : image.Image) {
+  try {
+    let staticMetadata = img.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
+    console.info(`getMetadata:${staticMetadata}`);
+  } catch (err) {
+    console.error('Failed to getMetadata.' + err);
+  }
+}
+```
 
 ## release
 
@@ -126,9 +183,96 @@ Releases this Image instance. This API uses an asynchronous callback to return t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(img : image.Image) {
+  img.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing the image instance.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(creator : image.ImageCreator) {
+  creator.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing creator.');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release() {
+  const imagePackerObj: image.ImagePacker = image.createImagePacker();
+  imagePackerObj.release((err: BusinessError)=>{
+    if (err) {
+      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing image packaging.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(receiver : image.ImageReceiver) {
+  receiver.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing the receiver.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(imageSourceObj : image.ImageSource) {
+  imageSourceObj.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing the image source instance.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function release(pixelMap: image.PixelMap) {
+  pixelMap.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in releasing the PixelMap object.');
+  });
+}
+```
 
 ## release
 
@@ -144,9 +288,84 @@ Releases this Image instance. This API uses a promise to return the result.The c
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(img : image.Image) {
+  img.release().then(() => {
+    console.info('Succeeded in releasing the image instance.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(creator : image.ImageCreator) {
+  creator.release().then(() => {
+    console.info('Succeeded in releasing creator.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release() {
+  const imagePackerObj: image.ImagePacker = image.createImagePacker();
+  imagePackerObj.release().then(() => {
+    console.info('Succeeded in releasing image packaging.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(receiver : image.ImageReceiver) {
+  receiver.release().then(() => {
+    console.info('Succeeded in releasing the receiver.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(imageSourceObj : image.ImageSource) {
+  imageSourceObj.release().then(() => {
+    console.info('Succeeded in releasing the image source instance.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function release(pixelMap: image.PixelMap) {
+  pixelMap.release().then(() => {
+    console.info('Succeeded in releasing the PixelMap object.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
 
 ## clipRect
 

@@ -9,7 +9,7 @@ Represents a SSAP client class. It provides APIs for connecting to and transmitt
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
+import ssap from '@kit.ConnectivityKit';
 ```
 
 ## callMethod
@@ -32,26 +32,26 @@ Describes the method for calling the server. For example, in a device control sc
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| method | [Method](arkts-connectivity-ssap-method-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| method | [Method](arkts-connectivity-ssap-method-i-sys.md) | Yes | Method for calling the server. The value must correspond to the method in the service on a remote device obtained during service discovery. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[Method](arkts-connectivity-ssap-method-i-sys.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Method](arkts-connectivity-ssap-method-i-sys.md)&gt; | Promise used to return the **Method** object corresponding to the calling result. The **result** field is the return value after the server method is executed. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| 36100003 |
-| 36100043 |
-| 36100044 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100043 | Invalid UUID. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 
 ## offEventNotify
 
@@ -71,9 +71,9 @@ Unsubscribes from event notification events. This API uses an asynchronous callb
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | No | Callback used to return the **Event** object of the service. If this parameter is specified, the current callback is unregistered. If this parameter is not set, all callbacks corresponding to the type are unsubscribed. |
 
 ## onEventNotify
 
@@ -93,9 +93,9 @@ Subscribes to event notification events. For example, in a device status monitor
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | Yes | Callback used to return the **Event** object of the service. |
 
 ## readDescriptor
 
@@ -117,26 +117,26 @@ Reads a server descriptor. This API can be used only after a connection is estab
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| descriptor | PropertyDescriptor | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| descriptor | PropertyDescriptor | Yes | Server property descriptor. The value must correspond to the descriptor in the service on a remote device obtained during service discovery. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;PropertyDescriptor & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;PropertyDescriptor & gt; | Promise used to return the **PropertyDescriptor** object read from the server. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| 36100003 |
-| 36100043 |
-| 36100044 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100043 | Invalid UUID in descriptor. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 
 ## setPropertyIndication
 
@@ -158,28 +158,28 @@ Enables or disables indication for property value change. When the property valu
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes |
-| enable | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | Property from the server. |
+| enable | boolean | Yes | Whether to enable indication for property value changes. **true**: enables indication. **false**: disables indication. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| 36100003 |
-| 36100030 |
-| 36100043 |
-| 36100044 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100030 | The connection is not established. |
+| 36100043 | Invalid UUID in property. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |
 
 ## writeDescriptor
 
@@ -201,23 +201,23 @@ Rewrites the server descriptor. This API uses a promise to return the result.Thi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| descriptor | PropertyDescriptor | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| descriptor | PropertyDescriptor | Yes | Server property descriptor. The value must correspond to the descriptor in the service on a remote device obtained during service discovery. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise that returns no value. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| 36100003 |
-| 36100043 |
-| 36100044 |
-| 36100099 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 36100003 | NearLink disabled. |
+| 36100043 | Invalid UUID in descriptor. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100099 | Operation failed. |

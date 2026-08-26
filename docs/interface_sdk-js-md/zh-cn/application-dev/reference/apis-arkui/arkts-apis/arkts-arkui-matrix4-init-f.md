@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import matrix4 from '@kit.ArkUI';
 ```
 
 ## init
@@ -41,12 +41,39 @@ Matrix的构造函数，可以通过传入的参数创建一个四阶矩阵，�
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number     ] | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number     ] | 是 | 参数为长度为16（4*4）的number数组, 详情见四阶矩阵说明。各number取值范围：(-∞, +∞)默认值：    [1, 0, 0, 0,0, 1, 0, 0,0, 0, 1, 0,0, 0, 0, 1] |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 根据入参创建的四阶矩阵对象。 |
+
+**示例**
+
+```TypeScript
+import { matrix4 } from '@kit.ArkUI';
+
+// 创建一个四阶矩阵
+let matrix = matrix4.init(
+  [1.0, 0.0, 0.0, 0.0,
+    0.0, 1.0, 0.0, 0.0,
+    0.0, 0.0, 1.0, 0.0,
+    0.0, 0.0, 0.0, 1.0]);
+
+@Entry
+@Component
+struct Tests {
+  build() {
+    Column() {
+      // $r("app.media.zh")需要替换为开发者所需的图像资源文件。 
+      Image($r("app.media.zh"))
+        .width('40%')
+        .height(100)
+        .transform(matrix)
+    }
+  }
+}
+```

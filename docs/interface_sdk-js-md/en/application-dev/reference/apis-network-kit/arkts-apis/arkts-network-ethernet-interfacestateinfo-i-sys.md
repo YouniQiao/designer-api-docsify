@@ -11,7 +11,7 @@ Listens for status changes of an Ethernet NIC.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from 'kits/@kit.NetworkKit';
+import ethernet from '@kit.NetworkKit';
 ```
 
 ## active

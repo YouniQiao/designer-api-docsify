@@ -9,7 +9,7 @@ Object used for store least recently used sendable Object.
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import ArkTSUtils from '@kit.ArkTS';
 ```
 
 ## clear
@@ -42,9 +42,9 @@ Default constructor.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| capacity | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| capacity | number | No | The capacity of the SendableLruCache. |
 
 ## contains
 
@@ -62,15 +62,15 @@ Check whether the given key exists in the SendableLruCache. If exists, returns t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | The key to check. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | The result of the checked. |
 
 ## entries
 
@@ -88,9 +88,9 @@ Returns an iterable of key-value pairs for each element in the SendableLruCache.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; | A new iterable iterator object. |
 
 ## get
 
@@ -108,15 +108,15 @@ Get the value associated with a specified key in the SendableLruCache.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | The key to query. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V \| undefined |
+| Type | Description |
+| --- | --- |
+| V \| undefined | The value associated with the key if the specified key is present; returns undefined otherwise. |
 
 ## getCapacity
 
@@ -134,9 +134,9 @@ Get the Capacity of the SendableLruCache.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The Capacity of the SendableLruCache. |
 
 ## getCreateCount
 
@@ -154,9 +154,9 @@ Get the number of times createDefault in the SendableLruCache.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The number of times createDefault. |
 
 ## getMatchCount
 
@@ -174,9 +174,9 @@ Get the number of times that the queried values are matched in the SendableLruCa
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The number of times that the queried values are matched. |
 
 ## getMissCount
 
@@ -194,9 +194,9 @@ Get the number of times that the queried values are not matched in the SendableL
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The number of times that the queried values are unmatched. |
 
 ## getPutCount
 
@@ -214,9 +214,9 @@ Get the number of times that values are added to SendableLruCache.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The number of times that values are added. |
 
 ## getRemoveCount
 
@@ -234,9 +234,9 @@ Get the number of times that values are removed from the SendableLruCache.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The number of times that values are removed. |
 
 ## isEmpty
 
@@ -254,9 +254,9 @@ Checks whether the SendableLruCache is empty.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | true if the SendableLruCache is empty, otherwise false. |
 
 ## keys
 
@@ -274,9 +274,9 @@ Returns a list of all keys in the SendableLruCache.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| K[] |
+| Type | Description |
+| --- | --- |
+| K[] | An array of all keys. |
 
 ## put
 
@@ -294,16 +294,16 @@ Adds a key-value pair to the SendableLruCache.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
-| value | V | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | The key to add. |
+| value | V | Yes | The value associated with the key to add. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V |
+| Type | Description |
+| --- | --- |
+| V | The value associated with the added key or the original value if the key to add already exists. |
 
 ## remove
 
@@ -321,15 +321,15 @@ Remove a specified key and its associated value from the SendableLruCache.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | The key to delete. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V \| undefined |
+| Type | Description |
+| --- | --- |
+| V \| undefined | The deleted value or undefined. |
 
 ## toString
 
@@ -347,9 +347,9 @@ Return the string representation of the object. The returned string format is: S
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | A new string contains all elements. |
 
 ## updateCapacity
 
@@ -367,9 +367,9 @@ Update the capacity of the SendableLruCache.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| newCapacity | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| newCapacity | number | Yes | The new capacity of the SendableLruCache. |
 
 ## values
 
@@ -387,9 +387,9 @@ Returns a list of all values in the SendableLruCache.
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V[] |
+| Type | Description |
+| --- | --- |
+| V[] | An array of all values. |
 
 ## length
 

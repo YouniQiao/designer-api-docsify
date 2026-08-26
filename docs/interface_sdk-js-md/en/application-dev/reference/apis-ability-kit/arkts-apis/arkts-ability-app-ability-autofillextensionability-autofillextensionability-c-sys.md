@@ -13,7 +13,7 @@ The AutoFillExtensionAbility module provides APIs for automatically filling in a
 ## Modules to Import
 
 ```TypeScript
-import { AutoFillExtensionAbility } from 'kits/@kit.AbilityKit';
+import AutoFillExtensionAbility from '@kit.AbilityKit';
 ```
 
 ## onBackground
@@ -32,6 +32,19 @@ Called when this AutoFillExtensionAbility is switched from the foreground to the
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onBackground() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onBackground');
+  }
+}
+```
+
 ## onCreate
 
 ```TypeScript
@@ -48,6 +61,19 @@ Called when an AutoFillExtensionAbility is created.
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onCreate');
+  }
+}
+```
+
 ## onDestroy
 
 ```TypeScript
@@ -63,6 +89,19 @@ Called to clear resources when this AutoFillExtensionAbility is destroyed. This 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onDestroy() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onDestroy');
+  }
+}
+```
 
 ## onFillRequest
 
@@ -82,11 +121,46 @@ Called when an auto-fill request is initiated or a password is generated.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes |
-| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | Yes |
-| callback | [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
+| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | Yes | Data to be automatically filled in. |
+| callback | [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | Yes | Callback used for the auto-fill request. |
+
+**Examples**
+
+```TypeScript
+import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onFillRequest(session: UIExtensionContentSession,
+                request: autoFillManager.FillRequest,
+                callback: autoFillManager.FillRequestCallback) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'autofill onFillRequest');
+    hilog.info(0x0000, 'testTag', 'fill requestCallback: %{public}s', JSON.stringify(callback));
+    hilog.info(0x0000, 'testTag', 'get request viewData: %{public}s', JSON.stringify(request.viewData));
+    try {
+      let localStorageData: Record<string, UIExtensionContentSession | string | autoFillManager.FillRequestCallback |
+      autoFillManager.ViewData | common.AutoFillExtensionContext> = {
+        'session': session,
+        'message': 'AutoFill Page',
+        'fillCallback': callback,
+        'viewData': request.viewData,
+        'context': this.context
+      };
+      let storage_fill = new LocalStorage(localStorageData);
+      if (session) {
+        session.loadContent('pages/SelectorList', storage_fill);
+      } else {
+        hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');
+      }
+    } catch (err) {
+      hilog.error(0x0000, 'testTag', '%{public}s', 'failed to load content');
+    }
+  }
+}
+```
 
 ## onForeground
 
@@ -103,6 +177,19 @@ Called when this AutoFillExtensionAbility is switched from the background to the
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onForeground() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onForeground');
+  }
+}
+```
 
 ## onSaveRequest
 
@@ -122,11 +209,44 @@ Called when automatic or manual saving is initiated.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes |
-| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md) | Yes |
-| callback | [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
+| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md) | Yes | Data to be saved. |
+| callback | [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) | Yes | Callback used for the saving request. |
+
+**Examples**
+
+```TypeScript
+import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onSaveRequest(session : UIExtensionContentSession,
+                request : autoFillManager.SaveRequest,
+                callback : autoFillManager.SaveRequestCallback) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onSaveRequest');
+    try {
+      let localStorageData: Record<string, UIExtensionContentSession | string | autoFillManager.SaveRequestCallback |
+      autoFillManager.ViewData | common.AutoFillExtensionContext> = {
+        'session': session,
+        'message': 'AutoFill Page',
+        'fillCallback': callback,
+        'viewData': request.viewData,
+        'context': this.context,
+      };
+      let storage_save = new LocalStorage(localStorageData);
+      if (session) {
+        session.loadContent('pages/SavePage', storage_save);
+      } else {
+        hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');
+      }
+    } catch (err) {
+      hilog.error(0x0000, 'testTag', '%{public}s', 'failed to load content');
+    }
+  }
+}
+```
 
 ## onSessionDestroy
 
@@ -146,9 +266,22 @@ Called when a UIExtensionContentSession instance is destroyed for this AutoFillE
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
+
+**Examples**
+
+```TypeScript
+import { AutoFillExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onSessionDestroy(session : UIExtensionContentSession) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onSessionDestroy');
+  }
+}
+```
 
 ## onUpdateRequest
 
@@ -168,9 +301,23 @@ Called when an update request is received.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| request | [UpdateRequest](arkts-ability-autofillrequest-updaterequest-i-sys.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| request | [UpdateRequest](arkts-ability-autofillrequest-updaterequest-i-sys.md) | Yes | Update request. |
+
+**Examples**
+
+```TypeScript
+import { AutoFillExtensionAbility, autoFillManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onUpdateRequest(request: autoFillManager.UpdateRequest) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'on update request, view data is: %{public}s',
+      JSON.stringify(request.viewData));
+  }
+}
+```
 
 ## context
 

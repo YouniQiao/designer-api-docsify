@@ -9,7 +9,6 @@ Describes the permission of a att attribute item.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## read

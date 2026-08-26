@@ -9,13 +9,13 @@ The hdrCapability module provides enums related to the High Dynamic Range (HDR) 
 ## Modules to Import
 
 ```TypeScript
-import { hdrCapability } from 'kits/@kit.ArkGraphics2D';
+import hdrCapability from '@kit.ArkGraphics2D';
 ```
 
 ## Summary
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [HDRFormat(HDR Capability)](arkts-arkgraphics2d-hdrcapability-hdrformat-e.md) |
+| Name | Description |
+| --- | --- |
+| [HDRFormat(HDR Capability)](arkts-arkgraphics2d-hdrcapability-hdrformat-e.md) | Enumerates the HDR formats. |

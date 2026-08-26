@@ -16,6 +16,17 @@ Callback for updating the forms.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| configInfo | Array&lt;[FormCustomConfig](arkts-form-forminfo-formcustomconfig-i-sys.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| configInfo | Array&lt;[FormCustomConfig](arkts-form-forminfo-formcustomconfig-i-sys.md)&gt; | Yes | the config info list of the forms. |
+
+**Examples**
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+let updateFormsConfigCallback: formInfo.UpdateFormsConfigCallback =
+  (configInfo: Array<formInfo.FormCustomConfig>): void => {
+    console.info('update forms config callback, config count: ' + configInfo.length);
+  };
+```

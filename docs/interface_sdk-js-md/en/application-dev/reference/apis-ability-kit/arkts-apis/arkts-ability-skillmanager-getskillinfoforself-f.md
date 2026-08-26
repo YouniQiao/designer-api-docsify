@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from 'kits/@kit.AbilityKit';
+import skillManager from '@kit.AbilityKit';
 ```
 
 ## getSkillInfoForSelf
@@ -24,21 +24,21 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| moduleName | string | Yes |
-| [skillName](arkts-ability-skillinfo-i.md) | string | Yes |
-| flags | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Indicates the module name of the skill. |
+| skillName | string | Yes | Indicates the name of the skill. |
+| flags | number | Yes | { |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;SkillInfo & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;SkillInfo & gt; | Returns the SkillInfo object of the specified skill. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| 17700093 |
+| Error Code ID | Error Message |
+| --- | --- |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
+| 17700093 | The specified skillName is not found. |

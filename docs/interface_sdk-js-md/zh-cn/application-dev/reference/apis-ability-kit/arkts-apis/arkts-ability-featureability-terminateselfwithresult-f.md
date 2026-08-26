@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import featureAbility from '@kit.AbilityKit';
 ```
 
 ## terminateSelfWithResult
@@ -22,10 +22,48 @@ function terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallba
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 | 表示停止Ability之后返回的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止当前Ability成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { featureAbility, wantConstant } from '@kit.AbilityKit';
+
+// 停止当前的Ability并返回结果
+featureAbility.terminateSelfWithResult(
+  {
+    resultCode: 1,
+    want:
+    {
+      action: 'ohos.want.action.home',
+      entities: ['entity.system.home'],
+      type: 'MIMETYPE',
+      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      /* FA模型中abilityName由package + Ability name组成 */
+      abilityName: 'com.example.myapplication.secondAbility',
+      uri: '',
+      parameters: {
+        mykey0: 2222,
+        mykey1: [1, 2, 3],
+        mykey2: '[1, 2, 3]',
+        mykey3: 'ssssssssssssssssssssssssss',
+        mykey4: [1, 15],
+        mykey5: [false, true, false],
+        mykey6: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
+        mykey7: true,
+      }
+    },
+  },
+  (error) => {
+    console.error(`error: ${JSON.stringify(error)}`);
+  }
+);
+```
 
 
 ## terminateSelfWithResult
@@ -44,12 +82,49 @@ function terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 | 表示停止Ability之后返回的结果。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { featureAbility, wantConstant } from '@kit.AbilityKit';
+
+// 停止当前的Ability并返回结果
+featureAbility.terminateSelfWithResult(
+  {
+    resultCode: 1,
+    want:
+    {
+      action: 'ohos.want.action.home',
+      entities: ['entity.system.home'],
+      type: 'MIMETYPE',
+      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      /* FA模型中abilityName由package + Ability name组成 */
+      abilityName: 'com.example.myapplication.secondAbility',
+      uri:'',
+      parameters: {
+        mykey0: 2222,
+        mykey1: [1, 2, 3],
+        mykey2: '[1, 2, 3]',
+        mykey3: 'ssssssssssssssssssssssssss',
+        mykey4: [1, 15],
+        mykey5: [false, true, false],
+        mykey6: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
+        mykey7: true,
+      }
+    },
+  }
+).then(() => {
+  console.info('==========================>terminateSelfWithResult=======================>');
+});
+```

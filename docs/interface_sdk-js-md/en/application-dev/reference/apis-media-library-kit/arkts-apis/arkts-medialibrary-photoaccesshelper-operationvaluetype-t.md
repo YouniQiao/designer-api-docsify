@@ -14,9 +14,9 @@ Indicates possible value types
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| long |
-| double |
-| string |
-| boolean |
+| Type | Description |
+| --- | --- |
+| long |  |
+| double |  |
+| string |  |
+| boolean |  |

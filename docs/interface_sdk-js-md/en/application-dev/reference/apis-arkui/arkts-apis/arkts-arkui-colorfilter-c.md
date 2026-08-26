@@ -29,6 +29,6 @@ Creates ColorFilter with 4*5 matrix.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number[] | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number[] | Yes | 4*5 color matrix values. The value[m*n] is located in the m row and n column. The matrix is row-first. |

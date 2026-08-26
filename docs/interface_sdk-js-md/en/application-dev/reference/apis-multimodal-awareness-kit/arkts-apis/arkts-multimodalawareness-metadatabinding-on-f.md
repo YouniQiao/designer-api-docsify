@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
+import metadataBinding from '@kit.MultimodalAwarenessKit';
 ```
 
 ## on('operationSubmitMetadata')
@@ -22,15 +22,32 @@ Subscribes to a system event to obtain the encoded metadata. The application nee
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'operationSubmitMetadata' | Yes |
-| bundleName | string | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'operationSubmitMetadata' | Yes | Event type. This parameter has a fixed value of **operationSubmitMetadata**, indicating the system application's attempt to obtain the encoded metadata. |
+| bundleName | string | Yes | Application bundle name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the encoded metadata. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) |
-| [32100004](../errorcode-metadataBinding.md#32100004-subscription-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
+| [32100004](../errorcode-metadataBinding.md#32100004-subscription-failed) | Subscribe Failed. Possible causes:  1. Abnormal system capability.  2. IPC communication abnormality.  3. Algorithm loading exception. |
+
+**Examples**
+
+```TypeScript
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+
+let bundleName: string = '';
+try {
+  metadataBinding.on('operationSubmitMetadata', bundleName, (event: number) => {
+    if (event == 1) {
+      console.info("The screenshot request is intercepted and the app link is obtained");
+    }
+  });
+} catch (error) {
+  console.error("register screenshot event error");
+}
+```

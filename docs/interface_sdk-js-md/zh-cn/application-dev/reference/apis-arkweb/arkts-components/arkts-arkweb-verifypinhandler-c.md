@@ -9,6 +9,9 @@ VerifyPinHandler是Web组件中处理PIN码验证请求的类，用于在Web页�
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
+import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
+import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## confirm
@@ -25,9 +28,9 @@ confirm(result: PinVerifyResult): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| result | [PinVerifyResult](arkts-arkweb-pinverifyresult-e.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| result | [PinVerifyResult](arkts-arkweb-pinverifyresult-e.md) | 是 | PIN码认证结果。成功表示Web组件将允许后续页面操作；失败则可能导致页面导航或内容加载被拦截。 |
 
 ## constructor
 

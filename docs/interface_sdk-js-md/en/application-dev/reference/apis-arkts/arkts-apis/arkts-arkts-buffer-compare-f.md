@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## compare
@@ -22,13 +21,26 @@ Compares two **Buffer** objects. This API is used for sorting **Buffer** objects
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| buf1 | Buffer \| Uint8Array | Yes |
-| buf2 | Buffer \| Uint8Array | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buf1 | Buffer \| Uint8Array | Yes | Buffer** object to compare. |
+| buf2 | Buffer \| Uint8Array | Yes | Buffer** object to compare. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| -1 \| 0 \| 1 |
+| Type | Description |
+| --- | --- |
+| -1 \| 0 \| 1 | Returns **0** if **buf1** is the same as **buf2**. |
+
+**Examples**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from('1234');
+let buf2 = buffer.from('0123');
+let res = buffer.compare(buf1, buf2);
+
+console.info(Number(res).toString());
+// Output: 1
+```

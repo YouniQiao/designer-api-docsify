@@ -1,7 +1,7 @@
 # Path
 
 路径绘制组件，根据绘制路径生成封闭的自定义形状，支持通过SVG路径描述规范定义复杂的几何形状。
-> **说明：**>> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。>> 该组件从API version 20开始支持使用AttributeUpdater类的> [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#属性)接口更新构造参数。
+> **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > 该组件从API version 20开始支持使用AttributeUpdater类的 > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#属性)接口更新构造参数。
 
 ## 子组件
 
@@ -30,9 +30,9 @@ Use new to create Path. Annonymous Object Rectification.
 
 **参数:**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [PathOptions](arkts-arkui-pathoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [PathOptions](arkts-arkui-pathoptions-i.md) | 否 | path options |
 
 ## Path
 
@@ -52,13 +52,166 @@ Path(options?: PathOptions)
 
 **参数:**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [PathOptions](arkts-arkui-pathoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [PathOptions](arkts-arkui-pathoptions-i.md) | 否 | Path组件绘制属性的配置对象。  省略时不设置绘制属性，组件按默认尺寸显示。默认尺寸根据路径内容自动计算宽度和高度。  异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 |
-| --- |
+| 名称 | 说明 |
+| --- | --- |
+
+## 示例
+
+通过commands、fillOpacity、stroke属性分别绘制路径、透明度、边框颜色。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct PathExample {
+  build() {
+    Column({ space: 10 }) {
+      Text('Straight line')
+        .fontSize(11)
+        .fontColor(0xCCCCCC)
+        .width('90%')
+      // 绘制一条长600px，宽3vp的直线
+      Path()
+        .width('600px')
+        .height('10px')
+        .commands('M0 0 L600 0')
+        .stroke(Color.Black)
+        .strokeWidth(3)
+
+      Text('Straight line graph')
+        .fontSize(11)
+        .fontColor(0xCCCCCC)
+        .width('90%')
+      // 绘制直线图形
+      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+        Path()
+          .width('210px')
+          .height('310px')
+          .commands('M100 0 L200 240 L0 240 Z')
+          .fillOpacity(0)
+          .stroke(Color.Black)
+          .strokeWidth(3)
+        Path()
+          .width('210px')
+          .height('310px')
+          .commands('M0 0 H200 V200 H0 Z')
+          .fillOpacity(0)
+          .stroke(Color.Black)
+          .strokeWidth(3)
+        Path()
+          .width('210px')
+          .height('310px')
+          .commands('M100 0 L0 100 L50 200 L150 200 L200 100 Z')
+          .fillOpacity(0)
+          .stroke(Color.Black)
+          .strokeWidth(3)
+      }.width('95%')
+
+      Text('Curve graphics').fontSize(11).fontColor(0xCCCCCC).width('90%')
+      // 绘制弧线图形
+      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+        Path()
+          .width('250px')
+          .height('310px')
+          .commands('M0 300 S100 0 240 300 Z')
+          .fillOpacity(0)
+          .stroke(Color.Black)
+          .strokeWidth(3)
+        Path()
+          .width('210px')
+          .height('310px')
+          .commands('M0 150 C0 100 140 0 200 150 L100 300 Z')
+          .fillOpacity(0)
+          .stroke(Color.Black)
+          .strokeWidth(3)
+        Path()
+          .width('210px')
+          .height('310px')
+          .commands('M0 100 A30 20 20 0 0 200 100 Z')
+          .fillOpacity(0)
+          .stroke(Color.Black)
+          .strokeWidth(3)
+      }.width('95%')
+    }.width('100%')
+    .margin({ top: 5 })
+  }
+}
+```
+
+width、height、commands属性分别使用不同的长度类型绘制图形。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct PathTypeExample {
+  build() {
+    Column({ space: 10 }) {
+      // 宽、高、命令字符串使用string类型，绘制一条直线。
+      Path({ width: '600px', height: '10px' })
+        .commands('M0 0 L600 0')
+        .fillOpacity(0)
+        .stroke(Color.Black)
+        .strokeWidth(3)
+      // 宽、高使用number类型，绘制一个矩形图形。
+      Path({ width: 200, height: 100 })
+        .commands('M200 0 H400 V200 H200 Z')
+        .fillOpacity(0)
+        .stroke(Color.Black)
+        .strokeWidth(3)
+      // 宽、高、命令字符串使用Resource类型（需用户自定义），绘制一个弧线图形。
+      Path({ width: $r('app.string.PathWidth'), height: $r('app.string.PathHeight') }) // 本示例中PathWidth和PathHeight均定义为"200"。
+        .commands($r('app.string.PathCommands')) // 本示例中PathCommands定义为"M150 300 Q300 0 450 300 Z"。
+        .fillOpacity(0)
+        .stroke(Color.Black)
+        .strokeWidth(3)
+    }.width('100%')
+    .margin({ top: 5 })
+  }
+}
+```
+
+以下示例展示了如何使用attributeModifier动态设置Path组件的commands、fill、fillOpacity、stroke、strokeDashArray、strokeDashOffset、strokeLineCap、strokeLineJoin、strokeMiterLimit、strokeOpacity、strokeWidth和antiAlias属性。
+
+```TypeScript
+// xxx.ets
+class MyPathModifier implements AttributeModifier<PathAttribute> {
+  applyNormalAttribute(instance: PathAttribute): void {
+    // 使用字符串commands绘制一个三角形，填充颜色#707070，填充透明度0.5，边框颜色#2787D9，边框间隙[20]，向左偏移15，线条两端样式为半圆，拐角样式使用尖角连接路径段，斜接长度与边框宽度比值的极限值为5，边框透明度0.5，边框宽度10，抗锯齿开启
+    instance.commands('M100 0 L200 240 L0 240 Z')
+    instance.fill("#707070")
+    instance.fillOpacity(0.5)
+    instance.stroke("#2787D9")
+    instance.strokeDashArray([20])
+    instance.strokeDashOffset("15")
+    instance.strokeLineCap(LineCapStyle.Round)
+    instance.strokeLineJoin(LineJoinStyle.Miter)
+    instance.strokeMiterLimit(5)
+    instance.strokeOpacity(0.5)
+    instance.strokeWidth(10)
+    instance.antiAlias(true)
+  }
+}
+
+@Entry
+@Component
+struct PathModifierDemo {
+  @State modifier: MyPathModifier = new MyPathModifier()
+
+  build() {
+    Column() {
+      Path()
+        .attributeModifier(this.modifier)
+        .offset({ x: 20, y: 20 })
+    }
+  }
+}
+```

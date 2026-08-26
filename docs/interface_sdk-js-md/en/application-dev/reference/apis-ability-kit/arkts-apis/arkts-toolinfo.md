@@ -5,9 +5,9 @@
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SubCommandInfo](arkts-ability-toolinfo-subcommandinfo-i-sys.md) |
-| [ToolInfo](arkts-ability-toolinfo-i-sys.md) |
-| [ToolSummary](arkts-ability-toolinfo-toolsummary-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [SubCommandInfo](arkts-ability-toolinfo-subcommandinfo-i-sys.md) | Subcommand information |
+| [ToolInfo](arkts-ability-toolinfo-i-sys.md) | ToolInfo describes the basic information of a cli tool. |
+| [ToolSummary](arkts-ability-toolinfo-toolsummary-i-sys.md) | ToolInfo describes the basic summary information of a cli tool. |
 <!--DelEnd-->

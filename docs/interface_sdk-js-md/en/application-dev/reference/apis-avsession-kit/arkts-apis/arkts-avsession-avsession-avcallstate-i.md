@@ -9,7 +9,7 @@ Used to indicate the call state of the current call.@interface AVCallState [sinc
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import avSession from '@kit.AVSessionKit';
 ```
 
 ## muted

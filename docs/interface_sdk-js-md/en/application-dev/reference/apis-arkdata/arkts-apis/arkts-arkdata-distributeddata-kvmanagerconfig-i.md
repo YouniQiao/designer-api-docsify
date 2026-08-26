@@ -13,6 +13,7 @@ Represents the configuration of a **KVManager** instance, including the bundle n
 ## Modules to Import
 
 ```TypeScript
+import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## bundleName

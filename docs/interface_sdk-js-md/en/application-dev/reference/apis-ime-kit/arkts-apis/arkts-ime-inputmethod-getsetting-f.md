@@ -3,7 +3,12 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import inputMethod from '@kit.IMEKit';
+import inputMethodEngine from '@kit.IMEKitEngine';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
+import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
+import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 ```
 
 ## getSetting
@@ -20,12 +25,18 @@ Obtains an [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) i
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) |
+| Type | Description |
+| --- | --- |
+| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | InputMethodSetting** instance. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [12800007](../errorcode-inputmethod-framework.md#12800007-input-method-setter-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800007](../errorcode-inputmethod-framework.md#12800007-input-method-setter-error) | input method setter error. Possible cause: create InputMethodSetting object failed. |
+
+**Examples**
+
+```TypeScript
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+```

@@ -14,11 +14,11 @@ Describes the video playback state. You can obtain the state through the **state
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'idle' |
-| 'prepared' |
-| 'playing' |
-| 'paused' |
-| 'stopped' |
-| 'error' |
+| Type | Description |
+| --- | --- |
+| 'idle' | The video player is idle. |
+| 'prepared' | Video playback is being prepared. |
+| 'playing' | Video playback is in progress. |
+| 'paused' | Video playback is paused. |
+| 'stopped' | Video playback is stopped. |
+| 'error' | Video playback is in the error state. |

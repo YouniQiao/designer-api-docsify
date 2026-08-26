@@ -9,7 +9,7 @@ Defines the parameters for creating a PiP controller.
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
+import PiPWindow from '@kit.ArkUI';
 ```
 
 ## componentController

@@ -40,9 +40,24 @@ you are advised to create a placeholder for the data in the **onLazyLoading** me
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the data item to be loaded. Value range: natural numbers |
+
+**Examples**
+
+```TypeScript
+// Assume that the total number of items is 100, and 3 items are needed for the initial screen rendering.
+// The initial array provides the first 3 items (arr = ['No.0', 'No.1', 'No.2']), and lazy loading is enabled.
+List() {
+  Repeat<string>(this.arr)
+    .each((obj: RepeatItem<string>) => { ListItem() { Text(obj.item) }})
+    .virtualScroll({ 
+      onTotalCount: () => { return 100; },
+      onLazyLoading: (index: number) => { this.arr[index] = `No.${index}`; }
+    })
+}
+```
 
 ## onTotalCount
 
@@ -69,9 +84,9 @@ return value.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Expected total number of data items to be loaded. |
 
 ## memoryOptimizationStrategy
 

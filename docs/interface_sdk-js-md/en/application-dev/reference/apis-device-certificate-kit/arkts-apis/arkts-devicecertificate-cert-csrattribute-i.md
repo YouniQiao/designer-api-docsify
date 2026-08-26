@@ -11,7 +11,6 @@ CSR attribute field. Currently, only string-type attribute fields are supported.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## type

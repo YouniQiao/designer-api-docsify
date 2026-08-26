@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from 'kits/@kit.ArkUI';
+import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -26,6 +26,15 @@ cancel(): void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+// animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
+animator.cancel();
+```
+
 ## finish
 
 ```TypeScript
@@ -39,6 +48,15 @@ finish(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+// animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
+animator.finish();
+```
 
 ## oncancel
 
@@ -131,9 +149,9 @@ onframe: (progress: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| progress | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| progress | number | 是 |  |
 
 ## onFrame
 
@@ -153,9 +171,9 @@ onFrame: (progress: number) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| progress | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| progress | number | 是 |  |
 
 ## onrepeat
 
@@ -206,6 +224,15 @@ pause(): void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+// animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
+animator.pause();
+```
+
 ## play
 
 ```TypeScript
@@ -219,6 +246,15 @@ play(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+// animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
+animator.play();
+```
 
 ## reset
 
@@ -236,16 +272,55 @@ reset(options: AnimatorOptions): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 | 定义动画选项。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The specified page is not found or the object property list is not obtained. |
+
+**示例**
+
+```TypeScript
+import { AnimatorResult } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator({
+      duration: 1500,
+      easing: "friction",
+      delay: 0,
+      fill: "forwards",
+      direction: "normal",
+      iterations: 3,
+      begin: 200.0,
+      end: 400.0
+    })
+    this.animatorResult.reset({
+      duration: 1500,
+      easing: "friction",
+      delay: 0,
+      fill: "forwards",
+      direction: "normal",
+      iterations: 5,
+      begin: 200.0,
+      end: 400.0
+    });
+  }
+
+  build() {
+    // ...
+  }
+}
+```
 
 ## reset
 
@@ -265,16 +340,41 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | 是 | 定义动画选项。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The specified page is not found or the object property list is not obtained. |
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { Animator as animator, AnimatorResult, AnimatorOptions, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+let options: AnimatorOptions = {
+  duration: 1500,
+  easing: 'ease',
+  delay: 0,
+  fill: "forwards",
+  direction: "normal",
+  iterations: 1,
+  begin: 100,
+  end: 200
+};
+let optionsNew: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200)
+  .duration(2000)
+  .iterations(3)
+  .delay(1000);
+let animatorResult: AnimatorResult = animator.create(options);
+animatorResult.reset(optionsNew);
+```
 
 ## reverse
 
@@ -289,6 +389,15 @@ reverse(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+// animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
+animator.reverse();
+```
 
 ## setExpectedFrameRateRange
 
@@ -308,9 +417,45 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | 是 | 设置期望的帧率范围。 |
+
+**示例**
+
+```TypeScript
+import { AnimatorResult } from '@kit.ArkUI';
+
+let expectedFrameRate: ExpectedFrameRateRange = {
+  min: 0,
+  max: 120,
+  expected: 30
+}
+
+@Entry
+@Component
+struct AnimatorTest {
+  private backAnimator: AnimatorResult | undefined = undefined;
+
+  create() {
+    this.backAnimator = this.getUIContext().createAnimator({
+      duration: 2000,
+      easing: "ease",
+      delay: 0,
+      fill: "forwards",
+      direction: "normal",
+      iterations: 1,
+      begin: 100, // 动画插值起点
+      end: 200 // 动画插值终点
+    })
+    this.backAnimator.setExpectedFrameRateRange(expectedFrameRate);
+  }
+
+  build() {
+    // ...
+  }
+}
+```
 
 ## update
 
@@ -320,7 +465,8 @@ update(options: AnimatorOptions): void
 
 更新当前动画器。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 6开始支持，从API version 9开始废弃。建议使用[reset](#reset)替代。
 
 **起始版本：** 6
@@ -333,6 +479,15 @@ update(options: AnimatorOptions): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 | 定义动画选项。 |
+
+**示例**
+
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+// animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
+animator.update(options);
+```

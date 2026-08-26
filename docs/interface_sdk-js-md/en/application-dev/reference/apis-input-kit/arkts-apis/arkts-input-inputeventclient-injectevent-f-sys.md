@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## injectEvent
@@ -25,14 +24,53 @@ Injects keys (including single keys and combination keys).
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| { KeyEvent: KeyEvent } | 0.0 | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| KeyEvent | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes |  |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            let backKeyDown: inputEventClient.KeyEvent = {
+              isPressed: true,
+              keyCode: 2,
+              keyDownDuration: 0,
+              isIntercepted: false
+            }
+            // Inject Event
+            inputEventClient.injectEvent({ KeyEvent: backKeyDown });
+
+            let backKeyUp: inputEventClient.KeyEvent = {
+              isPressed: false,
+              keyCode: 2,
+              keyDownDuration: 0,
+              isIntercepted: false
+            };
+            // Inject Event
+            inputEventClient.injectEvent({ KeyEvent: backKeyUp });
+          } catch (error) {
+            console.error(`Failed to inject KeyEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```

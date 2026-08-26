@@ -2,7 +2,8 @@
 
 媒体资产进度处理器，应用于onProgress方法中获取媒体资产进度。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 本Interface首批接口从API version 15开始支持。
 
 **起始版本：** 15
@@ -12,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import photoAccessHelper from '@kit.MediaLibraryKit';
 ```
 
 ## onProgress
@@ -29,6 +30,6 @@ onProgress(progress: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| progress | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| progress | number | 是 | 返回的进度百分比，范围为[0, 100]。 |

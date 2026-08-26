@@ -3,33 +3,33 @@
 ## Modules to Import
 
 ```TypeScript
-import { SplitPolicy, MultiNavigation, MultiNavPathStack } from 'kits/@kit.ArkUI';
+import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MultiNavPathStack](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md) |
+| Name | Description |
+| --- | --- |
+| [MultiNavPathStack](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md) | Implements a navigation stack of the **MultiNavigation** component. Currently, this stack can be created only by the user and cannot be obtained through callbacks. Do not use events or APIs such as **onReady** of **NavDestination** to obtain the navigation stack and perform stack operations, as this may lead to unpredictable issues. |
 
 ### Structs
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [MultiNavigation](arkts-arkui-arkui-advanced-multinavigation-multinavigation-s.md) |
+| Name | Description |
+| --- | --- |
+| [MultiNavigation](arkts-arkui-arkui-advanced-multinavigation-multinavigation-s.md) | **MultiNavigation** is a component designed for multi-column display and routing navigation on large-screen devices. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) |
+| Name | Description |
+| --- | --- |
+| [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | Enumerates the types of pages in **MultiNavigation**. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NavDestinationBuildFunction](arkts-arkui-navdestinationbuildfunction-t.md) |
-| [OnHomeShowOnTopCallback](arkts-arkui-onhomeshowontopcallback-t.md) |
-| [OnNavigationModeChangeCallback](arkts-arkui-onnavigationmodechangecallback-t.md) |
+| Name | Description |
+| --- | --- |
+| [NavDestinationBuildFunction](arkts-arkui-navdestinationbuildfunction-t.md) | Represents the function used by the **MultiNavigation** component to load navigation destination pages. |
+| [OnHomeShowOnTopCallback](arkts-arkui-onhomeshowontopcallback-t.md) | Represents the callback invoked when the home page is displayed at the top of the stack. |
+| [OnNavigationModeChangeCallback](arkts-arkui-onnavigationmodechangecallback-t.md) | Represents the callback invoked when the mode of the **MultiNavigation** component changes. |

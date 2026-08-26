@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import geolocation from '@kit.LocationKit';
 ```
 
 ## getAddressesFromLocationName
@@ -26,10 +26,25 @@ Obtain latitude and longitude info from location address
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| request | [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| request | [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md) | Yes | Indicates the geocode query parameters. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the latitude and longitude result. |
+
+**Examples**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let geocodeRequest:geolocation.GeoCodeRequest = {"description": "No. xx, xx Road, Pudong District, Shanghai", "maxItems": 1};
+geolocation.getAddressesFromLocationName(geocodeRequest, (err, data) => {
+    if (err) {
+        console.info('getAddressesFromLocationName: err=' + JSON.stringify(err));
+    }
+    if (data) {
+        console.info('getAddressesFromLocationName: data=' + JSON.stringify(data));
+    }
+});
+```
 
 
 ## getAddressesFromLocationName
@@ -52,12 +67,22 @@ Obtain latitude and longitude info from location address
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| request | [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| request | [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md) | Yes | Indicates the geocode query parameters. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;GeoAddress & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;GeoAddress & gt; & gt; | The promise returned by the function. |
+
+**Examples**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let geocodeRequest:geolocation.GeoCodeRequest = {"description": "No. xx, xx Road, Pudong District, Shanghai", "maxItems": 1};
+geolocation.getAddressesFromLocationName(geocodeRequest).then((result) => {
+    console.info('getAddressesFromLocationName: ' + JSON.stringify(result));
+});
+```

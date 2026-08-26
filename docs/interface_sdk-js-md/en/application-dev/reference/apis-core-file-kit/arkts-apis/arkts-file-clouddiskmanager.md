@@ -11,7 +11,7 @@ This module enables the File Manager to obtain the sync root information registe
 ## Modules to Import
 
 ```TypeScript
-import { cloudDiskManager } from 'kits/@kit.CoreFileKit';
+import cloudDiskManager from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -19,23 +19,23 @@ import { cloudDiskManager } from 'kits/@kit.CoreFileKit';
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SyncFolderAccessor](arkts-corefile-clouddiskmanager-syncfolderaccessor-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [SyncFolderAccessor](arkts-corefile-clouddiskmanager-syncfolderaccessor-c-sys.md) | A sync root management class that enables the File Manager to access the sync root information registered by third- party cloud disks. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SyncFolder](arkts-corefile-clouddiskmanager-syncfolder-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [SyncFolder](arkts-corefile-clouddiskmanager-syncfolder-i-sys.md) | Encapsulates the sync root information. |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SyncFolderState](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [SyncFolderState](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md) | Enumerates the states of the sync root. |
 <!--DelEnd-->

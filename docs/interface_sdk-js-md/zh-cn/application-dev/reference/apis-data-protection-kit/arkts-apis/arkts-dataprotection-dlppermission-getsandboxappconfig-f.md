@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import dlpPermission from '@kit.DataProtectionKit';
 ```
 
 ## getSandboxAppConfig
@@ -20,14 +20,26 @@ function getSandboxAppConfig(): Promise<string>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;string & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;string & gt; | Promise对象。返回沙箱应用配置信息。长度小于4194304字节。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-| [19100018](../errorcode-dlp.md#19100018-应用未授权) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| [19100018](../errorcode-dlp.md#19100018-应用未授权) | The application is not authorized. |
+
+**示例**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getSandboxAppConfig().then((configInfo) => { // 获取沙箱应用配置信息。
+  console.info('configInfo', configInfo);
+}).catch((error: BusinessError)=> {
+  console.error(JSON.stringify(error));
+});
+```

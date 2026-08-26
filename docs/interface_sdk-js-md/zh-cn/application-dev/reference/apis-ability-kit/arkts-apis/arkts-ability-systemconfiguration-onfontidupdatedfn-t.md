@@ -16,6 +16,6 @@ type OnFontIdUpdatedFn = (fontId: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [fontId](arkts-ability-app-ability-configuration-configuration-i.md) | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fontId | string | 是 | 变化后的系统字体ID。 |

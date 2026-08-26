@@ -9,7 +9,7 @@ Provides configuration options for download and cache, including HTTP options, t
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## cacheStrategy

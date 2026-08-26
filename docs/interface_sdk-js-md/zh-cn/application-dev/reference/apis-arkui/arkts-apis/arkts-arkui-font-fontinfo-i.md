@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import font from '@kit.ArkUI';
 ```
 
 ## family
@@ -191,3 +191,36 @@ width: number
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+直接使用font可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，推荐通过使用[UIContext](./arkts-apis-uicontext-uicontext.md)中的[getFont](./arkts-apis-uicontext-uicontext.md#getfont)方法获取当前UI上下文关联的[Font](arkts-apis-uicontext-font.md)对象。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct FontExample {
+  private fontInfo = this.getUIContext().getFont().getFontByName('');
+
+  build() {
+    Column() {
+      Button('getFontByName')
+        .onClick(() => {
+          this.fontInfo =
+            this.getUIContext().getFont().getFontByName('HarmonyOS Sans Italic');
+          console.info('getFontByName(): path = ' + this.fontInfo.path);
+          console.info('getFontByName(): postScriptName = ' + this.fontInfo.postScriptName);
+          console.info('getFontByName(): fullName = ' + this.fontInfo.fullName);
+          console.info('getFontByName(): family = ' + this.fontInfo.family);
+          console.info('getFontByName(): subfamily = ' + this.fontInfo.subfamily);
+          console.info('getFontByName(): weight = ' + this.fontInfo.weight);
+          console.info('getFontByName(): width = ' + this.fontInfo.width);
+          console.info('getFontByName(): italic = ' + this.fontInfo.italic);
+          console.info('getFontByName(): monoSpace = ' + this.fontInfo.monoSpace);
+          console.info('getFontByName(): symbolic = ' + this.fontInfo.symbolic);
+        })
+    }.width('100%')
+  }
+}
+```

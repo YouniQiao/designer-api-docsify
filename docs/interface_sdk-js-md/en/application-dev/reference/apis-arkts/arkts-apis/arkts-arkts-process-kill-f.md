@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import process from '@kit.ArkTS';
 ```
 
 ## kill
@@ -24,13 +24,26 @@ Sends a signal to a specified process to terminate it.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [signal](arkts-arkts-locks-asynclockoptions-c.md) | number | Yes |
-| pid | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| signal | number | Yes | Signal to send. |
+| pid | number | Yes | PID of the process, to which the signal will be sent. |
 
 **Return value:**
 
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | If the signal is sent successfully, **true** is returned. Other, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let pres = process.pid;
+let result = process.kill(28, pres);
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+let pres = process.pid;
+let result = pro.kill(28, pres);
+```

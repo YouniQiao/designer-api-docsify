@@ -9,7 +9,7 @@ Provides the string collation capability.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import intl from '@kit.LocalizationKit';
 ```
 
 ## compare
@@ -28,16 +28,27 @@ Compares two strings based on the specified collation rules.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| first | string | Yes |
-| second | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| first | string | Yes | First string to compare. |
+| second | string | Yes | Second string to compare. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Comparison result. |
+
+**Examples**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a Collator object with the locale ID being en-GB.
+let collator = new intl.Collator('en-GB');
+// Compare the sequence of the first and second strings.
+let compareResult = collator.compare('first', 'second'); // compareResult = -1
+```
 
 ## constructor
 
@@ -52,6 +63,52 @@ Creates a **Collator** object for the current system locale.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
+
+**Examples**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// The current locale ID is used by the default constructor.
+let locale = new intl.Locale();
+// Return the current system locale ID.
+let localeID = locale.toString();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a DateTimeFormat object using the current system locale ID.
+let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a NumberFormat object using the current system locale ID.
+let formatter: intl.NumberFormat = new intl.NumberFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a Collator object using the current system locale ID.
+let collator = new intl.Collator();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a PluralRules object using the current system locale ID.
+let pluralRules = new intl.PluralRules();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a RelativeTimeFormat object using the current system locale ID.
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
+```
 
 ## constructor
 
@@ -69,10 +126,19 @@ Creates a **Collator** object based on the specified locale and options.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locale | string \| Array & lt;string & gt; | Yes |
-| options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locale | string \| Array & lt;string & gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
+| options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | No | Options for creating a **Collator** object. |
+
+**Examples**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a Collator object with the locale ID being zh-CN, localeMatcher being lookup, and usage being sort.
+let collator = new intl.Collator('zh-CN', {localeMatcher: 'lookup', usage: 'sort'});
+```
 
 ## resolvedOptions
 
@@ -90,6 +156,18 @@ Obtains the options for creating a **Collator** object.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) |
+| Type | Description |
+| --- | --- |
+| [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | Options for creating a **Collator** object. |
+
+**Examples**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+let collator = new intl.Collator('zh-Hans', { usage: 'sort', ignorePunctuation: true });
+// Obtain the options of the Collator object.
+let options = collator.resolvedOptions();
+let usage = options.usage; // usage = 'sort'
+let ignorePunctuation = options.ignorePunctuation; // ignorePunctuation = true
+```

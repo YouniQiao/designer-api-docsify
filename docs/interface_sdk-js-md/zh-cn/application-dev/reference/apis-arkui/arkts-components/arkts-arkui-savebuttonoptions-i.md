@@ -2,10 +2,13 @@
 
 用于设置保存控件的图标、文本、按钮类型等属性。
 
-> **说明：**&gt;
-> - 建议icon或text至少传入一个。&gt;
+> **说明：**
+> 
+> - 建议icon或text至少传入一个。
+> 
 > - 如果icon、text都不传入，SaveButton将使用默认样式创建，默认样式：SaveIconStyle默认样式为FULL_FILLED；
-> SaveDescription默认样式为DOWNLOAD；ButtonType默认样式为Capsule。&gt;
+> SaveDescription默认样式为DOWNLOAD；ButtonType默认样式为Capsule。
+> 
 > - icon、text和buttonType不支持动态修改。
 
 **起始版本：** 10

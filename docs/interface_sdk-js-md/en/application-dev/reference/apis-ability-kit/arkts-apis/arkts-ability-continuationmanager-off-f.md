@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from 'kits/@kit.AbilityKit';
+import continuationManager from '@kit.AbilityKit';
 ```
 
 ## off('deviceSelected')
@@ -30,20 +30,33 @@ Unsubscribes from device connection events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'deviceSelected' | Yes |
-| token | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'deviceSelected' | Yes | Event type. The value is fixed at **deviceSelected**. |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
-| [16600004](../errorcode-DistributedSchedule.md#16600004-the-specified-callback-has-been-registered) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
+| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
+| [16600004](../errorcode-DistributedSchedule.md#16600004-the-specified-callback-has-been-registered) | The specified callback has been registered. |
+
+**Examples**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = 1;
+try {
+  continuationManager.off("deviceSelected", token);
+} catch (err) {
+  console.error('off failed, cause: ' + JSON.stringify(err));
+}
+```
 
 
 ## off('deviceUnselected')
@@ -70,20 +83,33 @@ Unsubscribes from device disconnection events.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'deviceUnselected' | Yes |
-| token | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'deviceUnselected' | Yes | Event type. The value is fixed at **deviceUnselected**. |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
-| [16600004](../errorcode-DistributedSchedule.md#16600004-the-specified-callback-has-been-registered) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
+| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
+| [16600004](../errorcode-DistributedSchedule.md#16600004-the-specified-callback-has-been-registered) | The specified callback has been registered. |
+
+**Examples**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = 1;
+try {
+  continuationManager.off("deviceUnselected", token);
+} catch (err) {
+  console.error('off failed, cause: ' + JSON.stringify(err));
+}
+```
 
 
 ## off('deviceConnect')
@@ -106,10 +132,22 @@ Unsubscribes from device connection events. This API uses an asynchronous callba
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'deviceConnect' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuationResult&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'deviceConnect' | Yes | Event type. The value is fixed at **deviceConnect**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuationResult&gt; | No | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
+
+**Examples**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+continuationManager.off("deviceConnect", (data) => {
+  console.info('onDeviceConnect deviceId: ' + JSON.stringify(data.id));
+  console.info('onDeviceConnect deviceType: ' + JSON.stringify(data.type));
+  console.info('onDeviceConnect deviceName: ' + JSON.stringify(data.name));
+});
+```
 
 
 ## off('deviceDisconnect')
@@ -132,7 +170,17 @@ Unsubscribes from device disconnection events. This API uses an asynchronous cal
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'deviceDisconnect' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'deviceDisconnect' | Yes | Event type. The value is fixed at **deviceDisconnect**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID. |
+
+**Examples**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+continuationManager.off("deviceDisconnect", (data) => {
+  console.info('onDeviceDisconnect deviceId: ' + JSON.stringify(data));
+});
+```

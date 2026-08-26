@@ -11,7 +11,7 @@ Struct for distributed device identification.@interface DeviceIdentification
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+import distributedDeviceManager from '@kit.DistributedServiceKit';
 ```
 
 ## deviceId

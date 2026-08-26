@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## endTime

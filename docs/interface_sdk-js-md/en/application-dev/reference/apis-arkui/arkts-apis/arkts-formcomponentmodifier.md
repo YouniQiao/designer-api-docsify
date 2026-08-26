@@ -5,7 +5,7 @@
 <!--Del-->
 ### Classes(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [FormComponentModifier](arkts-arkui-formcomponentmodifier-c-sys.md) |
+| Name | Description |
+| --- | --- |
+| [FormComponentModifier](arkts-arkui-formcomponentmodifier-c-sys.md) | Defines FormComponent Modifier@extends FormComponentAttribute @implements AttributeModifier & lt;FormComponentAttribute & gt; |
 <!--DelEnd-->

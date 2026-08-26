@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Device, DeviceResponse, GetDeviceOptions } from 'kits/@kit.BasicServicesKit';
+import Device, { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
 ```
 
 ## apiVersion

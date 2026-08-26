@@ -9,7 +9,7 @@ TLS安全相关操作。当本地证书cert和私钥key不为空时，开启双�
 ## 导入模块
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import socket from '@kit.NetworkKit';
 ```
 
 ## ca

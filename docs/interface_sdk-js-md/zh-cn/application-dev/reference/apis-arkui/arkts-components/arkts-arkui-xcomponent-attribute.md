@@ -31,9 +31,9 @@ enableAnalyzer(enable: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enable | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 是否启用AI图像分析器。   **true**：启用；**false**：禁用。默认值：**false**。 |
 
 ## enableSecure
 
@@ -53,9 +53,9 @@ enableSecure(isSecure: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| isSecure | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isSecure | boolean | 是 | 是否启用安全surface。值**true**表示启用安全surface，**false**表示相反的情况。默认值：**false**。 |
 
 ## hdrBrightness
 
@@ -76,9 +76,9 @@ hdrBrightness(brightness: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| brightness | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| brightness | number | 是 | HDR视频的亮度。取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。    **0.0**表示视频按照SDR亮度显示，**1.0**表示视频按照当前允许的最高HDR亮度显示。默认值：**1.0**。 |
 
 ## hdrBrightness
 
@@ -87,8 +87,8 @@ hdrBrightness(brightness: number, type?: HdrType)
 ```
 
 用于调整组件显示HDR内容时的亮度。当参数type设置为非**HdrType**.DEFAULT时，调用该接口前需先检查Display的hdrFormats属性是否包含对应的HDRFormat。 仅当hdrFormats包含对应的HDRFormat时，当前设备才支持对应的HDR类型，参数设置才会生效；否则将使用默认值**HdrType**.DEFAULT。 其映射关系如下：  
-| type取值 | hdrFormats需包含的HDRFormat |
-| -------- | -------- |
+| type取值 | hdrFormats需包含的HDRFormat |   
+| -------- | -------- |   
 | **HdrType**.AIHDR | HDRFormat.VIDEO_AIHDR |
 **说明：** 仅XComponent构造参数中的type为**XComponentType**.SURFACE时该接口生效，否则该接口不生效。
 
@@ -102,10 +102,10 @@ hdrBrightness(brightness: number, type?: HdrType)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| brightness | number | 是 |
-| type | [HdrType](arkts-arkui-hdrtype-e.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| brightness | number | 是 | HDR内容的亮度。取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。    **0.0**表示内容按照SDR亮度显示，**1.0**表示内容按照当前允许的最高HDR亮度显示。默认值：**1.0**。 |
+| type | [HdrType](arkts-arkui-hdrtype-e.md) | 否 | 显示HDR内容时的HDR类型。默认值：**HdrType.DEFAULT |
 
 ## onDestroy
 
@@ -123,9 +123,9 @@ onDestroy(event: VoidCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | XComponent销毁后的回调。<br>**起始版本：** 18 |
 
 ## onLoad
 
@@ -143,6 +143,6 @@ onLoad(callback: OnNativeLoadCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | 是 | 插件加载完成时回调事件，用于获取XComponent实例对象的context。<br>**起始版本：** 18 |

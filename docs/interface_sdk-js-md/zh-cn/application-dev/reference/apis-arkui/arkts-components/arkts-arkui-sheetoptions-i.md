@@ -32,9 +32,9 @@ shouldDismiss?: (sheetDismiss: SheetDismiss) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| sheetDismiss | [SheetDismiss](arkts-arkui-sheetdismiss-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sheetDismiss | [SheetDismiss](arkts-arkui-sheetdismiss-i.md) | 是 |  |
 
 ## blurStyle
 

@@ -31,9 +31,9 @@ constructor(color: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [color](#color) | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 显示为纯色效果。 |
 
 ## color
 

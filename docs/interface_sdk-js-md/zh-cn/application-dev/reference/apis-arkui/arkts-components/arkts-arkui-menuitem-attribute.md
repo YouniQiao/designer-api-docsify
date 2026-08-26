@@ -31,9 +31,9 @@ contentFont(value: Font)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 菜单项中内容信息的字体样式。 |
 
 ## contentFontColor
 
@@ -53,9 +53,9 @@ contentFontColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 菜单项中内容信息的字体颜色。默认值：'#E5000000' |
 
 ## labelFont
 
@@ -75,9 +75,9 @@ labelFont(value: Font)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 菜单项中标签信息的字体样式。 |
 
 ## labelFontColor
 
@@ -97,9 +97,9 @@ labelFontColor(value: ResourceColor)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 菜单项中标签信息的字体颜色。默认值：'#99000000' |
 
 ## onChange
 
@@ -117,9 +117,9 @@ onChange(callback: (selected: boolean) => void)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | (selected: boolean) = & gt; void | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | (selected: boolean) = & gt; void | 是 | 当前菜单项是否被选中。true：当前菜单项已选中；false：当前菜单项未选中。 |
 
 ## selected
 
@@ -137,9 +137,9 @@ selected(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 菜单项是否选中。true：菜单项被选中；false：菜单项不被选中。默认值：false |
 
 ## selectIcon
 
@@ -157,9 +157,9 @@ selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | boolean \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | 是 | 菜单项被选中时的图标显示方式。true：显示默认的对勾图标；false：不显示图标。ResourceStr：显示指定的图标。SymbolGlyphModifier：显示指定的HMSymbol图标。默认值：false<br>**起始版本：** 12 |
 
 ## subMenuBuilder
 
@@ -179,6 +179,6 @@ Create the submenu for custom menu item.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | Indicates the builder function for submenu. |

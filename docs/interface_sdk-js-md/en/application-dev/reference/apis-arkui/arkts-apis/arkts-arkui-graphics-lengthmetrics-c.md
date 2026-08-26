@@ -24,15 +24,34 @@ Sets whether the **LengthMetrics** object automatically updates with system conf
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the **LengthMetrics** object constructed using [resource](#resource) automatically refreshes the value when the system configuration changes.    **true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes.    **false**: The object does not proactively listen to the system configuration changes. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
+| Type | Description |
+| --- | --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | LengthMetrics** object. |
+
+**Examples**
+
+```TypeScript
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct MyStateSample {
+  @State lengthMetrics: LengthMetrics = LengthMetrics.resource($r('sys.float.ohos_id_button_min_width')).autoRefresh!(true)
+
+  build() {
+    Column() {
+      Button('Test LengthMetrics')
+        .padding({ top: this.lengthMetrics })
+    }
+  }
+}
+```
 
 ## constructor
 
@@ -52,10 +71,10 @@ A constructor used to create a **LengthMetrics** instance. If the **unit** param
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | number | Yes |
-| [unit](#unit) | [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Value of the length property. Value range: [0, +∞). |
+| unit | [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | No | Unit of the length property. |
 
 ## fp
 
@@ -75,15 +94,15 @@ Creates a length property in fp.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Value of the length property. Value range: (-∞, +∞). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
+| Type | Description |
+| --- | --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## lpx
 
@@ -103,15 +122,15 @@ Creates a length property in lpx.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Value of the length property. Value range: (-∞, +∞). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
+| Type | Description |
+| --- | --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## percent
 
@@ -131,15 +150,15 @@ Creates a length property in percent. The value **1** indicates 100%.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Value of the length property. Value range: [0, 1]. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
+| Type | Description |
+| --- | --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## px
 
@@ -159,15 +178,15 @@ Creates a length property in px.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Value of the length property. Value range: (-∞, +∞). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
+| Type | Description |
+| --- | --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## resource
 
@@ -187,15 +206,61 @@ Represents the length of a resource of the Resource type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Value of the length property. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
+| Type | Description |
+| --- | --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+
+**Examples**
+
+Use LengthMetrics to set the padding and margin attributes of Row.
+
+```TypeScript
+import { LengthMetrics, LengthUnit } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SizeExample {
+  build() {
+    Column({ space: 10 }) {
+      Text('margin and padding:')
+        .fontSize(12)
+        .fontColor(0xCCCCCC)
+        .width('90%')
+      Row() {
+        Row() {
+          Row()
+            .size({ width: '100%', height: '100%' })
+            .backgroundColor('#ffd5d5d5')
+        }
+        .width(80)
+        .height(80)
+        .padding({
+          top: new LengthMetrics(20, LengthUnit.VP),
+          bottom: LengthMetrics.px(15),
+          start: LengthMetrics.vp(10),
+          end: LengthMetrics.fp(20)
+        })
+        .margin({
+          top: LengthMetrics.percent(0.1),
+          bottom: LengthMetrics.lpx(20),
+          start: LengthMetrics.resource($r('app.float.row_margin_start')),
+          end: LengthMetrics.vp(10)
+        })
+        .backgroundColor(Color.White)
+      }
+      .backgroundColor("#ff2787d9")
+    }
+    .width('100%')
+    .margin({ top: 5 })
+  }
+}
+```
 
 ## vp
 
@@ -215,15 +280,15 @@ Creates a length property in vp.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Value of the length property. Value range: (-∞, +∞). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
+| Type | Description |
+| --- | --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## unit
 

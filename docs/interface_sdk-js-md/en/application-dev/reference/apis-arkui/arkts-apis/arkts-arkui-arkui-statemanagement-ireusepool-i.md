@@ -9,7 +9,7 @@ The **IReusePool** API provides the features related to the global reuse pool of
 ## Modules to Import
 
 ```TypeScript
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from 'kits/@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## getReusableInfo
@@ -31,16 +31,83 @@ Obtains the information about the recycling instance of a given reusable compone
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| constructor | [ReusableComponentConstructor](arkts-arkui-reusablecomponentconstructor-t.md) | Yes |
-| reuseId | string | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| constructor | [ReusableComponentConstructor](arkts-arkui-reusablecomponentconstructor-t.md) | Yes | Name of the reusable custom component to be queried. |
+| reuseId | string | No | Reuse ID for filtering. If specified, only the information about the reuse pool with the reuse ID is returned. The default value is **undefined**, indicating that information about all reuse pools is returned. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [IReusableInfo](arkts-arkui-arkui-statemanagement-ireusableinfo-i.md)[] \| [IReusableInfo](arkts-arkui-arkui-statemanagement-ireusableinfo-i.md) \| undefined |
+| Type | Description |
+| --- | --- |
+| [IReusableInfo](arkts-arkui-arkui-statemanagement-ireusableinfo-i.md)[] \| [IReusableInfo](arkts-arkui-arkui-statemanagement-ireusableinfo-i.md) \| undefined | If the reuse pool is not configured to accept the given component type, **undefined** is returned. |
+
+**Examples**
+
+```TypeScript
+import { UIUtils, IReusableInfo } from '@kit.ArkUI';
+
+@ReusableV2
+@ComponentV2
+struct ReusableChild {
+  aboutToRecycle() {
+    console.info('ReusableChild aboutToRecycle');
+  }
+  aboutToReuse() {
+    console.info('ReusableChild aboutToReuse');
+  }
+
+  build() {
+    Text('ReusableChild')
+  }
+}
+
+@Entry
+@ComponentV2({ reusePool: 'perInstance', poolAccepts: [ReusableChild], freezeWhenInactive: false })
+struct PoolOwner {
+  @Local showChild: boolean = true;
+
+  inspectPool() {
+    const pool = UIUtils.getCustomComponentContext(this).getReusePool();
+    if (!pool) {
+      return;
+    }
+
+    // Query the type of components accepted by the pool.
+    const info = pool.getReusableInfo(ReusableChild);
+    if (info === undefined) {
+      console.info('No reuse pool that accepts ReusableChild');
+    } else if (Array.isArray(info)) {
+      // Multiple reuseId buckets are used.
+      info.forEach((item: IReusableInfo, i: number) => {
+        console.info(`[${i}] reuseId=${item.reuseId}, count=${item.count}, maxCount=${item.maxCount}`);
+      });
+    } else {
+      // Single entry (reuseId is not used, or a specific reuseId is queried).
+      console.info(`count=${info.count}, maxCount=${info.maxCount}`);
+    }
+
+    // Query a specific reuseId. A single IReusableInfo is always returned.
+    const bucketInfo = pool.getReusableInfo(ReusableChild, 'A') as IReusableInfo;
+    console.info(`reuseId 'A': count=${bucketInfo.count}, maxCount=${bucketInfo.maxCount}`);
+  }
+
+  build() {
+    Column() {
+      Button('Switch Child Component')
+        .onClick(() => {
+          this.showChild = !this.showChild;
+        })
+      Button('Check Pool')
+        .onClick(() => this.inspectPool())
+      if (this.showChild) {
+        ReusableChild()
+          .reuse({ reuseId: () => 'A' })
+      }
+    }
+  }
+}
+```
 
 ## preRender
 
@@ -60,13 +127,95 @@ Pre-creates @Reusable/@ReusableV2 decorated components and places them in this r
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;[]&gt; | Yes |
-| times | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;[]&gt; | Yes | WrappedBuilder** that contains the @Builder decorated function to be executed *n* times. Each execution should create one or more @Reusable/@ReusableV2 decorated components. |
+| times | number | Yes | Number of times the @Builder decorated function is executed. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise parsed when the idle task is successfully completed. This promise returns no value. |
+
+**Examples**
+
+```TypeScript
+import { UIUtils, IReusableInfo } from '@kit.ArkUI';
+
+@ReusableV2
+@ComponentV2
+struct ReusableComponent {
+  @Param param: number = 8;
+
+  aboutToAppear() {
+    console.info('ReusableComponent aboutToAppear');
+  }
+  aboutToReuse() {
+    console.info('ReusableComponent aboutToReuse');
+  }
+
+  build() {
+    Column() {
+      Text(`ReusableComponent ${this.param}`)
+    }
+  }
+}
+
+@Builder 
+function preRenderBuilder() {
+  ReusableComponent()
+}
+
+@Entry
+@ComponentV2({ reusePool: 'shared', poolAccepts: [ReusableComponent], freezeWhenInactive: false })
+struct Index {
+  @Local onUIFullyLoaded: boolean = false;
+
+  aboutToAppear() {
+    // Obtain the pool and schedule pre-rendering.
+    const pool = UIUtils.getCustomComponentContext(this).getReusePool();
+    // Preload the reusable components in preRenderBuilder to this global reuse pool and execute preRenderBuilder once.
+    pool!.preRender(new WrappedBuilder<[]>(preRenderBuilder), 1)
+      .then(() => {
+        console.info('ReusableComponent preRender completes');
+      });
+  }
+
+  checkPool() {
+    // Obtain the number of components in the global reuse pool.
+    const reusePool = UIUtils.getCustomComponentContext(this).getReusePool();
+    const reusableInfo: IReusableInfo = reusePool!.getReusableInfo(ReusableComponent) as IReusableInfo;
+    console.info(`ReusableComponent reuse pool count=${reusableInfo.count}`);
+  }
+
+  build() {
+    Column({ space: 5 }) {
+      Button('Switch')
+        .onClick(() => {
+          this.onUIFullyLoaded = !this.onUIFullyLoaded;
+        })
+        .width(100)
+      Button('Check pool')
+        .onClick(() => {
+          this.checkPool();
+        })
+        .width(100)
+      CompA({ showFullUI: this.onUIFullyLoaded })
+    }
+    .width('100%')
+  }
+}
+
+@ComponentV2
+struct CompA {
+  @Require @Param showFullUI: boolean;
+
+  build() {
+    if (this.showFullUI) {
+      // This will reuse the pre-rendered instance from the pool.
+      ReusableComponent()
+    }
+  }
+}
+```

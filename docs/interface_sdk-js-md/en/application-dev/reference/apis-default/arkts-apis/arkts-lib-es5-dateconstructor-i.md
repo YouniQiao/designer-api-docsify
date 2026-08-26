@@ -13,8 +13,8 @@
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -23,8 +23,8 @@ new(): Date
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -33,14 +33,14 @@ new(value: number | string): Date
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number \| string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number \| string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -51,20 +51,20 @@ Creates a new Date.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| year | number | Yes |
-| monthIndex | number | Yes |
-| date | number | No |
-| hours | number | No |
-| minutes | number | No |
-| seconds | number | No |
-| ms | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| year | number | Yes |  |
+| monthIndex | number | Yes |  |
+| date | number | No |  |
+| hours | number | No |  |
+| minutes | number | No |  |
+| seconds | number | No |  |
+| ms | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## now
 
 ```TypeScript
@@ -75,8 +75,8 @@ Returns the number of milliseconds elapsed since midnight, January 1, 1970 Unive
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## parse
 
 ```TypeScript
@@ -87,14 +87,14 @@ Parses a string containing a date, and returns the number of milliseconds betwee
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| s | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| s | string | Yes |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## UTC
 
 ```TypeScript
@@ -105,20 +105,20 @@ Returns the number of milliseconds between midnight, January 1, 1970 Universal C
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| year | number | Yes |
-| monthIndex | number | Yes |
-| date | number | No |
-| hours | number | No |
-| minutes | number | No |
-| seconds | number | No |
-| ms | number | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| year | number | Yes |  |
+| monthIndex | number | Yes |  |
+| date | number | No |  |
+| hours | number | No |  |
+| minutes | number | No |  |
+| seconds | number | No |  |
+| ms | number | No |  |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
+| Type | Description |
+| --- | --- |
 ## prototype
 
 ```TypeScript

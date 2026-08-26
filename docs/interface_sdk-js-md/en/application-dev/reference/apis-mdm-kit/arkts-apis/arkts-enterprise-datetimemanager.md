@@ -2,7 +2,8 @@
 
 The **dateTimeManager** module provides APIs for system time management.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The APIs of this module are available only to
 > [MDM applications](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application), and can be
 > called only after the device administrator application is activated via
@@ -17,7 +18,7 @@ The **dateTimeManager** module provides APIs for system time management.
 ## Modules to Import
 
 ```TypeScript
-import { dateTimeManager } from 'kits/@kit.MDMKit';
+import dateTimeManager from '@kit.MDMKit';
 ```
 
 ## Summary
@@ -25,12 +26,12 @@ import { dateTimeManager } from 'kits/@kit.MDMKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [disallowModifyDateTime(System Time Management)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) |
-| [disallowModifyDateTime(System Time Management)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) |
-| [isModifyDateTimeDisallowed(System Time Management)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) |
-| [isModifyDateTimeDisallowed(System Time Management)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) |
-| [setDateTime(System Time Management)](arkts-mdm-datetimemanager-setdatetime-f-sys.md) |
-| [setDateTime(System Time Management)](arkts-mdm-datetimemanager-setdatetime-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [disallowModifyDateTime(System Time Management)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) | Disallows the device to modify the system time. This API uses an asynchronous callback to return the result. |
+| [disallowModifyDateTime(System Time Management)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) | Disallows the device to modify the system time. This API uses a promise to return the result. |
+| [isModifyDateTimeDisallowed(System Time Management)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) | Queries whether the system time of a device can be modified. This API uses an asynchronous callback to return the result. |
+| [isModifyDateTimeDisallowed(System Time Management)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) | Queries whether the system time of a device can be modified. This API uses a promise to return the result. |
+| [setDateTime(System Time Management)](arkts-mdm-datetimemanager-setdatetime-f-sys.md) | Sets the system time. This API uses an asynchronous callback to return the result. |
+| [setDateTime(System Time Management)](arkts-mdm-datetimemanager-setdatetime-f-sys.md) | Sets the system time. This API uses a promise to return the result. |
 <!--DelEnd-->

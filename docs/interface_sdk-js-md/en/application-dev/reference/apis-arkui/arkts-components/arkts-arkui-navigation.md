@@ -2,7 +2,7 @@
 
 The **Navigation** component is the root view container for navigation. It typically functions as the root container of a page and includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of **Navigation**) and non-home page content (child components of NavDestination) through routing.
 > **NOTE**
-> - Since API version 11, this component supports the safe area attribute by default, with the default attribute> value being> **expandSafeArea([SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM])**.> You can override this attribute to change the default behavior. In earlier versions, you need to use the> [expandSafeArea](arkts-arkui-commonmethod-c.md#expandsafearea) attribute to implement the safe area feature.>> - When [NavBar](arkts-arkui-navbar-t.md) is nested within a **Navigation** component, the lifecycle of the inner> **NavDestination** component does not synchronize with the outer **NavDestination** component or the lifecycle of a> modal.>> - If the [title](arkts-arkui-navigation-attribute.md#title) and [subTitle](arkts-arkui-navigation-attribute.md#subtitle) are not set> and [hideBackButton](arkts-arkui-navigation-attribute.md#hidebackbutton) is set to **true**, the title bar is not displayed.>> - During subpage navigation within **Navigation**, the new page actively requests focus.>> - You are not advised to use stack operations in aboutToAppear, as the> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation> failures.
+> - Since API version 11, this component supports the safe area attribute by default, with the default attribute > value being > **expandSafeArea([SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM])**. > You can override this attribute to change the default behavior. In earlier versions, you need to use the > [expandSafeArea](arkts-arkui-commonmethod-c.md#expandsafearea) attribute to implement the safe area feature. > > - When [NavBar](arkts-arkui-navbar-t.md) is nested within a **Navigation** component, the lifecycle of the inner > **NavDestination** component does not synchronize with the outer **NavDestination** component or the lifecycle of a > modal. > > - If the [title](arkts-arkui-navigation-attribute.md#title) and [subTitle](arkts-arkui-navigation-attribute.md#subtitle) are not set > and [hideBackButton](arkts-arkui-navigation-attribute.md#hidebackbutton) is set to **true**, the title bar is not displayed. > > - During subpage navigation within **Navigation**, the new page actively requests focus. > > - You are not advised to use stack operations in aboutToAppear, as the > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation > failures.
 
 ## Child Components
 
@@ -40,9 +40,9 @@ Binds a navigation controller to the **Navigation** component, suitable for page
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes | Navigation controller object. |
 
 ## Navigation
 
@@ -62,24 +62,3278 @@ Binds a routing stack to the **Navigation** component and specifies a **NavDesti
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes |
-| homeDestination | [HomePathInfo](arkts-arkui-homepathinfo-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes | Information about the routing stack. |
+| homeDestination | [HomePathInfo](arkts-arkui-homepathinfo-i.md) | Yes | Home page **NavDestination** information. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
+
+## Examples
+
+This example demonstrates the layout of a navigation page, including the title bar ([title](#title)), menu bar ([menus](#menus)), content area, and toolbar ([toolbarConfiguration](#toolbarconfiguration10)).
+
+```TypeScript
+// xxx.ets
+
+@Entry
+@Component
+struct NavigationExample {
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  @Builder
+  NavigationTitle() {
+    Column() {
+      Text('Title')
+        .fontColor('#182431')
+        .fontSize(30)
+        .lineHeight(41)
+        .fontWeight(700)
+      Text('subtitle')
+        .fontColor('#182431')
+        .fontSize(14)
+        .lineHeight(19)
+        .opacity(0.4)
+        .margin({ top: 2, bottom: 20 })
+    }.alignItems(HorizontalAlign.Start)
+  }
+
+  @Builder
+  NavigationMenus() {
+    Row() {
+      // Replace 'resources/base/media/ic_public_add.svg' with the resource file you use.
+      Image('resources/base/media/ic_public_add.svg')
+        .width(24)
+        .height(24)
+      // Replace 'resources/base/media/ic_public_add.svg' with the resource file you use.
+      Image('resources/base/media/ic_public_add.svg')
+        .width(24)
+        .height(24)
+        .margin({ left: 24 })
+      // Replace 'resources/base/media/ic_public_more.svg' with the image resource file you use.
+      Image('resources/base/media/ic_public_more.svg')
+        .width(24)
+        .height(24)
+        .margin({ left: 24 })
+    }
+  }
+
+  build() {
+    Column() {
+      Navigation() {
+        TextInput({ placeholder: 'search...' })
+          .width('90%')
+          .height(40)
+          .backgroundColor('#FFFFFF')
+          .margin({ top: 8 })
+
+        List({ space: 12, initialIndex: 0 }) {
+          ForEach(this.arr, (item: number) => {
+            ListItem() {
+              Text('' + item)
+                .width('90%')
+                .height(72)
+                .backgroundColor('#FFFFFF')
+                .borderRadius(24)
+                .fontSize(16)
+                .fontWeight(500)
+                .textAlign(TextAlign.Center)
+            }
+          }, (item: number) => item.toString())
+        }
+        .height(324)
+        .width('100%')
+        .margin({ top: 12, left: '10%' })
+      }
+      .title(this.NavigationTitle)
+      .menus(this.NavigationMenus)
+      .titleMode(NavigationTitleMode.Full)
+      .toolbarConfiguration([
+        {
+          // Replace $r("app.string.navigation_toolbar_add") and $r("app.media.ic_public_highlights_ed") with the image resource file you use.
+          value: $r("app.string.navigation_toolbar_add"),
+          icon: $r("app.media.ic_public_highlights_ed")
+        },
+        {
+          // Replace $r("app.string.navigation_toolbar_app") and $r("app.media.ic_public_highlights") with the image resource file you use.
+          value: $r("app.string.navigation_toolbar_app"),
+          icon: $r("app.media.ic_public_highlights")
+        },
+        {
+          // Replace $r("app.string.navigation_toolbar_collect") and $r("app.media.ic_public_highlights") with the image resource file you use.
+          value: $r("app.string.navigation_toolbar_collect"),
+          icon: $r("app.media.ic_public_highlights")
+        }
+      ])
+      .hideTitleBar(false)
+      .hideToolBar(false)
+      .onTitleModeChange((titleModel: NavigationTitleMode) => {
+        console.info('titleMode' + titleModel)
+      })
+    }.width('100%').height('100%').backgroundColor('#F1F3F5')
+  }
+}
+```
+
+This example demonstrates the use of methods in [NavPathStack](#navpathstack10) and route interception.
+
+```TypeScript
+// Index.ets
+@Entry
+@Component
+struct NavigationExample {
+  pageInfos: NavPathStack = new NavPathStack();
+  isUseInterception: boolean = false;
+
+  registerInterception() {
+    this.pageInfos.setInterception({
+      // Interception before page redirection, allowing for stack operations. The setting takes effect in the current redirection.
+      willShow: (from: NavDestinationContext | "navBar", to: NavDestinationContext | "navBar",
+        operation: NavigationOperation, animated: boolean) => {
+        if (!this.isUseInterception) {
+          return;
+        }
+        if (typeof to === "string") {
+          console.info("target page is navigation home");
+          return;
+        }
+        // Redirect the target page from pageTwo to pageOne.
+        let target: NavDestinationContext = to as NavDestinationContext;
+        if (target.pathInfo.name === 'pageTwo') {
+          target.pathStack.pop();
+          target.pathStack.pushPathByName('pageOne', null);
+        }
+      },
+      // Callback invoked after the page is navigated. Stack operations in this callback are effective in the next navigation.
+      didShow: (from: NavDestinationContext | "navBar", to: NavDestinationContext | "navBar",
+        operation: NavigationOperation, isAnimated: boolean) => {
+        if (!this.isUseInterception) {
+          return;
+        }
+        if (typeof from === "string") {
+          console.info("current transition is from navigation home");
+        } else {
+          console.info(`current transition is from  ${(from as NavDestinationContext).pathInfo.name}`);
+        }
+        if (typeof to === "string") {
+          console.info("current transition to is navBar");
+        } else {
+          console.info(`current transition is to ${(to as NavDestinationContext).pathInfo.name}`);
+        }
+      },
+      // Callback invoked when the display mode of the Navigation component switches between single-column and split-column.
+      modeChange: (mode: NavigationMode) => {
+        if (!this.isUseInterception) {
+          return;
+        }
+        console.info(`current navigation mode is ${mode}`);
+      }
+    })
+  }
+
+  build() {
+    Navigation(this.pageInfos) {
+      Column() {
+        Button('pushPath', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.pushPath({ name: 'pageOne' }); // Push the navigation destination page specified by name to the stack.
+          })
+        Button('use interception', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.isUseInterception = !this.isUseInterception;
+            if (this.isUseInterception) {
+              this.registerInterception();
+            } else {
+              this.pageInfos.setInterception(undefined);
+            }
+          })
+      }
+    }.title('NavIndex')
+  }
+}
+```
+
+```TypeScript
+// PageOne.ets
+class TmpClass {
+  count: number = 10;
+}
+
+@Builder
+export function PageOneBuilder(name: string, param: Object) {
+  PageOne()
+}
+
+@Component
+export struct PageOne {
+  pageInfos: NavPathStack = new NavPathStack();
+
+  build() {
+    NavDestination() {
+      Column() {
+        Button('pushPathByName', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            let tmp = new TmpClass();
+            this.pageInfos.pushPathByName('pageTwo', tmp); // Push the navigation destination page specified by name, with the data specified by param, to the stack.
+          })
+        Button('singletonLaunchMode', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.pushPath({ name: 'pageOne' },
+              { launchMode: LaunchMode.MOVE_TO_TOP_SINGLETON }); // Search from the bottom to the top of the stack. If the page with the specified name exists, move that page to the top of the stack.
+          })
+        Button('popToname', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.popToName('pageTwo'); // Pop the first navigation destination page that matches the value of name to the top of the routing stack.
+            console.info(`popToName ${JSON.stringify(this.pageInfos)},` + 
+              `Return value ${JSON.stringify(this.pageInfos.popToName('pageTwo'))}`); 
+          })
+        Button('popToIndex', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.popToIndex(1); // Return the routing stack to the navigation destination page that matches the value of index.
+            console.info(`popToIndex ${JSON.stringify(this.pageInfos)}`);
+          })
+        Button('moveToTop', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.moveToTop('pageTwo'); // Move to the top of the routing stack the first navigation destination page that matches the value of name.
+            console.info(`moveToTop ${JSON.stringify(this.pageInfos)},` + 
+              `Return value ${JSON.stringify(this.pageInfos.popToName('pageTwo'))}`); 
+          })
+        Button('moveIndexToTop', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.moveIndexToTop(1); // Move to the top of the routing stack the navigation destination page that matches the value of index.
+            console.info(`moveIndexToTop ${JSON.stringify(this.pageInfos)}`);
+          })
+        Button('clear', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.clear(); // Clear the routing stack.
+          })
+        Button('get', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            console.info('-------------------');
+            console.info(`Obtain names of all NavDestination pages in the stack ${JSON.stringify(this.pageInfos.getAllPathName())}`);
+            console.info(`Obtained parameter information of the navigation destination page specified by index ${JSON.stringify(this.pageInfos.getParamByIndex(1))}`);
+            console.info(`Obtained parameter information of all the navigation destination pages specified by name ${JSON.stringify(this.pageInfos.getParamByName('pageTwo'))}`);
+            console.info(`Obtained the index information of all the navigation destination pages specified by name ${JSON.stringify(this.pageInfos.getIndexByName('pageOne'))}`);
+            console.info(`Obtain the stack size ${JSON.stringify(this.pageInfos.size())}`);
+          })
+      }.width('100%').height('100%')
+    }.title('pageOne')
+    .onBackPressed(() => {
+      const popDestinationInfo = this.pageInfos.pop(); // Pop the top element out of the routing stack.
+      console.info(`pop return value ${JSON.stringify(popDestinationInfo)}`);
+      return true;
+    }).onReady((context: NavDestinationContext) => {
+      this.pageInfos = context.pathStack;
+    })
+  }
+}
+```
+
+```TypeScript
+// PageTwo.ets
+@Builder
+export function PageTwoBuilder(name: string, param: Object) {
+  PageTwo()
+}
+
+@Component
+export struct PageTwo {
+  pathStack: NavPathStack = new NavPathStack();
+  private menuItems: Array<NavigationMenuItem> = [
+    {
+      // Replace 'resources/base/media/undo.svg' with the image resource file you use.
+      value: "1",
+      icon: 'resources/base/media/undo.svg',
+    },
+    {
+      // Replace 'resources/base/media/redo.svg' with the image resource file you use.
+      value: "2",
+      icon: 'resources/base/media/redo.svg',
+      isEnabled: false,
+    },
+    {
+      // Replace 'resources/base/media/ic_public_ok.svg' with the image resource file you use.
+      value: "3",
+      icon: 'resources/base/media/ic_public_ok.svg',
+      isEnabled: true,
+    }
+  ];
+
+  build() {
+    NavDestination() {
+      Column() {
+        Button('pushPathByName', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pathStack.pushPathByName('pageOne', null);
+          })
+      }.width('100%').height('100%')
+    }.title('pageTwo')
+    .menus(this.menuItems)
+    .onBackPressed(() => {
+      this.pathStack.pop();
+      return true;
+    })
+    .onReady((context: NavDestinationContext) => {
+      this.pathStack = context.pathStack;
+      console.info(`current page config info is ${JSON.stringify(context.getConfigInRouteMap())}`);
+    })
+  }
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "pageOne",
+      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
+      "buildFunction": "PageOneBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    },
+    {
+      "name": "pageTwo",
+      "pageSourceFile": "src/main/ets/pages/PageTwo.ets",
+      "buildFunction": "PageTwoBuilder"
+    }
+  ]
+}
+```
+
+This sample demonstrates how to set a custom transition animation and an interactive transition animation for each [NavDestination](ts-basic-components-navdestination.md) page.
+
+```TypeScript
+// Index.ets
+import { CustomTransition, AnimateCallback } from './CustomNavigationUtils'
+
+@Entry
+@Component
+struct NavigationExample {
+  pageInfos: NavPathStack = new NavPathStack();
+
+  aboutToAppear() {
+    if (this.pageInfos === undefined) {
+      this.pageInfos = new NavPathStack();
+    }
+    this.pageInfos.pushPath({ name: 'pageOne', param: CustomTransition.getInstance().getAnimationId() });
+  }
+
+  build() {
+    Navigation(this.pageInfos) {
+    }
+    .title('NavIndex')
+    .hideNavBar(true)
+    .customNavContentTransition((from: NavContentInfo, to: NavContentInfo, operation: NavigationOperation) => {
+      if (from.mode == NavDestinationMode.DIALOG || to.mode == NavDestinationMode.DIALOG) {
+        return undefined;
+      }
+
+      // No custom animation for the home page
+      if (from.index === -1 || to.index === -1) {
+        return undefined;
+      }
+
+      CustomTransition.getInstance().operation = operation;
+      if (CustomTransition.getInstance().interactive) {
+        let customAnimation: NavigationAnimatedTransition = {
+          onTransitionEnd: (isSuccess: boolean) => {
+            console.info("===== current transition is " + isSuccess);
+            CustomTransition.getInstance().recoverState();
+            CustomTransition.getInstance().proxy = undefined;
+          },
+          transition: (transitionProxy: NavigationTransitionProxy) => {
+            CustomTransition.getInstance().proxy = transitionProxy;
+            let targetIndex: string | undefined = operation == NavigationOperation.PUSH ?
+              (to.navDestinationId) : (from.navDestinationId);
+            if (targetIndex) {
+              CustomTransition.getInstance().fireInteractiveAnimation(targetIndex, operation);
+            }
+          },
+          isInteractive: CustomTransition.getInstance().interactive
+        }
+        return customAnimation;
+      }
+      let customAnimation: NavigationAnimatedTransition = {
+        onTransitionEnd: (isSuccess: boolean) => {
+          console.info(`current transition result is ${isSuccess}`);
+        },
+        timeout: 7000,
+        // Called when transition starts. The transition context proxy object is passed in.
+        transition: (transitionProxy: NavigationTransitionProxy) => {
+          if (!from.navDestinationId || !to.navDestinationId) {
+            return;
+          }
+          // Obtain the corresponding transition animation callback from the CustomTransition class by subpage ID.
+          let fromParam: AnimateCallback = CustomTransition.getInstance().getAnimateParam(from.navDestinationId);
+          let toParam: AnimateCallback = CustomTransition.getInstance().getAnimateParam(to.navDestinationId);
+          if (operation == NavigationOperation.PUSH) {
+            if (toParam.start) {
+              toParam.start(true, false);
+            }
+            this.getUIContext()?.animateTo({
+              duration: 500, onFinish: () => {
+                transitionProxy.finishTransition();
+              }
+            }, () => {
+              if (toParam.finish) {
+                toParam.finish(true, false);
+              }
+            })
+          } else {
+            if (fromParam.start) {
+              fromParam.start(true, true);
+            }
+            this.getUIContext()?.animateTo({
+              duration: 500, onFinish: () => {
+                transitionProxy.finishTransition();
+              }
+            }, () => {
+              if (fromParam.finish) {
+                fromParam.finish(true, true);
+              }
+            })
+          }
+        }
+      };
+      return customAnimation;
+    })
+  }
+}
+```
+
+```TypeScript
+// PageOne.ets
+import { CustomTransition } from './CustomNavigationUtils';
+
+@Builder
+export function PageOneBuilder(name: string, param: Object) {
+  PageOne()
+}
+
+@Component
+export struct PageOne {
+  pageInfos: NavPathStack = new NavPathStack();
+  @State translateX: string = '0';
+  pageId: string = '';
+  rectWidth: number = 0;
+  interactive: boolean = false;
+
+  registerCallback() {
+    CustomTransition.getInstance().registerNavParam(this.pageId, (isPush: boolean, isExit: boolean) => {
+      if (isPush) {
+        this.translateX = '100%';
+      } else {
+        this.translateX = '0';
+      }
+    }, (isPush: boolean, isExit: boolean) => {
+      if (isPush) {
+        this.translateX = '0';
+      } else {
+        this.translateX = '100%';
+      }
+    }, (isPush: boolean, isExit: boolean) => {
+      this.translateX = '0';
+    }, (operation: NavigationOperation) => {
+      if (operation == NavigationOperation.PUSH) {
+        this.translateX = '100%';
+        this.getUIContext()?.animateTo({
+          duration: 1000,
+          onFinish: () => {
+            this.translateX = '0';
+          }
+        }, () => {
+          this.translateX = '0';
+        })
+      } else {
+        this.translateX = '0';
+        this.getUIContext()?.animateTo({
+          duration: 1000,
+          onFinish: () => {
+            this.translateX = '0';
+          }
+        }, () => {
+          this.translateX = '100%';
+        })
+      }
+    }, 200);
+  }
+
+  build() {
+    NavDestination() {
+      Column() {
+        Button(`setInteractive`)
+          .onClick(() => {
+            CustomTransition.getInstance().interactive = !CustomTransition.getInstance().interactive;
+            this.interactive = CustomTransition.getInstance().interactive;
+          })
+
+        Button('pushPathByName', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            // Push the navigation destination page specified by name, with the data specified by param, to the routing stack.
+            this.pageInfos.pushDestinationByName('pageTwo', CustomTransition.getInstance().getAnimationId());
+          })
+      }
+      .size({ width: '100%', height: '100%' })
+    }
+    .title('pageOne')
+    .onDisAppear(() => {
+      CustomTransition.getInstance().unRegisterNavParam(this.pageId);
+    })
+    .onReady((context: NavDestinationContext) => {
+      this.pageInfos = context.pathStack;
+      if (context.navDestinationId) {
+        this.pageId = context.navDestinationId;
+        this.registerCallback();
+      }
+    })
+    .translate({ x: this.translateX })
+    .backgroundColor('#F1F3F5')
+    .gesture(PanGesture()
+      .onActionStart((event: GestureEvent) => {
+        this.rectWidth = event.target.area.width as number;
+        if (event.offsetX < 0) {
+          this.pageInfos.pushPath({ name: 'pageTwo', param: CustomTransition.getInstance().getAnimationId() });
+        } else {
+          this.pageInfos.pop();
+        }
+      })
+      .onActionUpdate((event: GestureEvent) => {
+        let rate = event.fingerList[0].localX / this.rectWidth;
+        CustomTransition.getInstance().updateProgress(rate);
+      })
+      .onActionEnd((event: GestureEvent) => {
+        let rate: number = event.fingerList[0].localX / this.rectWidth;
+        CustomTransition.getInstance().finishInteractiveAnimation(rate);
+      }))
+  }
+}
+```
+
+```TypeScript
+// PageTwo.ets
+import { CustomTransition } from './CustomNavigationUtils'
+
+@Builder
+export function PageTwoBuilder(name: string, param: Object) {
+  PageTwo({ param: param as number })
+}
+
+@Component
+export struct PageTwo {
+  pageInfos: NavPathStack = new NavPathStack();
+  @State translateX: string = '0';
+  pageId: string = '';
+  rectWidth: number = 0;
+  param: number = 0;
+
+  registerCallback() {
+    CustomTransition.getInstance().registerNavParam(this.pageId, (isPush: boolean, isExit: boolean) => {
+      if (isPush) {
+        this.translateX = '100%'
+      } else {
+        this.translateX = '0';
+      }
+    }, (isPush: boolean, isExit: boolean) => {
+      if (isPush) {
+        this.translateX = '0';
+      } else {
+        this.translateX = '100%';
+      }
+    }, (isPush: boolean, isExit: boolean) => {
+      this.translateX = '0';
+    }, (operation: NavigationOperation) => {
+      if (operation == NavigationOperation.PUSH) {
+        this.translateX = '100%';
+        this.getUIContext()?.animateTo({
+          duration: 500, onFinish: () => {
+            this.translateX = '0';
+          }
+        }, () => {
+          this.translateX = '0';
+        })
+      } else {
+        this.translateX = '0';
+        this.getUIContext()?.animateTo({
+          duration: 500, onFinish: () => {
+            this.translateX = "0";
+          }
+        }, () => {
+          this.translateX = '100%';
+        })
+      }
+    }, 2000)
+  }
+
+  build() {
+    NavDestination() {
+      Column() {
+        Button('pushPathByName', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            // Push the navigation destination page specified by name, with the data specified by param, to the routing stack.
+            this.pageInfos.pushPath({ name: 'pageOne', param: CustomTransition.getInstance().getAnimationId() });
+          })
+      }
+      .size({ width: '100%', height: '100%' })
+    }
+    .title('pageTwo')
+    .gesture(PanGesture()
+      .onActionStart((event: GestureEvent) => {
+        this.rectWidth = event.target.area.width as number;
+        if (event.offsetX < 0) {
+          this.pageInfos.pushPath({ name: 'pageOne', param: CustomTransition.getInstance().getAnimationId() });
+        } else {
+          this.pageInfos.pop();
+        }
+      })
+      .onActionUpdate((event: GestureEvent) => {
+        let rate = event.fingerList[0].localX / this.rectWidth;
+        CustomTransition.getInstance().updateProgress(rate);
+      })
+      .onActionEnd((event: GestureEvent) => {
+        let rate = event.fingerList[0].localX / this.rectWidth;
+        CustomTransition.getInstance().finishInteractiveAnimation(rate);
+      }))
+    .onAppear(() => {
+      this.registerCallback();
+    })
+    .onDisAppear(() => {
+      CustomTransition.getInstance().unRegisterNavParam(this.pageId);
+    })
+    .onReady((context: NavDestinationContext) => {
+      this.pageInfos = context.pathStack;
+      if (context.navDestinationId) {
+        this.pageId = context.navDestinationId;
+        this.registerCallback();
+      }
+    })
+    .translate({ x: this.translateX })
+    .backgroundColor(Color.Yellow)
+  }
+}
+```
+
+```TypeScript
+// src/main/pages/CustomNavigationUtils.ets
+// Custom API to save the transition animation callback and parameters related to a page.
+
+export interface AnimateCallback {
+  finish: ((isPush: boolean, isExit: boolean) => void | undefined) | undefined;
+  start: ((isPush: boolean, isExit: boolean) => void | undefined) | undefined;
+  onFinish: ((isPush: boolean, isExit: boolean) => void | undefined) | undefined;
+  interactive: ((operation: NavigationOperation) => void | undefined) | undefined;
+  timeout: (number | undefined) | undefined;
+}
+
+const customTransitionMap: Map<string, AnimateCallback> = new Map();
+
+export class CustomTransition {
+  static delegate = new CustomTransition();
+  interactive: boolean = false;
+  proxy: NavigationTransitionProxy | undefined = undefined;
+  private animationId: number = 0;
+  operation: NavigationOperation = NavigationOperation.PUSH;
+
+  static getInstance() {
+    return CustomTransition.delegate;
+  }
+
+  /* Register animation callbacks for a page.
+   * name: unique ID of the target page
+   * startCallback: used to set the page state at the start of the animation.
+   * endCallback: used to set the page state at the end of the animation.
+   * onFinish: used to perform other operations after the animation ends.
+   * interactiveCallback: used to handle the interactive part of the transition.
+   * timeout: timeout for ending the transition.
+   */
+  registerNavParam(name: string, startCallback: (operation: boolean, isExit: boolean) => void,
+    endCallback: (operation: boolean, isExit: boolean) => void,
+    onFinish: (operation: boolean, isExit: boolean) => void,
+    interactiveCallback: (operation: NavigationOperation) => void,
+    timeout: number): void {
+    if (customTransitionMap.has(name)) {
+      let param = customTransitionMap.get(name);
+      if (param != undefined) {
+        param.start = startCallback;
+        param.finish = endCallback;
+        param.timeout = timeout;
+        param.onFinish = onFinish;
+        param.interactive = interactiveCallback;
+        return;
+      }
+    }
+    let params: AnimateCallback = {
+      timeout: timeout,
+      start: startCallback,
+      finish: endCallback,
+      onFinish: onFinish,
+      interactive: interactiveCallback
+    };
+    customTransitionMap.set(name, params);
+  }
+
+  getAnimationId() {
+    return Date.now();
+  }
+
+  unRegisterNavParam(name: string): void {
+    customTransitionMap.delete(name);
+  }
+
+  fireInteractiveAnimation(id: string, operation: NavigationOperation) {
+    let animation = customTransitionMap.get(id)?.interactive;
+    if (!animation) {
+      return;
+    }
+    animation(operation);
+  }
+
+  updateProgress(progress: number) {
+    if (!this.proxy?.updateTransition) {
+      return;
+    }
+    progress = this.operation == NavigationOperation.PUSH ? 1 - progress : progress;
+    this.proxy?.updateTransition(progress);
+  }
+
+  cancelTransition() {
+    if (this.proxy?.cancelTransition) {
+      this.proxy.cancelTransition();
+    }
+  }
+
+  recoverState() {
+    if (!this.proxy?.from.navDestinationId || !this.proxy?.to.navDestinationId) {
+      return;
+    }
+    let fromParam = customTransitionMap.get(this.proxy.from.navDestinationId);
+    if (fromParam?.onFinish) {
+      fromParam.onFinish(false, false);
+    }
+    let toParam = customTransitionMap.get(this.proxy?.to.navDestinationId);
+    if (toParam?.onFinish) {
+      toParam.onFinish(true, true);
+    }
+  }
+
+  finishTransition() {
+    this.proxy?.finishTransition();
+  }
+
+  finishInteractiveAnimation(rate: number) {
+    if (this.operation == NavigationOperation.PUSH) {
+      if (rate > 0.5) {
+        if (this.proxy?.cancelTransition) {
+          this.proxy.cancelTransition();
+        }
+      } else {
+        this.proxy?.finishTransition();
+      }
+    } else {
+      if (rate > 0.5) {
+        this.proxy?.finishTransition();
+      } else {
+        if (this.proxy?.cancelTransition) {
+          this.proxy.cancelTransition();
+        }
+      }
+    }
+  }
+
+  getAnimateParam(name: string): AnimateCallback {
+    let result: AnimateCallback = {
+      start: customTransitionMap.get(name)?.start,
+      finish: customTransitionMap.get(name)?.finish,
+      timeout: customTransitionMap.get(name)?.timeout,
+      onFinish: customTransitionMap.get(name)?.onFinish,
+      interactive: customTransitionMap.get(name)?.interactive,
+    };
+    return result;
+  }
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "pageOne",
+      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
+      "buildFunction": "PageOneBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    },
+    {
+      "name": "pageTwo",
+      "pageSourceFile": "src/main/ets/pages/PageTwo.ets",
+      "buildFunction": "PageTwoBuilder"
+    }
+  ]
+}
+```
+
+This example demonstrates how to use the APIs in [NavPathStack](#navpathstack10) to pass parameters back to the previous page.
+
+```TypeScript
+// Index.ets
+@Entry
+@Component
+struct NavigationExample {
+  pageInfo: NavPathStack = new NavPathStack();
+
+  build() {
+    Navigation(this.pageInfo) {
+      Column() {
+        Button('StartTest', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pushPath({ name: 'pageOne' }); // Push the navigation destination page specified by name to the routing stack.
+          })
+      }
+    }.title('NavIndex')
+  }
+}
+```
+
+```TypeScript
+// PageOne.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TmpClass {
+  count: number = 10;
+}
+
+class ParamWithOp {
+  operation: number = 1;
+  count: number = 10;
+}
+
+@Builder
+export function PageOneBuilder(name: string, param: Object) {
+  PageOne()
+}
+
+@Component
+export struct PageOne {
+  pageInfo: NavPathStack = new NavPathStack();
+  @State message: string = 'Hello World';
+
+  build() {
+    NavDestination() {
+      Column() {
+        Text(this.message)
+          .width('80%')
+          .height(50)
+          .margin(10)
+
+        Button('pushPath', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(10)
+          .onClick(() => {
+            this.pageInfo.pushPath({
+              name: 'pageTwo', param: new ParamWithOp(), onPop: (popInfo: PopInfo) => {
+                this.message =
+                  `[pushPath]last page is: ${popInfo.info.name},result: ${JSON.stringify(popInfo.result)}`;
+              }
+            }); // Push the navigation destination page specified by name, with the data specified by param, to the routing stack. Use the onPop callback to receive the page processing result.
+          })
+
+        Button('pushPathByName', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(10)
+          .onClick(() => {
+            let tmp = new TmpClass();
+            this.pageInfo.pushPathByName('pageTwo', tmp, (popInfo) => {
+              this.message =
+                `[pushPathByName]last page is: ${popInfo.info.name}, result: ${JSON.stringify(popInfo.result)}`;
+            }); // Push the navigation destination page specified by name, with the data specified by param, to the routing stack. Use the onPop callback to receive the page processing result.
+          })
+
+        Button('pushDestination', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(10)
+          .onClick(() => {
+            let tmp = new TmpClass();
+            // Push the navigation destination page specified by name, with the data specified by param, to the routing stack. Use the onPop callback to receive the page processing result.
+            this.pageInfo.pushDestination({
+              name: 'pageTwo', param: new ParamWithOp(), onPop: (popInfo: PopInfo) => {
+                this.message =
+                  `[pushDestination]last page is: ${popInfo.info.name}, result: ${JSON.stringify(popInfo.result)}`;
+              }
+            }).catch((error: BusinessError) => {
+              console.error(`[pushDestination]failed, error code = ${error.code}, error.message = ${error.message}.`);
+            }).then(() => {
+              console.error('[pushDestination]success.');
+            });
+          })
+
+        Button('pushDestinationByName', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(10)
+          .onClick(() => {
+            let tmp = new TmpClass();
+            // Push the navigation destination page specified by name, with the data specified by param, to the routing stack. Use the onPop callback to receive the page processing result.
+            this.pageInfo.pushDestinationByName('pageTwo', tmp, (popInfo) => {
+              this.message = 
+                `[pushDestinationByName]last page is: ${popInfo.info.name}, result: ${JSON.stringify(popInfo.result)}`;
+            }).catch((error: BusinessError) => {
+              console.error(`[pushDestinationByName]failed, error code = ${error.code}, error.message = ${error.message}.`);
+            }).then(() => {
+              console.error('[pushDestinationByName]success.');
+            });
+          })
+
+        Button('pushPathWithoutOnPop', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(10)
+          .onClick(() => {
+            this.pageInfo.pushPath({ name: 'pageTwo', param: new ParamWithOp() }); // Push the navigation destination page specified by name to the routing stack.
+          })
+
+        Button('pushPathByNameWithoutOnPop', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(10)
+          .onClick(() => {
+            let tmp = new TmpClass();
+            this.pageInfo.pushPathByName('pageTwo', tmp); // Push the navigation destination page specified by name, with the data specified by param, to the routing stack.
+          })
+
+        Button('pushDestinationWithoutOnPop', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(10)
+          .onClick(() => {
+            let tmp = new TmpClass();
+            // Push the navigation destination page specified by name, with the data specified by param, to the routing stack. Use the onPop callback to receive the page processing result.
+            this.pageInfo.pushDestination({ name: 'pageTwo', param: new ParamWithOp() })
+              .catch((error: BusinessError) => {
+                console.error(`[pushDestinationWithoutOnPop]failed, error code = ${error.code}, error.message = ${error.message}.`);
+              }).then(() => {
+              console.error('[pushDestinationWithoutOnPop]success.');
+            });
+          })
+
+        Button('pushDestinationByNameWithoutOnPop', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(10)
+          .onClick(() => {
+            let tmp = new TmpClass();
+            // Push the navigation destination page specified by name, with the data specified by param, to the routing stack.
+            this.pageInfo.pushDestinationByName('pageTwo', tmp)
+              .catch((error: BusinessError) => {
+                console.error(`[pushDestinationByNameWithoutOnPop]failed, error code = ${error.code}, error.message = ${error.message}.`);
+              }).then(() => {
+              console.error('[pushDestinationByNameWithoutOnPop]success.');
+            });
+          })
+
+        Button('clear', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(10)
+          .onClick(() => {
+            this.pageInfo.clear(); // Clear the routing stack.
+          })
+      }.width('100%').height('100%')
+    }.title('pageOne')
+    .onBackPressed(() => {
+      this.pageInfo.pop({ number: 1 }); // Pop the top element out of the routing stack.
+      return true;
+    }).onReady((context: NavDestinationContext) => {
+      this.pageInfo = context.pathStack;
+    })
+  }
+}
+```
+
+```TypeScript
+// PageTwo.ets
+class resultClass {
+  constructor(count: number) {
+    this.count = count;
+  }
+
+  count: number = 10;
+}
+
+@Builder
+export function PageTwoBuilder() {
+  PageTwo();
+}
+
+@Component
+export struct PageTwo {
+  pathStack: NavPathStack = new NavPathStack();
+
+  build() {
+    NavDestination() {
+      Column() {
+        Button('pop', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pathStack.pop(new resultClass(1)); // Return to the previous page and pass in the processing result to the onPop callback of push.
+          })
+
+        Button('popToName', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pathStack.popToName('pageOne',
+              new resultClass(11)); // Move the first navigation destination page that matches name to the top of the routing stack, and pass in the processing result to the onPop callback of push.
+          })
+
+        Button('popToIndex', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pathStack.popToIndex(0, new resultClass(111)); // Move the navigation destination page specified by index to the top of the routing stack, and pass in the processing result to the onPop callback of push.
+          })
+
+        Button('popWithoutResult', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pathStack.pop();
+          })
+
+        Button('popToNameWithoutResult', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pathStack.popToName('pageOne');
+          })
+
+        Button('popToIndexWithoutResult', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pathStack.popToIndex(0);
+          })
+      }.width('100%').height('100%')
+    }.title('pageTwo')
+    .onBackPressed(() => {
+      this.pathStack.pop(new resultClass(0)); // Return to the previous page and pass in the processing result to the onPop callback of push.
+      return true;
+    }).onReady((context: NavDestinationContext) => {
+      this.pathStack = context.pathStack;
+    })
+  }
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "pageOne",
+      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
+      "buildFunction": "PageOneBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    },
+    {
+      "name": "pageTwo",
+      "pageSourceFile": "src/main/ets/pages/PageTwo.ets",
+      "buildFunction": "PageTwoBuilder"
+    }
+  ]
+}
+```
+
+This example demonstrates how to set the background color and background blur effect for the title bar of the home page in Navigation, as well as for the toolbar and the title bars on the [NavDestination](ts-basic-components-navdestination.md) pages.
+
+```TypeScript
+// Index
+import {
+  COLOR1,
+  COLOR2,
+  BLUR_STYLE_1,
+  BLUR_STYLE_2,
+  BLUR_STYLE_OPTION_1,
+  BLUR_STYLE_OPTION_2,
+} from './Utils';
+
+@Entry
+@Component
+struct Index {
+  @Provide('navPathStack') navPathStack: NavPathStack = new NavPathStack();
+  @State useColor1: boolean = true;
+  @State useBlur1: boolean = true;
+  @State useBlurOption1: boolean = true;
+
+  build() {
+    Navigation(this.navPathStack) {
+      Stack({ alignContent: Alignment.Center }) {
+        BackComponent()
+          .width('100%')
+          .height('100%')
+        Column() {
+          Stack({ alignContent: Alignment.Center }) {
+            Button("switch color")
+              .onClick(() => {
+                this.useColor1 = !this.useColor1;
+              })
+          }
+          .width('100%')
+          .layoutWeight(1)
+
+          Stack({ alignContent: Alignment.Center }) {
+            Button("switch blur")
+              .onClick(() => {
+                this.useBlur1 = !this.useBlur1;
+              })
+          }
+          .width('100%')
+          .layoutWeight(1)
+
+          Stack({ alignContent: Alignment.Center }) {
+            Button("switch blurOption")
+              .onClick(() => {
+                this.useBlurOption1 = !this.useBlurOption1;
+              })
+          }
+          .width('100%')
+          .layoutWeight(1)
+
+          Stack({ alignContent: Alignment.Center }) {
+            Button("push page")
+              .onClick(() => {
+                this.navPathStack.pushPathByName('NavigationMenu', null);
+              })
+          }
+          .width('100%')
+          .layoutWeight(1)
+        }
+        .width('100%')
+        .height('80%')
+      }.width('100%')
+      .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+    // You can set the background color and background blur style of the title bar.
+    .title("NavTitle", {
+      backgroundColor: this.useColor1 ? COLOR1 : COLOR2,
+      backgroundBlurStyle: this.useBlur1 ? BLUR_STYLE_1 : BLUR_STYLE_2,
+      barStyle: BarStyle.STACK,
+      backgroundBlurStyleOptions: this.useBlurOption1 ? BLUR_STYLE_OPTION_1 : BLUR_STYLE_OPTION_2,
+    })
+    // You can set the background color and background blur style for the menu
+    .menus([
+      { value: "A" },
+      { value: "B" },
+      { value: "C" },
+      { value: "D" },
+    ], {
+      moreButtonOptions: {
+        backgroundBlurStyle: this.useBlur1 ? BLUR_STYLE_1 : BLUR_STYLE_2,
+        backgroundBlurStyleOptions: this.useBlurOption1 ? BLUR_STYLE_OPTION_1 : BLUR_STYLE_OPTION_2,
+      }
+    })
+    // You can set the background color and background blur style of the toolbar.
+    .toolbarConfiguration([
+      { value: "A" },
+      { value: "B" },
+      { value: "C" },
+      { value: "D" },
+      { value: "E" },
+      { value: "F" }
+    ], {
+      backgroundColor: this.useColor1 ? COLOR1 : COLOR2,
+      backgroundBlurStyle: this.useBlur1 ? BLUR_STYLE_1 : BLUR_STYLE_2,
+      // You can set the background color and background blur style for the menu in the toolbar.
+      moreButtonOptions: {
+        backgroundBlurStyle: this.useBlur1 ? BLUR_STYLE_1 : BLUR_STYLE_2,
+        backgroundBlurStyleOptions: this.useBlurOption1 ? BLUR_STYLE_OPTION_1 : BLUR_STYLE_OPTION_2,
+      }
+    })
+  }
+}
+
+@Component
+export struct BackComponent {
+  build() {
+    Row() {
+      Column() {
+      }
+      .height('100%')
+      .backgroundColor("#3D9DB4")
+      .layoutWeight(9)
+
+      Column() {
+      }
+      .height('100%')
+      .backgroundColor("#17A98D")
+      .layoutWeight(9)
+
+      Column() {
+      }
+      .height('100%')
+      .backgroundColor("#FFC000")
+      .layoutWeight(9)
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+```TypeScript
+// PageOne.ets
+import {
+  COLOR1,
+  COLOR2,
+  BLUR_STYLE_1,
+  BLUR_STYLE_2,
+  EFFECT_OPTION_1,
+  EFFECT_OPTION_2
+} from './Utils';
+import { BackComponent } from './Index';
+
+@Builder
+export function PageBuilder(name: string, param?: Object) {
+  ColorAndBlur();
+}
+
+@Component
+struct ColorAndBlur {
+  @State useColor1: boolean = true;
+  @State useBlur1: boolean = true;
+  @State useEffect1: boolean = true;
+
+  build() {
+    NavDestination() {
+      Stack({ alignContent: Alignment.Center }) {
+        BackComponent()
+          .width('100%')
+          .height('100%')
+        Column() {
+          Stack({ alignContent: Alignment.Center }) {
+            Button("switch color")
+              .onClick(() => {
+                this.useColor1 = !this.useColor1;
+              })
+          }
+          .width('100%')
+          .layoutWeight(1)
+
+          Stack({ alignContent: Alignment.Center }) {
+            Button("switch blur")
+              .onClick(() => {
+                this.useBlur1 = !this.useBlur1;
+              })
+          }
+          .width('100%')
+          .layoutWeight(1)
+
+          Stack({ alignContent: Alignment.Center }) {
+            Button("switch effect")
+              .onClick(() => {
+                this.useEffect1 = !this.useEffect1;
+              })
+          }
+          .width('100%')
+          .layoutWeight(1)
+        }
+        .width('100%')
+        .height('100%')
+      }.width('100%')
+      .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+    // You can set the background color and background blur style of the title bar.
+    .title("Destination Title", {
+      backgroundColor: this.useColor1 ? COLOR1 : COLOR2,
+      backgroundBlurStyle: this.useBlur1 ? BLUR_STYLE_1 : BLUR_STYLE_2,
+      barStyle: BarStyle.STACK,
+      backgroundEffect: this.useEffect1 ? EFFECT_OPTION_1 : EFFECT_OPTION_2,
+    })
+    // You can set the background color and background blur style for the menu
+    .menus([
+      { value: "A" },
+      { value: "B" },
+      { value: "C" },
+      { value: "D" },
+    ], {
+      moreButtonOptions: {
+        backgroundEffect: this.useEffect1 ? EFFECT_OPTION_1 : EFFECT_OPTION_2,
+      }
+    })
+    // You can set the background color and background blur style of the toolbar.
+    .toolbarConfiguration([
+      { value: "A" },
+      { value: "B" },
+      { value: "C" },
+      { value: "D" },
+      { value: "E" },
+      { value: "F" }
+    ], {
+      backgroundEffect: this.useEffect1 ? EFFECT_OPTION_1 : EFFECT_OPTION_2,
+      // You can set the background color and background blur style for the menu in the toolbar.
+      moreButtonOptions: {
+        backgroundEffect: this.useEffect1 ? EFFECT_OPTION_1 : EFFECT_OPTION_2,
+      }
+    })
+  }
+}
+```
+
+```TypeScript
+// Utils.ets
+export const COLOR1: string = "#80004AAF";
+export const COLOR2: string = "#802787D9";
+export const BLUR_STYLE_1: BlurStyle = BlurStyle.BACKGROUND_THIN;
+export const BLUR_STYLE_2: BlurStyle = BlurStyle.BACKGROUND_THICK;
+export const BLUR_STYLE_OPTION_1: BackgroundBlurStyleOptions = {
+  colorMode: ThemeColorMode.DARK,
+  adaptiveColor: AdaptiveColor.DEFAULT,
+  blurOptions: { grayscale: [20, 20] },
+  scale: 1
+};
+export const BLUR_STYLE_OPTION_2: BackgroundBlurStyleOptions = {
+  colorMode: ThemeColorMode.LIGHT,
+  adaptiveColor: AdaptiveColor.AVERAGE,
+  blurOptions: { grayscale: [20, 20] },
+  scale: 1
+};
+export const EFFECT_OPTION_1: BackgroundEffectOptions = {
+  radius: 20,
+  saturation: 10,
+  brightness: 0,
+  color: '#66FFFFFF',
+  adaptiveColor: AdaptiveColor.DEFAULT,
+  blurOptions: { grayscale: [0, 0] },
+};
+export const EFFECT_OPTION_2: BackgroundEffectOptions = {
+  radius: 60,
+  saturation: 40,
+  brightness: 1,
+  color: '#661A1A1A',
+  adaptiveColor: AdaptiveColor.AVERAGE,
+  blurOptions: { grayscale: [20, 20] },
+};
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "NavigationMenu",
+      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    }
+  ]
+}
+```
+
+This example shows how to obtain the parent [NavPathStack](#navpathstack10) for a nested Navigation component.
+
+```TypeScript
+@Entry
+@Component
+struct NavigationExample1 {
+  @State childNavStack: NavPathStack = new NavPathStack();
+
+  build() {
+    Navigation() {
+      Stack({ alignContent: Alignment.Center }) {
+        Navigation(this.childNavStack) {
+          Button('push Path to parent Navigation', { stateEffect: true, type: ButtonType.Capsule })
+            .width('80%')
+            .height(40)
+            .margin(20)
+            .onClick(() => {
+              // The parent navigation path stack can be obtained.
+              let parentStack = this.childNavStack.getParent();
+              parentStack?.pushPath({ name: "pageOne" });
+            })
+        }
+        .clip(true)
+        .backgroundColor(Color.Orange)
+        .width('80%')
+        .height('80%')
+        .title('ChildNavigation')
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .backgroundColor(Color.Green)
+    .width('100%')
+    .height('100%')
+    .title('ParentNavigation')
+  }
+}
+```
+
+```TypeScript
+// PageOne.ets
+@Builder
+export function PageOneBuilder(name: string) {
+  NavDestination() {
+    Text("this is " + name)
+  }
+  .title(name)
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "pageOne",
+      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
+      "buildFunction": "PageOneBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    }
+  ]
+}
+```
+
+[NavDestination](ts-basic-components-navdestination.md) can obtain the corresponding [NavPathInfo](arkts-arkui-navpathinfo-c.md) and its belonging [NavPathStack](#navpathstack10) via the [onReady](ts-basic-components-navdestination.md#onready11) event.
+
+```TypeScript
+class PageParam {
+  constructor(num_: number) {
+    this.num = num_;
+  }
+
+  num: number = 0;
+}
+
+@Builder
+export function PageOneBuilder(name: string, param: Object) {
+  PageOne();
+}
+
+@Component
+struct PageOne {
+  private stack: NavPathStack | null = null;
+  private name: string = "";
+  private paramNum: number = 0;
+
+  build() {
+    NavDestination() {
+      Column() {
+        Text("NavPathInfo: name: " + this.name + ", paramNum: " + this.paramNum)
+        Button('pushPath', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            if (this.stack) {
+              let p = new PageParam(this.paramNum + 1);
+              this.stack.pushPath({ name: "pageOne", param: p });
+            }
+          })
+        Button('pop', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.stack?.pop();
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .title('pageOne')
+    .onReady((ctx: NavDestinationContext) => {
+      // The passed NavPathInfo and the owning NavPathStack objects can be obtained for <NavDestination>.
+      try {
+        this.name = ctx?.pathInfo?.name;
+        this.paramNum = (ctx?.pathInfo?.param as PageParam)?.num;
+        this.stack = ctx.pathStack;
+      } catch (e) {
+        console.error(`testTag onReady catch exception: ${JSON.stringify(e)}`);
+      }
+    })
+  }
+}
+
+@Entry
+@Component
+struct NavigationExample2 {
+  private stack: NavPathStack = new NavPathStack();
+
+  build() {
+    Navigation(this.stack) {
+      Stack({ alignContent: Alignment.Center }) {
+        Button('pushPath', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            let p = new PageParam(1);
+            this.stack.pushPath({ name: "pageOne", param: p });
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+    .title('Navigation')
+  }
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "pageOne",
+      "pageSourceFile": "src/main/ets/pages/Index.ets",
+      "buildFunction": "PageOneBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    }
+  ]
+}
+```
+
+This example demonstrates the timing of the [NavDestination](ts-basic-components-navdestination.md) component lifecycle callbacks: [onAppear](ts-universal-events-show-hide.md#onappear), [onDisAppear](ts-universal-events-show-hide.md#ondisappear), [onShown](ts-basic-components-navdestination.md#onshown10), [onHidden](ts-basic-components-navdestination.md#onhidden10), [onWillAppear](ts-basic-components-navdestination.md#onwillappear12), [onWillDisappear](ts-basic-components-navdestination.md#onwilldisappear12), [onWillShow](ts-basic-components-navdestination.md#onwillshow12), and [onWillHide](ts-basic-components-navdestination.md#onwillhide12).
+
+```TypeScript
+@Builder
+export function PageOneBuilder(name: string, param: Object) {
+  PageOneComponent();
+}
+
+@Component
+struct PageOneComponent {
+  private stack: NavPathStack | null = null;
+  @State eventStr: string = "";
+
+  build() {
+    NavDestination() {
+      Column() {
+        Text("event: " + this.eventStr)
+        Button('pushPath', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            if (this.stack) {
+              this.stack.pushPath({ name: "pageOne" });
+            }
+          })
+        Button('pop', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.stack?.pop();
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .title('pageOne')
+    .onAppear(() => {
+      this.eventStr += "<onAppear>";
+    })
+    .onDisAppear(() => {
+      this.eventStr += "<onDisAppear>";
+    })
+    .onShown(() => {
+      this.eventStr += "<onShown>";
+    })
+    .onHidden(() => {
+      this.eventStr += "<onHidden>";
+    })
+    .onWillAppear(() => {
+      this.eventStr += "<onWillAppear>";
+    })
+    .onWillDisappear(() => {
+      this.eventStr += "<onWillDisappear>";
+    })
+    .onWillShow(() => {
+      this.eventStr += "<onWillShow>";
+    })
+    .onWillHide(() => {
+      this.eventStr += "<onWillHide>";
+    })
+    // onReady is called before onAppear.
+    .onReady((ctx: NavDestinationContext) => {
+      try {
+        this.eventStr += "<onReady>";
+        this.stack = ctx.pathStack;
+      } catch (e) {
+        console.error(`testTag onReady catch exception: ${JSON.stringify(e)}`);
+      }
+    })
+  }
+}
+
+@Entry
+@Component
+struct NavigationExample3 {
+  private stack: NavPathStack = new NavPathStack();
+
+  build() {
+    Navigation(this.stack) {
+      Stack({ alignContent: Alignment.Center }) {
+        Button('pushPath', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.stack.pushPath({ name: "pageOne" });
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+    .title('Navigation')
+  }
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "pageOne",
+      "pageSourceFile": "src/main/ets/pages/Index.ets",
+      "buildFunction": "PageOneBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    }
+  ]
+}
+```
+
+This example demonstrates the stack layout of the title bar in the Navigation component.
+
+```TypeScript
+@Entry
+@Component
+struct NavigationExample {
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+  private scrollerForScroll: Scroller = new Scroller();
+  @State barStyle: BarStyle = BarStyle.STANDARD;
+
+  build() {
+    Column() {
+      Navigation() {
+        Column() {
+          Scroll(this.scrollerForScroll) {
+            Column() {
+              // Replace $r('app.media.image_1') with the resource file you use.
+              Image($r('app.media.image_1'))// Set the height to be the same as that of the title bar to observe the STACK effect.
+                .height(138)
+                .width('100%')
+              Button('BarStyle.STANDARD')
+                .height('50vp')
+                .onClick(() => {
+                  this.barStyle = BarStyle.STANDARD;
+                })
+              Button('BarStyle.STACK')
+                .height('50vp')
+                .margin({ top: 12 })
+                .onClick(() => {
+                  this.barStyle = BarStyle.STACK;
+                })
+
+              ForEach(this.arr, (item: number) => {
+                ListItem() {
+                  Text('' + item)
+                    .width('100%')
+                    .height(100)
+                    .fontSize(16)
+                    .textAlign(TextAlign.Center)
+                    .borderRadius(10)
+                    .backgroundColor(Color.Orange)
+                    .margin({ top: 12 })
+                }
+              }, (item: number) => item.toString())
+            }
+          }
+        }
+        .width('100%')
+        .height('100%')
+        .backgroundColor(0xDCDCDC)
+      }
+      .title(
+        {
+          main: 'NavTitle',
+          sub: 'subtitle'
+        },
+        {
+          backgroundBlurStyle: BlurStyle.COMPONENT_THICK,
+          barStyle: this.barStyle,
+        }
+      )
+      .titleMode(NavigationTitleMode.Free)
+      .hideTitleBar(false)
+    }.width('100%').height('100%').backgroundColor('#F1F3F5')
+  }
+}
+```
+
+This example demonstrates how to define a derived class of [NavPathStack](#navpathstack10) and the basic usage of the derived class in Navigation.
+
+```TypeScript
+// Index.ets
+import { DerivedNavPathStack, NewParam } from './Utils';
+
+@Entry
+@Component
+struct Index {
+  derivedStack: DerivedNavPathStack = new DerivedNavPathStack();
+
+  aboutToAppear(): void {
+    this.derivedStack.setId('origin stack');
+  }
+  
+  build() {
+    Navigation(this.derivedStack) {
+      Button('to Page One').margin(20).onClick(() => {
+        this.derivedStack.pushPath({
+          name: 'pageOne',
+          param: new NewParam('push pageOne in homePage when stack size: ' + this.derivedStack.size())
+        });
+      })
+    }
+    .title('Home Page')
+  }
+}
+```
+
+```TypeScript
+// PageOne.ets
+import { DerivedNavPathStack, NewParam } from './Utils';
+
+@Builder
+export function pageMap(name: string) {
+  PageOne();
+}
+
+@Component
+struct PageOne {
+  derivedStack: DerivedNavPathStack = new DerivedNavPathStack();
+  curStringifyParam: string = "NA";
+
+  build() {
+    NavDestination() {
+      Column() {
+        Text(this.derivedStack.getInfo())
+          .margin(10)
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+          .textAlign(TextAlign.Start)
+        Text('current page param info:')
+          .margin(10)
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+          .textAlign(TextAlign.Start)
+        Text(this.curStringifyParam)
+          .margin(20)
+          .fontSize(20)
+          .textAlign(TextAlign.Start)
+      }.backgroundColor(Color.Pink)
+
+      Button('to Page One').margin(20).onClick(() => {
+        this.derivedStack.pushPath({
+          name: 'pageOne',
+          param: new NewParam('push pageOne in pageOne when stack size: ' + this.derivedStack.size())
+        });
+      })
+    }.title('Page One')
+    .onReady((context: NavDestinationContext) => {
+      console.info('[derive-test] reached PageOne\'s onReady');
+      // Obtain the derived stack from navdestinationContext.
+      this.derivedStack = context.pathStack as DerivedNavPathStack;
+      console.info('[derive-test] -- got derivedStack: ' + this.derivedStack.id);
+      this.curStringifyParam = JSON.stringify(context.pathInfo.param);
+      console.info('[derive-test] -- got param: ' + this.curStringifyParam);
+    })
+  }
+}
+```
+
+```TypeScript
+// Utils.ets
+export class DerivedNavPathStack extends NavPathStack {
+  // Set the custom unique ID.
+  id: string = "__default__";
+
+  // Custom method for the derived class.
+  setId(id: string) {
+    this.id = id;
+  }
+
+  // Custom method for the derived class.
+  getInfo(): string {
+    return "this page used Derived NavPathStack, id: " + this.id;
+  }
+
+  // Overload the method inherited from the NavPathStack base class.
+  pushPath(info: NavPathInfo, animated?: boolean): void
+  pushPath(info: NavPathInfo, options?: NavigationOptions): void
+  pushPath(info: NavPathInfo, secArg?: boolean | NavigationOptions): void {
+    console.info('[derive-test] reached DerivedNavPathStack\'s pushPath');
+    if (typeof secArg === 'boolean') {
+      super.pushPath(info, secArg);
+    } else {
+      super.pushPath(info, secArg);
+    }
+  }
+
+  // Override and overload the method inherited from the NavPathStack base class.
+  pop(animated?: boolean | undefined): NavPathInfo | undefined
+  pop(result: Object, animated?: boolean | undefined): NavPathInfo | undefined
+  pop(result?: Object, animated?: boolean | undefined): NavPathInfo | undefined {
+    console.info('[derive-test] reached DerivedNavPathStack\'s pop');
+    return super.pop(result, animated);
+  }
+
+  // Remaining methods inherited from the base class
+}
+
+export class NewParam {
+  info: string = "__default_param__";
+
+  constructor(info: string) {
+    this.info = info;
+  }
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "pageOne",
+      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
+      "buildFunction": "pageMap",
+      "data": {
+        "description": "this is pageOne"
+      }
+    }
+  ]
+}
+```
+
+This example demonstrates how to use the Symbol components in Navigation and [NavDestination](ts-basic-components-navdestination.md).
+
+```TypeScript
+// Index.ets
+import { SymbolGlyphModifier } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct NavigationExample {
+  @Provide('navPathStack') navPathStack: NavPathStack = new NavPathStack();
+  @State menuItems: Array<NavigationMenuItem> = [
+    {
+      // Replace 'resources/base/media/ic_public_ok.svg' with the image resource file you use.
+      value: 'menuItem1',
+      icon: 'resources/base/media/ic_public_ok.svg' // Icon resource path.
+    },
+    {
+      // Replace 'resources/base/media/ic_public_ok.svg' with the image resource file you use.
+      value: 'menuItem2',
+      icon: 'resources/base/media/ic_public_ok.svg', // Icon resource path.
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_folder_badge_plus')).fontColor([Color.Red, Color.Green])
+        .renderingStrategy(SymbolRenderingStrategy.MULTIPLE_COLOR),
+    },
+    {
+      value: 'menuItem3',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_lungs')),
+    },
+  ];
+  @State toolItems: Array<ToolbarItem> = [
+    {
+      // Replace 'resources/base/media/ic_public_ok.svg' with the image resource file you use.
+      value: 'toolItem1',
+      icon: 'resources/base/media/ic_public_ok.svg', // Icon resource path.
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_lungs')),
+      status: ToolbarItemStatus.ACTIVE,
+      activeSymbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_folder_badge_plus')).fontColor([Color.Red,
+        Color.Green]).renderingStrategy(SymbolRenderingStrategy.MULTIPLE_COLOR),
+      action: () => {
+      }
+    },
+    {
+      // Replace 'resources/base/media/ic_public_more.svg' with the image resource file you use.
+      value: 'toolItem2',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_star')),
+      status: ToolbarItemStatus.ACTIVE,
+      activeIcon: 'resources/base/media/ic_public_more.svg', // Icon resource path.
+      action: () => {
+      }
+    },
+    {
+      value: 'toolItem3',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_star')),
+      status: ToolbarItemStatus.ACTIVE,
+      activeSymbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_lungs')),
+      action: () => {
+      }
+    }
+  ];
+
+  build() {
+    Navigation(this.navPathStack) {
+      Column() {
+        Button('Go').onClick(() => {
+          this.navPathStack.pushPathByName('NavigationMenu', null);
+        })
+      }
+    }
+    .backButtonIcon(new SymbolGlyphModifier($r('sys.symbol.ohos_wifi')))
+    .titleMode(NavigationTitleMode.Mini)
+    .menus(this.menuItems)
+    .toolbarConfiguration(this.toolItems)
+    .title('Level-1 page')
+  }
+}
+```
+
+```TypeScript
+// PageOne.ets
+import { SymbolGlyphModifier } from '@kit.ArkUI';
+
+@Builder
+export function myRouter(name: string, param?: Object) {
+  NavigationMenu();
+}
+
+@Component
+export struct NavigationMenu {
+  @Consume('navPathStack') navPathStack: NavPathStack;
+  @State menuItems: Array<NavigationMenuItem> = [
+    {
+      // Replace 'resources/base/media/ic_public_ok.svg' with the image resource file you use.
+      value: 'menuItem1',
+      icon: 'resources/base/media/ic_public_ok.svg', // Icon resource path.
+      action: () => {
+      }
+    },
+    {
+      value: 'menuItem2',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_folder_badge_plus')).fontColor([Color.Red, Color.Green])
+        .renderingStrategy(SymbolRenderingStrategy.MULTIPLE_COLOR),
+      action: () => {
+      }
+    },
+    {
+      value: 'menuItem3',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.repeat_1')),
+      action: () => {
+      }
+    },
+  ];
+
+  build() {
+    NavDestination() {
+      Row() {
+        Column() {
+        }
+        .width('100%')
+      }
+      .height('100%')
+    }
+    .hideTitleBar(false)
+    .title('NavDestination title')
+    .backgroundColor($r('sys.color.ohos_id_color_titlebar_sub_bg'))
+    .backButtonIcon(new SymbolGlyphModifier($r('sys.symbol.ohos_star'))
+      .fontColor([Color.Blue]))
+    .menus(this.menuItems)
+  }
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "NavigationMenu",
+      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
+      "buildFunction": "myRouter",
+      "data": {
+        "description": "this is pageOne"
+      }
+    }
+  ]
+}
+```
+
+This example demonstrates how to set custom title bar padding in Navigation and [NavDestination](ts-basic-components-navdestination.md), and how to modify the main title and subtitle text styles through TextModifier.
+
+```TypeScript
+// Index.ets
+import { LengthMetrics } from '@kit.ArkUI';
+import { MainTitleTextModifier, SubTitleTextModifier } from './Utils';
+
+@Entry
+@Component
+struct NavigationExample {
+  private navPathStack: NavPathStack = new NavPathStack();
+  // Assign an initial padding at the start of the title bar.
+  @State paddingStart: LengthMetrics = LengthMetrics.vp(0);
+  // Assign an initial padding at the end of the title bar.
+  @State paddingEnd: LengthMetrics = LengthMetrics.vp(0);
+  // Main title attribute modifier.
+  @State mainTitleModifier: MainTitleTextModifier = new MainTitleTextModifier();
+  // Subtitle attribute modifier.
+  @State subTitleModifier: SubTitleTextModifier = new SubTitleTextModifier();
+  @State applyModifier: boolean = false;
+  @State useStyle1: boolean = true;
+
+  build() {
+    Navigation(this.navPathStack) {
+      Column() {
+        // Switch between padding values for the title bar.
+        Button('apply padding 32vp')
+          .onClick(() => {
+            this.paddingStart = LengthMetrics.vp(32);
+            this.paddingEnd = LengthMetrics.vp(32);
+          })
+          .margin({ top: 70 })
+          .width(180)
+        Button('apply padding 20vp')
+          .onClick(() => {
+            this.paddingStart = LengthMetrics.vp(20);
+            this.paddingEnd = LengthMetrics.vp(20);
+          })
+          .margin({ top: 40 })
+          .width(180)
+        Button('pushPage')
+          .onClick(() => {
+            this.navPathStack.pushPath({ name: 'NavDestinationExample' });
+          })
+          .margin({ top: 40 })
+          .width(180)
+        Row() {
+          Text(`apply Modifier`)
+          Toggle({ isOn: this.applyModifier, type: ToggleType.Switch }).onChange((isOn: boolean) => {
+            this.applyModifier = isOn;
+          })
+        }
+        .padding({ top: 95, left: 5, right: 5 })
+        .width(180)
+        .justifyContent(FlexAlign.SpaceBetween)
+
+        Row() {
+          Text(`use Style1`)
+          Toggle({ isOn: this.useStyle1, type: ToggleType.Switch }).onChange((isOn: boolean) => {
+            this.mainTitleModifier.useStyle1 = isOn;
+            this.subTitleModifier.useStyle1 = isOn;
+            this.useStyle1 = isOn;
+          })
+        }
+        .padding({ top: 40, left: 5, right: 5 })
+        .width(180)
+        .justifyContent(FlexAlign.SpaceBetween)
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .titleMode(NavigationTitleMode.Full)
+    .title(
+      { main: "Title", sub: "subTitle" },
+      this.applyModifier ?
+        {
+          paddingStart: this.paddingStart,
+          paddingEnd: this.paddingEnd,
+          mainTitleModifier: this.mainTitleModifier,
+          subTitleModifier: this.subTitleModifier,
+        } : {
+        paddingStart: this.paddingStart,
+        paddingEnd: this.paddingEnd
+      })
+  }
+}
+```
+
+```TypeScript
+// PageOne.ets
+import { LengthMetrics } from '@kit.ArkUI';
+import { MainTitleTextModifier, SubTitleTextModifier } from './Utils';
+
+@Builder
+export function myRouter(name: string, param?: Object) {
+  NavDestinationExample();
+}
+@Component
+export struct NavDestinationExample {
+  @State menuItems: Array<NavigationMenuItem> = [
+    {
+      // Replace 'resources/base/media/ic_public_ok.svg' with the image resource file you use.
+      value: 'menuItem1',
+      icon: 'resources/base/media/ic_public_ok.svg', // Icon resource path.
+      action: () => {
+      }
+    }
+  ];
+  @State paddingStart: LengthMetrics = LengthMetrics.vp(0);
+  @State paddingEnd: LengthMetrics = LengthMetrics.vp(0);
+  // Main title attribute modifier.
+  @State mainTitleModifier: MainTitleTextModifier = new MainTitleTextModifier();
+  // Subtitle attribute modifier.
+  @State subTitleModifier: SubTitleTextModifier = new SubTitleTextModifier();
+  @State applyModifier: boolean = false;
+  @State useStyle1: boolean = true;
+
+  build() {
+    NavDestination() {
+      Column() {
+        // Switch between padding values for the title bar.
+        Button('apply padding 32vp')
+          .onClick(() => {
+            this.paddingStart = LengthMetrics.vp(32);
+            this.paddingEnd = LengthMetrics.vp(32);
+          })
+          .margin({ top: 150 })
+          .width(180)
+        Button('apply padding 20vp')
+          .onClick(() => {
+            this.paddingStart = LengthMetrics.vp(20);
+            this.paddingEnd = LengthMetrics.vp(20);
+          })
+          .margin({ top: 40 })
+          .width(180)
+        Row() {
+          Text(`apply Modifier`)
+          Toggle({ isOn: this.applyModifier, type: ToggleType.Switch }).onChange((isOn: boolean) => {
+            this.applyModifier = isOn;
+          })
+        }
+        .padding({ top: 95, left: 5, right: 5 })
+        .width(180)
+        .justifyContent(FlexAlign.SpaceBetween)
+
+        Row() {
+          Text(`use Style1`)
+          Toggle({ isOn: this.useStyle1, type: ToggleType.Switch }).onChange((isOn: boolean) => {
+            this.mainTitleModifier.useStyle1 = isOn;
+            this.subTitleModifier.useStyle1 = isOn;
+            this.useStyle1 = isOn;
+          })
+        }
+        .padding({ top: 40, left: 5, right: 5 })
+        .width(180)
+        .justifyContent(FlexAlign.SpaceBetween)
+      }
+      .width('100%')
+      .height('90%')
+    }
+    .hideTitleBar(false)
+    .title(
+      { main: "Title", sub: "subTitle" },
+      this.applyModifier ?
+        {
+          paddingStart: this.paddingStart,
+          paddingEnd: this.paddingEnd,
+          mainTitleModifier: this.mainTitleModifier,
+          subTitleModifier: this.subTitleModifier,
+        } : {
+        paddingStart: this.paddingStart,
+        paddingEnd: this.paddingEnd
+      })
+    .menus(this.menuItems)
+  }
+}
+```
+
+```TypeScript
+// Utils.ets
+import { TextModifier } from '@kit.ArkUI';
+
+export class MainTitleTextModifier extends TextModifier {
+  useStyle1: boolean = true;
+
+  applyNormalAttribute(instance: TextModifier): void {
+    if (this.useStyle1) {
+      console.info(`testTag mainTitle use style1`);
+      instance.fontColor('#FFFFC000');
+      instance.fontSize(35);
+      instance.fontWeight(FontWeight.Bolder);
+      instance.fontStyle(FontStyle.Normal);
+      instance.textShadow({ radius: 5, offsetX: 9 });
+    } else {
+      console.info(`testTag mainTitle use style2`);
+      instance.fontColor('#FF23A98D');
+      instance.fontSize(20);
+      instance.heightAdaptivePolicy(TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST);
+      instance.fontWeight(FontWeight.Lighter);
+      instance.fontStyle(FontStyle.Italic);
+      instance.textShadow({ radius: 3, offsetX: 3 });
+    }
+  }
+}
+
+export class SubTitleTextModifier extends TextModifier {
+  useStyle1: boolean = true;
+
+  applyNormalAttribute(instance: TextModifier): void {
+    if (this.useStyle1) {
+      console.info(`testTag subTitle use style1`);
+      instance.fontColor('#FFFFC000');
+      instance.fontSize(15);
+      instance.fontWeight(FontWeight.Bolder);
+      instance.fontStyle(FontStyle.Normal);
+      instance.textShadow({ radius: 5, offsetX: 9 });
+    } else {
+      console.info(`testTag subTitle use style2`);
+      instance.fontColor('#FF23A98D');
+      instance.fontSize(10);
+      instance.fontWeight(FontWeight.Lighter);
+      instance.fontStyle(FontStyle.Italic);
+      instance.textShadow({ radius: 3, offsetX: 3 });
+    }
+  }
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "NavDestinationExample",
+      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
+      "buildFunction": "myRouter",
+      "data": {
+        "description": "this is pageOne"
+      }
+    }
+  ]
+}
+```
+
+This example shows how to implement a custom transition animation for navigation between pages.
+
+```TypeScript
+// Index.ets
+import { AnimateCallback, CustomTransition } from './CustomTransitionUtils'
+
+@Entry
+@Component
+struct NavigationCustomTransitionExample {
+  pageInfos: NavPathStack = new NavPathStack();
+
+  aboutToAppear() {
+    this.pageInfos.pushPath({ name: 'PageOne' }, false);
+  }
+
+  build() {
+    Navigation(this.pageInfos) {
+    }
+    .hideNavBar(true)
+    .customNavContentTransition((from: NavContentInfo, to: NavContentInfo, operation: NavigationOperation) => {
+      // No custom animation for the home page
+      if (from.index === -1 || to.index === -1) {
+        return undefined;
+      }
+
+      let customAnimation: NavigationAnimatedTransition = {
+        timeout: 2000,
+        // Called when transition starts. The transition context proxy object is passed in.
+        transition: (transitionProxy: NavigationTransitionProxy) => {
+          if (!from.navDestinationId || !to.navDestinationId) {
+            return;
+          }
+          // Obtain the corresponding transition animation callback from the CustomTransition class by subpage ID.
+          let fromParam: AnimateCallback = CustomTransition.getInstance().getAnimateParam(from.navDestinationId);
+          let toParam: AnimateCallback = CustomTransition.getInstance().getAnimateParam(to.navDestinationId);
+          // Push animation
+          if (operation == NavigationOperation.PUSH) {
+            if (fromParam.start && toParam.start) {
+              // Set the animation start for both pages in the push transition.
+              fromParam.start(true, true);
+              toParam.start(true, false);
+            }
+            this.getUIContext()?.animateTo({
+              duration: 500, curve: Curve.Friction, onFinish: () => {
+                // Manually call the finishTransition API after the animation ends. Otherwise, the system will automatically call the API after the specified timeout period.
+                transitionProxy.finishTransition();
+              }
+            }, () => {
+              if (fromParam.finish && toParam.finish) {
+                // Set the animation end for both pages in the push transition.
+                fromParam.finish(true, true);
+                toParam.finish(true, false);
+              }
+
+            })
+          } else if (operation == NavigationOperation.POP) {
+            // Pop animation
+            if (fromParam.start && toParam.start) {
+              // Set the animation start for both pages in the pop transition.
+              fromParam.start(false, true);
+              toParam.start(false, false);
+            }
+            this.getUIContext()?.animateTo({
+              duration: 500, curve: Curve.Friction, onFinish: () => {
+                // Manually call the finishTransition API after the animation ends. Otherwise, the system will automatically call the API after the specified timeout period.
+                transitionProxy.finishTransition();
+              }
+            }, () => {
+              if (fromParam.finish && toParam.finish) {
+                // Set the animation end for both pages in the pop transition.
+                fromParam.finish(false, true);
+                toParam.finish(false, false);
+              }
+            })
+          } else {
+            // No animation for the replacement operation
+          }
+        }
+      };
+      return customAnimation;
+    })
+  }
+}
+
+
+// PageOne
+@Builder
+export function PageOneBuilder() {
+  PageContainer({ title: "PageOne" });
+}
+
+// PageTwo
+@Builder
+export function PageTwoBuilder() {
+  PageContainer({ title: "PageTwo" });
+}
+
+@Component
+export struct PageContainer {
+  pageInfos: NavPathStack = new NavPathStack();
+  @State translateY: string = '0';
+  pageId: string = '';
+  title: string = ''
+
+  registerCallback() {
+    CustomTransition.getInstance().registerNavParam(this.pageId,
+      // Set the start point of the transition animation based on the transition type.
+      (isPush: boolean, isExit: boolean) => {
+        if (isPush) {
+          if (isExit) {
+            this.translateY = '0';
+          } else {
+            this.translateY = '100%';
+          }
+        } else {
+          if (isExit) {
+            this.translateY = '0';
+          } else {
+            this.translateY = '0';
+          }
+        }
+      },
+      // Set the end point of the transition animation based on the transition type.
+      (isPush: boolean, isExit: boolean) => {
+        if (isPush) {
+          if (isExit) {
+            this.translateY = '0';
+          } else {
+            this.translateY = '0';
+          }
+        } else {
+          if (isExit) {
+            this.translateY = '100%';
+          } else {
+            this.translateY = '0';
+          }
+        }
+      });
+  }
+
+  build() {
+    NavDestination() {
+      Column() {
+        Button('push next page', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.pushPath({ name: this.title == 'PageOne' ? "PageTwo" : "PageOne" });
+          })
+      }
+      .size({ width: '100%', height: '100%' })
+    }
+    .title(this.title)
+    .onDisAppear(() => {
+      // Unregister the custom transition animation parameters when the page is destroyed.
+      CustomTransition.getInstance().unRegisterNavParam(this.pageId);
+    })
+    .onReady((context: NavDestinationContext) => {
+      this.pageInfos = context.pathStack;
+      if (context.navDestinationId) {
+        this.pageId = context.navDestinationId;
+        // Register the custom transition animation parameters when the page is created.
+        this.registerCallback();
+      }
+    })
+    .translate({ y: this.translateY })
+    .backgroundColor(this.title == 'PageOne' ? '#F1F3F5' : '#ff11dee5')
+  }
+}
+```
+
+```TypeScript
+// The src/main/pages/CustomTransitionUtils.ts file defines a utility class for managing custom animation parameters for different pages.
+// Custom API to save the transition animation callback and parameters related to a page.
+export interface AnimateCallback {
+  start: ((isPush: boolean, isExit: boolean) => void | undefined) | undefined;
+  finish: ((isPush: boolean, isExit: boolean) => void | undefined) | undefined;
+}
+
+const customTransitionMap: Map<string, AnimateCallback> = new Map();
+
+export class CustomTransition {
+  static delegate = new CustomTransition();
+
+  static getInstance() {
+    return CustomTransition.delegate;
+  }
+
+  /* Register animation callbacks for a page.
+   * name: unique ID of the target page
+   * startCallback: used to set the page state at the start of the animation.
+   * endCallback: used to set the page state at the end of the animation.
+   */
+  registerNavParam(name: string, startCallback: (isPush: boolean, isExit: boolean) => void,
+    endCallback: (isPush: boolean, isExit: boolean) => void): void {
+    if (customTransitionMap.has(name)) {
+      let param = customTransitionMap.get(name);
+      if (param != undefined) {
+        param.start = startCallback;
+        param.finish = endCallback;
+        return;
+      }
+    }
+    let params: AnimateCallback = { start: startCallback, finish: endCallback };
+    customTransitionMap.set(name, params);
+  }
+
+  unRegisterNavParam(name: string): void {
+    customTransitionMap.delete(name);
+  }
+
+  getAnimateParam(name: string): AnimateCallback {
+    let result: AnimateCallback = {
+      start: customTransitionMap.get(name)?.start,
+      finish: customTransitionMap.get(name)?.finish
+    };
+    return result;
+  }
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "PageOne",
+      "pageSourceFile": "src/main/ets/pages/Index.ets",
+      "buildFunction": "PageOneBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    },
+    {
+      "name": "PageTwo",
+      "pageSourceFile": "src/main/ets/pages/Index.ets",
+      "buildFunction": "PageTwoBuilder"
+    }
+  ]
+}
+```
+
+Before running this example, you need to set orientation to auto_rotation in the abilities field of the project configuration file [module.json5](../../../quick-start/module-configuration-file.md).
+
+```TypeScript
+import { ComponentContent } from '@kit.ArkUI';
+
+@Builder function PlaceholderPage() {
+  Column() {
+    Text("Split-column mode placeholder page")
+      .fontSize(28)
+      .fontWeight(700)
+      .margin({ top: 200 })
+  }.width("100%")
+  .height("100%")
+}
+
+@Entry
+@Component
+struct NavigationExample {
+  @State minNavBarWidth: Dimension | undefined = undefined;
+  @State maxNavBarWidth: Dimension | undefined = undefined;
+  @State minContentWidth: Dimension|undefined = undefined;
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  @State currentIndex: number = 0;
+  placeholder = new ComponentContent(this.getUIContext(), wrapBuilder(PlaceholderPage))
+
+  @Builder
+  NavigationTitle() {
+    Column() {
+      Text('Title')
+        .fontColor('#182431')
+        .fontSize(30)
+        .lineHeight(41)
+        .fontWeight(700)
+      Text('subtitle')
+        .fontColor('#182431')
+        .fontSize(14)
+        .lineHeight(19)
+        .opacity(0.4)
+        .margin({ top: 2, bottom: 20 })
+    }.alignItems(HorizontalAlign.Start)
+  }
+
+  @Builder
+  NavigationMenus() {
+    Row() {
+      // Replace $r('sys.media.ohos_ic_public_add') with the resource file you use.
+      Image($r('sys.media.ohos_ic_public_add'))
+        .width(24)
+        .height(24)
+      // Replace $r('sys.media.ohos_ic_public_add') with the resource file you use.
+      Image($r('sys.media.ohos_ic_public_add'))
+        .width(24)
+        .height(24)
+        .margin({ left: 24 })
+      // Replace $r('sys.media.ohos_ic_public_more') with the resource file you use.
+      Image($r('sys.media.ohos_ic_public_more'))
+        .width(24)
+        .height(24)
+        .margin({ left: 24 })
+    }.margin({ top: 30 })
+  }
+
+  build() {
+    Column() {
+      Navigation() {
+        TextInput({ placeholder: 'search...' })
+          .width('90%')
+          .height(40)
+          .backgroundColor('#FFFFFF')
+          .margin({ top: 8 })
+
+        List({ space: 12, initialIndex: 0 }) {
+          ForEach(this.arr, (item: number) => {
+            ListItem() {
+              Text('' + item)
+                .width('90%')
+                .height(72)
+                .backgroundColor('#FFFFFF')
+                .borderRadius(24)
+                .fontSize(16)
+                .fontWeight(500)
+                .textAlign(TextAlign.Center)
+            }
+          }, (item: number) => item.toString())
+        }
+        .height(324)
+        .width('100%')
+        .margin({ top: 12, left: '10%' })
+      }
+      .title(this.NavigationTitle)
+      .padding({ left: 12 })
+      .menus(this.NavigationMenus)
+      .titleMode(NavigationTitleMode.Full)
+      .toolbarConfiguration([
+        {
+          // Replace $r("app.string.navigation_toolbar_add") and $r("app.media.startIcon") with the image resource file you use.
+          value: $r("app.string.navigation_toolbar_add"),
+          icon: $r("app.media.startIcon")
+        },
+        {
+          // Replace $r("app.string.navigation_toolbar_app") and $r("app.media.startIcon") with the image resource file you use.
+          value: $r("app.string.navigation_toolbar_app"),
+          icon: $r("app.media.startIcon")
+        },
+        {
+          // Replace $r("app.string.navigation_toolbar_collect") and $r("app.media.startIcon") with the image resource file you use.
+          value: $r("app.string.navigation_toolbar_collect"),
+          icon: $r("app.media.startIcon")
+        }
+      ])
+      .mode(NavigationMode.Split) // Set the navigation mode to Split.
+      .navBarWidthRange([this.minNavBarWidth, this.maxNavBarWidth]) // Set the navigation page width range: [minimum width, maximum width].
+      .minContentWidth(this.minContentWidth)
+      .hideTitleBar(false)
+      .hideToolBar(false)
+      .onTitleModeChange((titleModel: NavigationTitleMode) => {
+        console.info('titleMode' + titleModel)
+      })
+      .splitPlaceholder(this.placeholder)
+      .divider({ startMargin: 20, endMargin: 20, color: Color.Red}) // Added the divider attribute since API version 23.
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor('#F1F3F5')
+  }
+}
+```
+
+In the [module.json5](../../../quick-start/module-configuration-file.md) file, set orientation to landscape in the abilities field. (This configuration is used only to demonstrate the toolbar adaptation capability of Navigation in landscape mode. You can set orientation to auto_rotation as required.)
+
+```TypeScript
+import { SymbolGlyphModifier } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct NavigationExample {
+  @Provide('navPathStack') navPathStack:NavPathStack = new NavPathStack();
+  @State enable: boolean = false
+  @State menuItems:Array<NavigationMenuItem> = [
+    {
+      value:'menuItem1',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.card_writer')),
+    },
+    {
+      value:'menuItem2',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_folder_badge_plus'))
+    },
+    {
+      value:'menuItem3',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_lungs')),
+    },
+  ]
+
+  @State toolItems:Array<ToolbarItem> = [
+    {
+      value:'toolItem1',
+      symbolIcon:new SymbolGlyphModifier($r('sys.symbol.ohos_lungs')),
+      action:()=>{}
+    },
+    {
+      value:'toolItem2',
+      symbolIcon:new SymbolGlyphModifier($r('sys.symbol.card_migration')),
+      action:()=>{}
+    },
+    {
+      value:'toolItem3',
+      symbolIcon:new SymbolGlyphModifier($r('sys.symbol.ohos_star')),
+      action:()=>{}
+    }
+  ]
+
+  build() {
+    Navigation(this.navPathStack) {
+      Column() {
+        Button('Enable/Disable Adaptation').onClick(()=> {
+          this.enable = !this.enable;
+        })
+        Text("Toolbar adaptation enabled: " + this.enable)
+      }
+    }
+    .mode(NavigationMode.Stack)
+    .enableToolBarAdaptation(this.enable) // Specify whether to enable toolbar adaptation.
+    .backButtonIcon(new SymbolGlyphModifier($r('sys.symbol.ohos_wifi')))
+    .titleMode(NavigationTitleMode.Mini)
+    .menus(this.menuItems)
+    .toolbarConfiguration(this.toolItems)
+    .title('Level-1 page')
+  }
+}
+```
+
+This new way to create the Navigation component is added since API version 20.
+
+```TypeScript
+@Component
+struct PageHome {
+  private stack: NavPathStack | undefined = undefined;
+
+  build() {
+    NavDestination() {
+      Stack({alignContent: Alignment.Center}) {
+        Button('push PageOne').onClick(() => {
+          this.stack?.pushPath({name: 'PageOne'});
+        })
+      }.width('100%').height('100%')
+    }.title('PageHome')
+    .onReady((ctx: NavDestinationContext) => {
+      this.stack = ctx.pathStack;
+    })
+  }
+}
+
+@Builder
+function PageHomeBuilder() {
+  PageHome()
+}
+
+@Component
+struct PageOne {
+  build() {
+    NavDestination() {
+      Stack({alignContent: Alignment.Center}) {
+        Text('PageOne')
+      }.width('100%').height('100%')
+    }.title('PageOne')
+  }
+}
+
+@Builder
+function PageOneBuilder() {
+  PageOne()
+}
+
+@Entry
+@Component
+struct Index {
+  private stack: NavPathStack = new NavPathStack();
+
+  build() {
+    // Configure home page NavDestination information here.
+    Navigation(this.stack, { name: 'PageHome' }) {
+    }
+    .width('100%').height('100%')
+  }
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "PageHome",
+      "pageSourceFile": "src/main/ets/pages/Index.ets",
+      "buildFunction": "PageHomeBuilder",
+      "data": {
+        "description": "this is PageHome"
+      }
+    },
+    {
+      "name": "PageOne",
+      "pageSourceFile": "src/main/ets/pages/Index.ets",
+      "buildFunction": "PageOneBuilder",
+      "data": {
+        "description": "this is PageOne"
+      }
+    }
+  ]
+}
+```
+
+The interception API is added to the [NavigationInterception](arkts-arkui-navigationinterception-i.md) parameter type of setInterception since API version 22.
+
+```TypeScript
+// Index.ets
+@Entry
+@Component
+struct NavigationExample {
+  pageInfos: NavPathStack = new NavPathStack();
+  isUseInterception: boolean = false;
+
+  registerInterception() {
+    this.pageInfos.setInterception({
+      // Intercept navigation behavior before page creation. Stack operations take effect for the current navigation process.
+      interception: (from: NavPathInfo | "navBar", to: NavPathInfo | NavBar, navStack: NavPathStack,
+        operation: NavigationOperation, animated: boolean) => {
+        if (!this.isUseInterception) {
+          return;
+        }
+        if (typeof to === "string") {
+          return;
+        }
+        // Redirect the target page from pageTwo to pageOne.
+        let target: NavPathInfo = to as NavPathInfo;
+        let navStacktarget: NavPathStack = navStack as NavPathStack;
+        if (target.name === 'pageTwo') {
+          navStacktarget.pop();
+          navStacktarget.pushPathByName('pageOne', null);
+        }
+      },
+      // Callback invoked after the page is navigated. Stack operations in this callback are effective in the next navigation.
+      didShow: (from: NavDestinationContext | "navBar", to: NavDestinationContext | "navBar",
+        operation: NavigationOperation, isAnimated: boolean) => {
+        if (!this.isUseInterception) {
+          return;
+        }
+        if (typeof from === "string") {
+          console.info("current transition is from navigation home");
+        } else {
+          console.info(`current transition is from  ${(from as NavDestinationContext).pathInfo.name}`);
+          console.info(`current transition mode is to ${(to as NavDestinationContext).mode?.toString()}`);
+        }
+        if (typeof to === "string") {
+          console.info("current transition to is navBar");
+        } else {
+          console.info(`current transition is to ${(to as NavDestinationContext).pathInfo.name}`);
+          console.info(`current transition mode is to ${(to as NavDestinationContext).mode?.toString()}`);
+        }
+      },
+      // Callback invoked when the display mode of the Navigation component switches between single-column and split-column.
+      modeChange: (mode: NavigationMode) => {
+        if (!this.isUseInterception) {
+          return;
+        }
+        console.info(`current navigation mode is ${mode}`);
+      }
+    })
+  }
+
+  build() {
+    Navigation(this.pageInfos) {
+      Column() {
+        Button('pushPath', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.pushPath({ name: 'pageOne' }); // Push the navigation destination page specified by name to the navigation stack.
+          })
+        Button('use interception', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.isUseInterception = !this.isUseInterception;
+            if (this.isUseInterception) {
+              this.registerInterception();
+            } else {
+              this.pageInfos.setInterception(undefined);
+            }
+          })
+      }
+    }.title('NavIndex')
+  }
+}
+```
+
+```TypeScript
+// PageOne.ets
+class TmpClass {
+  count: number = 10;
+}
+
+@Builder
+export function PageOneBuilder(name: string, param: Object) {
+  PageOne()
+}
+
+@Component
+export struct PageOne {
+  pageInfos: NavPathStack = new NavPathStack();
+
+  build() {
+    NavDestination() {
+      Column() {
+        Button('pushPathByName', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            let tmp = new TmpClass();
+            this.pageInfos.pushPathByName('pageTwo', tmp); // Push the navigation destination page specified by name, with the data specified by param, to the routing stack.
+          })
+        Button('singletonLaunchMode', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.pushPath({ name: 'pageOne' },
+              { launchMode: LaunchMode.MOVE_TO_TOP_SINGLETON }); // Search from the bottom to the top of the stack. If the page with the specified name exists, move that page to the top of the stack.
+          })
+        Button('popToname', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.popToName('pageTwo'); // Pop the first navigation destination page that matches the value of name to the top of the routing stack.
+            console.info('popToName' + JSON.stringify(this.pageInfos),
+              'Return value' + JSON.stringify(this.pageInfos.popToName('pageTwo')));
+          })
+        Button('popToIndex', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.popToIndex(1); // Return the routing stack to the navigation destination page that matches the value of index.
+            console.info('popToIndex' + JSON.stringify(this.pageInfos));
+          })
+        Button('moveToTop', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.moveToTop('pageTwo'); // Move to the top of the routing stack the first navigation destination page that matches the value of name.
+            console.info('moveToTop' + JSON.stringify(this.pageInfos),
+              'Return value' + JSON.stringify(this.pageInfos.moveToTop('pageTwo')));
+          })
+        Button('moveIndexToTop', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.moveIndexToTop(1); // Move to the top of the routing stack the navigation destination page that matches the value of index.
+            console.info('moveIndexToTop' + JSON.stringify(this.pageInfos));
+          })
+        Button('clear', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.clear(); // Clear the routing stack.
+          })
+        Button('get', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            console.info('-------------------');
+            console.info('Obtain names of all NavDestination pages in the stack', JSON.stringify(this.pageInfos.getAllPathName()));
+            console.info('Obtain parameter information of the NavDestination page at the specified index',
+              JSON.stringify(this.pageInfos.getParamByIndex(1)));
+            console.info('Obtain the parameter information of all NavDestination pages with the specified name',
+              JSON.stringify(this.pageInfos.getParamByName('pageTwo')));
+            console.info('Obtain the position indexes of all NavDestination pages with the specified name',
+              JSON.stringify(this.pageInfos.getIndexByName('pageOne')));
+            console.info('Obtain the stack size', JSON.stringify(this.pageInfos.size()));
+          })
+      }.width('100%').height('100%')
+    }.title('pageOne')
+    .onBackPressed(() => {
+      const popDestinationInfo = this.pageInfos.pop(); // Pop the top element out of the routing stack.
+      console.info('pop' + 'return value' + JSON.stringify(popDestinationInfo));
+      return true;
+    }).onReady((context: NavDestinationContext) => {
+      this.pageInfos = context.pathStack;
+    })
+  }
+}
+```
+
+```TypeScript
+// PageTwo.ets
+@Builder
+export function PageTwoBuilder(name: string, param: Object) {
+  PageTwo()
+}
+
+@Component
+export struct PageTwo {
+  pathStack: NavPathStack = new NavPathStack();
+  private menuItems: Array<NavigationMenuItem> = [
+    {
+      value: "1",
+      icon: 'resources/base/media/undo.svg',
+    },
+    {
+      value: "2",
+      icon: 'resources/base/media/redo.svg',
+      isEnabled: false,
+    },
+    {
+      value: "3",
+      icon: 'resources/base/media/ic_public_ok.svg',
+      isEnabled: true,
+    }
+  ];
+
+  build() {
+    NavDestination() {
+      Column() {
+        Button('pushPathByName', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pathStack.pushPathByName('pageOne', null);
+          })
+      }.width('100%').height('100%')
+    }.title('pageTwo')
+    .menus(this.menuItems)
+    .onBackPressed(() => {
+      this.pathStack.pop();
+      return true;
+    })
+    .onReady((context: NavDestinationContext) => {
+      this.pathStack = context.pathStack;
+      console.info("current page config info is " + JSON.stringify(context.getConfigInRouteMap()));
+    })
+  }
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the project configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory.
+
+```TypeScript
+// src/main/resources/base/profile/router_map.json
+{
+  "routerMap": [
+    {
+      "name": "pageOne",
+      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
+      "buildFunction": "PageOneBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    },
+    {
+      "name": "pageTwo",
+      "pageSourceFile": "src/main/ets/pages/PageTwo.ets",
+      "buildFunction": "PageTwoBuilder"
+    }
+  ]
+}
+```
+
+The recoverable API is supported since API version 14.
+
+```TypeScript
+// Index.ets
+import { SymbolGlyphModifier } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct NavigationExample {
+  navPathStack: NavPathStack = new NavPathStack();
+  @State menuItems: Array<NavigationMenuItem> = [
+    {
+      // Replace 'resources/base/media/startIcon.png' with the resource file you use.
+      value: 'menuItem1',
+      icon: 'resources/base/media/startIcon.png' // Icon resource path.
+    },
+    {
+      // Replace 'resources/base/media/ic_public_ok.svg' with the image resource file you use.
+      value: 'menuItem2',
+      icon: 'resources/base/media/ic_public_ok.svg', // Icon resource path.
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_folder_badge_plus')).fontColor([Color.Red, Color.Green])
+        .renderingStrategy(SymbolRenderingStrategy.MULTIPLE_COLOR),
+    },
+    {
+      value: 'menuItem3',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_lungs')),
+    },
+  ];
+  @State toolItems: Array<ToolbarItem> = [
+    {
+      // Replace 'resources/base/media/ic_public_ok.svg' with the image resource file you use.
+      value: 'toolItem1',
+      icon: 'resources/base/media/ic_public_ok.svg', // Icon resource path.
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_lungs')),
+      status: ToolbarItemStatus.ACTIVE,
+      activeSymbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_folder_badge_plus')).fontColor([Color.Red,
+        Color.Green]).renderingStrategy(SymbolRenderingStrategy.MULTIPLE_COLOR),
+      action: () => {
+      }
+    },
+    {
+      // Replace 'resources/base/media/startIcon.png' with the resource file you use.
+      value: 'toolItem2',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_star')),
+      status: ToolbarItemStatus.ACTIVE,
+      activeIcon: 'resources/base/media/startIcon.png', // Icon resource path.
+      action: () => {
+      }
+    },
+    {
+      value: 'toolItem3',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_star')),
+      status: ToolbarItemStatus.ACTIVE,
+      activeSymbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_lungs')),
+      action: () => {
+      }
+    }
+  ];
+
+  build() {
+    Navigation(this.navPathStack) {
+      Column() {
+        Button('Go').onClick(() => {
+          this.navPathStack.pushPathByName('NavigationMenu', null);
+        })
+      }
+    }
+    .backButtonIcon(new SymbolGlyphModifier($r('sys.symbol.ohos_wifi')))
+    .titleMode(NavigationTitleMode.Mini)
+    .menus(this.menuItems)
+    .toolbarConfiguration(this.toolItems)
+    .title('Level-1 page')
+    .id('test')
+    .recoverable(true)
+  }
+}
+```
+
+```TypeScript
+// PageOne.ets
+import { SymbolGlyphModifier } from '@kit.ArkUI';
+
+@Builder
+export function myRouter(name: string, param?: Object) {
+  NavigationMenu();
+}
+
+@Component
+export struct NavigationMenu {
+  navPathStack: NavPathStack = new NavPathStack();
+  @State menuItems: Array<NavigationMenuItem> = [
+    {
+      // Replace 'resources/base/media/startIcon.png' with the resource file you use.
+      value: 'menuItem1',
+      icon: 'resources/base/media/startIcon.png', // Icon resource path.
+      action: () => {
+      }
+    },
+    {
+      value: 'menuItem2',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_folder_badge_plus')).fontColor([Color.Red, Color.Green])
+        .renderingStrategy(SymbolRenderingStrategy.MULTIPLE_COLOR),
+      action: () => {
+      }
+    },
+    {
+      value: 'menuItem3',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.repeat_1')),
+      action: () => {
+      }
+    },
+  ];
+
+  build() {
+    NavDestination() {
+      Row() {
+        Column() {
+        }
+        .width('100%')
+      }
+      .height('100%')
+    }
+    .onReady((context: NavDestinationContext) => {
+      this.navPathStack = context.pathStack;
+    })
+    .hideTitleBar(false)
+    .title('NavDestination title')
+    .backgroundColor($r('sys.color.ohos_id_color_titlebar_sub_bg'))
+    .backButtonIcon(new SymbolGlyphModifier($r('sys.symbol.ohos_star'))
+    .fontColor([Color.Blue]))
+    .menus(this.menuItems)
+    .recoverable(true)
+  }
+}
+```
+
+Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. Example:
+
+```TypeScript
+{
+  "routerMap": [
+    {
+      "name": "NavigationMenu",
+      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
+      "buildFunction": "myRouter",
+      "data": {
+        "description": "this is pageOne"
+      }
+    }
+  ]
+}
+```

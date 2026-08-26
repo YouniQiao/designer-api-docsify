@@ -16,6 +16,6 @@ Defines an OnLocaleUpdatedFn function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| locale | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locale | string | Yes | Indicates the locale settings. The application will automatically adjust its behavior based on the current locale to meet the user's localization requirements. This property can be configured by setting the system language, system region, and application language preferences |

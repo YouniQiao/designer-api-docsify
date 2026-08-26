@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import print from '@kit.BasicServicesKit';
 ```
 
 ## checkPreferencesConflicts
@@ -26,22 +26,22 @@ Check preferences conflicts.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| printerId | string | Yes |
-| changedType | string | Yes |
-| preferences | [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| printerId | string | Yes | Indicates the printer ID. Added printer ID in the system. |
+| changedType | string | Yes | Indicates the field name that was modified on the printing interface. Field names set in the print preview or preferences interface. |
+| preferences | [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md) | Yes | Indicates the selected value on the printing interface. The selected value on the printinginterface. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string[] & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string[] & gt; | Promise that resolves with the conflicting field names. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [13100005](../errorcode-print.md#13100005-invalid-printer) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [13100005](../errorcode-print.md#13100005-invalid-printer) | Can not find the printer or printer's ppd file in system. |

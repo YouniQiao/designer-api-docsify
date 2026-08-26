@@ -14,6 +14,6 @@ type NotifyMissionsChangedCallback = (deviceId: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| deviceId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceId | string | 是 | 设备ID，表示发生任务变化的远程设备。 |

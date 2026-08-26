@@ -12,8 +12,8 @@ Enumerates server authentication modes in a session.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'basic' |
-| 'ntlm' |
-| 'digest' |
+| Type | Description |
+| --- | --- |
+| 'basic' | Basic authentication mode. This field has a fixed value of **basic**. |
+| 'ntlm' | NTLM authentication mode. This field has a fixed value of **ntlm**. |
+| 'digest' | Digest authentication mode. This field has a fixed value of **digest**. |

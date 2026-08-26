@@ -32,9 +32,9 @@ A constructor used to create a **NumericTextTransition** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No | Options of the numeric flip animation. The default value is inherited from [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md). |
 
 ## enableBlur
 

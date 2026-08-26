@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { kioskManager } from 'kits/@kit.AbilityKit';
+import kioskManager from '@kit.AbilityKit';
 ```
 
 ## getKioskStatus
@@ -24,14 +24,44 @@ function getKioskStatus(): Promise<KioskStatus>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;KioskStatus & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;KioskStatus & gt; | Promise对象，返回当前Kiosk状态信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+
+**示例**
+
+```TypeScript
+import { kioskManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('getKioskInfo').margin({ top: 10 })
+        .onClick(() => {
+          // 获取Kiosk模式状态信息
+          kioskManager.getKioskStatus()
+            .then((data: kioskManager.KioskStatus) => {
+              hilog.info(0x0000, 'testTag', '%{public}s', `getKioskStatus success: ${JSON.stringify(data)}`);
+            })
+            .catch((error: BusinessError) => {
+              hilog.error(0x0000, 'testTag', '%{public}s', `getKioskStatus failed. Code: ${error.code}, message: ${error.message}`);
+            });
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```

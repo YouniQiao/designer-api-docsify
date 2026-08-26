@@ -16,7 +16,7 @@ declare type OnSelectCallback = (index: number, selectStr: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
-| selectStr | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 选中项的索引，索引值从0开始。 |
+| selectStr | string | 是 | 选中项的值。 |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from 'kits/@kit.AbilityKit';
+import childProcessManager from '@kit.AbilityKit';
 ```
 
 ## getChildProcessInfos
@@ -14,7 +14,8 @@ function getChildProcessInfos(): Promise<Array<ChildProcessInformation>>
 
 Obtains the information about the child processes of the current application. This API uses a promise to return the result. The returned child processes include those created through [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md) (in APP_SPAWN_FORK mode), [startArkChildProcess](arkts-ability-childprocessmanager-startarkchildprocess-f.md), and [startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md). [OH_Ability_CreateNativeChildProcess] [OH_Ability_CreateNativeChildProcessWithConfigs] [OH_Ability_StartNativeChildProcess] [OH_Ability_StartNativeChildProcessWithConfigs]
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The child process started in SELF_FORK mode is not included in the returned list.
 > If no child processes exist, an empty array is returned.
 
@@ -26,12 +27,12 @@ Obtains the information about the child processes of the current application. Th
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;Array & lt;ChildProcessInformation & gt; & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;Array & lt;ChildProcessInformation & gt; & gt; | Promise used to return the information about the child processes of the current application. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system service failed. |

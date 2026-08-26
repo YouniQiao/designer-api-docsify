@@ -10,7 +10,7 @@ The module defines the ability information. An application can obtain its own ab
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AbilityInfo](arkts-ability-abilityinfo-i.md) |
-| [WindowSize](arkts-ability-abilityinfo-windowsize-i.md) |
+| Name | Description |
+| --- | --- |
+| [AbilityInfo](arkts-ability-abilityinfo-i.md) | The module defines the ability information. |
+| [WindowSize](arkts-ability-abilityinfo-windowsize-i.md) | Describes the window size.  **Atomic service API**: This API can be used in atomic services since API version 11. |

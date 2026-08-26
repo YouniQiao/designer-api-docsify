@@ -2,10 +2,12 @@
 
 The distributedBundle module manages distributed bundles.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
 > [@ohos.bundle.distributedBundleManager](arkts-bundle-distributedbundlemanager.md)
-> instead.&gt;
+> instead.
+> 
 > The APIs provided by this module are system APIs.
 
 **Since:** 8
@@ -21,7 +23,7 @@ The distributedBundle module manages distributed bundles.
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundle } from 'kits/@kit.AbilityKit';
+import distributedBundle from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -29,10 +31,10 @@ import { distributedBundle } from 'kits/@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) |
-| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) |
-| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) | Obtains the information about the remote ability that matches the given element name. This API uses an asynchronous callback to return the result. |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) | Obtains the information about the remote ability that matches the given element name. This API uses a promise to return the result. |
+| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) | Obtains the information about remote abilities that match the given element names. This API uses an asynchronous callback to return the result. |
+| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) | Obtains the information about remote abilities that match the given element names. This API uses a promise to return the result. |
 <!--DelEnd-->

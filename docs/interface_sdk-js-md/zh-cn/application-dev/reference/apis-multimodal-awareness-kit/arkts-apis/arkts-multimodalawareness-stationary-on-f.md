@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
+import stationary from '@kit.MultimodalAwarenessKit';
 ```
 
 ## on
@@ -20,9 +20,18 @@ function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: numbe
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 |
-| event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | 是 |
-| reportLatencyNs | number | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 | 设备状态类型。 |
+| event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | 是 | 事件类型。 |
+| reportLatencyNs | number | 是 | 报告延时，单位：纳秒（ns），取值范围[1000000000, 3000000000]。超出范围时返回错误。建议根据业务场景选择合适的值， 较小值可提高实时性但会增加功耗，较大值可降低功耗但会降低响应速度。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 是 | 回调函数，用于接收设备状态变化结果。 |
+
+**示例**
+
+```TypeScript
+let reportLatencyNs = 1000000000; // 单位：纳秒
+stationary.on('still', stationary.ActivityEvent.ENTER, reportLatencyNs, (data) => {
+    console.info('data=' + JSON.stringify(data));
+});
+```

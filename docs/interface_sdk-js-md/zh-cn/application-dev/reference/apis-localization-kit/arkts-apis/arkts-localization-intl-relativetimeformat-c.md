@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import intl from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -33,6 +33,52 @@ constructor()
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 默认构造函数使用系统当前区域ID创建
+let locale = new intl.Locale();
+// 返回系统当前区域ID
+let localeID = locale.toString();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统当前区域ID创建DateTimeFormat对象
+let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统当前区域ID创建NumberFormat对象
+let formatter: intl.NumberFormat = new intl.NumberFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建Collator对象
+let collator = new intl.Collator();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建PluralRules对象
+let pluralRules = new intl.PluralRules();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建RelativeTimeFormat对象
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
+```
 
 ## constructor
 
@@ -54,10 +100,23 @@ constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOpt
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| locale | string \| Array & lt;string & gt; | 是 |
-| options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string \| Array & lt;string & gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | 否 | 创建相对时间格式化对象时的配置项。 默认值：所有属性都取默认值时的配置项。 |
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用zh-CN区域ID创建RelativeTimeFormat对象，localeMatcher设置为lookup，numeric设置为always，style设置为long
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN', {
+  localeMatcher: 'lookup',
+  numeric: 'always',
+  style: 'long'
+});
+```
 
 ## format
 
@@ -79,16 +138,27 @@ format(value: number, unit: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
-| unit | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 相对时间格式化的数值。 |
+| unit | string | 是 | 相对时间格式化的单位， 取值包括："year", "quarter", "month", "week", "day", "hour", "minute", "second"。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 格式化后的相对时间。 |
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用zh-CN区域ID创建RelativeTimeFormat对象
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN');
+// 计算zh-CN区域中数字3，单位quarter的本地化表示
+let formatResult: string = formatter.format(3, 'quarter'); // formatResult = '3个季度后'
+```
 
 ## formatToParts
 
@@ -110,16 +180,26 @@ formatToParts(value: number, unit: string): Array<object>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| value | number | 是 |
-| unit | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 相对时间格式化的数值。 |
+| unit | string | 是 | 相对时间格式化的单位， 取值包括："year", "quarter", "month", "week", "day", "hour", "minute", "second"。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;object & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;object & gt; | 格式化结果中各个部分的对象数组。 |
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用en区域ID创建RelativeTimeFormat对象，numeric设置为auto
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('en', { numeric: 'auto' });
+let parts: Array<object> = formatter.formatToParts(10, 'seconds'); // parts = [ {type: 'literal', value: 'in'}, {type: 'integer', value: 10, unit: 'second'}, {type: 'literal', value: 'seconds'} ]
+```
 
 ## resolvedOptions
 
@@ -141,6 +221,18 @@ resolvedOptions(): RelativeTimeFormatResolvedOptions
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [RelativeTimeFormatResolvedOptions](arkts-localization-intl-relativetimeformatresolvedoptions-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [RelativeTimeFormatResolvedOptions](arkts-localization-intl-relativetimeformatresolvedoptions-i.md) | 相对时间格式化对象的格式化配置项。 |
+
+**示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用en-GB区域ID创建RelativeTimeFormat对象
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('en-GB', { style: 'short' });
+// 获取RelativeTimeFormat对象配置项
+let options: intl.RelativeTimeFormatResolvedOptions = formatter.resolvedOptions();
+let style: string = options.style; // style = 'short'
+```

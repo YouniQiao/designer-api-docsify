@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import curves from '@kit.ArkUI';
 ```
 
 ## cubicBezier
@@ -24,15 +24,15 @@ Creates a cubic Bézier curve. The curve values must be between 0 and 1.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| x1 | number | Yes |
-| y1 | number | Yes |
-| x2 | number | Yes |
-| y2 | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x1 | number | Yes | Value range [0, 1]. Note: If the value is less than 0, 0 is used. If the value is greater than 1, 1 is used. |
+| y1 | number | Yes | Value range (-∞, +∞). |
+| x2 | number | Yes | Value range [0, 1]. Note: If the value is less than 0, 0 is used. If the value is greater than 1, 1 is used. |
+| y2 | number | Yes | Value range (-∞, +∞). |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
+| Type | Description |
+| --- | --- |
+| string | Cubic Bézier curve object. |

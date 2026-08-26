@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
+import errorManager from '@kit.AbilityKit';
 ```
 
 ## setDefaultFreezeObserver
@@ -14,7 +14,8 @@ function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObse
 
 发生APP_FREEZE时，支持链式回调，返回上一次注册的处理器，仅限主线程调用。 如果传入非法参数或在子线程调用，将抛出错误码并返回undefined，因此建议使用try-catch逻辑进行处理。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 该接口请勿与
 > [on('freeze')](arkts-ability-errormanager-on-f.md#onfreeze)
 > 或
@@ -31,18 +32,48 @@ function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObse
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| defaultObserver | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| defaultObserver | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | 否 | 默认冻屏观测器。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | 返回原来的默认冻屏观测器。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [16000205](../errorcode-ability.md#16000205-当前接口未在主线程中调用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [16000205](../errorcode-ability.md#16000205-当前接口未在主线程中调用) | API未在主线程中调用。 |
+
+**示例**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 用于保存上一次注册的处理器。如果是第一次注册，无前置处理器。
+let oldHandler: errorManager.FreezeObserver = () => {};
+const freezeHandler: errorManager.FreezeObserver = () => {
+  // 自定义的FreezeHandler实现逻辑
+  console.info('[freezeHandler] freeze handler invoked.');
+  if (oldHandler) {
+    oldHandler();
+  } else {
+    console.info('[freezeHandler] freeze handler end.');
+  }
+};
+
+export function setFreezeHandler() {
+  try {
+    oldHandler = errorManager.setDefaultFreezeObserver(freezeHandler);
+  } catch (paramError) {
+    let code = (paramError as BusinessError).code;
+    let message = (paramError as BusinessError).message;
+    console.error(`Failed to set freeze handler. Code: ${code}, message: ${message}`);
+  }
+  console.info('Registered freeze Handler.');
+}
+```

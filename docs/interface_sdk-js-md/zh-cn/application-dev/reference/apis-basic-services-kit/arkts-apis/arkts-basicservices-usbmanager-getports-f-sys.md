@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import usbManager from '@kit.BasicServicesKit';
+import serialManager from '@kit.BasicServicesKit.serial';
 ```
 
 ## getPorts
@@ -26,6 +27,13 @@ function getPorts(): Array<USBPort>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Array & lt;USBPort & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Array & lt;USBPort & gt; | USB端口描述信息列表。 |
+
+**示例**
+
+```TypeScript
+// 获取所有USB端口描述信息
+let ret: Array<usbManager.USBPort> = usbManager.getPorts();
+```

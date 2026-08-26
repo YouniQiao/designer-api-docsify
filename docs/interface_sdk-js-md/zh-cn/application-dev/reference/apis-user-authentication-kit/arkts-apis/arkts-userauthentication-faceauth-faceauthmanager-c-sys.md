@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { faceAuth } from 'kits/@kit.UserAuthenticationKit';
+import faceAuth from '@kit.UserAuthenticationKit';
 ```
 
 ## constructor
@@ -27,6 +27,14 @@ constructor()
 **系统能力：** SystemCapability.UserIAM.UserAuth.FaceAuth
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+```TypeScript
+import { faceAuth } from '@kit.UserAuthenticationKit';
+
+let faceAuthManager = new faceAuth.FaceAuthManager();
+```
 
 ## setSurfaceId
 
@@ -46,14 +54,32 @@ setSurfaceId(surfaceId: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| surfaceId | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| surfaceId | string | 是 | XComponent持有Surface的ID。用于在人脸录入过程中显示人脸 预览画面。    **说明：**需在XComponent完成初始化后，通过[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid)方法 获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12700001](../errorcode-useriam.md#12700001-人脸服务不可用) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
+| [12700001](../errorcode-useriam.md#12700001-人脸服务不可用) | The service is unavailable. |
+
+**示例**
+
+```TypeScript
+import { faceAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 该surfaceId应通过XComponentController.getXComponentSurfaceId()方法从XComponent控件获取，此处仅用作示例。
+let surfaceId = '123456';
+let faceManager = new faceAuth.FaceAuthManager();
+try {
+  faceManager.setSurfaceId(surfaceId);
+  console.info('set surface id successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to set surface id. Code: ${err?.code}, message: ${err?.message}`);
+}
+```

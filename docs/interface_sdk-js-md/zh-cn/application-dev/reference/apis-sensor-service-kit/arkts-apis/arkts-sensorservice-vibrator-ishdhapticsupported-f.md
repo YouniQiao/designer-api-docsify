@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## isHdHapticSupported
@@ -20,12 +19,29 @@ function isHdHapticSupported(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否支持高清振动。true表示支持高清振动，可使用VibrateFromFile和VibrateFromPattern类型；false表示不支持，使用自定义振动类型可能返回错误码801或效果不佳。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
+
+**示例**
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  // 查询是否支持高清振动
+  let ret = vibrator.isHdHapticSupported();
+  console.info(`The query result is ${ret}`);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```

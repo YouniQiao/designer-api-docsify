@@ -9,7 +9,8 @@ Implements a **TreeController** object, which can be bound to a tree view compon
 ## Modules to Import
 
 ```TypeScript
-import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from 'kits/@kit.ArkUI';
+import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
+import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUIV2';
 ```
 
 ## addNode
@@ -30,15 +31,15 @@ Adds a child node to the selected node.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| nodeParam | [NodeParam](arkts-arkui-arkui-advanced-treeview-nodeparam-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| nodeParam | [NodeParam](arkts-arkui-arkui-advanced-treeview-nodeparam-i.md) | No | Node information. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TreeController](arkts-arkui-arkui-advanced-treeview-treecontroller-c.md) |
+| Type | Description |
+| --- | --- |
+| [TreeController](arkts-arkui-arkui-advanced-treeview-treecontroller-c.md) | Controller of the **TreeView** component. |
 
 ## buildDone
 
@@ -90,11 +91,11 @@ Refreshes the tree view. You can call this API to update the information about t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| parentId | number | Yes |
-| parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes |
-| currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| parentId | number | Yes | ID of the parent node. The value must be greater than or equal to -1. |
+| parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Secondary text of the parent node. |
+| currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Secondary text of the current node. |
 
 ## removeNode
 

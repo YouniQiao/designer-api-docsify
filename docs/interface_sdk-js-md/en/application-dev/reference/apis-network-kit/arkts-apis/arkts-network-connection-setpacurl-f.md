@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## setPacUrl
@@ -14,7 +13,8 @@ function setPacUrl(pacUrl: string): void
 
 Sets the URL of the system-level Proxy Auto Config (PAC) script.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > Only the script address can be set. The proxy function cannot be parsed or enabled. To set the script and enable
 > the proxy, call the [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) API.
 
@@ -26,15 +26,24 @@ Sets the URL of the system-level Proxy Auto Config (PAC) script.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| pacUrl | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pacUrl | string | Yes | URL of the PAC script. Note that this URL will not be verified by the API. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+let pacUrl = "xxx";
+connection.setPacUrl(pacUrl);
+```

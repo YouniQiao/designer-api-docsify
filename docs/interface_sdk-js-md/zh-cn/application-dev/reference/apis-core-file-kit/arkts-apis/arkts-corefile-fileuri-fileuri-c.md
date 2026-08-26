@@ -11,7 +11,7 @@ FileUri表示文件的URI，继承自uri.URI。@extends uri.URI
 ## 导入模块
 
 ```TypeScript
-import { fileUri } from 'kits/@kit.CoreFileKit';
+import fileUri from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -30,18 +30,28 @@ FileUri的构造函数，用于创建FileUri实例。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| uriOrPath | string | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uriOrPath | string | 是 | URI或路径。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900005 |
-| 13900020 |
-| 13900042 |
-| 14300002 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900020 | Invalid argument |
+| 13900042 | Unknown error |
+| 14300002 | Invalid uri |
+
+**示例**
+
+```TypeScript
+let pathDir = this.context.filesDir; // 获取应用沙箱路径。
+let path = pathDir + '/test';
+let uri = fileUri.getUriFromPath(path);  // file://<packageName>/data/storage/el2/base/haps/entry/files/test
+let fileUriObject = new fileUri.FileUri(uri);
+console.info(`The name of FileUri is ${fileUriObject.name}`);
+```
 
 ## getFullDirectoryUri
 
@@ -59,17 +69,32 @@ getFullDirectoryUri(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回文件所在路径的目录URI；URI指向目录时返回当前URI。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900002 |
-| 13900012 |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  let pathDir = this.context.filesDir; // 获取应用沙箱路径。
+  let path = pathDir + '/test.txt';
+  let fileUriObject = new fileUri.FileUri(path);
+  let directoryUri = fileUriObject.getFullDirectoryUri();
+  console.info(`success to getFullDirectoryUri: ${JSON.stringify(directoryUri)}`);
+} catch (error) {
+  console.error(`failed to getFullDirectoryUri because: ${JSON.stringify(error)}`);
+}
+```
 
 ## isRemoteUri
 
@@ -87,15 +112,28 @@ isRemoteUri(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示远端URI，返回false表示本地URI。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| 13900042 |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+function isRemoteUriExample() {
+  let uri = 'file://com.example.demo/data/storage/el2/base/test.txt?networkid=xxxx'; // ?networkid设备id，远端URI的标识
+  let fileUriObject = new fileUri.FileUri(uri);
+  let ret = fileUriObject.isRemoteUri();
+  if (ret) {
+    console.info('It is a remote URI.');
+  }
+}
+```
 
 ## name
 

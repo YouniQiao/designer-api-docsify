@@ -11,7 +11,8 @@ Defines the callback of the authentication widget. The authentication widget use
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import userAuth from '@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 ```
 
 ## sendCommand
@@ -30,6 +31,28 @@ Triggered to receive commands from the user authentication framework. The user a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| cmdData | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| cmdData | string | Yes | Command data. It is a JSON string, containing the command content sent by the user authentication framework to the authentication widget. The JSON structure contains fields based on the command type. Common fields include **commandType** (string, command type), **authType** (array, authentication type list), and **result** (number, authentication result code). The widget needs to parse the data and perform the corresponding operations based on the command type. |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const userAuthWidgetMgrVersion = 1;
+try {
+  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
+  console.info('get userAuthWidgetMgr instance successfully.');
+  userAuthWidgetMgr.on('command', {
+    sendCommand: (cmdData) => {
+      console.info(`The cmdData is ${cmdData}`);
+    }
+  })
+  console.info('subscribe authentication event successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`userAuth widgetMgr failed. Code is ${err?.code}, message is ${err?.message}`);
+}
+```

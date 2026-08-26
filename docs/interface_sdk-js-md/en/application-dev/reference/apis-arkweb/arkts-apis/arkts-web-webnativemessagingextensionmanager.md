@@ -11,27 +11,27 @@ The webNativeMessagingExtensionManager module is a Web native message extension 
 ## Modules to Import
 
 ```TypeScript
-import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
+import webNativeMessagingExtensionManager from '@kit.ArkWeb';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [connectNative](arkts-arkweb-webnativemessagingextensionmanager-connectnative-f.md) |
-| [disconnectNative](arkts-arkweb-webnativemessagingextensionmanager-disconnectnative-f.md) |
+| Name | Description |
+| --- | --- |
+| [connectNative](arkts-arkweb-webnativemessagingextensionmanager-connectnative-f.md) | Connects the current ability to the specified web native message extension ability. |
+| [disconnectNative](arkts-arkweb-webnativemessagingextensionmanager-disconnectnative-f.md) | Disconnects the connection of a specified web native message extension. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) |
-| [WebExtensionConnectionCallback](arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) |
+| Name | Description |
+| --- | --- |
+| [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Represents the information about the web native message connection. |
+| [WebExtensionConnectionCallback](arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | As an input parameter when connecting a web native messaging extension, it is used to receive state changes during the connection. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [NmErrorCode](arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) |
+| Name | Description |
+| --- | --- |
+| [NmErrorCode](arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) | Provides the native messaging error codes. |

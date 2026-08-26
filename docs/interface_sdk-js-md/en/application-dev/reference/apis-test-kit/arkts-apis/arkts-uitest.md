@@ -32,61 +32,60 @@ The **UiTest** module provides UI automation test capabilities, such as componen
 ## Modules to Import
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [By](arkts-test-uitest-by-c.md) |
-| [Component](arkts-test-uitest-component-c.md) |
-| [Driver](arkts-test-uitest-driver-c.md) |
-| [On](arkts-test-uitest-on-c.md) |
-| [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) |
-| [UiComponent](arkts-test-uitest-uicomponent-c.md) |
-| [UiDriver](arkts-test-uitest-uidriver-c.md) |
-| [UiWindow](arkts-test-uitest-uiwindow-c.md) |
+| Name | Description |
+| --- | --- |
+| [By](arkts-test-uitest-by-c.md) | The UiTest framework provides a wide range of UI component feature description APIs in the **By** class to filter and match components.The APIs provided by the **By** class exhibit the following features: 1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component. 2. Provide multiple match patterns for component attributes. 3. Support absolute positioning and relative positioning for components. APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isbefore) and [By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isafter) can be used to specify the features of adjacent components to assist positioning.All APIs provided in the **By** class are synchronous. You are advised to use the static constructor **BY** to create a **By** object in chain mode. |
+| [Component](arkts-test-uitest-component-c.md) | Represents a component on the UI and provides APIs for obtaining component attributes, clicking a component, scrolling to search for a component, and text injection. All APIs provided in this class use a promise to return the result and must be invoked using **await**. |
+| [Driver](arkts-test-uitest-driver-c.md) | The **Driver** class is the main entrance of the UiTest framework. This class provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot. All APIs provided by this class, except **Driver.create()** and **Driver.createUIEventObserver()**, use an asynchronous method (promise) to return the result and must be invoked using **await**. |
+| [On](arkts-test-uitest-on-c.md) | Since API version 9, the UiTest framework provides a wide range of UI component feature description APIs in the **On** class to filter and match components.The APIs provided by the **On** class exhibit the following features: 1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component. 2. Provide multiple match patterns for component attributes. 3. Support absolute positioning and relative positioning for components. APIs such as [ON.isBefore](arkts-test-uitest-on-c.md#isbefore) and [ON.isAfter](arkts-test-uitest-on-c.md#isafter) can be used to specify the features of adjacent components to assist positioning.All APIs provided in the **On** class are synchronous. You are advised to use the static constructor **ON** to create an **On** object in chain mode. |
+| [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Implements a **PointerMatrix** object that stores coordinates and behaviors of each action of each finger in a multi-touch operation. After creating an object using create, use [setPoint](arkts-test-uitest-pointermatrix-c.md#setpoint) to set the coordinates of each finger at each step. Then pass the coordinates to [injectMultiPointerAction](arkts-test-uitest-driver-c.md#injectmultipointeraction) to perform a multi-finger operation. |
+| [UiComponent](arkts-test-uitest-uicomponent-c.md) | In **UiTest**, the **UiComponent** class represents a component on the UI and provides APIs for obtaining component attributes, clicking a component, scrolling to search for a component, and text injection. All APIs provided in this class use a promise to return the result and must be invoked using **await**. |
+| [UiDriver](arkts-test-uitest-uidriver-c.md) | The **UiDriver** class is the main entry to the UiTest framework. It provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot. All APIs provided by this class, except **UiDriver.create()**, use a promise to return the result and must be invoked using **await**. |
+| [UiWindow](arkts-test-uitest-uiwindow-c.md) | The **UiWindow** class represents a window on the UI and provides APIs for obtaining window attributes, dragging a window, and adjusting the window size. All APIs provided in this class use a promise to return the result and must be invoked using **await**. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) |
-| [InputTextMode](arkts-test-uitest-inputtextmode-i.md) |
-| [KeyOptions](arkts-test-uitest-keyoptions-i.md) |
-| [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) |
-| [Point](arkts-test-uitest-point-i.md) |
-| [Rect](arkts-test-uitest-rect-i.md) |
-| [TouchOptions](arkts-test-uitest-touchoptions-i.md) |
-| [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) |
-| [UIElementInfo](arkts-test-uitest-uielementinfo-i.md) |
-| [UIEventObserver](arkts-test-uitest-uieventobserver-i.md) |
-| [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) |
-| [WindowFilter](arkts-test-uitest-windowfilter-i.md) |
+| Name | Description |
+| --- | --- |
+| [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | Describes the extended configuration of component operation event listening, which is used to specify the listening process configuration and event filtering conditions. |
+| [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Describes the text input mode. |
+| [KeyOptions](arkts-test-uitest-keyoptions-i.md) | Represents the options for key operations. |
+| [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | Pen key operation options. |
+| [Point](arkts-test-uitest-point-i.md) | Represents the point on the device screen. |
+| [Rect](arkts-test-uitest-rect-i.md) | Represents the rectangle area on the device screen. |
+| [TouchOptions](arkts-test-uitest-touchoptions-i.md) | Common options for touch operations. |
+| [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | Describes information about the touchpad swipe gesture option. |
+| [UIElementInfo](arkts-test-uitest-uielementinfo-i.md) | Provides information about the UI event. |
+| [UIEventObserver](arkts-test-uitest-uieventobserver-i.md) | Defines a UI event listener, which is used to listen for various events on the UI, including the display of the **Toast** and **Dialog** components, window change event, and component operation event. An instance can be created using [createUIEventObserver](arkts-test-uitest-driver-c.md#createuieventobserver). |
+| [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | Describes the extended configuration of window change event listening, which is used to specify the listening process configuration and event filtering conditions. |
+| [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Provides the flag attributes of this window. |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) |
-| [DisplayRotation](arkts-test-uitest-displayrotation-e.md) |
-| [MatchPattern](arkts-test-uitest-matchpattern-e.md) |
-| [MouseButton](arkts-test-uitest-mousebutton-e.md) |
-| [PenKey](arkts-test-uitest-penkey-e.md) |
-| [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) |
-| [PenMode](arkts-test-uitest-penmode-e.md) |
-| [ResizeDirection](arkts-test-uitest-resizedirection-e.md) |
-| [UiDirection](arkts-test-uitest-uidirection-e.md) |
-| [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) |
-| [WindowMode](arkts-test-uitest-windowmode-e.md) |
+| Name | Description |
+| --- | --- |
+| [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | Enumerates the component operation event types that can be listened for. |
+| [DisplayRotation](arkts-test-uitest-displayrotation-e.md) | Describes the display rotation of the device. |
+| [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Enumerates the match patterns supported for component attributes. |
+| [MouseButton](arkts-test-uitest-mousebutton-e.md) | Describes the injected simulated mouse button. |
+| [PenKey](arkts-test-uitest-penkey-e.md) | Pen key type enum. |
+| [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | Pen key operation type enum. |
+| [PenMode](arkts-test-uitest-penmode-e.md) | Pen mode enum. |
+| [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | Enumerates the directions in which a window can be resized. |
+| [UiDirection](arkts-test-uitest-uidirection-e.md) | Describes the direction of a UI operation such as fling. |
+| [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | Enumerates the window change event types that can be listened for. |
+| [WindowMode](arkts-test-uitest-windowmode-e.md) | Enumerates the window modes. |
 
 ### Properties
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [BY](arkts-test-ohosuitest-p.md) |
-| [ON](arkts-test-ohosuitest-p.md) |
+| Name | Description |
+| --- | --- |
+| [BY](arkts-test-ohosuitest-p.md) | The static builder for building [By](arkts-test-uitest-by-c.md)object conveniently,usage example:BY.text('txt').enabled(true). |
+| [ON](arkts-test-ohosuitest-p.md) | The static builder for building [On](arkts-test-uitest-on-c.md)object conveniently,usage example:ON.text('txt').enabled(true). |

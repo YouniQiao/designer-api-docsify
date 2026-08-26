@@ -9,7 +9,7 @@ Manages text chunk process configurations.@interface SplitConfig
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from 'kits/@kit.ArkData';
+import intelligence from '@kit.ArkData';
 ```
 
 ## overlapRatio

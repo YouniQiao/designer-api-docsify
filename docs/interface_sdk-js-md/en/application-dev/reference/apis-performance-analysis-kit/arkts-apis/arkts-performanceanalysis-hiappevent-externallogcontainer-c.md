@@ -9,7 +9,6 @@ An external log container including all external log files.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getAllLogFiles
@@ -28,9 +27,9 @@ Get the set of all external log file paths
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Set & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Set & lt;string & gt; | The set of all external log file paths |
 
 ## getAllLogs
 
@@ -48,9 +47,9 @@ Get the set of all ExternalLogWrappers
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Set&lt;[ExternalLogWrapper](arkts-performanceanalysis-hiappevent-externallogwrapper-c.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Set&lt;[ExternalLogWrapper](arkts-performanceanalysis-hiappevent-externallogwrapper-c.md)&gt; | The set of all ExternalLogWrappers |
 
 ## getFirstGeneratedLogFiles
 
@@ -68,15 +67,15 @@ Get the first generated external log file paths of a given number
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| num | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| num | number | Yes | given number of queried files |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Set & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Set & lt;string & gt; | The set of qualified external log file paths |
 
 ## getLogFilesGeneratedAfter
 
@@ -94,15 +93,15 @@ Get the set of all external log file paths which are after a given time
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| timePoint | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| timePoint | number | Yes | given generated time point (ms) of file size |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Set & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Set & lt;string & gt; | The set of all external log file paths which are after a given time |
 
 ## getLogFilesGeneratedBefore
 
@@ -120,15 +119,15 @@ Get the set of all external log file paths which are before a given time
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| timePoint | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| timePoint | number | Yes | given generated time point (ms) of file size |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Set & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Set & lt;string & gt; | The set of all external log file paths which are before a given time |
 
 ## getLogFilesLargerThan
 
@@ -146,15 +145,15 @@ Get the set of all external log file paths whose size are larger than a given am
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sizeKb | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sizeKb | number | Yes | given amount of file size |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Set & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Set & lt;string & gt; | The set of all external log file paths whose size are larger than a given amount |
 
 ## getLogFilesOfSysEvent
 
@@ -172,15 +171,15 @@ Get the set of all external log file paths of a given system event
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | string | Yes | string of given system event |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Set & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Set & lt;string & gt; | The set of all external log file paths of a given system event |
 
 ## getLogFilesSmallerThan
 
@@ -198,15 +197,15 @@ Get the set of all external log file paths whose size are smaller than a given a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| sizeKb | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sizeKb | number | Yes | given amount of file size |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Set & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Set & lt;string & gt; | The set of all external log file paths whose size are smaller than a given amount |
 
 ## getLogNumber
 
@@ -224,6 +223,6 @@ Get the number of all external log files
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | The number of all external log files |

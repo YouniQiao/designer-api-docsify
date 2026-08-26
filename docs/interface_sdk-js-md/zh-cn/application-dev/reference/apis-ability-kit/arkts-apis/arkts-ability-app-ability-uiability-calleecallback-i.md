@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from 'kits/@kit.AbilityKit';
+import UIAbility, { Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## [[Call]]
@@ -28,12 +28,12 @@ import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteS
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| indata | rpc.MessageSequence | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| indata | rpc.MessageSequence | 是 | 发送需传递的数据。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| rpc.Parcelable |
+| 类型 | 说明 |
+| --- | --- |
+| rpc.Parcelable | 返回的数据对象。 |

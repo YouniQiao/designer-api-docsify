@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## createWebSocket
@@ -22,6 +21,12 @@ Creates a **WebSocket** object, which provides methods to create or close a WebS
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [WebSocket](arkts-network-websocket-websocket-i.md) |
+| Type | Description |
+| --- | --- |
+| [WebSocket](arkts-network-websocket-websocket-i.md) | A **WebSocket** object, which contains the **connect**, **send**, **close**, **on**, or **off** method. |
+
+**Examples**
+
+```TypeScript
+let ws: webSocket.WebSocket = webSocket.createWebSocket();
+```

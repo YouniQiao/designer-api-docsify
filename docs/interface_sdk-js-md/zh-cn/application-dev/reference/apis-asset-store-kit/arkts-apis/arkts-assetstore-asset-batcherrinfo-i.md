@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { asset } from 'kits/@kit.AssetStoreKit';
+import asset from '@kit.AssetStoreKit';
 ```
 
 ## errCode

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## download
@@ -29,14 +29,40 @@ cache type's size limit in **cacheDownload**. By default, the LRU mode is used t
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| url | string | Yes |
-| options | [CacheDownloadOptions](arkts-basicservices-cachedownload-cachedownloadoptions-i.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| url | string | Yes | URL of the target resource. HTTP and HTTPS are supported. The URL length cannot exceed 81 92 bytes. |
+| options | [CacheDownloadOptions](arkts-basicservices-cachedownload-cachedownloadoptions-i.md) | Yes | Cache download options for the target resource. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
+
+// Provide configuration options for the download task.
+let options: cacheDownload.CacheDownloadOptions = {
+  headers: { 'Accept': 'application/json' },
+  sslType: cacheDownload.SslType.TLS,
+  caPath: '/path/to/ca.pem',
+  cacheStrategy: cacheDownload.CacheStrategy.FORCE,
+  retry: { maxRetryCount: 1 },
+  timeout: {
+    networkCheckTimeout: 20,
+    httpTotalTimeout: 60,
+  }
+};
+
+try {
+  // Download the resource. If the download is successful, the resource will be cached to the specified file in the application memory or sandbox directory.
+  cacheDownload.download("https://www.example.com", options);
+} catch (err) {
+  console.error(`Failed to download the resource. err code: ${err.code}, err message: ${err.message}`);
+}
+```

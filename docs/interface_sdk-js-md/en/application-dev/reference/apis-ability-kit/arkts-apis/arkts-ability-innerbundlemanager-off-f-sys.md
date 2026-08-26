@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
+import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## off('BundleStatusChange')
@@ -14,7 +14,8 @@ function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 
 Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > off
 > instead.
@@ -33,10 +34,10 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'BundleStatusChange' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'BundleStatusChange' | Yes | Event type. Only **BundleStatusChange** is supported. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return a successful result or error information. |
 
 
 ## off('BundleStatusChange')
@@ -47,7 +48,8 @@ function off(type: 'BundleStatusChange'): Promise<string>
 
 Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > off
 > instead.
@@ -66,12 +68,12 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'BundleStatusChange' | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'BundleStatusChange' | Yes | Event type. Only **BundleStatusChange** is supported. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;string & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;string & gt; | Promise used to return a successful result or error information. |

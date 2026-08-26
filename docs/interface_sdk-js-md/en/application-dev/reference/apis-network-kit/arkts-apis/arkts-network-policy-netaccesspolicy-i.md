@@ -9,7 +9,7 @@ Defines the network access policy information.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from 'kits/@kit.NetworkKit';
+import policy from '@kit.NetworkKit';
 ```
 
 ## allowCellular

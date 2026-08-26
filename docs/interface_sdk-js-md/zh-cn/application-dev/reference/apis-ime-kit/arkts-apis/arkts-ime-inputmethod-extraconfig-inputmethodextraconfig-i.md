@@ -19,7 +19,7 @@
 ## 导入模块
 
 ```TypeScript
-import { InputMethodExtraConfig } from 'kits/@kit.IMEKit';
+import { InputMethodExtraConfig } from '@kit.IMEKit';
 ```
 
 ## customSettings
@@ -35,3 +35,31 @@ customSettings: Record<string, CustomValueType>
 **起始版本：** 22
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**示例**
+
+```TypeScript
+import { InputMethodExtraConfig, inputMethod } from '@kit.IMEKit';
+
+// 构造输入法扩展信息
+let extraConfig: InputMethodExtraConfig = {
+  customSettings: {
+    'inputMode': 'chat',
+    'showEmojiPanel': true,
+    'themeColor': 'dark',
+    'autoCapitalize': false,
+    'fontSize': 16
+  }
+};
+
+// 将扩展信息注入TextConfig（配合@ohos.inputMethod模块使用）
+let textConfig = {
+  inputAttribute: { textInputType: 0, enterKeyType: 0 },
+  cursorInfo: { left: 100, top: 200, width: 2, height: 20 },
+  extraConfig: extraConfig
+};
+
+// 通过attach传递给输入法应用
+let controller = inputMethod.getController();
+controller.attach(true, textConfig);
+```

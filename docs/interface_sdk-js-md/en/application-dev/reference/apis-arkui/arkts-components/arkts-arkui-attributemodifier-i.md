@@ -29,9 +29,9 @@ Defines the disabled update attribute function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | T | Yes |  |
 
 ## applyFocusedAttribute
 
@@ -51,9 +51,9 @@ Defines the focused update attribute function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | T | Yes |  |
 
 ## applyHoveredAttribute
 
@@ -73,9 +73,9 @@ Defines the function that updates the hovered attribute.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | T | Yes |  |
 
 ## applyNormalAttribute
 
@@ -95,9 +95,9 @@ Defines the normal update attribute function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | T | Yes |  |
 
 ## applyPressedAttribute
 
@@ -117,9 +117,9 @@ Defines the pressed update attribute function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | T | Yes |  |
 
 ## applySelectedAttribute
 
@@ -139,6 +139,6 @@ Defines the selected update attribute function.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| instance | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instance | T | Yes |  |

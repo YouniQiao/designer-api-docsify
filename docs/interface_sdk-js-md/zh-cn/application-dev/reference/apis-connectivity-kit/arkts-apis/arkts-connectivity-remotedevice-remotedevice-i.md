@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import remoteDevice from '@kit.ConnectivityKit';
 ```
 
 ## getAcbState
@@ -30,17 +30,17 @@ getAcbState(): AcbState
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md) | 和远端设备的逻辑链路连接状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## getConnectionState
 
@@ -60,17 +60,17 @@ getConnectionState(): ConnectionState
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) | 本端设备和远端设备的连接状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## getDeviceClass
 
@@ -90,17 +90,17 @@ getDeviceClass(): DeviceClass
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md) | 远端设备类型。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## getDeviceInformation
 
@@ -120,17 +120,17 @@ getDeviceInformation(): DeviceInformation
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [DeviceInformation](arkts-connectivity-remotedevice-deviceinformation-i.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [DeviceInformation](arkts-connectivity-remotedevice-deviceinformation-i.md) | 远端设备的设备信息。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## getDeviceName
 
@@ -150,17 +150,17 @@ getDeviceName(): string
 
 **返回值：**
 
-| 类型 |
-| --- |
-| string |
+| 类型 | 说明 |
+| --- | --- |
+| string | 远端设备名称。最大长度为30个字符。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## getPairingState
 
@@ -180,17 +180,17 @@ getPairingState(): PairingState
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) | 和远端设备的配对状态。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## startPairing
 
@@ -210,14 +210,14 @@ startPairing(): Promise<void>
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |

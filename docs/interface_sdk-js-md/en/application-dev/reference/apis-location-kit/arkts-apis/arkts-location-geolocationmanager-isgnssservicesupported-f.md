@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## isGnssServiceSupported
@@ -24,12 +23,12 @@ Check whether the GNSS service is supported.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |

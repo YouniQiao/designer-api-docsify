@@ -9,7 +9,7 @@ Defines a callback used to return whether the application started by number-pres
 ## Modules to Import
 
 ```TypeScript
-import { settingsLite } from 'kits/@kit.BasicServicesKit';
+import settingsLite from '@kit.BasicServicesKit';
 ```
 
 ## onResult
@@ -28,6 +28,6 @@ Called to determine whether the application can be started by number-pressing th
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | boolean | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | boolean | Yes | The specified application is started by number-pressing the function key if true is returned. Otherwise, an unexpected application is started. |

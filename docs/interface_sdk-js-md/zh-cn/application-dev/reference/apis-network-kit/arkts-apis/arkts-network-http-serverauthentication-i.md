@@ -9,7 +9,6 @@ HTTP服务器身份验证。
 ## 导入模块
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## authenticationType

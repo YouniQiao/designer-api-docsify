@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from 'kits/@kit.AbilityKit';
+import particleAbility from '@kit.AbilityKit';
 ```
 
 ## terminateSelf
@@ -22,9 +22,23 @@ Terminates this ParticleAbility. This API uses an asynchronous callback to retur
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ParticleAbility is terminated, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+
+particleAbility.terminateSelf(
+  (error) => {
+    if (error && error.code !== 0) {
+      console.error(`terminateSelf fail, error: ${JSON.stringify(error)}`);
+    }
+  }
+);
+```
 
 
 ## terminateSelf
@@ -43,6 +57,16 @@ Terminates this ParticleAbility. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+
+particleAbility.terminateSelf().then(() => {
+  console.info('particleAbility terminateSelf');
+});
+```

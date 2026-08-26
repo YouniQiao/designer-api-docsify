@@ -9,7 +9,7 @@ Summarizes the data information of the **unifiedData** object, including the dat
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import unifiedDataChannel from '@kit.ArkData';
 ```
 
 ## overview
@@ -65,3 +65,27 @@ Total data size of data in Bytes
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Examples**
+
+```TypeScript
+function parseSummary(summary: unifiedDataChannel.Summary) {
+  let summaryRecord = summary.summary as Record<string, number>;
+  if (summaryRecord) {
+    for (let item of Object.entries(summaryRecord)) {
+      if (item && item.length <= 1) {
+        continue;
+      }
+      let summaryStr: string = String(item[1]);
+      let info: string[] = summaryStr.split(",");
+      if (info.length <= 1) {
+        continue;
+      }
+      let key: string = info[0];
+      let value: string = info[1];
+    }
+  }
+  let overviewRecord = summary.overview as Record<string, number>;
+  let totalSize = summary.totalSize;
+}
+```

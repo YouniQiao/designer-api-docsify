@@ -33,9 +33,9 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [scope](#scope) | [EffectScope](arkts-arkui-effectscope-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.Default value: **EffectScope.LAYER |
 
 ## constructor
 
@@ -57,10 +57,10 @@ A constructor used to create a **ReplaceSymbolEffect** instance, which comes wit
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [scope](#scope) | [EffectScope](arkts-arkui-effectscope-e.md) | No |
-| [replaceType](arkts-arkui-replacesymboleffect-c.md) | [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.Default value: **EffectScope.LAYER |
+| replaceType | [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | No | Replacement effect type.Default value: **ReplaceEffectType.SEQUENTIAL |
 
 ## replaceType
 

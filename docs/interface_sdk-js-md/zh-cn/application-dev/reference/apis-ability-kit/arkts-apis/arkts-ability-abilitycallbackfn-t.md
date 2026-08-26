@@ -16,6 +16,6 @@ type AbilityCallbackFn = (ability: any) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ability | any | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | any | 是 | 表示注册监听的Ability。 |

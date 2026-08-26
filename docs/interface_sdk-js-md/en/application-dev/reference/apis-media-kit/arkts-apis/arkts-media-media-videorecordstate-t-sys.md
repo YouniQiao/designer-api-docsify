@@ -12,11 +12,11 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 **System API:** This is a system API.
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'idle' |
-| 'prepared' |
-| 'playing' |
-| 'paused' |
-| 'stopped' |
-| 'error' |
+| Type | Description |
+| --- | --- |
+| 'idle' | Idle state. The video recorder is created but not initialized. |
+| 'prepared' | Prepared state. The video recorder is ready to record. |
+| 'playing' | Playing state. The video recorder is recording. |
+| 'paused' | Paused state. The video recorder is paused. |
+| 'stopped' | Stopped state. The video recorder is stopped. |
+| 'error' | Error state. An error occurred. |

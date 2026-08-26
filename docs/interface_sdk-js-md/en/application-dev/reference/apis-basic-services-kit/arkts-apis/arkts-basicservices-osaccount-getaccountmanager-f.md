@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import osAccount from '@kit.BasicServicesKit';
 ```
 
 ## getAccountManager
@@ -20,6 +20,12 @@ Obtains an **AccountManager** instance.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) |
+| Type | Description |
+| --- | --- |
+| [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) | AccountManager** instance obtained. |
+
+**Examples**
+
+```TypeScript
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+```

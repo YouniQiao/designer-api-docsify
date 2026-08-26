@@ -29,9 +29,16 @@ Deletes all properties from [AppStorage](../../../ui/state-management/arkts-apps
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let res: boolean = AppStorage.Clear(); // true: There are no subscribers.
+```
 
 ## clear
 
@@ -49,9 +56,22 @@ Deletes all properties from [AppStorage](../../../ui/state-management/arkts-apps
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the properties in AppStorage have no subscribers and the deletion is successful; returns **false** if there are still subscribers. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let res: boolean = AppStorage.clear(); // true: There are no subscribers.
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let res: boolean = storage.clear(); // true: There are no subscribers.
+```
 
 ## Delete
 
@@ -71,15 +91,26 @@ Deletes the property corresponding to **propName** from [AppStorage](../../../ui
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** if the operation fails. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+AppStorage.Link('PropA');
+let res: boolean = AppStorage.Delete('PropA'); // false: PropA still has subscribers.
+
+AppStorage.SetOrCreate('PropB', 48);
+let res1: boolean = AppStorage.Delete('PropB'); // true: PropB is successfully deleted from AppStorage.
+```
 
 ## delete
 
@@ -105,15 +136,36 @@ Deletes the property corresponding to **propName** from [AppStorage](../../../ui
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** if the operation fails. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+AppStorage.link<number>('PropA');
+let res: boolean = AppStorage.delete('PropA'); // false: PropA still has subscribers.
+
+AppStorage.setOrCreate('PropB', 48);
+let res1: boolean = AppStorage.delete('PropB'); // true: PropB is successfully deleted from AppStorage.
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+storage.link<number>('PropA');
+let res: boolean = storage.delete('PropA'); // false: PropA still has subscribers.
+let res1: boolean = storage.delete('PropB'); // false: PropB does not exist in LocalStorage.
+storage.setOrCreate('PropB', 48);
+let res2: boolean = storage.delete('PropB'); // true: PropB is successfully deleted from LocalStorage.
+```
 
 ## Get
 
@@ -133,15 +185,22 @@ Obtains the value of the property corresponding to **propName** from [AppStorage
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T \| undefined |
+| Type | Description |
+| --- | --- |
+| T \| undefined | Value of the property corresponding to **propName** in AppStorage, or **undefined** if it does not exist. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let value: number = AppStorage.Get('PropA') as number; // 47
+```
 
 ## get
 
@@ -159,15 +218,28 @@ Obtains the value of the property corresponding to **propName** from [AppStorage
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| T \| undefined |
+| Type | Description |
+| --- | --- |
+| T \| undefined | Value of the property corresponding to **propName** in AppStorage, or **undefined** if it does not exist. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let value: number = AppStorage.get('PropA') as number; // 47
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let value: number = storage.get('PropA') as number; // 47
+```
 
 ## Has
 
@@ -187,15 +259,21 @@ Checks whether the property corresponding to **propName** exists in [AppStorage]
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the property exists in AppStorage; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+AppStorage.Has('simpleProp');
+```
 
 ## has
 
@@ -213,15 +291,27 @@ Checks whether the property corresponding to **propName** exists in [AppStorage]
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the property exists in AppStorage; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+AppStorage.has('simpleProp');
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+storage.has('PropA'); // true
+```
 
 ## IsMutable
 
@@ -239,15 +329,22 @@ Checks whether the property corresponding to **propName** in [AppStorage](../../
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the property corresponding to **propName** is mutable. Currently, this return value is always **true**. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let res: boolean = AppStorage.IsMutable('PropA');
+```
 
 ## Keys
 
@@ -267,9 +364,16 @@ Obtains all property names in [AppStorage](../../../ui/state-management/arkts-ap
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; | All property names in AppStorage. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('PropB', 48);
+let keys: IterableIterator<string> = AppStorage.Keys();
+```
 
 ## keys
 
@@ -287,9 +391,22 @@ Obtains all property names in [AppStorage](../../../ui/state-management/arkts-ap
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; | All property names in AppStorage. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropB', 48);
+let keys: IterableIterator<string> = AppStorage.keys();
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let keys: IterableIterator<string> = storage.keys();
+```
 
 ## Link
 
@@ -309,15 +426,24 @@ Establishes a two-way data binding with the property corresponding to **propName
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | Two-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.Link('PropA');
+let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.Link('PropA'); // linkToPropA2.get() == 47
+linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPropA2.get() == 48
+```
 
 ## link
 
@@ -335,15 +461,32 @@ Establishes a two-way data binding with the property corresponding to **propName
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Two-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.link('PropA');
+let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.link('PropA'); // linkToPropA2.get() == 47
+linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPropA2.get() == 48.
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let linkToPropA1: SubscribedAbstractProperty<number> = storage.link('PropA');
+let linkToPropA2: SubscribedAbstractProperty<number> = storage.link('PropA'); // linkToPropA2.get() == 47
+linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPropA2.get() == 48
+```
 
 ## Prop
 
@@ -367,15 +510,24 @@ Establishes a one-way data binding with the property corresponding to **propName
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| any |
+| Type | Description |
+| --- | --- |
+| any | One-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let prop1: SubscribedAbstractProperty<number> = AppStorage.Prop('PropA');
+let prop2: SubscribedAbstractProperty<number> = AppStorage.Prop('PropA');
+prop1.set(1); // One-way synchronization: prop1.get() returns 1, while prop2.get() returns 47.
+```
 
 ## prop
 
@@ -393,15 +545,24 @@ Establishes a one-way data binding with the property corresponding to **propName
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | One-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+let prop2: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+prop1.set(1); // One-way synchronization: prop1.get() returns 1, while prop2.get() returns 47.
+```
 
 ## ref
 
@@ -419,15 +580,32 @@ Returns a reference to the property corresponding to **propName** in [AppStorage
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined |
+| Type | Description |
+| --- | --- |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined | A reference to the property in AppStorage, or **undefined** if the property does not exist. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let refToPropA1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+let refToPropA2: AbstractProperty<number> | undefined = AppStorage.ref('PropA'); // refToPropA2.get() == 47
+refToPropA1?.set(48); // Synchronously modify AppStorage: refToPropA1.get() == refToPropA2.get() == 48.
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let refToPropA1: AbstractProperty<number> | undefined = storage.ref('PropA');
+let refToPropA2: AbstractProperty<number> | undefined = storage.ref('PropA'); // refToPropA2.get() == 47
+refToPropA1?.set(48); // refToPropA1.get() == refToPropA2.get() == 48
+```
 
 ## Set
 
@@ -447,16 +625,24 @@ Sets the value of the property corresponding to **propName** in [AppStorage](../
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
-| newValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
+| newValue | T | Yes | Property value. Since API version 12, the value can be **null** or **undefined**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **false** if the property corresponding to **propName** does not exist in AppStorage. Returns **true** if the operation is successful. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 48);
+let res: boolean = AppStorage.Set('PropA', 47); // true
+let res1: boolean = AppStorage.Set('PropB', 47); // false
+```
 
 ## set
 
@@ -483,16 +669,31 @@ Sets the value of the property corresponding to **propName** in [AppStorage](../
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
-| newValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
+| newValue | T | Yes | Property value. Since API version 12, the value can be **null** or **undefined**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **false** if the property corresponding to **propName** does not exist in AppStorage or if the assignment fails. Returns **true** if the assignment is successful. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 48);
+let res: boolean = AppStorage.set('PropA', 47); // true
+let res1: boolean = AppStorage.set('PropB', 47); // false
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let res: boolean = storage.set('PropA', 47); // true
+let res1: boolean = storage.set('PropB', 47); // false
+```
 
 ## SetAndLink
 
@@ -512,16 +713,24 @@ Similar to the [Link](#link) API, establishes a two-way data binding with the pr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
-| defaultValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
+| defaultValue | T | Yes | Default value used to initialize the property corresponding to **propName** in AppStorage if **propName** does not exist. The value cannot be **null** or **undefined**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty & lt;T & gt;** and two-way bound data of the given property in AppStorage. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let link1: SubscribedAbstractProperty<number> = AppStorage.SetAndLink('PropB', 49); // Create PropB with the default value 49.
+let link2: SubscribedAbstractProperty<number> = AppStorage.SetAndLink('PropA', 50); // PropA already exists with the value 47.
+```
 
 ## setAndLink
 
@@ -548,16 +757,31 @@ Similar to the [link](#link) API, establishes a two-way data binding with the pr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
-| defaultValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
+| defaultValue | T | Yes | Default value used to initialize the property corresponding to **propName** in AppStorage if **propName** does not exist. Since API version 12, **defaultValue** can be **null** or **undefined**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty & lt;T & gt;**, which is two-way bound data of the given property in AppStorage. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let link1: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropB', 49); // Create PropB with the default value 49.
+let link2: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropA', 50); // PropA already exists with the value 47.
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let link1: SubscribedAbstractProperty<number> = storage.setAndLink('PropB', 49); // Create PropB with the default value 49.
+let link2: SubscribedAbstractProperty<number> = storage.setAndLink('PropA', 50); // PropA already exists with the value 47.
+```
 
 ## SetAndProp
 
@@ -577,16 +801,23 @@ Similar to the [Prop](#prop) API, establishes a one-way data binding with the pr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
-| defaultValue | S | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
+| defaultValue | S | Yes | Default value used to initialize the property corresponding to **propName** in AppStorage if **propName** does not exist. The value cannot be **null** or **undefined**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; |
+| Type | Description |
+| --- | --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; | Instance of **SubscribedAbstractProperty & lt;S & gt;**. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let prop: SubscribedAbstractProperty<number> = AppStorage.SetAndProp('PropB', 49); // PropA -> 47, PropB -> 49
+```
 
 ## setAndProp
 
@@ -613,16 +844,23 @@ Similar to the [prop](#prop) API, establishes a one-way data binding with the pr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
-| defaultValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
+| defaultValue | T | Yes | Default value used to initialize the property corresponding to **propName** in AppStorage if **propName** does not exist. Since API version 12, **defaultValue** can be **null** or **undefined**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty & lt;T & gt;**. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop: SubscribedAbstractProperty<number> = AppStorage.setAndProp('PropB', 49); // PropA -> 47, PropB -> 49
+```
 
 ## setAndRef
 
@@ -649,16 +887,31 @@ Similar to the [ref](#ref) API, returns a reference to the property correspondin
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
-| defaultValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
+| defaultValue | T | Yes | Default value used to initialize the property corresponding to **propName** in AppStorage if **propName** does not exist. The value can be **null** or **undefined**. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; |
+| Type | Description |
+| --- | --- |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | Instance of **AbstractProperty & lt;T & gt;**, which is a reference to the property in AppStorage corresponding to **propName**. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> = AppStorage.setAndRef('PropB', 49); // Create PropB with the default value 49.
+let ref2: AbstractProperty<number> = AppStorage.setAndRef('PropA', 50); // PropA already exists with the value 47.
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let ref1: AbstractProperty<number> = storage.setAndRef('PropB', 49); // Create PropB with the default value 49.
+let ref2: AbstractProperty<number> = storage.setAndRef('PropA', 50); // PropA already exists with the value 47.
+```
 
 ## SetOrCreate
 
@@ -678,10 +931,16 @@ Sets the value of the property corresponding to **propName** in [AppStorage](../
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
-| newValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
+| newValue | T | Yes | Property value, which cannot be **null** or **undefined**. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('simpleProp', 121);
+```
 
 ## setOrCreate
 
@@ -708,10 +967,16 @@ Sets the value of the property corresponding to **propName** in [AppStorage](../
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| propName | string | Yes |
-| newValue | T | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propName | string | Yes | Property name in AppStorage. |
+| newValue | T | Yes | Property value. Since API version 12, the value can be **null** or **undefined**. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('simpleProp', 121);
+```
 
 ## Size
 
@@ -731,9 +996,16 @@ Obtains the number of properties in [AppStorage](../../../ui/state-management/ar
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of properties in AppStorage. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('PropB', 48);
+let res: number = AppStorage.Size(); // 1
+```
 
 ## size
 
@@ -751,9 +1023,22 @@ Obtains the number of properties in [AppStorage](../../../ui/state-management/ar
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Number of properties in AppStorage. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropB', 48);
+let res: number = AppStorage.size(); // 1
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let res: number = storage.size(); // 1
+```
 
 ## staticClear
 
@@ -773,6 +1058,12 @@ Deletes all properties.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Deletes all properties. Returns **true** if all properties are deleted; returns **false** if any of the properties is being referenced by a state variable. |
+
+**Examples**
+
+```TypeScript
+let clearResult = AppStorage.staticClear();
+```

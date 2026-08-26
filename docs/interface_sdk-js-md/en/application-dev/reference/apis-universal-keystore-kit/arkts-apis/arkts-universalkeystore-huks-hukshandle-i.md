@@ -2,7 +2,8 @@
 
 Defines the struct for a HUKS handle.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > This API is deprecated since API version 9. You are advised to use
 > [HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md).
 
@@ -17,7 +18,8 @@ Defines the struct for a HUKS handle.
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import huks from '@kit.UniversalKeystoreKit';
+import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 ```
 
 ## errorCode

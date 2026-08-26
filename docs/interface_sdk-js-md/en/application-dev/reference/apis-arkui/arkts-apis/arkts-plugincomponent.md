@@ -17,19 +17,19 @@ The **PluginComponentManager** module provides APIs for the **PluginComponent** 
 ## Modules to Import
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## Summary
 
 ### Namespaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [pluginComponentManager(PluginComponentManager)](arkts-arkui-plugincomponentmanager-n.md) |
+| Name | Description |
+| --- | --- |
+| [pluginComponentManager(PluginComponentManager)](arkts-arkui-plugincomponentmanager-n.md) | Implements a plugin component manager. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PluginComponentTemplate(PluginComponentManager)](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md) |
+| Name | Description |
+| --- | --- |
+| [PluginComponentTemplate(PluginComponentManager)](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md) | Describes the **PluginComponent** template parameters. |

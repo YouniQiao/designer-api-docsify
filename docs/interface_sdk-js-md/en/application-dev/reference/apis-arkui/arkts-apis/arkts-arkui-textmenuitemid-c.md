@@ -29,15 +29,15 @@ Checks whether this **TextMenuItemId** object is the same as another **TextMenuI
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Yes | ID of the **TextMenuItemId** object to compare. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the two **TextMenuItemId** objects are the same. |
 
 ## of
 
@@ -57,15 +57,15 @@ Creates a **TextMenuItemId** object based on **id**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Menu ID. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) |
+| Type | Description |
+| --- | --- |
+| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | TextMenuItemId** object. |
 
 ## address
 

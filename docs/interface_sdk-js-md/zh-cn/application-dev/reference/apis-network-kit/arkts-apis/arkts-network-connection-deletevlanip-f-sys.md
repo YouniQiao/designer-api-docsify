@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## deleteVlanIp
@@ -14,7 +13,8 @@ function deleteVlanIp(ifName: string, vlanId: number, address: LinkAddress): Pro
 
 从以太网网卡上对应vlanId的虚拟局域网中，删除已配置的IP地址及子网掩码。使用Promise异步回调。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > - 本接口当前仅支持PC设备，其他设备类型上调用本接口返回错误码2100002。
 
 **起始版本：** 23
@@ -29,25 +29,48 @@ function deleteVlanIp(ifName: string, vlanId: number, address: LinkAddress): Pro
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| ifName | string | 是 |
-| vlanId | number | 是 |
-| address | [LinkAddress](arkts-network-vpnextension-linkaddress-t.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ifName | string | 是 | 网卡名。 |
+| vlanId | number | 是 | vlan标识符，取值范围[0,4094]。 |
+| address | [LinkAddress](arkts-network-vpnextension-linkaddress-t.md) | 是 | 链路信息。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;void & gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-| [2100400](../errorcode-net-connection.md#2100400-传入网卡名不正确非以太网) |
-| [2100401](../errorcode-net-connection.md#2100401-未找到vlan上配置的ip地址) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Nonsystem applications use system APIs. |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| [2100400](../errorcode-net-connection.md#2100400-传入网卡名不正确非以太网) | The input network interface name is incorrect. |
+| [2100401](../errorcode-net-connection.md#2100401-未找到vlan上配置的ip地址) | The input IP address is not found. |
+
+**示例**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+let ifName = "eth0";
+let vlanId = 1;
+let netAddress: connection.NetAddress = {
+  address: '192.168.1.1',
+  family: 1,
+  port: 8080
+}
+let address: connection.LinkAddress = {
+  address: netAddress,
+  prefixLength: 24
+}
+connection.deleteVlanIp(ifName, vlanId, address).then(() => {
+  console.info(`Delete vlan ip success`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to delete vlan ip. Code:${error.code}, message:${error.message}`);
+});
+```

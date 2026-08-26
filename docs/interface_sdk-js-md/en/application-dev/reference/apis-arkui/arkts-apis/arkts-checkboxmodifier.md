@@ -4,6 +4,6 @@
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CheckboxModifier](arkts-arkui-checkboxmodifier-c.md) |
+| Name | Description |
+| --- | --- |
+| [CheckboxModifier](arkts-arkui-checkboxmodifier-c.md) | Defines Checkbox Modifier@extends CheckboxAttribute @implements AttributeModifier & lt;CheckboxAttribute & gt; |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { manager } from 'kits/@kit.ConnectivityKit';
+import manager from '@kit.ConnectivityKit';
 ```
 
 ## isNearLinkSupported
@@ -22,6 +22,6 @@ function isNearLinkSupported(): boolean
 
 **返回值：**
 
-| 类型 |
-| --- |
-| boolean |
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 表示当前设备是否支持星闪。返回true：设备支持星闪。返回false：设备不支持星闪。 |

@@ -29,9 +29,9 @@ constructor(textBackgroundStyle: TextBackgroundStyle)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [textBackgroundStyle](#textbackgroundstyle) | [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md) | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| textBackgroundStyle | [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md) | 是 | 文本背景色设置项。 |
 
 ## textBackgroundStyle
 

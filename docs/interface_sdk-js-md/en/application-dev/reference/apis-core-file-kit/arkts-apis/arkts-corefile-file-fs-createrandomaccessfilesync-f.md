@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
-import { fileIo } from 'kits/@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
+import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## createRandomAccessFileSync
@@ -23,46 +21,55 @@ Creates a **RandomAccessFile** instance based on a file path or file object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| [File](arkts-corefile-file-fs-file-i.md) | Yes |
-| mode | number | No | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:   - **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.   - **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode.    - **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.   You can also specify the following options, separated by a bitwise OR operator (\|
-| options | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| file | string \| [File](arkts-corefile-file-fs-file-i.md) | Yes | Application sandbox path of the file or an opened file object. |
+| mode | number | No | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:   - **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.   - **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode.    - **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.   You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given.   - **OpenMode.CREATE(0o100)**: If the file does not exist, create it.   - **OpenMode.TRUNC(0o1000)**: If the **RandomAccessFile** object already exists and is created in write mode, truncate the file length to 0.   - **OpenMode.APPEND(0o2000)**: Create the file in append mode. New data will be added to the end of the **RandomAccessFile** object.    - **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os.   - **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed.   - **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception.   - **OpenMode.SYNC(0o4010000)**: Create a **RandomAccessFile** instance in synchronous I/O mode. |
+| options | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | No | The options are as follows:   - **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position.   - **end** (number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file.   This parameter takes effect only for file stream objects obtained by [getreadstream](arkts-corefile-file-fs-randomaccessfile-i.md#getreadstream) and [getwritestream](arkts-corefile-file-fs-randomaccessfile-i.md#getwritestream).<br>**Since:** 12 |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md) |
+| Type | Description |
+| --- | --- |
+| [RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md) | RandomAccessFile** instance created. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| 13900001 |
-| 13900002 |
-| 13900004 |
-| 13900006 |
-| 13900008 |
-| 13900011 |
-| 13900012 |
-| 13900013 |
-| 13900014 |
-| 13900015 |
-| 13900017 |
-| 13900018 |
-| 13900019 |
-| 13900020 |
-| 13900022 |
-| 13900023 |
-| 13900024 |
-| 13900025 |
-| 13900027 |
-| 13900029 |
-| 13900030 |
-| 13900033 |
-| 13900034 |
-| 13900038 |
-| 13900041 |
-| 13900042 |
-| 13900044 |
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too number |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900038 | Value too large for defined data type |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE,
+  { start: 10, end: 100 });
+randomAccessFile.close();
+```

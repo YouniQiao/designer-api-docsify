@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fontManager } from 'kits/@kit.LocalizationKit';
+import fontManager from '@kit.LocalizationKit';
 ```
 
 ## progressPercentage

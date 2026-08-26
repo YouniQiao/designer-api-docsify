@@ -9,7 +9,7 @@ Represents the base class providing overridable methods for [PixelMap](../../api
 ## Modules to Import
 
 ```TypeScript
-import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## getPixelMap
@@ -30,15 +30,19 @@ Obtains this **PixelMap** instance.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| image.PixelMap |
+| Type | Description |
+| --- | --- |
+| image.PixelMap | PixelMap** object. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced by the drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
+
+**Examples**
+
+For details, see [LayeredDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md).
 
 ## invalidate
 
@@ -75,9 +79,9 @@ Checks whether **DrawableDescriptor** is released. If **true** is returned, the 
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether **DrawableDescriptor** is released. The value **true** indicates that the object is released, and **false** indicates that the object is not released. |
 
 ## load
 
@@ -97,16 +101,20 @@ Asynchronously loads the image resource and returns the loading result. This API
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)&gt; |
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)&gt; | Image resource loading result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [111001](../errorcode-drawable-descriptor.md#111001-failed-to-load-resources) |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [111001](../errorcode-drawable-descriptor.md#111001-failed-to-load-resources) | resource loading failed. |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced by the drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
+
+**Examples**
+
+For details, see [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
 
 ## loadSync
 
@@ -126,16 +134,20 @@ Synchronously loads the image resource and returns the loading result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md) |
+| Type | Description |
+| --- | --- |
+| [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md) | Image resource loading result. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [111001](../errorcode-drawable-descriptor.md#111001-failed-to-load-resources) |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [111001](../errorcode-drawable-descriptor.md#111001-failed-to-load-resources) | resource loading failed. |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced by the drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
+
+**Examples**
+
+For details, see [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
 
 ## release
 
@@ -152,3 +164,32 @@ Releases the resource held by **DrawableDescriptor**. After the **release** API 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { DrawableDescriptor } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  private resManager = this.getUIContext().getHostContext()?.resourceManager;
+  // Replace $r('app.media.startIcon') with the image resource file you use.
+  private drawable: DrawableDescriptor | undefined =
+    this.resManager?.getDrawableDescriptor($r('app.media.startIcon').id);
+
+  build() {
+    Column() {
+      Button('release')
+        .onClick(() => {
+          this.drawable?.release()
+        })
+      Button('isReleased')
+        .onClick(() => {
+          let released = this.drawable?.isReleased()
+          console.info(`isReleased = ${released}`)
+        })
+    }
+  }
+}
+```

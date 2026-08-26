@@ -12,7 +12,7 @@ type AuthEventKey = 'result' | 'tip'
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
-| 类型 |
-| --- |
-| 'result' |
-| 'tip' |
+| 类型 | 说明 |
+| --- | --- |
+| 'result' | If the first parameter of [on]{ |
+| 'tip' | If the first parameter of [on]{ |

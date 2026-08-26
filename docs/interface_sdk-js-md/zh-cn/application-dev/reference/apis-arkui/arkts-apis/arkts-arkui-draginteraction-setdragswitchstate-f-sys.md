@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dragInteraction } from 'kits/@kit.ArkUI';
+import dragInteraction from '@kit.ArkUI';
 ```
 
 ## setDragSwitchState
@@ -22,12 +22,12 @@ function setDragSwitchState(enabled: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| enabled | boolean | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | boolean | 是 | 设置开关状态。false：关闭，true：开启。 |
 
 **错误码：**
 
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |

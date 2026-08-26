@@ -9,7 +9,6 @@ Describes the service data.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## serviceUuid

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import cacheDownload from '@kit.BasicServicesKit';
 ```
 
 ## setDownloadInfoListSize
@@ -23,6 +23,20 @@ function setDownloadInfoListSize(size: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| size | number | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| size | number | 是 | 设置的下载信息列表大小。取值范围：[0, 8192]，默认为0，表示不会存储任何下载信息。 |
+
+**示例**
+
+```TypeScript
+import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 设置下载信息列表大小。  
+  cacheDownload.setDownloadInfoListSize(2048);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set download information list size. err code: ${err.code}, err message: ${err.message}`);
+}
+```

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import uiEffect from '@kit.ArkGraphics2D';
 ```
 
 ## grayscaleFactor
@@ -51,3 +51,12 @@ HDR的提亮倍数。取值范围为[1.0, 设备当前支持最大提亮倍数]�
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+```TypeScript
+// 创建Filter实例
+let filter: uiEffect.Filter = uiEffect.createFilter();
+// 设置HDR提亮倍数为2.0
+filter.hdrBrightnessRatio(2.0);
+```

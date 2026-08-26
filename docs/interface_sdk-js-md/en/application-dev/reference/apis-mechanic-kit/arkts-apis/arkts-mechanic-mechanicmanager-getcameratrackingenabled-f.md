@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## getCameraTrackingEnabled
@@ -20,13 +19,22 @@ Checks whether camera tracking is enabled for this mechanical device.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Enabled status. The value true means that camera tracking is enabled, and false means the opposite. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+
+**Examples**
+
+```TypeScript
+console.info('Get tracking status');
+// Call getCameraTrackingEnabled to obtain whether camera tracking is currently enabled.
+let enabled = mechanicManager.getCameraTrackingEnabled();
+console.info(`'current tracking status:' ${enabled}`);
+```

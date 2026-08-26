@@ -31,9 +31,9 @@ Obtains the current position of the caret.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Position of the caret. |
 
 ## getPreviewText
 
@@ -53,9 +53,9 @@ Obtains the preview text.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PreviewText](arkts-arkui-previewtext-i.md) |
+| Type | Description |
+| --- | --- |
+| [PreviewText](arkts-arkui-previewtext-i.md) | Preview text. |
 
 ## isEditing
 
@@ -75,9 +75,9 @@ Obtains the editing status of the rich text.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Editing status of the rich text. **true** means that the text is in editable state, and **false** means the opposite. |
 
 ## setCaretOffset
 
@@ -97,15 +97,15 @@ Sets the offset of the caret.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| offset | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | number | Yes | Offset of the caret. If the offset is outside the range of all content, the setting fails. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Whether the caret offset is set successfully. |
 
 ## stopEditing
 

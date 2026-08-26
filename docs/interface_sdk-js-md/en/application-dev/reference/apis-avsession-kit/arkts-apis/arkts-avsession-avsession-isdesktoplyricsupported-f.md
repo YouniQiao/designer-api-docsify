@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import avSession from '@kit.AVSessionKit';
 ```
 
 ## isDesktopLyricSupported
@@ -22,12 +22,22 @@ Whether desktop lyric feature is supported.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | result returned to indicate desktop lyric is supported. |
 
 **Error codes:**
 
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+
+**Examples**
+
+```TypeScript
+import { avSession } from '@kit.AVSessionKit';
+
+avSession.isDesktopLyricSupported().then((isSupported: boolean) => {
+  console.info(`Succeeded in checking desktop lyric supported: ${isSupported}`);
+});
+```

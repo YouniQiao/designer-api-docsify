@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import application from '@kit.AbilityKit';
 ```
 
 ## getAppPreloadType
@@ -14,9 +14,11 @@ export function getAppPreloadType(): AppPreloadType
 
 Obtains the preloading type of the current application process.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - This API can return the actual preloading type only if it is called before the first execution of
-> [AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate).&gt;
+> [AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate).
+> 
 > - Once the AbilityStage creation finishes, the preloaded data of the application is cleared. Any subsequent calls
 > will return **UNSPECIFIED** instead of the original preloading type.
 
@@ -28,6 +30,18 @@ Obtains the preloading type of the current application process.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [AppPreloadType](arkts-ability-application-apppreloadtype-e.md) |
+| Type | Description |
+| --- | --- |
+| [AppPreloadType](arkts-ability-application-apppreloadtype-e.md) | Obtains the preloading type of the current application process. |
+
+**Examples**
+
+```TypeScript
+import { AbilityStage, application } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage{
+  onCreate() {
+    let appPreloadType = application.getAppPreloadType();
+  }
+}
+```

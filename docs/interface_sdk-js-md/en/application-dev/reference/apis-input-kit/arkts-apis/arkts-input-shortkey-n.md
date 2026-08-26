@@ -11,8 +11,6 @@ The shortKey module provides APIs to set the delay for starting an ability using
 ## Modules to Import
 
 ```TypeScript
-import { shortKey } from 'kits/@kit.InputKit';
-import { FingerprintEvent } from 'kits/@kit.InputKit';
 ```
 
 ## Summary
@@ -20,8 +18,8 @@ import { FingerprintEvent } from 'kits/@kit.InputKit';
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [setKeyDownDuration(Preset Global Shortcut Keys)](arkts-input-shortkey-setkeydownduration-f-sys.md) |
-| [setKeyDownDuration(Preset Global Shortcut Keys)](arkts-input-shortkey-setkeydownduration-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [setKeyDownDuration(Preset Global Shortcut Keys)](arkts-input-shortkey-setkeydownduration-f-sys.md) | Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the result. |
+| [setKeyDownDuration(Preset Global Shortcut Keys)](arkts-input-shortkey-setkeydownduration-f-sys.md) | Sets the delay for starting an ability using shortcut keys. This API uses a promise to return the result. |
 <!--DelEnd-->

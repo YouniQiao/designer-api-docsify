@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AVVolumePanel, AVVolumePanelParameter } from 'kits/@kit.AudioKit';
+import { AVVolumePanel, AVVolumePanelParameter } from '@kit.AudioKit';
 ```
 
 ## position

@@ -10,7 +10,7 @@ Enumerates the page update types. A page update event is triggered by the access
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| 'pageContentUpdate' |
-| 'pageStateUpdate' |
+| Type | Description |
+| --- | --- |
+| 'pageContentUpdate' | Page content updated. |
+| 'pageStateUpdate' | Page state updated. |

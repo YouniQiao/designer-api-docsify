@@ -16,8 +16,8 @@ Describes the supported data types for the **space** parameter in the constructo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
-| number |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
+| Type | Description |
+| --- | --- |
+| string | Represents a string value. It can take any string value. |
+| number | Represents a numeric value. It can take any numerical value. |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Represents a resource reference type. It can take values from system resources or application resources. |

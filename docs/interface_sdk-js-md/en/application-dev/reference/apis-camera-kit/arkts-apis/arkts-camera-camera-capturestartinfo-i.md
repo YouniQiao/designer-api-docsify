@@ -9,7 +9,6 @@ Describes the capture start information.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## captureId

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import geolocation from '@kit.LocationKit';
 ```
 
 ## getCurrentLocation
@@ -26,10 +26,27 @@ function getCurrentLocation(request: CurrentLocationRequest, callback: AsyncCall
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) | 是 | 设置位置请求参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | 是 | 回调函数，返回当前位置信息。 |
+
+**示例**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+import BusinessError from "@ohos.base"
+let requestInfo:geolocation.CurrentLocationRequest = {'priority': 0x203, 'scenario': 0x300,'maxAccuracy': 0};
+let locationChange = (err:BusinessError.BusinessError, location:geolocation.Location) => {
+    if (err) {
+        console.info('locationChanger: err=' + JSON.stringify(err));
+    }
+    if (location) {
+        console.info('locationChanger: location=' + JSON.stringify(location));
+    }
+};
+geolocation.getCurrentLocation(requestInfo, locationChange);
+```
 
 
 ## getCurrentLocation
@@ -52,9 +69,25 @@ function getCurrentLocation(callback: AsyncCallback<Location>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | 是 | 回调函数，返回当前位置信息。 |
+
+**示例**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+import BusinessError from "@ohos.base"
+let locationChange = (err:BusinessError.BusinessError, location:geolocation.Location):void => {
+    if (err) {
+        console.info('locationChanger: err=' + JSON.stringify(err));
+    }
+    if (location) {
+        console.info('locationChanger: location=' + JSON.stringify(location));
+    }
+};
+geolocation.getCurrentLocation(locationChange);
+```
 
 
 ## getCurrentLocation
@@ -77,12 +110,22 @@ function getCurrentLocation(request?: CurrentLocationRequest): Promise<Location>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) | 否 | 设置位置请求参数。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| Promise & lt;Location & gt; |
+| 类型 | 说明 |
+| --- | --- |
+| Promise & lt;Location & gt; | Promise对象，返回当前位置信息。 |
+
+**示例**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let requestInfo:geolocation.CurrentLocationRequest = {'priority': 0x203, 'scenario': 0x300,'maxAccuracy': 0};
+geolocation.getCurrentLocation(requestInfo).then((result) => {
+    console.info('current location: ' + JSON.stringify(result));
+});
+```

@@ -2,7 +2,8 @@
 
 Ability信息，未做特殊说明的属性，均通过 [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md)获取。
 
-> **说明：**&gt;
+> **说明：**
+> 
 > 从API version 9开始，该模块不再维护，建议使用[bundleManager-AbilityInfo](#abilityinfo)替代。
 
 **起始版本：** 7

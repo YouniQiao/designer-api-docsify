@@ -31,10 +31,10 @@ changeIndex(index: number, useAnimation?: boolean):void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | number | 是 |
-| useAnimation | boolean | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | number | 是 | 指定导航点在Swiper中的索引值。   **说明：** 设置的值小于0或大于最大导航点索引时，取0。 |
+| useAnimation | boolean | 否 | 设置翻至指定导航点时是否有动效，true表示有动效，false表示没有动效。默认值：false。 |
 
 ## constructor
 

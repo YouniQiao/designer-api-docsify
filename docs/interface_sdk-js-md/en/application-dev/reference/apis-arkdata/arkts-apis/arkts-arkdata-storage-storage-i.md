@@ -31,9 +31,21 @@ Clears this **Storage** object. This API uses an asynchronous callback to return
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+storage.clear(function (err) {
+    if (err) {
+        console.info("Failed to clear the storage with err: " + err);
+        return;
+    }
+    console.info("Succeeded in clearing the storage.");
+})
+```
 
 ## clear
 
@@ -51,9 +63,20 @@ Clears this **Storage** object. This API uses a promise to return the result.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | A promise object. |
+
+**Examples**
+
+```TypeScript
+let promiseclear = storage.clear();
+promiseclear.then(() => {
+    console.info("Succeeded in clearing the storage.");
+}).catch((err) => {
+    console.info("Failed to clear the storage with err: " + err);
+})
+```
 
 ## clearSync
 
@@ -68,6 +91,12 @@ Clears this **Storage** object.
 **Deprecated since:** 9
 
 **Substitutes:** clear
+
+**Examples**
+
+```TypeScript
+storage.clearSync();
+```
 
 ## delete
 
@@ -85,10 +114,22 @@ Deletes data with the specified key from this storage object. This API uses an a
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the data. It cannot be empty. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+storage.delete('startup', function (err) {
+    if (err) {
+        console.info("Failed to delete startup key failed err: " + err);
+        return;
+    }
+    console.info("Succeeded in deleting startup key.");
+})
+```
 
 ## delete
 
@@ -106,15 +147,26 @@ Deletes data with the specified key from this storage object. This API uses a pr
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the data. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+let promisedel = storage.delete('startup')
+promisedel.then(() => {
+    console.info("Succeeded in deleting startup key.");
+}).catch((err) => {
+    console.info("Failed to delete startup key failed err: " + err);
+})
+```
 
 ## deleteSync
 
@@ -132,9 +184,15 @@ Deletes data with the specified key from this storage object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the data. It cannot be empty. |
+
+**Examples**
+
+```TypeScript
+storage.deleteSync('startup');
+```
 
 ## flush
 
@@ -152,9 +210,21 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+storage.flush(function (err) {
+    if (err) {
+        console.info("Failed to flush to file with err: " + err);
+        return;
+    }
+    console.info("Succeeded in flushing to file.");
+})
+```
 
 ## flush
 
@@ -172,9 +242,20 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+let promiseflush = storage.flush();
+promiseflush.then(() => {
+    console.info("Succeeded in flushing to file.");
+}).catch((err) => {
+    console.info("Failed to flush to file with err: " + err);
+})
+```
 
 ## flushSync
 
@@ -189,6 +270,12 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 **Deprecated since:** 9
 
 **Substitutes:** flush
+
+**Examples**
+
+```TypeScript
+storage.flushSync();
+```
 
 ## get
 
@@ -206,11 +293,23 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| defValue | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the data. It cannot be empty. |
+| defValue | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+storage.get('startup', 'default', function(err, value) {
+    if (err) {
+        console.info("Failed to get the value of startup with err: " + err);
+        return;
+      }
+    console.info("The value of startup is " + value);
+})
+```
 
 ## get
 
@@ -228,16 +327,27 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| defValue | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the data. It cannot be empty. |
+| defValue | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;ValueType & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;ValueType & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+let promiseget = storage.get('startup', 'default');
+promiseget.then((value) => {
+    console.info("The value of startup is " + value)
+}).catch((err) => {
+    console.info("Failed to get the value of startup with err: " + err);
+})
+```
 
 ## getSync
 
@@ -255,16 +365,23 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| defValue | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the data. It cannot be empty. |
+| defValue | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Default value to be returned if the value of the specified key does not exist. It can be a number, string, or Boolean value. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) |
+| Type | Description |
+| --- | --- |
+| [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Value corresponding to the specified key. If the value is null or not in the default value format, the default value is returned. |
+
+**Examples**
+
+```TypeScript
+let value = storage.getSync('startup', 'default');
+console.info("The value of startup is " + value);
+```
 
 ## has
 
@@ -282,16 +399,30 @@ Checks whether the storage object contains data with a given key. This API uses 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the data. It cannot be empty. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the storage object contains data with the specified key; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+storage.has('startup', function (err, isExist) {
+    if (err) {
+        console.info("Failed to check the key of startup with err: " + err);
+        return;
+    }
+    if (isExist) {
+        console.info("The key of startup is contained.");
+    }
+})
+```
 
 ## has
 
@@ -309,15 +440,28 @@ Checks whether the storage object contains data with a given key. This API uses 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the data. It cannot be empty. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;boolean & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;boolean & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+let promisehas = storage.has('startup')
+promisehas.then((isExist) => {
+    if (isExist) {
+        console.info("The key of startup is contained.");
+    }
+}).catch((err) => {
+    console.info("Failed to check the key of startup with err: " + err);
+})
+```
 
 ## hasSync
 
@@ -335,15 +479,24 @@ Checks whether the storage object contains data with a given key.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the data. It cannot be empty. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the storage object contains data with the specified key; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let isExist = storage.hasSync('startup');
+if (isExist) {
+    console.info("The key of startup is contained.");
+}
+```
 
 ## off('change')
 
@@ -361,10 +514,19 @@ Unsubscribes from data changes.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'change' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'change' | Yes | Event type. The value **change** indicates data change events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | Yes | Callback for the data change. |
+
+**Examples**
+
+```TypeScript
+let observer = function (key) {
+    console.info("The key of " + key + " changed.");
+}
+storage.off('change', observer);
+```
 
 ## on('change')
 
@@ -382,10 +544,21 @@ Subscribes to data changes. The **StorageObserver** needs to be implemented. Whe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'change' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'change' | Yes | Event type. The value **change** indicates data change events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+let observer = function (key) {
+    console.info("The key of " + key + " changed.");
+}
+storage.on('change', observer);
+storage.putSync('startup', 'auto');
+storage.flushSync();  // observer will be called.
+```
 
 ## put
 
@@ -403,11 +576,23 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the data. It cannot be empty. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | New value to store. It can be a number, string, or Boolean value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+storage.put('startup', 'auto', function (err) {
+    if (err) {
+        console.info("Failed to put the value of startup with err: " + err);
+        return;
+    }
+    console.info("Succeeded in putting the value of startup.");
+})
+```
 
 ## put
 
@@ -425,16 +610,27 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the data. It cannot be empty. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | New value to store. It can be a number, string, or Boolean value. |
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
+| Type | Description |
+| --- | --- |
+| Promise & lt;void & gt; | Promise used to return the result. |
+
+**Examples**
+
+```TypeScript
+let promiseput = storage.put('startup', 'auto');
+promiseput.then(() => {
+    console.info("Succeeded in putting the value of startup.");
+}).catch((err) => {
+    console.info("Failed to put the value of startup with err: " + err);
+})
+```
 
 ## putSync
 
@@ -452,7 +648,13 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the data. It cannot be empty. |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | New value to store. It can be a number, string, or Boolean value. |
+
+**Examples**
+
+```TypeScript
+storage.putSync('startup', 'auto');
+```

@@ -1,6 +1,6 @@
 # Flex
 
-The **Flex** component is a container that uses the flexible box model for layout. It provides an efficient mechanism for arranging and aligning child elements, as well as distributing available space among them. For details, see [Flex Layout](../../../ui/arkts-layout-development-flex-layout.md).> **NOTE**>> - This component is supported since API version 7. Updates will be marked with a superscript to indicate their> earliest API version.>> - The **Flex** component adapts the layout of flex items during rendering. This may affect the performance.> Therefore, you are advised to use Column or Row instead under scenarios where> consistently high performance is required. For best practices, see> [Using Layout Components Properly](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve-layout-performance#section12745188175420)>> - If the main axis length of the **Flex** component is unspecified, it follows the size of the parent container by> default. If the **Flex** component contains child components for which> position is set, the> **Flex** component does not follow the size of the parent container. If the main axis length of the **Column** or> **Row** component is unspecified, it follows the size of the child nodes by default.>> - If **Flex**, **Column**, or **Row** containers have no child components and no explicit width or height settings,> their default width or height is **-1**.>> - You can set the main axis length of a **Flex** component to **auto** to make it adapt to the layout of its child> components. This way, the **Flex** component's length is subject to the **constraintSize** attribute and the> maximum and minimum length constraints passed from the parent container, with **constraintSize** taking precedence.>> **Child Components**>> This component can contain child components.
+The **Flex** component is a container that uses the flexible box model for layout. It provides an efficient mechanism for arranging and aligning child elements, as well as distributing available space among them. For details, see [Flex Layout](../../../ui/arkts-layout-development-flex-layout.md). > **NOTE** > > - This component is supported since API version 7. Updates will be marked with a superscript to indicate their > earliest API version. > > - The **Flex** component adapts the layout of flex items during rendering. This may affect the performance. > Therefore, you are advised to use Column or Row instead under scenarios where > consistently high performance is required. For best practices, see > [Using Layout Components Properly](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve-layout-performance#section12745188175420) > > - If the main axis length of the **Flex** component is unspecified, it follows the size of the parent container by > default. If the **Flex** component contains child components for which > position is set, the > **Flex** component does not follow the size of the parent container. If the main axis length of the **Column** or > **Row** component is unspecified, it follows the size of the child nodes by default. > > - If **Flex**, **Column**, or **Row** containers have no child components and no explicit width or height settings, > their default width or height is **-1**. > > - You can set the main axis length of a **Flex** component to **auto** to make it adapt to the layout of its child > components. This way, the **Flex** component's length is subject to the **constraintSize** attribute and the > maximum and minimum length constraints passed from the parent container, with **constraintSize** taking precedence. > > **Child Components** > > This component can contain child components.
 
 ## Flex
 
@@ -20,13 +20,382 @@ Creates a **Flex** component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [FlexOptions](arkts-arkui-flexoptions-i.md) | No |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [FlexOptions](arkts-arkui-flexoptions-i.md) | No | Parameters of the child components in the **Flex** component. |
 
 ## Summary
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
+| Name | Description |
+| --- | --- |
+
+## Examples
+
+This example demonstrates different layout directions for child components by setting the direction property.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct FlexExample1 {
+  build() {
+    Column() {
+      Column({ space: 5 }) {
+        Text('direction:Row').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        Flex({ direction: FlexDirection.Row }) { // The child components are arranged in the same direction as the main axis runs along the rows.
+          Text('1').width('20%').height(50).backgroundColor(0xF5DEB3)
+          Text('2').width('20%').height(50).backgroundColor(0xD2B48C)
+          Text('3').width('20%').height(50).backgroundColor(0xF5DEB3)
+          Text('4').width('20%').height(50).backgroundColor(0xD2B48C)
+        }
+        .height(70)
+        .width('90%')
+        .padding(10)
+        .backgroundColor(0xAFEEEE)
+
+        Text('direction:RowReverse').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        Flex({ direction: FlexDirection.RowReverse }) { // The child components are arranged opposite to the Row direction.
+          Text('1').width('20%').height(50).backgroundColor(0xF5DEB3)
+          Text('2').width('20%').height(50).backgroundColor(0xD2B48C)
+          Text('3').width('20%').height(50).backgroundColor(0xF5DEB3)
+          Text('4').width('20%').height(50).backgroundColor(0xD2B48C)
+        }
+        .height(70)
+        .width('90%')
+        .padding(10)
+        .backgroundColor(0xAFEEEE)
+
+        Text('direction:Column').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        Flex({ direction: FlexDirection.Column }) { // The child components are arranged in the same direction as the main axis runs down the columns.
+          Text('1').width('100%').height(40).backgroundColor(0xF5DEB3)
+          Text('2').width('100%').height(40).backgroundColor(0xD2B48C)
+          Text('3').width('100%').height(40).backgroundColor(0xF5DEB3)
+          Text('4').width('100%').height(40).backgroundColor(0xD2B48C)
+        }
+        .height(160)
+        .width('90%')
+        .padding(10)
+        .backgroundColor(0xAFEEEE)
+
+        Text('direction:ColumnReverse').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        Flex({ direction: FlexDirection.ColumnReverse }) { // The child components are arranged opposite to the Column direction.
+          Text('1').width('100%').height(40).backgroundColor(0xF5DEB3)
+          Text('2').width('100%').height(40).backgroundColor(0xD2B48C)
+          Text('3').width('100%').height(40).backgroundColor(0xF5DEB3)
+          Text('4').width('100%').height(40).backgroundColor(0xD2B48C)
+        }
+        .height(160)
+        .width('90%')
+        .padding(10)
+        .backgroundColor(0xAFEEEE)
+      }.width('100%').margin({ top: 5 })
+    }.width('100%')
+  }
+}
+```
+
+This example demonstrates single-line and multi-line layouts for child components by setting the wrap property.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct FlexExample2 {
+  build() {
+    Column() {
+      Column({ space: 5 }) {
+        Text('Wrap').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        Flex({ wrap: FlexWrap.Wrap }) { // The child components are arranged in multiple lines.
+          Text('1').width('50%').height(50).backgroundColor(0xF5DEB3)
+          Text('2').width('50%').height(50).backgroundColor(0xD2B48C)
+          Text('3').width('50%').height(50).backgroundColor(0xD2B48C)
+        }
+        .width('90%')
+        .padding(10)
+        .backgroundColor(0xAFEEEE)
+
+        Text('NoWrap').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        Flex({ wrap: FlexWrap.NoWrap }) { // The child components are arranged in a single line.
+          Text('1').width('50%').height(50).backgroundColor(0xF5DEB3)
+          Text('2').width('50%').height(50).backgroundColor(0xD2B48C)
+          Text('3').width('50%').height(50).backgroundColor(0xF5DEB3)
+        }
+        .width('90%')
+        .padding(10)
+        .backgroundColor(0xAFEEEE)
+
+        Text('WrapReverse').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        Flex({ wrap: FlexWrap.WrapReverse , direction:FlexDirection.Row }) { // The child components are reversely arranged in multiple lines, and they may overflow.
+          Text('1').width('50%').height(50).backgroundColor(0xF5DEB3)
+          Text('2').width('50%').height(50).backgroundColor(0xD2B48C)
+          Text('3').width('50%').height(50).backgroundColor(0xD2B48C)
+        }
+        .width('90%')
+        .height(120)
+        .padding(10)
+        .backgroundColor(0xAFEEEE)
+      }.width('100%').margin({ top: 5 })
+    }.width('100%')
+  }
+}
+```
+
+This example demonstrates different alignment effects for child components along the main axis by setting the justifyContent property.
+
+```TypeScript
+// xxx.ets
+@Component
+struct JustifyContentFlex {
+  justifyContent: number = 0;
+
+  build() {
+    Flex({ justifyContent: this.justifyContent }) {
+      Text('1').width('20%').height(50).backgroundColor(0xF5DEB3)
+      Text('2').width('20%').height(50).backgroundColor(0xD2B48C)
+      Text('3').width('20%').height(50).backgroundColor(0xF5DEB3)
+    }
+    .width('90%')
+    .padding(10)
+    .backgroundColor(0xAFEEEE)
+  }
+}
+
+@Entry
+@Component
+struct FlexExample3 {
+  build() {
+    Column() {
+      Column({ space: 5 }) {
+        Text('justifyContent:Start').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        JustifyContentFlex({ justifyContent: FlexAlign.Start }) // The child components are aligned with the start edge of the main axis.
+
+        Text('justifyContent:Center').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        JustifyContentFlex({ justifyContent: FlexAlign.Center }) // The child components are aligned in the center of the main axis.
+
+        Text('justifyContent:End').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        JustifyContentFlex({ justifyContent: FlexAlign.End }) // The child components are aligned with the end edge of the main axis.
+
+        Text('justifyContent:SpaceBetween').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        JustifyContentFlex({ justifyContent: FlexAlign.SpaceBetween }) // The child components are evenly distributed along the main axis. The first component is aligned with the main-start, the last component is aligned with the main-end.
+
+        Text('justifyContent:SpaceAround').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        JustifyContentFlex({ justifyContent: FlexAlign.SpaceAround }) // The child components evenly divide the container layout on the main axis, with equal space on both sides of each child component. Therefore, the distance from the first child component to the line start and from the last child component to the line end is half the distance between adjacent child components.
+
+        Text('justifyContent:SpaceEvenly').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        JustifyContentFlex({ justifyContent: FlexAlign.SpaceEvenly }) // The child components are evenly distributed along the main axis. The space between the first component and main-start, the space between the last component and main-end, and the space between any two adjacent components are the same.
+      }.width('100%').margin({ top: 5 })
+    }.width('100%')
+  }
+}
+```
+
+This example demonstrates different alignment effects for child components along the cross axis by setting the alignItems property.
+
+```TypeScript
+// xxx.ets
+@Component
+struct AlignItemsFlex {
+  alignItems: number = 0;
+
+  build() {
+    Flex({ alignItems: this.alignItems }) {
+      Text('1').width('33%').height(30).backgroundColor(0xF5DEB3)
+      Text('2').width('33%').height(40).backgroundColor(0xD2B48C)
+      Text('3').width('33%').height(50).backgroundColor(0xF5DEB3)
+    }
+    .size({width: '90%', height: 80})
+    .padding(10)
+    .backgroundColor(0xAFEEEE)
+  }
+}
+
+@Entry
+@Component
+struct FlexExample4 {
+  build() {
+    Column() {
+      Column({ space: 5 }) {
+        Text('alignItems:Auto').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        AlignItemsFlex({ alignItems: ItemAlign.Auto }) // Automatically aligns child components on the cross axis of the container.
+
+        Text('alignItems:Start').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        AlignItemsFlex({ alignItems: ItemAlign.Start }) // The items in the container are aligned with the cross-start edge.
+
+        Text('alignItems:Center').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        AlignItemsFlex({alignItems: ItemAlign.Center}) // The items in the container are centered along the cross axis.
+
+        Text('alignItems:End').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        AlignItemsFlex({ alignItems: ItemAlign.End }) // The items in the container are aligned with the cross-end edge.
+
+        Text('alignItems:Stretch').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        AlignItemsFlex({ alignItems: ItemAlign.Stretch }) // The items in the container are stretched and padded along the cross axis.
+
+        Text('alignItems:Baseline').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        AlignItemsFlex({ alignItems: ItemAlign.Baseline }) // The items in the container are aligned in such a manner that their text baselines are aligned along the cross axis.
+      }.width('100%').margin({ top: 5 })
+    }.width('100%')
+  }
+}
+```
+
+This example demonstrates different alignment effects for multiple lines of content by setting the alignContent property.
+
+```TypeScript
+// xxx.ets
+@Component
+struct AlignContentFlex {
+  alignContent: number = 0;
+
+  build() {
+    Flex({ wrap: FlexWrap.Wrap, alignContent: this.alignContent }) {
+      Text('1').width('50%').height(20).backgroundColor(0xF5DEB3)
+      Text('2').width('50%').height(20).backgroundColor(0xD2B48C)
+      Text('3').width('50%').height(20).backgroundColor(0xD2B48C)
+    }
+    .size({ width: '90%', height: 90 })
+    .padding(10)
+    .backgroundColor(0xAFEEEE)
+  }
+}
+
+@Entry
+@Component
+struct FlexExample5 {
+  build() {
+    Column() {
+      Column({ space: 5 }) {
+        Text('alignContent:Start').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        AlignContentFlex({ alignContent: FlexAlign.Start }) // The child components are aligned with the start edge in the multi-row layout.
+
+        Text('alignContent:Center').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        AlignContentFlex({ alignContent: FlexAlign.Center }) // The child components are aligned in the center in the multi-row layout.
+
+        Text('alignContent:End').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        AlignContentFlex({ alignContent: FlexAlign.End }) // The child components are aligned with the end edge in the multi-row layout.
+
+        Text('alignContent:SpaceBetween').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        AlignContentFlex({ alignContent: FlexAlign.SpaceBetween }) // In the multi-row layout, the child component in the first row is aligned with the start edge of the column, and the child component in the last row is aligned with the end edge of the column.
+
+        Text('alignContent:SpaceAround').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        AlignContentFlex({ alignContent: FlexAlign.SpaceAround }) // In the multi-row layout, the space between the child component in the first row and the start edge of the column, and that between the child component in the last row and the end edge of the column are both half the size of the space between two adjacent rows.
+
+        Text('alignContent:SpaceEvenly').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        Flex({
+          wrap: FlexWrap.Wrap,
+          alignContent: FlexAlign.SpaceEvenly
+        }) {// In the multi-row layout, the space between the child component in the first row and the start edge of the column, the space between the child component in the last row and the end edge of the column, and the space between any two adjacent rows are the same.
+          Text('1').width('50%').height(20).backgroundColor(0xF5DEB3)
+          Text('2').width('50%').height(20).backgroundColor(0xD2B48C)
+          Text('3').width('50%').height(20).backgroundColor(0xF5DEB3)
+          Text('4').width('50%').height(20).backgroundColor(0xD2B48C)
+          Text('5').width('50%').height(20).backgroundColor(0xF5DEB3)
+        }
+        .size({ width: '90%', height: 100 })
+        .padding({ left: 10, right: 10 })
+        .backgroundColor(0xAFEEEE)
+      }.width('100%').margin({ top: 5 })
+    }.width('100%')
+  }
+}
+```
+
+This example sets the spacing along the main axis and cross axis for child components in single-line or multi-line arrangement by configuring the space attribute.
+
+```TypeScript
+import {LengthMetrics} from '@kit.ArkUI';
+
+@Entry
+@Component
+struct FlexExample6 {
+  build() {
+    Column() {
+      Column({ space: 5 }) {
+        Text('Wrap').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        Flex({ wrap: FlexWrap.Wrap, space: {main: LengthMetrics.px(50), cross: LengthMetrics.px(50)} }) { // The child components are arranged in multiple lines.
+          Text('1').width('40%').height(50).backgroundColor(0xF5DEB3)
+          Text('2').width('40%').height(50).backgroundColor(0xD2B48C)
+          Text('3').width('40%').height(50).backgroundColor(0xD2B48C)
+        }
+        .width('90%')
+        .padding(10)
+        .backgroundColor(0xAFEEEE)
+
+        Text('NoWrap').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        Flex({ wrap: FlexWrap.NoWrap, space: {main: LengthMetrics.px(50), cross: LengthMetrics.px(50)} }) { // The child components are arranged in a single line.
+          Text('1').width('50%').height(50).backgroundColor(0xF5DEB3)
+          Text('2').width('50%').height(50).backgroundColor(0xD2B48C)
+          Text('3').width('50%').height(50).backgroundColor(0xF5DEB3)
+        }
+        .width('90%')
+        .padding(10)
+        .backgroundColor(0xAFEEEE)
+
+        Text('WrapReverse').fontSize(9).fontColor(0xCCCCCC).width('90%')
+        Flex({ wrap: FlexWrap.WrapReverse, direction:FlexDirection.Row, space: {main: LengthMetrics.px(50), cross: LengthMetrics.px(50)} }) { // The child components are reversely arranged in multiple lines.
+          Text('1').width('40%').height(50).backgroundColor(0xF5DEB3)
+          Text('2').width('40%').height(50).backgroundColor(0xD2B48C)
+          Text('3').width('40%').height(50).backgroundColor(0xD2B48C)
+        }
+        .width('90%')
+        .height(120)
+        .padding(10)
+        .backgroundColor(0xAFEEEE)
+      }.width('100%').margin({ top: 5 })
+    }.width('100%')
+  }
+}
+```
+
+This example shows how the Flex component can automatically adjust to fit the layout of child components when the width is set to auto.
+
+```TypeScript
+@Component
+struct Demo {
+  @Require @Prop text: string
+
+  build() {
+    Button() {
+      Flex() {
+        Image($r('sys.media.ohos_ic_public_voice'))
+          .width(16)
+          .height(16)
+
+        Row() {
+          Text(this.text)
+            .margin({
+              left: 6,
+              right: 6
+            })
+            .fontSize(14)
+            .maxLines(1)
+            .textOverflow({ overflow: TextOverflow.Ellipsis })
+        }
+
+        Image($r('sys.media.ohos_ic_public_sound'))
+          .width(16)
+          .height(16)
+      }.width('auto')
+    }
+    .backgroundColor(0xAFEEEE)
+    .height(36)
+    .padding({ left: 16, right: 16 })
+    .constraintSize({ maxWidth: 156 })
+    .width('auto')
+  }
+}
+
+@Entry
+@Component
+struct FlexExample7 {
+  build() {
+    Column({ space: 12 }) {
+      Text('Width does not reach max length').fontSize(11).fontColor(0XCCCCCC).width('50%')
+      Demo({ text: '123' })
+      Text('Width reaches max length').fontSize(11).fontColor(0XCCCCCC).width('50%')
+      Demo({ text: '1234567890-1234567890-1234567890-1234567890' })
+    }
+  }
+}
+```

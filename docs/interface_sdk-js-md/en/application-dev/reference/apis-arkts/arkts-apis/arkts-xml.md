@@ -9,36 +9,35 @@ The xml module provides utilities for converting XML text to Javascript object, 
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [XmlDynamicSerializer](arkts-arkts-xml-xmldynamicserializer-c.md) |
-| [XmlPullParser](arkts-arkts-xml-xmlpullparser-c.md) |
-| [XmlSAXParser](arkts-arkts-xml-xmlsaxparser-c.md) |
-| [XmlSerializer](arkts-arkts-xml-xmlserializer-c.md) |
+| Name | Description |
+| --- | --- |
+| [XmlDynamicSerializer](arkts-arkts-xml-xmldynamicserializer-c.md) | The XmlDynamicSerializer interface is used to dynamically generate an xml file. |
+| [XmlPullParser](arkts-arkts-xml-xmlpullparser-c.md) | The XmlPullParser interface is used to parse the existing xml file. |
+| [XmlSAXParser](arkts-arkts-xml-xmlsaxparser-c.md) | The XmlSAXParser provides the capability of parsing XML in a streaming manner. |
+| [XmlSerializer](arkts-arkts-xml-xmlserializer-c.md) | The XmlSerializer interface is used to generate an xml file. |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ParseInfo](arkts-arkts-xml-parseinfo-i.md) |
-| [ParseOptions](arkts-arkts-xml-parseoptions-i.md) |
-| [XmlSAXHandler](arkts-arkts-xml-xmlsaxhandler-i.md) |
+| Name | Description |
+| --- | --- |
+| [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | The current parse info. |
+| [ParseOptions](arkts-arkts-xml-parseoptions-i.md) | Parse options for XmlPullParser. |
+| [XmlSAXHandler](arkts-arkts-xml-xmlsaxhandler-i.md) | A simple API for XML handling |
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [EventType](arkts-arkts-xml-eventtype-e.md) |
+| Name | Description |
+| --- | --- |
+| [EventType](arkts-arkts-xml-eventtype-e.md) | The event types represented by XML elements. |
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AttributeWithTagCb](arkts-arkts-xml-attributewithtagcb-t.md) |
+| Name | Description |
+| --- | --- |
+| [AttributeWithTagCb](arkts-arkts-xml-attributewithtagcb-t.md) | The type of ParseOptions attributeWithTagCallbackFunction. |

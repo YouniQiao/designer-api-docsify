@@ -21,7 +21,8 @@ childrenMainSize(value: ChildrenMainSize)
 
 Sets the size information of the child components of a **ListItemGroup** component along the main axis.
 
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > - The **childrenMainSize** attribute of the **List** component must be set at the same time for the attribute to
 > take effect.
 
@@ -35,9 +36,9 @@ Sets the size information of the child components of a **ListItemGroup** compone
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ChildrenMainSize](arkts-arkui-childrenmainsize-c.md) | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ChildrenMainSize](arkts-arkui-childrenmainsize-c.md) | Yes | Size information of child components in the main axis direction. |
 
 ## divider
 
@@ -57,6 +58,6 @@ Sets the style of the divider for the list items. By default, there is no divide
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) \| null | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) \| null | Yes | [since 18] |

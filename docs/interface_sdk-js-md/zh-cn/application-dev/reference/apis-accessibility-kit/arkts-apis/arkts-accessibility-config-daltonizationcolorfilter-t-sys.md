@@ -12,9 +12,9 @@ type DaltonizationColorFilter = 'Normal' | 'Protanomaly' | 'Deuteranomaly' | 'Tr
 
 **系统接口：** 此接口为系统接口。
 
-| 类型 |
-| --- |
-| 'Normal' |
-| 'Protanomaly' |
-| 'Deuteranomaly' |
-| 'Tritanomaly' |
+| 类型 | 说明 |
+| --- | --- |
+| 'Normal' | 表示正常类型。 |
+| 'Protanomaly' | 表示红色弱类型。 |
+| 'Deuteranomaly' | 表示绿色弱类型。 |
+| 'Tritanomaly' | 表示蓝色弱类型。 |

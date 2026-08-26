@@ -31,9 +31,9 @@ constructor(options?: TapGestureHandlerOptions)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [TapGestureHandlerOptions](arkts-arkui-tapgesturehandleroptions-i.md) | 否 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [TapGestureHandlerOptions](arkts-arkui-tapgesturehandleroptions-i.md) | 否 | 点击手势处理器配置参数。 |
 
 ## onAction
 
@@ -53,12 +53,12 @@ onAction(event: Callback<GestureEvent>): TapGestureHandler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 点击手势处理器识别成功回调。 |
 
 **返回值：**
 
-| 类型 |
-| --- |
-| [TapGestureHandler](arkts-arkui-tapgesturehandler-c.md) |
+| 类型 | 说明 |
+| --- | --- |
+| [TapGestureHandler](arkts-arkui-tapgesturehandler-c.md) | 返回当前点击手势处理器对象。 |

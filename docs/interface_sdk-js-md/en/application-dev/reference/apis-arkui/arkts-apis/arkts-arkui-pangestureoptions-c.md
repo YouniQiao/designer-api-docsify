@@ -27,9 +27,9 @@ Creates a pan gesture configuration object. The **PanGestureOptions** API enable
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration.    **fingers**: minimum number of fingers required. The value ranges from 1 to 10.Default value: **1**    **direction**: pan direction. The value supports the AND ( & ) and OR (\ |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration.    **fingers**: minimum number of fingers required. The value ranges from 1 to 10.Default value: **1**    **direction**: pan direction. The value supports the AND ( & ) and OR (\ |) operations.Default value: **PanDirection.All**    **distance**: minimum pan distance to trigger the gesture, in vp.Default value: **8** for the stylus and **5** for other input sources.    **NOTE：**If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.If the value specified is less than **0**, the default value is used.To avoid slow response and lagging during scrolling, set a reasonable pan distance.When the scale attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
 
 ## getDirection
 
@@ -49,9 +49,9 @@ Obtains the pan direction.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [PanDirection](arkts-arkui-pandirection-e.md) |
+| Type | Description |
+| --- | --- |
+| [PanDirection](arkts-arkui-pandirection-e.md) | Pan direction. |
 
 ## getDistance
 
@@ -71,9 +71,9 @@ Obtains the minimum pan distance to trigger the gesture. The unit is vp.
 
 **Return value:**
 
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| number |
+| Type | Description |
+| --- | --- |
+| number | Minimum pan distance to trigger the gesture. |
 
 ## setDirection
 
@@ -91,9 +91,9 @@ Sets the pan direction.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [PanDirection](arkts-arkui-pandirection-e.md) | Yes | Pan direction. The value supports the AND ( & ) and OR (\ |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [PanDirection](arkts-arkui-pandirection-e.md) | Yes | Pan direction. The value supports the AND ( & ) and OR (\ |) operations.Default value: **PanDirection.All |
 
 ## setDistance
 
@@ -111,9 +111,9 @@ Sets the minimum pan distance to trigger the gesture, in vp. To avoid performanc
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Minimum pan distance to trigger the gesture, in vp.Default value: **8** for the stylus and **5** for other input sources.   **NOTE：**If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.If the value specified is less than **0**, the default value is used.To avoid slow response and lagging during scrolling, set a reasonable pan distance.When the scale attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
 
 ## setFingers
 
@@ -131,6 +131,6 @@ Sets the minimum number of fingers to trigger the gesture.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | number | Yes |
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Minimum number of fingers to trigger a pan gesture. The value ranges from 1 to 10.Default value: **1 |

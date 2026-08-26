@@ -7,179 +7,179 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import avSession from '@kit.AVSessionKit';
 ```
 
 ## Summary
 
 ### Functions
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [createAVSession](arkts-avsession-avsession-createavsession-f.md) |
-| [createAVSession](arkts-avsession-avsession-createavsession-f.md) |
-| [createController](arkts-avsession-avsession-createcontroller-f.md) |
-| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f.md) |
-| [getAVSession](arkts-avsession-avsession-getavsession-f.md) |
-| [isDesktopLyricSupported](arkts-avsession-avsession-isdesktoplyricsupported-f.md) |
-| [offSessionCreate](arkts-avsession-avsession-offsessioncreate-f.md) |
-| [offSessionDestroy](arkts-avsession-avsession-offsessiondestroy-f.md) |
-| [offTopSessionChange](arkts-avsession-avsession-offtopsessionchange-f.md) |
-| [onSessionCreate](arkts-avsession-avsession-onsessioncreate-f.md) |
-| [onSessionDestroy](arkts-avsession-avsession-onsessiondestroy-f.md) |
-| [onTopSessionChange](arkts-avsession-avsession-ontopsessionchange-f.md) |
+| Name | Description |
+| --- | --- |
+| [createAVSession](arkts-avsession-avsession-createavsession-f.md) | Create an AVSession instance. An ability can only create one AVSession |
+| [createAVSession](arkts-avsession-avsession-createavsession-f.md) | Create an AVSession instance. An ability can only create one AVSession |
+| [createController](arkts-avsession-avsession-createcontroller-f.md) | Create an avsession controller |
+| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f.md) | Get all avsession descriptors which can be shown on system entrance. |
+| [getAVSession](arkts-avsession-avsession-getavsession-f.md) | Get an AVSession instance if already created. |
+| [isDesktopLyricSupported](arkts-avsession-avsession-isdesktoplyricsupported-f.md) | Whether desktop lyric feature is supported. |
+| [offSessionCreate](arkts-avsession-avsession-offsessioncreate-f.md) | Unregister session create callback |
+| [offSessionDestroy](arkts-avsession-avsession-offsessiondestroy-f.md) | Unregister session destroy callback |
+| [offTopSessionChange](arkts-avsession-avsession-offtopsessionchange-f.md) | Unregister top session changed callback |
+| [onSessionCreate](arkts-avsession-avsession-onsessioncreate-f.md) | Register session create callback |
+| [onSessionDestroy](arkts-avsession-avsession-onsessiondestroy-f.md) | Register session destroy callback |
+| [onTopSessionChange](arkts-avsession-avsession-ontopsessionchange-f.md) | Register top session changed callback |
 
 <!--Del-->
 ### Functions(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md) |
-| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md) |
-| [createController](arkts-avsession-avsession-createcontroller-f-sys.md) |
-| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md) |
-| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) |
-| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) |
-| [getDistributedSessionController](arkts-avsession-avsession-getdistributedsessioncontroller-f-sys.md) |
-| [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md) |
-| [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md) |
-| [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md) |
-| [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md) |
-| [getSessionDescriptors](arkts-avsession-avsession-getsessiondescriptors-f-sys.md) |
-| off |
-| off |
-| off |
-| off |
-| off |
-| off |
-| off |
-| off |
-| off |
-| [offActiveSessionChanged](arkts-avsession-avsession-offactivesessionchanged-f-sys.md) |
-| [offSystemCommonEvent](arkts-avsession-avsession-offsystemcommonevent-f-sys.md) |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
-| on |
-| [onActiveSessionChanged](arkts-avsession-avsession-onactivesessionchanged-f-sys.md) |
-| [onSystemCommonEvent](arkts-avsession-avsession-onsystemcommonevent-f-sys.md) |
-| [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) |
-| [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) |
-| [sendSystemCommonCommand](arkts-avsession-avsession-sendsystemcommoncommand-f-sys.md) |
-| [sendSystemControlCommand](arkts-avsession-avsession-sendsystemcontrolcommand-f-sys.md) |
-| [sendSystemControlCommand](arkts-avsession-avsession-sendsystemcontrolcommand-f-sys.md) |
-| [setDiscoverable](arkts-avsession-avsession-setdiscoverable-f-sys.md) |
-| [setDiscoverable](arkts-avsession-avsession-setdiscoverable-f-sys.md) |
-| [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md) |
-| [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md) |
-| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md) |
-| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md) |
-| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md) |
-| [startCasting](arkts-avsession-avsession-startcasting-f-sys.md) |
-| [startCasting](arkts-avsession-avsession-startcasting-f-sys.md) |
-| [startDeviceLogging](arkts-avsession-avsession-startdevicelogging-f-sys.md) |
-| [stopCastDeviceDiscovery](arkts-avsession-avsession-stopcastdevicediscovery-f-sys.md) |
-| [stopCastDeviceDiscovery](arkts-avsession-avsession-stopcastdevicediscovery-f-sys.md) |
-| [stopCasting](arkts-avsession-avsession-stopcasting-f-sys.md) |
-| [stopCasting](arkts-avsession-avsession-stopcasting-f-sys.md) |
-| [stopDeviceLogging](arkts-avsession-avsession-stopdevicelogging-f-sys.md) |
+| Name | Description |
+| --- | --- |
+| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md) | Cast Audio to the remote devices or cast back local device |
+| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md) | Cast Audio to the remote devices or cast back local device |
+| [createController](arkts-avsession-avsession-createcontroller-f-sys.md) | Create an avsession controller |
+| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md) | Get all avsession descriptors of the system |
+| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | Register a callback to retrieve an avsession cast controller. This function can be used at both side to get the same controller to do the playback control. |
+| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | Get the current session's remote controller client. If the avsession is not under casting state, the controller will return null. |
+| [getDistributedSessionController](arkts-avsession-avsession-getdistributedsessioncontroller-f-sys.md) | Get distributed avsession controller |
+| [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md) | Get history play list information records. |
+| [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md) | Get history play list information records. |
+| [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md) | Get history avsession records. These sessions have been destroyed. |
+| [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md) | Get history avsession records. These sessions have been destroyed. |
+| [getSessionDescriptors](arkts-avsession-avsession-getsessiondescriptors-f-sys.md) | Get session descriptors of the system based on different session category. |
+| off | Unregister session create callback |
+| off | Unregister session destroy callback |
+| off | Unregister top session changed callback |
+| off | Unregister Session service death callback, notifying the application to clean up resources. |
+| off | Unregister distributed session changed callback |
+| off | Unregister device discovery callback |
+| off | Unregister device offline callback |
+| off | UnRegister log event callback. |
+| off | Unregisters a system callback for the device connection phase. |
+| [offActiveSessionChanged](arkts-avsession-avsession-offactivesessionchanged-f-sys.md) | Unregister active session changed callback. |
+| [offSystemCommonEvent](arkts-avsession-avsession-offsystemcommonevent-f-sys.md) | Unregister system common event callback |
+| on | Register session create callback |
+| on | Register session destroy callback |
+| on | Register top session changed callback |
+| on | Register Session service death callback, notifying the application to clean up resources. |
+| on | Register distributed session changed callback |
+| on | Register device discovery callback |
+| on | Register device offline callback |
+| on | Register log event callback. |
+| on | Registers a system callback for the device connection phase. The callback includes information such as error codes, connection status, radar errors, and user behavior codes. |
+| [onActiveSessionChanged](arkts-avsession-avsession-onactivesessionchanged-f-sys.md) | Register active session changed callback. |
+| [onSystemCommonEvent](arkts-avsession-avsession-onsystemcommonevent-f-sys.md) | Register system common event callback |
+| [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) | Send system media key event.The system automatically selects the recipient. |
+| [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) | Send system media key event.The system automatically selects the recipient. |
+| [sendSystemCommonCommand](arkts-avsession-avsession-sendsystemcommoncommand-f-sys.md) | Send system control command. The system automatically selects the recipient. |
+| [sendSystemControlCommand](arkts-avsession-avsession-sendsystemcontrolcommand-f-sys.md) | Send system control command.The system automatically selects the recipient. |
+| [sendSystemControlCommand](arkts-avsession-avsession-sendsystemcontrolcommand-f-sys.md) | Send system control command.The system automatically selects the recipient. |
+| [setDiscoverable](arkts-avsession-avsession-setdiscoverable-f-sys.md) | Enable or disable device to be discoverable, used at sink side. |
+| [setDiscoverable](arkts-avsession-avsession-setdiscoverable-f-sys.md) | Enable or disable device to be discoverable, used at sink side. |
+| [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md) | Start an application for media playback. |
+| [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md) | Start an application for media playback with command info. |
+| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md) | Start device discovery. |
+| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md) | Start device discovery. |
+| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md) | Start device discovery. |
+| [startCasting](arkts-avsession-avsession-startcasting-f-sys.md) | Cast resource to remote device. |
+| [startCasting](arkts-avsession-avsession-startcasting-f-sys.md) | Cast resource to remote device. |
+| [startDeviceLogging](arkts-avsession-avsession-startdevicelogging-f-sys.md) | Begin to write device logs into a file descriptor for the purpose of problem locating. If the logs exceed max file size, no logs will be written and DEVICE_LOG_FULL event will be omitted. |
+| [stopCastDeviceDiscovery](arkts-avsession-avsession-stopcastdevicediscovery-f-sys.md) | Stop device discovery. |
+| [stopCastDeviceDiscovery](arkts-avsession-avsession-stopcastdevicediscovery-f-sys.md) | Stop device discovery. |
+| [stopCasting](arkts-avsession-avsession-stopcasting-f-sys.md) | Stop current cast and disconnect device connection. |
+| [stopCasting](arkts-avsession-avsession-stopcasting-f-sys.md) | Stop current cast and disconnect device connection. |
+| [stopDeviceLogging](arkts-avsession-avsession-stopdevicelogging-f-sys.md) | Stop the current device written even the discovery is ongoing. |
 <!--DelEnd-->
 
 ### Classes
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AVCastPickerHelper](arkts-avsession-avsession-avcastpickerhelper-c.md) |
+| Name | Description |
+| --- | --- |
+| [AVCastPickerHelper](arkts-avsession-avsession-avcastpickerhelper-c.md) | A helper to enable a picker to select output devices |
 
 ### Interfaces
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md) |
-| [AVCallState](arkts-avsession-avsession-avcallstate-i.md) |
-| [AVCastControlCommand](arkts-avsession-avsession-avcastcontrolcommand-i.md) |
-| [AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) |
-| [AVCastPickerOptions](arkts-avsession-avsession-avcastpickeroptions-i.md) |
-| [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) |
-| [AVMediaDescription](arkts-avsession-avsession-avmediadescription-i.md) |
-| [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) |
-| [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) |
-| [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
-| [AVSession](arkts-avsession-avsession-avsession-i.md) |
-| [AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md) |
-| [AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i.md) |
-| [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) |
-| [CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md) |
-| [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) |
-| [DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md) |
-| [DeviceInfo](arkts-avsession-avsession-deviceinfo-i.md) |
-| [MenuPosition](arkts-avsession-avsession-menuposition-i.md) |
-| [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
-| [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md) |
+| Name | Description |
+| --- | --- |
+| [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md) | Audio capabilities. |
+| [AVCallState](arkts-avsession-avsession-avcallstate-i.md) | Used to indicate the call state of the current call.@interface AVCallState [since 11 - 11] |
+| [AVCastControlCommand](arkts-avsession-avsession-avcastcontrolcommand-i.md) | The definition of cast command to be sent to the session |
+| [AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) | AVCastController definition used to implement a remote control when a cast is connected |
+| [AVCastPickerOptions](arkts-avsession-avsession-avcastpickeroptions-i.md) | An option to make different picker usage |
+| [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | The definition of command to be sent to the session@interface AVControlCommand [since 10 - 11] |
+| [AVMediaDescription](arkts-avsession-avsession-avmediadescription-i.md) | The description of the media for an item in the playlist of the session |
+| [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | The metadata of the current media.Used to set the properties of the current media file |
+| [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | Used to indicate the playback state of the current media. If the playback state of the media changes, it needs to be updated synchronously |
+| [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | The item in the playlist of the session |
+| [AVSession](arkts-avsession-avsession-avsession-i.md) | AVSession object. |
+| [AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md) | Session controller,used to control media playback and get media information@interface AVSessionController [since 10 - 11] |
+| [AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i.md) | The description of the session |
+| [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) | The metadata of the current call.@interface CallMetadata [since 11 - 11] |
+| [CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md) | Define the information for extended display screen. |
+| [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) | The definition of command information to be sent to the session |
+| [DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md) | Desktop lyric state definition. |
+| [DeviceInfo](arkts-avsession-avsession-deviceinfo-i.md) | Device Information Definition |
+| [MenuPosition](arkts-avsession-avsession-menuposition-i.md) | Position definition of one component on which the menu will bind and popup. |
+| [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) | Target Device Information Definition |
+| [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md) | Playback position definition |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AVCastController](arkts-avsession-avsession-avcastcontroller-i-sys.md) |
-| [AVQueueInfo](arkts-avsession-avsession-avqueueinfo-i-sys.md) |
-| [AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md) |
-| [DeviceInfo](arkts-avsession-avsession-deviceinfo-i-sys.md) |
-| [DeviceState](arkts-avsession-avsession-devicestate-i-sys.md) |
-| [HiPlayDeviceInfo](arkts-avsession-avsession-hiplaydeviceinfo-i-sys.md) |
-| [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) |
+| Name | Description |
+| --- | --- |
+| [AVCastController](arkts-avsession-avsession-avcastcontroller-i-sys.md) | AVCastController definition used to implement a remote control when a cast is connected |
+| [AVQueueInfo](arkts-avsession-avsession-avqueueinfo-i-sys.md) | The play list information definition. |
+| [AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md) | The description of the session |
+| [DeviceInfo](arkts-avsession-avsession-deviceinfo-i-sys.md) | Device Information Definition |
+| [DeviceState](arkts-avsession-avsession-devicestate-i-sys.md) | Device state used to describe states including discovery, authentication and other scenes. |
+| [HiPlayDeviceInfo](arkts-avsession-avsession-hiplaydeviceinfo-i-sys.md) | HiPlay Device Information Definition |
+| [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) | Session token. Used to judge the legitimacy of the session. |
 <!--DelEnd-->
 
 ### Enums
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md) |
-| [AVSessionErrorCode](arkts-avsession-avsession-avsessionerrorcode-e.md) |
-| [BackgroundPlayMode](arkts-avsession-avsession-backgroundplaymode-e.md) |
-| [CallerType](arkts-avsession-avsession-callertype-e.md) |
-| [CallState](arkts-avsession-avsession-callstate-e.md) |
-| [CastDisplayState](arkts-avsession-avsession-castdisplaystate-e.md) |
-| [ConnectionState](arkts-avsession-avsession-connectionstate-e.md) |
-| [DecoderType](arkts-avsession-avsession-decodertype-e.md) |
-| [DeviceType](arkts-avsession-avsession-devicetype-e.md) |
-| [DisplayTag](arkts-avsession-avsession-displaytag-e.md) |
-| [ExtraKey](arkts-avsession-avsession-extrakey-e.md) |
-| [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
-| [PlaybackState](arkts-avsession-avsession-playbackstate-e.md) |
-| [ProtocolType](arkts-avsession-avsession-protocoltype-e.md) |
-| [ResolutionLevel](arkts-avsession-avsession-resolutionlevel-e.md) |
-| [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md) |
+| Name | Description |
+| --- | --- |
+| [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md) | cast category indicating different playback scenes |
+| [AVSessionErrorCode](arkts-avsession-avsession-avsessionerrorcode-e.md) | Enumerates ErrorCode types, returns in BusinessError.code. |
+| [BackgroundPlayMode](arkts-avsession-avsession-backgroundplaymode-e.md) | Supported background play mode definitions. |
+| [CallerType](arkts-avsession-avsession-callertype-e.md) | Enumerates CallerType including caller source type. |
+| [CallState](arkts-avsession-avsession-callstate-e.md) | Enumeration of current call state |
+| [CastDisplayState](arkts-avsession-avsession-castdisplaystate-e.md) | Enumerates the cast display states. |
+| [ConnectionState](arkts-avsession-avsession-connectionstate-e.md) | Define the device connection state. |
+| [DecoderType](arkts-avsession-avsession-decodertype-e.md) | The defination of decoder type. |
+| [DeviceType](arkts-avsession-avsession-devicetype-e.md) | Device type definition |
+| [DisplayTag](arkts-avsession-avsession-displaytag-e.md) | The pre-defined display tag by system. |
+| [ExtraKey](arkts-avsession-avsession-extrakey-e.md) | Define some common extra keys used in different scenarios. |
+| [LoopMode](arkts-avsession-avsession-loopmode-e.md) | Loop Play Mode Definition |
+| [PlaybackState](arkts-avsession-avsession-playbackstate-e.md) | Definition of current playback state |
+| [ProtocolType](arkts-avsession-avsession-protocoltype-e.md) | Define different protocol capability |
+| [ResolutionLevel](arkts-avsession-avsession-resolutionlevel-e.md) | The defination of suggested resolution. |
+| [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md) | Supported skip intervals definition |
 
 <!--Del-->
 ### Enums(System API)
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ConnectionState](arkts-avsession-avsession-connectionstate-e-sys.md) |
-| [DeviceLogEventCode](arkts-avsession-avsession-devicelogeventcode-e-sys.md) |
-| [DistributedSessionType](arkts-avsession-avsession-distributedsessiontype-e-sys.md) |
-| [ExtraKey](arkts-avsession-avsession-extrakey-e-sys.md) |
-| [ProtocolType](arkts-avsession-avsession-protocoltype-e-sys.md) |
-| [SessionCategory](arkts-avsession-avsession-sessioncategory-e-sys.md) |
+| Name | Description |
+| --- | --- |
+| [ConnectionState](arkts-avsession-avsession-connectionstate-e-sys.md) | Define the device connection state. |
+| [DeviceLogEventCode](arkts-avsession-avsession-devicelogeventcode-e-sys.md) | Enumerates device log event code. |
+| [DistributedSessionType](arkts-avsession-avsession-distributedsessiontype-e-sys.md) | Define different distributed session type |
+| [ExtraKey](arkts-avsession-avsession-extrakey-e-sys.md) | Define some common extra keys used in different scenarios. |
+| [ProtocolType](arkts-avsession-avsession-protocoltype-e-sys.md) | Define different protocol capability |
+| [SessionCategory](arkts-avsession-avsession-sessioncategory-e-sys.md) | Session category for different scenes. |
 <!--DelEnd-->
 
 ### Types
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md) |
-| [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md) |
-| [AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md) |
-| [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) |
-| [EventProcess](arkts-avsession-avsession-eventprocess-t.md) |
-| [ExtraInfo](arkts-avsession-avsession-extrainfo-t.md) |
-| [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) |
-| [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) |
-| [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md) |
+| Name | Description |
+| --- | --- |
+| [AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md) | The type of control command |
+| [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md) | The type of control command. |
+| [AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md) | The type of media center control command, which can be used to determine the button displayed on the media center. |
+| [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | Session type supports audio & video, voice_call, video_call, photo |
+| [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | The general process funcation with an event and arguments. |
+| [ExtraInfo](arkts-avsession-avsession-extrainfo-t.md) | The extra info object. |
+| [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | The callback of key request. |
+| [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Defines the basic callback. |
+| [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md) | Defines the callback type including two parameters. |

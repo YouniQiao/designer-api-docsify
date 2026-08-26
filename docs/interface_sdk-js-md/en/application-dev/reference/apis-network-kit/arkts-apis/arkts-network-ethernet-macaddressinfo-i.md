@@ -9,7 +9,7 @@ Defines the name and MAC address of an Ethernet NIC.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from 'kits/@kit.NetworkKit';
+import ethernet from '@kit.NetworkKit';
 ```
 
 ## iface

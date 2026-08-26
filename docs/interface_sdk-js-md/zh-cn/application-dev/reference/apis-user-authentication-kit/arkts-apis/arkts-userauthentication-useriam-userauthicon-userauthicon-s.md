@@ -12,7 +12,7 @@
 ## 导入模块
 
 ```TypeScript
-import { UserAuthIcon } from 'kits/@kit.UserAuthenticationKit';
+import UserAuthIcon from '@kit.UserAuthenticationKit';
 ```
 
 ## onAuthResult
@@ -32,9 +32,9 @@ onAuthResult: (result: userAuth.UserAuthResult) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| result | userAuth.UserAuthResult | 是 |
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| result | userAuth.UserAuthResult | 是 | Authentication result information. |
 
 ## onIconClick
 
